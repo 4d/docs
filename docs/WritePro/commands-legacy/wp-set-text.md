@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| newText | Text | &#x1F852; | Text to insert |
-| textPosition | Number | &#x1F852; | Insertion position (replace, before, after) |
-| rangeUpdate | Number | &#x1F852; | Includes or excludes the inserted content within the range |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| newText | Text | &rarr; | Text to insert |
+| textPosition | Number | &rarr; | Insertion position (replace, before, after) |
+| rangeUpdate | Number | &rarr; | Includes or excludes the inserted content within the range |
 
 <!-- END REF-->
 

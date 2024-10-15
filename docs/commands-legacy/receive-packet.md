@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE PACKET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &srarr; | Document reference number, or Current channel (serial port or document) |
-| receiveVar | Text, Blob | &harr; | Variable to receive data |
-| stopChar &#124; numBytes | String, Longint | &srarr; | Character(s) at which to stop receiving, or Number of bytes to receive |
+| docRef | Time | &rarr; | Document reference number, or Current channel (serial port or document) |
+| receiveVar | Text, Blob | &larr; | Variable to receive data |
+| stopChar &#124; numBytes | String, Longint | &rarr; | Character(s) at which to stop receiving, or Number of bytes to receive |
 
 <!-- END REF-->
 

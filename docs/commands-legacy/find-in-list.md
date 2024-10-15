@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &srarr; | List reference number (if * omitted) Name of list type object (if * passed) |
-| value | Text | &srarr; | Value to be searched for |
-| scope | Integer | &srarr; | 0=Main list, 1=Sublist |
-| itemsArray | Integer array | &harr; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
-| * | Operator | &srarr; | - If omitted: use position of items - If passed: use reference number of items |
+| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &rarr; | List reference number (if * omitted) Name of list type object (if * passed) |
+| value | Text | &rarr; | Value to be searched for |
+| scope | Integer | &rarr; | 0=Main list, 1=Sublist |
+| itemsArray | Array integer | &larr; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
+| * | Operator | &rarr; | - If omitted: use position of items - If passed: use reference number of items |
 | Function result | Longint | &larr; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
 
 <!-- END REF-->

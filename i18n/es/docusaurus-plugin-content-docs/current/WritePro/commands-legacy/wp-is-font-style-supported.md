@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Is font style supported.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rangoObj | Objeto | &#x1F852; | Rango o referencia del elemento |
-| estiloFuenteWP | Entero largo | &#x1F852; | Constante de estilo de fuente |
-| Resultado | Booleano | &#x1F850; | True si alguna parte de rangoObj soporta estiloFuenteWP; False en caso contrario |
+| rangoObj | Object | &rarr; | Rango o referencia del elemento |
+| estiloFuenteWP | Integer | &rarr; | Constante de estilo de fuente |
+| Resultado | Boolean | &larr; | True si alguna parte de rangoObj soporta estiloFuenteWP; False en caso contrario |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Day number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aDate | Date | &srarr; | 曜日に対応する数値を得る日付 |
+| aDate | Date | &rarr; | 曜日に対応する数値を得る日付 |
 | 戻り値 | Integer | &larr; | 曜日を示す数値 |
 
 <!-- END REF-->

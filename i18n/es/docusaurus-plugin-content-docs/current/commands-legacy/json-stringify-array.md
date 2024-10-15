@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Text array, Real array, Boolean array, Pointer array, Object array | &srarr; | Array cuyo contenido debe ser serializado |
-| * | Operador | &srarr; | Mejorar el formato |
+| array | Text array, Real array, Boolean array, Pointer array, Object array | &rarr; | Array cuyo contenido debe ser serializado |
+| * | Operador | &rarr; | Mejorar el formato |
 | Resultado | Text | &larr; | Cadena que contiene el array JSON serializado |
 
 <!-- END REF-->

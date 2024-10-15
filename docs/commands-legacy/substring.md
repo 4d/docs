@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Substring.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &srarr; | String from which to get substring |
-| firstChar | Integer | &srarr; | Position of first character |
-| numChars | Integer | &srarr; | Number of characters to get |
+| source | Text | &rarr; | String from which to get substring |
+| firstChar | Integer | &rarr; | Position of first character |
+| numChars | Integer | &rarr; | Number of characters to get |
 | Function result | String | &larr; | Substring of source |
 
 <!-- END REF-->

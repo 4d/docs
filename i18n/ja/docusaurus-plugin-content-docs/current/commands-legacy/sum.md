@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | 合計を求めるデータ |
-| attributePath | Text | &srarr; | 合計値を取得したい属性のパス |
+| series | Field, Array | &rarr; | 合計を求めるデータ |
+| attributePath | Text | &rarr; | 合計値を取得したい属性のパス |
 | 戻り値 | Real | &larr; | seriesの合計 |
 
 <!-- END REF-->

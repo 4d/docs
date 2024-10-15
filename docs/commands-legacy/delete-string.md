@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Delete string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &srarr; | String from which to delete characters |
-| where | Integer | &srarr; | First character to delete |
-| numChars | Integer | &srarr; | Number of characters to delete |
+| source | Text | &rarr; | String from which to delete characters |
+| where | Integer | &rarr; | First character to delete |
+| numChars | Integer | &rarr; | Number of characters to delete |
 | Function result | String | &larr; | Resulting string |
 
 <!-- END REF-->

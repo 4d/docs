@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is compiled mode.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Retorna a informação do banco local |
+| * | Operador | &rarr; | Retorna a informação do banco local |
 | Resultado | Boolean | &larr; | Compilado (True), Interpretado (False) |
 
 <!-- END REF-->

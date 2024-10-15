@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print marker.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTaquet | Integer | &srarr; | Numéro de taquet |
+| numTaquet | Integer | &rarr; | Numéro de taquet |
 | Résultat | Integer | &larr; | Position du taquet |
 
 <!-- END REF-->

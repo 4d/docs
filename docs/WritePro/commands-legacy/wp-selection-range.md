@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Selection range.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable. |
-| wpArea | String | &#x1F852; | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
-| Function result | Object | &#x1F850; | Range or Picture object |
+| * | Operator | &rarr; | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable. |
+| wpArea | String | &rarr; | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| Function result | Object | &larr; | Range or Picture object |
 
 <!-- END REF-->
 

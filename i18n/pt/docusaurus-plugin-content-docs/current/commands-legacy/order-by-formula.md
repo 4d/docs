@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela na qual vai ordenar os registros |
-| expressao | Expression | &srarr; | Fórmula de ordem para cada nível (pode ser de tipo Alfanumérico, Real, Inteiro, Inteiro longo, Data, Hora ou Booleano) |
-| >ou< | Operador | &srarr; | Sentido da ordenação para cada nível: > ordem crescente, ou < ordem decrescente |
+| tabela | Table | &rarr; | Tabela na qual vai ordenar os registros |
+| expressao | Expression | &rarr; | Fórmula de ordem para cada nível (pode ser de tipo Alfanumérico, Real, Inteiro, Inteiro longo, Data, Hora ou Booleano) |
+| >ou< | Operador | &rarr; | Sentido da ordenação para cada nível: > ordem crescente, ou < ordem decrescente |
 
 <!-- END REF-->
 

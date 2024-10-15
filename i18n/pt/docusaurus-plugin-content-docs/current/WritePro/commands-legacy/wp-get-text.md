@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objAlvo | Objeto | &#x1F852; | Range ou elemento ou documento 4D Write Pro |
-| expressoes | Número | &#x1F852; | Instruções para avaliação de expressões |
-| Resultado | Texto | &#x1F850; | Texto do objRange |
+| objAlvo | Object | &rarr; | Range ou elemento ou documento 4D Write Pro |
+| expressoes | Number | &rarr; | Instruções para avaliação de expressões |
+| Resultado | Text | &larr; | Texto do objRange |
 
 <!-- END REF-->
 

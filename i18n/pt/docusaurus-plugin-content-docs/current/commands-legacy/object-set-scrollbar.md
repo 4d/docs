@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| horizontal | Boolean, Integer | &srarr; | True = exibir, False = esconder |
-| vertical | Boolean, Integer | &srarr; | True = exibir, False = esconder |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| horizontal | Boolean, Integer | &rarr; | True = exibir, False = esconder |
+| vertical | Boolean, Integer | &rarr; | True = exibir, False = esconder |
 
 <!-- END REF-->
 

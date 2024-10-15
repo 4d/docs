@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD VARIABLES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &srarr; | Document contenant la ou les variable(s) à lire |
-| variable | Variable | &harr; | Nom de(s) variable(s) devant recevoir les valeurs |
+| nomFichier | Text | &rarr; | Document contenant la ou les variable(s) à lire |
+| variable | Variable | &larr; | Nom de(s) variable(s) devant recevoir les valeurs |
 
 <!-- END REF-->
 

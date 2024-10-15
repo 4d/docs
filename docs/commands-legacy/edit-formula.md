@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table to display by default in the Formula editor |
-| formula | Text | &srarr; | Variable containing the formula to display in the Formula editor or "" to display editor only |
-| &harr; | Formula validated by the user |
+| aTable | Table | &rarr; | Table to display by default in the Formula editor |
+| formula | Text | &rarr; | Variable containing the formula to display in the Formula editor or "" to display editor only |
+| &larr; | Formula validated by the user |
 
 <!-- END REF-->
 

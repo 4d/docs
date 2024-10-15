@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refsImages | Integer array | &harr; | Numéros de référence des images stockées dans la bibliothèque d'images |
-| nomsImages | Text array | &harr; | Noms des images stockées dans la bibliothèque d'images |
+| refsImages | Integer array | &larr; | Numéros de référence des images stockées dans la bibliothèque d'images |
+| nomsImages | Text array | &larr; | Noms des images stockées dans la bibliothèque d'images |
 
 <!-- END REF-->
 

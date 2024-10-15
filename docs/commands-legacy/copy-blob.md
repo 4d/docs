@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| srcBlob | Blob | &srarr; | Source BLOB |
-| dstBlob | Blob | &srarr; | Destination BLOB |
-| srcOffset | Integer | &srarr; | Source position for the copy |
-| dstOffset | Integer | &srarr; | Destination position for the copy |
-| len | Integer | &srarr; | Number of bytes to be copied |
+| srcBlob | Blob | &rarr; | Source BLOB |
+| dstBlob | Blob | &rarr; | Destination BLOB |
+| srcOffset | Integer | &rarr; | Source position for the copy |
+| dstOffset | Integer | &rarr; | Destination position for the copy |
+| len | Integer | &rarr; | Number of bytes to be copied |
 
 <!-- END REF-->
 

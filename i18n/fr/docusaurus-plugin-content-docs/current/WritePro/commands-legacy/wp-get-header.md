@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get header.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément section/sous-section 4D Write Pro |
-| docWP | Objet | &#x1F852; | Document 4D Write Pro |
-| indexSection | Entier long | &#x1F852; | Numéro de la section |
-| typeSousSection | Entier long | &#x1F852; | Type de sous-section (wk first page, wk left page ou wk right page) |
-| Résultat | Objet | &#x1F850; | En-tête 4D Write Pro |
+| objCible | Object | &rarr; | Plage ou élément section/sous-section 4D Write Pro |
+| docWP | Object | &rarr; | Document 4D Write Pro |
+| indexSection | Integer | &rarr; | Numéro de la section |
+| typeSousSection | Integer | &rarr; | Type de sous-section (wk first page, wk left page ou wk right page) |
+| Résultat | Object | &larr; | En-tête 4D Write Pro |
 
 <!-- END REF-->
 

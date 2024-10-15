@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get list name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &srarr; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| listType | Integer | &srarr; | Type of list: Choice list, Required list or Excluded list |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | any | &rarr; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| listType | Integer | &rarr; | Type of list: Choice list, Required list or Excluded list |
 | Function result | Text | &larr; | Name of list (specified in Design mode) |
 
 <!-- END REF-->

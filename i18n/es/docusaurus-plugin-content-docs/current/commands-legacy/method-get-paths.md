@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomCarpeta | Text | &srarr; | Nombre de carpeta de la página Inicio |
-| tipoMetodo | Integer | &srarr; | Selector de tipo de método a recuperar |
-| arrRutas | Text array | &harr; | Array de rutas y nombres de los métodos |
-| marcador | Real | &srarr; | Valor mínimo de marcador |
-| &harr; | Nuevo valor actual |
-| * | Operador | &srarr; | Si se pasa = comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| nomCarpeta | Text | &rarr; | Nombre de carpeta de la página Inicio |
+| tipoMetodo | Integer | &rarr; | Selector de tipo de método a recuperar |
+| arrRutas | Text array | &larr; | Array de rutas y nombres de los métodos |
+| marcador | Real | &rarr; | Valor mínimo de marcador |
+| &larr; | Nuevo valor actual |
+| * | Operador | &rarr; | Si se pasa = comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

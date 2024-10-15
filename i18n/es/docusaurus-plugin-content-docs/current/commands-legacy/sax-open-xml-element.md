@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &srarr; | Referencia del documento abierto |
-| etiqueta | Text | &srarr; | Nombre del elemento a abrir |
-| nomAtrib | Text | &srarr; | Nombre del atributo |
-| valorAtrib | Text | &srarr; | Valor del atributo |
+| documento | Time | &rarr; | Referencia del documento abierto |
+| etiqueta | Text | &rarr; | Nombre del elemento a abrir |
+| nomAtrib | Text | &rarr; | Nombre del atributo |
+| valorAtrib | Text | &rarr; | Valor del atributo |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Arctan.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &srarr; | Tangente pour laquelle vous souhaitez calculer l'angle en radians |
+| nombre | Real | &rarr; | Tangente pour laquelle vous souhaitez calculer l'angle en radians |
 | Résultat | Real | &larr; | Angle en radians |
 
 <!-- END REF-->

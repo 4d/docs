@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FOLDER LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &srarr; | Chemin d'accès de volume, répertoire ou dossier |
-| dossiers | Text array | &harr; | Noms des dossiers situés à cet endroit |
+| cheminAccès | Text | &rarr; | Chemin d'accès de volume, répertoire ou dossier |
+| dossiers | Text array | &larr; | Noms des dossiers situés à cet endroit |
 
 <!-- END REF-->
 

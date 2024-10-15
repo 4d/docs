@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | フォーミュラエディタにデフォルトで表示するテーブル |
-| formula | Text | &srarr; | フォーミュラエディタに表示するフォーミュラを含む変 またはエディタの実を表示するには "" |
-| &harr; | ユーザが確定したフォーミュラ |
+| aTable | Table | &rarr; | フォーミュラエディタにデフォルトで表示するテーブル |
+| formula | Text | &rarr; | フォーミュラエディタに表示するフォーミュラを含む変 またはエディタの実を表示するには "" |
+| &larr; | ユーザが確定したフォーミュラ |
 
 <!-- END REF-->
 

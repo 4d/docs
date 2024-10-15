@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu selected.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| subMenu | Text | &harr; | Referencia del menú que contiene la línea seleccionada |
+| subMenu | Text | &larr; | Referencia del menú que contiene la línea seleccionada |
 | Resultado | Integer | &larr; | Comando de menú seleccionado Palabra superior: Número de menú Palabra inferior: Número de comando de menú |
 
 <!-- END REF-->

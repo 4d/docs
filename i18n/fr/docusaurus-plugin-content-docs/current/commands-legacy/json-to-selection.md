@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table 4D dans laquelle copier les éléments |
-| jsonTab | Text | &srarr; | Tableau d'objets en JSON |
+| laTable | Table | &rarr; | Table 4D dans laquelle copier les éléments |
+| jsonTab | Text | &rarr; | Tableau d'objets en JSON |
 
 <!-- END REF-->
 

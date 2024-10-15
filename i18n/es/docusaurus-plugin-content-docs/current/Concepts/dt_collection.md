@@ -46,7 +46,7 @@ Las colecciones deben haber sido instanciadas, de lo contrario intentar leer o m
 
 La instanciación de la colección puede realizarse de una de las siguientes maneras:
 
-- utilizando el comando [`New collection`](../API/CollectionClass.md#new-collection),
+- using the [`New collection`](../command/new-collection.md) command,
 - utilizando el operador `[]`.
 
 :::info
@@ -57,7 +57,7 @@ Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Get Monitore
 
 ### Comando `New collection`
 
-El comando [`New collection`](../API/CollectionClass.md#new-collection) crea una nueva colección vacía o prellenada y devuelve su referencia.
+The [`New collection`](../command/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
 
 Ejemplos:
 
@@ -105,8 +105,8 @@ Si crea un literal de colección que contenga un único elemento, asegúrese de 
 
 Puede crear dos tipos de colecciones:
 
-- colecciones normales (no compartidas), utilizando el comando [`New collection`](API/CollectionClass.md#new-collection) o la sintaxis literal de colección (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
-- colecciones compartidas, utilizando el comando [`New shared collection`](API/CollectionClass.md#new-shared-collection). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
+- regular (non-shared) collections, using the [`New collection`](command/new-collection.md) command or collection literal syntax (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
+- shared collections, using the [`New shared collection`](command/new-shared-collection.md) command. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
 
 Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 

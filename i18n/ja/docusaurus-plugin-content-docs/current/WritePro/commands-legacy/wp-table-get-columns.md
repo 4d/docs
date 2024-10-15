@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get columns.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| tableRef | オブジェクト | &#x1F852; | テーブル参照オブジェクト |
-| startCol | 倍長整数 | &#x1F852; | 最初のカラムの位置 |
-| numCols | 倍長整数 | &#x1F852; | 取得するカラムの位置 |
-| 戻り値 | オブジェクト | &#x1F850; | 選択されたカラムを含む新しいテーブルレンジ |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| tableRef | Object | &rarr; | テーブル参照オブジェクト |
+| startCol | Integer | &rarr; | 最初のカラムの位置 |
+| numCols | Integer | &rarr; | 取得するカラムの位置 |
+| 戻り値 | Object | &larr; | 選択されたカラムを含む新しいテーブルレンジ |
 
 <!-- END REF-->
 

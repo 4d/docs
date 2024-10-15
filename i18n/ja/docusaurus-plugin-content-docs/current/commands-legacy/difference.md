@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DIFFERENCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | Text | &srarr; | セット |
-| subtractSet | Text | &srarr; | 取り除くセット |
-| resultSet | Text | &srarr; | 結果のセット |
+| set | Text | &rarr; | セット |
+| subtractSet | Text | &rarr; | 取り除くセット |
+| resultSet | Text | &rarr; | 結果のセット |
 
 <!-- END REF-->
 

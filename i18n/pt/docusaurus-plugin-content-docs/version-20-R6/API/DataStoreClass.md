@@ -6,7 +6,7 @@ title: DataStore
 A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. Os objetos `Datastore` são retornados pelos seguintes comandos:
 
 - [ds](#ds): um atalho para o datastore principal
-- [Open datastore](#open-datastore): to open any remote datastore
+- [Abrir datastore](#open-datastore): para abrir qualquer datastore remoto
 
 ### Resumo
 
@@ -58,17 +58,17 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 #### Descrição
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+O comando `ds` <!-- REF #_command_.ds.Summary -->retorna uma referência ao datastore que corresponde ao banco de dados 4D atual ou ao banco de dados designado por *localID*<!-- END REF -->.
 
-If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). O repositório de dados é aberto automaticamente e está disponível diretamente por meio do `ds`.
+Se omitir o parâmetro localID (ou se passa uma string vazia ""), o comando devolve uma referência ao armazém de dados que coincide com a base de dados local de 4D (ou  a base de datos de 4D Server em caso de abrir uma base de dados remota em 4D Server). O repositório de dados é aberto automaticamente e está disponível diretamente por meio do `ds`.
 
-You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](#open-datastore) command by the current database (host or component). A identificação local se define quando se utilizar este comando.
+Você também pode obter uma referência em um datastore remoto aberto passando seu ID local no parâmetro *localID*. O datastore deve ter sido aberto anteriormente com o comando [`Open datastore`](#open-datastore) pelo banco de dados atual (host ou componente). A identificação local se define quando se utilizar este comando.
 
 > O escopo do id local do banco de dados no qual o armazen de dados foi aberto.
 
 Se nenhum datastore *localID* for encontrado, o comando retornará **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Os objetos disponíveis no `cs.Datastore` são mapeados a partir do banco de dados de destino de acordo com as [regras gerais do ORDA] (ORDA/dsMapping.md#general-rules).
 
 #### Exemplo 1
 
@@ -141,21 +141,21 @@ Os seguintes datastores remotos são compatíveis com o comando:
 
 :::note
 
-`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Consulte a seção [user login mode](../REST/authUsers.md#user-login-modes) para saber como configurar a autenticação dependendo do modo de login do usuário atual selecionado.
 
 :::
 
-Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
+Passe em connectionInfo um objeto que desceva o armazém de dados remoto ao que quiser se conectar. It can contain the following properties (all properties are optional except *hostname*):
 
-| Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                                           | Aplicação Qodly                                                              |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                                                           | API Endpoint de instância Qodly cloud                                        |
-| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                               | - (ignorado)                                              |
-| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                              | - (ignorado)                                              |
-| idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). Para saber mais informação, consulte **Fechamento de sessões**. | - (ignorado)                                              |
-| tls         | Parâmetros | True para usar conexão segura(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                               | True para usar conexão segura. Se omitido, false por defeito |
-| type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                          | - (ignorado)                                              |
-| api-key     | Text       | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                                               | API key da instância Qodly cloud                                             |
+| Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Aplicação Qodly                                                              |
+| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                                                                          | API Endpoint de instância Qodly cloud                                        |
+| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                              | - (ignorado)                                              |
+| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - (ignorado)                                              |
+| idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). O valor não pode ser < 60 (se for passado um valor menor, o tempo limite será definido como 60). Para obter mais informações, veja **Sessões de encerramento**. | - (ignorado)                                              |
+| tls         | Parâmetros | True para usar conexão segura(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                                              | True para usar conexão segura. Se omitido, false por defeito |
+| type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                         | - (ignorado)                                              |
+| api-key     | Text       | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                                                              | API key da instância Qodly cloud                                             |
 
 (1) Se `tls` for true, o protocolo HTTPS é utilizado se:
 
@@ -163,7 +163,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 - o número de porto especificado coincide com o porto HTTPS configurado nos ajustes do banco de dados
 - a valid certificate and private encryption key are installed in the 4D application. Senão é mostrado o erro "1610 - A remote request to host xxx has failed"
 
-*localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
+*localID* é um alias local para a sessão aberta no armazenamento de dados remoto. Se *localID* já existir no aplicativo, ele será usado. Caso contrário, uma nova sessão *localID* é criada quando o objeto de armazenamento de dados é usado.
 
 Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma referência sobre o mesmo objeto datastore:
 
@@ -449,7 +449,7 @@ A função `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->
 
 Esta função só pode ser chamada:
 
-- no datastore local ([`ds`](#ds)).
+- no repositório de dados local ([`ds`](#ds)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
@@ -600,7 +600,7 @@ A função `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summary
 
 Esta função só pode ser chamada:
 
-- no datastore local ([`ds`](#ds)).
+- no repositório de dados local ([`ds`](#ds)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
@@ -1047,7 +1047,7 @@ A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary
 
 Esta função só pode ser chamada:
 
-- no datastore local ([`ds`](#ds)).
+- no repositório de dados local ([`ds`](#ds)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::

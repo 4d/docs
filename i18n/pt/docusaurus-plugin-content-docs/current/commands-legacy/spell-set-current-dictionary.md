@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dicionário | Integer, Text | &srarr; | Dicionário a ser usado para correção ortográfica |
+| dicionário | Integer, Text | &rarr; | Dicionário a ser usado para correção ortográfica |
 
 <!-- END REF-->
 

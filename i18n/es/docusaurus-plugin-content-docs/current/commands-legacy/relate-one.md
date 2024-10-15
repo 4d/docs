@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tablasN &#124; CampoN | Tabla, Campo | &srarr; | Tabla para la cual definir todas las relaciones automáticas o Campo con la relación manual con la tabla Uno |
-| discriminante | Field | &srarr; | Campo discriminante de la tabla 1 |
+| tablasN &#124; CampoN | Tabla, Campo | &rarr; | Tabla para la cual definir todas las relaciones automáticas o Campo con la relación manual con la tabla Uno |
+| discriminante | Field | &rarr; | Campo discriminante de la tabla 1 |
 
 <!-- END REF-->
 

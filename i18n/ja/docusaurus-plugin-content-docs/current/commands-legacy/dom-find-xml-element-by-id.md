@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Find XML element by ID.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML要素参照 |
-| id | Text | &srarr; | 検索する要素のID属性値 |
+| elementRef | Text | &rarr; | XML要素参照 |
+| id | Text | &rarr; | 検索する要素のID属性値 |
 | 戻り値 | Text | &larr; | 見つけた要素の参照 (該当する場合) |
 
 <!-- END REF-->

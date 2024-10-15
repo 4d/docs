@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Export structure file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpeta | Text | &srarr; | Ruta de la carpeta de destino para archivos de proyecto |
-| opciones | Object | &srarr; | Opciones de exportar |
+| rutaCarpeta | Text | &rarr; | Ruta de la carpeta de destino para archivos de proyecto |
+| opciones | Object | &rarr; | Opciones de exportar |
 | Resultado | Object | &larr; | Estado de validación y mensajes (si los hay) |
 
 <!-- END REF-->

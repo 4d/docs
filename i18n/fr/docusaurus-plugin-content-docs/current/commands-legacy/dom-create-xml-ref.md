@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| racine | Text | &srarr; | Nom de l’élément racine |
-| nameSpace | Text | &srarr; | Valeur de l’espace de nommage (Namespace) |
-| nSNom | Text | &srarr; | Nom d’espace de nommage |
-| nSValeur | Text | &srarr; | Valeur d’espace de nommage |
+| racine | Text | &rarr; | Nom de l’élément racine |
+| nameSpace | Text | &rarr; | Valeur de l’espace de nommage (Namespace) |
+| nSNom | Text | &rarr; | Nom d’espace de nommage |
+| nSValeur | Text | &rarr; | Valeur d’espace de nommage |
 | Résultat | Text | &larr; | Référence de l’élément XML racine |
 
 <!-- END REF-->

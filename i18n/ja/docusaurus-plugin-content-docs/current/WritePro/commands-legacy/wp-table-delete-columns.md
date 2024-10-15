@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| tableRef | オブジェクト | &#x1F852; | 表の参照 |
-| colNumber | 倍長整数 | &#x1F852; | カラムの番号 |
-| numColumns | 倍長整数 | &#x1F852; | 削除するカラムの数(デフォルト値=1) |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| tableRef | Object | &rarr; | 表の参照 |
+| colNumber | Integer | &rarr; | カラムの番号 |
+| numColumns | Integer | &rarr; | 削除するカラムの数(デフォルト値=1) |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objFaixa | Objeto | &#x1F852; | faixa de objetos ou elemento do documento 4D Write Pro |
-| Resultado | Objeto | &#x1F850; | Objeto de Faixa contendo apenas tabelas |
+| objFaixa | Object | &rarr; | faixa de objetos ou elemento do documento 4D Write Pro |
+| Resultado | Object | &larr; | Objeto de Faixa contendo apenas tabelas |
 
 <!-- END REF-->
 

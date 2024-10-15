@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row font style.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
-| object | any | &srarr; | オブジェクト名(*指定時)、または変数(*省略時) |
-| row | Integer | &srarr; | 列番号 |
+| * | 演算子 | &rarr; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
+| object | any | &rarr; | オブジェクト名(*指定時)、または変数(*省略時) |
+| row | Integer | &rarr; | 列番号 |
 | 戻り値 | Integer | &larr; | スタイルの値 |
 
 <!-- END REF-->

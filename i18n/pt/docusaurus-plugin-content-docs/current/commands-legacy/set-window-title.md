@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| titulo | Text | &srarr; | título da janela |
-| janela | Integer | &srarr; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| titulo | Text | &rarr; | título da janela |
+| janela | Integer | &rarr; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 
 <!-- END REF-->
 

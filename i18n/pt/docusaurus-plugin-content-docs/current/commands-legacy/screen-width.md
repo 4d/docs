@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Screen width.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Windows: largo da janela da aplicação ou altura da tela se especificada * Macintosh: largo da tela principal |
+| * | Operador | &rarr; | Windows: largo da janela da aplicação ou altura da tela se especificada * Macintosh: largo da tela principal |
 | Resultado | Integer | &larr; | Largo expressado em pixeles |
 
 <!-- END REF-->

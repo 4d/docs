@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Subtotal.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| valeurs | Field | &srarr; | Champ ou variable numérique dont vous voulez calculer le sous-total |
-| sautPage | Integer | &srarr; | Niveau de rupture auquel effectuer un saut de page |
+| valeurs | Field | &rarr; | Champ ou variable numérique dont vous voulez calculer le sous-total |
+| sautPage | Integer | &rarr; | Niveau de rupture auquel effectuer un saut de page |
 | Résultat | Real | &larr; | Sous-total de valeurs |
 
 <!-- END REF-->

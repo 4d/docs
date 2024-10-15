@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| url | Text | &harr; | エラー元のURL |
-| description | Text | &harr; | エラーの説明 (Mac OS) |
-| errorCode | Integer | &harr; | エラーコード |
+| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| url | Text | &larr; | エラー元のURL |
+| description | Text | &larr; | エラーの説明 (Mac OS) |
+| errorCode | Integer | &larr; | エラーコード |
 
 <!-- END REF-->
 

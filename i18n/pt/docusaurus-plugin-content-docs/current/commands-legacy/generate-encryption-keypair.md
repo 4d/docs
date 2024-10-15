@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| chavPriv | Blob | &harr; | BLOB que contém a chave privada |
-| chavPublica | Blob | &harr; | BLOB que contém a chave pública |
-| tamanho | Integer | &srarr; | Tamanho da chave (bits) [512...2048]. O valor normal é  512 |
+| chavPriv | Blob | &larr; | BLOB que contém a chave privada |
+| chavPublica | Blob | &larr; | BLOB que contém a chave pública |
+| tamanho | Integer | &rarr; | Tamanho da chave (bits) [512...2048]. O valor normal é  512 |
 
 <!-- END REF-->
 

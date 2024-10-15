@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referência da área |
-| esquerda | Integer | &srarr; | Borda esquerda |
-| superior | Integer | &srarr; | margem superiro |
-| direita | Integer | &srarr; | limite direita |
-| inferior | Integer | &srarr; | limite inferior |
+| area | Integer | &rarr; | Referência da área |
+| esquerda | Integer | &rarr; | Borda esquerda |
+| superior | Integer | &rarr; | margem superiro |
+| direita | Integer | &rarr; | limite direita |
+| inferior | Integer | &rarr; | limite inferior |
 
 <!-- END REF-->
 

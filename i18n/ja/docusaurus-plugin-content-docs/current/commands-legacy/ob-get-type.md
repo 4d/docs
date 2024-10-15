@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Get type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &srarr; | 構造化されたオブジェクト |
-| property | Text | &srarr; | 読み出したいプロパティ名 |
+| object | Object | &rarr; | 構造化されたオブジェクト |
+| property | Text | &rarr; | 読み出したいプロパティ名 |
 | 戻り値 | Integer | &larr; | プロパティの値のタイプ |
 
 <!-- END REF-->

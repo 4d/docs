@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SELECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, wpArea é um formulário nome objeto (string). Se omitido, wpArea é um campo objeto ou variável |
-| wpArea | String, Objeto | &#x1F852; | Nome de objeto formulário (se * for especificado) ou objeto variável ou campo 4D Write Pro (se * for omitido) |
-| wpArea | Objeto | &#x1F852; | Nome de objeto de formulário (se * for especificado) ou 4D Write Pro variável objeto ou campo (se * for omitido) |
-| faixaInicio | Inteiro longo | &#x1F852; | Início offset da faixa de texto |
-| faixaFim | Inteiro longo | &#x1F852; | Final offset da faixa de texto |
+| * | Operador | &rarr; | Se especificado, wpArea é um formulário nome objeto (string). Se omitido, wpArea é um campo objeto ou variável |
+| wpArea | Text, Object | &rarr; | Nome de objeto formulário (se * for especificado) ou objeto variável ou campo 4D Write Pro (se * for omitido) |
+| wpArea | Object | &rarr; | Nome de objeto de formulário (se * for especificado) ou 4D Write Pro variável objeto ou campo (se * for omitido) |
+| faixaInicio | Integer | &rarr; | Início offset da faixa de texto |
+| faixaFim | Integer | &rarr; | Final offset da faixa de texto |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| arrObjetos | Text array | &harr; | Nombre de los objetos del formulario |
-| arrVariables | Pointer array | &harr; | Punteros a variables o campos asociados a los objetos |
-| arrPags | Array integer | &harr; | Número de página de cada objeto |
-| opcionPag | Integer, * | &srarr; | 1=Página actual del formulario, 2=Todas las páginas, 4=Páginas heredadas<br/>Si se pasa * (obsoleto) = página actual con objetos heredados |
+| arrObjetos | Text array | &larr; | Nombre de los objetos del formulario |
+| arrVariables | Pointer array | &larr; | Punteros a variables o campos asociados a los objetos |
+| arrPags | Array integer | &larr; | Número de página de cada objeto |
+| opcionPag | Integer, * | &rarr; | 1=Página actual del formulario, 2=Todas las páginas, 4=Páginas heredadas<br/>Si se pasa * (obsoleto) = página actual con objetos heredados |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &srarr; | プロセス番号 |
-| procName | Text | &harr; | プロセス名 |
-| procState | Integer | &harr; | プロセスの状態 |
-| procTime | Integer | &harr; | プロセスの稼働時間 (Tick) |
-| procMode | Boolean, Integer | &harr; | TRUE: 表示, FALSE: 非表示 |
-| uniqueID | Integer | &harr; | ユニークなプロセス番号 |
-| origin | Integer | &harr; | プロセスの発生源 |
+| process | Integer | &rarr; | プロセス番号 |
+| procName | Text | &larr; | プロセス名 |
+| procState | Integer | &larr; | プロセスの状態 |
+| procTime | Integer | &larr; | プロセスの稼働時間 (Tick) |
+| procMode | Boolean, Integer | &larr; | TRUE: 表示, FALSE: 非表示 |
+| uniqueID | Integer | &larr; | ユニークなプロセス番号 |
+| origin | Integer | &larr; | プロセスの発生源 |
 
 <!-- END REF-->
 

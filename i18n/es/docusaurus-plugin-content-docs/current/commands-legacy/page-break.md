@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAGE BREAK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * &#124; > | &srarr; | * Cancela la impresión iniciada por Print form, o > Manda un trabajo de impresión |
+| * &#124; > | &rarr; | * Cancela la impresión iniciada por Print form, o > Manda un trabajo de impresión |
 
 <!-- END REF-->
 

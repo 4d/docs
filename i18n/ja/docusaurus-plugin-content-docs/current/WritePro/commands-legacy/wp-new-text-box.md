@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New text box.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | オブジェクト | &#x1F852; | 4D Write Pro document |
-| pageNum | 数値 | &#x1F852; | Page number where to anchor the text box |
-| 戻り値 | オブジェクト | &#x1F850; | Text box object |
+| wpDoc | Object | &rarr; | 4D Write Pro document |
+| pageNum | Number | &rarr; | Page number where to anchor the text box |
+| 戻り値 | Object | &larr; | Text box object |
 
 <!-- END REF-->
 

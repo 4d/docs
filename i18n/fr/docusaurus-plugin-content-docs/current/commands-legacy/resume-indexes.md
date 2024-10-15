@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table pour laquelle réactiver les index |
-| * | Opérateur | &srarr; | Si passé = indexation asynchrone |
+| laTable | Table | &rarr; | Table pour laquelle réactiver les index |
+| * | Opérateur | &rarr; | Si passé = indexation asynchrone |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de laquelle lire les enregistrements marqués Si omis, table du formulaire courant |
-| nomEnsemble | Text | &srarr; | Ensemble dans lequel stocker les enregistrements marqués |
+| laTable | Table | &rarr; | Table de laquelle lire les enregistrements marqués Si omis, table du formulaire courant |
+| nomEnsemble | Text | &rarr; | Ensemble dans lequel stocker les enregistrements marqués |
 
 <!-- END REF-->
 

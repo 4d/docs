@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XMLルート要素参照 |
-| xPath | Text | &srarr; | 作成するXML要素のXPathパス |
-| attribNamesArray | Text array | &srarr; | 属性名配列 |
-| attribValuesArray | Text array | &srarr; | 属性値配列 |
+| elementRef | Text | &rarr; | XMLルート要素参照 |
+| xPath | Text | &rarr; | 作成するXML要素のXPathパス |
+| attribNamesArray | Text array | &rarr; | 属性名配列 |
+| attribValuesArray | Text array | &rarr; | 属性値配列 |
 | 戻り値 | Text | &larr; | 作成されたXML要素の参照 |
 
 <!-- END REF-->

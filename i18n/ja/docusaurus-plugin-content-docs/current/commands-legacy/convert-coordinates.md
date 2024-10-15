@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| xCoord | Integer | &srarr; | 点の水平方向の座標(変換前) |
-| &harr; | 点の水平方向の座標(変換後) |
-| yCoord | Integer | &srarr; | 点の垂直方向の座標(変換前) |
-| &harr; | 点の垂直方向の座標(変換後) |
-| from | Integer | &srarr; | 変換前の座標系 |
-| to | Integer | &srarr; | 変換後の座標系 |
+| xCoord | Integer | &rarr; | 点の水平方向の座標(変換前) |
+| &larr; | 点の水平方向の座標(変換後) |
+| yCoord | Integer | &rarr; | 点の垂直方向の座標(変換前) |
+| &larr; | 点の垂直方向の座標(変換後) |
+| from | Integer | &rarr; | 変換前の座標系 |
+| to | Integer | &rarr; | 変換後の座標系 |
 
 <!-- END REF-->
 

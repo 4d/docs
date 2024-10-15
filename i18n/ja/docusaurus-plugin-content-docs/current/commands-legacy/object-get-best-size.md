@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| bestWidth | Integer | &harr; | 最適オブジェクト幅 |
-| bestHeight | Integer | &harr; | 最適オブジェクト高さ |
-| maxWidth | Integer | &srarr; | 最大オブジェクト幅 |
+| * | 演算子 | &rarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| bestWidth | Integer | &larr; | 最適オブジェクト幅 |
+| bestHeight | Integer | &larr; | 最適オブジェクト高さ |
+| maxWidth | Integer | &rarr; | 最大オブジェクト幅 |
 
 <!-- END REF-->
 

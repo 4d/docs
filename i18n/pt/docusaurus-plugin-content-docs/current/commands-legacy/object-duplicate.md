@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | any | &srarr; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * for omitido) |
-| novoNome | Text | &srarr; | Nome do novo objeto |
-| novaVar | Pointer | &srarr; | Ponteiro para a variável do novo objeto |
-| relacionadoA | Text | &srarr; | Nome do objeto editável anterior (ou do botão de opção) |
-| moverH | Integer | &srarr; | Deslocamento horizontal do novo objeto (>0 = a direita, <0 para a esquerda) |
-| moverV | Integer | &srarr; | Deslocamento vertical do novo objeto (>0 = para baixo, <0 = para cima) |
-| redimH | Integer | &srarr; | Valor do redimensionamento horizontal do objeto |
-| redimV | Integer | &srarr; | Valor do redimensionamento vrtical do objeto |
-| * | Operador | &srarr; | se especificado = coordenadas absolutadas, se omitida = coordenadas relativas |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
+| objeto | any | &rarr; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * for omitido) |
+| novoNome | Text | &rarr; | Nome do novo objeto |
+| novaVar | Pointer | &rarr; | Ponteiro para a variável do novo objeto |
+| relacionadoA | Text | &rarr; | Nome do objeto editável anterior (ou do botão de opção) |
+| moverH | Integer | &rarr; | Deslocamento horizontal do novo objeto (>0 = a direita, <0 para a esquerda) |
+| moverV | Integer | &rarr; | Deslocamento vertical do novo objeto (>0 = para baixo, <0 = para cima) |
+| redimH | Integer | &rarr; | Valor do redimensionamento horizontal do objeto |
+| redimV | Integer | &rarr; | Valor do redimensionamento vrtical do objeto |
+| * | Operador | &rarr; | se especificado = coordenadas absolutadas, se omitida = coordenadas relativas |
 
 <!-- END REF-->
 

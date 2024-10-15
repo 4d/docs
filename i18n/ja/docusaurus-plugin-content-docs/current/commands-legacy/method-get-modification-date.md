@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text, Text配列 | &srarr; | メソッドパスを格納したテキストまたはテキスト配列 |
-| modDate | Date, Date配列 | &harr; | メソッド更新日 |
-| modTime | Time, Integer array | &harr; | メソッド更新時刻 |
-| * | 演算子 | &srarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| path | Text, Text配列 | &rarr; | メソッドパスを格納したテキストまたはテキスト配列 |
+| modDate | Date, Date配列 | &larr; | メソッド更新日 |
+| modTime | Time, Integer array | &larr; | メソッド更新時刻 |
+| * | 演算子 | &rarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
-| nuevText | Text | &srarr; | Texto a insertar |
-| inicioSel | Integer | &srarr; | Inicio de la selección |
-| finSel | Integer | &srarr; | Fin de la selección |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
+| nuevText | Text | &rarr; | Texto a insertar |
+| inicioSel | Integer | &rarr; | Inicio de la selección |
+| finSel | Integer | &rarr; | Fin de la selección |
 
 <!-- END REF-->
 

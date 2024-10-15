@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.List item position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &srarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef | Integer | &srarr; | Item reference number |
+| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemRef | Integer | &rarr; | Item reference number |
 | Function result | Longint | &larr; | Item position in expanded/collapsed lists |
 
 <!-- END REF-->

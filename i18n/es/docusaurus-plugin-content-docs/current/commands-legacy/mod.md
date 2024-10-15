@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Mod.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| número1 | Integer | &srarr; | Número a dividir |
-| número2 | Integer | &srarr; | Número divisor |
+| número1 | Integer | &rarr; | Número a dividir |
+| número2 | Integer | &rarr; | Número divisor |
 | Resultado | Real | &larr; | Devuelve el resto de la división |
 
 <!-- END REF-->

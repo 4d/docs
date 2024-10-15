@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userID | Integer | &srarr; | ユーザーアカウントのユニークなID番号、<br/>または -1= デザイナーに関連した新規ユーザーの追加 -2= 管理者に関連した新規ユーザーの追加 |
-| &harr; | 追加したユーザーアカウント (あれば) のユニークなID番号 |
-| name | Text | &srarr; | 新規ユーザーの名前 |
-| startup | Text | &srarr; | 新規ユーザースタートアップメソッドの名前 |
-| password | Text | &srarr; | 新しい (暗号化されていない) パスワード、または * を指定すると、パスワードは以前のまま |
-| nbLogin | Integer | &srarr; | データベースへログインした回数 (バイナリデータベースのみ) |
-| lastLogin | Date | &srarr; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
-| memberships | Integer array | &srarr; | ユーザーが属するグループのID番号 |
-| groupOwner | Integer | &srarr; | ユーザーグループオーナーの参照番号 (バイナリデータベースのみ) |
+| userID | Integer | &rarr; | ユーザーアカウントのユニークなID番号、<br/>または -1= デザイナーに関連した新規ユーザーの追加 -2= 管理者に関連した新規ユーザーの追加 |
+| &larr; | 追加したユーザーアカウント (あれば) のユニークなID番号 |
+| name | Text | &rarr; | 新規ユーザーの名前 |
+| startup | Text | &rarr; | 新規ユーザースタートアップメソッドの名前 |
+| password | Text | &rarr; | 新しい (暗号化されていない) パスワード、または * を指定すると、パスワードは以前のまま |
+| nbLogin | Integer | &rarr; | データベースへログインした回数 (バイナリデータベースのみ) |
+| lastLogin | Date | &rarr; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
+| memberships | Integer array | &rarr; | ユーザーが属するグループのID番号 |
+| groupOwner | Integer | &rarr; | ユーザーグループオーナーの参照番号 (バイナリデータベースのみ) |
 | 戻り値 | Integer | &larr; | 新規ユーザーのユニークなID番号 |
 
 <!-- END REF-->

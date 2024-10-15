@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Picture | &srarr; | Champ ou variable image 4D à passer en imagette |
-| dest | Picture | &harr; | Imagette résultante |
-| largeur | Integer | &srarr; | Largeur de l’imagette en pixels, Par défaut = 48 |
-| hauteur | Integer | &srarr; | Hauteur de l’imagette en pixels, Par défaut = 48 |
-| mode | Integer | &srarr; | Mode de création de l’imagette Par défaut = proportionnelle centrée (6) |
-| profondeur | Integer | &srarr; | Obsolète, ne pas utiliser |
+| source | Picture | &rarr; | Champ ou variable image 4D à passer en imagette |
+| dest | Picture | &larr; | Imagette résultante |
+| largeur | Integer | &rarr; | Largeur de l’imagette en pixels, Par défaut = 48 |
+| hauteur | Integer | &rarr; | Hauteur de l’imagette en pixels, Par défaut = 48 |
+| mode | Integer | &rarr; | Mode de création de l’imagette Par défaut = proportionnelle centrée (6) |
+| profondeur | Integer | &rarr; | Obsolète, ne pas utiliser |
 
 <!-- END REF-->
 

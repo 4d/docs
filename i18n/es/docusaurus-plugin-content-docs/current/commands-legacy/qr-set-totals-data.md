@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referencia del área |
-| numColumna | Integer | &srarr; | Número de columna |
-| numRuptura | Integer | &srarr; | Número de ruptura |
-| operador &#124; valor | Entero largo, Cadena | &srarr; | Operador para la celda o contenido de la celda |
+| area | Integer | &rarr; | Referencia del área |
+| numColumna | Integer | &rarr; | Número de columna |
+| numRuptura | Integer | &rarr; | Número de ruptura |
+| operador &#124; valor | Entero largo, Cadena | &rarr; | Operador para la celda o contenido de la celda |
 
 <!-- END REF-->
 

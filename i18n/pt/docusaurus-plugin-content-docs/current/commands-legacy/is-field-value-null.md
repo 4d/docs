@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field value Null.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &srarr; | Campo a ser avaliado |
+| campo | Field | &rarr; | Campo a ser avaliado |
 | Resultado | Boolean | &larr; | TRUE = campo é NULL, False = campo não é NULL |
 
 <!-- END REF-->

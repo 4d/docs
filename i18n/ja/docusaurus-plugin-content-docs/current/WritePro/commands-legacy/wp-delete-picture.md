@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| imgObj | オブジェクト | &#x1F852; | 画像オブジェクト(インラインまたはアンカー) |
+| imgObj | Object | &rarr; | 画像オブジェクト(インラインまたはアンカー) |
 
 <!-- END REF-->
 

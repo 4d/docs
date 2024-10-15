@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table à paramétrer ou Table par défaut si ce paramètre est omis |
-| sélecteur | Integer | &srarr; | Code du paramètre de la base à modifier |
-| valeur | Real, Text | &srarr; | Valeur du paramètre |
+| laTable | Table | &rarr; | Table à paramétrer ou Table par défaut si ce paramètre est omis |
+| sélecteur | Integer | &rarr; | Code du paramètre de la base à modifier |
+| valeur | Real, Text | &rarr; | Valeur du paramètre |
 
 <!-- END REF-->
 

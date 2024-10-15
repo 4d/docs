@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
-| type | Integer | &srarr; | レポートタイプ |
+| area | Integer | &rarr; | エリア参照 |
+| type | Integer | &rarr; | レポートタイプ |
 
 <!-- END REF-->
 

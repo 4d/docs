@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get formulas.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| Résultat | Collection | &#x1F850; | Collection de formules |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| Résultat | Collection | &larr; | Collection de formules |
 
 <!-- END REF-->
 

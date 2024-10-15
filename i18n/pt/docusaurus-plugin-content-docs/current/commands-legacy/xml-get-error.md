@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.XML GET ERROR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &srarr; | Referência de elemento XML |
-| textoErro | Variable | &harr; | Texto do erro |
-| linha | Variable | &harr; | Número de linha |
-| coluna | Variable | &harr; | Número de coluna |
+| refElemento | Text | &rarr; | Referência de elemento XML |
+| textoErro | Variable | &larr; | Texto do erro |
+| linha | Variable | &larr; | Número de linha |
+| coluna | Variable | &larr; | Número de coluna |
 
 <!-- END REF-->
 

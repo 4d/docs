@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Print settings to BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| printSettings | Blob | &harr; | Current print settings |
+| printSettings | Blob | &larr; | Current print settings |
 | Function result | Longint | &larr; | Status code: 1=Operation successful, 0=No current printer |
 
 <!-- END REF-->

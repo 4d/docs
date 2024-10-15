@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para a qual vai estabelecer o formulário output, ou tabela padrão, se omitido |
-| formulario | Text, Object | &srarr; | Nome formulário |
-| formUsuario | Text | &srarr; | Nome de formulário usuário a utilizar |
+| tabela | Table | &rarr; | Tabela para a qual vai estabelecer o formulário output, ou tabela padrão, se omitido |
+| formulario | Text, Object | &rarr; | Nome formulário |
+| formUsuario | Text | &rarr; | Nome de formulário usuário a utilizar |
 
 <!-- END REF-->
 

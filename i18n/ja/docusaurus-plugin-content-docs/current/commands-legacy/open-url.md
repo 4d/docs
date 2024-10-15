@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN URL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text | &srarr; | 開くドキュメントまたはURL |
-| appName | Text | &srarr; | 使用するアプリケーション名 |
-| * | 演算子 | &srarr; | 指定した場合 = URLをエンコードしない, 省略した場合 = URLをエンコードする |
+| path | Text | &rarr; | 開くドキュメントまたはURL |
+| appName | Text | &rarr; | 使用するアプリケーション名 |
+| * | 演算子 | &rarr; | 指定した場合 = URLをエンコードしない, 省略した場合 = URLをエンコードする |
 
 <!-- END REF-->
 

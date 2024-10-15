@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Character code.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| character | Text | &srarr; | 取得したい文字を得るためのコード |
+| character | Text | &rarr; | 取得したい文字を得るためのコード |
 | 戻り値 | Integer | &larr; | 文字コード |
 
 <!-- END REF-->

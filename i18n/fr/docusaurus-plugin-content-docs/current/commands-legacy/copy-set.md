@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| srcEns | Text | &srarr; | Nom de l'ensemble source |
-| dstEns | Text | &srarr; | Nom de l'ensemble de destination |
+| srcEns | Text | &rarr; | Nom de l'ensemble source |
+| dstEns | Text | &rarr; | Nom de l'ensemble de destination |
 
 <!-- END REF-->
 

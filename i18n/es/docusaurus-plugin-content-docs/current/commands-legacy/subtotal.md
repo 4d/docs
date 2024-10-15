@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Subtotal.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valores | Field | &srarr; | Campo o variable numérica donde quiere devolver el subtotal |
-| saltoPag | Integer | &srarr; | Nivel de ruptura para el cual efectuar un salto de página |
+| valores | Field | &rarr; | Campo o variable numérica donde quiere devolver el subtotal |
+| saltoPag | Integer | &rarr; | Nivel de ruptura para el cual efectuar un salto de página |
 | Resultado | Real | &larr; | Subtotal de valores |
 
 <!-- END REF-->

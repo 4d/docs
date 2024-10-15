@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SMTP New transporter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| server | Object | &srarr; | Mail server information |
+| server | Object | &rarr; | Mail server information |
 | Function result | 4D.SMTPTransporter | &larr; | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->

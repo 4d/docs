@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &srarr; | Picture to be placed in pasteboard |
+| picture | Picture | &rarr; | Picture to be placed in pasteboard |
 
 <!-- END REF-->
 

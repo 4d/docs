@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Num.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Text, Boolean, Integer | &srarr; | Chaîne à convertir en numérique ou Booléen à convertir en 0 ou 1 ou Expression numérique |
-| séparateur | Text | &srarr; | Séparateur décimal |
+| expression | Text, Boolean, Integer | &rarr; | Chaîne à convertir en numérique ou Booléen à convertir en 0 ou 1 ou Expression numérique |
+| séparateur | Text | &rarr; | Séparateur décimal |
 | Résultat | Real | &larr; | Valeur numérique du paramètre expression |
 
 <!-- END REF-->

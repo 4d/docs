@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INTERSECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto1 | Text | &srarr; | Primeiro conjunto |
-| conjunto2 | Text | &srarr; | Segundo conjunto |
-| conjuntoResultado | Text | &srarr; | Conjunto Resultado |
+| conjunto1 | Text | &rarr; | Primeiro conjunto |
+| conjunto2 | Text | &rarr; | Segundo conjunto |
+| conjuntoResultado | Text | &rarr; | Conjunto Resultado |
 
 <!-- END REF-->
 

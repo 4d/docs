@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array to which an element will be appended |
-| value | Expression | &srarr; | Value to append |
+| array | Array | &rarr; | Array to which an element will be appended |
+| value | Expression | &rarr; | Value to append |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campoObjeto | Field | &srarr; | campo objeto indexado |
-| rotaArray | Text array | &harr; | Array que vai receber a lsita de diferentes rotas |
+| campoObjeto | Field | &rarr; | campo objeto indexado |
+| rotaArray | Text array | &larr; | Array que vai receber a lsita de diferentes rotas |
 
 <!-- END REF-->
 

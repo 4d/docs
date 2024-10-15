@@ -232,7 +232,7 @@ O nome de uma variável interprocessada começa sempre com os símbolos (`<>`) -
 Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) partilham a mesma definição de variáveis interprocessadas, mas cada máquina tem um exemplo diferente para cada variável.
 
 
-## System Variables
+## Variáveis do sistema
 
 The 4D language manages several **system variables**, which allow you to control the execution of different operations. You can test their values and use them as any variable. All system variables are [process variables](#process-variables).
 

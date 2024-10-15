@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get indexed string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resID | Integer | &srarr; | リソースID番号、または 'group'要素の'id'属性 (XLIFF) |
-| strID | Integer | &srarr; | ストリング番号、または 'trans-unit'要素の'id'属性 (XLIFF) |
-| resFile | Time | &srarr; | リソースファイル参照番号、または 省略時: すべてのXLIFFファイル、または 開かれているリソースファイル |
+| resID | Integer | &rarr; | リソースID番号、または 'group'要素の'id'属性 (XLIFF) |
+| strID | Integer | &rarr; | ストリング番号、または 'trans-unit'要素の'id'属性 (XLIFF) |
+| resFile | Time | &rarr; | リソースファイル参照番号、または 省略時: すべてのXLIFFファイル、または 開かれているリソースファイル |
 | 戻り値 | Text | &larr; | インデックス付きストリングの値 |
 
 <!-- END REF-->

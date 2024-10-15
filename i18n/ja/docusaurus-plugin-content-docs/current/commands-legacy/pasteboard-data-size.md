@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Pasteboard data size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataType | Text | &srarr; | データタイプ |
+| dataType | Text | &rarr; | データタイプ |
 | 戻り値 | Integer | &larr; | ペーストボード中のデータサイズ (バイト) またはエラーコード |
 
 <!-- END REF-->

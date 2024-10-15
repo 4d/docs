@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Day number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laDate | Date | &srarr; | Date dont vous souhaitez connaître le numéro du jour |
+| laDate | Date | &rarr; | Date dont vous souhaitez connaître le numéro du jour |
 | Résultat | Integer | &larr; | Numéro représentant le jour de la semaine auquel date correspond |
 
 <!-- END REF-->

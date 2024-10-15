@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONFIRM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| message | Text | &srarr; | 確認ダイアログボックスに表示するメッセージ |
-| OK button title | 文字 | &srarr; | OKボタンのタイトル |
-| cancel button title | 文字 | &srarr; | キャンセルボタンのタイトル |
+| message | Text | &rarr; | 確認ダイアログボックスに表示するメッセージ |
+| OK button title | 文字 | &rarr; | OKボタンのタイトル |
+| cancel button title | 文字 | &rarr; | キャンセルボタンのタイトル |
 
 <!-- END REF-->
 

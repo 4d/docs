@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.User in group.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| usuario | Text | &srarr; | Nombre del usuario |
-| grupo | Text | &srarr; | Nombre del grupo |
+| usuario | Text | &rarr; | Nombre del usuario |
+| grupo | Text | &rarr; | Nombre del grupo |
 | Resultado | Boolean | &larr; | TRUE = el usuario está en el grupo FALSE = el usuario no está en el grupo |
 
 <!-- END REF-->

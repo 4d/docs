@@ -10,7 +10,7 @@ This property is only available for list boxes with the following [data sources]
 - collection ou entity selection,
 - array (não hierárquico).
 
-A propriedade não está selecionada por padrão. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
+A propriedade não está selecionada por padrão. Note that only columns with the option selected will be taken into account to calculate the row height. Note that only columns with the option selected will be taken into account to calculate the row height.
 
 :::note
 
@@ -123,7 +123,7 @@ Coordenada superior do objecto no formulário.
 
 </details>
 
-Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+Defines the corner roundness (in pixels) of the object. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 

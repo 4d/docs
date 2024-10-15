@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| tableRef | オブジェクト | &#x1F852; | 表の参照 |
-| rowNumber | 倍長整数 | &#x1F852; | 行インデックス番号 |
-| numRows | 倍長整数 | &#x1F852; | 削除する行の数(デフォルト値=1) |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| tableRef | Object | &rarr; | 表の参照 |
+| rowNumber | Integer | &rarr; | 行インデックス番号 |
+| numRows | Integer | &rarr; | 削除する行の数(デフォルト値=1) |
 
 <!-- END REF-->
 

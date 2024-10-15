@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Insert string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &srarr; | Chaîne dans laquelle effectuer l'insertion |
-| insertion | Text | &srarr; | Chaîne à insérer dans source |
-| positionDépart | Integer | &srarr; | Position de l'insertion |
+| source | Text | &rarr; | Chaîne dans laquelle effectuer l'insertion |
+| insertion | Text | &rarr; | Chaîne à insérer dans source |
+| positionDépart | Integer | &rarr; | Position de l'insertion |
 | Résultat | Text | &larr; | Chaîne résultante |
 
 <!-- END REF-->

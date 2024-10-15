@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT SYLK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
-| document | Text | &srarr; | データが書き出されるSYLKドキュメント |
+| aTable | Table | &rarr; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
+| document | Text | &rarr; | データが書き出されるSYLKドキュメント |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET DATA CONTEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | オブジェクト | &#x1F852; | 4D Write Pro ドキュメント |
-| contextData | オブジェクト | &#x1F852; | コンテキストに入れるデータ |
+| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
+| contextData | Object | &rarr; | コンテキストに入れるデータ |
 
 <!-- END REF-->
 

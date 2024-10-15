@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| rootFolder | Text | &srarr; | Webサーバルートフォルダのパス名 |
+| rootFolder | Text | &rarr; | Webサーバルートフォルダのパス名 |
 
 <!-- END REF-->
 

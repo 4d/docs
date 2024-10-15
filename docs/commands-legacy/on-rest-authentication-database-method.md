@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.On REST Authentication database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Text | &harr; | User name |
-| $2 | Text | &harr; | Password |
-| $3 | Boolean | &harr; | True = Digest mode, False = Basic mode |
-| $4 | Text | &harr; | Ip address of the caller |
+| $1 | Text | &larr; | User name |
+| $2 | Text | &larr; | Password |
+| $3 | Boolean | &larr; | True = Digest mode, False = Basic mode |
+| $4 | Text | &larr; | Ip address of the caller |
 | $0 | Boolean | &larr; | True = session opening accepted, False = session opening rejected |
 
 <!-- END REF-->

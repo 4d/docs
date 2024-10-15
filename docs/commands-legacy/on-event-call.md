@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON EVENT CALL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| eventMethod | Text | &srarr; | Event method to be invoked, or Empty string to stop intercepting events |
-| processName | Text | &srarr; | Process name |
+| eventMethod | Text | &rarr; | Event method to be invoked, or Empty string to stop intercepting events |
+| processName | Text | &rarr; | Process name |
 
 <!-- END REF-->
 

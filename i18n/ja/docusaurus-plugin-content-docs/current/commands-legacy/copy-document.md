@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| sourceName | Text | &srarr; | コピーするファイルやフォルダーのパス名 |
-| destinationName | Text | &srarr; | ファイルやフォルダーコピーの配置先名またはパス名 |
-| newName | Text | &srarr; | コピーされたファイルまたはフォルダの新しい名前 |
-| * | 演算子 | &srarr; | 存在する場合、既存のドキュメントを上書きする |
+| sourceName | Text | &rarr; | コピーするファイルやフォルダーのパス名 |
+| destinationName | Text | &rarr; | ファイルやフォルダーコピーの配置先名またはパス名 |
+| newName | Text | &rarr; | コピーされたファイルまたはフォルダの新しい名前 |
+| * | 演算子 | &rarr; | 存在する場合、既存のドキュメントを上書きする |
 
 <!-- END REF-->
 

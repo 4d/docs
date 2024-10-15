@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ENABLE MENU ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &srarr; | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
-| process | Integer | &srarr; | プロセス参照番号 |
+| menu | Integer, Text | &rarr; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &rarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| process | Integer | &rarr; | プロセス参照番号 |
 
 <!-- END REF-->
 

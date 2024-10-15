@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table of the current selection |
-| recordArray | Integer array | &harr; | Array of record numbers |
-| selection | Text | &srarr; | Name of the named selection or the current selection if this parameter is omitted |
+| aTable | Table | &rarr; | Table of the current selection |
+| recordArray | Array integer | &larr; | Array of record numbers |
+| selection | Text | &rarr; | Name of the named selection or the current selection if this parameter is omitted |
 
 <!-- END REF-->
 

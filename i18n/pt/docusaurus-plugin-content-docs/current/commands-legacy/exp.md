@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Exp.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &srarr; | Expoente n da exponenciação e^n |
+| numero | Real | &rarr; | Expoente n da exponenciação e^n |
 | Resultado | Real | &larr; | Número neperiano (e=2,718...) elevado a n |
 
 <!-- END REF-->

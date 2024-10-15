@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is empty.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &srarr; | Structured object |
+| object | Object, Object | &rarr; | Structured object |
 | Function result | Boolean | &larr; | True if object is empty or undefined, otherwise False |
 
 <!-- END REF-->

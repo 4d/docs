@@ -3,16 +3,53 @@ id: updates
 title: リリースノート
 ---
 
-## 4D 20.x
 
-[**4D 20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D 20 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+:::tip
 
-
-:::caution 4D v20.2 以降の4D Server に接続する最小クライアントバージョンについて
-
-内部的な理由により、4D 20.2 以降の 4D Server に接続するリモートクライアントのバージョンは、4D 20.2 以上でなければなりません。
+Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.x LTS.
 
 :::
+
+## 4D 20.5 LTS
+
+#### ハイライト
+
+- 4D 20.5 LTS is certified on Windows 11 24H2.
+- 4D 20.5 LTS is certified on macOS Sequoïa (macOS 15).
+
+:::warning Known issue on Windows 11 24H2
+
+On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may fail due to an issue which is still under investigation. If you frequently print PDFs with your 4D application, we currently recommend that you do not upgrade to Windows 11 24H2.
+
+:::
+
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
+
+
+## 4D 20.4 LTS
+
+#### ハイライト
+
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
+
+## 4D 20.3 LTS
+
+#### ハイライト
+
+- CEF updated to Chromium 5993
+- SpreadJS updated to version 16.2.6 (in 4D 20.2 HF1).
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
+
+#### 動作の変更
+
+- 4D 20.3では、[4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/)場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore)コマンドの *connectionInfo* パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す *connectionInfo* で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
+
+
+## 4D 20.2 LTS
+
+#### ハイライト
+
+- 4D 20.2 は macOS Sonoma (macOS 14) 対応です。
 
 :::warning セキュリティに関する注記
 
@@ -20,25 +57,47 @@ title: リリースノート
 
 :::
 
-#### インデックス再構築の警告
+:::caution Minimal client version for 4D Server 20.2 and later
 
-4D 20 では、ICUライブラリのアップデート (後述参照) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
+内部的な理由により、4D 20.2 以降の 4D Server に接続するリモートクライアントのバージョンは、4D 20.2 以上でなければなりません。
+
+:::
+
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
+
+#### 動作の変更
+
+- 4D 20.2 以降、4D 20 LTS は Windows Server 2012 R2 との互換性がなくなりました。
+- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 A fix has been made in 4D as of versions **20.2** (20.1 HF1) and **20 R2** and the value is now 0.
+
+## 4D 20.1 LTS
+
+#### ハイライト
 
 :::caution 4D 20.1 インデックス再構築、およびクライアント/サーバーのバージョンについての警告
 
 4D 20.1 には ICUライブラリーのアップデートが含まれており、以下の影響があります:
 
 - 文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。
-- 並べ替えの一貫性のため、4Dリモートクライアントと 4Dサーバーは同じバージョンを使用する必要があります。4D 20.1 のリモートと 4D 20.1 の 4Dサーバーのみが互いに接続できます。
+- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server 20.1 and vice versa.
 
 :::
 
 
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+
+## 4D 20 LTS
+
+
 #### ハイライト
 
-- *SpreadJS* は 4D 20.2 HF1 でバージョン 16.2.6 にアップデートされました。
-- 4D 20.2 は macOS Sonoma (macOS 14) 対応です。
-- (4D 20.1) [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
+:::caution Index rebuild
+
+4D 20 では、ICUライブラリのアップデート (後述参照) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
+
+:::
+
+- New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
 - 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
@@ -61,14 +120,11 @@ title: リリースノート
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- 修正されたバグリスト: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4)。<br /> 日本語版はこちら: [4D 20](https://4d-jp.github.io/2024/170/release-note-version-20/) - [4D 20.1](https://4d-jp.github.io/2023/191/release-note-version-20/) - [4D 20.2](https://4d-jp.github.io/2023/292/release-note-version-20/) - [4D 20.3](https://4d-jp.github.io/2024/35/release-note-version-20/) - [4D 20.4](https://4d-jp.github.io/2024/158/release-note-version-20/)。
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20): list of all bugs that have been fixed in 4D 20 LTS.
 
 
 #### 動作の変更
 
-- 4D 20.3では、[4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/)場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore)コマンドの *connectionInfo* パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す *connectionInfo* で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
-- 4D 20.2 以降、4D 20 LTS は Windows Server 2012 R2 との互換性がなくなりました。
-- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
 - TLS v1.0 および TLS v1.1 は廃止され、4D Server において `Min TLS version` としてサポートされなくなりました。 現在はバージョン 1.3 がデフォルトで選択されています。`_o_TLSv1_0` または `_o_TLSv1_1` 定数が [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) で設定されている場合には、バージョン 1.3 が自動的に使用されます。
@@ -76,7 +132,7 @@ title: リリースノート
 - 4D 20 より、[4D for Mobile](https://developer.4d.com/go-mobile/) は 4D環境にデフォルトでインストールされなくなりました。 4D for Mobile の開発機能を 4D で利用するには、プロジェクトの ["Components"](../Project/architecture.md#components) フォルダーに [4D Mobile App コンポーネントをインストール](https://developer.4d.com/go-mobile/docs/getting-started/installation) する必要があります。 プロジェクトが [4D Mobile App Server コンポーネント](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server) の機能を使用している場合、こちらも同じ場所にインストールする必要があります。
 
 
-## 4D 19 R8
+### 4D 19 R8
 
 [**4D 19 R8 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19-r8/): 4D 19 R8 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
@@ -89,7 +145,6 @@ title: リリースノート
 - Windows で [SDIモードでのアプリケーションのテスト](../Menus/sdi.md#sdiモード利用条件) をサポート。
 - 4D View Pro:
     - 表組みにおけるテーマのサポート: 新しい [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) および [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) コマンドの追加、[VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) コマンドにテーマオプションを追加
-
     - 新しい [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) コマンドの追加
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。
@@ -104,7 +159,7 @@ title: リリースノート
 
 
 
-## 4D 19 R7
+### 4D 19 R7
 
 [**4D 19 R7 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19-r7/): 4D 19 R7 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
@@ -134,7 +189,7 @@ title: リリースノート
 - Wakanda/4D Mobile REST プロトコルを使用してプロジェクトメソッドを呼び出す機能が削除されました。 [ORDAデータモデルクラス関数](../REST/ClassFunctions.md) または [/4DACTION URL](../WebServer/httpRequests.md#4daction) を代わりに使用することができます。
 
 
-## 4D 19 R6
+### 4D 19 R6
 
 - 新しい [HTTPRequest](../API/HTTPRequestClass.md) クラス。
 - コードを呼び出すタイプの Collectionクラス関数が、*formula* 引数として Formulaオブジェクトをサポートするようになりました: [`.every()`](../API/CollectionClass.md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
@@ -147,7 +202,7 @@ title: リリースノート
 
 
 
-## 4D 19 R5
+### 4D 19 R5
 
 - ビルド時に、プロジェクトの [directory.json ファイル](../Users/editing.md#directoryjson-file) を [サーバーに埋め込む](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。 これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
 - ビルドするアプリケーションで、[使用しないモジュールの選択を解除](../Desktop/building.md#モジュールの選択解除) できるようになりました。
@@ -180,7 +235,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 
 
 
-## 4D 19 R4
+### 4D 19 R4
 
 - ORDAクラス: [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) が利用可能に。
 - ループにおける [break と continue](../Concepts/flow-control.md#break-と-continue) 文のサポート。
@@ -201,7 +256,7 @@ $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解�
 
 
 
-## 4D 19 R3
+### 4D 19 R3
 
 - クラス: [計算プロパティ](../Concepts/classes.md#function-get-と-function-set) が利用可能に。
 - ORDAクラス: [計算属性](../ORDA/ordaClasses.md#計算属性) が利用可能に。 計算プロパティと似ていますが、[クエリ](../ORDA/ordaClasses.md#function-query-attributename) や [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) 関数もサポートしています。
@@ -243,48 +298,18 @@ ALERT($param1+" "+$param2)
 
 
 
-## 4D 19 R2
+### 4D 19 R2
 
 - 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](../Preferences/general.md#gitignore-ファイルを作成する) が作成可能
 - 新しい [`4D.Blob`](Concepts/dt_blob.md#blob-の種類) オブジェクトを扱うための新しい[BlobクラスAPI](../API/BlobClass.md)
 - [`.setText()`](../API/FileClass.md#settext) におけるデフォルトの改行コード (EOL) の指定と `no-bom` のサポート
 
 
-## 過去のリリース
-
-<details><summary>過去のリリースについてはこちらをクリックしてください。</summary>
-
-### 4D 19
-
-:::warning セキュリティに関する注記
-
-4Dアプリケーションが TLS接続を使用する場合は、4D 19.7 LTS build 288986以上へのアップグレードが推奨されます。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
-
-:::
-
-- [IMAPTransporter クラス](../API/IMAPTransporterClass.md): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
-- [File クラス](../API/FileClass.md): 新しい `setAppInfo()` および `getAppInfo()` 関数
-- 新しい [4DEACH](../Tags/tags#4deach-と-4dendeach) 変換タグ
-- Web サーバー: 新しい [SameSite セッションcookie](../WebServer/webServerConfig.md#セッションcookie-samesite) 設定
-- [フォーム](../FormEditor/properties_FormProperties.md#カラースキーム) および [スタイルシート](../FormEditor/createStylesheet.md#メディアクエリ) 用のダークおよびライトカラースキームサポート
-- [コードエディター環境設定](../Preferences/methods.md#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
-- Apple Silicon プロセッサー用の [ネイティブコンパイル](../Project/compiler.md#コンパイラーメソッド)
-- エンティティセレクション型リストボックスの列で、[変数の計算](../FormObjects/properties_Object.md#変数の計算) プロパティがサポートされるようになりました。
-- 新しい包括的な [CLI](../Admin/cli.md) (コマンドラインインターフェース) ページ
+## 4D 19.x LTS
 
 
+See [**Release Notes for 4D 19.x LTS**](../../version-19/Notes/updates.md).
 
-### 4D 18 R6
-
-- [EntitySelection クラス](../API/EntitySelectionClass.md): `.average()`, `.max()` および `.min()` 関数は、エンティティセレクションが空の場合には *undefined* を返すようになりました。
-- [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` プロパティは OAuth 2.0 を有効化します。
-- [IMAP Mail](../API/IMAPTransporterClass.md): 新しい `.expunge()` および `.append()` 関数の追加。
-- 新しい [Web管理](../Admin/webAdmin.md) Webサーバーコンポーネント
-- 新しい [データエクスプローラー](../Admin/dataExplorer.md) インターフェース
-- 新しい Web [ユーザーセッション](../WebServer/sessions.md) および [その API](../API/SessionClass.md)
-
-
-</details>
 
 
 ## ライブラリの一覧 (4D 20 LTS)

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET TEXT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Objeto | &#x1F852; | Objeto de rango |
-| nuevoTexto | Texto | &#x1F852; | Texto a insertar |
-| posicionTexto | Número | &#x1F852; | Posición de inserción (reemplazar, antes, después) |
-| alcanceRango | Número | &#x1F852; | Incluye o excluye el contenido insertado dentro del rango |
+| objRango | Object | &rarr; | Objeto de rango |
+| nuevoText | Text | &rarr; | Texto a insertar |
+| posicionTexto | Number | &rarr; | Posición de inserción (reemplazar, antes, después) |
+| alcanceRango | Number | &rarr; | Incluye o excluye el contenido insertado dentro del rango |
 
 <!-- END REF-->
 

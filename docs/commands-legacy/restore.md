@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESTORE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| archivePath | Text | &srarr; | Pathname of archive to restore |
-| destFolderPath | Text | &srarr; | Pathname of destination folder |
+| archivePath | Text | &rarr; | Pathname of archive to restore |
+| destFolderPath | Text | &rarr; | Pathname of destination folder |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referencia del área |
-| comando | Integer | &srarr; | Comando de menú a ejecutar |
+| area | Integer | &rarr; | Referencia del área |
+| comando | Integer | &rarr; | Comando de menú a ejecutar |
 
 <!-- END REF-->
 

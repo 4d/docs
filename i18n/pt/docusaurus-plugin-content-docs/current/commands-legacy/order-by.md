@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela na qual vai ordenar os registros selecionados, ou tabela Padrão, se omitido |
-| campo | Field | &srarr; | Campo no qual estabelecer a ordem para cada nível |
-| > ou < | Operador | &srarr; | Direção da ordem para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente |
-| * | Operador | &srarr; | Continuar a bandeira de ordem |
+| tabela | Table | &rarr; | Tabela na qual vai ordenar os registros selecionados, ou tabela Padrão, se omitido |
+| campo | Field | &rarr; | Campo no qual estabelecer a ordem para cada nível |
+| > ou < | Operador | &rarr; | Direção da ordem para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente |
+| * | Operador | &rarr; | Continuar a bandeira de ordem |
 
 <!-- END REF-->
 

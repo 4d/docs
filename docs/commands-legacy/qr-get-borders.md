@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET BORDERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Reference of the area |
-| column | Integer | &srarr; | Column number |
-| row | Integer | &srarr; | Row number |
-| border | Integer | &srarr; | Border value |
-| line | Integer | &harr; | Line thickness |
-| color | Integer | &harr; | Border color |
+| area | Integer | &rarr; | Reference of the area |
+| column | Integer | &rarr; | Column number |
+| row | Integer | &rarr; | Row number |
+| border | Integer | &rarr; | Border value |
+| line | Integer | &larr; | Line thickness |
+| color | Integer | &larr; | Border color |
 
 <!-- END REF-->
 

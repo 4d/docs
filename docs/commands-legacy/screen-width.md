@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Screen width.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | Windows: width of application window, or width of screen if * is specified Macintosh: width of main screen |
+| * | Operator | &rarr; | Windows: width of application window, or width of screen if * is specified Macintosh: width of main screen |
 | Function result | Longint | &larr; | Width expressed in pixels |
 
 <!-- END REF-->

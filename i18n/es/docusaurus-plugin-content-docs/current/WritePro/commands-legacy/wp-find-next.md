@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find next.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objTarget | Objeto | &#x1F852; | Rango o elemento o documento 4D Write Pro |
-| buscarDespues | Objeto | &#x1F852; | Rango después del cual comenzar a buscar |
-| buscarValor | Cadena | &#x1F852; | Valor a buscar |
-| condicionBusq | Entero largo | &#x1F852; | Regla(s) de búsqueda |
-| valorReempl | Cadena | &#x1F852; | Cadena a reemplazar |
-| Resultado | Objeto | &#x1F850; | Rango del valor encontrado/reemplazado |
+| objTarget | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
+| buscarDespues | Object | &rarr; | Rango después del cual comenzar a buscar |
+| buscarValor | Text | &rarr; | Valor a buscar |
+| condicionBusq | Integer | &rarr; | Regla(s) de búsqueda |
+| valorReempl | Text | &rarr; | Cadena a reemplazar |
+| Resultado | Object | &larr; | Rango del valor encontrado/reemplazado |
 
 <!-- END REF-->
 

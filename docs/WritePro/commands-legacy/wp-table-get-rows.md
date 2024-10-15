@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get rows.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| tableRef | Object | &#x1F852; | Table reference |
-| startRow &#124; wk header rows | Longint, String | &#x1F852; | Position of first row OR wk header rows |
-| numRows | Longint | &#x1F852; | Number of rows to get |
-| Function result | Object | &#x1F850; | New table range containing selected rows |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| tableRef | Object | &rarr; | Table reference |
+| startRow &#124; wk header rows | Longint, String | &rarr; | Position of first row OR wk header rows |
+| numRows | Longint | &rarr; | Number of rows to get |
+| Function result | Object | &larr; | New table range containing selected rows |
 
 <!-- END REF-->
 

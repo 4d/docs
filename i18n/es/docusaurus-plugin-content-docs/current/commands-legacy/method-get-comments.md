@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET COMMENTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text, Text array | &srarr; | Texto o array texto que contiene una o varias rutas de método |
-| comentarios | Text, Text array | &harr; | Comentarios de los métodos designados |
-| * | Operador | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text, Text array | &rarr; | Texto o array texto que contiene una o varias rutas de método |
+| comentarios | Text, Text array | &larr; | Comentarios de los métodos designados |
+| * | Operador | &rarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

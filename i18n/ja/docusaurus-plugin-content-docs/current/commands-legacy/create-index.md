@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE INDEX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | インデックスを作成するためのテーブル |
-| fieldsArray | Pointer array | &srarr; | インデックスされるフィールドへのポインタ |
-| indexType | Integer | &srarr; | 作成されるインデックスのタイプ: -1 = キーワード、 0 = デフォルト、 1 = 標準 B-Tree、 3 = クラスタ B-Tree |
-| indexName | Text | &srarr; | 作成するインデックスの名前 |
-| * | 演算子 | &srarr; | 渡されると = 非同期インデックス |
+| aTable | Table | &rarr; | インデックスを作成するためのテーブル |
+| fieldsArray | Pointer array | &rarr; | インデックスされるフィールドへのポインタ |
+| indexType | Integer | &rarr; | 作成されるインデックスのタイプ: -1 = キーワード、 0 = デフォルト、 1 = 標準 B-Tree、 3 = クラスタ B-Tree |
+| indexName | Text | &rarr; | 作成するインデックスの名前 |
+| * | 演算子 | &rarr; | 渡されると = 非同期インデックス |
 
 <!-- END REF-->
 

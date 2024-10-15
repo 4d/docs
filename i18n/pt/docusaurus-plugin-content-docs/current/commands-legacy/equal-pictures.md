@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Equal pictures.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem1 | Picture, Picture | &srarr; | Imagem fonte original |
-| imagem2 | Picture, Picture | &srarr; | Imagem a comparar |
-| mascara | Picture, Picture | &harr; | Máscara resultante |
+| imagem1 | Picture, Picture | &rarr; | Imagem fonte original |
+| imagem2 | Picture, Picture | &rarr; | Imagem a comparar |
+| mascara | Picture, Picture | &larr; | Máscara resultante |
 | resultado | Boolean | &larr; | True se ambas imagens são idênticas; caso contrário, False |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Next window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &srarr; | Numéro de référence de la fenêtre |
+| fenêtre | Integer | &rarr; | Numéro de référence de la fenêtre |
 | Résultat | Integer | &larr; | Numéro de référence de fenêtre |
 
 <!-- END REF-->

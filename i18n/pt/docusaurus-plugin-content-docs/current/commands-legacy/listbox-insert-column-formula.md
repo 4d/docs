@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçaoCol | Integer | &srarr; | Localização da coluna a inserir |
-| nomeColuna | Text | &srarr; | Nome do objeto de coluna |
-| formula | Text | &srarr; | Fórmula 4D associada com a coluna |
-| tipoDados | Integer | &srarr; | Tipo de resultado da fórmula |
-| nomeCabe | Text | &srarr; | Nome do objeto título da coluna |
-| varTitulo | Integer, Pointer | &srarr; | Variável título de coluna |
-| nomeRodape | Text | &srarr; | Nome do rodapé  da coluna |
-| varRodape | Variable, Pointer | &srarr; | Variável de rodapé da coluna |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &rarr; | Localização da coluna a inserir |
+| nomeColuna | Text | &rarr; | Nome do objeto de coluna |
+| formula | Text | &rarr; | Fórmula 4D associada com a coluna |
+| tipoDados | Integer | &rarr; | Tipo de resultado da fórmula |
+| nomeCabe | Text | &rarr; | Nome do objeto título da coluna |
+| varTitulo | Integer, Pointer | &rarr; | Variável título de coluna |
+| nomeRodape | Text | &rarr; | Nome do rodapé  da coluna |
+| varRodape | Variable, Pointer | &rarr; | Variável de rodapé da coluna |
 
 <!-- END REF-->
 

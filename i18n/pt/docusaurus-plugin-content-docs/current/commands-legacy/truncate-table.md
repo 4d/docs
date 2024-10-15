@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela onde todos os registros serão apagados ou tabela padrão se esse parâmetro for omitido |
+| tabela | Table | &rarr; | Tabela onde todos os registros serão apagados ou tabela padrão se esse parâmetro for omitido |
 
 <!-- END REF-->
 

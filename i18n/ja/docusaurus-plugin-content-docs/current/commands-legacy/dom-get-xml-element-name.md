@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML要素参照 |
-| elementName | Variable | &harr; | 要素の名前 |
+| elementRef | Text | &rarr; | XML要素参照 |
+| elementName | Variable | &larr; | 要素の名前 |
 
 <!-- END REF-->
 

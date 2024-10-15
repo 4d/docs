@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Tan.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &srarr; | Nombre, exprimé en radians, dont vous voulez connaître la tangente |
+| nombre | Real | &rarr; | Nombre, exprimé en radians, dont vous voulez connaître la tangente |
 | Résultat | Real | &larr; | Tangente de nombre |
 
 <!-- END REF-->

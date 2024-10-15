@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Count XML elements.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &srarr; | Referência de elemento XML |
-| nomeElemento | Text | &srarr; | Nome do elemento XML a ser contado |
+| refElemento | Text | &rarr; | Referência de elemento XML |
+| nomeElemento | Text | &rarr; | Nome do elemento XML a ser contado |
 | Resultado | Integer | &larr; | Número de elementos |
 
 <!-- END REF-->

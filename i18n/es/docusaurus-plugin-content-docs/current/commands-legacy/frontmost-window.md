@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Frontmost window.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, tiene en cuenta las ventanas flotantes Si se omite, ignora las ventanas flotantes |
+| * | Operador | &rarr; | Si se especifica, tiene en cuenta las ventanas flotantes Si se omite, ignora las ventanas flotantes |
 | Resultado | Integer | &larr; | Número de referencia de ventana |
 
 <!-- END REF-->

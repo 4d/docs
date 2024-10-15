@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get next sibling XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML要素参照 |
-| siblingElemName | Text | &harr; | 兄弟XML要素名 |
-| siblingElemValue | Text | &harr; | 兄弟XML要素値 |
+| elementRef | Text | &rarr; | XML要素参照 |
+| siblingElemName | Text | &larr; | 兄弟XML要素名 |
+| siblingElemValue | Text | &larr; | 兄弟XML要素値 |
 | 戻り値 | Text | &larr; | 兄弟XML要素参照 |
 
 <!-- END REF-->

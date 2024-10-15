@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get current page.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | Returns number of current subform page |
+| * | Operator | &rarr; | Returns number of current subform page |
 | Function result | Longint | &larr; | Number of currently displayed form page |
 
 <!-- END REF-->

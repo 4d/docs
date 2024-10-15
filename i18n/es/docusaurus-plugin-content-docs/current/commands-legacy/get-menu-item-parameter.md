@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item parameter.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &srarr; | Referencia de menú o número de menú |
-| lineaMenu | Integer | &srarr; | Número de línea de menú o -1 para la última línea añadida al menú |
+| menu | Integer, Text | &rarr; | Referencia de menú o número de menú |
+| lineaMenu | Integer | &rarr; | Número de línea de menú o -1 para la última línea añadida al menú |
 | Resultado | Text | &larr; | Parámetro personalizado de la línea de menú |
 
 <!-- END REF-->

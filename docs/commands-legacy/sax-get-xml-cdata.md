@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML CDATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &srarr; | Reference of open document |
-| value | Text, Blob | &harr; | Element value |
+| document | Time | &rarr; | Reference of open document |
+| value | Text, Blob | &larr; | Element value |
 
 <!-- END REF-->
 

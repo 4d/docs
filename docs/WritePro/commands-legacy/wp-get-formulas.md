@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get formulas.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| Function result | Collection | &#x1F850; | Collection of formulas |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| Function result | Collection | &larr; | Collection of formulas |
 
 <!-- END REF-->
 

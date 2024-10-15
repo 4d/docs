@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &srarr; | Tabla en la cual aplicar la fórmula o Tabla por defecto, si se omite |
-| sentencia | Expression | &srarr; | Línea de código o método |
+| tabla | Table | &rarr; | Tabla en la cual aplicar la fórmula o Tabla por defecto, si se omite |
+| sentencia | Expression | &rarr; | Línea de código o método |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Compile project.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| projectFile | 4D.File | &srarr; | コンパイルするプロジェクトの.4DProject ファイル |
-| options | Object | &srarr; | コンパイルオプションを指定するオブジェクト |
+| projectFile | 4D.File | &rarr; | コンパイルするプロジェクトの.4DProject ファイル |
+| options | Object | &rarr; | コンパイルオプションを指定するオブジェクト |
 | 戻り値 | Object | &larr; | コンパイルのステータスの情報を格納したオブジェクト |
 
 <!-- END REF-->

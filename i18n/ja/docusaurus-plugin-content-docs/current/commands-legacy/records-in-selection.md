@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in selection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | カレントセレクション数を返すテーブル 省略時、デフォルトテーブル |
+| aTable | Table | &rarr; | カレントセレクション数を返すテーブル 省略時、デフォルトテーブル |
 | 戻り値 | Integer | &larr; | カレントセレクションのレコード数 |
 
 <!-- END REF-->

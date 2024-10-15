@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Insert table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジオブジェクト |
-| mode | 倍長整数 | &#x1F852; | 挿入モード |
-| rangeUpdate | 倍長整数 | &#x1F852; | レンジ更新モード |
-| nbCols | 倍長整数 | &#x1F852; | テーブル内に設定するカラム数 |
-| nbRows | 倍長整数 | &#x1F852; | テーブル内に設定する行数 |
-| 戻り値 | オブジェクト | &#x1F850; | テーブル参照オブジェクト |
+| targetObj | Object | &rarr; | レンジオブジェクト |
+| mode | Integer | &rarr; | 挿入モード |
+| rangeUpdate | Integer | &rarr; | レンジ更新モード |
+| nbCols | Integer | &rarr; | テーブル内に設定するカラム数 |
+| nbRows | Integer | &rarr; | テーブル内に設定する行数 |
+| 戻り値 | Object | &larr; | テーブル参照オブジェクト |
 
 <!-- END REF-->
 

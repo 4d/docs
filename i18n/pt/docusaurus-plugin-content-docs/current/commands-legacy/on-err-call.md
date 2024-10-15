@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON ERR CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| metodoErro | Text | &srarr; | Método de erro a ser chamado, ou string Vazia para não capturar erros |
-| escopo | Integer | &srarr; | Escopo do método de erro |
+| metodoErro | Text | &rarr; | Método de erro a ser chamado, ou string Vazia para não capturar erros |
+| escopo | Integer | &rarr; | Escopo do método de erro |
 
 <!-- END REF-->
 

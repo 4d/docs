@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESTART 4D.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| time | Integer | &srarr; | 4Dが再起動するまでの猶予時間(秒) |
-| message | Text | &srarr; | クライアントマシンに表示するテキスト |
+| time | Integer | &rarr; | 4Dが再起動するまでの猶予時間(秒) |
+| message | Text | &rarr; | クライアントマシンに表示するテキスト |
 
 <!-- END REF-->
 

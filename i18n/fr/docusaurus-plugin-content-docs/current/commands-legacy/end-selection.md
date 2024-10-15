@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.End selection.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table pour laquelle tester si le pointeur d'enregistrement courant est au-delà du dernier enregistrement de la sélection courante ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &rarr; | Table pour laquelle tester si le pointeur d'enregistrement courant est au-delà du dernier enregistrement de la sélection courante ou Table par défaut si ce paramètre est omis |
 | Résultat | Boolean | &larr; | Oui (Vrai), Non (Faux) |
 
 <!-- END REF-->

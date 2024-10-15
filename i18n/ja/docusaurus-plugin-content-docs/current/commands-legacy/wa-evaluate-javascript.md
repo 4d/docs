@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| jsCode | Text | &srarr; | JavaScriptコード |
-| type | Integer | &srarr; | 戻り値に指定する型 |
+| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| jsCode | Text | &rarr; | JavaScriptコード |
+| type | Integer | &rarr; | 戻り値に指定する型 |
 | 戻り値 | Object, Text, Pointer, Real, Date, Time | &larr; | 実行結果 |
 
 <!-- END REF-->

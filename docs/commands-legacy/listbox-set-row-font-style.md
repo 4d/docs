@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &srarr; | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| row | Integer | &srarr; | Row number |
-| style | Integer | &srarr; | Font style |
+| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &rarr; | Object name (if * is specified) or<br/>Variable (if * is omitted) |
+| row | Integer | &rarr; | Row number |
+| style | Integer | &rarr; | Font style |
 
 <!-- END REF-->
 

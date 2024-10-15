@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| text | Text | &srarr; | Text to check |
-| errPos | Integer | &harr; | Position of first character of unknown word |
-| errLength | Integer | &harr; | Length of unknown word |
-| checkPos | Integer | &srarr; | Start position for check |
-| arrSuggest | Text array | &harr; | List of suggestions |
+| text | Text | &rarr; | Text to check |
+| errPos | Integer | &larr; | Position of first character of unknown word |
+| errLength | Integer | &larr; | Length of unknown word |
+| checkPos | Integer | &rarr; | Start position for check |
+| arrSuggest | Text array | &larr; | List of suggestions |
 
 <!-- END REF-->
 

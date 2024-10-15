@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in set.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set | Text | &srarr; | Name of the set to test |
+| set | Text | &rarr; | Name of the set to test |
 | Function result | Boolean | &larr; | Current record of set's table is in set (True) or Current record of set's table is not in set (False) |
 
 <!-- END REF-->

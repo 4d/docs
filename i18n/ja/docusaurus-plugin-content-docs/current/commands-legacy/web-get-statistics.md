@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET STATISTICS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pages | Text array | &harr; | 最も閲覧されるページの名前 |
-| hits | Integer array | &harr; | 各ページのヒット数 |
-| usage | Integer | &harr; | キャッシュの使用率 |
+| pages | Text array | &larr; | 最も閲覧されるページの名前 |
+| hits | Integer array | &larr; | 各ページのヒット数 |
+| usage | Integer | &larr; | キャッシュの使用率 |
 
 <!-- END REF-->
 

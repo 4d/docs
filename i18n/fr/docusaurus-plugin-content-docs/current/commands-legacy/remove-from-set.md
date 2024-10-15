@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE FROM SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-| ensemble | Text | &srarr; | Nom de l'ensemble duquel supprimer l'enregistrement courant |
+| laTable | Table | &rarr; | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &rarr; | Nom de l'ensemble duquel supprimer l'enregistrement courant |
 
 <!-- END REF-->
 

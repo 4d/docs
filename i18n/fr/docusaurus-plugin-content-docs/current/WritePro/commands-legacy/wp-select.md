@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SELECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet (document) |
-| zoneWP | Chaîne, Objet | &#x1F852; | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| débutPlage | Entier long | &#x1F852; | Position du début de la plage texte |
-| finPlage | Entier long | &#x1F852; | Position de la fin de la plage texte |
+| * | Opérateur | &rarr; | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet (document) |
+| zoneWP | Text, Object | &rarr; | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| débutPlage | Integer | &rarr; | Position du début de la plage texte |
+| finPlage | Integer | &rarr; | Position de la fin de la plage texte |
 
 <!-- END REF-->
 

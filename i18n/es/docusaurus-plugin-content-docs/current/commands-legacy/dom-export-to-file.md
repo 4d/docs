@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | Referencia del elemento XML raíz |
-| rutaArchivo | Text | &srarr; | Ruta de acceso completa del archivo |
+| elementRef | Text | &rarr; | Referencia del elemento XML raíz |
+| rutaArchivo | Text | &rarr; | Ruta de acceso completa del archivo |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Bookmark range.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docWP | Objeto | &#x1F852; | Documento 4D Write Pro |
-| nombk | Texto | &#x1F852; | Nombre del marcador cuyo rango desea obtener |
-| Resultado | Objeto | &#x1F850; | Rango del marcador |
+| docWP | Object | &rarr; | Documento 4D Write Pro |
+| nombk | Text | &rarr; | Nombre del marcador cuyo rango desea obtener |
+| Resultado | Object | &larr; | Rango del marcador |
 
 <!-- END REF-->
 

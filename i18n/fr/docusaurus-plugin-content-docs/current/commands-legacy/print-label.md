@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT LABEL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table à imprimer ou Table par défaut si ce paramètre est omis |
-| nomFichier | Text | &srarr; | Nom de fichier d'étiquettes sur disque |
-| * &#124; > | &srarr; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
+| laTable | Table | &rarr; | Table à imprimer ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &rarr; | Nom de fichier d'étiquettes sur disque |
+| * &#124; > | &rarr; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
 
 <!-- END REF-->
 

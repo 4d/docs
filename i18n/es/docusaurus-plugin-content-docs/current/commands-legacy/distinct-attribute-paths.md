@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoObjeto | Field | &srarr; | Campo objeto indexado |
-| arrayRuta | Text array | &harr; | Array para recibir la lista de rutas diferentes |
+| campoObjeto | Field | &rarr; | Campo objeto indexado |
+| arrayRuta | Text array | &larr; | Array para recibir la lista de rutas diferentes |
 
 <!-- END REF-->
 

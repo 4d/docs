@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a list.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &srarr; | Referência da lista a ser testada |
+| lista | Integer | &rarr; | Referência da lista a ser testada |
 | Resultado | Boolean | &larr; | TRUE se a lista é hierárquica e FALSE se não for uma lista hierárquica |
 
 <!-- END REF-->

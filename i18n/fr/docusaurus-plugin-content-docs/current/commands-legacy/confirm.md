@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONFIRM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &srarr; | Message à afficher dans la boîte de dialogue de confirmation |
-| libelléBoutonOK | Text | &srarr; | Libellé du bouton OK |
-| libelléBoutonAnn | Text | &srarr; | Libellé du bouton Annuler |
+| message | Text | &rarr; | Message à afficher dans la boîte de dialogue de confirmation |
+| libelléBoutonOK | Text | &rarr; | Libellé du bouton OK |
+| libelléBoutonAnn | Text | &rarr; | Libellé du bouton Annuler |
 
 <!-- END REF-->
 

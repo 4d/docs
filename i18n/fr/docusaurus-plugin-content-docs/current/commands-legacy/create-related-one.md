@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE RELATED ONE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &srarr; | Champ N (champ d'où part le lien) |
+| leField | Field | &rarr; | Champ N (champ d'où part le lien) |
 
 <!-- END REF-->
 

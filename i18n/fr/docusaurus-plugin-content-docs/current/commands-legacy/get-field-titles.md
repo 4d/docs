@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD TITLES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table dont vous souhaitez connaître les noms des champs |
-| titresChamps | Text array | &harr; | Noms courants des champs |
-| numChamps | Integer array | &harr; | Numéros des champs |
+| laTable | Table | &rarr; | Table dont vous souhaitez connaître les noms des champs |
+| titresChamps | Text array | &larr; | Noms courants des champs |
+| numChamps | Integer array | &larr; | Numéros des champs |
 
 <!-- END REF-->
 

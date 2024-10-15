@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get path.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoMetodo | Integer | &srarr; | Seletor de tipo objeto |
-| aTable | Table | &srarr; | Referência de tabela |
-| nomObjeto | Text | &srarr; | Nome de formulário ou método base |
-| nomObjetoForm | Text | &harr; | Nome do objeto de formulário |
-| * | Operador | &srarr; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| tipoMetodo | Integer | &rarr; | Seletor de tipo objeto |
+| aTable | Table | &rarr; | Referência de tabela |
+| nomObjeto | Text | &rarr; | Nome de formulário ou método base |
+| nomObjetoForm | Text | &larr; | Nome do objeto de formulário |
+| * | Operador | &rarr; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 | Resultado | Text | &larr; | Rota de acesso completa do objeto |
 
 <!-- END REF-->

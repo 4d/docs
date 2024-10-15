@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu selected.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| subMenu | Text | &harr; | 選択された項目を含むメニューの参照 |
+| subMenu | Text | &larr; | 選択された項目を含むメニューの参照 |
 | 戻り値 | Integer | &larr; | 選択されたメニューコマンド 上位バイトにメニュー番号 下位バイトにメニュー項目番号 |
 
 <!-- END REF-->

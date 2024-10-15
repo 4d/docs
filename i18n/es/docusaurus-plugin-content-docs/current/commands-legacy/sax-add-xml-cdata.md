@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML CDATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &srarr; | Referencia del documento abierto |
-| datos | Blob, Text | &srarr; | Texto o BLOB a insertar en el documento entre etiquetas CData |
+| documento | Time | &rarr; | Referencia del documento abierto |
+| datos | Blob, Text | &rarr; | Texto o BLOB a insertar en el documento entre etiquetas CData |
 
 <!-- END REF-->
 

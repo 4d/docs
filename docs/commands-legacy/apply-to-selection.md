@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to apply statement |
-| statement | Expression | &srarr; | One line of code or a method |
+| aTable | Table | &rarr; | Table for which to apply statement |
+| statement | Expression | &rarr; | One line of code or a method |
 
 <!-- END REF-->
 

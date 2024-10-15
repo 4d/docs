@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get file from pasteboard.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| xIndex | Integer | &srarr; | ドラッグアクションに含まれるx番目のファイル |
+| xIndex | Integer | &rarr; | ドラッグアクションに含まれるx番目のファイル |
 | 戻り値 | Text | &larr; | ペーストボードから取り出した、ファイルのパス名 |
 
 <!-- END REF-->

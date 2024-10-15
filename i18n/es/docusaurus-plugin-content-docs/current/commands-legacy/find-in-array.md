@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array a buscar |
-| valor | Expression | &srarr; | Valor del mismo tipo a buscar en el array |
-| inicio | Integer | &srarr; | Elemento a partir del cual comenzar la búsqueda |
+| array | Array | &rarr; | Array a buscar |
+| valor | Expression | &rarr; | Valor del mismo tipo a buscar en el array |
+| inicio | Integer | &rarr; | Elemento a partir del cual comenzar la búsqueda |
 | Resultado | Integer | &larr; | Número del primer elemento en el array que corresponde al valor |
 
 <!-- END REF-->

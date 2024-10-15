@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToDecrypt | Blob | &srarr; | BLOB à décrypter |
-| keyObject &#124; passPhrase | Objet, Texte | &srarr; | Objet JSON contenant la clé de chiffrement ou le mot de passe pour générer directement une clé de chiffrement (texte) |
-| salt | Integer | &srarr; | Additional salt for algorithm |
-| decryptedBlob | Blob | &harr; | BLOB décrypté |
+| blobToDecrypt | Blob | &rarr; | BLOB à décrypter |
+| keyObject &#124; passPhrase | Objet, Texte | &rarr; | Objet JSON contenant la clé de chiffrement ou le mot de passe pour générer directement une clé de chiffrement (texte) |
+| salt | Integer | &rarr; | Additional salt for algorithm |
+| decryptedBlob | Blob | &larr; | BLOB décrypté |
 | Résultat | Boolean | &larr; | True si le déchiffrement a été effectué correctement. Sinon False |
 
 <!-- END REF-->

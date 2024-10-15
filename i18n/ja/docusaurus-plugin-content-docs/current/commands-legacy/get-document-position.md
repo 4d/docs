@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get document position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &srarr; | ドキュメント参照番号 |
+| Time | Time | &rarr; | ドキュメント参照番号 |
 | 戻り値 | Real | &larr; | ドキュメント開始位置からの ファイル位置(バイト単位) |
 
 <!-- END REF-->

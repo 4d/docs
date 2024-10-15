@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | セレクションを書き出すテーブル |
-| folderPath | Text | &srarr; | 書き出しフォルダーのパス名、または"" でフォルダー選択ダイアログボックスを表示 |
-| numFiles | Integer | &srarr; | フォルダーごとの最大ファイル数 |
-| fileLimitSize | Integer | &srarr; | Export.sql ファイルの最大サイズ (KB) |
-| fieldLimitSize | Integer | &srarr; | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
+| aTable | Table | &rarr; | セレクションを書き出すテーブル |
+| folderPath | Text | &rarr; | 書き出しフォルダーのパス名、または"" でフォルダー選択ダイアログボックスを表示 |
+| numFiles | Integer | &rarr; | フォルダーごとの最大ファイル数 |
+| fileLimitSize | Integer | &rarr; | Export.sql ファイルの最大サイズ (KB) |
+| fieldLimitSize | Integer | &rarr; | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
 
 <!-- END REF-->
 

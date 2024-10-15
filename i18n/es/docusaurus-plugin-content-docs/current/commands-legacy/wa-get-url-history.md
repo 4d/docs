@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrUrls | Text array | &harr; | Array de los URLs visitados |
-| direccion | Integer | &srarr; | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
-| arrTitulos | Text array | &harr; | Array de títulos de ventanas |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrUrls | Text array | &larr; | Array de los URLs visitados |
+| direccion | Integer | &rarr; | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
+| arrTitulos | Text array | &larr; | Array de títulos de ventanas |
 
 <!-- END REF-->
 

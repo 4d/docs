@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DIFFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble1 | Text | &srarr; | Ensemble initial |
-| ensemble2 | Text | &srarr; | Ensemble à exclure |
-| résultat | Text | &srarr; | Ensemble résultant |
+| ensemble1 | Text | &rarr; | Ensemble initial |
+| ensemble2 | Text | &rarr; | Ensemble à exclure |
+| résultat | Text | &rarr; | Ensemble résultant |
 
 <!-- END REF-->
 

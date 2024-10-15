@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジ または 要素 または4D Write Pro ドキュメント |
-| expressions | 数値 | &#x1F852; | 式の評価の指定 |
-| 戻り値 | テキスト | &#x1F850; | targetObjのテキスト |
+| targetObj | Object | &rarr; | レンジ または 要素 または4D Write Pro ドキュメント |
+| expressions | Number | &rarr; | 式の評価の指定 |
+| 戻り値 | Text | &larr; | targetObjのテキスト |
 
 <!-- END REF-->
 

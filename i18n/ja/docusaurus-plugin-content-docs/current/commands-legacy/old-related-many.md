@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OLD RELATED MANY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | 1フィールド |
+| aField | Field | &rarr; | 1フィールド |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get plain text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
-| refMode | Integer | &srarr; | Mode for handling references found in the text |
+| * | 演算子 | &rarr; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
+| refMode | Integer | &rarr; | Mode for handling references found in the text |
 | 戻り値 | Text | &larr; | タグなしのテキスト |
 
 <!-- END REF-->

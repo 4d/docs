@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| destFolderPath | Text | &srarr; | Path of the saved file destination folder |
-| maxSize | Integer | &srarr; | Maximum size of JSON file to create (bytes) |
-| logPath | Text | &srarr; | Pathname of log file to export; use current log file if omitted |
-| fieldAtt | Integer | &srarr; | Field description attribute: 1 = use number (default), 2 = use name |
+| destFolderPath | Text | &rarr; | Path of the saved file destination folder |
+| maxSize | Integer | &rarr; | Maximum size of JSON file to create (bytes) |
+| logPath | Text | &rarr; | Pathname of log file to export; use current log file if omitted |
+| fieldAtt | Integer | &rarr; | Field description attribute: 1 = use number (default), 2 = use name |
 
 <!-- END REF-->
 

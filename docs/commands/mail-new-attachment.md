@@ -19,15 +19,15 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|file|4D.File|&#x1F852;|Attachment file|
-|zipFile|4D.ZipFile|&#x1F852;|Attachment Zipfile|
-|blob|4D.Blob|&#x1F852;|BLOB containing the attachment|
-|path|Text|&#x1F852;|Path of the attachment file|
-|name|Text|&#x1F852;|Name + extension used by the mail client to designate the attachment|
-|cid|Text|&#x1F852;|ID of attachment (HTML messages only), or " " if no cid is required|
-|type|Text|&#x1F852;|Value of the content-type header|
-|disposition|Text|&#x1F852;|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|&#x1F850;|Attachment object|
+|file|4D.File|&rarr;|Attachment file|
+|zipFile|4D.ZipFile|&rarr;|Attachment Zipfile|
+|blob|4D.Blob|&rarr;|BLOB containing the attachment|
+|path|Text|&rarr;|Path of the attachment file|
+|name|Text|&rarr;|Name + extension used by the mail client to designate the attachment|
+|cid|Text|&rarr;|ID of attachment (HTML messages only), or " " if no cid is required|
+|type|Text|&rarr;|Value of the content-type header|
+|disposition|Text|&rarr;|Value of the content-disposition header: "inline" or "attachment".|
+|Result|4D.MailAttachment|&larr;|Attachment object|
 <!-- END REF-->
 
 

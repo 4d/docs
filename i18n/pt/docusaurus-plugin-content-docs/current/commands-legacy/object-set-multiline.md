@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &srarr; | Nome de objeto (se for especificado *) ou<br/>campo ou variável (se for omitido *) |
-| multilinha | Integer | &srarr; | Estado da propriedade multi linha |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &rarr; | Nome de objeto (se for especificado *) ou<br/>campo ou variável (se for omitido *) |
+| multilinha | Integer | &rarr; | Estado da propriedade multi linha |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item modifiers.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &srarr; | Menu reference or Menu number |
-| menuItem | Integer | &srarr; | Number of menu item or -1 for the last item added to the menu |
-| process | Integer | &srarr; | Process number |
+| menu | Integer, Text | &rarr; | Menu reference or Menu number |
+| menuItem | Integer | &rarr; | Number of menu item or -1 for the last item added to the menu |
+| process | Integer | &rarr; | Process number |
 | Function result | Longint | &larr; | Modification key(s) associated with menu item |
 
 <!-- END REF-->

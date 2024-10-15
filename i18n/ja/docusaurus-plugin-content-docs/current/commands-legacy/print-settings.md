@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dialType | Integer | &srarr; | 表示するダイアログボックス |
+| dialType | Integer | &rarr; | 表示するダイアログボックス |
 
 <!-- END REF-->
 

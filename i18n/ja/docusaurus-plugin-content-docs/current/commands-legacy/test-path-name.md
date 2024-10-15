@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Test path name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathname | Text | &srarr; | ディレクトリ、フォルダまたはドキュメントへのパス名 |
+| pathname | Text | &rarr; | ディレクトリ、フォルダまたはドキュメントへのパス名 |
 | 戻り値 | Integer | &larr; | 1=パス名は既存のドキュメントを表す 0=パス名は既存のディレクトリまたはフォルダを表す <0=無効のパス名、OSファイルマネージャエラーコード |
 
 <!-- END REF-->

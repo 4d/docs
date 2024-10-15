@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Import document.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminFichier | Chaîne | &#x1F852; | Chemin du document 4D Write (.4w7 ou .4wt)<br/>ou du document 4D Write Pro (.4wp) |
-| option | Entier long, Objet | &#x1F852; | Option de formatage des expressions HTML |
-| Résultat | Objet | &#x1F850; | Objet 4D Write Pro |
+| cheminFichier | Text | &rarr; | Chemin du document 4D Write (.4w7 ou .4wt)<br/>ou du document 4D Write Pro (.4wp) |
+| option | Integer, Object | &rarr; | Option de formatage des expressions HTML |
+| Résultat | Object | &larr; | Objet 4D Write Pro |
 
 <!-- END REF-->
 

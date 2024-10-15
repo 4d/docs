@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CURSOR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cursor | Integer | &srarr; | Número de cursor sistema |
+| cursor | Integer | &rarr; | Número de cursor sistema |
 
 <!-- END REF-->
 

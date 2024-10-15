@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| blobDecriptografar | Blob | &srarr; | Blob que vai ser decriptografado |
-| objetoChave / passefrase | Objeto, Texto | &srarr; | Objeto JSON que contém a chave de criptografia ou passefrase para geração de chave direta de criptografia (texto) |
-| salt | Integer | &srarr; | Salt (ou sal/dados aleatórios) para o algoritmo de criptografia |
-| Blobdecriptografado | Blob | &harr; | BLOB que foi decriptografado |
+| blobDecriptografar | Blob | &rarr; | Blob que vai ser decriptografado |
+| objetoChave / passefrase | Objeto, Texto | &rarr; | Objeto JSON que contém a chave de criptografia ou passefrase para geração de chave direta de criptografia (texto) |
+| salt | Integer | &rarr; | Salt (ou sal/dados aleatórios) para o algoritmo de criptografia |
+| Blobdecriptografado | Blob | &larr; | BLOB que foi decriptografado |
 | Resultado | Boolean | &larr; | True se a descrição tiver sido realizada corretamente. Senão False |
 
 <!-- END REF-->

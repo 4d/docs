@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | String, BLOB, Objeto | &#x1F852; | Fonte HTML 4D ou Blob 4D Write |
-| opção | Inteiro longo | &#x1F852; | Opção de importação para expressões HTML |
-| Resultado | Objeto | &#x1F850; | Objeto 4D Write Pro |
+| fonte | Text, Blob, Object | &rarr; | Fonte HTML 4D ou Blob 4D Write |
+| opção | Integer | &rarr; | Opção de importação para expressões HTML |
+| Resultado | Object | &larr; | Objeto 4D Write Pro |
 
 <!-- END REF-->
 

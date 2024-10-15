@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| numColunas | Integer | &srarr; | Número de colunas a bloquear |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| numColunas | Integer | &rarr; | Número de colunas a bloquear |
 
 <!-- END REF-->
 

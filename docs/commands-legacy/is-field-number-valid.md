@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field number valid.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Longint, Pointer | &srarr; | Table number or Pointer to table |
-| fieldNum | Integer | &srarr; | Field number |
+| tableNum &#124; tablePtr | Longint, Pointer | &rarr; | Table number or Pointer to table |
+| fieldNum | Integer | &rarr; | Field number |
 | Function result | Boolean | &larr; | True = field exists in the table False = field does not exist in the table |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current client authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| dominio | Text | &harr; | Nombre del dominio |
-| protocolo | Text | &harr; | "Kerberos", "NTLM", o cadena vacía |
+| dominio | Text | &larr; | Nombre del dominio |
+| protocolo | Text | &larr; | "Kerberos", "NTLM", o cadena vacía |
 | Resultado | Text | &larr; | Nombre de usuario de sesión devuelto por Windows |
 
 <!-- END REF-->

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SELECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
-| wpArea | String, Object | &#x1F852; | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| startRange | Longint | &#x1F852; | Starting offset of text range |
-| endRange | Longint | &#x1F852; | Ending offset of text range |
+| * | Operator | &rarr; | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
+| wpArea | String, Object | &rarr; | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| startRange | Longint | &rarr; | Starting offset of text range |
+| endRange | Longint | &rarr; | Ending offset of text range |
 
 <!-- END REF-->
 

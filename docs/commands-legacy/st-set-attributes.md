@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | any | &srarr; | Object name (if * is specified) or <br/>Text field or variable (if * is omitted) |
-| startSel | Integer | &srarr; | Start of new text selection |
-| endSel | Integer | &srarr; | End of new text selection |
-| attribName | Text | &srarr; | Attribute to set |
-| attribValue | Text, Integer | &srarr; | New value of attribute |
+| * | Operator | &rarr; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
+| object | any | &rarr; | Object name (if * is specified) or <br/>Text field or variable (if * is omitted) |
+| startSel | Integer | &rarr; | Start of new text selection |
+| endSel | Integer | &rarr; | End of new text selection |
+| attribName | Text | &rarr; | Attribute to set |
+| attribValue | Text, Integer | &rarr; | New value of attribute |
 
 <!-- END REF-->
 

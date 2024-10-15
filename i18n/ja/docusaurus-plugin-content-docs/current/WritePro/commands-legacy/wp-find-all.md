@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find all.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | 4D Write Pro ドキュメントのレンジまたは要素 |
-| searchValue | 文字 | &#x1F852; | 検索する値 |
-| searchCondition | 倍長整数 | &#x1F852; | 検索条件 |
-| replaceValue | 文字 | &#x1F852; | 置換後の文字列 |
-| 戻り値 | コレクション | &#x1F850; | レンジオブジェクトのコレクション |
+| targetObj | Object | &rarr; | 4D Write Pro ドキュメントのレンジまたは要素 |
+| searchValue | Text | &rarr; | 検索する値 |
+| searchCondition | Integer | &rarr; | 検索条件 |
+| replaceValue | Text | &rarr; | 置換後の文字列 |
+| 戻り値 | Collection | &larr; | レンジオブジェクトのコレクション |
 
 <!-- END REF-->
 

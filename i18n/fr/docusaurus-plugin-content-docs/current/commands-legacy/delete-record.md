@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de laquelle supprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &rarr; | Table de laquelle supprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

@@ -10,19 +10,19 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| find | Text | &srarr; | String to find |
-| aText | Text | &srarr; | String in which to search |
-| start | Integer | &srarr; | Position in string where search will start |
-| lengthFound | Integer | &harr; | Length of string found |
-| * | Operator | &srarr; | If passed: evaluation based on character codes |
+| find | Text | &rarr; | String to find |
+| aText | Text | &rarr; | String in which to search |
+| start | Integer | &rarr; | Position in string where search will start |
+| lengthFound | Integer | &larr; | Length of string found |
+| * | Operator | &rarr; | If passed: evaluation based on character codes |
 | Function result | Longint | &larr; | Position of first occurrence |
 | Position ( find ; aString ; start ; lengthFound ; options ) -> Function result |
 | Parameter | Type | Description |
-| find | Text | &srarr; | String to find |
-| aText | Text | &srarr; | String in which to search |
-| start | Integer | &srarr; | Position in string where search will start |
-| lengthFound | Integer | &srarr; | Length of string found |
-| options | Integer | &srarr; | Search condition(s) |
+| find | Text | &rarr; | String to find |
+| aText | Text | &rarr; | String in which to search |
+| start | Integer | &rarr; | Position in string where search will start |
+| lengthFound | Integer | &rarr; | Length of string found |
+| options | Integer | &rarr; | Search condition(s) |
 | Function result | Longint | &larr; | Position of first occurrence |
 
 <!-- END REF-->

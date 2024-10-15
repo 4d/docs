@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| nouvNom | Text | &srarr; | Nom du nouvel objet |
-| nouvVar | Pointer | &srarr; | Pointeur vers la variable du nouvel objet |
-| reliéA | Text | &srarr; | Nom de l’objet saisissable (ou du bouton radio) précédent |
-| dépH | Integer | &srarr; | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
-| dépV | Integer | &srarr; | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
-| redimH | Integer | &srarr; | Valeur de redimensionnement horizontal du nouvel objet |
-| redimV | Integer | &srarr; | Valeur de redimensionnement vertical du nouvel objet |
-| * | Opérateur | &srarr; | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| nouvNom | Text | &rarr; | Nom du nouvel objet |
+| nouvVar | Pointer | &rarr; | Pointeur vers la variable du nouvel objet |
+| reliéA | Text | &rarr; | Nom de l’objet saisissable (ou du bouton radio) précédent |
+| dépH | Integer | &rarr; | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &rarr; | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &rarr; | Valeur de redimensionnement horizontal du nouvel objet |
+| redimV | Integer | &rarr; | Valeur de redimensionnement vertical du nouvel objet |
+| * | Opérateur | &rarr; | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
 
 <!-- END REF-->
 

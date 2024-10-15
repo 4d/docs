@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU BAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menuBar | Integer, Text, Text | &srarr; | メニューバー番号または名前 または メニュー参照 |
-| process | Integer | &srarr; | プロセス参照番号 |
-| * | 演算子 | &srarr; | メニューバーの状態を保存 |
+| menuBar | Integer, Text, Text | &rarr; | メニューバー番号または名前 または メニュー参照 |
+| process | Integer | &rarr; | プロセス参照番号 |
+| * | 演算子 | &rarr; | メニューバーの状態を保存 |
 
 <!-- END REF-->
 

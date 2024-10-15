@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docWP | Objet | &#x1F852; | Document 4D Write Pro |
+| docWP | Object | &rarr; | Document 4D Write Pro |
 | tabNomsSignets | Tableau texte | &#x1F858; | Tableau des noms de signets |
 
 <!-- END REF-->

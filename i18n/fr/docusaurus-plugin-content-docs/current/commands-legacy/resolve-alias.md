@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAlias | Text | &srarr; | Nom ou chemin d’accès complet de l’alias/ du raccourci |
-| cheminCible | Text | &harr; | Nom ou chemin d’accès complet de la cible de l’alias/du raccourci |
+| cheminAlias | Text | &rarr; | Nom ou chemin d’accès complet de l’alias/ du raccourci |
+| cheminCible | Text | &larr; | Nom ou chemin d’accès complet de la cible de l’alias/du raccourci |
 
 <!-- END REF-->
 

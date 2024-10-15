@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table range.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| Résultat | Objet | &#x1F850; | Objet plage contenant uniquement les tableaux |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| Résultat | Object | &larr; | Objet plage contenant uniquement les tableaux |
 
 <!-- END REF-->
 

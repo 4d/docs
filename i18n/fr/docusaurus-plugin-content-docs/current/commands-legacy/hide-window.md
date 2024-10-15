@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HIDE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &srarr; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
+| fenêtre | Integer | &rarr; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 
 <!-- END REF-->
 

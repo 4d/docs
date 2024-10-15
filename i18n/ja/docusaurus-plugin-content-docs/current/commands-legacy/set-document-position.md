@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DOCUMENT POSITION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &srarr; | ドキュメント参照番号 |
-| offset | Real | &srarr; | ファイル位置(バイトで指定) |
-| anchor | Integer | &srarr; | 1 = ファイル先頭からの相対位置 2 = ファイル最後からの相対位置 3 = 現在位置からの相対位置 |
+| Time | Time | &rarr; | ドキュメント参照番号 |
+| offset | Real | &rarr; | ファイル位置(バイトで指定) |
+| anchor | Integer | &rarr; | 1 = ファイル先頭からの相対位置 2 = ファイル最後からの相対位置 3 = 現在位置からの相対位置 |
 
 <!-- END REF-->
 

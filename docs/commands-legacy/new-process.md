@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.New process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| method | Text | &srarr; | Method to be executed within the process |
-| stack | Integer | &srarr; | Stack size in bytes |
-| name | Text | &srarr; | Name of the process created |
-| param | Expression | &srarr; | Parameter(s) to the method |
-| * | Operator | &srarr; | Unique process |
+| method | Text | &rarr; | Method to be executed within the process |
+| stack | Integer | &rarr; | Stack size in bytes |
+| name | Text | &rarr; | Name of the process created |
+| param | Expression | &rarr; | Parameter(s) to the method |
+| * | Operator | &rarr; | Unique process |
 | Function result | Longint | &larr; | Process number for newly created process or already executing process |
 
 <!-- END REF-->

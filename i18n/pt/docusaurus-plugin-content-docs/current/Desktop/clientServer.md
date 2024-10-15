@@ -87,7 +87,7 @@ No entanto, você precisa prestar atenção às seguintes diferenças de comport
 
 ## Sessões de usuário remoto
 
-No servidor, o comando [`Session`](../API/SessionClass.md#session) retorna um objeto `session` descrevendo a sessão atual do usuário. Este objeto é tratado através das funções e propriedades da [classe `sessão`](../API/SessionClass.md).
+On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Este objeto é tratado através das funções e propriedades da [classe `sessão`](../API/SessionClass.md).
 
 ### Utilização
 

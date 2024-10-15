@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database parameter.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &srarr; | Tabla del parámetro o Tabla por defecto si se omite este parámetro |
-| selector | Integer | &srarr; | Código del parámetro de la base |
-| valor | Text | &harr; | Valor alfa del parámetro |
+| tabla | Table | &rarr; | Tabla del parámetro o Tabla por defecto si se omite este parámetro |
+| selector | Integer | &rarr; | Código del parámetro de la base |
+| valor | Text | &larr; | Valor alfa del parámetro |
 | Resultado | Real | &larr; | Valor actual del parámetro |
 
 <!-- END REF-->

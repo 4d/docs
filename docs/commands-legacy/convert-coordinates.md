@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| xCoord | Integer | &srarr; | Horizontal coordinate of a point (initial) |
-| &harr; | Horizontal coordinate of a point (converted) |
-| yCoord | Integer | &srarr; | Vertical coordinate of a point (initial) |
-| &harr; | Vertical coordinate of a point (converted) |
-| from | Integer | &srarr; | Coordinates system to convert from |
-| to | Integer | &srarr; | Coordinates system to convert to |
+| xCoord | Integer | &rarr; | Horizontal coordinate of a point (initial) |
+| &larr; | Horizontal coordinate of a point (converted) |
+| yCoord | Integer | &rarr; | Vertical coordinate of a point (initial) |
+| &larr; | Vertical coordinate of a point (converted) |
+| from | Integer | &rarr; | Coordinates system to convert from |
+| to | Integer | &rarr; | Coordinates system to convert to |
 
 <!-- END REF-->
 

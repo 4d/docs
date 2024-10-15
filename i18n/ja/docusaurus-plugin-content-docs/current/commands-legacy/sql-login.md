@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOGIN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataEntry | Text | &srarr; | 外部データベース名、または<br/>外部データソースのIPアドレス、または<br/>ODBCマネジャーのデータソース名、または<br/>""で選択ダイアログボックスの表示 |
-| userName | Text | &srarr; | データソースに登録されているユーザー名 |
-| password | Text | &srarr; | データソースに登録されているパスワード |
-| * | 演算子 | &srarr; | Begin SQL/End SQLへ適用される 省略した場合、適用しない(ローカルデータベース)、 渡す場合、適用する |
+| dataEntry | Text | &rarr; | 外部データベース名、または<br/>外部データソースのIPアドレス、または<br/>ODBCマネジャーのデータソース名、または<br/>""で選択ダイアログボックスの表示 |
+| userName | Text | &rarr; | データソースに登録されているユーザー名 |
+| password | Text | &rarr; | データソースに登録されているパスワード |
+| * | 演算子 | &rarr; | Begin SQL/End SQLへ適用される 省略した場合、適用しない(ローカルデータベース)、 渡す場合、適用する |
 
 <!-- END REF-->
 

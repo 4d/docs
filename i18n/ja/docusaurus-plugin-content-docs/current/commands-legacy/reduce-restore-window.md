@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &srarr; | ウィンドウ参照番号 |
+| window | Integer | &rarr; | ウィンドウ参照番号 |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaAcceso | Text | &srarr; | Nombre o ruta de acceso del archivo de historial a integrar |
-| numOperacion | Real | &srarr; | Número de la última operación integrada |
-| &harr; | Nuevo número de la última operación integrada o -2 para integrar todo el archivo |
-| modo | Integer | &srarr; | 0=modo estricto (modo por defecto), 1=modo auto reparar |
-| objError | Object | &harr; | Operaciones faltantes |
+| rutaAcceso | Text | &rarr; | Nombre o ruta de acceso del archivo de historial a integrar |
+| numOperacion | Real | &rarr; | Número de la última operación integrada |
+| &larr; | Nuevo número de la última operación integrada o -2 para integrar todo el archivo |
+| modo | Integer | &rarr; | 0=modo estricto (modo por defecto), 1=modo auto reparar |
+| objError | Object | &larr; | Operaciones faltantes |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
-| colNumber | Integer | &srarr; | カラム番号 |
-| object | Field, Variable, Pointer | &srarr; | カラムに挿入するオブジェクト |
+| area | Integer | &rarr; | エリア参照 |
+| colNumber | Integer | &rarr; | カラム番号 |
+| object | Field, Variable, Pointer | &rarr; | カラムに挿入するオブジェクト |
 
 <!-- END REF-->
 

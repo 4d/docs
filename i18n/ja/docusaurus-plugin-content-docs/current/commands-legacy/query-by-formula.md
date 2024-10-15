@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | レコードセレクションを求めるテーブル |
-| queryFormula | Boolean | &srarr; | 検索フォーミュラ |
+| aTable | Table | &rarr; | レコードセレクションを求めるテーブル |
+| queryFormula | Boolean | &rarr; | 検索フォーミュラ |
 
 <!-- END REF-->
 

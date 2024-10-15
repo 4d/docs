@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get document size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text, Time | &srarr; | Document reference number or Document name |
-| * | Operator | &srarr; | On Mac OS only: - if omitted, size of data fork - if specified, size of resource fork |
+| document | Text, Time | &rarr; | Document reference number or Document name |
+| * | Operator | &rarr; | On Mac OS only: - if omitted, size of data fork - if specified, size of resource fork |
 | Function result | Real | &larr; | Size (expressed in bytes) of the document |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoVar | Field, Variable | &srarr; | Campo o variable a probar |
+| campoVar | Field, Variable | &rarr; | Campo o variable a probar |
 | Resultado | Integer | &larr; | Número de tipo de datos |
 
 <!-- END REF-->

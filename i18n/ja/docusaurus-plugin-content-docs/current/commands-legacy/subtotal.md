@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Subtotal.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| data | Field | &srarr; | 小計を求める数値型のフィールドまたは変数 |
-| pageBreak | Integer | &srarr; | 改ページを行うブレークレベル |
+| data | Field | &rarr; | 小計を求める数値型のフィールドまたは変数 |
+| pageBreak | Integer | &rarr; | 改ページを行うブレークレベル |
 | 戻り値 | Real | &larr; | データの小計 |
 
 <!-- END REF-->

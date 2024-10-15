@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Mobile App Action database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Objeto | &srarr; | Informação passada pela aplicação móvel |
+| $1 | Objeto | &rarr; | Informação passada pela aplicação móvel |
 | Resultado | Object | &larr; | Estado da ação e sincronização de dados |
 
 <!-- END REF-->

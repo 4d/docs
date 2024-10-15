@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Trunc.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &srarr; | Número a truncar |
-| decimales | Integer | &srarr; | Número de lugares decimales a conservar |
+| Numero | Real | &rarr; | Número a truncar |
+| decimales | Integer | &rarr; | Número de lugares decimales a conservar |
 | Resultado | Real | &larr; | Número truncado a partir del número decimales especificado por decimales |
 
 <!-- END REF-->

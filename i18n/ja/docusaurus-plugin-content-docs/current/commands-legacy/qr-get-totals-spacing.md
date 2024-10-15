@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET TOTALS SPACING.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
-| subtotal | Integer | &srarr; | 小計番号 |
-| value | Integer | &harr; | 0=スペースなし, 32000=改ページ挿入, >0=ブレークレベルの上に追加するスペース, <0=比率指定 |
+| area | Integer | &rarr; | エリア参照 |
+| subtotal | Integer | &rarr; | 小計番号 |
+| value | Integer | &larr; | 0=スペースなし, 32000=改ページ挿入, >0=ブレークレベルの上に追加するスペース, <0=比率指定 |
 
 <!-- END REF-->
 

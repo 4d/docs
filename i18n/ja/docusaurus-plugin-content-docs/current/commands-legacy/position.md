@@ -10,19 +10,19 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| find | Text | &srarr; | 見つける文字列 |
-| aString | Text | &srarr; | 調べる文字列 |
-| start | Integer | &srarr; | aString引数内で検索を開始する位置 |
-| lengthFound | Integer | &harr; | 見つかった文字列の長さ |
-| * | 演算子 | &srarr; | 渡されると、文字コードに基づいて評価 |
+| find | Text | &rarr; | 見つける文字列 |
+| aString | Text | &rarr; | 調べる文字列 |
+| start | Integer | &rarr; | aString引数内で検索を開始する位置 |
+| lengthFound | Integer | &larr; | 見つかった文字列の長さ |
+| * | 演算子 | &rarr; | 渡されると、文字コードに基づいて評価 |
 | 戻り値 | Integer | &larr; | 最初に見つかった位置 |
 | Position ( find ; aString ; start ; lengthFound ; options ) -> 戻り値 |
 | 引数 | 型 | 説明 |
-| find | Text | &srarr; | 見つける文字列 |
-| aString | Text | &srarr; | 調べる文字列 |
-| start | Integer | &srarr; | aString引数内で検索を開始する位置 |
-| lengthFound | Integer | &srarr; | 見つかった文字列の長さ |
-| options | Integer | &srarr; | 検索条件 |
+| find | Text | &rarr; | 見つける文字列 |
+| aString | Text | &rarr; | 調べる文字列 |
+| start | Integer | &rarr; | aString引数内で検索を開始する位置 |
+| lengthFound | Integer | &rarr; | 見つかった文字列の長さ |
+| options | Integer | &rarr; | 検索条件 |
 | 戻り値 | Integer | &larr; | 最初に見つかった位置 |
 
 <!-- END REF-->

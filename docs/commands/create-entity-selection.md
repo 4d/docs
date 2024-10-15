@@ -8,9 +8,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Create entity selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dsTable | Table | &#x1F852; | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings | Object | &#x1F852; | Build option: context |
-| Function result | 4D.EntitySelection | &#x1F850; | Entity selection matching the dataclass related to the given table |
+| dsTable | Table | &rarr; | Table in the 4D database whose current selection will be used to build the entity selection |
+| settings | Object |&rarr; | Build option: context |
+| Function result | 4D.EntitySelection | &larr; | Entity selection matching the dataclass related to the given table |
 
 <!-- END REF-->
 

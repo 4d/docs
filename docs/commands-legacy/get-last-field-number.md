@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last field number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Longint, Pointer | &srarr; | Table number or Pointer to table |
+| tableNum &#124; tablePtr | Longint, Pointer | &rarr; | Table number or Pointer to table |
 | Function result | Longint | &larr; | Highest field number in table |
 
 <!-- END REF-->

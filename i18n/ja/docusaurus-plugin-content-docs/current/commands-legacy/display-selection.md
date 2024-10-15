@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | 表示するテーブル, または 省略時、デフォルトテーブル |
-| selectMode | Integer | &srarr; | 選択モード |
-| enterList | Boolean | &srarr; | リスト入力を許可するオプション |
-| * | Operator |  &srarr; | 1レコードセレクションの場合にも出力フォームを使用し、 入力フォームのスクロールバーを隠す |
-| * | Operator |  &srarr; | 入力フォームでスクロールバーを表示する (最初の*の2番目のオプションを上書きする) |
+| aTable | Table | &rarr; | 表示するテーブル, または 省略時、デフォルトテーブル |
+| selectMode | Integer | &rarr; | 選択モード |
+| enterList | Boolean | &rarr; | リスト入力を許可するオプション |
+| * | Operator |  &rarr; | 1レコードセレクションの場合にも出力フォームを使用し、 入力フォームのスクロールバーを隠す |
+| * | Operator |  &rarr; | 入力フォームでスクロールバーを表示する (最初の*の2番目のオプションを上書きする) |
 
 <!-- END REF-->
 

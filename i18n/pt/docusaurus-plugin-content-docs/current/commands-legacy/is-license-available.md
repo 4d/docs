@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is license available.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| licença | Integer | &srarr; | Testar se o plug-in desejado está disponível |
+| licença | Integer | &rarr; | Testar se o plug-in desejado está disponível |
 | Resultado | Boolean | &larr; | Verdadeiro se o plug-in estiver disponível, senão False |
 
 <!-- END REF-->

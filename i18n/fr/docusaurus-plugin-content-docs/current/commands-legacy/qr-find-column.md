@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Find column.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &srarr; | Référence de la zone |
-| expression | Text, Pointer | &srarr; | Objet de colonne |
+| zone | Integer | &rarr; | Référence de la zone |
+| expression | Text, Pointer | &rarr; | Objet de colonne |
 | Résultat | Integer | &larr; | Numéro de colonne |
 
 <!-- END REF-->

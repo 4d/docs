@@ -7,7 +7,7 @@ La clase `IMAPTransporter` le permite recuperar mensajes de un servidor de corre
 
 ### Objeto IMAP Transporter
 
-Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter](#imap-new-transporter). Ofrecen las siguientes propiedades y funciones:
+IMAP Transporter objects are instantiated with the [IMAP New transporter](../commands/imap-new-transporter.md) command. Ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,73 +42,6 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 | [<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Syntax -->](#unsubscribe)<br/><!-- INCLUDE #IMAPTransporterClass.unsubscribe().Summary -->                        |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                   |
 
-## IMAP New transporter
-
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18 R4       | Añadidos       |
-
-</details>
-
-<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF #_command_.IMAP New transporter.Params -->
-
-| Parámetros | Tipo                               |                             | Descripción                                           |
-| ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------- |
-| server     | Object                             |              ->             | Información del servidor de correo                    |
-| Result     | 4D.IMAPTransporter | <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summary -->configura una nueva conexión IMAP<!-- END REF --> según el parámetro *server* y devuelve un nuevo objeto *transporter*. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
-
-En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
-
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Valor por defecto (si se omite)                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                  | False                                                                    |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena u objeto token que representa las credenciales de autorización OAuth2. Utilizado sólo con OAUTH2 `authationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                    | se utiliza el modo de autenticación más seguro soportado por el servidor |
-| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                                            | 300                                                                      |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                       | 30                                                                       |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *obligatorio*                                                            |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                     | ninguno                                                                  |
-| .**password** : Text<br/>contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                                                                               | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 993                                                                      |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ninguno                                                                  |
-
-> **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
-
-#### Resultado
-
-La función devuelve un [**objeto transportador IMAP**](#object-imap-transporter). Todas las propiedades devueltas son de sólo lectura\*\*.
-
-> La conexión IMAP se cierra automáticamente cuando se destruye el objeto transportador.
-
-#### Ejemplo
-
-```4d
-$server:=New object
-$server.host:="imap.gmail.com" //Obligatorio
-$server.port:=993
-$server.user:="4d@gmail.com"
-$server.password:="XXXXXXXX"
-$server.logFile:="LogTest.txt" //log a guardar en la carpeta Logs
-
-var $transporter : 4D.IMAPTransporter
- $transporter:=IMAP New transporter($server)
-
-$status:=$transporter.checkConnection()
-If(Not($status.success))
-   ALERT("An error occurred: "+$status.statusText)
-End if
-```
-
 ## 4D.IMAPTransporter.new()
 
 <!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
@@ -124,7 +57,7 @@ End if
 
 #### Descripción
 
-La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.IMAPTransporter`<!-- END REF -->. Es idéntico al comando [`IMAP New transporter`](#imap-new-transporter) (acceso directo).
+La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.IMAPTransporter`<!-- END REF -->. It is identical to the [`IMAP New transporter`](../commands/imap-new-transporter.md) command (shortcut).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -149,7 +82,7 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | Collection |              ->             | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
 | keywords   | Object     |              ->             | Banderas de palabras claves a añadir                                                                                                                                                                                                                       |
-| Result     | Object     | <- | Estado de la operación addFlags                                                                                                                                                                                                                            |
+| Resultado  | Object     | <- | Estado de la operación addFlags                                                                                                                                                                                                                            |
 
 <!-- END REF -->
 
@@ -854,7 +787,7 @@ En el parámetro opcional `parameters`, pase un objeto que contenga valores para
 | withBoxProperties | Boolean    | Si true (por defecto): agrega los atributos `selectable`, `inferior` e `interesting` al objeto de resultado. Si es false, se omiten estos atributos. |
 | withBoxInfo       | Boolean    | El valor por defecto es false. Si true, agrega los atributos `mailCount`, `mailRecent` e `id` al objeto resultado.                                                                      |
 
-#### Resultado
+#### Result
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
@@ -923,7 +856,7 @@ El delimitador es un caracter que puede utilizarse para:
 - crear buzones de nivel inferior
 - buscar más arriba o más abajo en la jerarquía del buzón
 
-#### Result
+#### Resultado
 
 Caracter delimitador del nombre del buzón.
 
@@ -1086,7 +1019,7 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 > - Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > - Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox).
 
-#### Resultado
+#### Result
 
 `.getMails()` devuelve un objeto que contiene las siguientes colecciones:
 
@@ -1170,7 +1103,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 > * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error,
 > * Si no hay ninguna conexión abierta, `.getMIMEAsBlob()` abrirá una conexión el último buzón especificado con `.selectBox()`.
 
-#### Result
+#### Resultado
 
 `.getMIMEAsBlob()` devuelve un `BLOB` que puede almacenarse en una base de datos o convertirse en un objeto [`Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
 

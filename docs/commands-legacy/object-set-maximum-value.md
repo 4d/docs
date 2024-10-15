@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| maxValue | Date, Time, Number | &srarr; | Maximum value for object |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &rarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| maxValue | Date, Time, Number | &rarr; | Maximum value for object |
 
 <!-- END REF-->
 

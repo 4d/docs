@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get element by ID.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | オブジェクト | &#x1F852; | 4D Write Pro ドキュメント |
-| ID | 文字 | &#x1F852; | 取得する要素のID |
-| 戻り値 | オブジェクト | &#x1F850; | 4D Write Pro 要素 |
+| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
+| ID | Text | &rarr; | 取得する要素のID |
+| 戻り値 | Object | &larr; | 4D Write Pro 要素 |
 
 <!-- END REF-->
 

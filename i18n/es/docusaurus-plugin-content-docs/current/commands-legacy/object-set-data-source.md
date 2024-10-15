@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| fuenteDatos | Pointer | &srarr; | Puntero a la nueva fuente de datos del objeto |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| fuenteDatos | Pointer | &rarr; | Puntero a la nueva fuente de datos del objeto |
 
 <!-- END REF-->
 

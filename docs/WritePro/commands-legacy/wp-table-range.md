@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table range.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| Function result | Object | &#x1F850; | Range object containing tables only |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| Function result | Object | &larr; | Range object containing tables only |
 
 <!-- END REF-->
 

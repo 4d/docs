@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| layout | Longint | &#x1F852; | 4D Write Pro document layout used for evaluation: 0 (default)=4D Write Pro layout, 1=HTML WYSIWYG |
-| Function result | Object | &#x1F850; | Position information |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| layout | Longint | &rarr; | 4D Write Pro document layout used for evaluation: 0 (default)=4D Write Pro layout, 1=HTML WYSIWYG |
+| Function result | Object | &larr; | Position information |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.XML DECODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| valorXML | Text | &srarr; | Valor do tipo Texto que vem de uma estrutura XML |
-| objeto4D | Field, Variable | &harr; | Variável 4D ou campo que recebe o valor XML convertido |
+| valorXML | Text | &rarr; | Valor do tipo Texto que vem de uma estrutura XML |
+| objeto4D | Field, Variable | &larr; | Variável 4D ou campo que recebe o valor XML convertido |
 
 <!-- END REF-->
 

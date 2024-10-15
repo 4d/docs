@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
-| débutSél | Integer | &srarr; | Début de la sélection |
-| finSél | Integer | &srarr; | Fin de la sélection |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
+| débutSél | Integer | &rarr; | Début de la sélection |
+| finSél | Integer | &rarr; | Fin de la sélection |
 | Résultat | Text | &larr; | Texte incluant les balises de style |
 
 <!-- END REF-->

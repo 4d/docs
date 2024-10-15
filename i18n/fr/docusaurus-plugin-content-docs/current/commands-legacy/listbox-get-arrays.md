@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| tabNomsCols | Text array | &harr; | Noms d’objet des colonnes |
-| tabNomsEntêtes | Text array | &harr; | Noms d’objet des en-têtes |
-| tabVarCols | Pointer array | &harr; | Pointeurs vers les variables des colonnes ou Pointeurs vers les champs des colonnes ou Nil |
-| tabVarEntêtes | Pointer array | &harr; | Pointeurs vers les variables des en-têtes |
-| tabColsVisibles | Boolean array | &harr; | Visibilité de chaque colonne |
-| tabStyles | Pointer array | &harr; | Pointeurs vers les tableaux ou les variables de styles de couleurs et de contrôle des lignes ou Nil |
-| tabNomsPieds | Text array | &harr; | Noms d’objet des pieds de colonnes |
-| tabVarPieds | Pointer array | &harr; | Pointeurs vers les variables des pieds de colonnes |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| tabNomsCols | Text array | &larr; | Noms d’objet des colonnes |
+| tabNomsEntêtes | Text array | &larr; | Noms d’objet des en-têtes |
+| tabVarCols | Pointer array | &larr; | Pointeurs vers les variables des colonnes ou Pointeurs vers les champs des colonnes ou Nil |
+| tabVarEntêtes | Pointer array | &larr; | Pointeurs vers les variables des en-têtes |
+| tabColsVisibles | Boolean array | &larr; | Visibilité de chaque colonne |
+| tabStyles | Pointer array | &larr; | Pointeurs vers les tableaux ou les variables de styles de couleurs et de contrôle des lignes ou Nil |
+| tabNomsPieds | Text array | &larr; | Noms d’objet des pieds de colonnes |
+| tabVarPieds | Pointer array | &larr; | Pointeurs vers les variables des pieds de colonnes |
 
 <!-- END REF-->
 

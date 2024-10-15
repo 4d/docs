@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SCREENSHOT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela do formulário |
-| nomeForm | Text | &srarr; | Nome do formulário |
-| imagForm | Picture | &harr; | Imagem do formulário em execução se o primeiro parâmetro se omite, ou<br/>Imagem do formulário no editor de formulários se passar um nome de formulário |
-| pagNum | Integer | &srarr; | Número de página do formulário |
+| tabela | Table | &rarr; | Tabela do formulário |
+| nomeForm | Text | &rarr; | Nome do formulário |
+| imagForm | Picture | &larr; | Imagem do formulário em execução se o primeiro parâmetro se omite, ou<br/>Imagem do formulário no editor de formulários se passar um nome de formulário |
+| pagNum | Integer | &rarr; | Número de página do formulário |
 
 <!-- END REF-->
 

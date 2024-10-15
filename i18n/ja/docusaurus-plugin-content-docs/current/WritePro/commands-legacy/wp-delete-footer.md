@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE FOOTER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpSection | オブジェクト | &#x1F852; | 4D Write Pro セクションあるいはサブセクション |
+| wpSection | Object | &rarr; | 4D Write Pro セクションあるいはサブセクション |
 
 <!-- END REF-->
 

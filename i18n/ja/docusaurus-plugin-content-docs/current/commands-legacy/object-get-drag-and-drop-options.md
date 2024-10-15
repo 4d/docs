@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| draggable | Boolean | &harr; | ドラッグ可能ならTrue、そうでなければFalse |
-| automaticDrag | Boolean | &harr; | 自動ドラッグならTrue、そうでなければFalse |
-| droppable | Boolean | &harr; | ドロップ可能ならTrue、そうでなければFalse |
-| automaticDrop | Boolean | &harr; | 自動ドロップ可能ならTrue、そうでなければFalse |
+| * | 演算子 | &rarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| draggable | Boolean | &larr; | ドラッグ可能ならTrue、そうでなければFalse |
+| automaticDrag | Boolean | &larr; | 自動ドラッグならTrue、そうでなければFalse |
+| droppable | Boolean | &larr; | ドロップ可能ならTrue、そうでなければFalse |
+| automaticDrop | Boolean | &larr; | 自動ドロップ可能ならTrue、そうでなければFalse |
 
 <!-- END REF-->
 

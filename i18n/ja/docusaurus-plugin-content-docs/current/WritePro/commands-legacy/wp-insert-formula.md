@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Proドキュメント |
-| formula | オブジェクト | &#x1F852; | フォーミュラオブジェクト |
-| mode | 数値 | &#x1F852; | 挿入モード |
-| rangeUpdate | 数値 | &#x1F852; | 挿入されたコンテンツをレンジ内に含めるか含めないかを指定 |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Proドキュメント |
+| formula | Object | &rarr; | フォーミュラオブジェクト |
+| mode | Number | &rarr; | 挿入モード |
+| rangeUpdate | Number | &rarr; | 挿入されたコンテンツをレンジ内に含めるか含めないかを指定 |
 
 <!-- END REF-->
 

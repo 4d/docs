@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomPasta | Text | &srarr; | Nome da página da pasta de inicio |
-| tipoMetodo | Integer | &srarr; | Seletor de tipo de método a recuperar |
-| arrRotas | Text array | &harr; | Arrays de rotas e nomes dos métodos |
-| marcador | Real | &srarr; | Valor mínimo de marcador |
-| &harr; | Novo valor atual |
-| * | Operador | &srarr; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| nomPasta | Text | &rarr; | Nome da página da pasta de inicio |
+| tipoMetodo | Integer | &rarr; | Seletor de tipo de método a recuperar |
+| arrRotas | Text array | &larr; | Arrays de rotas e nomes dos métodos |
+| marcador | Real | &rarr; | Valor mínimo de marcador |
+| &larr; | Novo valor atual |
+| * | Operador | &rarr; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

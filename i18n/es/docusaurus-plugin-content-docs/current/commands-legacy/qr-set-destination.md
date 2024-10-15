@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET DESTINATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referencia del área |
-| tipo | Integer | &srarr; | Tipo de informe |
-| especificos | Text, Variable | &srarr; | Específicos del tipo de salida |
+| area | Integer | &rarr; | Referencia del área |
+| tipo | Integer | &rarr; | Tipo de informe |
+| especificos | Text, Variable | &rarr; | Específicos del tipo de salida |
 
 <!-- END REF-->
 

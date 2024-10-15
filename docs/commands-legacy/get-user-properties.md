@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer | &srarr; | Unique user ID number |
-| name | Text | &harr; | Name of the user |
-| startup | Text | &harr; | Startup method name |
-| password | Text | &harr; | Always an empty string |
-| nbLogin | Integer | &harr; | Number of logins to the database (Binary databases only) |
-| lastLogin | Date | &harr; | Date of last login to the database (Binary databases only) |
-| memberships | Integer array | &harr; | ID numbers of groups to which the user belongs |
-| groupOwner | Integer | &harr; | ID number of user group owner (Binary databases only) |
+| userID | Integer | &rarr; | Unique user ID number |
+| name | Text | &larr; | Name of the user |
+| startup | Text | &larr; | Startup method name |
+| password | Text | &larr; | Always an empty string |
+| nbLogin | Integer | &larr; | Number of logins to the database (Binary databases only) |
+| lastLogin | Date | &larr; | Date of last login to the database (Binary databases only) |
+| memberships | Array integer | &larr; | ID numbers of groups to which the user belongs |
+| groupOwner | Integer | &larr; | ID number of user group owner (Binary databases only) |
 
 <!-- END REF-->
 

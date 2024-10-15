@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to return number of selected records, or Default table, if omitted |
+| aTable | Table | &rarr; | Table for which to return number of selected records, or Default table, if omitted |
 | Function result | Longint | &larr; | Records in selection of table |
 
 <!-- END REF-->

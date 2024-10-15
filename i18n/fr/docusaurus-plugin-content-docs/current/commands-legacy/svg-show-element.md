@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
-| objetPicture | Picture | &srarr; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
-| id | Text | &srarr; | Attribut id de l’élément à visualiser |
-| marge | Integer | &srarr; | Marge de visibilité (en pixels par défaut) |
+| * | Opérateur | &rarr; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
+| objetPicture | Picture | &rarr; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id | Text | &rarr; | Attribut id de l’élément à visualiser |
+| marge | Integer | &rarr; | Marge de visibilité (en pixels par défaut) |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| oldPosition | Integer | &harr; | 移動された列の前の位置 |
-| newPosition | Integer | &harr; | 移動された列の新しい位置 |
+| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| oldPosition | Integer | &larr; | 移動された列の前の位置 |
+| newPosition | Integer | &larr; | 移動された列の新しい位置 |
 
 <!-- END REF-->
 

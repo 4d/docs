@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objetImage est un nom d’objet (chaîne) Si omis, objetImage est un champ ou une variable |
-| objetPicture | Picture | &srarr; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| x | Integer | &srarr; | Coordonnée X en pixels |
-| y | Integer | &srarr; | Coordonnée Y en pixels |
+| * | Opérateur | &rarr; | Si spécifié, objetImage est un nom d’objet (chaîne) Si omis, objetImage est un champ ou une variable |
+| objetPicture | Picture | &rarr; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| x | Integer | &rarr; | Coordonnée X en pixels |
+| y | Integer | &rarr; | Coordonnée Y en pixels |
 | Résultat | Text | &larr; | ID de l’élément se trouvant à l’emplacement x,y |
 
 <!-- END REF-->

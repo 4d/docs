@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Picture | &srarr; | Fonte da imagem 4D ou variável a converter para uma miniatura |
-| dest | Picture | &harr; | Miniatura resultante |
-| largura | Integer | &srarr; | Largura da miniatura em pixels. Valor padrão = 48 |
-| altura | Integer | &srarr; | Altura da miniatura em pixels. Valor padrão = 48 |
-| modo | Integer | &srarr; | Módulo de criação de miniaturas; Valor padrão= Proporcional centralizado (6) |
-| profundidade | Integer | &srarr; | Obsoleto, não usar |
+| fonte | Picture | &rarr; | Fonte da imagem 4D ou variável a converter para uma miniatura |
+| dest | Picture | &larr; | Miniatura resultante |
+| largura | Integer | &rarr; | Largura da miniatura em pixels. Valor padrão = 48 |
+| altura | Integer | &rarr; | Altura da miniatura em pixels. Valor padrão = 48 |
+| modo | Integer | &rarr; | Módulo de criação de miniaturas; Valor padrão= Proporcional centralizado (6) |
+| profundidade | Integer | &rarr; | Obsoleto, não usar |
 
 <!-- END REF-->
 

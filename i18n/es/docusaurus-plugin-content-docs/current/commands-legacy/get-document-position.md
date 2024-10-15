@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get document position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docRef | Time | &srarr; | Número de referencia del documento |
+| docRef | Time | &rarr; | Número de referencia del documento |
 | Resultado | Real | &larr; | Posición en el archivo (expresada en bytes) a partir del inicio del archivo |
 
 <!-- END REF-->

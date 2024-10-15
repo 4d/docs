@@ -5,7 +5,7 @@ title: Fonte de dados
 
 ## Inserção automática
 
-When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory.
+When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
 
 When the **automatic insertion** option is not selected (default), the value entered is stored in the object but not in the list in memory.
 

@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable (si * se omite) |
-| posicionCol | Integer | &srarr; | Ubicación de la columna a insertar |
-| nomCol | Text | &srarr; | Nombre del objeto de la columna |
-| formula | Text | &srarr; | Fórmula 4D asociada a la columna |
-| tipoDatos | Integer | &srarr; | Tipo de resultado de la fórmula |
-| nomEncabezado | Text | &srarr; | Nombre del objeto del encabezado de la columna |
-| varEncabezado | Integer, Pointer | &srarr; | Variable del encabezado de la columna |
-| nomPie | Text | &srarr; | Nombre del objeto de pie de la columna |
-| variablePie | Variable, Pointer | &srarr; | Variable de pie de columna |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Variable (si * se omite) |
+| posicionCol | Integer | &rarr; | Ubicación de la columna a insertar |
+| nomCol | Text | &rarr; | Nombre del objeto de la columna |
+| formula | Text | &rarr; | Fórmula 4D asociada a la columna |
+| tipoDatos | Integer | &rarr; | Tipo de resultado de la fórmula |
+| nomEncabezado | Text | &rarr; | Nombre del objeto del encabezado de la columna |
+| varEncabezado | Integer, Pointer | &rarr; | Variable del encabezado de la columna |
+| nomPie | Text | &rarr; | Nombre del objeto de pie de la columna |
+| variablePie | Variable, Pointer | &rarr; | Variable de pie de columna |
 
 <!-- END REF-->
 

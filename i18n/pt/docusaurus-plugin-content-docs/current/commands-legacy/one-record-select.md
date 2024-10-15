@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela na qual reduzir a seleção ao registro atual, ou tabela padrão, se omitido |
+| tabela | Table | &rarr; | Tabela na qual reduzir a seleção ao registro atual, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

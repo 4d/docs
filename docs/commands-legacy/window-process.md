@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Window process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &srarr; | Window reference number |
+| window | Integer | &rarr; | Window reference number |
 | Function result | Longint | &larr; | Process reference number |
 
 <!-- END REF-->

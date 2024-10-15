@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.INVOKE ACTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| action | Text | &srarr; | Nom de l'action standard ou syntaxe avec paramètre si celui-ci est requis |
-| cible | Integer | &srarr; | Définit le lieu d'exécution de l'action : le formulaire courant (par défaut) ou le formulaire principal |
+| action | Text | &rarr; | Nom de l'action standard ou syntaxe avec paramètre si celui-ci est requis |
+| cible | Integer | &rarr; | Définit le lieu d'exécution de l'action : le formulaire courant (par défaut) ou le formulaire principal |
 
 <!-- END REF-->
 

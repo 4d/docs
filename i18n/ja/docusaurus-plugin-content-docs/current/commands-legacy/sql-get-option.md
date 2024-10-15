@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &srarr; | オプション番号 |
-| value | Integer, Text | &harr; | オプション値 |
+| option | Integer | &rarr; | オプション番号 |
+| value | Integer, Text | &larr; | オプション値 |
 
 <!-- END REF-->
 

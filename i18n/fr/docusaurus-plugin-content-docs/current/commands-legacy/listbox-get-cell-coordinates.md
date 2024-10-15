@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| colonne | Integer | &srarr; | Numéro de colonne |
-| ligne | Integer | &srarr; | Numéro de ligne |
-| gauche | Integer | &harr; | Coordonnée gauche de l'objet |
-| haut | Integer | &harr; | Coordonnée supérieure de l’objet |
-| droite | Integer | &harr; | Coordonnée droite de l’objet |
-| bas | Integer | &harr; | Coordonnée inférieure de l’objet |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| colonne | Integer | &rarr; | Numéro de colonne |
+| ligne | Integer | &rarr; | Numéro de ligne |
+| gauche | Integer | &larr; | Coordonnée gauche de l'objet |
+| haut | Integer | &larr; | Coordonnée supérieure de l’objet |
+| droite | Integer | &larr; | Coordonnée droite de l’objet |
+| bas | Integer | &larr; | Coordonnée inférieure de l’objet |
 
 <!-- END REF-->
 

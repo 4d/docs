@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get pointer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| varName | Text | &srarr; | プロセスまたはインタプロセス変数の名前 |
+| varName | Text | &rarr; | プロセスまたはインタプロセス変数の名前 |
 | 戻り値 | Pointer | &larr; | プロセスまたはインタープロセス変数へのポインタ |
 
 <!-- END REF-->

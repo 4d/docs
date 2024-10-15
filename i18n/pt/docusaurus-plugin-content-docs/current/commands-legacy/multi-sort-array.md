@@ -10,12 +10,12 @@ displayed_sidebar: docs
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array a ser ordenado |
-| ordem | * | &srarr; | ">" para ordernar em ordem crescente ou "<" para ordenar em ordem decrescente, se omitido "aa" sem ordem |
+| array | Array | &rarr; | Array a ser ordenado |
+| ordem | * | &rarr; | ">" para ordernar em ordem crescente ou "<" para ordenar em ordem decrescente, se omitido "aa" sem ordem |
 | MULTI SORT ARRAY ( ptrArrayNome  ; sortArrayNome  ) |
 | Parâmetro | Tipo | Descrição |
-| ptrArrayNome | Pointer array | &srarr; | Array de um array de ponteiros |
-| sortArrayNome | Integer array | &srarr; | Ordenação do array (1 = ordenar em ordem crescente, -1 = ordenar em ordem descrescente, 0 = sincronização com a ordenação anterior) |
+| ptrArrayNome | Pointer array | &rarr; | Array de um array de ponteiros |
+| sortArrayNome | Integer array | &rarr; | Ordenação do array (1 = ordenar em ordem crescente, -1 = ordenar em ordem descrescente, 0 = sincronização com a ordenação anterior) |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectField | Field | &srarr; | Object field from which to get the list of distinct attribute values |
-| path | Text | &srarr; | Path of attribute whose distinct values you want to get |
-| valuesArray | Text array, Integer array, Boolean array, Date array, Time array | &harr; | Distinct values in attribute path |
+| objectField | Field | &rarr; | Object field from which to get the list of distinct attribute values |
+| path | Text | &rarr; | Path of attribute whose distinct values you want to get |
+| valuesArray | Text array, Array integer, Boolean array, Date array, Time array | &larr; | Distinct values in attribute path |
 
 <!-- END REF-->
 

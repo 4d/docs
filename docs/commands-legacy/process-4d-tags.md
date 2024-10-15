@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| inputTemplate | Text | &srarr; | Data containing tags to process |
-| outputResult | Text | &harr; | Result from template execution |
-| param | Expression | &srarr; | Parameter(s) passed to template being executed |
+| inputTemplate | Text | &rarr; | Data containing tags to process |
+| outputResult | Text | &larr; | Result from template execution |
+| param | Expression | &rarr; | Parameter(s) passed to template being executed |
 
 <!-- END REF-->
 

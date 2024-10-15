@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &srarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| beforeItemRef &#124; * | Longint, Operator | &srarr; | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
-| itemText | Text | &srarr; | Text for the new list item |
-| itemRef | Integer | &srarr; | Unique reference number for the new list item |
-| sublist | Integer | &srarr; | Optional sublist to attach to the new list item |
-| expanded | Boolean | &srarr; | Indicates if the sublist will be expanded or collapsed |
+| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| beforeItemRef &#124; * | Longint, Operator | &rarr; | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
+| itemText | Text | &rarr; | Text for the new list item |
+| itemRef | Integer | &rarr; | Unique reference number for the new list item |
+| sublist | Integer | &rarr; | Optional sublist to attach to the new list item |
+| expanded | Boolean | &rarr; | Indicates if the sublist will be expanded or collapsed |
 
 <!-- END REF-->
 

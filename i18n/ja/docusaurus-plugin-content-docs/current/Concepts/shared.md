@@ -8,7 +8,7 @@ title: 共有オブジェクトと共有コレクション
 共有オブジェクトと共有コレクションは、標準の [`Object`](dt_object.md) および [`Collection`](dt_collection.md) 型の変数に保存されますが、専用のコマンドを使用してインスタンス化されている必要があります:
 
 - 共有オブジェクトを作成するには、[`New shared object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドを使用するか、[共有クラス](classes.md#共有クラス) の [`new()`](../API/ClassClass.md#new) 関数を呼び出します。
-- 共有コレクションを作成するには、[`New shared collection`](../API/CollectionClass.md#new-shared-collection) コマンドを使用します。
+- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
 
 共有オブジェクトと共有コレクションには、スカラー値または他の共有オブジェクトや共有コレクションのみを含めることができます。 ただし、共有オブジェクトや共有コレクションは、標準の (非共有の) オブジェクトおよびコレクションのプロパティとして設定することができます。
 

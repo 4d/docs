@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Request.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mensagem | Text | &srarr; | Mensagem a exibir na caixa de diálogo de alerta |
-| respostaPadrao | Text | &srarr; | Dados automáticos para a área de entrada de texto |
-| okBotaoTitulo | Text | &srarr; | Título do botão OK |
-| cancelarBotaoTitulo | Text | &srarr; | Título do botão Cancelar |
+| mensagem | Text | &rarr; | Mensagem a exibir na caixa de diálogo de alerta |
+| respostaPadrao | Text | &rarr; | Dados automáticos para a área de entrada de texto |
+| okBotaoTitulo | Text | &rarr; | Título do botão OK |
+| cancelarBotaoTitulo | Text | &rarr; | Título do botão Cancelar |
 | Resultado | Text | &larr; | Valor introduzido pelo usuário |
 
 <!-- END REF-->

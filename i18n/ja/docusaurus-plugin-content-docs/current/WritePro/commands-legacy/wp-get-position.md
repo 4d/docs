@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | 4D Write Pro ドキュメント、レンジ または 要素 |
-| layout | 倍長整数 | &#x1F852; | 評価の際に使用される4D Write Pro ドキュメントのレイアウト: 0(デフォルト)=4D Write Pro レイアウト、 1=HTML WYSIWYG |
-| 戻り値 | オブジェクト | &#x1F850; | 位置情報 |
+| targetObj | Object | &rarr; | 4D Write Pro ドキュメント、レンジ または 要素 |
+| layout | Integer | &rarr; | 評価の際に使用される4D Write Pro ドキュメントのレイアウト: 0(デフォルト)=4D Write Pro レイアウト、 1=HTML WYSIWYG |
+| 戻り値 | Object | &larr; | 位置情報 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Exp.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &srarr; | Nombre à évaluer |
+| nombre | Real | &rarr; | Nombre à évaluer |
 | Résultat | Real | &larr; | Exponentielle de nombre |
 
 <!-- END REF-->

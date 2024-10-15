@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &srarr; | Numéro de référence de la fenêtre Si omis = Toutes les fenêtres (Windows) ou Fenêtre de premier plan du process courant (Mac OS) |
+| fenêtre | Integer | &rarr; | Numéro de référence de la fenêtre Si omis = Toutes les fenêtres (Windows) ou Fenêtre de premier plan du process courant (Mac OS) |
 
 <!-- END REF-->
 

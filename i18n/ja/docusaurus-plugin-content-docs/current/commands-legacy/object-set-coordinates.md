@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時:object はオブジェクト名(文字列)、省略時:object は変数またはフィールド |
-| object | Integer | &srarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| left | Integer | &srarr; | オブジェクトの左端の絶対座標(ピクセル) |
-| top | Integer | &srarr; | オブジェクトの上端の絶対座標(ピクセル) |
-| right | Integer | &srarr; | オブジェクトの右端の絶対座標(ピクセル) |
-| bottom | Integer | &srarr; | オブジェクトの下端の絶対座標(ピクセル) |
+| * | 演算子 | &rarr; | 指定時:object はオブジェクト名(文字列)、省略時:object は変数またはフィールド |
+| object | Integer | &rarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| left | Integer | &rarr; | オブジェクトの左端の絶対座標(ピクセル) |
+| top | Integer | &rarr; | オブジェクトの上端の絶対座標(ピクセル) |
+| right | Integer | &rarr; | オブジェクトの右端の絶対座標(ピクセル) |
+| bottom | Integer | &rarr; | オブジェクトの下端の絶対座標(ピクセル) |
 
 <!-- END REF-->
 

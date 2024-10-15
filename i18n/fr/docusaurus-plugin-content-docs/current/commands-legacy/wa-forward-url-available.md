@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Forward URL available.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 | Résultat | Boolean | &larr; | Vrai s’il existe un URL suivant dans la séquence d’URLs ouverts, Faux sinon |
 
 <!-- END REF-->

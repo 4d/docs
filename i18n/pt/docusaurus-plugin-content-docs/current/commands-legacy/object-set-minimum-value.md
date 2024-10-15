@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| valorMinimo | Date, Time, Number | &srarr; | Valor mínimo para o objeto |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| valorMinimo | Date, Time, Number | &rarr; | Valor mínimo para o objeto |
 
 <!-- END REF-->
 

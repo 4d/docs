@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nom | Text | &srarr; | Nom du paramètre à inclure dans la requête SOAP |
-| valeur | Variable | &srarr; | Variable 4D contenant la valeur du paramètre |
-| typeSOAP | Text | &srarr; | Type SOAP du paramètre |
+| nom | Text | &rarr; | Nom du paramètre à inclure dans la requête SOAP |
+| valeur | Variable | &rarr; | Variable 4D contenant la valeur du paramètre |
+| typeSOAP | Text | &rarr; | Type SOAP du paramètre |
 
 <!-- END REF-->
 

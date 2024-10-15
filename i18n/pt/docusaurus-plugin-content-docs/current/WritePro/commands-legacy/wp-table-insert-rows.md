@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table insert rows.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objTarget | Objeto | &#x1F852; | Range ou elemento ou 4D Write Pro |
-| refTabela | Objeto | &#x1F852; | Referência de Tabela |
-| numLinha | Inteiro longo | &#x1F852; | Número índice da linha |
-| numLinhasInserir | Inteiro longo | &#x1F852; | Número de linhas a inserir (valor predeterminado =1) |
-| Resultado | Objeto | &#x1F850; | Range/seleção de linhas da tabela |
+| objTarget | Object | &rarr; | Range ou elemento ou 4D Write Pro |
+| refTabela | Object | &rarr; | Referência de Tabela |
+| numLinha | Integer | &rarr; | Número índice da linha |
+| numLinhasInserir | Integer | &rarr; | Número de linhas a inserir (valor predeterminado =1) |
+| Resultado | Object | &larr; | Range/seleção de linhas da tabela |
 
 <!-- END REF-->
 

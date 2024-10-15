@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &srarr; | Référence de la zone |
-| type | Integer | &srarr; | Type d'état |
+| zone | Integer | &rarr; | Référence de la zone |
+| type | Integer | &rarr; | Type d'état |
 
 <!-- END REF-->
 

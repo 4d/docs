@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &srarr; | File path and arguments of file to launch |
-| inputStream | Text, Blob | &srarr; | Input stream (stdin) |
-| outputStream | Text, Blob | &harr; | Output stream (stdout) |
-| errorStream | Text, Blob | &harr; | Error stream (stderr) |
-| pid | Integer | &harr; | Unique identifier for external process |
+| fileName | Text | &rarr; | File path and arguments of file to launch |
+| inputStream | Text, Blob | &rarr; | Input stream (stdin) |
+| outputStream | Text, Blob | &larr; | Output stream (stdout) |
+| errorStream | Text, Blob | &larr; | Error stream (stderr) |
+| pid | Integer | &larr; | Unique identifier for external process |
 
 <!-- END REF-->
 

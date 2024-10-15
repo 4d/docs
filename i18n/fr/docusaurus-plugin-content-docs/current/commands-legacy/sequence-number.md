@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Sequence number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table à numéroter automatiquement ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &rarr; | Table à numéroter automatiquement ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &larr; | Numéro automatique |
 
 <!-- END REF-->

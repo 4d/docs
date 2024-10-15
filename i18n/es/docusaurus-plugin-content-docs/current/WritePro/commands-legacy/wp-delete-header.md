@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE HEADER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| wpSection | Objeto | &#x1F852; | Sección o subsección 4D Write Pro |
+| wpSection | Object | &rarr; | Sección o subsección 4D Write Pro |
 
 <!-- END REF-->
 

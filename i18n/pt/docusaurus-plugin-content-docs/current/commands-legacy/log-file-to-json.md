@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaPastaDest | Text | &srarr; | Rota da pasta de destino do arquivo salvo |
-| tamMax | Integer | &srarr; | Tamanho máximo do arquivo JSON a criar (bytes) |
-| rotaHist | Text | &srarr; | Rota do arquivo de histórico a exportar; se omitido, usa o arquivo de histórico atual |
-| atrCampo | Integer | &srarr; | Descrição do atributo do campo: 1 = usa número (padrão), 2 = usa nome |
+| rotaPastaDest | Text | &rarr; | Rota da pasta de destino do arquivo salvo |
+| tamMax | Integer | &rarr; | Tamanho máximo do arquivo JSON a criar (bytes) |
+| rotaHist | Text | &rarr; | Rota do arquivo de histórico a exportar; se omitido, usa o arquivo de histórico atual |
+| atrCampo | Integer | &rarr; | Descrição do atributo do campo: 1 = usa número (padrão), 2 = usa nome |
 
 <!-- END REF-->
 

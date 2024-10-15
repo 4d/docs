@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE TEXT BOX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| textBox | オブジェクト | &#x1F852; | テキストボックス |
+| textBox | Object | &rarr; | テキストボックス |
 
 <!-- END REF-->
 

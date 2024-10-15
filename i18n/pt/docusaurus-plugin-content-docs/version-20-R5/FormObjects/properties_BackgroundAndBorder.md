@@ -5,9 +5,9 @@ title: Fundo e margem
 
 ## Cor de fundo alternado
 
-Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por defecto, _Automático_ está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
+Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, _Automático_ está selecionado: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Gramática JSON
 
@@ -25,9 +25,9 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 Define a cor de fundo de um objeto.
 
-En el caso de un list box, por defecto se selecciona _Automático_: la columna utiliza el color de fondo definido al nivel del list box.
+No caso de uma caixa de listagem, por padrão, _Automático_ é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Gramática JSON
 
@@ -49,11 +49,11 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 `List box de tipo coleção e seleção de entidades`
 
-Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the _4D Language Reference manual_.
+Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) no _Manual de Linguagem 4D_.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) command with `lk background color expression` constant.
+Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) com a constante `lk color expression`.
 
-> Con los list box de tipo colección o selección de entidades, esta propiedad también puede definirse utilizando una [Meta Info Expression](properties_Text.md#meta-info-expression).
+> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON
 
@@ -130,7 +130,7 @@ A cor pode ser especificada por:
 - um valor HEX - como "#ff0000"
 - um valor RGB - como "rgb(255,0,0)"
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Gramática JSON
 
@@ -138,7 +138,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 | ------ | ------------- | ---------------------------------------- |
 | stroke | string        | um valor css, "transparent", "automatic" |
 
-> Esta propiedad también está disponible para los objetos basados en texto, en cuyo caso designa tanto el color de la fuente como las líneas del objeto, ver [Color de la fuente](properties_Text.md#font-color).
+> Essa propriedade também está disponível para objetos baseados em texto, neste caso é designada tanto a cor da fonte quanto as linhas do objeto, veja [Cor da fonte](properties_Text.md#font-color).
 
 #### Objectos suportados
 
@@ -168,21 +168,21 @@ Designa a espessura de uma linha.
 
 O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 
-Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html). Se você quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento de array correspondente.
+Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html). Se você quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento de array correspondente.
 
 Por exemplo, dada uma caixa de listagem em que as linhas têm uma cor alternada de cinza/cinza claro, definida nas propriedades da caixa de listagem. Um array de cor de fundo também foi definida para a caixa de listagem, a fim de mudar a cor das linhas em que pelo menos um valor é negativo para laranja claro:
 
 ```4d
- <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
+ <>_BgndColors{$i}:=0x00FFD0B0 // laranja
+ <>_BgndColors{$i}:=-255 // valor por padrão
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-De seguida, deve colorir as células com valores negativos a laranja-escuro. Para ello, se define un array de colores de fondo para cada columna, por ejemplo `<>_BgndColor_1`, `<>_BgndColor_2` y `<>_BgndColor_3`. Os valores dessas arrays têm prioridade sobre os valores definidos nas propriedades da caixa de listagem, bem como sobre os valores do array geral de cores de fundo:
+De seguida, deve colorir as células com valores negativos a laranja-escuro. Para fazer isso, você definiu um array de cor de fundo para cada coluna, por exemplo, `<>_BgndColor_1`, `<>_BgndColor_2` e `<>_BgndColor_3`. Os valores dessas arrays têm prioridade sobre os valores definidos nas propriedades da caixa de listagem, bem como sobre os valores do array geral de cores de fundo:
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // laranja escura
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
@@ -190,7 +190,7 @@ De seguida, deve colorir as células com valores negativos a laranja-escuro. Par
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) and [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) commands. Eles têm a vantagem de permitir que você não precise predefinir matrizes de estilo/cor para as colunas: em vez disso, elas são criadas dinamicamente pelos comandos.
+Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET ROW STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) e [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html). Eles têm a vantagem de permitir que você não precise predefinir matrizes de estilo/cor para as colunas: em vez disso, elas são criadas dinamicamente pelos comandos.
 
 #### Gramática JSON
 
@@ -206,7 +206,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc
 
 ## Transparente
 
-Define o fundo do list box como "Transparent". Cuando se define, se ignora cualquier [color de fondo alternativo](#alternate-background-color) o [color de fondo](#background-color-fill-color) definido para la columna.
+Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de fundo alternativa](#alternate-background-color) ou [cor de fundo](#background-color-fill-color) definido para a coluna é ignorada.
 
 #### Gramática JSON
 
@@ -220,4 +220,4 @@ Define o fundo do list box como "Transparent". Cuando se define, se ignora cualq
 
 #### Veja também
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Cor de fundo / Cor de preenchimento](#background-color-fill-color)

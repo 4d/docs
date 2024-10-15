@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| users | Blob | &srarr; | BLOB (encrypted) containing database user accounts created and saved by the database Administrator |
+| users | Blob | &rarr; | BLOB (encrypted) containing database user accounts created and saved by the database Administrator |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE NAMED SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nom | Text | &srarr; | Nom de la sélection temporaire à utiliser |
+| nom | Text | &rarr; | Nom de la sélection temporaire à utiliser |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &srarr; | Número de menu ou menu de referência |
-| menuItem | Integer | &srarr; | Número de item de menu ou -1 para o último item adicionado |
-| processo | Integer | &srarr; | Número de referência de processo |
+| menu | Integer, Text | &rarr; | Número de menu ou menu de referência |
+| menuItem | Integer | &rarr; | Número de item de menu ou -1 para o último item adicionado |
+| processo | Integer | &rarr; | Número de referência de processo |
 | Resultado | Text | &larr; | Texto do item de menu |
 
 <!-- END REF-->

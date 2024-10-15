@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Select document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| directory | Text, Integer | &srarr; | • Directory access path to display by default in the document selection dialog box, or• Empty string to display default user folder (“My documents” under Windows, “Documents” under Mac OS), or• Number of the memorized access path |
-| fileTypes | Text | &srarr; | List of types of documents to filter, or "*" to not filter documents |
-| title | Text | &srarr; | Title of the selection dialog box |
-| options | Integer | &srarr; | Selection option(s) |
-| selected | Text array | &harr; | Array containing the list of access paths + names of selected files |
+| directory | Text, Integer | &rarr; | • Directory access path to display by default in the document selection dialog box, or• Empty string to display default user folder (“My documents” under Windows, “Documents” under Mac OS), or• Number of the memorized access path |
+| fileTypes | Text | &rarr; | List of types of documents to filter, or "*" to not filter documents |
+| title | Text | &rarr; | Title of the selection dialog box |
+| options | Integer | &rarr; | Selection option(s) |
+| selected | Text array | &larr; | Array containing the list of access paths + names of selected files |
 | Function result | String | &larr; | Name of selected file (first file of the list in case of multiple selection) |
 
 <!-- END REF-->

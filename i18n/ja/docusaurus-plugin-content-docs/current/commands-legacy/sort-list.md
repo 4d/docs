@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SORT LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &srarr; | リスト参照番号 |
-| > または < | 演算子 | &srarr; | 並び順: > 昇順, または < 降順 |
+| list | Integer | &rarr; | リスト参照番号 |
+| > または < | 演算子 | &rarr; | 並び順: > 昇順, または < 降順 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Validate digest.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userName | Text | &srarr; | ユーザの名前 |
-| password | Text | &srarr; | ユーザのパスワード |
+| userName | Text | &rarr; | ユーザの名前 |
+| password | Text | &rarr; | ユーザのパスワード |
 | 戻り値 | Boolean | &larr; | True=認証はOK、 False=認証は失敗 |
 
 <!-- END REF-->

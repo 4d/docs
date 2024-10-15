@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Day of.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fecha | Date | &srarr; | Fecha para la cual devolver el día |
+| fecha | Date | &rarr; | Fecha para la cual devolver el día |
 | Resultado | Integer | &larr; | Día del mes de la fecha |
 
 <!-- END REF-->

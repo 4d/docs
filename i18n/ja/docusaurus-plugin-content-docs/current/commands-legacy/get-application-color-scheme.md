@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get application color scheme.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | ホストデータベースのカラースキームを返す |
+| * | 演算子 | &rarr; | ホストデータベースのカラースキームを返す |
 | 戻り値 | Text | &larr; | カレントアプリケーションのカラースキーム |
 
 <!-- END REF-->

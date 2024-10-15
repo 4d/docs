@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Copy.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &srarr; | Objeto estruturado |
-| resolvePont | Boolean | &srarr; | True = resolve os ponteiros, False ou se omitido = não resolve ponteiros |
-| opção | Integer | &srarr; | ck shared: retorna um objeto partilhado, ck resolve pointers: resolve os ponteiros antes de copiar |
-| groupWith | Collection, Object | &srarr; | Coleção partilhada ou objeto para ser agrupado com o objeto retornado |
+| objeto | Object, Campo Object | &rarr; | Objeto estruturado |
+| resolvePont | Boolean | &rarr; | True = resolve os ponteiros, False ou se omitido = não resolve ponteiros |
+| opção | Integer | &rarr; | ck shared: retorna um objeto partilhado, ck resolve pointers: resolve os ponteiros antes de copiar |
+| groupWith | Collection, Object | &rarr; | Coleção partilhada ou objeto para ser agrupado com o objeto retornado |
 | Resultado | Object | &larr; | Cópia de objeto |
 
 <!-- END REF-->

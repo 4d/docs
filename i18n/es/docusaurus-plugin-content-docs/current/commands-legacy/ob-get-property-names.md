@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB GET PROPERTY NAMES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object | &srarr; | Objeto estructurado |
-| nomProp | Text array | &harr; | Nombres de las propiedades |
-| arrTipos | Integer array | &harr; | Tipos de propiedades |
+| objeto | Object | &rarr; | Objeto estructurado |
+| nomProp | Text array | &larr; | Nombres de las propiedades |
+| arrTipos | Integer array | &larr; | Tipos de propiedades |
 
 <!-- END REF-->
 

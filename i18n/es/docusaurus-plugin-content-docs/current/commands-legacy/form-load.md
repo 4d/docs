@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM LOAD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Tabla del formulario a cargar (si se omite, carga un formulario proyecto) |
-| formulario | Text, Object | &srarr; | Nombre del formulario proyecto a abrir para la impresión o Cadena vacía para cerrar el formulario proyecto actual |
-| dataForm | Object | &srarr; | Datos a asociar al formulario |
-| * | Operador | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| aTable | Table | &rarr; | Tabla del formulario a cargar (si se omite, carga un formulario proyecto) |
+| formulario | Text, Object | &rarr; | Nombre del formulario proyecto a abrir para la impresión o Cadena vacía para cerrar el formulario proyecto actual |
+| dataForm | Object | &rarr; | Datos a asociar al formulario |
+| * | Operador | &rarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

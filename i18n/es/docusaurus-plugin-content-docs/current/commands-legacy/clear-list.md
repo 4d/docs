@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &srarr; | Número de referencia de la lista |
-| * | Operator |  &srarr; | Si se especifica, si hay sublistas las borra de la memoria, Si se omite, las sublistas no son borradas |
+| lista | Integer | &rarr; | Número de referencia de la lista |
+| * | Operator |  &rarr; | Si se especifica, si hay sublistas las borra de la memoria, Si se omite, las sublistas no son borradas |
 
 <!-- END REF-->
 

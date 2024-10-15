@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tamanho | Real | &srarr; | Tamanho do banco de dados em bytes |
-| libMin | Real | &srarr; | Mínimo número de bytes a liberar quando cache estiver cheia |
+| tamanho | Real | &rarr; | Tamanho do banco de dados em bytes |
+| libMin | Real | &rarr; | Mínimo número de bytes a liberar quando cache estiver cheia |
 
 <!-- END REF-->
 

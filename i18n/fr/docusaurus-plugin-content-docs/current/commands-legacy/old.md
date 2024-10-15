@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Old.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &srarr; | Champ dont vous voulez obtenir l'ancienne valeur |
+| leField | Field | &rarr; | Champ dont vous voulez obtenir l'ancienne valeur |
 | Résultat | Expression | &larr; | Valeur originale de champ |
 
 <!-- END REF-->

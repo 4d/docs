@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.POST EVENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| what | Integer | &srarr; | イベントのタイプ |
-| message | Integer | &srarr; | イベントメッセージ |
-| when | Integer | &srarr; | Tick単位でのイベント時間 |
-| mouseX | Integer | &srarr; | マウスの水平座標 |
-| mouseY | Integer | &srarr; | マウスの垂直座標 |
-| modifiers | Integer | &srarr; | モディファイアキーのステータス |
-| process | Integer | &srarr; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
+| what | Integer | &rarr; | イベントのタイプ |
+| message | Integer | &rarr; | イベントメッセージ |
+| when | Integer | &rarr; | Tick単位でのイベント時間 |
+| mouseX | Integer | &rarr; | マウスの水平座標 |
+| mouseY | Integer | &rarr; | マウスの垂直座標 |
+| modifiers | Integer | &rarr; | モディファイアキーのステータス |
+| process | Integer | &rarr; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
 
 <!-- END REF-->
 

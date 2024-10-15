@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get table fragmentation.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | フラグメント率を取得するテーブル |
+| aTable | Table | &rarr; | フラグメント率を取得するテーブル |
 | 戻り値 | Real | &larr; | フラグメンテーションの割合 |
 
 <!-- END REF-->

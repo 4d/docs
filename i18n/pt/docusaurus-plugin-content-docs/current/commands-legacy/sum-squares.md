@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum squares.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | Dados para os quais se retorna a soma de quadrados. |
+| series | Field, Array | &rarr; | Dados para os quais se retorna a soma de quadrados. |
 | Resultado | Real | &larr; | Soma dos quadrados dos valores da série |
 
 <!-- END REF-->

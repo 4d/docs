@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LDAP Search.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &srarr; | 検索を開始するルートエントリーの識別名 |
-| filter | Text | &srarr; | LDAP検索フィルター |
-| scope | Text | &srarr; | 検索のスコープ: "base" (デフォルト)、"one"、または"sub" |
-| attributes | Text array | &srarr; | 取得する属性 |
-| attributesAsArray | Boolean array | &srarr; | True = 属性を強制的に配列として返す;<br/>False = 属性を強制的に単純な変数として返す |
+| dnRootEntry | Text | &rarr; | 検索を開始するルートエントリーの識別名 |
+| filter | Text | &rarr; | LDAP検索フィルター |
+| scope | Text | &rarr; | 検索のスコープ: "base" (デフォルト)、"one"、または"sub" |
+| attributes | Text array | &rarr; | 取得する属性 |
+| attributesAsArray | Boolean array | &rarr; | True = 属性を強制的に配列として返す;<br/>False = 属性を強制的に単純な変数として返す |
 | 戻り値 | Object | &larr; | キー/値 属性 |
 
 <!-- END REF-->

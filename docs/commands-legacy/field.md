@@ -10,12 +10,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | Integer | &srarr; | Table number |
-| fieldNum | Integer | &srarr; | Field number |
+| tableNum | Integer | &rarr; | Table number |
+| fieldNum | Integer | &rarr; | Field number |
 | fieldPtr | Pointer | &larr; | Field pointer |
 | Field ( fieldPtr ) -> fieldNum |
 | Parameter | Type | Description |
-| fieldPtr | Pointer | &srarr; | Field pointer |
+| fieldPtr | Pointer | &rarr; | Field pointer |
 | fieldNum | Integer | &larr; | Field number |
 
 <!-- END REF-->

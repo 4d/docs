@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de la lista |
-| lista | Integer, Text | &srarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| refElem &#124; * | Entero largo, Operador | &srarr; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
-| selector | Text | &srarr; | Constante del parámetro |
-| valor | Text, Boolean, Real | &harr; | Valor actual del parámetro |
+| * | Operador | &rarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de la lista |
+| lista | Integer, Text | &rarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| refElem &#124; * | Entero largo, Operador | &rarr; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
+| selector | Text | &rarr; | Constante del parámetro |
+| valor | Text, Boolean, Real | &larr; | Valor actual del parámetro |
 
 <!-- END REF-->
 

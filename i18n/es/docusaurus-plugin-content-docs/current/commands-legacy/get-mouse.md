@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MOUSE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ratonX | Real | &harr; | Coordenada horizontal del ratón |
-| ratonY | Real | &harr; | Coordenada vertical del ratón |
-| botonRaton | Integer | &harr; | Estado del botón del ratón: 0 = Botón arriba 1 = Botón presionado 2 = Botón derecho presionado 3 = Los dos botones presionados |
-| * | Operador | &srarr; | Si se especifica, utlizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
+| ratonX | Real | &larr; | Coordenada horizontal del ratón |
+| ratonY | Real | &larr; | Coordenada vertical del ratón |
+| botonRaton | Integer | &larr; | Estado del botón del ratón: 0 = Botón arriba 1 = Botón presionado 2 = Botón derecho presionado 3 = Los dos botones presionados |
+| * | Operador | &rarr; | Si se especifica, utlizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
 
 <!-- END REF-->
 

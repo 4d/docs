@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Validate password.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userID | Integer, Text | &srarr; | ユニークなユーザID |
-| password | Text | &srarr; | 暗号化されていないパスワード |
-| digest | Boolean | &srarr; | Digest password = True, <br/>Plain-text password (default) = False |
+| userID | Integer, Text | &rarr; | ユニークなユーザID |
+| password | Text | &rarr; | 暗号化されていないパスワード |
+| digest | Boolean | &rarr; | Digest password = True, <br/>Plain-text password (default) = False |
 | 戻り値 | Boolean | &larr; | True = 有効なパスワード False = 無効なパスワード |
 
 <!-- END REF-->

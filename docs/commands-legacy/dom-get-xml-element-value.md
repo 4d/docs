@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML element reference |
-| elementValue | Variable | &harr; | Value of the element |
-| cDATA | Variable | &harr; | Contents of the CDATA section |
+| elementRef | Text | &rarr; | XML element reference |
+| elementValue | Variable | &larr; | Value of the element |
+| cDATA | Variable | &larr; | Contents of the CDATA section |
 
 <!-- END REF-->
 

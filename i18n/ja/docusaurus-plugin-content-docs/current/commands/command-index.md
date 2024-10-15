@@ -7,7 +7,7 @@ title: インデックス
 
 <a id="4D"><b>4D</b></a>
 
-[`4D`](../commands-legacy/4d.md)<br/>
+[`4D`](4d.md)<br/>
 
 <a id="A"><b>A</b></a>
 
@@ -148,7 +148,7 @@ title: インデックス
 [`Create deployment license`](../commands-legacy/create-deployment-license.md)<br/>
 [`Create document`](../commands-legacy/create-document.md)<br/>
 [`CREATE EMPTY SET`](../commands-legacy/create-empty-set.md)<br/>
-[`Create entity selection`](../commands-legacy/create-entity-selection.md)<br/>
+[`Create entity selection`](create-entity-selection.md)<br/>
 [`CREATE FOLDER`](../commands-legacy/create-folder.md)<br/>
 [`CREATE INDEX`](../commands-legacy/create-index.md)<br/>
 [`Create menu`](../commands-legacy/create-menu.md)<br/>
@@ -158,7 +158,7 @@ title: インデックス
 [`CREATE SET`](../commands-legacy/create-set.md)<br/>
 [`CREATE SET FROM ARRAY`](../commands-legacy/create-set-from-array.md)<br/>
 [`CREATE THUMBNAIL`](../commands-legacy/create-thumbnail.md)<br/>
-[`cs`](../commands-legacy/cs.md)<br/>
+[`cs`](cs.md)<br/>
 [`Current client authentication`](../commands-legacy/current-client-authentication.md)<br/>
 [`Current date`](../commands-legacy/current-date.md)<br/>
 [`Current default table`](../commands-legacy/current-default-table.md)<br/>
@@ -252,7 +252,7 @@ title: インデックス
 [`DRAG WINDOW`](../commands-legacy/drag-window.md)<br/>
 [`Drop position`](../commands-legacy/drop-position.md)<br/>
 [`DROP REMOTE USER`](../commands-legacy/drop-remote-user.md)<br/>
-[`ds`](../commands-legacy/ds.md)<br/>
+[`ds`](ds.md)<br/>
 [`DUPLICATE RECORD`](../commands-legacy/duplicate-record.md)<br/>
 [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md)<br/>
 
@@ -264,6 +264,7 @@ title: インデックス
 [`ENABLE MENU ITEM`](../commands-legacy/enable-menu-item.md)<br/>
 [`ENCRYPT BLOB`](../commands-legacy/encrypt-blob.md)<br/>
 [`Encrypt data BLOB`](../commands-legacy/encrypt-data-blob.md)<br/>
+
 [`Encrypt data file`](../commands-legacy/encrypt-data-file.md)<br/>
 [`End selection`](../commands-legacy/end-selection.md)<br/>
 [`End SQL`](../commands-legacy/end-sql.md)<br/>
@@ -289,7 +290,7 @@ title: インデックス
 [`False`](../commands-legacy/false.md)<br/>
 [`Field`](../commands-legacy/field.md)<br/>
 [`Field name`](../commands-legacy/field-name.md)<br/>
-[`File`](../commands-legacy/file.md)<br/>
+[`File`](file.md)<br/>
 [`FILTER EVENT`](../commands-legacy/filter-event.md)<br/>
 [`FILTER KEYSTROKE`](../commands-legacy/filter-keystroke.md)<br/>
 [`Find in array`](../commands-legacy/find-in-array.md)<br/>
@@ -300,7 +301,7 @@ title: インデックス
 [`FIRST RECORD`](../commands-legacy/first-record.md)<br/>
 [`FLUSH CACHE`](../commands-legacy/flush-cache.md)<br/>
 [`Focus object`](../commands-legacy/focus-object.md)<br/>
-[`Folder`](../commands-legacy/folder.md)<br/>
+[`Folder`](folder.md)<br/>
 [`FOLDER LIST`](../commands-legacy/folder-list.md)<br/>
 [`Font file`](../commands-legacy/font-file.md)<br/>
 [`FONT LIST`](../commands-legacy/font-list.md)<br/>
@@ -332,8 +333,8 @@ title: インデックス
 [`FORM SET SIZE`](../commands-legacy/form-set-size.md)<br/>
 [`FORM SET VERTICAL RESIZING`](../commands-legacy/form-set-vertical-resizing.md)<br/>
 [`FORM UNLOAD`](../commands-legacy/form-unload.md)<br/>
-[`Formula`](../commands-legacy/formula.md)<br/>
-[`Formula from string`](../commands-legacy/formula-from-string.md)<br/>
+[`Formula`](formula.md)<br/>
+[`Formula from string`](formula-from-string.md)<br/>
 [`Frontmost process`](../commands-legacy/frontmost-process.md)<br/>
 [`Frontmost window`](../commands-legacy/frontmost-window.md)<br/>
 
@@ -488,7 +489,7 @@ title: インデックス
 <a id="I"><b>I</b></a>
 
 [`IDLE`](../commands-legacy/idle.md)<br/>
-[`IMAP New transporter`](../commands-legacy/imap-new-transporter.md)<br/>
+[`IMAP New transporter`](imap-new-transporter.md)<br/>
 [`IMPORT DATA`](../commands-legacy/import-data.md)<br/>
 [`IMPORT DIF`](../commands-legacy/import-dif.md)<br/>
 [`IMPORT STRUCTURE`](../commands-legacy/import-structure.md)<br/>
@@ -641,9 +642,9 @@ title: インデックス
 [`Macintosh command down`](../commands-legacy/macintosh-command-down.md)<br/>
 [`Macintosh control down`](../commands-legacy/macintosh-control-down.md)<br/>
 [`Macintosh option down`](../commands-legacy/macintosh-option-down.md)<br/>
-[`MAIL Convert from MIME`](../commands-legacy/mail-convert-from-mime.md)<br/>
-[`MAIL Convert to MIME`](../commands-legacy/mail-convert-to-mime.md)<br/>
-[`MAIL New attachment`](../commands-legacy/mail-new-attachment.md)<br/>
+[`MAIL Convert from MIME`](mail-convert-from-mime.md)<br/>
+[`MAIL Convert to MIME`](mail-convert-to-mime.md)<br/>
+[`MAIL New attachment`](mail-new-attachment.md)<br/>
 [`Match regex`](../commands-legacy/match-regex.md)<br/>
 [`Max`](../commands-legacy/max.md)<br/>
 [`MAXIMIZE WINDOW`](../commands-legacy/maximize-window.md)<br/>
@@ -687,15 +688,15 @@ title: インデックス
 
 <a id="N"><b>N</b></a>
 
-[`New collection`](../commands-legacy/new-collection.md)<br/>
+[`New collection`](new-collection.md)<br/>
 [`New data key`](../commands-legacy/new-data-key.md)<br/>
 [`New list`](../commands-legacy/new-list.md)<br/>
 [`New log file`](../commands-legacy/new-log-file.md)<br/>
 [`New object`](../commands-legacy/new-object.md)<br/>
 [`New process`](../commands-legacy/new-process.md)<br/>
-[`New shared collection`](../commands-legacy/new-shared-collection.md)<br/>
+[`New shared collection`](new-shared-collection.md)<br/>
 [`New shared object`](../commands-legacy/new-shared-object.md)<br/>
-[`New signal`](../commands-legacy/new-signal.md)<br/>
+[`New signal`](new-signal.md)<br/>
 [`NEXT RECORD`](../commands-legacy/next-record.md)<br/>
 [`Next window`](../commands-legacy/next-window.md)<br/>
 [`NO DEFAULT TABLE`](../commands-legacy/no-default-table.md)<br/>
@@ -844,7 +845,7 @@ title: インデックス
 [`OPEN COLOR PICKER`](../commands-legacy/open-color-picker.md)<br/>
 [`OPEN DATA FILE`](../commands-legacy/open-data-file.md)<br/>
 [`OPEN DATABASE`](../commands-legacy/open-database.md)<br/>
-[`Open datastore`](../commands-legacy/open-datastore.md)<br/>
+[`Open datastore`](open-datastore.md)<br/>
 [`Open document`](../commands-legacy/open-document.md)<br/>
 [`OPEN FONT PICKER`](../commands-legacy/open-font-picker.md)<br/>
 [`Open form window`](../commands-legacy/open-form-window.md)<br/>
@@ -881,7 +882,7 @@ title: インデックス
 [`PLUGIN LIST`](../commands-legacy/plugin-list.md)<br/>
 [`POP RECORD`](../commands-legacy/pop-record.md)<br/>
 [`Pop up menu`](../commands-legacy/pop-up-menu.md)<br/>
-[`POP3 New transporter`](../commands-legacy/pop3-new-transporter.md)<br/>
+[`POP3 New transporter`](pop3-new-transporter.md)<br/>
 [`Position`](../commands-legacy/position.md)<br/>
 [`POST CLICK`](../commands-legacy/post-click.md)<br/>
 [`POST EVENT`](../commands-legacy/post-event.md)<br/>
@@ -1062,7 +1063,7 @@ title: インデックス
 [`SEND RECORD`](../commands-legacy/send-record.md)<br/>
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
-[`Session`](../commands-legacy/session.md)<br/>
+[`Session`](session.md)<br/>
 [`Session storage by ID`](../commands-legacy/session-storage-by-id.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands-legacy/set-allowed-methods.md)<br/>
@@ -1143,7 +1144,7 @@ title: インデックス
 [`SHOW WINDOW`](../commands-legacy/show-window.md)<br/>
 [`Sin`](../commands-legacy/sin.md)<br/>
 [`Size of array`](../commands-legacy/size-of-array.md)<br/>
-[`SMTP New transporter`](../commands-legacy/smtp-new-transporter.md)<br/>
+[`SMTP New transporter`](smtp-new-transporter.md)<br/>
 [`SOAP DECLARATION`](../commands-legacy/soap-declaration.md)<br/>
 [`SOAP Get info`](../commands-legacy/soap-get-info.md)<br/>
 [`SOAP REJECT NEW REQUESTS`](../commands-legacy/soap-reject-new-requests.md)<br/>
@@ -1203,7 +1204,7 @@ title: インデックス
 [`Subtotal`](../commands-legacy/subtotal.md)<br/>
 [`Sum`](../commands-legacy/sum.md)<br/>
 [`Sum squares`](../commands-legacy/sum-squares.md)<br/>
-[`Super`](../commands-legacy/super.md)<br/>
+[`Super`](super.md)<br/>
 [`SUSPEND TRANSACTION`](../commands-legacy/suspend-transaction.md)<br/>
 [`SVG EXPORT TO PICTURE`](../commands-legacy/svg-export-to-picture.md)<br/>
 [`SVG Find element ID by coordinates`](../commands-legacy/svg-find-element-id-by-coordinates.md)<br/>
@@ -1224,7 +1225,7 @@ title: インデックス
 [`TEXT TO ARRAY`](../commands-legacy/text-to-array.md)<br/>
 [`TEXT TO BLOB`](../commands-legacy/text-to-blob.md)<br/>
 [`TEXT TO DOCUMENT`](../commands-legacy/text-to-document.md)<br/>
-[`This`](../commands-legacy/this.md)<br/>
+[`This`](this.md)<br/>
 [`throw`](../commands-legacy/throw.md)<br/>
 [`Tickcount`](../commands-legacy/tickcount.md)<br/>
 [`Time`](../commands-legacy/time.md)<br/>
@@ -1250,7 +1251,7 @@ title: インデックス
 [`UNREGISTER CLIENT`](../commands-legacy/unregister-client.md)<br/>
 [`Uppercase`](../commands-legacy/uppercase.md)<br/>
 [`USE CHARACTER SET`](../commands-legacy/use-character-set.md)<br/>
-[`USE ENTITY SELECTION`](../commands-legacy/use-entity-selection.md)<br/>
+[`USE ENTITY SELECTION`](use-entity-selection.md)<br/>
 [`USE NAMED SELECTION`](../commands-legacy/use-named-selection.md)<br/>
 [`USE SET`](../commands-legacy/use-set.md)<br/>
 [`User in group`](../commands-legacy/user-in-group.md)<br/>
@@ -1318,8 +1319,8 @@ title: インデックス
 [`WEB SEND HTTP REDIRECT`](../commands-legacy/web-send-http-redirect.md)<br/>
 [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)<br/>
 [`WEB SEND TEXT`](../commands-legacy/web-send-text.md)<br/>
-[`WEB Server`](../commands-legacy/web-server.md)<br/>
-[`WEB Server list`](../commands-legacy/web-server-list.md)<br/>
+[`WEB Server`](web-server.md)<br/>
+[`WEB Server list`](web-server-list.md)<br/>
 [`WEB SERVICE AUTHENTICATE`](../commands-legacy/web-service-authenticate.md)<br/>
 [`WEB SERVICE CALL`](../commands-legacy/web-service-call.md)<br/>
 [`WEB SERVICE Get info`](../commands-legacy/web-service-get-info.md)<br/>
@@ -1430,5 +1431,5 @@ title: インデックス
 
 <a id="Z"><b>Z</b></a>
 
-[`ZIP Create archive`](../commands-legacy/zip-create-archive.md)<br/>
-[`ZIP Read archive`](../commands-legacy/zip-read-archive.md)<br/>
+[`ZIP Create archive`](zip-create-archive.md)<br/>
+[`ZIP Read archive`](zip-read-archive.md)<br/>

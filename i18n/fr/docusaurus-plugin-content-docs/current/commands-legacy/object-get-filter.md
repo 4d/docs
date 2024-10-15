@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get filter.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &srarr; | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &rarr; | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
 | Résultat | Text | &larr; | Nom du filtre de saisie |
 
 <!-- END REF-->

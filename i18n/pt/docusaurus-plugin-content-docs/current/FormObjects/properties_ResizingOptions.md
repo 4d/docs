@@ -130,4 +130,4 @@ Designa se o tamanho da coluna pode ser modificado pelo usuário.
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)

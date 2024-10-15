@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| text | Text | &srarr; | BLOBに書き込むテキスト |
-| Blob | Blob | &srarr; | テキストを受け取るBLOB |
-| textFormat | Integer | &srarr; | テキストのフォーマットと文字セット |
-| offset &#124; * | 変数, 演算子 | &srarr; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
-| &harr; | *でない場合、書き込み後の新しいオフセット |
+| text | Text | &rarr; | BLOBに書き込むテキスト |
+| Blob | Blob | &rarr; | テキストを受け取るBLOB |
+| textFormat | Integer | &rarr; | テキストのフォーマットと文字セット |
+| offset &#124; * | 変数, 演算子 | &rarr; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
+| &larr; | *でない場合、書き込み後の新しいオフセット |
 
 <!-- END REF-->
 

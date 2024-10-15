@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, pictureObject is an object name (string) If omitted, pictureObject is a field or variable |
-| pictureObject | Picture | &srarr; | Object name (if * specified) or Field or Variable (if * omitted) |
-| x | Integer | &srarr; | X coordinate in pixels |
-| y | Integer | &srarr; | Y coordinate in pixels |
+| * | Operator | &rarr; | If specified, pictureObject is an object name (string) If omitted, pictureObject is a field or variable |
+| pictureObject | Picture | &rarr; | Object name (if * specified) or Field or Variable (if * omitted) |
+| x | Integer | &rarr; | X coordinate in pixels |
+| y | Integer | &rarr; | Y coordinate in pixels |
 | Function result | String | &larr; | ID of element found at the location X, Y |
 
 <!-- END REF-->

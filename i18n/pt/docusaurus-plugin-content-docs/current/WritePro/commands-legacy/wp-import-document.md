@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Import document.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaArquivo | String | &#x1F852; | Rota a um documento 4D Write (.4w7 ou .4wt) ou um documento 4D Write Pro (.4wp) |
-| opção | Inteiro longo, Objeto | &#x1F852; | Opção de importação para expressões HTML |
-| Resultado | Objeto | &#x1F850; | Objeto 4D Write Pro |
+| rotaArquivo | Text | &rarr; | Rota a um documento 4D Write (.4w7 ou .4wt) ou um documento 4D Write Pro (.4wp) |
+| opção | Integer, Object | &rarr; | Opção de importação para expressões HTML |
+| Resultado | Object | &larr; | Objeto 4D Write Pro |
 
 <!-- END REF-->
 

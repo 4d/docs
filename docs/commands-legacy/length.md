@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Length.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| string | Text | &srarr; | String for which to return length |
+| string | Text | &rarr; | String for which to return length |
 | Function result | Longint | &larr; | Length of string |
 
 <!-- END REF-->

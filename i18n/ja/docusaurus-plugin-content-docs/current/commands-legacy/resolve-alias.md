@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aliasPath | Text | &srarr; | エイリアス/ショートカットのアクセスパスまたは名前 |
-| targetPath | Text | &harr; | エイリアス/ショートカットターゲットのアクセスパスまたは名前 |
+| aliasPath | Text | &rarr; | エイリアス/ショートカットのアクセスパスまたは名前 |
+| targetPath | Text | &larr; | エイリアス/ショートカットターゲットのアクセスパスまたは名前 |
 
 <!-- END REF-->
 

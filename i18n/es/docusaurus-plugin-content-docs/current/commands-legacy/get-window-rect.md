@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET WINDOW RECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| izquierda | Integer | &harr; | Coordenada izquierda del interior de la ventana |
-| superior | Integer | &harr; | Coordenada superior del interior de la ventana |
-| derecha | Integer | &harr; | Coordenada derecha del interior de la ventana |
-| inferior | Integer | &harr; | Coordenada inferior del interior de la ventana |
-| ventana | Integer | &srarr; | Número de referencia de la ventana o Ventana del primer plano del proceso si se omite o Ventana MDI si -1 (Windows) |
+| izquierda | Integer | &larr; | Coordenada izquierda del interior de la ventana |
+| superior | Integer | &larr; | Coordenada superior del interior de la ventana |
+| derecha | Integer | &larr; | Coordenada derecha del interior de la ventana |
+| inferior | Integer | &larr; | Coordenada inferior del interior de la ventana |
+| ventana | Integer | &rarr; | Número de referencia de la ventana o Ventana del primer plano del proceso si se omite o Ventana MDI si -1 (Windows) |
 
 <!-- END REF-->
 

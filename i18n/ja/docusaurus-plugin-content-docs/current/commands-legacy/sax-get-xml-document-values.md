@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &srarr; | 開いたドキュメントの参照 |
-| encoding | Text | &harr; | XMLドキュメント文字セット |
-| version | Text | &harr; | XMLバージョン |
-| standalone | Boolean | &harr; | True = ドキュメントはスタンドアロン, そうない場合 False |
+| document | Time | &rarr; | 開いたドキュメントの参照 |
+| encoding | Text | &larr; | XMLドキュメント文字セット |
+| version | Text | &larr; | XMLバージョン |
+| standalone | Boolean | &larr; | True = ドキュメントはスタンドアロン, そうない場合 False |
 
 <!-- END REF-->
 

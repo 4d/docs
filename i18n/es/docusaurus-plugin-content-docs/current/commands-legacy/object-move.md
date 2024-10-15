@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT MOVE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
-| moveH | Integer | &srarr; | Valor del movimiento horizontal del objeto (>0 = a la derecha, <0 = a la izquierda) |
-| moveV | Integer | &srarr; | Valor del movimiento vertical del objeto (>0 = hacia abajo, <0 = hacia arriba) |
-| redimH | Integer | &srarr; | Valor del redimensionamiento horizontal del objeto |
-| redimV | Integer | &srarr; | Valor del redimensionamiento vertical del objeto |
-| * | Operador | &srarr; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
+| moveH | Integer | &rarr; | Valor del movimiento horizontal del objeto (>0 = a la derecha, <0 = a la izquierda) |
+| moveV | Integer | &rarr; | Valor del movimiento vertical del objeto (>0 = hacia abajo, <0 = hacia arriba) |
+| redimH | Integer | &rarr; | Valor del redimensionamiento horizontal del objeto |
+| redimV | Integer | &rarr; | Valor del redimensionamiento vertical del objeto |
+| * | Operador | &rarr; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
 
 <!-- END REF-->
 

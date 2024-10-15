@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP Execute.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| scriptPath | Text | &srarr; | PHPスクリプトへのパスまたは<br/>"" でPHP関数を実行 |
-| functionName | Text | &srarr; | 実行するPHP関数 |
-| phpResult | *, Variable, Field | &harr; | PHP関数実行結果または結果を受け取らない場合* |
-| param | Text, Boolean, Real, Integer, Date, Time | &srarr; | PHP関数の引数 |
+| scriptPath | Text | &rarr; | PHPスクリプトへのパスまたは<br/>"" でPHP関数を実行 |
+| functionName | Text | &rarr; | 実行するPHP関数 |
+| phpResult | *, Variable, Field | &larr; | PHP関数実行結果または結果を受け取らない場合* |
+| param | Text, Boolean, Real, Integer, Date, Time | &rarr; | PHP関数の引数 |
 | 戻り値 | Boolean | &larr; | True = 正しく実行された<br/>False = 実行時にエラーがあった |
 
 <!-- END REF-->

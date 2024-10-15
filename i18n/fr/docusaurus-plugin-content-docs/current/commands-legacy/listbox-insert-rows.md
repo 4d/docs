@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionLigne | Integer | &srarr; | Emplacement de la ligne à insérer |
-| nbLignes | Integer | &srarr; | Nombre de lignes à insérer |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionLigne | Integer | &rarr; | Emplacement de la ligne à insérer |
+| nbLignes | Integer | &rarr; | Nombre de lignes à insérer |
 
 <!-- END REF-->
 

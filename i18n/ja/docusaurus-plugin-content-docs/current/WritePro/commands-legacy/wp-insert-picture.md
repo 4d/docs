@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| picture | ピクチャー | &#x1F852; | ピクチャーフィールドまたは変数、あるいはディスク上のピクチャーファイルへのパス |
-| mode | 倍長整数 | &#x1F852; | 挿入モード |
-| rangeUpdate | 倍長整数 | &#x1F852; | レンジ更新モード |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| picture | Picture | &rarr; | ピクチャーフィールドまたは変数、あるいはディスク上のピクチャーファイルへのパス |
+| mode | Integer | &rarr; | 挿入モード |
+| rangeUpdate | Integer | &rarr; | レンジ更新モード |
 
 <!-- END REF-->
 

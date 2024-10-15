@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET NULL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &srarr; | Objeto estruturado |
-| propriedade | Text | &srarr; | Nome da propriedade onde o valor nulo será aplicado |
+| objeto | Object, Campo Object | &rarr; | Objeto estruturado |
+| propriedade | Text | &rarr; | Nome da propriedade onde o valor nulo será aplicado |
 
 <!-- END REF-->
 

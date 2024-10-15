@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared object.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| propiedad | Text | &srarr; | Nombre de la propiedad a crear |
-| valor | Text, Date, Boolean, Pointer, Number, Object | &srarr; | Valor de la propiedad |
+| propiedad | Text | &rarr; | Nombre de la propiedad a crear |
+| valor | Text, Date, Boolean, Pointer, Number, Object | &rarr; | Valor de la propiedad |
 | Resultado | Object | &larr; | Nuevo objeto compartido |
 
 <!-- END REF-->

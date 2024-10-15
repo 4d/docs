@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| méthodeHTTP | Text | &srarr; | Méthode HTTP pour la requête |
-| url | Text | &srarr; | URL auquel envoyer la requête |
-| contenu | Text, Blob, Picture, Object | &srarr; | Contenu du corps (body) de la requête |
-| réponse | Text, Blob, Picture, Object | &harr; | Résultat de la requête |
-| nomsEnTêtes | Text array | &srarr; | Noms des en-têtes de la requête |
-| &harr; | Noms d’en-têtes retournés |
-| valeursEnTêtes | Text array | &srarr; | Valeurs d’en-têtes de la requête |
-| &harr; | Valeurs d’en-têtes retournées |
-| * | Opérateur | &srarr; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
+| méthodeHTTP | Text | &rarr; | Méthode HTTP pour la requête |
+| url | Text | &rarr; | URL auquel envoyer la requête |
+| contenu | Text, Blob, Picture, Object | &rarr; | Contenu du corps (body) de la requête |
+| réponse | Text, Blob, Picture, Object | &larr; | Résultat de la requête |
+| nomsEnTêtes | Text array | &rarr; | Noms des en-têtes de la requête |
+| &larr; | Noms d’en-têtes retournés |
+| valeursEnTêtes | Text array | &rarr; | Valeurs d’en-têtes de la requête |
+| &larr; | Valeurs d’en-têtes retournées |
+| * | Opérateur | &rarr; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
 | Résultat | Integer | &larr; | Code de statut HTTP |
 
 <!-- END REF-->

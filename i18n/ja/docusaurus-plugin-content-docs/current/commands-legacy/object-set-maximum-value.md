@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &srarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| maxValue | Date, Time, Number | &srarr; | オブジェクトの最大値 |
+| * | 演算子 | &rarr; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &rarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| maxValue | Date, Time, Number | &rarr; | オブジェクトの最大値 |
 
 <!-- END REF-->
 

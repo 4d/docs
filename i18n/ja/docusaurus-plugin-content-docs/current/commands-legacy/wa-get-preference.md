@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定されると、オブジェクトがオブジェクト名 (文字列) 省略されると、オブジェクトは変数 |
-| object | any | &srarr; | オブジェクトの名前 (引数 * が指定されると) または、変数 (引数 * が省略されると) |
-| selector | Integer | &srarr; | 取得する環境設定 |
-| value | Variable | &harr; | 環境設定のカレント値 |
+| * | 演算子 | &rarr; | 指定されると、オブジェクトがオブジェクト名 (文字列) 省略されると、オブジェクトは変数 |
+| object | any | &rarr; | オブジェクトの名前 (引数 * が指定されると) または、変数 (引数 * が省略されると) |
+| selector | Integer | &rarr; | 取得する環境設定 |
+| value | Variable | &larr; | 環境設定のカレント値 |
 
 <!-- END REF-->
 

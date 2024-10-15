@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| arrastavel | Boolean | &srarr; | 0 = False, 1 = True |
-| arrastavelAuto | Boolean | &srarr; | 0 = False, 1 = True |
-| soltavel | Boolean | &srarr; | 0 = False, 1 = True |
-| soltavelAuto | Boolean | &srarr; | 0 = False, 1 = True |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| arrastavel | Boolean | &rarr; | 0 = False, 1 = True |
+| arrastavelAuto | Boolean | &rarr; | 0 = False, 1 = True |
+| soltavel | Boolean | &rarr; | 0 = False, 1 = True |
+| soltavelAuto | Boolean | &rarr; | 0 = False, 1 = True |
 
 <!-- END REF-->
 

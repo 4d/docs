@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET INFO ROW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリアの参照 |
-| row | Integer | &srarr; | 行指定 |
-| hide | Integer | &srarr; | 0 = 表示, 1 = 非表示 |
+| area | Integer | &rarr; | エリアの参照 |
+| row | Integer | &rarr; | 行指定 |
+| hide | Integer | &rarr; | 0 = 表示, 1 = 非表示 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | セッション中の"blob"データの優先度値を設定したいテーブル |
-| priority | Integer | &srarr; | テーブル内のBLOBのキャッシュ優先度 |
+| aTable | Table | &rarr; | セッション中の"blob"データの優先度値を設定したいテーブル |
+| priority | Integer | &rarr; | テーブル内のBLOBのキャッシュ優先度 |
 
 <!-- END REF-->
 

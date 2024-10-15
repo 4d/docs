@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified record.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela a testar se registro atual foi modificada ou tabela padrão, se omitido |
+| tabela | Table | &rarr; | Tabela a testar se registro atual foi modificada ou tabela padrão, se omitido |
 | Resultado | Boolean | &larr; | Registro foi modificado (True) ou Registro não foi modificado (False) |
 
 <!-- END REF-->

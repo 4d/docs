@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE USER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userID | Integer | &srarr; | 削除するユーザのID番号 |
+| userID | Integer | &rarr; | 削除するユーザのID番号 |
 
 <!-- END REF-->
 

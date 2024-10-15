@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para a qual retornar a seleção de registros |
-| formula | Boolean | &srarr; | Fórmula de pesquisa |
+| tabela | Table | &rarr; | Tabela para a qual retornar a seleção de registros |
+| formula | Boolean | &rarr; | Fórmula de pesquisa |
 
 <!-- END REF-->
 

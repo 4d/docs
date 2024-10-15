@@ -98,8 +98,8 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
-- `cs` - ユーザークラスストア
-- `4D` - ビルトインクラスストア
+- [`cs`](../commands/cs.md) for user class store
+- [`4D`](../commands/4d.md) for built-in class store
 
 ### `cs`
 
@@ -141,6 +141,14 @@ $instance:=cs.myClass.new()
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
+You want to list 4D built-in classes:
+
+```4d
+ var $keys : collection
+ $keys:=OB Keys(4D)
+ ALERT("There are "+String($keys.length)+" built-in classes.")
+```
+
 ## Class オブジェクト
 
 プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
@@ -172,6 +180,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 - `property`: オブジェクトのスタティックプロパティを型定義します。
 - `Function get <Name>` と `Function set <Name>`: オブジェクトの計算プロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
+- `This` and `Super` are commands that have special
 
 ### `Function`
 
@@ -586,182 +595,39 @@ Class constructor ($side : Integer)
   $area:=This.height*This.width
 ```
 
+## Class function commands
+
+The following commands have specific features when they are used within class functions:
+
 ### `Super`
 
-<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
 
-<!-- REF #_command_.Super.Params -->
-
-|引数|タイプ||説明|
-
-\|---|---|---|---|
-|param|any|->|親コンストラクターに渡すパラメーター|
-|戻り値|Object|<-|オブジェクトの親|
-
-<!-- END REF -->
-
-`Super` キーワードによって、<!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->。
-
-`Super` は次の 2つの目的のために使います:
-
-1. [コンストラクターコード](#class-constructor) 内において、`Super` はスーパークラスのコンストラクターを呼び出すコマンドです。 コンストラクター内で使用する際には、`Super` コマンドは単独で使用され、また `This` キーワードよりも先に使用される必要があります。
-
-- 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
-- スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
-- オブジェクトのスコープ外で `Super` を呼び出した場合、または、スーパークラスコンストラクターがすでに呼び出されたオブジェクトを対象に呼び出した場合には、エラー -10746 が生成されます。
-
-```4d
-// myClass コンストラクター
-var $text1; $text2 : Text
-Super($text1) // テキスト型引数をスーパークラスコンストラクターに渡します
-This.param:=$text2 // 2番目の引数を使用します
-```
-
-2. [クラスメンバー関数](#function) 内において、`Super` はスーパークラスのプロトタイプを指し、スーパークラス階層のメンバーメソッドの呼び出しを可能にします。
-
-```4d
-Super.doSomething(42) // スーパークラスにて宣言されている
-// "doSomething" メンバーメソッドを呼び出します
-```
-
-#### 例題 1
-
-クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラス の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
-
-```4d
-// クラス: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
-
-
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
-
-// 関数定義
-Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
-```
-
-```4d
-// クラス: Square
-
-Class extends Rectangle
-
-Class constructor ($side : Integer)
-
- // 親クラスのコンストラクターを呼び出します
- // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
- Super($side;$side)
- // 派生クラスにおいては、'This' を使用するより先に
- // Super を呼び出しておく必要があります
- This.name:="Square"
-
-Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
-```
-
-#### 例題 2
-
-クラスメンバーメソッド内で `Super` を使う例です。 メンバーメソッドを持つ `Rectangle` クラスを作成します:
-
-```4d
-// クラス: Rectangle
-
-Function nbSides()
- var $0 : Text
- $0:="I have 4 sides"
-```
-
-`Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:
-
-```4d
-// クラス: Square
-
-Class extends Rectangle
-
-Function description()
- var $0 : Text
- $0:=Super.nbSides()+" which are all equal"
-```
-
-この場合、プロジェクトメソッド内には次のように書けます:
-
-```4d
-var $square : Object
-var $message : Text
-$square:=cs.Square.new()
-$message:=$square.description() // "I have 4 sides which are all equal"
-```
+For more details, see the [`Super`](../commands/super.md) command description.
 
 ### `This`
 
-<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
+The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
-<!-- REF #_command_.This.Params -->
-
-| 引数  | 型      |                             | 説明         |
-| --- | ------ | --------------------------- | ---------- |
-| 戻り値 | オブジェクト | <- | カレントオブジェクト |
-
-<!-- END REF -->
-
-`This` キーワードは、<!-- REF #_command_.This.Summary -->現在処理中のオブジェクトへの参照を返します<!-- END REF -->。
-
-`This` の値は、呼ばれ方によって決まります。 <code>This</code> の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
-
-オブジェクトのメンバーメソッドとして [フォーミュラ](../API/FunctionClass.md) が呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 例:
+例:
 
 ```4d
-$o:=New object("prop";42;"f";Formula(This.prop))
-$val:=$o.f() //42
+//Class: ob
+
+Function f() : Integer
+ return This.a+This.b
 ```
 
-[クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
-
-```4d
-// クラス: ob
-
-Class Constructor  
-
- // This のプロパティを
- // 代入によって作成します
-
- This.a:=42
-```
-
-```4d
-// 4Dメソッドにて 
-$o:=cs.ob.new()
-$val:=$o.a //42
-```
-
-> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。
-
-基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
-
-```4d
-// クラス: ob
-
-Function f()
- $0:=This.a+This.b
-```
-
-この場合、プロジェクトメソッド内には次のように書けます:
+Then you can write in a method:
 
 ```4d
 $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
-
 ```
 
-この例では、変数 $o に代入されたオブジェクトは _f_ プロパティを持たないため、これをクラスより継承します。 _f_ は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
+For more details, see the [`This`](../commands/this.md) command description.
 
 ## クラスコマンド
 

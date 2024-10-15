@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &srarr; | Object name (if * specified) or <br/>Field or variable (if * omitted) |
-| x | Integer | &srarr; | Horizontal coordinate of top left corner of selection rectangle |
-| y | Integer | &srarr; | Vertical coordinate of top left corner of selection rectangle |
-| width | Integer | &srarr; | Width of selection rectangle |
-| height | Integer | &srarr; | Height of selection rectangle |
-| arrIDs | Text array | &harr; | IDs of elements whose bounding rectangle intersects with the selection rectangle |
+| * | Operator | &rarr; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
+| pictureObject | Picture | &rarr; | Object name (if * specified) or <br/>Field or variable (if * omitted) |
+| x | Integer | &rarr; | Horizontal coordinate of top left corner of selection rectangle |
+| y | Integer | &rarr; | Vertical coordinate of top left corner of selection rectangle |
+| width | Integer | &rarr; | Width of selection rectangle |
+| height | Integer | &rarr; | Height of selection rectangle |
+| arrIDs | Text array | &larr; | IDs of elements whose bounding rectangle intersects with the selection rectangle |
 | Function result | Boolean | &larr; | True = at least one element is found |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SCAN INDEX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | インデックスをスキャンするインデックスフィールド |
-| number | Integer | &srarr; | 返すレコード数 |
-| >　または < | 演算子 | &srarr; | >: インデックスの始まりから <: インデックスの終わりから |
+| aField | Field | &rarr; | インデックスをスキャンするインデックスフィールド |
+| number | Integer | &rarr; | 返すレコード数 |
+| >　または < | 演算子 | &rarr; | >: インデックスの始まりから <: インデックスの終わりから |
 
 <!-- END REF-->
 

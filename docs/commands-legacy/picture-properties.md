@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &srarr; | Picture for which to get information |
-| width | Real | &harr; | Width of the picture expressed in pixels |
-| height | Real | &harr; | Height of the picture expressed in pixels |
-| hOffset | Integer | &harr; | Horizontal offset when displayed on background |
-| vOffset | Integer | &harr; | Vertical offset when displayed on background |
-| mode | Integer | &harr; | Transfer mode when displayed on background |
+| picture | Picture | &rarr; | Picture for which to get information |
+| width | Real | &larr; | Width of the picture expressed in pixels |
+| height | Real | &larr; | Height of the picture expressed in pixels |
+| hOffset | Integer | &larr; | Horizontal offset when displayed on background |
+| vOffset | Integer | &larr; | Vertical offset when displayed on background |
+| mode | Integer | &larr; | Transfer mode when displayed on background |
 
 <!-- END REF-->
 

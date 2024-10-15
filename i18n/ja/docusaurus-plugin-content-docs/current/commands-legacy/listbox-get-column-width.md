@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| minWidth | Integer | &harr; | 列の最小幅 (ピクセル単位) |
-| maxWidth | Integer | &harr; | 列の最大幅 (ピクセル単位) |
+| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| minWidth | Integer | &larr; | 列の最小幅 (ピクセル単位) |
+| maxWidth | Integer | &larr; | 列の最大幅 (ピクセル単位) |
 | 戻り値 | Integer | &larr; | 列幅 (ピクセル単位) |
 
 <!-- END REF-->

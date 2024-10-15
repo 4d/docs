@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | Field for which the priority of the index(es) has to be retrieved |
+| aField | Field | &rarr; | Field for which the priority of the index(es) has to be retrieved |
 | Function result | Longint | &larr; | Current priority value for index(es) |
 
 <!-- END REF-->

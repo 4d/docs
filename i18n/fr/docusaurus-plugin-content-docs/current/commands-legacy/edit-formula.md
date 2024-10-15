@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table à afficher par défaut dans l’éditeur de formules |
-| formule | Text | &srarr; | Variable contenant la formule à afficher dans l’éditeur de formules ou "" pour uniquement afficher l’éditeur |
-| &harr; | Formule validée par l’utilisateur |
+| laTable | Table | &rarr; | Table à afficher par défaut dans l’éditeur de formules |
+| formule | Text | &rarr; | Variable contenant la formule à afficher dans l’éditeur de formules ou "" pour uniquement afficher l’éditeur |
+| &larr; | Formule validée par l’utilisateur |
 
 <!-- END REF-->
 

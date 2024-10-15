@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é um campo ou uma variável |
-| objeto | any | &srarr; | Nome de objeto ou "" para designar o formulário (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| arrEventos | Integer array | &srarr; | Array de eventos a definir |
-| modo | Integer | &srarr; | Modo de ativação dos eventos definidos em arrEventos |
+| * | Operador | &rarr; | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é um campo ou uma variável |
+| objeto | any | &rarr; | Nome de objeto ou "" para designar o formulário (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| arrEventos | Integer array | &rarr; | Array de eventos a definir |
+| modo | Integer | &rarr; | Modo de ativação dos eventos definidos em arrEventos |
 
 <!-- END REF-->
 

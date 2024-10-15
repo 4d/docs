@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| graphImage | Picture | &srarr; | Variable image |
-| graphNum &#124; graphParams | Entier long, Objet | &srarr; | Entier long : Numéro de type de graphe, Objet (64 bits uniquement) : Paramètres du graphe |
-| xCatégories | Array | &srarr; | Catégories sur l'axe des x |
-| zValeurs | Array | &srarr; | Valeurs à représenter graphiquement (jusqu'à 8 valeurs) |
+| graphImage | Picture | &rarr; | Variable image |
+| graphNum &#124; graphParams | Entier long, Objet | &rarr; | Entier long : Numéro de type de graphe, Objet (64 bits uniquement) : Paramètres du graphe |
+| xCatégories | Array | &rarr; | Catégories sur l'axe des x |
+| zValeurs | Array | &rarr; | Valeurs à représenter graphiquement (jusqu'à 8 valeurs) |
 
 <!-- END REF-->
 

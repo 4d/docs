@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in set.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Text | &srarr; | Nombre del conjunto a borrar |
+| conjunto | Text | &rarr; | Nombre del conjunto a borrar |
 | Resultado | Boolean | &larr; | El registro actual está en el conjunto (True) o El registro actual no está en el conjunto (False) |
 
 <!-- END REF-->

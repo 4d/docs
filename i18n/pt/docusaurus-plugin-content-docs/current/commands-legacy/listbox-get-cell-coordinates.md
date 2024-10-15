@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado = objeto é um nome de objeto (cadeia) |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
-| coluna | Integer | &srarr; | Número de coluna |
-| linha | Integer | &srarr; | Número de linha |
-| esquerda | Integer | &harr; | Coordenada esquerda do objeto |
-| superior | Integer | &harr; | Coordenada superior do objeto |
-| direita | Integer | &harr; | Coordenada direita do objeto |
-| inferior | Integer | &harr; | Coordenada inferior do objeto |
+| * | Operador | &rarr; | Se especificado = objeto é um nome de objeto (cadeia) |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
+| coluna | Integer | &rarr; | Número de coluna |
+| linha | Integer | &rarr; | Número de linha |
+| esquerda | Integer | &larr; | Coordenada esquerda do objeto |
+| superior | Integer | &larr; | Coordenada superior do objeto |
+| direita | Integer | &larr; | Coordenada direita do objeto |
+| inferior | Integer | &larr; | Coordenada inferior do objeto |
 
 <!-- END REF-->
 

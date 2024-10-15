@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Validate password.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refUsuario | Integer, Text | &srarr; | ID de usuário |
-| senha | Text | &srarr; | Senha não criptografada |
-| digest | Boolean | &srarr; | Senha digest = True, Senha texto plano (por padrão) = False |
+| refUsuario | Integer, Text | &rarr; | ID de usuário |
+| senha | Text | &rarr; | Senha não criptografada |
+| digest | Boolean | &rarr; | Senha digest = True, Senha texto plano (por padrão) = False |
 | Resultado | Boolean | &larr; | TRUE= senha válida; FALSE = senha inválida |
 
 <!-- END REF-->

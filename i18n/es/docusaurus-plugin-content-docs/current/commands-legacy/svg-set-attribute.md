@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable o un campo |
-| objetoPicture | Picture | &srarr; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| id_Element | Text | &srarr; | ID del elemento donde uno o más atributos se definen |
-| nomAtrib | Text | &srarr; | Atributo a definir |
-| valorAtrib | Text, Integer | &srarr; | Nuevo valor del atributo |
-| * | Operador | &srarr; | Si se pasa = modificar el árbol DOM interno de la imagen SVG (variable únicamente) |
+| * | Operador | &rarr; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable o un campo |
+| objetoPicture | Picture | &rarr; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| id_Element | Text | &rarr; | ID del elemento donde uno o más atributos se definen |
+| nomAtrib | Text | &rarr; | Atributo a definir |
+| valorAtrib | Text, Integer | &rarr; | Nuevo valor del atributo |
+| * | Operador | &rarr; | Si se pasa = modificar el árbol DOM interno de la imagen SVG (variable únicamente) |
 
 <!-- END REF-->
 

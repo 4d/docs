@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table reference |
-| arrPaths | Text array | &harr; | Array of method paths and names |
-| filter | Text | &srarr; | Name filter |
-| stamp | Real | &srarr; | Minimum value of stamp |
-| &harr; | New current value |
-| * | Operator | &srarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| aTable | Table | &rarr; | Table reference |
+| arrPaths | Text array | &larr; | Array of method paths and names |
+| filter | Text | &rarr; | Name filter |
+| stamp | Real | &rarr; | Minimum value of stamp |
+| &larr; | New current value |
+| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

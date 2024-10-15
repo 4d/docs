@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Is font style supported.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément |
-| stylePoliceWP | Entier long | &#x1F852; | Constante de style de police |
-| Résultat | Booléen | &#x1F850; | Vrai si le style est pris en charge dans tout ou partie de objCible, Faux sinon |
+| objCible | Object | &rarr; | Plage ou élément |
+| stylePoliceWP | Integer | &rarr; | Constante de style de police |
+| Résultat | Boolean | &larr; | Vrai si le style est pris en charge dans tout ou partie de objCible, Faux sinon |
 
 <!-- END REF-->
 

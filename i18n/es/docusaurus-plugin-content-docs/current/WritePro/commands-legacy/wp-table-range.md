@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table range.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Objeto | &#x1F852; | Rango o referencia del elemento o documento 4D Write Pro |
-| Resultado | Objeto | &#x1F850; | Objeto rango que contiene tablas únicamente |
+| objRango | Object | &rarr; | Rango o referencia del elemento o documento 4D Write Pro |
+| Resultado | Object | &larr; | Objeto rango que contiene tablas únicamente |
 
 <!-- END REF-->
 

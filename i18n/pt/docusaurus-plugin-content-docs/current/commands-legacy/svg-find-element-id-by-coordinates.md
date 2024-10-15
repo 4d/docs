@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objetoImagem é um nome de objeto (string), se omitido, objetoImagem é um campo ou variável |
-| objetoPicture | Picture | &srarr; | Nome de objeto (Se * for especificado) ou Campo ou Variável (se * for omitido) |
-| X | Integer | &srarr; | Coordenadas X em píxels |
-| Y | Integer | &srarr; | Coordenadas Y em píxels |
+| * | Operador | &rarr; | Se especificado, objetoImagem é um nome de objeto (string), se omitido, objetoImagem é um campo ou variável |
+| objetoPicture | Picture | &rarr; | Nome de objeto (Se * for especificado) ou Campo ou Variável (se * for omitido) |
+| X | Integer | &rarr; | Coordenadas X em píxels |
+| Y | Integer | &rarr; | Coordenadas Y em píxels |
 | Resultado | Text | &larr; | ID do elemento encontrado na localização X, Y |
 
 <!-- END REF-->

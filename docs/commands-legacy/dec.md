@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Dec.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &srarr; | Number whose decimal portion is returned |
+| number | Real | &rarr; | Number whose decimal portion is returned |
 | Function result | Real | &larr; | Decimal part of number |
 
 <!-- END REF-->

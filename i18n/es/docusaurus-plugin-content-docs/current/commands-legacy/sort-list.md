@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SORT LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &srarr; | Número de referencia de lista |
-| > ou < | Operador | &srarr; | Criterio de ordenación: > ordenar en orden ascendente, u < ordenar en orden descendente |
+| lista | Integer | &rarr; | Número de referencia de lista |
+| > ou < | Operador | &rarr; | Criterio de ordenación: > ordenar en orden ascendente, u < ordenar en orden descendente |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT LABEL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | 印刷するテーブル, または 省略した場合、デフォルトテーブル |
-| document | Text | &srarr; | ディスクに保存したラベルドキュメント名 |
-| * &#124; > | &srarr; | *: 印刷ダイアログを省略, または >:  印刷設定の再初期化をしない |
+| aTable | Table | &rarr; | 印刷するテーブル, または 省略した場合、デフォルトテーブル |
+| document | Text | &rarr; | ディスクに保存したラベルドキュメント名 |
+| * &#124; > | &rarr; | *: 印刷ダイアログを省略, または >:  印刷設定の再初期化をしない |
 
 <!-- END REF-->
 

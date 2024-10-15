@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| duração | Real | &srarr; | Duração de tempo (em segundos) antes do inicio do logging |
-| fonte | Integer | &srarr; | Origem da operação |
+| duração | Real | &rarr; | Duração de tempo (em segundos) antes do inicio do logging |
+| fonte | Integer | &rarr; | Origem da operação |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SERIAL INFORMATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| criterio | Integer | &harr; | Llave única del producto (encriptada) |
-| usuario | Text | &harr; | Nombre registrado |
-| empresa | Text | &harr; | Organización registrada |
-| conectados | Integer | &harr; | Número de usuarios conectados |
-| maxUsuarios | Integer | &harr; | Número máximo de usuarios conectados |
+| criterio | Integer | &larr; | Llave única del producto (encriptada) |
+| usuario | Text | &larr; | Nombre registrado |
+| empresa | Text | &larr; | Organización registrada |
+| conectados | Integer | &larr; | Número de usuarios conectados |
+| maxUsuarios | Integer | &larr; | Número máximo de usuarios conectados |
 
 <!-- END REF-->
 

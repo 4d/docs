@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| wpDoc | Object | &#x1F852; | 4D Write Pro document |
-| mode | Longint | &#x1F852; | Insertion mode |
-| rangeUpdate | Longint | &#x1F852; | Range update mode |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| wpDoc | Object | &rarr; | 4D Write Pro document |
+| mode | Longint | &rarr; | Insertion mode |
+| rangeUpdate | Longint | &rarr; | Range update mode |
 
 <!-- END REF-->
 

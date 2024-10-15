@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| startSel | Integer | &srarr; | Start of selection |
-| endSel | Integer | &srarr; | End of selection |
-| * | Operator | &srarr; | If passed = update expressions before freezing them |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &rarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| startSel | Integer | &rarr; | Start of selection |
+| endSel | Integer | &rarr; | End of selection |
+| * | Operator | &rarr; | If passed = update expressions before freezing them |
 
 <!-- END REF-->
 

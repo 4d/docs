@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| attribName | Text | &#x1F852; | Name of attribute to set |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#x1F852; | New attribute value |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| attribName | Text | &rarr; | Name of attribute to set |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &rarr; | New attribute value |
 
 <!-- END REF-->
 

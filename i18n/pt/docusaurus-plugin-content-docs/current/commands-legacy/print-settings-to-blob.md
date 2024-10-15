@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Print settings to BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| confImpress | Blob | &harr; | Configuração de impressão atuais |
+| confImpress | Blob | &larr; | Configuração de impressão atuais |
 | Resultado | Integer | &larr; | código de estado 1= operação bem sucedida, 0=sem impressora atual |
 
 <!-- END REF-->

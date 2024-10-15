@@ -61,7 +61,7 @@ La création d'une session web pour une requête REST peut nécessiter qu'une li
 
 :::
 
-L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](API/SessionClass.md#session) dans le code de n'importe quel process web.
+The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -84,9 +84,9 @@ Une session web évolutive est fermée lorsque:
 
 La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signifie que le serveur Web fermera automatiquement les sessions inactives après 60 minutes.
 
-Ce timeout peut être modifié en utilisant la propriété [`.idleTimeout`](API/SessionClass.md#idletimeout) de l'objet `Session` (le délai d'attente ne peut pas être inférieur à 60 minutes) ou le paramètre _connectionInfo_ de la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore).
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
-Lorsqu'une session web est fermée, si la commande [`Session`](API/SessionClass.md#session) est appelée par la suite :
+When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
 
 - l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`storage`](API/SessionClass.md#storage) est vide

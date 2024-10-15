@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get cells.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| tableRef | オブジェクト | &#x1F852; | テーブル参照オブジェクト |
-| startCol | 倍長整数 | &#x1F852; | 先頭セルの位置 (カラム) |
-| startRow | 倍長整数 | &#x1F852; | 先頭セルの位置 (行) |
-| numCols | 倍長整数 | &#x1F852; | 取得するカラムの数 |
-| numRows | 倍長整数 | &#x1F852; | 取得する行の数 |
-| 戻り値 | オブジェクト | &#x1F850; | 指定セルを含む新規レンジ |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| tableRef | Object | &rarr; | テーブル参照オブジェクト |
+| startCol | Integer | &rarr; | 先頭セルの位置 (カラム) |
+| startRow | Integer | &rarr; | 先頭セルの位置 (行) |
+| numCols | Integer | &rarr; | 取得するカラムの数 |
+| numRows | Integer | &rarr; | 取得する行の数 |
+| 戻り値 | Object | &larr; | 指定セルを含む新規レンジ |
 
 <!-- END REF-->
 

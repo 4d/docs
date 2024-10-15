@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Select document.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| directorio | Text, Integer | &srarr; | • Ruta de acceso del directorio para mostrar por defecto en la caja de diálogo de selección o • Cadena vacía para mostrar la carpeta del usuario por defecto (“Mis documentos” bajo Windows, “Documentos” bajo Mac OS), o • Número de la ruta de acceso memorizada |
-| tiposArchivos | Text | &srarr; | Lista de los tipos de documentos a filtrar, o "*" para no filtrar los documentos |
-| titulo | Text | &srarr; | Título de la caja de diálogo de selección |
-| opciones | Integer | &srarr; | Opciones de selección |
-| seleccionados | Text array | &harr; | Array que contiene la lista de rutas de acceso + los nombres de los archivos seleccionados |
+| directorio | Text, Integer | &rarr; | • Ruta de acceso del directorio para mostrar por defecto en la caja de diálogo de selección o • Cadena vacía para mostrar la carpeta del usuario por defecto (“Mis documentos” bajo Windows, “Documentos” bajo Mac OS), o • Número de la ruta de acceso memorizada |
+| tiposArchivos | Text | &rarr; | Lista de los tipos de documentos a filtrar, o "*" para no filtrar los documentos |
+| titulo | Text | &rarr; | Título de la caja de diálogo de selección |
+| opciones | Integer | &rarr; | Opciones de selección |
+| seleccionados | Text array | &larr; | Array que contiene la lista de rutas de acceso + los nombres de los archivos seleccionados |
 | Resultado | Text | &larr; | Nombre del archivo seleccionado (primer archivo de la lista en caso de selección múltiple) |
 
 <!-- END REF-->

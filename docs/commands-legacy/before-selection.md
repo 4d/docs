@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Before selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to test if record pointer is before the first selected record, or Default table, if omitted |
+| aTable | Table | &rarr; | Table for which to test if record pointer is before the first selected record, or Default table, if omitted |
 | Function result | Boolean | &larr; | Yes (TRUE) or No (FALSE) |
 
 <!-- END REF-->

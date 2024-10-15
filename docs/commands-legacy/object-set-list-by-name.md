@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an Object Name (String) If omitted, object is a Field or a Variable |
-| object | any | &srarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
-| listType | Integer | &srarr; | Type of list: Choice list, Required list or Excluded list |
-| list | Text | &srarr; | Name of the list to use as Choice list or "" to disassociate the list |
+| * | Operator | &rarr; | If specified, object is an Object Name (String) If omitted, object is a Field or a Variable |
+| object | any | &rarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| listType | Integer | &rarr; | Type of list: Choice list, Required list or Excluded list |
+| list | Text | &rarr; | Name of the list to use as Choice list or "" to disassociate the list |
 
 <!-- END REF-->
 

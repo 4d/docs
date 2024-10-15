@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT MARKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| markNum | Integer | &srarr; | Marker number |
-| position | Integer | &srarr; | New position for the marker |
-| * | Operator | &srarr; | If passed = move subsequent markers If omitted = do not move subsequent markers |
+| markNum | Integer | &rarr; | Marker number |
+| position | Integer | &rarr; | New position for the marker |
+| * | Operator | &rarr; | If passed = move subsequent markers If omitted = do not move subsequent markers |
 
 <!-- END REF-->
 

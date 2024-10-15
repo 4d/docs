@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Method called on error.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| scope | Integer | &srarr; | Scope of the error method |
+| scope | Integer | &rarr; | Scope of the error method |
 | Function result | String | &larr; | Name of method called on error |
 
 <!-- END REF-->

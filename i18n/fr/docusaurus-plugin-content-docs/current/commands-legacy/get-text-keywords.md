@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texte | Text | &srarr; | Texte original |
-| tabMotsClés | Text array | &harr; | Tableau contenant les mots-clés |
-| * | Opérateur | &srarr; | Si passé = mots uniques |
+| texte | Text | &rarr; | Texte original |
+| tabMotsClés | Text array | &larr; | Tableau contenant les mots-clés |
+| * | Opérateur | &rarr; | Si passé = mots uniques |
 
 <!-- END REF-->
 

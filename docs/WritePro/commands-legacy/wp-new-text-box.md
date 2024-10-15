@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New text box.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &#x1F852; | 4D Write Pro document |
-| pageNum | Number | &#x1F852; | Page number where to anchor the text box |
-| Function result | Object | &#x1F850; | Text box object |
+| wpDoc | Object | &rarr; | 4D Write Pro document |
+| pageNum | Number | &rarr; | Page number where to anchor the text box |
+| Function result | Object | &larr; | Text box object |
 
 <!-- END REF-->
 

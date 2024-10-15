@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Cache info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| dbFilter | Object | &srarr; | Define la lista de atributos a devolver (filtrada por DB) |
+| dbFilter | Object | &rarr; | Define la lista de atributos a devolver (filtrada por DB) |
 | Resultado | Object | &larr; | Información sobre la caché |
 
 <!-- END REF-->

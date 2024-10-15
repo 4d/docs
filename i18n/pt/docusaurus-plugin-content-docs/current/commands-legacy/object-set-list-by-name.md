@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &srarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| tipoLista | Integer | &srarr; | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
-| lista | Text | &srarr; | Nome da lista a ser usada como Lista de Escolha (definida no ambiente Desenho) |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &rarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| tipoLista | Integer | &rarr; | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
+| lista | Text | &rarr; | Nome da lista a ser usada como Lista de Escolha (definida no ambiente Desenho) |
 
 <!-- END REF-->
 

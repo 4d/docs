@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| rejectStatus | Boolean | &srarr; | 新規リクエストを拒否するにはTrue、それ以外の場合にはFalse |
+| rejectStatus | Boolean | &rarr; | 新規リクエストを拒否するにはTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->
 

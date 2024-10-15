@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE BUFFER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| receiveVar | Text | &harr; | Variable to receive data |
+| receiveVar | Text | &larr; | Variable to receive data |
 
 <!-- END REF-->
 

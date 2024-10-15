@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table into which to receive the record, or Default table, if omitted |
+| aTable | Table | &rarr; | Table into which to receive the record, or Default table, if omitted |
 
 <!-- END REF-->
 

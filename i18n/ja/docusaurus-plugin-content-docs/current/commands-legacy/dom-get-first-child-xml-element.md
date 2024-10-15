@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get first child XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML要素参照 |
-| childElemName | Text | &harr; | 子要素名 |
-| childElemValue | Text | &harr; | 子要素値 |
+| elementRef | Text | &rarr; | XML要素参照 |
+| childElemName | Text | &larr; | 子要素名 |
+| childElemValue | Text | &larr; | 子要素値 |
 | 戻り値 | Text | &larr; | 子要素参照 |
 
 <!-- END REF-->

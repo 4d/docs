@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| numTabela | Integer | &harr; | número da tabela selecionada |
-| nome | Text | &harr; | Nome da seleção ou ** para seleção atual |
-| highlightName | Text | &harr; | Nome do set destacado. |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| numTabela | Integer | &larr; | número da tabela selecionada |
+| nome | Text | &larr; | Nome da seleção ou ** para seleção atual |
+| highlightName | Text | &larr; | Nome do set destacado. |
 
 <!-- END REF-->
 

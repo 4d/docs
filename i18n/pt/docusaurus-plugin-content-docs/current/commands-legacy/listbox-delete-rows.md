@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DELETE ROWS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se * é especificado) ou Variável (se * é omitido) |
-| posiçao | Integer | &srarr; | Posição da fila a apagar |
-| numRows | Integer | &srarr; | Número de linhas a excluir |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se * é especificado) ou Variável (se * é omitido) |
+| posiçao | Integer | &rarr; | Posição da fila a apagar |
+| numRows | Integer | &rarr; | Número de linhas a excluir |
 
 <!-- END REF-->
 

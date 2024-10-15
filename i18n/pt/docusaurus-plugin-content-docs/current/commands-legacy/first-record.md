@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FIRST RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para a qual vai mover o primeiro registro selecionado, ou a tabela padrão, se omitido |
+| tabela | Table | &rarr; | Tabela para a qual vai mover o primeiro registro selecionado, ou a tabela padrão, se omitido |
 
 <!-- END REF-->
 

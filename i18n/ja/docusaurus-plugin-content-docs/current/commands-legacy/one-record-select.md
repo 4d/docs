@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | カレントレコードをカレントセレクションにする テーブル、または省略時デフォルトテーブル |
+| aTable | Table | &rarr; | カレントレコードをカレントセレクションにする テーブル、または省略時デフォルトテーブル |
 
 <!-- END REF-->
 

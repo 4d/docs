@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field number valid.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &srarr; | Número da tabela ou ponteiro a tabela |
-| numCampo | Integer | &srarr; | Número do campo |
+| numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &rarr; | Número da tabela ou ponteiro a tabela |
+| numCampo | Integer | &rarr; | Número do campo |
 | Resultado | Boolean | &larr; | True = Campo exista na tabela; False = campo não existe na tabela |
 
 <!-- END REF-->

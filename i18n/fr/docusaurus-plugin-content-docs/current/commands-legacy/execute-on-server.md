@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Execute on server.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| procédure | Text | &srarr; | Procédure à exécuter dans le process |
-| pile | Integer | &srarr; | Taille de la pile en octets (0 = taille par défaut) |
-| nom | Text | &srarr; | Nom du process créé |
-| param | Expression | &srarr; | Paramètre(s) de la procédure |
-| * | Opérateur | &srarr; | Process unique |
+| procédure | Text | &rarr; | Procédure à exécuter dans le process |
+| pile | Integer | &rarr; | Taille de la pile en octets (0 = taille par défaut) |
+| nom | Text | &rarr; | Nom du process créé |
+| param | Expression | &rarr; | Paramètre(s) de la procédure |
+| * | Opérateur | &rarr; | Process unique |
 | Résultat | Integer | &larr; | Numéro du process pour un process nouvellement créé ou un process déjà en cours d'exécution |
 
 <!-- END REF-->

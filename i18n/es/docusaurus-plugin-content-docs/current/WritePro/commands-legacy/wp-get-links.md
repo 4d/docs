@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get links.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Objeto | &#x1F852; | Rango o elemento o documento 4D Write Pro |
-| Resultado | Collection | &#x1F850; | Colección de enlaces |
+| objRango | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
+| Resultado | Collection | &larr; | Colección de enlaces |
 
 <!-- END REF-->
 

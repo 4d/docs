@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in sorted array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &srarr; | Tableau dans lequel effectuer la recherche |
-| valeur | Expression | &srarr; | Valeur (de même type que le tableau) à rechercher dans le tableau |
-| > ou < | Opérateur | &srarr; | > si le tableau est trié par ordre croissant, < s'il est trié par ordre décroissant |
-| posDébut | Integer | &harr; | Si la valeur est trouvée, position de sa première occurrence ; sinon, position où la valeur devrait être insérée |
-| posFin | Integer | &harr; | Si la valeur est trouvée, position de sa dernière occurrence ; sinon, identique à posDébut |
+| tableau | Array | &rarr; | Tableau dans lequel effectuer la recherche |
+| valeur | Expression | &rarr; | Valeur (de même type que le tableau) à rechercher dans le tableau |
+| > ou < | Opérateur | &rarr; | > si le tableau est trié par ordre croissant, < s'il est trié par ordre décroissant |
+| posDébut | Integer | &larr; | Si la valeur est trouvée, position de sa première occurrence ; sinon, position où la valeur devrait être insérée |
+| posFin | Integer | &larr; | Si la valeur est trouvée, position de sa dernière occurrence ; sinon, identique à posDébut |
 | Résultat | Boolean | &larr; | Vrai si au moins un élément du tableau correspond à la valeur recherchée, sinon Faux |
 
 <!-- END REF-->

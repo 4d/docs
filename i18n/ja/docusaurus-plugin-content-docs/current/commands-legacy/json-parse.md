@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Parse.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| jsonString | Text | &srarr; | 解析したいJSON文字列 |
-| type | Integer | &srarr; | 値を変換したい型 |
-| * | 演算子 | &srarr; | 返された値がオブジェクトの場合、各プロパティの行の位置とオフセットを追加 |
+| jsonString | Text | &rarr; | 解析したいJSON文字列 |
+| type | Integer | &rarr; | 値を変換したい型 |
+| * | 演算子 | &rarr; | 返された値がオブジェクトの場合、各プロパティの行の位置とオフセットを追加 |
 | 戻り値 | any, Object | &larr; | JSON文字列から取り出した値 |
 
 <!-- END REF-->

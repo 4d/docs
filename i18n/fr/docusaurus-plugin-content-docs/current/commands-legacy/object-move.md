@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT MOVE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
-| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
-| dépH | Integer | &srarr; | Valeur de déplacement horizontal de l’objet (>0 = vers la droite, <0 = vers la gauche) |
-| dépV | Integer | &srarr; | Valeur de déplacement vertical de l’objet (>0 = vers le bas, <0 = vers le haut) |
-| redimH | Integer | &srarr; | Valeur de redimensionnement horizontal de l’objet |
-| redimV | Integer | &srarr; | Valeur de redimensionnement vertical de l’objet |
-| * | Opérateur | &srarr; | Si spécifié = coordonnées absolues Si omis = coordonnées relatives |
+| * | Opérateur | &rarr; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
+| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| dépH | Integer | &rarr; | Valeur de déplacement horizontal de l’objet (>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &rarr; | Valeur de déplacement vertical de l’objet (>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &rarr; | Valeur de redimensionnement horizontal de l’objet |
+| redimV | Integer | &rarr; | Valeur de redimensionnement vertical de l’objet |
+| * | Opérateur | &rarr; | Si spécifié = coordonnées absolues Si omis = coordonnées relatives |
 
 <!-- END REF-->
 

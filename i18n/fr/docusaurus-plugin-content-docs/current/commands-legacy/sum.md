@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &srarr; | Valeurs dont vous souhaitez calculer la somme |
-| cheminAttribut | Text | &srarr; | Chemin d'attribut duquel calculer la somme |
+| séries | Field, Array | &rarr; | Valeurs dont vous souhaitez calculer la somme |
+| cheminAttribut | Text | &rarr; | Chemin d'attribut duquel calculer la somme |
 | Résultat | Real | &larr; | Somme de séries |
 
 <!-- END REF-->

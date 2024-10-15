@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| option | Integer | &srarr; | Option to set |
-| value | Integer | &srarr; | New value of option |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &rarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| option | Integer | &rarr; | Option to set |
+| value | Integer | &rarr; | New value of option |
 
 <!-- END REF-->
 

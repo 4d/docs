@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINTABLE MARGIN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| esquerda | Integer | &srarr; | Margem esquerda |
-| superior | Integer | &srarr; | Margem superior |
-| direita | Integer | &srarr; | Margem direita |
-| inferior | Integer | &srarr; | Margem inferior |
+| esquerda | Integer | &rarr; | Margem esquerda |
+| superior | Integer | &rarr; | Margem superior |
+| direita | Integer | &rarr; | Margem direita |
+| inferior | Integer | &rarr; | Margem inferior |
 
 <!-- END REF-->
 

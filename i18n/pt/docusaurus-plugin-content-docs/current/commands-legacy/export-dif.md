@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DIF.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela da qual exportar dados, ou tabela padrão, se omitida |
-| documento | Text | &srarr; | documento DIF que recebe os dados |
+| tabela | Table | &rarr; | Tabela da qual exportar dados, ou tabela padrão, se omitida |
+| documento | Text | &rarr; | documento DIF que recebe os dados |
 
 <!-- END REF-->
 

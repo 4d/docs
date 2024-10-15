@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Length.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadena | Text | &srarr; | Cadena de  la cual devolver la longitud |
+| cadena | Text | &rarr; | Cadena de  la cual devolver la longitud |
 | Resultado | Integer | &larr; | Longitud de la cadena |
 
 <!-- END REF-->

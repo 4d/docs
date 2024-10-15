@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SEND RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | カレントレコードを送信するテーブル, または 省略した場合デフォルトテーブル |
+| aTable | Table | &rarr; | カレントレコードを送信するテーブル, または 省略した場合デフォルトテーブル |
 
 <!-- END REF-->
 

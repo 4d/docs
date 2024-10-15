@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table dont vous souhaitez modifier la priorité des données scalaires pour toute la session |
-| priorité | Integer | &srarr; | Priorité des valeurs scalaires de la table dans le cache |
+| laTable | Table | &rarr; | Table dont vous souhaitez modifier la priorité des données scalaires pour toute la session |
+| priorité | Integer | &rarr; | Priorité des valeurs scalaires de la table dans le cache |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela na qual ir ao registro selecionado ou Tabela por padrão, se omitida |
-| posicao | Integer | &srarr; | Posição do registro na seleção |
+| tabela | Table | &rarr; | Tabela na qual ir ao registro selecionado ou Tabela por padrão, se omitida |
+| posicao | Integer | &rarr; | Posição do registro na seleção |
 
 <!-- END REF-->
 

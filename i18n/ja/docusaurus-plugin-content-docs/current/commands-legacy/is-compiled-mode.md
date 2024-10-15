@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is compiled mode.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | ホストデータベースの情報を返す |
+| * | 演算子 | &rarr; | ホストデータベースの情報を返す |
 | 戻り値 | Boolean | &larr; | コンパイル済み (True), インタプリタ (False) |
 
 <!-- END REF-->

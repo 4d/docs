@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Create document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &srarr; | ドキュメント名、または 完全なドキュメントのパス名、または 標準ファイルダイアログボックスの空の文字列 |
-| fileType | Text | &srarr; | スクリーンされるドキュメントタイプのリスト、または ドキュメントをスクリーンしない場合 "*" |
+| document | Text | &rarr; | ドキュメント名、または 完全なドキュメントのパス名、または 標準ファイルダイアログボックスの空の文字列 |
+| fileType | Text | &rarr; | スクリーンされるドキュメントタイプのリスト、または ドキュメントをスクリーンしない場合 "*" |
 | 戻り値 | Time | &larr; | ドキュメント参照番号 |
 
 <!-- END REF-->

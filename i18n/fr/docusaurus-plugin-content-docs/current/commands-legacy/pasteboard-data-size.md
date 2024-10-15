@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Pasteboard data size.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeDonnées | Text | &srarr; | Type de données |
+| typeDonnées | Text | &rarr; | Type de données |
 | Résultat | Integer | &larr; | Taille (en octets) des données présentes dans le conteneur ou code d'erreur |
 
 <!-- END REF-->

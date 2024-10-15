@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &srarr; | Nome de objeto (se especificado *) ou<br/>Campo ou variável (se omitido *) |
-| menuContext | Boolean | &srarr; | True = ativar o menu contextual, False = desativar o menu contextual |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &rarr; | Nome de objeto (se especificado *) ou<br/>Campo ou variável (se omitido *) |
+| menuContext | Boolean | &rarr; | True = ativar o menu contextual, False = desativar o menu contextual |
 
 <!-- END REF-->
 

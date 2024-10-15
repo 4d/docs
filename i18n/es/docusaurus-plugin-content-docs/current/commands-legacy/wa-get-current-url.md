@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get current URL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
 | Resultado | Text | &larr; | URL actualmente cargada en el área Web |
 
 <!-- END REF-->

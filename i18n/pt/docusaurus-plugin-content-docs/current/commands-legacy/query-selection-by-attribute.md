@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umaTable | Table | &srarr; | Tabela para a quel vai retornar uma seleção de registros, ou tabela Padrão se omitido |
-| operadorConj | * | &srarr; | Operador Conjunção para usar para unir múltiplas pesquisas (se alguma) |
-| campoObj | Field | &srarr; | Campo objeto para atributos de pesquisa |
-| rotaAtributo | Text | &srarr; | Nome ou rota do atributo |
-| operadorPesq | *, Text | &srarr; | Operador Pesquisa (comparador) |
-| valor | Text, Number, Date, Time | &srarr; | Valor a comparar |
-| * | Operador | &srarr; | Continua flag de pesquisa |
+| umaTable | Table | &rarr; | Tabela para a quel vai retornar uma seleção de registros, ou tabela Padrão se omitido |
+| operadorConj | * | &rarr; | Operador Conjunção para usar para unir múltiplas pesquisas (se alguma) |
+| campoObj | Field | &rarr; | Campo objeto para atributos de pesquisa |
+| rotaAtributo | Text | &rarr; | Nome ou rota do atributo |
+| operadorPesq | *, Text | &rarr; | Operador Pesquisa (comparador) |
+| valor | Text, Number, Date, Time | &rarr; | Valor a comparar |
+| * | Operador | &rarr; | Continua flag de pesquisa |
 
 <!-- END REF-->
 

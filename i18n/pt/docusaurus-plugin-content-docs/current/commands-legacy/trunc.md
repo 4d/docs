@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Trunc.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &srarr; | Número a ser truncado |
-| decimais | Integer | &srarr; | Número de decimais usadas para truncar |
+| numero | Real | &rarr; | Número a ser truncado |
+| decimais | Integer | &rarr; | Número de decimais usadas para truncar |
 | Resultado | Real | &larr; | Número com a parte decimal truncada ao número de casas decimais especificada por Decimais |
 
 <!-- END REF-->

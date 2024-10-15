@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | nテーブルのフィールド (リレーションの開始元) |
+| aField | Field | &rarr; | nテーブルのフィールド (リレーションの開始元) |
 
 <!-- END REF-->
 

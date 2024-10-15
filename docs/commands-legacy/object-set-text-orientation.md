@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| orientation | Integer | &srarr; | Value of object orientation |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &rarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| orientation | Integer | &rarr; | Value of object orientation |
 
 <!-- END REF-->
 

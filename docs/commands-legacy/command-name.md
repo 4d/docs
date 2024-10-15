@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Command name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| command | Integer | &srarr; | Command number |
-| info | Integer | &harr; | Thread-safety property of command |
-| theme | Text | &harr; | Language theme of command |
+| command | Integer | &rarr; | Command number |
+| info | Integer | &larr; | Thread-safety property of command |
+| theme | Text | &larr; | Language theme of command |
 | Function result | String | &larr; | Localized command name |
 
 <!-- END REF-->

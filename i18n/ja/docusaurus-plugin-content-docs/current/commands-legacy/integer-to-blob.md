@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| entier | Integer | &srarr; | BLOBに書き込む整数値 |
-| Blob | Blob | &srarr; | 整数値を受け取るBLOB |
-| ordreOctet | Integer | &srarr; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset &#124; * | 変数, 演算子 | &srarr; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
-| &harr; | *でない場合、書き込み後の新しいオフセット |
+| entier | Integer | &rarr; | BLOBに書き込む整数値 |
+| Blob | Blob | &rarr; | 整数値を受け取るBLOB |
+| ordreOctet | Integer | &rarr; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| offset &#124; * | 変数, 演算子 | &rarr; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
+| &larr; | *でない場合、書き込み後の新しいオフセット |
 
 <!-- END REF-->
 

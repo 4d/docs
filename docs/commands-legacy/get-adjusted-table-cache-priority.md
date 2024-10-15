@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which the scalar priority value has to be retrieved |
+| aTable | Table | &rarr; | Table for which the scalar priority value has to be retrieved |
 | Function result | Longint | &larr; | Current priority value for scalar fields |
 
 <!-- END REF-->

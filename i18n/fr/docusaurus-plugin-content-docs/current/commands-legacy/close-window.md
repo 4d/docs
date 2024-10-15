@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &srarr; | Numéro de référence de la fenêtre externe ou Fenêtre de premier plan du process si ce paramètre est omis |
+| fenêtre | Integer | &rarr; | Numéro de référence de la fenêtre externe ou Fenêtre de premier plan du process si ce paramètre est omis |
 
 <!-- END REF-->
 

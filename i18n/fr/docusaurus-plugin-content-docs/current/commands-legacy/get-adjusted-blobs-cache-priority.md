@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table pour laquelle connaître la valeur de priorité des "blobs" |
+| laTable | Table | &rarr; | Table pour laquelle connaître la valeur de priorité des "blobs" |
 | Résultat | Integer | &larr; | Valeur de priorité courante pour les champs "blobs" |
 
 <!-- END REF-->

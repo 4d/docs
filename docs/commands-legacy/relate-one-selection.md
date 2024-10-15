@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable | Table | &srarr; | Many table name (from which the relation starts) |
-| oneTable | Table | &srarr; | One table name (to which the relation refers) |
+| manyTable | Table | &rarr; | Many table name (from which the relation starts) |
+| oneTable | Table | &rarr; | One table name (to which the relation refers) |
 
 <!-- END REF-->
 

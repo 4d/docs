@@ -48,15 +48,15 @@ Por padrão, 4D cria uma variável ou expressão de [tipo de objeto](properties_
 
 ### Sincronização do formulário principal e do subformulário (valor único)
 
-A vinculação da mesma variável ou expressão ao contêiner do subformulário e a outros objetos do formulário pai permite vincular os contextos do formulário pai e do subformulário para dar os toques finais em interfaces sofisticadas. Imagine un subformulario que contiene un reloj que muestra una hora estática, insertado en un formulario padre que contiene un [área de entrada](input_overview.md):
+A vinculação da mesma variável ou expressão ao contêiner do subformulário e a outros objetos do formulário pai permite vincular os contextos do formulário pai e do subformulário para dar os toques finais em interfaces sofisticadas. Imagine um subformulário que contém um relógio que exibe uma hora estática, inserido em um formulário pai que contém uma[ área de entrada](input_overview.md):
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) **tienen el mismo valor que _Variable o Expresión_**. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
+No formulário pai, ambos os objetos (área de entrada e contêiner de subformulário) **possuem o mesmo valor que _Variável ou Expressão_**. Pode ser uma variável (ex: `parisTime`), ou uma expressão (ex: `Form.parisTime`).
 
 :::info
 
-Para mostrar una hora estática, debe utilizar el [tipo de datos](properties_DataSource.md#data-type-expression-type) apropiado para la [variable o la expresión](properties_Object.md#variable-or-expression):
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - Si utiliza una variable (por ejemplo, `parisTime`), debe ser del tipo `texto` o `tiempo`.
 - Si utiliza una expresión (por ejemplo, `Form.myValue`), debe contener un valor `texto`.

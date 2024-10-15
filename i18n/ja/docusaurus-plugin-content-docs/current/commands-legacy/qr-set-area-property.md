@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET AREA PROPERTY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
-| property | Integer | &srarr; | 指定するインタフェース要素 |
-| value | Integer | &srarr; | 1 = 表示, 0 = 非表示 |
+| area | Integer | &rarr; | エリア参照 |
+| property | Integer | &rarr; | 指定するインタフェース要素 |
+| value | Integer | &rarr; | 1 = 表示, 0 = 非表示 |
 
 <!-- END REF-->
 

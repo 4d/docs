@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOCUMENT TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &srarr; | Nom du document |
-| blob | Blob | &srarr; | Champ ou variable de type BLOB devant recevoir le document |
-| &harr; | Contenu du document |
+| document | Text | &rarr; | Nom du document |
+| blob | Blob | &rarr; | Champ ou variable de type BLOB devant recevoir le document |
+| &larr; | Contenu du document |
 
 <!-- END REF-->
 

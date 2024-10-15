@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT ROWS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| selection | Object, Collection | &srarr; | Object or collection describing the rows to select |
-| action | Integer | &srarr; | lk replace selection (default if omitted), lk add to selection, lk remove from selection |
+| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| selection | Object, Collection | &rarr; | Object or collection describing the rows to select |
+| action | Integer | &rarr; | lk replace selection (default if omitted), lk add to selection, lk remove from selection |
 
 <!-- END REF-->
 

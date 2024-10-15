@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP FREEZE FORMULAS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| recompute | Entier long | &#x1F852; | Option to control recomputing |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| recompute | Integer | &rarr; | Option to control recomputing |
 
 <!-- END REF-->
 

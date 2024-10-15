@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD RELATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| manyField | Field | &srarr; | リレート開始フィールド |
-| one | Integer | &harr; | n対1リレートの状態 |
-| many | Integer | &harr; | 1対nリレートの状態 |
-| * | 演算子 | &srarr; | 指定時: oneとmanyにはリレーション の現在の状態が返る (値は2または3のみ) 省略時 (デフォルト): プログラムでリレーションが 変更されていなければ、oneとmanyに1が返される |
+| manyField | Field | &rarr; | リレート開始フィールド |
+| one | Integer | &larr; | n対1リレートの状態 |
+| many | Integer | &larr; | 1対nリレートの状態 |
+| * | 演算子 | &rarr; | 指定時: oneとmanyにはリレーション の現在の状態が返る (値は2または3のみ) 省略時 (デフォルト): プログラムでリレーションが 変更されていなければ、oneとmanyに1が返される |
 
 <!-- END REF-->
 

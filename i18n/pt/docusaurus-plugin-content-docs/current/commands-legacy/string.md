@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.String.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| expressao | Expression | &srarr; | Expressão para qual vai retornar o formato string (pode ser um Real, Inteiro, Inteiro longo, Data, string hora, texto ou booleano) |
-| formato | Integer, Text | &srarr; | Formato exibiçao |
-| horaComb | Time | &srarr; | Hora a combinar se a expressão for uma data |
+| expressao | Expression | &rarr; | Expressão para qual vai retornar o formato string (pode ser um Real, Inteiro, Inteiro longo, Data, string hora, texto ou booleano) |
+| formato | Integer, Text | &rarr; | Formato exibiçao |
+| horaComb | Time | &rarr; | Hora a combinar se a expressão for uma data |
 | Resultado | Text | &larr; | Formato string da expressão |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get style sheet.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| wpDoc | Objeto | &#x1F852; | Documento 4d Write Pro |
-| nomeFolhaEstilo | String | &#x1F852; | Nome da folha de estilo |
-| Resultado | Objeto | &#x1F850; | Objeto estiloFolha |
+| wpDoc | Object | &rarr; | Documento 4d Write Pro |
+| nomeFolhaEstilo | Text | &rarr; | Nome da folha de estilo |
+| Resultado | Object | &larr; | Objeto estiloFolha |
 
 <!-- END REF-->
 

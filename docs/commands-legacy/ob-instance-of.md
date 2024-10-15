@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Instance of.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &srarr; | Object whose class is to be tested |
-| class | Object | &srarr; | Class to test belongship |
+| object | Object | &rarr; | Object whose class is to be tested |
+| class | Object | &rarr; | Class to test belongship |
 | Function result | Boolean | &larr; | True if object belongs to the specified class or a child class, and false otherwise |
 
 <!-- END REF-->

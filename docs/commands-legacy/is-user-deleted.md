@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is user deleted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userNumber | Integer | &srarr; | User ID number |
+| userNumber | Integer | &rarr; | User ID number |
 | Function result | Boolean | &larr; | TRUE = User account is deleted or does not exist FALSE = User account is active |
 
 <!-- END REF-->

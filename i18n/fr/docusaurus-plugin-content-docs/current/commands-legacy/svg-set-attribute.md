@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
-| objetPicture | Picture | &srarr; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
-| id_Element | Text | &srarr; | ID de l'élément dont un ou plusieurs attribut(s) sont à définir |
-| nomAttribut | Text | &srarr; | Attribut à définir |
-| valeurAttribut | Text, Integer | &srarr; | Nouvelle valeur d’attribut |
-| * | Opérateur | &srarr; | Si passé = modifier l'arbre DOM interne de l'image SVG (variable uniquement) |
+| * | Opérateur | &rarr; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
+| objetPicture | Picture | &rarr; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id_Element | Text | &rarr; | ID de l'élément dont un ou plusieurs attribut(s) sont à définir |
+| nomAttribut | Text | &rarr; | Attribut à définir |
+| valeurAttribut | Text, Integer | &rarr; | Nouvelle valeur d’attribut |
+| * | Opérateur | &rarr; | Si passé = modifier l'arbre DOM interne de l'image SVG (variable uniquement) |
 
 <!-- END REF-->
 

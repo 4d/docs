@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| accessURL | Text | &srarr; | Access URL to Web Service |
-| soapAction | Text | &srarr; | Contents of SOAPAction field |
-| methodName | Text | &srarr; | Name of the method |
-| nameSpace | Text | &srarr; | Namespace |
-| complexType | Integer | &srarr; | Configuration of complex types (simple types if omitted) |
-| * | Operator | &srarr; | Do not close connection |
+| accessURL | Text | &rarr; | Access URL to Web Service |
+| soapAction | Text | &rarr; | Contents of SOAPAction field |
+| methodName | Text | &rarr; | Name of the method |
+| nameSpace | Text | &rarr; | Namespace |
+| complexType | Integer | &rarr; | Configuration of complex types (simple types if omitted) |
+| * | Operator | &rarr; | Do not close connection |
 
 <!-- END REF-->
 

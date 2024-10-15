@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is nil pointer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aPointer | Pointer | &srarr; | テストするポインタ |
+| aPointer | Pointer | &rarr; | テストするポインタ |
 | 戻り値 | Boolean | &larr; | TRUE = Nil ポインタ (->[]) FALSE = 既存のオブジェクトへの有効なポインタ |
 
 <!-- END REF-->

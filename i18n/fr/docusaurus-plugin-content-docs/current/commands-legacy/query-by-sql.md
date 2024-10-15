@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY SQL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de laquelle retourner une sélection d’enregistrements ou Table par défaut si ce paramètre est omis |
-| formuleSQL | Text | &srarr; | Formule de recherche SQL valide représentant la clause WHERE de la requête SELECT |
+| laTable | Table | &rarr; | Table de laquelle retourner une sélection d’enregistrements ou Table par défaut si ce paramètre est omis |
+| formuleSQL | Text | &rarr; | Formule de recherche SQL valide représentant la clause WHERE de la requête SELECT |
 
 <!-- END REF-->
 

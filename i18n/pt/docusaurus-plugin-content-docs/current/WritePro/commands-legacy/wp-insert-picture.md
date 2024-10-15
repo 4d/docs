@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objFaixa | Objeto | &#x1F852; | objeto Faixa |
-| imagem | Imagem | &#x1F852; | Campo ou variável Imagem, ou rota para o arquivo imagem em disco |
-| modo | Inteiro longo | &#x1F852; | Modo de inserção |
-| atualizarFaixa | Inteiro longo | &#x1F852; | Modo de atualização de Faixa |
+| objFaixa | Object | &rarr; | objeto Faixa |
+| imagem | Picture | &rarr; | Campo ou variável Imagem, ou rota para o arquivo imagem em disco |
+| modo | Integer | &rarr; | Modo de inserção |
+| atualizarFaixa | Integer | &rarr; | Modo de atualização de Faixa |
 
 <!-- END REF-->
 

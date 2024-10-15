@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table dans laquelle aller à l'enregistrement spécifié ou Table par défaut si ce paramètre est omis |
-| enregistrement | Integer | &srarr; | Position de l'enregistrement dans la sélection |
+| laTable | Table | &rarr; | Table dans laquelle aller à l'enregistrement spécifié ou Table par défaut si ce paramètre est omis |
+| enregistrement | Integer | &rarr; | Position de l'enregistrement dans la sélection |
 
 <!-- END REF-->
 

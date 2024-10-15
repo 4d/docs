@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| colPosition | Integer | &srarr; | 列の挿入場所 |
-| colName | Text | &srarr; | 列オブジェクト名 |
-| colVariable | Array, Field, Variable, Pointer | &srarr; | 列配列名 または フィールド または 変数 |
-| headerName | Text | &srarr; | 列ヘッダオブジェクト名 |
-| headerVar | Integer, Pointer | &srarr; | 列ヘッダ変数 |
-| footerName | Text | &srarr; | 列フッターオブジェクト名 |
-| footerVar | Variable, Pointer | &srarr; | 列フッター変数 |
+| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| colPosition | Integer | &rarr; | 列の挿入場所 |
+| colName | Text | &rarr; | 列オブジェクト名 |
+| colVariable | Array, Field, Variable, Pointer | &rarr; | 列配列名 または フィールド または 変数 |
+| headerName | Text | &rarr; | 列ヘッダオブジェクト名 |
+| headerVar | Integer, Pointer | &rarr; | 列ヘッダ変数 |
+| footerName | Text | &rarr; | 列フッターオブジェクト名 |
+| footerVar | Variable, Pointer | &rarr; | 列フッター変数 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
 | Resultado | Text | &larr; | Título del botón |
 
 <!-- END REF-->

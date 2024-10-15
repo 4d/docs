@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Print object.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| posX | Integer | &srarr; | Localização horizontal do objeto |
-| posY | Integer | &srarr; | Localização Vertical do objeto |
-| largura | Integer | &srarr; | Largura do objeto (pixels) |
-| alto | Integer | &srarr; | Altura do objeto (pixels) |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| posX | Integer | &rarr; | Localização horizontal do objeto |
+| posY | Integer | &rarr; | Localização Vertical do objeto |
+| largura | Integer | &rarr; | Largura do objeto (pixels) |
+| alto | Integer | &rarr; | Altura do objeto (pixels) |
 | Resultado | Boolean | &larr; | Verdade = objeto impresso completamente; de outro modo False |
 
 <!-- END REF-->

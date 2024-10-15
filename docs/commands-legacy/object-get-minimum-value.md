@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| minValue | Date, Time, Number | &harr; | Current minimum value for object |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &rarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| minValue | Date, Time, Number | &larr; | Current minimum value for object |
 
 <!-- END REF-->
 

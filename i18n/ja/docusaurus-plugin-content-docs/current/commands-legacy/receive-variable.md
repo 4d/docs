@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | Variable | &harr; | データを受信する変数 |
+| variable | Variable | &larr; | データを受信する変数 |
 
 <!-- END REF-->
 

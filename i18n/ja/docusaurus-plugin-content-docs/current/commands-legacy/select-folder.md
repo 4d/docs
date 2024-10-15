@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Select folder.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| message | Text | &srarr; | ウィンドウのタイトル |
-| defaultPath | Text, Integer | &srarr; | デフォルトのパス名、 または、デフォルトのユーザフォルダを表示する空の文字列 (Windowsでは"My documents"、 Mac OSでは"Documents")、 または記憶されたパス名の番号 |
-| options | Integer | &srarr; | Mac OS上での選択オプション |
+| message | Text | &rarr; | ウィンドウのタイトル |
+| defaultPath | Text, Integer | &rarr; | デフォルトのパス名、 または、デフォルトのユーザフォルダを表示する空の文字列 (Windowsでは"My documents"、 Mac OSでは"Documents")、 または記憶されたパス名の番号 |
+| options | Integer | &rarr; | Mac OS上での選択オプション |
 | 戻り値 | Text | &larr; | 選択されたフォルダへのアクセスパス |
 
 <!-- END REF-->

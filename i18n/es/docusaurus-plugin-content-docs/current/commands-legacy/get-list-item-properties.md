@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | Integer, Text | &srarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| refElem &#124; * | Operador, Entero largo | &srarr; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
-| editable | Boolean | &harr; | TRUE = Editable, FALSE = No editable |
-| estilos | Integer | &harr; | Estilo de fuente del elemento |
-| icono | Text, Integer | &harr; | Número de recurso Mac OS ‘cicn’, o 65536 + número de recurso Mac OS ‘PICT’, o 131072 + número de referencia de imagen |
-| color | Integer | &harr; | Valor de color RGB |
+| * | Operador | &rarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
+| lista | Integer, Text | &rarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| refElem &#124; * | Operador, Entero largo | &rarr; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
+| editable | Boolean | &larr; | TRUE = Editable, FALSE = No editable |
+| estilos | Integer | &larr; | Estilo de fuente del elemento |
+| icono | Text, Integer | &larr; | Número de recurso Mac OS ‘cicn’, o 65536 + número de recurso Mac OS ‘PICT’, o 131072 + número de referencia de imagen |
+| color | Integer | &larr; | Valor de color RGB |
 
 <!-- END REF-->
 

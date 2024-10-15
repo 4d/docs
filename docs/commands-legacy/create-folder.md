@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &srarr; | Pathname to new folder to create |
-| * | Operator | &srarr; | Create folder hierarchy |
+| folderPath | Text | &rarr; | Pathname to new folder to create |
+| * | Operator | &rarr; | Create folder hierarchy |
 
 <!-- END REF-->
 

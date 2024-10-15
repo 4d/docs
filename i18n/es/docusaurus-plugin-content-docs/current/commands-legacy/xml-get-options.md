@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.XML GET OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElement &#124; document | Texto | &srarr; | Referencia del elemento XML raíz o referenica del documento abierto |
-| selector | Integer | &srarr; | Opción a leer |
-| valor | Integer | &harr; | Valor actual de la opción |
+| refElement &#124; document | Texto | &rarr; | Referencia del elemento XML raíz o referenica del documento abierto |
+| selector | Integer | &rarr; | Opción a leer |
+| valor | Integer | &larr; | Valor actual de la opción |
 
 <!-- END REF-->
 

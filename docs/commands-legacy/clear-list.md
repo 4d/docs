@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &srarr; | List reference number |
-| * | Operator |  &srarr; | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
+| list | Integer | &rarr; | List reference number |
+| * | Operator |  &rarr; | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
 
 <!-- END REF-->
 

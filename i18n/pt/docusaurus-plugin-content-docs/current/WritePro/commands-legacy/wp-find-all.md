@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find all.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objAlvo | Objeto | &#x1F852; | Range ou elemento ou do documento 4D Write Pro |
-| valorPesquisa | String | &#x1F852; | Valor pesquisa |
-| condiçãoPesquisa | Inteiro longo | &#x1F852; | Pesquisa regras |
-| valorSubstituir | String | &#x1F852; | String substituição |
-| Resultado | Collection | &#x1F850; | Coleção de objetos range |
+| objAlvo | Object | &rarr; | Range ou elemento ou do documento 4D Write Pro |
+| valorPesquisa | Text | &rarr; | Valor pesquisa |
+| condiçãoPesquisa | Integer | &rarr; | Pesquisa regras |
+| valorSubstituir | Text | &rarr; | String substituição |
+| Resultado | Collection | &larr; | Coleção de objetos range |
 
 <!-- END REF-->
 

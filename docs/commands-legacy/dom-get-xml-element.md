@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML element reference |
-| elementName | Text | &srarr; | Name of element to get |
-| index | Integer | &srarr; | Index number of element to get |
-| elementValue | Variable | &harr; | Value of the element |
+| elementRef | Text | &rarr; | XML element reference |
+| elementName | Text | &rarr; | Name of element to get |
+| index | Integer | &rarr; | Index number of element to get |
+| elementValue | Variable | &larr; | Value of the element |
 | Function result | String | &larr; | XML reference (16 characters) |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Count in array.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array no qual a contagem deve ocorrer |
-| valor | Expression | &srarr; | Valor a contar |
+| array | Array | &rarr; | Array no qual a contagem deve ocorrer |
+| valor | Expression | &rarr; | Valor a contar |
 | Resultado | Integer | &larr; | Número de ocorrências encontradas |
 
 <!-- END REF-->

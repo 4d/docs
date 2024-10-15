@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE FOOTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpSection | Object | &#x1F852; | 4D Write Pro section or subsection |
+| wpSection | Object | &rarr; | 4D Write Pro section or subsection |
 
 <!-- END REF-->
 

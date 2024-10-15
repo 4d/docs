@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoDatos | Text | &srarr; | Tipo de datos (4 caracteres) |
-| datos | Blob | &srarr; | Datos a añadir al portapapeles |
+| tipoDatos | Text | &rarr; | Tipo de datos (4 caracteres) |
+| datos | Blob | &rarr; | Datos a añadir al portapapeles |
 
 <!-- END REF-->
 

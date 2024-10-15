@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML element reference |
-| childTypesArr | Integer array | &harr; | Types of child nodes |
-| nodeRefsArr | Text array | &harr; | References or Values of child nodes |
+| elementRef | Text | &rarr; | XML element reference |
+| childTypesArr | Array integer | &larr; | Types of child nodes |
+| nodeRefsArr | Text array | &larr; | References or Values of child nodes |
 
 <!-- END REF-->
 

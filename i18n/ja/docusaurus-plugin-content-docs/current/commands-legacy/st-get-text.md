@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数またはフィールド |
-| object | any | &srarr; | オブジェクト名 (* 指定時)または、テキストフィールドか変数 (* 省略時) |
-| startSel | Integer | &srarr; | 文字選択の開始位置 |
-| endSel | Integer | &srarr; | 文字選択の終了位置 |
+| * | 演算子 | &rarr; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数またはフィールド |
+| object | any | &rarr; | オブジェクト名 (* 指定時)または、テキストフィールドか変数 (* 省略時) |
+| startSel | Integer | &rarr; | 文字選択の開始位置 |
+| endSel | Integer | &rarr; | 文字選択の終了位置 |
 | 戻り値 | Text | &larr; | スタイルタグを含むテキスト |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Record number.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &srarr; | Tabla de la cual devolver el número del registro actual o Tabla por defecto, si se omite |
+| tabla | Table | &rarr; | Tabla de la cual devolver el número del registro actual o Tabla por defecto, si se omite |
 | Resultado | Integer | &larr; | Número del registro actual |
 
 <!-- END REF-->

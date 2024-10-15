@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get subsection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element |
-| wpSection | Object | &#x1F852; | 4D Write Pro section |
-| subSectionType | Longint | &#x1F852; | Subsection type (wk first page, wk left page, or wk right page) |
-| Function result | Object | &#x1F850; | Subsection |
+| targetObj | Object | &rarr; | Range or element |
+| wpSection | Object | &rarr; | 4D Write Pro section |
+| subSectionType | Longint | &rarr; | Subsection type (wk first page, wk left page, or wk right page) |
+| Function result | Object | &larr; | Subsection |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Reference of the area |
-| colNum | Integer | &srarr; | Column number |
-| breakNum | Integer | &srarr; | Break number |
-| operator | Integer | &harr; | Operator value for the cell |
-| text | Text | &harr; | Contents of the cell |
+| area | Integer | &rarr; | Reference of the area |
+| colNum | Integer | &rarr; | Column number |
+| breakNum | Integer | &rarr; | Break number |
+| operator | Integer | &larr; | Operator value for the cell |
+| text | Text | &larr; | Contents of the cell |
 
 <!-- END REF-->
 

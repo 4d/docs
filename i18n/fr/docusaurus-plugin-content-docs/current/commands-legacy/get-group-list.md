@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomsGroupes | Text array | &harr; | Noms des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe |
-| numérosGroupes | Integer array | &harr; | Numéros de référence uniques pour chaque groupe |
+| nomsGroupes | Text array | &larr; | Noms des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe |
+| numérosGroupes | Integer array | &larr; | Numéros de référence uniques pour chaque groupe |
 
 <!-- END REF-->
 

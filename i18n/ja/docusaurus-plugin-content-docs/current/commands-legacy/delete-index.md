@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE INDEX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldPtr &#124; indexName | ポインター, 文字 | &srarr; | インデックスを削除するフィールドを指すポインタ 削除されるインデックスの名前 |
-| * | 演算子 | &srarr; | 渡されると = 非同期オペレーション |
+| fieldPtr &#124; indexName | ポインター, 文字 | &rarr; | インデックスを削除するフィールドを指すポインタ 削除されるインデックスの名前 |
+| * | 演算子 | &rarr; | 渡されると = 非同期オペレーション |
 
 <!-- END REF-->
 

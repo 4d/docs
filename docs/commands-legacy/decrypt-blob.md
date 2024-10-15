@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| toDecrypt | Blob | &srarr; | Data to decrypt |
-| &harr; | Decrypted data |
-| sendPubKey | Blob | &srarr; | Sender’s public key |
-| recipPrivKey | Blob | &srarr; | Recipient’s private key |
+| toDecrypt | Blob | &rarr; | Data to decrypt |
+| &larr; | Decrypted data |
+| sendPubKey | Blob | &rarr; | Sender’s public key |
+| recipPrivKey | Blob | &rarr; | Recipient’s private key |
 
 <!-- END REF-->
 

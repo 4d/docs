@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get page count.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | オブジェクト | &#x1F852; | 4D Write Pro ドキュメント |
-| 戻り値 | 倍長整数 | &#x1F850; | ドキュメントのページ数 |
+| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
+| 戻り値 | Integer | &larr; | ドキュメントのページ数 |
 
 <!-- END REF-->
 

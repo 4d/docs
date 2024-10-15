@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate password hash.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| password | Text | &srarr; | ユーザーのパスワード。最初の72文字のみ使用。 |
-| options | Object | &srarr; | オプションを格納したオブジェクト |
+| password | Text | &rarr; | ユーザーのパスワード。最初の72文字のみ使用。 |
+| options | Object | &rarr; | オプションを格納したオブジェクト |
 | 戻り値 | Text | &larr; | ハッシュされたパスワードを返します。 |
 
 <!-- END REF-->

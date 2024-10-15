@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TIMER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tickCount | Integer | &srarr; | Tickcount または -1=すぐに実行する |
+| tickCount | Integer | &rarr; | Tickcount または -1=すぐに実行する |
 
 <!-- END REF-->
 

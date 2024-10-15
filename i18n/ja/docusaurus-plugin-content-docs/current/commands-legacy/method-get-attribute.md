@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get attribute.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text | &srarr; | プロジェクトメソッドのパス |
-| attribType | Integer | &srarr; | 取得する属性タイプ |
-| * | 演算子 | &srarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| path | Text | &rarr; | プロジェクトメソッドのパス |
+| attribType | Integer | &rarr; | 取得する属性タイプ |
+| * | 演算子 | &rarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 | 戻り値 | Boolean | &larr; | True: 属性が選択されている、False: 選択されていない |
 
 <!-- END REF-->

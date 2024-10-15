@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in table.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para a qual vai devolver o número de registros, ou tabela padrão, se omitida |
+| tabela | Table | &rarr; | Tabela para a qual vai devolver o número de registros, ou tabela padrão, se omitida |
 | Resultado | Integer | &larr; | Número total de registros na tabela |
 
 <!-- END REF-->

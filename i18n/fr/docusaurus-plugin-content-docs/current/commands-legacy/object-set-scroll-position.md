@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne)Si omis, objet est une table, un champ ou une variable |
-| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Table, champ ou variable (si * est omis) |
-| positionLigne | Integer | &srarr; | Numéro de ligne à afficher ou Défilement vertical en pixels (images) |
-| positionH | Integer | &srarr; | Numéro de colonne à afficher (list box) ou<br/>Défilement horizontal en pixels (images) |
-| * | Opérateur | &srarr; | Afficher la ligne (et la colonne si le paramètre positionH est passé) en première position après défilement (listes)Appliquer un défilement relatif (images) |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne)Si omis, objet est une table, un champ ou une variable |
+| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Table, champ ou variable (si * est omis) |
+| positionLigne | Integer | &rarr; | Numéro de ligne à afficher ou Défilement vertical en pixels (images) |
+| positionH | Integer | &rarr; | Numéro de colonne à afficher (list box) ou<br/>Défilement horizontal en pixels (images) |
+| * | Opérateur | &rarr; | Afficher la ligne (et la colonne si le paramètre positionH est passé) en première position après défilement (listes)Appliquer un défilement relatif (images) |
 
 <!-- END REF-->
 

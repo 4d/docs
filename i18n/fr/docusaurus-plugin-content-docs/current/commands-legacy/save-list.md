@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &srarr; | Numéro de référence de liste |
-| nomListe | Text | &srarr; | Nom de la liste tel qu'il doit apparaître dans l'éditeur d'énumérations en mode Développement |
+| liste | Integer | &rarr; | Numéro de référence de liste |
+| nomListe | Text | &rarr; | Nom de la liste tel qu'il doit apparaître dans l'éditeur d'énumérations en mode Développement |
 
 <!-- END REF-->
 

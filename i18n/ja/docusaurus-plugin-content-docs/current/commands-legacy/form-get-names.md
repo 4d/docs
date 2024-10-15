@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET NAMES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | テーブル参照 |
-| arrNames | Text array | &harr; | フォーム名の配列 |
-| filter | Text | &srarr; | 名前のフィルター |
-| marker | Real | &srarr; | 返す最古のカウンター |
-| &harr; | 最新のカウンター |
-| * | 演算子 | &srarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| aTable | Table | &rarr; | テーブル参照 |
+| arrNames | Text array | &larr; | フォーム名の配列 |
+| filter | Text | &rarr; | 名前のフィルター |
+| marker | Real | &rarr; | 返す最古のカウンター |
+| &larr; | 最新のカウンター |
+| * | 演算子 | &rarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

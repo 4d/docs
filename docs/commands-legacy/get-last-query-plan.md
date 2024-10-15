@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last query plan.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| descFormat | Integer | &srarr; | Description format (Text or XML) |
+| descFormat | Integer | &rarr; | Description format (Text or XML) |
 | Function result | String | &larr; | Description of last executed query plan |
 
 <!-- END REF-->

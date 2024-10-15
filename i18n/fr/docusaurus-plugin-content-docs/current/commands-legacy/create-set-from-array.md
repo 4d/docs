@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de l’ensemble |
-| tabEnrg | Integer, Boolean array | &srarr; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans l’ensemble, Faux = il n’est pas dans l’ensemble) |
-| nomEnsemble | Text | &srarr; | Nom de l’ensemble à créer, ou Appliquer la commande à l’ensemble Userset si ce paramètre est omis ou vide |
+| laTable | Table | &rarr; | Table de l’ensemble |
+| tabEnrg | Integer, Boolean array | &rarr; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans l’ensemble, Faux = il n’est pas dans l’ensemble) |
+| nomEnsemble | Text | &rarr; | Nom de l’ensemble à créer, ou Appliquer la commande à l’ensemble Userset si ce paramètre est omis ou vide |
 
 <!-- END REF-->
 

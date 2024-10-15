@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get current page.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | カレントサブフォームページ番号を返す |
+| * | 演算子 | &rarr; | カレントサブフォームページ番号を返す |
 | 戻り値 | Integer | &larr; | 現在表示されているページ番号 |
 
 <!-- END REF-->

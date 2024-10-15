@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Compile project.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arquivoProjeto | 4D.File | &srarr; | Arquivo .4DProject a compilar |
-| opções | Object | &srarr; | Objeto que especifica opções de compilação |
+| arquivoProjeto | 4D.File | &rarr; | Arquivo .4DProject a compilar |
+| opções | Object | &rarr; | Objeto que especifica opções de compilação |
 | Resultado | Object | &larr; | Objeto que contém informação do status da compilação |
 
 <!-- END REF-->

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MOUSE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mouseX | Real | &harr; | Coordenadas horizontais do mouse |
-| mouseY | Real | &harr; | Coordenadas verticais do mouse |
-| botaoMouse | Integer | &harr; | Estado do botão do mouse: 0=botão sem pressionar; 1=botão pressionado; 2= botão direito pressionado; 3=dois botões pressionados |
-| * | Operador | &srarr; | Se especificado, sistema global de coordenadas é usado, se omitido, sistema de coordenadas locais é usado |
+| mouseX | Real | &larr; | Coordenadas horizontais do mouse |
+| mouseY | Real | &larr; | Coordenadas verticais do mouse |
+| botaoMouse | Integer | &larr; | Estado do botão do mouse: 0=botão sem pressionar; 1=botão pressionado; 2= botão direito pressionado; 3=dois botões pressionados |
+| * | Operador | &rarr; | Se especificado, sistema global de coordenadas é usado, se omitido, sistema de coordenadas locais é usado |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT BREAK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Objeto | &#x1F852; | Rango |
-| tipoRuptura | Entero largo | &#x1F852; | Tipo de ruptura a insertar |
-| modo | Entero largo | &#x1F852; | Modo de inserción |
-| ActRango | Entero largo | &#x1F852; | Modo de actualización del rango |
+| objRango | Object | &rarr; | Rango |
+| tipoRuptura | Integer | &rarr; | Tipo de ruptura a insertar |
+| modo | Integer | &rarr; | Modo de inserción |
+| ActRango | Integer | &rarr; | Modo de actualización del rango |
 
 <!-- END REF-->
 

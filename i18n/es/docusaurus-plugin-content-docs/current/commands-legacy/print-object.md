@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Print object.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de ojbeto (cadena). Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o variable (si se omite *) |
-| posX | Integer | &srarr; | Ubicación horizontal del objeto |
-| posY | Integer | &srarr; | Ubicación vertical del objeto |
-| ancho | Integer | &srarr; | Ancho del objeto (píxeles) |
-| alto | Integer | &srarr; | Alto del objeto (píxeles) |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de ojbeto (cadena). Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o variable (si se omite *) |
+| posX | Integer | &rarr; | Ubicación horizontal del objeto |
+| posY | Integer | &rarr; | Ubicación vertical del objeto |
+| ancho | Integer | &rarr; | Ancho del objeto (píxeles) |
+| alto | Integer | &rarr; | Alto del objeto (píxeles) |
 | Resultado | Boolean | &larr; | True = objeto impreso completamente, de lo contrario False |
 
 <!-- END REF-->

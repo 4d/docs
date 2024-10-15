@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| nouveauTexte | Texte | &#x1F852; | Texte à insérer |
-| positionTexte | Numérique | &#x1F852; | Position de l'insertion (remplace, avant, après) |
-| miseAJourPlage | Numérique | &#x1F852; | Inclut ou exclut le contenu inséré dans la plage |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| nouveauText | Text | &rarr; | Texte à insérer |
+| positionTexte | Number | &rarr; | Position de l'insertion (remplace, avant, après) |
+| miseAJourPlage | Number | &rarr; | Inclut ou exclut le contenu inséré dans la plage |
 
 <!-- END REF-->
 

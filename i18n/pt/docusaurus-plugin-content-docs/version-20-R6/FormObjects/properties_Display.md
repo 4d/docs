@@ -148,7 +148,7 @@ Os formatos de exibição numérica (exceto para notações científicas) são a
 > No Windows, ao usar a tecla de separação decimal do teclado numérico, 4D faz uma distinção dependendo do tipo de campo onde o cursor está localizado:
 >
 > - em um campo do tipo Real, o uso dessa chave inserirá o separador decimal definido no sistema,
-> - in any other type of field, this key inserts the character associated with the key, usually a period (.) ou vírgula (,).
+> - em qualquer outro tipo de campo, essa chave insere o caractere associado à chave, geralmente um ponto (.) ou vírgula (,).
 
 ### Pontos decimais e outros caracteres de visualização
 
@@ -206,12 +206,12 @@ O formato de notação científica é o único formato que arredonda automaticam
 
 Você pode exibir um número em hexadecimal usando os seguintes formatos de exibição:
 
-- `&x`: este formato muestra números hexadecimales utilizando el formato “0xFFFF”.
-- `&$`: este formato muestra números hexadecimales utilizando el formato "$FFFF".
+- `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
+- `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
 
 ### Notação XML
 
-El formato `&xml` hará que un número cumpla las normas estándar XML. Em particular, o caractere separador decimal será um ponto "." em todos os casos, independentemente das configurações do sistema.
+The `&xml` format will make a number compliant with XML standard rules. Em particular, o caractere separador decimal será um ponto "." em todos os casos, independentemente das configurações do sistema.
 
 ### Mostrar um número como hora
 
@@ -281,7 +281,7 @@ As opções de truncagem e escala não afetam a imagem em si. O conteúdo de um 
 
 `Gramática JSON: "scaled"`
 
-El formato **A escala para ajustarse** hace que 4D redimensione la imagen para ajustarla a las dimensiones del área.
+O formato **Scaled to fit** faz com que o 4D redimensione a imagem para se ajustar às dimensões da área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -291,9 +291,9 @@ El formato **A escala para ajustarse** hace que 4D redimensione la imagen para a
 
 El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D corta igualmente de cada borda e da parte superior e inferior.
 
-El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior izquierda de la imagen en la esquina superior izquierda del área y recorte cualquier parte que no quepa dentro del área. 4D corta da direita e de baixo para cima.
+O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 
-> Cuando el formato de la imagen es **Truncado (no centrado)**, es posible añadir barras de desplazamiento al área de entrada.
+> Quando o formato da imagem for **Truncado (não centrado)**, é possível adicionar barras de deslocamento à área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
@@ -360,7 +360,7 @@ A tabela abaixo mostra os formatos de exibição do campo Hora e dá exemplos:
 
 ### Formato personalizado
 
-Customized time formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Por exemplo:
+Formatos de hora personalizados podem ser construídos usando vários padrões descritos na página [**Formatos de Data e Hora**](../Project/date-time-formats.md). Por exemplo:
 
 | Padrão                                  | Exemplo (sistema americano) |
 | --------------------------------------- | ---------------------------------------------- |
@@ -423,7 +423,7 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. En este c
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -492,7 +492,7 @@ Nesse caso, o título da caixa de seleção pode ser inserido usando essa propri
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -537,7 +537,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 Esta propriedade permite ocultar o objeto no ambiente Aplicação.
 
-É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. En este contexto, a menudo es necesario ocultar objetos por programación durante el evento `On load` del formulario y luego mostrar determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
+É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. Nesse contexto, muitas vezes é necessário ocultar objetos programaticamente durante o evento `On load` do formulário e, depois, exibir determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
 
 #### Visibilidade automática em formulários lista
 

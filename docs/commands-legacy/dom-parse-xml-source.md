@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Parse XML source.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &srarr; | Document pathname |
-| validation | Boolean | &srarr; | True = Validation False = No validation |
-| dtd &#124; schema | String | &srarr; | Location of the DTD or XML schema |
+| document | Text | &rarr; | Document pathname |
+| validation | Boolean | &rarr; | True = Validation False = No validation |
+| dtd &#124; schema | String | &rarr; | Location of the DTD or XML schema |
 | Function result | String | &larr; | Reference of XML element |
 
 <!-- END REF-->

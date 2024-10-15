@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in sorted array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | 検索する配列 |
-| value | Expression | &srarr; | 配列内で検索する値(配列と同じ型) |
-| > or < | 演算子 | &srarr; | 配列が昇順になっている場合には>、降順になっている場合には< |
-| posFirst | Integer | &harr; | 値が見つかった場合にはそれが見つかった最初の位置/そうでない場合には値が挿入されるべき位置 |
-| posLast | Integer | &harr; | 値が見つかった場合にはそれが見つかった最後の位置/そうでない場合にはposFirstと同じ |
+| array | Array | &rarr; | 検索する配列 |
+| value | Expression | &rarr; | 配列内で検索する値(配列と同じ型) |
+| > or < | 演算子 | &rarr; | 配列が昇順になっている場合には>、降順になっている場合には< |
+| posFirst | Integer | &larr; | 値が見つかった場合にはそれが見つかった最初の位置/そうでない場合には値が挿入されるべき位置 |
+| posLast | Integer | &larr; | 値が見つかった場合にはそれが見つかった最後の位置/そうでない場合にはposFirstと同じ |
 | 戻り値 | Boolean | &larr; | 配列内にて値と合致する要素が少なくとも一つある場合にはTrue、そうでない場合にはFalse |
 
 <!-- END REF-->

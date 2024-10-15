@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| expressions | Number | &#x1F852; | Instructions for expression evaluation |
-| Function result | Text | &#x1F850; | Text of targetObj |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| expressions | Number | &rarr; | Instructions for expression evaluation |
+| Function result | Text | &larr; | Text of targetObj |
 
 <!-- END REF-->
 

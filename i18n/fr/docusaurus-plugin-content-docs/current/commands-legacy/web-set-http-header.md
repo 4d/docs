@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| entête &#124; tabChamps | Texte, Tableau texte | &srarr; | Champ ou variable contenant l'en-tête HTTP de la requête ou Tableau des champs de l'en-tête HTTP |
-| tabValeurs | Text array | &srarr; | Contenu des champs de l’en-tête HTTP |
+| entête &#124; tabChamps | Texte, Tableau texte | &rarr; | Champ ou variable contenant l'en-tête HTTP de la requête ou Tableau des champs de l'en-tête HTTP |
+| tabValeurs | Text array | &rarr; | Contenu des champs de l’en-tête HTTP |
 
 <!-- END REF-->
 

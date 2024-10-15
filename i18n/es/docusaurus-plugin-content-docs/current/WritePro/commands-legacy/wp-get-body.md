@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get body.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| wpDoc | Objeto | &#x1F852; | Documento 4D Write Pro |
-| Resultado | Objeto | &#x1F850; | Cuerpo 4D Write Pro |
+| wpDoc | Object | &rarr; | Documento 4D Write Pro |
+| Resultado | Object | &larr; | Cuerpo 4D Write Pro |
 
 <!-- END REF-->
 

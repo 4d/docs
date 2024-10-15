@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Pop up menu.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| contenu | Text | &srarr; | Définition du texte du menu |
-| parDéfaut | Integer | &srarr; | Numéro de l'élément sélectionné par défaut |
-| coordX | Integer | &srarr; | Coordonnée X du coin supérieur gauche |
-| coordY | Integer | &srarr; | Coordonnée Y du coin supérieur gauche |
+| contenu | Text | &rarr; | Définition du texte du menu |
+| parDéfaut | Integer | &rarr; | Numéro de l'élément sélectionné par défaut |
+| coordX | Integer | &rarr; | Coordonnée X du coin supérieur gauche |
+| coordY | Integer | &rarr; | Coordonnée Y du coin supérieur gauche |
 | Résultat | Integer | &larr; | Numéro de l'élément de menu sélectionné |
 
 <!-- END REF-->

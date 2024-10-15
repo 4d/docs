@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Text | &srarr; | Menu reference |
-| default | Text | &srarr; | Parameter of item selected by default |
-| xCoord | Integer | &srarr; | X coordinate of top left corner |
-| yCoord | Integer | &srarr; | Y coordinate of top left corner |
+| menu | Text | &rarr; | Menu reference |
+| default | Text | &rarr; | Parameter of item selected by default |
+| xCoord | Integer | &rarr; | X coordinate of top left corner |
+| yCoord | Integer | &rarr; | Y coordinate of top left corner |
 | Function result | String | &larr; | Parameter of selected menu item |
 
 <!-- END REF-->

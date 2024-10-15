@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT DIF.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table into which to import data, or Default table, if omitted |
-| document | Text | &srarr; | DIF document from which to import data |
+| aTable | Table | &rarr; | Table into which to import data, or Default table, if omitted |
+| document | Text | &rarr; | DIF document from which to import data |
 
 <!-- END REF-->
 

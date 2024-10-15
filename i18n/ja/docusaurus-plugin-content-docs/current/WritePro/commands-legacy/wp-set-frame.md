@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET FRAME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時、wpArea はフォームオブジェクト(文字列)。省略時、wpArea はオブジェクトフィールドあるいは変数 |
-| wpArea | 文字 | &#x1F852; | フォームオブジェクト名(* 指定時)あるいは4D Write Pro オブジェクト変数あるいはフィールド(* 省略時) |
-| frameSelector | 倍長整数 | &#x1F852; | カーソルを設定するフレーム |
-| textBoxID | 文字 | &#x1F852; | カーソルを設定したいテキストボックスのID |
+| * | 演算子 | &rarr; | 指定時、wpArea はフォームオブジェクト(文字列)。省略時、wpArea はオブジェクトフィールドあるいは変数 |
+| wpArea | Text | &rarr; | フォームオブジェクト名(* 指定時)あるいは4D Write Pro オブジェクト変数あるいはフィールド(* 省略時) |
+| frameSelector | Integer | &rarr; | カーソルを設定するフレーム |
+| textBoxID | Text | &rarr; | カーソルを設定したいテキストボックスのID |
 
 <!-- END REF-->
 

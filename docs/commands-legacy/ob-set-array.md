@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &srarr; | Structured object |
-| property | Text | &srarr; | Name of property to set |
-| array | Array, Variable | &srarr; | Array to store in property |
+| object | Object, Object | &rarr; | Structured object |
+| property | Text | &rarr; | Name of property to set |
+| array | Array, Variable | &rarr; | Array to store in property |
 
 <!-- END REF-->
 

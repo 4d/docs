@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SCAN INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | Indexed field on which to scan index |
-| number | Integer | &srarr; | Number of records to return |
-| > or < | Operator | &srarr; | > from beginning of index < from end of index |
+| aField | Field | &rarr; | Indexed field on which to scan index |
+| number | Integer | &rarr; | Number of records to return |
+| > or < | Operator | &rarr; | > from beginning of index < from end of index |
 
 <!-- END REF-->
 

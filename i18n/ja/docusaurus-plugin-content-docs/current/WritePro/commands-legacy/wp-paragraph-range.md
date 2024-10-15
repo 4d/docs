@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Paragraph range.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | 4D Write Pro レンジ または 要素の参照 |
-| 戻り値 | オブジェクト | &#x1F850; | 段落のみを格納したレンジ |
+| targetObj | Object | &rarr; | 4D Write Pro レンジ または 要素の参照 |
+| 戻り値 | Object | &larr; | 段落のみを格納したレンジ |
 
 <!-- END REF-->
 

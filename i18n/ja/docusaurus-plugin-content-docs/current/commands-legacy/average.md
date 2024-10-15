@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Average.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | 平均を求めるデータ |
-| attributePath | Text | &srarr; | 平均を取得したい属性のパス |
+| series | Field, Array | &rarr; | 平均を求めるデータ |
+| attributePath | Text | &rarr; | 平均を取得したい属性のパス |
 | 戻り値 | Real | &larr; | seriesの平均値 |
 
 <!-- END REF-->

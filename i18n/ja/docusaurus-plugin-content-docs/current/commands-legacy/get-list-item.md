@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &srarr; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemPos &#124; * | 演算子, 倍長整数 | &srarr; | 展開/折りたたまれたリスト中の項目位置 * の場合、リスト中のカレント項目 |
-| itemRef | Integer | &harr; | 項目参照番号 |
-| itemText | Text | &harr; | リスト項目テキスト |
-| sublist | Integer | &harr; | サブリストリスト参照番号 (サブリストがある場合) |
-| expanded | Boolean | &harr; | サブリストが添付されている場合: TRUE = サブリストは現在展開されている FALSE = サブリストは折りたたまれている |
+| * | 演算子 | &rarr; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &rarr; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemPos &#124; * | 演算子, 倍長整数 | &rarr; | 展開/折りたたまれたリスト中の項目位置 * の場合、リスト中のカレント項目 |
+| itemRef | Integer | &larr; | 項目参照番号 |
+| itemText | Text | &larr; | リスト項目テキスト |
+| sublist | Integer | &larr; | サブリストリスト参照番号 (サブリストがある場合) |
+| expanded | Boolean | &larr; | サブリストが添付されている場合: TRUE = サブリストは現在展開されている FALSE = サブリストは折りたたまれている |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET VISIBLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, Object is an Object Name (String) If omitted, Object parameter is a Field or a Variable |
-| object | any | &srarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
-| visible | Boolean | &srarr; | True for visible, False for invisible |
+| * | Operator | &rarr; | If specified, Object is an Object Name (String) If omitted, Object parameter is a Field or a Variable |
+| object | any | &rarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| visible | Boolean | &rarr; | True for visible, False for invisible |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &srarr; | Lista hierárquica a armazenar no BLOB |
-| Blob | Blob | &srarr; | BLOB a receber a lista hierárquica |
-| * | Operador | &srarr; | * adicionar o valor |
+| lista | Integer | &rarr; | Lista hierárquica a armazenar no BLOB |
+| Blob | Blob | &rarr; | BLOB a receber a lista hierárquica |
+| * | Operador | &rarr; | * adicionar o valor |
 
 <!-- END REF-->
 

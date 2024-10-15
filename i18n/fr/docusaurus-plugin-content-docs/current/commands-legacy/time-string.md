@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Time string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| secondes | Integer, Time | &srarr; | Secondes écoulées depuis minuit |
+| secondes | Integer, Time | &rarr; | Secondes écoulées depuis minuit |
 | Résultat | Text | &larr; | Heure sous forme de chaîne au format 24 heures |
 
 <!-- END REF-->

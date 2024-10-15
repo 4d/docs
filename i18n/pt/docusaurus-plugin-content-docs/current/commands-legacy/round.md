@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Round.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| round | Real | &srarr; | Número a ser arredondado |
-| decimais | Integer | &srarr; | Número de casas decimais a arredondar |
+| round | Real | &rarr; | Número a ser arredondado |
+| decimais | Integer | &rarr; | Número de casas decimais a arredondar |
 | Resultado | Real | &larr; | Valor arredondado ao número de casas decimais especificada por decimais |
 
 <!-- END REF-->

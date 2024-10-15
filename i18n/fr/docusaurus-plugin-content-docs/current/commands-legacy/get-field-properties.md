@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; numTable | Pointeur, Entier long | &srarr; | Pointeur de champ ou Numéro de table |
-| numChamp | Integer | &srarr; | Numéro de champ si un numéro de table est passé en premier paramètre |
-| champType | Integer | &harr; | Type de champ |
-| champLong | Integer | &harr; | Longueur du champ (si alphanumérique) |
-| indexé | Boolean | &harr; | Vrai = Indexé, Faux = Non indexé |
-| unique | Boolean | &harr; | Vrai = Unique, Faux = Non unique |
-| invisible | Boolean | &harr; | Vrai = Invisible, Faux = Visible |
+| ptrChp &#124; numTable | Pointeur, Entier long | &rarr; | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &rarr; | Numéro de champ si un numéro de table est passé en premier paramètre |
+| champType | Integer | &larr; | Type de champ |
+| champLong | Integer | &larr; | Longueur du champ (si alphanumérique) |
+| indexé | Boolean | &larr; | Vrai = Indexé, Faux = Non indexé |
+| unique | Boolean | &larr; | Vrai = Unique, Faux = Non unique |
+| invisible | Boolean | &larr; | Vrai = Invisible, Faux = Visible |
 
 <!-- END REF-->
 

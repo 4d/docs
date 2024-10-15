@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP GET ATTRIBUTES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rangoObj | Objeto | &#x1F852; | Rango o elemento o documento 4D Write Pro |
-| nomAtrib | Texto | &#x1F852; | Nombre del atributo a obtener |
+| rangoObj | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
+| nomAtrib | Text | &rarr; | Nombre del atributo a obtener |
 | valorAtrib | Texto, Número, Array, Collection, Imagen, Fecha | &#x1F858; | Valor actual de atributo para el rango de texto. |
 
 <!-- END REF-->

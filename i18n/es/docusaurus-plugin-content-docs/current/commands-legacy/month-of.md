@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Month of.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fecha | Date | &srarr; | Fecha para la cual devolver el mes |
+| fecha | Date | &rarr; | Fecha para la cual devolver el mes |
 | Resultado | Integer | &larr; | Número que indica el mes de la fecha |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素 |
-| bkName | 文字 | &#x1F852; | 作成するブックマーク名 |
+| targetObj | Object | &rarr; | レンジまたは要素 |
+| bkName | Text | &rarr; | 作成するブックマーク名 |
 
 <!-- END REF-->
 

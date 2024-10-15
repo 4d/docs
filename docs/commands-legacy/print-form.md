@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Print form.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table owning the form, or Default table, if omitted |
-| form | Text, Object | &srarr; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData | Object | &srarr; | Data to associate to the form |
-| areaStart | Integer | &srarr; | Print marker, or Beginning area (if areaEnd is specified) |
-| areaEnd | Integer | &srarr; | Ending area (if areaStart specified) |
+| aTable | Table | &rarr; | Table owning the form, or Default table, if omitted |
+| form | Text, Object | &rarr; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
+| formData | Object | &rarr; | Data to associate to the form |
+| areaStart | Integer | &rarr; | Print marker, or Beginning area (if areaEnd is specified) |
+| areaEnd | Integer | &rarr; | Ending area (if areaStart specified) |
 | Function result | Longint | &larr; | Height of printed section |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | セットの属しているテーブル、または 省略時、デフォルトテーブル |
-| set | Text | &srarr; | 作成するセットの名前 |
-| document | Text | &srarr; | セットを保存したドキュメントの名前 |
+| aTable | Table | &rarr; | セットの属しているテーブル、または 省略時、デフォルトテーブル |
+| set | Text | &rarr; | 作成するセットの名前 |
+| document | Text | &rarr; | セットを保存したドキュメントの名前 |
 
 <!-- END REF-->
 

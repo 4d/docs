@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert path POSIX to system.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| posixPath | Text | &srarr; | POSIXパス名 |
-| * | 演算子 | &srarr; | エンコーディングオプション |
+| posixPath | Text | &rarr; | POSIXパス名 |
+| * | 演算子 | &rarr; | エンコーディングオプション |
 | 戻り値 | Text | &larr; | システムシンタックスで表現されたパス名 |
 
 <!-- END REF-->

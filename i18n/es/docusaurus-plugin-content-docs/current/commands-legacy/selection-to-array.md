@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field, Table | &srarr; | Campo a utilizar para recuperar datos o Tabla a utilizar para recuperar números de registros |
-| array | Array | &harr; | Array para recibir valores de campos o números de registros |
-| campo | Field | &srarr; | Campo a recuperar en el array |
-| array | Array | &harr; | Array que recibe los valores del campo |
-| * | Operador | &srarr; | Esperar ejecución |
+| campo | Field, Table | &rarr; | Campo a utilizar para recuperar datos o Tabla a utilizar para recuperar números de registros |
+| array | Array | &larr; | Array para recibir valores de campos o números de registros |
+| campo | Field | &rarr; | Campo a recuperar en el array |
+| array | Array | &larr; | Array que recibe los valores del campo |
+| * | Operador | &rarr; | Esperar ejecución |
 
 <!-- END REF-->
 

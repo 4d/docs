@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DIF.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table from which to export data,or Default table, if omitted |
-| document | Text | &srarr; | DIF document to receive the data |
+| aTable | Table | &rarr; | Table from which to export data,or Default table, if omitted |
+| document | Text | &rarr; | DIF document to receive the data |
 
 <!-- END REF-->
 

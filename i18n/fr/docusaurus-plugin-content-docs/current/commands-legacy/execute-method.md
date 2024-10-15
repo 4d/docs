@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE METHOD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomMéthode | Text | &srarr; | Nom de méthode projet à exécuter |
-| résultat | Variable, * | &harr; | Variable recevant le résultat de la méthode ou * pour une méthode ne retournant pas de résultat |
-| param | Expression | &srarr; | Paramètre(s) de la méthode |
+| nomMéthode | Text | &rarr; | Nom de méthode projet à exécuter |
+| résultat | Variable, * | &larr; | Variable recevant le résultat de la méthode ou * pour une méthode ne retournant pas de résultat |
+| param | Expression | &rarr; | Paramètre(s) de la méthode |
 
 <!-- END REF-->
 

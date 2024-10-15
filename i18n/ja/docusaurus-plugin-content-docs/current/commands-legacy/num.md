@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Num.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | Text, Boolean, Integer | &srarr; | 数値型を返したい文字列、または 0または１を返したいブール、または 数値式 |
-| separator | Text | &srarr; | 小数区切り |
+| expression | Text, Boolean, Integer | &rarr; | 数値型を返したい文字列、または 0または１を返したいブール、または 数値式 |
+| separator | Text | &rarr; | 小数区切り |
 | 戻り値 | Real | &larr; | 式引数の数値型 |
 
 <!-- END REF-->

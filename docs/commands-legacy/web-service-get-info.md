@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE Get info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| infoType | Integer | &srarr; | Information to be retrieved |
+| infoType | Integer | &rarr; | Information to be retrieved |
 | Function result | String | &larr; | Information about the last SOAP error |
 
 <!-- END REF-->

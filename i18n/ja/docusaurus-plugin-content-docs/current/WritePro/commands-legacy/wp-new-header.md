@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New header.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpSection | オブジェクト | &#x1F852; | 4D Write Pro セクションまたはサブセクションの参照 |
-| 戻り値 | オブジェクト | &#x1F850; | 4D Write Pro ヘッダー参照 |
+| wpSection | Object | &rarr; | 4D Write Pro セクションまたはサブセクションの参照 |
+| 戻り値 | Object | &larr; | 4D Write Pro ヘッダー参照 |
 
 <!-- END REF-->
 

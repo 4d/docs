@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get application color scheme.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | Returns color scheme of host database |
+| * | Operator | &rarr; | Returns color scheme of host database |
 | Function result | Text | &larr; | Current application color scheme |
 
 <!-- END REF-->

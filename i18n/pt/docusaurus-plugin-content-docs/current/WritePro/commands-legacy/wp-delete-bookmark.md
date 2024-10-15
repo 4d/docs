@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| wpDoc | Objeto | &#x1F852; | 4D Write Pro document |
-| nomBK | String | &#x1F852; | Nome de bookmark a apagar |
+| wpDoc | Object | &rarr; | 4D Write Pro document |
+| nomBK | Text | &rarr; | Nome de bookmark a apagar |
 
 <!-- END REF-->
 

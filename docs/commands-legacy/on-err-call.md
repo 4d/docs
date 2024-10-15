@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON ERR CALL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| errorMethod | Text | &srarr; | Error method to be invoked, or Empty string to stop trapping errors |
-| scope | Integer | &srarr; | Scope for the error method |
+| errorMethod | Text | &rarr; | Error method to be invoked, or Empty string to stop trapping errors |
+| scope | Integer | &rarr; | Scope for the error method |
 
 <!-- END REF-->
 

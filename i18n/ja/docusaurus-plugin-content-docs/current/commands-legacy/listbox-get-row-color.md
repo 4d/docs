@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row color.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時、オブジェクトをオブジェクト名(文字列)で指定。省略時、オブジェクトを変数で指定 |
-| object | any | &srarr; | オブジェクト名(* 指定時)変数(* 省略時) |
-| row | Integer | &srarr; | 行番号 |
-| colorType | Integer | &srarr; | リストボックスのフォントカラー(デフォルト)またはリストボックスの背景色 |
+| * | 演算子 | &rarr; | 指定時、オブジェクトをオブジェクト名(文字列)で指定。省略時、オブジェクトを変数で指定 |
+| object | any | &rarr; | オブジェクト名(* 指定時)変数(* 省略時) |
+| row | Integer | &rarr; | 行番号 |
+| colorType | Integer | &rarr; | リストボックスのフォントカラー(デフォルト)またはリストボックスの背景色 |
 | 戻り値 | Text | &larr; | カラー値 |
 
 <!-- END REF-->

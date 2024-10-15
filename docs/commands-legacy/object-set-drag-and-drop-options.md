@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
-| draggable | Boolean | &srarr; | Draggable = True; otherwise, False |
-| automaticDrag | Boolean | &srarr; | Automatic Drag = True; otherwise, False |
-| droppable | Boolean | &srarr; | Droppable = True; otherwise, False |
-| automaticDrop | Boolean | &srarr; | Automatic Drop = True; otherwise, False |
+| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &rarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| draggable | Boolean | &rarr; | Draggable = True; otherwise, False |
+| automaticDrag | Boolean | &rarr; | Automatic Drag = True; otherwise, False |
+| droppable | Boolean | &rarr; | Droppable = True; otherwise, False |
+| automaticDrop | Boolean | &rarr; | Automatic Drop = True; otherwise, False |
 
 <!-- END REF-->
 

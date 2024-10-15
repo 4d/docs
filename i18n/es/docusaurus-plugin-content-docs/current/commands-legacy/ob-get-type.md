@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Get type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object | &srarr; | Objeto estructurado |
-| propiedad | Text | &srarr; | Nombre de la propiedad |
+| objeto | Object | &rarr; | Objeto estructurado |
+| propiedad | Text | &rarr; | Nombre de la propiedad |
 | Resultado | Integer | &larr; | Tipo de valor de la propiedad |
 
 <!-- END REF-->

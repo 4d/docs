@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| volume | Text | &srarr; | Nom du volume |
-| taille | Real | &harr; | Taille du volume exprimée en octets |
-| utilisé | Real | &harr; | Place utilisée sur le volume exprimée en octets |
-| libre | Real | &harr; | Place libre sur le volume exprimée en octets |
+| volume | Text | &rarr; | Nom du volume |
+| taille | Real | &larr; | Taille du volume exprimée en octets |
+| utilisé | Real | &larr; | Place utilisée sur le volume exprimée en octets |
+| libre | Real | &larr; | Place libre sur le volume exprimée en octets |
 
 <!-- END REF-->
 

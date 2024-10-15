@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT PICTURE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| image | Image | &#x1F852; | Champ ou variable Image, ou chemin d'accès à une image sur le disque |
-| mode | Entier long | &#x1F852; | Mode d'insertion |
-| miseAJourPlage | Entier long | &#x1F852; | Mode de mise à jour de la plage de sélection |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| image | Picture | &rarr; | Champ ou variable Image, ou chemin d'accès à une image sur le disque |
+| mode | Integer | &rarr; | Mode d'insertion |
+| miseAJourPlage | Integer | &rarr; | Mode de mise à jour de la plage de sélection |
 
 <!-- END REF-->
 

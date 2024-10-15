@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Std deviation.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | Data for which to return the standard deviation |
+| series | Field, Array | &rarr; | Data for which to return the standard deviation |
 | Function result | Real | &larr; | Standard deviation of series |
 
 <!-- END REF-->

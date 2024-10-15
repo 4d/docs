@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to set the output form, or Default table, if omitted |
-| form | Text, Object | &srarr; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| userForm | Text | &srarr; | Name of user form to use |
+| aTable | Table | &rarr; | Table for which to set the output form, or Default table, if omitted |
+| form | Text, Object | &rarr; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| userForm | Text | &rarr; | Name of user form to use |
 
 <!-- END REF-->
 

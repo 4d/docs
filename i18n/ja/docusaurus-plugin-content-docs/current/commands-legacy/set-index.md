@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET INDEX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | インデックスを作成または削除するフィールド |
-| index | Boolean, Integer | &srarr; | True=作成、False=削除、または インデックスを作成: -1=キーワード、 0=デフォルト、1=標準B-Tree、3=クラスタB-Tree |
-| * | Operator |  &srarr; | *を渡すと非同期にインデックスを作成 |
+| aField | Field | &rarr; | インデックスを作成または削除するフィールド |
+| index | Boolean, Integer | &rarr; | True=作成、False=削除、または インデックスを作成: -1=キーワード、 0=デフォルト、1=標準B-Tree、3=クラスタB-Tree |
+| * | Operator |  &rarr; | *を渡すと非同期にインデックスを作成 |
 
 <!-- END REF-->
 

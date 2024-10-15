@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table append row.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refTableau | Objet | &#x1F852; | Référence de tableau |
-| valeur | Texte, Numérique, Heure, Date, Image | &#x1F852; | Valeur(s) à fixer dans la ligne |
-| Résultat | Objet | &#x1F850; | Objet plage ligne |
+| refTableau | Object | &rarr; | Référence de tableau |
+| valeur | Text, Number, Time, Date, Picture | &rarr; | Valeur(s) à fixer dans la ligne |
+| Résultat | Object | &larr; | Objet plage ligne |
 
 <!-- END REF-->
 

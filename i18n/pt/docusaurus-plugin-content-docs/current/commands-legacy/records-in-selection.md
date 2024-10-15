@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in selection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para a qual retornar número dos registros selecionados, ou tabela padrão, se omitido |
+| tabela | Table | &rarr; | Tabela para a qual retornar número dos registros selecionados, ou tabela padrão, se omitido |
 | Resultado | Integer | &larr; | Registros em seleção da tabela |
 
 <!-- END REF-->

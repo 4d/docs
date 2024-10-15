@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Selected record number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to return the selected record number or Default table, if omitted |
+| aTable | Table | &rarr; | Table for which to return the selected record number or Default table, if omitted |
 | Function result | Longint | &larr; | Selected record number of current record |
 
 <!-- END REF-->

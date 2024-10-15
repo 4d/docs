@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is license available.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| license | Integer | &srarr; | ライセンスの有効性テストを行うプラグイン |
+| license | Integer | &rarr; | ライセンスの有効性テストを行うプラグイン |
 | 戻り値 | Boolean | &larr; | プラグインが利用可能な場合はTrue、その他の場合はFalse |
 
 <!-- END REF-->

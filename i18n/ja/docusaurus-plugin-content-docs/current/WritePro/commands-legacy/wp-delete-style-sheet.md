@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE STYLE SHEET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| styleSheetObj | オブジェクト | &#x1F852; | スタイルシートオブジェクト |
-| wpDoc | オブジェクト | &#x1F852; | 4D Write Pro ドキュメント |
-| styleSheetName | 文字 | &#x1F852; | スタイルシート名 |
+| styleSheetObj | Object | &rarr; | スタイルシートオブジェクト |
+| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
+| styleSheetName | Text | &rarr; | スタイルシート名 |
 
 <!-- END REF-->
 

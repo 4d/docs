@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA SET PREFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| sélecteur | Integer | &srarr; | Préférence à modifier |
-| valeur | Boolean | &srarr; | Valeur de la préférence (Vrai = autorisé, Faux = non autorisé) |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| sélecteur | Integer | &rarr; | Préférence à modifier |
+| valeur | Boolean | &rarr; | Valeur de la préférence (Vrai = autorisé, Faux = non autorisé) |
 
 <!-- END REF-->
 

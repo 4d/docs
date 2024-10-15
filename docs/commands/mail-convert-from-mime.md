@@ -18,8 +18,8 @@ displayed_sidebar: docs
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|mime|Blob, Text|&#x1F852;|Email in MIME|
-|Result|Object|&#x1F850;|Email object|
+|mime|Blob, Text|&rarr;|Email in MIME|
+|Result|Object|&larr;|Email object|
 <!-- END REF -->
 
 #### Description
@@ -90,5 +90,5 @@ $status:=$transporter.send($email)
 
 
 
-| mime | BLOB, Text | &#x1F852; | Email in MIME |
-| Function result | Object | &#x1F850; | Email object |
+| mime | BLOB, Text | &rarr; | Email in MIME |
+| Function result | Object | &larr; | Email object |

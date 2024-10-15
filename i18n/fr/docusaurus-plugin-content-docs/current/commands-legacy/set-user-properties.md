@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| réfUtilisateur | Integer | &srarr; | Numéro de référence unique du compte de l'utilisateur ou -1 pour l'ajout d'un utilisateur affilié au Super_Utilisateur ou -2 pour l'ajout d'un utilisateur affilié à l'Administrateur |
-| &harr; | Unique ID number of added user account (if any) |
-| nom | Text | &srarr; | Nouveau nom de l'utilisateur |
-| démarrage | Text | &srarr; | Nom de la nouvelle méthode de démarrage |
-| motDePasse | Text | &srarr; | Nouveau mot de passe (non crypté) ou * pour ne pas modifier le mot de passe |
-| nbUtilisations | Integer | &srarr; | Nouveau nombre d'utilisations de la base |
-| dernièreUtilisation | Date | &srarr; | Nouvelle date de dernière utilisation de la base |
-| adhésions | Integer array | &srarr; | Numéros de référence des groupes auxquels l'utilisateur appartient |
-| groupePropriétaire | Integer | &srarr; | Numéro de référence du groupe propriétaire de l’utilisateur |
+| réfUtilisateur | Integer | &rarr; | Numéro de référence unique du compte de l'utilisateur ou -1 pour l'ajout d'un utilisateur affilié au Super_Utilisateur ou -2 pour l'ajout d'un utilisateur affilié à l'Administrateur |
+| &larr; | Unique ID number of added user account (if any) |
+| nom | Text | &rarr; | Nouveau nom de l'utilisateur |
+| démarrage | Text | &rarr; | Nom de la nouvelle méthode de démarrage |
+| motDePasse | Text | &rarr; | Nouveau mot de passe (non crypté) ou * pour ne pas modifier le mot de passe |
+| nbUtilisations | Integer | &rarr; | Nouveau nombre d'utilisations de la base |
+| dernièreUtilisation | Date | &rarr; | Nouvelle date de dernière utilisation de la base |
+| adhésions | Integer array | &rarr; | Numéros de référence des groupes auxquels l'utilisateur appartient |
+| groupePropriétaire | Integer | &rarr; | Numéro de référence du groupe propriétaire de l’utilisateur |
 | Résultat | Integer | &larr; | Numéro de référence unique du nouvel utilisateur |
 
 <!-- END REF-->

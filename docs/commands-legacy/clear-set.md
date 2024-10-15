@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set | Text | &srarr; | Name of the set to clear from memory |
+| set | Text | &rarr; | Name of the set to clear from memory |
 
 <!-- END REF-->
 

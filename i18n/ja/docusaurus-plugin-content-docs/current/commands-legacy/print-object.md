@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Print object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| posX | Integer | &srarr; | オブジェクトの横位置 |
-| posY | Integer | &srarr; | オブジェクトの縦位置 |
-| width | Integer | &srarr; | オブジェクトの幅 (ピクセル) |
-| height | Integer | &srarr; | オブジェクトの高さ (ピクセル) |
+| * | 演算子 | &rarr; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| posX | Integer | &rarr; | オブジェクトの横位置 |
+| posY | Integer | &rarr; | オブジェクトの縦位置 |
+| width | Integer | &rarr; | オブジェクトの幅 (ピクセル) |
+| height | Integer | &rarr; | オブジェクトの高さ (ピクセル) |
 | 戻り値 | Boolean | &larr; | True = オブジェクトが完全に印刷された; そうでなければFalse |
 
 <!-- END REF-->

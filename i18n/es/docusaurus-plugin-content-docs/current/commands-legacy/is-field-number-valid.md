@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field number valid.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla &#124; ptrTabla | Entero largo, Puntero | &srarr; | Número de tabla o Puntero a una tabla |
-| numCamp | Integer | &srarr; | Número de campo |
+| numTabla &#124; ptrTabla | Entero largo, Puntero | &rarr; | Número de tabla o Puntero a una tabla |
+| numCamp | Integer | &rarr; | Número de campo |
 | Resultado | Boolean | &larr; | True = el campo existe en la tabla False = el campo no existe en la tabla |
 
 <!-- END REF-->

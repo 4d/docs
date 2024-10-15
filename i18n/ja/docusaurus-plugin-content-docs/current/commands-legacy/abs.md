@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Abs.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &srarr; | 絶対値を求める数値 |
+| number | Real | &rarr; | 絶対値を求める数値 |
 | 戻り値 | Real | &larr; | 絶対値 |
 
 <!-- END REF-->

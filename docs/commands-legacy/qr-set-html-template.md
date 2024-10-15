@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET HTML TEMPLATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Reference of the area |
-| template | Text | &srarr; | HTML template |
+| area | Integer | &rarr; | Reference of the area |
+| template | Text | &rarr; | HTML template |
 
 <!-- END REF-->
 

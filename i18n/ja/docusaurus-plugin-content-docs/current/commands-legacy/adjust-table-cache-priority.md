@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | スカラーデータの優先度値を調整したいテーブル |
-| priority | Integer | &srarr; | テーブルのキャッシュ優先度値 |
+| aTable | Table | &rarr; | スカラーデータの優先度値を調整したいテーブル |
+| priority | Integer | &rarr; | テーブルのキャッシュ優先度値 |
 
 <!-- END REF-->
 

@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-Os objetos `Folder` são criados com o comando [`Folder`](#folder). Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\`](#create).
+`Folder` objects are created with the [`Folder`](../commands/folder.md) command. Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\`](#create).
 
 ### Exemplo
 
@@ -67,9 +67,9 @@ Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems
 
 #### Descrição
 
-A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. É idêntico ao comando [`Folder`](#folder) (atalho).
+A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. It is identical to the [`Folder`](../commands/folder.md) command (shortcut).
 
-> Recomenda-se usar o comando de atalho [`Folder`](#folder) em vez de `4D.Folder.new()`.
+> It is recommended to use the [`Folder`](../commands/folder.md) shortcut command instead of `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 

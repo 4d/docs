@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaEstruct | Text | &srarr; | Nombre de ruta del archivo de estructura |
-| rutaDatos | Text | &srarr; | Nombre de ruta del archivo de datos a cifrar |
-| newPassPhrase &#124; newDataKey | Texto, Objeto | &srarr; | En caso de reemplazo: nueva passPhrase (texto) o nueva llave de cifrado (objeto) |
-| carpetaArchivo | Text | &srarr; | Nombre de ruta de la carpeta donde se guardarán los archivos originales |
-| curPassPhrase &#124; curDataKey | Texto, Objeto | &srarr; | passPhrase actual (texto) o llave de encripción actual(objeto) |
-| nomMetod | Text | &srarr; | Nombre del método de retrollamada 4D |
+| rutaEstruct | Text | &rarr; | Nombre de ruta del archivo de estructura |
+| rutaDatos | Text | &rarr; | Nombre de ruta del archivo de datos a cifrar |
+| newPassPhrase &#124; newDataKey | Texto, Objeto | &rarr; | En caso de reemplazo: nueva passPhrase (texto) o nueva llave de cifrado (objeto) |
+| carpetaArchivo | Text | &rarr; | Nombre de ruta de la carpeta donde se guardarán los archivos originales |
+| curPassPhrase &#124; curDataKey | Texto, Objeto | &rarr; | passPhrase actual (texto) o llave de encripción actual(objeto) |
+| nomMetod | Text | &rarr; | Nombre del método de retrollamada 4D |
 | Resultado | Text | &larr; | Nombre completo de la carpeta donde se guardaron los archivos originales |
 
 <!-- END REF-->

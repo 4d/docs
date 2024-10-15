@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base On Mobile App Authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| infoMovil | Object | &srarr; | Información pasada por la aplicación móvil |
+| infoMovil | Object | &rarr; | Información pasada por la aplicación móvil |
 | estado | Object | &larr; | Estado de la autenticación |
 
 <!-- END REF-->

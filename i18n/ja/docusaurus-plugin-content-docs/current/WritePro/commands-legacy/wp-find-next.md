@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find next.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| searchAfter | オブジェクト | &#x1F852; | 検索を開始する開始点のレンジ |
-| searchValue | 文字 | &#x1F852; | 検索する値 |
-| searchCondition | 倍長整数 | &#x1F852; | 検索ルール |
-| replaceValue | 文字 | &#x1F852; | 置換後の文字列 |
-| 戻り値 | オブジェクト | &#x1F850; | 見つかった/置換された値のレンジ |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| searchAfter | Object | &rarr; | 検索を開始する開始点のレンジ |
+| searchValue | Text | &rarr; | 検索する値 |
+| searchCondition | Integer | &rarr; | 検索ルール |
+| replaceValue | Text | &rarr; | 置換後の文字列 |
+| 戻り値 | Object | &larr; | 見つかった/置換された値のレンジ |
 
 <!-- END REF-->
 

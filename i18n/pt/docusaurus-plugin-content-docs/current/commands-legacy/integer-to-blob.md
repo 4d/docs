@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| inteiro | Integer | &srarr; | Valor inteiro a escrever no BLOB |
-| Blob | Blob | &srarr; | BLOB a receber o valor inteiro |
-| byteOrdem | Integer | &srarr; | 0 Ordem de bytes em modo nativo 1 Ordem dos bytes Macintosh 2 Ordem dos bytes PC |
-| offset &#124; * | Variável, Operador | &srarr; | Offset expressado em bytes no BLOB ou * para adicionar o valor |
-| &harr; | Novo offset depois de escrita se * for omitido |
+| inteiro | Integer | &rarr; | Valor inteiro a escrever no BLOB |
+| Blob | Blob | &rarr; | BLOB a receber o valor inteiro |
+| byteOrdem | Integer | &rarr; | 0 Ordem de bytes em modo nativo 1 Ordem dos bytes Macintosh 2 Ordem dos bytes PC |
+| offset &#124; * | Variável, Operador | &rarr; | Offset expressado em bytes no BLOB ou * para adicionar o valor |
+| &larr; | Novo offset depois de escrita se * for omitido |
 
 <!-- END REF-->
 

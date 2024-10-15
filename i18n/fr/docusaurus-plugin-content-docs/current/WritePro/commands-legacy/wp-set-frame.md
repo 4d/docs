@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET FRAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
-| zoneWP | Chaîne | &#x1F852; | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
-| sélecteurCadre | Entier long | &#x1F852; | Cadre dans lequel placer le curseur |
-| textBoxID | Chaîne | &#x1F852; | Id of the text box where the cursor should be set |
+| * | Opérateur | &rarr; | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
+| zoneWP | Text | &rarr; | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
+| sélecteurCadre | Integer | &rarr; | Cadre dans lequel placer le curseur |
+| textBoxID | Text | &rarr; | Id of the text box where the cursor should be set |
 
 <!-- END REF-->
 
