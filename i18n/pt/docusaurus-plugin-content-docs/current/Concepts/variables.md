@@ -244,7 +244,7 @@ O nome de uma variável de processo sempre começa com os símbolos `<>` — um 
 
 Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) partilham a mesma definição de variáveis interprocessadas, mas cada máquina tem um exemplo diferente para cada variável.
 
-## System Variables
+## Variáveis do sistema
 
 A linguagem 4D gerencia diversas **variáveis sistema**, que permitem controlar a execução de diferentes operações. You can test their values and use them as any variable. Todas as variáveis do sistema são [variáveis processo](#process-variables).
 

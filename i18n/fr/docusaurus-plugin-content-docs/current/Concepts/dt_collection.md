@@ -46,7 +46,7 @@ Les collections doivent avoir été instanciées, sinon toute tentative de lectu
 
 L'instanciation d'une collection peut se faire de l'une des manières suivantes :
 
-- en utilisant la commande [`New collection`](../API/CollectionClass.md#new-collection),
+- using the [`New collection`](../command/new-collection.md) command,
 - en utilisant l'opérateur `[]`.
 
 :::info
@@ -57,7 +57,7 @@ Plusieurs commandes et fonctions 4D retournent des collections, par exemple [`Ge
 
 ### Commande `New collection`
 
-La commande [`New collection`](../API/CollectionClass.md#new-collection) crée une nouvelle collection vide ou préremplie et renvoie sa référence.
+The [`New collection`](../command/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
 
 Exemples :
 
@@ -105,8 +105,8 @@ Si vous créez une collection littérale contenant un seul élément, assurez-vo
 
 Vous pouvez créer deux types de collections :
 
-- des collections standard (non partagées) en utilisant la commande [`New collection`](API/CollectionClass.md#new-collection) ou la syntaxe de collection littérale (`[]`). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
-- des collections partagées, en utilisant la commande [`New shared collection`](API/CollectionClass.md#new-shared-collection). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections est contrôlé par des structures [`Use...End use`](Concepts/shared.md#useend-use).
+- regular (non-shared) collections, using the [`New collection`](command/new-collection.md) command or collection literal syntax (`[]`). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
+- shared collections, using the [`New shared collection`](command/new-shared-collection.md) command. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections est contrôlé par des structures [`Use...End use`](Concepts/shared.md#useend-use).
 
 Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 

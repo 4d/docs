@@ -5,7 +5,7 @@ title: EntitySelection
 
 Una entity selection es un objeto que contiene una o más referencias a [entidades](ORDA/dsMapping.md#entity) pertenecientes a la misma [Dataclass](ORDA/dsMapping.md#dataclass). Una entity selection puede contener 0, 1 o X entidades de la dataclass -- donde X puede representar el número total de entidades contenidas en la dataclass.
 
-Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). También puede crear entity selections vacías utilizando la función [`dataClass.newSelection()`](DataClassClass.md#newselection) o el comando [`Create new selection`](#create-new-selection).
+Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](../commands/create-entity-selection.md) command.
 
 ### Resumen
 
@@ -46,88 +46,6 @@ Las entity selections pueden crearse a partir de selecciones existentes utilizan
 | [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<br/><!-- INCLUDE #EntitySelectionClass.slice().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<br/><!-- INCLUDE #EntitySelectionClass.sum().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->                                  |
-
-## Crear una entity selection
-
-<!-- REF #_command_.Create entity selection.Syntax -->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
-
-<!-- REF #_command_.Create entity selection.Params -->
-
-| Parámetros | Tipo                               |                             | Descripción                                                                                     |
-| ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------- |
-| dsTable    | Tabla                              |              ->             | Tabla de la base 4D cuya selección actual se utilizará para construir la selección de entidades |
-| settings   | Object                             |              ->             | Opciones de construcción: context                                               |
-| Result     | 4D.EntitySelection | <- | Selección de entidades que coinciden con la clase de datos relacionada con la tabla dada        |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `Create entity selection` construye y devuelve una nueva entity selection [modificable](ORDA/entities.md#entity-selections-compartibles-o-modificables) relativa a la dataclass correspondiente con la *dsTable* dada, de acuerdo con la selección actual de esta tabla.
-
-Si la selección actual está ordenada, se crea una entity selection [ordenada](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) (se mantiene el orden de la selección actual). Si la selección actual no está ordenada, se crea una selección de entidades no ordenada.
-
-Si la *dsTable* no está expuesta en [`ds`](API/DataStoreClass.md#ds), se devuelve un error. Este comando no puede utilizarse con un datastore remoto.
-
-En el parámetro opcional *settings*, puede pasar un objeto que contenga la siguiente propiedad:
-
-| Propiedad | Tipo | Descripción                                                                                                                              |
-| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el [contexto de optimización](../ORDA/client-server-optimization.md) aplicado a la selección de entidades. |
-
-#### Ejemplo
-
-```4d
-var $employees : cs.EmployeeSelection
-ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee])
-// La entity selection $employees ahora contiene un conjunto de referencias
-// en todas las entidades relacionadas con la clase de datos Employee
-```
-
-#### Ver también
-
-[`dataClass.newSelection()`](DataClassClass.md#newselection)
-
-## USE ENTITY SELECTION
-
-<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
-
-<!-- REF #_command_.USE ENTITY SELECTION.Params -->
-
-| Parámetros      | Tipo            |     | Descripción          |
-| --------------- | --------------- | :-: | -------------------- |
-| entitySelection | EntitySelection |  -> | Una entity selection |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `USE ENTITY SELECTION` actualiza la selección actual de la tabla que coincide con la dataclass del parámetro *entitySelection*, de acuerdo con el contenido de la entity selection.
-
-Este comando no puede utilizarse con un [almacén de datos remoto](../ORDA/remoteDatastores.md).
-
-:::info
-
-Este comando está diseñado para hacer que las selecciones actuales 4D se beneficien del poder de las consultas ORDA. Por razones de rendimiento, en 4D monousuario y 4D Server, el comando conecta directamente *entitySelection* a la selección actual. Por lo tanto, una vez que se ha utilizado *entitySelection*, no debe reutilizarse ni alterarse posteriormente.
-
-:::
-
-:::note
-
-Tras una llamada a `USE ENTITY SELECTION`, el primer registro de la selección actual actualizada (si no está vacío) se convierte en el registro actual, pero no se carga en memoria. Si necesita utilizar los valores de los campos en el registro actual, utilice el comando `LOAD RECORD` después del comando `USE ENTITY SELECTION`.
-
-:::
-
-#### Ejemplo
-
-```4d
-var $entitySel : cs.EmployeeSelection
-
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel está asociado a la dataclass Employee 
-REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla Employee
-```
 
 <!-- REF EntitySelectionClass.index.Desc -->
 

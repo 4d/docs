@@ -8,7 +8,7 @@ title: Objets et collections partagés
 Les objets partagés et les collections partagées sont stockés dans des variables standard de type [`Object`](dt_object.md) et [`Collection`](dt_collection.md), mais doivent être instanciés à l'aide de commandes spécifiques :
 
 - pour créer un objet partagé, utilisez la commande [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) ou appelez la fonction [`new()`](../API/ClassClass.md#new) d'une [classe partagée](classes.md#classes-partagées),
-- pour créer une collection partagée, utilisez la commande [`New shared collection`](../API/CollectionClass.md#new-shared-collection).
+- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 

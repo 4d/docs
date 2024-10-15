@@ -63,7 +63,7 @@ As seleções de entidades podem ser criadas a partir de seleções existentes u
 
 #### Descrição
 
-O comando `Create entity selection` cria e retorna uma nova seleção de entidade [alterável](ORDA/entities.md#shareable-or-alterable-entity-selections) relacionada à classe de dados correspondente à *dsTable* fornecida, de acordo com a seleção atual dessa tabela.
+O comando `Create entity selection` cria e retorna uma nova seleção de entidade [alterável] (ORDA/entities.md#shareable-or-alterable-entity-selections) relacionada à classe de dados correspondente à *dsTable* fornecida, de acordo com a seleção atual dessa tabela.
 
 Se a seleção atual for ordenada, uma entidade [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) é criada (a ordem da seleção atual é mantida). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
 
@@ -102,7 +102,7 @@ $employees:=Create entity selection([Employee])
 
 #### Descrição
 
-O comando `USE ENTITY SELECTION` atualiza a seleção atual da tabela que corresponde à classe de dados do parâmetro *entitySelection*, conforme o conteúdo da seleção de entidade.
+O comando `USE ENTITY SELECTION` atualiza a seleção atual da tabela que corresponde à classe de dados do parâmetro *entitySelection*, de acordo com o conteúdo da seleção de entidade.
 
 Este comando não pode ser utilizado com um [Datastore remoto](../ORDA/datastoresRemotos.md).
 

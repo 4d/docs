@@ -61,7 +61,7 @@ La creación de una sesión web para una petición REST puede requerir que una l
 
 :::
 
-Se puede acceder al objeto `Session` de la sesión actual a través del comando [`Session`](API/SessionClass.md#session) en el código de todo proceso web.
+The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -84,9 +84,9 @@ Una sesión web escalable se cierra cuando:
 
 La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que significa que el servidor web cerrará automáticamente las sesiones inactivas después de 60 minutos.
 
-Este tiempo de espera puede establecerse utilizando la propiedad [`.idleTimeout`](API/SessionClass.md#idletimeout) del objeto `Session` (el tiempo de espera no puede ser inferior a 60 minutos) o el parámetro _connectionInfo_ del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore).
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
-Cuando se cierra una sesión web, si después se llama al comando [`Session`](API/SessionClass.md#session):
+When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - la propiedad [`.storage`](API/SessionClass.md#storage) está vacía

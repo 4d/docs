@@ -314,7 +314,7 @@ The Dependencies panel is then displayed. Dependencies are sorted by name in alp
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can add or remove **local** and **GitHub** dependencies.
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). Você pode adicionar ou remover as dependências **local** e **GitHub**.
 
 ### Adding a local dependency
 
@@ -322,7 +322,7 @@ To add a local dependency, click on the **+** button in the footer area of the p
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Make sure the **Local** tab is selected and click on the **...** button. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
+Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
 
 If the selected item is valid, its name and location are displayed in the dialog box.
 
@@ -330,7 +330,7 @@ If the selected item is valid, its name and location are displayed in the dialog
 
 If the selected item is not valid, an error message is displayed.
 
-Click **Add** to add the dependency to the project.
+Clique em **Adicionar** para adicionar a dependência ao projeto.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
 - If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
@@ -345,7 +345,7 @@ The dependency is added to the [inactive dependency list](#dependency-status) wi
 
 ### Adding a GitHub dependency
 
-To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the footer area of the panel and select the **GitHub** tab.
+Para adicionar uma [dependência GitHub](#components-stored-on-github), clique no botão **+** na área de rodapé do painel e selecione a aba **GitHub**.
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
@@ -370,7 +370,7 @@ You can then define the [tag or version](#tags-and-versions) option for the depe
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
 
-Click on the **Add** button to add the dependency to the project.
+Clique no botão **Adicionar** para adicionar a dependência ao projeto.
 
 The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
 

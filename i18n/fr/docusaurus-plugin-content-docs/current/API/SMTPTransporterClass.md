@@ -7,7 +7,7 @@ La classe `SMTPTransporter` vous permet de configurer des connexions SMTP et d'e
 
 ### Objet SMTP Transporter
 
-Les objets SMTP Transporter sont instanciés avec la commande [SMTP New transporter](#smtp-new-transporter). Leurs propriétés et fonctions sont les suivantes :
+SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. Leurs propriétés et fonctions sont les suivantes :
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -25,94 +25,6 @@ Les objets SMTP Transporter sont instanciés avec la commande [SMTP New transpor
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                        |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                             |
 
-<!-- REF SMTPTransporterClass.SMTP New transporter.Desc -->
-
-## SMTP New transporter
-
-<details><summary>Historique</summary>
-
-| Release | Modifications                                     |
-| ------- | ------------------------------------------------- |
-| 18      | Nouvelle propriété logFile                        |
-| 17 R5   | Nouvelles propriétés bodyCharset et headerCharset |
-| 17 R4   | Ajout                                             |
-
-</details>
-
-<!-- REF #_command_.SMTP New transporter.Syntax -->**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
-
-<!-- REF #_command_.SMTP New transporter.Params -->
-
-| Paramètres | Type                               |                             | Description                                       |
-| ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
-| server     | Object                             |              ->             | Informations sur le serveur IMAP                  |
-| Résultat   | 4D.SMTPTransporter | <- | [Objet SMTP Transporter](#objet-smtp-transporter) |
-
-<!-- END REF -->
-
-#### Description
-
-La commande `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configure une nouvelle connexion SMTP<!-- END REF --> en fonction du paramètre *server* et retourne un nouvel objet *[SMTP transporter](#objet-smtp-transporter)*. L'objet transporteur retourné sera alors utilisé pour l'envoi d'emails.
-
-> Cette commande n'ouvre pas de connexion au serveur SMTP. La connexion SMTP est réellement ouverte lorsque la fonction [`.send()`](#send) est exécutée.
->
-> La connexion SMTP est automatiquement fermée :
->
-> - lorsque l'objet transporter est détruit si la propriété [`keepAlive`](#keepalive) est à true (par défaut),
-> - après chaque exécution de la fonction [`send()`](#send) si la propriété [`keepAlive`](#keepalive) est définie sur false.
-
-Dans le paramètre *server*, passez un objet contenant les propriétés suivantes :
-
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Valeur par défaut (si omise)                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                              | False                                                                                            |
-| .**accessTokenOAuth2** : Text<br/>.**accessTokenOAuth2** : Object<br/>Chaîne ou objet token représentant les informations d'autorisation OAuth2. Utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné dans l'objet *[SMTP transporter](#smtp-transporter-object)*. | aucun                                                                                            |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                | le mode d'authentification le plus sûr pris en charge par le serveur est utilisé                 |
-| [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<br/><!-- INCLUDE #transporter.bodyCharset.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                     | `mail mode UTF8` (US-ASCII_UTF8_QP) |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                   | 30                                                                                               |
-| [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<br/><!-- INCLUDE #transporter.headerCharset.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                               | `mail mode UTF8` (US-ASCII_UTF8_QP) |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | *obligatoire*                                                                                    |
-| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<br/><!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                         | True                                                                                             |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | aucun                                                                                            |
-| **password** : Text<br/>Mot de passe utilisateur pour l'authentification sur le serveur. Non retourné dans l'objet *[SMTP transporter](#smtp-transporter-object)*.                                                                                                                                                                                                                                                                                                                                                         | aucun                                                                                            |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | 587                                                                                              |
-| [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 100                                                                                              |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | aucun                                                                                            |
-
-#### Résultat
-
-La fonction renvoie un [**objet SMTP Transporter**](#objet-smtp-transporter). Toutes les propriétés retournées sont en **lecture seule**.
-
-#### Exemple
-
-```4d
- $server:=New object
- $server.host:="smtp.gmail.com" //Mandatory
- $server.port:=465
- $server.user:="4D@gmail.com"
- $server.password:="XXXX"
- $server.logFile:="LogTest.txt" //Extended log to save in the Logs folder
-
- var $transporter : 4D.SMTPTransporter
- $transporter:=SMTP New transporter($server)
-
- $email:=New object
- $email.subject:="my first mail "
- $email.from:="4d@gmail.com"
- $email.to:="4d@4d.com;test@4d.com"
- $email.textBody:="Hello World"
- $email.htmlBody:="<h1>Hello World</h1><h4>'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'</h4>\
- <p>There are many variations of passages of Lorem Ipsum available."\
- +"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>"
-
- $status:=$transporter.send($email)
- If(Not($status.success))
-    ALERT("An error occurred sending the mail: "+$status.message)
- End if
-```
-
-<!-- END REF -->
-
 ## 4D.SMTPTransporter.new()
 
 <!-- REF #4D.SMTPTransporter.new().Syntax -->**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
@@ -128,7 +40,7 @@ La fonction renvoie un [**objet SMTP Transporter**](#objet-smtp-transporter). To
 
 #### Description
 
-La fonction `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crée et retourne un nouvel objet de type `4D.SMTPTransporter`<!-- END REF -->. Elle est identique à la commande [`SMTP New transporter`](#smtp-new-transporter) (raccourci).
+La fonction `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crée et retourne un nouvel objet de type `4D.SMTPTransporter`<!-- END REF -->. It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

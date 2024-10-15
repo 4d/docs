@@ -120,7 +120,7 @@ Gracias a esta arquitectura, puede simplemente copiar todos sus componentes al m
 
 :::note
 
-If you do not want to use the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
+Si no desea utilizar la arquitectura **dependencies.json**, puede instalar componentes locales copiando sus archivos en la carpeta [**Components** de su proyecto](architecture.md#components).
 
 :::
 
@@ -318,13 +318,13 @@ La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D 
 
 ### Añadir una dependencia local
 
-To add a local dependency, click on the **+** button in the footer area of the panel. Se muestra la siguiente caja de diálogo:
+Para añadir una dependencia local, haga clic en el botón **+** en el área de pie de página del panel. Se muestra la siguiente caja de diálogo:
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Asegúrese de que la pestaña **Local** esté seleccionada y haga clic en el botón **...**. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
+Asegúrese de que la pestaña **Local** esté seleccionada y haga clic en el botón **...**. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un [**.4DZ**](../Desktop/building.md#build-component) o un archivo [**.4DProject**](architecture.md##applicationname4dproject-file).
 
-If the selected item is valid, its name and location are displayed in the dialog box.
+Si el elemento seleccionado es válido, su nombre y ubicación se muestran en la caja de diálogo.
 
 ![dependency-selected](../assets/en/Project/local-selected.png)
 
@@ -332,8 +332,8 @@ Si el elemento seleccionado no es válido, se mostrará un mensaje de error.
 
 Haga clic en **Añadir** para añadir la dependencia al proyecto.
 
-- If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
+- Si selecciona un componente situado junto a la carpeta del paquete del proyecto (ubicación predeterminada), se declara en el archivo [**dependencies.json**](#dependenciesjson).
+- Si selecciona un componente que no se encuentra junto a la carpeta del paquete del proyecto, se declara en el archivo [**dependencies.json**](#dependenciesjson) y su ruta se declara en el archivo [**environment4d.json**](#environmen4djson) (ver nota). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
 
 :::note
 
@@ -341,19 +341,19 @@ Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](
 
 :::
 
-The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. Se cargará cuando se reinicie la aplicación.
+La dependencia se añade a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible después de reiniciar**. Se cargará cuando se reinicie la aplicación.
 
 ### Añadir una dependencia GitHub
 
-To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the footer area of the panel and select the **GitHub** tab.
+Para añadir una [dependencia GitHub](#components-stored-on-github), haga clic en el botón **+** en el área de pie de página del panel y seleccione la pestaña **GitHub**.
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
-Introduzca la ruta del repositorio GitHub de la dependencia. It could be a **repository URL** or a **github-account/repository-name string**, for example:
+Introduzca la ruta del repositorio GitHub de la dependencia. Podría ser una **URL del repositorio** o una **cadena de nombres de repositorio github/account/repository**, por ejemplo:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
-Once the connection is established, the GitHub icon ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) is displayed on the right side of the entry area. Puede hacer clic en este icono para abrir el repositorio en su navegador predeterminado.
+Una vez establecida la conexión, se muestra el icono de GitHub![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) en el lado derecho del área de entrada. Puede hacer clic en este icono para abrir el repositorio en su navegador predeterminado.
 
 :::note
 

@@ -79,7 +79,7 @@ If an error occurs during the creation of the proxy object, the function returns
 
 In the *commandLine* parameter, pass the full path of the application's file to be executed (posix syntax), as well as any required arguments, if necessary. If you pass only the application name, 4D will use the `PATH` environment variable to locate the executable.
 
-**Warning:** This function can only launch executable applications; it cannot execute instructions that are part of the shell (command interpreter). For example, under Windows it is not possible to use this command to execute the `dir` instruction.
+**Advertência**: esta função só pode lançar aplicações executáveis; não pode executar instruções que fazem parte da shell (intérprete de comandos). For example, under Windows it is not possible to use this command to execute the `dir` instruction.
 
 #### Objeto *options*
 

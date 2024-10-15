@@ -11,7 +11,7 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 
 ### Objetos Fórmula
 
-Los comandos [Formula](#formula) y [Formula from string](#formula-from-string) permiten crear objetos [`4D.Function`](#about-4dfunction-objects) para ejecutar toda expresión o código 4D expresado como texto.
+The [Formula](../commands/formula.md) and [Formula from string](../commands/formula-from-string.md) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
 Los objetos Formula pueden encapsularse en las propiedades de objeto:
 
@@ -96,195 +96,6 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 | [<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)<br/><!-- INCLUDE #FunctionClass.call().Summary -->    |
 | [<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)<br/><!-- INCLUDE #FunctionClass.source.Summary -->  |
 
-## Formula
-
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                                         |
-| ----------- | ------------------------------------------------------ |
-| 17 R6       | Renombrado (New formula -> Formula) |
-| 17 R3       | Añadidos                                               |
-
-</details>
-
-<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
-
-<!-- REF #_command_.Formula.Params -->
-
-| Parámetros | Tipo                        |                             | Descripción                             |
-| ---------- | --------------------------- | :-------------------------: | --------------------------------------- |
-| formulaExp | Expression                  |              ->             | Fórmula a devolver como objeto          |
-| Result     | 4D.Function | <- | Función nativa que encapsula la fórmula |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `Formula` <!-- REF #_command_.Formula.Summary -->crea un objeto `4D Function` basado en la expresión *formulaExp*<!-- END REF -->. *formulaExp* puede ser tan simple como un valor único o complejo, como un método proyecto con parámetros.
-
-Tener una fórmula como objeto permite pasarla como parámetro (atributo calculado) a los comandos o a los métodos o ejecutarla desde varios componentes sin necesidad de declararla como "compartida por los componentes y la base de datos local". Cuando se llama, el objeto fórmula se evalúa en el contexto de la base de datos o del componente que lo creó.
-
-La fórmula devuelta puede ser llamada con:
-
-- los métodos [`.call()`](#call) o [`.apply()`](#apply), o
-- la sintaxis de notación objeto (ver [objeto formula](#formula-object)).
-
-```4d
- var $f : 4D.Function
- $f:=Formula(1+2)
- $o:=New object("myFormula";$f)
-
-  //tres formas diferentes de llamar a la fórmula
- $f.call($o) //devuelve 3
- $f.apply($o) //devuelve 3
- $o.myFormula() //devuelve 3
-```
-
-Puede pasar [parámetros](#pasando-parámetros) a `Formula`, como se muestra a continuación en el [ejemplo 4](#ejemplo-4).
-
-Se puede especificar el objeto sobre el que se ejecuta la fórmula, como se ve en [ejemplo 5](#ejemplo-5). Se puede acceder a las propiedades del objeto mediante el comando `This`.
-
-Si *formulaExp* utiliza variables locales, sus valores se copian y almacenan en el objeto fórmula devuelto durante su creación. Cuando se ejecuta, la fórmula utiliza estos valores copiados en lugar del valor actual de las variables locales. Tenga en cuenta que no se soporta el uso de arrays como variables locales.
-
-El objeto creado por `Formula` puede guardarse, por ejemplo, en un campo de base de datos o en un documento blob.
-
-#### Ejemplo 1
-
-Una fórmula simple:
-
-```4d
- var $f : 4D.Function
- $f:=Formula(1+2)
-
- var $o : Object
- $o:=New object("f";$f)
-
- $result:=$o.f() // devuelve 3
-```
-
-#### Ejemplo 2
-
-Una fórmula utilizando variables locales:
-
-```4d
-
-
- $value:=10
- $o:=New object("f";Formula($value))
- $value:=20
-
- $result:=$o.f() // devuelve 10
-```
-
-#### Ejemplo 3
-
-Una fórmula sencilla que utiliza parámetros:
-
-```4d
- $o:=New object("f";Formula($1+$2))
- $result:=$o.f(10;20) //devuelve 30
-```
-
-#### Ejemplo 4
-
-Una fórmula utilizando un método proyecto con parámetros:
-
-```4d
- $o:=New object("f";Formula(myMethod))
- $result:=$o.f("param1";"param2") // equivalente a $result:=myMethod("param1";"param2")
-```
-
-#### Ejemplo 5
-
-Utilizando `This`:
-
-```4d
- $o:=New object("fullName";Formula(This.firstName+" "+This.lastName))
- $o.firstName:="John"
- $o.lastName:="Smith"
- $result:=$o.fullName() //devuelve "John Smith"
-```
-
-#### Ejemplo 6
-
-Llamar a una fórmula utilizando la notación de objetos:
-
-```4d
- var $feta; $robot : Object
- var $calc : 4D.Function
- $robot:=New object("name";"Robot";"price";543;"quantity";2)
- $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
-
- $calc:=Formula(This.total:=This.price*This.quantity)
-
-  //define la fórmula de las propiedades del objeto
- $feta.calc:=$calc
- $robot.calc:=$calc
-
-  //llama la fórmula
- $feta.calc() // $feta={name:Feta,price:12.5,quantity:5,total:62.5,calc:"[object Formula]"}
- $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
-```
-
-## Formula from string
-
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                                                             |
-| ----------- | -------------------------------------------------------------------------- |
-| 20 R3       | Soporte del parámetro *context*                                            |
-| 17 R6       | Renombrado: New formula from string -> Formula from string |
-| 17 R3       | Añadidos                                                                   |
-
-</details>
-
-<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Longint ) : 4D.Function<!-- END REF -->
-
-<!-- REF #_command_.Formula from string.Params -->
-
-| Parámetros    | Tipo                        |                             | Descripción                                                                                       |
-| ------------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
-| formulaString | Text                        |              ->             | Fórmula texto a devolver como objeto                                                              |
-| context       | Number                      |              ->             | `sk execute in current database` (por defecto) o `sk execute in host database` |
-| Resultado     | 4D.Function | <- | Objeto nativo que encapsula la fórmula                                                            |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crea un objeto `4D.Function` basado en *formulaString* y, opcionalmente, *context*<!-- END REF -->.  *formulaString* puede ser tan simple como un valor único o complejo, como un método proyecto con parámetros.
-
-Este comando es similar a [`Formula`](#formula), excepto que maneja una fórmula basada en texto y permite definir un contexto de ejecución. Normalmente se recomienda utilizar el comando `Formula`, excepto si la fórmula original se expresó como texto (por ejemplo, almacenada externamente en un archivo JSON), o si desea crear una fórmula en una base de datos local mientras llama a `Formula from string` desde un componente. Se recomienda especialmente utilizar sintaxis con tokens con este comando.
-
-> Dado que no se puede acceder al contenido de las variables locales por su nombre en el modo compilado, no se pueden utilizar en *formulaString*. Un intento de acceder a una variable local con `Formula from string` generará un error (-10737).
-
-Si la fórmula se crea en un componente, puede considerar utilizar el parámetro *context*. Por defecto, dado que las fórmulas se ejecutan en el contexto en el que fueron creadas, no podrá llamar a una variable, función o método no compartido de la base de datos local. En este caso, puede pasar la constante `sk execute in host database` en el parámetro *context* para ejecutar el objeto `4D.Function` en el contexto de la base de datos local. Las siguientes constantes están disponibles:
-
-| Constante                        | Tipo    | Descripción                                                                               |
-| -------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
-| `sk execute in current database` | Longint | (por defecto) La fórmula se ejecutará en el contexto en el que se creó |
-| `sk execute in host database`    | Longint | La fórmula se ejecutará en el contexto de la base de datos local                          |
-
-#### Ejemplo
-
-El siguiente código creará un diálogo que acepta una fórmula en formato texto:
-
-```4d
- var $textFormula : Text
- var $f : 4D.Function
- $textFormula:=Request("Please type a formula")
- If(ok=1)
-    $f:=Formula from string($textFormula)
-    ALERT("Result = "+String($f.call()))
- End if
-```
-
-![](../assets/en/API/formulaDialog.png)
-
-...y ejecuta la fórmula:
-
-![](../assets/en/API/formulaAlert.png)
-
 <!-- REF FunctionClass.apply().Desc -->
 
 ## .apply()
@@ -365,7 +176,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | ---------- | ------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | thisObj    | Object | ->                          | Objeto a devolver por el comando This en la fórmula                                                                                                      |
 | params     | any    | ->                          | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
-| Result     | any    | <- | Valor obtenido de la ejecución de la fórmula                                                                                                             |
+| Resultado  | any    | <- | Valor obtenido de la ejecución de la fórmula                                                                                                             |
 
 <!-- END REF -->
 
