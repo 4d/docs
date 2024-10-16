@@ -6,7 +6,7 @@ title: Notas del lanzamiento
 
 :::tip
 
-Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.x LTS.
+Lea las [**novedades de 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la entrada del blog que lista todas las nuevas funcionalidades y mejoras en 4D 20.x LTS.
 
 :::
 
@@ -14,29 +14,29 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### Lo más destacado
 
-- 4D 20.5 LTS is certified on Windows 11 24H2.
-- 4D 20.5 LTS is certified on macOS Sequoïa (macOS 15).
+- 4D 20.5 LTS está certificado en Windows 11 24H2.
+- 4D 20.5 LTS está certificado en macOS Sequoia (macOS 15).
 
-:::warning Known issue on Windows 11 24H2
+:::warning Problema conocido en Windows 11 24H2
 
-On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may fail due to an issue which is still under investigation. If you frequently print PDFs with your 4D application, we currently recommend that you do not upgrade to Windows 11 24H2.
+En Windows 11 24H2, la generación de archivos pdf mediante el driver Microsoft Print to PDF puede fallar debido a un problema que aún se está investigando. Si imprime con frecuencia archivos PDF con su aplicación 4D, le recomendamos que no actualice a Windows 11 24H2.
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
+- [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20.5): lista de todos los bugs corregidos en 4D 20.5 LTS.
 
 
 ## 4D 20.4 LTS
 
 #### Lo más destacado
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
+- [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20.4): lista de todos los bugs corregidos en 4D 20.4 LTS.
 
 ## 4D 20.3 LTS
 
 #### Lo más destacado
 
-- CEF updated to Chromium 5993
+- CEF actualizado a Chromium 5993
 - SpreadJS updated to version 16.2.6 (in 4D 20.2 HF1).
 - [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
 
@@ -57,18 +57,18 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-:::caution Minimal client version for 4D Server 20.2 and later
+:::caution Versión mínima del cliente para 4D Server 20.2 y posterior
 
 Por razones internas, la versión de los clientes remotos que se conectan a 4D Server 20.2 y posteriores debe ser al menos 4D 20.2.
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
+- [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20.2): lista de todos los bugs corregidos en 4D 20.2 LTS.
 
 #### Cambios de comportamiento
 
 - A partir de 20.2, 4D 20 LTS ya no es compatible con Windows Server 2012 R2.
-- **Atención**: el valor inicial [`offset`](../API/FileHandleClass.md#offset) de los objetos [4D.FileHandle](../API/FileHandleClass.md) se ha definido incorrectamente en 1 en lugar de 0. A fix has been made in 4D as of versions **20.2** (20.1 HF1) and **20 R2** and the value is now 0.
+- **Atención**: el valor inicial [`offset`](../API/FileHandleClass.md#offset) de los objetos [4D.FileHandle](../API/FileHandleClass.md) se ha definido incorrectamente en 1 en lugar de 0. Se ha realizado una corrección en 4D a partir de las versiones **20.2** (20.1 HF1) y **20 R2** y el valor es ahora 0.
 
 ## 4D 20.1 LTS
 
@@ -79,25 +79,25 @@ Por razones internas, la versión de los clientes remotos que se conectan a 4D S
 4D 20.1 también incluye una actualización de la biblioteca ICU, que tiene las siguientes consecuencias:
 
 - Forzará una reconstrucción automática de los índices de tipo alfa, texto y objeto.
-- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server 20.1 and vice versa.
+- Por coherencia de ordenación, es necesario que los clientes remotos 4D y el servidor 4D utilicen la misma versión: solo los clientes remotos 4D 20.1 pueden conectarse al servidor 4D 20.1 y viceversa.
 
 :::
 
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+- [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20.1): lista de todos los bugs corregidos en 4D 20.1 LTS.
 
 ## 4D 20 LTS
 
 
 #### Lo más destacado
 
-:::caution Index rebuild
+:::caution Reconstrucción de los índices
 
 4D 20 incluye una actualización de la librería ICU (ver abajo) que forzará una reconstrucción automática de los índices de tipo alpha, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
 :::
 
-- New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
+- Nueva propiedad `plugins` en el parámetro *options* para el comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - 4D Server integra automáticamente varios historiales: [Restauración automática](../Backup/settings.md#automatic-restore).
 - [Clase IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) soportan las palabras claves personalizadas.
 - Nuevas clases [WebSocketServer](../API/WebSocketServerClass.md) y [WebSocketConnection](../API/WebSocketConnectionClass.md) para crear y gestionar conexiones WebSocket desde 4D.
@@ -120,7 +120,7 @@ Por razones internas, la versión de los clientes remotos que se conectan a 4D S
 - Nuevo `validateTLSCertificate` opción para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar la validación automática del certificado.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) en doc.4d.com.
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20): list of all bugs that have been fixed in 4D 20 LTS.
+- [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20): lista de todos los bugs corregidos en 4D 20 LTS.
 
 
 #### Cambios de comportamiento
@@ -308,7 +308,7 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 ## 4D 19.x LTS
 
 
-See [**Release Notes for 4D 19.x LTS**](../../version-19/Notes/updates.md).
+Ver [**Notas de la versión de 4D 19.x LTS**](../../version-19/Notes/updates.md).
 
 
 

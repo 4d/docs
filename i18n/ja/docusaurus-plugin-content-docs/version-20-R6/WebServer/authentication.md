@@ -83,7 +83,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:
 
 - Webサーバーが有効な静的ページを要求する URL を受信したとき。
-- Webサーバーが `rest/` で始まる URL を受信し、RESTサーバーが起動したとき (この場合、認証は [`On REST Authentication`データベースメソッド](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する) または [ストラクチャー設定](REST/configuration.md#ストラクチャー設定を使用する) によって処理されます)。
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### シンタックス
 

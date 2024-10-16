@@ -38,7 +38,7 @@ ds.webUser.save()
 
 Ver también [este ejemplo](gettingStarted.md#authenticating-users) del capítulo "Cómo comenzar".
 
-If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $1 and $2, only the IP addresses of the browser and the server ($3 and $4) are provided, the user name and password ($5 and $6) are empty. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
+If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $urll and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
 
 > **Atención**: si el método de base de datos `On Web Authentication` no existe, las conexiones se aceptan automáticamente (modo de prueba).
 
@@ -61,7 +61,7 @@ Os valores introduzidos são então avaliados:
 
 This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
 
-Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
+Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $password parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
 
 > Você deve reiniciar o servidor Web para que as alterações feitas nesses parâmetros sejam levadas em conta.
 
@@ -83,53 +83,48 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxe
 
-**On Web Authentication**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text ) -> $0 : Boolean
+**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
 
 | Parâmetros | Tipo       |                             | Descrição                                                                |
 | ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------ |
-| $1         | Text       | <- | URL                                                                      |
-| $2         | Text       | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
-| $3         | Text       | <- | Endereço IP do cliente Web (browser)                  |
-| $4         | Text       | <- | Endereço IP do servidor                                                  |
-| $5         | Text       | <- | Nome de usuario                                                          |
-| $6         | Text       | <- | Senha                                                                    |
-| $0         | Parâmetros |              ->             | True = pedido aceite, False = pedido rejeitado                           |
+| $url       | Text       | <- | URL                                                                      |
+| $content   | Text       | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $IPClient  | Text       | <- | Endereço IP do cliente Web (browser)                  |
+| $IPServer  | Text       | <- | Endereço IP do servidor                                                  |
+| $user      | Text       | <- | Nome de usuario                                                          |
+| $password  | Text       | <- | Senha                                                                    |
+| $accept    | Parâmetros |              ->             | True = pedido aceite, False = pedido rejeitado                           |
 
 Estes parâmetros devem ser declarados da seguinte forma:
 
 ```4d
-//On Web Authentication database method
- 
- C_TEXT($1;$2;$3;$4;$5;$6)
- C_BOOLEAN($0)
- 
-//Code for the method
-```
-
-Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):
-
-```4d
 // On Web Authentication database method
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
+#DECLARE ($url : Text; $content : Text; \
+  $IPClient : Text; $IPServer : Text; \
   $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+  -> $accept : Boolean
+
+//Code for the method
 
 ```
 
-> Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-mode) seleccionado).
+:::note
 
-#### $1 - URL
+Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-mode) seleccionado).
 
-El primer parámetro (`$1`) es la URL recibida por el servidor, de la que se ha eliminado la dirección del host.
+:::
 
-Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+#### $url - URL
 
-| URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $1                                                                 |
+The first parameter (`$url`) is the URL received by the server, from which the host address has been removed.
+
+Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. The following table shows the values of $urll depending on the URL entered in the Web browser:
+
+| URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $urll                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -137,43 +132,46 @@ Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu W
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $2 - Cabeçalho e corpo do pedido HTTP
+#### $content - Header and Body of the HTTP request
 
-El segundo parámetro (`$2`) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Its contents will vary depending on the nature of the web browser which is attempting the connection.
+The second parameter (`$content`) is the header and the body of the HTTP request sent by the web browser. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Its contents will vary depending on the nature of the web browser which is attempting the connection.
 
 If your application uses this information, it is up to you to parse the header and the body. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
+> For performance reasons, the size of data passing through the $content parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
-#### $3 - Endereço IP do cliente Web
+#### $IPClient - Web client IP address
 
-El parámetro `$3` recibe la dirección IP de la máquina del navegador. This information can allow you to distinguish between intranet and internet connections.
+The `$IPClient` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
 
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
-#### $4 - Endereço IP do servidor
+#### $IPServer - Server IP address
 
-El parámetro `$4` recibe la dirección IP utilizada para llamar al servidor web. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
+The `$IPServer` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
-#### $5 e $6 - Nome de usuário e palavra-passe
+#### $user and $password - User Name and Password
 
-Los parámetros `$5` y `$6` reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo de identificación estándar que muestra el navegador. Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
+The `$user` and `$password` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
 
-#### Parâmetro $0
+#### $accept - Function return
 
-El método base `On Web Authentication` devuelve un booleano en $0:
+The `On Web Authentication` database method returns a boolean:
 
-- Se $0 é True, a ligação é aceite.
+- If it is True, the connection is accepted.
 
-- Se $0 é False, a ligação é recusada.
+- If it is False, the connection is refused.
 
 El método base `On Web Connection` sólo se ejecuta si la conexión ha sido aceptada por `On Web Authentication`.
 
-> **ADVERTENCIA**<br/>Si no se define ningún valor en $0 o si $0 no está definido en el método base `On Web Authentication`, la conexión se considera aceptada y se ejecuta el método base `On Web Connection`.
+:::warning
 
-> - Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. O mesmo acontecerá se ocorrer um erro durante seu processamento.
+- If no value is returned, the connection is considered as **accepted** and the `On Web Connection` database method is executed.
+- Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. O mesmo acontecerá se ocorrer um erro durante seu processamento.
+
+:::
 
 ### Exemplo
 
