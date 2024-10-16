@@ -2411,6 +2411,7 @@ module.exports =
 											"WritePro/commands-legacy/wp-delete-footer",
 											"WritePro/commands-legacy/wp-delete-header",
 											"WritePro/commands-legacy/wp-delete-picture",
+											"WritePro/commands/wp-delete-section",
 											"WritePro/commands-legacy/wp-delete-style-sheet",
 											"WritePro/commands/wp-delete-subsection",
 											"WritePro/commands-legacy/wp-delete-text-box",
@@ -2485,11 +2486,6 @@ module.exports =
 									},
 								]
 							},
-						{
-						  type: 'link',
-						  label: '4D Write Pro', // The link label
-						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html',
-						},
 						{
 						  type: 'doc',
 						  label: '4D Write Pro Interface', // The link label
