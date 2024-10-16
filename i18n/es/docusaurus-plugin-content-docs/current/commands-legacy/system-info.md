@@ -73,6 +73,6 @@ devuelve un objeto que contiene la siguiente información:
 #### Ver también 
 
 *\_o\_Gestalt*  
-[Application info](get-application-info.md)  
+[Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  

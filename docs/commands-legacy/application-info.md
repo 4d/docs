@@ -1,7 +1,7 @@
 ---
-id: get-application-info
+id: application-info
 title: Application info
-slug: /commands/get-application-info
+slug: /commands/application-info
 displayed_sidebar: docs
 ---
 

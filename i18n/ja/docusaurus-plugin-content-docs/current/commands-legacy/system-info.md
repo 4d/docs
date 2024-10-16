@@ -73,6 +73,6 @@ Windows マシン上で以下のコードを実行した場合:
 #### 参照 
 
 *\_o\_Gestalt*  
-[Application info](get-application-info.md)  
+[Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  

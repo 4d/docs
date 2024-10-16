@@ -101,6 +101,6 @@ retourne un objet contenant les informations suivantes :
 #### Voir aussi 
 
 *\_o\_Gestalt*  
-[Application info](get-application-info.md)  
+[Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
