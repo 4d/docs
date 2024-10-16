@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
-| 引数          | 型      |                                | 説明                                 |
-| ----------- | ------ | ------------------------------ | ---------------------------------- |
-| section     | オブジェクト | &amp;rarr; | 4D Write Pro section               |
-| wpDoc       | オブジェクト | &amp;rarr; | 4D Write Pro document              |
-| indexNumber | 整数     | &amp;rarr; | Index of the section to be deleted |
-| count       | 整数     | &amp;rarr; | Number of sections to be deleted   |
+| 引数          | 型      |                            | 説明                                 |
+| ----------- | ------ | -------------------------- | ---------------------------------- |
+| section     | オブジェクト | &#8594 | 4D Write Pro section               |
+| wpDoc       | オブジェクト | &#8594 | 4D Write Pro document              |
+| indexNumber | 整数     | &#8594 | Index of the section to be deleted |
+| count       | 整数     | &#8594 | Number of sections to be deleted   |
 
 <!-- END REF-->
 
