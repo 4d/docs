@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
-| Paramètres  | Type    |                              | Description                        |
-| ----------- | ------- | ---------------------------- | ---------------------------------- |
-| section     | Object  | &#x1F852 | 4D Write Pro section               |
-| wpDoc       | Object  | &#x1F852 | 4D Write Pro document              |
-| indexNumber | Integer | &#x1F852 | Index of the section to be deleted |
-| count       | Integer | &#x1F852 | Number of sections to be deleted   |
+| Paramètres  | Type    |                                | Description                        |
+| ----------- | ------- | ------------------------------ | ---------------------------------- |
+| section     | Object  | &amp;rarr; | 4D Write Pro section               |
+| wpDoc       | Object  | &amp;rarr; | 4D Write Pro document              |
+| indexNumber | Integer | &amp;rarr; | Index of the section to be deleted |
+| count       | Integer | &amp;rarr; | Number of sections to be deleted   |
 
 <!-- END REF-->
 
