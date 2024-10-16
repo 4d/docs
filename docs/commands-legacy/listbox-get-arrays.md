@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| arrColNames | Text array | &larr; | Column object names |
-| arrHeaderNames | Text array | &larr; | Header object names |
-| arrColVars | Pointer array | &larr; | Pointers to column variables or Pointers to column fields or Nil |
-| arrHeaderVars | Pointer array | &larr; | Pointers to header variables |
-| arrColsVisible | Boolean array | &larr; | Visibility of each column |
-| arrStyles | Pointer array | &larr; | Pointers to arrays, or style, color and row control variables, or Nil |
-| arrFooterNames | Text array | &larr; | Column footer object names |
-| arrFooterVars | Pointer array | &larr; | Pointers to column footer variables |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| arrColNames | Text array | &#8592; | Column object names |
+| arrHeaderNames | Text array | &#8592; | Header object names |
+| arrColVars | Pointer array | &#8592; | Pointers to column variables or Pointers to column fields or Nil |
+| arrHeaderVars | Pointer array | &#8592; | Pointers to header variables |
+| arrColsVisible | Boolean array | &#8592; | Visibility of each column |
+| arrStyles | Pointer array | &#8592; | Pointers to arrays, or style, color and row control variables, or Nil |
+| arrFooterNames | Text array | &#8592; | Column footer object names |
+| arrFooterVars | Pointer array | &#8592; | Pointers to column footer variables |
 
 <!-- END REF-->
 

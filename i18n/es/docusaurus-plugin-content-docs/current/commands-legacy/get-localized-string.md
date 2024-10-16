@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNombre | Text | &rarr; | Nombre del atributo resNombre |
-| Resultado | Text | &larr; | Valor de la cadena designada por resNombre en el lenguaje actual |
+| resNombre | Text | &#8594;  | Nombre del atributo resNombre |
+| Resultado | Text | &#8592; | Valor de la cadena designada por resNombre en el lenguaje actual |
 
 <!-- END REF-->
 

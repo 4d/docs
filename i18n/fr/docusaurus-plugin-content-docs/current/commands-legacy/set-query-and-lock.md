@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| verrou | Boolean | &rarr; | Vrai = verrouiller les enregistrements trouvés par les recherches, Faux = ne pas les verrouiller |
+| verrou | Boolean | &#8594;  | Vrai = verrouiller les enregistrements trouvés par les recherches, Faux = ne pas les verrouiller |
 
 <!-- END REF-->
 

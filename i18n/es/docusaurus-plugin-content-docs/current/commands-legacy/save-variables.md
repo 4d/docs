@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE VARIABLES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &rarr; | Nombre del documento en el cual guardar las variables |
-| variable | Variable | &rarr; | Variables a guardar |
+| doc | Text | &#8594;  | Nombre del documento en el cual guardar las variables |
+| variable | Variable | &#8594;  | Variables a guardar |
 
 <!-- END REF-->
 

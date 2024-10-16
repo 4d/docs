@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabObjets | Text array | &larr; | Noms des objets du formulaire |
-| tabVariables | Pointer array | &larr; | Pointeurs sur les variables ou champs associés aux objets |
-| tabPages | Array integer | &larr; | Numéro de page de chaque objet |
-| optionPage &#124; * | Entier long, Opérateur | &rarr; | 1=Page courante du formulaire, 2=Toutes les pages, 4=Pages héritées<br/>Si * passé (obsolète) = page courante avec objets hérités |
+| tabObjets | Text array | &#8592; | Noms des objets du formulaire |
+| tabVariables | Pointer array | &#8592; | Pointeurs sur les variables ou champs associés aux objets |
+| tabPages | Array integer | &#8592; | Numéro de page de chaque objet |
+| optionPage &#124; * | Entier long, Opérateur | &#8594;  | 1=Page courante du formulaire, 2=Toutes les pages, 4=Pages héritées<br/>Si * passé (obsolète) = page courante avec objets hérités |
 
 <!-- END REF-->
 

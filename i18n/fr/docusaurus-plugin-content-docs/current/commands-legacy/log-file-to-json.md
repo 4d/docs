@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossierDest | Text | &rarr; | Chemin d'accès du dossier de destination du fichier sauvegardé |
-| tailleMax | Integer | &rarr; | Taille maximale du fichier JSON à créer (octets) |
-| cheminHistorique | Text | &rarr; | Chemin d'accès du fichier d'historique à exporter ; utiliser l'historique courant si omis |
-| attribChamp | Integer | &rarr; | Attribut de description du champ : 1 = utiliser numéro (défaut), 2 = utiliser nom |
+| cheminDossierDest | Text | &#8594;  | Chemin d'accès du dossier de destination du fichier sauvegardé |
+| tailleMax | Integer | &#8594;  | Taille maximale du fichier JSON à créer (octets) |
+| cheminHistorique | Text | &#8594;  | Chemin d'accès du fichier d'historique à exporter ; utiliser l'historique courant si omis |
+| attribChamp | Integer | &#8594;  | Attribut de description du champ : 1 = utiliser numéro (défaut), 2 = utiliser nom |
 
 <!-- END REF-->
 

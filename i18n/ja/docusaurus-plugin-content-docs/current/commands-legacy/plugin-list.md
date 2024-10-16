@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLUGIN LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| numbersArray | Integer array | &larr; | プラグイン番号 |
-| namesArray | Text array | &larr; | プラグイン名 |
+| numbersArray | Integer array | &#8592; | プラグイン番号 |
+| namesArray | Text array | &#8592; | プラグイン名 |
 
 <!-- END REF-->
 

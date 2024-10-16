@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| presentation | Integer | &rarr; | Mise en page de document 4D Write Pro utilisée pour la présentation :<br/>0 (par défaut) = mise en page 4D Write Pro,<br/>1 = HTML WYSIWYG |
-| Résultat | Object | &larr; | Informations sur la position |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| presentation | Integer | &#8594;  | Mise en page de document 4D Write Pro utilisée pour la présentation :<br/>0 (par défaut) = mise en page 4D Write Pro,<br/>1 = HTML WYSIWYG |
+| Résultat | Object | &#8592; | Informations sur la position |
 
 <!-- END REF-->
 

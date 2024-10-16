@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REJECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &rarr; | Champ dont la saisie doit être refusée |
+| leField | Field | &#8594;  | Champ dont la saisie doit être refusée |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| alignment | Integer | &rarr; | 整列コード |
+| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| alignment | Integer | &#8594;  | 整列コード |
 
 <!-- END REF-->
 

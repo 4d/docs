@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SEND RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table from which to send the current record, or Default table, if omitted |
+| aTable | Table | &#8594;  | Table from which to send the current record, or Default table, if omitted |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Table.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla &#124; unPtr | Entero largo, Puntero | &rarr; | Número de tabla o Puntero de tabla, o Puntero de campo |
-| Resultado | Integer, Pointer | &larr; | Puntero de tabla, si se pasa un número de tabla Número de tabla, si se pasa un puntero de tabla Número de tabla, si se pasa un puntero de campo |
+| numTabla &#124; unPtr | Entero largo, Puntero | &#8594;  | Número de tabla o Puntero de tabla, o Puntero de campo |
+| Resultado | Integer, Pointer | &#8592; | Puntero de tabla, si se pasa un número de tabla Número de tabla, si se pasa un puntero de tabla Número de tabla, si se pasa un puntero de campo |
 
 <!-- END REF-->
 

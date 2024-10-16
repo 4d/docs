@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Time.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| timeValue | Text, Integer | &rarr; | 時間を表す文字列または倍長整数 |
-| 戻り値 | Time | &larr; | 時間 |
+| timeValue | Text, Integer | &#8594;  | 時間を表す文字列または倍長整数 |
+| 戻り値 | Time | &#8592; | 時間 |
 
 <!-- END REF-->
 

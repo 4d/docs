@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folder | Text | &rarr; | Name or full path of the folder to be deleted |
-| deleteOption | Integer | &rarr; | Folder deletion option |
+| folder | Text | &#8594;  | Name or full path of the folder to be deleted |
+| deleteOption | Integer | &#8594;  | Folder deletion option |
 
 <!-- END REF-->
 

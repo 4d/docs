@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU BAR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| barra | Integer, Text, Text | &rarr; | Número ou nome da barra de menu ou referência de Menu |
-| processo | Integer | &rarr; | Número de referência de processo |
-| * | Operador | &rarr; | Guardar estado da barra de menu |
+| barra | Integer, Text, Text | &#8594;  | Número ou nome da barra de menu ou referência de Menu |
+| processo | Integer | &#8594;  | Número de referência de processo |
+| * | Operador | &#8594;  | Guardar estado da barra de menu |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Not.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| booléen | Boolean | &rarr; | Valeur booléenne à inverser |
-| Résultat | Boolean | &larr; | Inverse de booléen |
+| booléen | Boolean | &#8594;  | Valeur booléenne à inverser |
+| Résultat | Boolean | &#8592; | Inverse de booléen |
 
 <!-- END REF-->
 

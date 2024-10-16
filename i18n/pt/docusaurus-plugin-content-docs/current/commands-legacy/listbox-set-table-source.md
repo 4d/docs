@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| numTabela &#124; tempo | Inteiro longo, String | &rarr; | Seleção temporária |
-| nomeSelecionado | Text | &rarr; | Nome do conjunto selecionado |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| numTabela &#124; tempo | Inteiro longo, String | &#8594;  | Seleção temporária |
+| nomeSelecionado | Text | &#8594;  | Nome do conjunto selecionado |
 
 <!-- END REF-->
 

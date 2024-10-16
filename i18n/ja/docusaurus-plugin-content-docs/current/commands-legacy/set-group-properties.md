@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Set group properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| groupID | Integer | &rarr; | グループのユニークなID番号、または、 -1= デザイナーグループの追加 -2= 管理者グループの追加 |
-| &larr; | 追加したグループ (あれば) のユニークなID番号 |
-| name | Text | &rarr; | 新規グループの名前 |
-| owner | Integer | &rarr; | 新規グループオーナーのユーザーID番号 (バイナリデータベースのみ) |
-| members | Integer array | &rarr; | 新規グループのメンバー |
-| 戻り値 | Integer | &larr; | 新規グループのユニークなID番号 |
+| groupID | Integer | &#8594;  | グループのユニークなID番号、または、 -1= デザイナーグループの追加 -2= 管理者グループの追加 |
+| &#8592; | 追加したグループ (あれば) のユニークなID番号 |
+| name | Text | &#8594;  | 新規グループの名前 |
+| owner | Integer | &#8594;  | 新規グループオーナーのユーザーID番号 (バイナリデータベースのみ) |
+| members | Integer array | &#8594;  | 新規グループのメンバー |
+| 戻り値 | Integer | &#8592; | 新規グループのユニークなID番号 |
 
 <!-- END REF-->
 

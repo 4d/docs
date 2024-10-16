@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to return a selection of records |
-| queryFormula | Boolean | &rarr; | Query formula |
+| aTable | Table | &#8594;  | Table for which to return a selection of records |
+| queryFormula | Boolean | &#8594;  | Query formula |
 
 <!-- END REF-->
 

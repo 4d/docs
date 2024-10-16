@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML要素参照 |
-| attribName | Text | &rarr; | 取り除く属性 |
+| elementRef | Text | &#8594;  | XML要素参照 |
+| attribName | Text | &#8594;  | 取り除く属性 |
 
 <!-- END REF-->
 

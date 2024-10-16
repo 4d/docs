@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &rarr; | 開いたドキュメントの参照 |
-| encoding | Text | &rarr; | XMLドキュメント文字セット |
-| standalone | Boolean | &rarr; | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
+| document | Time | &#8594;  | 開いたドキュメントの参照 |
+| encoding | Text | &#8594;  | XMLドキュメント文字セット |
+| standalone | Boolean | &#8594;  | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
 
 <!-- END REF-->
 

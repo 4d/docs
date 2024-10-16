@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TIME.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomArray | Array | &rarr; | Nome de array |
-| tamanho | Integer | &rarr; | Número de elementos no array ou Número de filas se especificado tamanho2 |
-| tamanho2 | Integer | &rarr; | Número de colunas em um array de duas dimensões |
+| nomArray | Array | &#8594;  | Nome de array |
+| tamanho | Integer | &#8594;  | Número de elementos no array ou Número de filas se especificado tamanho2 |
+| tamanho2 | Integer | &#8594;  | Número de colunas em um array de duas dimensões |
 
 <!-- END REF-->
 

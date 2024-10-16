@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized document path.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaRelativa | Text | &rarr; | Rota relativa do documento para qual quer obter a versão localizada |
-| Resultado | Text | &larr; | Rota de acesso absoluta ao documento localizado |
+| rotaRelativa | Text | &#8594;  | Rota relativa do documento para qual quer obter a versão localizada |
+| Resultado | Text | &#8592; | Rota de acesso absoluta ao documento localizado |
 
 <!-- END REF-->
 

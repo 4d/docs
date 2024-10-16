@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laText | Text | &rarr; | Chaîne à convertir en minuscules |
-| * | Opérateur | &rarr; | Si passé : conserver les accents Si omis : supprimer les accents |
-| Résultat | Text | &larr; | chaîne en minuscules |
+| laText | Text | &#8594;  | Chaîne à convertir en minuscules |
+| * | Opérateur | &#8594;  | Si passé : conserver les accents Si omis : supprimer les accents |
+| Résultat | Text | &#8592; | chaîne en minuscules |
 
 <!-- END REF-->
 

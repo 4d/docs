@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE MERGE CELLS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
-| tableRef | Object | &rarr; | Referencia de la tabla |
-| startColumn | Integer | &rarr; | Posición de la primera columna de celdas |
-| startRow | Integer | &rarr; | Posición de la primera línea de columna |
-| columnCount | Integer | &rarr; | Número de columnas a fusionar |
-| rowCount | Integer | &rarr; | Número de líneas a fusionar |
+| targetObj | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
+| tableRef | Object | &#8594;  | Referencia de la tabla |
+| startColumn | Integer | &#8594;  | Posición de la primera columna de celdas |
+| startRow | Integer | &#8594;  | Posición de la primera línea de columna |
+| columnCount | Integer | &#8594;  | Número de columnas a fusionar |
+| rowCount | Integer | &#8594;  | Número de líneas a fusionar |
 
 <!-- END REF-->
 

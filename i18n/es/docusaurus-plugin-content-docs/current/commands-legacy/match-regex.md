@@ -10,18 +10,18 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| patron | Text | &rarr; | Expresión regular |
-| laCadena | Text | &rarr; | Cadena en la cual se efectúa la búsqueda |
-| inicio | Integer | &rarr; | Posición de laCadena donde comenzar la búsqueda |
-| pos_encont. | Array entero largo, Variable entero largo | &larr; | Posición de la ocurrencia |
-| long_encont. | Array entero largo, Variable entero largo | &larr; | Longitud de la ocurrencia |
-| * | Operador | &rarr; | Si se pasa: buscar únicamente en la posición indicada |
-| Resultado | Boolean | &larr; | True = la búsqueda ha encontrado una ocurrencia; De lo contrario, False. |
+| patron | Text | &#8594;  | Expresión regular |
+| laCadena | Text | &#8594;  | Cadena en la cual se efectúa la búsqueda |
+| inicio | Integer | &#8594;  | Posición de laCadena donde comenzar la búsqueda |
+| pos_encont. | Array entero largo, Variable entero largo | &#8592; | Posición de la ocurrencia |
+| long_encont. | Array entero largo, Variable entero largo | &#8592; | Longitud de la ocurrencia |
+| * | Operador | &#8594;  | Si se pasa: buscar únicamente en la posición indicada |
+| Resultado | Boolean | &#8592; | True = la búsqueda ha encontrado una ocurrencia; De lo contrario, False. |
 | Match regex ( patron ; laCadena ) -> Resultado |
 | Parámetro | Tipo | Descripción |
-| patron | Text | &rarr; | Expresión regular (igualdad completa) |
-| laCadena | Text | &rarr; | Cadena en la cual se efectúa la búsqueda |
-| Resultado | Boolean | &larr; | True= la cadena encuentra una ocurrencia, de lo contrario False |
+| patron | Text | &#8594;  | Expresión regular (igualdad completa) |
+| laCadena | Text | &#8594;  | Cadena en la cual se efectúa la búsqueda |
+| Resultado | Boolean | &#8592; | True= la cadena encuentra una ocurrencia, de lo contrario False |
 
 <!-- END REF-->
 

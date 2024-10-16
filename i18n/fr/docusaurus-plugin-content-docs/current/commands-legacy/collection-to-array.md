@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.COLLECTION TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| collection | Collection | &rarr; | Collection à copier dans un ou des tableau(x) |
-| tableau | Array | &larr; | Tableau reçevant les éléments de la collection ; si le paramètre nomPropriété est passé, le tableau reçoit les valeurs correspondantes à nomPropriété dans la collection. |
-| nomPropriété | Text | &rarr; | Nom de la propriété de l'objet dont les valeurs sont à copier dans le tableau ("" pour tous les éléments) |
+| collection | Collection | &#8594;  | Collection à copier dans un ou des tableau(x) |
+| tableau | Array | &#8592; | Tableau reçevant les éléments de la collection ; si le paramètre nomPropriété est passé, le tableau reçoit les valeurs correspondantes à nomPropriété dans la collection. |
+| nomPropriété | Text | &#8594;  | Nom de la propriété de l'objet dont les valeurs sont à copier dans le tableau ("" pour tous les éléments) |
 
 <!-- END REF-->
 

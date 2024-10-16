@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | セレクションからセットを作成するテーブル、または 省略時、デフォルトテーブル |
-| set | Text | &rarr; | 新規に作成するセットの名前 |
+| aTable | Table | &#8594;  | セレクションからセットを作成するテーブル、または 省略時、デフォルトテーブル |
+| set | Text | &#8594;  | 新規に作成するセットの名前 |
 
 <!-- END REF-->
 

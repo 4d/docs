@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Request.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &rarr; | Message to display in the request dialog box |
-| defaultResponse | Text | &rarr; | Default data for the enterable text area |
-| OKButtonTitle | Text | &rarr; | OK button title |
-| CancelButtonTitle | Text | &rarr; | Cancel button title |
-| Function result | String | &larr; | Value entered by user |
+| message | Text | &#8594;  | Message to display in the request dialog box |
+| defaultResponse | Text | &#8594;  | Default data for the enterable text area |
+| OKButtonTitle | Text | &#8594;  | OK button title |
+| CancelButtonTitle | Text | &#8594;  | Cancel button title |
+| Function result | String | &#8592; | Value entered by user |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN DATABASE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| filePath | Text | &rarr; | File name (.4db, .4dc, .4dbase, .4dproject, .4dz, or .4dlink) or complete access path of database to open |
+| filePath | Text | &#8594;  | File name (.4db, .4dc, .4dbase, .4dproject, .4dz, or .4dlink) or complete access path of database to open |
 
 <!-- END REF-->
 

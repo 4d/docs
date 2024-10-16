@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DELETE ROWS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| rowPosition | Integer | &rarr; | 削除する行の位置 |
-| numRows | Integer | &rarr; | 削除する行の数 |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| rowPosition | Integer | &#8594;  | 削除する行の位置 |
+| numRows | Integer | &#8594;  | 削除する行の数 |
 
 <!-- END REF-->
 

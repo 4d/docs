@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get body part count.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &larr; | Nombre de parties du corps |
+| Résultat | Integer | &#8592; | Nombre de parties du corps |
 
 <!-- END REF-->
 

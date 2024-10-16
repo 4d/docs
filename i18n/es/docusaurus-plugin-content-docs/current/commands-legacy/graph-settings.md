@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| graf | Picture | &rarr; | Área del gráfico o variable imagen |
-| xmin | Integer, Date, Time | &rarr; | Valor mínimo del eje de las x para gráfico proporcional (líneas o puntos solamente) |
-| xmax | Integer, Date, Time | &rarr; | Valor máximo del eje de las x para gráfico proporcional (líneas o puntos solamente) |
-| ymin | Integer | &rarr; | Valor mínimo del eje y |
-| ymax | Integer | &rarr; | Valor máximo del eje y |
-| xprop | Boolean | &rarr; | TRUE para eje x proporcional; FALSE para eje x normal (líneas o puntos solamente) |
-| xgrid | Boolean | &rarr; | TRUE para rejilla del eje x; FALSE para no rejilla en el eje x (sólo si xprop es TRUE) |
-| ygrid | Boolean | &rarr; | TRUE para rejilla del eje y; FALSE para no rejilla el eje y |
-| titulo | Text | &rarr; | Título(s) para las leyenda(s) del gráfico |
+| graf | Picture | &#8594;  | Área del gráfico o variable imagen |
+| xmin | Integer, Date, Time | &#8594;  | Valor mínimo del eje de las x para gráfico proporcional (líneas o puntos solamente) |
+| xmax | Integer, Date, Time | &#8594;  | Valor máximo del eje de las x para gráfico proporcional (líneas o puntos solamente) |
+| ymin | Integer | &#8594;  | Valor mínimo del eje y |
+| ymax | Integer | &#8594;  | Valor máximo del eje y |
+| xprop | Boolean | &#8594;  | TRUE para eje x proporcional; FALSE para eje x normal (líneas o puntos solamente) |
+| xgrid | Boolean | &#8594;  | TRUE para rejilla del eje x; FALSE para no rejilla en el eje x (sólo si xprop es TRUE) |
+| ygrid | Boolean | &#8594;  | TRUE para rejilla del eje y; FALSE para no rejilla el eje y |
+| titulo | Text | &#8594;  | Título(s) para las leyenda(s) del gráfico |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set | Text | &rarr; | Name of the set to use |
+| set | Text | &#8594;  | Name of the set to use |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get sections.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
-| Function result | Collection | &larr; | Collection of all sections found in targetObj |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| Function result | Collection | &#8592; | Collection of all sections found in targetObj |
 
 <!-- END REF-->
 

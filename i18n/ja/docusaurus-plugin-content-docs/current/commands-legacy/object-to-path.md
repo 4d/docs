@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Object to path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathObject | Object | &rarr; | パスの中身を定義するオブジェクト |
-| 戻り値 | Text | &larr; | パス名 |
+| pathObject | Object | &#8594;  | パスの中身を定義するオブジェクト |
+| 戻り値 | Text | &#8592; | パス名 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Proドキュメント |
-| bkName | Text | &rarr; | 削除するブックマークの名前 |
+| wpDoc | Object | &#8594;  | 4D Write Proドキュメント |
+| bkName | Text | &#8594;  | 削除するブックマークの名前 |
 
 <!-- END REF-->
 

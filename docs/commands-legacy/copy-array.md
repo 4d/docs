@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Array | &rarr; | Array from which to copy |
-| destination | Array | &larr; | Array to which to copy |
+| source | Array | &#8594;  | Array from which to copy |
+| destination | Array | &#8592; | Array to which to copy |
 
 <!-- END REF-->
 

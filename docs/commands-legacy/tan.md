@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Tan.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &rarr; | Number, in radians, whose tangent is returned |
-| Function result | Real | &larr; | Tangent of number |
+| number | Real | &#8594;  | Number, in radians, whose tangent is returned |
+| Function result | Real | &#8592; | Tangent of number |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | カレントレコードを削除するテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594;  | カレントレコードを削除するテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Active transaction.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Devuelve False si se suspende la transacción actual |
+| Resultado | Boolean | &#8592; | Devuelve False si se suspende la transacción actual |
 
 <!-- END REF-->
 

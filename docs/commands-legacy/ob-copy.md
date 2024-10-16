@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Copy.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &rarr; | Structured object |
-| resolvePtrs | Boolean | &rarr; | True = resolve pointers, False or omitted = do not resolve pointers |
-| option | Integer | &rarr; | ck shared: return a shared object,ck resolve pointers: resolve pointers before copying |
-| groupWith | Collection, Object | &rarr; | Shared collection or object to be grouped with the resulting object |
-| Function result | Object | &larr; | Deep copy of object |
+| object | Object, Object | &#8594;  | Structured object |
+| resolvePtrs | Boolean | &#8594;  | True = resolve pointers, False or omitted = do not resolve pointers |
+| option | Integer | &#8594;  | ck shared: return a shared object,ck resolve pointers: resolve pointers before copying |
+| groupWith | Collection, Object | &#8594;  | Shared collection or object to be grouped with the resulting object |
+| Function result | Object | &#8592; | Deep copy of object |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is nil pointer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aPointer | Pointer | &rarr; | Pointer to be tested |
-| Function result | Boolean | &larr; | TRUE = Nil pointer (->[]) FALSE = Valid pointer to an existing object |
+| aPointer | Pointer | &#8594;  | Pointer to be tested |
+| Function result | Boolean | &#8592; | TRUE = Nil pointer (->[]) FALSE = Valid pointer to an existing object |
 
 <!-- END REF-->
 

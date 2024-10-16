@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &rarr; | Picture to be converted |
-| &larr; | Converted picture |
-| codec | Text | &rarr; | Picture Codec ID |
-| compression | Real | &rarr; | Quality of compression |
+| picture | Picture | &#8594;  | Picture to be converted |
+| &#8592; | Converted picture |
+| codec | Text | &#8594;  | Picture Codec ID |
+| compression | Real | &#8594;  | Quality of compression |
 
 <!-- END REF-->
 

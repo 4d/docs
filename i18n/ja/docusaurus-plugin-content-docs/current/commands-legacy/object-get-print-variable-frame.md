@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &rarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| variableFrame | Boolean | &larr; | True = 可変長フレームを使用、False = 固定長フレームを使用 |
-| fixedSubform | Integer | &larr; | 固定長フレーム時のサブフォームに対するオプション |
+| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| variableFrame | Boolean | &#8592; | True = 可変長フレームを使用、False = 固定長フレームを使用 |
+| fixedSubform | Integer | &#8592; | 固定長フレーム時のサブフォームに対するオプション |
 
 <!-- END REF-->
 

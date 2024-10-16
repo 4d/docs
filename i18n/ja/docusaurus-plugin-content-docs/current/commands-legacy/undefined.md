@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Undefined.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | Expression | &rarr; | テストしたい結果の値を返す式 |
-| 戻り値 | Boolean | &larr; | True = 変数は現在未定義である False = 変数は現在定義されている |
+| expression | Expression | &#8594;  | テストしたい結果の値を返す式 |
+| 戻り値 | Boolean | &#8592; | True = 変数は現在未定義である False = 変数は現在定義されている |
 
 <!-- END REF-->
 

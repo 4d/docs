@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &rarr; | Número de referência da lista |
-| * | Operator |  &rarr; | Se especificada, se há sub-listas se deve apagar da memória, Se omitida, as sub-listas não são apagadas |
+| lista | Integer | &#8594;  | Número de referência da lista |
+| * | Operator |  &#8594;  | Se especificada, se há sub-listas se deve apagar da memória, Se omitida, as sub-listas não são apagadas |
 
 <!-- END REF-->
 

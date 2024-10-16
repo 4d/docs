@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &rarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| antesElem &#124; * | Entero largo, Operador | &rarr; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionado |
-| textoElem | Text | &rarr; | Texto para el nuevo elemento (max. 255 caracteres) |
-| refElem | Integer | &rarr; | Número de referencia único del nuevo elemento |
-| sublista | Integer | &rarr; | Sublista opcional para asociar al nuevo elemento |
-| desplegada | Boolean | &rarr; | Indica si la sublista será desplegada o contraída |
+| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| antesElem &#124; * | Entero largo, Operador | &#8594;  | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionado |
+| textoElem | Text | &#8594;  | Texto para el nuevo elemento (max. 255 caracteres) |
+| refElem | Integer | &#8594;  | Número de referencia único del nuevo elemento |
+| sublista | Integer | &#8594;  | Sublista opcional para asociar al nuevo elemento |
+| desplegada | Boolean | &#8594;  | Indica si la sublista será desplegada o contraída |
 
 <!-- END REF-->
 

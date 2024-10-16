@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Find XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML element reference |
-| xPath | Text | &rarr; | XPath path of the element to look for |
-| arrElementRefs | Text array | &larr; | List of element references found (if applicable) |
-| Function result | String | &larr; | Reference of the element found (if applicable) |
+| elementRef | Text | &#8594;  | XML element reference |
+| xPath | Text | &#8594;  | XPath path of the element to look for |
+| arrElementRefs | Text array | &#8592; | List of element references found (if applicable) |
+| Function result | String | &#8592; | Reference of the element found (if applicable) |
 
 <!-- END REF-->
 

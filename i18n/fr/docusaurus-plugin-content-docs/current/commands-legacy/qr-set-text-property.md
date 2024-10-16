@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &rarr; | Référence de la zone |
-| numColonne | Integer | &rarr; | Numéro de colonne |
-| numLigne | Integer | &rarr; | Numéro de ligne |
-| propriété | Integer | &rarr; | Numéro de propriété |
-| valeur | Integer, Text | &rarr; | Valeur de la propriété définie |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| numLigne | Integer | &#8594;  | Numéro de ligne |
+| propriété | Integer | &#8594;  | Numéro de propriété |
+| valeur | Integer, Text | &#8594;  | Valeur de la propriété définie |
 
 <!-- END REF-->
 

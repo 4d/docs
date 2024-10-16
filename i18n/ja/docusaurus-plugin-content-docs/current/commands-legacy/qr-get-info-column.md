@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | エリア参照 |
-| colNum | Integer | &rarr; | カラム番号 |
-| title | Text | &larr; | カラムタイトル |
-| object | Text | &larr; | カラムに割り当てられたオブジェクト |
-| hide | Integer | &larr; | 0 = 表示, 1 = 非表示 |
-| size | Integer | &larr; | カラムサイズ |
-| repeatedValue | Integer | &larr; | 0 = 繰り返ししない, 1 = 繰り返す |
-| displayFormat | Text | &larr; | データの表示フォーマット |
-| resultVar | Text | &larr; | フォーミュラ変数名 |
+| area | Integer | &#8594;  | エリア参照 |
+| colNum | Integer | &#8594;  | カラム番号 |
+| title | Text | &#8592; | カラムタイトル |
+| object | Text | &#8592; | カラムに割り当てられたオブジェクト |
+| hide | Integer | &#8592; | 0 = 表示, 1 = 非表示 |
+| size | Integer | &#8592; | カラムサイズ |
+| repeatedValue | Integer | &#8592; | 0 = 繰り返ししない, 1 = 繰り返す |
+| displayFormat | Text | &#8592; | データの表示フォーマット |
+| resultVar | Text | &#8592; | フォーミュラ変数名 |
 
 <!-- END REF-->
 

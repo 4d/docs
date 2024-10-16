@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| arrType | Integer | &rarr; | Type of array |
-| Function result | Pointer | &larr; | Pointer to array associated with property |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
+| arrType | Integer | &#8594;  | Type of array |
+| Function result | Pointer | &#8592; | Pointer to array associated with property |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.On Mobile App Action database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| mobileInfo | Object | &rarr; | Information passée par l'application mobile |
-| status | Object | &larr; | Statut de l'action & synchronisation des données |
+| mobileInfo | Object | &#8594;  | Information passée par l'application mobile |
+| status | Object | &#8592; | Statut de l'action & synchronisation des données |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | Root XML element reference |
-| filePath | Text | &rarr; | Full access path of the file |
+| elementRef | Text | &#8594;  | Root XML element reference |
+| filePath | Text | &#8594;  | Full access path of the file |
 
 <!-- END REF-->
 

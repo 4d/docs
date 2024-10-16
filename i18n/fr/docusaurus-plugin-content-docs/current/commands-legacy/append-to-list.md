@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND TO LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &rarr; | Numéro de référence de liste |
-| libelléElément | Text | &rarr; | Libellé du nouvel élément |
-| réfElément | Integer | &rarr; | Numéro de référence unique du nouvel élément |
-| sous_Liste | Integer | &rarr; | Sous-liste optionnelle à rattacher au nouvel élément |
-| déployée | Boolean | &rarr; | Indique si la sous-liste doit être déployée ou non |
+| liste | Integer | &#8594;  | Numéro de référence de liste |
+| libelléElément | Text | &#8594;  | Libellé du nouvel élément |
+| réfElément | Integer | &#8594;  | Numéro de référence unique du nouvel élément |
+| sous_Liste | Integer | &#8594;  | Sous-liste optionnelle à rattacher au nouvel élément |
+| déployée | Boolean | &#8594;  | Indique si la sous-liste doit être déployée ou non |
 
 <!-- END REF-->
 

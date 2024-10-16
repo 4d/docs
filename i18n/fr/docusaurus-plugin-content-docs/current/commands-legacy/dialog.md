@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DIALOG.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table à laquelle appartient le formulaire Si omis : Table par défaut ou utilisation d'un formulaire projet |
-| formulaire | Text, Object | &rarr; | Nom du formulaire table ou projet à afficher, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| formData | Object | &rarr; | Données à associer au formulaire |
-| * | Opérateur | &rarr; | Utiliser le même process |
+| laTable | Table | &#8594;  | Table à laquelle appartient le formulaire Si omis : Table par défaut ou utilisation d'un formulaire projet |
+| formulaire | Text, Object | &#8594;  | Nom du formulaire table ou projet à afficher, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formData | Object | &#8594;  | Données à associer au formulaire |
+| * | Opérateur | &#8594;  | Utiliser le même process |
 
 <!-- END REF-->
 

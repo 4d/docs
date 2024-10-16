@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Copy.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object, Object | &rarr; | 構造化されたオブジェクト |
-| resolvePtrs | Boolean | &rarr; | True = ポインターを解決<br/>False または省略時 = ポインターを解決しない |
-| option | Integer | &rarr; | ck shared: 共有オブジェクトを返すck resolve pointers: コピーの前にポインターを解決する |
-| groupWith | Collection, Object | &rarr; | 返されるオブジェクトが所属することになる共有コレクションまたは共有オブジェクト |
-| 戻り値 | Object | &larr; | 複製されたオブジェクト |
+| object | Object, Object | &#8594;  | 構造化されたオブジェクト |
+| resolvePtrs | Boolean | &#8594;  | True = ポインターを解決<br/>False または省略時 = ポインターを解決しない |
+| option | Integer | &#8594;  | ck shared: 共有オブジェクトを返すck resolve pointers: コピーの前にポインターを解決する |
+| groupWith | Collection, Object | &#8594;  | 返されるオブジェクトが所属することになる共有コレクションまたは共有オブジェクト |
+| 戻り値 | Object | &#8592; | 複製されたオブジェクト |
 
 <!-- END REF-->
 

@@ -8,7 +8,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Server list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Collection | &larr; | Collection of the available Web Server objects |
+| Function result | Collection | &#8592; | Collection of the available Web Server objects |
 
 <!-- END REF-->
 

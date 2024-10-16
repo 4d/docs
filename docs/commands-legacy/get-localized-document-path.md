@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized document path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| relativePath | Text | &rarr; | Relative pathname of document for which we want to obtain localized version |
-| Function result | Text | &larr; | Absolute pathname of localized document |
+| relativePath | Text | &#8594;  | Relative pathname of document for which we want to obtain localized version |
+| Function result | Text | &#8592; | Absolute pathname of localized document |
 
 <!-- END REF-->
 

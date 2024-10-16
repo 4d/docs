@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!-- REF #_command_.ZIP Create archive.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|fileToZip|4D.File|&rarr;|File or Folder object to compress|
-|folderToZip|4D.Folder|&rarr;|File or Folder object to compress|
-|zipStructure|Object|&rarr;|File or Folder object to compress|
-|destinationFile|4D.File|&rarr;|Destination file for the archive|
-|options|Integer|&rarr;|*folderToZip* option: `ZIP Without enclosing folder`|
-|Result|Object|&larr;|Status object|
+|fileToZip|4D.File|&#8594; |File or Folder object to compress|
+|folderToZip|4D.Folder|&#8594; |File or Folder object to compress|
+|zipStructure|Object|&#8594; |File or Folder object to compress|
+|destinationFile|4D.File|&#8594; |Destination file for the archive|
+|options|Integer|&#8594; |*folderToZip* option: `ZIP Without enclosing folder`|
+|Result|Object|&#8592;|Status object|
 <!-- END REF -->
 
 

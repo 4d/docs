@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombreEnr | Integer | &rarr; | Nombre d’enregistrements à charger |
+| nombreEnr | Integer | &#8594;  | Nombre d’enregistrements à charger |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.READ PICTURE FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &rarr; | Name or full pathname of the file to read, or empty string |
-| picture | Picture | &larr; | Field or variable receiving picture |
-| * | Operator | &rarr; | If passed = accept any type of file |
+| fileName | Text | &#8594;  | Name or full pathname of the file to read, or empty string |
+| picture | Picture | &#8592; | Field or variable receiving picture |
+| * | Operator | &#8594;  | If passed = accept any type of file |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET NAMES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Référence de table |
-| tabNoms | Text array | &larr; | Tableau des noms de formulaires |
-| filtre | Text | &rarr; | Filtrage des noms |
-| marqueur | Real | &rarr; | Marqueur de version minimale à retourner |
-| &larr; | Nouvelle valeur |
-| * | Opérateur | &rarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| laTable | Table | &#8594;  | Référence de table |
+| tabNoms | Text array | &#8592; | Tableau des noms de formulaires |
+| filtre | Text | &#8594;  | Filtrage des noms |
+| marqueur | Real | &#8594;  | Marqueur de version minimale à retourner |
+| &#8592; | Nouvelle valeur |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

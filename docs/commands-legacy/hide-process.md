@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HIDE PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &rarr; | Process number or process to be hidden |
+| process | Integer | &#8594;  | Process number or process to be hidden |
 
 <!-- END REF-->
 

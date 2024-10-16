@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET STYLE SHEET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &rarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| styleSheetName | Text | &rarr; | Name of style sheet |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| styleSheetName | Text | &#8594;  | Name of style sheet |
 
 <!-- END REF-->
 

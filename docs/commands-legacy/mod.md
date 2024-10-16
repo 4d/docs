@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Mod.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number1 | Integer | &rarr; | Number to divide |
-| number2 | Integer | &rarr; | Number to divide by |
-| Function result | Real | &larr; | Returns the remainder |
+| number1 | Integer | &#8594;  | Number to divide |
+| number2 | Integer | &#8594;  | Number to divide by |
+| Function result | Real | &#8592; | Returns the remainder |
 
 <!-- END REF-->
 

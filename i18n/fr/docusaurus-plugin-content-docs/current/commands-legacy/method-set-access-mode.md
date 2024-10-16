@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| mode | Integer | &rarr; | Mode d’accès aux objets verrouillés |
+| mode | Integer | &#8594;  | Mode d’accès aux objets verrouillés |
 
 <!-- END REF-->
 

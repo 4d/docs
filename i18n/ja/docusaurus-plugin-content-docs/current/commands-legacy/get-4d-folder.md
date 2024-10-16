@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D folder.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folder | Integer | &rarr; | フォルダータイプ (省略時 = Active 4D folder) |
-| options | Object | &rarr; | 4D Client database folder path configuration |
-| * | 演算子 | &rarr; | ホストデータベースのフォルダーを返す |
-| 戻り値 | Text | &larr; | 指定したフォルダーのパス名 |
+| folder | Integer | &#8594;  | フォルダータイプ (省略時 = Active 4D folder) |
+| options | Object | &#8594;  | 4D Client database folder path configuration |
+| * | 演算子 | &#8594;  | ホストデータベースのフォルダーを返す |
+| 戻り値 | Text | &#8592; | 指定したフォルダーのパス名 |
 
 <!-- END REF-->
 

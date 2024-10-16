@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML document ref.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrayNomesAtrib | Text | &rarr; | Referência dos elementos existentes em árvore DOM |
-| Resultado | Text | &larr; | Referência do primeiro elemento de uma árvore DOM (modo documento) |
+| arrayNomesAtrib | Text | &#8594;  | Referência dos elementos existentes em árvore DOM |
+| Resultado | Text | &#8592; | Referência do primeiro elemento de uma árvore DOM (modo documento) |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrNames | Text array | &larr; | Array of Home page folder names |
-| filter | Text | &rarr; | Name filter |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| arrNames | Text array | &#8592; | Array of Home page folder names |
+| filter | Text | &#8594;  | Name filter |
+| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

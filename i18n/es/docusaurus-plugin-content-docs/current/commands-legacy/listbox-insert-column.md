@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| posicionCol | Integer | &rarr; | Ubicación de la columna a insertar |
-| nomCol | Text | &rarr; | Nombre del objeto de la columna |
-| variableCol | Array, Field, Variable, Pointer | &rarr; | Nombre de la variable de la columna |
-| nomEncabezado | Text | &rarr; | Nombre del objeto del título de la columna |
-| varTitulo | Integer, Pointer | &rarr; | Variable de título de la columna |
-| nomPie | Text | &rarr; | Nombre del objeto de pie de la columna |
-| nomVar | Variable, Pointer | &rarr; | Variable de pie de la columna |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| posicionCol | Integer | &#8594;  | Ubicación de la columna a insertar |
+| nomCol | Text | &#8594;  | Nombre del objeto de la columna |
+| variableCol | Array, Field, Variable, Pointer | &#8594;  | Nombre de la variable de la columna |
+| nomEncabezado | Text | &#8594;  | Nombre del objeto del título de la columna |
+| varTitulo | Integer, Pointer | &#8594;  | Variable de título de la columna |
+| nomPie | Text | &#8594;  | Nombre del objeto de pie de la columna |
+| nomVar | Variable, Pointer | &#8594;  | Variable de pie de la columna |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | Pointer, Longint | &rarr; | Field pointer or table number |
-| fieldNum | Integer | &rarr; | Field number if the table number is passed as first parameter |
-| list | Text | &larr; | Associated choice list name or empty string |
-| mandatory | Boolean | &larr; | True = Mandatory, False = Optional |
-| nonEnterable | Boolean | &larr; | True = Non-enterable, False = Enterable |
-| nonModifiable | Boolean | &larr; | True = Non-modifiable, False = Modifiable |
+| fieldPtr&#124;tableNum | Pointer, Longint | &#8594;  | Field pointer or table number |
+| fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
+| list | Text | &#8592; | Associated choice list name or empty string |
+| mandatory | Boolean | &#8592; | True = Mandatory, False = Optional |
+| nonEnterable | Boolean | &#8592; | True = Non-enterable, False = Enterable |
+| nonModifiable | Boolean | &#8592; | True = Non-modifiable, False = Modifiable |
 
 <!-- END REF-->
 

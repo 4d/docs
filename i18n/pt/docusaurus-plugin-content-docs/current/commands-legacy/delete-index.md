@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE INDEX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pontCampo&#124;nomeIndice | Ponteiro, String | &rarr; | Ponteiro ao campo cujos índices serão apagados ou Nome do Índice que será apagado. |
-| * | Operador | &rarr; | Se passado = operação assincrônica |
+| pontCampo&#124;nomeIndice | Ponteiro, String | &#8594;  | Ponteiro ao campo cujos índices serão apagados ou Nome do Índice que será apagado. |
+| * | Operador | &#8594;  | Se passado = operação assincrônica |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Find XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML要素参照 |
-| xPath | Text | &rarr; | 検索する要素のXPathパス |
-| arrElementRefs | Text array | &larr; | 見つかった要素参照のリスト (該当する場合) |
-| 戻り値 | Text | &larr; | 見つかった要素の参照 (該当する場合) |
+| elementRef | Text | &#8594;  | XML要素参照 |
+| xPath | Text | &#8594;  | 検索する要素のXPathパス |
+| arrElementRefs | Text array | &#8592; | 見つかった要素参照のリスト (該当する場合) |
+| 戻り値 | Text | &#8592; | 見つかった要素の参照 (該当する場合) |
 
 <!-- END REF-->
 

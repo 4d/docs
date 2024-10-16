@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get section.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| alvoObj | Object | &rarr; | Range ou elemento de referência |
-| wpDoc | Object | &rarr; | Documento 4D Write pro |
-| índiceSeção | Integer | &rarr; | Índice da seção |
-| Resultado | Object | &larr; | Seção 4D Write Pro |
+| alvoObj | Object | &#8594;  | Range ou elemento de referência |
+| wpDoc | Object | &#8594;  | Documento 4D Write pro |
+| índiceSeção | Integer | &#8594;  | Índice da seção |
+| Resultado | Object | &#8592; | Seção 4D Write Pro |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELAY PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &rarr; | Process number |
-| duration | Real | &rarr; | Duration expressed in ticks |
+| process | Integer | &#8594;  | Process number |
+| duration | Real | &#8594;  | Duration expressed in ticks |
 
 <!-- END REF-->
 

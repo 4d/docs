@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WINDOW LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| windows | Array | &larr; | Array of window reference numbers |
-| * | Operator | &rarr; | If specified, take floating windows into account If omitted, ignore floating windows |
+| windows | Array | &#8592; | Array of window reference numbers |
+| * | Operator | &#8594;  | If specified, take floating windows into account If omitted, ignore floating windows |
 
 <!-- END REF-->
 

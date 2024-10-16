@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REJECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &rarr; | 入力を拒否するフィールド |
+| aField | Field | &#8594;  | 入力を拒否するフィールド |
 
 <!-- END REF-->
 

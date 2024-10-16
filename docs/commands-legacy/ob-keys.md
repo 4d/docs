@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Keys.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | Object to return property names |
-| Function result | Collection | &larr; | Collection of property names (strings) |
+| object | Object | &#8594;  | Object to return property names |
+| Function result | Collection | &#8592; | Collection of property names (strings) |
 
 <!-- END REF-->
 

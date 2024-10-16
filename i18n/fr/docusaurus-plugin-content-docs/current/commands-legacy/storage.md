@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Storage.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Object | &larr; | Catalogue des objets et collections partagé(e)s enregistré(e)s dans Storage |
+| Résultat | Object | &#8592; | Catalogue des objets et collections partagé(e)s enregistré(e)s dans Storage |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get report kind.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Reference of the area |
-| Function result | Longint | &larr; | Type of the report |
+| area | Integer | &#8594;  | Reference of the area |
+| Function result | Longint | &#8592; | Type of the report |
 
 <!-- END REF-->
 

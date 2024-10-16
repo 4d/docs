@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SORT ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | Arrays to sort |
-| > or < | Operator | &rarr; | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
+| array | Array | &#8594;  | Arrays to sort |
+| > or < | Operator | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
 
 <!-- END REF-->
 

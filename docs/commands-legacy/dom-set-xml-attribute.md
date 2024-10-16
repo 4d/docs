@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML element reference |
-| attribName | Text | &rarr; | Attribute to set |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &rarr; | New attribute value |
+| elementRef | Text | &#8594;  | XML element reference |
+| attribName | Text | &#8594;  | Attribute to set |
+| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
 
 <!-- END REF-->
 

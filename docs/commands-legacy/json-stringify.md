@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Object, any | &rarr; | Data to convert into JSON string |
-| * | Operator | &rarr; | Pretty printing |
-| Function result | Text | &larr; | String containing serialized JSON text |
+| value | Object, any | &#8594;  | Data to convert into JSON string |
+| * | Operator | &#8594;  | Pretty printing |
+| Function result | Text | &#8592; | String containing serialized JSON text |
 
 <!-- END REF-->
 

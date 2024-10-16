@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET RGB COLORS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
-| foregroundColor | Text, Integer | &larr; | 描画色のRGBカラー値 |
-| backgroundColor | Text, Integer | &larr; | 背景色のRGBカラー値 |
-| altBackgrndColor | Text, Integer | &larr; | 奇数行の色のRGBカラー値 |
+| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| foregroundColor | Text, Integer | &#8592; | 描画色のRGBカラー値 |
+| backgroundColor | Text, Integer | &#8592; | 背景色のRGBカラー値 |
+| altBackgrndColor | Text, Integer | &#8592; | 奇数行の色のRGBカラー値 |
 
 <!-- END REF-->
 

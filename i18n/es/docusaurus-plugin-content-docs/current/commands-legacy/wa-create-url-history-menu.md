@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| direccion | Integer | &rarr; | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
-| Resultado | Text | &larr; | Referencia de menú |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| direccion | Integer | &#8594;  | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
+| Resultado | Text | &#8592; | Referencia de menú |
 
 <!-- END REF-->
 

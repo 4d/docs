@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET STYLE SHEET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &rarr; | Nombre de objeto (si * se especifica) o<br/>Campo o variable (si * se omite) |
-| nomHojaEstilo | Text | &rarr; | Nombre de la hoja de estilo |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si * se especifica) o<br/>Campo o variable (si * se omite) |
+| nomHojaEstilo | Text | &#8594;  | Nombre de la hoja de estilo |
 
 <!-- END REF-->
 

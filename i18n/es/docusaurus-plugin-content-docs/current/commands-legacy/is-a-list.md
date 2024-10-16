@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a list.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &rarr; | Referencia de la lista a probar |
-| Resultado | Boolean | &larr; | TRUE si la lista es una lista jerárquica FALSE si la lista no es una lista jerárquica |
+| lista | Integer | &#8594;  | Referencia de la lista a probar |
+| Resultado | Boolean | &#8592; | TRUE si la lista es una lista jerárquica FALSE si la lista no es una lista jerárquica |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Text range.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
-| startRange | Longint | &rarr; | Starting offset of range in the area |
-| endRange | Longint | &rarr; | Ending offset of range in the area |
-| Function result | Object | &larr; | Range object |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| startRange | Longint | &#8594;  | Starting offset of range in the area |
+| endRange | Longint | &#8594;  | Ending offset of range in the area |
+| Function result | Object | &#8592; | Range object |
 
 <!-- END REF-->
 

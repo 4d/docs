@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Read only state.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla para la cual probar el estado sólo lectura o Tabla por defecto, si se omite |
-| Resultado | Boolean | &larr; | El acceso a la tabla es sólo lectura (TRUE), o El acceso a la tabla es lectura/escritura (FALSE) |
+| tabla | Table | &#8594;  | Tabla para la cual probar el estado sólo lectura o Tabla por defecto, si se omite |
+| Resultado | Boolean | &#8592; | El acceso a la tabla es sólo lectura (TRUE), o El acceso a la tabla es lectura/escritura (FALSE) |
 
 <!-- END REF-->
 

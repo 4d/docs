@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| carFiltro | Text | &rarr; | Caracter de filtrado de tecle ou Cadeia vazia para cancelar o filtrado |
+| carFiltro | Text | &#8594;  | Caracter de filtrado de tecle ou Cadeia vazia para cancelar o filtrado |
 
 <!-- END REF-->
 

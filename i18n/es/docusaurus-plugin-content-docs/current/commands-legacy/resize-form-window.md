@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ancho | Integer | &rarr; | Píxeles a añadir o eliminar del ancho actual de la ventana formulario |
-| alto | Integer | &rarr; | Píxeles a añadir o eliminar del largo actual de la ventana formulario |
+| ancho | Integer | &#8594;  | Píxeles a añadir o eliminar del ancho actual de la ventana formulario |
+| alto | Integer | &#8594;  | Píxeles a añadir o eliminar del largo actual de la ventana formulario |
 
 <!-- END REF-->
 

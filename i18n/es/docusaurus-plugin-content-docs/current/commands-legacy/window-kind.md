@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Window kind.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &rarr; | Número de referencia de la ventana o Ventana del primer plano del proceso actual, si se  omite |
-| Resultado | Integer | &larr; | Tipo de ventana |
+| ventana | Integer | &#8594;  | Número de referencia de la ventana o Ventana del primer plano del proceso actual, si se  omite |
+| Resultado | Integer | &#8592; | Tipo de ventana |
 
 <!-- END REF-->
 

@@ -20,9 +20,9 @@ displayed_sidebar: docs
 <!-- REF #_command_.Formula from string.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|formulaString|Text|&rarr;|Text formula to be returned as object|
-|context|Number|&rarr;|`sk execute in current database` (default) or `sk execute in host database`|
-|Result|4D.Function|&larr;|Native object encapsulating the formula|
+|formulaString|Text|&#8594; |Text formula to be returned as object|
+|context|Number|&#8594; |`sk execute in current database` (default) or `sk execute in host database`|
+|Result|4D.Function|&#8592;|Native object encapsulating the formula|
 <!-- END REF -->
 
 

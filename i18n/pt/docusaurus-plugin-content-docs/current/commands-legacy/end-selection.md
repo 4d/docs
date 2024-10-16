@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.End selection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela na qual provar se o ponteiro do registro está além do último registro selecionado, ou Tabela por padrão, se omitida |
-| Resultado | Boolean | &larr; | Sim (TRUE) ou Não (FALSE) |
+| tabela | Table | &#8594;  | Tabela na qual provar se o ponteiro do registro está além do último registro selecionado, ou Tabela por padrão, se omitida |
+| Resultado | Boolean | &#8592; | Sim (TRUE) ou Não (FALSE) |
 
 <!-- END REF-->
 

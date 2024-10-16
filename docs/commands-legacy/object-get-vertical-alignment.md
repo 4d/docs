@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &rarr; | Object Name (if * is specified) or Variable (if * is omitted) |
-| Function result | Longint | &larr; | Type of alignment |
+| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| Function result | Longint | &#8592; | Type of alignment |
 
 <!-- END REF-->
 

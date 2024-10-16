@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| varText | Text | &rarr; | Texte original à découper |
-| tabTexte | Text array | &larr; | Tableau contenant le texte découpé en mots ou lignes |
-| largeur | Integer | &rarr; | Largeur maximale de la chaîne (en pixels) |
-| nomPolice | Text | &rarr; | Nom de police |
-| taillePolice | Integer | &rarr; | Taille de police |
-| stylePolice | Integer | &rarr; | Style de police |
-| * | Opérateur | &rarr; | Si passé = interpréter le texte en multistyle |
+| varText | Text | &#8594;  | Texte original à découper |
+| tabTexte | Text array | &#8592; | Tableau contenant le texte découpé en mots ou lignes |
+| largeur | Integer | &#8594;  | Largeur maximale de la chaîne (en pixels) |
+| nomPolice | Text | &#8594;  | Nom de police |
+| taillePolice | Integer | &#8594;  | Taille de police |
+| stylePolice | Integer | &#8594;  | Style de police |
+| * | Opérateur | &#8594;  | Si passé = interpréter le texte en multistyle |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folderName | Text | &rarr; | ホームページのフォルダー名 |
-| methodType | Integer | &rarr; | 取得するメソッドタイプセレクター |
-| arrPaths | Text array | &larr; | メソッドパスおよび名前の配列 |
-| stamp | Real | &rarr; | スタンプの最小値 |
-| &larr; | 新しい現在値 |
-| * | 演算子 | &rarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| folderName | Text | &#8594;  | ホームページのフォルダー名 |
+| methodType | Integer | &#8594;  | 取得するメソッドタイプセレクター |
+| arrPaths | Text array | &#8592; | メソッドパスおよび名前の配列 |
+| stamp | Real | &#8594;  | スタンプの最小値 |
+| &#8592; | 新しい現在値 |
+| * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

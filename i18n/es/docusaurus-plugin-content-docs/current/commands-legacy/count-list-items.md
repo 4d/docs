@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Count list items.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &rarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| * | Operador | &rarr; | Si se omite (por defecto): Devuelve los elementos visibles (desplegados) de la lista Si se especifica: Devuelve todos los elementos de la lista |
-| Resultado | Integer | &larr; | Número de elementos visibles de la lista (desplegados) (si se omite el segundo *) o número total de elementos de la lista (si se presenta el segundo *) |
+| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| * | Operador | &#8594;  | Si se omite (por defecto): Devuelve los elementos visibles (desplegados) de la lista Si se especifica: Devuelve todos los elementos de la lista |
+| Resultado | Integer | &#8592; | Número de elementos visibles de la lista (desplegados) (si se omite el segundo *) o número total de elementos de la lista (si se presenta el segundo *) |
 
 <!-- END REF-->
 

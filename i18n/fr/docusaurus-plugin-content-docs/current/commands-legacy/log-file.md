@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Log File.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &larr; | Nom long du fichier d’historique de la base |
+| Résultat | Text | &#8592; | Nom long du fichier d’historique de la base |
 
 <!-- END REF-->
 

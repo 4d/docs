@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE STYLE SHEET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objFeuilleStyle | Object | &rarr; | Objet feuille de style |
-| docWP | Object | &rarr; | Document 4D Write Pro |
-| nomFeuilleStyle | Text | &rarr; | Nom de la feuille de style |
+| objFeuilleStyle | Object | &#8594;  | Objet feuille de style |
+| docWP | Object | &#8594;  | Document 4D Write Pro |
+| nomFeuilleStyle | Text | &#8594;  | Nom de la feuille de style |
 
 <!-- END REF-->
 

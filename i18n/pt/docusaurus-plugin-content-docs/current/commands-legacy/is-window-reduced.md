@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window reduced.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &rarr; | Número de referência da janela |
-| Resultado | Boolean | &larr; | true se a janela for reduzida no taskbar ou no dock. Se não, false |
+| janela | Integer | &#8594;  | Número de referência da janela |
+| Resultado | Boolean | &#8592; | true se a janela for reduzida no taskbar ou no dock. Se não, false |
 
 <!-- END REF-->
 

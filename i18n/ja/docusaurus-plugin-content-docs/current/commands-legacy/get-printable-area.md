@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| height | Integer | &larr; | 印刷可能領域の高さ |
-| width | Integer | &larr; | 印刷可能領域の幅 |
+| height | Integer | &#8592; | 印刷可能領域の高さ |
+| width | Integer | &#8592; | 印刷可能領域の幅 |
 
 <!-- END REF-->
 

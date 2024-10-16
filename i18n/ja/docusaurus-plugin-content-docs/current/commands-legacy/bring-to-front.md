@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BRING TO FRONT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &rarr; | 最前面に移動させるプロセスのプロセス番号 |
+| process | Integer | &#8594;  | 最前面に移動させるプロセスのプロセス番号 |
 
 <!-- END REF-->
 

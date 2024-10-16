@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh control down.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Estado da tecla Control Macintosh |
+| Resultado | Boolean | &#8592; | Estado da tecla Control Macintosh |
 
 <!-- END REF-->
 

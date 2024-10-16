@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DUPLICATE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de l'enregistrement à dupliquer ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594;  | Table de l'enregistrement à dupliquer ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

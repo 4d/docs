@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Integer | &rarr; | Selection to use |
-| textParam | Text | &rarr; | Text sent |
+| selector | Integer | &#8594;  | Selection to use |
+| textParam | Text | &#8594;  | Text sent |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &larr; | ペーストボードから取り出したピクチャ |
+| picture | Picture | &#8592; | ペーストボードから取り出したピクチャ |
 
 <!-- END REF-->
 

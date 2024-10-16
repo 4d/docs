@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Method called on event.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Text | &larr; | Nombre del método llamado por evento |
+| Resultado | Text | &#8592; | Nombre del método llamado por evento |
 
 <!-- END REF-->
 

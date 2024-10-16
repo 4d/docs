@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET GRID.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| horizontal | Boolean | &rarr; | True = 表示, False = 非表示 |
-| vertical | Boolean | &rarr; | True = 表示, False = 非表示 |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| horizontal | Boolean | &#8594;  | True = 表示, False = 非表示 |
+| vertical | Boolean | &#8594;  | True = 表示, False = 非表示 |
 
 <!-- END REF-->
 

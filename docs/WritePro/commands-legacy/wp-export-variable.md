@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP EXPORT VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro variable |
+| wpDoc | Object | &#8594;  | 4D Write Pro variable |
 | destination | Text variable, BLOB variable | &#x1F858; | Variable to receive exported contents |
-| format | Longint | &rarr; | Variable output format |
-| option | Object, Longint | &rarr; | Export options |
+| format | Longint | &#8594;  | Variable output format |
+| option | Object, Longint | &#8594;  | Export options |
 
 <!-- END REF-->
 

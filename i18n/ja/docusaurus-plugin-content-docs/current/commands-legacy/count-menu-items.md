@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Count menu items.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | メニュー番号またはメニュー参照 |
-| process | Integer | &rarr; | プロセス参照番号 |
-| 戻り値 | Integer | &larr; | メニュー中のメニュー項目数 |
+| menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
+| process | Integer | &#8594;  | プロセス参照番号 |
+| 戻り値 | Integer | &#8592; | メニュー中のメニュー項目数 |
 
 <!-- END REF-->
 

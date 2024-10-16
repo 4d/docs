@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get elements.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
-| elementType | Longint | &rarr; | Desired type of element to retrieve |
-| Function result | Collection | &larr; | Collection containing element references |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| elementType | Longint | &#8594;  | Desired type of element to retrieve |
+| Function result | Collection | &#8592; | Collection containing element references |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Font file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| familiaFuente | Text | &rarr; | Nombre de la familia de fuente |
-| estiloFuente | Integer | &rarr; | Estilo de fuente: 0=normal (por defecto), 1=negrita, 2=itálica |
-| Resultado | Null, Object | &larr; | Objeto archivo fuente |
+| familiaFuente | Text | &#8594;  | Nombre de la familia de fuente |
+| estiloFuente | Integer | &#8594;  | Estilo de fuente: 0=normal (por defecto), 1=negrita, 2=itálica |
+| Resultado | Null, Object | &#8592; | Objeto archivo fuente |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de laquelle il faut copier la sélection ou Table par défaut si ce paramètre est omis |
-| nom | Text | &rarr; | Nom de la sélection temporaire à créer |
+| laTable | Table | &#8594;  | Table de laquelle il faut copier la sélection ou Table par défaut si ce paramètre est omis |
+| nom | Text | &#8594;  | Nom de la sélection temporaire à créer |
 
 <!-- END REF-->
 

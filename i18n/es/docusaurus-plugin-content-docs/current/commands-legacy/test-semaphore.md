@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Test semaphore.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| semaforo | Text | &rarr; | Nombre del semáforo a probar |
-| Resultado | Boolean | &larr; | True = el semáforo existe, False = el semáforo no existe |
+| semaforo | Text | &#8594;  | Nombre del semáforo a probar |
+| Resultado | Boolean | &#8592; | True = el semáforo existe, False = el semáforo no existe |
 
 <!-- END REF-->
 

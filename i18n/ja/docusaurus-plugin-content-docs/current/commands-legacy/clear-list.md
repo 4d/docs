@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &rarr; | リスト参照番号 |
-| * | Operator |  &rarr; | 指定した場合, サブリストがあればそれもメモリからクリア 省略した場合, サブリストがあってもそれをクリアしない |
+| list | Integer | &#8594;  | リスト参照番号 |
+| * | Operator |  &#8594;  | 指定した場合, サブリストがあればそれもメモリからクリア 省略した場合, サブリストがあってもそれをクリアしない |
 
 <!-- END REF-->
 

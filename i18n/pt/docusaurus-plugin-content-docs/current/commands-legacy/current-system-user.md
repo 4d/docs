@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current system user.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &larr; | Nome do dono do equipo na rede |
+| Resultado | Text | &#8592; | Nome do dono do equipo na rede |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela para a qual ir ao registro, ou tabela padrão, se omitido |
-| registro | Integer | &rarr; | Número retornado pelo número de Registro |
+| tabela | Table | &#8594;  | Tabela para a qual ir ao registro, ou tabela padrão, se omitido |
+| registro | Integer | &#8594;  | Número retornado pelo número de Registro |
 
 <!-- END REF-->
 

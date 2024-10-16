@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML CDATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &rarr; | 開かれたドキュメントへの参照 |
-| data | Blob, Text | &rarr; | ドキュメントのCDATAタグの間に挿入する テキストまたはBLOB |
+| document | Time | &#8594;  | 開かれたドキュメントへの参照 |
+| data | Blob, Text | &#8594;  | ドキュメントのCDATAタグの間に挿入する テキストまたはBLOB |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get formulas.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Proドキュメント |
-| 戻り値 | Collection | &larr; | フォーミュラのコレクション |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Proドキュメント |
+| 戻り値 | Collection | &#8592; | フォーミュラのコレクション |
 
 <!-- END REF-->
 

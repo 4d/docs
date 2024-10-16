@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get action.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a field or variable |
-| object | any | &rarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| Function result | Text | &larr; | Associated standard action name and (if any) parameter string |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a field or variable |
+| object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| Function result | Text | &#8592; | Associated standard action name and (if any) parameter string |
 
 <!-- END REF-->
 

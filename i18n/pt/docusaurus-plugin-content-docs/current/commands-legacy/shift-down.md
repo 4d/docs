@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Shift down.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Estado da tecla Shift |
+| Resultado | Boolean | &#8592; | Estado da tecla Shift |
 
 <!-- END REF-->
 

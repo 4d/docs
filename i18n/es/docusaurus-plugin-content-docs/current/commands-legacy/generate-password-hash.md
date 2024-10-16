@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate password hash.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| contrasena | Text | &rarr; | La contraseña del usuario. Sólo se utilizan los primeros 72 caracteres. |
-| opciones | Object | &rarr; | Un objeto que contiene opciones. |
-| Resultado | Text | &larr; | Devuelve la contraseña hash. |
+| contrasena | Text | &#8594;  | La contraseña del usuario. Sólo se utilizan los primeros 72 caracteres. |
+| opciones | Object | &#8594;  | Un objeto que contiene opciones. |
+| Resultado | Text | &#8592; | Devuelve la contraseña hash. |
 
 <!-- END REF-->
 

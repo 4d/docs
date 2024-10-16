@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Read only state.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to test read-only state, or Default table, if omitted |
-| Function result | Boolean | &larr; | Access to table is read-only (TRUE), or Access to table is read-write (FALSE) |
+| aTable | Table | &#8594;  | Table for which to test read-only state, or Default table, if omitted |
+| Function result | Boolean | &#8592; | Access to table is read-only (TRUE), or Access to table is read-write (FALSE) |
 
 <!-- END REF-->
 

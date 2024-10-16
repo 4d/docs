@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | Menu number or Menu reference |
-| menuItem | Integer | &rarr; | Menu item number or -1 for last item added |
-| itemKey | Text, Integer | &rarr; | Letter of keyboard shortcut or Character code of keyboard shortcut (former syntax) |
-| modifiers | Integer | &rarr; | Modifier(s) to associate with shortcut  (ignored if Character code is passed in itemKey) |
-| process | Integer | &rarr; | Process reference number |
+| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
+| menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
+| itemKey | Text, Integer | &#8594;  | Letter of keyboard shortcut or Character code of keyboard shortcut (former syntax) |
+| modifiers | Integer | &#8594;  | Modifier(s) to associate with shortcut  (ignored if Character code is passed in itemKey) |
+| process | Integer | &#8594;  | Process reference number |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT ROW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçao | Integer | &rarr; | Número da fila a selecionar |
-| açao | Integer | &rarr; | Ação de seleção |
+| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçao | Integer | &#8594;  | Número da fila a selecionar |
+| açao | Integer | &#8594;  | Ação de seleção |
 
 <!-- END REF-->
 

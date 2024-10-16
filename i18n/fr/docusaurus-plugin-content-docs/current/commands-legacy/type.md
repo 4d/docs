@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Type.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champVar | Field, Variable | &rarr; | Champ ou variable à tester |
-| Résultat | Integer | &larr; | Numéro du type de données |
+| champVar | Field, Variable | &#8594;  | Champ ou variable à tester |
+| Résultat | Integer | &#8592; | Numéro du type de données |
 
 <!-- END REF-->
 

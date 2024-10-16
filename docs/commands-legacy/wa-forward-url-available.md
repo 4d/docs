@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Forward URL available.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Boolean | &larr; | True if there is a following URL in the sequence of URLs opened;otherwise, False |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| Function result | Boolean | &#8592; | True if there is a following URL in the sequence of URLs opened;otherwise, False |
 
 <!-- END REF-->
 

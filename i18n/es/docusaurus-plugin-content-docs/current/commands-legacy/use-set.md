@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Text | &rarr; | Nombre del conjunto a utilizar |
+| conjunto | Text | &#8594;  | Nombre del conjunto a utilizar |
 
 <!-- END REF-->
 

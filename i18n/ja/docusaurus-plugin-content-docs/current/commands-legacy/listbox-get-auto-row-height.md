@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get auto row height.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
-| selector | Integer | &rarr; | 取得する高さの値:lk row min height あるいは lk row max height |
-| unit | Integer | &rarr; | 行の高さの最小値、あるいは最大値 |
-| 戻り値 | Integer | &larr; | 選択された行の高さの値 |
+| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
+| selector | Integer | &#8594;  | 取得する高さの値:lk row min height あるいは lk row max height |
+| unit | Integer | &#8594;  | 行の高さの最小値、あるいは最大値 |
+| 戻り値 | Integer | &#8592; | 選択された行の高さの値 |
 
 <!-- END REF-->
 

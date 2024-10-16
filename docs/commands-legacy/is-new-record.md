@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is new record.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table of the record to examine or Default table if this parameter is omitted |
-| Function result | Boolean | &larr; | True if the record is being created, False otherwise |
+| aTable | Table | &#8594;  | Table of the record to examine or Default table if this parameter is omitted |
+| Function result | Boolean | &#8592; | True if the record is being created, False otherwise |
 
 <!-- END REF-->
 

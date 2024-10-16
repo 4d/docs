@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT BREAK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objFaixa | Object | &rarr; | Objeto de faixa 4dWrite Pro |
-| tipoRuptura | Integer | &rarr; | Tipo de quebra a inserir |
-| modo | Integer | &rarr; | Modo de inserção |
-| atualizFaixa | Integer | &rarr; | Modo de atualização da Faixa |
+| objFaixa | Object | &#8594;  | Objeto de faixa 4dWrite Pro |
+| tipoRuptura | Integer | &#8594;  | Tipo de quebra a inserir |
+| modo | Integer | &#8594;  | Modo de inserção |
+| atualizFaixa | Integer | &#8594;  | Modo de atualização da Faixa |
 
 <!-- END REF-->
 

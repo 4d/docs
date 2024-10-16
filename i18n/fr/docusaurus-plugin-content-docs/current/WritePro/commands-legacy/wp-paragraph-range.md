@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Paragraph range.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément |
-| Résultat | Object | &larr; | Plage définissant uniquement les paragraphes |
+| objCible | Object | &#8594;  | Plage ou élément |
+| Résultat | Object | &#8592; | Plage définissant uniquement les paragraphes |
 
 <!-- END REF-->
 

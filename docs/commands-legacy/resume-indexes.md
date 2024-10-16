@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to resume indexes |
-| * | Operator | &rarr; | If passed = asynchronous indexing |
+| aTable | Table | &#8594;  | Table for which to resume indexes |
+| * | Operator | &#8594;  | If passed = asynchronous indexing |
 
 <!-- END REF-->
 

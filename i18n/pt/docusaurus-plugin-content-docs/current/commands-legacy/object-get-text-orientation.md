@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get text orientation.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especifica, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
-| object | any | &rarr; | Nome de objeto (se for especificado *) ou Campo ou variável (se for omitido *) |
-| Resultado | Integer | &larr; | Ângulo de rotação de texto |
+| * | Operador | &#8594;  | Se especifica, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
+| object | any | &#8594;  | Nome de objeto (se for especificado *) ou Campo ou variável (se for omitido *) |
+| Resultado | Integer | &#8592; | Ângulo de rotação de texto |
 
 <!-- END REF-->
 

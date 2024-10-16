@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela a qual apagar a seleção atual, ou tabela padrão, se omitido |
+| tabela | Table | &#8594;  | Tabela a qual apagar a seleção atual, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

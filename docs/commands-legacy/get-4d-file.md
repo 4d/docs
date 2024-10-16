@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| file | Integer | &rarr; | File type |
-| * | Operator | &rarr; | Return file path of host database |
-| Function result | String | &larr; | Pathname to 4D file |
+| file | Integer | &#8594;  | File type |
+| * | Operator | &#8594;  | Return file path of host database |
+| Function result | String | &#8592; | Pathname to 4D file |
 
 <!-- END REF-->
 

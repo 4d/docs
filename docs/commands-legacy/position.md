@@ -10,20 +10,20 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| find | Text | &rarr; | String to find |
-| aText | Text | &rarr; | String in which to search |
-| start | Integer | &rarr; | Position in string where search will start |
-| lengthFound | Integer | &larr; | Length of string found |
-| * | Operator | &rarr; | If passed: evaluation based on character codes |
-| Function result | Longint | &larr; | Position of first occurrence |
+| find | Text | &#8594;  | String to find |
+| aText | Text | &#8594;  | String in which to search |
+| start | Integer | &#8594;  | Position in string where search will start |
+| lengthFound | Integer | &#8592; | Length of string found |
+| * | Operator | &#8594;  | If passed: evaluation based on character codes |
+| Function result | Longint | &#8592; | Position of first occurrence |
 | Position ( find ; aString ; start ; lengthFound ; options ) -> Function result |
 | Parameter | Type | Description |
-| find | Text | &rarr; | String to find |
-| aText | Text | &rarr; | String in which to search |
-| start | Integer | &rarr; | Position in string where search will start |
-| lengthFound | Integer | &rarr; | Length of string found |
-| options | Integer | &rarr; | Search condition(s) |
-| Function result | Longint | &larr; | Position of first occurrence |
+| find | Text | &#8594;  | String to find |
+| aText | Text | &#8594;  | String in which to search |
+| start | Integer | &#8594;  | Position in string where search will start |
+| lengthFound | Integer | &#8594;  | Length of string found |
+| options | Integer | &#8594;  | Search condition(s) |
+| Function result | Longint | &#8592; | Position of first occurrence |
 
 <!-- END REF-->
 

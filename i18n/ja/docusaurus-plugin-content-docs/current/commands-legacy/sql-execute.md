@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXECUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| sqlStatement | Text | &rarr; | 実行するSQLコマンド |
-| boundObj | Variable, Field | &larr; | 結果を受け取る(必要に応じて) |
+| sqlStatement | Text | &#8594;  | 実行するSQLコマンド |
+| boundObj | Variable, Field | &#8592; | 結果を受け取る(必要に応じて) |
 
 <!-- END REF-->
 

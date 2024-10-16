@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Table | Table | &rarr; | Tabela cujos "blobs" de valores de prioridade de dados vão ser ajustados |
-| prioridade | Integer | &rarr; | Valor de prioridade de Cache para Blobs na tabela |
+| Table | Table | &#8594;  | Tabela cujos "blobs" de valores de prioridade de dados vão ser ajustados |
+| prioridade | Integer | &#8594;  | Valor de prioridade de Cache para Blobs na tabela |
 
 <!-- END REF-->
 

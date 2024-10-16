@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | カレントレコードを表示するテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594;  | カレントレコードを表示するテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

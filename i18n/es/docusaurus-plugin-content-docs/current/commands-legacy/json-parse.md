@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Parse.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadenaJSON | Text | &rarr; | Cadena en JSON a analizar |
-| tipo | Integer | &rarr; | Tipo en el cual convertir los valores |
-| * | Operador | &rarr; | Agrega la posición de la línea y el desplazamiento de cada propiedad si el valor devuelto es un objeto |
-| Resultado | any, Object | &larr; | Valores extraídos de la cadena JSON |
+| cadenaJSON | Text | &#8594;  | Cadena en JSON a analizar |
+| tipo | Integer | &#8594;  | Tipo en el cual convertir los valores |
+| * | Operador | &#8594;  | Agrega la posición de la línea y el desplazamiento de cada propiedad si el valor devuelto es un objeto |
+| Resultado | any, Object | &#8592; | Valores extraídos de la cadena JSON |
 
 <!-- END REF-->
 

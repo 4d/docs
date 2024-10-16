@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| format | Integer | &rarr; | 取得するシステムフォーマット |
-| value | Text | &larr; | システムで定義されるフォーマットの値 |
+| format | Integer | &#8594;  | 取得するシステムフォーマット |
+| value | Text | &#8592; | システムで定義されるフォーマットの値 |
 
 <!-- END REF-->
 

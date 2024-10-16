@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla para la cual crear un nuevo registro, o Tabla por defecto, si se omite |
+| tabla | Table | &#8594;  | Tabla para la cual crear un nuevo registro, o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 

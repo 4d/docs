@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela do formulário ou tabela por padrão, se for omitido |
-| nomeForm | Text | &rarr; | Nome do formulário |
-| largura | Integer | &larr; | Largura do formulário (em pixels) |
-| altura | Integer | &larr; | Altura do formulário (em pixels) |
-| numPags | Integer | &larr; | Número de páginas no formulário |
-| larguraFixa | Boolean | &larr; | Verdadeiro = Largura fixo, Falso = Largura variável |
-| alturaFixa | Boolean | &larr; | Verdadeiro = Altura fixa, Falso = Altura variável |
-| titulo | Text | &larr; | Título da janela do formulário |
+| tabela | Table | &#8594;  | Tabela do formulário ou tabela por padrão, se for omitido |
+| nomeForm | Text | &#8594;  | Nome do formulário |
+| largura | Integer | &#8592; | Largura do formulário (em pixels) |
+| altura | Integer | &#8592; | Altura do formulário (em pixels) |
+| numPags | Integer | &#8592; | Número de páginas no formulário |
+| larguraFixa | Boolean | &#8592; | Verdadeiro = Largura fixo, Falso = Largura variável |
+| alturaFixa | Boolean | &#8592; | Verdadeiro = Altura fixa, Falso = Altura variável |
+| titulo | Text | &#8592; | Título da janela do formulário |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| esquerda | Integer | &larr; | Coordenada esquerda da área da tela |
-| superior | Integer | &larr; | Coordenada superior da área da tela |
-| direita | Integer | &larr; | Coordenada direita da área da tela |
-| inferior | Integer | &larr; | Coordenada inferior da área da tela |
-| tela | Integer | &rarr; | Número da tela, ou tela principal se omitida |
-| areaTela | Integer | &rarr; | Tela inteira (padrão)ou então área de trabalho |
+| esquerda | Integer | &#8592; | Coordenada esquerda da área da tela |
+| superior | Integer | &#8592; | Coordenada superior da área da tela |
+| direita | Integer | &#8592; | Coordenada direita da área da tela |
+| inferior | Integer | &#8592; | Coordenada inferior da área da tela |
+| tela | Integer | &#8594;  | Número da tela, ou tela principal se omitida |
+| areaTela | Integer | &#8594;  | Tela inteira (padrão)ou então área de trabalho |
 
 <!-- END REF-->
 

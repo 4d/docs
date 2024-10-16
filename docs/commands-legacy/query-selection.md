@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to return a selection of records, or Default table, if omitted |
-| queryArgument | Expression | &rarr; | Query argument |
-| * | Operator | &rarr; | Continue query flag |
+| aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table, if omitted |
+| queryArgument | Expression | &#8594;  | Query argument |
+| * | Operator | &#8594;  | Continue query flag |
 
 <!-- END REF-->
 

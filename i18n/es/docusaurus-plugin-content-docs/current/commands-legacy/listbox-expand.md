@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX EXPAND.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objetos es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| recursivo | Boolean | &rarr; | Verdadero = desplegar los subniveles, Falso = no desplegar los subniveles |
-| selector | Integer | &rarr; | Parte del list box a desplegar |
-| grueso | Integer | &rarr; | Número de línea de la ruptura a desplegar o Número de nivel del listbox a desplegar |
-| columna | Integer | &rarr; | Número de columna de la ruptura a desplegar |
+| * | Operador | &#8594;  | Si se especifica, objetos es un nombre de objeto (cadena). Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| recursivo | Boolean | &#8594;  | Verdadero = desplegar los subniveles, Falso = no desplegar los subniveles |
+| selector | Integer | &#8594;  | Parte del list box a desplegar |
+| grueso | Integer | &#8594;  | Número de línea de la ruptura a desplegar o Número de nivel del listbox a desplegar |
+| columna | Integer | &#8594;  | Número de columna de la ruptura a desplegar |
 
 <!-- END REF-->
 

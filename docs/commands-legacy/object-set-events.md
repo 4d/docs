@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &rarr; | Object name or "" to designate the form (if * is specified) or<br/>Field or variable (if * is omitted) |
-| arrEvents | Array integer | &rarr; | Array of events to set |
-| mode | Integer | &rarr; | Activation mode for events defined in arrEvents |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &#8594;  | Object name or "" to designate the form (if * is specified) or<br/>Field or variable (if * is omitted) |
+| arrEvents | Array integer | &#8594;  | Array of events to set |
+| mode | Integer | &#8594;  | Activation mode for events defined in arrEvents |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Insert XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElementTarget | Text | &rarr; | Referencia del elemento XML padre |
-| refElementFuente | Text | &rarr; | Referencia del elemento XML a insertar |
-| indiceHijo | Integer | &rarr; | Índice del hijo del elemento objetivo antes del cual se debe insertar el nuevo elemento |
-| Resultado | Text | &larr; | Referencia del nuevo elemento XML |
+| refElementTarget | Text | &#8594;  | Referencia del elemento XML padre |
+| refElementFuente | Text | &#8594;  | Referencia del elemento XML a insertar |
+| indiceHijo | Integer | &#8594;  | Índice del hijo del elemento objetivo antes del cual se debe insertar el nuevo elemento |
+| Resultado | Text | &#8592; | Referencia del nuevo elemento XML |
 
 <!-- END REF-->
 

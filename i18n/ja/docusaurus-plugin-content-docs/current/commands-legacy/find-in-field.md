@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in field.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetField | Field | &rarr; | 検索を実行するフィールド |
-| value | Field, Variable | &rarr; | 検索する値 |
-| &larr; | 検索された値 |
-| 戻り値 | Integer | &larr; | 検索されたレコード番号 または レコードが検索されなかった場合、-1 |
+| targetField | Field | &#8594;  | 検索を実行するフィールド |
+| value | Field, Variable | &#8594;  | 検索する値 |
+| &#8592; | 検索された値 |
+| 戻り値 | Integer | &#8592; | 検索されたレコード番号 または レコードが検索されなかった場合、-1 |
 
 <!-- END REF-->
 

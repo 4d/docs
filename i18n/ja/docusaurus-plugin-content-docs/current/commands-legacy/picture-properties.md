@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &rarr; | 情報を取得するピクチャ |
-| width | Real | &larr; | ピクチャの幅 (ピクセル) |
-| height | Real | &larr; | ピクチャの高さ (ピクセル) |
-| hOffset | Integer | &larr; | バックグランド表示の時の水平方向のオフセット |
-| vOffset | Integer | &larr; | バックグランド表示の時の垂直方向のオフセット |
-| mode | Integer | &larr; | バックグランド表示の時の転送モード |
+| picture | Picture | &#8594;  | 情報を取得するピクチャ |
+| width | Real | &#8592; | ピクチャの幅 (ピクセル) |
+| height | Real | &#8592; | ピクチャの高さ (ピクセル) |
+| hOffset | Integer | &#8592; | バックグランド表示の時の水平方向のオフセット |
+| vOffset | Integer | &#8592; | バックグランド表示の時の垂直方向のオフセット |
+| mode | Integer | &#8592; | バックグランド表示の時の転送モード |
 
 <!-- END REF-->
 

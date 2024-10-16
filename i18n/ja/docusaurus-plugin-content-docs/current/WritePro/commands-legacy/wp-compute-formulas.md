@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP COMPUTE FORMULAS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
 
 <!-- END REF-->
 

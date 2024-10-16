@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.POP RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla de la cual desapilar el registro actual o Tabla por defecto, si se omite |
+| tabla | Table | &#8594;  | Tabla de la cual desapilar el registro actual o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COMPRESS BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &rarr; | BLOB a ser comprimido |
-| compressão | Integer | &rarr; | Se não se omite: 1, compressão máxima possível 2, velocidade de compressão máxima |
+| Blob | Blob | &#8594;  | BLOB a ser comprimido |
+| compressão | Integer | &#8594;  | Se não se omite: 1, compressão máxima possível 2, velocidade de compressão máxima |
 
 <!-- END REF-->
 

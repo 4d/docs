@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| débutSél | Integer | &rarr; | Début de la sélection |
-| finSél | Integer | &rarr; | Fin de la sélection |
-| * | Opérateur | &rarr; | Si passé = mettre à jour les expressions avant de les figer |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
+| * | Opérateur | &#8594;  | Si passé = mettre à jour les expressions avant de les figer |
 
 <!-- END REF-->
 

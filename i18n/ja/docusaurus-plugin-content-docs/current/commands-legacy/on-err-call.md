@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON ERR CALL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| errorMethod | Text | &rarr; | 実行されるエラーメソッド, または 空の文字列でエラーのトラップ停止 |
-| scope | Integer | &rarr; | エラーメソッドのスコープ |
+| errorMethod | Text | &#8594;  | 実行されるエラーメソッド, または 空の文字列でエラーのトラップ停止 |
+| scope | Integer | &#8594;  | エラーメソッドのスコープ |
 
 <!-- END REF-->
 

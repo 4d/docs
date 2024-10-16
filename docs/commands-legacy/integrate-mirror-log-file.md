@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathName | Text | &rarr; | Name or pathname of the log file to be integrated |
-| operationNum | Real | &rarr; | Number of last operation integrated or -2 to integrate the whole file |
-| &larr; | New number of last operation integrated |
-| mode | Integer | &rarr; | 0=strict mode (default mode), 1=auto repair mode |
-| errObject | Object | &larr; | Missed operation(s) |
+| pathName | Text | &#8594;  | Name or pathname of the log file to be integrated |
+| operationNum | Real | &#8594;  | Number of last operation integrated or -2 to integrate the whole file |
+| &#8592; | New number of last operation integrated |
+| mode | Integer | &#8594;  | 0=strict mode (default mode), 1=auto repair mode |
+| errObject | Object | &#8592; | Missed operation(s) |
 
 <!-- END REF-->
 

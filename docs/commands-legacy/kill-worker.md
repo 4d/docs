@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.KILL WORKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Text, Integer | &rarr; | Number or name of process to kill (kills current process if omitted) |
+| process | Text, Integer | &#8594;  | Number or name of process to kill (kills current process if omitted) |
 
 <!-- END REF-->
 

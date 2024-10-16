@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAGE BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * &#124; > | &rarr; | * Cancel printing job started with Print form, or > Force one printing job |
+| * &#124; > | &#8594;  | * Cancel printing job started with Print form, or > Force one printing job |
 
 <!-- END REF-->
 

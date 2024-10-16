@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to print settings.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| printSettings | Blob | &rarr; | 印刷設定を格納したBLOB |
-| params | Integer | &rarr; | 0 = 部数と印刷範囲に関して、BLOB に保存された値を復元；1 = デフォルト値にリセット |
-| 戻り値 | Integer | &larr; | 1 = 処理に成功, 0 = カレントのプリンターがない, -1 = 引数が不正, 2 = プリンターが変更された |
+| printSettings | Blob | &#8594;  | 印刷設定を格納したBLOB |
+| params | Integer | &#8594;  | 0 = 部数と印刷範囲に関して、BLOB に保存された値を復元；1 = デフォルト値にリセット |
+| 戻り値 | Integer | &#8592; | 1 = 処理に成功, 0 = カレントのプリンターがない, -1 = 引数が不正, 2 = プリンターが変更された |
 
 <!-- END REF-->
 

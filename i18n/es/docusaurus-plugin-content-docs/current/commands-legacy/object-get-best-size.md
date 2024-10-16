@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| largOpt | Integer | &larr; | Largo óptimo del objeto |
-| altOpt | Integer | &larr; | Alto óptimo del objeto |
-| anchoMax | Integer | &rarr; | Largo máximo del objeto |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| largOpt | Integer | &#8592; | Largo óptimo del objeto |
+| altOpt | Integer | &#8592; | Alto óptimo del objeto |
+| anchoMax | Integer | &#8594;  | Largo máximo del objeto |
 
 <!-- END REF-->
 

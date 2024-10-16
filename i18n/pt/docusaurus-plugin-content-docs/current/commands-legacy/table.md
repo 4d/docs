@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Table.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela&#124;Ponteiro | Inteiro longo, Ponteiro | &rarr; | Número de tabela, ou ponteiro de Tabela, ou ponteiro de Campo |
-| Resultado | Integer, Pointer | &larr; | Ponteiro tabela, se um número de tabela for passado.<br/>Número de tabela, se um ponteiro de tabela for passado.<br/>Número de tabela, se um ponteiro de Campo for passado. |
+| numTabela&#124;Ponteiro | Inteiro longo, Ponteiro | &#8594;  | Número de tabela, ou ponteiro de Tabela, ou ponteiro de Campo |
+| Resultado | Integer, Pointer | &#8592; | Ponteiro tabela, se um número de tabela for passado.<br/>Número de tabela, se um ponteiro de tabela for passado.<br/>Número de tabela, se um ponteiro de Campo for passado. |
 
 <!-- END REF-->
 

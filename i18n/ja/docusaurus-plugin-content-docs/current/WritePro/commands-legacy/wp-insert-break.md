@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT BREAK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
-| breakType | Integer | &rarr; | 挿入するブレークの型 |
-| mode | Integer | &rarr; | 挿入モード |
-| rangeUpdate | Integer | &rarr; | レンジ更新モード |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
+| breakType | Integer | &#8594;  | 挿入するブレークの型 |
+| mode | Integer | &#8594;  | 挿入モード |
+| rangeUpdate | Integer | &#8594;  | レンジ更新モード |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON ERR CALL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| metodoError | Text | &rarr; | Método de gestión de errores a llamar o cadena vacía para desinstalar el método |
-| alcance | Integer | &rarr; | Alcance del método de gestión de errores |
+| metodoError | Text | &#8594;  | Método de gestión de errores a llamar o cadena vacía para desinstalar el método |
+| alcance | Integer | &#8594;  | Alcance del método de gestión de errores |
 
 <!-- END REF-->
 

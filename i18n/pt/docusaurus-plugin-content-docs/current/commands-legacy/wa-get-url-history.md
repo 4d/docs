@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| arrayURLs | Text array | &larr; | Array das URLs visitadas |
-| endereço | Integer | &rarr; | 0 ou omitido = Lista das URLs anteriores; 1 = Lista das próximas URLs |
-| arrTitulos | Text array | &larr; | Array de titulos |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| arrayURLs | Text array | &#8592; | Array das URLs visitadas |
+| endereço | Integer | &#8594;  | 0 ou omitido = Lista das URLs anteriores; 1 = Lista das próximas URLs |
+| arrTitulos | Text array | &#8592; | Array de titulos |
 
 <!-- END REF-->
 

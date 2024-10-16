@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Print object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable |
-| objet | any | &rarr; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
-| posX | Integer | &rarr; | Emplacement horizontal de l'objet |
-| posY | Integer | &rarr; | Emplacement vertical de l'objet |
-| largeur | Integer | &rarr; | Largeur de l'objet (pixels) |
-| hauteur | Integer | &rarr; | Hauteur de l'objet (pixels) |
-| Résultat | Boolean | &larr; | Vrai = objet entièrement imprimé, Faux sinon |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| posX | Integer | &#8594;  | Emplacement horizontal de l'objet |
+| posY | Integer | &#8594;  | Emplacement vertical de l'objet |
+| largeur | Integer | &#8594;  | Largeur de l'objet (pixels) |
+| hauteur | Integer | &#8594;  | Hauteur de l'objet (pixels) |
+| Résultat | Boolean | &#8592; | Vrai = objet entièrement imprimé, Faux sinon |
 
 <!-- END REF-->
 

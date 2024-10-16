@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TOTALS SPACING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Reference of the area |
-| subtotal | Integer | &rarr; | Subtotal number |
-| value | Integer | &rarr; | 0=no space, 32000=inserts a page break, >0=spacing added below the break level, <0=proportional increase |
+| area | Integer | &#8594;  | Reference of the area |
+| subtotal | Integer | &#8594;  | Subtotal number |
+| value | Integer | &#8594;  | 0=no space, 32000=inserts a page break, >0=spacing added below the break level, <0=proportional increase |
 
 <!-- END REF-->
 

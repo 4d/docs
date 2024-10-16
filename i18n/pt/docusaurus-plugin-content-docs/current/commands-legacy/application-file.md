@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Application file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &larr; | Nome longo da aplicação ou arquivo 4D executável |
+| Resultado | Text | &#8592; | Nome longo da aplicação ou arquivo 4D executável |
 
 <!-- END REF-->
 

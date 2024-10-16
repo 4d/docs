@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET FRAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, areaWP es un nombre de objeto de formulario (cadena). Si se omite, areaWP es un campo o una variable objeto. |
-| areaWP | Text | &rarr; | Nombre de objeto de formulario (si se especifica *) o campo o variable objeto 4D Write Pro (si se omite *) |
-| selectorMarco | Integer | &rarr; | Marco donde debe colocarse el cursor |
-| textBoxID | Text | &rarr; | Id de la caja de texto donde se debe colocar el cursor |
+| * | Operador | &#8594;  | Si se especifica, areaWP es un nombre de objeto de formulario (cadena). Si se omite, areaWP es un campo o una variable objeto. |
+| areaWP | Text | &#8594;  | Nombre de objeto de formulario (si se especifica *) o campo o variable objeto 4D Write Pro (si se omite *) |
+| selectorMarco | Integer | &#8594;  | Marco donde debe colocarse el cursor |
+| textBoxID | Text | &#8594;  | Id de la caja de texto donde se debe colocar el cursor |
 
 <!-- END REF-->
 

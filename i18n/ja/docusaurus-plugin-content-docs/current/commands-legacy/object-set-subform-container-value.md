@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| value | any | &rarr; | データソースの新しい値 |
+| value | any | &#8594;  | データソースの新しい値 |
 
 <!-- END REF-->
 

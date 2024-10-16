@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &rarr; | Champ auquel attribuer la valeur NULL |
+| leField | Field | &#8594;  | Champ auquel attribuer la valeur NULL |
 
 <!-- END REF-->
 

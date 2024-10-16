@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML root element reference |
-| xPath | Text | &rarr; | XPath path of the XML element to create |
-| attribNamesArray | Text array | &rarr; | Array of attribute names |
-| attribValuesArray | Text array | &rarr; | Array of attribute values |
-| Function result | Text | &larr; | Reference of created XML element |
+| elementRef | Text | &#8594;  | XML root element reference |
+| xPath | Text | &#8594;  | XPath path of the XML element to create |
+| attribNamesArray | Text array | &#8594;  | Array of attribute names |
+| attribValuesArray | Text array | &#8594;  | Array of attribute values |
+| Function result | Text | &#8592; | Reference of created XML element |
 
 <!-- END REF-->
 

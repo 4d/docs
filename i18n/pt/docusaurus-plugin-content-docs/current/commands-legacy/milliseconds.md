@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Milliseconds.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Número de milissegundos passados desde que se iniciou o equipamento |
+| Resultado | Integer | &#8592; | Número de milissegundos passados desde que se iniciou o equipamento |
 
 <!-- END REF-->
 

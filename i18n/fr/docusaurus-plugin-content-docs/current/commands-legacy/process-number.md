@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Process number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nom | Text | &rarr; | Nom du process duquel récupérer le numéro |
-| * | Operator |  &rarr; | Retourner le numéro du process serveur |
-| Résultat | Integer | &larr; | Numéro du process |
+| nom | Text | &#8594;  | Nom du process duquel récupérer le numéro |
+| * | Operator |  &#8594;  | Retourner le numéro du process serveur |
+| Résultat | Integer | &#8592; | Numéro du process |
 
 <!-- END REF-->
 

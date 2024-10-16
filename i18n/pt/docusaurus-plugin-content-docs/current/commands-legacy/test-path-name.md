@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Test path name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeRota | Text | &rarr; | Rota ao diretório, pasta ou documento |
-| resultado | Integer | &larr; | 1 - rota de acesso do documento existente, 0 - rota do diretório ou pasta existente, <0 - rota inválida, código de erro do gestor de arquivo OS |
+| nomeRota | Text | &#8594;  | Rota ao diretório, pasta ou documento |
+| resultado | Integer | &#8592; | 1 - rota de acesso do documento existente, 0 - rota do diretório ou pasta existente, <0 - rota inválida, código de erro do gestor de arquivo OS |
 
 <!-- END REF-->
 

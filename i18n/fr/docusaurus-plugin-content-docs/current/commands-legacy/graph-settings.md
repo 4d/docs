@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| graphImage | Picture | &rarr; | Variable image |
-| xmin | Integer, Date, Time | &rarr; | Valeur minimale de l'échelle des X pour graphe proportionnel (lignes ou points) |
-| xmax | Integer, Date, Time | &rarr; | Valeur maximale de l'échelle des X pour graphe proportionnel (lignes ou points) |
-| ymin | Integer | &rarr; | Valeur minimale de l'échelle des Y |
-| ymax | Integer | &rarr; | Valeur maximale de l'échelle des Y |
-| xprop | Boolean | &rarr; | VRAI pour l'échelle des X proportionnelle ; FAUX pour l'échelle des X normale (lignes ou points) |
-| grilleX | Boolean | &rarr; | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
-| grilleY | Boolean | &rarr; | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
-| titre | Text | &rarr; | Titre(s) pour les titre(s) des série(s) |
+| graphImage | Picture | &#8594;  | Variable image |
+| xmin | Integer, Date, Time | &#8594;  | Valeur minimale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| xmax | Integer, Date, Time | &#8594;  | Valeur maximale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| ymin | Integer | &#8594;  | Valeur minimale de l'échelle des Y |
+| ymax | Integer | &#8594;  | Valeur maximale de l'échelle des Y |
+| xprop | Boolean | &#8594;  | VRAI pour l'échelle des X proportionnelle ; FAUX pour l'échelle des X normale (lignes ou points) |
+| grilleX | Boolean | &#8594;  | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
+| grilleY | Boolean | &#8594;  | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
+| titre | Text | &#8594;  | Titre(s) pour les titre(s) des série(s) |
 
 <!-- END REF-->
 

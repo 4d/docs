@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD TITLES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla para la cual definir los títulos de los campos |
-| titulosCampos | Text array | &rarr; | Nuevos títulos de los campos |
-| numCampos | Integer array | &rarr; | Números de los campos |
-| * | Operator |  &rarr; | Utilizar los nombres personalizados en el editor de fórmulas |
+| tabla | Table | &#8594;  | Tabla para la cual definir los títulos de los campos |
+| titulosCampos | Text array | &#8594;  | Nuevos títulos de los campos |
+| numCampos | Integer array | &#8594;  | Números de los campos |
+| * | Operator |  &#8594;  | Utilizar los nombres personalizados en el editor de fórmulas |
 
 <!-- END REF-->
 

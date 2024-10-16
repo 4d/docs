@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro document |
-| bkName | String | &rarr; | Name of bookmark to delete |
+| wpDoc | Object | &#8594;  | 4D Write Pro document |
+| bkName | String | &#8594;  | Name of bookmark to delete |
 
 <!-- END REF-->
 

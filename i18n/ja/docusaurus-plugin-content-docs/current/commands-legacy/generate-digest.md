@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate digest.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| param | Blob, Text | &rarr; | Digestキーを取得するBLOBやテキスト |
-| algorithm | Integer | &rarr; | キーの生成に使用するアルゴリズム0= MD5、1 = SHA1、 2=4Dダイジェスト |
-| * | 演算子 | &rarr; | ダイジェストをBase64URL でエンコード |
-| 戻り値 | Text | &larr; | Digestキーの値 |
+| param | Blob, Text | &#8594;  | Digestキーを取得するBLOBやテキスト |
+| algorithm | Integer | &#8594;  | キーの生成に使用するアルゴリズム0= MD5、1 = SHA1、 2=4Dダイジェスト |
+| * | 演算子 | &#8594;  | ダイジェストをBase64URL でエンコード |
+| 戻り値 | Text | &#8592; | Digestキーの値 |
 
 <!-- END REF-->
 

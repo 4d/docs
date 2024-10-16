@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| user | Text, Integer | &rarr; | Name or unique user ID |
-| password | Text | &rarr; | Password (not encrypted) |
+| user | Text, Integer | &#8594;  | Name or unique user ID |
+| password | Text | &#8594;  | Password (not encrypted) |
 
 <!-- END REF-->
 

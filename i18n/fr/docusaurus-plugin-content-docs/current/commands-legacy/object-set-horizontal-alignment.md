@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &rarr; | Nom d’objet (si * est passé) ou Champ ou variable (si * est omis) |
-| alignement | Integer | &rarr; | Code d’alignement |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est passé) ou Champ ou variable (si * est omis) |
+| alignement | Integer | &#8594;  | Code d’alignement |
 
 <!-- END REF-->
 

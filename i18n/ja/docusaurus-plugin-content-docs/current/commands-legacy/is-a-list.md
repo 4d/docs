@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &rarr; | テストするListRef値 |
-| 戻り値 | Boolean | &larr; | TRUE: listは階層リスト FALSE: listは階層リストでない |
+| list | Integer | &#8594;  | テストするListRef値 |
+| 戻り値 | Boolean | &#8592; | TRUE: listは階層リスト FALSE: listは階層リストでない |
 
 <!-- END REF-->
 

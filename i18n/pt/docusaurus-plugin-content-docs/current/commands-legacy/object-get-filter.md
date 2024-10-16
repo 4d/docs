@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get filter.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
-| objeto | any | &rarr; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| Resultado | Text | &larr; | Nome do filtro |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
+| objeto | any | &#8594;  | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| Resultado | Text | &#8592; | Nome do filtro |
 
 <!-- END REF-->
 

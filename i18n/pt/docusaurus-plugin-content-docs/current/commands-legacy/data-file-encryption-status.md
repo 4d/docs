@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file encryption status.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaEstrutura | Text | &rarr; | Rota do arquivo de estrutura 4D a ser verificado |
-| rotaDados | Text | &rarr; | Rota do arquivo de dados 4D a ser verificado |
-| Resultado | Object | &larr; | Informação sobre o estado de criptografia do arquivo de dados e de cada tabela |
+| rotaEstrutura | Text | &#8594;  | Rota do arquivo de estrutura 4D a ser verificado |
+| rotaDados | Text | &#8594;  | Rota do arquivo de dados 4D a ser verificado |
+| Resultado | Object | &#8592; | Informação sobre o estado de criptografia do arquivo de dados e de cada tabela |
 
 <!-- END REF-->
 

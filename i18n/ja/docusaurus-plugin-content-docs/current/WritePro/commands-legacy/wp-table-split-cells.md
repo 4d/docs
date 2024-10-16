@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE SPLIT CELLS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Proドキュメント |
-| tableRef | Object | &rarr; | 表の参照 |
-| startColumn | Integer | &rarr; | 最初のセル列の位置 |
-| startRow | Integer | &rarr; | 最初のセル行の位置 |
-| columnCount | Integer | &rarr; | 結合解除する列の数 |
-| rowCount | Integer | &rarr; | 結合解除する行の数 |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Proドキュメント |
+| tableRef | Object | &#8594;  | 表の参照 |
+| startColumn | Integer | &#8594;  | 最初のセル列の位置 |
+| startRow | Integer | &#8594;  | 最初のセル行の位置 |
+| columnCount | Integer | &#8594;  | 結合解除する列の数 |
+| rowCount | Integer | &#8594;  | 結合解除する行の数 |
 
 <!-- END REF-->
 

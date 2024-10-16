@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| accessPath | Text | &rarr; | 作成するデータファイルの名前または完全パス名 |
+| accessPath | Text | &#8594;  | 作成するデータファイルの名前または完全パス名 |
 
 <!-- END REF-->
 

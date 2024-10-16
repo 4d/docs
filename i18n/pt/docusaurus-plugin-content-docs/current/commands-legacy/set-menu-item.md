@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | Número de menu ou menu de referência |
-| menuItem | Integer | &rarr; | Número de item menu ou  -1 para o último item adicionado |
-| textoElem | Text | &rarr; | Novo texto para o item de menu |
-| processo | Integer | &rarr; | Número de referência do processo |
-| * | Operador | &rarr; | Se passado: considerar metacaracteres como caracteres comuns |
+| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594;  | Número de item menu ou  -1 para o último item adicionado |
+| textoElem | Text | &#8594;  | Novo texto para o item de menu |
+| processo | Integer | &#8594;  | Número de referência do processo |
+| * | Operador | &#8594;  | Se passado: considerar metacaracteres como caracteres comuns |
 
 <!-- END REF-->
 

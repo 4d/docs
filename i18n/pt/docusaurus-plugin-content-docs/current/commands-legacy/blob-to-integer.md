@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to integer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &rarr; | BLOB do qual obter o valor inteiro |
-| byteOrdem | Integer | &rarr; | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
-| offset | Variable | &rarr; | Offset no BLOB (expressado em bytes) |
-| &larr; | Novo offset depois da leitura |
-| Resultado da função | Inteiro | &larr; | Valor inteiro (2 bytes) |
+| Blob | Blob | &#8594;  | BLOB do qual obter o valor inteiro |
+| byteOrdem | Integer | &#8594;  | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
+| offset | Variable | &#8594;  | Offset no BLOB (expressado em bytes) |
+| &#8592; | Novo offset depois da leitura |
+| Resultado da função | Inteiro | &#8592; | Valor inteiro (2 bytes) |
 
 <!-- END REF-->
 

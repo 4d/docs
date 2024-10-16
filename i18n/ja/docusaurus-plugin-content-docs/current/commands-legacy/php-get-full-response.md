@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP GET FULL RESPONSE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| stdOut | Text, Blob | &larr; | stdoutバッファーの内容 |
-| errLabels | Text array | &larr; | エラーのラベル |
-| errValues | Text array | &larr; | エラーの値 |
-| httpHeaderFields | Text array | &larr; | HTTPヘッダーの名前 |
-| httpHeaderValues | Text array | &larr; | HTTPヘッダーの値 |
+| stdOut | Text, Blob | &#8592; | stdoutバッファーの内容 |
+| errLabels | Text array | &#8592; | エラーのラベル |
+| errValues | Text array | &#8592; | エラーの値 |
+| httpHeaderFields | Text array | &#8592; | HTTPヘッダーの名前 |
+| httpHeaderValues | Text array | &#8592; | HTTPヘッダーの値 |
 
 <!-- END REF-->
 

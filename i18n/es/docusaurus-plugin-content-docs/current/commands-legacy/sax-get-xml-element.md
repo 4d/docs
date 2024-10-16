@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML ELEMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &rarr; | Referencia del documento abierto |
-| nombre | Text | &larr; | Nombre del elemento |
-| prefijo | Text | &larr; | Espacio de nombre |
-| nomsAtributos | Text array | &larr; | Nombres de los atributos |
-| valoresAtributos | Text array | &larr; | Valores de los atributos |
+| documento | Time | &#8594;  | Referencia del documento abierto |
+| nombre | Text | &#8592; | Nombre del elemento |
+| prefijo | Text | &#8592; | Espacio de nombre |
+| nomsAtributos | Text array | &#8592; | Nombres de los atributos |
+| valoresAtributos | Text array | &#8592; | Valores de los atributos |
 
 <!-- END REF-->
 

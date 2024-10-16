@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get subrecord key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champID | Field | &rarr; | Champ de type "Lien sous-table" ou de type "Entier long" d’une ancienne relation sous-table |
-| Entier long | Entier long | &larr; | Clé interne du lien |
+| champID | Field | &#8594;  | Champ de type "Lien sous-table" ou de type "Entier long" d’une ancienne relation sous-table |
+| Entier long | Entier long | &#8592; | Clé interne du lien |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR NEW AREA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| ptr | Pointer | &rarr; | 変数へのポインター |
+| ptr | Pointer | &#8594;  | 変数へのポインター |
 
 <!-- END REF-->
 

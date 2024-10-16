@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get edited text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &larr; | 編集中のテキスト |
+| 戻り値 | Text | &#8592; | 編集中のテキスト |
 
 <!-- END REF-->
 

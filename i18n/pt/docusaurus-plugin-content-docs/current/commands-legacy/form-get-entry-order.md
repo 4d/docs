@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objectNames | Text array | &larr; | Nomes de objeto ordenados por ordem de entrada |
-| numPagina &#124; * | Inteiro longo, Operador | &rarr; | Número de página para o qual obter a ordem definida de entrada (página atual se omitida) |
+| objectNames | Text array | &#8592; | Nomes de objeto ordenados por ordem de entrada |
+| numPagina &#124; * | Inteiro longo, Operador | &#8594;  | Número de página para o qual obter a ordem definida de entrada (página atual se omitida) |
 
 <!-- END REF-->
 

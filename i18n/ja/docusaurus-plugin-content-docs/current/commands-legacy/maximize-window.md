@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &rarr; | ウィンドウ参照番号、または省略時は すべてのカレントプロセス最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) |
+| window | Integer | &#8594;  | ウィンドウ参照番号、または省略時は すべてのカレントプロセス最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) |
 
 <!-- END REF-->
 

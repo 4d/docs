@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Year of.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fecha | Date | &rarr; | Fecha para la cual devolver el año |
-| Resultado | Integer | &larr; | Número indicando el año de la fecha |
+| fecha | Date | &#8594;  | Fecha para la cual devolver el año |
+| Resultado | Integer | &#8592; | Número indicando el año de la fecha |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &rarr; | Référence d’élément XML |
-| nomAttribut | Text | &rarr; | Attribut à définir |
-| valeurAttribut | Text, Boolean, Integer, Real, Time, Date | &rarr; | Nouvelle valeur d’attribut |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomAttribut | Text | &#8594;  | Attribut à définir |
+| valeurAttribut | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Nouvelle valeur d’attribut |
 
 <!-- END REF-->
 

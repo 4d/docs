@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| confCreacionApp | Text | &rarr; | Ruta de acceso completa del proyecto a utilizar |
+| confCreacionApp | Text | &#8594;  | Ruta de acceso completa del proyecto a utilizar |
 
 <!-- END REF-->
 

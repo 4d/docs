@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela da seleção atual |
-| arrayRegistro | Integer array | &larr; | Array dos números gravados |
-| seleçao | Text | &rarr; | Nome da seleção escolhida ou a seleção atual se este parâmetro for omitido |
+| tabela | Table | &#8594;  | Tabela da seleção atual |
+| arrayRegistro | Integer array | &#8592; | Array dos números gravados |
+| seleçao | Text | &#8594;  | Nome da seleção escolhida ou a seleção atual se este parâmetro for omitido |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Table name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla &#124; ptrTabla | Entero largo, Puntero | &rarr; | Número de tabla o puntero de tabla |
-| Resultado | Text | &larr; | Nombre de la tabla |
+| numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594;  | Número de tabla o puntero de tabla |
+| Resultado | Text | &#8592; | Nombre de la tabla |
 
 <!-- END REF-->
 

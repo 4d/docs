@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Referência da área |
-| numColuna | Integer | &rarr; | Número de Coluna |
-| objeto | Field, Variable, Pointer | &rarr; | Objeto a inserir na coluna |
+| area | Integer | &#8594;  | Referência da área |
+| numColuna | Integer | &#8594;  | Número de Coluna |
+| objeto | Field, Variable, Pointer | &#8594;  | Objeto a inserir na coluna |
 
 <!-- END REF-->
 

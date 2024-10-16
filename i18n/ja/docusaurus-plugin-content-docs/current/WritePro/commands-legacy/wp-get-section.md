@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get section.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素の参照 |
-| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
-| sectionIndex | Integer | &rarr; | セクションのインデックス |
-| 戻り値 | Object | &larr; | 4D Write Pro セクション |
+| targetObj | Object | &#8594;  | レンジまたは要素の参照 |
+| wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
+| sectionIndex | Integer | &#8594;  | セクションのインデックス |
+| 戻り値 | Object | &#8592; | 4D Write Pro セクション |
 
 <!-- END REF-->
 

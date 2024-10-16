@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get title.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | se especificado, objueto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | any | &rarr; | Nome de objeto (se * é especificado) ou variável ou campo (se * for omitido) |
-| Resultado | Text | &larr; | Título do botão |
+| * | Operador | &#8594;  | se especificado, objueto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou variável ou campo (se * for omitido) |
+| Resultado | Text | &#8592; | Título do botão |
 
 <!-- END REF-->
 

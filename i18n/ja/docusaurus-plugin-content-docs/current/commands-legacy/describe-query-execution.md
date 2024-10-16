@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| status | Boolean | &rarr; | True=内部クエリ分析を有効にする, False=内部クエリ分析を無効にする |
+| status | Boolean | &#8594;  | True=内部クエリ分析を有効にする, False=内部クエリ分析を無効にする |
 
 <!-- END REF-->
 

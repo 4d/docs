@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userID | Integer | &rarr; | ユニークなユーザーID番号 |
-| name | Text | &larr; | ユーザー名 |
-| startup | Text | &larr; | スタートアップメソッドの名前 |
-| password | Text | &larr; | 常に空の文字列 |
-| nbLogin | Integer | &larr; | データベースにログインした回数 (バイナリデータベースのみ) |
-| lastLogin | Date | &larr; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
-| memberships | Integer array | &larr; | ユーザーが属するグループのID番号 |
-| groupOwner | Integer | &larr; | ユーザーのグループオーナーのID番号 (バイナリデータベースのみ) |
+| userID | Integer | &#8594;  | ユニークなユーザーID番号 |
+| name | Text | &#8592; | ユーザー名 |
+| startup | Text | &#8592; | スタートアップメソッドの名前 |
+| password | Text | &#8592; | 常に空の文字列 |
+| nbLogin | Integer | &#8592; | データベースにログインした回数 (バイナリデータベースのみ) |
+| lastLogin | Date | &#8592; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
+| memberships | Integer array | &#8592; | ユーザーが属するグループのID番号 |
+| groupOwner | Integer | &#8592; | ユーザーのグループオーナーのID番号 (バイナリデータベースのみ) |
 
 <!-- END REF-->
 

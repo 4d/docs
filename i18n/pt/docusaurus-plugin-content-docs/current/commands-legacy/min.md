@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Min.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| series | Field, Array | &rarr; | Dados para os quais se retorna o valor mínimo |
-| atributoRota | Text | &rarr; | Rota do atributo para o qual retorna o valor mínimo |
-| Resultado | Date, Number | &larr; | Valor mínimo em séries |
+| series | Field, Array | &#8594;  | Dados para os quais se retorna o valor mínimo |
+| atributoRota | Text | &#8594;  | Rota do atributo para o qual retorna o valor mínimo |
+| Resultado | Date, Number | &#8592; | Valor mínimo em séries |
 
 <!-- END REF-->
 

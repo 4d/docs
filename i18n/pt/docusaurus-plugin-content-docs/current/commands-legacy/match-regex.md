@@ -10,18 +10,18 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| padrao | Text | &rarr; | Expressão regular |
-| umaCadeia | Text | &rarr; | Cadeia na qual será realizada a pesquisa |
-| posiçao | Integer | &rarr; | Posição em umaCadeia onde começa a pesquisa |
-| pos_encont | Integer array, Integer | &larr; | Posição da ocorrência |
-| compr_encont | Integer array, Integer | &larr; | Comprimento da ocorrência |
-| * | Operador | &rarr; | Se passado, a função pesquisa apenas na posição indicada |
-| Resultado | Boolean | &larr; | True=pesquisa encontrou uma ocorrência, se não, False |
+| padrao | Text | &#8594;  | Expressão regular |
+| umaCadeia | Text | &#8594;  | Cadeia na qual será realizada a pesquisa |
+| posiçao | Integer | &#8594;  | Posição em umaCadeia onde começa a pesquisa |
+| pos_encont | Integer array, Integer | &#8592; | Posição da ocorrência |
+| compr_encont | Integer array, Integer | &#8592; | Comprimento da ocorrência |
+| * | Operador | &#8594;  | Se passado, a função pesquisa apenas na posição indicada |
+| Resultado | Boolean | &#8592; | True=pesquisa encontrou uma ocorrência, se não, False |
 | Match regex ( padrao ; umaCadeia ) -> Resultado |
 | Parâmetro | Tipo | Descrição |
-| padrao | Text | &rarr; | Expressão regular (igualdade completa) |
-| umaCadeia | Text | &rarr; | Cadeia na qual será realizada a pesquisa |
-| Resultado | Boolean | &larr; | True = pesquisa encontrou uma ocorrência, se não, False |
+| padrao | Text | &#8594;  | Expressão regular (igualdade completa) |
+| umaCadeia | Text | &#8594;  | Cadeia na qual será realizada a pesquisa |
+| Resultado | Boolean | &#8592; | True = pesquisa encontrou uma ocorrência, se não, False |
 
 <!-- END REF-->
 

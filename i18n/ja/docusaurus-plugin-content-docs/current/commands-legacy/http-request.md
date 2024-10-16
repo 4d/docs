@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| httpMethod | Text | &rarr; | リクエストで使用するHTTPメソッド |
-| url | Text | &rarr; | リクエストの送信先URL |
-| contents | Text, Blob, Picture, Object | &rarr; | リクエストボディの内容 |
-| response | Text, Blob, Picture, Object | &larr; | レスポンスの内容 |
-| headerNames | Text array | &rarr; | リクエストのヘッダー名 |
-| &larr; | 返されたヘッダー名 |
-| headerValues | Text array | &rarr; | リクエストのヘッダー値 |
-| &larr; | 返されたヘッダー値 |
-| * | 演算子 | &rarr; | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
-| 戻り値 | Integer | &larr; | HTTPステータスコード |
+| httpMethod | Text | &#8594;  | リクエストで使用するHTTPメソッド |
+| url | Text | &#8594;  | リクエストの送信先URL |
+| contents | Text, Blob, Picture, Object | &#8594;  | リクエストボディの内容 |
+| response | Text, Blob, Picture, Object | &#8592; | レスポンスの内容 |
+| headerNames | Text array | &#8594;  | リクエストのヘッダー名 |
+| &#8592; | 返されたヘッダー名 |
+| headerValues | Text array | &#8594;  | リクエストのヘッダー値 |
+| &#8592; | 返されたヘッダー値 |
+| * | 演算子 | &#8594;  | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
+| 戻り値 | Integer | &#8592; | HTTPステータスコード |
 
 <!-- END REF-->
 

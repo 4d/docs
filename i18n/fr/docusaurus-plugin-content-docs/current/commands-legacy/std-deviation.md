@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Std deviation.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &rarr; | Valeurs dont vous voulez obtenir l'écart type |
-| Résultat | Real | &larr; | Ecart type de séries |
+| séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir l'écart type |
+| Résultat | Real | &#8592; | Ecart type de séries |
 
 <!-- END REF-->
 

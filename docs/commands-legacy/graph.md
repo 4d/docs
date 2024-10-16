@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| graphPicture | Picture | &rarr; | Picture variable |
-| graphNumber &#124; graphSettings | Longint, Object | &rarr; | Longint: Graph type number, Object: Graph settings |
-| xLabels | Array | &rarr; | Labels for the x-axis |
-| yElements | Array | &rarr; | Data to graph (up to eight allowed) |
+| graphPicture | Picture | &#8594;  | Picture variable |
+| graphNumber &#124; graphSettings | Longint, Object | &#8594;  | Longint: Graph type number, Object: Graph settings |
+| xLabels | Array | &#8594;  | Labels for the x-axis |
+| yElements | Array | &#8594;  | Data to graph (up to eight allowed) |
 
 <!-- END REF-->
 

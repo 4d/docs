@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SCREENSHOT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | フォームテーブル |
-| formName | Text | &rarr; | フォーム名 |
-| formPict | Picture | &larr; | 第一引数が省略された場合実行中のフォームのピクチャー。フォーム名がが渡された場合フォームエディター中のフォームのピクチャー |
-| pageNum | Integer | &rarr; | フォームページ番号 |
+| aTable | Table | &#8594;  | フォームテーブル |
+| formName | Text | &#8594;  | フォーム名 |
+| formPict | Picture | &#8592; | 第一引数が省略された場合実行中のフォームのピクチャー。フォーム名がが渡された場合フォームエディター中のフォームのピクチャー |
+| pageNum | Integer | &#8594;  | フォームページ番号 |
 
 <!-- END REF-->
 

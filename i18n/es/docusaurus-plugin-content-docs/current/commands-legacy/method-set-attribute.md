@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text | &rarr; | Ruta del método proyecto |
-| tipoAtrib | Integer | &rarr; | Tipo de atributo |
-| valorAtrib | Boolean, Text | &rarr; | True = seleccionar el atributo  False = deseleccionar el atributo |
-| operador | * | &rarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text | &#8594;  | Ruta del método proyecto |
+| tipoAtrib | Integer | &#8594;  | Tipo de atributo |
+| valorAtrib | Boolean, Text | &#8594;  | True = seleccionar el atributo  False = deseleccionar el atributo |
+| operador | * | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

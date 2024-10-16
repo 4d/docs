@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Exp.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &rarr; | Expoente n da exponenciação e^n |
-| Resultado | Real | &larr; | Número neperiano (e=2,718...) elevado a n |
+| numero | Real | &#8594;  | Expoente n da exponenciação e^n |
+| Resultado | Real | &#8592; | Número neperiano (e=2,718...) elevado a n |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY SQL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table in which to return a selection of records or Default table if this parameter is omitted |
-| sqlFormula | Text | &rarr; | Valid SQL search formula representing the WHERE clause of the SELECT query |
+| aTable | Table | &#8594;  | Table in which to return a selection of records or Default table if this parameter is omitted |
+| sqlFormula | Text | &#8594;  | Valid SQL search formula representing the WHERE clause of the SELECT query |
 
 <!-- END REF-->
 

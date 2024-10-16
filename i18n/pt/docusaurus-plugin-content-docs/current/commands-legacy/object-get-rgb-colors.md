@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET RGB COLORS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificar, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo. |
-| objeto | any | &rarr; | Nome do objeto (se * é especificado) ou Variável ou Campo (se * é omitido) |
-| corPrimeiroPlano | Text, Integer | &larr; | Valor da cor RGB do primeiro plano |
-| corFundo | Text, Integer | &larr; | Valor da cor do RGB para segundo plano (fundo) |
-| corFundoAlternativo | Text, Integer | &larr; | Valor da cor RGB do fundo alternativo |
+| * | Operador | &#8594;  | Se especificar, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo. |
+| objeto | any | &#8594;  | Nome do objeto (se * é especificado) ou Variável ou Campo (se * é omitido) |
+| corPrimeiroPlano | Text, Integer | &#8592; | Valor da cor RGB do primeiro plano |
+| corFundo | Text, Integer | &#8592; | Valor da cor do RGB para segundo plano (fundo) |
+| corFundoAlternativo | Text, Integer | &#8592; | Valor da cor RGB do fundo alternativo |
 
 <!-- END REF-->
 

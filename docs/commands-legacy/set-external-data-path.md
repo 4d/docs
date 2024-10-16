@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Text, Blob, Picture | &rarr; | Field for which to set the storage location |
-| path | Text, Integer | &rarr; | Pathname and file name of external storage or0 = use structure definition 1 = use default folder |
+| aField | Text, Blob, Picture | &#8594;  | Field for which to set the storage location |
+| path | Text, Integer | &#8594;  | Pathname and file name of external storage or0 = use structure definition 1 = use default folder |
 
 <!-- END REF-->
 

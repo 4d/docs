@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &rarr; | Référence de la zone |
-| numCommande | Integer | &rarr; | Commande de menu à exécuter |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numCommande | Integer | &#8594;  | Commande de menu à exécuter |
 
 <!-- END REF-->
 

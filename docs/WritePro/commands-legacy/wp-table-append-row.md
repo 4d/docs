@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table append row.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableRef | Object | &rarr; | Table reference |
-| value | Text, Number, Time, Date, Picture | &rarr; | Value(s) to set in the row |
-| Function result | Object | &larr; | Row range object |
+| tableRef | Object | &#8594;  | Table reference |
+| value | Text, Number, Time, Date, Picture | &#8594;  | Value(s) to set in the row |
+| Function result | Object | &#8592; | Row range object |
 
 <!-- END REF-->
 

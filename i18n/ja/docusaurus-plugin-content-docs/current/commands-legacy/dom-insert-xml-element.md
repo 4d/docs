@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Insert XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetElementRef | Text | &rarr; | 親XML要素参照 |
-| sourceElementRef | Text | &rarr; | 挿入するXML要素参照 |
-| childIndex | Integer | &rarr; | 新しい要素を挿入するターゲットとなる子要素のインデックス |
-| 戻り値 | Text | &larr; | 新しいXML要素の参照 |
+| targetElementRef | Text | &#8594;  | 親XML要素参照 |
+| sourceElementRef | Text | &#8594;  | 挿入するXML要素参照 |
+| childIndex | Integer | &#8594;  | 新しい要素を挿入するターゲットとなる子要素のインデックス |
+| 戻り値 | Text | &#8592; | 新しいXML要素の参照 |
 
 <!-- END REF-->
 

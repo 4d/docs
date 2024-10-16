@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| row | Integer | &rarr; | Row number |
-| color | Text, Integer | &rarr; | RGB color value |
-| colorType | Integer | &rarr; | Listbox font color (default) or listbox background color |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
+| row | Integer | &#8594;  | Row number |
+| color | Text, Integer | &#8594;  | RGB color value |
+| colorType | Integer | &#8594;  | Listbox font color (default) or listbox background color |
 
 <!-- END REF-->
 

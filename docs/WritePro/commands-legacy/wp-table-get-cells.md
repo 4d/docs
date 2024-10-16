@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get cells.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
-| tableRef | Object | &rarr; | Table reference |
-| startCol | Longint | &rarr; | Position of first cell column |
-| startRow | Longint | &rarr; | Position of first column row |
-| numCols | Longint | &rarr; | Number of columns to get |
-| numRows | Longint | &rarr; | Number of rows to get |
-| Function result | Object | &larr; | New range containing cells |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| tableRef | Object | &#8594;  | Table reference |
+| startCol | Longint | &#8594;  | Position of first cell column |
+| startRow | Longint | &#8594;  | Position of first column row |
+| numCols | Longint | &#8594;  | Number of columns to get |
+| numRows | Longint | &#8594;  | Number of rows to get |
+| Function result | Object | &#8592; | New range containing cells |
 
 <!-- END REF-->
 

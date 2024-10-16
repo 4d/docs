@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINTERS LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| namesArray | Text array | &larr; | Printer names |
-| altNamesArray | Text array | &larr; | Windows: Printer locations, macOS: Custom printer names |
-| modelsArray | Text array | &larr; | Printer models |
+| namesArray | Text array | &#8592; | Printer names |
+| altNamesArray | Text array | &#8592; | Windows: Printer locations, macOS: Custom printer names |
+| modelsArray | Text array | &#8592; | Printer models |
 
 <!-- END REF-->
 

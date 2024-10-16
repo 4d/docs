@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP GET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| nomAttribut | Text | &rarr; | Nom d'attribut dont vous souhaitez lire la valeur |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| nomAttribut | Text | &#8594;  | Nom d'attribut dont vous souhaitez lire la valeur |
 | valeurAttribut | Texte, Numérique, Tableau, Collection, Image, Date | &#x1F858; | Valeur courante de l'attribut |
 
 <!-- END REF-->

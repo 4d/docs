@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
-| débutSél | Integer | &rarr; | Début de la nouvelle sélection de texte |
-| finSél | Integer | &rarr; | Fin de la nouvelle sélection de texte |
-| nomAttribut | Text | &rarr; | Attribut à définir |
-| valeurAttribut | Text, Integer | &rarr; | Nouvelle valeur d’attribut |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
+| débutSél | Integer | &#8594;  | Début de la nouvelle sélection de texte |
+| finSél | Integer | &#8594;  | Fin de la nouvelle sélection de texte |
+| nomAttribut | Text | &#8594;  | Attribut à définir |
+| valeurAttribut | Text, Integer | &#8594;  | Nouvelle valeur d’attribut |
 
 <!-- END REF-->
 

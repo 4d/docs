@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rejeitarEstado | Boolean | &rarr; | True se novas petições forem rejeitadas, senão false |
+| rejeitarEstado | Boolean | &#8594;  | True se novas petições forem rejeitadas, senão false |
 
 <!-- END REF-->
 

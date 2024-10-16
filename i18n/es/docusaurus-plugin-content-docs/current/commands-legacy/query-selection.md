@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla en la cual efectuar la búsqueda o Tabla por defecto, si se omite |
-| criterioBusqueda | Expression | &rarr; | Líneas de búsqueda |
-| * | Operador | &rarr; | Bandera para continuar la búsqueda |
+| tabla | Table | &#8594;  | Tabla en la cual efectuar la búsqueda o Tabla por defecto, si se omite |
+| criterioBusqueda | Expression | &#8594;  | Líneas de búsqueda |
+| * | Operador | &#8594;  | Bandera para continuar la búsqueda |
 
 <!-- END REF-->
 

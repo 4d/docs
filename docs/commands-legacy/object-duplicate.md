@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &rarr; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| newName | Text | &rarr; | Name of new object |
-| newVar | Pointer | &rarr; | Pointer to variable of new object |
-| boundTo | Text | &rarr; | Name of previous enterable object (or radio button) |
-| moveH | Integer | &rarr; | Horizontal shift of new object (>0 = to the right, <0 = to the left) |
-| moveV | Integer | &rarr; | Vertical shift of new object (>0 = downwards, <0 = upwards) |
-| resizeH | Integer | &rarr; | Value of the horizontal resize of the object |
-| resizeV | Integer | &rarr; | Value of the vertical resize of the object |
-| * | Operator | &rarr; | If specified= absolute coordinates<br/>If omitted= relative coordinates |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| newName | Text | &#8594;  | Name of new object |
+| newVar | Pointer | &#8594;  | Pointer to variable of new object |
+| boundTo | Text | &#8594;  | Name of previous enterable object (or radio button) |
+| moveH | Integer | &#8594;  | Horizontal shift of new object (>0 = to the right, <0 = to the left) |
+| moveV | Integer | &#8594;  | Vertical shift of new object (>0 = downwards, <0 = upwards) |
+| resizeH | Integer | &#8594;  | Value of the horizontal resize of the object |
+| resizeV | Integer | &#8594;  | Value of the vertical resize of the object |
+| * | Operator | &#8594;  | If specified= absolute coordinates<br/>If omitted= relative coordinates |
 
 <!-- END REF-->
 

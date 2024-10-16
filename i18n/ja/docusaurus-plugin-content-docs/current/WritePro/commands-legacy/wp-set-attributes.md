@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | 4D Write Pro ドキュメント、レンジ または要素 |
-| attribName | Text | &rarr; | 設定する属性名 |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &rarr; | 新しい属性の値 |
+| targetObj | Object | &#8594;  | 4D Write Pro ドキュメント、レンジ または要素 |
+| attribName | Text | &#8594;  | 設定する属性名 |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594;  | 新しい属性の値 |
 
 <!-- END REF-->
 

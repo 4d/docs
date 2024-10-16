@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Timestamp.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &larr; | Heure courante au format ISO avec millisecondes |
+| Résultat | Text | &#8592; | Heure courante au format ISO avec millisecondes |
 
 <!-- END REF-->
 

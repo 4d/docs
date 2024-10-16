@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE ALIAS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetPath | Text | &rarr; | Name or access path of the alias/shortcut target |
-| aliasPath | Text | &rarr; | Name or full pathname for the alias or shortcut |
+| targetPath | Text | &#8594;  | Name or access path of the alias/shortcut target |
+| aliasPath | Text | &#8594;  | Name or full pathname for the alias or shortcut |
 
 <!-- END REF-->
 

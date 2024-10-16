@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture, Picture | &rarr; | Imagen para la cual obtener las palabras claves asociadas |
-| arrayPalabrasClaves | Text array | &larr; | Array con las palabras claves extraídas |
-| * | Operador | &rarr; | Si se pasa = usar valores distintos |
+| imagen | Picture, Picture | &#8594;  | Imagen para la cual obtener las palabras claves asociadas |
+| arrayPalabrasClaves | Text array | &#8592; | Array con las palabras claves extraídas |
+| * | Operador | &#8594;  | Si se pasa = usar valores distintos |
 
 <!-- END REF-->
 

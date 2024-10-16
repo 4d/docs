@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | Número de menu ou menu de referência |
-| menuItem | Integer | &rarr; | Número de item de menu ou -1 para o último item adicionado ao menu |
-| param | Text | &rarr; | String a ser associado como parâmetro |
+| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594;  | Número de item de menu ou -1 para o último item adicionado ao menu |
+| param | Text | &#8594;  | String a ser associado como parâmetro |
 
 <!-- END REF-->
 

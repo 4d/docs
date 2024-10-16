@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Locked.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de l'enregistrement dont vous voulez tester le verrouillage ou Table par défaut si ce paramètre est omis |
-| Résultat | Boolean | &larr; | L'enregistrement est verrouillé (Vrai) ou L'enregistrement n'est pas verrouillé (Faux) |
+| laTable | Table | &#8594;  | Table de l'enregistrement dont vous voulez tester le verrouillage ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &#8592; | L'enregistrement est verrouillé (Vrai) ou L'enregistrement n'est pas verrouillé (Faux) |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.List item position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &rarr; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef | Integer | &rarr; | 項目参照番号 |
-| 戻り値 | Integer | &larr; | 展開/折りたたまれたリストにおける項目位置 |
+| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemRef | Integer | &#8594;  | 項目参照番号 |
+| 戻り値 | Integer | &#8592; | 展開/折りたたまれたリストにおける項目位置 |
 
 <!-- END REF-->
 

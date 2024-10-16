@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| nouvNom | Text | &rarr; | Nom du nouvel objet |
-| nouvVar | Pointer | &rarr; | Pointeur vers la variable du nouvel objet |
-| reliéA | Text | &rarr; | Nom de l’objet saisissable (ou du bouton radio) précédent |
-| dépH | Integer | &rarr; | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
-| dépV | Integer | &rarr; | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
-| redimH | Integer | &rarr; | Valeur de redimensionnement horizontal du nouvel objet |
-| redimV | Integer | &rarr; | Valeur de redimensionnement vertical du nouvel objet |
-| * | Opérateur | &rarr; | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| nouvNom | Text | &#8594;  | Nom du nouvel objet |
+| nouvVar | Pointer | &#8594;  | Pointeur vers la variable du nouvel objet |
+| reliéA | Text | &#8594;  | Nom de l’objet saisissable (ou du bouton radio) précédent |
+| dépH | Integer | &#8594;  | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &#8594;  | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &#8594;  | Valeur de redimensionnement horizontal du nouvel objet |
+| redimV | Integer | &#8594;  | Valeur de redimensionnement vertical du nouvel objet |
+| * | Opérateur | &#8594;  | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get body.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
-| 戻り値 | Object | &larr; | 4D Write Pro ボディ(本文) |
+| wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
+| 戻り値 | Object | &#8592; | 4D Write Pro ボディ(本文) |
 
 <!-- END REF-->
 

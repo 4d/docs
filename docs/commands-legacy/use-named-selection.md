@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE NAMED SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| name | Text | &rarr; | Name of named selection to be used |
+| name | Text | &#8594;  | Name of named selection to be used |
 
 <!-- END REF-->
 

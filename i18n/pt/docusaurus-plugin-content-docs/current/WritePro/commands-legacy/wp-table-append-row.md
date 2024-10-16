@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table append row.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refTab | Object | &rarr; | objeto referência Tabela |
-| valor | Text, Number, Time, Date, Picture | &rarr; | Valores a estabelecer na fila |
-| Resultado | Object | &larr; | Objeto faixa Fila |
+| refTab | Object | &#8594;  | objeto referência Tabela |
+| valor | Text, Number, Time, Date, Picture | &#8594;  | Valores a estabelecer na fila |
+| Resultado | Object | &#8592; | Objeto faixa Fila |
 
 <!-- END REF-->
 

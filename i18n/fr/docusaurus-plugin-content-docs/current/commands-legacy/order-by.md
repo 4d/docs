@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de laquelle réordonner la sélection courante ou Table par défaut si ce paramètre est omis |
-| leField | Field | &rarr; | Champ sur lequel effectuer le tri pour chaque niveau |
-| > ou < | Opérateur | &rarr; | Sens du tri pour chaque niveau : > demander un tri croissant ou < demander un tri décroissant |
-| * | Opérateur | &rarr; | Attente d'exécution du tri |
+| laTable | Table | &#8594;  | Table de laquelle réordonner la sélection courante ou Table par défaut si ce paramètre est omis |
+| leField | Field | &#8594;  | Champ sur lequel effectuer le tri pour chaque niveau |
+| > ou < | Opérateur | &#8594;  | Sens du tri pour chaque niveau : > demander un tri croissant ou < demander un tri décroissant |
+| * | Opérateur | &#8594;  | Attente d'exécution du tri |
 
 <!-- END REF-->
 

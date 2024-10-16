@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docWP | Object | &rarr; | Documento 4D Write Pro |
-| nombk | Text | &rarr; | Nombre del marcador a eliminar |
+| docWP | Object | &#8594;  | Documento 4D Write Pro |
+| nombk | Text | &#8594;  | Nombre del marcador a eliminar |
 
 <!-- END REF-->
 

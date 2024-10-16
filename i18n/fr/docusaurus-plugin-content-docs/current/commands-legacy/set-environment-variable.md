@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomVar | Text | &rarr; | Nom de la variable à fixer |
-| valeurVar | Text | &rarr; | Valeur de la variable ou "" pour rétablir la valeur par défaut |
+| nomVar | Text | &#8594;  | Nom de la variable à fixer |
+| valeurVar | Text | &#8594;  | Valeur de la variable ou "" pour rétablir la valeur par défaut |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Insert table.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Object | &rarr; | Rango |
-| modo | Integer | &rarr; | Modo de inserción |
-| actRango | Integer | &rarr; | Modo de actualización de rango |
-| numCol | Integer | &rarr; | Número de columnas a definir en la tabla |
-| numFilas | Integer | &rarr; | Número de filas a definir en la tabla |
-| Resultado | Object | &larr; | Objeto de referencia de tabla |
+| objRango | Object | &#8594;  | Rango |
+| modo | Integer | &#8594;  | Modo de inserción |
+| actRango | Integer | &#8594;  | Modo de actualización de rango |
+| numCol | Integer | &#8594;  | Número de columnas a definir en la tabla |
+| numFilas | Integer | &#8594;  | Número de filas a definir en la tabla |
+| Resultado | Object | &#8592; | Objeto de referencia de tabla |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Create deployment license.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mergedApp | 4D.Folder | &rarr; | Folder containing the merged application |
-| buildLicense | 4D.File | &rarr; | License required to generate the embedded license |
-| oemLicense | 4D.File | &rarr; | 4D OEM XML Key license if server license |
-| Resultado | Object | &larr; | Status |
+| mergedApp | 4D.Folder | &#8594;  | Folder containing the merged application |
+| buildLicense | 4D.File | &#8594;  | License required to generate the embedded license |
+| oemLicense | 4D.File | &#8594;  | 4D OEM XML Key license if server license |
+| Resultado | Object | &#8592; | Status |
 
 <!-- END REF-->
 

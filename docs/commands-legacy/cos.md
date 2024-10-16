@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Cos.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &rarr; | Number, in radians, whose cosine is returned |
-| Function result | Real | &larr; | Cosine of number |
+| number | Real | &#8594;  | Number, in radians, whose cosine is returned |
+| Function result | Real | &#8592; | Cosine of number |
 
 <!-- END REF-->
 

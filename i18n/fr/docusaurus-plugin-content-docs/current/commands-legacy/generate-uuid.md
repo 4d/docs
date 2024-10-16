@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate UUID.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &larr; | Nouvel UUID sous forme de texte non-canonique (32 caractères) |
+| Résultat | Text | &#8592; | Nouvel UUID sous forme de texte non-canonique (32 caractères) |
 
 <!-- END REF-->
 

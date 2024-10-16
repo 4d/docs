@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate digest.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| param | Blob, Text | &rarr; | Blob ou texte pour lequel obtenir une clé digest |
-| algorithme | Integer | &rarr; | Algorithme utilisé pour retourner la clé : 0 = Digest MD5, 1 = Digest SHA1, 2 = Digest 4D, 3 = Digest SHA-256, 4 = Digest SHA-512 |
-| * | Opérateur | &rarr; | Crypter digest en Base64URL |
-| Résultat | Text | &larr; | Valeur de la clé digest |
+| param | Blob, Text | &#8594;  | Blob ou texte pour lequel obtenir une clé digest |
+| algorithme | Integer | &#8594;  | Algorithme utilisé pour retourner la clé : 0 = Digest MD5, 1 = Digest SHA1, 2 = Digest 4D, 3 = Digest SHA-256, 4 = Digest SHA-512 |
+| * | Opérateur | &#8594;  | Crypter digest en Base64URL |
+| Résultat | Text | &#8592; | Valeur de la clé digest |
 
 <!-- END REF-->
 

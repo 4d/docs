@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Right click.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | True si se detecta un clic derecho, si no False |
+| Resultado | Boolean | &#8592; | True si se detecta un clic derecho, si no False |
 
 <!-- END REF-->
 

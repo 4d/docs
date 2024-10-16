@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Shift down.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &larr; | Etat de la touche Majuscule |
+| Résultat | Boolean | &#8592; | Etat de la touche Majuscule |
 
 <!-- END REF-->
 

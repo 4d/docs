@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table into which to import data, or Default table, if omitted |
-| document | Text | &rarr; | Text document from which to import data |
+| aTable | Table | &#8594;  | Table into which to import data, or Default table, if omitted |
+| document | Text | &#8594;  | Text document from which to import data |
 
 <!-- END REF-->
 

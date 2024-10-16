@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Session storage by ID.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| id | Text | &rarr; | Identificador Único (UUID) da sessão no servidor |
-| Resultado | Object | &larr; | Objeto de armazenagem da sessão |
+| id | Text | &#8594;  | Identificador Único (UUID) da sessão no servidor |
+| Resultado | Object | &#8592; | Objeto de armazenagem da sessão |
 
 <!-- END REF-->
 

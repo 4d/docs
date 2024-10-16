@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CHANGE PASSWORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| contraseña | Text | &rarr; | Nueva contraseña |
+| contraseña | Text | &#8594;  | Nueva contraseña |
 
 <!-- END REF-->
 

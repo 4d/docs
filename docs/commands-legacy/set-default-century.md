@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| century | Integer | &rarr; | Default century (minus one) for entry of date with two-digit year |
-| pivotYear | Integer | &rarr; | Pivot year for entry of date with two-digit year |
+| century | Integer | &#8594;  | Default century (minus one) for entry of date with two-digit year |
+| pivotYear | Integer | &#8594;  | Pivot year for entry of date with two-digit year |
 
 <!-- END REF-->
 

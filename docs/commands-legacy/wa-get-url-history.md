@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| urlsArr | Text array | &larr; | Array of URLs visited |
-| direction | Integer | &rarr; | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| titlesArr | Text array | &larr; | Array of window titles |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| urlsArr | Text array | &#8592; | Array of URLs visited |
+| direction | Integer | &#8594;  | 0 or omitted=List of previous URLs, 1=List of next URLs |
+| titlesArr | Text array | &#8592; | Array of window titles |
 
 <!-- END REF-->
 

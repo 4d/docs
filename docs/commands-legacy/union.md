@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.UNION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set1 | Text | &rarr; | First set |
-| set2 | Text | &rarr; | Second set |
-| resultSet | Text | &rarr; | Resulting set |
+| set1 | Text | &#8594;  | First set |
+| set2 | Text | &#8594;  | Second set |
+| resultSet | Text | &#8594;  | Resulting set |
 
 <!-- END REF-->
 

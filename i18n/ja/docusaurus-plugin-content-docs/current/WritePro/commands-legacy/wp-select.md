@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SELECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時、wpAreaはフォームオブジェクト名(文字列)。省略時、wpAreaはオブジェクトフィールドまたは変数。 |
-| wpArea | Text, Object | &rarr; | フォームオブジェクト名(*指定時)または4D Write Proオブジェクト変数またはフィールド(*省略時) |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
-| startRange | Integer | &rarr; | テキストレンジの開始のオフセット |
-| endRange | Integer | &rarr; | テキストレンジの終わりのオフセット |
+| * | 演算子 | &#8594;  | 指定時、wpAreaはフォームオブジェクト名(文字列)。省略時、wpAreaはオブジェクトフィールドまたは変数。 |
+| wpArea | Text, Object | &#8594;  | フォームオブジェクト名(*指定時)または4D Write Proオブジェクト変数またはフィールド(*省略時) |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
+| startRange | Integer | &#8594;  | テキストレンジの開始のオフセット |
+| endRange | Integer | &#8594;  | テキストレンジの終わりのオフセット |
 
 <!-- END REF-->
 

@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionCol | Integer | &rarr; | Emplacement de la colonne à insérer |
-| nomCol | Text | &rarr; | Nom d’objet de la colonne |
-| formule | Text | &rarr; | Formule 4D associée à la colonne |
-| typeDonnées | Integer | &rarr; | Type de résultat de la formule |
-| nomEnTête | Text | &rarr; | Nom d'objet de l'en-tête de la colonne |
-| variableEntête | Integer, Pointer | &rarr; | Variable d'en-tête de la colonne |
-| nomPied | Text | &rarr; | Nom d’objet du pied de la colonne |
-| variablePied | Variable, Pointer | &rarr; | Variable du pied de la colonne |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#8594;  | Emplacement de la colonne à insérer |
+| nomCol | Text | &#8594;  | Nom d’objet de la colonne |
+| formule | Text | &#8594;  | Formule 4D associée à la colonne |
+| typeDonnées | Integer | &#8594;  | Type de résultat de la formule |
+| nomEnTête | Text | &#8594;  | Nom d'objet de l'en-tête de la colonne |
+| variableEntête | Integer, Pointer | &#8594;  | Variable d'en-tête de la colonne |
+| nomPied | Text | &#8594;  | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &#8594;  | Variable du pied de la colonne |
 
 <!-- END REF-->
 

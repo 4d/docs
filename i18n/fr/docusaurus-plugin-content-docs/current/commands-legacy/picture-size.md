@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Picture size.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &rarr; | Image pour laquelle vous voulez connaître la taille en octets |
-| Résultat | Integer | &larr; | Taille en octets de l'image |
+| image | Picture | &#8594;  | Image pour laquelle vous voulez connaître la taille en octets |
+| Résultat | Integer | &#8592; | Taille en octets de l'image |
 
 <!-- END REF-->
 

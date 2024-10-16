@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY WITH ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champCible | Field | &rarr; | Champ duquel comparer les valeurs |
-| tableau | Array | &rarr; | Tableau des valeurs recherchées |
+| champCible | Field | &#8594;  | Champ duquel comparer les valeurs |
+| tableau | Array | &#8594;  | Tableau des valeurs recherchées |
 
 <!-- END REF-->
 

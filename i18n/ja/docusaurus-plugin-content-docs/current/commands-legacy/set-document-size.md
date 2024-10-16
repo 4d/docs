@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DOCUMENT SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &rarr; | ドキュメント参照番号 |
-| size | Real | &rarr; | 新しいサイズ(バイト単位) |
+| Time | Time | &#8594;  | ドキュメント参照番号 |
+| size | Real | &#8594;  | 新しいサイズ(バイト単位) |
 
 <!-- END REF-->
 

@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table of the form or Default table, if omitted |
-| formName | Text | &rarr; | Name of the form |
-| width | Integer | &larr; | Width of the form (in pixels) |
-| height | Integer | &larr; | Height of the form (in pixels) |
-| numPages | Integer | &larr; | Number of pages in the form |
-| fixedWidth | Boolean | &larr; | True = Fixed width, False = Variable width |
-| fixedHeight | Boolean | &larr; | True = Fixed height, False = Variable height |
-| title | Text | &larr; | Title of the form’s window |
+| aTable | Table | &#8594;  | Table of the form or Default table, if omitted |
+| formName | Text | &#8594;  | Name of the form |
+| width | Integer | &#8592; | Width of the form (in pixels) |
+| height | Integer | &#8592; | Height of the form (in pixels) |
+| numPages | Integer | &#8592; | Number of pages in the form |
+| fixedWidth | Boolean | &#8592; | True = Fixed width, False = Variable width |
+| fixedHeight | Boolean | &#8592; | True = Fixed height, False = Variable height |
+| title | Text | &#8592; | Title of the form’s window |
 
 <!-- END REF-->
 

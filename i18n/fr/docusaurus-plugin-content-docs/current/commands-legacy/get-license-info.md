@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Object | &larr; | Informations sur la licence active |
+| Résultat | Object | &#8592; | Informations sur la licence active |
 
 <!-- END REF-->
 

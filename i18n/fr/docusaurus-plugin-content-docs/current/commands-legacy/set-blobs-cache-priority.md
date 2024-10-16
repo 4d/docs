@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table dont vous souhaitez modifier la priorité des données "blobs" pour toute la session |
-| priorité | Integer | &rarr; | Priorité des données "blobs" de la table dans le cache |
+| laTable | Table | &#8594;  | Table dont vous souhaitez modifier la priorité des données "blobs" pour toute la session |
+| priorité | Integer | &#8594;  | Priorité des données "blobs" de la table dans le cache |
 
 <!-- END REF-->
 

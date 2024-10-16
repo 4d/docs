@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to real.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &rarr; | BLOB duquel extraire la valeur de type Réel |
-| formatRéel | Integer | &rarr; | 0 Format réel natif 1 Format réel étendu 2  Format réel double Macintosh 3  Format réel double Windows |
-| offset | Variable | &rarr; | Offset (en octets) dans le BLOB |
-| &larr; | Nouvel offset après lecture |
-| Résultat | Real | &larr; | Valeur de type Réel |
+| blob | Blob | &#8594;  | BLOB duquel extraire la valeur de type Réel |
+| formatRéel | Integer | &#8594;  | 0 Format réel natif 1 Format réel étendu 2  Format réel double Macintosh 3  Format réel double Windows |
+| offset | Variable | &#8594;  | Offset (en octets) dans le BLOB |
+| &#8592; | Nouvel offset après lecture |
+| Résultat | Real | &#8592; | Valeur de type Réel |
 
 <!-- END REF-->
 

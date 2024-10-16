@@ -8,7 +8,7 @@ displayed_sidebar: docs
 <!--REF #_command_.This.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &larr; | Current element or object |
+| Function result | Object | &#8592; | Current element or object |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | Pointer, Longint | &rarr; | Table number or Field pointer |
-| fieldNum | Integer | &rarr; | Field number if Table number is passed |
-| fieldType | Integer | &larr; | Type of field |
-| fieldLength | Integer | &larr; | Length of field, if Alphanumeric |
-| indexed | Boolean | &larr; | True = Indexed, False = Non indexed |
-| unique | Boolean | &larr; | True = Unique, False = Non unique |
-| invisible | Boolean | &larr; | True = Invisible, False = Visible |
+| fieldPtr &#124; tableNum | Pointer, Longint | &#8594;  | Table number or Field pointer |
+| fieldNum | Integer | &#8594;  | Field number if Table number is passed |
+| fieldType | Integer | &#8592; | Type of field |
+| fieldLength | Integer | &#8592; | Length of field, if Alphanumeric |
+| indexed | Boolean | &#8592; | True = Indexed, False = Non indexed |
+| unique | Boolean | &#8592; | True = Unique, False = Non unique |
+| invisible | Boolean | &#8592; | True = Invisible, False = Visible |
 
 <!-- END REF-->
 

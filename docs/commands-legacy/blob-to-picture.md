@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pictureBlob | Blob | &rarr; | BLOB containing a picture |
-| picture | Picture | &larr; | Picture from BLOB |
-| codec | Text | &rarr; | Picture codec ID |
+| pictureBlob | Blob | &#8594;  | BLOB containing a picture |
+| picture | Picture | &#8592; | Picture from BLOB |
+| codec | Text | &#8594;  | Picture codec ID |
 
 <!-- END REF-->
 

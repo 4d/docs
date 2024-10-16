@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataType | Text | &rarr; | 追加するデータのタイプ |
-| data | Blob | &rarr; | ペーストボードに追加するデータ |
+| dataType | Text | &#8594;  | 追加するデータのタイプ |
+| data | Blob | &#8594;  | ペーストボードに追加するデータ |
 
 <!-- END REF-->
 

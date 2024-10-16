@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get locked records info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de laquelle vous souhaitez connaître les enregistrements verrouillés |
-| Résultat | Object | &larr; | Description des enregistrements verrouillés (le cas échéant) |
+| laTable | Table | &#8594;  | Table de laquelle vous souhaitez connaître les enregistrements verrouillés |
+| Résultat | Object | &#8592; | Description des enregistrements verrouillés (le cas échéant) |
 
 <!-- END REF-->
 

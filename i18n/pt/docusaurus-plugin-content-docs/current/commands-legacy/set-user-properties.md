@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &rarr; | Número de ID de conta de usuário; -1 para adicionar um usuário |
-| &larr; | Número de ID de conta de usuário adicionado (se houver) |
-| nome | Text | &rarr; | Novo nome de usuário |
-| inicio | Text | &rarr; | Novo método de início |
-| senha | Text | &rarr; | Nova senha (não criptografada); ou * para deixar a senha intocada |
-| numLogin | Integer | &rarr; | Novo número de logins do banco de dados |
-| ultLogin | Date | &rarr; | Nova data do último login ao banco de dados |
-| adesao | Integer array | &rarr; | Números de IDs dos grupos aos quais pertence o usuário |
-| propGrupo | Integer | &rarr; | Número de referência de usuário do proprietário do grupo |
-| Resultado | Integer | &larr; | Número de ID de referência do novo usuário |
+| refUsuario | Integer | &#8594;  | Número de ID de conta de usuário; -1 para adicionar um usuário |
+| &#8592; | Número de ID de conta de usuário adicionado (se houver) |
+| nome | Text | &#8594;  | Novo nome de usuário |
+| inicio | Text | &#8594;  | Novo método de início |
+| senha | Text | &#8594;  | Nova senha (não criptografada); ou * para deixar a senha intocada |
+| numLogin | Integer | &#8594;  | Novo número de logins do banco de dados |
+| ultLogin | Date | &#8594;  | Nova data do último login ao banco de dados |
+| adesao | Integer array | &#8594;  | Números de IDs dos grupos aos quais pertence o usuário |
+| propGrupo | Integer | &#8594;  | Número de referência de usuário do proprietário do grupo |
+| Resultado | Integer | &#8592; | Número de ID de referência do novo usuário |
 
 <!-- END REF-->
 

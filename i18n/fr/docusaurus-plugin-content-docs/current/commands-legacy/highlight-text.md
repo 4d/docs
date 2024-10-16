@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
-| objet | Field, Variable, any | &rarr; | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
-| débutSél | Integer | &rarr; | Nouvelle position de début de sélection de texte |
-| finSél | Integer | &rarr; | Nouvelle position de fin de sélection de texte |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
+| objet | Field, Variable, any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
+| débutSél | Integer | &#8594;  | Nouvelle position de début de sélection de texte |
+| finSél | Integer | &#8594;  | Nouvelle position de fin de sélection de texte |
 
 <!-- END REF-->
 

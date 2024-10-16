@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Next window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &rarr; | Window reference number |
-| Function result | WinRef | &larr; | Window reference number |
+| window | Integer | &#8594;  | Window reference number |
+| Function result | WinRef | &#8592; | Window reference number |
 
 <!-- END REF-->
 

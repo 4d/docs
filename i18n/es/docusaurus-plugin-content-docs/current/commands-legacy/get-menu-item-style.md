@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item style.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | Número de menú o Referencia de menú |
-| lineamenu | Integer | &rarr; | Número de línea de menú o -1 para el último elemento añadido |
-| proceso | Integer | &rarr; | Process reference number |
-| Resultado | Integer | &larr; | Estilo del comando de menú |
+| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
+| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 para el último elemento añadido |
+| proceso | Integer | &#8594;  | Process reference number |
+| Resultado | Integer | &#8592; | Estilo del comando de menú |
 
 <!-- END REF-->
 

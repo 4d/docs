@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableName | Text | &rarr; | 再生成する、失われたテーブルの名称 |
+| tableName | Text | &#8594;  | 再生成する、失われたテーブルの名称 |
 
 <!-- END REF-->
 

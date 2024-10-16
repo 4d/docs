@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &larr; | Numéro de référence de la fenêtre du formulaire courant |
+| Résultat | Integer | &#8592; | Numéro de référence de la fenêtre du formulaire courant |
 
 <!-- END REF-->
 

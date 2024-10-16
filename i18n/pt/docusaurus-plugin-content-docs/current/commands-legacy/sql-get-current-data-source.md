@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL Get current data source.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &larr; | Nome da fonte de dados atualmente sendo usada |
+| Resultado | Text | &#8592; | Nome da fonte de dados atualmente sendo usada |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get auto row height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (une chaîne). Si omis, objet est une variable. |
-| objet | any | &rarr; | Nom de l'objet (si * est spécifié) ou variable (si * est omis) |
-| sélecteur | Integer | &rarr; | Valeur de hauteur à lire : lk hauteur ligne min ou lk hauteur ligne max |
-| unité | Integer | &rarr; | Valeur d'unité de hauteur : 0 = pixels, 1 = lignes |
-| Résultat | Integer | &larr; | Valeur de la limite de hauteur de ligne sélectionnée |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (une chaîne). Si omis, objet est une variable. |
+| objet | any | &#8594;  | Nom de l'objet (si * est spécifié) ou variable (si * est omis) |
+| sélecteur | Integer | &#8594;  | Valeur de hauteur à lire : lk hauteur ligne min ou lk hauteur ligne max |
+| unité | Integer | &#8594;  | Valeur d'unité de hauteur : 0 = pixels, 1 = lignes |
+| Résultat | Integer | &#8592; | Valeur de la limite de hauteur de ligne sélectionnée |
 
 <!-- END REF-->
 

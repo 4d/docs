@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to integer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &rarr; | 整数値を取り出すBLOB |
-| byteOrder | Integer | &rarr; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset | Variable | &rarr; | BLOB中のオフセット (バイト単位) |
-| &larr; | 読み込み後、新しいオフセット |
-| 戻り値 | Integer | &larr; | 2バイト整数値 |
+| Blob | Blob | &#8594;  | 整数値を取り出すBLOB |
+| byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| offset | Variable | &#8594;  | BLOB中のオフセット (バイト単位) |
+| &#8592; | 読み込み後、新しいオフセット |
+| 戻り値 | Integer | &#8592; | 2バイト整数値 |
 
 <!-- END REF-->
 

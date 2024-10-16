@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Log.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &rarr; | Número para el cual devolver el logaritmo |
-| Resultado | Real | &larr; | Logaritmo del número |
+| Numero | Real | &#8594;  | Número para el cual devolver el logaritmo |
+| Resultado | Real | &#8592; | Logaritmo del número |
 
 <!-- END REF-->
 

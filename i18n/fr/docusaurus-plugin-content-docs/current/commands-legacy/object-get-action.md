@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get action.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne). Si omis, objet est un champ ou une variable |
-| objet | any | &rarr; | Nom de l'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| Résultat | Text | &larr; | Nom de l'action standard associée et (s'il existe) son paramètre chaîne. |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne). Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom de l'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Text | &#8592; | Nom de l'action standard associée et (s'il existe) son paramètre chaîne. |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Log.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &rarr; | Número que você deseja obter o log |
-| Resultado | Real | &larr; | Log de número |
+| numero | Real | &#8594;  | Número que você deseja obter o log |
+| Resultado | Real | &#8592; | Log de número |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Class.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | Object whose class is to be returned |
-| Function result | Null, Object | &larr; | Class of object |
+| object | Object | &#8594;  | Object whose class is to be returned |
+| Function result | Null, Object | &#8592; | Class of object |
 
 <!-- END REF-->
 

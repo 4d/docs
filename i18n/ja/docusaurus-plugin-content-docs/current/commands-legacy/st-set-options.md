@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET OPTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: object はオブジェクト名(文字列)<br/>省略時: object は変数またはフィールド |
-| object | any | &rarr; | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
-| option | Integer | &rarr; | 設定したいオプション |
-| value | Integer | &rarr; | オプションの新しい値 |
+| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)<br/>省略時: object は変数またはフィールド |
+| object | any | &#8594;  | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
+| option | Integer | &#8594;  | 設定したいオプション |
+| value | Integer | &#8594;  | オプションの新しい値 |
 
 <!-- END REF-->
 

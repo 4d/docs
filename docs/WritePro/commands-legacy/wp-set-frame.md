@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET FRAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable. |
-| wpArea | String | &rarr; | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
-| frameSelector | Longint | &rarr; | Frame where the cursor should be set |
-| textBoxID | String | &rarr; | Id of the text box where the cursor should be set |
+| * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable. |
+| wpArea | String | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| frameSelector | Longint | &#8594;  | Frame where the cursor should be set |
+| textBoxID | String | &#8594;  | Id of the text box where the cursor should be set |
 
 <!-- END REF-->
 

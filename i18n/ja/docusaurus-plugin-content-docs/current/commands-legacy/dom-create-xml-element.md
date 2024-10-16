@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | ルートXML要素参照 |
-| xPath | Text | &rarr; | 作成するXML要素のXPathパス |
-| attrName | Text | &rarr; | 設定する属性 |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &rarr; | 新しい属性値 |
-| 戻り値 | Text | &larr; | 作成されたXML要素の参照 |
+| elementRef | Text | &#8594;  | ルートXML要素参照 |
+| xPath | Text | &#8594;  | 作成するXML要素のXPathパス |
+| attrName | Text | &#8594;  | 設定する属性 |
+| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | 新しい属性値 |
+| 戻り値 | Text | &#8592; | 作成されたXML要素の参照 |
 
 <!-- END REF-->
 

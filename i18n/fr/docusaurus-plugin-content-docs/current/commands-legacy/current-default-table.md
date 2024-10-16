@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current default table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Pointer | &larr; | Pointeur vers la table par défaut |
+| Résultat | Pointer | &#8592; | Pointeur vers la table par défaut |
 
 <!-- END REF-->
 

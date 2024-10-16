@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é um campo ou uma variável |
-| objeto | any | &rarr; | Nome de objeto (se * for especificado ) ou Campo ou variável (se * for omitido) |
-| tresEsta | Boolean | &rarr; | True = caixa de seleção de três estados, False = caixa de seleção padrão |
+| * | Operador | &#8594;  | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594;  | Nome de objeto (se * for especificado ) ou Campo ou variável (se * for omitido) |
+| tresEsta | Boolean | &#8594;  | True = caixa de seleção de três estados, False = caixa de seleção padrão |
 
 <!-- END REF-->
 

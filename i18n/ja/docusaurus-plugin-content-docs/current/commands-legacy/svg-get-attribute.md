@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
-| pictureObject | Picture | &rarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| element_ID | Text | &rarr; | 属性値を取得する要素のID |
-| attribName | Text | &rarr; | 取得する属性 |
-| attribValue | Text, Integer | &larr; | 現在の属性値 |
+| * | 演算子 | &#8594;  | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
+| pictureObject | Picture | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| element_ID | Text | &#8594;  | 属性値を取得する要素のID |
+| attribName | Text | &#8594;  | 取得する属性 |
+| attribValue | Text, Integer | &#8592; | 現在の属性値 |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| url | Text | &larr; | URL at origin of error |
-| description | Text | &larr; | Description of error (Mac OS) |
-| errorCode | Integer | &larr; | Error code |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| url | Text | &#8592; | URL at origin of error |
+| description | Text | &#8592; | Description of error (Mac OS) |
+| errorCode | Integer | &#8592; | Error code |
 
 <!-- END REF-->
 

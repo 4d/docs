@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get breaks.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
-| breakType | Longint | &rarr; | Type of breaks to return |
-| Function result | Collection | &larr; | Collection of ranges |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| breakType | Longint | &#8594;  | Type of breaks to return |
+| Function result | Collection | &#8592; | Collection of ranges |
 
 <!-- END REF-->
 

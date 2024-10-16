@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | ルートXML要素参照 |
-| filePath | Text | &rarr; | ファイルへのフルパス |
+| elementRef | Text | &#8594;  | ルートXML要素参照 |
+| filePath | Text | &#8594;  | ファイルへのフルパス |
 
 <!-- END REF-->
 

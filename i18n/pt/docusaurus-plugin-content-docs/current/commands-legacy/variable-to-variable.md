@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.VARIABLE TO VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &rarr; | Número de processo de destino |
-| dstVar | Variable | &rarr; | Variável de destino |
-| srcVar | Variable | &rarr; | Variável fonte |
+| processo | Integer | &#8594;  | Número de processo de destino |
+| dstVar | Variable | &#8594;  | Variável de destino |
+| srcVar | Variable | &#8594;  | Variável fonte |
 
 <!-- END REF-->
 

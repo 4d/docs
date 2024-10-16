@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET HORIZONTAL RESIZING.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resize | Boolean | &larr; | True: フォームを水平方向にリサイズ可<br/>False: フォームを水平方向にリサイズ不可 |
-| minWidth | Integer | &larr; | 最小フォーム幅 (ピクセル) |
-| maxWidth | Integer | &larr; | 最大フォーム幅 (ピクセル) |
+| resize | Boolean | &#8592; | True: フォームを水平方向にリサイズ可<br/>False: フォームを水平方向にリサイズ不可 |
+| minWidth | Integer | &#8592; | 最小フォーム幅 (ピクセル) |
+| maxWidth | Integer | &#8592; | 最大フォーム幅 (ピクセル) |
 
 <!-- END REF-->
 

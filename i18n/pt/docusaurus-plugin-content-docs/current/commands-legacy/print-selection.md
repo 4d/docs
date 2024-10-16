@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela para a qual imprimir a seleção, ou Tabela por padrão, se for omitido |
-| * &#124; > | Operador | &rarr; | * para apagar as caixas de diálogo de impressão, ou > para não reiniciar as preferências de impressão |
+| tabela | Table | &#8594;  | Tabela para a qual imprimir a seleção, ou Tabela por padrão, se for omitido |
+| * &#124; > | Operador | &#8594;  | * para apagar as caixas de diálogo de impressão, ou > para não reiniciar as preferências de impressão |
 
 <!-- END REF-->
 

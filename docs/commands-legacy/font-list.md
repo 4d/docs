@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fonts | Text array | &larr; | Array of font names |
-| listType &#124; * | Longint, Operator | &rarr; | Font type list to return or * to return font names under OS X |
+| fonts | Text array | &#8592; | Array of font names |
+| listType &#124; * | Longint, Operator | &#8594;  | Font type list to return or * to return font names under OS X |
 
 <!-- END REF-->
 

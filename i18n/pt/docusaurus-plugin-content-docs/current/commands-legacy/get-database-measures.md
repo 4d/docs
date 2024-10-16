@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database measures.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opcoes | Object | &rarr; | Opções de retorno |
-| Resultado | Object | &larr; | Objeto que contém as medidas da base |
+| opcoes | Object | &#8594;  | Opções de retorno |
+| Resultado | Object | &#8592; | Objeto que contém as medidas da base |
 
 <!-- END REF-->
 

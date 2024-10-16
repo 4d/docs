@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LDAP LOGIN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| url | Text | &rarr; | 接続するLDAPサーバーのURL |
-| login | Text | &rarr; | ログインエントリー |
-| password | Text | &rarr; | ログインエントリーのパスワード |
-| digest | Integer | &rarr; | 0 = パスワードをMD5ダイジェストで送るMD5(デフォルト)、<br/>1 = パスワードを暗号化なしで送る |
+| url | Text | &#8594;  | 接続するLDAPサーバーのURL |
+| login | Text | &#8594;  | ログインエントリー |
+| password | Text | &#8594;  | ログインエントリーのパスワード |
+| digest | Integer | &#8594;  | 0 = パスワードをMD5ダイジェストで送るMD5(デフォルト)、<br/>1 = パスワードを暗号化なしで送る |
 
 <!-- END REF-->
 

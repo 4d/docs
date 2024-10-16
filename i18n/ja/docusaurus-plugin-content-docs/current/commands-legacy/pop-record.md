@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.POP RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | レコードをポップするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594;  | レコードをポップするテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

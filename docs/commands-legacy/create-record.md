@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to create a new record, or Default table, if omitted |
+| aTable | Table | &#8594;  | Table for which to create a new record, or Default table, if omitted |
 
 <!-- END REF-->
 

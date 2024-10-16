@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto(string), se omitido, objeto é uma variável ou um campo. |
-| objeto | any | &rarr; | Nome de objeto (se * é especificado)ou variável (se * é omitido) |
-| ativo | Boolean | &rarr; | True = objeto ativo, ou então False |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(string), se omitido, objeto é uma variável ou um campo. |
+| objeto | any | &#8594;  | Nome de objeto (se * é especificado)ou variável (se * é omitido) |
+| ativo | Boolean | &#8594;  | True = objeto ativo, ou então False |
 
 <!-- END REF-->
 

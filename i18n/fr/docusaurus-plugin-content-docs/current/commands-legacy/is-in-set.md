@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in set.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble | Text | &rarr; | Nom de l'ensemble à tester |
-| Résultat | Boolean | &larr; | L'enregistrement courant est dans l'ensemble (Vrai) ou l'enregistrement courant n'est pas dans l'ensemble (Faux) |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à tester |
+| Résultat | Boolean | &#8592; | L'enregistrement courant est dans l'ensemble (Vrai) ou l'enregistrement courant n'est pas dans l'ensemble (Faux) |
 
 <!-- END REF-->
 

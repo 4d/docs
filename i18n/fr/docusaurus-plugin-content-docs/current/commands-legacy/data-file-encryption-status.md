@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file encryption status.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminStructure | Text | &rarr; | Chemin d'accès du fichier de structure à vérifier |
-| cheminDonnées | Text | &rarr; | Chemin d'accès du fichier de données 4D à vérifier |
-| Résultat | Object | &larr; | Informations sur le chiffrement du fichier de données et de chaque table |
+| cheminStructure | Text | &#8594;  | Chemin d'accès du fichier de structure à vérifier |
+| cheminDonnées | Text | &#8594;  | Chemin d'accès du fichier de données 4D à vérifier |
+| Résultat | Object | &#8592; | Informations sur le chiffrement du fichier de données et de chaque table |
 
 <!-- END REF-->
 

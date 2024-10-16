@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoFonte | Integer | &rarr; | Tipo da fonte: usuário ou sistema |
-| arrayNomesFontes | Text array | &larr; | Array dos nomes das fontes dos dados |
-| arrayDrivers | Text array | &larr; | Array dos drives das fontes |
+| tipoFonte | Integer | &#8594;  | Tipo da fonte: usuário ou sistema |
+| arrayNomesFontes | Text array | &#8592; | Array dos nomes das fontes dos dados |
+| arrayDrivers | Text array | &#8592; | Array dos drives das fontes |
 
 <!-- END REF-->
 

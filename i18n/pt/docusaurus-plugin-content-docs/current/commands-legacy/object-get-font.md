@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get font.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido). |
-| Resultado | Text | &larr; | Nome da fonte |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido). |
+| Resultado | Text | &#8592; | Nome da fonte |
 
 <!-- END REF-->
 

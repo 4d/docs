@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base On Web Connection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Texto | &larr; | URL |
-| $2 | Texto | &larr; | Encabezado HTTP + Cuerpo HTTP |
-| $3 | Texto | &larr; | Dirección IP del navegador |
-| $4 | Texto | &larr; | Dirección IP del servidor |
-| $5 | Texto | &larr; | Nombre de usuario |
-| $6 | Texto | &larr; | Contraseña |
+| $1 | Texto | &#8592; | URL |
+| $2 | Texto | &#8592; | Encabezado HTTP + Cuerpo HTTP |
+| $3 | Texto | &#8592; | Dirección IP del navegador |
+| $4 | Texto | &#8592; | Dirección IP del servidor |
+| $5 | Texto | &#8592; | Nombre de usuario |
+| $6 | Texto | &#8592; | Contraseña |
 
 <!-- END REF-->
 

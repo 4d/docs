@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SERIAL INFORMATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| key | Integer | &larr; | Unique product key (encrypted) |
-| user | Text | &larr; | Registered name |
-| company | Text | &larr; | Registered organization |
-| connected | Integer | &larr; | Number of connected users |
-| maxUser | Integer | &larr; | Maximum number of connected users |
+| key | Integer | &#8592; | Unique product key (encrypted) |
+| user | Text | &#8592; | Registered name |
+| company | Text | &#8592; | Registered organization |
+| connected | Integer | &#8592; | Number of connected users |
+| maxUser | Integer | &#8592; | Maximum number of connected users |
 
 <!-- END REF-->
 

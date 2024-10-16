@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Select folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mensaje | Text | &rarr; | Título de la ventana |
-| rutaDefecto | Text, Integer | &rarr; | • Ruta de acceso por defecto o • Ruta vacía para mostrar el usuario por defecto carpeta (“Mis documentos” bajo Windows, “Documentos” bajor Mac OS), o • Número de ruta de acceso memorizada |
-| opciones | Integer | &rarr; | Opciones de selección bajo Mac OS |
-| Resultado | Text | &larr; | Ruta de acceso al archivo seleccionado |
+| mensaje | Text | &#8594;  | Título de la ventana |
+| rutaDefecto | Text, Integer | &#8594;  | • Ruta de acceso por defecto o • Ruta vacía para mostrar el usuario por defecto carpeta (“Mis documentos” bajo Windows, “Documentos” bajor Mac OS), o • Número de ruta de acceso memorizada |
+| opciones | Integer | &#8594;  | Opciones de selección bajo Mac OS |
+| Resultado | Text | &#8592; | Ruta de acceso al archivo seleccionado |
 
 <!-- END REF-->
 

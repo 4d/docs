@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.Open window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| gauche | Integer | &rarr; | Coordonnée gauche de l'intérieur de la fenêtre |
-| haut | Integer | &rarr; | Coordonnée supérieure de l'intérieur de la fenêtre |
-| droite | Integer | &rarr; | Coordonnée droite de l'intérieur de la fenêtre |
-| bas | Integer | &rarr; | Coordonnée inférieure de l'intérieur de la fenêtre |
-| type | Integer | &rarr; | Type de la fenêtre |
-| titre | Text | &rarr; | Titre de la fenêtre |
-| caseFermeture | Text | &rarr; | Méthode à appeler en cas de double-clic sur la case du menu Système ou de clic sur la case de fermeture |
-| Résultat | Integer | &larr; | Numéro de référence de la fenêtre |
+| gauche | Integer | &#8594;  | Coordonnée gauche de l'intérieur de la fenêtre |
+| haut | Integer | &#8594;  | Coordonnée supérieure de l'intérieur de la fenêtre |
+| droite | Integer | &#8594;  | Coordonnée droite de l'intérieur de la fenêtre |
+| bas | Integer | &#8594;  | Coordonnée inférieure de l'intérieur de la fenêtre |
+| type | Integer | &#8594;  | Type de la fenêtre |
+| titre | Text | &#8594;  | Titre de la fenêtre |
+| caseFermeture | Text | &#8594;  | Méthode à appeler en cas de double-clic sur la case du menu Système ou de clic sur la case de fermeture |
+| Résultat | Integer | &#8592; | Numéro de référence de la fenêtre |
 
 <!-- END REF-->
 

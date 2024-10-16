@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL FORM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &rarr; | Número de referência da janela |
-| metodo | Object, Text | &rarr; | Nome do método de projeto a chamar |
-| param | Expression | &rarr; | Parâmetros passados ao método |
+| janela | Integer | &#8594;  | Número de referência da janela |
+| metodo | Object, Text | &#8594;  | Nome do método de projeto a chamar |
+| param | Expression | &#8594;  | Parâmetros passados ao método |
 
 <!-- END REF-->
 

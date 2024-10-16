@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Record number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to return the number of the current record, or Default table, if omitted |
-| Function result | Longint | &larr; | Current record number |
+| aTable | Table | &#8594;  | Table for which to return the number of the current record, or Default table, if omitted |
+| Function result | Longint | &#8592; | Current record number |
 
 <!-- END REF-->
 

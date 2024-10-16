@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Method called on error.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| scope | Integer | &rarr; | エラーメソッドのスコープ |
-| 戻り値 | Text | &larr; | エラー時に呼び出されるメソッド名 |
+| scope | Integer | &#8594;  | エラーメソッドのスコープ |
+| 戻り値 | Text | &#8592; | エラー時に呼び出されるメソッド名 |
 
 <!-- END REF-->
 

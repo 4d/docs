@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM LOAD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table du formulaire à charger (si omis, charger un formulaire projet) |
-| formulaire | Text, Object | &rarr; | Nom du formulaire table ou projet à utiliser, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| formData | Object | &rarr; | Data to associate to the form |
-| * | Opérateur | &rarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| laTable | Table | &#8594;  | Table du formulaire à charger (si omis, charger un formulaire projet) |
+| formulaire | Text, Object | &#8594;  | Nom du formulaire table ou projet à utiliser, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formData | Object | &#8594;  | Data to associate to the form |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

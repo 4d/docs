@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get enterable.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| Resultado | Boolean | &larr; | True = objeto(s) editable(s) |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| Resultado | Boolean | &#8592; | True = objeto(s) editable(s) |
 
 <!-- END REF-->
 

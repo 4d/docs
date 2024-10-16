@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Screen height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Windows: altura de la ventana de la aplicación o altura de la pantalla si se especifica * Macintosh: altura de la pantalla principal |
-| Resultado | Integer | &larr; | Altura expresada en píxeles |
+| * | Operador | &#8594;  | Windows: altura de la ventana de la aplicación o altura de la pantalla si se especifica * Macintosh: altura de la pantalla principal |
+| Resultado | Integer | &#8592; | Altura expresada en píxeles |
 
 <!-- END REF-->
 

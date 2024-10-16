@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dossierCertificats | Text | &rarr; | Chemin d’accès et nom du dossier des certificats du client |
+| dossierCertificats | Text | &#8594;  | Chemin d’accès et nom du dossier des certificats du client |
 
 <!-- END REF-->
 

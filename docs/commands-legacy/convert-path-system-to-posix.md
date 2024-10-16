@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert path system to POSIX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| systemPath | Text | &rarr; | Relative or absolute pathname expressed in system syntax |
-| * | Operator | &rarr; | Encoding option |
-| Function result | Text | &larr; | Absolute pathname expressed in POSIX syntax |
+| systemPath | Text | &#8594;  | Relative or absolute pathname expressed in system syntax |
+| * | Operator | &#8594;  | Encoding option |
+| Function result | Text | &#8592; | Absolute pathname expressed in POSIX syntax |
 
 <!-- END REF-->
 

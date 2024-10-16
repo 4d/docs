@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP COMPUTE FORMULAS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 
 <!-- END REF-->
 

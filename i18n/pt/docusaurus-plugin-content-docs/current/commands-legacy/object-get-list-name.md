@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get list name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
-| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
-| tipoLista | Integer | &rarr; | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
-| Resultado | Text | &larr; | Nome da lista de escolha (especificado no modo Desenho) |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
+| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
+| tipoLista | Integer | &#8594;  | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
+| Resultado | Text | &#8592; | Nome da lista de escolha (especificado no modo Desenho) |
 
 <!-- END REF-->
 

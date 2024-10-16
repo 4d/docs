@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Not.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| boolean | Boolean | &rarr; | Boolean value to negate |
-| Function result | Boolean | &larr; | Opposite of Boolean |
+| boolean | Boolean | &#8594;  | Boolean value to negate |
+| Function result | Boolean | &#8592; | Opposite of Boolean |
 
 <!-- END REF-->
 

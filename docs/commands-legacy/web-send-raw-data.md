@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND RAW DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Blob | &rarr; | HTTP data to send |
-| * | Operator | &rarr; | Send chunked |
+| data | Blob | &#8594;  | HTTP data to send |
+| * | Operator | &#8594;  | Send chunked |
 
 <!-- END REF-->
 

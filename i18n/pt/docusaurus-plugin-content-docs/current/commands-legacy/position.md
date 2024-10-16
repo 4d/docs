@@ -10,20 +10,20 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pesquisar | Text | &rarr; | Cadeia a procurar |
-| cadeia | Text | &rarr; | Cadeia na qual procurar |
-| inicio | Integer | &rarr; | Posição na cadeia onde iniciar a pesquisa |
-| comprEncont | Integer | &larr; | Comprimento da cadeia encontrada |
-| * | Operador | &rarr; | Se passado: avaliação baseada em códigos de caracteres |
-| Resultado | Integer | &larr; | Posição da primeira ocorrência |
+| pesquisar | Text | &#8594;  | Cadeia a procurar |
+| cadeia | Text | &#8594;  | Cadeia na qual procurar |
+| inicio | Integer | &#8594;  | Posição na cadeia onde iniciar a pesquisa |
+| comprEncont | Integer | &#8592; | Comprimento da cadeia encontrada |
+| * | Operador | &#8594;  | Se passado: avaliação baseada em códigos de caracteres |
+| Resultado | Integer | &#8592; | Posição da primeira ocorrência |
 | Position ( pesquisar ; string ; inicio ; comprimentoEncontrado ; opções ) -> Resultado |
 | Parâmetro | Tipo | Descrição |
-| pesquisar | Text | &rarr; | String a pesquisar |
-| string | Text | &rarr; | texto no qual procurar |
-| inicio | Integer | &rarr; | Posição no texto onde a pesquisa começa |
-| comprimentoEncontrado | Integer | &rarr; | Comprimento do texto encontrado |
-| opções | Integer | &rarr; | Condições de pesquisa |
-| Resultado | Integer | &larr; | Posição da primeira ocorrência |
+| pesquisar | Text | &#8594;  | String a pesquisar |
+| string | Text | &#8594;  | texto no qual procurar |
+| inicio | Integer | &#8594;  | Posição no texto onde a pesquisa começa |
+| comprimentoEncontrado | Integer | &#8594;  | Comprimento do texto encontrado |
+| opções | Integer | &#8594;  | Condições de pesquisa |
+| Resultado | Integer | &#8592; | Posição da primeira ocorrência |
 
 <!-- END REF-->
 

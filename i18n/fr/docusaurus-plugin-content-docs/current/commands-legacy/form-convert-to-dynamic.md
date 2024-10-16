@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| uneTable | Table | &rarr; | Table du formulaire |
-| nomFormulaire | Text | &rarr; | Nom d'un formulaire projet ou d'un formulaire table "classique" |
-| Résultat | Object | &larr; | formName converti en formulaire dynamique |
+| uneTable | Table | &#8594;  | Table du formulaire |
+| nomFormulaire | Text | &#8594;  | Nom d'un formulaire projet ou d'un formulaire table "classique" |
+| Résultat | Object | &#8592; | formName converti en formulaire dynamique |
 
 <!-- END REF-->
 

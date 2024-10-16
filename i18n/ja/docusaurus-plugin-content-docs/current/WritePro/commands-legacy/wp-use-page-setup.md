@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP USE PAGE SETUP.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Proドキュメント |
+| wpDoc | Object | &#8594;  | 4D Write Proドキュメント |
 
 <!-- END REF-->
 

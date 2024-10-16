@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Locked.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | ロックを検証するレコードが属するテーブル, または 省略時、デフォルトテーブル |
-| 戻り値 | Boolean | &larr; | TRUE: レコードはロックされている FALSE: レコードはロックされていない |
+| aTable | Table | &#8594;  | ロックを検証するレコードが属するテーブル, または 省略時、デフォルトテーブル |
+| 戻り値 | Boolean | &#8592; | TRUE: レコードはロックされている FALSE: レコードはロックされていない |
 
 <!-- END REF-->
 

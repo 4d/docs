@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SERIAL INFORMATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| key | Integer | &larr; | ユニークな製品キー (暗号化) |
-| user | Text | &larr; | 登録名 |
-| company | Text | &larr; | 登録された会社名 |
-| connected | Integer | &larr; | 接続ユーザ数 |
-| maxUser | Integer | &larr; | 最大接続ユーザ数 |
+| key | Integer | &#8592; | ユニークな製品キー (暗号化) |
+| user | Text | &#8592; | 登録名 |
+| company | Text | &#8592; | 登録された会社名 |
+| connected | Integer | &#8592; | 接続ユーザ数 |
+| maxUser | Integer | &#8592; | 最大接続ユーザ数 |
 
 <!-- END REF-->
 

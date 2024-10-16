@@ -10,13 +10,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | Integer | &rarr; | Table number |
-| fieldNum | Integer | &rarr; | Field number |
-| fieldPtr | Pointer | &larr; | Field pointer |
+| tableNum | Integer | &#8594;  | Table number |
+| fieldNum | Integer | &#8594;  | Field number |
+| fieldPtr | Pointer | &#8592; | Field pointer |
 | Field ( fieldPtr ) -> fieldNum |
 | Parameter | Type | Description |
-| fieldPtr | Pointer | &rarr; | Field pointer |
-| fieldNum | Integer | &larr; | Field number |
+| fieldPtr | Pointer | &#8594;  | Field pointer |
+| fieldNum | Integer | &#8592; | Field number |
 
 <!-- END REF-->
 

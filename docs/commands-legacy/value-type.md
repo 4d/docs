@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Value type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &rarr; | Expression whose resulting value to be tested |
-| Function result | Longint | &larr; | Data type number |
+| expression | Expression | &#8594;  | Expression whose resulting value to be tested |
+| Function result | Longint | &#8592; | Data type number |
 
 <!-- END REF-->
 

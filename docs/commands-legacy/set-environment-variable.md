@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| varName | Text | &rarr; | Variable name to set |
-| varValue | Text | &rarr; | Value of the variable or  "" to reset default value |
+| varName | Text | &#8594;  | Variable name to set |
+| varValue | Text | &#8594;  | Value of the variable or  "" to reset default value |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET CODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text, Text array | &rarr; | Texto ou array texto que contém uma ou mais rotas de método |
-| codigo | Text, Text array | &rarr; | Código dos métodos designados |
-| * | Operador | &rarr; | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
+| rota | Text, Text array | &#8594;  | Texto ou array texto que contém uma ou mais rotas de método |
+| codigo | Text, Text array | &#8594;  | Código dos métodos designados |
+| * | Operador | &#8594;  | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

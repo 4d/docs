@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get current printer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &larr; | カレントプリンター名 |
+| 戻り値 | Text | &#8592; | カレントプリンター名 |
 
 <!-- END REF-->
 

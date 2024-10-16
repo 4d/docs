@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get picture file name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture, Picture | &rarr; | Imagem para a qual obter o nome por defeito |
-| Resultado | Text | &larr; | Nome por defeito do arquivo imagem |
+| imagem | Picture, Picture | &#8594;  | Imagem para a qual obter o nome por defeito |
+| Resultado | Text | &#8592; | Nome por defeito do arquivo imagem |
 
 <!-- END REF-->
 

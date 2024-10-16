@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find all.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| valeurRecherche | Text | &rarr; | Valeur à rechercher |
-| conditionRecherche | Integer | &rarr; | Règle(s) de recherche |
-| remplacerValeur | Text | &rarr; | Chaîne de remplacement |
-| Résultat | Collection | &larr; | Collection d'objets plage |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| valeurRecherche | Text | &#8594;  | Valeur à rechercher |
+| conditionRecherche | Integer | &#8594;  | Règle(s) de recherche |
+| remplacerValeur | Text | &#8594;  | Chaîne de remplacement |
+| Résultat | Collection | &#8592; | Collection d'objets plage |
 
 <!-- END REF-->
 

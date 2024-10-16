@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &rarr; | Object name (if * specified) or <br/>Variable or field (if * omitted) |
-| id | Text | &rarr; | ID attribute of element to display |
-| margin | Integer | &rarr; | Margin of visibility (in pixels by default) |
+| * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
+| pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
+| id | Text | &#8594;  | ID attribute of element to display |
+| margin | Integer | &#8594;  | Margin of visibility (in pixels by default) |
 
 <!-- END REF-->
 

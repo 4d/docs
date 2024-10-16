@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Print settings to BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| paramImpression | Blob | &larr; | Paramètres courants d'impression |
-| Résultat | Integer | &larr; | Code d'état : 1=Opération réussie, 0=Pas d'imprimante courante |
+| paramImpression | Blob | &#8592; | Paramètres courants d'impression |
+| Résultat | Integer | &#8592; | Code d'état : 1=Opération réussie, 0=Pas d'imprimante courante |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get cells.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| refTableau | Object | &rarr; | Référence de tableau |
-| debutCol | Integer | &rarr; | Position de la colonne de la première cellule |
-| debutLigne | Integer | &rarr; | Position de la ligne de la première cellule |
-| nbCols | Integer | &rarr; | Nombre de colonnes à lire |
-| nbLignes | Integer | &rarr; | Nombre de lignes à lire |
-| Résultat | Object | &larr; | Nouvelle plage contenant les cellules |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| refTableau | Object | &#8594;  | Référence de tableau |
+| debutCol | Integer | &#8594;  | Position de la colonne de la première cellule |
+| debutLigne | Integer | &#8594;  | Position de la ligne de la première cellule |
+| nbCols | Integer | &#8594;  | Nombre de colonnes à lire |
+| nbLignes | Integer | &#8594;  | Nombre de lignes à lire |
+| Résultat | Object | &#8592; | Nouvelle plage contenant les cellules |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジオブジェクト |
-| newText | Text | &rarr; | 挿入するテキスト |
-| textPosition | Number | &rarr; | 挿入位置(置き換え、前、後) |
-| rangeUpdate | Number | &rarr; | 挿入されたコンテンツをレンジに含める、あるいは含めない |
+| targetObj | Object | &#8594;  | レンジオブジェクト |
+| newText | Text | &#8594;  | 挿入するテキスト |
+| textPosition | Number | &#8594;  | 挿入位置(置き換え、前、後) |
+| rangeUpdate | Number | &#8594;  | 挿入されたコンテンツをレンジに含める、あるいは含めない |
 
 <!-- END REF-->
 

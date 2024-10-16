@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Char.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| charCode | Integer | &rarr; | 文字コード |
-| 戻り値 | Text | &larr; | 文字コードによって表現された文字 |
+| charCode | Integer | &#8594;  | 文字コード |
+| 戻り値 | Text | &#8592; | 文字コードによって表現された文字 |
 
 <!-- END REF-->
 

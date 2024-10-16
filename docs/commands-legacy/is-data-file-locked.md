@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is data file locked.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | True = file/segment locked False = file/segment not locked |
+| Function result | Boolean | &#8592; | True = file/segment locked False = file/segment not locked |
 
 <!-- END REF-->
 

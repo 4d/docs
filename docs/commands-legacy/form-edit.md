@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM EDIT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table owning the form or If omitted: default table or use of project form |
-| form | Text | &rarr; | Form name |
+| aTable | Table | &#8594;  | Table owning the form or If omitted: default table or use of project form |
+| form | Text | &#8594;  | Form name |
 
 <!-- END REF-->
 

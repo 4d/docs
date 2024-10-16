@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| blobAcriptografar | Blob | &rarr; | BLOB que vai criptografar |
-| objetoChave / passefrase | Objeto, Texto | &rarr; | Objeto JSON que contém a chave de criptografia ou passefrase para geração de uma chave de criptografia direta (texto) |
-| salt | Integer | &rarr; | Sal de criptografia (para adicionar dados aleatórios) para maior segurança do algoritmo |
-| blobCriptografado' | BLOB | &larr; | BLOB que foi criptografado |
-| Resultado | Boolean | &larr; | TRUE se a criptografia for realizada corretamente, senão FALSE |
+| blobAcriptografar | Blob | &#8594;  | BLOB que vai criptografar |
+| objetoChave / passefrase | Objeto, Texto | &#8594;  | Objeto JSON que contém a chave de criptografia ou passefrase para geração de uma chave de criptografia direta (texto) |
+| salt | Integer | &#8594;  | Sal de criptografia (para adicionar dados aleatórios) para maior segurança do algoritmo |
+| blobCriptografado' | BLOB | &#8592; | BLOB que foi criptografado |
+| Resultado | Boolean | &#8592; | TRUE se a criptografia for realizada corretamente, senão FALSE |
 
 <!-- END REF-->
 

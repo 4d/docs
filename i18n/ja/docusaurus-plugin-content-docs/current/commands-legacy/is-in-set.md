@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in set.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | Text | &rarr; | テストするセットの名前 |
-| 戻り値 | Boolean | &larr; | True＝カレントレコードがセットに含まれる False＝カレントレコードがセットに含まれない |
+| set | Text | &#8594;  | テストするセットの名前 |
+| 戻り値 | Boolean | &#8592; | True＝カレントレコードがセットに含まれる False＝カレントレコードがセットに含まれない |
 
 <!-- END REF-->
 

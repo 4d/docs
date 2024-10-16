@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçaoCol | Integer | &rarr; | Localização da coluna a inserir |
-| nomeColuna | Text | &rarr; | Nome do objeto coluna |
-| variavelCol | Array, Field, Variable, Pointer | &rarr; | Nome de coluna do array ou campo ou variável |
-| nomeCabe | Text | &rarr; | Nome do objeto título da coluna |
-| varTitulo | Integer, Pointer | &rarr; | Variável título da coluna |
-| nomRodapé | Text | &rarr; | Nome do rodapé da coluna |
-| nomeVar | Variable, Pointer | &rarr; | Variável do rodapé da coluna |
+| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &#8594;  | Localização da coluna a inserir |
+| nomeColuna | Text | &#8594;  | Nome do objeto coluna |
+| variavelCol | Array, Field, Variable, Pointer | &#8594;  | Nome de coluna do array ou campo ou variável |
+| nomeCabe | Text | &#8594;  | Nome do objeto título da coluna |
+| varTitulo | Integer, Pointer | &#8594;  | Variável título da coluna |
+| nomRodapé | Text | &#8594;  | Nome do rodapé da coluna |
+| nomeVar | Variable, Pointer | &#8594;  | Variável do rodapé da coluna |
 
 <!-- END REF-->
 

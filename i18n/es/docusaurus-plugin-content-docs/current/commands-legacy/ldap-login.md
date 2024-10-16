@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LDAP LOGIN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| url | Text | &rarr; | URL del servidor LDAP al cual conectarse |
-| login | Text | &rarr; | Cuenta del usuario |
-| password | Text | &rarr; | Contraseña del usuario |
-| digest | Integer | &rarr; | 0 = enviar contraseña en digest MD5 (por defecto), 1 = enviar contraseña sin encripción |
+| url | Text | &#8594;  | URL del servidor LDAP al cual conectarse |
+| login | Text | &#8594;  | Cuenta del usuario |
+| password | Text | &#8594;  | Contraseña del usuario |
+| digest | Integer | &#8594;  | 0 = enviar contraseña en digest MD5 (por defecto), 1 = enviar contraseña sin encripción |
 
 <!-- END REF-->
 

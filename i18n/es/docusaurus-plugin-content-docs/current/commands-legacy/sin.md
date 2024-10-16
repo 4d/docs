@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sin.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &rarr; | Número, en radianes, cuyo seno se devuelve |
-| Resultado | Real | &larr; | Seno del número |
+| Numero | Real | &#8594;  | Número, en radianes, cuyo seno se devuelve |
+| Resultado | Real | &#8592; | Seno del número |
 
 <!-- END REF-->
 

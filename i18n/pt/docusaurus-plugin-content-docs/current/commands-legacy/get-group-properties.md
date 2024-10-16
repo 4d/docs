@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refGrupo | Integer | &rarr; | Número de referencia ID de grupo |
-| nome | Text | &larr; | Nome do grupo |
-| proprietario | Integer | &larr; | Número de ID do proprietário do grupo |
-| membros | Integer array | &larr; | Membros do grupo |
+| refGrupo | Integer | &#8594;  | Número de referencia ID de grupo |
+| nome | Text | &#8592; | Nome do grupo |
+| proprietario | Integer | &#8592; | Número de ID do proprietário do grupo |
+| membros | Integer array | &#8592; | Membros do grupo |
 
 <!-- END REF-->
 

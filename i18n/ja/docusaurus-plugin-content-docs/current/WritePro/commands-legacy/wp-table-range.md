@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table range.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | 4D Write Pro ドキュメント、レンジまたは要素 |
-| 戻り値 | Object | &larr; | 表のみを格納したレンジオブジェクト |
+| targetObj | Object | &#8594;  | 4D Write Pro ドキュメント、レンジまたは要素 |
+| 戻り値 | Object | &#8592; | 表のみを格納したレンジオブジェクト |
 
 <!-- END REF-->
 

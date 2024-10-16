@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Method called on error.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| portée | Integer | &rarr; | Portée de la méthode de gestion d'erreur |
-| Résultat | Text | &larr; | Nom de la méthode d’appel sur erreur |
+| portée | Integer | &#8594;  | Portée de la méthode de gestion d'erreur |
+| Résultat | Text | &#8592; | Nom de la méthode d’appel sur erreur |
 
 <!-- END REF-->
 

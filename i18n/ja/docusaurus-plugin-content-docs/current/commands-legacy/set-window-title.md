@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| title | Text | &rarr; | ウィンドウタイトル |
-| window | Integer | &rarr; | ウィンドウ参照番号, または 省略時カレントプロセスの最前面ウィンドウ |
+| title | Text | &#8594;  | ウィンドウタイトル |
+| window | Integer | &#8594;  | ウィンドウ参照番号, または 省略時カレントプロセスの最前面ウィンドウ |
 
 <!-- END REF-->
 

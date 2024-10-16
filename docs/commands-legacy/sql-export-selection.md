@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table from which to export selection |
-| folderPath | Text | &rarr; | Pathname of export folder or "" to display folder selection dialog box |
-| numFiles | Integer | &rarr; | Maximum number of files per folder |
-| fileLimitSize | Integer | &rarr; | Maximum size of Export.sql file (in KB) |
-| fieldLimitSize | Integer | &rarr; | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field are embedded into the main file |
+| aTable | Table | &#8594;  | Table from which to export selection |
+| folderPath | Text | &#8594;  | Pathname of export folder or "" to display folder selection dialog box |
+| numFiles | Integer | &#8594;  | Maximum number of files per folder |
+| fileLimitSize | Integer | &#8594;  | Maximum size of Export.sql file (in KB) |
+| fieldLimitSize | Integer | &#8594;  | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field are embedded into the main file |
 
 <!-- END REF-->
 

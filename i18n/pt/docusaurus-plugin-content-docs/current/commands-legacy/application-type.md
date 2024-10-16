@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Application type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Valor numérico que denota o tipo de aplicação |
+| Resultado | Integer | &#8592; | Valor numérico que denota o tipo de aplicação |
 
 <!-- END REF-->
 

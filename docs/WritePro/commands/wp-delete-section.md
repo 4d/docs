@@ -10,10 +10,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE SECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| section | Object | &rarr; | 4D Write Pro section |
-| wpDoc | Object | &rarr; | 4D Write Pro document |
-| indexNumber | Integer | &rarr; | Index of the section to be deleted |
-| count | Integer | &rarr; | Number of sections to be deleted |
+| section | Object | &#8594;  | 4D Write Pro section |
+| wpDoc | Object | &#8594;  | 4D Write Pro document |
+| indexNumber | Integer | &#8594;  | Index of the section to be deleted |
+| count | Integer | &#8594;  | Number of sections to be deleted |
 
 <!-- END REF-->
 

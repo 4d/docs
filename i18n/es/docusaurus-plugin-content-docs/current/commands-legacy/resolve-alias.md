@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaAlias | Text | &rarr; | Nombre o ruta de acceso completa del alias/atajo |
-| rutaObjetivo | Text | &larr; | Nombre o ruta de acceso completa del objetivo del alias/atajo |
+| rutaAlias | Text | &#8594;  | Nombre o ruta de acceso completa del alias/atajo |
+| rutaObjetivo | Text | &#8592; | Nombre o ruta de acceso completa del objetivo del alias/atajo |
 
 <!-- END REF-->
 

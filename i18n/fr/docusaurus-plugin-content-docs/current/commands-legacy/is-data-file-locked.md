@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is data file locked.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &larr; | Vrai = fichier/segment verrouillé Faux = fichier/segment non verrouillé |
+| Résultat | Boolean | &#8592; | Vrai = fichier/segment verrouillé Faux = fichier/segment non verrouillé |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &rarr; | 書き出すファイルのフルパス名, または空の文字列 |
-| picture | Picture | &rarr; | 書き出すピクチャフィールドまたは変数 |
-| codec | Text | &rarr; | ピクチャCodec ID |
+| fileName | Text | &#8594;  | 書き出すファイルのフルパス名, または空の文字列 |
+| picture | Picture | &#8594;  | 書き出すピクチャフィールドまたは変数 |
+| codec | Text | &#8594;  | ピクチャCodec ID |
 
 <!-- END REF-->
 

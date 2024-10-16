@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count users.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &larr; | Nombre d'utilisateurs connectés au serveur |
+| Résultat | Integer | &#8592; | Nombre d'utilisateurs connectés au serveur |
 
 <!-- END REF-->
 

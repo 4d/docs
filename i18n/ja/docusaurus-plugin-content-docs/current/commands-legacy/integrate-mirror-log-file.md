@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathName | Text | &rarr; | 統合されるログファイルの名前もしくはパス名 |
-| operationNum | Real | &rarr; | 統合が開始されるオペレーションの番号 |
-| &larr; | 最後に統合されたオペレーションの番号 |
-| mode | Integer | &rarr; | 0=厳格な統合モード(デフォルトモード)、1=自動修復モード |
-| errObject | Object | &larr; | 失われたオペレーション |
+| pathName | Text | &#8594;  | 統合されるログファイルの名前もしくはパス名 |
+| operationNum | Real | &#8594;  | 統合が開始されるオペレーションの番号 |
+| &#8592; | 最後に統合されたオペレーションの番号 |
+| mode | Integer | &#8594;  | 0=厳格な統合モード(デフォルトモード)、1=自動修復モード |
+| errObject | Object | &#8592; | 失われたオペレーション |
 
 <!-- END REF-->
 

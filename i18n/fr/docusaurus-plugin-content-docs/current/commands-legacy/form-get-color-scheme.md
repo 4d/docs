@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get color scheme.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &larr; | Schéma de couleur du formulaire courant : "light" ou "dark" |
+| Résultat | Text | &#8592; | Schéma de couleur du formulaire courant : "light" ou "dark" |
 
 <!-- END REF-->
 

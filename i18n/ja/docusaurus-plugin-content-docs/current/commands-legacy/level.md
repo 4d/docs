@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Level.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &larr; | カレントのブレークまはたヘッダのレベル |
+| 戻り値 | Integer | &#8592; | カレントのブレークまはたヘッダのレベル |
 
 <!-- END REF-->
 

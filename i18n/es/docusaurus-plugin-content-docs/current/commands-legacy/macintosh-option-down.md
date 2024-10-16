@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh option down.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Estado de la tecla Opción Macintosh o Estado de la tecla Alt Windows |
+| Resultado | Boolean | &#8592; | Estado de la tecla Opción Macintosh o Estado de la tecla Alt Windows |
 
 <!-- END REF-->
 

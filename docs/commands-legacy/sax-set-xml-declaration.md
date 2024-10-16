@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &rarr; | Reference of open document |
-| encoding | Text | &rarr; | XML document character set |
-| standalone | Boolean | &rarr; | True = the document is standalone False (default) = document is not standalone |
+| document | Time | &#8594;  | Reference of open document |
+| encoding | Text | &#8594;  | XML document character set |
+| standalone | Boolean | &#8594;  | True = the document is standalone False (default) = document is not standalone |
 
 <!-- END REF-->
 

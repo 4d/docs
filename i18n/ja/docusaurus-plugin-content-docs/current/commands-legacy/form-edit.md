@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM EDIT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | 指定時はフォームが所属するテーブル、省略時にはデフォルトテーブルを指定またはプロジェクトフォームを使用 |
-| form | Text | &rarr; | フォーム名 |
+| aTable | Table | &#8594;  | 指定時はフォームが所属するテーブル、省略時にはデフォルトテーブルを指定またはプロジェクトフォームを使用 |
+| form | Text | &#8594;  | フォーム名 |
 
 <!-- END REF-->
 

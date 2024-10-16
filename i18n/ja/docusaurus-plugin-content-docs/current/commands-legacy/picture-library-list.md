@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picRefs | Integer array | &larr; | ピクチャライブラリ画像の参照番号 |
-| picNames | Text array | &larr; | ピクチャライブラリ画像の名前 |
+| picRefs | Integer array | &#8592; | ピクチャライブラリ画像の参照番号 |
+| picNames | Text array | &#8592; | ピクチャライブラリ画像の名前 |
 
 <!-- END REF-->
 

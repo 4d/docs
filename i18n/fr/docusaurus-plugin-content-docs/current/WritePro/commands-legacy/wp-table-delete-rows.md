@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D View Pro |
-| refTableau | Object | &rarr; | Référence de tableau |
-| numLigne | Integer | &rarr; | Numéro d'indice de la ligne |
-| nbLignes | Integer | &rarr; | Nombre de lignes à supprimer (valeur par défaut=1) |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D View Pro |
+| refTableau | Object | &#8594;  | Référence de tableau |
+| numLigne | Integer | &#8594;  | Numéro d'indice de la ligne |
+| nbLignes | Integer | &#8594;  | Nombre de lignes à supprimer (valeur par défaut=1) |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ASSERT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| boolExpression | Boolean | &rarr; | ブール式 |
-| messageText | Text | &rarr; | エラーメッセージテキスト |
+| boolExpression | Boolean | &#8594;  | ブール式 |
+| messageText | Text | &#8594;  | エラーメッセージテキスト |
 
 <!-- END REF-->
 

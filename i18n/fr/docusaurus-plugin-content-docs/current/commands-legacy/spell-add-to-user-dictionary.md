@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| mots | Text, Text array | &rarr; | Mot ou liste de mots à ajouter au dictionnaire utilisateur |
+| mots | Text, Text array | &#8594;  | Mot ou liste de mots à ajouter au dictionnaire utilisateur |
 
 <!-- END REF-->
 

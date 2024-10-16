@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET URL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
-| object | any | &rarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| urlText | Text | &larr; | リンクの表示テキスト |
-| urlAddress | Text | &larr; | URL アドレス |
-| startSel | Integer | &rarr; | 選択範囲の開始地点 |
-| endSel | Integer | &rarr; | 選択範囲の終了地点 |
+| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
+| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| urlText | Text | &#8592; | リンクの表示テキスト |
+| urlAddress | Text | &#8592; | URL アドレス |
+| startSel | Integer | &#8594;  | 選択範囲の開始地点 |
+| endSel | Integer | &#8594;  | 選択範囲の終了地点 |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| selector | Integer | &rarr; | Preference to get |
-| value | Variable | &larr; | Current value of the preference |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| selector | Integer | &#8594;  | Preference to get |
+| value | Variable | &#8592; | Current value of the preference |
 
 <!-- END REF-->
 

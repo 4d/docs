@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture, Picture | &rarr; | Imagem para à qual definir o nome por padrão |
-| nomArquivo | Text | &rarr; | Nome da imagem por padrão |
+| imagem | Picture, Picture | &#8594;  | Imagem para à qual definir o nome por padrão |
+| nomArquivo | Text | &#8594;  | Nome da imagem por padrão |
 
 <!-- END REF-->
 

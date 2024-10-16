@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Import document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| filePath | String | &rarr; | Path to: a 4D Write document (.4w7 or .4wt) ora 4D Write Pro document (.4wp) ora .docx document (.docx) |
-| option | Longint, Object | &rarr; | (longint) Import option for HTML expressions(object) Import options for .docx document |
-| Function result | Object | &larr; | 4D Write Pro object |
+| filePath | String | &#8594;  | Path to: a 4D Write document (.4w7 or .4wt) ora 4D Write Pro document (.4wp) ora .docx document (.docx) |
+| option | Longint, Object | &#8594;  | (longint) Import option for HTML expressions(object) Import options for .docx document |
+| Function result | Object | &#8592; | 4D Write Pro object |
 
 <!-- END REF-->
 

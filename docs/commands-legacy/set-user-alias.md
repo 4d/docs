@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET USER ALIAS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| alias | Text | &rarr; | Alternate user name for 4D user account or "" to reset |
+| alias | Text | &#8594;  | Alternate user name for 4D user account or "" to reset |
 
 <!-- END REF-->
 

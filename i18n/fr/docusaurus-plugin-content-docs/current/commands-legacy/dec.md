@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Dec.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &rarr; | Valeur dont voulez obtenir la partie décimale |
-| Résultat | Real | &larr; | Partie décimale de nombre |
+| nombre | Real | &#8594;  | Valeur dont voulez obtenir la partie décimale |
+| Résultat | Real | &#8592; | Partie décimale de nombre |
 
 <!-- END REF-->
 

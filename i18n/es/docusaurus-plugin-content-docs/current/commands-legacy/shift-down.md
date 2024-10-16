@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Shift down.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Estado de la tecla Mayús |
+| Resultado | Boolean | &#8592; | Estado de la tecla Mayús |
 
 <!-- END REF-->
 

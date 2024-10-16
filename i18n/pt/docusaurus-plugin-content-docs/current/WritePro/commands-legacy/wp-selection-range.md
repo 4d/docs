@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Selection range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, wpArea é um nome de objeto de formulário (string). Se omitido, wpArea é um campo de objeto ou variável |
-| wpArea | Text | &rarr; | Nome de objeto de formulário (se * é especificado) ou variável de objeto 4D Write Pro ou campo (se * for omitido) |
-| Resultado | Object | &larr; | Faixa de objeto |
+| * | Operador | &#8594;  | Se especificado, wpArea é um nome de objeto de formulário (string). Se omitido, wpArea é um campo de objeto ou variável |
+| wpArea | Text | &#8594;  | Nome de objeto de formulário (se * é especificado) ou variável de objeto 4D Write Pro ou campo (se * for omitido) |
+| Resultado | Object | &#8592; | Faixa de objeto |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND MENU ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer | &rarr; | Menu number or Menu reference |
-| itemText | Text | &rarr; | Text for the new menu items |
-| subMenu | Text | &rarr; | Reference of submenu associated with item |
-| process | Integer | &rarr; | Process reference number |
-| * | Operator | &rarr; | If passed: consider metacharacters as standard characters |
+| menu | Integer | &#8594;  | Menu number or Menu reference |
+| itemText | Text | &#8594;  | Text for the new menu items |
+| subMenu | Text | &#8594;  | Reference of submenu associated with item |
+| process | Integer | &#8594;  | Process reference number |
+| * | Operator | &#8594;  | If passed: consider metacharacters as standard characters |
 
 <!-- END REF-->
 

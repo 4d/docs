@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| arrColNames | Text array | &larr; | 列オブジェクト名 |
-| arrHeaderNames | Text array | &larr; | ヘッダーオブジェクト名 |
-| arrColVars | Pointer array | &larr; | 列変数へのポインターまたは列フィールドへのポインターまたはNil |
-| arrHeaderVars | Pointer array | &larr; | ヘッダー変数へのポインター |
-| arrColsVisible | Boolean array | &larr; | 列毎の表示状態 |
-| arrStyles | Pointer array | &larr; | 配列へのポインターまたは スタイル、カラー、および行管理変数またはNil |
-| arrFooterNames | Text array | &larr; | 列フッターオブジェクト名 |
-| arrFooterVars | Pointer array | &larr; | 列フッター変数へのポインター |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| arrColNames | Text array | &#8592; | 列オブジェクト名 |
+| arrHeaderNames | Text array | &#8592; | ヘッダーオブジェクト名 |
+| arrColVars | Pointer array | &#8592; | 列変数へのポインターまたは列フィールドへのポインターまたはNil |
+| arrHeaderVars | Pointer array | &#8592; | ヘッダー変数へのポインター |
+| arrColsVisible | Boolean array | &#8592; | 列毎の表示状態 |
+| arrStyles | Pointer array | &#8592; | 配列へのポインターまたは スタイル、カラー、および行管理変数またはNil |
+| arrFooterNames | Text array | &#8592; | 列フッターオブジェクト名 |
+| arrFooterVars | Pointer array | &#8592; | 列フッター変数へのポインター |
 
 <!-- END REF-->
 

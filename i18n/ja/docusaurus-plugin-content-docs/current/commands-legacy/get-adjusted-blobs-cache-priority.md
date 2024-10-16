@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | "blob"優先度値を取得したいテーブル |
-| 戻り値 | Integer | &larr; | "blob"フィールドのカレントの優先度値 |
+| aTable | Table | &#8594;  | "blob"優先度値を取得したいテーブル |
+| 戻り値 | Integer | &#8592; | "blob"フィールドのカレントの優先度値 |
 
 <!-- END REF-->
 

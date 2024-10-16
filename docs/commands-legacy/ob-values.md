@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Values.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | Object to return property values |
-| Function result | Collection | &larr; | Collection of property values (variant) |
+| object | Object | &#8594;  | Object to return property values |
+| Function result | Collection | &#8592; | Collection of property values (variant) |
 
 <!-- END REF-->
 

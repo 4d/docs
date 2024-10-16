@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field number valid.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | 倍長整数, ポインター | &rarr; | テーブル番号またはテーブルへのポインタ |
-| fieldNum | Integer | &rarr; | フィールド番号 |
-| 戻り値 | Boolean | &larr; | True = テーブルにあるフィールド False = フィールドがテーブルに存在しない |
+| tableNum &#124; tablePtr | 倍長整数, ポインター | &#8594;  | テーブル番号またはテーブルへのポインタ |
+| fieldNum | Integer | &#8594;  | フィールド番号 |
+| 戻り値 | Boolean | &#8592; | True = テーブルにあるフィールド False = フィールドがテーブルに存在しない |
 
 <!-- END REF-->
 

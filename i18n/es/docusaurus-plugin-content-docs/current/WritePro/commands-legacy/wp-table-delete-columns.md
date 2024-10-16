@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objTarget | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
-| refTabla | Object | &rarr; | Referencia de tabla |
-| numCol | Integer | &rarr; | Número de columna |
-| numColumns | Integer | &rarr; | Número de columnas a eliminar (valor por defecto = 1) |
+| objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
+| refTabla | Object | &#8594;  | Referencia de tabla |
+| numCol | Integer | &#8594;  | Número de columna |
+| numColumns | Integer | &#8594;  | Número de columnas a eliminar (valor por defecto = 1) |
 
 <!-- END REF-->
 

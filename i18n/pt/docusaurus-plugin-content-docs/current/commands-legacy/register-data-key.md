@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Register data key.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| curPassPhrase &#124; curDataKey | Texto, Objeto | &rarr; | Frase passe atual (texto) ou chave de criptografia de dados atual (objeto) |
-| Resultado | Boolean | &larr; | True se a chave de criptografia tiver sido adicionada com sucesso ao chaveiro 4D, False se já estiver no chaveiro. |
+| curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594;  | Frase passe atual (texto) ou chave de criptografia de dados atual (objeto) |
+| Resultado | Boolean | &#8592; | True se a chave de criptografia tiver sido adicionada com sucesso ao chaveiro 4D, False se já estiver no chaveiro. |
 
 <!-- END REF-->
 

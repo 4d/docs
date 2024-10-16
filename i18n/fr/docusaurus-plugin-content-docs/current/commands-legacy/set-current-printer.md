@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CURRENT PRINTER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomImpr | Text | &rarr; | Nom de l’imprimante à utiliser |
+| nomImpr | Text | &#8594;  | Nom de l’imprimante à utiliser |
 
 <!-- END REF-->
 

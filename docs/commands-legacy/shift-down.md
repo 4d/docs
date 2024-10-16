@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Shift down.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | State of the Shift key |
+| Function result | Boolean | &#8592; | State of the Shift key |
 
 <!-- END REF-->
 

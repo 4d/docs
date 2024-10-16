@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get page count.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | 4D Write Pro document or section |
-| Function result | Longint | &larr; | Number of pages in document |
+| targetObj | Object | &#8594;  | 4D Write Pro document or section |
+| Function result | Longint | &#8592; | Number of pages in document |
 
 <!-- END REF-->
 

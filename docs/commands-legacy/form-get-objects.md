@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectsArray | Text array | &larr; | Name of form objects |
-| variablesArray | Pointer array | &larr; | Pointers to variables or fields associated with objects |
-| pagesArray | Array integer | &larr; | Page number of each object |
-| formPageOption &#124; * | Longint, Operator | &rarr; | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>If * passed (obsolete) = current page with inherited objects |
+| objectsArray | Text array | &#8592; | Name of form objects |
+| variablesArray | Pointer array | &#8592; | Pointers to variables or fields associated with objects |
+| pagesArray | Array integer | &#8592; | Page number of each object |
+| formPageOption &#124; * | Longint, Operator | &#8594;  | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>If * passed (obsolete) = current page with inherited objects |
 
 <!-- END REF-->
 

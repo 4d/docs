@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aDécrypter | Blob | &rarr; | Données à décrypter |
-| &larr; | Données décryptées |
-| cléPubEmetteur | Blob | &rarr; | Clé publique de l’émetteur |
-| cléPrivRécepteur | Blob | &rarr; | Clé privée du récepteur |
+| aDécrypter | Blob | &#8594;  | Données à décrypter |
+| &#8592; | Données décryptées |
+| cléPubEmetteur | Blob | &#8594;  | Clé publique de l’émetteur |
+| cléPrivRécepteur | Blob | &#8594;  | Clé privée du récepteur |
 
 <!-- END REF-->
 

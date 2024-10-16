@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| content | Text | &rarr; | HTMLソースコード |
-| baseURL | Text | &rarr; | 相対参照に使用するURL (Mac OS) |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| content | Text | &#8594;  | HTMLソースコード |
+| baseURL | Text | &#8594;  | 相対参照に使用するURL (Mac OS) |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element |
-| bkName | String | &rarr; | Name of bookmark to create |
+| targetObj | Object | &#8594;  | Range or element |
+| bkName | String | &#8594;  | Name of bookmark to create |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Test semaphore.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| semaphore | Text | &rarr; | Name of the semaphore to test |
-| Function result | Boolean | &larr; | True = the semaphore exists, False = the semaphore doesn’t exist |
+| semaphore | Text | &#8594;  | Name of the semaphore to test |
+| Function result | Boolean | &#8592; | True = the semaphore exists, False = the semaphore doesn’t exist |
 
 <!-- END REF-->
 

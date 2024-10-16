@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get breaks.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| typeSaut | Integer | &rarr; | Type de sauts à retourner |
-| Résultat | Collection | &larr; | Collection de plages |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| typeSaut | Integer | &#8594;  | Type de sauts à retourner |
+| Résultat | Collection | &#8592; | Collection de plages |
 
 <!-- END REF-->
 

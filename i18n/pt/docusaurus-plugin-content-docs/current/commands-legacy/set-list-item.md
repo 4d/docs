@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &rarr; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| refElem &#124; * | Operador, Inteiro longo | &rarr; | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
-| novoText | Text | &rarr; | Novo texto do elemento |
-| novoNum | Integer | &rarr; | Novo número de referência do elemento |
-| sublista | Integer | &rarr; | Nova sub-lista associada ao elemento, ou 0 = nenhuma sub-lista (separar atual, se existe), ou -1 = nenhuma muda |
-| expandida | Boolean | &rarr; | Indica se a sub-lista deve ser expandida ou contraída |
+| * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| refElem &#124; * | Operador, Inteiro longo | &#8594;  | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
+| novoText | Text | &#8594;  | Novo texto do elemento |
+| novoNum | Integer | &#8594;  | Novo número de referência do elemento |
+| sublista | Integer | &#8594;  | Nova sub-lista associada ao elemento, ou 0 = nenhuma sub-lista (separar atual, se existe), ou -1 = nenhuma muda |
+| expandida | Boolean | &#8594;  | Indica se a sub-lista deve ser expandida ou contraída |
 
 <!-- END REF-->
 

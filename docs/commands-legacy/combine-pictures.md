@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.COMBINE PICTURES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resultingPict | Picture | &larr; | Picture resulting from combination |
-| pict1 | Picture | &rarr; | First picture to combine |
-| operator | Integer | &rarr; | Type of combination to be done |
-| pict2 | Picture | &rarr; | Second picture to combine |
-| horOffset | Integer | &rarr; | Horizontal offset for superimposition |
-| vertOffset | Integer | &rarr; | Vertical offset for superimposition |
+| resultingPict | Picture | &#8592; | Picture resulting from combination |
+| pict1 | Picture | &#8594;  | First picture to combine |
+| operator | Integer | &#8594;  | Type of combination to be done |
+| pict2 | Picture | &#8594;  | Second picture to combine |
+| horOffset | Integer | &#8594;  | Horizontal offset for superimposition |
+| vertOffset | Integer | &#8594;  | Vertical offset for superimposition |
 
 <!-- END REF-->
 

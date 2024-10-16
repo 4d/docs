@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| file | Integer | &rarr; | ファイルタイプ |
-| * | 演算子 | &rarr; | ホストデータベースのファイルを返す |
-| 戻り値 | Text | &larr; | 指定したファイルのパス名 |
+| file | Integer | &#8594;  | ファイルタイプ |
+| * | 演算子 | &#8594;  | ホストデータベースのファイルを返す |
+| 戻り値 | Text | &#8592; | 指定したファイルのパス名 |
 
 <!-- END REF-->
 

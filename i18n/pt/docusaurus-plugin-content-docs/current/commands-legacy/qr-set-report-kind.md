@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Referência da área |
-| tipo | Integer | &rarr; | Tipo do relatório |
+| area | Integer | &#8594;  | Referência da área |
+| tipo | Integer | &#8594;  | Tipo do relatório |
 
 <!-- END REF-->
 

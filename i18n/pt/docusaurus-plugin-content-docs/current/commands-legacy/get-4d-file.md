@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arquivo | Integer | &rarr; | Tipo de arquivo |
-| * | Operador | &rarr; | Retorna arquivo do banco de dados host |
-| Resultado | Text | &larr; | Nome da rota do arquivo 4D |
+| arquivo | Integer | &#8594;  | Tipo de arquivo |
+| * | Operador | &#8594;  | Retorna arquivo do banco de dados host |
+| Resultado | Text | &#8592; | Nome da rota do arquivo 4D |
 
 <!-- END REF-->
 

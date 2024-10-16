@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &rarr; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
-| récursive | Boolean | &rarr; | Vrai = contracter les sous-niveaux, Faux = ne pas contracter les sous-niveaux |
-| sélecteur | Integer | &rarr; | Partie de la list box à contracter |
-| ligne | Integer | &rarr; | Numéro de ligne de la rupture à contracter ou Numéro de niveau de la list box à contracter |
-| colonne | Integer | &rarr; | Numéro de colonne de la rupture à contracter |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| récursive | Boolean | &#8594;  | Vrai = contracter les sous-niveaux, Faux = ne pas contracter les sous-niveaux |
+| sélecteur | Integer | &#8594;  | Partie de la list box à contracter |
+| ligne | Integer | &#8594;  | Numéro de ligne de la rupture à contracter ou Numéro de niveau de la list box à contracter |
+| colonne | Integer | &#8594;  | Numéro de colonne de la rupture à contracter |
 
 <!-- END REF-->
 

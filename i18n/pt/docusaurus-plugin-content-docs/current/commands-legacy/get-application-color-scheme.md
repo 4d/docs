@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get application color scheme.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Retorna o esquema de cores do banco de dados host/anfitrião |
-| Resultado | Text | &larr; | Esquema de cores da aplicação atual |
+| * | Operador | &#8594;  | Retorna o esquema de cores do banco de dados host/anfitrião |
+| Resultado | Text | &#8592; | Esquema de cores da aplicação atual |
 
 <!-- END REF-->
 

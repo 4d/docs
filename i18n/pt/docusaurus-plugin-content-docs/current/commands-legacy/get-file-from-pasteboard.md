@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get file from pasteboard.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| indiceN | Integer | &rarr; | Arquivo N incluído na ação de arrastar |
-| Resultado | Text | &larr; | Rota do arquivo extraído da área de transferência |
+| indiceN | Integer | &#8594;  | Arquivo N incluído na ação de arrastar |
+| Resultado | Text | &#8592; | Rota do arquivo extraído da área de transferência |
 
 <!-- END REF-->
 

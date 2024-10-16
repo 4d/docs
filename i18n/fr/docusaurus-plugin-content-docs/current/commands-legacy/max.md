@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Max.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &rarr; | Valeurs desquelles dont vous voulez obtenir la plus élevée |
-| cheminAttribut | Text | &rarr; | Chemin d'attribut duquel calculer la valeur maximale |
-| Résultat | Date, Number | &larr; | Valeur la plus élevée de séries |
+| séries | Field, Array | &#8594;  | Valeurs desquelles dont vous voulez obtenir la plus élevée |
+| cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la valeur maximale |
+| Résultat | Date, Number | &#8592; | Valeur la plus élevée de séries |
 
 <!-- END REF-->
 

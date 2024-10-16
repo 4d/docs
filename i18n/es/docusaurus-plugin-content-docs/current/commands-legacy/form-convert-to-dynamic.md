@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla de formulario |
-| nomFormulario | Text | &rarr; | Nombre de un proyecto "clásico" o formulario tabla |
-| Resultado | Object | &larr; | nomFormulario convertido a formulario dinámico |
+| tabla | Table | &#8594;  | Tabla de formulario |
+| nomFormulario | Text | &#8594;  | Nombre de un proyecto "clásico" o formulario tabla |
+| Resultado | Object | &#8592; | nomFormulario convertido a formulario dinámico |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR REPORT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table to use for the report, or Default table if omitted |
-| document | Text | &rarr; | Quick Report document to load |
-| methodName | Text | &rarr; | Name of method to call |
-| * | Operator | &rarr; | Deletion of printing dialog boxes |
+| aTable | Table | &#8594;  | Table to use for the report, or Default table if omitted |
+| document | Text | &#8594;  | Quick Report document to load |
+| methodName | Text | &#8594;  | Name of method to call |
+| * | Operator | &#8594;  | Deletion of printing dialog boxes |
 
 <!-- END REF-->
 

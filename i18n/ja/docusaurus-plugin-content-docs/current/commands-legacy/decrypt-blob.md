@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| toDecrypt | Blob | &rarr; | 復号するデータ |
-| &larr; | 複合されたデータ |
-| sendPubKey | Blob | &rarr; | 送信者の公開鍵 |
-| recipPrivKey | Blob | &rarr; | 受信者の秘密鍵 |
+| toDecrypt | Blob | &#8594;  | 復号するデータ |
+| &#8592; | 複合されたデータ |
+| sendPubKey | Blob | &#8594;  | 送信者の公開鍵 |
+| recipPrivKey | Blob | &#8594;  | 受信者の秘密鍵 |
 
 <!-- END REF-->
 

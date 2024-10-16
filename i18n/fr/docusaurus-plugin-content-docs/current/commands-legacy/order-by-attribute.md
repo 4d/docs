@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table dans laquelle la sélection est triée ou Table par défaut si ce paramètre est omis |
-| champObjet | Object | &rarr; | Champ objet dont les attributs sont à utiliser pour le tri |
-| cheminAttribut | Text | &rarr; | Nom ou chemin d'attribut pour chaque niveau que l'on veut trier |
-| > ou < | Opérateur | &rarr; | Sens de tri pour chaque niveau : > pour trier par ordre ascendant, ou < pour trier par ordre descendant. |
-| * | Opérateur | &rarr; | Attente d'exécution du tri |
+| laTable | Table | &#8594;  | Table dans laquelle la sélection est triée ou Table par défaut si ce paramètre est omis |
+| champObjet | Object | &#8594;  | Champ objet dont les attributs sont à utiliser pour le tri |
+| cheminAttribut | Text | &#8594;  | Nom ou chemin d'attribut pour chaque niveau que l'on veut trier |
+| > ou < | Opérateur | &#8594;  | Sens de tri pour chaque niveau : > pour trier par ordre ascendant, ou < pour trier par ordre descendant. |
+| * | Opérateur | &#8594;  | Attente d'exécution du tri |
 
 <!-- END REF-->
 

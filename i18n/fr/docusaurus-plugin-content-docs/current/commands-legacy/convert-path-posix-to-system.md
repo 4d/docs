@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert path POSIX to system.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminPosix | Text | &rarr; | Chemin d’accès POSIX |
-| * | Opérateur | &rarr; | Option d’encodage |
-| Résultat | Text | &larr; | Chemin d’accès exprimé en syntaxe système |
+| cheminPosix | Text | &#8594;  | Chemin d’accès POSIX |
+| * | Opérateur | &#8594;  | Option d’encodage |
+| Résultat | Text | &#8592; | Chemin d’accès exprimé en syntaxe système |
 
 <!-- END REF-->
 

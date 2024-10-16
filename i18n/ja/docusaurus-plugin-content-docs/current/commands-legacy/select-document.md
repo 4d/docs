@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Select document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| directory | Text, Integer | &rarr; | ドキュメント選択ダイアログボックスで ディレクトリのアクセスパスをデフォルトで表示する、または デフォルトユーザフォルダを表示する空の文字列 (Windowsでは"My documents"、 Mac OSでは"Documents")、または メモリーされたアクセスパスの番号 |
-| fileTypes | Text | &rarr; | フィルタするドキュメントタイプのリスト、または ドキュメントをフィルタしない"*" |
-| title | Text | &rarr; | 選択ダイアログボックスのタイトル |
-| options | Integer | &rarr; | 任意の選択 |
-| selected | Text array | &larr; | アクセスパスのリストを含む配列 + 選択されたファイルの名前 |
-| 戻り値 | Text | &larr; | 選択されたファイルの名前(複数の選択がある場合、 リストの最初のファイル) |
+| directory | Text, Integer | &#8594;  | ドキュメント選択ダイアログボックスで ディレクトリのアクセスパスをデフォルトで表示する、または デフォルトユーザフォルダを表示する空の文字列 (Windowsでは"My documents"、 Mac OSでは"Documents")、または メモリーされたアクセスパスの番号 |
+| fileTypes | Text | &#8594;  | フィルタするドキュメントタイプのリスト、または ドキュメントをフィルタしない"*" |
+| title | Text | &#8594;  | 選択ダイアログボックスのタイトル |
+| options | Integer | &#8594;  | 任意の選択 |
+| selected | Text array | &#8592; | アクセスパスのリストを含む配列 + 選択されたファイルの名前 |
+| 戻り値 | Text | &#8592; | 選択されたファイルの名前(複数の選択がある場合、 リストの最初のファイル) |
 
 <!-- END REF-->
 

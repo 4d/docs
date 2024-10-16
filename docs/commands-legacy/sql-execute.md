@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXECUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| sqlStatement | Text | &rarr; | SQL command to execute |
-| boundObj | Variable, Field | &larr; | Receives result (if necessary) |
+| sqlStatement | Text | &#8594;  | SQL command to execute |
+| boundObj | Variable, Field | &#8592; | Receives result (if necessary) |
 
 <!-- END REF-->
 

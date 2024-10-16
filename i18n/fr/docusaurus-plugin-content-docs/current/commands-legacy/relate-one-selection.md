@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableN | Table | &rarr; | Nom de la table N (d'où part le lien) |
-| table1 | Table | &rarr; | Nom de la table 1 (où arrive le lien) |
+| tableN | Table | &#8594;  | Nom de la table N (d'où part le lien) |
+| table1 | Table | &#8594;  | Nom de la table 1 (où arrive le lien) |
 
 <!-- END REF-->
 

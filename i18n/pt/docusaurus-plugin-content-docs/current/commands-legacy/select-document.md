@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Select document.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| diretorio | Text, Integer | &rarr; | Rota de acesso do diretório a exibir na caixa de diálogo de seleção de documentos, ou String vazia para exibir a pasta de usuário padrão ("Meus documentos" em Windows e "Documentos" em Mac OS) ou Número da rota de acesso memorizada. |
-| tipoArquivos | Text | &rarr; | Lista de tipos de documentos a filtrar, ou "*" para não filtrar os documentos |
-| titulo | Text | &rarr; | Título da caixa de diálogo de seleção |
-| opçoes | Integer | &rarr; | Opções de seleção |
-| selecionados | Text array | &larr; | Array que contém a lista de rotas de acesso + nomes dos arquivos selecionados |
-| Resultado | Text | &larr; | Nome dos arquivos selecionados (primeiro arquivo da lista em caso de seleção múltipla) |
+| diretorio | Text, Integer | &#8594;  | Rota de acesso do diretório a exibir na caixa de diálogo de seleção de documentos, ou String vazia para exibir a pasta de usuário padrão ("Meus documentos" em Windows e "Documentos" em Mac OS) ou Número da rota de acesso memorizada. |
+| tipoArquivos | Text | &#8594;  | Lista de tipos de documentos a filtrar, ou "*" para não filtrar os documentos |
+| titulo | Text | &#8594;  | Título da caixa de diálogo de seleção |
+| opçoes | Integer | &#8594;  | Opções de seleção |
+| selecionados | Text array | &#8592; | Array que contém a lista de rotas de acesso + nomes dos arquivos selecionados |
+| Resultado | Text | &#8592; | Nome dos arquivos selecionados (primeiro arquivo da lista em caso de seleção múltipla) |
 
 <!-- END REF-->
 

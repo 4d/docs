@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Arctan.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &rarr; | 角度を求めるタンジェント値 |
-| 戻り値 | Real | &larr; | ラジアン角度 |
+| number | Real | &#8594;  | 角度を求めるタンジェント値 |
+| 戻り値 | Real | &#8592; | ラジアン角度 |
 
 <!-- END REF-->
 

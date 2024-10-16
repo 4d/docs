@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Day of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| date | Date | &rarr; | 日を取り出す日付 |
-| 戻り値 | Integer | &larr; | 日を表す数値 |
+| date | Date | &#8594;  | 日を取り出す日付 |
+| 戻り値 | Integer | &#8592; | 日を表す数値 |
 
 <!-- END REF-->
 

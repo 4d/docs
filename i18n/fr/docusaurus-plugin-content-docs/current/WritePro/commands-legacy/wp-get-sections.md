@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get sections.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou document 4D Write Pro |
-| Résultat | Collection | &larr; | Collection de toutes les sections contenues dans objCible |
+| objCible | Object | &#8594;  | Plage ou document 4D Write Pro |
+| Résultat | Collection | &#8592; | Collection de toutes les sections contenues dans objCible |
 
 <!-- END REF-->
 

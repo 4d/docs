@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| rowPosition | Integer | &rarr; | 行挿入位置 |
-| numRows | Integer | &rarr; | 挿入する行数 |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| rowPosition | Integer | &#8594;  | 行挿入位置 |
+| numRows | Integer | &#8594;  | 挿入する行数 |
 
 <!-- END REF-->
 

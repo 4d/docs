@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.After.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Devolve True se o ciclo de execução é um after |
+| Resultado | Boolean | &#8592; | Devolve True se o ciclo de execução é um after |
 
 <!-- END REF-->
 

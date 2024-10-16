@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.READ PICTURE FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArchivo | Text | &rarr; | Nombre o ruta de acceso completa del archivo a leer, o cadena vacía |
-| imagen | Picture | &larr; | Campo o variable que recibe la imagen |
-| * | Operador | &rarr; | Si se pasa = acepta todo tipo de archivo |
+| nomArchivo | Text | &#8594;  | Nombre o ruta de acceso completa del archivo a leer, o cadena vacía |
+| imagen | Picture | &#8592; | Campo o variable que recibe la imagen |
+| * | Operador | &#8594;  | Si se pasa = acepta todo tipo de archivo |
 
 <!-- END REF-->
 

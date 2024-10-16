@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current system user.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &larr; | マシンオーナーのネットワーク名 |
+| 戻り値 | Text | &#8592; | マシンオーナーのネットワーク名 |
 
 <!-- END REF-->
 

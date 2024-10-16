@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| expressions | Number | &rarr; | Instructions pour l'évaluation de l'expression |
-| Résultat | Text | &larr; | Texte de objCible |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| expressions | Number | &#8594;  | Instructions pour l'évaluation de l'expression |
+| Résultat | Text | &#8592; | Texte de objCible |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &rarr; | Object Name (if * is specified) or Variable (if * is omitted) |
-| invisible | Boolean | &rarr; | True = focus rectangle hidden,False = focus rectangle shown |
+| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| invisible | Boolean | &#8594;  | True = focus rectangle hidden,False = focus rectangle shown |
 
 <!-- END REF-->
 

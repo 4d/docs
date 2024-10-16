@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is waiting mouse up.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | True if the object is waiting for a mouse up event, False otherwise |
+| Function result | Boolean | &#8592; | True if the object is waiting for a mouse up event, False otherwise |
 
 <!-- END REF-->
 

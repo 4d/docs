@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrayNoms | Text array | &larr; | Array de nomes de pastas da página de início |
-| filtro | Text | &rarr; | Filtro de nomes |
-| * | Operador | &rarr; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| arrayNoms | Text array | &#8592; | Array de nomes de pastas da página de início |
+| filtro | Text | &#8594;  | Filtro de nomes |
+| * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

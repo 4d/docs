@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Structure file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Devuelve el archivo de estructura de la base local |
-| Resultado | Text | &larr; | Nombre largo del archivo de estructura de la base |
+| * | Operador | &#8594;  | Devuelve el archivo de estructura de la base local |
+| Resultado | Text | &#8592; | Nombre largo del archivo de estructura de la base |
 
 <!-- END REF-->
 

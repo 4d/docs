@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es un campo o una variable. |
-| objetoPicture | Picture | &rarr; | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) |
-| x | Integer | &rarr; | Coordenada horizontal de la esquina superior izquierda del rectángulo de selección. |
-| y | Integer | &rarr; | Coordinada vertical de la esquina superior izquierda del rectángulo de selección |
-| ancho | Integer | &rarr; | Ancho del rectángulo de selección |
-| alto | Integer | &rarr; | Altura del rectángulo de selección |
-| arrIDs | Text array | &larr; | IDs de los elementos cuyo rectángulo circundante está en intersección con el rectángulo de selección |
-| Resultado | Boolean | &larr; | True = se encontró al menos un elemento |
+| * | Operador | &#8594;  | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es un campo o una variable. |
+| objetoPicture | Picture | &#8594;  | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) |
+| x | Integer | &#8594;  | Coordenada horizontal de la esquina superior izquierda del rectángulo de selección. |
+| y | Integer | &#8594;  | Coordinada vertical de la esquina superior izquierda del rectángulo de selección |
+| ancho | Integer | &#8594;  | Ancho del rectángulo de selección |
+| alto | Integer | &#8594;  | Altura del rectángulo de selección |
+| arrIDs | Text array | &#8592; | IDs de los elementos cuyo rectángulo circundante está en intersección con el rectángulo de selección |
+| Resultado | Boolean | &#8592; | True = se encontró al menos un elemento |
 
 <!-- END REF-->
 

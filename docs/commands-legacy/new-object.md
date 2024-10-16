@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.New object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| property | Text | &rarr; | Name of property to create |
-| value | any | &rarr; | Value of property |
-| Function result | Object | &larr; | New language object |
+| property | Text | &#8594;  | Name of property to create |
+| value | any | &#8594;  | Value of property |
+| Function result | Object | &#8592; | New language object |
 
 <!-- END REF-->
 

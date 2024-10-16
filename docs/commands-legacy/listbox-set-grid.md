@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET GRID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| horizontal | Boolean | &rarr; | True = show, False = hide |
-| vertical | Boolean | &rarr; | True = show, False = hide |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| horizontal | Boolean | &#8594;  | True = show, False = hide |
+| vertical | Boolean | &#8594;  | True = show, False = hide |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossier | Text | &rarr; | Chemin d’accès du dossier (package sous OS X) contenant l’application mise à jour |
-| erreursDiscrètes | Boolean | &rarr; | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
+| cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous OS X) contenant l’application mise à jour |
+| erreursDiscrètes | Boolean | &#8594;  | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
 
 <!-- END REF-->
 

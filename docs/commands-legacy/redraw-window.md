@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDRAW WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &rarr; | Window reference number, or Frontmost window of current process, if omitted |
+| window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
 
 <!-- END REF-->
 

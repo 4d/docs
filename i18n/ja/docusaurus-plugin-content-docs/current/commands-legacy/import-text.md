@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | データを読み込むテーブル, または 省略した場合, デフォルトテーブル |
-| document | Text | &rarr; | データを読み込むテキストドキュメント |
+| aTable | Table | &#8594;  | データを読み込むテーブル, または 省略した場合, デフォルトテーブル |
+| document | Text | &#8594;  | データを読み込むテキストドキュメント |
 
 <!-- END REF-->
 

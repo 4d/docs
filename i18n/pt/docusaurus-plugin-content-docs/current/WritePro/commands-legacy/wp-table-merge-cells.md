@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE MERGE CELLS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Intervalo ou elemento ou documento 4D Write Pro |
-| tableRef | Object | &rarr; | Referência de Tabela |
-| startColumn | Integer | &rarr; | Posição da primeira célula da coluna |
-| startRow | Integer | &rarr; | Posição da primeira linha da coluna |
-| columnCount | Integer | &rarr; | Número de colunas para fundir |
-| rowCount | Integer | &rarr; | Número de linhas a fundir |
+| targetObj | Object | &#8594;  | Intervalo ou elemento ou documento 4D Write Pro |
+| tableRef | Object | &#8594;  | Referência de Tabela |
+| startColumn | Integer | &#8594;  | Posição da primeira célula da coluna |
+| startRow | Integer | &#8594;  | Posição da primeira linha da coluna |
+| columnCount | Integer | &#8594;  | Número de colunas para fundir |
+| rowCount | Integer | &#8594;  | Número de linhas a fundir |
 
 <!-- END REF-->
 

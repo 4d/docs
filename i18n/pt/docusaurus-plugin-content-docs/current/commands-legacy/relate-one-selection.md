@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabelaN | Table | &rarr; | Nome da tabela Muitos (onde inicia a relação) |
-| tabela1 | Table | &rarr; | Nome da Tabela Um (onde termina a relação) |
+| tabelaN | Table | &#8594;  | Nome da tabela Muitos (onde inicia a relação) |
+| tabela1 | Table | &#8594;  | Nome da Tabela Um (onde termina a relação) |
 
 <!-- END REF-->
 

@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| colPosition | Integer | &rarr; | 列挿入位置 |
-| colName | Text | &rarr; | 列オブジェクト名 |
-| formula | Text | &rarr; | 列に関連付ける4Dフォーミュラ |
-| dataType | Integer | &rarr; | フォーミュラの結果型 |
-| headerName | Text | &rarr; | 列ヘッダーオブジェクト名 |
-| headerVariable | Integer, Pointer | &rarr; | 列ヘッダー変数 |
-| footerName | Text | &rarr; | 列フッターオブジェクト名 |
-| footerVar | Variable, Pointer | &rarr; | 列フッター変数 |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| colPosition | Integer | &#8594;  | 列挿入位置 |
+| colName | Text | &#8594;  | 列オブジェクト名 |
+| formula | Text | &#8594;  | 列に関連付ける4Dフォーミュラ |
+| dataType | Integer | &#8594;  | フォーミュラの結果型 |
+| headerName | Text | &#8594;  | 列ヘッダーオブジェクト名 |
+| headerVariable | Integer, Pointer | &#8594;  | 列ヘッダー変数 |
+| footerName | Text | &#8594;  | 列フッターオブジェクト名 |
+| footerVar | Variable, Pointer | &#8594;  | 列フッター変数 |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get columns.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| refTableau | Object | &rarr; | Référence de tableau |
-| debutCol | Integer | &rarr; | Position de la première colonne |
-| nbCols | Integer | &rarr; | Nombre de colonnes à lire |
-| Résultat | Object | &larr; | Nouvelle plage contenant les colonnes sélectionnées |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| refTableau | Object | &#8594;  | Référence de tableau |
+| debutCol | Integer | &#8594;  | Position de la première colonne |
+| nbCols | Integer | &#8594;  | Nombre de colonnes à lire |
+| Résultat | Object | &#8592; | Nouvelle plage contenant les colonnes sélectionnées |
 
 <!-- END REF-->
 

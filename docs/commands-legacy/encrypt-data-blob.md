@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToEncrypt | Blob | &rarr; | BLOB to encrypt |
-| keyObject &#124; passPhrase | Object, Text | &rarr; | JSON object containing the encryption key or passphrase for direct encryption key generation (text) |
-| salt | Integer | &rarr; | Additional salt for algorithm |
-| encryptedBlob | Blob | &larr; | Encrypted BLOB |
-| Function result | Boolean | &larr; | True if encryption has been correctly performed, False otherwise |
+| blobToEncrypt | Blob | &#8594;  | BLOB to encrypt |
+| keyObject &#124; passPhrase | Object, Text | &#8594;  | JSON object containing the encryption key or passphrase for direct encryption key generation (text) |
+| salt | Integer | &#8594;  | Additional salt for algorithm |
+| encryptedBlob | Blob | &#8592; | Encrypted BLOB |
+| Function result | Boolean | &#8592; | True if encryption has been correctly performed, False otherwise |
 
 <!-- END REF-->
 

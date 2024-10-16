@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Picture | &rarr; | Campo o variable imagen 4D a convertir en miniatura |
-| dest | Picture | &larr; | Miniatura resultante |
-| ancho | Integer | &rarr; | Largo de la miniatura en píxeles, Valor por defecto = 48 |
-| altura | Integer | &rarr; | Alto de la miniatura en píxeles, Valor por defecto = 48 |
-| modo | Integer | &rarr; | Modo de creación de la miniatura Valor por defecto = Proporcional centrado (6) |
-| profundidad | Integer | &rarr; | Colores de la miniatura en bits/píxeles Valor por defecto = Profundidad de pantalla actual (0) |
+| fuente | Picture | &#8594;  | Campo o variable imagen 4D a convertir en miniatura |
+| dest | Picture | &#8592; | Miniatura resultante |
+| ancho | Integer | &#8594;  | Largo de la miniatura en píxeles, Valor por defecto = 48 |
+| altura | Integer | &#8594;  | Alto de la miniatura en píxeles, Valor por defecto = 48 |
+| modo | Integer | &#8594;  | Modo de creación de la miniatura Valor por defecto = Proporcional centrado (6) |
+| profundidad | Integer | &#8594;  | Colores de la miniatura en bits/píxeles Valor por defecto = Profundidad de pantalla actual (0) |
 
 <!-- END REF-->
 

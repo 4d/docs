@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Count XML elements.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML要素参照 |
-| elementName | Text | &rarr; | 数えるXML要素名 |
-| 戻り値 | Integer | &larr; | 要素数 |
+| elementRef | Text | &#8594;  | XML要素参照 |
+| elementName | Text | &#8594;  | 数えるXML要素名 |
+| 戻り値 | Integer | &#8592; | 要素数 |
 
 <!-- END REF-->
 

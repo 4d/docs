@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert path system to POSIX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminSystème | Text | &rarr; | Chemin d’accès relatif ou absolu exprimé en syntaxe système |
-| * | Opérateur | &rarr; | Option d’encodage |
-| Résultat | Text | &larr; | Chemin d’accès absolu exprimé en syntaxe POSIX |
+| cheminSystème | Text | &#8594;  | Chemin d’accès relatif ou absolu exprimé en syntaxe système |
+| * | Opérateur | &#8594;  | Option d’encodage |
+| Résultat | Text | &#8592; | Chemin d’accès absolu exprimé en syntaxe POSIX |
 
 <!-- END REF-->
 

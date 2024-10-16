@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table from which to copy selection, or Default table, if omitted |
-| name | Text | &rarr; | Name of the named selection to create |
+| aTable | Table | &#8594;  | Table from which to copy selection, or Default table, if omitted |
+| name | Text | &#8594;  | Name of the named selection to create |
 
 <!-- END REF-->
 

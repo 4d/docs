@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valorDevuelto | Variable | &larr; | Valor devuelto por el servicio web |
-| nombreDevuelto | Text | &rarr; | Nombre del parámetro a recuperar |
-| * | Operator |  &rarr; | Liberar memoria |
+| valorDevuelto | Variable | &#8592; | Valor devuelto por el servicio web |
+| nombreDevuelto | Text | &#8594;  | Nombre del parámetro a recuperar |
+| * | Operator |  &#8594;  | Liberar memoria |
 
 <!-- END REF-->
 

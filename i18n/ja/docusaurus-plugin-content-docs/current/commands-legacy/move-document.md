@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| srcPathname | Text | &rarr; | 既存ドキュメントへの完全なパス名 |
-| dstPathname | Text | &rarr; | 移動先のパス名 |
+| srcPathname | Text | &#8594;  | 既存ドキュメントへの完全なパス名 |
+| dstPathname | Text | &#8594;  | 移動先のパス名 |
 
 <!-- END REF-->
 

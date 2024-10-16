@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
-| object | any | &rarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| Resultado | Integer | &larr; | Tipo de objeto |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
+| object | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| Resultado | Integer | &#8592; | Tipo de objeto |
 
 <!-- END REF-->
 

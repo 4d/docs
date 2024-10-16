@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET QUERY DESTINATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| destinationType | Integer | &larr; | 0 = sélection courante, 1 = ensemble, 2 = sélection temporaire, 3 = variable |
-| destinationObjet | Text | &larr; | Nom de l'ensemble ou Nom de la sélection temporaire ou Chaîne vide |
-| destinationPtr | Pointer | &larr; | Pointeur vers variable locale si destinationType = 3 |
+| destinationType | Integer | &#8592; | 0 = sélection courante, 1 = ensemble, 2 = sélection temporaire, 3 = variable |
+| destinationObjet | Text | &#8592; | Nom de l'ensemble ou Nom de la sélection temporaire ou Chaîne vide |
+| destinationPtr | Pointer | &#8592; | Pointeur vers variable locale si destinationType = 3 |
 
 <!-- END REF-->
 

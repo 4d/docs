@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groupID | Integer | &rarr; | Unique group ID number |
-| name | Text | &larr; | Name of the group |
-| owner | Integer | &larr; | User ID number of group owner (Binary databases only) |
-| members | Array integer | &larr; | Group members |
+| groupID | Integer | &#8594;  | Unique group ID number |
+| name | Text | &#8592; | Name of the group |
+| owner | Integer | &#8592; | User ID number of group owner (Binary databases only) |
+| members | Array integer | &#8592; | Group members |
 
 <!-- END REF-->
 

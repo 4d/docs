@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dialType | Integer | &rarr; | Dialog box to be displayed |
+| dialType | Integer | &#8594;  | Dialog box to be displayed |
 
 <!-- END REF-->
 

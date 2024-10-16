@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE STYLE SHEET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objetoHojaEstilo | Object | &rarr; | Objeto hoja de estilo |
-| wpDoc | Object | &rarr; | Documento 4D Write Pro |
-| nombreHojaEstilo | Text | &rarr; | Nombre de la hoja de estilo |
+| objetoHojaEstilo | Object | &#8594;  | Objeto hoja de estilo |
+| wpDoc | Object | &#8594;  | Documento 4D Write Pro |
+| nombreHojaEstilo | Text | &#8594;  | Nombre de la hoja de estilo |
 
 <!-- END REF-->
 

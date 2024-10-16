@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| filtersArr | Text array | &rarr; | フィルタ配列 |
-| allowDenyArr | Boolean array | &rarr; | 許可-拒否配列 |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| filtersArr | Text array | &#8594;  | フィルタ配列 |
+| allowDenyArr | Boolean array | &#8594;  | 許可-拒否配列 |
 
 <!-- END REF-->
 

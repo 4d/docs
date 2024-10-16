@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &rarr; | BLOBに格納する階層リスト |
-| Blob | Blob | &rarr; | 階層リストを受け取るBLOB |
-| * | 演算子 | &rarr; | 値を追加するには* |
+| list | Integer | &#8594;  | BLOBに格納する階層リスト |
+| Blob | Blob | &#8594;  | 階層リストを受け取るBLOB |
+| * | 演算子 | &#8594;  | 値を追加するには* |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArquivo | Text | &rarr; | Rota de acesso e argumentos de arquivo a lançar |
-| fluxoEntrada | Text, Blob | &rarr; | Fluxo de entrada(stdin) |
-| fluxoSaida | Text, Blob | &larr; | Fluxo de saída (stdout) |
-| fluxoErro | Text, Blob | &larr; | Fluxo de erro(stderr) |
-| pid | Integer | &larr; | Identificador único para processo externo |
+| nomeArquivo | Text | &#8594;  | Rota de acesso e argumentos de arquivo a lançar |
+| fluxoEntrada | Text, Blob | &#8594;  | Fluxo de entrada(stdin) |
+| fluxoSaida | Text, Blob | &#8592; | Fluxo de saída (stdout) |
+| fluxoErro | Text, Blob | &#8592; | Fluxo de erro(stderr) |
+| pid | Integer | &#8592; | Identificador único para processo externo |
 
 <!-- END REF-->
 

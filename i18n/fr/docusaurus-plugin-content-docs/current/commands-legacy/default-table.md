@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DEFAULT TABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table à définir comme table par défaut |
+| laTable | Table | &#8594;  | Table à définir comme table par défaut |
 
 <!-- END REF-->
 

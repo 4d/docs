@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Process number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | Text | &rarr; | プロセス番号を取り出すプロセス名 |
-| * | Operator |  &rarr; | 4D Serverのプロセス番号を返す |
-| 戻り値 | Integer | &larr; | プロセス番号 |
+| name | Text | &#8594;  | プロセス番号を取り出すプロセス名 |
+| * | Operator |  &#8594;  | 4D Serverのプロセス番号を返す |
+| 戻り値 | Integer | &#8592; | プロセス番号 |
 
 <!-- END REF-->
 

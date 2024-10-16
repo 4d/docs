@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectField | Field | &rarr; | Indexed object field |
-| pathArray | Text array | &larr; | Array to receive list of distinct paths |
+| objectField | Field | &#8594;  | Indexed object field |
+| pathArray | Text array | &#8592; | Array to receive list of distinct paths |
 
 <!-- END REF-->
 

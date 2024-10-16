@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE ALIAS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminCible | Text | &rarr; | Nom ou chemin d’accès de la cible de l’alias/du raccourci |
-| cheminAlias | Text | &rarr; | Nom ou chemin d’accès complet de l’alias/du raccourci à créer |
+| cheminCible | Text | &#8594;  | Nom ou chemin d’accès de la cible de l’alias/du raccourci |
+| cheminAlias | Text | &#8594;  | Nom ou chemin d’accès complet de l’alias/du raccourci à créer |
 
 <!-- END REF-->
 

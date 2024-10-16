@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Transaction level.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Nível transação atual (0 se nenhuma transação for iniciada) |
+| Resultado | Integer | &#8592; | Nível transação atual (0 se nenhuma transação for iniciada) |
 
 <!-- END REF-->
 

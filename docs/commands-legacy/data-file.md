@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| segment | Integer | &rarr; | Obsolete, do not use |
-| Function result | String | &larr; | Long name of the data file for the database |
+| segment | Integer | &#8594;  | Obsolete, do not use |
+| Function result | String | &#8592; | Long name of the data file for the database |
 
 <!-- END REF-->
 

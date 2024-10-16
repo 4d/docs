@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Int.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &rarr; | Número cuja porção inteira é devolvida |
-| Resultado | Real | &larr; | Porção inteira do número |
+| numero | Real | &#8594;  | Número cuja porção inteira é devolvida |
+| Resultado | Real | &#8592; | Porção inteira do número |
 
 <!-- END REF-->
 

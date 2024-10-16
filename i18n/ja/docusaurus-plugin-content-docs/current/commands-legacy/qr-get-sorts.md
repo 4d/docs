@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET SORTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | エリア参照 |
-| aColumns | Real array | &larr; | ソートされたカラム |
-| aOrders | Real array | &larr; | ソート順 |
+| area | Integer | &#8594;  | エリア参照 |
+| aColumns | Real array | &#8592; | ソートされたカラム |
+| aOrders | Real array | &#8592; | ソート順 |
 
 <!-- END REF-->
 

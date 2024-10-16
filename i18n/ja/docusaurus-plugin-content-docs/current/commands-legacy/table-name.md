@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Table name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | 倍長整数, ポインター | &rarr; | テーブル番号、またはテーブルポインタ |
-| 戻り値 | Text | &larr; | テーブルの名前 |
+| tableNum &#124; tablePtr | 倍長整数, ポインター | &#8594;  | テーブル番号、またはテーブルポインタ |
+| 戻り値 | Text | &#8592; | テーブルの名前 |
 
 <!-- END REF-->
 

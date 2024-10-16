@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto(cadeia) Se omitido, objeto é um campo ou variável |
-| objeto | any | &rarr; | Nome do objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| valorMax | Date, Time, Number | &rarr; | Valor máximo para o objeto |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia) Se omitido, objeto é um campo ou variável |
+| objeto | any | &#8594;  | Nome do objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| valorMax | Date, Time, Number | &#8594;  | Valor máximo para o objeto |
 
 <!-- END REF-->
 

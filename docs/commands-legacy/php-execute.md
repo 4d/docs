@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP Execute.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| scriptPath | Text | &rarr; | Pathname to PHP script or<br/>"" to execute a PHP function |
-| functionName | Text | &rarr; | PHP function to be executed |
-| phpResult | *, Variable, Field | &larr; | Result of PHP function execution or * to not receive any result |
-| param | Text, Boolean, Real, Integer, Date, Time | &rarr; | Parameter(s) of PHP function |
-| Function result | Boolean | &larr; | True = execution correct<br/>False = execution error |
+| scriptPath | Text | &#8594;  | Pathname to PHP script or<br/>"" to execute a PHP function |
+| functionName | Text | &#8594;  | PHP function to be executed |
+| phpResult | *, Variable, Field | &#8592; | Result of PHP function execution or * to not receive any result |
+| param | Text, Boolean, Real, Integer, Date, Time | &#8594;  | Parameter(s) of PHP function |
+| Function result | Boolean | &#8592; | True = execution correct<br/>False = execution error |
 
 <!-- END REF-->
 

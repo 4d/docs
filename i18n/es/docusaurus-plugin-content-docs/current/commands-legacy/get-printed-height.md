@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get printed height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Posición del marcador |
+| Resultado | Integer | &#8592; | Posición del marcador |
 
 <!-- END REF-->
 

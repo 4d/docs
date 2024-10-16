@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get locked columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &rarr; | Object Name (if * is specified) or Variable (if * is omitted) |
-| Function result | Longint | &larr; | Number of locked columns |
+| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| Function result | Longint | &#8592; | Number of locked columns |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP FREEZE FORMULAS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
-| recompute | Longint | &rarr; | Option to control recomputing |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| recompute | Longint | &#8594;  | Option to control recomputing |
 
 <!-- END REF-->
 

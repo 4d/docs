@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena), Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Variables (si se omite *) |
-| recursivo | Boolean | &rarr; | True = contraer los subniveles<br/>False = no contraer los subniveles |
-| selector | Integer | &rarr; | Parte del list box a contraer |
-| grueso | Integer | &rarr; | Número de línea de la ruptura a contraer o <br/>Número de nivel del listbox a contraer |
-| columna | Integer | &rarr; | Número de columna de la ruptura a contraer |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena), Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variables (si se omite *) |
+| recursivo | Boolean | &#8594;  | True = contraer los subniveles<br/>False = no contraer los subniveles |
+| selector | Integer | &#8594;  | Parte del list box a contraer |
+| grueso | Integer | &#8594;  | Número de línea de la ruptura a contraer o <br/>Número de nivel del listbox a contraer |
+| columna | Integer | &#8594;  | Número de columna de la ruptura a contraer |
 
 <!-- END REF-->
 

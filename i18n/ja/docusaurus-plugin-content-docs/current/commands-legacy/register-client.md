@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| clientName | Text | &rarr; | 4Dクライアントセッション名 |
-| period | Integer | &rarr; | ***バージョン11.3より無効*** |
-| * | 演算子 | &rarr; | ローカルプロセス |
+| clientName | Text | &#8594;  | 4Dクライアントセッション名 |
+| period | Integer | &#8594;  | ***バージョン11.3より無効*** |
+| * | 演算子 | &#8594;  | ローカルプロセス |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Add picture.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | Documento 4D Write Pro |
-| imagen | Picture, Text | &rarr; | Imagen (campo o variable) o Ruta de la imagen (texto) |
-| Resultado | Object | &larr; | Objeto que hace referencia a la imagen |
+| wpDoc | Object | &#8594;  | Documento 4D Write Pro |
+| imagen | Picture, Text | &#8594;  | Imagen (campo o variable) o Ruta de la imagen (texto) |
+| Resultado | Object | &#8592; | Objeto que hace referencia a la imagen |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get cache size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Real | &larr; | Tamanho da cache de banco de dados em bytes |
+| Resultado | Real | &#8592; | Tamanho da cache de banco de dados em bytes |
 
 <!-- END REF-->
 

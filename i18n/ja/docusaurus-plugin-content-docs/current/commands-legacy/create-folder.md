@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folderPath | Text | &rarr; | 作成する新しいフォルダーのパス名 |
-| * | 演算子 | &rarr; | パス中に存在しないフォルダーを作成する |
+| folderPath | Text | &#8594;  | 作成する新しいフォルダーのパス名 |
+| * | 演算子 | &#8594;  | パス中に存在しないフォルダーを作成する |
 
 <!-- END REF-->
 

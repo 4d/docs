@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Split string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chaîneASéparer | Text | &rarr; | Chaîne d'origine à découper |
-| séparateur | Text | &rarr; | Chaîne à laquelle chaîneASéparer doit être découpée. Si chaîne vide (""), chaque caractère de chaîneASéparer sera un élément de la collection |
-| options | Integer | &rarr; | Option(s) relative(s) aux chaînes vides et espaces |
-| Résultat | Collection | &larr; | Collection de sous-chaînes |
+| chaîneASéparer | Text | &#8594;  | Chaîne d'origine à découper |
+| séparateur | Text | &#8594;  | Chaîne à laquelle chaîneASéparer doit être découpée. Si chaîne vide (""), chaque caractère de chaîneASéparer sera un élément de la collection |
+| options | Integer | &#8594;  | Option(s) relative(s) aux chaînes vides et espaces |
+| Résultat | Collection | &#8592; | Collection de sous-chaînes |
 
 <!-- END REF-->
 

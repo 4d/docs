@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| altura | Integer | &larr; | Altura da área de impressão |
-| largura | Integer | &larr; | Largura da área de impressão |
+| altura | Integer | &#8592; | Altura da área de impressão |
+| largura | Integer | &#8592; | Largura da área de impressão |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| colorScheme | Text | &rarr; | "light"、"dark"、または "inherited" |
+| colorScheme | Text | &#8594;  | "light"、"dark"、または "inherited" |
 
 <!-- END REF-->
 

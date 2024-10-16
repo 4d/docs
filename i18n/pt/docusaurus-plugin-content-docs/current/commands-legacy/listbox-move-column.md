@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome do objeto (se especificado *) ou<br/>Variável (se omitido *) da coluna a mover |
-| colPosition | Integer | &rarr; | Nova localização da coluna |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome do objeto (se especificado *) ou<br/>Variável (se omitido *) da coluna a mover |
+| colPosition | Integer | &#8594;  | Nova localização da coluna |
 
 <!-- END REF-->
 

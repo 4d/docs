@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &rarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| avantElément &#124; * | Entier long, Opérateur | &rarr; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
-| libelléElément | Text | &rarr; | Libellé du nouvel élément |
-| réfElément | Integer | &rarr; | Numéro de référence unique du nouvel élément |
-| sous_Liste | Integer | &rarr; | Sous-liste optionnelle rattachée au nouvel élément |
-| déployée | Boolean | &rarr; | Indique si la sous-liste doit être déployée ou non |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| avantElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
+| libelléElément | Text | &#8594;  | Libellé du nouvel élément |
+| réfElément | Integer | &#8594;  | Numéro de référence unique du nouvel élément |
+| sous_Liste | Integer | &#8594;  | Sous-liste optionnelle rattachée au nouvel élément |
+| déployée | Boolean | &#8594;  | Indique si la sous-liste doit être déployée ou non |
 
 <!-- END REF-->
 

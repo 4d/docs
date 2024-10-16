@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.POP RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de laquelle dépiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594;  | Table de laquelle dépiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

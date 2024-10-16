@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrNomsCols | Text array | &larr; | Nombres de objeto de las columnas |
-| arrNomsEncabezados | Text array | &larr; | Nombres de objeto de los títulos |
-| arrVarCols | Pointer array | &larr; | Punteros hacia las variables de las columnas |
-| arrVarEncabezados | Pointer array | &larr; | Punteros hacia campos o Nil |
-| arrColsVisibles | Boolean array | &larr; | Visibilidad de cada columna |
-| arrEstilos | Pointer array | &larr; | Punteros a los arrays o a las variables de estilos de colores y de visibilidad o Nil |
-| arrNomsPies | Text array | &larr; | Nombres de los objetos de pies de columna |
-| arrVarsPies | Pointer array | &larr; | Punteros a las variables de pies de columna |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrNomsCols | Text array | &#8592; | Nombres de objeto de las columnas |
+| arrNomsEncabezados | Text array | &#8592; | Nombres de objeto de los títulos |
+| arrVarCols | Pointer array | &#8592; | Punteros hacia las variables de las columnas |
+| arrVarEncabezados | Pointer array | &#8592; | Punteros hacia campos o Nil |
+| arrColsVisibles | Boolean array | &#8592; | Visibilidad de cada columna |
+| arrEstilos | Pointer array | &#8592; | Punteros a los arrays o a las variables de estilos de colores y de visibilidad o Nil |
+| arrNomsPies | Text array | &#8592; | Nombres de los objetos de pies de columna |
+| arrVarsPies | Pointer array | &#8592; | Punteros a las variables de pies de columna |
 
 <!-- END REF-->
 

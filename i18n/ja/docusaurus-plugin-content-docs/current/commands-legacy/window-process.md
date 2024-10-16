@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Window process.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &rarr; | ウィンドウ参照番号 |
-| 戻り値 | Integer | &larr; | プロセス参照番号 |
+| window | Integer | &#8594;  | ウィンドウ参照番号 |
+| 戻り値 | Integer | &#8592; | プロセス参照番号 |
 
 <!-- END REF-->
 

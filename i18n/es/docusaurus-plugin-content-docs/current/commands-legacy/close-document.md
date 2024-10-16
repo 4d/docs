@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docRef | Time | &rarr; | Número de referencia del documento |
+| docRef | Time | &#8594;  | Número de referencia del documento |
 
 <!-- END REF-->
 

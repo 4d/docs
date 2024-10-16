@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get section.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément |
-| docWP | Object | &rarr; | Document 4D Write Pro |
-| indexSection | Integer | &rarr; | Index section |
-| Résultat | Object | &larr; | Section 4D Write Pro |
+| objCible | Object | &#8594;  | Plage ou élément |
+| docWP | Object | &#8594;  | Document 4D Write Pro |
+| indexSection | Integer | &#8594;  | Index section |
+| Résultat | Object | &#8592; | Section 4D Write Pro |
 
 <!-- END REF-->
 

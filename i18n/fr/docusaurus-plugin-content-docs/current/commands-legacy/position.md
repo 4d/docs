@@ -10,20 +10,20 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| àChercher | Text | &rarr; | Chaîne à rechercher |
-| laText | Text | &rarr; | Chaîne dans laquelle effectuer la recherche |
-| début | Integer | &rarr; | Position dans laChaîne où débuter la recherche |
-| longTrouvée | Integer | &larr; | Longueur de la chaîne trouvée |
-| * | Opérateur | &rarr; | Si passé : évaluation basée sur les codes de caractères |
-| Résultat | Integer | &larr; | Position de la première occurrence de àChercher |
+| àChercher | Text | &#8594;  | Chaîne à rechercher |
+| laText | Text | &#8594;  | Chaîne dans laquelle effectuer la recherche |
+| début | Integer | &#8594;  | Position dans laChaîne où débuter la recherche |
+| longTrouvée | Integer | &#8592; | Longueur de la chaîne trouvée |
+| * | Opérateur | &#8594;  | Si passé : évaluation basée sur les codes de caractères |
+| Résultat | Integer | &#8592; | Position de la première occurrence de àChercher |
 | Position ( àChercher ; laChaîne ; début ; longTrouvée ; options ) -> Résultat |
 | Paramètre | Type | Description |
-| àChercher | Text | &rarr; | Chaîne à rechercher |
-| laText | Text | &rarr; | Chaîne dans laquelle effectuer la recherche |
-| début | Integer | &rarr; | Position dans laChaîne où débuter la recherche |
-| longTrouvée | Integer | &rarr; | Longueur de la chaîne trouvée |
-| options | Integer | &rarr; | Critère(s) de recherche |
-| Résultat | Integer | &larr; | Position de la première occurrence de àChercher |
+| àChercher | Text | &#8594;  | Chaîne à rechercher |
+| laText | Text | &#8594;  | Chaîne dans laquelle effectuer la recherche |
+| début | Integer | &#8594;  | Position dans laChaîne où débuter la recherche |
+| longTrouvée | Integer | &#8594;  | Longueur de la chaîne trouvée |
+| options | Integer | &#8594;  | Critère(s) de recherche |
+| Résultat | Integer | &#8592; | Position de la première occurrence de àChercher |
 
 <!-- END REF-->
 

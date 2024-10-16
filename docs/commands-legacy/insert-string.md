@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Insert string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &rarr; | String in which to insert the other string |
-| what | Text | &rarr; | String to insert |
-| where | Integer | &rarr; | Where to insert |
-| Function result | String | &larr; | Resulting string |
+| source | Text | &#8594;  | String in which to insert the other string |
+| what | Text | &#8594;  | String to insert |
+| where | Integer | &#8594;  | Where to insert |
+| Function result | String | &#8592; | Resulting string |
 
 <!-- END REF-->
 

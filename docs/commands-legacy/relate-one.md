@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable &#124; Field | Table, Field | &rarr; | Table for which to establish all automatic relations, or Field with manual relation to one table |
-| choiceField | Field | &rarr; | Choice field from the one table |
+| manyTable &#124; Field | Table, Field | &#8594;  | Table for which to establish all automatic relations, or Field with manual relation to one table |
+| choiceField | Field | &#8594;  | Choice field from the one table |
 
 <!-- END REF-->
 

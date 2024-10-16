@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla para la cual devolver una selección de registros o Tabla por defecto si se omite |
-| opConj | * | &rarr; | Operador de conjunción ausar para combinar varias búsquedas (si las hay) |
-| campoObjeto | Field | &rarr; | Campo objeto cuyos atributos utilizar para la búsqueda |
-| rutaAtributo | Text | &rarr; | Nombre o ruta de atributo |
-| opBusq | Text, * | &rarr; | Operador de búsqueda (comparador) |
-| valor | Text, Number, Date, Time | &rarr; | Valor a comparar |
-| * | Operador | &rarr; | Espera de ejecución de la búsqueda |
+| tabla | Table | &#8594;  | Tabla para la cual devolver una selección de registros o Tabla por defecto si se omite |
+| opConj | * | &#8594;  | Operador de conjunción ausar para combinar varias búsquedas (si las hay) |
+| campoObjeto | Field | &#8594;  | Campo objeto cuyos atributos utilizar para la búsqueda |
+| rutaAtributo | Text | &#8594;  | Nombre o ruta de atributo |
+| opBusq | Text, * | &#8594;  | Operador de búsqueda (comparador) |
+| valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
+| * | Operador | &#8594;  | Espera de ejecución de la búsqueda |
 
 <!-- END REF-->
 

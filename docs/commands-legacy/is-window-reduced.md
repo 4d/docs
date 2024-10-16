@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window reduced.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &rarr; | Window reference number |
-| Function result | Boolean | &larr; | True if the window is reduced in the taskbar or the in dock, False otherwise |
+| window | Integer | &#8594;  | Window reference number |
+| Function result | Boolean | &#8592; | True if the window is reduced in the taskbar or the in dock, False otherwise |
 
 <!-- END REF-->
 

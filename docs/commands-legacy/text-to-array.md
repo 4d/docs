@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| varText | Text | &rarr; | Original text to be divided |
-| arrText | Text array | &larr; | Array containing the text divided into words or lines |
-| width | Integer | &rarr; | Maximum width of string (in pixels) |
-| fontName | Text | &rarr; | Name of font |
-| fontSize | Integer | &rarr; | Size of font |
-| fontStyle | Integer | &rarr; | Style of font |
-| * | Operator | &rarr; | If passed = interpret text as multistyle |
+| varText | Text | &#8594;  | Original text to be divided |
+| arrText | Text array | &#8592; | Array containing the text divided into words or lines |
+| width | Integer | &#8594;  | Maximum width of string (in pixels) |
+| fontName | Text | &#8594;  | Name of font |
+| fontSize | Integer | &#8594;  | Size of font |
+| fontStyle | Integer | &#8594;  | Style of font |
+| * | Operator | &#8594;  | If passed = interpret text as multistyle |
 
 <!-- END REF-->
 

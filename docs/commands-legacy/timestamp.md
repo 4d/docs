@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Timestamp.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &larr; | Current time returned using ISO format with milliseconds |
+| Function result | String | &#8592; | Current time returned using ISO format with milliseconds |
 
 <!-- END REF-->
 

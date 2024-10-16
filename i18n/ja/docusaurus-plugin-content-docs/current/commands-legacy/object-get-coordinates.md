@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| left | Integer | &larr; | オブジェクトの左座標 |
-| top | Integer | &larr; | オブジェクトの上座標 |
-| right | Integer | &larr; | オブジェクトの右座標 |
-| bottom | Integer | &larr; | オブジェクトの下座標 |
+| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| left | Integer | &#8592; | オブジェクトの左座標 |
+| top | Integer | &#8592; | オブジェクトの上座標 |
+| right | Integer | &#8592; | オブジェクトの右座標 |
+| bottom | Integer | &#8592; | オブジェクトの下座標 |
 
 <!-- END REF-->
 

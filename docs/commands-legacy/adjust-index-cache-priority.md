@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &rarr; | Field whose index(es) priority value has to be adjusted |
-| priority | Integer | &rarr; | Cache priority value for the field index(es) |
+| aField | Field | &#8594;  | Field whose index(es) priority value has to be adjusted |
+| priority | Integer | &#8594;  | Cache priority value for the field index(es) |
 
 <!-- END REF-->
 

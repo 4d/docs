@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get system info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Object | &larr; | システム情報 |
+| 戻り値 | Object | &#8592; | システム情報 |
 
 <!-- END REF-->
 

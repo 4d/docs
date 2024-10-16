@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| color | Text, Integer | &rarr; | RGB color value |
-| horizontal | Boolean | &rarr; | Use color for horizontal grid lines |
-| vertical | Boolean | &rarr; | Use color for vertical grid lines |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| color | Text, Integer | &#8594;  | RGB color value |
+| horizontal | Boolean | &#8594;  | Use color for horizontal grid lines |
+| vertical | Boolean | &#8594;  | Use color for vertical grid lines |
 
 <!-- END REF-->
 

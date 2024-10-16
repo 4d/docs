@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &rarr; | バイト列を挿入するBLOB |
-| offset | Integer | &rarr; | バイト列挿入開始位置 |
-| len | Integer | &rarr; | 挿入するバイト数 |
-| filler | Integer | &rarr; | デフォルトのバイト値 (0x00..0xFF) 省略した場合0x00 |
+| Blob | Blob | &#8594;  | バイト列を挿入するBLOB |
+| offset | Integer | &#8594;  | バイト列挿入開始位置 |
+| len | Integer | &#8594;  | 挿入するバイト数 |
+| filler | Integer | &#8594;  | デフォルトのバイト値 (0x00..0xFF) 省略した場合0x00 |
 
 <!-- END REF-->
 

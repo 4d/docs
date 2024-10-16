@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Is font style supported.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素 |
-| wpFontStyle | Integer | &rarr; | フォントスタイル定数 |
-| 戻り値 | Boolean | &larr; | wpFontStyleがサポートされている部分がレンジ内にあればTrue、それ以外はFalse |
+| targetObj | Object | &#8594;  | レンジまたは要素 |
+| wpFontStyle | Integer | &#8594;  | フォントスタイル定数 |
+| 戻り値 | Boolean | &#8592; | wpFontStyleがサポートされている部分がレンジ内にあればTrue、それ以外はFalse |
 
 <!-- END REF-->
 

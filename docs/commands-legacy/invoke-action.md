@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.INVOKE ACTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| action | Text | &rarr; | Standard action name or pattern including parameter if required |
-| target | Integer | &rarr; | Defines where to execute the action: current form (default) or main form |
+| action | Text | &#8594;  | Standard action name or pattern including parameter if required |
+| target | Integer | &#8594;  | Defines where to execute the action: current form (default) or main form |
 
 <!-- END REF-->
 

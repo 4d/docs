@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela para a qual devolver uma seleção de registros ou Tabela por padrão, se for omitido |
-| criterioPesquisa | Expression | &rarr; | Critério de Pesquisa |
-| * | Operador | &rarr; | Flag para continuar a pesquisa |
+| tabela | Table | &#8594;  | Tabela para a qual devolver uma seleção de registros ou Tabela por padrão, se for omitido |
+| criterioPesquisa | Expression | &#8594;  | Critério de Pesquisa |
+| * | Operador | &#8594;  | Flag para continuar a pesquisa |
 
 <!-- END REF-->
 

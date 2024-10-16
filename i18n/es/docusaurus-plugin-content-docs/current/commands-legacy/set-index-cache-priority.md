@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &rarr; | Campo cuyo valor de prioridad de índices debe ser configurado para la sesión |
-| prioridad | Integer | &rarr; | Valor de prioridad de la caché para el(los) índice(s) de campo |
+| campo | Field | &#8594;  | Campo cuyo valor de prioridad de índices debe ser configurado para la sesión |
+| prioridad | Integer | &#8594;  | Valor de prioridad de la caché para el(los) índice(s) de campo |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| inicio | Integer | &rarr; | Número de registro seleccionado a partir del cual comenzar la recuperación de datos |
-| fin | Integer | &rarr; | Número de registro seleccionado donde termina la recuperación de datos |
-| campo | Field, Table | &rarr; | Campo a utilizar para recuperar los datos o Tabla a utilizar para recuperar los números de registros |
-| array | Array | &larr; | Array para recibir los datos o números de registros de los campos |
+| inicio | Integer | &#8594;  | Número de registro seleccionado a partir del cual comenzar la recuperación de datos |
+| fin | Integer | &#8594;  | Número de registro seleccionado donde termina la recuperación de datos |
+| campo | Field, Table | &#8594;  | Campo a utilizar para recuperar los datos o Tabla a utilizar para recuperar los números de registros |
+| array | Array | &#8592; | Array para recibir los datos o números de registros de los campos |
 
 <!-- END REF-->
 

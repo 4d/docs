@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy parameters.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| inicioDesde | Integer | &rarr; | Indice inicio (incluido) |
-| Resultado | Collection | &larr; | Nova coleção contendo parâmetros realmente passados |
+| inicioDesde | Integer | &#8594;  | Indice inicio (incluido) |
+| Resultado | Collection | &#8592; | Nova coleção contendo parâmetros realmente passados |
 
 <!-- END REF-->
 

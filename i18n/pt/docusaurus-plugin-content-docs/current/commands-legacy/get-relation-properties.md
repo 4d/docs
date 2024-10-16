@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &rarr; | Ponteiro de campo ou número da tabela |
-| numCampo | Integer | &rarr; | Número de campo se o número da tabela for passado como primeiro parâmetro |
-| Tabela | Integer | &larr; | Nº de tabela ou 0 se nenhuma relação tiver sido definido para o campo |
-| Campo | Integer | &larr; | Número de campo ou 0 se nenhuma relação for definida para o campo. |
-| discriminante | Integer | &larr; | Número de campo discriminante ou 0 se nenhum campo |
-| autoUm | Boolean | &larr; | True = relação Um automática, False = Relação Um manual |
-| autoMuitos | Boolean | &larr; | True = relação Um para Muitos automática, False = Relação Um para Muitos manual |
+| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro de campo ou número da tabela |
+| numCampo | Integer | &#8594;  | Número de campo se o número da tabela for passado como primeiro parâmetro |
+| Tabela | Integer | &#8592; | Nº de tabela ou 0 se nenhuma relação tiver sido definido para o campo |
+| Campo | Integer | &#8592; | Número de campo ou 0 se nenhuma relação for definida para o campo. |
+| discriminante | Integer | &#8592; | Número de campo discriminante ou 0 se nenhum campo |
+| autoUm | Boolean | &#8592; | True = relação Um automática, False = Relação Um manual |
+| autoMuitos | Boolean | &#8592; | True = relação Um para Muitos automática, False = Relação Um para Muitos manual |
 
 <!-- END REF-->
 

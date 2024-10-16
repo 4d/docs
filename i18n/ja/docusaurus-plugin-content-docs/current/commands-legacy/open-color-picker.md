@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| textOrBackground | Integer | &rarr; | 0または省略 = テキストカラーを選択、1 = テキスト背景色を選択 |
+| textOrBackground | Integer | &#8594;  | 0または省略 = テキストカラーを選択、1 = テキスト背景色を選択 |
 
 <!-- END REF-->
 

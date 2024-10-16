@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &rarr; | 変換するピクチャ |
-| &larr; | 変換されたピクチャ |
-| codec | Text | &rarr; | ピクチャCodec ID |
-| compression | Real | &rarr; | 圧縮の品質 |
+| picture | Picture | &#8594;  | 変換するピクチャ |
+| &#8592; | 変換されたピクチャ |
+| codec | Text | &#8594;  | ピクチャCodec ID |
+| compression | Real | &#8594;  | 圧縮の品質 |
 
 <!-- END REF-->
 

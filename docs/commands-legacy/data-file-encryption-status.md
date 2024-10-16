@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file encryption status.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &rarr; | Pathname of 4D structure file to be checked |
-| dataPath | Text | &rarr; | Pathname of 4D data file to be checked |
-| Function result | Object | &larr; | Information about the encryption of the data file and of each table |
+| structurePath | Text | &#8594;  | Pathname of 4D structure file to be checked |
+| dataPath | Text | &#8594;  | Pathname of 4D data file to be checked |
+| Function result | Object | &#8592; | Information about the encryption of the data file and of each table |
 
 <!-- END REF-->
 

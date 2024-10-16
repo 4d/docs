@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &rarr; | Numéro du process |
-| procNom | Text | &larr; | Nom du process |
-| procStatut | Integer | &larr; | Statut du process |
-| procTemps | Integer | &larr; | Temps d'exécution cumulé du process en ticks |
-| procMode | Boolean, Integer | &larr; | Si booléen : Visible (Vrai) ou Caché (Faux)Si entier long (champ de bits) : bit 0 = Visibilité, bit 1 = Exécution en préemptif |
-| uniqueID | Integer | &larr; | Numéro unique du process |
-| origine | Integer | &larr; | Origine du process |
+| process | Integer | &#8594;  | Numéro du process |
+| procNom | Text | &#8592; | Nom du process |
+| procStatut | Integer | &#8592; | Statut du process |
+| procTemps | Integer | &#8592; | Temps d'exécution cumulé du process en ticks |
+| procMode | Boolean, Integer | &#8592; | Si booléen : Visible (Vrai) ou Caché (Faux)Si entier long (champ de bits) : bit 0 = Visibilité, bit 1 = Exécution en préemptif |
+| uniqueID | Integer | &#8592; | Numéro unique du process |
+| origine | Integer | &#8592; | Origine du process |
 
 <!-- END REF-->
 

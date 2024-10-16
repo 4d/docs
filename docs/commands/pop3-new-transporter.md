@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.POP3 New transporter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| server | Object | &rarr; | Mail server information |
-| Function result | 4D.POP3Transporter | &larr; | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
+| server | Object | &#8594;  | Mail server information |
+| Function result | 4D.POP3Transporter | &#8592; | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
 <!-- END REF-->
 

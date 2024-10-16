@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Text | &rarr; | Nome do documento ou rota de acesso completa |
+| documento | Text | &#8594;  | Nome do documento ou rota de acesso completa |
 
 <!-- END REF-->
 

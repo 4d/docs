@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla para la cual se debe recuperar el valor de prioridad escalar |
-| Resultado | Integer | &larr; | Valor de prioridad actual para campos escalares |
+| tabla | Table | &#8594;  | Tabla para la cual se debe recuperar el valor de prioridad escalar |
+| Resultado | Integer | &#8592; | Valor de prioridad actual para campos escalares |
 
 <!-- END REF-->
 

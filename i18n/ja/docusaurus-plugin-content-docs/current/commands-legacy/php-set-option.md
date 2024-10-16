@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP SET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &rarr; | 設定するオプション |
-| value | Boolean | &rarr; | オプションの新しい値 |
-| * | 演算子 | &rarr; | 指定時: 変更は次の呼び出し時にのみ適用 |
+| option | Integer | &#8594;  | 設定するオプション |
+| value | Boolean | &#8594;  | オプションの新しい値 |
+| * | 演算子 | &#8594;  | 指定時: 変更は次の呼び出し時にのみ適用 |
 
 <!-- END REF-->
 

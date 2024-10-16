@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Picture size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &rarr; | サイズを知りたいピクチャ |
-| 戻り値 | Integer | &larr; | ピクチャのサイズ (バイト) |
+| picture | Picture | &#8594;  | サイズを知りたいピクチャ |
+| 戻り値 | Integer | &#8592; | ピクチャのサイズ (バイト) |
 
 <!-- END REF-->
 

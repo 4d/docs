@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Paragraph range.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rangoObj | Object | &rarr; | Rango o elemento |
-| Resultado | Object | &larr; | Rango de objetos que se refiere sólo a los párrafos |
+| rangoObj | Object | &#8594;  | Rango o elemento |
+| Resultado | Object | &#8592; | Rango de objetos que se refiere sólo a los párrafos |
 
 <!-- END REF-->
 

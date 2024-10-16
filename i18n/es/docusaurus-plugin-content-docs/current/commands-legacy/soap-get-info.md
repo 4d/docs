@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP get info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numInfo | Integer | &rarr; | Número de tipo de información SOAP a obtener |
-| Resultado | Text | &larr; | Información SOAP |
+| numInfo | Integer | &#8594;  | Número de tipo de información SOAP a obtener |
+| Resultado | Text | &#8592; | Información SOAP |
 
 <!-- END REF-->
 

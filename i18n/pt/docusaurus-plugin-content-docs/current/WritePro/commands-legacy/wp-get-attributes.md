@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP GET ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| faixaObj | Object | &rarr; | Faixa do 4D Write Pro ou documento |
-| nomeAtrib | Text | &rarr; | Nome do atributo a obter |
+| faixaObj | Object | &#8594;  | Faixa do 4D Write Pro ou documento |
+| nomeAtrib | Text | &#8594;  | Nome do atributo a obter |
 | valorAtrib | Texto, Número, Array, Collection, Imagem, Data | &#x1F858; | Valor atual do atributo para a faixa de texto |
 
 <!-- END REF-->

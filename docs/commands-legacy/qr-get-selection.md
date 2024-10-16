@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Reference of the area |
-| left | Integer | &larr; | Left boundary |
-| top | Integer | &larr; | Top boundary |
-| right | Integer | &larr; | Right boundary |
-| bottom | Integer | &larr; | Bottom boundary |
+| area | Integer | &#8594;  | Reference of the area |
+| left | Integer | &#8592; | Left boundary |
+| top | Integer | &#8592; | Top boundary |
+| right | Integer | &#8592; | Right boundary |
+| bottom | Integer | &#8592; | Bottom boundary |
 
 <!-- END REF-->
 

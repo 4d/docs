@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| orientacion | Integer | &rarr; | Valor de orientación del objeto |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| orientacion | Integer | &#8594;  | Valor de orientación del objeto |
 
 <!-- END REF-->
 

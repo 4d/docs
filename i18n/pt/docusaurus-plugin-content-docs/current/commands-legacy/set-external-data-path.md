@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aCampo | Text, Blob, Picture | &rarr; | Campo para definir o local de armazenamento |
-| rota | Text, Integer | &rarr; | Caminho e nome do arquivo d armazenamento externo ou0=usar definição da estrutura1=usar pasta padrão |
+| aCampo | Text, Blob, Picture | &#8594;  | Campo para definir o local de armazenamento |
+| rota | Text, Integer | &#8594;  | Caminho e nome do arquivo d armazenamento externo ou0=usar definição da estrutura1=usar pasta padrão |
 
 <!-- END REF-->
 

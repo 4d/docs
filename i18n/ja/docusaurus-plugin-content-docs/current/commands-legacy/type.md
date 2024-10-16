@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldVar | Field, Variable | &rarr; | テストするフィールドまたは変数 |
-| 戻り値 | Integer | &larr; | データタイプ番号 |
+| fieldVar | Field, Variable | &#8594;  | テストするフィールドまたは変数 |
+| 戻り値 | Integer | &#8592; | データタイプ番号 |
 
 <!-- END REF-->
 

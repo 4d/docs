@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| langID | Integer array | &larr; | ID uniques des langues |
-| langFichiers | Text array | &larr; | Noms des fichiers de langue installés |
-| langNoms | Text array | &larr; | Noms locaux des langues |
+| langID | Integer array | &#8592; | ID uniques des langues |
+| langFichiers | Text array | &#8592; | Noms des fichiers de langue installés |
+| langNoms | Text array | &#8592; | Noms locaux des langues |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get sections.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Rango o documento 4D Write Pro |
-| Resultado | Collection | &larr; | Colección de todas las secciones (principales) encontradas en targetObj |
+| targetObj | Object | &#8594;  | Rango o documento 4D Write Pro |
+| Resultado | Collection | &#8592; | Colección de todas las secciones (principales) encontradas en targetObj |
 
 <!-- END REF-->
 

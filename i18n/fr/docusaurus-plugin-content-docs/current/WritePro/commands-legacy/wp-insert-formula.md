@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| formule | Object | &rarr; | Objet formule |
-| mode | Number | &rarr; | Mode d'insertion |
-| miseAjourPlage | Number | &rarr; | Inclut ou exclut le contenu inséré dans la plage |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| formule | Object | &#8594;  | Objet formule |
+| mode | Number | &#8594;  | Mode d'insertion |
+| miseAjourPlage | Number | &#8594;  | Inclut ou exclut le contenu inséré dans la plage |
 
 <!-- END REF-->
 

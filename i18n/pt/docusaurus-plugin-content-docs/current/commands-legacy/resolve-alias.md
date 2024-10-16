@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaAlias | Text | &rarr; | Nome ou rota de acesso do alias/atalho |
-| rotaObjetivo | Text | &larr; | Nome ou rota de acesso do alias/atalho alvo |
+| rotaAlias | Text | &#8594;  | Nome ou rota de acesso do alias/atalho |
+| rotaObjetivo | Text | &#8592; | Nome ou rota de acesso do alias/atalho alvo |
 
 <!-- END REF-->
 

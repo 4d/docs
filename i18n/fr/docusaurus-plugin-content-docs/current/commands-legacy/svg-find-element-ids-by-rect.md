@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est un champ ou une variable |
-| objetPicture | Picture | &rarr; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| x | Integer | &rarr; | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
-| y | Integer | &rarr; | Coordonnée verticale du coin haut gauche du rectangle de sélection |
-| largeur | Integer | &rarr; | Largeur du rectangle de sélection |
-| hauteur | Integer | &rarr; | Hauteur du rectangle de sélection |
-| tabIds | Text array | &larr; | IDs des éléments dont le rectangle englobant est en intersection avec le rectangle de sélection |
-| Résultat | Boolean | &larr; | Vrai = au moins un élément est trouvé, Faux sinon |
+| * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est un champ ou une variable |
+| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| x | Integer | &#8594;  | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
+| y | Integer | &#8594;  | Coordonnée verticale du coin haut gauche du rectangle de sélection |
+| largeur | Integer | &#8594;  | Largeur du rectangle de sélection |
+| hauteur | Integer | &#8594;  | Hauteur du rectangle de sélection |
+| tabIds | Text array | &#8592; | IDs des éléments dont le rectangle englobant est en intersection avec le rectangle de sélection |
+| Résultat | Boolean | &#8592; | Vrai = au moins un élément est trouvé, Faux sinon |
 
 <!-- END REF-->
 

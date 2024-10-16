@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Semaphore.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sémaphore | Text | &rarr; | Sémaphore à tester et à positionner |
-| nbTicks | Integer | &rarr; | Temps d’attente maximum |
-| Résultat | Boolean | &larr; | sémaphore a été correctement créé (Faux) ou sémaphore était déjà créé (Vrai) |
+| sémaphore | Text | &#8594;  | Sémaphore à tester et à positionner |
+| nbTicks | Integer | &#8594;  | Temps d’attente maximum |
+| Résultat | Boolean | &#8592; | sémaphore a été correctement créé (Faux) ou sémaphore était déjà créé (Vrai) |
 
 <!-- END REF-->
 

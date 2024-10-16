@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomObjet | Text | &rarr; | Nom ou chemin de fichier son ou son systèmeChaîne vide pour stopper un son asynchrone |
-| asynchrone | Integer | &rarr; | (Windows) Si passé : exécution asynchrone, si omis : exécution synchrone |
+| nomObjet | Text | &#8594;  | Nom ou chemin de fichier son ou son systèmeChaîne vide pour stopper un son asynchrone |
+| asynchrone | Integer | &#8594;  | (Windows) Si passé : exécution asynchrone, si omis : exécution synchrone |
 
 <!-- END REF-->
 

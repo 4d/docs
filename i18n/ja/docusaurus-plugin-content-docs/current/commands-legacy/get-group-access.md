@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get group access.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Collection | &larr; | ユーザーが所属するグループ名のコレクション |
+| 戻り値 | Collection | &#8592; | ユーザーが所属するグループ名のコレクション |
 
 <!-- END REF-->
 

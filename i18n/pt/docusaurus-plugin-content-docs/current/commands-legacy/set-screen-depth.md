@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET SCREEN DEPTH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| depth | Integer | &rarr; | Profundidade da tela (número de cores = 2 ^ Profundidade da tela) |
-| cor | Integer | &rarr; | 1 = Cor, 0 = Escala de cinzas |
-| tela | Integer | &rarr; | Número da tela, ou tela principal, se omitido |
+| depth | Integer | &#8594;  | Profundidade da tela (número de cores = 2 ^ Profundidade da tela) |
+| cor | Integer | &#8594;  | 1 = Cor, 0 = Escala de cinzas |
+| tela | Integer | &#8594;  | Número da tela, ou tela principal, se omitido |
 
 <!-- END REF-->
 

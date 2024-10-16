@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOCUMENT LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | Text | &rarr; | Pathname to volume, directory or folder |
-| documents | Text array | &larr; | Names of the documents present at this location |
-| options | Integer | &rarr; | Options for building list |
+| pathname | Text | &#8594;  | Pathname to volume, directory or folder |
+| documents | Text array | &#8592; | Names of the documents present at this location |
+| options | Integer | &#8594;  | Options for building list |
 
 <!-- END REF-->
 

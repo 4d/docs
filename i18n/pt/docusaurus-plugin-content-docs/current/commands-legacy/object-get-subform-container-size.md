@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| largura | Integer | &larr; | Largura do objeto sub-formulário |
-| altura | Integer | &larr; | Altura do objeto sub-formulário |
+| largura | Integer | &#8592; | Largura do objeto sub-formulário |
+| altura | Integer | &#8592; | Altura do objeto sub-formulário |
 
 <!-- END REF-->
 

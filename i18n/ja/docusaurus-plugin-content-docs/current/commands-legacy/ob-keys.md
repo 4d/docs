@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Keys.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | プロパティ名を返すオブジェクト |
-| 戻り値 | Collection | &larr; | プロパティ名(文字列)のコレクション |
+| object | Object | &#8594;  | プロパティ名を返すオブジェクト |
+| 戻り値 | Collection | &#8592; | プロパティ名(文字列)のコレクション |
 
 <!-- END REF-->
 

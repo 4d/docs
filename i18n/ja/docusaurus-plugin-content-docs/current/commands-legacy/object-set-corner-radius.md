@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時objectはオブジェクト名 (文字列) 省略時objectは変数またはフィールド |
-| object | any | &rarr; | オブジェクト名 (* 指定時)、またはフィールドまたは変数 (* 省略時) |
-| radius | Integer | &rarr; | 丸い角の新しい半径(ピクセル単位) |
+| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列) 省略時objectは変数またはフィールド |
+| object | any | &#8594;  | オブジェクト名 (* 指定時)、またはフィールドまたは変数 (* 省略時) |
+| radius | Integer | &#8594;  | 丸い角の新しい半径(ピクセル単位) |
 
 <!-- END REF-->
 

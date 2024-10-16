@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| colorPrimerPlano | Text, Integer | &rarr; | Valor del color RGB del primer plano |
-| colorFondo | Text, Integer | &rarr; | Valor del color RGB del fondo |
-| colorFondoAlt | Text, Integer | &rarr; | Valor del color RGB del fondo alterno |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| colorPrimerPlano | Text, Integer | &#8594;  | Valor del color RGB del primer plano |
+| colorFondo | Text, Integer | &#8594;  | Valor del color RGB del fondo |
+| colorFondoAlt | Text, Integer | &#8594;  | Valor del color RGB del fondo alterno |
 
 <!-- END REF-->
 

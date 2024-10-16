@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| segmento | Integer | &rarr; | Obsoleto, no utilizar |
-| Resultado | Text | &larr; | Nombre largo del archivo de datos de la base |
+| segmento | Integer | &#8594;  | Obsoleto, no utilizar |
+| Resultado | Text | &#8592; | Nombre largo del archivo de datos de la base |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela para a qual vai salvar o registro atual, ou tabela padrão, se omitido |
+| tabela | Table | &#8594;  | Tabela para a qual vai salvar o registro atual, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

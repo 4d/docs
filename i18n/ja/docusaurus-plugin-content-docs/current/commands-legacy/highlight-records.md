@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | レコードをハイライトするテーブル 省略時、カレントフォームのテーブル |
-| setName | Text | &rarr; | ハイライトさせるレコードのセット、または 省略時、Userset |
-| * | 演算子 | &rarr; | リストの自動スクロールを無効 |
+| aTable | Table | &#8594;  | レコードをハイライトするテーブル 省略時、カレントフォームのテーブル |
+| setName | Text | &#8594;  | ハイライトさせるレコードのセット、または 省略時、Userset |
+| * | 演算子 | &#8594;  | リストの自動スクロールを無効 |
 
 <!-- END REF-->
 

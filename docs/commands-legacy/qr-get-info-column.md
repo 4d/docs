@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Reference of the area |
-| colNum | Integer | &rarr; | Column number |
-| title | Text | &larr; | Column title |
-| object | Text | &larr; | Object assigned for that column |
-| hide | Integer | &larr; | 0 = displayed, 1 = hidden |
-| size | Integer | &larr; | Column size |
-| repeatedValue | Integer | &larr; | 0 = not repeated, 1 = repeated |
-| displayFormat | Text | &larr; | Display format for the data |
-| resultVar | Text | &larr; | Name of the formula variable |
+| area | Integer | &#8594;  | Reference of the area |
+| colNum | Integer | &#8594;  | Column number |
+| title | Text | &#8592; | Column title |
+| object | Text | &#8592; | Object assigned for that column |
+| hide | Integer | &#8592; | 0 = displayed, 1 = hidden |
+| size | Integer | &#8592; | Column size |
+| repeatedValue | Integer | &#8592; | 0 = not repeated, 1 = repeated |
+| displayFormat | Text | &#8592; | Display format for the data |
+| resultVar | Text | &#8592; | Name of the formula variable |
 
 <!-- END REF-->
 

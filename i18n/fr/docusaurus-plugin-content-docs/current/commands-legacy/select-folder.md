@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Select folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &rarr; | Titre de la fenêtre de sélection |
-| répertoire | Text, Integer | &rarr; | Chemin d’accès du répertoire par défautou Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS),ou Numéro de chemin d’accès mémorisé |
-| options | Integer | &rarr; | Option(s) de sélection sous Mac OS |
-| Résultat | Text | &larr; | Chemin d’accès au dossier sélectionné |
+| message | Text | &#8594;  | Titre de la fenêtre de sélection |
+| répertoire | Text, Integer | &#8594;  | Chemin d’accès du répertoire par défautou Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS),ou Numéro de chemin d’accès mémorisé |
+| options | Integer | &#8594;  | Option(s) de sélection sous Mac OS |
+| Résultat | Text | &#8592; | Chemin d’accès au dossier sélectionné |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela na qual o registro atual será apagado, ou tabela Padrão, se omitido |
+| tabela | Table | &#8594;  | Tabela na qual o registro atual será apagado, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 

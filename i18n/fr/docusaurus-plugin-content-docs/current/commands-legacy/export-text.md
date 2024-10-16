@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table depuis laquelle effectuer l'export ou Table par défaut si ce paramètre est omis |
-| nomFichier | Text | &rarr; | Document texte à exporter |
+| laTable | Table | &#8594;  | Table depuis laquelle effectuer l'export ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &#8594;  | Document texte à exporter |
 
 <!-- END REF-->
 

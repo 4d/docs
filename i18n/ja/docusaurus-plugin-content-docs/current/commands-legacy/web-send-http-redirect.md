@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| url | Text | &rarr; | 新しいURL |
-| * | 演算子 | &rarr; | 指定されている場合 = URLは翻訳されない 省略されている場合 = URLは翻訳される |
+| url | Text | &#8594;  | 新しいURL |
+| * | 演算子 | &#8594;  | 指定されている場合 = URLは翻訳されない 省略されている場合 = URLは翻訳される |
 
 <!-- END REF-->
 

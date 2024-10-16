@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL End selection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | El resultado establece los límites alcanzados |
+| Resultado | Boolean | &#8592; | El resultado establece los límites alcanzados |
 
 <!-- END REF-->
 

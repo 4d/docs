@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Process number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| name | Text | &rarr; | Name of process for which to retrieve the process number |
-| * | Operator |  &rarr; | Return the process number from the server |
-| Function result | Longint | &larr; | Process number |
+| name | Text | &#8594;  | Name of process for which to retrieve the process number |
+| * | Operator |  &#8594;  | Return the process number from the server |
+| Function result | Longint | &#8592; | Process number |
 
 <!-- END REF-->
 

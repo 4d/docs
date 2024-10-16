@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE POINTER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| puntero | Pointer | &rarr; | Puntero del cual recuperar el objeto referenciado |
-| nomVar | Text | &larr; | Nombre de la variable referenciada o cadena vacía |
-| numTabla | Integer | &larr; | Número de la tabla o del elemento del array referenciado o 0 o -1 |
-| numCamp | Integer | &larr; | Número del campo referenciado o 0 |
+| puntero | Pointer | &#8594;  | Puntero del cual recuperar el objeto referenciado |
+| nomVar | Text | &#8592; | Nombre de la variable referenciada o cadena vacía |
+| numTabla | Integer | &#8592; | Número de la tabla o del elemento del array referenciado o 0 o -1 |
+| numCamp | Integer | &#8592; | Número del campo referenciado o 0 |
 
 <!-- END REF-->
 

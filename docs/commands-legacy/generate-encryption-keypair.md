@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| privKey | Blob | &larr; | BLOB to contain the private key |
-| pubKey | Blob | &larr; | BLOB to contain the public key |
-| length | Integer | &rarr; | Key length (bits) [512...2048] Default value = 512 |
+| privKey | Blob | &#8592; | BLOB to contain the private key |
+| pubKey | Blob | &#8592; | BLOB to contain the public key |
+| length | Integer | &#8594;  | Key length (bits) [512...2048] Default value = 512 |
 
 <!-- END REF-->
 

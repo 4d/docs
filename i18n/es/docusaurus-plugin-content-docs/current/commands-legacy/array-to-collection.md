@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| coleccion | Collection | &larr; | Colección a recibir los datos del array |
-| array | Array | &rarr; | Array a copiar a la colección; si se pasó nombreProp, array a copiar a los valores de nombreProp en la colección. |
-| nombreProp | Text | &rarr; | Nombre de la propiedad del objeto cuyo valor llenar con elementos del array |
+| coleccion | Collection | &#8592; | Colección a recibir los datos del array |
+| array | Array | &#8594;  | Array a copiar a la colección; si se pasó nombreProp, array a copiar a los valores de nombreProp en la colección. |
+| nombreProp | Text | &#8594;  | Nombre de la propiedad del objeto cuyo valor llenar con elementos del array |
 
 <!-- END REF-->
 

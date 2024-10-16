@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Load list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| listName | Text | &rarr; | デザインモードのリストエディタで 作成されたリスト名 |
-| 戻り値 | Integer | &larr; | 新しく作成されたリストのリスト参照番号 |
+| listName | Text | &#8594;  | デザインモードのリストエディタで 作成されたリスト名 |
+| 戻り値 | Integer | &#8592; | 新しく作成されたリストのリスト参照番号 |
 
 <!-- END REF-->
 

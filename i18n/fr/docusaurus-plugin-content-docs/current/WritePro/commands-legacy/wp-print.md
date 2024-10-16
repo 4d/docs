@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP PRINT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docWP | Object | &rarr; | Document 4D Write Pro |
-| optionsImpr | Integer | &rarr; | Options d'impression pour le document 4D Write Pro |
+| docWP | Object | &#8594;  | Document 4D Write Pro |
+| optionsImpr | Integer | &#8594;  | Options d'impression pour le document 4D Write Pro |
 
 <!-- END REF-->
 

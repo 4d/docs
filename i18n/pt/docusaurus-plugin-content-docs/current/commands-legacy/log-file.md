@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Log File.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &larr; | Nome completo do arquivo de log do banco de dados |
+| Resultado | Text | &#8592; | Nome completo do arquivo de log do banco de dados |
 
 <!-- END REF-->
 

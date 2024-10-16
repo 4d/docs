@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get pointer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Integer | &rarr; | Object category |
-| objectName | Text | &rarr; | Object name |
-| subformName | Text | &rarr; | Subform object name |
-| Function result | Pointer | &larr; | Pointer to object variable |
+| selector | Integer | &#8594;  | Object category |
+| objectName | Text | &#8594;  | Object name |
+| subformName | Text | &#8594;  | Subform object name |
+| Function result | Pointer | &#8592; | Pointer to object variable |
 
 <!-- END REF-->
 

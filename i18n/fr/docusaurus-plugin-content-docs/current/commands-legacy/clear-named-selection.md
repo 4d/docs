@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nom | Text | &rarr; | Nom de la sélection temporaire à effacer |
+| nom | Text | &#8594;  | Nom de la sélection temporaire à effacer |
 
 <!-- END REF-->
 

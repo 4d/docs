@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, list is an object name (string)If omitted, list is a list reference number |
-| list | Integer, Text | &rarr; | List reference number (if * omitted) orName of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &rarr; | Item reference number or 0 for the last item appended to the list or * for the current list item |
-| arrSelection | Text array | &larr; | Array of parameter names |
-| arrValues | Text array | &larr; | Array of parameter values |
+| * | Operator | &#8594;  | If specified, list is an object name (string)If omitted, list is a list reference number |
+| list | Integer, Text | &#8594;  | List reference number (if * omitted) orName of list type object (if * passed) |
+| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
+| arrSelection | Text array | &#8592; | Array of parameter names |
+| arrValues | Text array | &#8592; | Array of parameter values |
 
 <!-- END REF-->
 

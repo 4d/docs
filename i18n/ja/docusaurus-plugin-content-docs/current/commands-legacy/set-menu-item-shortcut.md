@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &rarr; | メニュー項目番号 または -1: 最後に追加された項目 |
-| itemKey | Text, Integer | &rarr; | キーボードショートカットの文字またはキーボードショートカットの文字コード (古いシンタックス) |
-| modifiers | Integer | &rarr; | ショートカットに割り当てられたモディファイア  (キーコードが渡された時は無視) |
-| process | Integer | &rarr; | プロセス参照番号 |
+| menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
+| itemKey | Text, Integer | &#8594;  | キーボードショートカットの文字またはキーボードショートカットの文字コード (古いシンタックス) |
+| modifiers | Integer | &#8594;  | ショートカットに割り当てられたモディファイア  (キーコードが渡された時は無視) |
+| process | Integer | &#8594;  | プロセス参照番号 |
 
 <!-- END REF-->
 

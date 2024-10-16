@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LOCKED BY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de l'enregistrement verrouillé ou Table par défaut si ce paramètre est omis |
-| process | Integer | &larr; | Numéro du process |
-| utilisateur4D | Text | &larr; | Nom de l'utilisateur 4D |
-| utilisateurSession | Text | &larr; | Nom de l'utilisateur ayant ouvert la session de travail |
-| nomProcess | Text | &larr; | Nom du process |
+| laTable | Table | &#8594;  | Table de l'enregistrement verrouillé ou Table par défaut si ce paramètre est omis |
+| process | Integer | &#8592; | Numéro du process |
+| utilisateur4D | Text | &#8592; | Nom de l'utilisateur 4D |
+| utilisateurSession | Text | &#8592; | Nom de l'utilisateur ayant ouvert la session de travail |
+| nomProcess | Text | &#8592; | Nom du process |
 
 <!-- END REF-->
 

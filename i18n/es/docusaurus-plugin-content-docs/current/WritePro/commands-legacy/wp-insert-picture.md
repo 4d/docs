@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT PICTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Object | &rarr; | Objeto de rango |
-| imagen | Picture | &rarr; | Campo o variable imagen, o ruta del archivo de imagen en el disco |
-| modo | Integer | &rarr; | Modo de inserción |
-| actRango | Integer | &rarr; | Modo actualizar rango |
+| objRango | Object | &#8594;  | Objeto de rango |
+| imagen | Picture | &#8594;  | Campo o variable imagen, o ruta del archivo de imagen en el disco |
+| modo | Integer | &#8594;  | Modo de inserción |
+| actRango | Integer | &#8594;  | Modo actualizar rango |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.List item position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | Integer, Text | &rarr; | Número de referencia de lista (si se omite *) Nombre de objeto de tipo lista (si se pasa *) |
-| refElem | Integer | &rarr; | Número de referencia del elemento |
-| Resultado | Integer | &larr; | Posición del elemento en listas desplegadas/contraídas |
+| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
+| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) Nombre de objeto de tipo lista (si se pasa *) |
+| refElem | Integer | &#8594;  | Número de referencia del elemento |
+| Resultado | Integer | &#8592; | Posición del elemento en listas desplegadas/contraídas |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &rarr; | BLOB into which bytes will be inserted |
-| offset | Integer | &rarr; | Starting position where bytes will be inserted |
-| len | Integer | &rarr; | Number of bytes to be inserted |
-| filler | Integer | &rarr; | Default byte value (0x00..0xFF) 0x00 if omitted |
+| blob | Blob | &#8594;  | BLOB into which bytes will be inserted |
+| offset | Integer | &#8594;  | Starting position where bytes will be inserted |
+| len | Integer | &#8594;  | Number of bytes to be inserted |
+| filler | Integer | &#8594;  | Default byte value (0x00..0xFF) 0x00 if omitted |
 
 <!-- END REF-->
 

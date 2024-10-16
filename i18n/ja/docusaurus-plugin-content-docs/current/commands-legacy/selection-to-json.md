@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Selection to JSON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | シリアライズするテーブル |
-| aField | Field | &rarr; | シリアライズするフィールドを指定 |
-| template | Object | &rarr; | プロパティ名と取り出したいフィールドを指定するポインターをオブジェクトで渡す |
-| 戻り値 | Text | &larr; | シリアライズされた JSON 配列を含む文字列 |
+| aTable | Table | &#8594;  | シリアライズするテーブル |
+| aField | Field | &#8594;  | シリアライズするフィールドを指定 |
+| template | Object | &#8594;  | プロパティ名と取り出したいフィールドを指定するポインターをオブジェクトで渡す |
+| 戻り値 | Text | &#8592; | シリアライズされた JSON 配列を含む文字列 |
 
 <!-- END REF-->
 

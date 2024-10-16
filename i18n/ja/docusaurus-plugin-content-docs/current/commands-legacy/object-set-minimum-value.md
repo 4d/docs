@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &rarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| minValue | Date, Time, Number | &rarr; | オブジェクトの最小値 |
+| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| minValue | Date, Time, Number | &#8594;  | オブジェクトの最小値 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sin.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &rarr; | Number, in radians, whose sine is returned |
-| Function result | Real | &larr; | Sine of number |
+| number | Real | &#8594;  | Number, in radians, whose sine is returned |
+| Function result | Real | &#8592; | Sine of number |
 
 <!-- END REF-->
 

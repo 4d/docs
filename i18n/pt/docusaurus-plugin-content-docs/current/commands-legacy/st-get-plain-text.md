@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get plain text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo. |
-| objeto | any | &rarr; | Nome de objeto (se * é especificado) ou Variável ou campo (se * é omitido) |
-| refMode | Integer | &rarr; | Mode for handling references found in the text |
-| Resultado | Text | &larr; | Texto sem tags |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo. |
+| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Variável ou campo (se * é omitido) |
+| refMode | Integer | &#8594;  | Mode for handling references found in the text |
+| Resultado | Text | &#8592; | Texto sem tags |
 
 <!-- END REF-->
 

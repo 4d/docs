@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Get.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| url | Text | &rarr; | URL auquel envoyer la requête |
-| réponse | Text, Blob, Picture, Object | &larr; | Résultat de la requête |
-| nomsEnTêtes | Text array | &rarr; | Noms des en-têtes de la requête |
-| &larr; | Noms d’en-têtes retournés |
-| valeursEnTêtes | Text array | &rarr; | Valeurs d’en-têtes de la requête |
-| &larr; | Valeurs d’en-têtes retournées |
-| * | Opérateur | &rarr; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
-| Résultat | Integer | &larr; | Code de statut HTTP |
+| url | Text | &#8594;  | URL auquel envoyer la requête |
+| réponse | Text, Blob, Picture, Object | &#8592; | Résultat de la requête |
+| nomsEnTêtes | Text array | &#8594;  | Noms des en-têtes de la requête |
+| &#8592; | Noms d’en-têtes retournés |
+| valeursEnTêtes | Text array | &#8594;  | Valeurs d’en-têtes de la requête |
+| &#8592; | Valeurs d’en-têtes retournées |
+| * | Opérateur | &#8594;  | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
+| Résultat | Integer | &#8592; | Code de statut HTTP |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomGrupos | Text array | &larr; | Nomes dos grupos como aparecem na janela de editor de senhas |
-| numGrupos | Integer array | &larr; | Números de ID de grupo correspondentes |
+| nomGrupos | Text array | &#8592; | Nomes dos grupos como aparecem na janela de editor de senhas |
+| numGrupos | Integer array | &#8592; | Números de ID de grupo correspondentes |
 
 <!-- END REF-->
 

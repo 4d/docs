@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Class.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | クラスを返してほしいオブジェクト |
-| 戻り値 | Null, Object | &larr; | オブジェクトのクラス |
+| object | Object | &#8594;  | クラスを返してほしいオブジェクト |
+| 戻り値 | Null, Object | &#8592; | オブジェクトのクラス |
 
 <!-- END REF-->
 

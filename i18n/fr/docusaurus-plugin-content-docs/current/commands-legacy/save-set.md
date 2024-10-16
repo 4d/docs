@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble | Text | &rarr; | Nom de l'ensemble à stocker |
-| nomFichier | Text | &rarr; | Nom du fichier dans lequel stocker l'ensemble |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à stocker |
+| nomFichier | Text | &#8594;  | Nom du fichier dans lequel stocker l'ensemble |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET RECENT FONTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fontsArray | Text array | &rarr; | フォント名の配列 |
+| fontsArray | Text array | &#8594;  | フォント名の配列 |
 
 <!-- END REF-->
 

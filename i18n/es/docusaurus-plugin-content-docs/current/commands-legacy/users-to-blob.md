@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.USERS TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| usuarios | Blob | &rarr; | BLOB que debe contener los usuarios |
-| &larr; | Cuentas de usuarios (encriptado) |
+| usuarios | Blob | &#8594;  | BLOB que debe contener los usuarios |
+| &#8592; | Cuentas de usuarios (encriptado) |
 
 <!-- END REF-->
 

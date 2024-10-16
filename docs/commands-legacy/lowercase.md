@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aText | Text | &rarr; | String to convert to lowercase |
-| * | Operator | &rarr; | If passed: keep accents |
-| Function result | String | &larr; | String in lowercase |
+| aText | Text | &#8594;  | String to convert to lowercase |
+| * | Operator | &#8594;  | If passed: keep accents |
+| Function result | String | &#8592; | String in lowercase |
 
 <!-- END REF-->
 

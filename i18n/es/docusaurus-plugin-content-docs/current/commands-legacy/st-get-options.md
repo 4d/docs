@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| opcion | Integer | &rarr; | Opción a leer |
-| valor | Integer | &larr; | Valor actual de la opción |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| opcion | Integer | &#8594;  | Opción a leer |
+| valor | Integer | &#8592; | Valor actual de la opción |
 
 <!-- END REF-->
 

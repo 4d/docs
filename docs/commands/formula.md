@@ -20,8 +20,8 @@ displayed_sidebar: docs
 <!-- REF #_command_.Formula.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|formulaExp|Expression|&rarr;|Formula to be returned as object|
-|Result|4D.Function|&larr;|Native function encapsulating the formula|
+|formulaExp|Expression|&#8594; |Formula to be returned as object|
+|Result|4D.Function|&#8592;|Native function encapsulating the formula|
 <!-- END REF -->
 
 

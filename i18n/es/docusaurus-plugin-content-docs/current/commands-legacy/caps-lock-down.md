@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Caps lock down.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Estado de la tecla Bloq Mayús |
+| Resultado | Boolean | &#8592; | Estado de la tecla Bloq Mayús |
 
 <!-- END REF-->
 

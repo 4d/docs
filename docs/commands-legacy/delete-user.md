@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE USER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer | &rarr; | ID number of user to delete |
+| userID | Integer | &#8594;  | ID number of user to delete |
 
 <!-- END REF-->
 

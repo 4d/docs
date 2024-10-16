@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | フォームが属するテーブル、省略時はデフォルトテーブル |
-| formName | Text | &rarr; | フォーム名 |
-| width | Integer | &larr; | フォームの幅 (ピクセル) |
-| height | Integer | &larr; | フォームの高さ (ピクセル) |
-| numPages | Integer | &larr; | フォームのページ数 |
-| fixedWidth | Boolean | &larr; | True = 幅固定, False = 幅可変 |
-| fixedHeight | Boolean | &larr; | True = 高さ固定, False = 高さ可変 |
-| title | Text | &larr; | フォームのウィンドウタイトル |
+| aTable | Table | &#8594;  | フォームが属するテーブル、省略時はデフォルトテーブル |
+| formName | Text | &#8594;  | フォーム名 |
+| width | Integer | &#8592; | フォームの幅 (ピクセル) |
+| height | Integer | &#8592; | フォームの高さ (ピクセル) |
+| numPages | Integer | &#8592; | フォームのページ数 |
+| fixedWidth | Boolean | &#8592; | True = 幅固定, False = 幅可変 |
+| fixedHeight | Boolean | &#8592; | True = 高さ固定, False = 高さ可変 |
+| title | Text | &#8592; | フォームのウィンドウタイトル |
 
 <!-- END REF-->
 

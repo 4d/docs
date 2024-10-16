@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | any | &rarr; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| filtreSaisie | Text | &rarr; | Nouveau filtre de saisie pour la zone saisissable |
+| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| filtreSaisie | Text | &#8594;  | Nouveau filtre de saisie pour la zone saisissable |
 
 <!-- END REF-->
 

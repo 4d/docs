@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB GET ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &rarr; | Objeto estruturado |
-| propriedade | Text | &rarr; | Nome da propriedade a ler |
-| array | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &larr; | Array valor da propriedade |
+| objeto | Object, Campo Object | &#8594;  | Objeto estruturado |
+| propriedade | Text | &#8594;  | Nome da propriedade a ler |
+| array | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &#8592; | Array valor da propriedade |
 
 <!-- END REF-->
 

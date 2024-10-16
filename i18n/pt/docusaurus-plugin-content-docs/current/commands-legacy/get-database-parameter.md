@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database parameter.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela do parâmetro ou tabela padrão se este parâmetro for omitido |
-| seletor | Integer | &rarr; | Código do parâmetro do banco |
-| valorAlfa | Text | &larr; | Valor alfa do parâmetro |
-| Resultado | Real | &larr; | Valor atual do parâmetro |
+| tabela | Table | &#8594;  | Tabela do parâmetro ou tabela padrão se este parâmetro for omitido |
+| seletor | Integer | &#8594;  | Código do parâmetro do banco |
+| valorAlfa | Text | &#8592; | Valor alfa do parâmetro |
+| Resultado | Real | &#8592; | Valor atual do parâmetro |
 
 <!-- END REF-->
 

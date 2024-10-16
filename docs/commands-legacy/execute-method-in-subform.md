@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| subformObject | Text | &rarr; | Name of subform object |
-| formula | Object, Text | &rarr; | Formula object or Name of project method |
-| return | *, Variable | &rarr; | * if formula does not return a value |
-| &larr; | Value returned by formula |
-| param | Expression | &rarr; | Parameter(s) passed to formula |
+| subformObject | Text | &#8594;  | Name of subform object |
+| formula | Object, Text | &#8594;  | Formula object or Name of project method |
+| return | *, Variable | &#8594;  | * if formula does not return a value |
+| &#8592; | Value returned by formula |
+| param | Expression | &#8594;  | Parameter(s) passed to formula |
 
 <!-- END REF-->
 

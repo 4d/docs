@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find previous.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
-| searchBefore | Object | &rarr; | Range before which to begin searching |
-| searchValue | String | &rarr; | Search value |
-| searchCondition | Longint | &rarr; | Search rule(s) |
-| replaceValue | String | &rarr; | Replacement string |
-| Function result | Object | &larr; | Range of the found/replaced value |
+| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| searchBefore | Object | &#8594;  | Range before which to begin searching |
+| searchValue | String | &#8594;  | Search value |
+| searchCondition | Longint | &#8594;  | Search rule(s) |
+| replaceValue | String | &#8594;  | Replacement string |
+| Function result | Object | &#8592; | Range of the found/replaced value |
 
 <!-- END REF-->
 

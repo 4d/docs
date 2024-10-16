@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Add picture.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
-| picture | Picture, Text | &rarr; | ピクチャー(フィールドまたは変数)あるいはピクチャーへのパス(テキスト) |
-| 戻り値 | Object | &larr; | ピクチャーを参照するオブジェクト |
+| wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
+| picture | Picture, Text | &#8594;  | ピクチャー(フィールドまたは変数)あるいはピクチャーへのパス(テキスト) |
+| 戻り値 | Object | &#8592; | ピクチャーを参照するオブジェクト |
 
 <!-- END REF-->
 

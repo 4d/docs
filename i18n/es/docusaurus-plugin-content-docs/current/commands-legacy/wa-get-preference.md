@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| selector | Integer | &rarr; | Preferencia a leer |
-| valor | Variable | &larr; | Valor actual de la preferencia |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| selector | Integer | &#8594;  | Preferencia a leer |
+| valor | Variable | &#8592; | Valor actual de la preferencia |
 
 <!-- END REF-->
 

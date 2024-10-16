@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| faixaObj | Object | &rarr; | Range ou elemento de 4D Write Pro documento |
-| atribNome | Text | &rarr; | Nome do atributo a estabelecer |
-| atribValor | Text, Number, Object, Collection, Picture, Date | &rarr; | Novo valor do atributo |
+| faixaObj | Object | &#8594;  | Range ou elemento de 4D Write Pro documento |
+| atribNome | Text | &#8594;  | Nome do atributo a estabelecer |
+| atribValor | Text, Number, Object, Collection, Picture, Date | &#8594;  | Novo valor do atributo |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &rarr; | Field to test |
-| Function result | Boolean | &larr; | True if the field has been assigned a new value, otherwise False |
+| aField | Field | &#8594;  | Field to test |
+| Function result | Boolean | &#8592; | True if the field has been assigned a new value, otherwise False |
 
 <!-- END REF-->
 

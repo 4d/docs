@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Text range.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Object | &rarr; | Rango o referencia del elemento o documento 4D Write Pro |
-| rangoInicio | Integer | &rarr; | Punto inicial del rango de texto |
-| rangoFin | Integer | &rarr; | Punto final del rango de texto |
-| Resultado | Object | &larr; | Rango de objeto |
+| objRango | Object | &#8594;  | Rango o referencia del elemento o documento 4D Write Pro |
+| rangoInicio | Integer | &#8594;  | Punto inicial del rango de texto |
+| rangoFin | Integer | &#8594;  | Punto final del rango de texto |
+| Resultado | Object | &#8592; | Rango de objeto |
 
 <!-- END REF-->
 

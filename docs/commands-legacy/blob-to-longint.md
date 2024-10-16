@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to longint.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &rarr; | BLOB from which to get the Long Integer value |
-| byteOrder | Integer | &rarr; | 0 = Native byte ordering, 1 = Macintosh byte ordering, 2 = PC byte ordering |
-| offset | Variable | &rarr; | Offset within the BLOB (expressed in bytes) |
-| &larr; | New offset after reading |
-| Function result | Longint | &larr; | 4-byte Long Integer value |
+| blob | Blob | &#8594;  | BLOB from which to get the Long Integer value |
+| byteOrder | Integer | &#8594;  | 0 = Native byte ordering, 1 = Macintosh byte ordering, 2 = PC byte ordering |
+| offset | Variable | &#8594;  | Offset within the BLOB (expressed in bytes) |
+| &#8592; | New offset after reading |
+| Function result | Longint | &#8592; | 4-byte Long Integer value |
 
 <!-- END REF-->
 

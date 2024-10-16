@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob, Text | &rarr; | Base 64フォーマットでコード化するBLOB |
-| &larr; | Base 64フォーマットでコード化したBLOB |
-| encoded | Blob, Text | &larr; | エンコードされた値 |
-| * | 演算子 | &rarr; | Base64URL フォーマットでエンコードする |
+| Blob | Blob, Text | &#8594;  | Base 64フォーマットでコード化するBLOB |
+| &#8592; | Base 64フォーマットでコード化したBLOB |
+| encoded | Blob, Text | &#8592; | エンコードされた値 |
+| * | 演算子 | &#8594;  | Base64URL フォーマットでエンコードする |
 
 <!-- END REF-->
 

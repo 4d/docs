@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ABOUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| itemText | Text | &rarr; | アバウトメニュー項目の新しいテキスト |
-| method | Text | &rarr; | メニューが選択された時に実行するメソッドの名前 |
+| itemText | Text | &#8594;  | アバウトメニュー項目の新しいテキスト |
+| method | Text | &#8594;  | メニューが選択された時に実行するメソッドの名前 |
 
 <!-- END REF-->
 

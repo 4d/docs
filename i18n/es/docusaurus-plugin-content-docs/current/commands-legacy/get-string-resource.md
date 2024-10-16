@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get string resource.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNum | Integer | &rarr; | Número del recurso |
-| resArchivo | Time | &rarr; | Número de referencia del archivo de recursos o Todos los archivos de recursos abiertos, si se omite |
-| Resultado | Text | &larr; | Contenido del recurso STR |
+| resNum | Integer | &#8594;  | Número del recurso |
+| resArchivo | Time | &#8594;  | Número de referencia del archivo de recursos o Todos los archivos de recursos abiertos, si se omite |
+| Resultado | Text | &#8592; | Contenido del recurso STR |
 
 <!-- END REF-->
 

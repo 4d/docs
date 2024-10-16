@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Copy.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &rarr; | Objet structuré |
-| résoudrePtrs | Boolean | &rarr; | Vrai = résoudre les pointeurs, Faux ou omis = ne pas les résoudre |
-| option | Integer | &rarr; | ck shared: return a shared object,ck resolve pointers: resolve pointers before copying |
-| grouperAvec | Collection, Object | &rarr; | Collection ou objet partagé(e) à grouper avec l'objet résultant |
-| Résultat | Object | &larr; | Copie de objet |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| résoudrePtrs | Boolean | &#8594;  | Vrai = résoudre les pointeurs, Faux ou omis = ne pas les résoudre |
+| option | Integer | &#8594;  | ck shared: return a shared object,ck resolve pointers: resolve pointers before copying |
+| grouperAvec | Collection, Object | &#8594;  | Collection ou objet partagé(e) à grouper avec l'objet résultant |
+| Résultat | Object | &#8592; | Copie de objet |
 
 <!-- END REF-->
 

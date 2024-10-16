@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &rarr; | List reference number |
-| appearance | Integer | &rarr; | *** Deprecated, must always be 0 *** |
-| icon | Integer | &rarr; | *** Deprecated, must always be 0 *** |
-| lineHeight | Integer | &rarr; | Minimal line height expressed in pixels |
-| doubleClick | Integer | &rarr; | Expand/Collapse sublist on double-click 0 = Yes, 1= No |
-| multiSelections | Integer | &rarr; | Multiple selections: 0 = No (default), 1 = Yes |
-| editable | Integer | &rarr; | 0 = List is not editable by user, 1 = List is editable by user (default) |
+| list | Integer | &#8594;  | List reference number |
+| appearance | Integer | &#8594;  | *** Deprecated, must always be 0 *** |
+| icon | Integer | &#8594;  | *** Deprecated, must always be 0 *** |
+| lineHeight | Integer | &#8594;  | Minimal line height expressed in pixels |
+| doubleClick | Integer | &#8594;  | Expand/Collapse sublist on double-click 0 = Yes, 1= No |
+| multiSelections | Integer | &#8594;  | Multiple selections: 0 = No (default), 1 = Yes |
+| editable | Integer | &#8594;  | 0 = List is not editable by user, 1 = List is editable by user (default) |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
-| objeto | any | &rarr; | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
-| Resultado | Boolean | &larr; | True = retângulo de foco oculto, False = retângulo de foco visível |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
+| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
+| Resultado | Boolean | &#8592; | True = retângulo de foco oculto, False = retângulo de foco visível |
 
 <!-- END REF-->
 

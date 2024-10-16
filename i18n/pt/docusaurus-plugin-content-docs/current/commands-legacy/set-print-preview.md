@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| vistaprevia | Boolean | &rarr; | Pré-visualização em tela (TRUE), ou sem vista prévia (FALSE) |
+| vistaprevia | Boolean | &#8594;  | Pré-visualização em tela (TRUE), ou sem vista prévia (FALSE) |
 
 <!-- END REF-->
 

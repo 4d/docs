@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | 要素を削除する配列 |
-| where | Integer | &rarr; | 削除を開始する要素番号 |
-| howMany | Integer | &rarr; | 削除する要素数, または 省略時は1要素 |
+| array | Array | &#8594;  | 要素を削除する配列 |
+| where | Integer | &#8594;  | 削除を開始する要素番号 |
+| howMany | Integer | &#8594;  | 削除する要素数, または 省略時は1要素 |
 
 <!-- END REF-->
 

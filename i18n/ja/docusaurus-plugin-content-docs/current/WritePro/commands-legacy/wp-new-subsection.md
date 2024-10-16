@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New subsection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpSection | Object | &rarr; | 4D Write Pro セクション |
-| subSectionType | Integer | &rarr; | サブセクションのタイプ(wk first page, wk left page, or wk right page) |
-| 戻り値 | Object | &larr; | 新しいサブセクション |
+| wpSection | Object | &#8594;  | 4D Write Pro セクション |
+| subSectionType | Integer | &#8594;  | サブセクションのタイプ(wk first page, wk left page, or wk right page) |
+| 戻り値 | Object | &#8592; | 新しいサブセクション |
 
 <!-- END REF-->
 

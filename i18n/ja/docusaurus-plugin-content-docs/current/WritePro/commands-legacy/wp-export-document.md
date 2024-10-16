@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro 変数 |
-| filePath | Text | &rarr; | 書き出されたファイルへのパス |
-| format | Integer | &rarr; | ドキュメントの出力フォーマット |
-| option | Object, Integer | &rarr; | 書き出しオプション |
+| wpDoc | Object | &#8594;  | 4D Write Pro 変数 |
+| filePath | Text | &#8594;  | 書き出されたファイルへのパス |
+| format | Integer | &#8594;  | ドキュメントの出力フォーマット |
+| option | Object, Integer | &#8594;  | 書き出しオプション |
 
 <!-- END REF-->
 

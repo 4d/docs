@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TIMER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ticCont | Integer | &rarr; | Número de tics |
+| ticCont | Integer | &#8594;  | Número de tics |
 
 <!-- END REF-->
 

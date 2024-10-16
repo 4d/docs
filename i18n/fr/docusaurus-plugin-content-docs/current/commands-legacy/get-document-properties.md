@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &rarr; | Nom du document |
-| verrouillé | Boolean | &larr; | Verrouillé (Vrai) ou non verrouillé (Faux) |
-| invisible | Boolean | &larr; | Invisible (Vrai) ou visible (Faux) |
-| créé le | Date | &larr; | Date de création |
-| créé à | Heure | &larr; | Heure de création |
-| modifié le | Date | &larr; | Date de la dernière modification |
-| modifié à | Heure | &larr; | Heure de la dernière modification |
+| nomFichier | Text | &#8594;  | Nom du document |
+| verrouillé | Boolean | &#8592; | Verrouillé (Vrai) ou non verrouillé (Faux) |
+| invisible | Boolean | &#8592; | Invisible (Vrai) ou visible (Faux) |
+| créé le | Date | &#8592; | Date de création |
+| créé à | Heure | &#8592; | Heure de création |
+| modifié le | Date | &#8592; | Date de la dernière modification |
+| modifié à | Heure | &#8592; | Heure de la dernière modification |
 
 <!-- END REF-->
 

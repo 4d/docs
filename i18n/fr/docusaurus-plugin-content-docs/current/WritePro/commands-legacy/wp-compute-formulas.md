@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP COMPUTE FORMULAS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 
 <!-- END REF-->
 

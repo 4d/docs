@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get query limit.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &larr; | Nombre limite d’enregistrements, 0 = nombre illimité |
+| Résultat | Integer | &#8592; | Nombre limite d’enregistrements, 0 = nombre illimité |
 
 <!-- END REF-->
 

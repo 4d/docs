@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetDoc | Object | &rarr; | スタイルシートを受け取る4D Write Pro ドキュメント |
-| sourceDoc | Object | &rarr; | スタイルシートを取り出す4D Write Pro ドキュメント |
+| targetDoc | Object | &#8594;  | スタイルシートを受け取る4D Write Pro ドキュメント |
+| sourceDoc | Object | &#8594;  | スタイルシートを取り出す4D Write Pro ドキュメント |
 
 <!-- END REF-->
 

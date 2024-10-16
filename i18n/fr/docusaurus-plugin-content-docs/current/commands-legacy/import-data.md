@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT DATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &rarr; | Chemin d’accès et nom du fichier à importer |
-| projet | Text, Blob | &rarr; | Contenu du projet d’import (XML ou référence d'élément DOM ou BLOB) |
-| &larr; | Nouveau contenu du projet d’import (si le paramètre * a été passé) |
-| * | Opérateur | &rarr; | Affichage de la boîte de dialogue d’import et mise à jour du projet |
+| nomFichier | Text | &#8594;  | Chemin d’accès et nom du fichier à importer |
+| projet | Text, Blob | &#8594;  | Contenu du projet d’import (XML ou référence d'élément DOM ou BLOB) |
+| &#8592; | Nouveau contenu du projet d’import (si le paramètre * a été passé) |
+| * | Opérateur | &#8594;  | Affichage de la boîte de dialogue d’import et mise à jour du projet |
 
 <!-- END REF-->
 

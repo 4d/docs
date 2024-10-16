@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &rarr; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| beforeItemRef &#124; * | 倍長整数, 演算子 | &rarr; | 項目参照番号 または 0: リストに最後に追加された項目 または *: 現在選択されている項目 |
-| itemText | Text | &rarr; | 新しいリスト項目のテキスト |
-| itemRef | Integer | &rarr; | 新しいリスト項目のユニークな参照番号 |
-| sublist | Integer | &rarr; | 新しいリスト項目に添付するオプションのサブリスト |
-| expanded | Boolean | &rarr; | サブリストの展開/折りたたみ状態を指定 |
+| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| beforeItemRef &#124; * | 倍長整数, 演算子 | &#8594;  | 項目参照番号 または 0: リストに最後に追加された項目 または *: 現在選択されている項目 |
+| itemText | Text | &#8594;  | 新しいリスト項目のテキスト |
+| itemRef | Integer | &#8594;  | 新しいリスト項目のユニークな参照番号 |
+| sublist | Integer | &#8594;  | 新しいリスト項目に添付するオプションのサブリスト |
+| expanded | Boolean | &#8594;  | サブリストの展開/折りたたみ状態を指定 |
 
 <!-- END REF-->
 

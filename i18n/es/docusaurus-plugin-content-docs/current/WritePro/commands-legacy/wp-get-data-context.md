@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get data context.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | Documento 4D Write Pro |
-| Resultado | Object | &larr; | Objeto de contexto de datos |
+| wpDoc | Object | &#8594;  | Documento 4D Write Pro |
+| Resultado | Object | &#8592; | Objeto de contexto de datos |
 
 <!-- END REF-->
 

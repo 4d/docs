@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Parse.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| jsonText | Text | &rarr; | JSON string to parse |
-| type | Integer | &rarr; | Type in which to convert the values |
-| * | Operator | &rarr; | Adds line position and offset of each property if returned value is an object |
-| Function result | Mixed, Object | &larr; | Values extracted from JSON string |
+| jsonText | Text | &#8594;  | JSON string to parse |
+| type | Integer | &#8594;  | Type in which to convert the values |
+| * | Operator | &#8594;  | Adds line position and offset of each property if returned value is an object |
+| Function result | Mixed, Object | &#8592; | Values extracted from JSON string |
 
 <!-- END REF-->
 

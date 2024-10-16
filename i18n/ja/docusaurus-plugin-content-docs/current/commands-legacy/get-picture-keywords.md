@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture, Picture | &rarr; | 割り当てられたキーワードを取得するピクチャー |
-| arrKeywords | Text array | &larr; | キーワードを受け取る配列 |
-| * | 演算子 | &rarr; | 指定時: 重複するキーワードを取り除く |
+| picture | Picture, Picture | &#8594;  | 割り当てられたキーワードを取得するピクチャー |
+| arrKeywords | Text array | &#8592; | キーワードを受け取る配列 |
+| * | 演算子 | &#8594;  | 指定時: 重複するキーワードを取り除く |
 
 <!-- END REF-->
 

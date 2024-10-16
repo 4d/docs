@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField &#124; aTable | Field, Table | &rarr; | Field to use for retrieving data or Table to use for retrieving record numbers |
-| array | Array | &larr; | Array to receive field data or record numbers |
-| aField | Field | &rarr; | Field to retrieve in array |
-| array | Array | &larr; | Array to receive field data |
-| * | Operator | &rarr; | Await execution |
+| aField &#124; aTable | Field, Table | &#8594;  | Field to use for retrieving data or Table to use for retrieving record numbers |
+| array | Array | &#8592; | Array to receive field data or record numbers |
+| aField | Field | &#8594;  | Field to retrieve in array |
+| array | Array | &#8592; | Array to receive field data |
+| * | Operator | &#8594;  | Await execution |
 
 <!-- END REF-->
 

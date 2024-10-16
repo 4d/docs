@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umaTable | Table | &rarr; | Tabela para a qual retornar uma seleção de registros, ou tabela padrão se for omitido |
-| opConj | * | &rarr; | Operador de Conjunção para juntar múltiplas pesquisas |
-| campoObjeto | Field | &rarr; | Campo Objeto para atributos de pesquisa |
-| caminhoAtributo | Text | &rarr; | Nome ou caminho do atributo |
-| opPesq | Text, * | &rarr; | Operador pesquisa (comparador) |
-| valor | Text, Number, Date, Time | &rarr; | Valor a comparar |
-| * | Operador | &rarr; | Continua a flag de pesquisa |
+| umaTable | Table | &#8594;  | Tabela para a qual retornar uma seleção de registros, ou tabela padrão se for omitido |
+| opConj | * | &#8594;  | Operador de Conjunção para juntar múltiplas pesquisas |
+| campoObjeto | Field | &#8594;  | Campo Objeto para atributos de pesquisa |
+| caminhoAtributo | Text | &#8594;  | Nome ou caminho do atributo |
+| opPesq | Text, * | &#8594;  | Operador pesquisa (comparador) |
+| valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
+| * | Operador | &#8594;  | Continua a flag de pesquisa |
 
 <!-- END REF-->
 

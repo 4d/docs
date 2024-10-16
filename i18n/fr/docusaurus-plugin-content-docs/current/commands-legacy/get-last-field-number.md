@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last field number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable &#124; ptrTable | Entier long, Pointeur | &rarr; | Numéro de table ou Pointeur vers une table |
-| Résultat | Integer | &larr; | Numéro de champ le plus élevé dans la table |
+| numTable &#124; ptrTable | Entier long, Pointeur | &#8594;  | Numéro de table ou Pointeur vers une table |
+| Résultat | Integer | &#8592; | Numéro de champ le plus élevé dans la table |
 
 <!-- END REF-->
 

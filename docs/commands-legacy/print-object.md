@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Print object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) <br/>If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| posX | Integer | &rarr; | Horizontal location of object |
-| posY | Integer | &rarr; | Vertical location of object |
-| width | Integer | &rarr; | Width of object (pixels) |
-| height | Integer | &rarr; | Height of object (pixels) |
-| Function result | Boolean | &larr; | True = object entirely printed; otherwise False |
+| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| posX | Integer | &#8594;  | Horizontal location of object |
+| posY | Integer | &#8594;  | Vertical location of object |
+| width | Integer | &#8594;  | Width of object (pixels) |
+| height | Integer | &#8594;  | Height of object (pixels) |
+| Function result | Boolean | &#8592; | True = object entirely printed; otherwise False |
 
 <!-- END REF-->
 

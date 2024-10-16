@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément |
-| nomSignet | Text | &rarr; | Nom du signet à créer |
+| objCible | Object | &#8594;  | Plage ou élément |
+| nomSignet | Text | &#8594;  | Nom du signet à créer |
 
 <!-- END REF-->
 

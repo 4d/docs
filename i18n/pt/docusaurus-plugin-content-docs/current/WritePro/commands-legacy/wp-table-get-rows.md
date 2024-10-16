@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get rows.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objAlvo | Object | &rarr; | intervalo ou elemento ou documento 4D Write Pro |
-| refTab | Object | &rarr; | objeto referência de tabela |
-| iniFila | Integer, Text | &rarr; | Posição início fila |
-| numFilas | Integer | &rarr; | Número de filas a obter |
-| Resultado | Object | &larr; | Nova faixa de tabela contendo filas selecionadas |
+| objAlvo | Object | &#8594;  | intervalo ou elemento ou documento 4D Write Pro |
+| refTab | Object | &#8594;  | objeto referência de tabela |
+| iniFila | Integer, Text | &#8594;  | Posição início fila |
+| numFilas | Integer | &#8594;  | Número de filas a obter |
+| Resultado | Object | &#8592; | Nova faixa de tabela contendo filas selecionadas |
 
 <!-- END REF-->
 

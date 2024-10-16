@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomTabla | Text | &rarr; | Nombre de tabla faltante a regenerar |
+| nomTabla | Text | &#8594;  | Nombre de tabla faltante a regenerar |
 
 <!-- END REF-->
 

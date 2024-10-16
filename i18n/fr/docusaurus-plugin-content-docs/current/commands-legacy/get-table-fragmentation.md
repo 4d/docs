@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get table fragmentation.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de laquelle connaître le taux de fragmentation |
-| Résultat | Real | &larr; | Pourcentage de fragmentation |
+| laTable | Table | &#8594;  | Table de laquelle connaître le taux de fragmentation |
+| Résultat | Real | &#8592; | Pourcentage de fragmentation |
 
 <!-- END REF-->
 

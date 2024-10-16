@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get current printer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &larr; | Name of the current printer |
+| Function result | String | &#8592; | Name of the current printer |
 
 <!-- END REF-->
 

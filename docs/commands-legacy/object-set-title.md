@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an Object Name (String) If omitted, object is a Variable |
-| object | any | &rarr; | Object Name (if * is specified), or Variable (if * is omitted) |
-| title | Text | &rarr; | New title for the object |
+| * | Operator | &#8594;  | If specified, object is an Object Name (String) If omitted, object is a Variable |
+| object | any | &#8594;  | Object Name (if * is specified), or Variable (if * is omitted) |
+| title | Text | &#8594;  | New title for the object |
 
 <!-- END REF-->
 

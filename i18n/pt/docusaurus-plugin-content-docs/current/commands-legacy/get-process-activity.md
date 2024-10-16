@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get process activity.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opções | Integer | &rarr; | Retorna opções |
-| Resultado | Object | &larr; | snapshot dos processos executando ou sessões de usuário (apenas em 4D Server) |
+| opções | Integer | &#8594;  | Retorna opções |
+| Resultado | Object | &#8592; | snapshot dos processos executando ou sessões de usuário (apenas em 4D Server) |
 
 <!-- END REF-->
 

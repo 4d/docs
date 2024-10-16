@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o variable (si se omite *) |
-| linea | Integer | &rarr; | Número de línea de la ruptura |
-| columna | Integer | &rarr; | Número de columna de la ruptura |
-| accion | Integer | &rarr; | Acción de selección |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable (si se omite *) |
+| linea | Integer | &#8594;  | Número de línea de la ruptura |
+| columna | Integer | &#8594;  | Número de columna de la ruptura |
+| accion | Integer | &#8594;  | Acción de selección |
 
 <!-- END REF-->
 

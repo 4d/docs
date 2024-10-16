@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Picture | &rarr; | サムネイルに変換する4Dピクチャフィールド または変数 |
-| dest | Picture | &larr; | 結果のサムネイル |
-| width | Integer | &rarr; | サムネイル幅 (ピクセル), デフォルト値 = 48 |
-| height | Integer | &rarr; | サムネイル高 (ピクセル), デフォルト値 = 48 |
-| mode | Integer | &rarr; | サムネイル作成モード デフォルト値 = Scaled to fit prop centered (6) |
-| depth | Integer | &rarr; | 廃止。使用しないでください |
+| source | Picture | &#8594;  | サムネイルに変換する4Dピクチャフィールド または変数 |
+| dest | Picture | &#8592; | 結果のサムネイル |
+| width | Integer | &#8594;  | サムネイル幅 (ピクセル), デフォルト値 = 48 |
+| height | Integer | &#8594;  | サムネイル高 (ピクセル), デフォルト値 = 48 |
+| mode | Integer | &#8594;  | サムネイル作成モード デフォルト値 = Scaled to fit prop centered (6) |
+| depth | Integer | &#8594;  | 廃止。使用しないでください |
 
 <!-- END REF-->
 

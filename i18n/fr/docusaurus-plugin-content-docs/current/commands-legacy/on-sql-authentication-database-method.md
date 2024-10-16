@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.On SQL Authentication database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Texte | &larr; | Nom d’utilisateur |
-| $2 | Texte | &larr; | Mot de passe |
-| $3 | Texte | &larr; | (Facultatif) Adresse IP du client à l’origine de la requête |
-| $0 | Booléen | &larr; | Vrai = requête acceptée, Faux = requête rejetée |
+| $1 | Texte | &#8592; | Nom d’utilisateur |
+| $2 | Texte | &#8592; | Mot de passe |
+| $3 | Texte | &#8592; | (Facultatif) Adresse IP du client à l’origine de la requête |
+| $0 | Booléen | &#8592; | Vrai = requête acceptée, Faux = requête rejetée |
 
 <!-- END REF-->
 

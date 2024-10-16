@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in set.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | Text | &rarr; | テストするセットの名前 |
-| 戻り値 | Integer | &larr; | セットに含まれるレコード数 |
+| set | Text | &#8594;  | テストするセットの名前 |
+| 戻り値 | Integer | &#8592; | セットに含まれるレコード数 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campoObjeto | Field | &rarr; | Campo Objeto do qual obtém a lista de valores atributo distintos |
-| rota | Text | &rarr; | Rota do atributo cujos valores distintos deseja obter. |
-| arrayValores | Text array, Integer array, Boolean array, Date array, Time array | &larr; | Valores distintos na rota atributo |
+| campoObjeto | Field | &#8594;  | Campo Objeto do qual obtém a lista de valores atributo distintos |
+| rota | Text | &#8594;  | Rota do atributo cujos valores distintos deseja obter. |
+| arrayValores | Text array, Integer array, Boolean array, Date array, Time array | &#8592; | Valores distintos na rota atributo |
 
 <!-- END REF-->
 

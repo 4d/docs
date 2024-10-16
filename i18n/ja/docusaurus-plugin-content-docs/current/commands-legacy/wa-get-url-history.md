@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| urlsArr | Text array | &larr; | 訪問したURLの配列 |
-| direction | Integer | &rarr; | 0または省略=前のURL配列, 1=次のURL配列 |
-| titlesArr | Text array | &larr; | ウィンドウタイトルの配列 |
+| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| urlsArr | Text array | &#8592; | 訪問したURLの配列 |
+| direction | Integer | &#8594;  | 0または省略=前のURL配列, 1=次のURL配列 |
+| titlesArr | Text array | &#8592; | ウィンドウタイトルの配列 |
 
 <!-- END REF-->
 

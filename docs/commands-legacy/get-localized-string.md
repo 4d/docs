@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resName | Text | &rarr; | Name of resname attribute |
-| Function result | String | &larr; | Value of string designated by resName in current language |
+| resName | Text | &#8594;  | Name of resname attribute |
+| Function result | String | &#8592; | Value of string designated by resName in current language |
 
 <!-- END REF-->
 

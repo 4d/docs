@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LAST RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | カレントレコードをセレクションの最後に移動する テーブル、または省略時、デフォルトテーブル |
+| aTable | Table | &#8594;  | カレントレコードをセレクションの最後に移動する テーブル、または省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

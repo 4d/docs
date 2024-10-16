@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| words | Text, Text配列 | &rarr; | ユーザー辞書に追加する単語または単語リスト |
+| words | Text, Text配列 | &#8594;  | ユーザー辞書に追加する単語または単語リスト |
 
 <!-- END REF-->
 

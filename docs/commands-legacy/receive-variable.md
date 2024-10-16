@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &larr; | Variable in which to receive |
+| variable | Variable | &#8592; | Variable in which to receive |
 
 <!-- END REF-->
 

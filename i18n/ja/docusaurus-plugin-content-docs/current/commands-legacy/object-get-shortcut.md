@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SHORTCUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| key | Text | &larr; | オブジェクトに割り当てられたキー |
-| modifiers | Integer | &larr; | モディファイアーキーマスクまたはマスクの組み合わせ |
+| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| key | Text | &#8592; | オブジェクトに割り当てられたキー |
+| modifiers | Integer | &#8592; | モディファイアーキーマスクまたはマスクの組み合わせ |
 
 <!-- END REF-->
 

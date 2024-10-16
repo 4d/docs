@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table à laquelle appartient l'ensemble ou Table par défaut si ce paramètre est omis |
-| ensemble | Text | &rarr; | Nom de l'ensemble à créer en mémoire |
-| nomFichier | Text | &rarr; | Document disque contenant l'ensemble |
+| laTable | Table | &#8594;  | Table à laquelle appartient l'ensemble ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à créer en mémoire |
+| nomFichier | Text | &#8594;  | Document disque contenant l'ensemble |
 
 <!-- END REF-->
 

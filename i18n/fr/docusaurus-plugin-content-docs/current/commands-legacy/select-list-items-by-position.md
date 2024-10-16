@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &rarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| positionElém | Integer | &rarr; | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) |
-| tabPositions | Integer array | &rarr; | Tableau de positions dans la ou les liste(s) déployée(s)/contractée(s) |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| positionElém | Integer | &#8594;  | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) |
+| tabPositions | Integer array | &#8594;  | Tableau de positions dans la ou les liste(s) déployée(s)/contractée(s) |
 
 <!-- END REF-->
 

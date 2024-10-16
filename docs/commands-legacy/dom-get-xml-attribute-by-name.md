@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML element reference |
-| attribName | Text | &rarr; | Attribute name |
-| attribValue | Variable | &larr; | Attribute value |
+| elementRef | Text | &#8594;  | XML element reference |
+| attribName | Text | &#8594;  | Attribute name |
+| attribValue | Variable | &#8592; | Attribute value |
 
 <!-- END REF-->
 

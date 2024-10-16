@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Version type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Informação sobre o tipo de versão (bitfield) |
+| Resultado | Integer | &#8592; | Informação sobre o tipo de versão (bitfield) |
 
 <!-- END REF-->
 

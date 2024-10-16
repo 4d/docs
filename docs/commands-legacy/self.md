@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Self.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Pointer | &larr; | Pointer to form object (if any) whose method is currently being executed. Otherwise Nil (->[]) if outside of context |
+| Function result | Pointer | &#8592; | Pointer to form object (if any) whose method is currently being executed. Otherwise Nil (->[]) if outside of context |
 
 <!-- END REF-->
 

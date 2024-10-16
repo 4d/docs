@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN DATABASE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| filePath | Text | &rarr; | 開きたいファイル名(.4db、.4dc、.4dbase または .4dlink)、<br/>または開きたいデータベースへの完全なアクセスパス |
+| filePath | Text | &#8594;  | 開きたいファイル名(.4db、.4dc、.4dbase または .4dlink)、<br/>または開きたいデータベースへの完全なアクセスパス |
 
 <!-- END REF-->
 

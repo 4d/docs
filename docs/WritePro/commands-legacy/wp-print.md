@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP PRINT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro document |
-| printOptions | Longint | &rarr; | Printing options for the 4D Write Pro document |
+| wpDoc | Object | &#8594;  | 4D Write Pro document |
+| printOptions | Longint | &#8594;  | Printing options for the 4D Write Pro document |
 
 <!-- END REF-->
 

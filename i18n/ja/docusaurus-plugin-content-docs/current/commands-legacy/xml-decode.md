@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.XML DECODE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| xmlValue | Text | &rarr; | XML構造から取得したテキスト型の値 |
-| 4Dvar | Field, Variable | &larr; | 変換したXMLの値を受け取る4D変数またはフィールド |
+| xmlValue | Text | &#8594;  | XML構造から取得したテキスト型の値 |
+| 4Dvar | Field, Variable | &#8592; | 変換したXMLの値を受け取る4D変数またはフィールド |
 
 <!-- END REF-->
 

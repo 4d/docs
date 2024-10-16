@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou Variável (se * for omitido) |
+| * | Operador | &#8594;  | Se especificado objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou Variável (se * for omitido) |
 
 <!-- END REF-->
 

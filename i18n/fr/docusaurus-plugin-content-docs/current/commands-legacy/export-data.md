@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &rarr; | Chemin d’accès et nom du fichier d’export |
-| projet | Text, Blob | &rarr; | Contenu du projet d’export (XML ou référence d'élément DOM ou BLOB) |
-| &larr; | Nouveau contenu du projet d’export (si le paramètre * a été passé) |
-| * | Opérateur | &rarr; | Affichage de la boîte de dialogue d’export et mise à jour du projet |
+| nomFichier | Text | &#8594;  | Chemin d’accès et nom du fichier d’export |
+| projet | Text, Blob | &#8594;  | Contenu du projet d’export (XML ou référence d'élément DOM ou BLOB) |
+| &#8592; | Nouveau contenu du projet d’export (si le paramètre * a été passé) |
+| * | Opérateur | &#8594;  | Affichage de la boîte de dialogue d’export et mise à jour du projet |
 
 <!-- END REF-->
 

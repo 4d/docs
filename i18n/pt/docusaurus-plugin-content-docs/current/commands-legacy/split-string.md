@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Split string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| stringAseparar | Text | &rarr; | Valor string |
-| string | Text | &rarr; | String que stringAseparar separa. Se string vazia (""), cada caractere de stringAseparar é uma substring |
-| opções | Integer | &rarr; | Opções referentes a strings vazias e espaços |
-| Resultado | Collection | &larr; | Coleção de substrings |
+| stringAseparar | Text | &#8594;  | Valor string |
+| string | Text | &#8594;  | String que stringAseparar separa. Se string vazia (""), cada caractere de stringAseparar é uma substring |
+| opções | Integer | &#8594;  | Opções referentes a strings vazias e espaços |
+| Resultado | Collection | &#8592; | Coleção de substrings |
 
 <!-- END REF-->
 

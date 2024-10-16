@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Reference of the area |
-| aTable | Integer | &rarr; | Table number |
+| area | Integer | &#8594;  | Reference of the area |
+| aTable | Integer | &#8594;  | Table number |
 
 <!-- END REF-->
 

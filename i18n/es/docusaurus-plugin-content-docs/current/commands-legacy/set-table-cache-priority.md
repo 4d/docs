@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla cuyo valor de prioridad de datos escalares tiene que ser definido para la sesión |
-| prioridad | Integer | &rarr; | Valor de prioridad de caché para valores escalares en la tabla |
+| tabla | Table | &#8594;  | Tabla cuyo valor de prioridad de datos escalares tiene que ser definido para la sesión |
+| prioridad | Integer | &#8594;  | Valor de prioridad de caché para valores escalares en la tabla |
 
 <!-- END REF-->
 

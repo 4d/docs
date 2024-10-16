@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE SET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &rarr; | 設定するオプションのコード |
-| value | Integer, Text | &rarr; | オプションの値 |
+| option | Integer | &#8594;  | 設定するオプションのコード |
+| value | Integer, Text | &#8594;  | オプションの値 |
 
 <!-- END REF-->
 

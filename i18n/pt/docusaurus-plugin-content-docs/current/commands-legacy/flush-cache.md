@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tamanho&#124;* | Real, Operador | &rarr; | *para completamente liberar a memória cache, ou números de bytes a liberar em cache |
+| tamanho&#124;* | Real, Operador | &#8594;  | *para completamente liberar a memória cache, ou números de bytes a liberar em cache |
 
 <!-- END REF-->
 

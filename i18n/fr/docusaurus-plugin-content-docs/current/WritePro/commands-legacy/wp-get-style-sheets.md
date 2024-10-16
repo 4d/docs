@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get style sheets.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docWP | Object | &rarr; | Document 4D Write Pro |
-| type | Integer | &rarr; | Type de la feuille de style |
-| Résultat | Collection | &larr; | Collection d'objets feuille de style |
+| docWP | Object | &#8594;  | Document 4D Write Pro |
+| type | Integer | &#8594;  | Type de la feuille de style |
+| Résultat | Collection | &#8592; | Collection d'objets feuille de style |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Bookmark range.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro document |
-| bkName | Text | &rarr; | Name of bookmark whose range you want to get |
-| Function result | Object | &larr; | Range of bookmark |
+| wpDoc | Object | &#8594;  | 4D Write Pro document |
+| bkName | Text | &#8594;  | Name of bookmark whose range you want to get |
+| Function result | Object | &#8592; | Range of bookmark |
 
 <!-- END REF-->
 

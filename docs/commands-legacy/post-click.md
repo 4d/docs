@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.POST CLICK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| mouseX | Integer | &rarr; | Horizontal coordinate |
-| mouseY | Integer | &rarr; | Vertical coordinate |
-| process | Integer | &rarr; | Destination process reference number, or Application event queue, if omitted, or 0 |
-| * | Operator |  &rarr; | If specified, global coordinate system is used If omitted, local coordinate system is used |
+| mouseX | Integer | &#8594;  | Horizontal coordinate |
+| mouseY | Integer | &#8594;  | Vertical coordinate |
+| process | Integer | &#8594;  | Destination process reference number, or Application event queue, if omitted, or 0 |
+| * | Operator |  &#8594;  | If specified, global coordinate system is used If omitted, local coordinate system is used |
 
 <!-- END REF-->
 

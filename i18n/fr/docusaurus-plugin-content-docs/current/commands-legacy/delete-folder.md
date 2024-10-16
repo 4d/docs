@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dossier | Text | &rarr; | Nom ou chemin d’accès complet du dossier à supprimer |
-| optionSuppression | Integer | &rarr; | Option de suppression du dossier |
+| dossier | Text | &#8594;  | Nom ou chemin d’accès complet du dossier à supprimer |
+| optionSuppression | Integer | &#8594;  | Option de suppression du dossier |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numéroPage | Integer | &rarr; | Numéro de la page à afficher |
-| * | Opérateur | &rarr; | Changer la page du sous-formulaire courant |
+| numéroPage | Integer | &#8594;  | Numéro de la page à afficher |
+| * | Opérateur | &#8594;  | Changer la page du sous-formulaire courant |
 
 <!-- END REF-->
 

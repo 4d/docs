@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| volume | Text | &rarr; | ボリュームの名前 |
-| size | Real | &larr; | ボリュームのサイズ(バイト単位) |
-| used | Real | &larr; | 使用サイズ(バイト単位) |
-| free | Real | &larr; | 空きサイズ(バイト単位) |
+| volume | Text | &#8594;  | ボリュームの名前 |
+| size | Real | &#8592; | ボリュームのサイズ(バイト単位) |
+| used | Real | &#8592; | 使用サイズ(バイト単位) |
+| free | Real | &#8592; | 空きサイズ(バイト単位) |
 
 <!-- END REF-->
 

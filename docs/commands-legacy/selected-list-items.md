@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Selected list items.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemsArray | Array integer | &larr; | If 2nd * omitted: Array contains the positions of selected items in the list(s) If 2nd * passed: Array contains the selected item references |
-| * | Operator | &rarr; | If omitted: Item position(s) If passed: Item reference(s) |
-| Function result | Longint | &larr; | If 2nd * omitted: Position of current selected list item in expanded/collapsed list(s) If 2nd * passed: Reference of the selected item |
+| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemsArray | Array integer | &#8592; | If 2nd * omitted: Array contains the positions of selected items in the list(s) If 2nd * passed: Array contains the selected item references |
+| * | Operator | &#8594;  | If omitted: Item position(s) If passed: Item reference(s) |
+| Function result | Longint | &#8592; | If 2nd * omitted: Position of current selected list item in expanded/collapsed list(s) If 2nd * passed: Reference of the selected item |
 
 <!-- END REF-->
 

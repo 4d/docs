@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP PRINT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
-| printOptions | Integer | &rarr; | 4D Write Pro ドキュメントの印刷オプション |
+| wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
+| printOptions | Integer | &#8594;  | 4D Write Pro ドキュメントの印刷オプション |
 
 <!-- END REF-->
 

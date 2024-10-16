@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in sorted array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | Array to search |
-| value | Expression | &rarr; | Value (same type as array) to search for in the array |
-| > or < | Operator | &rarr; | > if array is sorted in ascending order, < if it is sorted in descending order |
-| posFirst | Integer | &larr; | Position of its first occurrence if the value is found; otherwise position where the value should be inserted |
-| posLast | Integer | &larr; | Position of its last occurrence if the value is found; otherwise same as posFirst |
-| Function result | Boolean | &larr; | True if at least one element in array matches the value, False otherwise |
+| array | Array | &#8594;  | Array to search |
+| value | Expression | &#8594;  | Value (same type as array) to search for in the array |
+| > or < | Operator | &#8594;  | > if array is sorted in ascending order, < if it is sorted in descending order |
+| posFirst | Integer | &#8592; | Position of its first occurrence if the value is found; otherwise position where the value should be inserted |
+| posLast | Integer | &#8592; | Position of its last occurrence if the value is found; otherwise same as posFirst |
+| Function result | Boolean | &#8592; | True if at least one element in array matches the value, False otherwise |
 
 <!-- END REF-->
 

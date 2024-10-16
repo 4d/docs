@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate digest.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| param | Blob, Text | &rarr; | Blob o texto para o qual obter uma chave digest |
-| algoritmo | Integer | &rarr; | Algoritimo utilizado para retornar a chave: 0 = MD5 Digest, 1 = SHA1 Digest |
-| * | Operador | &rarr; | Encode digest in Base64URL |
-| resultado | Text | &larr; | Valor da chave digest |
+| param | Blob, Text | &#8594;  | Blob o texto para o qual obter uma chave digest |
+| algoritmo | Integer | &#8594;  | Algoritimo utilizado para retornar a chave: 0 = MD5 Digest, 1 = SHA1 Digest |
+| * | Operador | &#8594;  | Encode digest in Base64URL |
+| resultado | Text | &#8592; | Valor da chave digest |
 
 <!-- END REF-->
 

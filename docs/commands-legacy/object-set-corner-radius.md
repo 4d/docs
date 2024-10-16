@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &rarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| radius | Integer | &rarr; | New radius of rounded corners (in pixels) |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | any | &#8594;  | Object name (if * is specified) or Field or variable (if * is omitted) |
+| radius | Integer | &#8594;  | New radius of rounded corners (in pixels) |
 
 <!-- END REF-->
 

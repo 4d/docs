@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT MARKER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTaquet | Integer | &rarr; | Numéro de taquet |
-| position | Integer | &rarr; | Nouvelle position du taquet |
-| * | Opérateur | &rarr; | Si passé = déplacer les marqueurs suivants Si omis = ne pas déplacer les marqueurs suivants |
+| numTaquet | Integer | &#8594;  | Numéro de taquet |
+| position | Integer | &#8594;  | Nouvelle position du taquet |
+| * | Opérateur | &#8594;  | Si passé = déplacer les marqueurs suivants Si omis = ne pas déplacer les marqueurs suivants |
 
 <!-- END REF-->
 

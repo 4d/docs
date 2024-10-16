@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| semaphore | Text | &rarr; | Semaphore to clear |
+| semaphore | Text | &#8594;  | Semaphore to clear |
 
 <!-- END REF-->
 

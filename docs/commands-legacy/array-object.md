@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY OBJECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &rarr; | Name of array |
-| size | Integer | &rarr; | Number of array elements or Number of arrays if size2 is specified |
-| size2 | Integer | &rarr; | Number of 2D array elements |
+| arrayName | Array | &#8594;  | Name of array |
+| size | Integer | &#8594;  | Number of array elements or Number of arrays if size2 is specified |
+| size2 | Integer | &#8594;  | Number of 2D array elements |
 
 <!-- END REF-->
 

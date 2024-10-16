@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB REMOVE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &rarr; | Objeto estruturado |
-| propriedade | Text | &rarr; | Nome da propriedade a remover |
+| objeto | Object, Campo Object | &#8594;  | Objeto estruturado |
+| propriedade | Text | &#8594;  | Nome da propriedade a remover |
 
 <!-- END REF-->
 

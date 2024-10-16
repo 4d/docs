@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST TO ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Text, Integer | &rarr; | Lista da qual copiar os itens de primeiro nível |
-| array | Array | &larr; | Array para o qual copiar os itens da lista |
-| itemRefs | Array | &larr; | Números de referência da lista de itens |
+| lista | Text, Integer | &#8594;  | Lista da qual copiar os itens de primeiro nível |
+| array | Array | &#8592; | Array para o qual copiar os itens da lista |
+| itemRefs | Array | &#8592; | Números de referência da lista de itens |
 
 <!-- END REF-->
 

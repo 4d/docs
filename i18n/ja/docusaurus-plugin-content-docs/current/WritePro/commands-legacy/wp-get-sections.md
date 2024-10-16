@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get sections.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは4D Write Pro ドキュメント |
-| 戻り値 | Collection | &larr; | targetObj 内で見つかった全ての(メイン)セクションのコレクション |
+| targetObj | Object | &#8594;  | レンジまたは4D Write Pro ドキュメント |
+| 戻り値 | Collection | &#8592; | targetObj 内で見つかった全ての(メイン)セクションのコレクション |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | ポインター, 倍長整数 | &rarr; | フィールドポインタ、またはテーブル番号 |
-| fieldNum | Integer | &rarr; | 第一引数がテーブル番号の場合、 フィールド番号 |
-| oneTable | Integer | &larr; | 1テーブルのテーブル番号、または リレーションが未定義の場合は0（ゼロ） |
-| oneField | Integer | &larr; | 1フィールド番号、または リレーションが未定義の場合は0（ゼロ） |
-| choiceField | Integer | &larr; | 選択フィールド番号、または選択フィールドが未定義の場合は0（ゼロ） |
-| autoOne | Boolean | &larr; | True = 自動1対1リレート False = 1対1マニュアルリレート |
-| autoMany | Boolean | &larr; | True = 自動1対nリレート False = 1対nマニュアルリレート |
+| fieldPtr&#124;tableNum | ポインター, 倍長整数 | &#8594;  | フィールドポインタ、またはテーブル番号 |
+| fieldNum | Integer | &#8594;  | 第一引数がテーブル番号の場合、 フィールド番号 |
+| oneTable | Integer | &#8592; | 1テーブルのテーブル番号、または リレーションが未定義の場合は0（ゼロ） |
+| oneField | Integer | &#8592; | 1フィールド番号、または リレーションが未定義の場合は0（ゼロ） |
+| choiceField | Integer | &#8592; | 選択フィールド番号、または選択フィールドが未定義の場合は0（ゼロ） |
+| autoOne | Boolean | &#8592; | True = 自動1対1リレート False = 1対1マニュアルリレート |
+| autoMany | Boolean | &#8592; | True = 自動1対nリレート False = 1対nマニュアルリレート |
 
 <!-- END REF-->
 

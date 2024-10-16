@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docWP | Object | &rarr; | Documento 4D Write Pro |
+| docWP | Object | &#8594;  | Documento 4D Write Pro |
 | arrayNomMarcadores | Array texto | &#x1F858; | Array de nombres de marcadores |
 
 <!-- END REF-->

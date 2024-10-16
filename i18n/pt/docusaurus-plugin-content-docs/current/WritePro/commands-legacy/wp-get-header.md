@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get header.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objFaixa | Object | &rarr; | Faixa 4D Write Pro |
-| docWP | Object | &rarr; | Documento 4D Write Pro |
-| indiceSecao | Integer | &rarr; | Indice seção |
-| subsecaoTipo | Integer | &rarr; | Tipo sub-seção (wk first page, wk left page ou wk right page) |
-| Resultado | Object | &larr; | Cabeçalho 4D Write Pro |
+| objFaixa | Object | &#8594;  | Faixa 4D Write Pro |
+| docWP | Object | &#8594;  | Documento 4D Write Pro |
+| indiceSecao | Integer | &#8594;  | Indice seção |
+| subsecaoTipo | Integer | &#8594;  | Tipo sub-seção (wk first page, wk left page ou wk right page) |
+| Resultado | Object | &#8592; | Cabeçalho 4D Write Pro |
 
 <!-- END REF-->
 

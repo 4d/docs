@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Activated.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | Devuelve TRUE si el ciclo de ejecución está en activación |
+| Resultado | Boolean | &#8592; | Devuelve TRUE si el ciclo de ejecución está en activación |
 
 <!-- END REF-->
 

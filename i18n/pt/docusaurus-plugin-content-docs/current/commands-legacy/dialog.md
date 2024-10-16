@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DIALOG.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela a qual pertence o formulário ou se omitida: tabela por padrão ou uso do formulário de projeto |
-| formulario | Text, Object | &rarr; | Nome de tabela ou formulário de projeto a mostrar como diálogo |
-| dataForm | Object | &rarr; | Dados a associar ao formulário |
-| * | Operador | &rarr; | Utilizar o mesmo processo |
+| tabela | Table | &#8594;  | Tabela a qual pertence o formulário ou se omitida: tabela por padrão ou uso do formulário de projeto |
+| formulario | Text, Object | &#8594;  | Nome de tabela ou formulário de projeto a mostrar como diálogo |
+| dataForm | Object | &#8594;  | Dados a associar ao formulário |
+| * | Operador | &#8594;  | Utilizar o mesmo processo |
 
 <!-- END REF-->
 

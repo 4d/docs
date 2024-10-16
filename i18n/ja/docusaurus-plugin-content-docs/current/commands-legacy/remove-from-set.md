@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE FROM SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | カレントレコードのテーブル、または 省略時、デフォルトテーブル |
-| set | Text | &rarr; | カレントレコードを取り除くセットの名前 |
+| aTable | Table | &#8594;  | カレントレコードのテーブル、または 省略時、デフォルトテーブル |
+| set | Text | &#8594;  | カレントレコードを取り除くセットの名前 |
 
 <!-- END REF-->
 

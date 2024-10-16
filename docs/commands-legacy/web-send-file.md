@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| htmlFile | Text | &rarr; | HTML Pathname to HTML file or empty string for terminating SEND HTML FILE |
+| htmlFile | Text | &#8594;  | HTML Pathname to HTML file or empty string for terminating SEND HTML FILE |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Table name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &rarr; | Número da tabela ou ponteiro a tabela |
-| Resultado | Text | &larr; | Nome da tabela |
+| numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#8594;  | Número da tabela ou ponteiro a tabela |
+| Resultado | Text | &#8592; | Nome da tabela |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Host Database Event database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Entier long | &larr; | Code d'événement |
+| $1 | Entier long | &#8592; | Code d'événement |
 
 <!-- END REF-->
 

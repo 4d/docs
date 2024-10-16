@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &rarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| positionElém &#124; * | Opérateur, Entier long | &rarr; | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) ou * pour l‘élément courant de la liste |
-| réfElément | Integer | &larr; | Numéro de référence de l'élément |
-| libelléElément | Text | &larr; | Libellé de l'élément |
-| sous_Liste | Integer | &larr; | Numéro de référence de sous-liste (s'il y en a) |
-| déployée | Boolean | &larr; | Si une sous-liste est rattachée à l'élément : Vrai = la sous-liste est déployée Faux = la sous-liste est contractée |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| positionElém &#124; * | Opérateur, Entier long | &#8594;  | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) ou * pour l‘élément courant de la liste |
+| réfElément | Integer | &#8592; | Numéro de référence de l'élément |
+| libelléElément | Text | &#8592; | Libellé de l'élément |
+| sous_Liste | Integer | &#8592; | Numéro de référence de sous-liste (s'il y en a) |
+| déployée | Boolean | &#8592; | Si une sous-liste est rattachée à l'élément : Vrai = la sous-liste est déployée Faux = la sous-liste est contractée |
 
 <!-- END REF-->
 

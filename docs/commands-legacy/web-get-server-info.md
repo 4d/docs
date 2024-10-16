@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get server info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| withCache | Boolean | &rarr; | True to return the Web cache description. Otherwise (default), the cache description is not returned. |
-| Function result | Object | &larr; | Information on the running Web server and SOAP server |
+| withCache | Boolean | &#8594;  | True to return the Web cache description. Otherwise (default), the cache description is not returned. |
+| Function result | Object | &#8592; | Information on the running Web server and SOAP server |
 
 <!-- END REF-->
 

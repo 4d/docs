@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla de la cual se borrarán todos los registros o tabla por defecto si se omite este parámetro |
+| tabla | Table | &#8594;  | Tabla de la cual se borrarán todos los registros o tabla por defecto si se omite este parámetro |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Bookmark range.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docWP | Object | &rarr; | Document 4D Write Pro |
-| nomSignet | Text | &rarr; | Nom du signet dont vous souhaitez récupérer la plage |
-| Résultat | Object | &larr; | Plage du signet |
+| docWP | Object | &#8594;  | Document 4D Write Pro |
+| nomSignet | Text | &#8594;  | Nom du signet dont vous souhaitez récupérer la plage |
+| Résultat | Object | &#8592; | Plage du signet |
 
 <!-- END REF-->
 

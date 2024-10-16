@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.End selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to test if record pointer is beyond the last selected record, or Default table, if omitted |
-| Function result | Boolean | &larr; | Yes (TRUE) or No (FALSE) |
+| aTable | Table | &#8594;  | Table for which to test if record pointer is beyond the last selected record, or Default table, if omitted |
+| Function result | Boolean | &#8592; | Yes (TRUE) or No (FALSE) |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabfalt | Text array | &larr; | Nombres de las tablas faltantes en la base |
+| tabfalt | Text array | &#8592; | Nombres de las tablas faltantes en la base |
 
 <!-- END REF-->
 

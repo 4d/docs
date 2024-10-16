@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO DOCUMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &rarr; | Nom de document ou Chemin d'accès à un document |
-| texte | Text | &rarr; | Texte à stocker dans un document |
-| jeuCaractères | Text, Integer | &rarr; | Nom ou Numéro de jeu de caractères |
-| modeRetour | Integer | &rarr; | Mode de traitement des retours à la ligne |
+| nomFichier | Text | &#8594;  | Nom de document ou Chemin d'accès à un document |
+| texte | Text | &#8594;  | Texte à stocker dans un document |
+| jeuCaractères | Text, Integer | &#8594;  | Nom ou Numéro de jeu de caractères |
+| modeRetour | Integer | &#8594;  | Mode de traitement des retours à la ligne |
 
 <!-- END REF-->
 

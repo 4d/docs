@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET SCREEN DEPTH.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| profundidad | Integer | &rarr; | Profundidad de la pantalla (número de colores = 2 ^ Profundidad de pantalla) |
-| color | Integer | &rarr; | 1 = Color, 0 = Escala de grises |
-| pantalla | Integer | &rarr; | Número de la pantalla, o pantalla principal, si se omite |
+| profundidad | Integer | &#8594;  | Profundidad de la pantalla (número de colores = 2 ^ Profundidad de pantalla) |
+| color | Integer | &#8594;  | 1 = Color, 0 = Escala de grises |
+| pantalla | Integer | &#8594;  | Número de la pantalla, o pantalla principal, si se omite |
 
 <!-- END REF-->
 

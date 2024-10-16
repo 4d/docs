@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Open form window.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela do formulário ou tabela padrão, se omitido |
-| nomeForm | Text, Object | &rarr; | Nome do formulário |
-| tipo | Integer | &rarr; | tipo de janela |
-| hPos | Integer | &rarr; | Posição horizontal da janela |
-| vPos | Integer | &rarr; | Posição vertical da janela |
-| * | Operador | &rarr; | Salvar posição atual e tamanho da janela |
-| Resultado | Integer | &larr; | Número de referência de janela |
+| tabela | Table | &#8594;  | Tabela do formulário ou tabela padrão, se omitido |
+| nomeForm | Text, Object | &#8594;  | Nome do formulário |
+| tipo | Integer | &#8594;  | tipo de janela |
+| hPos | Integer | &#8594;  | Posição horizontal da janela |
+| vPos | Integer | &#8594;  | Posição vertical da janela |
+| * | Operador | &#8594;  | Salvar posição atual e tamanho da janela |
+| Resultado | Integer | &#8592; | Número de referência de janela |
 
 <!-- END REF-->
 

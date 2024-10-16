@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| jerarquico | Boolean | &rarr; | True = list box jerárquico False = list box no jerárquico |
-| jerarquia | Pointer array | &rarr; | Array de punteros |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| jerarquico | Boolean | &#8594;  | True = list box jerárquico False = list box no jerárquico |
+| jerarquia | Pointer array | &#8594;  | Array de punteros |
 
 <!-- END REF-->
 

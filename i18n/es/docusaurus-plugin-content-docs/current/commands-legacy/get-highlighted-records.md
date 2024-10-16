@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla de la cual leer los registros seleccionados Si se omite, tabla del formulario actual |
-| nomConjunto | Text | &rarr; | Conjunto en el cual guardar los registros seleccionados |
+| tabla | Table | &#8594;  | Tabla de la cual leer los registros seleccionados Si se omite, tabla del formulario actual |
+| nomConjunto | Text | &#8594;  | Conjunto en el cual guardar los registros seleccionados |
 
 <!-- END REF-->
 

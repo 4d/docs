@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TOTALS SPACING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &rarr; | Référence de la zone |
-| sousTotal | Integer | &rarr; | Numéro de sous-total |
-| valeur | Integer | &rarr; | 0=pas d'espace, 32000=insère un saut de page, >0=espace ajouté sous le niveau de rupture, <0=augmentation proportionnelle |
+| zone | Integer | &#8594;  | Référence de la zone |
+| sousTotal | Integer | &#8594;  | Numéro de sous-total |
+| valeur | Integer | &#8594;  | 0=pas d'espace, 32000=insère un saut de page, >0=espace ajouté sous le niveau de rupture, <0=augmentation proportionnelle |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &rarr; | ドキュメント参照番号 |
+| Time | Time | &#8594;  | ドキュメント参照番号 |
 
 <!-- END REF-->
 

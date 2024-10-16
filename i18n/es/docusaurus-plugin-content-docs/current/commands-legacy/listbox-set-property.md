@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable. |
-| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| propiedad | Integer | &rarr; | Propiedad de list box o de columna |
-| valor | Integer, Text | &rarr; | Valor de la propiedad |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable. |
+| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| propiedad | Integer | &#8594;  | Propiedad de list box o de columna |
+| valor | Integer, Text | &#8594;  | Valor de la propiedad |
 
 <!-- END REF-->
 

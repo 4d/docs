@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable ou champ (si * est omis) |
-| codeLangue | Text | &rarr; | Code de langue RFC3066 ISO639 et ISO3166, "" = pas de changement |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable ou champ (si * est omis) |
+| codeLangue | Text | &#8594;  | Code de langue RFC3066 ISO639 et ISO3166, "" = pas de changement |
 
 <!-- END REF-->
 

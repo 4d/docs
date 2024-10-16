@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In transaction.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &larr; | VRAI si le process courant est en transaction, FAUX sinon |
+| Résultat | Boolean | &#8592; | VRAI si le process courant est en transaction, FAUX sinon |
 
 <!-- END REF-->
 

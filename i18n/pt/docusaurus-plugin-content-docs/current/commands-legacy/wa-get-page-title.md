@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get page title.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| Resultado | Text | &larr; | Título da página atual |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| Resultado | Text | &#8592; | Título da página atual |
 
 <!-- END REF-->
 

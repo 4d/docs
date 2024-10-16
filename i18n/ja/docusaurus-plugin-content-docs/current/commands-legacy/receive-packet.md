@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE PACKET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &rarr; | ドキュメント参照番号, または カレントチャンネル (シリアルポートまたはドキュメント) |
-| receiveVar | Text, Blob | &larr; | データを受け取る変数 |
-| stopChar &#124; numBytes | 文字, 倍長整数 | &rarr; | 受信を停止する文字, または受信するバイト数 |
+| Time | Time | &#8594;  | ドキュメント参照番号, または カレントチャンネル (シリアルポートまたはドキュメント) |
+| receiveVar | Text, Blob | &#8592; | データを受け取る変数 |
+| stopChar &#124; numBytes | 文字, 倍長整数 | &#8594;  | 受信を停止する文字, または受信するバイト数 |
 
 <!-- END REF-->
 

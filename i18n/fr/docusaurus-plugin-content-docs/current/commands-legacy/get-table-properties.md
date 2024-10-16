@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrTable &#124; numTable | Pointeur, Entier long | &rarr; | Pointeur de table ou Numéro de table |
-| invisible | Boolean | &larr; | Vrai = Invisible, Faux = Visible |
-| trigSvgdeNouv | Boolean | &larr; | Vrai = Trigger “Sur sauvegarde nouvel enreg” activé, sinon Faux |
-| trigSvgdeEnr | Boolean | &larr; | Vrai = Trigger “Sur sauvegarde enregistrement” activé, sinon Faux |
-| trigSupprEnr | Boolean | &larr; | Vrai = Trigger “Sur suppression enreg” activé, sinon Faux |
-| trigChargEnr | Boolean | &larr; | *** Ne pas utiliser (obsolète) *** |
+| ptrTable &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de table ou Numéro de table |
+| invisible | Boolean | &#8592; | Vrai = Invisible, Faux = Visible |
+| trigSvgdeNouv | Boolean | &#8592; | Vrai = Trigger “Sur sauvegarde nouvel enreg” activé, sinon Faux |
+| trigSvgdeEnr | Boolean | &#8592; | Vrai = Trigger “Sur sauvegarde enregistrement” activé, sinon Faux |
+| trigSupprEnr | Boolean | &#8592; | Vrai = Trigger “Sur suppression enreg” activé, sinon Faux |
+| trigChargEnr | Boolean | &#8592; | *** Ne pas utiliser (obsolète) *** |
 
 <!-- END REF-->
 

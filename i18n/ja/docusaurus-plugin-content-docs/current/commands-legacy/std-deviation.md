@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Std deviation.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | Field, Array | &rarr; | 標準偏差を求めるデータ |
-| 戻り値 | Real | &larr; | seriesの標準偏差 |
+| series | Field, Array | &#8594;  | 標準偏差を求めるデータ |
+| 戻り値 | Real | &#8592; | seriesの標準偏差 |
 
 <!-- END REF-->
 

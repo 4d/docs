@@ -8,7 +8,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Session.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | 4D.Session | &larr; | Session object |
+| Function result | 4D.Session | &#8592; | Session object |
 
 <!-- END REF-->
 

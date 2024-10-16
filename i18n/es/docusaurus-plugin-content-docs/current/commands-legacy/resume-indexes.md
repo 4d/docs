@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla para la cual reactivar los índices |
-| * | Operador | &rarr; | Si se pasa = indexación asíncrona |
+| tabla | Table | &#8594;  | Tabla para la cual reactivar los índices |
+| * | Operador | &#8594;  | Si se pasa = indexación asíncrona |
 
 <!-- END REF-->
 

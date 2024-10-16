@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| duree | Real | &rarr; | Durée (en secondes) avant l'ouverture d'une session |
-| source | Integer | &rarr; | Origine d'une opération |
+| duree | Real | &#8594;  | Durée (en secondes) avant l'ouverture d'une session |
+| source | Integer | &#8594;  | Origine d'une opération |
 
 <!-- END REF-->
 

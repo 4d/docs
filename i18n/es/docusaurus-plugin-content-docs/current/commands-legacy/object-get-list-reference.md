@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &rarr; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
-| tipoLista | Integer | &rarr; | Tipo de lista: lista de Selección, lista obligatoria o la lista de excluidos |
-| Resultado | Integer | &larr; | Número de referencia de lista |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| tipoLista | Integer | &#8594;  | Tipo de lista: lista de Selección, lista obligatoria o la lista de excluidos |
+| Resultado | Integer | &#8592; | Número de referencia de lista |
 
 <!-- END REF-->
 

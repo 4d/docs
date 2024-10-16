@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Undefined.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &rarr; | Expression whose resulting value to be evaluated |
-| Function result | Boolean | &larr; | True = undefined, False = not undefined |
+| expression | Expression | &#8594;  | Expression whose resulting value to be evaluated |
+| Function result | Boolean | &#8592; | True = undefined, False = not undefined |
 
 <!-- END REF-->
 

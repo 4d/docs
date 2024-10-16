@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable ou un champ |
-| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| formule | Text | &rarr; | Formule 4D associée à la colonne |
-| typeDonnées | Integer | &rarr; | Type de résultat de la formule |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| formule | Text | &#8594;  | Formule 4D associée à la colonne |
+| typeDonnées | Integer | &#8594;  | Type de résultat de la formule |
 
 <!-- END REF-->
 

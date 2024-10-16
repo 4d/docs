@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| templateEntrée | Text | &rarr; | Données contenant des balises à traiter |
-| résultatSortie | Text | &larr; | Résultat de l'exécution du template |
-| param | Expression | &rarr; | Paramètre(s) à passer au template en exécution |
+| templateEntrée | Text | &#8594;  | Données contenant des balises à traiter |
+| résultatSortie | Text | &#8592; | Résultat de l'exécution du template |
+| param | Expression | &#8594;  | Paramètre(s) à passer au template en exécution |
 
 <!-- END REF-->
 

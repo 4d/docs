@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| estruturaXML | Text | &larr; | Exportação da definição XML da estrutura de banco de dados 4D |
-| formato | Text | &rarr; | Formato de exportação: formato xml (padrão) ou formato html |
+| estruturaXML | Text | &#8592; | Exportação da definição XML da estrutura de banco de dados 4D |
+| formato | Text | &#8594;  | Formato de exportação: formato xml (padrão) ou formato html |
 
 <!-- END REF-->
 

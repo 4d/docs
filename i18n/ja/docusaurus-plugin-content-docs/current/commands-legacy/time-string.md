@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Time string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| seconds | Integer, Time | &rarr; | 0時からの秒数 |
-| 戻り値 | Text | &larr; | 24時フォーマットの時間文字列 |
+| seconds | Integer, Time | &#8594;  | 0時からの秒数 |
+| 戻り値 | Text | &#8592; | 24時フォーマットの時間文字列 |
 
 <!-- END REF-->
 

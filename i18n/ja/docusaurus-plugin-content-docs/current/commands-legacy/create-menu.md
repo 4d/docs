@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Create menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Text, Integer, Text | &rarr; | メニュー参照 または 番号 または メニューバー名 |
-| 戻り値 | Text | &larr; | メニュー参照 |
+| menu | Text, Integer, Text | &#8594;  | メニュー参照 または 番号 または メニューバー名 |
+| 戻り値 | Text | &#8592; | メニュー参照 |
 
 <!-- END REF-->
 

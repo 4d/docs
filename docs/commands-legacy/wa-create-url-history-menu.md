@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| direction | Integer | &rarr; | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| Function result | MenuRef | &larr; | Menu reference |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| direction | Integer | &#8594;  | 0 or omitted=List of previous URLs, 1=List of next URLs |
+| Function result | MenuRef | &#8592; | Menu reference |
 
 <!-- END REF-->
 

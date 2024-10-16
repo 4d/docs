@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Blob | Blob | &rarr; | BLOB del cual obtener el texto |
-| formatoTexto | Integer | &rarr; | Formato y conjunto de caracteres de texto |
-| offset | Variable | &rarr; | Offset en el BLOB (expresado en bytes) |
-| &larr; | Nuevo offset después de la lectura |
-| longitudTexto | Integer | &rarr; | Número de caracteres a leer |
-| Resultado | Text | &larr; | Valor del texto |
+| Blob | Blob | &#8594;  | BLOB del cual obtener el texto |
+| formatoTexto | Integer | &#8594;  | Formato y conjunto de caracteres de texto |
+| offset | Variable | &#8594;  | Offset en el BLOB (expresado en bytes) |
+| &#8592; | Nuevo offset después de la lectura |
+| longitudTexto | Integer | &#8594;  | Número de caracteres a leer |
+| Resultado | Text | &#8592; | Valor del texto |
 
 <!-- END REF-->
 

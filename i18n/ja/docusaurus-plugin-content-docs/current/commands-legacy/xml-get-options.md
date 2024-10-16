@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.XML GET OPTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef &#124; document | テキスト | &rarr; | XMLルート要素参照 または開かれたドキュメントの参照 |
-| selector | Integer | &rarr; | 取得するオプション |
-| value | Integer | &larr; | オプションの現在値 |
+| elementRef &#124; document | テキスト | &#8594;  | XMLルート要素参照 または開かれたドキュメントの参照 |
+| selector | Integer | &#8594;  | 取得するオプション |
+| value | Integer | &#8592; | オプションの現在値 |
 
 <!-- END REF-->
 

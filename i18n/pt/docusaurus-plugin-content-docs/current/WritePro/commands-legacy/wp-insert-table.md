@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Insert table.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objFaixa | Object | &rarr; | Objeto Faixa de seleção |
-| modo | Integer | &rarr; | Modo inserção |
-| atFaixa | Integer | &rarr; | Modo de atualização da faixa |
-| numCol | Integer | &rarr; | Número de colunas a estabelecer na tabela |
-| numFilas | Integer | &rarr; | Numero de filas a estabelecer na tabela |
-| Resultado | Object | &larr; | Objeto referência tabela |
+| objFaixa | Object | &#8594;  | Objeto Faixa de seleção |
+| modo | Integer | &#8594;  | Modo inserção |
+| atFaixa | Integer | &#8594;  | Modo de atualização da faixa |
+| numCol | Integer | &#8594;  | Número de colunas a estabelecer na tabela |
+| numFilas | Integer | &#8594;  | Numero de filas a estabelecer na tabela |
+| Resultado | Object | &#8592; | Objeto referência tabela |
 
 <!-- END REF-->
 

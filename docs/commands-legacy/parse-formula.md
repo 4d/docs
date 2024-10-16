@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Parse formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| formula | Text | &rarr; | Plain text formula |
-| options | Integer | &rarr; | Instructions for input / output |
-| errorMessage | Text | &larr; | Error message (empty string if no error) |
-| Function result | Text | &larr; | Transformed formula (plain text) |
+| formula | Text | &#8594;  | Plain text formula |
+| options | Integer | &#8594;  | Instructions for input / output |
+| errorMessage | Text | &#8592; | Error message (empty string if no error) |
+| Function result | Text | &#8592; | Transformed formula (plain text) |
 
 <!-- END REF-->
 

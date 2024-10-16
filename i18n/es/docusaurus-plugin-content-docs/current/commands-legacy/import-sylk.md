@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT SYLK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla en la cual importar los datos, o Tabla por defecto, si se omite |
-| doc | Text | &rarr; | Documento SYLK a importar |
+| tabla | Table | &#8594;  | Tabla en la cual importar los datos, o Tabla por defecto, si se omite |
+| doc | Text | &#8594;  | Documento SYLK a importar |
 
 <!-- END REF-->
 

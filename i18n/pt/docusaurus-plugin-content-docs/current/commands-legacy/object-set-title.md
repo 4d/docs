@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
-| titulo | Text | &rarr; | Novo título do objeto |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
+| titulo | Text | &#8594;  | Novo título do objeto |
 
 <!-- END REF-->
 

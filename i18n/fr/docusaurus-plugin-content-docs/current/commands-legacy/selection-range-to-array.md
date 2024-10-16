@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| début | Integer | &rarr; | Numéro de l'enregistrement sous-sélectionné à partir duquel commencer la copie des données |
-| fin | Integer | &rarr; | Numéro de l'enregistrement sous-sélectionné auquel arrêter la copie des données |
-| leChamp &#124; laTable | Champ, Table | &rarr; | Champ à utiliser pour récupérer les données ou Table à utiliser pour récupérer les numéros d'enregistrements |
-| tableau | Array | &larr; | Tableau recevant les données ou les numéros d'enregistrements |
+| début | Integer | &#8594;  | Numéro de l'enregistrement sous-sélectionné à partir duquel commencer la copie des données |
+| fin | Integer | &#8594;  | Numéro de l'enregistrement sous-sélectionné auquel arrêter la copie des données |
+| leChamp &#124; laTable | Champ, Table | &#8594;  | Champ à utiliser pour récupérer les données ou Table à utiliser pour récupérer les numéros d'enregistrements |
+| tableau | Array | &#8592; | Tableau recevant les données ou les numéros d'enregistrements |
 
 <!-- END REF-->
 

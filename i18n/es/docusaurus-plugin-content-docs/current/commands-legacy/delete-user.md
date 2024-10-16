@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE USER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &rarr; | Número de identificación del usuario a borrar |
+| refUsuario | Integer | &#8594;  | Número de identificación del usuario a borrar |
 
 <!-- END REF-->
 

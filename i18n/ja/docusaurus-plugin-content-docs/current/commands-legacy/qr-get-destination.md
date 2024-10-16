@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET DESTINATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | エリア参照 |
-| type | Integer | &larr; | レポートのタイプ |
-| specifics | Text, Variable | &larr; | 出力先の詳細 |
+| area | Integer | &#8594;  | エリア参照 |
+| type | Integer | &#8592; | レポートのタイプ |
+| specifics | Text, Variable | &#8592; | 出力先の詳細 |
 
 <!-- END REF-->
 

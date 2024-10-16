@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Execute on server.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| proced | Text | &rarr; | Procedimento a executar no processo |
-| pilha | Integer | &rarr; | Tamanho da pilha em bytes |
-| nome | Text | &rarr; | Nome do processo criado |
-| param | Expression | &rarr; | Parâmetro(s) do procedimento |
-| * | Operador | &rarr; | Processo único |
-| Resultado | Integer | &larr; | Número de processo para o processo criado recentemente ou de um processo que está sendo executado |
+| proced | Text | &#8594;  | Procedimento a executar no processo |
+| pilha | Integer | &#8594;  | Tamanho da pilha em bytes |
+| nome | Text | &#8594;  | Nome do processo criado |
+| param | Expression | &#8594;  | Parâmetro(s) do procedimento |
+| * | Operador | &#8594;  | Processo único |
+| Resultado | Integer | &#8592; | Número de processo para o processo criado recentemente ou de um processo que está sendo executado |
 
 <!-- END REF-->
 

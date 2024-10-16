@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
-| arrNomsCols | Text array | &larr; | Nomes de objetos de colunas |
-| arrNomsTitulos | Text array | &larr; | Nomes dos objetos títulos cabeçalhos |
-| arrVarCols | Pointer array | &larr; | Ponteiros para variáveis de colunas ou Ponteiros para campos coluna ou Nil |
-| arrVarTitulos | Pointer array | &larr; | Ponteiros para variáveis de título |
-| arrColsVisiveis | Boolean array | &larr; | Visibilidade de cada coluna |
-| arrEstilos | Pointer array | &larr; | Ponteiros para arrays ou estilos, cores e variáveis de visibilidade ou Nil |
-| arrFooterNames | Text array | &larr; | Nomes de objetos do rodapé da coluna |
-| arrFootersVars | Pointer array | &larr; | Ponteiros para variáveis de rodapé de coluna |
+| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
+| arrNomsCols | Text array | &#8592; | Nomes de objetos de colunas |
+| arrNomsTitulos | Text array | &#8592; | Nomes dos objetos títulos cabeçalhos |
+| arrVarCols | Pointer array | &#8592; | Ponteiros para variáveis de colunas ou Ponteiros para campos coluna ou Nil |
+| arrVarTitulos | Pointer array | &#8592; | Ponteiros para variáveis de título |
+| arrColsVisiveis | Boolean array | &#8592; | Visibilidade de cada coluna |
+| arrEstilos | Pointer array | &#8592; | Ponteiros para arrays ou estilos, cores e variáveis de visibilidade ou Nil |
+| arrFooterNames | Text array | &#8592; | Nomes de objetos do rodapé da coluna |
+| arrFootersVars | Pointer array | &#8592; | Ponteiros para variáveis de rodapé de coluna |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is macOS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &larr; | Vrai si le système d'exploitation est macOS, sinon Faux |
+| Résultat | Boolean | &#8592; | Vrai si le système d'exploitation est macOS, sinon Faux |
 
 <!-- END REF-->
 

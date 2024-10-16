@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &rarr; | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &rarr; | Item reference number or 0 for the last item added to the list or * for the current item of the list |
-| icon | Picture | &larr; | Icon associated with item |
+| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
+| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| icon | Picture | &#8592; | Icon associated with item |
 
 <!-- END REF-->
 

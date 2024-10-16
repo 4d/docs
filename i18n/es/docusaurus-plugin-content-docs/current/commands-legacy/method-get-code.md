@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET CODE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text, Text array | &rarr; | Texto o array de texto que contiene una o varias rutas de método |
-| codigo | Text, Text array | &larr; | Código de los métodos designados |
-| opcion | Integer | &rarr; | 0 o si se omite = exportación simple (sin tokens), 1 = exportación con tokens |
-| * | Operador | &rarr; | Si se pasa = comando se aplica a la base de datos de host cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text, Text array | &#8594;  | Texto o array de texto que contiene una o varias rutas de método |
+| codigo | Text, Text array | &#8592; | Código de los métodos designados |
+| opcion | Integer | &#8594;  | 0 o si se omite = exportación simple (sin tokens), 1 = exportación con tokens |
+| * | Operador | &#8594;  | Si se pasa = comando se aplica a la base de datos de host cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

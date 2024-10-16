@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML ENTITY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &rarr; | Referência do documento aberto |
-| nome | Text | &larr; | Nome da entidade |
-| valor | Text | &larr; | Entity value |
+| documento | Time | &#8594;  | Referência do documento aberto |
+| nome | Text | &#8592; | Nome da entidade |
+| valor | Text | &#8592; | Entity value |
 
 <!-- END REF-->
 

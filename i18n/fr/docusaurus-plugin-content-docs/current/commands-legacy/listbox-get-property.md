@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get property.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| propriété | Integer | &rarr; | Propriété dont vous souhaitez connaître la valeur |
-| Résultat | Text, Integer | &larr; | Valeur courante |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| propriété | Integer | &#8594;  | Propriété dont vous souhaitez connaître la valeur |
+| Résultat | Text, Integer | &#8592; | Valeur courante |
 
 <!-- END REF-->
 

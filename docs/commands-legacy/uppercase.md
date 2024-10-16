@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Uppercase.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aText | Text | &rarr; | String to convert to uppercase |
-| * | Operator | &rarr; | If passed: keep accents |
-| Function result | String | &larr; | String in uppercase |
+| aText | Text | &#8594;  | String to convert to uppercase |
+| * | Operator | &#8594;  | If passed: keep accents |
+| Function result | String | &#8592; | String in uppercase |
 
 <!-- END REF-->
 

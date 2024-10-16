@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML document ref.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | DOMツリー中の既存の要素の参照 |
-| 戻り値 | Text | &larr; | DOMツリーの最初の要素の参照 (ドキュメントノード) |
+| elementRef | Text | &#8594;  | DOMツリー中の既存の要素の参照 |
+| 戻り値 | Text | &#8592; | DOMツリーの最初の要素の参照 (ドキュメントノード) |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Selected record number.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla de la cual devolver el número de registros seleccionados, o Tabla por defecto, si se omite |
-| Resultado | Integer | &larr; | Número en la selección |
+| tabla | Table | &#8594;  | Tabla de la cual devolver el número de registros seleccionados, o Tabla por defecto, si se omite |
+| Resultado | Integer | &#8592; | Número en la selección |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDRAW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | any | &rarr; | Table for which to redraw the subform, or Field for which to redraw the area, or Variable for which to redraw the area, or List box to be updated |
+| object | any | &#8594;  | Table for which to redraw the subform, or Field for which to redraw the area, or Variable for which to redraw the area, or List box to be updated |
 
 <!-- END REF-->
 

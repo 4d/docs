@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Bookmark range.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Proドキュメント |
-| bkName | Text | &rarr; | レンジを取得したいブックマーク名 |
-| 戻り値 | Object | &larr; | ブックマークのレンジ |
+| wpDoc | Object | &#8594;  | 4D Write Proドキュメント |
+| bkName | Text | &#8594;  | レンジを取得したいブックマーク名 |
+| 戻り値 | Object | &#8592; | ブックマークのレンジ |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD TO SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-| ensemble | Text | &rarr; | Nom de l'ensemble auquel ajouter l'enregistrement courant |
+| laTable | Table | &#8594;  | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594;  | Nom de l'ensemble auquel ajouter l'enregistrement courant |
 
 <!-- END REF-->
 

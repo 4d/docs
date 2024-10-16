@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &larr; | Imagen extraída del Portapapeles |
+| imagen | Picture | &#8592; | Imagen extraída del Portapapeles |
 
 <!-- END REF-->
 

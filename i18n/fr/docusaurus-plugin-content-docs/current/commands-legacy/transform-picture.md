@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &rarr; | Image source à transformer |
-| &larr; | Image résultant de la transformation |
-| opérateur | Integer | &rarr; | Type de transformation à effectuer |
-| param1 | Real | &rarr; | Paramètre de la transformation |
-| param2 | Real | &rarr; | Paramètre de la transformation |
-| param3 | Real | &rarr; | Paramètre de la transformation |
-| param4 | Real | &rarr; | Paramètre de la transformation |
+| image | Picture | &#8594;  | Image source à transformer |
+| &#8592; | Image résultant de la transformation |
+| opérateur | Integer | &#8594;  | Type de transformation à effectuer |
+| param1 | Real | &#8594;  | Paramètre de la transformation |
+| param2 | Real | &#8594;  | Paramètre de la transformation |
+| param3 | Real | &#8594;  | Paramètre de la transformation |
+| param4 | Real | &#8594;  | Paramètre de la transformation |
 
 <!-- END REF-->
 

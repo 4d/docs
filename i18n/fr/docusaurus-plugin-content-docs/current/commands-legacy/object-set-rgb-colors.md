@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Champ ou Variable (si * est omis) |
-| couleurAvantPlan | Text, Integer | &rarr; | Valeur de la couleur RVB d'avant-plan |
-| couleurArrièrePlan | Text, Integer | &rarr; | Valeur de la couleur RVB d'arrière-plan |
-| couleurArrièrePlanAlt | Text, Integer | &rarr; | Valeur de la couleur RVB d'arrière-plan alternée |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou Variable (si * est omis) |
+| couleurAvantPlan | Text, Integer | &#8594;  | Valeur de la couleur RVB d'avant-plan |
+| couleurArrièrePlan | Text, Integer | &#8594;  | Valeur de la couleur RVB d'arrière-plan |
+| couleurArrièrePlanAlt | Text, Integer | &#8594;  | Valeur de la couleur RVB d'arrière-plan alternée |
 
 <!-- END REF-->
 

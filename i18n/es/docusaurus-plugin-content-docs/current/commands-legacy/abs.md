@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Abs.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &rarr; | Número del cual quiere obtener el valor absoluto |
-| Resultado | Real | &larr; | Valor absoluto de número |
+| Numero | Real | &#8594;  | Número del cual quiere obtener el valor absoluto |
+| Resultado | Real | &#8592; | Valor absoluto de número |
 
 <!-- END REF-->
 

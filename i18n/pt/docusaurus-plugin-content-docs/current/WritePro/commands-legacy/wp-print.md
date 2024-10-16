@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP PRINT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | Nome do documento 4D Write Pro |
-| modoImpr | Integer | &rarr; | Modo de impressão para o documento 4D Write Pro: 0 (normal) = modo 4D Write Pro, 1 = HTML WYSWYG |
+| wpDoc | Object | &#8594;  | Nome do documento 4D Write Pro |
+| modoImpr | Integer | &#8594;  | Modo de impressão para o documento 4D Write Pro: 0 (normal) = modo 4D Write Pro, 1 = HTML WYSWYG |
 
 <!-- END REF-->
 

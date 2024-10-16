@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license usage.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Collection | &larr; | Une collection d'objets contenant des informations sur les licences utilisées |
+| Résultat | Collection | &#8592; | Une collection d'objets contenant des informations sur les licences utilisées |
 
 <!-- END REF-->
 

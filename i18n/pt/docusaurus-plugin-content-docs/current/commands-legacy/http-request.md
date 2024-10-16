@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| metodoHTTP | Text | &rarr; | Método HTTP para a solicitação |
-| url | Text | &rarr; | URL à qual enviar a solicitação |
-| conteúdo | Text, Blob, Picture, Object | &rarr; | Conteúdo do corpo(body)da solicitação |
-| resultado | Text, Blob, Picture, Object | &larr; | Resultado da solicitação |
-| nomCab | Text array | &rarr; | Nomes dos cabeçalhos da solicitação |
-| &larr; | Nomes dos cabeçalhos devolvidos |
-| valCab | Text array | &rarr; | Valores dos cabeçalhos da solicitação |
-| &larr; | Valores dos cabeçalhos devolvidos |
-| * | Operador | &rarr; | Se passada, a conexão se mantém (keep-alive)Se omitida, a conexão é fechada automaticamente. |
-| Resultado | Integer | &larr; | Código de estado HTTP |
+| metodoHTTP | Text | &#8594;  | Método HTTP para a solicitação |
+| url | Text | &#8594;  | URL à qual enviar a solicitação |
+| conteúdo | Text, Blob, Picture, Object | &#8594;  | Conteúdo do corpo(body)da solicitação |
+| resultado | Text, Blob, Picture, Object | &#8592; | Resultado da solicitação |
+| nomCab | Text array | &#8594;  | Nomes dos cabeçalhos da solicitação |
+| &#8592; | Nomes dos cabeçalhos devolvidos |
+| valCab | Text array | &#8594;  | Valores dos cabeçalhos da solicitação |
+| &#8592; | Valores dos cabeçalhos devolvidos |
+| * | Operador | &#8594;  | Se passada, a conexão se mantém (keep-alive)Se omitida, a conexão é fechada automaticamente. |
+| Resultado | Integer | &#8592; | Código de estado HTTP |
 
 <!-- END REF-->
 

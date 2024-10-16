@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.New process.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| method | Text | &rarr; | プロセスで実行させるメソッド |
-| stack | Integer | &rarr; | スタックサイズ (バイト) |
-| name | Text | &rarr; | 作成するプロセスの名前 |
-| param | Expression | &rarr; | メソッドに渡す引数 |
-| * | 演算子 | &rarr; | 重複しないプロセス |
-| 戻り値 | Integer | &larr; | 新規に作成されたプロセス番号 または既存のプロセス番号 |
+| method | Text | &#8594;  | プロセスで実行させるメソッド |
+| stack | Integer | &#8594;  | スタックサイズ (バイト) |
+| name | Text | &#8594;  | 作成するプロセスの名前 |
+| param | Expression | &#8594;  | メソッドに渡す引数 |
+| * | 演算子 | &#8594;  | 重複しないプロセス |
+| 戻り値 | Integer | &#8592; | 新規に作成されたプロセス番号 または既存のプロセス番号 |
 
 <!-- END REF-->
 

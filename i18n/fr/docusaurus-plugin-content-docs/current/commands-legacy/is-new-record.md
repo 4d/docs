@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is new record.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table de l’enregistrement à examiner ou Table par défaut si ce paramètre est omis |
-| Résultat | Boolean | &larr; | Vrai si l’enregistrement est en cours de création, Faux sinon |
+| laTable | Table | &#8594;  | Table de l’enregistrement à examiner ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &#8592; | Vrai si l’enregistrement est en cours de création, Faux sinon |
 
 <!-- END REF-->
 

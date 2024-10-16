@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Integer | &rarr; | Catégorie d’objet |
-| Résultat | Text | &larr; | Nom de l’objet |
+| sélecteur | Integer | &#8594;  | Catégorie d’objet |
+| Résultat | Text | &#8592; | Nom de l’objet |
 
 <!-- END REF-->
 

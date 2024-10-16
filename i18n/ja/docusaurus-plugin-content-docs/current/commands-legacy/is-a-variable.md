@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a variable.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aPointer | Pointer | &rarr; | テストするポインタ |
-| 戻り値 | Boolean | &larr; | TRUE = 変数のポインタ FALSE = 変数以外のポインタ |
+| aPointer | Pointer | &#8594;  | テストするポインタ |
+| 戻り値 | Boolean | &#8592; | TRUE = 変数のポインタ FALSE = 変数以外のポインタ |
 
 <!-- END REF-->
 

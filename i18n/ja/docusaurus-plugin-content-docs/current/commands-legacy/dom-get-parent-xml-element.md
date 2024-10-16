@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get parent XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML要素参照 |
-| parentElemName | Text | &larr; | 親XML要素名 |
-| parentElemValue | Text | &larr; | 親XML要素値 |
-| 戻り値 | Text | &larr; | 親XML要素参照 |
+| elementRef | Text | &#8594;  | XML要素参照 |
+| parentElemName | Text | &#8592; | 親XML要素名 |
+| parentElemValue | Text | &#8592; | 親XML要素値 |
+| 戻り値 | Text | &#8592; | 親XML要素参照 |
 
 <!-- END REF-->
 

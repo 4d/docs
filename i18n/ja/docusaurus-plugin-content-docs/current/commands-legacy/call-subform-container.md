@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| event | Integer | &rarr; | 送信するイベント |
+| event | Integer | &#8594;  | 送信するイベント |
 
 <!-- END REF-->
 

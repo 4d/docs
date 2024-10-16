@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP SET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opcion | Integer | &rarr; | Código de la opción a definir |
-| valor | Integer | &rarr; | Valor de la opción |
+| opcion | Integer | &#8594;  | Código de la opción a definir |
+| valor | Integer | &#8594;  | Valor de la opción |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET CODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &rarr; | Text or Text array containing one or more method path(s) |
-| code | Text, Text array | &larr; | Code of designated method(s) |
-| option | Integer | &rarr; | 0 or omitted = simple export (without tokens), 1 = export with tokens |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
+| code | Text, Text array | &#8592; | Code of designated method(s) |
+| option | Integer | &#8594;  | 0 or omitted = simple export (without tokens), 1 = export with tokens |
+| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

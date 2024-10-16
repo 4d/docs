@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy parameters.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| startFrom | Integer | &rarr; | Starting index (included) |
-| Résultat | Collection | &larr; | New collection containing parameters actually passed |
+| startFrom | Integer | &#8594;  | Starting index (included) |
+| Résultat | Collection | &#8592; | New collection containing parameters actually passed |
 
 <!-- END REF-->
 

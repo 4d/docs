@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Picture range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| faixaObj | Object | &rarr; | Faixa do Objeto (range) do qual pegar as imagens |
-| Resultado | Object | &larr; | Faixa de objeto contendo apenas imagens |
+| faixaObj | Object | &#8594;  | Faixa do Objeto (range) do qual pegar as imagens |
+| Resultado | Object | &#8592; | Faixa de objeto contendo apenas imagens |
 
 <!-- END REF-->
 

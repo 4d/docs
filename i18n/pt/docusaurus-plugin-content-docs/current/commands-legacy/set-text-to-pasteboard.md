@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| texto | Text | &rarr; | Texto a copiar na área de transferência |
+| texto | Text | &#8594;  | Texto a copiar na área de transferência |
 
 <!-- END REF-->
 

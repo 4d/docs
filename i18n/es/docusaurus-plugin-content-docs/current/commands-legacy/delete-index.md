@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE INDEX.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Ptrcamp &#124; nomIndex | Puntero, Cadena | &rarr; | Puntero al campo del cual borrar los índices o Nombre del índice a borrar |
-| * | Operador | &rarr; | Si se pasa = operación asincrónica |
+| Ptrcamp &#124; nomIndex | Puntero, Cadena | &#8594;  | Puntero al campo del cual borrar los índices o Nombre del índice a borrar |
+| * | Operador | &#8594;  | Si se pasa = operación asincrónica |
 
 <!-- END REF-->
 

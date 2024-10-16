@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN DATABASE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaArchivo | Text | &rarr; | Nombre o ruta de acceso completa del archivo de base de datos a abrir (.4db, .4dc, .4dbase o .4dlink) |
+| rutaArchivo | Text | &#8594;  | Nombre o ruta de acceso completa del archivo de base de datos a abrir (.4db, .4dc, .4dbase o .4dlink) |
 
 <!-- END REF-->
 

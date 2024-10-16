@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get element by ID.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | Documento 4D Write Pro |
-| ID | Text | &rarr; | Identificador do elemento a recuperar |
-| Resultado | Object | &larr; | elemento 4D Write Pro |
+| wpDoc | Object | &#8594;  | Documento 4D Write Pro |
+| ID | Text | &#8594;  | Identificador do elemento a recuperar |
+| Resultado | Object | &#8592; | elemento 4D Write Pro |
 
 <!-- END REF-->
 

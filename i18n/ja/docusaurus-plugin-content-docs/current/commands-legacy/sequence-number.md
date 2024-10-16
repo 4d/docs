@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sequence number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | シーケンス番号を求めるテーブル, または 省略時、デフォルトテーブル |
-| 戻り値 | Integer | &larr; | シーケンス番号 |
+| aTable | Table | &#8594;  | シーケンス番号を求めるテーブル, または 省略時、デフォルトテーブル |
+| 戻り値 | Integer | &#8592; | シーケンス番号 |
 
 <!-- END REF-->
 

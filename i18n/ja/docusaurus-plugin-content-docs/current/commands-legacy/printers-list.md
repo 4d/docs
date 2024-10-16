@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINTERS LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| namesArray | Text array | &larr; | プリンタ名 |
-| altNamesArray | Text array | &larr; | Windows: プリンタの場所 macOS: カスタムプリンタ名 |
-| modelsArray | Text array | &larr; | プリンタモデル |
+| namesArray | Text array | &#8592; | プリンタ名 |
+| altNamesArray | Text array | &#8592; | Windows: プリンタの場所 macOS: カスタムプリンタ名 |
+| modelsArray | Text array | &#8592; | プリンタモデル |
 
 <!-- END REF-->
 

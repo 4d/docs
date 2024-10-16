@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| destFolderPath | Text | &rarr; | 保存されているファイルの保存先フォルダへのパス |
-| maxSize | Integer | &rarr; | 作成するJSONファイルの最大サイズ(バイト単位) |
-| logPath | Text | &rarr; | 書き出すログファイルのパス名; 省略時はカレントログファイルを使用 |
-| fieldAtt | Integer | &rarr; | フィールド詳細属性: 1 = 数字を使用(デフォルト)、2 = 名前を使用 |
+| destFolderPath | Text | &#8594;  | 保存されているファイルの保存先フォルダへのパス |
+| maxSize | Integer | &#8594;  | 作成するJSONファイルの最大サイズ(バイト単位) |
+| logPath | Text | &#8594;  | 書き出すログファイルのパス名; 省略時はカレントログファイルを使用 |
+| fieldAtt | Integer | &#8594;  | フィールド詳細属性: 1 = 数字を使用(デフォルト)、2 = 名前を使用 |
 
 <!-- END REF-->
 

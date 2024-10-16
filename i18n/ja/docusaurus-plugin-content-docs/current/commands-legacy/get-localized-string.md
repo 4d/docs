@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resName | Text | &rarr; | resname属性値 |
-| 戻り値 | Text | &larr; | カレントランゲージで resNameによって指定された文字列の値 |
+| resName | Text | &#8594;  | resname属性値 |
+| 戻り値 | Text | &#8592; | カレントランゲージで resNameによって指定された文字列の値 |
 
 <!-- END REF-->
 

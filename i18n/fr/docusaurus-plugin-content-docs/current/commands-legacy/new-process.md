@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.New process.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| méthode | Text | &rarr; | Méthode à exécuter dans le process |
-| pile | Integer | &rarr; | Taille de la pile en octets (0 = taille par défaut) |
-| nom | Text | &rarr; | Nom du process créé |
-| param | Expression | &rarr; | Paramètre(s) de la méthode |
-| * | Opérateur | &rarr; | Process unique |
-| Résultat | Integer | &larr; | Numéro du process nouvellement créé ou du process déjà en cours d'exécution |
+| méthode | Text | &#8594;  | Méthode à exécuter dans le process |
+| pile | Integer | &#8594;  | Taille de la pile en octets (0 = taille par défaut) |
+| nom | Text | &#8594;  | Nom du process créé |
+| param | Expression | &#8594;  | Paramètre(s) de la méthode |
+| * | Opérateur | &#8594;  | Process unique |
+| Résultat | Integer | &#8592; | Numéro du process nouvellement créé ou du process déjà en cours d'exécution |
 
 <!-- END REF-->
 

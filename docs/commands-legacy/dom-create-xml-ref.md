@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| root | Text | &rarr; | Name of root element |
-| nameSpace | Text | &rarr; | Value of namespace |
-| nameSpaceName | Text | &rarr; | Namespace name |
-| nameSpaceValue | Text | &rarr; | Namespace value |
-| Function result | String | &larr; | Root XML element reference |
+| root | Text | &#8594;  | Name of root element |
+| nameSpace | Text | &#8594;  | Value of namespace |
+| nameSpaceName | Text | &#8594;  | Namespace name |
+| nameSpaceValue | Text | &#8594;  | Namespace value |
+| Function result | String | &#8592; | Root XML element reference |
 
 <!-- END REF-->
 

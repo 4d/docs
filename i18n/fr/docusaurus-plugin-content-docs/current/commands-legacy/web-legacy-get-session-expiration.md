@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| idSession | Text | &rarr; | UUID de session |
-| dateExp | Date | &larr; | Date d’expiration du cookie |
-| heureExp | Time | &larr; | Heure d’expiration du cookie |
+| idSession | Text | &#8594;  | UUID de session |
+| dateExp | Date | &#8592; | Date d’expiration du cookie |
+| heureExp | Time | &#8592; | Heure d’expiration du cookie |
 
 <!-- END REF-->
 

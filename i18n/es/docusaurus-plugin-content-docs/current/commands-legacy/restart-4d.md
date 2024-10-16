@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESTART 4D.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| demora | Integer | &rarr; | Tiempo de retardo (segundos) antes que 4D reinicie |
-| mensaje | Text | &rarr; | Texto a mostrar en los equipos clientes |
+| demora | Integer | &#8594;  | Tiempo de retardo (segundos) antes que 4D reinicie |
+| mensaje | Text | &#8594;  | Texto a mostrar en los equipos clientes |
 
 <!-- END REF-->
 

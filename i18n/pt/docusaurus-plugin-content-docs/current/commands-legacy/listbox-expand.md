@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX EXPAND.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| recursive | Boolean | &rarr; | True = expand sublevels<br/>False = do not expand sublevels |
-| selector | Integer | &rarr; | Part of list box to expand |
-| linha &#124; nivel | Inteiro longo | &rarr; | Number of break row to expand or <br/>Number of list box level to expand |
-| coluna | Integer | &rarr; | Number of break column to expand |
+| * | Operador | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| recursive | Boolean | &#8594;  | True = expand sublevels<br/>False = do not expand sublevels |
+| selector | Integer | &#8594;  | Part of list box to expand |
+| linha &#124; nivel | Inteiro longo | &#8594;  | Number of break row to expand or <br/>Number of list box level to expand |
+| coluna | Integer | &#8594;  | Number of break column to expand |
 
 <!-- END REF-->
 

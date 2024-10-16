@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last update log path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &larr; | Chemin d’accès du journal de mise à jour le plus récent |
+| Résultat | Text | &#8592; | Chemin d’accès du journal de mise à jour le plus récent |
 
 <!-- END REF-->
 

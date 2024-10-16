@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| hColor | Text, Integer | &larr; | Value of RGB color for horizontal lines |
-| vColor | Text, Integer | &larr; | Value of RGB color for vertical lines |
+| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| hColor | Text, Integer | &#8592; | Value of RGB color for horizontal lines |
+| vColor | Text, Integer | &#8592; | Value of RGB color for vertical lines |
 
 <!-- END REF-->
 

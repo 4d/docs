@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | Número de menú o Referencia de menú |
-| proceso | Integer | &rarr; | Número de referencia del proceso |
-| Resultado | Text | &larr; | Título del menú |
+| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
+| proceso | Integer | &#8594;  | Número de referencia del proceso |
+| Resultado | Text | &#8592; | Título del menú |
 
 <!-- END REF-->
 

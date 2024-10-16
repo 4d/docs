@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeFolhaEstilo | Text | &rarr; | Nome da folha de estilo |
-| fonte | Text | &larr; | Tipo de fonte |
-| tam | Integer | &larr; | Tamanho de fonte |
-| estilos | Integer | &larr; | Valor do estilo |
+| nomeFolhaEstilo | Text | &#8594;  | Nome da folha de estilo |
+| fonte | Text | &#8592; | Tipo de fonte |
+| tam | Integer | &#8592; | Tamanho de fonte |
+| estilos | Integer | &#8592; | Valor do estilo |
 
 <!-- END REF-->
 

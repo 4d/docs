@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Font file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| famillePolice | Text | &rarr; | Nom de la famille de police |
-| stylePolice | Integer | &rarr; | Style de police : 0=normale (par défaut), 1=gras, 2=italique |
-| Résultat | Null, Object | &larr; | Objet fichier police |
+| famillePolice | Text | &#8594;  | Nom de la famille de police |
+| stylePolice | Integer | &#8594;  | Style de police : 0=normale (par défaut), 1=gras, 2=italique |
+| Résultat | Null, Object | &#8592; | Objet fichier police |
 
 <!-- END REF-->
 

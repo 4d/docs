@@ -10,20 +10,20 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| buscar | Text | &rarr; | Cadena a buscar |
-| laText | Text | &rarr; | Cadena en la cual buscar |
-| inicio | Integer | &rarr; | Posición en la cadena donde comenzar la búsqueda |
-| longEncont | Integer | &larr; | Longitud de la cadena encontrada |
-| * | Operador | &rarr; | Si se pasa: búsqueda diacrítica |
-| Resultado | Integer | &larr; | Posición de la primera ocurrencia |
+| buscar | Text | &#8594;  | Cadena a buscar |
+| laText | Text | &#8594;  | Cadena en la cual buscar |
+| inicio | Integer | &#8594;  | Posición en la cadena donde comenzar la búsqueda |
+| longEncont | Integer | &#8592; | Longitud de la cadena encontrada |
+| * | Operador | &#8594;  | Si se pasa: búsqueda diacrítica |
+| Resultado | Integer | &#8592; | Posición de la primera ocurrencia |
 | Position ( buscar ; laCadena ; inicio ; longEncont ; opciones ) -> Resultado |
 | Parámetro | Tipo | Descripción |
-| buscar | Text | &rarr; | Cadena a buscar |
-| laText | Text | &rarr; | Cadena en la cual buscar |
-| inicio | Integer | &rarr; | Posición en la cadena donde comenzar la búsqueda |
-| longEncont | Integer | &rarr; | Longitud de la cadena encontrada |
-| opciones | Integer | &rarr; | Condición(es) de búsqueda |
-| Resultado | Integer | &larr; | Posición de la primera ocurrencia |
+| buscar | Text | &#8594;  | Cadena a buscar |
+| laText | Text | &#8594;  | Cadena en la cual buscar |
+| inicio | Integer | &#8594;  | Posición en la cadena donde comenzar la búsqueda |
+| longEncont | Integer | &#8594;  | Longitud de la cadena encontrada |
+| opciones | Integer | &#8594;  | Condición(es) de búsqueda |
+| Resultado | Integer | &#8592; | Posición de la primera ocurrencia |
 
 <!-- END REF-->
 

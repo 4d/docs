@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Object | &rarr; | Rango o elemento |
-| nombk | Text | &rarr; | Nombre de marcador a crear |
+| objRango | Object | &#8594;  | Rango o elemento |
+| nombk | Text | &#8594;  | Nombre de marcador a crear |
 
 <!-- END REF-->
 

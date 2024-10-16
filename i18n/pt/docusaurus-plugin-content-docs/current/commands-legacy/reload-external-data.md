@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| oCampo | Text, Blob, Picture, Object | &rarr; | Campo para definir a localização de armazenamento |
+| oCampo | Text, Blob, Picture, Object | &#8594;  | Campo para definir a localização de armazenamento |
 
 <!-- END REF-->
 

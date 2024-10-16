@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &rarr; | Window reference number or if omitted, all current process frontmost windows (Windows) or current process frontmost window (Mac OS) |
+| window | Integer | &#8594;  | Window reference number or if omitted, all current process frontmost windows (Windows) or current process frontmost window (Mac OS) |
 
 <!-- END REF-->
 

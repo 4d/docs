@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized document path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| relativePath | Text | &rarr; | ローカライズされたバージョンを取得したいドキュメントの相対パス名 |
-| 戻り値 | Text | &larr; | ローカライズされたドキュメントの絶対パス名 |
+| relativePath | Text | &#8594;  | ローカライズされたバージョンを取得したいドキュメントの相対パス名 |
+| 戻り値 | Text | &#8592; | ローカライズされたドキュメントの絶対パス名 |
 
 <!-- END REF-->
 

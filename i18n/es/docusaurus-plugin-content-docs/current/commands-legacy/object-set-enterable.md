@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *), o Tabla o campo o variable (si se omite *) |
-| editable | Boolean, Integer | &rarr; | True para editable; False para no editable |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Tabla o campo o variable (si se omite *) |
+| editable | Boolean, Integer | &#8594;  | True para editable; False para no editable |
 
 <!-- END REF-->
 

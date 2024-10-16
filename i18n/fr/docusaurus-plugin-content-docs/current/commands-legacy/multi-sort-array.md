@@ -10,12 +10,12 @@ displayed_sidebar: docs
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &rarr; | Tableau(x) à trier |
-| sensDuTri | * | &rarr; | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
+| tableau | Array | &#8594;  | Tableau(x) à trier |
+| sensDuTri | * | &#8594;  | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
 | MULTI SORT ARRAY ( tabPointeurs ; tabTris ) |
 | Paramètre | Type | Description |
-| tabPointeurs | Pointer array | &rarr; | Tableau de pointeurs de tableaux |
-| tabTris | Integer array | &rarr; | Tableau d’ordres de tri (1 = tri par ordre croissant, -1 = tri par ordre décroissant, 0 = synchronisation avec des tris précédents) |
+| tabPointeurs | Pointer array | &#8594;  | Tableau de pointeurs de tableaux |
+| tabTris | Integer array | &#8594;  | Tableau d’ordres de tri (1 = tri par ordre croissant, -1 = tri par ordre décroissant, 0 = synchronisation avec des tris précédents) |
 
 <!-- END REF-->
 

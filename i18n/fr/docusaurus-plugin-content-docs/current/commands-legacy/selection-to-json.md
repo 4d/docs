@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Selection to JSON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table à sérialiser |
-| leField | Field | &rarr; | Champ(s) dont le contenu doit être sérialisé |
-| template | Object | &rarr; | Objet pour la sélection de libellés et de champs |
-| Résultat | Text | &larr; | Chaîne contenant le tableau JSON sérialisé |
+| laTable | Table | &#8594;  | Table à sérialiser |
+| leField | Field | &#8594;  | Champ(s) dont le contenu doit être sérialisé |
+| template | Object | &#8594;  | Objet pour la sélection de libellés et de champs |
+| Résultat | Text | &#8592; | Chaîne contenant le tableau JSON sérialisé |
 
 <!-- END REF-->
 

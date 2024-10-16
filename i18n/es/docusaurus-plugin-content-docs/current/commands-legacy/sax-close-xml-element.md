@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &rarr; | Referencia del documento abierto |
+| documento | Time | &#8594;  | Referencia del documento abierto |
 
 <!-- END REF-->
 

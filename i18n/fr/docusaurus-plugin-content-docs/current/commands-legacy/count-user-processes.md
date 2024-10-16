@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count user processes.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &larr; | Nombre de process vivants (à l'exception de process internes) |
+| Résultat | Integer | &#8592; | Nombre de process vivants (à l'exception de process internes) |
 
 <!-- END REF-->
 

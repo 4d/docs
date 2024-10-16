@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate password hash.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| senha | Text | &rarr; | A senha do usuário. Só os primeiros 72 caracteres são usados |
-| opções | Object | &rarr; | Um objeto contendo opções |
-| Resultado | Text | &larr; | Retorna a senha hashed |
+| senha | Text | &#8594;  | A senha do usuário. Só os primeiros 72 caracteres são usados |
+| opções | Object | &#8594;  | Um objeto contendo opções |
+| Resultado | Text | &#8592; | Retorna a senha hashed |
 
 <!-- END REF-->
 

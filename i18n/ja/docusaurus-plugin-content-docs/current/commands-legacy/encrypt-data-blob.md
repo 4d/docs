@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| blobToEncrypt | Blob | &rarr; | 暗号化したいBLOB |
-| keyObject &#124; passPhrase | オブジェクト, テキスト | &rarr; | 暗号化鍵を格納したJSON オブジェクト、または直接暗号化鍵を生成するためのパスフレーズ(テキスト) |
-| salt | Integer | &rarr; | アルゴリズムのための追加のsalt |
-| encryptedBlob | Blob | &larr; | 暗号化されたBLOB |
-| 戻り値 | Boolean | &larr; | 暗号化が正常に実行された場合にはTrue、それ以外の場合にはFalse |
+| blobToEncrypt | Blob | &#8594;  | 暗号化したいBLOB |
+| keyObject &#124; passPhrase | オブジェクト, テキスト | &#8594;  | 暗号化鍵を格納したJSON オブジェクト、または直接暗号化鍵を生成するためのパスフレーズ(テキスト) |
+| salt | Integer | &#8594;  | アルゴリズムのための追加のsalt |
+| encryptedBlob | Blob | &#8592; | 暗号化されたBLOB |
+| 戻り値 | Boolean | &#8592; | 暗号化が正常に実行された場合にはTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->
 

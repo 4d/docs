@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| seculo | Integer | &rarr; | Século por padrão (menos um) para a entrada de anos com dois dígitos |
-| anoPivo | Integer | &rarr; | Ano pivô para a entrada de anos com dois dígitos |
+| seculo | Integer | &#8594;  | Século por padrão (menos um) para a entrada de anos com dois dígitos |
+| anoPivo | Integer | &#8594;  | Ano pivô para a entrada de anos com dois dígitos |
 
 <!-- END REF-->
 

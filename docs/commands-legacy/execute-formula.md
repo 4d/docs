@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| statement | Text | &rarr; | Code to be executed |
+| statement | Text | &#8594;  | Code to be executed |
 
 <!-- END REF-->
 

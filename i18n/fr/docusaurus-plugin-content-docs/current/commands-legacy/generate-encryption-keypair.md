@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cléPrivée | Blob | &larr; | BLOB devant recevoir la clé privée |
-| cléPublique | Blob | &larr; | BLOB devant recevoir la clé publique |
-| longueur | Integer | &rarr; | Longueur des clés en bits [512...2048] Par défaut = 512 |
+| cléPrivée | Blob | &#8592; | BLOB devant recevoir la clé privée |
+| cléPublique | Blob | &#8592; | BLOB devant recevoir la clé publique |
+| longueur | Integer | &#8594;  | Longueur des clés en bits [512...2048] Par défaut = 512 |
 
 <!-- END REF-->
 

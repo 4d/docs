@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, o objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
-| seletor | Integer | &rarr; | Valor de altura a estabelecer: lk row min heigh ou lk row max heigh |
-| valor | Integer | &rarr; | Valor máximo ou mínimo de altura de linha |
-| unidade | Integer | &rarr; | Unidade de valor da altura: 0=pixels, 1=linhas |
+| * | Operador | &#8594;  | Se especificado, o objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
+| seletor | Integer | &#8594;  | Valor de altura a estabelecer: lk row min heigh ou lk row max heigh |
+| valor | Integer | &#8594;  | Valor máximo ou mínimo de altura de linha |
+| unidade | Integer | &#8594;  | Unidade de valor da altura: 0=pixels, 1=linhas |
 
 <!-- END REF-->
 

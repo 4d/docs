@@ -10,12 +10,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CHANNEL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| port | Integer | &rarr; | Numéro de port série |
-| param | Integer | &rarr; | Paramètres de communication |
+| port | Integer | &#8594;  | Numéro de port série |
+| param | Integer | &#8594;  | Paramètres de communication |
 | SET CHANNEL ( opération ; nomFichier ) |
 | Paramètre | Type | Description |
-| opération | Integer | &rarr; | Opération à effectuer sur document |
-| nomFichier | Text | &rarr; | Nom du document |
+| opération | Integer | &#8594;  | Opération à effectuer sur document |
+| nomFichier | Text | &#8594;  | Nom du document |
 
 <!-- END REF-->
 

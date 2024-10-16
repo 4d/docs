@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| toEncrypt | Blob | &rarr; | Dados a encriptar |
-| &larr; | Dados encriptados |
-| sendPrivKey | Blob | &rarr; | Chave privada do emissor |
-| recipPubKey | Blob | &rarr; | Chave pública do receptor |
+| toEncrypt | Blob | &#8594;  | Dados a encriptar |
+| &#8592; | Dados encriptados |
+| sendPrivKey | Blob | &#8594;  | Chave privada do emissor |
+| recipPubKey | Blob | &#8594;  | Chave pública do receptor |
 
 <!-- END REF-->
 

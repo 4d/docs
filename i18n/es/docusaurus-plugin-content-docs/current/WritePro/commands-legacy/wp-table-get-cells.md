@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get cells.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objTarget | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
-| refTabla | Object | &rarr; | Referencia de tabla |
-| colIni | Integer | &rarr; | Posición de la primera columna de celda |
-| filaIni | Integer | &rarr; | Posición de la primera fila de la columna |
-| NumCol | Integer | &rarr; | Número de columnas a obtener |
-| numFilas | Integer | &rarr; | Número de filas a obtener |
-| Resultado | Object | &larr; | Nuevo rango que contiene celdas |
+| objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
+| refTabla | Object | &#8594;  | Referencia de tabla |
+| colIni | Integer | &#8594;  | Posición de la primera columna de celda |
+| filaIni | Integer | &#8594;  | Posición de la primera fila de la columna |
+| NumCol | Integer | &#8594;  | Número de columnas a obtener |
+| numFilas | Integer | &#8594;  | Número de filas a obtener |
+| Resultado | Object | &#8592; | Nuevo rango que contiene celdas |
 
 <!-- END REF-->
 

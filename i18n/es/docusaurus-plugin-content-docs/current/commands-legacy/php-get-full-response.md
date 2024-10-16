@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP GET FULL RESPONSE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| stdOut | Text, Blob | &larr; | Contenido del buffer stdOut |
-| etiquetasErr | Text array | &larr; | Etiquetas de los errores |
-| valoresErr | Text array | &larr; | Valores de los errores |
-| camposEncHttp | Text array | &larr; | Nombres de los encabezados HTTP |
-| valoresEncHttp | Text array | &larr; | Valores de los encabezados HTTP |
+| stdOut | Text, Blob | &#8592; | Contenido del buffer stdOut |
+| etiquetasErr | Text array | &#8592; | Etiquetas de los errores |
+| valoresErr | Text array | &#8592; | Valores de los errores |
+| camposEncHttp | Text array | &#8592; | Nombres de los encabezados HTTP |
+| valoresEncHttp | Text array | &#8592; | Valores de los encabezados HTTP |
 
 <!-- END REF-->
 

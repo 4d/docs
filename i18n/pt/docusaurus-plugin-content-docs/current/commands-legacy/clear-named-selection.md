@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nome | Text | &rarr; | Nome da seleção temporal a apagar |
+| nome | Text | &#8594;  | Nome da seleção temporal a apagar |
 
 <!-- END REF-->
 

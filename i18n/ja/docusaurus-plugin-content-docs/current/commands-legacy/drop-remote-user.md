@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DROP REMOTE USER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userSession | Text | &rarr; | ユーザーのセッションID |
+| userSession | Text | &#8594;  | ユーザーのセッションID |
 
 <!-- END REF-->
 

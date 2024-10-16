@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ASSERT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expressionBool | Boolean | &rarr; | Expression booléenne |
-| texteMessage | Text | &rarr; | Texte du message d’erreur |
+| expressionBool | Boolean | &#8594;  | Expression booléenne |
+| texteMessage | Text | &#8594;  | Texte du message d’erreur |
 
 <!-- END REF-->
 

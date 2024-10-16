@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP AUTHENTICATE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nome | Text | &rarr; | Nome de usuário |
-| senha | Text | &rarr; | Senha de usuário |
-| metodoAut | Integer | &rarr; | Método de autenticação: 0 ou se omite = não definido, 1 = BASIC, 2 = DIGEST |
-| * | Operador | &rarr; | Se passado: autenticação por proxy |
+| nome | Text | &#8594;  | Nome de usuário |
+| senha | Text | &#8594;  | Senha de usuário |
+| metodoAut | Integer | &#8594;  | Método de autenticação: 0 ou se omite = não definido, 1 = BASIC, 2 = DIGEST |
+| * | Operador | &#8594;  | Se passado: autenticação por proxy |
 
 <!-- END REF-->
 

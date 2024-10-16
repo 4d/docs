@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT BREAK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| typeRupture | Integer | &rarr; | Type de rupture à insérer |
-| mode | Integer | &rarr; | Mode d'insertion |
-| miseAJourPlage | Integer | &rarr; | Mode de mise à jour de la plage de sélection |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| typeRupture | Integer | &#8594;  | Type de rupture à insérer |
+| mode | Integer | &#8594;  | Mode d'insertion |
+| miseAJourPlage | Integer | &#8594;  | Mode de mise à jour de la plage de sélection |
 
 <!-- END REF-->
 

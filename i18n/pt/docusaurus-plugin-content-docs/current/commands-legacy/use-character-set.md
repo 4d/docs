@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mapa | Text, * | &rarr; | Nome do conjunto de caracteres a ser usado (modo Unicode), ou nome do Documento do mapa ASCII a ser usado (ASCII mode) ou * para reiniciar para o conjunto de caracteres/mapa ASCII padrão |
-| mapaEntradaSaida | Integer | &rarr; | 0 = Mapa de saída 1 = Mapa de entrada, se omitido, mapa de saída |
+| mapa | Text, * | &#8594;  | Nome do conjunto de caracteres a ser usado (modo Unicode), ou nome do Documento do mapa ASCII a ser usado (ASCII mode) ou * para reiniciar para o conjunto de caracteres/mapa ASCII padrão |
+| mapaEntradaSaida | Integer | &#8594;  | 0 = Mapa de saída 1 = Mapa de entrada, se omitido, mapa de saída |
 
 <!-- END REF-->
 

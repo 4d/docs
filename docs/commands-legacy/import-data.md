@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &rarr; | Access path and name of the import file |
-| project | Text, Blob | &rarr; | Contents of the import project |
-| &larr; | New contents of the import project (if the * parameter has been passed) |
-| * | Operator | &rarr; | Displays the import dialog box and updates the project |
+| fileName | Text | &#8594;  | Access path and name of the import file |
+| project | Text, Blob | &#8594;  | Contents of the import project |
+| &#8592; | New contents of the import project (if the * parameter has been passed) |
+| * | Operator | &#8594;  | Displays the import dialog box and updates the project |
 
 <!-- END REF-->
 

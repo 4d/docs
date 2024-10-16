@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is table number valid.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableNum | Integer | &rarr; | テーブル番号 |
-| 戻り値 | Boolean | &larr; | True = テーブルがデータベースに存在する False = テーブルがデータベースに存在しない |
+| tableNum | Integer | &#8594;  | テーブル番号 |
+| 戻り値 | Boolean | &#8592; | True = テーブルがデータベースに存在する False = テーブルがデータベースに存在しない |
 
 <!-- END REF-->
 

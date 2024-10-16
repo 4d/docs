@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | 4D object to be used (variable, array or field) |
-| paramType | Integer | &rarr; | Type of parameter |
+| object | Object | &#8594;  | 4D object to be used (variable, array or field) |
+| paramType | Integer | &#8594;  | Type of parameter |
 
 <!-- END REF-->
 

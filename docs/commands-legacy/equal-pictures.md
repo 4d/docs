@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Equal pictures.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture1 | Picture, Picture | &rarr; | Original source picture |
-| picture2 | Picture, Picture | &rarr; | Picture to compare |
-| mask | Picture, Picture | &larr; | Resulting mask |
-| Function result | Boolean | &larr; | True if both pictures are identical; otherwise, False |
+| picture1 | Picture, Picture | &#8594;  | Original source picture |
+| picture2 | Picture, Picture | &#8594;  | Picture to compare |
+| mask | Picture, Picture | &#8592; | Resulting mask |
+| Function result | Boolean | &#8592; | True if both pictures are identical; otherwise, False |
 
 <!-- END REF-->
 

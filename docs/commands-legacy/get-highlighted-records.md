@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table where the highlighted records will be read If omitted, table of the current form |
-| setName | Text | &rarr; | Set where the highlighted records will be stored |
+| aTable | Table | &#8594;  | Table where the highlighted records will be read If omitted, table of the current form |
+| setName | Text | &#8594;  | Set where the highlighted records will be stored |
 
 <!-- END REF-->
 

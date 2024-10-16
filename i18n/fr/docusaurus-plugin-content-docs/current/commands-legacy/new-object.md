@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.New object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| propriété | Text | &rarr; | Nom de la propriété à créer |
-| valeur | any | &rarr; | Valeur de la propriété |
-| Résultat | Object | &larr; | Nouvel objet structuré |
+| propriété | Text | &#8594;  | Nom de la propriété à créer |
+| valeur | any | &#8594;  | Valeur de la propriété |
+| Résultat | Object | &#8592; | Nouvel objet structuré |
 
 <!-- END REF-->
 

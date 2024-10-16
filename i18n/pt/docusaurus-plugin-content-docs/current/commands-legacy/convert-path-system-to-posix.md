@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert path system to POSIX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaSistema | Text | &rarr; | Rota de acesso absoluta ou relativa, expressa em sintaxe de sistema |
-| * | Operador | &rarr; | Opção de codificação |
-| Resultado | Text | &larr; | Absolute pathname expressed in POSIX syntax |
+| rotaSistema | Text | &#8594;  | Rota de acesso absoluta ou relativa, expressa em sintaxe de sistema |
+| * | Operador | &#8594;  | Opção de codificação |
+| Resultado | Text | &#8592; | Absolute pathname expressed in POSIX syntax |
 
 <!-- END REF-->
 

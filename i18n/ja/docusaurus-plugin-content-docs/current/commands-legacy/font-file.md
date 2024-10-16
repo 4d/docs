@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Font file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fontFamily | Text | &rarr; | フォントファミリー名 |
-| fontStyle | Integer | &rarr; | フォントスタイル: 0=通常 (デフォルト)、1=太字、2=斜体字 |
-| 戻り値 | Null, Object | &larr; | フォントファイルオブジェクト |
+| fontFamily | Text | &#8594;  | フォントファミリー名 |
+| fontStyle | Integer | &#8594;  | フォントスタイル: 0=通常 (デフォルト)、1=太字、2=斜体字 |
+| 戻り値 | Null, Object | &#8592; | フォントファイルオブジェクト |
 
 <!-- END REF-->
 

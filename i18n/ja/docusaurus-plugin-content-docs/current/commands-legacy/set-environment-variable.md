@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| varName | Text | &rarr; | 設定する変数の名前 |
-| varValue | Text | &rarr; | 変数の値、 またはデフォルト値をリセットする "" |
+| varName | Text | &#8594;  | 設定する変数の名前 |
+| varValue | Text | &#8594;  | 変数の値、 またはデフォルト値をリセットする "" |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field value Null.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &rarr; | Field to be evaluated |
-| Function result | Boolean | &larr; | True = field is NULL, False = field is not NULL |
+| aField | Field | &#8594;  | Field to be evaluated |
+| Function result | Boolean | &#8592; | True = field is NULL, False = field is not NULL |
 
 <!-- END REF-->
 

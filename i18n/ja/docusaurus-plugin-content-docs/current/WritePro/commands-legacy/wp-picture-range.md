@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Picture range.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジ または 要素 |
-| 戻り値 | Object | &larr; | ピクチャーのみを含んだレンジオブジェクト |
+| targetObj | Object | &#8594;  | レンジ または 要素 |
+| 戻り値 | Object | &#8592; | ピクチャーのみを含んだレンジオブジェクト |
 
 <!-- END REF-->
 

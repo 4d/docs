@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &rarr; | Número de referencia de la lista |
-| apariencia | Integer | &larr; | Estilo gráfico de la lista 1 = Lista jerárquica a la Macintosh 2 = Lista jerárquica a la Windows |
-| icono | Integer | &larr; | Referencia de recurso Mac OS  ‘cicn’ |
-| altoLinea | Integer | &larr; | Altura mínima de la línea expresada en píxeles |
-| dobleClic | Integer | &larr; | Desplegar/Contraer sublista con doble-clik? 0 = Sí, 1= No |
-| multiSeleccion | Integer | &larr; | Selecciones múltiples: 0 = No, 1 = Sí |
-| editable | Integer | &larr; | Lista editable por el usuario: 0 = No, 1 = Sí |
+| lista | Integer | &#8594;  | Número de referencia de la lista |
+| apariencia | Integer | &#8592; | Estilo gráfico de la lista 1 = Lista jerárquica a la Macintosh 2 = Lista jerárquica a la Windows |
+| icono | Integer | &#8592; | Referencia de recurso Mac OS  ‘cicn’ |
+| altoLinea | Integer | &#8592; | Altura mínima de la línea expresada en píxeles |
+| dobleClic | Integer | &#8592; | Desplegar/Contraer sublista con doble-clik? 0 = Sí, 1= No |
+| multiSeleccion | Integer | &#8592; | Selecciones múltiples: 0 = No, 1 = Sí |
+| editable | Integer | &#8592; | Lista editable por el usuario: 0 = No, 1 = Sí |
 
 <!-- END REF-->
 

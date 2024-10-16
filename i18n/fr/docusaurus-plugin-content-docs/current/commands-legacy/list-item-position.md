@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.List item position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &rarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| réfElément | Integer | &rarr; | Numéro de référence d'élément |
-| Résultat | Integer | &larr; | Position de l'élément parmi la ou les liste(s) déployée(s)/contractée(s) |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| réfElément | Integer | &#8594;  | Numéro de référence d'élément |
+| Résultat | Integer | &#8592; | Position de l'élément parmi la ou les liste(s) déployée(s)/contractée(s) |
 
 <!-- END REF-->
 

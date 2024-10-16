@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.On 4D Mobile Authentication database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Texto | &larr; | Nome de usuário |
-| $2 | Texto | &larr; | Senha |
-| $3 | Booleano | &larr; | True = modo Digest, False = modo Basic |
-| $4 | Texto | &larr; | Endereço IP do caller |
-| Resultado | Boolean | &larr; | True = pedido aceito, False = pedido rejeitado |
+| $1 | Texto | &#8592; | Nome de usuário |
+| $2 | Texto | &#8592; | Senha |
+| $3 | Booleano | &#8592; | True = modo Digest, False = modo Basic |
+| $4 | Texto | &#8592; | Endereço IP do caller |
+| Resultado | Boolean | &#8592; | True = pedido aceito, False = pedido rejeitado |
 
 <!-- END REF-->
 

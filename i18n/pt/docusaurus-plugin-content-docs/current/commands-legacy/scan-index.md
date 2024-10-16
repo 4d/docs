@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SCAN INDEX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &rarr; | Campo indexado onde vai procurar o índice |
-| numero | Integer | &rarr; | Nº de registros  a retornar |
-| > ou < | Operador | &rarr; | >a partir do começo do índice, |
+| campo | Field | &#8594;  | Campo indexado onde vai procurar o índice |
+| numero | Integer | &#8594;  | Nº de registros  a retornar |
+| > ou < | Operador | &#8594;  | >a partir do começo do índice, |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| redimension | Boolean | &rarr; | True: el formulario es redimensionable verticalmente False: el formulario no puede ser redimensionado verticalmente |
-| alturaMin | Integer | &rarr; | Altura mínima del formulario (píxeles) |
-| alturaMax | Integer | &rarr; | Altura máxima del formulario (píxeles) |
+| redimension | Boolean | &#8594;  | True: el formulario es redimensionable verticalmente False: el formulario no puede ser redimensionado verticalmente |
+| alturaMin | Integer | &#8594;  | Altura mínima del formulario (píxeles) |
+| alturaMax | Integer | &#8594;  | Altura máxima del formulario (píxeles) |
 
 <!-- END REF-->
 

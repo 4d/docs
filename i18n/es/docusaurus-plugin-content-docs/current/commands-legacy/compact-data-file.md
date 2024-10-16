@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Compact data file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaEstructura | Text | &rarr; | Ruta de acceso al archivo de estructura |
-| rutaDatos | Text | &rarr; | Ruta de acceso al archivo de datos |
-| carpetaArchivo | Text | &rarr; | Ruta de acceso a la carpeta donde se colocará el archivo de datos original |
-| opcion | Integer | &rarr; | Opciones de compactación |
-| metodo | Text | &rarr; | Nombre del método 4D de retrollamada |
-| Resultado | Text | &larr; | Ruta de acceso completa de la carpeta que contiene el archivo de datos original |
+| rutaEstructura | Text | &#8594;  | Ruta de acceso al archivo de estructura |
+| rutaDatos | Text | &#8594;  | Ruta de acceso al archivo de datos |
+| carpetaArchivo | Text | &#8594;  | Ruta de acceso a la carpeta donde se colocará el archivo de datos original |
+| opcion | Integer | &#8594;  | Opciones de compactación |
+| metodo | Text | &#8594;  | Nombre del método 4D de retrollamada |
+| Resultado | Text | &#8592; | Ruta de acceso completa de la carpeta que contiene el archivo de datos original |
 
 <!-- END REF-->
 

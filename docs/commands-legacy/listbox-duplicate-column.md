@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or<br/>Variable (if * is omitted) of the column to be duplicated |
-| colPosition | Integer | &rarr; | Location of new duplicated column |
-| colName | Text | &rarr; | Name of new column |
-| colVariable | Array, Field, Variable, Pointer | &rarr; | Name of the column array variable or field or variable |
-| headerName | Text | &rarr; | Column header object name |
-| headerVar | Integer, Pointer | &rarr; | Column header variable |
-| footerName | Text | &rarr; | Column footer object name |
-| footerVar | Variable, Pointer | &rarr; | Column footer variable |
+| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) of the column to be duplicated |
+| colPosition | Integer | &#8594;  | Location of new duplicated column |
+| colName | Text | &#8594;  | Name of new column |
+| colVariable | Array, Field, Variable, Pointer | &#8594;  | Name of the column array variable or field or variable |
+| headerName | Text | &#8594;  | Column header object name |
+| headerVar | Integer, Pointer | &#8594;  | Column header variable |
+| footerName | Text | &#8594;  | Column footer object name |
+| footerVar | Variable, Pointer | &#8594;  | Column footer variable |
 
 <!-- END REF-->
 

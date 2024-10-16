@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE DATA FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| endAcesso | Text | &rarr; | Nome ou endereço completo de acesso ao arquivo de dados a ser criado |
+| endAcesso | Text | &#8594;  | Nome ou endereço completo de acesso ao arquivo de dados a ser criado |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT DOCUMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objFaixa | Object | &rarr; | Faixa 4D Write Pro |
-| docWP | Object | &rarr; | Documento 4D Write Pro |
-| modo | Integer | &rarr; | Modo inserção |
-| atualizFaixa | Integer | &rarr; | Modo atualização Faixa |
+| objFaixa | Object | &#8594;  | Faixa 4D Write Pro |
+| docWP | Object | &#8594;  | Documento 4D Write Pro |
+| modo | Integer | &#8594;  | Modo inserção |
+| atualizFaixa | Integer | &#8594;  | Modo atualização Faixa |
 
 <!-- END REF-->
 

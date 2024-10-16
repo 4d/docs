@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Old.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &rarr; | Campo ao qual devolver o valor anterior |
-| Resultado | Expression | &larr; | Valor original do campo |
+| campo | Field | &#8594;  | Campo ao qual devolver o valor anterior |
+| Resultado | Expression | &#8592; | Valor original do campo |
 
 <!-- END REF-->
 

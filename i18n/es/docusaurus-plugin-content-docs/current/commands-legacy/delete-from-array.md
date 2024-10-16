@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | Array del cual borrar elementos |
-| posicion | Integer | &rarr; | Elemento donde comienza la supresión |
-| reemplazos | Integer | &rarr; | Número de elementos a borrar, o 1 elemento si se omite |
+| array | Array | &#8594;  | Array del cual borrar elementos |
+| posicion | Integer | &#8594;  | Elemento donde comienza la supresión |
+| reemplazos | Integer | &#8594;  | Número de elementos a borrar, o 1 elemento si se omite |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeDonnées | Text | &rarr; | Type de données à extraire du conteneur |
-| données | Blob | &larr; | Données extraites du conteneur |
+| typeDonnées | Text | &#8594;  | Type de données à extraire du conteneur |
+| données | Blob | &#8592; | Données extraites du conteneur |
 
 <!-- END REF-->
 

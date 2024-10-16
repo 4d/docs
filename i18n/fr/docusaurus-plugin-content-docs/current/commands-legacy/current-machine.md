@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current machine.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &larr; | Nom de la machine sur le réseau |
+| Résultat | Text | &#8592; | Nom de la machine sur le réseau |
 
 <!-- END REF-->
 

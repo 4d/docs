@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | エリア参照 |
-| property | Integer | &rarr; | 1 = 印刷ダイアログ, 2 = ドキュメントの単位 |
-| value | Integer | &rarr; | プロパティ値 |
+| area | Integer | &#8594;  | エリア参照 |
+| property | Integer | &#8594;  | 1 = 印刷ダイアログ, 2 = ドキュメントの単位 |
+| value | Integer | &#8594;  | プロパティ値 |
 
 <!-- END REF-->
 

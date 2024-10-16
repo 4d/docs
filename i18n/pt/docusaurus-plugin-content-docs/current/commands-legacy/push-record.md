@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PUSH RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela para a qual empilhar os registros, ou tabela padrão, se omitido |
+| tabela | Table | &#8594;  | Tabela para a qual empilhar os registros, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

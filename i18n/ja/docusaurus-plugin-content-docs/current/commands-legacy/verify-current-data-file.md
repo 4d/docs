@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objects | Integer | &rarr; | 検証するオブジェクト |
-| options | Integer | &rarr; | 検証オプション |
-| method | Text | &rarr; | 4Dコールバックメソッド名 |
-| tablesArray | Integer array | &rarr; | 検証するテーブル番号 |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &rarr; | 検証するインデックス番号 |
+| objects | Integer | &#8594;  | 検証するオブジェクト |
+| options | Integer | &#8594;  | 検証オプション |
+| method | Text | &#8594;  | 4Dコールバックメソッド名 |
+| tablesArray | Integer array | &#8594;  | 検証するテーブル番号 |
+| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | 検証するインデックス番号 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Test path name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombreRuta | Text | &rarr; | Ruta de acceso a un directorio, carpeta o documento |
-| Resultado | Integer | &larr; | 1, rutaAcceso es un documento existente 0, rutaAcceso es un directorio o carpeta existente <0, ruta de acceso incorrecta, código de error del administrador de archivos del sistema |
+| nombreRuta | Text | &#8594;  | Ruta de acceso a un directorio, carpeta o documento |
+| Resultado | Integer | &#8592; | 1, rutaAcceso es un documento existente 0, rutaAcceso es un directorio o carpeta existente <0, ruta de acceso incorrecta, código de error del administrador de archivos del sistema |
 
 <!-- END REF-->
 

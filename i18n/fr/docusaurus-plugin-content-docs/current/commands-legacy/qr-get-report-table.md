@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get report table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &rarr; | Référence de la zone |
-| Résultat | Integer | &larr; | Numéro de table |
+| zone | Integer | &#8594;  | Référence de la zone |
+| Résultat | Integer | &#8592; | Numéro de table |
 
 <!-- END REF-->
 

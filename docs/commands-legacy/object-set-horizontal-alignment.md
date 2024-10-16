@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an Object name (String) If omitted, object is a field or a variable |
-| object | any | &rarr; | Object name (if * specified), or Field or variable (if * omitted) |
-| alignment | Integer | &rarr; | Alignment code |
+| * | Operator | &#8594;  | If specified, object is an Object name (String) If omitted, object is a field or a variable |
+| object | any | &#8594;  | Object name (if * specified), or Field or variable (if * omitted) |
+| alignment | Integer | &#8594;  | Alignment code |
 
 <!-- END REF-->
 

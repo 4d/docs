@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| epsilon | Real | &rarr; | Valor epsilon para las comparaciones de igualdad de los reales |
+| epsilon | Real | &#8594;  | Valor epsilon para las comparaciones de igualdad de los reales |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| seletor | Text | &rarr; | Chave que designa um tema ou página ou um grupo de parâmetros da caixa de diálogo Preferências |
-| acesso | Boolean | &rarr; | True=Bloquear as outras páginas da caixa de diálogo, False ou se omitir=Deixar ativas as outras páginas da caixa de diálogo |
-| tipoConfiguração | Integer | &rarr; | 0 ou omitido = configuração da estrutura; 1 = configuração de usuário, 2 = Configuração usuário para arquivo de dados |
+| seletor | Text | &#8594;  | Chave que designa um tema ou página ou um grupo de parâmetros da caixa de diálogo Preferências |
+| acesso | Boolean | &#8594;  | True=Bloquear as outras páginas da caixa de diálogo, False ou se omitir=Deixar ativas as outras páginas da caixa de diálogo |
+| tipoConfiguração | Integer | &#8594;  | 0 ou omitido = configuração da estrutura; 1 = configuração de usuário, 2 = Configuração usuário para arquivo de dados |
 
 <!-- END REF-->
 

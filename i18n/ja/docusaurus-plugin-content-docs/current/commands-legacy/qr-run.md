@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR RUN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | 実行するエリアの参照 |
+| area | Integer | &#8594;  | 実行するエリアの参照 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| viaPasta | Text | &rarr; | Via de acesso da pasta (pacote sob OS X) que contém a aplicação atualizada |
-| errosDiscretos | Boolean | &rarr; | False (por padrão) = mostrar mensagens de erro, True = não reportar eles |
+| viaPasta | Text | &#8594;  | Via de acesso da pasta (pacote sob OS X) que contém a aplicação atualizada |
+| errosDiscretos | Boolean | &#8594;  | False (por padrão) = mostrar mensagens de erro, True = não reportar eles |
 
 <!-- END REF-->
 

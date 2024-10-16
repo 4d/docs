@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | Array from which to delete elements |
-| where | Integer | &rarr; | Element at which to begin deletion |
-| howMany | Integer | &rarr; | Number of elements to delete, or 1 element if omitted |
+| array | Array | &#8594;  | Array from which to delete elements |
+| where | Integer | &#8594;  | Element at which to begin deletion |
+| howMany | Integer | &#8594;  | Number of elements to delete, or 1 element if omitted |
 
 <!-- END REF-->
 

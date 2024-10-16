@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texte | Text | &rarr; | Texte à placer dans le conteneur de données |
+| texte | Text | &#8594;  | Texte à placer dans le conteneur de données |
 
 <!-- END REF-->
 

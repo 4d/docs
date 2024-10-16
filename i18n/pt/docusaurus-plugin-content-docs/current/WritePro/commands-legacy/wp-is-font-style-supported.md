@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Is font style supported.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| faixaObj | Object | &rarr; | Faixa do Objeto parse |
-| wpEstiloFonte | Integer | &rarr; | Constante de Estilo de Fonte wk font negrito wk font itálico wk texto subscrito, wk texto estilo linha atravessada |
-| Resultado | Boolean | &larr; | True se qualquer parte de faixaObj suporta wpEstiloFonte, se não False |
+| faixaObj | Object | &#8594;  | Faixa do Objeto parse |
+| wpEstiloFonte | Integer | &#8594;  | Constante de Estilo de Fonte wk font negrito wk font itálico wk texto subscrito, wk texto estilo linha atravessada |
+| Resultado | Boolean | &#8592; | True se qualquer parte de faixaObj suporta wpEstiloFonte, se não False |
 
 <!-- END REF-->
 

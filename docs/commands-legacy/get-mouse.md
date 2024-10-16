@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MOUSE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| mouseX | Real | &larr; | Horizontal coordinate of mouse |
-| mouseY | Real | &larr; | Vertical coordinate of mouse |
-| mouseButton | Integer | &larr; | Mouse button state: 0 = Button up 1 = Button down 2 = Right button down 3 = Both buttons down |
-| * | Operator | &rarr; | If specified, global coordinate system is usedIf omitted, local coordinate system is used |
+| mouseX | Real | &#8592; | Horizontal coordinate of mouse |
+| mouseY | Real | &#8592; | Vertical coordinate of mouse |
+| mouseButton | Integer | &#8592; | Mouse button state: 0 = Button up 1 = Button down 2 = Right button down 3 = Both buttons down |
+| * | Operator | &#8594;  | If specified, global coordinate system is usedIf omitted, local coordinate system is used |
 
 <!-- END REF-->
 

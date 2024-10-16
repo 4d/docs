@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &rarr; | Nº de referência de usuário |
-| nome | Text | &larr; | Nome de usuário |
-| inicio | Text | &larr; | Nome de método de início |
-| senha | Text | &larr; | Sempre é uma cadeia vazia |
-| numLogin | Integer | &larr; | Número de logins para o banco de dados |
-| ultLogin | Date | &larr; | Data do último login ao banco de dados |
-| adesao | Integer array | &larr; | Número de ID dos grupos ao qual o usuário pertence |
-| propGrupo | Integer | &larr; | Número de ID do proprietário do grupo |
+| refUsuario | Integer | &#8594;  | Nº de referência de usuário |
+| nome | Text | &#8592; | Nome de usuário |
+| inicio | Text | &#8592; | Nome de método de início |
+| senha | Text | &#8592; | Sempre é uma cadeia vazia |
+| numLogin | Integer | &#8592; | Número de logins para o banco de dados |
+| ultLogin | Date | &#8592; | Data do último login ao banco de dados |
+| adesao | Integer array | &#8592; | Número de ID dos grupos ao qual o usuário pertence |
+| propGrupo | Integer | &#8592; | Número de ID do proprietário do grupo |
 
 <!-- END REF-->
 

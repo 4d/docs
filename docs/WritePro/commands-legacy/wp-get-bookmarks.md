@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | 4D Write Pro document |
+| wpDoc | Object | &#8594;  | 4D Write Pro document |
 | arrBKNames | Text array | &#x1F858; | Array of bookmark names |
 
 <!-- END REF-->

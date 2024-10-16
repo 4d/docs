@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| width | Integer | &larr; | サブフォームオブジェクトの幅 |
-| height | Integer | &larr; | サブフォームオブジェクトの高さ |
+| width | Integer | &#8592; | サブフォームオブジェクトの幅 |
+| height | Integer | &#8592; | サブフォームオブジェクトの高さ |
 
 <!-- END REF-->
 

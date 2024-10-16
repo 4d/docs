@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &rarr; | ウィンドウ参照番号または 省略時カレントプロセスの最前面ウィンドウ |
+| window | Integer | &#8594;  | ウィンドウ参照番号または 省略時カレントプロセスの最前面ウィンドウ |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL SET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opción | Integer | &rarr; | Número de opción a definir |
-| valor | Integer, Text | &rarr; | Nuevo valor de opción |
+| opción | Integer | &#8594;  | Número de opción a definir |
+| valor | Integer, Text | &#8594;  | Nuevo valor de opción |
 
 <!-- END REF-->
 

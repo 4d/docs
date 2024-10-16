@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| textOrBackground | Integer | &rarr; | 0 or omitted = text color, 1 = text background color |
+| textOrBackground | Integer | &#8594;  | 0 or omitted = text color, 1 = text background color |
 
 <!-- END REF-->
 

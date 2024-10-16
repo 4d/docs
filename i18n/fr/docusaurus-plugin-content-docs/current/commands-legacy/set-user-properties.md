@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| réfUtilisateur | Integer | &rarr; | Numéro de référence unique du compte de l'utilisateur ou -1 pour l'ajout d'un utilisateur affilié au Super_Utilisateur ou -2 pour l'ajout d'un utilisateur affilié à l'Administrateur |
-| &larr; | Unique ID number of added user account (if any) |
-| nom | Text | &rarr; | Nouveau nom de l'utilisateur |
-| démarrage | Text | &rarr; | Nom de la nouvelle méthode de démarrage |
-| motDePasse | Text | &rarr; | Nouveau mot de passe (non crypté) ou * pour ne pas modifier le mot de passe |
-| nbUtilisations | Integer | &rarr; | Nouveau nombre d'utilisations de la base |
-| dernièreUtilisation | Date | &rarr; | Nouvelle date de dernière utilisation de la base |
-| adhésions | Integer array | &rarr; | Numéros de référence des groupes auxquels l'utilisateur appartient |
-| groupePropriétaire | Integer | &rarr; | Numéro de référence du groupe propriétaire de l’utilisateur |
-| Résultat | Integer | &larr; | Numéro de référence unique du nouvel utilisateur |
+| réfUtilisateur | Integer | &#8594;  | Numéro de référence unique du compte de l'utilisateur ou -1 pour l'ajout d'un utilisateur affilié au Super_Utilisateur ou -2 pour l'ajout d'un utilisateur affilié à l'Administrateur |
+| &#8592; | Unique ID number of added user account (if any) |
+| nom | Text | &#8594;  | Nouveau nom de l'utilisateur |
+| démarrage | Text | &#8594;  | Nom de la nouvelle méthode de démarrage |
+| motDePasse | Text | &#8594;  | Nouveau mot de passe (non crypté) ou * pour ne pas modifier le mot de passe |
+| nbUtilisations | Integer | &#8594;  | Nouveau nombre d'utilisations de la base |
+| dernièreUtilisation | Date | &#8594;  | Nouvelle date de dernière utilisation de la base |
+| adhésions | Integer array | &#8594;  | Numéros de référence des groupes auxquels l'utilisateur appartient |
+| groupePropriétaire | Integer | &#8594;  | Numéro de référence du groupe propriétaire de l’utilisateur |
+| Résultat | Integer | &#8592; | Numéro de référence unique du nouvel utilisateur |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL SET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &rarr; | 設定するオプション番号 |
-| value | Integer, Text | &rarr; | 新しいオプションの値 |
+| option | Integer | &#8594;  | 設定するオプション番号 |
+| value | Integer, Text | &#8594;  | 新しいオプションの値 |
 
 <!-- END REF-->
 

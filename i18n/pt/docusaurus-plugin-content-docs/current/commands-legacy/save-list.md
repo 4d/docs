@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &rarr; | Número de referência da lista |
-| nomeLista | Text | &rarr; | Nome da lista como aparecerá no editor de listas do entorno Desenho |
+| lista | Integer | &#8594;  | Número de referência da lista |
+| nomeLista | Text | &#8594;  | Nome da lista como aparecerá no editor de listas do entorno Desenho |
 
 <!-- END REF-->
 

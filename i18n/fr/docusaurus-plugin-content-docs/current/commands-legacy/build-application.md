@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomProjet | Text | &rarr; | Chemin d’accès complet du projet à utiliser |
+| nomProjet | Text | &#8594;  | Chemin d’accès complet du projet à utiliser |
 
 <!-- END REF-->
 

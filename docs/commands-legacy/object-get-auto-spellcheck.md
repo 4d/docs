@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get auto spellcheck.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable or field |
-| object | any | &rarr; | Object Name (if * is specified) or Variable or field (if * is omitted) |
-| Function result | Boolean | &larr; | True = automatic spell-checking, False = no automatic spell-checking |
+| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable or field |
+| object | any | &#8594;  | Object Name (if * is specified) or Variable or field (if * is omitted) |
+| Function result | Boolean | &#8592; | True = automatic spell-checking, False = no automatic spell-checking |
 
 <!-- END REF-->
 

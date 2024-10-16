@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get context menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| 戻り値 | Boolean | &larr; | True = コンテキストメニュー有効、False = コンテキストメニュー無効 |
+| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| 戻り値 | Boolean | &#8592; | True = コンテキストメニュー有効、False = コンテキストメニュー無効 |
 
 <!-- END REF-->
 

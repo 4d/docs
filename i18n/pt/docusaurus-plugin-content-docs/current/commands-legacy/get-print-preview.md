@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print preview.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &larr; | True = Vista previa de impressão, <br/>False = Não vista previa de impressão |
+| Resultado | Boolean | &#8592; | True = Vista previa de impressão, <br/>False = Não vista previa de impressão |
 
 <!-- END REF-->
 

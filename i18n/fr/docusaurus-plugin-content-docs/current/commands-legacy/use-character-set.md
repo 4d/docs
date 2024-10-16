@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| filtre | Text, * | &rarr; | Nom du jeu de caractères à utiliser ou * pour restaurer le jeu par défaut |
-| typeFiltre | Integer | &rarr; | 0 = Filtre d'exportation, 1 = Filtre d'importation |
+| filtre | Text, * | &#8594;  | Nom du jeu de caractères à utiliser ou * pour restaurer le jeu par défaut |
+| typeFiltre | Integer | &#8594;  | 0 = Filtre d'exportation, 1 = Filtre d'importation |
 
 <!-- END REF-->
 

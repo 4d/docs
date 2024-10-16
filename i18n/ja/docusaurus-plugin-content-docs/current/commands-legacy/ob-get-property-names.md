@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB GET PROPERTY NAMES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | 構造化されたオブジェクト |
-| arrProperties | Text array | &larr; | プロパティ名 |
-| arrTypes | Integer array | &larr; | プロパティの型 |
+| object | Object | &#8594;  | 構造化されたオブジェクト |
+| arrProperties | Text array | &#8592; | プロパティ名 |
+| arrTypes | Integer array | &#8592; | プロパティの型 |
 
 <!-- END REF-->
 

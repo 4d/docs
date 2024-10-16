@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &rarr; | Table pour laquelle connaître la valeur de priorité des données scalaires |
-| Résultat | Integer | &larr; | Valeur de priorité courante pour les champs scalaires |
+| laTable | Table | &#8594;  | Table pour laquelle connaître la valeur de priorité des données scalaires |
+| Résultat | Integer | &#8592; | Valeur de priorité courante pour les champs scalaires |
 
 <!-- END REF-->
 

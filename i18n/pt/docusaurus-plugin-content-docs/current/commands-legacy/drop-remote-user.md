@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DROP REMOTE USER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| sessaoUsuario | Text | &rarr; | ID de sessão do usuário |
+| sessaoUsuario | Text | &#8594;  | ID de sessão do usuário |
 
 <!-- END REF-->
 

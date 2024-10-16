@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| triggerLevel | Integer | &rarr; | トリガ実行サイクルレベル |
-| dbEvent | Integer | &larr; | データベースイベント |
-| tableNum | Integer | &larr; | 影響を受けるテーブル番号 |
-| recordNum | Integer | &larr; | 影響を受けるレコード番号 |
+| triggerLevel | Integer | &#8594;  | トリガ実行サイクルレベル |
+| dbEvent | Integer | &#8592; | データベースイベント |
+| tableNum | Integer | &#8592; | 影響を受けるテーブル番号 |
+| recordNum | Integer | &#8592; | 影響を受けるレコード番号 |
 
 <!-- END REF-->
 

@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
-| pictureObject | Picture | &rarr; | オブジェクト名 (* 指定時) またはフィールドや変数 (* 省略時) |
-| x | Integer | &rarr; | 選択領域の左上の横座標 |
-| y | Integer | &rarr; | 選択領域の左上の縦座標 |
-| width | Integer | &rarr; | 選択領域の幅 |
-| height | Integer | &rarr; | 選択領域の高さ |
-| arrIDs | Text array | &larr; | バインドされた四角が選択領域に交差する要素のID |
-| 戻り値 | Boolean | &larr; | True = 最低1つの要素が見つかった |
+| * | 演算子 | &#8594;  | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
+| pictureObject | Picture | &#8594;  | オブジェクト名 (* 指定時) またはフィールドや変数 (* 省略時) |
+| x | Integer | &#8594;  | 選択領域の左上の横座標 |
+| y | Integer | &#8594;  | 選択領域の左上の縦座標 |
+| width | Integer | &#8594;  | 選択領域の幅 |
+| height | Integer | &#8594;  | 選択領域の高さ |
+| arrIDs | Text array | &#8592; | バインドされた四角が選択領域に交差する要素のID |
+| 戻り値 | Boolean | &#8592; | True = 最低1つの要素が見つかった |
 
 <!-- END REF-->
 

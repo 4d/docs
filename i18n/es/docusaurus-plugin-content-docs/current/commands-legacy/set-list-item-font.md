@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &rarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| refElem &#124; * | Entero largo, Operador | &rarr; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
-| fuente | Text, Integer | &rarr; | Nombre o número de fuente |
+| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| refElem &#124; * | Entero largo, Operador | &#8594;  | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
+| fuente | Text, Integer | &#8594;  | Nombre o número de fuente |
 
 <!-- END REF-->
 

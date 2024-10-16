@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Run offscreen area.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| parametros | Object | &rarr; | Objeto que contiene los atributos del área web |
-| Resultado | any | &larr; | Propiedad .result del objeto onEvent, o Null si no devuelve un valor |
+| parametros | Object | &#8594;  | Objeto que contiene los atributos del área web |
+| Resultado | any | &#8592; | Propiedad .result del objeto onEvent, o Null si no devuelve un valor |
 
 <!-- END REF-->
 

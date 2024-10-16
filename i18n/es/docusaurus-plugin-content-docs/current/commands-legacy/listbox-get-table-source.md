@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| numTabla | Integer | &larr; | Número de la tabla de la selección |
-| nombre | Text | &larr; | Nombre de la selección temporal o "" para la selección actual |
-| nomSel | Text | &larr; | Nombre del conjunto seleccionado |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| numTabla | Integer | &#8592; | Número de la tabla de la selección |
+| nombre | Text | &#8592; | Nombre de la selección temporal o "" para la selección actual |
+| nomSel | Text | &#8592; | Nombre del conjunto seleccionado |
 
 <!-- END REF-->
 

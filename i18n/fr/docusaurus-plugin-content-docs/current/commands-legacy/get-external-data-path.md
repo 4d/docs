@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get external data path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Text, Blob, Picture | &rarr; | Champ dont vous souhaitez obtenir le lieu de stockage |
-| Résultat | Text | &larr; | Chemin d’accès complet du fichier de stockage externe |
+| leChamp | Text, Blob, Picture | &#8594;  | Champ dont vous souhaitez obtenir le lieu de stockage |
+| Résultat | Text | &#8592; | Chemin d’accès complet du fichier de stockage externe |
 
 <!-- END REF-->
 

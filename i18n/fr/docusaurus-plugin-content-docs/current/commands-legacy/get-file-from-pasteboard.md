@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get file from pasteboard.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| indiceN | Integer | &rarr; | Nième fichier inclus dans le glisser |
-| Résultat | Text | &larr; | Chemin d'accès de fichier extrait du conteneur de données |
+| indiceN | Integer | &#8594;  | Nième fichier inclus dans le glisser |
+| Résultat | Text | &#8592; | Chemin d'accès de fichier extrait du conteneur de données |
 
 <!-- END REF-->
 

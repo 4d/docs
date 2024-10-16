@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| selector | Integer | &rarr; | 取得する情報 |
-| info | Integer | &larr; | 現在の値 |
+| * | 演算子 | &#8594;  | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| selector | Integer | &#8594;  | 取得する情報 |
+| info | Integer | &#8592; | 現在の値 |
 
 <!-- END REF-->
 

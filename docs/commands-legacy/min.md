@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Min.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &rarr; | Data for which to return the minimum value |
-| attributePath | Text | &rarr; | Path of attribute for which to return the minimum value |
-| Function result | Date, Number | &larr; | Minimum value in series |
+| series | Field, Array | &#8594;  | Data for which to return the minimum value |
+| attributePath | Text | &#8594;  | Path of attribute for which to return the minimum value |
+| Function result | Date, Number | &#8592; | Minimum value in series |
 
 <!-- END REF-->
 

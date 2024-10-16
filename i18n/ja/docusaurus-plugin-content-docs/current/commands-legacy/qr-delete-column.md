@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | エリア参照 |
-| colNumber | Integer | &rarr; | カラム番号 |
+| area | Integer | &#8594;  | エリア参照 |
+| colNumber | Integer | &#8594;  | カラム番号 |
 
 <!-- END REF-->
 

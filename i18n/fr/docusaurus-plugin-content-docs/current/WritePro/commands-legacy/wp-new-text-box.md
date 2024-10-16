@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New text box.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &rarr; | Document 4D Write Pro |
-| pageNum | Number | &rarr; | Numéro de page où ancrer la zone de texte |
-| Résultat | Object | &larr; | Objet zone de texte |
+| wpDoc | Object | &#8594;  | Document 4D Write Pro |
+| pageNum | Number | &#8594;  | Numéro de page où ancrer la zone de texte |
+| Résultat | Object | &#8592; | Objet zone de texte |
 
 <!-- END REF-->
 

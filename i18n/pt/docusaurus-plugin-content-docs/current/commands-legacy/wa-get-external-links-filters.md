@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| arrFiltro | Text array | &larr; | Array de filtros |
-| permitirArrRecusar | Boolean array | &larr; | Permitir array recusar |
+| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| arrFiltro | Text array | &#8592; | Array de filtros |
+| permitirArrRecusar | Boolean array | &#8592; | Permitir array recusar |
 
 <!-- END REF-->
 

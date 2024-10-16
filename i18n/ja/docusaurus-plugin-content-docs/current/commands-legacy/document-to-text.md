@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Document to text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &rarr; | ドキュメント名またはドキュメントへのパス名 |
-| charSet | Text, Integer | &rarr; | 文字コード名の名前または数字 |
-| breakMode | Integer | &rarr; | 改行の処理モード |
-| 戻り値 | Text | &larr; | ドキュメントから取得したテキスト |
+| fileName | Text | &#8594;  | ドキュメント名またはドキュメントへのパス名 |
+| charSet | Text, Integer | &#8594;  | 文字コード名の名前または数字 |
+| breakMode | Integer | &#8594;  | 改行の処理モード |
+| 戻り値 | Text | &#8592; | ドキュメントから取得したテキスト |
 
 <!-- END REF-->
 

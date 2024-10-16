@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table to use for data entry, or Default table, if omitted |
-| * | Operator |  &rarr; | Hide scroll bars |
+| aTable | Table | &#8594;  | Table to use for data entry, or Default table, if omitted |
+| * | Operator |  &#8594;  | Hide scroll bars |
 
 <!-- END REF-->
 

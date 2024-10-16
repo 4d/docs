@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &rarr; | Numéro de référence de la liste |
-| apparence | Integer | &larr; | Style graphique de la liste 1 = Liste hiérarchique à la Macintosh 2 = Liste hiérarchique à la Windows |
-| icône | Integer | &larr; | *** Paramètre obsolète, retourne 0 *** |
-| hauteurLigne | Integer | &larr; | Hauteur minimale de la ligne (pixels) |
-| doubleClic | Integer | &larr; | Déploiement/contraction sur double-clic 0 = autorisé, 1= empêché |
-| multiSélection | Integer | &larr; | Sélections multiples : 0 = interdites, 1 = autorisées |
-| modifiable | Integer | &larr; | Enumération modifiable : 0 = non, 1 = oui |
+| liste | Integer | &#8594;  | Numéro de référence de la liste |
+| apparence | Integer | &#8592; | Style graphique de la liste 1 = Liste hiérarchique à la Macintosh 2 = Liste hiérarchique à la Windows |
+| icône | Integer | &#8592; | *** Paramètre obsolète, retourne 0 *** |
+| hauteurLigne | Integer | &#8592; | Hauteur minimale de la ligne (pixels) |
+| doubleClic | Integer | &#8592; | Déploiement/contraction sur double-clic 0 = autorisé, 1= empêché |
+| multiSélection | Integer | &#8592; | Sélections multiples : 0 = interdites, 1 = autorisées |
+| modifiable | Integer | &#8592; | Enumération modifiable : 0 = non, 1 = oui |
 
 <!-- END REF-->
 

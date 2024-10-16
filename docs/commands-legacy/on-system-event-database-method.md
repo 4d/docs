@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On System Event database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Longint | &larr; | Event code |
+| $1 | Longint | &#8592; | Event code |
 
 <!-- END REF-->
 

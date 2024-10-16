@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LOCKED BY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela para visualizar os registros bloqueados, ou Tabela Padrão, se omitido |
-| processo | Integer | &larr; | Nº de referência do processo |
-| usuario4D | Text | &larr; | Nome do usuário 4D |
-| usuarioSessao | Text | &larr; | Nome do usuário que abriu a sessão de trabalho |
-| nomeProcesso | Text | &larr; | Nome do processo |
+| tabela | Table | &#8594;  | Tabela para visualizar os registros bloqueados, ou Tabela Padrão, se omitido |
+| processo | Integer | &#8592; | Nº de referência do processo |
+| usuario4D | Text | &#8592; | Nome do usuário 4D |
+| usuarioSessao | Text | &#8592; | Nome do usuário que abriu a sessão de trabalho |
+| nomeProcesso | Text | &#8592; | Nome do processo |
 
 <!-- END REF-->
 

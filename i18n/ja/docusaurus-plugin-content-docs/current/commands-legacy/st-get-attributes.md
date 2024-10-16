@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
-| startSel | Integer | &rarr; | テキスト選択の開始位置 |
-| endSel | Integer | &rarr; | テキスト選択の終了位置 |
-| attribName | Integer | &rarr; | 取得する属性 |
-| attribValue | Variable | &larr; | 属性の現在の値 |
+| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
+| startSel | Integer | &#8594;  | テキスト選択の開始位置 |
+| endSel | Integer | &#8594;  | テキスト選択の終了位置 |
+| attribName | Integer | &#8594;  | 取得する属性 |
+| attribValue | Variable | &#8592; | 属性の現在の値 |
 
 <!-- END REF-->
 

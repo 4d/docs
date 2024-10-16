@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEMS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | Menu reference or Menu number |
-| menuTitlesArray | Text array | &larr; | Array of menu titles |
-| menuRefsArray | Text array | &larr; | Array of menu references |
+| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
+| menuTitlesArray | Text array | &#8592; | Array of menu titles |
+| menuRefsArray | Text array | &#8592; | Array of menu references |
 
 <!-- END REF-->
 

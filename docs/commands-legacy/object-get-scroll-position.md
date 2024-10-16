@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | any | &rarr; | Object name (if * is specified) or <br/>Variable or field or table (if * is omitted) |
-| vPosition | Integer | &larr; | Number of first line displayed or Vertical scrolling in pixels (pictures) |
-| hPosition | Integer | &larr; | Number of first column displayed or<br/>Horizonal scrolling in pixels (pictures) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
+| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field or table (if * is omitted) |
+| vPosition | Integer | &#8592; | Number of first line displayed or Vertical scrolling in pixels (pictures) |
+| hPosition | Integer | &#8592; | Number of first column displayed or<br/>Horizonal scrolling in pixels (pictures) |
 
 <!-- END REF-->
 

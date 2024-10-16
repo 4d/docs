@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &rarr; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| selector | Integer | &rarr; | Information to get |
-| info | Integer | &larr; | Current value |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| selector | Integer | &#8594;  | Information to get |
+| info | Integer | &#8592; | Current value |
 
 <!-- END REF-->
 

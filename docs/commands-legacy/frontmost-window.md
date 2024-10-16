@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Frontmost window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, take floating windows into account If omitted, ignore floating windows |
-| Function result | WinRef | &larr; | Window reference number |
+| * | Operator | &#8594;  | If specified, take floating windows into account If omitted, ignore floating windows |
+| Function result | WinRef | &#8592; | Window reference number |
 
 <!-- END REF-->
 

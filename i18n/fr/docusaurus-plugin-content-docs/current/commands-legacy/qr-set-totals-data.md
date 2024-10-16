@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &rarr; | Référence de la zone |
-| numColonne | Integer | &rarr; | Numéro de colonne |
-| numRupture | Integer | &rarr; | Numéro de rupture |
-| opérateur &#124; valeur | Entier long, Chaîne | &rarr; | Opérateur pour la cellule ou Contenu de la cellule |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| numRupture | Integer | &#8594;  | Numéro de rupture |
+| opérateur &#124; valeur | Entier long, Chaîne | &#8594;  | Opérateur pour la cellule ou Contenu de la cellule |
 
 <!-- END REF-->
 

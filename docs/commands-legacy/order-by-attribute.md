@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to order selected records, or Default table, if omitted |
-| objectField | Object | &rarr; | Object field containing the sorting attribute |
-| attributePath | Text | &rarr; | Name or path of attribute on which to set the order for each level |
-| > or < | Operator | &rarr; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
-| * | Operator | &rarr; | Continue order flag |
+| aTable | Table | &#8594;  | Table for which to order selected records, or Default table, if omitted |
+| objectField | Object | &#8594;  | Object field containing the sorting attribute |
+| attributePath | Text | &#8594;  | Name or path of attribute on which to set the order for each level |
+| > or < | Operator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| * | Operator | &#8594;  | Continue order flag |
 
 <!-- END REF-->
 

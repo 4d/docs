@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu selected.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| subMenu | Text | &larr; | Reference of menu containing item selected |
-| Function result | Longint | &larr; | Menu command selected Menu number in high word Menu item number in low word |
+| subMenu | Text | &#8592; | Reference of menu containing item selected |
+| Function result | Longint | &#8592; | Menu command selected Menu number in high word Menu item number in low word |
 
 <!-- END REF-->
 

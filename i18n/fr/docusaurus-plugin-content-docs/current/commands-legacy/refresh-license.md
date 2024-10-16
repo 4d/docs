@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Refresh license.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Object | &larr; | Objet statut |
+| Résultat | Object | &#8592; | Objet statut |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form table.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Pointer | &larr; | Ponteiro a tabela do formulário atualmente exibido |
+| Resultado | Pointer | &#8592; | Ponteiro a tabela do formulário atualmente exibido |
 
 <!-- END REF-->
 

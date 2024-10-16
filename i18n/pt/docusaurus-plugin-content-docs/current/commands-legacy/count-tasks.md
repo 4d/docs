@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count tasks.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Número total de processos abertos (incluindo processos kernel) |
+| Resultado | Integer | &#8592; | Número total de processos abertos (incluindo processos kernel) |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Integer | &rarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| left | Integer | &rarr; | Left coordinate of object in pixels |
-| top | Integer | &rarr; | Top coordinate of object in pixels |
-| right | Integer | &rarr; | Right coordinate of object in pixels |
-| bottom | Integer | &rarr; | Bottom coordinate of object in pixels |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Integer | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| left | Integer | &#8594;  | Left coordinate of object in pixels |
+| top | Integer | &#8594;  | Top coordinate of object in pixels |
+| right | Integer | &#8594;  | Right coordinate of object in pixels |
+| bottom | Integer | &#8594;  | Bottom coordinate of object in pixels |
 
 <!-- END REF-->
 

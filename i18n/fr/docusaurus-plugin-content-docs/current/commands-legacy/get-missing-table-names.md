@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabManquantes | Text array | &larr; | Noms des tables manquantes dans la base |
+| tabManquantes | Text array | &#8592; | Noms des tables manquantes dans la base |
 
 <!-- END REF-->
 

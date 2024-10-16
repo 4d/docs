@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu bar screen.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Número da tela que contém a barra de menus |
+| Resultado | Integer | &#8592; | Número da tela que contém a barra de menus |
 
 <!-- END REF-->
 

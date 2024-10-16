@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Print object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| posX | Integer | &rarr; | オブジェクトの横位置 |
-| posY | Integer | &rarr; | オブジェクトの縦位置 |
-| width | Integer | &rarr; | オブジェクトの幅 (ピクセル) |
-| height | Integer | &rarr; | オブジェクトの高さ (ピクセル) |
-| 戻り値 | Boolean | &larr; | True = オブジェクトが完全に印刷された; そうでなければFalse |
+| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| posX | Integer | &#8594;  | オブジェクトの横位置 |
+| posY | Integer | &#8594;  | オブジェクトの縦位置 |
+| width | Integer | &#8594;  | オブジェクトの幅 (ピクセル) |
+| height | Integer | &#8594;  | オブジェクトの高さ (ピクセル) |
+| 戻り値 | Boolean | &#8592; | True = オブジェクトが完全に印刷された; そうでなければFalse |
 
 <!-- END REF-->
 

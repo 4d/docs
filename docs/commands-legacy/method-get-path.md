@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| methodType | Integer | &rarr; | Design object type selector |
-| aTable | Table | &rarr; | Table reference |
-| objectName | Text | &rarr; | Name of form or method |
-| formObjectName | Text | &larr; | Name of form object |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
-| Function result | Text | &larr; | Full path of object |
+| methodType | Integer | &#8594;  | Design object type selector |
+| aTable | Table | &#8594;  | Table reference |
+| objectName | Text | &#8594;  | Name of form or method |
+| formObjectName | Text | &#8592; | Name of form object |
+| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| Function result | Text | &#8592; | Full path of object |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX Get XML node.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &rarr; | 開いたドキュメントの参照 |
-| 戻り値 | Integer | &larr; | 関数から返されたイベント |
+| document | Time | &#8594;  | 開いたドキュメントの参照 |
+| 戻り値 | Integer | &#8592; | 関数から返されたイベント |
 
 <!-- END REF-->
 

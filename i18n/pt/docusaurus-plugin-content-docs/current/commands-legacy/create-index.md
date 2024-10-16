@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE INDEX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &rarr; | Tabela para qual criar um índice |
-| arrayCampos | Pointer array | &rarr; | Ponteiros aos campos a serem indexados |
-| tipoIndice | Integer | &rarr; | Tipo de índice a criar: -1 = Palavra chave, 0 = padrão, 1 = B-Tree padrão, 3 = Cluster B-Tree |
-| nomeIndice | Text | &rarr; | Nome de Índice a criar |
-| * | Operador | &rarr; | Se passado = índice assincrônico |
+| tabela | Table | &#8594;  | Tabela para qual criar um índice |
+| arrayCampos | Pointer array | &#8594;  | Ponteiros aos campos a serem indexados |
+| tipoIndice | Integer | &#8594;  | Tipo de índice a criar: -1 = Palavra chave, 0 = padrão, 1 = B-Tree padrão, 3 = Cluster B-Tree |
+| nomeIndice | Text | &#8594;  | Nome de Índice a criar |
+| * | Operador | &#8594;  | Se passado = índice assincrônico |
 
 <!-- END REF-->
 

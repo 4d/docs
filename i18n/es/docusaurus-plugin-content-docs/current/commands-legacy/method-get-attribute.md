@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text | &rarr; | Ruta de método proyecto |
-| tipoAtributo | Integer | &rarr; | Tipo de atributo a obtener |
-| * | Operador | &rarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
-| Resultado | Boolean | &larr; | True = atributo seleccionado; de lo contrario False |
+| ruta | Text | &#8594;  | Ruta de método proyecto |
+| tipoAtributo | Integer | &#8594;  | Tipo de atributo a obtener |
+| * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| Resultado | Boolean | &#8592; | True = atributo seleccionado; de lo contrario False |
 
 <!-- END REF-->
 

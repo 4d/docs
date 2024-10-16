@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table insert rows.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
-| tableRef | Object | &rarr; | 表参照 |
-| rowNumber | Integer | &rarr; | 行インデックス番号 |
-| numRows | Integer | &rarr; | 挿入する行の数(デフォルト値=1) |
-| 戻り値 | Object | &larr; | 表の行のレンジ |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
+| tableRef | Object | &#8594;  | 表参照 |
+| rowNumber | Integer | &#8594;  | 行インデックス番号 |
+| numRows | Integer | &#8594;  | 挿入する行の数(デフォルト値=1) |
+| 戻り値 | Object | &#8592; | 表の行のレンジ |
 
 <!-- END REF-->
 

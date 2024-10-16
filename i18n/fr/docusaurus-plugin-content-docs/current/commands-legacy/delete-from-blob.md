@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &rarr; | BLOB duquel supprimer des octets |
-| offset | Integer | &rarr; | Offset à partir duquel supprimer les octets |
-| nombre | Integer | &rarr; | Nombre d'octets à supprimer |
+| blob | Blob | &#8594;  | BLOB duquel supprimer des octets |
+| offset | Integer | &#8594;  | Offset à partir duquel supprimer les octets |
+| nombre | Integer | &#8594;  | Nombre d'octets à supprimer |
 
 <!-- END REF-->
 

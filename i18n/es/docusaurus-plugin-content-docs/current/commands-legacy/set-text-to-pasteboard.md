@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| texto | Text | &rarr; | Texto a copiar en el portapapeles |
+| texto | Text | &#8594;  | Texto a copiar en el portapapeles |
 
 <!-- END REF-->
 

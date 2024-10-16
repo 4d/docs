@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &rarr; | Option number |
-| value | Integer, Text | &larr; | Option value |
+| option | Integer | &#8594;  | Option number |
+| value | Integer, Text | &#8592; | Option value |
 
 <!-- END REF-->
 

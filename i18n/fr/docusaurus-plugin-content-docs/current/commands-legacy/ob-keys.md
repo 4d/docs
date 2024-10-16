@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Keys.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &rarr; | Objet dont on veut obtenir les noms des propriétés |
-| Résultat | Collection | &larr; | Collection de noms de propriété (chaines) |
+| objet | Object | &#8594;  | Objet dont on veut obtenir les noms des propriétés |
+| Résultat | Collection | &#8592; | Collection de noms de propriété (chaines) |
 
 <!-- END REF-->
 

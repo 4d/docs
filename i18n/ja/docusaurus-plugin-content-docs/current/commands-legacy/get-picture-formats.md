@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &rarr; | 解析するピクチャーフィールドあるいは変数 |
-| codecIDs | Text array | &larr; | ピクチャーのコーデックID |
+| picture | Picture | &#8594;  | 解析するピクチャーフィールドあるいは変数 |
+| codecIDs | Text array | &#8592; | ピクチャーのコーデックID |
 
 <!-- END REF-->
 

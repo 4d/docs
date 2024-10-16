@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PRINT OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &rarr; | Option number or PDF option code |
-| value1 | Integer, Text | &larr; | Value 1 of the option |
-| value2 | Integer, Text | &larr; | Value 2 of the option |
+| option | Integer | &#8594;  | Option number or PDF option code |
+| value1 | Integer, Text | &#8592; | Value 1 of the option |
+| value2 | Integer, Text | &#8592; | Value 2 of the option |
 
 <!-- END REF-->
 

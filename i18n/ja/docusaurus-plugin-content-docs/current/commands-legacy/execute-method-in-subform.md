@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| subformObject | Text | &rarr; | サブフォームオブジェクトの名称 |
-| formula | Object, Text | &rarr; | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
-| return | *, Variable | &rarr; | メソッドが値を戻さない場合 * |
-| &larr; | メソッドから返される値 |
-| param | Expression | &rarr; | メソッドに渡す引数 |
+| subformObject | Text | &#8594;  | サブフォームオブジェクトの名称 |
+| formula | Object, Text | &#8594;  | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
+| return | *, Variable | &#8594;  | メソッドが値を戻さない場合 * |
+| &#8592; | メソッドから返される値 |
+| param | Expression | &#8594;  | メソッドに渡す引数 |
 
 <!-- END REF-->
 

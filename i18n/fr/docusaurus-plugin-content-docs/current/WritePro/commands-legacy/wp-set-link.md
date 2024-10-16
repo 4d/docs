@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET LINK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| objLien | Object | &rarr; | Valeur du lien hypertexte |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| objLien | Object | &#8594;  | Valeur du lien hypertexte |
 
 <!-- END REF-->
 

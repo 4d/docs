@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LOG FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| historique | *, Text | &rarr; | Nom du fichier d'historique ou * pour refermer l'historique courant |
+| historique | *, Text | &#8594;  | Nom du fichier d'historique ou * pour refermer l'historique courant |
 
 <!-- END REF-->
 

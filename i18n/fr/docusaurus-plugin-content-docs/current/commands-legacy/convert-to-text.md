@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert to text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &rarr; | BLOB contenant un texte exprimé dans un jeu de caractères spécifique |
-| jeuCaractères | Text, Integer | &rarr; | Nom ou Numéro du jeu de caractères de blob |
-| Résultat | Text | &larr; | Contenu de blob exprimé dans le jeu de caractères 4D |
+| blob | Blob | &#8594;  | BLOB contenant un texte exprimé dans un jeu de caractères spécifique |
+| jeuCaractères | Text, Integer | &#8594;  | Nom ou Numéro du jeu de caractères de blob |
+| Résultat | Text | &#8592; | Contenu de blob exprimé dans le jeu de caractères 4D |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT OPTION VALUES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &rarr; | Numéro d’option |
-| tabNoms | Text array | &larr; | Noms des valeurs |
-| tabInfo1 | Integer array | &larr; | Valeurs 1 de l’option |
-| tabInfo2 | Integer array | &larr; | Valeurs 2 de l’option |
+| option | Integer | &#8594;  | Numéro d’option |
+| tabNoms | Text array | &#8592; | Noms des valeurs |
+| tabInfo1 | Integer array | &#8592; | Valeurs 1 de l’option |
+| tabInfo2 | Integer array | &#8592; | Valeurs 2 de l’option |
 
 <!-- END REF-->
 

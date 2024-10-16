@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| returnValue | Variable | &larr; | Value returned by the Web Service |
-| returnName | Text | &rarr; | Name of the parameter to be retrieved |
-| * | Operator |  &rarr; | Free up memory |
+| returnValue | Variable | &#8592; | Value returned by the Web Service |
+| returnName | Text | &#8594;  | Name of the parameter to be retrieved |
+| * | Operator |  &#8594;  | Free up memory |
 
 <!-- END REF-->
 

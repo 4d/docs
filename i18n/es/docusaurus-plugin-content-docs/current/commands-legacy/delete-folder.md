@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carpeta | Text | &rarr; | Nombre o ruta de acceso completa de la carpeta a borrar |
-| opcionEliminacion | Integer | &rarr; | Opción de eliminación de la carpeta |
+| carpeta | Text | &#8594;  | Nombre o ruta de acceso completa de la carpeta a borrar |
+| opcionEliminacion | Integer | &#8594;  | Opción de eliminación de la carpeta |
 
 <!-- END REF-->
 

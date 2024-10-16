@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Level.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Nível de ruptura ou do cabeçalho atual |
+| Resultado | Integer | &#8592; | Nível de ruptura ou do cabeçalho atual |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| entierLong | Integer | &rarr; | Valeur de type Entier long à écrire dans BLOB |
-| blob | Blob | &rarr; | BLOB devant recevoir l'entier long |
-| ordreOctet | Integer | &rarr; | 0=Ordre d'octets natif, 1=Ordre d'octets Macintosh, 2=Ordre d'octets PC |
-| offset &#124; * | Variable, Opérateur | &rarr; | Offset (en octets) dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
-| &larr; | Nouvel offset après l'écriture si * omis |
+| entierLong | Integer | &#8594;  | Valeur de type Entier long à écrire dans BLOB |
+| blob | Blob | &#8594;  | BLOB devant recevoir l'entier long |
+| ordreOctet | Integer | &#8594;  | 0=Ordre d'octets natif, 1=Ordre d'octets Macintosh, 2=Ordre d'octets PC |
+| offset &#124; * | Variable, Opérateur | &#8594;  | Offset (en octets) dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
+| &#8592; | Nouvel offset après l'écriture si * omis |
 
 <!-- END REF-->
 

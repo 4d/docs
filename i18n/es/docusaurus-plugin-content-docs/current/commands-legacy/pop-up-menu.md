@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Pop up menu.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| contenido | Text | &rarr; | Definición del texto del menú |
-| porDefecto | Integer | &rarr; | Número del elemento seleccionado por defecto |
-| CoordX | Integer | &rarr; | Coordenada X de la esquina superior izquierda |
-| CoordY | Integer | &rarr; | Coordenada Y de la esquina superior izquierda |
-| Resultado | Integer | &larr; | Número de elemento de menú seleccionado |
+| contenido | Text | &#8594;  | Definición del texto del menú |
+| porDefecto | Integer | &#8594;  | Número del elemento seleccionado por defecto |
+| CoordX | Integer | &#8594;  | Coordenada X de la esquina superior izquierda |
+| CoordY | Integer | &#8594;  | Coordenada Y de la esquina superior izquierda |
+| Resultado | Integer | &#8592; | Número de elemento de menú seleccionado |
 
 <!-- END REF-->
 

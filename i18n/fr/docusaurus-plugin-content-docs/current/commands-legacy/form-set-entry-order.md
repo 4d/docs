@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomsObjets | Text array | &rarr; | Tableau des noms d'objets dans l'ordre de saisie souhaité |
-| numPage | Integer | &rarr; | Numéro de la page dont vous voulez fixer l'ordre de saisie (page courante si omis) |
+| nomsObjets | Text array | &#8594;  | Tableau des noms d'objets dans l'ordre de saisie souhaité |
+| numPage | Integer | &#8594;  | Numéro de la page dont vous voulez fixer l'ordre de saisie (page courante si omis) |
 
 <!-- END REF-->
 

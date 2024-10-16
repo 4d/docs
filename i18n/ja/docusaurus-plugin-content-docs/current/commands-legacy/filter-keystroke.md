@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| filteredChar | Text | &rarr; | フィルタされたキーストローク文字、または 空文字の場合キーストロークをキャンセル |
+| filteredChar | Text | &#8594;  | フィルタされたキーストローク文字、または 空文字の場合キーストロークをキャンセル |
 
 <!-- END REF-->
 

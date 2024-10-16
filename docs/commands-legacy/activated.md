@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Activated.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | Returns TRUE if the execution cycle is an activation |
+| Function result | Boolean | &#8592; | Returns TRUE if the execution cycle is an activation |
 
 <!-- END REF-->
 

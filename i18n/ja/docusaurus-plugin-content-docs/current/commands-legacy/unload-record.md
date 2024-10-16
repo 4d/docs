@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | レコードをアンロードするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594;  | レコードをアンロードするテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

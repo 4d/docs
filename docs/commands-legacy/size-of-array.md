@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Size of array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | Array whose size is returned |
-| Function result | Longint | &larr; | Returns the number of elements in array |
+| array | Array | &#8594;  | Array whose size is returned |
+| Function result | Longint | &#8592; | Returns the number of elements in array |
 
 <!-- END REF-->
 

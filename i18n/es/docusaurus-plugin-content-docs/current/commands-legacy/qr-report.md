@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR REPORT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &rarr; | Tabla a utilizar para el informe o tabla por defecto si se omite |
-| doc | Text | &rarr; | Documento de informe rápido a cargar |
-| nomMetodo | Text | &rarr; | Nombre del método a llamar |
-| * | Operador | &rarr; | Eliminación de las cajas de diálogo de impresión |
+| tabla | Table | &#8594;  | Tabla a utilizar para el informe o tabla por defecto si se omite |
+| doc | Text | &#8594;  | Documento de informe rápido a cargar |
+| nomMetodo | Text | &#8594;  | Nombre del método a llamar |
+| * | Operador | &#8594;  | Eliminación de las cajas de diálogo de impresión |
 
 <!-- END REF-->
 

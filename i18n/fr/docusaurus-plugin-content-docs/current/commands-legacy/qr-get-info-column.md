@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &rarr; | Référence de la zone |
-| numColonne | Integer | &rarr; | Numéro de colonne |
-| titre | Text | &larr; | Titre de la colonne |
-| objet | Text | &larr; | Nom du champ ou contenu de la formule affecté(e) à la colonne |
-| cachée | Integer | &larr; | 0 = visible, 1 = invisible |
-| taille | Integer | &larr; | Largeur de la colonne |
-| valeursRépétées | Integer | &larr; | 0 = non répétées, 1 = répétées |
-| format | Text | &larr; | Format d'affichage des données |
-| varRésultat | Text | &larr; | Nom de la variable de formule |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| titre | Text | &#8592; | Titre de la colonne |
+| objet | Text | &#8592; | Nom du champ ou contenu de la formule affecté(e) à la colonne |
+| cachée | Integer | &#8592; | 0 = visible, 1 = invisible |
+| taille | Integer | &#8592; | Largeur de la colonne |
+| valeursRépétées | Integer | &#8592; | 0 = non répétées, 1 = répétées |
+| format | Text | &#8592; | Format d'affichage des données |
+| varRésultat | Text | &#8592; | Nom de la variable de formule |
 
 <!-- END REF-->
 

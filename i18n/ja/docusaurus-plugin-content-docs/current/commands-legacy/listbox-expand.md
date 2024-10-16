@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX EXPAND.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &rarr; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
-| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| recursive | Boolean | &rarr; | True = サブレベルを展開<br/>False = サブレベルを展開しない |
-| selector | Integer | &rarr; | 展開するリストボックスのパーツ |
-| line | Integer | &rarr; | 展開するブレーク行の番号、または<br/>展開するリストボックスレベルの番号 |
-| column | Integer | &rarr; | 展開するブレーク列の番号 |
+| * | 演算子 | &#8594;  | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
+| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| recursive | Boolean | &#8594;  | True = サブレベルを展開<br/>False = サブレベルを展開しない |
+| selector | Integer | &#8594;  | 展開するリストボックスのパーツ |
+| line | Integer | &#8594;  | 展開するブレーク行の番号、または<br/>展開するリストボックスレベルの番号 |
+| column | Integer | &#8594;  | 展開するブレーク列の番号 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET NAMES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| arrNoms | Text array | &larr; | Array de nombres de métodos de proyecto |
-| filtro | Text | &rarr; | Filtros de nombres |
-| * | Operador | &rarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| arrNoms | Text array | &#8592; | Array de nombres de métodos de proyecto |
+| filtro | Text | &#8594;  | Filtros de nombres |
+| * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

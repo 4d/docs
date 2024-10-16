@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
-| layout | Integer | &rarr; | Diseño de documento 4D Write Pro utilizado para la evaluación: 0 (predeterminado)= diseño 4D Write Pro, 1=HTML WYSIWYG |
-| Resultado | Object | &larr; | Información de la posición |
+| objRango | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
+| layout | Integer | &#8594;  | Diseño de documento 4D Write Pro utilizado para la evaluación: 0 (predeterminado)= diseño 4D Write Pro, 1=HTML WYSIWYG |
+| Resultado | Object | &#8592; | Información de la posición |
 
 <!-- END REF-->
 

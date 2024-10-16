@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| preview | Boolean | &rarr; | スクリーンにプレビュー (TRUE), または プレビューしない (FALSE) |
+| preview | Boolean | &#8594;  | スクリーンにプレビュー (TRUE), または プレビューしない (FALSE) |
 
 <!-- END REF-->
 

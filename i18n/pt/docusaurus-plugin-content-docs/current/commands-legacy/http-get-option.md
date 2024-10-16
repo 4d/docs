@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP GET OPTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opção | Integer | &rarr; | Código da opção a ler |
-| valor | Integer | &larr; | Valor atual da opção |
+| opção | Integer | &#8594;  | Código da opção a ler |
+| valor | Integer | &#8592; | Valor atual da opção |
 
 <!-- END REF-->
 

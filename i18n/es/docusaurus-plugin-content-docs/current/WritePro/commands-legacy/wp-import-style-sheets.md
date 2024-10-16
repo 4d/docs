@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docTarget | Object | &rarr; | Documento 4D Write Pro para recibir hojas de estilo |
-| docSource | Object | &rarr; | Documento 4D Write Pro para obtener hojas de estilo |
+| docTarget | Object | &#8594;  | Documento 4D Write Pro para recibir hojas de estilo |
+| docSource | Object | &#8594;  | Documento 4D Write Pro para obtener hojas de estilo |
 
 <!-- END REF-->
 

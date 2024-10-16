@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET ACTIVITY SNAPSHOT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrActivities &#124; arrUUID | Object array, Text array | &larr; | Complete description of operations (object array) or<br/>Operation UUIDs (text array) |
-| arrStart | Text array | &larr; | Operation start times |
-| arrDuration | Array integer | &larr; | Operation durations in milliseconds |
-| arrInfo | Text array | &larr; | Description |
-| arrDetails | Object array | &larr; | Details of context and sub-operations (if any) |
-| * | Operator | &rarr; | If passed = Get server activity |
+| arrActivities &#124; arrUUID | Object array, Text array | &#8592; | Complete description of operations (object array) or<br/>Operation UUIDs (text array) |
+| arrStart | Text array | &#8592; | Operation start times |
+| arrDuration | Array integer | &#8592; | Operation durations in milliseconds |
+| arrInfo | Text array | &#8592; | Description |
+| arrDetails | Object array | &#8592; | Details of context and sub-operations (if any) |
+| * | Operator | &#8594;  | If passed = Get server activity |
 
 <!-- END REF-->
 

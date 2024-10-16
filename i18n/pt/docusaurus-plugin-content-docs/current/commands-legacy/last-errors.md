@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Last errors.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Collection | &larr; | Collection of error objects |
+| Resultado | Collection | &#8592; | Collection of error objects |
 
 <!-- END REF-->
 

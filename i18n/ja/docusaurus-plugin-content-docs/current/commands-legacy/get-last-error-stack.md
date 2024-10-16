@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LAST ERROR STACK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| codesArray | Integer array | &larr; | エラー番号 |
-| intCompArray | Text array | &larr; | 内部コンポーネントコード |
-| textArray | Text array | &larr; | エラーテキスト |
+| codesArray | Integer array | &#8592; | エラー番号 |
+| intCompArray | Text array | &#8592; | 内部コンポーネントコード |
+| textArray | Text array | &#8592; | エラーテキスト |
 
 <!-- END REF-->
 

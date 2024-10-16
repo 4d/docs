@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dialType | Integer | &rarr; | Caixas de diálogo a mostrar |
+| dialType | Integer | &#8594;  | Caixas de diálogo a mostrar |
 
 <!-- END REF-->
 

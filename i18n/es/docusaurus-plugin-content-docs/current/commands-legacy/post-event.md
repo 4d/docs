@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.POST EVENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| que | Integer | &rarr; | Tipo de evento |
-| mensaje | Integer | &rarr; | Mensaje del evento |
-| cuando | Integer | &rarr; | Momento del evento expresado en tics |
-| ratonX | Integer | &rarr; | Coordenada horizontal del ratón |
-| ratonY | Integer | &rarr; | Coordenada vertical del ratón |
-| modificadores | Integer | &rarr; | Estado de las teclas Modificadores |
-| proceso | Integer | &rarr; | Número de referencia del proceso de destino o Fila de atención de los eventos de la aplicación, si se omite o si se pasa 0 |
+| que | Integer | &#8594;  | Tipo de evento |
+| mensaje | Integer | &#8594;  | Mensaje del evento |
+| cuando | Integer | &#8594;  | Momento del evento expresado en tics |
+| ratonX | Integer | &#8594;  | Coordenada horizontal del ratón |
+| ratonY | Integer | &#8594;  | Coordenada vertical del ratón |
+| modificadores | Integer | &#8594;  | Estado de las teclas Modificadores |
+| proceso | Integer | &#8594;  | Número de referencia del proceso de destino o Fila de atención de los eventos de la aplicación, si se omite o si se pasa 0 |
 
 <!-- END REF-->
 

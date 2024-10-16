@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| redimension | Boolean | &rarr; | Vrai : le formulaire est redimensionnable horizontalement Faux : le formulaire n’est pas redimensionnable horizontalement |
-| largeurMini | Integer | &rarr; | Largeur minimale du formulaire (pixels) |
-| largeurMaxi | Integer | &rarr; | Largeur maximale du formulaire (pixels) |
+| redimension | Boolean | &#8594;  | Vrai : le formulaire est redimensionnable horizontalement Faux : le formulaire n’est pas redimensionnable horizontalement |
+| largeurMini | Integer | &#8594;  | Largeur minimale du formulaire (pixels) |
+| largeurMaxi | Integer | &#8594;  | Largeur maximale du formulaire (pixels) |
 
 <!-- END REF-->
 

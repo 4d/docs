@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current user.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| user | Integer | &rarr; | User alias or 4D user account |
-| Function result | String | &larr; | User name of the current user |
+| user | Integer | &#8594;  | User alias or 4D user account |
+| Function result | String | &#8592; | User name of the current user |
 
 <!-- END REF-->
 

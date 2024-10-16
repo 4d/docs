@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Proドキュメント |
-| wpDoc | Object | &rarr; | 4D Wrie Pro ドキュメント |
-| mode | Integer | &rarr; | 挿入モード |
-| rangeUpdate | Integer | &rarr; | レンジ更新モード |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Proドキュメント |
+| wpDoc | Object | &#8594;  | 4D Wrie Pro ドキュメント |
+| mode | Integer | &#8594;  | 挿入モード |
+| rangeUpdate | Integer | &#8594;  | レンジ更新モード |
 
 <!-- END REF-->
 

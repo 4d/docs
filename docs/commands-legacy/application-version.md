@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Application version.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| buildNum | Integer | &larr; | Build number |
-| * | Operator | &rarr; | Long version number if passed, otherwise Short version number |
-| Function result | String | &larr; | Version number encoded string |
+| buildNum | Integer | &#8592; | Build number |
+| * | Operator | &#8594;  | Long version number if passed, otherwise Short version number |
+| Function result | String | &#8592; | Version number encoded string |
 
 <!-- END REF-->
 

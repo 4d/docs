@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Bookmark range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| docWP | Object | &rarr; | Documento 4D Write Pro |
-| NomeBK | Text | &rarr; | Nome de bookmark cuja faixa quer obter |
-| Resultado | Object | &larr; | Faixa de bookmark |
+| docWP | Object | &#8594;  | Documento 4D Write Pro |
+| NomeBK | Text | &#8594;  | Nome de bookmark cuja faixa quer obter |
+| Resultado | Object | &#8592; | Faixa de bookmark |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Text array, Real array, Boolean array, Pointer array, Object array | &rarr; | 内容をシリアライズしたい配列 |
-| * | 演算子 | &rarr; | 整形フォーマット |
-| 戻り値 | Text | &larr; | シリアライズされたJSON配列を含む文字列 |
+| array | Text array, Real array, Boolean array, Pointer array, Object array | &#8594;  | 内容をシリアライズしたい配列 |
+| * | 演算子 | &#8594;  | 整形フォーマット |
+| 戻り値 | Text | &#8592; | シリアライズされたJSON配列を含む文字列 |
 
 <!-- END REF-->
 

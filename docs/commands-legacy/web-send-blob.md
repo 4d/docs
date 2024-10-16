@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &rarr; | BLOB to send to the browser |
-| type | Text | &rarr; | Data type of the BLOB |
+| blob | Blob | &#8594;  | BLOB to send to the browser |
+| type | Text | &#8594;  | Data type of the BLOB |
 
 <!-- END REF-->
 

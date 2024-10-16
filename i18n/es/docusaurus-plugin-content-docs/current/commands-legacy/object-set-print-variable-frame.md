@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| marcoVariable | Boolean | &rarr; | True = Impresión de marco variable, False = Impresión de marco fijo |
-| subformFijo | Integer | &rarr; | Opciones de impresión de subformularios en tamaño fijo |
+| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| marcoVariable | Boolean | &#8594;  | True = Impresión de marco variable, False = Impresión de marco fijo |
+| subformFijo | Integer | &#8594;  | Opciones de impresión de subformularios en tamaño fijo |
 
 <!-- END REF-->
 

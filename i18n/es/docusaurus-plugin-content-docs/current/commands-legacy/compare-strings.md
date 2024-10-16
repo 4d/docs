@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Compare strings.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadenaA | Text | &rarr; | Cadena a comparar |
-| cadenaB | Text | &rarr; | Cadena a comparar |
-| opciones | Integer | &rarr; | Regla(s) de comparación |
-| Resultado | Integer | &larr; | Resultado de la comparación de las cadenas |
+| cadenaA | Text | &#8594;  | Cadena a comparar |
+| cadenaB | Text | &#8594;  | Cadena a comparar |
+| opciones | Integer | &#8594;  | Regla(s) de comparación |
+| Resultado | Integer | &#8592; | Resultado de la comparación de las cadenas |
 
 <!-- END REF-->
 

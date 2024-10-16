@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DRAG ICON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| icone | Picture | &rarr; | Ícone a utilizar durante arrastar |
-| deslH | Integer | &rarr; | Deslocamento horizontal do borde esquerdo da imagem com respeito a posição do cursor (> = 0, a esquerda, <0 = a direita) |
-| deslV | Integer | &rarr; | Deslocamento vertical do borde superior da imagem com respeito a posição do cursor (> 0 = para cima, <0 = para baixo) |
+| icone | Picture | &#8594;  | Ícone a utilizar durante arrastar |
+| deslH | Integer | &#8594;  | Deslocamento horizontal do borde esquerdo da imagem com respeito a posição do cursor (> = 0, a esquerda, <0 = a direita) |
+| deslV | Integer | &#8594;  | Deslocamento vertical do borde superior da imagem com respeito a posição do cursor (> 0 = para cima, <0 = para baixo) |
 
 <!-- END REF-->
 

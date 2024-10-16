@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemPos &#124; * | Operator, Longint | &rarr; | Position of item in expanded/collapsed list(s) or * for the current item in the list |
-| itemRef | Integer | &larr; | Item reference number |
-| itemText | Text | &larr; | Text of the list item |
-| sublist | Integer | &larr; | Sublist list reference number (if any) |
-| expanded | Boolean | &larr; | If a sublist is attached: TRUE = sublist is currently expanded FALSE = sublist is currently collapsed |
+| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemPos &#124; * | Operator, Longint | &#8594;  | Position of item in expanded/collapsed list(s) or * for the current item in the list |
+| itemRef | Integer | &#8592; | Item reference number |
+| itemText | Text | &#8592; | Text of the list item |
+| sublist | Integer | &#8592; | Sublist list reference number (if any) |
+| expanded | Boolean | &#8592; | If a sublist is attached: TRUE = sublist is currently expanded FALSE = sublist is currently collapsed |
 
 <!-- END REF-->
 

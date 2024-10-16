@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Random.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &larr; | Número inteiro aleatório |
+| Resultado | Integer | &#8592; | Número inteiro aleatório |
 
 <!-- END REF-->
 

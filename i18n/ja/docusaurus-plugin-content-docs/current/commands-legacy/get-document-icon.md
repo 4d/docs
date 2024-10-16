@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| docPath | Text | &rarr; | アイコンを取得するドキュメントのパスまたは名前、 または空の文字列の場合標準のファイルを開くダイアログ |
-| icon | Picture, Picture | &larr; | ドキュメントアイコン |
-| size | Integer | &rarr; | 返されたピクチャのサイズ(ピクセルで) |
+| docPath | Text | &#8594;  | アイコンを取得するドキュメントのパスまたは名前、 または空の文字列の場合標準のファイルを開くダイアログ |
+| icon | Picture, Picture | &#8592; | ドキュメントアイコン |
+| size | Integer | &#8594;  | 返されたピクチャのサイズ(ピクセルで) |
 
 <!-- END REF-->
 

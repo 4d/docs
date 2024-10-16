@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Select folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &rarr; | Title of the window |
-| defaultPath | Text, Integer | &rarr; | • Default pathname or • Empty string to display the default user folder (“My documents” under Windows, “Documents” under Mac OS), or • Number of memorized pathname |
-| options | Integer | &rarr; | Selection option(s)under Mac OS |
-| Function result | String | &larr; | Access path to the selected folder |
+| message | Text | &#8594;  | Title of the window |
+| defaultPath | Text, Integer | &#8594;  | • Default pathname or • Empty string to display the default user folder (“My documents” under Windows, “Documents” under Mac OS), or • Number of memorized pathname |
+| options | Integer | &#8594;  | Selection option(s)under Mac OS |
+| Function result | String | &#8592; | Access path to the selected folder |
 
 <!-- END REF-->
 

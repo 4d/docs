@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Validate digest.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userName | Text | &rarr; | User name |
-| password | Text | &rarr; | User password |
-| Function result | Boolean | &larr; | True=Authentication OK, False=Authentication failed |
+| userName | Text | &#8594;  | User name |
+| password | Text | &#8594;  | User password |
+| Function result | Boolean | &#8592; | True=Authentication OK, False=Authentication failed |
 
 <!-- END REF-->
 

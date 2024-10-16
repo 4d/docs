@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &rarr; | Número de referencia de la ventana |
+| ventana | Integer | &#8594;  | Número de referencia de la ventana |
 
 <!-- END REF-->
 

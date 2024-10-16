@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Round.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| round | Real | &rarr; | 丸める数値 |
-| places | Integer | &rarr; | 丸める小数部の位置 |
-| 戻り値 | Real | &larr; | placesで指定された場所で 丸められた数値 |
+| round | Real | &#8594;  | 丸める数値 |
+| places | Integer | &#8594;  | 丸める小数部の位置 |
+| 戻り値 | Real | &#8592; | placesで指定された場所で 丸められた数値 |
 
 <!-- END REF-->
 

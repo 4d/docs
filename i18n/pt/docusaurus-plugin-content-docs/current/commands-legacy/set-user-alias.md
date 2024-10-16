@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET USER ALIAS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| alias | Text | &rarr; | Alias ou apelido é o nome de usuário alternativo para a conta de usuário 4D ou "" para resetar |
+| alias | Text | &#8594;  | Alias ou apelido é o nome de usuário alternativo para a conta de usuário 4D ou "" para resetar |
 
 <!-- END REF-->
 

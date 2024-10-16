@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &rarr; | Référence d’élément XML |
-| encodage | Text | &rarr; | Jeu de caractères du document XML |
-| autonome | Boolean | &rarr; | Vrai=le document est autonome Faux (défaut)=le document n’est pas autonome |
-| indentation | Boolean | &rarr; | *** Obsolète, ne plus utiliser *** |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| encodage | Text | &#8594;  | Jeu de caractères du document XML |
+| autonome | Boolean | &#8594;  | Vrai=le document est autonome Faux (défaut)=le document n’est pas autonome |
+| indentation | Boolean | &#8594;  | *** Obsolète, ne plus utiliser *** |
 
 <!-- END REF-->
 

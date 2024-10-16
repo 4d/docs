@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current time.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | Returns the current time from the server |
-| Function result | Time | &larr; | Current time |
+| * | Operator | &#8594;  | Returns the current time from the server |
+| Function result | Time | &#8592; | Current time |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Referencia del área |
-| numColumna | Integer | &rarr; | Número de columna |
-| numLinea | Integer | &rarr; | Número de línea |
-| propiedad | Integer | &rarr; | Número de propiedad |
-| valor | Integer, Text | &rarr; | Valor de la propiedad seleccionada |
+| area | Integer | &#8594;  | Referencia del área |
+| numColumna | Integer | &#8594;  | Número de columna |
+| numLinea | Integer | &#8594;  | Número de línea |
+| propiedad | Integer | &#8594;  | Número de propiedad |
+| valor | Integer, Text | &#8594;  | Valor de la propiedad seleccionada |
 
 <!-- END REF-->
 

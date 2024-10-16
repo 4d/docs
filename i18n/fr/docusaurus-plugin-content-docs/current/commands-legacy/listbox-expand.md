@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX EXPAND.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| récursive | Boolean | &rarr; | Vrai = déployer les sous-niveaux, Faux = ne pas déployer les sous-niveaux |
-| sélecteur | Integer | &rarr; | Partie de la list box à déployer |
-| ligne | Integer | &rarr; | Numéro de ligne de la rupture à déployer ou Numéro de niveau de la list box à déployer |
-| colonne | Integer | &rarr; | Numéro de colonne de la rupture à déployer |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| récursive | Boolean | &#8594;  | Vrai = déployer les sous-niveaux, Faux = ne pas déployer les sous-niveaux |
+| sélecteur | Integer | &#8594;  | Partie de la list box à déployer |
+| ligne | Integer | &#8594;  | Numéro de ligne de la rupture à déployer ou Numéro de niveau de la list box à déployer |
+| colonne | Integer | &#8594;  | Numéro de colonne de la rupture à déployer |
 
 <!-- END REF-->
 

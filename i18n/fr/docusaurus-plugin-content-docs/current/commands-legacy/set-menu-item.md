@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &rarr; | Numéro de menu ou Référence de menu |
-| ligneMenu | Integer | &rarr; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
-| libelléElément | Text | &rarr; | Nouveau libellé de la ligne de menu |
-| process | Integer | &rarr; | Numéro de référence de process |
-| * | Opérateur | &rarr; | Si passé : considérer les métacaractères comme des caractères standard |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| libelléElément | Text | &#8594;  | Nouveau libellé de la ligne de menu |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| * | Opérateur | &#8594;  | Si passé : considérer les métacaractères comme des caractères standard |
 
 <!-- END REF-->
 

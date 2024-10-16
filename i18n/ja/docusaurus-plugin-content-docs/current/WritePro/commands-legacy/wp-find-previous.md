@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find previous.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
-| searchBefore | Object | &rarr; | 前方向に検索を開始する開始点のレンジ |
-| searchValue | Text | &rarr; | 検索する値 |
-| searchCondition | Integer | &rarr; | 検索ルール |
-| replaceValue | Text | &rarr; | 置換後の文字列 |
-| 戻り値 | Object | &larr; | 見つかった/置換された値のレンジ |
+| targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
+| searchBefore | Object | &#8594;  | 前方向に検索を開始する開始点のレンジ |
+| searchValue | Text | &#8594;  | 検索する値 |
+| searchCondition | Integer | &#8594;  | 検索ルール |
+| replaceValue | Text | &#8594;  | 置換後の文字列 |
+| 戻り値 | Object | &#8592; | 見つかった/置換された値のレンジ |
 
 <!-- END REF-->
 

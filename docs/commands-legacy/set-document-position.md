@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DOCUMENT POSITION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &rarr; | Document reference number |
-| offset | Real | &rarr; | File position (expressed in bytes) |
-| anchor | Integer | &rarr; | 1 = In relation to the beginning of the file 2 = In relation to the end of the file 3 = In relation to current position |
+| docRef | Time | &#8594;  | Document reference number |
+| offset | Real | &#8594;  | File position (expressed in bytes) |
+| anchor | Integer | &#8594;  | 1 = In relation to the beginning of the file 2 = In relation to the end of the file 3 = In relation to current position |
 
 <!-- END REF-->
 

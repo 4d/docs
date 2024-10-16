@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &rarr; | Campo onde o valor NULL vai ser atribuído |
+| campo | Field | &#8594;  | Campo onde o valor NULL vai ser atribuído |
 
 <!-- END REF-->
 

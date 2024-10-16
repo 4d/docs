@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table insert columns.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
-| refTableau | Object | &rarr; | Référence de tableau |
-| numCol | Integer | &rarr; | Numéro de colonne |
-| nbCols | Integer | &rarr; | Nombre de colonnes à insérer (valeur par défaut = 1) |
-| Résultat | Object | &larr; | Plage de colonnes du tableau |
+| objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| refTableau | Object | &#8594;  | Référence de tableau |
+| numCol | Integer | &#8594;  | Numéro de colonne |
+| nbCols | Integer | &#8594;  | Nombre de colonnes à insérer (valeur par défaut = 1) |
+| Résultat | Object | &#8592; | Plage de colonnes du tableau |
 
 <!-- END REF-->
 

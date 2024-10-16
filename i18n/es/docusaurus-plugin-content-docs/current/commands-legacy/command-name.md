@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Command name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| comando | Integer | &rarr; | Número del comando |
-| info | Integer | &larr; | Propiedad hilo seguro del comando |
-| theme | Text | &larr; | Tema del lenguaje del comando |
-| Resultado | Text | &larr; | Nombre del comando traducido |
+| comando | Integer | &#8594;  | Número del comando |
+| info | Integer | &#8592; | Propiedad hilo seguro del comando |
+| theme | Text | &#8592; | Tema del lenguaje del comando |
+| Resultado | Text | &#8592; | Nombre del comando traducido |
 
 <!-- END REF-->
 

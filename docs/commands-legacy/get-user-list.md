@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userNames | Text array | &larr; | User names as they appear in the Password editor window |
-| userNumbers | Array integer | &larr; | Corresponding unique user ID numbers |
+| userNames | Text array | &#8592; | User names as they appear in the Password editor window |
+| userNumbers | Array integer | &#8592; | Corresponding unique user ID numbers |
 
 <!-- END REF-->
 

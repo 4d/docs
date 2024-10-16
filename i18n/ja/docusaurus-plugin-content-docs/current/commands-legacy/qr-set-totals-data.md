@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | エリア参照 |
-| colNum | Integer | &rarr; | カラム番号 |
-| breakNum | Integer | &rarr; | ブレーク番号 |
-| operator &#124; value | 倍長整数, 文字 | &rarr; | セルの演算子の値またはセルの内容 |
+| area | Integer | &#8594;  | エリア参照 |
+| colNum | Integer | &#8594;  | カラム番号 |
+| breakNum | Integer | &#8594;  | ブレーク番号 |
+| operator &#124; value | 倍長整数, 文字 | &#8594;  | セルの演算子の値またはセルの内容 |
 
 <!-- END REF-->
 

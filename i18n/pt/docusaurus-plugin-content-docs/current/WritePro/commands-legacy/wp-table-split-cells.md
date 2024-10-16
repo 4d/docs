@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE SPLIT CELLS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objAlvo | Object | &rarr; | Intervalo ou elemento ou documento 4D Write Pro |
-| TableRef | Object | &rarr; | Referência de TAbela |
-| startColumn | Integer | &rarr; | Posição da primeira célula de coluna |
-| startRow | Integer | &rarr; | Posição da primeira linha da coluna |
-| columnCount | Integer | &rarr; | Número de colunas a dividir |
-| rowCount | Integer | &rarr; | Número de linhas a dividir |
+| objAlvo | Object | &#8594;  | Intervalo ou elemento ou documento 4D Write Pro |
+| TableRef | Object | &#8594;  | Referência de TAbela |
+| startColumn | Integer | &#8594;  | Posição da primeira célula de coluna |
+| startRow | Integer | &#8594;  | Posição da primeira linha da coluna |
+| columnCount | Integer | &#8594;  | Número de colunas a dividir |
+| rowCount | Integer | &#8594;  | Número de linhas a dividir |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeSource | Integer | &rarr; | Type de source : utilisateur ou système |
-| tabNomsSources | Text array | &larr; | Tableau des noms de sources de données |
-| tabPilotes | Text array | &larr; | Tableau des pilotes des sources |
+| typeSource | Integer | &#8594;  | Type de source : utilisateur ou système |
+| tabNomsSources | Text array | &#8592; | Tableau des noms de sources de données |
+| tabPilotes | Text array | &#8592; | Tableau des pilotes des sources |
 
 <!-- END REF-->
 

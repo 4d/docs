@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Length.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| string | Text | &rarr; | 長さを調べる文字列 |
-| 戻り値 | Integer | &larr; | 文字列の長さ |
+| string | Text | &#8594;  | 長さを調べる文字列 |
+| 戻り値 | Integer | &#8592; | 文字列の長さ |
 
 <!-- END REF-->
 

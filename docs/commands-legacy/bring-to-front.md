@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BRING TO FRONT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &rarr; | Process number of the process to pass to the frontmost level |
+| process | Integer | &#8594;  | Process number of the process to pass to the frontmost level |
 
 <!-- END REF-->
 

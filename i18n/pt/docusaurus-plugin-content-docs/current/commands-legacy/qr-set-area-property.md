@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET AREA PROPERTY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &rarr; | Referência da área |
-| propriedade | Integer | &rarr; | Elemento de interface |
-| valor | Integer | &rarr; | 1=exibir, 0=ocultar |
+| area | Integer | &#8594;  | Referência da área |
+| propriedade | Integer | &#8594;  | Elemento de interface |
+| valor | Integer | &#8594;  | 1=exibir, 0=ocultar |
 
 <!-- END REF-->
 

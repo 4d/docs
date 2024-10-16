@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP DECLARATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variavel | Variable | &rarr; | Variável que referencia um argumento de entrada ou saída SOAP |
-| tipo | Integer | &rarr; | Tipo 4D para o qual o argumento aponta |
-| entrada_saida | Integer | &rarr; | 1 = entrada SOAP; 2 = saída SOAP |
-| apelido | Text | &rarr; | Nome publicado por esse argumento usando trocas SOAP |
+| variavel | Variable | &#8594;  | Variável que referencia um argumento de entrada ou saída SOAP |
+| tipo | Integer | &#8594;  | Tipo 4D para o qual o argumento aponta |
+| entrada_saida | Integer | &#8594;  | 1 = entrada SOAP; 2 = saída SOAP |
+| apelido | Text | &#8594;  | Nome publicado por esse argumento usando trocas SOAP |
 
 <!-- END REF-->
 
