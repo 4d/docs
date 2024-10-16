@@ -22,6 +22,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidade
+
+Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomendável usar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
 #### 
 
 <!--REF #_command_.HTTP Request.Summary-->O comando **HTTP Request** permite enviar todo tipo de petição HTTP a um URL específico e processar a resposta do servidor HTTP.<!-- END REF-->

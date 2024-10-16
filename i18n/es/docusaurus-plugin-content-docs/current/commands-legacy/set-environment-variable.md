@@ -14,6 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidad
+
+Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
+
 #### Descripción 
 
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->El comando **SET ENVIRONMENT VARIABLE** permite fijar el valor de una variable de entorno bajo macOS y Windows.<!-- END REF--> Está diseñado para utilizarse con el comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md). También funciona con el comando [PHP Execute](php-execute.md).  

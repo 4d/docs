@@ -17,6 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidade
+
+**PHP está obsoleto em 4D**. Recomenda-se usar a classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
+
 #### Descrição 
 
 <!--REF #_command_.PHP Execute.Summary-->O comando PHP Execute permite executar um script ou uma função PHP.<!-- END REF-->

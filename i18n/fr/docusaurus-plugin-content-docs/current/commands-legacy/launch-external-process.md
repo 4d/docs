@@ -17,9 +17,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilité 
+:::info Compatibilité
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->À partir de 4D v19 R4, nous recommandons l'utilisation de la *classe SystemWorker* pour exécuter et contrôler les process externes.<!-- END REF--> Néanmoins, cette commande est toujours prise en charge. 
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->À partir de 4D v19 R4, nous recommandons l'utilisation de la classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md) pour exécuter et contrôler les process externes.<!-- END REF--> Néanmoins, cette commande est toujours prise en charge. 
+
+:::
+
 
 #### Description 
 

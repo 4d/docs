@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilité
+
+**PHP est obsolète dans 4D**. Il est désormais recommandé d'utiliser la classe [`4D.SystemWorker`](../API/SystemWorkerClass.md).
+
+:::
+
 #### Description 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->La commande **PHP GET FULL RESPONSE** vous permet d’obtenir des informations supplémentaires sur la réponse retournée par l’interpréteur PHP.<!-- END REF--> Cette commande est particulièrement utile en cas d’erreur survenant au cours de l’exécution du script. 

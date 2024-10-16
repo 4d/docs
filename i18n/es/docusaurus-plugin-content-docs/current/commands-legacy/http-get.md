@@ -20,6 +20,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidad
+
+Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomienda utilizar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
+
 #### Descripción 
 
 <!--REF #_command_.HTTP Get.Summary-->El comando **HTTP Get** envía directamente una petición HTTP GET a un URL específico y procesa la respuesta del servidor HTTP.<!-- END REF-->
