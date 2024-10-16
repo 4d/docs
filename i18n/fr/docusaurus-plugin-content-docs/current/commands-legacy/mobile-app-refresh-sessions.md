@@ -22,7 +22,7 @@ La commande vérifie la conformité de chaque fichier de session dans le dossier
 
 Si un fichier de session n'est pas valide ou a été supprimé, la session correspondante est supprimée de la mémoire.
 
-La commande peut renvoyer l'une des erreurs suivantes, qui peuvent être traitées via les commandes [ON ERR CALL](on-err-call.md) et [GET LAST ERROR STACK](get-last-error-stack.md) :
+La commande peut renvoyer l'une des erreurs suivantes, qui peuvent être traitées via les commandes [ON ERR CALL](on-err-call.md) et [Last errors](last-errors.md)  :
 
 | **Nom du composant** | **Code d'erreur** | **Description**                                                     |
 | -------------------- | ----------------- | ------------------------------------------------------------------- |

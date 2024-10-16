@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 セッションファイルが有効でない、あるいは削除されていた場合には、対応するセッションはメモリから削除されます。
 
-コマンドは以下のいずれかのエラーを返します。これらは[ON ERR CALL](on-err-call.md) および [GET LAST ERROR STACK](get-last-error-stack.md) コマンドを通して管理可能です:
+コマンドは以下のいずれかのエラーを返します。これらは[ON ERR CALL](on-err-call.md) および [Last errors](last-errors.md)  コマンドを通して管理可能です:
 
 | **コンポーネント名** | **エラーコード** | **詳細**                      |
 | ------------ | ---------- | --------------------------- |

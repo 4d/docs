@@ -27,10 +27,8 @@ Chaque objet erreur contient les attributs suivants :
 
 Cette commande doit être appelée depuis une méthode d'appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
 
-**Note :** Voir également l'ancienne commande [GET LAST ERROR STACK](get-last-error-stack.md) qui retourne les mêmes informations sous forme de tableaux. 
 
 #### Voir aussi 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
