@@ -66,7 +66,7 @@ Depois, crie o método de projeto TRADUZIR\_TABELAS\_E\_CAMPOS. Este método ana
  var $Idioma : Text
  $Idioma:=$1
  
- For($vlTabela;1;Get last table number) //Passar por cada tabela
+ For($vlTabela;1;Last table number) //Passar por cada tabela
     If($vlTabela#(Table(->[Traduçoes]))) //Não traduzir a tabela de traduções
   //Verificar se existe uma tradução de nome da tabela para o idioma especificado
        QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Idioma;*) //idioma desejado
@@ -152,7 +152,7 @@ com o método de projeto TABELAS\_E\_CAMPOS\_LOCALIZADOS:
  SET TABLE TITLES($asNomes;$aiNumeros)
  
   //Atualização dos nomes de campos
- $vlNumTabela:=Get last table number //Obter o número de tabelas no banco
+ $vlNumTabela:=Last table number //Obter o número de tabelas no banco
  For($vlTabela;1;$vlNumTabela) //Passar por cada tabela
     If(Is table number valid($vlTabela))
        QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Idioma;*)
@@ -177,7 +177,7 @@ Se quiser remover todos os campos personalizados e nomes de tabela definidos:
 
 #### Ver também 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  

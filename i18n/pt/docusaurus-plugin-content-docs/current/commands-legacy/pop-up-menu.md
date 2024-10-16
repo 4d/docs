@@ -76,7 +76,7 @@ O método de projeto MEU MENU RAPIDO faz aparecer um menu de navegação pop up:
 
 ```4d
   // Método de projeto MEU MENU RAPIDO
- GET MOUSE($vlMouseX;$vlMouseY;$vlBotao)
+ MOUSE POSITION($vlMouseX;$vlMouseY;$vlBotao)
  If(Macintosh control down&NBSP;|&NBSP;($vlBotao=2))
     $vtElementos:="Sobre este banco...<i;(-;!-outras opções;(-"=""     for($vltabela;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltabela))=""           $vtelementos:="$vtElementos+";"+Table" name($vltabela)=""        end="" if=""     end="" for=""     $vlescolhausuario:="Pop" up="" menu($vtelementos)=""     case="" of=""        :($vlescolhausuario="1)"   //="" mostrar="" informação="" as="" opções=""        else=""           if($vlescolhausuario="">0)
   // Ir a tabela cujo número for $vlEscolhaUsuario-4
@@ -102,4 +102,4 @@ O próximo é o menu pop-up tal como aparece em Windows (esquerda) e Macintosh (
 #### Ver também 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[GET MOUSE](get-mouse.md)  
+[MOUSE POSITION](mouse-position.md)  

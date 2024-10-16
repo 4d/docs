@@ -37,5 +37,5 @@ CHANGE LICENSES は、顧客に配付されたコンパイル済みのシング�
 
 #### 参照 
 
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Is license available](is-license-available.md)  

@@ -1,12 +1,12 @@
 ---
-id: get-last-query-plan
-title: Get last query plan
-slug: /commands/get-last-query-plan
+id: last-query-plan
+title: Last query plan
+slug: /commands/last-query-plan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get last query plan.Syntax-->**Get last query plan** ( *formatDescr* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get last query plan.Params-->
+<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *formatDescr* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Last query plan.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | formatDescr | Integer | &#8594;  | Formato de descrição (texto ou XML) |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get last query plan.Summary-->O comando Get Last Query Plan devolve a descrição interna do plano de execução da última pesquisa realizada nos dados.<!-- END REF--> Para maior informação sobre as descrições de pesquisas, por favor consulte a documentação do comando [DESCRIBE QUERY EXECUTION](describe-query-execution.md "DESCRIBE QUERY EXECUTION"). .  
+<!--REF #_command_.Last query plan.Summary-->O comando Last query plan devolve a descrição interna do plano de execução da última pesquisa realizada nos dados.<!-- END REF--> Para maior informação sobre as descrições de pesquisas, por favor consulte a documentação do comando [DESCRIBE QUERY EXECUTION](describe-query-execution.md "DESCRIBE QUERY EXECUTION"). .  
 
 Esta descrição se devolve em formato Texto ou XML dependendo do valor passado no parâmetro *formatDescr*. Pode passar uma das seguintes constantes, localizadas no tema “Queries”:  
   
@@ -28,9 +28,9 @@ Esta descrição se devolve em formato Texto ou XML dependendo do valor passado 
   
 Este comando devolve um valor significativo se o comando [DESCRIBE QUERY EXECUTION](describe-query-execution.md "DESCRIBE QUERY EXECUTION") for executado durante a sessão.  
   
-A descrição do plano da última pesquisa pode ser comparada com a descrição da rota real da última pesquisa (obtido com a ajuda do comando [Get Last Query Path](get-last-query-path.md "Get Last Query Path")) com propósitos de otimização.
+A descrição do plano da última pesquisa pode ser comparada com a descrição da rota real da última pesquisa (obtido com a ajuda do comando [Last query path](last-query-path.md "Last query path")) com propósitos de otimização.
 
 #### Ver também 
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
-[Get last query path](get-last-query-path.md)  
+[Last query path](last-query-path.md)  

@@ -1,12 +1,12 @@
 ---
 id: get-application-info
-title: Get application info
+title: Application info
 slug: /commands/get-application-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application info.Syntax-->**Get application info** -> Function result<!-- END REF-->
-<!--REF #_command_.Get application info.Params-->
+<!--REF #_command_.Application info.Syntax-->**Application info** -> Function result<!-- END REF-->
+<!--REF #_command_.Application info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Object | &#8592; | Information about the active application activity |
@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 #### Example 1 
 
-<!--REF #_command_.Get application info.Summary-->The **Get application info** command returns an object providing detailed information about the active application's activity and network configuration.<!-- END REF-->
+<!--REF #_command_.Application info.Summary-->The **Application info** command returns an object providing detailed information about the active application's activity and network configuration.<!-- END REF-->
 
-The command can be executed on applications running in both standalone and client/server environments. The information returned depends on where **Get application info** is executed. For example, if executed from a remote 4D, the information applies only to the remote workstation. If the command is called in a method that is executed on the server, the information returned applies to the the server.
+The command can be executed on applications running in both standalone and client/server environments. The information returned depends on where **Application info** is executed. For example, if executed from a remote 4D, the information applies only to the remote workstation. If the command is called in a method that is executed on the server, the information returned applies to the the server.
 
 The returned object contains the following properties:
 
@@ -43,7 +43,7 @@ The returned object contains the following properties:
 | useQUICNetworkLayer         | boolean    | True if QUIC network layer used for the application server and db4d server (*beta* in 4D v20, see *Compatibility page*). Not returned in standalone environment. Possible values: true, false. For more information, see [this blog post](https://blog.4d.com/quic-network/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | false                                           |
 | volumeShadowCopyStatus      | string     | Returns the status of the Volume Shadow Copy Service. Windows only. For more information, see *Using Volume Shadow Copy Service on Windows*.  Possible values: <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>vss available</td> <td>available</td> <td>The service is available.</td> </tr><tr> <td>vss error</td> <td>error</td> <td>The service experienced an error.</td> </tr><tr> <td>vss not available</td> <td>notAvailable</td> <td>The service is unavailable.</td> </tr><tr> <td>vss update required</td> <td>updateRequired</td> <td>The service needs to be updated.</td> </tr> </tbody> </table> | "available"                                     |
 
-(\*) On Windows, you need to get this counter previously initialized, for example by a call to the **Get application info** command in the [On Startup database method](on-startup-database-method.md). 
+(\*) On Windows, you need to get this counter previously initialized, for example by a call to the **Application info** command in the [On Startup database method](on-startup-database-method.md). 
 
 #### Example 2 
 
@@ -51,7 +51,7 @@ The following code returns an object containing information about the running ap
 
 ```4d
  var $appInfo : Object
- $appInfo:=Get application info
+ $appInfo:=Application info
 ```
 
 If the code is executed from a standalone environment, the object contains (for example):
@@ -76,5 +76,5 @@ If the code is executed on 4D Server, the object contains (for example):
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
-[Get system info](get-system-info.md)  
+[System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  

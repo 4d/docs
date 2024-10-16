@@ -1,12 +1,12 @@
 ---
-id: get-monitored-activity
-title: Get Monitored Activity
-slug: /commands/get-monitored-activity
+id: monitored-activity
+title: Monitored activity
+slug: /commands/monitored-activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Monitored Activity.Syntax-->**Get Monitored Activity**  -> Function result<!-- END REF-->
-<!--REF #_command_.Get Monitored Activity.Params-->
+<!--REF #_command_.Monitored activity.Syntax-->**Monitored activity**  -> Function result<!-- END REF-->
+<!--REF #_command_.Monitored activity.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Collection | &#8592; | Collection of monitored activities |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get Monitored Activity.Summary-->The **Get Monitored Activity** command returns a collection of objects describing operations recorded according to the specifications set by the [START MONITORING ACTIVITY](start-monitoring-activity.md) command.<!-- END REF--> It can be called and executed on 4D remote, 4D Server, and 4D standalone applications (if *source* isn't from network activity).
+<!--REF #_command_.Monitored activity.Summary-->The **Monitored activity** command returns a collection of objects describing operations recorded according to the specifications set by the [START MONITORING ACTIVITY](start-monitoring-activity.md) command.<!-- END REF--> It can be called and executed on 4D remote, 4D Server, and 4D standalone applications (if *source* isn't from network activity).
 
 The objects in the returned collection have the following properties: 
 
@@ -27,7 +27,7 @@ The objects in the returned collection have the following properties:
 
 ##### activityKind = Activity language (1) 
 
-**Note:** The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DDebugLog.txt (standard)* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Get Monitored Activity** command will thus impact the returned results.
+**Note:** The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DDebugLog.txt (standard)* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
 
 *activityData* object:
 
@@ -66,8 +66,8 @@ The following additional properties are returned in the *activityData* object ac
 
 **Notes:** 
 
-* If the debug logs have been stopped on the 4D Server [GRAPH SETTINGS](graph-settings.md), **Get Monitored Activity** will return nothing. If the logs are restarted on the server or via the [START MONITORING ACTIVITY](start-monitoring-activity.md) command with Activity network, **Get Monitored Activity** will resume returning network activity information.
-* The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DRequestsLog.txt* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Get Monitored Activity** command will thus impact the returned results.
+* If the debug logs have been stopped on the 4D Server [GRAPH SETTINGS](graph-settings.md), **Monitored activity** will return nothing. If the logs are restarted on the server or via the [START MONITORING ACTIVITY](start-monitoring-activity.md) command with Activity network, **Monitored activity** will resume returning network activity information.
+* The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DRequestsLog.txt* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
 
 *activityData* object:
 
@@ -89,7 +89,7 @@ The following additional properties are returned in the *activityData* object ac
 
 ##### activityKind = Activity operations (4) 
 
-**Note:** The *activityData* object is similar to the one returned by the [GET ACTIVITY SNAPSHOT](get-activity-snapshot.md) command, except that it only thresholded and finished operations are returned.
+**Note:** The *activityData* object is similar to the one returned by the [ACTIVITY SNAPSHOT](activity-snapshot.md) command, except that it only thresholded and finished operations are returned.
 
 *activityData* object:
 

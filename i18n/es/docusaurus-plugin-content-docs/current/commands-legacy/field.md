@@ -55,5 +55,5 @@ En el siguiente ejemplo, la variable *campNum* es igual al número del campo de 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
-[Get last field number](get-last-field-number.md)  
+[Last field number](last-field-number.md)  
 [Table](table.md)  

@@ -1,12 +1,12 @@
 ---
-id: get-action-info
-title: Get action info
-slug: /commands/get-action-info
+id: action-info
+title: Action info
+slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get action info.Syntax-->**Get action info** ( *action* {; *objetivo*} ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get action info.Params-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *objetivo*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Action info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Nombre o patrón de acción estándar incluyendo el parámetro si es necesario |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get action info.Summary-->El comando **Get action info** devuelve diferente información, incluida la disponibilidad y el estado, sobre la *accion* definida en el *objetivo*, de acuerdo con el contexto de la aplicación actual.<!-- END REF-->
+<!--REF #_command_.Action info.Summary-->El comando **Action info** devuelve diferente información, incluida la disponibilidad y el estado, sobre la *accion* definida en el *objetivo*, de acuerdo con el contexto de la aplicación actual.<!-- END REF-->
 
 En *accion*, pase el nombre de la acción estándar a verificar. Puede ser una cadena o una constante del tema *Acción estándar*. Puede ser una cadena o una constante del tema *Acción estándar*. Algunas acciones aceptan un elemento objetivo y parámetros. En este caso, debe utilizar el patrón solicitado, por ejemplo *"gotoPage?value=2"* or *paragraph/backgroundPositionV?value=top.* 
 
@@ -34,7 +34,7 @@ Puede pasar en *objetivo* el contexto del formulario en el que se debe ejecutar 
 
 **Nota:** si se omite el *objetivo*, se utiliza por defecto el contexto ak current form.
 
-El comando **Get action info** devuelve información en forma de un objeto que contiene las siguientes propiedades:
+El comando **Action info** devuelve información en forma de un objeto que contiene las siguientes propiedades:
 
 | **Propiedad** | **Tipo** | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -53,7 +53,7 @@ Desea saber si la acción copiar está disponible (es decir, si se han seleccion
 ```4d
  var $actionInfo : Object
  var $isEnabled : Boolean
- $actionInfo:=Get action info(ak copy)
+ $actionInfo:=Action info(ak copy)
  If(Not(Undefined($actionInfo.enabled))) //la acción es definida en el proceso
     If(OB Get($actionInfo;"enabled"))
        ... //la acción copiar está disponible

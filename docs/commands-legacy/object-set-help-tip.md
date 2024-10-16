@@ -57,7 +57,7 @@ In this form, a help tip is displayed and changes dynamically when the mouse hov
        SET DATABASE PARAMETER(Tips delay;0) // Tip displayed immediately at mouse stop
        SET DATABASE PARAMETER(Tips duration;60*10) // 10 seconds max display
     :(FORM Event=On Mouse Move)
-       GET MOUSE($x;$y;$b)
+       MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
        $y:=$y-$top
@@ -103,7 +103,7 @@ You have a list box, "Commands List", containing a list and you want to set a he
  
   //#1 : find which row is hovered
  
-       GET MOUSE($mouseX;$mouseY;$mouseZ)
+       MOUSE POSITION($mouseX;$mouseY;$mouseZ)
        LISTBOX GET CELL POSITION(*;"Commands List";$mouseX;$mouseY;$col;$row)
  
   //#2 : setup the matching help tip

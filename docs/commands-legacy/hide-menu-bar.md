@@ -29,7 +29,7 @@ The following method displays a record in full-screen display (Macintosh) until 
  FORM SET INPUT([Paintings];"Full Screen 800")
  DISPLAY RECORD([Paintings])
  Repeat
-    GET MOUSE($vlX;$vlY;$vlButton)
+    MOUSE POSITION($vlX;$vlY;$vlButton)
  Until($vlButton#0)
  CLOSE WINDOW
  SHOW MENU BAR

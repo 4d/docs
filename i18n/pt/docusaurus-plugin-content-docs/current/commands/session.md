@@ -92,6 +92,6 @@ IP:port/4DACTION/action_Session
 
 ### Veja também
 
-[Session storage by ID](session-storage-by-id.md)\
+[Session storage](session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)

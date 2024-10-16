@@ -37,5 +37,5 @@ This way a user can activate licenses without having to modify the database.
 
 #### See also 
 
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Is license available](is-license-available.md)  

@@ -108,12 +108,12 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // テーブルと同じ数の空行 (つまり、列なし) を持つ配列作成します
- $vlLastTable:=Get last table number
+ $vlLastTable:=Last table number
  ARRAY POINTER(<>apFields;$vlLastTable;0) // X行 0列の 2D配列
   // テーブル毎に
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
-       $vlLastField:=Get last field number($vlTable)
+       $vlLastField:=Last field number($vlTable)
   // 全フィールドをチェックします
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)

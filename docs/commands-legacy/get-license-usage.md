@@ -1,12 +1,12 @@
 ---
-id: get-license-usage
-title: Get license usage
-slug: /commands/get-license-usage
+id: license-usage
+title: License usage
+slug: /commands/license-usage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get license usage.Syntax-->**Get license usage** -> Function result<!-- END REF-->
-<!--REF #_command_.Get license usage.Params-->
+<!--REF #_command_.License usage.Syntax-->**License usage** -> Function result<!-- END REF-->
+<!--REF #_command_.License usage.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Collection | &#8592; | A collection of objects with information on the retained licenses. |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get license usage.Summary-->The **Get license usage** command returns a collection of objects containing information on the retained licenses.<!-- END REF-->
+<!--REF #_command_.License usage.Summary-->The **License usage** command returns a collection of objects containing information on the retained licenses.<!-- END REF-->
 
 Each object in the returned collection has the following attributes:
 

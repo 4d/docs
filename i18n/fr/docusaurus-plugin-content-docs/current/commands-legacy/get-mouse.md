@@ -1,12 +1,12 @@
 ---
-id: get-mouse
-title: GET MOUSE
-slug: /commands/get-mouse
+id: mouse-position
+title: MOUSE POSITION
+slug: /commands/mouse-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MOUSE.Syntax-->**GET MOUSE** ( *sourisX* ; *sourisY* ; *boutonSouris* {; *} )<!-- END REF-->
-<!--REF #_command_.GET MOUSE.Params-->
+<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *sourisX* ; *sourisY* ; *boutonSouris* {; *} )<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sourisX | Real | &#8592; | Coordonnée horizontale de la souris |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET MOUSE.Summary-->La commande **GET MOUSE** retourne l'état courant de la souris.<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Summary-->La commande **MOUSE POSITION** retourne l'état courant de la souris.<!-- END REF-->
 
 Les coordonnées horizontale et verticale sont retournées dans les paramètres *sourisX* et *sourisY*. Si vous passez le paramètre *\**, ces coordonnées sont exprimées par rapport à l'écran principal (sous Windows en mode SDI et sous macOS) ou par rapport à la fenêtre de l'application (sous Windows en mode MDI). Si vous ne passez pas le paramètre *\**, vous exprimez ces coordonnées par rapport à la fenêtre du formulaire courant (s'il y en a un) du process courant.
 

@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get locked records info](get-locked-records-info.md)  
+[Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *レコードのロック*  

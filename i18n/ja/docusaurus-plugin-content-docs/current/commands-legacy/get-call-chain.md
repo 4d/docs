@@ -1,12 +1,12 @@
 ---
-id: get-call-chain
-title: Get call chain
-slug: /commands/get-call-chain
+id: call-chain
+title: Call chain
+slug: /commands/call-chain
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get call chain.Syntax-->**Get call chain** -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get call chain.Params-->
+<!--REF #_command_.Call chain.Syntax-->**Call chain** -> 戻り値<!-- END REF-->
+<!--REF #_command_.Call chain.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Collection | &#8592; | プロセス内のメソッド呼び出しチェーンの詳細を記したオブジェクトのコレクション |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get call chain.Summary-->**Get call chain** コマンドは、カレントプロセス内における、メソッド呼び出しチェーンの各ステップを詳細に説明するオブジェクトのコレクションを返します。<!-- END REF-->デバッガウィンドウと同じ情報を提供します。このコマンドはそれに加え、どの4D環境(コンパイル済みモードを含む)でも実行可能であるという利点を備えています。
+<!--REF #_command_.Call chain.Summary-->**Call chain** コマンドは、カレントプロセス内における、メソッド呼び出しチェーンの各ステップを詳細に説明するオブジェクトのコレクションを返します。<!-- END REF-->デバッガウィンドウと同じ情報を提供します。このコマンドはそれに加え、どの4D環境(コンパイル済みモードを含む)でも実行可能であるという利点を備えています。
 
 このコマンドは、呼び出されたメソッド、それを呼び出したコンポーネント、そして呼び出しが発生した行番号を明らかにすることで、デバッギングを容易にします。返されるコレクションのそれぞれのオブジェクトのには、以下のプロパティが格納されています:
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ```4d
  var $currentCallChain : Collection
- $currentCallChain:=Get call chain
+ $currentCallChain:=Call chain
 ```
 
 プロジェクトメソッドが実行された場合、呼び出しチェーンには例えば以下のような情報が格納されます:

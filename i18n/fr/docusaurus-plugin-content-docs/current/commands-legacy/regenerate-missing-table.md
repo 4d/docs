@@ -32,7 +32,7 @@ Cette méthode regénère toutes les tables manquantes éventuellement présente
  If($SizeArray#0)
   // Remplir le tableau avec les noms de toutes les tables de la base
     ARRAY TEXT(tabTables;Lire numero derniere table)
-    If(Get last table number>0)    //S’il y a bien des tables
+    If(Last table number>0)    //S’il y a bien des tables
        For($vlTables;Size of array(tabTables);1;-1)
           If(Is table number valid($vlTables))
              tabTables{$vlTables}:=Table name($vlTables)

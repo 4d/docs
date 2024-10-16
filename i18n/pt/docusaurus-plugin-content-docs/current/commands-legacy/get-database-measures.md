@@ -1,12 +1,12 @@
 ---
-id: get-database-measures
-title: Get database measures
-slug: /commands/get-database-measures
+id: database-measures
+title: Database measures
+slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database measures.Syntax-->**Get database measures** {( *opcoes* )} -> Resultado<!-- END REF-->
-<!--REF #_command_.Get database measures.Params-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *opcoes* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Database measures.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | opcoes | Object | &#8594;  | Opções de retorno |
@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get database measures.Summary-->O comando **Get database measures** lhe permite obter informação detalhada sobre os eventos do motor de base de dados 4D.<!-- END REF--> A informação devolvida inclui o acesso leitura/escritura dos dados desde/até o disco ou a memória cachê, assim como também o acesso aos índices da base de dados, as pesquisas e as ordenações.  
+<!--REF #_command_.Database measures.Summary-->O comando **Database measures** lhe permite obter informação detalhada sobre os eventos do motor de base de dados 4D.<!-- END REF--> A informação devolvida inclui o acesso leitura/escritura dos dados desde/até o disco ou a memória cachê, assim como também o acesso aos índices da base de dados, as pesquisas e as ordenações.  
   
-**Get database measures** devolve um único objeto que contém todas as medidas relevantes. O parâmetro *opcoes* lhe permite configurar as opções para a informação devolvida.
+**Database measures** devolve um único objeto que contém todas as medidas relevantes. O parâmetro *opcoes* lhe permite configurar as opções para a informação devolvida.
 
 ##### Apresentação do objeto devolvido 
 
@@ -290,7 +290,7 @@ Você deseja obter o objeto "history" no objeto devolvido:
  var $param : Object
  var $measures : Object
  OB SET($param;"withHistory";True)
- $measures:=Get database measures($param)
+ $measures:=Database measures($param)
 ```
 
 #### Exemplo 2 
@@ -301,7 +301,7 @@ Só queremos saber o número total de bytes lidos na memória cachê ("cacheRead
  var $oStats : Object
  var $oParams : Object
  OB SET($oParams;"path";"DB.cacheReadBytes")
- $oStats:=Get database measures($oParams)
+ $oStats:=Database measures($oParams)
 ```
 
 O objeto devolvido contém, por exemplo:
@@ -326,5 +326,5 @@ Queremos obter as medidas de bytes de cachê nos últimos dois minutos:
  OB SET($oParams;"path";"DB.cacheReadBytes")
  OB SET($oParams;"withHistory";True)
  OB SET($oParams;"historyLength";2*60)
- $measures:=Get database measures($oParams)
+ $measures:=Database measures($oParams)
 ```

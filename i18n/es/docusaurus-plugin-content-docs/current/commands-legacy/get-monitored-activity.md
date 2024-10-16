@@ -1,12 +1,12 @@
 ---
-id: get-monitored-activity
-title: Get Monitored Activity
-slug: /commands/get-monitored-activity
+id: monitored-activity
+title: Monitored activity
+slug: /commands/monitored-activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Monitored Activity.Syntax-->**Get Monitored Activity**  -> Resultado<!-- END REF-->
-<!--REF #_command_.Get Monitored Activity.Params-->
+<!--REF #_command_.Monitored activity.Syntax-->**Monitored activity**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Monitored activity.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Collection | &#8592; | Colección de actividades monitoreadas |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get Monitored Activity.Summary-->El comando **Get Monitored Activity** devuelve una colección de objetos que describen operaciones registradas de acuerdo con las especificaciones definidas por el comando [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Se puede llamar y ejecutar en 4D remoto, 4D Server y aplicaciones 4D autónomas (si *fuente* no proviene de la actividad de red).
+<!--REF #_command_.Monitored activity.Summary-->El comando **Monitored activity** devuelve una colección de objetos que describen operaciones registradas de acuerdo con las especificaciones definidas por el comando [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Se puede llamar y ejecutar en 4D remoto, 4D Server y aplicaciones 4D autónomas (si *fuente* no proviene de la actividad de red).
 
 Los objetos en la colección devuelta tienen las siguientes propiedades:
 
@@ -27,7 +27,7 @@ Los objetos en la colección devuelta tienen las siguientes propiedades:
 
 ##### activityKind = Activity language (1) 
 
-**Nota:** el objeto *activityData* utiliza la información definida por el comando [SET DATABASE PARAMETER](set-database-parameter.md) para *4DDebugLog.txt (estándar)* (si corresponde), de lo contrario, utiliza un modo predeterminado. Iniciar la grabación del historial durante la ejecución del comando **Get Monitored Activity** afectará los resultados devueltos.
+**Nota:** el objeto *activityData* utiliza la información definida por el comando [SET DATABASE PARAMETER](set-database-parameter.md) para *4DDebugLog.txt (estándar)* (si corresponde), de lo contrario, utiliza un modo predeterminado. Iniciar la grabación del historial durante la ejecución del comando **Monitored activity** afectará los resultados devueltos.
 
 objeto *activityData*:
 
@@ -66,8 +66,8 @@ Las siguientes propiedades adicionales se devuelven en el objeto *activityData* 
 
 **Notas:** 
 
-* si los historiales de depuración se han detenido en el servidor 4D [GRAPH SETTINGS](graph-settings.md), **Get Monitored Activity** no devolverá nada. Si los historiales se reinician en el servidor o mediante el comando [START MONITORING ACTIVITY](start-monitoring-activity.md) con Activity network, **Get Monitored Activity** reanudará la información de actividad de red.
-* el objeto *activityData* utiliza la información definida por el comando [SET DATABASE PARAMETER](set-database-parameter.md) para el *4DRequestsLog.txt* (si corresponde), de lo contrario, utiliza un modo predeterminado . Iniciar la grabación del historial durante la ejecución del comando **Get Monitored Activity** impactará los resultados devueltos.
+* si los historiales de depuración se han detenido en el servidor 4D [GRAPH SETTINGS](graph-settings.md), **Monitored activity** no devolverá nada. Si los historiales se reinician en el servidor o mediante el comando [START MONITORING ACTIVITY](start-monitoring-activity.md) con Activity network, **Monitored activity** reanudará la información de actividad de red.
+* el objeto *activityData* utiliza la información definida por el comando [SET DATABASE PARAMETER](set-database-parameter.md) para el *4DRequestsLog.txt* (si corresponde), de lo contrario, utiliza un modo predeterminado . Iniciar la grabación del historial durante la ejecución del comando **Monitored activity** impactará los resultados devueltos.
 
 objeto *activityData*:
 
@@ -89,7 +89,7 @@ objeto *activityData*:
 
 ##### activityKind = Activity operations (4) 
 
-**Nota:** el objeto *activityData* es similar al que devuelve el comando [GET ACTIVITY SNAPSHOT](get-activity-snapshot.md), excepto que solo se devuelven las operaciones de umbral y finalizadas.
+**Nota:** el objeto *activityData* es similar al que devuelve el comando [ACTIVITY SNAPSHOT](activity-snapshot.md), excepto que solo se devuelven las operaciones de umbral y finalizadas.
 
 objeto *activityData*:
 

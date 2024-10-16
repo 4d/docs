@@ -104,12 +104,12 @@ Folgendes Beispiel speichert für jedes Datenfeld jeder Tabelle einen Zeiger in 
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // Create as many rows (empty and without columns) as there are tables
- $vlLastTable:=Get last table number
+ $vlLastTable:=Last table number
  ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
   // For each table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
-       $vlLastField:=Get last field number($vlTable)
+       $vlLastField:=Last field number($vlTable)
   // Give value of elements
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)

@@ -129,6 +129,6 @@ En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
 #### Ver también 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Get application info](get-application-info.md)  
+[Application info](get-application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  

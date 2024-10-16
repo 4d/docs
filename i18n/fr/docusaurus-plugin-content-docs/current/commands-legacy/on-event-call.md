@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Conseil :** Cette commande nécessite un niveau de connaissances avancé en programmation. Généralement, vous n'avez pas besoin d'appeler **ON EVENT CALL** pour traiter les événements. Lorsque vous utilisez des formulaires, 4D gère pour vous les événements et les retourne aux formulaires et objets appropriés. 
 
-**Astuce :** Les commandes telles que [GET MOUSE](get-mouse.md), [Shift down](shift-down.md), etc., permettent de récupérer des informations sur les événements. Ces commandes, dans une certaine mesure, peuvent être appelées depuis les méthodes objet pour traiter les informations dont vous avez besoin. Elles peuvent ainsi vous épargner l'écriture d'un algorithme basé sur une structure du type **ON EVENT CALL**.
+**Astuce :** Les commandes telles que [MOUSE POSITION](mouse-position.md), [Shift down](shift-down.md), etc., permettent de récupérer des informations sur les événements. Ces commandes, dans une certaine mesure, peuvent être appelées depuis les méthodes objet pour traiter les informations dont vous avez besoin. Elles peuvent ainsi vous épargner l'écriture d'un algorithme basé sur une structure du type **ON EVENT CALL**.
 
 La portée de cette commande est la session de travail. Par défaut, la méthode est exécutée dans un process local séparé. Vous ne pouvez avoir qu'une méthode de gestion d'événement à la fois. Pour désinstaller une méthode de gestion d'événement, appelez de nouveau **ON EVENT CALL** et passez une chaîne vide dans *méthodeEvén*.
 
@@ -110,6 +110,6 @@ Lorsque vous imprimez un état à l'aide la commande [PRINT SELECTION](print-sel
 #### Voir aussi 
 
 [FILTER EVENT](filter-event.md)  
-[GET MOUSE](get-mouse.md)  
+[MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  

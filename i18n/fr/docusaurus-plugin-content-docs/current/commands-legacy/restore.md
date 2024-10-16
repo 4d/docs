@@ -32,4 +32,4 @@ La commande **RESTORE** modifie la valeur des variables *OK* et *Document* : si 
 #### Voir aussi 
 
 [BACKUP](backup.md)  
-[GET RESTORE INFORMATION](get-restore-information.md)  
+[RESTORE INFO](restore-info.md)  

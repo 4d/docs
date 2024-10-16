@@ -46,5 +46,5 @@ L'exemple suivant affiche une boîte de dialogue d'alerte. Nous passons à cette
 #### Voir aussi 
 
 [Field](field.md)  
-[Get last field number](get-last-field-number.md)  
+[Last field number](last-field-number.md)  
 [Table name](table-name.md)  

@@ -1,12 +1,12 @@
 ---
-id: session-storage-by-id
-title: Session storage by ID
-slug: /commands/session-storage-by-id
+id: session-storage
+title: Session storage
+slug: /commands/session-storage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Session storage by ID.Syntax-->**Session storage by ID** ( *id* ) -> 戻り値<!-- END REF-->
-<!--REF #_command_.Session storage by ID.Params-->
+<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Session storage.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | id | Text | &#8594;  | Unique identifier (UUID) of the session on the server |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 注 
 
-<!--REF #_command_.Session storage by ID.Summary-->**Session storage by ID** コマンドは*id* 引数に渡した固有のIDを持つセッションのStorage オブジェクトを返します。<!-- END REF-->
+<!--REF #_command_.Session storage.Summary-->**Session storage** コマンドは*id* 引数に渡した固有のIDを持つセッションのStorage オブジェクトを返します。<!-- END REF-->
 
 引数には、Storage を取得したいセッションのUUID を渡します。これはサーバーによって自動的に割り当てられ、[session オブジェクト](https://developer.4d.com/docs/ja/API/SessionClass) の [**.id**](https://developer.4d.com/docs/ja/API/SessionClass/#id) プロパティ内に保存されています。指定したセッションがサーバー上に存在しない場合、コマンドは**Null** を返します。
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
  #DECLARE($id Text;$text Text)
  var $obj : Object
  
- $obj:=Session storage by ID($id)
+ $obj:=Session storage($id)
  
  If($obj.settings=Null)
     Use($obj)

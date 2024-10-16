@@ -43,7 +43,7 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 #### Ver também 
 
 [CHANGE LICENSES](change-licenses.md)  
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  

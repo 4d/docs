@@ -1,12 +1,12 @@
 ---
-id: get-locked-records-info
-title: Get locked records info
-slug: /commands/get-locked-records-info
+id: locked-records-info
+title: Locked records info
+slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get locked records info.Syntax-->**Get locked records info** ( *aTabela* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get locked records info.Params-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTabela* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Locked records info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Tabela da qual obter os registros bloqueados |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get locked records info.Summary-->O comando **Get locked records info** devolve um objeto que contém diferente informação sobre os registros bloqueados atualmente em *aTabela*.<!-- END REF-->
+<!--REF #_command_.Locked records info.Summary-->O comando **Locked records info** devolve um objeto que contém diferente informação sobre os registros bloqueados atualmente em *aTabela*.<!-- END REF-->
 
 **Nota**: o comando funciona só com 4D e 4D Server. Devolve um objeto não válido quando for chamado desde um 4D remoto. Entretanto, pode ser chamado neste contexto se a opção "Executar em servidor" estiver ativada para o método de chamada. Nesse caso, o objeto devolvido conterá informação sobre o servidor. Quando chamar desde um componente, sempre se aplica ao banco de dados local.  
   
@@ -33,7 +33,7 @@ Cada elemento da coleção "description object" identifica um registro bloqueado
 | **Propriedade**   | **Tipo**      | **Descrição**                                                                                                                                                                                                                                                              |
 | ----------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | contextID         | UUID (Cadeia) | UUID do contexto da base responsável do bloqueio                                                                                                                                                                                                                           |
-| contextAttributes | Objeto        | Objeto que contém a mesma informação que o comando [LOCKED BY](locked-by.md) aplicado ao registro, a diferença é que **Get locked records info** devolve o nome do usuário definido no sistema e não o do usuário 4D, assim como informação adicional (ver mais a frente). |
+| contextAttributes | Objeto        | Objeto que contém a mesma informação que o comando [LOCKED BY](locked-by.md) aplicado ao registro, a diferença é que **Locked records info** devolve o nome do usuário definido no sistema e não o do usuário 4D, assim como informação adicional (ver mais a frente). |
 | recordNumber      | Inteiro longo | Número de registro do registro bloqueado                                                                                                                                                                                                                                   |
 
 O objeto *contextAttributes* tem as propriedades abaixo:
@@ -72,7 +72,7 @@ Se o registro foi bloqueado pela petição $lock REST (a nivel de sessão):
 Execute o seguinte código:
 
 ```4d
- $vOlocked :=Get locked records info([Table])
+ $vOlocked :=Locked records info([Table])
 ```
 
 Se dois registros estão bloqueados na tabela \[Table\], o seguinte objeto se devolve em $vOlocked:

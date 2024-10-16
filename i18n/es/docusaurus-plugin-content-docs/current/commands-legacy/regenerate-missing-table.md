@@ -31,8 +31,8 @@ Este método regenera todas las tablas faltantes eventualmente presentes en la b
  $SizeArray:=Size of array($arrMissingTables)
  If($SizeArray#0)
   // Llena el array con los nombres de todas las tablas en la base
-    ARRAY TEXT(arrTables;Get last table number)
-    If(Get last table number>0) //Si hay tablas
+    ARRAY TEXT(arrTables;Last table number)
+    If(Last table number>0) //Si hay tablas
        For($vlTables;Size of array(arrTables);1;-1)
           If(Is table number valid($vlTables))
              arrTables{$vlTables}:=Table name($vlTables)

@@ -1,12 +1,12 @@
 ---
 id: get-application-info
-title: Get application info
+title: Application info
 slug: /commands/get-application-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application info.Syntax-->**Get application info** -> Resultado<!-- END REF-->
-<!--REF #_command_.Get application info.Params-->
+<!--REF #_command_.Application info.Syntax-->**Application info** -> Resultado<!-- END REF-->
+<!--REF #_command_.Application info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Object | &#8592; | Informação sobre a atividade da aplicação ativa |
@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 #### Exemplo 1 
 
-<!--REF #_command_.Get application info.Summary-->O comando **Get application info** retorna um objeto que traz informação detalhada sobre a atividade da aplicação ativa e da configuração de rede.<!-- END REF-->
+<!--REF #_command_.Application info.Summary-->O comando **Application info** retorna um objeto que traz informação detalhada sobre a atividade da aplicação ativa e da configuração de rede.<!-- END REF-->
 
-O comando pode ser executado em aplicações rodando tanto em modo standalone e ambientes cliente/servidor. A informação retornada depende de onde **Get application info** for executado. Por exemplo, se executado a partir de um 4D remoto, a informação se aplica apenas a uma workstation remota. Entretanto, se o comando for selecionado, a informação retornada aplica ao servidor.
+O comando pode ser executado em aplicações rodando tanto em modo standalone e ambientes cliente/servidor. A informação retornada depende de onde **Application info** for executado. Por exemplo, se executado a partir de um 4D remoto, a informação se aplica apenas a uma workstation remota. Entretanto, se o comando for selecionado, a informação retornada aplica ao servidor.
 
 O objeto retornado contém as propriedades abaixo:
 
@@ -43,7 +43,7 @@ O objeto retornado contém as propriedades abaixo:
 | useQUICNetworkLayer     | booleano   | True si la capa de red QUIC utilizada para el servidor de la aplicación y el servidor db4d (beta en 4D v20, ver *Página Compatibilidade*). No devuelto en entorno monopuesto. Valores posibles: true, false. Para más información ver este blog post.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | false                                           |
 | volumeShadowCopyStatus  | string     | Retorna o estado do Serviço Volume Shadow Copy. Só para Windows. Para saber mais, veja *Usar Serviço Volume Shadow Copy em Windows*.  Valores possíveis: <table> <thead> <tr> <td>Constante</td> <td>Valor</td> <td>Comentário</td> </tr> </thead> <tbody> <tr> <td>vss available</td> <td>available</td> <td>O serviço está disponível<br/></td> </tr><tr> <td>vss error</td> <td>error</td> <td>O serviço experimentou um erro.</td> </tr><tr> <td>vss not available</td> <td>notAvailable</td> <td>O serviço não está disponível</td> </tr><tr> <td>vss update required</td> <td>updateRequired</td> <td>O serviço precisa ser atualizado</td> </tr> </tbody> </table> | "available"                                     |
 
-(\*) Em Windows, deve ser iniciado previamente este contador, por exemplo, mediante uma chamada ao comando **Get application info** em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md).
+(\*) Em Windows, deve ser iniciado previamente este contador, por exemplo, mediante uma chamada ao comando **Application info** em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md).
 
 #### Exemplo 2 
 
@@ -51,7 +51,7 @@ O código abaixo retorna um objeto que contém informação sobre a aplicação 
 
 ```4d
  var $appInfo : Object
- $appInfo:=Get application info
+ $appInfo:=Application info
 ```
 
 Se o código for executado de um ambiente standalone, o objeto vai conter (por exemplo):
@@ -76,5 +76,5 @@ Se o código for executado em 4D Server, o objeto contém (por exemplo):
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
-[Get system info](get-system-info.md)  
+[System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  

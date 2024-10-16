@@ -1,12 +1,12 @@
 ---
-id: get-localized-document-path
-title: Get localized document path
-slug: /commands/get-localized-document-path
+id: localized-document-path
+title: Localized document path
+slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized document path.Syntax-->**Get localized document path** ( *relativePath* ) -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get localized document path.Params-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *relativePath* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Localized document path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | relativePath | Text | &#8594;  | ローカライズされたバージョンを取得したいドキュメントの相対パス名 |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get localized document path.Summary-->Get localized document path コマンドはxxx.<!-- END REF-->lprojフォルダ内に存在する、相対パスで指定されたドキュメントの完全 (絶対) パス名を返します。
+<!--REF #_command_.Localized document path.Summary-->Localized document path コマンドはxxx.<!-- END REF-->lprojフォルダ内に存在する、相対パスで指定されたドキュメントの完全 (絶対) パス名を返します。
 
 このコマンドは**Resources**フォルダおよびxxx.lproj (xxxは言語コード) サブフォルダが存在するマルチ言語アプリケーションアーキテクチャで使用しなければなりません。このアーキテクチャにおいて、4Dはローカライズされた.xliffタイプや画像などのファイルを自動でサポートします。しかし開発者は他のタイプのファイルについても同じメカニズムを使用する必要があるかもしれません。
 
@@ -55,7 +55,7 @@ Resources フォルダの中身は以下のようになっています:
 カレント言語に適用する.xslファイルを決定するには、以下のコードを使用します:
 
 ```4d
- $myxsl:=Get localized document path("xsl/log.xsl")
+ $myxsl:=Localized document path("xsl/log.xsl")
 ```
 
 カレントの言語が日本語である場合 (ja)、コマンドは以下を返します:

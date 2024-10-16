@@ -24,7 +24,7 @@ The following information is provided for each line:
 	+ **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
 	+ **Process Details**: Additional information concerning the table, field, process or client, depending on the type of operation
 
-> Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. More information can be found in this command description.
+> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. More information can be found in this command description.
 
 The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 
@@ -39,7 +39,7 @@ You can resume monitoring of the operations by performing the same action as for
 
 The RTM page can display additional information, if necessary, for each listed operation.
 
-To access the advanced mode for an operation, press **Shift** and select the desired operation. All available information is then displayed in the "Process Details" area without any filtering (as returned by the `GET ACTIVITY SNAPSHOT` command). Available information depends on the operation selected.
+To access the advanced mode for an operation, press **Shift** and select the desired operation. All available information is then displayed in the "Process Details" area without any filtering (as returned by the `ACTIVITY SNAPSHOT` command). Available information depends on the operation selected.
 
 Here is an example of information displayed in standard mode:
 

@@ -77,6 +77,6 @@ Si vous passez **Vrai** dans le paramètre *avecCache*, la commande retourne les
 
 #### Voir aussi 
 
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Get process activity](get-process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  

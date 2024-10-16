@@ -1,12 +1,12 @@
 ---
-id: get-activity-snapshot
-title: GET ACTIVITY SNAPSHOT
-slug: /commands/get-activity-snapshot
+id: activity-snapshot
+title: ACTIVITY SNAPSHOT
+slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Syntax-->**GET ACTIVITY SNAPSHOT** ( tabActivités | tabUUID ; *tabDébut* ; *tabDurée* ; *tabInfo* {; *tabDétails*}{; *} )<!-- END REF-->
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Params-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( tabActivités | tabUUID ; *tabDébut* ; *tabDurée* ; *tabInfo* {; *tabDétails*}{; *} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabActivités &#124; tabUUID | Tableau objet, Tableau texte | &#8592; | Description complète des opérations (tableau objet) ouUUIDs des opérations (tableau texte) |
@@ -20,15 +20,15 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Summary-->La commande **GET ACTIVITY SNAPSHOT** retourne un ou plusieurs tableau(x) décrivant les opérations en cours de progression sur les données de 4D.<!-- END REF--> Ces opérations entraînent généralement l’affichage d’une fenêtre de progression. 
+<!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->La commande **ACTIVITY SNAPSHOT** retourne un ou plusieurs tableau(x) décrivant les opérations en cours de progression sur les données de 4D.<!-- END REF--> Ces opérations entraînent généralement l’affichage d’une fenêtre de progression. 
 
 Cette commande permet d’obtenir un instantané des *n* opérations les plus coûteuses en temps et/ou les plus fréquentes en cours d’exécution telles que l’écriture du cache ou l’exécution de formules.
 
-**Note :** Les informations retournées par la commande **GET ACTIVITY SNAPSHOT** sont les mêmes que celles affichées dans la page "Moniteur temps réel" (MTR) de la fenêtre d’administration de 4D Server (cf. *guide de référence de 4D Server*). 
+**Note :** Les informations retournées par la commande **ACTIVITY SNAPSHOT** sont les mêmes que celles affichées dans la page "Moniteur temps réel" (MTR) de la fenêtre d’administration de 4D Server (cf. *guide de référence de 4D Server*). 
 
-Par défaut, **GET ACTIVITY SNAPSHOT** traite des opérations effectuées en local (avec 4D monoposte, 4D Server ou 4D en mode distant). Avec 4D en mode distant cependant, vous pouvez également obtenir l’aperçu des opérations effectuées sur le serveur : il suffit pour cela de passer l’étoile (*\**) en dernier paramètre. Dans ce cas, les données du serveur seront récupérées localement. Le paramètre *\** est ignoré lorsque la commande est exécutée sur 4D Server ou 4D monoposte. 
+Par défaut, **ACTIVITY SNAPSHOT** traite des opérations effectuées en local (avec 4D monoposte, 4D Server ou 4D en mode distant). Avec 4D en mode distant cependant, vous pouvez également obtenir l’aperçu des opérations effectuées sur le serveur : il suffit pour cela de passer l’étoile (*\**) en dernier paramètre. Dans ce cas, les données du serveur seront récupérées localement. Le paramètre *\** est ignoré lorsque la commande est exécutée sur 4D Server ou 4D monoposte. 
 
-La commande **GET ACTIVITY SNAPSHOT** admet deux syntaxes : 
+La commande **ACTIVITY SNAPSHOT** admet deux syntaxes : 
 
 * syntaxe utilisant uniquement un tableau objet.
 * syntaxe utilisant plusieurs tableaux.
@@ -93,7 +93,7 @@ Cette méthode, exécutée dans un process séparé sous 4D ou 4D Server, permet
  ARRAY TEXT(tabInfo;0)
  
  Repeat
-       GET ACTIVITY SNAPSHOT(tabUUID;tabDébut;tabDurée;tabInfo)
+       ACTIVITY SNAPSHOT(tabUUID;tabDébut;tabDurée;tabInfo)
        If(Size of array(tabUUID)>0)
           TRACE //appel du débogueur
        End if

@@ -98,5 +98,5 @@ Se quiser obter a coleção de todas as sessões de usuário:
 #### Ver também 
 
 [PROCESS PROPERTIES](process-properties.md)  
-[Session storage by ID](session-storage-by-id.md)  
+[Session storage](session-storage.md)  
 [WEB Get server info](web-get-server-info.md)  

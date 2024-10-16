@@ -1,12 +1,12 @@
 ---
-id: get-system-info
-title: Get system info
-slug: /commands/get-system-info
+id: system-info
+title: System info
+slug: /commands/system-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get system info.Syntax-->**Get system info**  -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get system info.Params-->
+<!--REF #_command_.System info.Syntax-->**System info**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.System info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Object | &#8592; | システム情報 |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get system info.Summary-->**Get system info** コマンドは、そのコマンドが実行されたOS とマシンのシステムのハードウェア/ソフトウェア両面の特性に関する情報を格納したオブジェクトを返します。<!-- END REF-->
+<!--REF #_command_.System info.Summary-->**System info** コマンドは、そのコマンドが実行されたOS とマシンのシステムのハードウェア/ソフトウェア両面の特性に関する情報を格納したオブジェクトを返します。<!-- END REF-->
 
 コマンドは、以下のような情報を返します:
 
@@ -61,7 +61,7 @@ Windows マシン上で以下のコードを実行した場合:
 
 ```4d
  var $systemInfo : Object
- $systemInfo:=Get system info
+ $systemInfo:=System info
 ```
 
 以下のような情報を格納しているオブジェクトを返します:
@@ -73,6 +73,6 @@ Windows マシン上で以下のコードを実行した場合:
 #### 参照 
 
 *\_o\_Gestalt*  
-[Get application info](get-application-info.md)  
+[Application info](get-application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  

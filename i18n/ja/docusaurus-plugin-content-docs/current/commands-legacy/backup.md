@@ -33,6 +33,6 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[GET BACKUP INFORMATION](get-backup-information.md)  
+[BACKUP INFO](backup-info.md)  
 *On Backup Startupデータベースメソッド*  
 [RESTORE](restore.md)  

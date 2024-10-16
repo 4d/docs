@@ -366,22 +366,22 @@ Nome (Número)
 [Generate UUID](https://doc.4d.com/4dv20/help/command/en/page1066.html) (1066) -
 [Get 4D file](https://doc.4d.com/4dv20/help/command/en/page1418.html) (1418) -
 [Get 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html) (485) -
-[Get action info](https://doc.4d.com/4dv20/help/command/en/page1442.html) (1442) -
-[GET ACTIVITY SNAPSHOT](https://doc.4d.com/4dv20/help/command/en/page1277.html) (1277) -
+[Action info](https://doc.4d.com/4dv20/help/command/en/page1442.html) (1442) -
+[ACTIVITY SNAPSHOT](https://doc.4d.com/4dv20/help/command/en/page1277.html) (1277) -
 [Get adjusted blobs cache priority](https://doc.4d.com/4dv20/help/command/en/page1428.html) (1428) -
 [Get adjusted index cache priority](https://doc.4d.com/4dv20/help/command/en/page1427.html) (1427) -
 [Get adjusted table cache priority](https://doc.4d.com/4dv20/help/command/en/page1426.html) (1426) -
 [GET ALLOWED METHODS](https://doc.4d.com/4dv20/help/command/en/page908.html) (908) -
 [Get application color scheme](https://doc.4d.com/4dv20/help/command/en/page1763.html) (1763) -
-[Get application info](https://doc.4d.com/4dv20/help/command/en/page1599.html) (1599) -
+[Application info](https://doc.4d.com/4dv20/help/command/en/page1599.html) (1599) -
 [Get assert enabled](https://doc.4d.com/4dv20/help/command/en/page1130.html) (1130) -
 [GET AUTOMATIC RELATIONS](https://doc.4d.com/4dv20/help/command/en/page899.html) (899) -
-[GET BACKUP INFORMATION](https://doc.4d.com/4dv20/help/command/en/page888.html) (888) -
+[BACKUP INFO](https://doc.4d.com/4dv20/help/command/en/page888.html) (888) -
 [Get cache size](https://doc.4d.com/4dv20/help/command/en/page1432.html) (1432) -
-[Get call chain](https://doc.4d.com/4dv20/help/command/en/page1662.html) (1662) -
+[Call chain](https://doc.4d.com/4dv20/help/command/en/page1662.html) (1662) -
 [Get current printer](https://doc.4d.com/4dv20/help/command/en/page788.html) (788) -
 [Get database localization](https://doc.4d.com/4dv20/help/command/en/page1009.html) (1009) -
-[Get database measures](https://doc.4d.com/4dv20/help/command/en/page1314.html) (1314) -
+[Database measures](https://doc.4d.com/4dv20/help/command/en/page1314.html) (1314) -
 [Get database parameter](https://doc.4d.com/4dv20/help/command/en/page643.html) (643) -
 [Get default user](https://doc.4d.com/4dv20/help/command/en/page826.html) (826) -
 [GET DOCUMENT ICON](https://doc.4d.com/4dv20/help/command/en/page700.html) (700) -
@@ -402,13 +402,13 @@ Nome (Número)
 [GET HIGHLIGHTED RECORDS](https://doc.4d.com/4dv20/help/command/en/page902.html) (902) -
 [Get indexed string](https://doc.4d.com/4dv20/help/command/en/page510.html) (510) -
 [GET LAST ERROR STACK](https://doc.4d.com/4dv20/help/command/en/page1015.html) (1015) -
-[Get last field number](https://doc.4d.com/4dv20/help/command/en/page255.html) (255) -
-[Get last query path](https://doc.4d.com/4dv20/help/command/en/page1045.html) (1045) -
-[Get last query plan](https://doc.4d.com/4dv20/help/command/en/page1046.html) (1046) -
-[Get last table number](https://doc.4d.com/4dv20/help/command/en/page254.html) (254) -
+[Last field number](https://doc.4d.com/4dv20/help/command/en/page255.html) (255) -
+[Last query path](https://doc.4d.com/4dv20/help/command/en/page1045.html) (1045) -
+[Last query plan](https://doc.4d.com/4dv20/help/command/en/page1046.html) (1046) -
+[Last table number](https://doc.4d.com/4dv20/help/command/en/page254.html) (254) -
 [Get last update log path](https://doc.4d.com/4dv20/help/command/en/page1301.html) (1301) -
-[Get license info](https://doc.4d.com/4dv20/help/command/en/page1489.html) (1489) -
-[Get license usage](https://doc.4d.com/4dv20/help/command/en/page1782.html) (1782) -
+[License info](https://doc.4d.com/4dv20/help/command/en/page1489.html) (1489) -
+[License usage](https://doc.4d.com/4dv20/help/command/en/page1782.html) (1782) -
 [GET LIST ITEM](https://doc.4d.com/4dv20/help/command/en/page378.html) (378) -
 [Get list item font](https://doc.4d.com/4dv20/help/command/en/page954.html) (954) -
 [GET LIST ITEM ICON](https://doc.4d.com/4dv20/help/command/en/page951.html) (951) -
@@ -416,11 +416,11 @@ Nome (Número)
 [GET LIST ITEM PARAMETER ARRAYS](https://doc.4d.com/4dv20/help/command/en/page1195.html) (1195) -
 [GET LIST ITEM PROPERTIES](https://doc.4d.com/4dv20/help/command/en/page631.html) (631) -
 [GET LIST PROPERTIES](https://doc.4d.com/4dv20/help/command/en/page632.html) (632) -
-[Get localized document path](https://doc.4d.com/4dv20/help/command/en/page1105.html) (1105) -
-[Get localized string](https://doc.4d.com/4dv20/help/command/en/page991.html) (991) -
-[Get locked records info](https://doc.4d.com/4dv20/help/command/en/page1316.html) (1316) -
+[Localized document path](https://doc.4d.com/4dv20/help/command/en/page1105.html) (1105) -
+[Localized string](https://doc.4d.com/4dv20/help/command/en/page991.html) (991) -
+[Locked records info](https://doc.4d.com/4dv20/help/command/en/page1316.html) (1316) -
 [GET MACRO PARAMETER](https://doc.4d.com/4dv20/help/command/en/page997.html) (997) -
-[GET MEMORY STATISTICS](https://doc.4d.com/4dv20/help/command/en/page1118.html) (1118) -
+[MEMORY STATISTICS](https://doc.4d.com/4dv20/help/command/en/page1118.html) (1118) -
 [Get menu bar reference](https://doc.4d.com/4dv20/help/command/en/page979.html) (979) -
 [Get menu item](https://doc.4d.com/4dv20/help/command/en/page422.html) (422) -
 [GET MENU ITEM ICON](https://doc.4d.com/4dv20/help/command/en/page983.html) (983) -
@@ -434,8 +434,8 @@ Nome (Número)
 [GET MENU ITEMS](https://doc.4d.com/4dv20/help/command/en/page977.html) (977) -
 [Get menu title](https://doc.4d.com/4dv20/help/command/en/page430.html) (430) -
 [GET MISSING TABLE NAMES](https://doc.4d.com/4dv20/help/command/en/page1125.html) (1125) -
-[Get Monitored Activity](https://doc.4d.com/4dv20/help/command/en/page1713.html) (1713) -
-[GET MOUSE](https://doc.4d.com/4dv20/help/command/en/page468.html) (468) -
+[Monitored activity](https://doc.4d.com/4dv20/help/command/en/page1713.html) (1713) -
+[MOUSE POSITION](https://doc.4d.com/4dv20/help/command/en/page468.html) (468) -
 [GET PASTEBOARD DATA](https://doc.4d.com/4dv20/help/command/en/page401.html) (401) -
 [GET PASTEBOARD DATA TYPE](https://doc.4d.com/4dv20/help/command/en/page958.html) (958) -
 [Get picture file name](https://doc.4d.com/4dv20/help/command/en/page1171.html) (1171) -
@@ -462,7 +462,7 @@ Nome (Número)
 [GET RESOURCE](https://doc.4d.com/4dv20/help/command/en/page508.html) (508) -
 [Get resource name](https://doc.4d.com/4dv20/help/command/en/page513.html) (513) -
 [Get resource properties](https://doc.4d.com/4dv20/help/command/en/page515.html) (515) -
-[GET RESTORE INFORMATION](https://doc.4d.com/4dv20/help/command/en/page889.html) (889) -
+[RESTORE INFO](https://doc.4d.com/4dv20/help/command/en/page889.html) (889) -
 [Get selected menu item parameter](https://doc.4d.com/4dv20/help/command/en/page1005.html) (1005) -
 [GET SERIAL INFORMATION](https://doc.4d.com/4dv20/help/command/en/page696.html) (696) -
 [GET SERIAL PORT MAPPING](https://doc.4d.com/4dv20/help/command/en/page909.html) (909) -
@@ -470,8 +470,8 @@ Nome (Número)
 [GET STYLE SHEET INFO](https://doc.4d.com/4dv20/help/command/en/page1256.html) (1256) -
 [Get subrecord key](https://doc.4d.com/4dv20/help/command/en/page1137.html) (1137) -
 [GET SYSTEM FORMAT](https://doc.4d.com/4dv20/help/command/en/page994.html) (994) -
-[Get system info](https://doc.4d.com/4dv20/help/command/en/page1571.html) (1571) -
-[Get table fragmentation](https://doc.4d.com/4dv20/help/command/en/page1127.html) (1127) -
+[System info](https://doc.4d.com/4dv20/help/command/en/page1571.html) (1571) -
+[Table fragmentation](https://doc.4d.com/4dv20/help/command/en/page1127.html) (1127) -
 [GET TABLE PROPERTIES](https://doc.4d.com/4dv20/help/command/en/page687.html) (687) -
 [GET TABLE TITLES](https://doc.4d.com/4dv20/help/command/en/page803.html) (803) -
 [Get text from pasteboard](https://doc.4d.com/4dv20/help/command/en/page524.html) (524) -
@@ -1066,7 +1066,7 @@ Nome (Número)
 [SEND VARIABLE](https://doc.4d.com/4dv20/help/command/en/page80.html) (80) -
 [Sequence number](https://doc.4d.com/4dv20/help/command/en/page244.html) (244) -
 [Session](https://doc.4d.com/4dv20/help/command/en/page1714.html) (1714) -
-[Session storage by id](https://doc.4d.com/4dv20R/help/command/en/page1839.html) (1839) -
+[Session storage](https://doc.4d.com/4dv20R/help/command/en/page1839.html) (1839) -
 [SET ABOUT](https://doc.4d.com/4dv20/help/command/en/page316.html) (316) -
 [SET ALLOWED METHODS](https://doc.4d.com/4dv20/help/command/en/page805.html) (805) -
 [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv20/help/command/en/page1762.html) (1762) -

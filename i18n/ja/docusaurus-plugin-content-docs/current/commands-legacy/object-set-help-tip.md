@@ -57,7 +57,7 @@ displayed_sidebar: docs
        SET DATABASE PARAMETER(Tips delay;0) // Tipsはマウスが停止したら即座に表示
        SET DATABASE PARAMETER(Tips duration;60*10) // 最大10秒間表示
     :(Form event code=On Mouse Move) //v17 以前ではForm event を使用
-       GET MOUSE($x;$y;$b)
+       MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
        $y:=$y-$top
@@ -103,7 +103,7 @@ displayed_sidebar: docs
  
   //#1 : どの行をホバーしているのか探す
  
-       GET MOUSE($mouseX;$mouseY;$mouseZ)
+       MOUSE POSITION($mouseX;$mouseY;$mouseZ)
        LISTBOX GET CELL POSITION(*;"Commands List";$mouseX;$mouseY;$col;$row)
  
   //#2 : 対応するヘルプTipsを設定

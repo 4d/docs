@@ -1,12 +1,12 @@
 ---
-id: get-localized-string
-title: Get localized string
-slug: /commands/get-localized-string
+id: localized-string
+title: Localized string
+slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized string.Syntax-->**Get localized string** ( *resName* ) -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get localized string.Params-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Localized string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resName | Text | &#8594;  | resname属性値 |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get localized string.Summary-->Get localized stringコマンドは、*resName*の属性によって指定された、カレントランゲージの文字列を返します。<!-- END REF-->
+<!--REF #_command_.Localized string.Summary-->Localized stringコマンドは、*resName*の属性によって指定された、カレントランゲージの文字列を返します。<!-- END REF-->
 
 このコマンドは、XLIFFのアーキテクチャ内だけで機能します。このタイプのアーキテクチャに関する詳細は、*Design Reference*マニュアルにあるXLIFFサポートを参照してください。
 
@@ -42,7 +42,7 @@ Note: XLIFFは大文字小文字を区別します。
 以下のステートメントを実行後:
 
 ```4d
- $JAvalue:=Get localized string("Show on disk")
+ $JAvalue:=Localized string("Show on disk")
 ```
   
   

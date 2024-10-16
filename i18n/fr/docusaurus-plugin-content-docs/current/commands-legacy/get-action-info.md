@@ -1,12 +1,12 @@
 ---
-id: get-action-info
-title: Get action info
-slug: /commands/get-action-info
+id: action-info
+title: Action info
+slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get action info.Syntax-->**Get action info** ( *action* {; *cible*} ) -> Résultat<!-- END REF-->
-<!--REF #_command_.Get action info.Params-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *cible*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Action info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Nom de l'action standard ou syntaxe incluant un paramètre si celui-ci est requis |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get action info.Summary-->La commande **Get action info** retourne plusieurs informations, incluant la disponibilité et le statut à propos de l'*action* définie dans la *cible*, selon le contexte de l'application courante.<!-- END REF--> 
+<!--REF #_command_.Action info.Summary-->La commande **Action info** retourne plusieurs informations, incluant la disponibilité et le statut à propos de l'*action* définie dans la *cible*, selon le contexte de l'application courante.<!-- END REF--> 
 
 Dans *action*, passez l'action standard à vérifier. Ce peut être une chaîne ou une constante du thème *Action standard*. Certaines actions acceptent un élément cible et des paramètres. Dans ce cas, vous devez utiliser la syntaxe requise, par exemple *"gotoPage?value=2"* ou *paragraph/backgroundPositionV?value=top.*
 
@@ -34,7 +34,7 @@ Vous pouvez passer dans *cible* le contexte formulaire où l'*action* doit être
 
 **Note :** Si *cible* est omis, par défaut, c'est le contexte ak current form qui est utilisé.
 
-La commande **Get action info** retourne les informations sous la forme d'un Objet contenant les propriétés ci-dessous :
+La commande **Action info** retourne les informations sous la forme d'un Objet contenant les propriétés ci-dessous :
 
 | **Propriété** | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -53,7 +53,7 @@ Vous voulez savoir si l'action standard **Copier** est disponible (c'est-à-dire
 ```4d
  var $actionInfo : Object
  var $isEnabled : Boolean
- $actionInfo:=Get action info(ak copy)
+ $actionInfo:=Action info(ak copy)
  If(Not(Undefined($actionInfo.enabled)) //l'action est définie dans le process
     If(OB Get($actionInfo;"enabled"))
        ... //la copie est disponible

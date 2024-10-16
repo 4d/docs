@@ -73,7 +73,7 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
   **注**:
 
   - このオプションを設定すると、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/ja/page642.html) コマンドにより "旧式ネットワークレイヤーを使用する" オプションが設定されていても無視されます。
-  - 4Dアプリケーションが QUICネットワークレイヤーで動作しているかどうかは、[Get application info](https://doc.4d.com/4Dv20/help/command/ja/page1599.html) コマンドで確認できます。
+  - 4Dアプリケーションが QUICネットワークレイヤーで動作しているかどうかは、[Application info](https://doc.4d.com/4Dv20/help/command/ja/page1599.html) コマンドで確認できます。
   - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
   - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
   - QUICレイヤーオプションを選択すると:

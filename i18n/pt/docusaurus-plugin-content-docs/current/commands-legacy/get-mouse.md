@@ -1,12 +1,12 @@
 ---
-id: get-mouse
-title: GET MOUSE
-slug: /commands/get-mouse
+id: mouse-position
+title: MOUSE POSITION
+slug: /commands/mouse-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MOUSE.Syntax-->**GET MOUSE** ( *mouseX* ; *mouseY* ; *botaoMouse* {; *} )<!-- END REF-->
-<!--REF #_command_.GET MOUSE.Params-->
+<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *mouseX* ; *mouseY* ; *botaoMouse* {; *} )<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | mouseX | Real | &#8592; | Coordenadas horizontais do mouse |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.GET MOUSE.Summary-->O comando GET MOUSE retorna o estado atual do mouse.<!-- END REF-->  
+<!--REF #_command_.MOUSE POSITION.Summary-->O comando MOUSE POSITION retorna o estado atual do mouse.<!-- END REF-->  
 
 As coordenadas horizontal e vertical são retornadas em *mouseX* e *mouseY*. Se passar o parâmetro *\** , as coordenadas são expressas em relação à tela (modo macOS e Windows SDI) ou a janela da aplicação (modo Windows MDI). Se omitir o parâmetro \*, são expressas em relação à janela do formulário atual (se houver) do processo atual. 
 

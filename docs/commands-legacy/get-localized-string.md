@@ -1,12 +1,12 @@
 ---
-id: get-localized-string
-title: Get localized string
-slug: /commands/get-localized-string
+id: localized-string
+title: Localized string
+slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized string.Syntax-->**Get localized string** ( *resName* ) -> Function result<!-- END REF-->
-<!--REF #_command_.Get localized string.Params-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Localized string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resName | Text | &#8594;  | Name of resname attribute |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get localized string.Summary-->The **Get localized string** command returns the value of the string designated by the *resName* attribute for the current language.<!-- END REF-->
+<!--REF #_command_.Localized string.Summary-->The **Localized string** command returns the value of the string designated by the *resName* attribute for the current language.<!-- END REF-->
 
 This command only works within an XLIFF architecture. For more information about this type of architecture, please refer to the description of XLIFF support in the *Design Reference* manual.
 
@@ -42,7 +42,7 @@ Here is an extract from an .xlf file:
 After executing the following statement:
 
 ```4d
- $FRvalue:=Get localized string("Show on disk")
+ $FRvalue:=Localized string("Show on disk")
 ```
 
 ... if the current language is French, $FRvalue contains “Montrer sur le disque”.

@@ -1,12 +1,12 @@
 ---
-id: get-call-chain
-title: Get call chain
-slug: /commands/get-call-chain
+id: call-chain
+title: Call chain
+slug: /commands/call-chain
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get call chain.Syntax-->**Get call chain** -> Function result<!-- END REF-->
-<!--REF #_command_.Get call chain.Params-->
+<!--REF #_command_.Call chain.Syntax-->**Call chain** -> Function result<!-- END REF-->
+<!--REF #_command_.Call chain.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Collection | &#8592; | Collection of objects describing the call chain within a process |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get call chain.Summary-->The **Get call chain** command returns a collection of objects describing each step of the method call chain within the current process.<!-- END REF--> It provides the same information as the Debugger window. It has the added benefit of being able to be executed from any 4D environment, including compiled mode.
+<!--REF #_command_.Call chain.Summary-->The **Call chain** command returns a collection of objects describing each step of the method call chain within the current process.<!-- END REF--> It provides the same information as the Debugger window. It has the added benefit of being able to be executed from any 4D environment, including compiled mode.
 
 The command facilitates debugging by enabling the identification of the method called, the component that called it, and the line number where the call was made. Each object in the returned collection contains the following properties:
 
@@ -34,7 +34,7 @@ The following code returns a collection of objects containing information about 
 
 ```4d
  var $currentCallChain : Collection
- $currentCallChain:=Get call chain
+ $currentCallChain:=Call chain
 ```
 
 If a project method is executed, the call chain could contain (for example):

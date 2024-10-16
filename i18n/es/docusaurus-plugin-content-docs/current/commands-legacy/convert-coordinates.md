@@ -66,12 +66,12 @@ Usted quiere abrir un menú emergente situado en la esquina inferior izquierda d
 
 #### Ejemplo 2 
 
-Usted quiere abrir una ventana emergente en la posición del cursor del ratón. En Windows, es necesario convertir las coordenadas desde [GET MOUSE](get-mouse.md) (con el parámetro \*) devolviendo valores basados en la posición de la ventana MDI:
+Usted quiere abrir una ventana emergente en la posición del cursor del ratón. En Windows, es necesario convertir las coordenadas desde [MOUSE POSITION](mouse-position.md) (con el parámetro \*) devolviendo valores basados en la posición de la ventana MDI:
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
  var $window : Integer
- GET MOUSE($mouseX;$mouseY;$mouseButtons)
+ MOUSE POSITION($mouseX;$mouseY;$mouseButtons)
  CONVERT COORDINATES($mouseX;$mouseY;XY Current window;XY Main window)
  $window:=Open form window("PopupWindowForm";Pop up form window;$mouseX;$mouseY)
  DIALOG("PopupWindowForm")

@@ -22,7 +22,7 @@ As informações seguintes são fornecidas para cada linha:
   - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
   - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
 
-> Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. Para mais informações, consultar a descrição deste comando.
+> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. Para mais informações, consultar a descrição deste comando.
 
 A página está ativa e é atualizada permanentemente assim que é exibida. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 
@@ -37,7 +37,7 @@ You can resume monitoring of the operations by performing the same action as for
 
 The RTM page can display additional information, if necessary, for each listed operation.
 
-Para acceder al modo avanzado de una operación, presione **Mayús** y seleccione la operación deseada. A continuación, se muestra toda la información disponible en el área "Detalles del proceso" sin ningún filtro (tal y como devuelve el comando `GET ACTIVITY SNAPSHOT`). As informações disponíveis dependem da operação selecionada.
+Para acceder al modo avanzado de una operación, presione **Mayús** y seleccione la operación deseada. A continuación, se muestra toda la información disponible en el área "Detalles del proceso" sin ningún filtro (tal y como devuelve el comando `ACTIVITY SNAPSHOT`). As informações disponíveis dependem da operação selecionada.
 
 Eis um exemplo de informações apresentadas no modo padrão:
 

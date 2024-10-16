@@ -1,12 +1,12 @@
 ---
-id: get-restore-information
-title: GET RESTORE INFORMATION
-slug: /commands/get-restore-information
+id: restore-info
+title: RESTORE INFO
+slug: /commands/restore-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESTORE INFORMATION.Syntax-->**GET RESTORE INFORMATION** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET RESTORE INFORMATION.Params-->
+<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | 取得する情報のタイプ |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.GET RESTORE INFORMATION.Summary-->GET RESTORE INFORMATIONコマンドを使用し、前回のデータベース自動復元に関連する情報を取得できます。<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Summary-->RESTORE INFOコマンドを使用し、前回のデータベース自動復元に関連する情報を取得できます。<!-- END REF-->
 
 *selector*には取得する情報タイプを渡します。この引数の値として、“”テーマ内の定数を使用できます:
 

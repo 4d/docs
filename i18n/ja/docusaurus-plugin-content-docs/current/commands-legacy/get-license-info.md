@@ -1,12 +1,12 @@
 ---
-id: get-license-info
-title: Get license info
-slug: /commands/get-license-info
+id: license-info
+title: License info
+slug: /commands/license-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get license info.Syntax-->**Get license info** -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get license info.Params-->
+<!--REF #_command_.License info.Syntax-->**License info** -> 戻り値<!-- END REF-->
+<!--REF #_command_.License info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Object | &#8592; | アクティブなライセンスについての情報 |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get license info.Summary-->**Get license info** コマンドはアクティブなライセンスについての詳細な情報を提供するオブジェクトを返します。<!-- END REF-->
+<!--REF #_command_.License info.Summary-->**License info** コマンドはアクティブなライセンスについての詳細な情報を提供するオブジェクトを返します。<!-- END REF-->
 
 コマンドがライセンスをローカルに使用しない4Dアプリケーション上(例:4Dリモートなど)で実行された場合、コマンドはヌルオブジェクトを返します。
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 ```4d
  var $obj : Object
- $obj:=Get license info
+ $obj:=License info
 ```
 
 *$obj* には例えば、以下のような情報が返されます:

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Tip:** This command requires advanced programming knowledge. Usually, you do not need to use **ON EVENT CALL** for working with events. While using forms, 4D handles the events and sends them to the appropriate forms and objects. 
 
-**Tip:** Commands such as [GET MOUSE](get-mouse.md), [Shift down](shift-down.md), etc., can be used for getting information about events. These commands can be called from within object methods to get the information you need about an event involving an object. Using them spares you the writing of an algorithm based on the **ON EVENT CALL** scheme.
+**Tip:** Commands such as [MOUSE POSITION](mouse-position.md), [Shift down](shift-down.md), etc., can be used for getting information about events. These commands can be called from within object methods to get the information you need about an event involving an object. Using them spares you the writing of an algorithm based on the **ON EVENT CALL** scheme.
 
 The scope of this command is the current working session. By default, the method is run in a separate local process. You can have only one event-handling method at a time. To stop catching events with a method, call **ON EVENT CALL** again and pass an empty string in *eventMethod*.
 
@@ -110,6 +110,6 @@ If you print a report using [PRINT SELECTION](print-selection.md), you do NOT ne
 #### See also 
 
 [FILTER EVENT](filter-event.md)  
-[GET MOUSE](get-mouse.md)  
+[MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  

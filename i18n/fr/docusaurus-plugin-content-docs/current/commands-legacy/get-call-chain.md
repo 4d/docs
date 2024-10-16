@@ -1,12 +1,12 @@
 ---
-id: get-call-chain
-title: Get call chain
-slug: /commands/get-call-chain
+id: call-chain
+title: Call chain
+slug: /commands/call-chain
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get call chain.Syntax-->**Get call chain** -> Résultat<!-- END REF-->
-<!--REF #_command_.Get call chain.Params-->
+<!--REF #_command_.Call chain.Syntax-->**Call chain** -> Résultat<!-- END REF-->
+<!--REF #_command_.Call chain.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Collection | &#8592; | Collection d'objets décrivant la chaîne d'appel d'une méthode dans un process |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get call chain.Summary-->La commande **Get call chain** retourne une collection d'objets décrivant chaque étape de la chaîne d'appel d'une méthode, dans le process courant.<!-- END REF--> Elle fournit les mêmes informations que celles qui sont affichées dans le débogeur. Elle a l'avantage de pouvoir être exécutée à partir de n'importe quel environnement 4D, y compris en mode compilé.
+<!--REF #_command_.Call chain.Summary-->La commande **Call chain** retourne une collection d'objets décrivant chaque étape de la chaîne d'appel d'une méthode, dans le process courant.<!-- END REF--> Elle fournit les mêmes informations que celles qui sont affichées dans le débogeur. Elle a l'avantage de pouvoir être exécutée à partir de n'importe quel environnement 4D, y compris en mode compilé.
 
 La commande facilite le débogage en permettant l'identification de la méthode qui est appelée, du composant qui l'a appelée et du numéro de ligne où l'appel a été effectué. Chaque objet de la collection retournée contient les propriétés suivantes :
 
@@ -34,7 +34,7 @@ Le code suivant retourne une collection d'objets contenant des informations sur 
 
 ```4d
  var $currentCallChain : Collection
- $currentCallChain:=Get call chain
+ $currentCallChain:=Call chain
 ```
 
 Si une méthode projet est exécutée, la chaîne d'appel peut contenir (par exemple) :

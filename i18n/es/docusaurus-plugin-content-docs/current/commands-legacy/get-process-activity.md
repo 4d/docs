@@ -101,5 +101,5 @@ Usted quiere obtener la colección de todas las sesiones de usuario:
 #### Ver también 
 
 [PROCESS PROPERTIES](process-properties.md)  
-[Session storage by ID](session-storage-by-id.md)  
+[Session storage](session-storage.md)  
 [WEB Get server info](web-get-server-info.md)  

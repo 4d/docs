@@ -1,12 +1,12 @@
 ---
-id: get-localized-string
-title: Get localized string
-slug: /commands/get-localized-string
+id: localized-string
+title: Localized string
+slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized string.Syntax-->**Get localized string** ( *resNome* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get localized string.Params-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resNome* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Localized string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | resNome | Text | &#8594;  | Nome do atributo recurso |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get localized string.Summary-->O comando Get localized string devolve o valor da string designada pelo atributo *resNome* para a linguagem atual.<!-- END REF-->
+<!--REF #_command_.Localized string.Summary-->O comando Localized string devolve o valor da string designada pelo atributo *resNome* para a linguagem atual.<!-- END REF-->
 
 Este comando apenas funciona dentro de uma arquitetura XLIFF. Para maior informação sobre este tipo de arquitectura, por favor consulte a descripção de compatibilidade de XLIFF no manual de Desenho.  
   
@@ -42,7 +42,7 @@ Este é um extrato do arquivo .xlf:
 Depois da execução do seguinte comando:
 
 ```4d
- $valorPT:=Get localized string("Show on disk")
+ $valorPT:=Localized string("Show on disk")
 ```
 
 ... se a linguagem atual for Português, , $valorPT contém “Mostrar no disco”.

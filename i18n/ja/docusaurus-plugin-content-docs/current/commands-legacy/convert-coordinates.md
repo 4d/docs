@@ -66,12 +66,12 @@ displayed_sidebar: docs
 
 #### 例題 2 
 
-マウスカーソルの位置にポップアップウィンドウを開きたい場合を考えます。Windowsにおいては、[GET MOUSE](get-mouse.md)コマンド(\* 引数を使用)はMDIウィンドウの位置に基づいた値を返すため、座標系を変換する必要があります:
+マウスカーソルの位置にポップアップウィンドウを開きたい場合を考えます。Windowsにおいては、[MOUSE POSITION](mouse-position.md)コマンド(\* 引数を使用)はMDIウィンドウの位置に基づいた値を返すため、座標系を変換する必要があります:
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
  var $window : Integer
- GET MOUSE($mouseX;$mouseY;$mouseButtons)
+ MOUSE POSITION($mouseX;$mouseY;$mouseButtons)
  CONVERT COORDINATES($mouseX;$mouseY;XY Current window;XY Main window)
  $window:=Open form window("PopupWindowForm";Pop up form window;$mouseX;$mouseY)
  DIALOG("PopupWindowForm")

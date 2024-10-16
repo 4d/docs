@@ -1,12 +1,12 @@
 ---
-id: get-locked-records-info
-title: Get locked records info
-slug: /commands/get-locked-records-info
+id: locked-records-info
+title: Locked records info
+slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get locked records info.Syntax-->**Get locked records info** ( *aTable* ) -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get locked records info.Params-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Locked records info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | ロックされたレコードの情報を取得したいテーブル |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get locked records info.Summary-->**Get locked records info** コマンドは、*aTable* で指定したテーブル内で現在ロックされているレコードについての様々な情報を含んだobject を返します。<!-- END REF-->
+<!--REF #_command_.Locked records info.Summary-->**Locked records info** コマンドは、*aTable* で指定したテーブル内で現在ロックされているレコードについての様々な情報を含んだobject を返します。<!-- END REF-->
 
 **注:** このコマンドは 4D と 4D Server に対してのみ有効です。4D リモートまたはコンポーネントから呼び出された場合には無効なオブジェクトを返します。ただし、呼び出しメソッドに"Execute on server" オプションが有効化されている場合には呼び出し可能です。この場合返されるオブジェクトには、サーバーの情報が含まれます。コンポーネントから呼び出された場合には、常にホストデータベースに対して適用されます。
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 | **プロパティ**         | **型**      | **詳細**                                                                                                                                                             |
 | ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | contextID         | UUID (文字列) | ロックをしているデータベースコンテキストのUUID                                                                                                                                          |
-| contextAttributes | オブジェクト     | [LOCKED BY](locked-by.md) コマンドをレコードに適用したときと似たような情報を含むオブジェクト。違いは、**Get locked records info** が返すのはシステムで定義されたユーザー名であり、4Dユーザーのユーザー名ではないという点と、追加の情報を返すという点です(以下の説明参照)。 |
+| contextAttributes | オブジェクト     | [LOCKED BY](locked-by.md) コマンドをレコードに適用したときと似たような情報を含むオブジェクト。違いは、**Locked records info** が返すのはシステムで定義されたユーザー名であり、4Dユーザーのユーザー名ではないという点と、追加の情報を返すという点です(以下の説明参照)。 |
 | recordNumber      | 倍長整数       | ロックされたレコードのレコード番号                                                                                                                                                  |
 
 *contextAttributes* オブジェクトは以下のプロパティから構成されています:
@@ -72,7 +72,7 @@ displayed_sidebar: docs
 以下のコードを実行します:
 
 ```4d
- $vOlocked :=Get locked records info([Table])
+ $vOlocked :=Locked records info([Table])
 ```
 
 \[Table\]のテーブル内にて二つのレコードがロックされていた場合には、以下の様なオブジェクトが$vOlockedに返されます:

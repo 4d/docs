@@ -1,12 +1,12 @@
 ---
-id: get-localized-document-path
-title: Get localized document path
-slug: /commands/get-localized-document-path
+id: localized-document-path
+title: Localized document path
+slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized document path.Syntax-->**Get localized document path** ( *rutaRelativa* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get localized document path.Params-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *rutaRelativa* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Localized document path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaRelativa | Text | &#8594;  | Ruta de acceso relativa del documento del cual obtener la versión localizada |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get localized document path.Summary-->El comando Get localized document path devuelve la ruta completa (absoluta) de un documento designado por *rutaRelativa* y ubicado en la carpeta xxx.<!-- END REF-->lproj.  
+<!--REF #_command_.Localized document path.Summary-->El comando Localized document path devuelve la ruta completa (absoluta) de un documento designado por *rutaRelativa* y ubicado en la carpeta xxx.<!-- END REF-->lproj.  
   
 Este comando debe usarse dentro de una arquitectura de aplicación multi-lenguaje basada en la presencia de una carpeta **Resources** y de las subcarpetas xxx.lproj (xxx representa un idioma). Con esta arquitectura, 4D soporta automáticamente archivos localizados de tipo XLIFF así como las imágenes, pero es posible que deba usar el mismo mecanismo para otros tipos de archivos.   
   
@@ -54,7 +54,7 @@ Estos son los contenidos de la carpeta Resources:
 Para utilizar un archivo .xsl adaptado al lenguaje actual, sólo debe pasar:
 
 ```4d
- $myxsl:=Get localized document path("xsl/log.xsl")
+ $myxsl:=Localized document path("xsl/log.xsl")
 ```
 
 Si el lenguaje actual es, por ejemplo, francés canadiense (fr-ca), el comando devuelve:

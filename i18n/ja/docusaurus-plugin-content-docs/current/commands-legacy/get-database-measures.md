@@ -1,12 +1,12 @@
 ---
-id: get-database-measures
-title: Get database measures
-slug: /commands/get-database-measures
+id: database-measures
+title: Database measures
+slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database measures.Syntax-->**Get database measures** {( *options* )} -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get database measures.Params-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *options* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Database measures.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | options | Object | &#8594;  | 戻り値を指定するオプション |
@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get database measures.Summary-->**Get database measures** コマンドは、4Dデータベースエンジンイベントについての詳細な情報を取得します。<!-- END REF-->返される情報には、ディスクやメモ リーキャッシュへの(もしくはからの)読み出し/書き込みアクセスに加え、データベースのインデックス、クエリ、並び替えの使用も含まれます。
+<!--REF #_command_.Database measures.Summary-->**Database measures** コマンドは、4Dデータベースエンジンイベントについての詳細な情報を取得します。<!-- END REF-->返される情報には、ディスクやメモ リーキャッシュへの(もしくはからの)読み出し/書き込みアクセスに加え、データベースのインデックス、クエリ、並び替えの使用も含まれます。
 
-**Get database measures** は全ての関連情報を内包する単一のオブジェクトを返します。*options* オブジェクト引数を使用して、その返される情報のオプションを指定する事ができます。
+**Database measures** は全ての関連情報を内包する単一のオブジェクトを返します。*options* オブジェクト引数を使用して、その返される情報のオプションを指定する事ができます。
 
 ##### 返されるオブジェクトの概要 
 
@@ -290,7 +290,7 @@ displayed_sidebar: docs
  var $param : Object
  var $measures : Object
  OB SET($param;"withHistory";True)
- $measures:=Get database measures($param)
+ $measures:=Database measures($param)
 ```
 
 #### 例題 2 
@@ -301,7 +301,7 @@ displayed_sidebar: docs
  var $oStats : Object
  var $oParams : Object
  OB SET($oParams;"path";"DB.cacheReadBytes")
- $oStats:=Get database measures($oParams)
+ $oStats:=Database measures($oParams)
 ```
 
 返されたオブジェクトには、以下の様な情報が含まれます:
@@ -326,5 +326,5 @@ displayed_sidebar: docs
  OB SET($oParams;"path";"DB.cacheReadBytes")
  OB SET($oParams;"withHistory";True)
  OB SET($oParams;"historyLength";2*60)
- $measures:=Get database measures($oParams)
+ $measures:=Database measures($oParams)
 ```

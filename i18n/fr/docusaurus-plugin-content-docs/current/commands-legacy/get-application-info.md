@@ -1,12 +1,12 @@
 ---
 id: get-application-info
-title: Get application info
+title: Application info
 slug: /commands/get-application-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application info.Syntax-->**Get application info** -> Résultat<!-- END REF-->
-<!--REF #_command_.Get application info.Params-->
+<!--REF #_command_.Application info.Syntax-->**Application info** -> Résultat<!-- END REF-->
+<!--REF #_command_.Application info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Object | &#8592; | Information sur l'activité de l'application courante |
@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 #### Exemple 1 
 
-<!--REF #_command_.Get application info.Summary-->La commande **Get application info** retourne un objet qui fournit des informations détaillées sur l'activité de l'application courante et sa configuration réseau.<!-- END REF-->
+<!--REF #_command_.Application info.Summary-->La commande **Application info** retourne un objet qui fournit des informations détaillées sur l'activité de l'application courante et sa configuration réseau.<!-- END REF-->
 
-La commande peut être exécutée sur des applications locales ou client/serveur. Les informations retournées dépendent de l'environnement dans lequel la commande **Get application info** est exécutée. Par exemple, si la commande est exécutée depuis un 4D distant, les informations concernent uniquement les postes distants. Si la commande est appelée dans une méthode exécutée sur serveur, les informations retournées concernent le serveur.
+La commande peut être exécutée sur des applications locales ou client/serveur. Les informations retournées dépendent de l'environnement dans lequel la commande **Application info** est exécutée. Par exemple, si la commande est exécutée depuis un 4D distant, les informations concernent uniquement les postes distants. Si la commande est appelée dans une méthode exécutée sur serveur, les informations retournées concernent le serveur.
 
 L'objet retourné contient les propriétés suivantes :
 
@@ -43,7 +43,7 @@ L'objet retourné contient les propriétés suivantes :
 | \[ \].ip                    | chaîne     | Adresse IP                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | "192.167.1.2"                                   |
 | useQUICNetworkLayer         | booléen    | Vrai si la couche réseau QUIC est utilisée pour le serveur d'application et le serveur db4d (*beta* dans 4D v20, voir *Page Compatibilité*). Non retourné en mode local. Valeurs possibles : vrai, faux. Pour plus d'informations, voir cet [article de blog.](https://blog.4d.com/quic-network/)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | faux                                            |
 
-(\*) Sur Windows, vous devez vous assurer que ce compteur est préalablement initialisé, en appelant par exemple la commande **Get application info** dans la [On Startup database method](on-startup-database-method.md).
+(\*) Sur Windows, vous devez vous assurer que ce compteur est préalablement initialisé, en appelant par exemple la commande **Application info** dans la [On Startup database method](on-startup-database-method.md).
 
 #### Exemple 2 
 
@@ -51,7 +51,7 @@ Le code suivant retourne un objet contenant des informations sur l'application c
 
 ```4d
  var $appInfo : Object
- $appInfo:=Get application info
+ $appInfo:=Application info
 ```
 
 Si le code est exécuté sur un 4D en mode local, l'objet contient (par exemple) :
@@ -76,5 +76,5 @@ Si le code est exécuté sur 4D Server, l'objet contient (par exemple) :
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
-[Get system info](get-system-info.md)  
+[System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  

@@ -1,12 +1,12 @@
 ---
-id: get-license-info
-title: Get license info
-slug: /commands/get-license-info
+id: license-info
+title: License info
+slug: /commands/license-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get license info.Syntax-->**Get license info** -> Function result<!-- END REF-->
-<!--REF #_command_.Get license info.Params-->
+<!--REF #_command_.License info.Syntax-->**License info** -> Function result<!-- END REF-->
+<!--REF #_command_.License info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Object | &#8592; | Information about the active licence |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get license info.Summary-->The **Get license info** command returns an object providing detailed information about the active license.<!-- END REF-->
+<!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
 
 If the command is executed on a 4D application that does not use locally a license (e.g. 4D remote), the command returns a Null object.
 
@@ -52,7 +52,7 @@ You want to get information on your current 4D Server license:
 
 ```4d
  var $obj : Object
- $obj:=Get license info
+ $obj:=License info
 ```
 
 *$obj* can contain, for example:

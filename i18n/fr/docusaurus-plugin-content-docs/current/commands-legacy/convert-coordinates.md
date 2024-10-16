@@ -68,12 +68,12 @@ Vous souhaitez afficher un pop up menu à l'angle inférieur gauche de l'objet "
 
 #### Exemple 2 
 
-Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la souris. Sous Windows, vous devez convertir les coordonnées car [GET MOUSE](get-mouse.md) (avec le paramètre \*) retourne des valeurs basées sur la position de la fenêtre MDI :
+Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la souris. Sous Windows, vous devez convertir les coordonnées car [MOUSE POSITION](mouse-position.md) (avec le paramètre \*) retourne des valeurs basées sur la position de la fenêtre MDI :
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
  var $window : Integer
- GET MOUSE($mouseX;$mouseY;$mouseButtons)
+ MOUSE POSITION($mouseX;$mouseY;$mouseButtons)
  CONVERT COORDINATES($mouseX;$mouseY;XY Current window;XY Main window)
  $window:=Open form window("PopupWindowForm";Pop up form window;$mouseX;$mouseY)
  DIALOG("PopupWindowForm")

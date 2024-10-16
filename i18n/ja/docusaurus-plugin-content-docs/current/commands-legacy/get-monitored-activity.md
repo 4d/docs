@@ -1,12 +1,12 @@
 ---
-id: get-monitored-activity
-title: Get Monitored Activity
-slug: /commands/get-monitored-activity
+id: monitored-activity
+title: Monitored activity
+slug: /commands/monitored-activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Monitored Activity.Syntax-->**Get Monitored Activity**  -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get Monitored Activity.Params-->
+<!--REF #_command_.Monitored activity.Syntax-->**Monitored activity**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Monitored activity.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Collection | &#8592; | モニターしているアクティビティのコレクション |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get Monitored Activity.Summary-->**Get Monitored Activity** コマンドは、[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドによって設定された詳細に応じて記録されたオペレーションを表すオブジェクトのコレクションを返します。<!-- END REF-->このコマンドは4D リモート、4D Server、スタンドアロン版の4D において実行または呼び出し可能です(ただしスタンドアロン版は*source* 引数で指定されたソースがネットワークアクティビティでない場合のみ可能)。
+<!--REF #_command_.Monitored activity.Summary-->**Monitored activity** コマンドは、[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドによって設定された詳細に応じて記録されたオペレーションを表すオブジェクトのコレクションを返します。<!-- END REF-->このコマンドは4D リモート、4D Server、スタンドアロン版の4D において実行または呼び出し可能です(ただしスタンドアロン版は*source* 引数で指定されたソースがネットワークアクティビティでない場合のみ可能)。
 
 返されたコレクション内のオブジェクトは、以下のようなプロパティを格納しています:
 
@@ -66,8 +66,8 @@ displayed_sidebar: docs
 
 ****注:** 
 
-* デバッグログが4D Server の[GRAPH SETTINGS](graph-settings.md)にて停止されている場合、**Get Monitored Activity** は何も返しません。ログがサーバー上で、あるいは[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドとActivity network を使用して再開されていた場合、**Get Monitored Activity** コマンドはネットワークアクティビティ情報を返すのを再開します。
-* *activityData* オブジェクトは*4DRequestsLog.txt* においては[SET DATABASE PARAMETER](set-database-parameter.md) コマンドで定義された情報を(あれは)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、**Get Monitored Activity** コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
+* デバッグログが4D Server の[GRAPH SETTINGS](graph-settings.md)にて停止されている場合、**Monitored activity** は何も返しません。ログがサーバー上で、あるいは[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドとActivity network を使用して再開されていた場合、**Monitored activity** コマンドはネットワークアクティビティ情報を返すのを再開します。
+* *activityData* オブジェクトは*4DRequestsLog.txt* においては[SET DATABASE PARAMETER](set-database-parameter.md) コマンドで定義された情報を(あれは)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、**Monitored activity** コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
 
 *activityData* オブジェクト:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
 
 ##### activityKind = Activity operations (4) 
 
-**注:** *activityData* オブジェクトは[GET ACTIVITY SNAPSHOT](get-activity-snapshot.md) コマンドから返されるものに近いですが、閾値と完了したオペレーションのみが返されるという点が異なります。
+**注:** *activityData* オブジェクトは[ACTIVITY SNAPSHOT](activity-snapshot.md) コマンドから返されるものに近いですが、閾値と完了したオペレーションのみが返されるという点が異なります。
 
 *activityData* オブジェクト:
 

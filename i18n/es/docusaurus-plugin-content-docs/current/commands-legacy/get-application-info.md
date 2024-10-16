@@ -1,12 +1,12 @@
 ---
 id: get-application-info
-title: Get application info
+title: Application info
 slug: /commands/get-application-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application info.Syntax-->**Get application info** -> Resultado<!-- END REF-->
-<!--REF #_command_.Get application info.Params-->
+<!--REF #_command_.Application info.Syntax-->**Application info** -> Resultado<!-- END REF-->
+<!--REF #_command_.Application info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Object | &#8592; | Información sobre la actividad de la aplicación activa |
@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 #### Ejemplo 1 
 
-<!--REF #_command_.Get application info.Summary-->El comando **Get application info** devuelve un objeto que ofrece información detallada sobre la actividad de la aplicación activa y la configuración de la red.<!-- END REF-->
+<!--REF #_command_.Application info.Summary-->El comando **Application info** devuelve un objeto que ofrece información detallada sobre la actividad de la aplicación activa y la configuración de la red.<!-- END REF-->
 
-El comando se puede ejecutar en aplicaciones que se ejecutan en entornos independientes y cliente/servidor. La información devuelta depende de donde se ejecuta **Get application info**. Por ejemplo, si se ejecuta desde un 4D remoto, la información solo se aplica a la estación de trabajo remota. Sin embargo, si se selecciona *Atributo Ejecutar en servidor*, la información devuelta se aplica al servidor.
+El comando se puede ejecutar en aplicaciones que se ejecutan en entornos independientes y cliente/servidor. La información devuelta depende de donde se ejecuta **Application info**. Por ejemplo, si se ejecuta desde un 4D remoto, la información solo se aplica a la estación de trabajo remota. Sin embargo, si se selecciona *Atributo Ejecutar en servidor*, la información devuelta se aplica al servidor.
 
 El objeto devuelto contiene las siguientes propiedades:
 
@@ -43,7 +43,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | useQUICNetworkLayer         | booleano  | True si la capa de red QUIC utilizada para el servidor de la aplicación y el servidor db4d (*beta* en 4D v20, ver *Página Compatibilidad*). No devuelto en entorno monopuesto. Valores posibles: true, false. Para más información ver [este blog post](https://blog.4d.com/quic-network/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | false                                           |
 | volumeShadowCopyStatus      | cadena    | Devuelve el estado del Servicio Volume Shadow Copy. Sólo en Windows. Para más información, consulte *Utilizar Servicio Volume Shadow Copy en Windows*. Valores posibles: <table> <thead> <tr> <td>Constante</td> <td>Valor</td> <td>Comentario</td> </tr> </thead> <tbody> <tr> <td>vss available</td> <td>available</td> <td>El servicio está disponible.</td> </tr><tr> <td>vss error</td> <td>error</td> <td>El servicio experimentó un error.</td> </tr><tr> <td>vss not available</td> <td>notAvailable</td> <td>El servicio no está disponible.</td> </tr><tr> <td>vss update required</td> <td>updateRequired</td> <td>El servicio necesita actualizarse.</td> </tr> </tbody> </table> | "available"                                     |
 
-(\*) En Windows, debe inicializar previamente este contador, por ejemplo, mediante una llamada al comando **Get application info** en el [Método base On Startup](metodo-base-on-startup.md).
+(\*) En Windows, debe inicializar previamente este contador, por ejemplo, mediante una llamada al comando **Application info** en el [Método base On Startup](metodo-base-on-startup.md).
 
 #### Ejemplo 2 
 
@@ -51,7 +51,7 @@ El siguiente código devuelve un objeto que contiene información sobre la aplic
 
 ```4d
  var $appInfo : Object
- $appInfo:=Get application info
+ $appInfo:=Application info
 ```
 
 Si el código se ejecuta desde un entorno autónomo, el objeto contiene (por ejemplo):
@@ -76,5 +76,5 @@ Si el código se ejecuta en 4D Server, el objeto contiene (por ejemplo):
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
-[Get system info](get-system-info.md)  
+[System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  

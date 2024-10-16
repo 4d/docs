@@ -57,5 +57,5 @@ Este ejemplo, la variable *numTabla* es igual al número de la tabla a la cual p
 #### Ver también 
 
 [Field](field.md)  
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [Table name](table-name.md)  

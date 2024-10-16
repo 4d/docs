@@ -21,7 +21,7 @@ This concerns all 4D environments: 4D (all modes), 4D Server and databases merge
 The **On Backup Startup database method**  allows verifying that the backup started. In this method, you should return a value that authorizes or refuses the backup in the $0 parameter:
 
 * If $0 = 0, the backup can be launched.
-* If $0 # 0, the backup is not authorized. The operation is cancelled and an error is returned. You can get the error using the [GET BACKUP INFORMATION](get-backup-information.md) command.
+* If $0 # 0, the backup is not authorized. The operation is cancelled and an error is returned. You can get the error using the [BACKUP INFO](backup-info.md) command.
 
 You can use this database method to verify backup execution conditions (user, date of the last backup, etc.).
 

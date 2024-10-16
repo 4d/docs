@@ -1,12 +1,12 @@
 ---
-id: get-table-fragmentation
-title: Get table fragmentation
-slug: /commands/get-table-fragmentation
+id: table-fragmentation
+title: Table fragmentation
+slug: /commands/table-fragmentation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get table fragmentation.Syntax-->**Get table fragmentation** ( *aTable* ) -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get table fragmentation.Params-->
+<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Table fragmentation.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | フラグメント率を取得するテーブル |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get table fragmentation.Summary-->Get table fragmentation コマンドは *aTable*引数で指定されたテーブルの、物理的なレコードフラグメンテーションの割合 (%) を返します。<!-- END REF-->. 
+<!--REF #_command_.Table fragmentation.Summary-->Table fragmentation コマンドは *aTable*引数で指定されたテーブルの、物理的なレコードフラグメンテーションの割合 (%) を返します。<!-- END REF-->. 
 
 レコードの物理的なフラグメンテーションの割合は、データファイル中にレコードが並び順通りに格納されているかを示します。フラグメンテーション率が高くなりすぎると、テーブルに対する並び替えやシーケンシャル検索がかなり遅くなります。フラグメンテーション率0%はフラグメンテーションがないことを示します。20%を超えた場合、データファイルの圧縮をお勧めします。
 
@@ -26,9 +26,9 @@ displayed_sidebar: docs
 
 ```4d
  ToBeCompacted:=False
- For($i ;1;Get last table number)
+ For($i ;1;Last table number)
     If(Is table number valid($i))
-       If(Get table fragmentation(Table($i)->)>20)
+       If(Table fragmentation(Table($i)->)>20)
           ToBeCompacted:=True
        End if
     End if

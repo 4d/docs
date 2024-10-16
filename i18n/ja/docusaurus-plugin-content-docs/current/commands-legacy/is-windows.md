@@ -31,5 +31,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get system info](get-system-info.md)  
+[System info](system-info.md)  
 [Is macOS](is-macos.md)  

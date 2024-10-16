@@ -1,12 +1,12 @@
 ---
-id: get-backup-information
-title: GET BACKUP INFORMATION
-slug: /commands/get-backup-information
+id: backup-info
+title: BACKUP INFO
+slug: /commands/backup-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET BACKUP INFORMATION.Syntax-->**GET BACKUP INFORMATION** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET BACKUP INFORMATION.Params-->
+<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | Type of information to get |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET BACKUP INFORMATION.Summary-->The GET BACKUP INFORMATION command gets information related to the last backup performed on the database data.<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Summary-->The BACKUP INFO command gets information related to the last backup performed on the database data.<!-- END REF-->
 
 Pass the type of information to get in *selector*. The type and content of the *info1* and *info2* parameters depend on the value of *selector*. You can use one of the following constants, placed in the “*Backup and Restore*” theme:
 

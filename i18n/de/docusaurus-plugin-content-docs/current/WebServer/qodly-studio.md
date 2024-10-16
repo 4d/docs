@@ -231,7 +231,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 | ---------------------- | ---------------- |
 | `atan`                 | `Arctan`         |
 | `highestProcessNumber` | `Count tasks`    |
-| `callChain`            | `Get call chain` |
+| `callChain`            | `Call chain` |
 | `objectClass`          | `OB Class`       |
 | `objectCopy`           | `OB Copy`        |
 | `objectEntries`        | `OB Entries`     |

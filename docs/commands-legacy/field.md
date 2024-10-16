@@ -55,5 +55,5 @@ The following example sets the *FieldNum* variable to the field number of \[Tabl
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
-[Get last field number](get-last-field-number.md)  
+[Last field number](last-field-number.md)  
 [Table](table.md)  

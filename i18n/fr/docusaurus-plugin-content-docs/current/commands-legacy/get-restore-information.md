@@ -1,12 +1,12 @@
 ---
-id: get-restore-information
-title: GET RESTORE INFORMATION
-slug: /commands/get-restore-information
+id: restore-info
+title: RESTORE INFO
+slug: /commands/restore-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESTORE INFORMATION.Syntax-->**GET RESTORE INFORMATION** ( *sélecteur* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET RESTORE INFORMATION.Params-->
+<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *sélecteur* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sélecteur | Integer | &#8594;  | Type d’information à récupérer |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET RESTORE INFORMATION.Summary-->La commande **GET RESTORE INFORMATION** permet de récupérer des informations relatives à la dernière restitution automatique de la base.<!-- END REF--> 
+<!--REF #_command_.RESTORE INFO.Summary-->La commande **RESTORE INFO** permet de récupérer des informations relatives à la dernière restitution automatique de la base.<!-- END REF--> 
 
 Passez dans le paramètre *sélecteur* le type d’information à récupérer. Vous pouvez utiliser une des constantes suivantes, placées dans le thème “*Sauvegarde et restitution*” :
 

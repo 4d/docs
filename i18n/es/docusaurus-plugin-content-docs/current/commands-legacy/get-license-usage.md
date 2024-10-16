@@ -1,12 +1,12 @@
 ---
-id: get-license-usage
-title: Get license usage
-slug: /commands/get-license-usage
+id: license-usage
+title: License usage
+slug: /commands/license-usage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get license usage.Syntax-->**Get license usage** -> Resultado<!-- END REF-->
-<!--REF #_command_.Get license usage.Params-->
+<!--REF #_command_.License usage.Syntax-->**License usage** -> Resultado<!-- END REF-->
+<!--REF #_command_.License usage.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Collection | &#8592; | Una colección de objetos con información sobre las licencias retenidas. |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get license usage.Summary-->El comando **Get license usage** devuelve una colección de objetos que contienen información sobre las licencias retenidas.<!-- END REF-->
+<!--REF #_command_.License usage.Summary-->El comando **License usage** devuelve una colección de objetos que contienen información sobre las licencias retenidas.<!-- END REF-->
 
 Cada objeto de la colección devuelta tiene los siguientes atributos:
 

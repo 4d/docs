@@ -1,12 +1,12 @@
 ---
-id: get-restore-information
-title: GET RESTORE INFORMATION
-slug: /commands/get-restore-information
+id: restore-info
+title: RESTORE INFO
+slug: /commands/restore-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESTORE INFORMATION.Syntax-->**GET RESTORE INFORMATION** ( *seletor* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET RESTORE INFORMATION.Params-->
+<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *seletor* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | seletor | Integer | &#8594;  | Tipo de informação a ser obtida |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET RESTORE INFORMATION.Summary-->O comando GET RESTORE INFORMATION permite obter informações relacionadas com a última restauração automática da base de dados.<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Summary-->O comando RESTORE INFO permite obter informações relacionadas com a última restauração automática da base de dados.<!-- END REF-->
 
 Passe o tipo de informação a obter em *seletor*. É possível utilizar uma das constantes a seguir, localizadas no tema “Backup and Restore”:
 

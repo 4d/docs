@@ -1,12 +1,12 @@
 ---
-id: get-restore-information
-title: GET RESTORE INFORMATION
-slug: /commands/get-restore-information
+id: restore-info
+title: RESTORE INFO
+slug: /commands/restore-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESTORE INFORMATION.Syntax-->**GET RESTORE INFORMATION** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET RESTORE INFORMATION.Params-->
+<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | Type of information to get |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET RESTORE INFORMATION.Summary-->The GET RESTORE INFORMATION command gets information related to the last automatic database restore.<!-- END REF--> 
+<!--REF #_command_.RESTORE INFO.Summary-->The RESTORE INFO command gets information related to the last automatic database restore.<!-- END REF--> 
 
 Pass the type of information to get in *selector*. You can use one of the following constants, placed in the “*Backup and Restore*” theme:
 

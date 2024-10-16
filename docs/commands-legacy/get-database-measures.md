@@ -1,12 +1,12 @@
 ---
-id: get-database-measures
-title: Get database measures
-slug: /commands/get-database-measures
+id: database-measures
+title: Database measures
+slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database measures.Syntax-->**Get database measures** {( *options* )} -> Function result<!-- END REF-->
-<!--REF #_command_.Get database measures.Params-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *options* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Database measures.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | options | Object | &#8594;  | Return options |
@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get database measures.Summary-->The **Get database measures** command allows you to get detailed information about 4D database engine events.<!-- END REF--> Returned information includes data read/write access from/to the disk or the memory cache, as well as the use of database indexes, queries and sorts. 
+<!--REF #_command_.Database measures.Summary-->The **Database measures** command allows you to get detailed information about 4D database engine events.<!-- END REF--> Returned information includes data read/write access from/to the disk or the memory cache, as well as the use of database indexes, queries and sorts. 
 
-**Get database measures** returns a single object that contains all the relevant measures. The *options* object parameter allows you to set options for the returned information. 
+**Database measures** returns a single object that contains all the relevant measures. The *options* object parameter allows you to set options for the returned information. 
 
 ##### Overview of the returned object 
 
@@ -291,7 +291,7 @@ You want to have the history logged in the returned object:
  var $param : Object
  var $measures : Object
  OB SET($param;"withHistory";True)
- $measures:=Get database measures($param)
+ $measures:=Database measures($param)
 ```
 
 #### Example 2 
@@ -302,7 +302,7 @@ We only want to know the global number of bytes read in the cache ("cacheReadByt
  var $oStats : Object
  var $oParams : Object
  OB SET($oParams;"path";"DB.cacheReadBytes")
- $oStats:=Get database measures($oParams)
+ $oStats:=Database measures($oParams)
 ```
 
 The object returned contains, for example:
@@ -327,5 +327,5 @@ We want to request measures for cache bytes read within the last two minutes:
  OB SET($oParams;"path";"DB.cacheReadBytes")
  OB SET($oParams;"withHistory";True)
  OB SET($oParams;"historyLength";2*60)
- $measures:=Get database measures($oParams)
+ $measures:=Database measures($oParams)
 ```

@@ -1,12 +1,12 @@
 ---
-id: get-license-info
-title: Get license info
-slug: /commands/get-license-info
+id: license-info
+title: License info
+slug: /commands/license-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get license info.Syntax-->**Get license info** -> Resultado<!-- END REF-->
-<!--REF #_command_.Get license info.Params-->
+<!--REF #_command_.License info.Syntax-->**License info** -> Resultado<!-- END REF-->
+<!--REF #_command_.License info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Object | &#8592; | Informação sobre a licença ativa |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get license info.Summary-->O comando **Get license info** devolve um objeto que oferece informação detalhada sobre a licença ativa.<!-- END REF-->
+<!--REF #_command_.License info.Summary-->O comando **License info** devolve um objeto que oferece informação detalhada sobre a licença ativa.<!-- END REF-->
 
 Se o comando for executado em uma aplicação 4D que não utiliza localmente uma licença (por exemplo, 4D remoto), o comando devolve um objeto Null.
 
@@ -52,7 +52,7 @@ Se quiser obter informação sobre sua licença 4D Server atual:
 
 ```4d
  var $obj : Object
- $obj:=Get license info
+ $obj:=License info
 ```
 
 *$obj* pode conter, por exemplo:

@@ -47,5 +47,5 @@ displayed_sidebar: docs
 #### 参照 
 
 [Field](field.md)  
-[Get last field number](get-last-field-number.md)  
+[Last field number](last-field-number.md)  
 [Table name](table-name.md)  

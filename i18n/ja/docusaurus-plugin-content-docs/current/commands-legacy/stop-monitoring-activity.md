@@ -24,5 +24,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get Monitored Activity](get-monitored-activity.md)  
+[Monitored activity](monitored-activity.md)  
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  

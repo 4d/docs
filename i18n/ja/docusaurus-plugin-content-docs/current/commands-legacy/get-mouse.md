@@ -1,12 +1,12 @@
 ---
-id: get-mouse
-title: GET MOUSE
-slug: /commands/get-mouse
+id: mouse-position
+title: MOUSE POSITION
+slug: /commands/mouse-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MOUSE.Syntax-->**GET MOUSE** ( *mouseX* ; *mouseY* ; *mouseButton* {; *} )<!-- END REF-->
-<!--REF #_command_.GET MOUSE.Params-->
+<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *mouseX* ; *mouseY* ; *mouseButton* {; *} )<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | mouseX | Real | &#8592; | マウスの水平座標 |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.GET MOUSE.Summary-->GET MOUSE コマンドは、マウスの現在の状態を返します。<!-- END REF--> 
+<!--REF #_command_.MOUSE POSITION.Summary-->MOUSE POSITION コマンドは、マウスの現在の状態を返します。<!-- END REF--> 
 
 水平座標と垂直座標が引数 *mouseX* と *mouseY* に返されます。オプション引数 *\** を渡した場合には、macOS および Windows SDI モードにおいてはメインスクリーンに対して、Windows MDI モードにおいてはアプリケーションウィンドウに対して、これらの座標が相対的に表されます。引数 *\** を省略すると、座標はカレントプロセスのカレントフォームウィンドウ(あれば)に対して相対的に表されます。
 

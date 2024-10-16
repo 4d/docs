@@ -1,12 +1,12 @@
 ---
-id: get-database-measures
-title: Get database measures
-slug: /commands/get-database-measures
+id: database-measures
+title: Database measures
+slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database measures.Syntax-->**Get database measures** {( *options* )} -> Résultat<!-- END REF-->
-<!--REF #_command_.Get database measures.Params-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *options* )} -> Résultat<!-- END REF-->
+<!--REF #_command_.Database measures.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | options | Object | &#8594;  | Options de retour |
@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get database measures.Summary-->La commande **Get database measures** vous permet d'obtenir un ensemble d'informations détaillées sur les événements du moteur de base de données de 4D.<!-- END REF--> Les informations renvoyées concernent les accès en lecture/écriture aux données depuis ou vers le disque ou le cache ainsi que l'utilisation des index de la base, les recherches et les tris. 
+<!--REF #_command_.Database measures.Summary-->La commande **Database measures** vous permet d'obtenir un ensemble d'informations détaillées sur les événements du moteur de base de données de 4D.<!-- END REF--> Les informations renvoyées concernent les accès en lecture/écriture aux données depuis ou vers le disque ou le cache ainsi que l'utilisation des index de la base, les recherches et les tris. 
 
-**Get database measures** retourne un seul objet contenant toutes les mesures utiles. Le paramètre *options* vous permet de paramétrer les informations retournées. 
+**Database measures** retourne un seul objet contenant toutes les mesures utiles. Le paramètre *options* vous permet de paramétrer les informations retournées. 
 
 ##### Présentation de l'objet retourné 
 
@@ -288,7 +288,7 @@ Vous souhaitez obtenir l'objet "history" dans l'objet retourné :
  var $param : Object
  var $measures : Object
  OB SET($param;"withHistory";True)
- $measures:=Get database measures($param)
+ $measures:=Database measures($param)
 ```
 
 #### Exemple 2 
@@ -299,7 +299,7 @@ Vous souhaitez connaître uniquement le nombre global d'octets lus dans le cache
  var $oStats : Object
  var $oParams : Object
  OB SET($oParams;"path";"DB.cacheReadBytes")
- $oStats:=Get database measures($oParams)
+ $oStats:=Database measures($oParams)
 ```
 
 L'objet retourné contiendra, par exemple :
@@ -324,5 +324,5 @@ Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux 
  OB SET($oParams;"path";"DB.cacheReadBytes")
  OB SET($oParams;"withHistory";True)
  OB SET($oParams;"historyLength";2*60)
- $measures:=Get database measures($oParams)
+ $measures:=Database measures($oParams)
 ```

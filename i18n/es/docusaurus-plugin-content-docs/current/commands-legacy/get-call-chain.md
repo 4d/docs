@@ -1,12 +1,12 @@
 ---
-id: get-call-chain
-title: Get call chain
-slug: /commands/get-call-chain
+id: call-chain
+title: Call chain
+slug: /commands/call-chain
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get call chain.Syntax-->**Get call chain** -> Resultado<!-- END REF-->
-<!--REF #_command_.Get call chain.Params-->
+<!--REF #_command_.Call chain.Syntax-->**Call chain** -> Resultado<!-- END REF-->
+<!--REF #_command_.Call chain.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Collection | &#8592; | Colección de objetos que describen la cadena de llamadas a métodos dentro de un proceso |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get call chain.Summary-->El comando **Get call chain** devuelve una colección de objetos que describen cada paso de la cadena de llamadas al método dentro del proceso actual.<!-- END REF--> Ofrece la misma información que la ventana del Depurador. Tiene la ventaja adicional de poder ejecutarse desde cualquier entorno 4D, incluido el modo compilado.
+<!--REF #_command_.Call chain.Summary-->El comando **Call chain** devuelve una colección de objetos que describen cada paso de la cadena de llamadas al método dentro del proceso actual.<!-- END REF--> Ofrece la misma información que la ventana del Depurador. Tiene la ventaja adicional de poder ejecutarse desde cualquier entorno 4D, incluido el modo compilado.
 
 El comando facilita la depuración al permitir la identificación del método llamado, el componente que lo llamó y el número de línea donde se realizó la llamada. Cada objeto en la colección devuelta contiene las siguientes propiedades:
 
@@ -34,7 +34,7 @@ El siguiente código devuelve una colección de objetos que contienen informaci�
 
 ```4d
  var $currentCallChain : Collection
- $currentCallChain:=Get call chain
+ $currentCallChain:=Call chain
 ```
 
 Si se ejecuta un método proyecto, la cadena de llamadas podría contener (por ejemplo):

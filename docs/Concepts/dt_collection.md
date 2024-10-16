@@ -51,7 +51,7 @@ Collection instantiation can be done in one of the following ways:
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](../commands-legacy/get-monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
+Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
 
 :::
 

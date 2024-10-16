@@ -1,12 +1,12 @@
 ---
-id: get-license-usage
-title: Get license usage
-slug: /commands/get-license-usage
+id: license-usage
+title: License usage
+slug: /commands/license-usage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get license usage.Syntax-->**Get license usage** -> Résultat<!-- END REF-->
-<!--REF #_command_.Get license usage.Params-->
+<!--REF #_command_.License usage.Syntax-->**License usage** -> Résultat<!-- END REF-->
+<!--REF #_command_.License usage.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Collection | &#8592; | Une collection d'objets contenant des informations sur les licences utilisées |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get license usage.Summary-->La commande **Get license usage** retourne une collection d'objets contenant des informations sur les licences utilisées\[#/descv\].<!-- END REF-->
+<!--REF #_command_.License usage.Summary-->La commande **License usage** retourne une collection d'objets contenant des informations sur les licences utilisées\[#/descv\].<!-- END REF-->
 
 Chaque objet de la collection retournée possède les attributs suivants :
 

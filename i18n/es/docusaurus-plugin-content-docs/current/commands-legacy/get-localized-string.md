@@ -1,12 +1,12 @@
 ---
-id: get-localized-string
-title: Get localized string
-slug: /commands/get-localized-string
+id: localized-string
+title: Localized string
+slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized string.Syntax-->**Get localized string** ( *resNombre* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get localized string.Params-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resNombre* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Localized string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | resNombre | Text | &#8594;  | Nombre del atributo resNombre |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get localized string.Summary-->El comando Get localized string devuelve el valor de la cadena designada por el atributo *resNombre* para el lenguaje actual.<!-- END REF--> 
+<!--REF #_command_.Localized string.Summary-->El comando Localized string devuelve el valor de la cadena designada por el atributo *resNombre* para el lenguaje actual.<!-- END REF--> 
 
 Este comando sólo funciona dentro de una arquitectura XLIFF. Para mayor información sobre este tipo de arquitectura, por favor consulte la descripción de soporte de XLIFF en el *manual de Diseño*.
 
@@ -42,7 +42,7 @@ Este es un extracto del archivo .xlf:
 Después de la ejecución de la siguiente instrucción:
 
 ```4d
- $valorES:=Get localized string("Show on disk")
+ $valorES:=Localized string("Show on disk")
 ```
 
 ... si el lenguaje actual es el Español, $valorES contiene “Mostrar en el disco”.

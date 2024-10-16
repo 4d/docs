@@ -1,12 +1,12 @@
 ---
-id: get-activity-snapshot
-title: GET ACTIVITY SNAPSHOT
-slug: /commands/get-activity-snapshot
+id: activity-snapshot
+title: ACTIVITY SNAPSHOT
+slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Syntax-->**GET ACTIVITY SNAPSHOT** ( arrActivities | arrUUID ; *arrStart* ; *arrDuration* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Params-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( arrActivities | arrUUID ; *arrStart* ; *arrDuration* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | arrActivities &#124; arrUUID | Object array, Text array | &#8592; | Complete description of operations (object array) or<br/>Operation UUIDs (text array) |
@@ -20,21 +20,21 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Summary-->The **GET ACTIVITY SNAPSHOT** command returns a single or several arrays describing operations in progress on the 4D data.<!-- END REF--> These operations usually display a progress window. 
+<!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->The **ACTIVITY SNAPSHOT** command returns a single or several arrays describing operations in progress on the 4D data.<!-- END REF--> These operations usually display a progress window. 
 
 This command is used to get a snapshot of the *x* operations that are most time-consuming and/or run most frequently, such as cache writing or the execution of formulas.
 
-**Note:** The information returned by the **GET ACTIVITY SNAPSHOT** command is the same as that displayed on the "Real Time Monitor" (RTM) page of the 4D Server administration window (see *4D Server Reference Guide*). 
+**Note:** The information returned by the **ACTIVITY SNAPSHOT** command is the same as that displayed on the "Real Time Monitor" (RTM) page of the 4D Server administration window (see *4D Server Reference Guide*). 
 
-By default, **GET ACTIVITY SNAPSHOT** processes operations performed locally (with 4D single-user, 4D Server or 4D in remote mode). However, with 4D in remote mode, you can also get a snapshot of operations performed on the server: you just need to pass the asterisk (*\**) as the last parameter. In this case, the server data is recovered locally.   
+By default, **ACTIVITY SNAPSHOT** processes operations performed locally (with 4D single-user, 4D Server or 4D in remote mode). However, with 4D in remote mode, you can also get a snapshot of operations performed on the server: you just need to pass the asterisk (*\**) as the last parameter. In this case, the server data is recovered locally.   
 The *\** parameter is ignored when the command is executed on 4D Server or 4D single-user. 
 
-The **GET ACTIVITY SNAPSHOT** command accepts two syntaxes: 
+The **ACTIVITY SNAPSHOT** command accepts two syntaxes: 
 
 * syntax using only an object array.
 * syntax using several arrays.
 
-##### First syntax: GET ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
+##### First syntax: ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
 
 With this syntax, all the operations are returned in a structured form in the 4D object array (*arrActivities*). Each element of the array is an object built as follows:
 
@@ -70,7 +70,7 @@ Here is a description of each property returned:
    * ...
 * *subOperations* (array): array of objects containing sub-operations of the current operation (if any). The structure of each sub-element is identical to the one in the main object. If the current operation does not have any sub-operations, then *subOperations* is empty.
 
-##### Second syntax: GET ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
+##### Second syntax: ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
 
 With this syntax, all the operations are returned in several synchronized arrays (each operation causes an element to be added to all of the arrays). The following arrays are returned:
 
@@ -94,7 +94,7 @@ This method, executed in a separate process on 4D or 4D Server, provides a snaps
  ARRAY TEXT(arrInfo;0)
  
  Repeat
-    GET ACTIVITY SNAPSHOT(arrUUID;arrStart;arrDuration;arrInfo)
+    ACTIVITY SNAPSHOT(arrUUID;arrStart;arrDuration;arrInfo)
     If(Size of array(arrUUID)>0)
        TRACE // calling of debugger
     End if

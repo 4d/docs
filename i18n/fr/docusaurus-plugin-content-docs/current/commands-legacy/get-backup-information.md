@@ -1,12 +1,12 @@
 ---
-id: get-backup-information
-title: GET BACKUP INFORMATION
-slug: /commands/get-backup-information
+id: backup-info
+title: BACKUP INFO
+slug: /commands/backup-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET BACKUP INFORMATION.Syntax-->**GET BACKUP INFORMATION** ( *sélecteur* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET BACKUP INFORMATION.Params-->
+<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *sélecteur* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sélecteur | Integer | &#8594;  | Type d’information à récupérer |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET BACKUP INFORMATION.Summary-->La commande **GET BACKUP INFORMATION** permet de récupérer des informations relatives à la dernière sauvegarde effectuée sur les données de la base.<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Summary-->La commande **BACKUP INFO** permet de récupérer des informations relatives à la dernière sauvegarde effectuée sur les données de la base.<!-- END REF-->
 
 Passez dans le paramètre *sélecteur* le type d’information à récupérer. Le type et le contenu des paramètres *info1* et *info2* dépendent de la valeur du *sélecteur.* Vous pouvez utiliser une des constantes suivantes, placées dans le thème “*Sauvegarde et restitution*” : 
 

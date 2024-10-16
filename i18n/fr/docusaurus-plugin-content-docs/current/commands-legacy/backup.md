@@ -34,6 +34,6 @@ En cas d’incident au cours de la sauvegarde, les informations relatives à l'i
 
 #### Voir aussi 
 
-[GET BACKUP INFORMATION](get-backup-information.md)  
+[BACKUP INFO](backup-info.md)  
 *Méthode base Sur démarrage sauvegarde*  
 [RESTORE](restore.md)  

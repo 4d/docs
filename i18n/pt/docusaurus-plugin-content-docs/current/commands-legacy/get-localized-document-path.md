@@ -1,12 +1,12 @@
 ---
-id: get-localized-document-path
-title: Get localized document path
-slug: /commands/get-localized-document-path
+id: localized-document-path
+title: Localized document path
+slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized document path.Syntax-->**Get localized document path** ( *rotaRelativa* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get localized document path.Params-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *rotaRelativa* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Localized document path.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaRelativa | Text | &#8594;  | Rota relativa do documento para qual quer obter a versão localizada |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get localized document path.Summary-->O comando Get localized document path retorna a rota completa (absoluta) de um documento designado por *rotaRelativa* e localizado na pasta xxx.<!-- END REF-->lproj.  
+<!--REF #_command_.Localized document path.Summary-->O comando Localized document path retorna a rota completa (absoluta) de um documento designado por *rotaRelativa* e localizado na pasta xxx.<!-- END REF-->lproj.  
 
 Este comando deve ser usado dentro de uma arquitetura de aplicação multi-linguagem baseada na presença de uma pasta **Resources** e das subpastas xxx.lproj (xxx representa um idioma). Com esta arquitetura, 4D é automaticamente compatível arquivos localizados de tipo .xliff assim como as imagens, mas é possível que deva usar o mesmo mecanismo para outros tipos de arquivos.  
   
@@ -54,7 +54,7 @@ Estes são os conteúdos da pasta Resources:
 Para utilizar um arquivo .xsl adaptado a linguagem atual, apenas deve passar:
 
 ```4d
- $myxsl:=Get localized document path("xsl/log.xsl")
+ $myxsl:=Localized document path("xsl/log.xsl")
 ```
 
 Se a linguagem atuarl for, por exemplo, francês canadense (fr-ca), o comando devolve:

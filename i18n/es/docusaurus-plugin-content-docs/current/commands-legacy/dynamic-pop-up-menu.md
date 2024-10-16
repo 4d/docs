@@ -39,7 +39,7 @@ Si un elemento de menú ha sido seleccionado, el comando devuelve su cadena de c
 
 **A partir de 4D v16 R3:** si una acción estándar está asociada a un elemento de menú, es tenida en cuenta por el comando **Dynamic pop up menu** en varios niveles:
 
-* Si una acción estándar asociada no está activada (es decir, no se puede invocar) en el contexto del menú emergente, el elemento se oculta automáticamente. Puede saber si una acción se activa utilizando el comando [Get action info](get-action-info.md).
+* Si una acción estándar asociada no está activada (es decir, no se puede invocar) en el contexto del menú emergente, el elemento se oculta automáticamente. Puede saber si una acción se activa utilizando el comando [Action info](action-info.md).
 * Los elementos con una acción asociada se seleccionan automáticamente, sin marcar o "mezclados" según la selección.
 * Si el título de la acción se ha ajustado al elemento usando la constante ak standard action title, el nombre localizado se mostrará en el menú.
 * Cuando se selecciona el elemento, se invoca la acción estándar asociada (la ejecución es asíncrona).

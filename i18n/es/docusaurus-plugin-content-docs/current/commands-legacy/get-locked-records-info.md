@@ -1,12 +1,12 @@
 ---
-id: get-locked-records-info
-title: Get locked records info
-slug: /commands/get-locked-records-info
+id: locked-records-info
+title: Locked records info
+slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get locked records info.Syntax-->**Get locked records info** ( *laTabla* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get locked records info.Params-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTabla* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Locked records info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Tabla de la cual obtener los registros bloqueados |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get locked records info.Summary-->El comando **Get locked records info** devuelve un objeto que contiene diferente información sobre los registros bloqueados actualmente en *laTabla*.<!-- END REF-->
+<!--REF #_command_.Locked records info.Summary-->El comando **Locked records info** devuelve un objeto que contiene diferente información sobre los registros bloqueados actualmente en *laTabla*.<!-- END REF-->
 
 **Nota**: el comando funciona solo con 4D y 4D Server. Devuelve un objeto no válido cuando se llama desde un 4D remoto. Sin embargo, puede llamarse en este contexto si la opción "Ejecutar en servidor" está activada para el método de llamada. En este caso, el objeto devuelto contendrá información sobre el servidor. Cuando se llama desde un componente, siempre se aplica a la base local.
 
@@ -33,7 +33,7 @@ Cada elemento de la colección "description object" identifica un registro bloqu
 | **Propiedad**     | **Tipo**      | **Descripción**                                                                                                                                                                                                                                                                                   |
 | ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | contextID         | UUID (Cadena) | UUID del contexto de la base responsable del bloqueo                                                                                                                                                                                                                                              |
-| contextAttributes | Objeto        | Objeto que contiene la misma información que el comando [LOCKED BY](locked-by.md) aplicado al registro, la diferencia es que **Get locked records info** devuelve el nombre del usuario definido en el sistema y no el del usuario 4D, así como también información adicional (ver más adelante). |
+| contextAttributes | Objeto        | Objeto que contiene la misma información que el comando [LOCKED BY](locked-by.md) aplicado al registro, la diferencia es que **Locked records info** devuelve el nombre del usuario definido en el sistema y no el del usuario 4D, así como también información adicional (ver más adelante). |
 | recordNumber      | Entero largo  | Número de registro del registro bloqueado                                                                                                                                                                                                                                                         |
 
 El objeto *contextAttributes* se compone de las siguientes propiedades:
@@ -72,7 +72,7 @@ El objeto *contextAttributes* se compone de las siguientes propiedades:
 Ejecute el siguiente código:
 
 ```4d
- $vOlocked :=Get locked records info([Table])
+ $vOlocked :=Locked records info([Table])
 ```
 
 Si dos registros están bloqueados en la tabla \[Table\], el siguiente objeto se devuelve en $vOlocked:

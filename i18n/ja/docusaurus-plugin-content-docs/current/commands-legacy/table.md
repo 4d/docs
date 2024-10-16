@@ -58,5 +58,5 @@ displayed_sidebar: docs
 #### 参照 
 
 [Field](field.md)  
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [Table name](table-name.md)  

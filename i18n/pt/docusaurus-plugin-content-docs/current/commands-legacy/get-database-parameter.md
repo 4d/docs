@@ -129,6 +129,6 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
 #### Ver também 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Get application info](get-application-info.md)  
+[Application info](get-application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  

@@ -22,7 +22,7 @@ Calling the command with the *status* parameter set to **True** enables the quer
 * A detailed internal description of the query just before its execution, in other words, what was planned to be executed (the query plan),
 * A detailed internal description of the query that was actually executed (the query path).
 
-The information recorded includes the type of query (indexed, sequential), the number of records found and the time needed for every query criteria to be executed. Y ou can then read this information using the [Get last query plan](get-last-query-plan.md) and [Get last query path](get-last-query-path.md) commands.
+The information recorded includes the type of query (indexed, sequential), the number of records found and the time needed for every query criteria to be executed. Y ou can then read this information using the [Last query plan](last-query-plan.md) and [Last query path](last-query-path.md) commands.
 
 Usually, the description of the query plan and its path are the same, but they may nevertheless differ because 4D might implement dynamic optimizations during the query execution in order to improve performance. For example, an indexed query may be converted dynamically into a sequential query if the 4D engine estimates that this might be faster — this is sometimes the case, more particularly, when the number of records being queries is low.
 
@@ -39,8 +39,8 @@ The following example illustrates the type of information obtained using these c
  QUERY([Employees];&;[Companies]Name="H@";*) // that work for a company whose name starts with H
  QUERY([Employees];&;[Employees]Salary>2500;*) // whose salary is > 2500
  QUERY([Employees];&;[Cities]Pop<50000) // that live in a city with less than 50,000 inhabitants
- $vResultPlan:=Get last query plan(Description in text format)
- $vResultPath:=Get last query path(Description in text format)
+ $vResultPlan:=Last query plan(Description in text format)
+ $vResultPath:=Last query path(Description in text format)
  DESCRIBE QUERY EXECUTION(False) //End of analysis mode
 ```
 
@@ -50,7 +50,7 @@ After executing this code, *$vResultPlan* and *$vResultPath* contain description
 $vResultPlan :    Employees.LastName == T@ And  Employees.Salary > 2500 And Join on Table : Companies  :   Employees.Company = Companies.Name [index : Companies.Name ] LIKE H@ And Join  on Table : Cities  :  Employees.City = Cities.Name [index : Cities.Pop  ] < 50000$vResultPath : (Employees.LastName == T@ And Employees.Salary  > 2500) And (Join on Table : Companies  :  Employees.Company  = Companies.Name with filter {[index : Companies.Name ]  LIKE H@}) And (Join on Table : Cities  :  Employees.City = Cities.Name  with filter {[index : Cities.Pop ] < 50000})   (3 records found in 1  ms)
 ```
 
-If the Description in XML Format constant is passed to the [Get last query path](get-last-query-path.md) command, *$vResultPath* contains the description of the query expressed in XML:
+If the Description in XML Format constant is passed to the [Last query path](last-query-path.md) command, *$vResultPath* contains the description of the query expressed in XML:
 
 ```XML
 $vResultPath : 
@@ -65,5 +65,5 @@ $vResultPath :
 
 #### See also 
 
-[Get last query path](get-last-query-path.md)  
-[Get last query plan](get-last-query-plan.md)  
+[Last query path](last-query-path.md)  
+[Last query plan](last-query-plan.md)  

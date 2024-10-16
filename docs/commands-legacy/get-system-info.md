@@ -1,12 +1,12 @@
 ---
-id: get-system-info
-title: Get system info
-slug: /commands/get-system-info
+id: system-info
+title: System info
+slug: /commands/system-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get system info.Syntax-->**Get system info**  -> Function result<!-- END REF-->
-<!--REF #_command_.Get system info.Params-->
+<!--REF #_command_.System info.Syntax-->**System info**  -> Function result<!-- END REF-->
+<!--REF #_command_.System info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Object | &#8592; | System information |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get system info.Summary-->The **Get system info** command returns an object containg information about the operating system and the characteristics of the system hardware and software from the machine it's executed on.<!-- END REF-->
+<!--REF #_command_.System info.Summary-->The **System info** command returns an object containg information about the operating system and the characteristics of the system hardware and software from the machine it's executed on.<!-- END REF-->
 
 The command returns the following information: 
 
@@ -61,7 +61,7 @@ The following code on a Windows machine:
 
 ```4d
  var $systemInfo : Object
- $systemInfo:=Get system info
+ $systemInfo:=System info
 ```
 
 returns an object that contains, for example, the following information:
@@ -73,6 +73,6 @@ returns an object that contains, for example, the following information:
 #### See also 
 
 *\_o\_Gestalt*  
-[Get application info](get-application-info.md)  
+[Application info](get-application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  

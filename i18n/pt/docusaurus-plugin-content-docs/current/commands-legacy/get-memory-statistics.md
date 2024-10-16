@@ -1,12 +1,12 @@
 ---
-id: get-memory-statistics
-title: GET MEMORY STATISTICS
-slug: /commands/get-memory-statistics
+id: memory-statistics
+title: MEMORY STATISTICS
+slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MEMORY STATISTICS.Syntax-->**GET MEMORY STATISTICS** ( *tipoInfo* ; *arrayNomes* ; *arrayValores* ; *arrayContador* )<!-- END REF-->
-<!--REF #_command_.GET MEMORY STATISTICS.Params-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *tipoInfo* ; *arrayNomes* ; *arrayValores* ; *arrayContador* )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tipoInfo | Integer | &#8594;  | Seletor de informação a ser obtido |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.GET MEMORY STATISTICS.Summary-->O comando **GET MEMORY STATISTICS** recupera informação relacionada ao uso da cache de dados 4D.<!-- END REF--> . Esta informação pode ser usada para analisar o funcionamento do aplicativo.   
+<!--REF #_command_.MEMORY STATISTICS.Summary-->O comando **MEMORY STATISTICS** recupera informação relacionada ao uso da cache de dados 4D.<!-- END REF--> . Esta informação pode ser usada para analisar o funcionamento do aplicativo.   
   
 Passe no parâmetro *tipoInfo* um valor que indique o tipo de informação que você deseja obteR. Em versões 4D atuais, há apenas um tipo compatível (*tipoInfo*\=1)
 

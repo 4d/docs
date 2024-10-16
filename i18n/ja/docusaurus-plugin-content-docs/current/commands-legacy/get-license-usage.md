@@ -1,12 +1,12 @@
 ---
-id: get-license-usage
-title: Get license usage
-slug: /commands/get-license-usage
+id: license-usage
+title: License usage
+slug: /commands/license-usage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get license usage.Syntax-->**Get license usage** -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get license usage.Params-->
+<!--REF #_command_.License usage.Syntax-->**License usage** -> 戻り値<!-- END REF-->
+<!--REF #_command_.License usage.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Collection | &#8592; | 使用中のライセンスについての情報を格納したオブジェクトのコレクション |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get license usage.Summary-->**Get license usage** コマンドは、使用されているライセンスについての情報を格納したオブジェクトのコレクションを返します。<!-- END REF-->
+<!--REF #_command_.License usage.Summary-->**License usage** コマンドは、使用されているライセンスについての情報を格納したオブジェクトのコレクションを返します。<!-- END REF-->
 
 返されたコレクション内のそれぞれのオブジェクトには、以下の属性が格納されています:
 

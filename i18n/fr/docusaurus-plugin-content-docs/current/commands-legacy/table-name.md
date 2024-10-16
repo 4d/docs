@@ -34,7 +34,7 @@ La méthode suivante est un exemple de méthode générique qui affiche les enre
 #### Voir aussi 
 
 [Field name](field-name.md)  
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  

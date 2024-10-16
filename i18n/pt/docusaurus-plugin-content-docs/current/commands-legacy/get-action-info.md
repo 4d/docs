@@ -1,12 +1,12 @@
 ---
-id: get-action-info
-title: Get action info
-slug: /commands/get-action-info
+id: action-info
+title: Action info
+slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get action info.Syntax-->**Get action info** ( *ação* {; *alvo*} ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get action info.Params-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *ação* {; *alvo*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Action info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | ação | Text | &#8594;  | Nome da ação padrão ou padrão incluindo parâmetro se exigido |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get action info.Summary-->O comando **Get action info** devolve várias informações, incluida a disponibilidade e o estado, sobre a *ação* definida no *objetivo*, de acordo com o contexto da aplicação atual.<!-- END REF-->
+<!--REF #_command_.Action info.Summary-->O comando **Action info** devolve várias informações, incluida a disponibilidade e o estado, sobre a *ação* definida no *objetivo*, de acordo com o contexto da aplicação atual.<!-- END REF-->
 
 Em *ação*, passe o nome da ação padrão a verificar. Pode ser uma string ou uma constante de tema *Ação estandarte*. Algumas ações aceitam parâmetros. Neste caso, deve utilizar o padrão seguinte: *actionName?parameterName=parameterValue.* Exemplo: *"gotoPage?value=2"*
 
@@ -34,7 +34,7 @@ Pode passar em *objetivo* o contexto de formulário no qual se deve executar a *
 
 **Nota:** se for omitido o *objetivo*, se utiliza por padrão o contexto ak current form.
 
-O comando **Get action info** devolve informação em forma de um objeto que contenha as seguintes propriedades:
+O comando **Action info** devolve informação em forma de um objeto que contenha as seguintes propriedades:
 
 | **Propriedad**e | **Tipo** | **Descrição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,7 +55,7 @@ Se quiser saber se a ação copiar está disponível (ou seja, se foram selecion
 ```4d
  var $actionInfo : Object
  var $isEnabled : Boolean
- $actionInfo:=Get action info(ak copy)
+ $actionInfo:=Action info(ak copy)
  If(OB Is defined($actionInfo.enabled)) //a ação é definida no processo
     If(OB Get($actionInfo;"enabled"))
   //a ação copiar está disponível

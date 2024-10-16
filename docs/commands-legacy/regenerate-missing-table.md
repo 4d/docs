@@ -31,8 +31,8 @@ This method regenerates all the missing tables that may be present in the databa
  $SizeArray:=Size of array($arrMissingTables)
  If($SizeArray#0)
   // Fills the array with the names of all the tables in the database
-    ARRAY TEXT(arrTables;Get last table number)
-    If(Get last table number>0) //If there are actually tables
+    ARRAY TEXT(arrTables;Last table number)
+    If(Last table number>0) //If there are actually tables
        For($vlTables;Size of array(arrTables);1;-1)
           If(Is table number valid($vlTables))
              arrTables{$vlTables}:=Table name($vlTables)

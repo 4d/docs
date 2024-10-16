@@ -1,12 +1,12 @@
 ---
-id: get-table-fragmentation
-title: Get table fragmentation
-slug: /commands/get-table-fragmentation
+id: table-fragmentation
+title: Table fragmentation
+slug: /commands/table-fragmentation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get table fragmentation.Syntax-->**Get table fragmentation** ( *aTabela* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Get table fragmentation.Params-->
+<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTabela* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Table fragmentation.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Tabela para a qual obter a taxa de fragmentação |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get table fragmentation.Summary-->O comando Get table fragmentation retorna o percentual de fragmentação lógica para os registros da tabela designada pelo parâmetro *aTabela*.<!-- END REF--> 
+<!--REF #_command_.Table fragmentation.Summary-->O comando Table fragmentation retorna o percentual de fragmentação lógica para os registros da tabela designada pelo parâmetro *aTabela*.<!-- END REF--> 
 
 A taxa de fragmentação lógica dos registros indica se os registros são armazenados de forma ordenada no arquivo de dados. Se a fragmentação se torna demasiado elevada, isso pode desacelerar consideravelmente as buscas seqüenciais sobre a tabela. A porcentagem de fragmentação 0 corresponde à ausência de fragmentação. Além de uma taxa de 20%, pode ser útil compactar os dados do arquivo. 
 
@@ -26,9 +26,9 @@ Este método lhe permite requisitar a compactação do arquivo de dados no caso 
 
 ```4d
  ToBeCompacted:=False
- For($i ;1;Get last table number)
+ For($i ;1;Last table number)
     If(Is table number valid($i))
-       If(Get table fragmentation(Table($i)->)>20)
+       If(Table fragmentation(Table($i)->)>20)
           ToBeCompacted:=True
        End if
     End if

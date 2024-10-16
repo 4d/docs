@@ -30,7 +30,7 @@ During transaction processing, [LOAD RECORD](load-record.md) and **Locked** are 
 
 #### See also 
 
-[Get locked records info](get-locked-records-info.md)  
+[Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Record Locking*  

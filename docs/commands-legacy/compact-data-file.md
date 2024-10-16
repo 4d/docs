@@ -65,5 +65,5 @@ If the compacting operation is carried out correctly, the OK system variable is 
 
 #### See also 
 
-[Get table fragmentation](get-table-fragmentation.md)  
+[Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  

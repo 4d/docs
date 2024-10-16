@@ -273,7 +273,7 @@ End if
 
 :::tip
 
-[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html) コマンドにこのプロパティを渡すことで、セッションの `.storage` オブジェクトを取得できます。
+[`Session storage`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html) コマンドにこのプロパティを渡すことで、セッションの `.storage` オブジェクトを取得できます。
 
 :::
 
@@ -531,7 +531,7 @@ End if
 
 :::tip
 
-セッションの `.storage` プロパティは [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html) コマンドで取得できます。
+セッションの `.storage` プロパティは [`Session storage`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html) コマンドで取得できます。
 
 :::
 

@@ -23,5 +23,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  

@@ -1,12 +1,12 @@
 ---
-id: get-activity-snapshot
-title: GET ACTIVITY SNAPSHOT
-slug: /commands/get-activity-snapshot
+id: activity-snapshot
+title: ACTIVITY SNAPSHOT
+slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Syntax-->**GET ACTIVITY SNAPSHOT** ( arrActivities | arrUUID ; *arrStart* ; *arrDuration* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Params-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( arrActivities | arrUUID ; *arrStart* ; *arrDuration* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | arrActivities &#124; arrUUID | Object array, テキスト配列 | &#8592; | オペレーションの詳細な情報(オブジェクト配列)<br/>またはオペレーションの UUID(テキスト配列) |
@@ -20,21 +20,21 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.GET ACTIVITY SNAPSHOT.Summary-->**GET ACTIVITY SNAPSHOT**コマンドは、4D 上で進行中のデータ操作の詳細を記載した配列を、一つまたは複数の配列に返します。<!-- END REF-->これらの操作は、通常進捗ウィンドウが表示されます。
+<!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->**ACTIVITY SNAPSHOT**コマンドは、4D 上で進行中のデータ操作の詳細を記載した配列を、一つまたは複数の配列に返します。<!-- END REF-->これらの操作は、通常進捗ウィンドウが表示されます。
 
 この情報は、もっとも時間のかかっているオペレーションまたは頻繁に使用されているオペレーション(キャッシュ書き込みやフォーミュラの実行など)のスナップショットを取るのに使われます。
 
-**注:** **GET ACTIVITY SNAPSHOT** コマンドによって返された情報は、4D Server のリアルタイムモニターのページに表示されているデータと同じです。 ( *4D Server Reference Guide* を参照して下さい。)
+**注:** **ACTIVITY SNAPSHOT** コマンドによって返された情報は、4D Server のリアルタイムモニターのページに表示されているデータと同じです。 ( *4D Server Reference Guide* を参照して下さい。)
 
-デフォルトとして、 **GET ACTIVITY SNAPSHOT** はローカルに実行されている操作のみ処理します(4D シングルユーザー、4D サーバーまたはリモートモードの4Dなど)。それに加え、リモートモードの4Dでは、サーバーで実行されている操作のスナップショットを取ることもできます。そのためには最後の引数として、 *\** 演算子を渡して下さい。サーバーのデータはローカルに復元されます。  
+デフォルトとして、 **ACTIVITY SNAPSHOT** はローカルに実行されている操作のみ処理します(4D シングルユーザー、4D サーバーまたはリモートモードの4Dなど)。それに加え、リモートモードの4Dでは、サーバーで実行されている操作のスナップショットを取ることもできます。そのためには最後の引数として、 *\** 演算子を渡して下さい。サーバーのデータはローカルに復元されます。  
 *\** 演算子は、コマンドが4Dサーバーや4Dシングルユーザー上で実行された場合には無視されます。
 
-**GET ACTIVITY SNAPSHOT** コマンドではシンタックスを使用することができます:
+**ACTIVITY SNAPSHOT** コマンドではシンタックスを使用することができます:
 
 * オブジェクト配列のみを使用するシンタックス
 * 複数の配列を使用するシンタックス
 
-##### 第一シンタックス: GET ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
+##### 第一シンタックス: ACTIVITY SNAPSHOT ( arrActivities {; \*}) 
 
 この記法では、リアルタイムモニターの全てのオペレーションが構造化された形式で4D オブジェクト配列( *arrActivities* 引数で指定）に返されます。配列の各要素は、以下の様に構築されたオブジェクトになっています:
 
@@ -70,7 +70,7 @@ displayed_sidebar: docs
    * ...
 * *subOperations* (配列): カレントのオペレーションのサブオペレーション(あれば)を含んだオブジェクトの配列。それぞれのサブ要素のストラクチャはメインオブジェクトないのものと同じです。カレントオペレーションにサブオペレーションが何もない場合、*subOperations* は空の配列になります。
 
-##### 第二シンタックス: GET ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
+##### 第二シンタックス: ACTIVITY SNAPSHOT ( arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} {; \*}) 
 
 この記法では、リアルタイムモニターの全てのオペレーションが、同期した複数の配列に返されます(オペレーションがあるたび、全ての配列に要素が追加されていきます)。返される配列は以下の通りです:
 
@@ -95,7 +95,7 @@ displayed_sidebar: docs
  ARRAY TEXT(arrInfo;0)
  
  Repeat
-    GET ACTIVITY SNAPSHOT(arrUUID;arrStart;arrDuration;arrInfo)
+    ACTIVITY SNAPSHOT(arrUUID;arrStart;arrDuration;arrInfo)
     If(Size of array(arrUUID)>0)
        TRACE // デバッガを呼び出し
     End if

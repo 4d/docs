@@ -51,7 +51,7 @@ _expression_ には正の整数を返す有効な 4D 式であればどんなも
 
 :::info
 
-いくつかの 4Dコマンドや関数はコレクションを返します。たとえば、 [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/ja/page1713.html) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はコレクションを返します。たとえば、 [`Monitored activity`](https://doc.4d.com/4dv19R/help/command/ja/page1713.html) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 

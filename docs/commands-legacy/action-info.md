@@ -1,12 +1,12 @@
 ---
-id: get-action-info
-title: Get action info
-slug: /commands/get-action-info
+id: action-info
+title: Action info
+slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get action info.Syntax-->**Get action info** ( *action* {; *target*} ) -> Function result<!-- END REF-->
-<!--REF #_command_.Get action info.Params-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *target*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Action info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Standard action name or pattern including parameter if required |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get action info.Summary-->The **Get action info** command returns several information, including availability and status, about the defined *action* in the *target*, according to the current application context.<!-- END REF-->
+<!--REF #_command_.Action info.Summary-->The **Action info** command returns several information, including availability and status, about the defined *action* in the *target*, according to the current application context.<!-- END REF-->
 
 In *action*, pass the standard action to to check. It can be a string or a constant from the *Standard Action* theme. It can be a string or a constant from the *Standard Action* theme. Some actions accept a target element and parameters. In this case, you must use the requested pattern, for example *"gotoPage?value=2"* or *paragraph/backgroundPositionV?value=top.* 
 
@@ -34,7 +34,7 @@ You can pass in *target* the form context where the *action* must be executed, i
 
 **Note:** If *target* is omitted, by default the ak current form context is used.
 
-The **Get action info** command returns information in the form of an object containing the following properties:
+The **Action info** command returns information in the form of an object containing the following properties:
 
 | **Property** | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ You want to know if the copy action is available (i.e. if some data is selected)
 ```4d
  var $actionInfo : Object
  var $isEnabled : Boolean
- $actionInfo:=Get action info(ak copy)
+ $actionInfo:=Action info(ak copy)
  If(Not(Undefined($actionInfo.enabled))) //action is defined in the process
     If(OB Get($actionInfo;"enabled"))
        ... //the copy action is available

@@ -1,12 +1,12 @@
 ---
-id: get-localized-document-path
-title: Get localized document path
-slug: /commands/get-localized-document-path
+id: localized-document-path
+title: Localized document path
+slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized document path.Syntax-->**Get localized document path** ( *relativePath* ) -> Function result<!-- END REF-->
-<!--REF #_command_.Get localized document path.Params-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *relativePath* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Localized document path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | relativePath | Text | &#8594;  | Relative pathname of document for which we want to obtain localized version |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get localized document path.Summary-->The **Get localized document path** command returns the complete (absolute) pathname of a document designated by *relativePath* and located in a xxx.<!-- END REF-->lproj folder.
+<!--REF #_command_.Localized document path.Summary-->The **Localized document path** command returns the complete (absolute) pathname of a document designated by *relativePath* and located in a xxx.<!-- END REF-->lproj folder.
 
 This command must be used within a multi-language application architecture based on the presence of a **Resources** folder and *xxx.lproj* subfolders (where xxx represents a language). With this architecture, 4D automatically supports localized files of the .xliff type as well as pictures, but you may need to use the same mechanism for other types of files. 
 
@@ -55,7 +55,7 @@ Here are the contents of the Resources folder:
 To use a .xsl file adapted to the current language, you simply need to pass:
 
 ```4d
- $myxsl:=Get localized document path("xsl/log.xsl")
+ $myxsl:=Localized document path("xsl/log.xsl")
 ```
 
 If the current language is, for example, French Canadian (fr-ca), the command returns:

@@ -22,7 +22,7 @@ La llamada del comando con el parámetro *estado* en [True](true.md "True") acti
 * Una descripción interna detallada de la búsqueda justo antes de su ejecución, en otras palabras, la búsqueda previa (el plan de búsqueda),
 * Una descripción interna detallada de la búsqueda que se ejecutó realmente (la ruta de búsqueda).
 
-La información registrada incluye el tipo de búsqueda (indexada, secuencial), el número de registro encontrados y el tiempo necesario para cada criterio de búsqueda a ejecutar. Puede leer esta información utilizando los comandos [Get last query plan](get-last-query-plan.md) y [Get last query path](get-last-query-path.md).
+La información registrada incluye el tipo de búsqueda (indexada, secuencial), el número de registro encontrados y el tiempo necesario para cada criterio de búsqueda a ejecutar. Puede leer esta información utilizando los comandos [Last query plan](last-query-plan.md) y [Last query path](last-query-path.md).
 
 Por lo general, la descripción del plan de una búsqueda y su ruta son idénticos, pero podrían eventualmente ser diferentes porque 4D podría implementar optimizaciones dinámicas durante la ejecución de la búsqueda para mejorar el rendimiento. Por ejemplo, una búsqueda índexada puede convertirse dinámicamente en una búsqueda secuencial si el motor 4D estima que sería más rápida, este es el caso, cuando el número de registros en los cuales se efectúa la búsqueda es bajo.
 
@@ -39,8 +39,8 @@ El siguiente ejemplo ilustra el tipo de información obtenida utilizando estos c
  QUERY([Employees];&;[Companies]Name="H@";*) // que trabajan para una empresa  cuyo nombre comienza por H
  QUERY([Employees];&;[Employees]Salary>2500;*) // cuyo salario es > 2500
  QUERY([Employees];&;[Cities]Pop<50000) // que viven en una ciudad con menos de 50 000 habitantes
- $vResultPlan:=Get last query plan(Description in text format)
- $vResultPath:=Get last query path(Description in text format)
+ $vResultPlan:=Last query plan(Description in text format)
+ $vResultPath:=Last query path(Description in text format)
  DESCRIBE QUERY EXECUTION(False) //Fin del modelo de análisis
 ```
 
@@ -50,7 +50,7 @@ Después de ejecutar este código, *$vResultPlan* y *$vResultPath* contienen des
 $vResultPlan :    Employees.LastName == T@ And  Employees.Salary > 2500 And Join on Table : Companies  :   Employees.Company = Companies.Name [index : Companies.Name ] LIKE H@ And Join  on Table : Cities  :  Employees.City = Cities.Name [index : Cities.Pop  ] < 50000$vResultPath : (Employees.LastName == T@ And Employees.Salary  > 2500) And (Join on Table : Companies  :  Employees.Company  = Companies.Name with filter {[index : Companies.Name ]  LIKE H@}) And (Join on Table : Cities  :  Employees.City = Cities.Name  with filter {[index : Cities.Pop ] < 50000})   (3 registros encontrados en 1  minuto)
 ```
 
-Si la constante Description in XML Format se pasa al comando [Get last query path](get-last-query-path.md "Get last query path"), *$vResultPath* contiene la descripción de la búsqueda expresada en XML:
+Si la constante Description in XML Format se pasa al comando [Last query path](last-query-path.md "Last query path"), *$vResultPath* contiene la descripción de la búsqueda expresada en XML:
 
 ```XML
 $vResultPath : 
@@ -65,5 +65,5 @@ $vResultPath :
 
 #### Ver también 
 
-[Get last query path](get-last-query-path.md)  
-[Get last query plan](get-last-query-plan.md)  
+[Last query path](last-query-path.md)  
+[Last query plan](last-query-plan.md)  

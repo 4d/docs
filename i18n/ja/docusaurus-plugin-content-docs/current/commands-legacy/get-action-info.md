@@ -1,12 +1,12 @@
 ---
-id: get-action-info
-title: Get action info
-slug: /commands/get-action-info
+id: action-info
+title: Action info
+slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get action info.Syntax-->**Get action info** ( *action* {; *target*} ) -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get action info.Params-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *target*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Action info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get action info.Summary-->**Get action info** コマンドはカレントのアプリケーションコンテキストに応じて、*target* 引数で指定したターゲット内で定義されている*action* 引数で指定した標準アクションについて、利用可能状況やステータスなどを含む様々な情報を返します。<!-- END REF-->
+<!--REF #_command_.Action info.Summary-->**Action info** コマンドはカレントのアプリケーションコンテキストに応じて、*target* 引数で指定したターゲット内で定義されている*action* 引数で指定した標準アクションについて、利用可能状況やステータスなどを含む様々な情報を返します。<!-- END REF-->
 
 *action* 引数には、チェックしたい標準アクションの名前を渡します。文字列あるいは*標準アクション* テーマの定数を渡すことができます。アクションの詳細リストは4D*デザインリファレンス*マニュアルの*標準アクション* の章にて提供されています。
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **注:** *target* が省略された場合、デフォルトではak current form コンテキストが使用されます。
 
-**Get action info** コマンドは情報を、以下のプロパティを含むオブジェクトとして返します:
+**Action info** コマンドは情報を、以下のプロパティを含むオブジェクトとして返します:
 
 | **プロパティ** | **型** | **詳細**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 ```4d
  var $actionInfo : Object
  var $isEnabled : Boolean
- $actionInfo:=Get action info(ak copy)
+ $actionInfo:=Action info(ak copy)
  If(Not(Undefined($actionInfo.enabled))) //アクションがプロセス内で定義されている
     If(OB Get($actionInfo;"enabled"))
        ... //コピーアクションは利用可能

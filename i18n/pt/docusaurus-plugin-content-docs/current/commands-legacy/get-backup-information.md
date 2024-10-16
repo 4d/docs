@@ -1,12 +1,12 @@
 ---
-id: get-backup-information
-title: GET BACKUP INFORMATION
-slug: /commands/get-backup-information
+id: backup-info
+title: BACKUP INFO
+slug: /commands/backup-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET BACKUP INFORMATION.Syntax-->**GET BACKUP INFORMATION** ( *seletor* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET BACKUP INFORMATION.Params-->
+<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *seletor* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | seletor | Integer | &#8594;  | Tipo de informação a ser obtida |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.GET BACKUP INFORMATION.Summary-->O comando GET BACKUP INFORMATION permite obter informação relacionada com o último backup efetuado na base de dados.<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Summary-->O comando BACKUP INFO permite obter informação relacionada com o último backup efetuado na base de dados.<!-- END REF-->
 
 Passe o tipo de informação a se obter em *seletor*. É possível utilizar uma das constantes a seguir, localizadas no tema “*Backup*”:
 

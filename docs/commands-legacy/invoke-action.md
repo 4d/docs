@@ -42,7 +42,7 @@ Depending on the *target*, the **INVOKE ACTION** command execution is either syn
 
 **Note:** Standard edit actions (Cut, Copy, Paste, Select all, Clear, Undo/Redo) ignore the *target* parameter, if passed. Such actions are always executed synchronously in the context of the editable object that has the focus.
 
-The **INVOKE ACTION** command does not generate an error, for example, if the requested action is not available in the current context. You must validate the expected action using the [Get action info](get-action-info.md) command. 
+The **INVOKE ACTION** command does not generate an error, for example, if the requested action is not available in the current context. You must validate the expected action using the [Action info](action-info.md) command. 
 
 #### Example 1 
 
@@ -62,4 +62,4 @@ You want to execute a **Goto page** standard action (page 3) in the main form:
 
 #### See also 
 
-[Get action info](get-action-info.md)  
+[Action info](action-info.md)  

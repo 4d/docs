@@ -1,12 +1,12 @@
 ---
-id: get-localized-document-path
-title: Get localized document path
-slug: /commands/get-localized-document-path
+id: localized-document-path
+title: Localized document path
+slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get localized document path.Syntax-->**Get localized document path** ( *cheminRelatif* ) -> Résultat<!-- END REF-->
-<!--REF #_command_.Get localized document path.Params-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *cheminRelatif* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Localized document path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminRelatif | Text | &#8594;  | Chemin d’accès relatif du document dont on veut obtenir la version localisée |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get localized document path.Summary-->La commande **Get localized document path** retourne le chemin d’accès complet (absolu) d’un document désigné par *cheminRelatif* et situé dans un dossier xxx.<!-- END REF-->lproj.
+<!--REF #_command_.Localized document path.Summary-->La commande **Localized document path** retourne le chemin d’accès complet (absolu) d’un document désigné par *cheminRelatif* et situé dans un dossier xxx.<!-- END REF-->lproj.
 
 Cette commande doit être utilisée dans le cadre d’une architecture d’application multi-langue basée sur la présence d’un dossier **Resources** et de sous-dossiers *xxx.lproj* (xxx représentant une langue). Avec cette architecture, 4D prend automatiquement en charge les fichiers localisés de type .xliff ainsi que les images, mais vous pouvez avoir besoin d’utiliser le même mécanisme pour d’autres types de fichiers. 
 
@@ -55,7 +55,7 @@ Voici le contenu du dossier Resources :
 Pour utiliser un fichier .xsl adapté à la langue courante, il vous suffit de passer :
 
 ```4d
- $monxsl:=Get localized document path("xsl/log.xsl")
+ $monxsl:=Localized document path("xsl/log.xsl")
 ```
 
 Si la langue courante est, par exemple, le français canadien (fr-ca), la commande retourne :

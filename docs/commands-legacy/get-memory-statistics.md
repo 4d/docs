@@ -1,12 +1,12 @@
 ---
-id: get-memory-statistics
-title: GET MEMORY STATISTICS
-slug: /commands/get-memory-statistics
+id: memory-statistics
+title: MEMORY STATISTICS
+slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MEMORY STATISTICS.Syntax-->**GET MEMORY STATISTICS** ( *infoType* ; *arrNames* ; *arrValues* ; *arrCount* )<!-- END REF-->
-<!--REF #_command_.GET MEMORY STATISTICS.Params-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* ; *arrNames* ; *arrValues* ; *arrCount* )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | infoType | Integer | &#8594;  | Type of requested info (always 1) |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET MEMORY STATISTICS.Summary-->The **GET MEMORY STATISTICS** command recovers information related to the use of the data cache by 4D.<!-- END REF--> This information can be used to analyze the functioning of the application. 
+<!--REF #_command_.MEMORY STATISTICS.Summary-->The **MEMORY STATISTICS** command recovers information related to the use of the data cache by 4D.<!-- END REF--> This information can be used to analyze the functioning of the application. 
 
 The *infoType* parameter specifies the type of requested information. In current 4D versions, there is only one supported type (*infoType*\=1) 
 

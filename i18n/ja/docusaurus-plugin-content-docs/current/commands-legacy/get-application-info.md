@@ -1,12 +1,12 @@
 ---
 id: get-application-info
-title: Get application info
+title: Application info
 slug: /commands/get-application-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application info.Syntax-->**Get application info** -> 戻り値<!-- END REF-->
-<!--REF #_command_.Get application info.Params-->
+<!--REF #_command_.Application info.Syntax-->**Application info** -> 戻り値<!-- END REF-->
+<!--REF #_command_.Application info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Object | &#8592; | アクティブなアプリケーションのアクティビティについての情報 |
@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 #### 例題 1 
 
-<!--REF #_command_.Get application info.Summary-->**Get application info** コマンドはアクティブなアプリケーションのアクティビティと、ネットワーク設定に関する詳細な情報を格納したオブジェクト型を返します。<!-- END REF-->
+<!--REF #_command_.Application info.Summary-->**Application info** コマンドはアクティブなアプリケーションのアクティビティと、ネットワーク設定に関する詳細な情報を格納したオブジェクト型を返します。<!-- END REF-->
 
-コマンドはスタンドアロンとクライアント/サーバー環境、どちらで実行しているアプリケーション上でも実行することが可能です。返される情報は、**Get application info** が実行される場所に応じて変わります。例えば、リモートの4D 上で実行された場合、返される情報はリモートワークステーションに関する情報のみになります。コマンドがサーバーで実行されるメソッドで呼び出された場合には、返される情報はサーバーの情報が返されます。
+コマンドはスタンドアロンとクライアント/サーバー環境、どちらで実行しているアプリケーション上でも実行することが可能です。返される情報は、**Application info** が実行される場所に応じて変わります。例えば、リモートの4D 上で実行された場合、返される情報はリモートワークステーションに関する情報のみになります。コマンドがサーバーで実行されるメソッドで呼び出された場合には、返される情報はサーバーの情報が返されます。
 
 返されるオブジェクト型には、以下のプロパティが格納されます:
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 | useQUICNetworkLayer         | ブール    | アプリケーションサーバーおよびDB4Dサーバーに対してQUIC ネットワークレイヤーが使用されている場合にはTrue(4D v20 ではベータ版、詳細は*互換性ページ* 参照)。スタンドアロン環境では返されません。取り得る値: true、false。詳細な情報については、[このBlog 記事](https://blog.4d.com/quic-network/) を参照してください。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | false                                           |
 | volumeShadowCopyStatus      | 文字列    | ボリューム・シャドウ・コピー・サービスのステータスを返します。Windowsのみ。詳細な情報については、*Windows のボリュームシャドウコピーサービスを使用する*を参照してください。 取り得る値: <table> <thead> <tr> <td>定数</td> <td>値</td> <td>コメント</td> </tr> </thead> <tbody> <tr> <td>vss available</td> <td>available</td> <td>サービスは利用可能です。</td> </tr><tr> <td>vss error</td> <td>error</td> <td>サービスにエラーが発生しました。</td> </tr><tr> <td>vss not available</td> <td>notAvailable</td> <td>サービスは利用できません。</td> </tr><tr> <td>vss update required</td> <td>updateRequired</td> <td>サービスは更新が必要です。</td> </tr> </tbody> </table> | "available"                                     |
 
-(\*) Windows 上では、例えば[On Startupデータベースメソッド](on-startup-database-method.md) 内で**Get application info** コマンドを呼び出すなどして、カウンターを事前に初期化しておく必要があります。
+(\*) Windows 上では、例えば[On Startupデータベースメソッド](on-startup-database-method.md) 内で**Application info** コマンドを呼び出すなどして、カウンターを事前に初期化しておく必要があります。
 
 #### 例題 2 
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ```4d
  var $appInfo : Object
- $appInfo:=Get application info
+ $appInfo:=Application info
 ```
 
  コードがスタンドアロン環境で実行された場合、返されたオブジェクトには(一例として)以下のような情報が格納されています: 
@@ -76,5 +76,5 @@ displayed_sidebar: docs
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
-[Get system info](get-system-info.md)  
+[System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  

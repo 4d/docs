@@ -1,12 +1,12 @@
 ---
-id: get-system-info
-title: Get system info
-slug: /commands/get-system-info
+id: system-info
+title: System info
+slug: /commands/system-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get system info.Syntax-->**Get system info**  -> Resultado<!-- END REF-->
-<!--REF #_command_.Get system info.Params-->
+<!--REF #_command_.System info.Syntax-->**System info**  -> Resultado<!-- END REF-->
+<!--REF #_command_.System info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Object | &#8592; | Informação do sistema |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get system info.Summary-->O comando **Get system info** devolve um objeto que contém informação sobre o sistema operativo e as características do hardware e software do sistema da máquina em que é executado.<!-- END REF-->
+<!--REF #_command_.System info.Summary-->O comando **System info** devolve um objeto que contém informação sobre o sistema operativo e as características do hardware e software do sistema da máquina em que é executado.<!-- END REF-->
 
 O comando devolve a informação abaixo:
 
@@ -60,7 +60,7 @@ O código abaixo é numa máquina Windows:
 
 ```4d
  var $systemInfo : Object
- $systemInfo:=Get system info
+ $systemInfo:=System info
 ```
 
 devolve um objeto que contém a informação abaixo:
@@ -72,6 +72,6 @@ devolve um objeto que contém a informação abaixo:
 #### Ver também 
 
 *\_o\_Gestalt*  
-[Get application info](get-application-info.md)  
+[Application info](get-application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  

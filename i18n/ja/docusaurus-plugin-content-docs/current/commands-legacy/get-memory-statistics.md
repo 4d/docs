@@ -1,12 +1,12 @@
 ---
-id: get-memory-statistics
-title: GET MEMORY STATISTICS
-slug: /commands/get-memory-statistics
+id: memory-statistics
+title: MEMORY STATISTICS
+slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MEMORY STATISTICS.Syntax-->**GET MEMORY STATISTICS** ( *infoType* ; *arrNames* ; *arrValues* ; *arrCount* )<!-- END REF-->
-<!--REF #_command_.GET MEMORY STATISTICS.Params-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* ; *arrNames* ; *arrValues* ; *arrCount* )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | infoType | Integer | &#8594;  | 取得する情報のセレクター |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.GET MEMORY STATISTICS.Summary-->**GET MEMORY STATISTICS**コマンドは、4Dのデータキャッシュの利用に関する情報を取得します。<!-- END REF-->この情報はアプリケーションの動作を検証するために使用できます。
+<!--REF #_command_.MEMORY STATISTICS.Summary-->**MEMORY STATISTICS**コマンドは、4Dのデータキャッシュの利用に関する情報を取得します。<!-- END REF-->この情報はアプリケーションの動作を検証するために使用できます。
 
 *infoType* 引数はリクエストしたい情報のタイプを指定します。カレントの4D のバージョンではサポートされるタイプは一つだけ(*infoType*\=1)です。
 

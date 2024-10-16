@@ -25,7 +25,7 @@ O On Backup Shutdown database method permite verificar que o backup foi executad
 * Se o backup foi interrompido pelo usuário ou ocorreu um erro, $1 é diferente de 0\.
 * * Se o backup foi parado pelo *Método de Banco de Dados On Backup Startup* (*$0* \# 0), *$1* obtém o valor devolvido no parâmetro $0\. Isto lhe permite implementar um sistema de gerenciamento de erros personalizados  
    * Se o backup foi parado por um erro, o código do erro é devolvido em *$1.*
- Em todos os casos, pode obter informação sobre o erro utilizando o comando [GET BACKUP INFORMATION](get-backup-information.md).  
+ Em todos os casos, pode obter informação sobre o erro utilizando o comando [BACKUP INFO](backup-info.md).  
 
 **Nota**: Você deve declarar o parâmetro *$1* (inteiro longo) no método do banco de dados:
 

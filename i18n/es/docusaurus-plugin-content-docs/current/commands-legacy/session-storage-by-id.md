@@ -1,12 +1,12 @@
 ---
-id: session-storage-by-id
-title: Session storage by ID
-slug: /commands/session-storage-by-id
+id: session-storage
+title: Session storage
+slug: /commands/session-storage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Session storage by ID.Syntax-->**Session storage by ID** ( *id* ) -> Resultado<!-- END REF-->
-<!--REF #_command_.Session storage by ID.Params-->
+<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Session storage.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | id | Text | &#8594;  | Identificador único (UUID) de la sesión en el servidor |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Nota 
 
-<!--REF #_command_.Session storage by ID.Summary-->El comando **Session storage by ID** devuelve el objeto de almacenamiento de la sesión cuyo identificador único se pasó en el parámetro *id*.<!-- END REF--> 
+<!--REF #_command_.Session storage.Summary-->El comando **Session storage** devuelve el objeto de almacenamiento de la sesión cuyo identificador único se pasó en el parámetro *id*.<!-- END REF--> 
 
 En *id*, pase el UUID de la sesión para la que desea obtener el almacenamiento. El servidor lo asigna automáticamente y se almacena en la propiedad [**.id**](https://developer.4d.com/docs/API/SessionClass#id) del [objeto sesión](https://developer.4d.com/docs/API/SessionClass). Si la sesión no existe en el servidor, el comando devuelve **Null**. 
 
@@ -35,7 +35,7 @@ Este método modifica el valor de una propiedad "settings" almacenada en el obje
  #DECLARE($id Text;$text Text)
  var $obj : Object
  
- $obj:=Session storage by ID($id)
+ $obj:=Session storage($id)
  
  If($obj.settings=Null)
     Use($obj)

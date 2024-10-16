@@ -1,12 +1,12 @@
 ---
-id: get-backup-information
-title: GET BACKUP INFORMATION
-slug: /commands/get-backup-information
+id: backup-info
+title: BACKUP INFO
+slug: /commands/backup-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET BACKUP INFORMATION.Syntax-->**GET BACKUP INFORMATION** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
-<!--REF #_command_.GET BACKUP INFORMATION.Params-->
+<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | 取得する情報のタイプ |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.GET BACKUP INFORMATION.Summary-->GET BACKUP INFORMATION コマンドを使用して、データベースのデータに対して行われた前回のバックアップに関連する情報を取得できます。<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Summary-->BACKUP INFO コマンドを使用して、データベースのデータに対して行われた前回のバックアップに関連する情報を取得できます。<!-- END REF-->
 
 *selector*には取得する情報タイプを渡します。*info1* と *info2* の型および内容は、*selector* の値によって決まります。“*Backup and Restore*”テーマの次の定数を使用できます:
 

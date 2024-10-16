@@ -24,5 +24,5 @@ Ver exemplo para **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
 
 #### Ver também 
 
-[Get Monitored Activity](get-monitored-activity.md)  
+[Monitored activity](monitored-activity.md)  
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  

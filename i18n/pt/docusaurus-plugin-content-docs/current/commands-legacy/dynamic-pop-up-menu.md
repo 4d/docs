@@ -39,7 +39,7 @@ Se um elemento de menu for selecionado, o comando devolve sua cadeia de caracter
 
 **A partir de 4D v16 R3:** Se uma ação padrão for associada a um item menu, é levado em consideração pelo comando **Dynamic pop up menu** em vários níveis:
 
-* se uma ação padrão associada não for ativada (ou seja, não puder ser chamada) no contexto do menu pop up, o item é automaticamente escondido. Pode saber se a ação foi ativada usando o comando [Get action info](get-action-info.md).
+* se uma ação padrão associada não for ativada (ou seja, não puder ser chamada) no contexto do menu pop up, o item é automaticamente escondido. Pode saber se a ação foi ativada usando o comando [Action info](action-info.md).
 * Itens com uma ação toggle associada são automaticamente marcados, desmarcados ou "mixed" dependendo da seleção.
 * Se o título da ação foi estabelecido ao item usando a constante ak standard action title, o nome localizado é exibido no menu.
 * Quando o item for selecionado, a ação padrão associada é chamada (execução é assíncrona).

@@ -1,12 +1,12 @@
 ---
-id: get-locked-records-info
-title: Get locked records info
-slug: /commands/get-locked-records-info
+id: locked-records-info
+title: Locked records info
+slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get locked records info.Syntax-->**Get locked records info** ( *laTable* ) -> Résultat<!-- END REF-->
-<!--REF #_command_.Get locked records info.Params-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTable* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Locked records info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle vous souhaitez connaître les enregistrements verrouillés |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get locked records info.Summary-->La commande **Get locked records info** retourne un [objet](# "Données structurées sous forme d'objet natif 4D") décrivant le ou les enregistrement(s) actuellement verrouillé(s) dans *laTable*.<!-- END REF-->
+<!--REF #_command_.Locked records info.Summary-->La commande **Locked records info** retourne un [objet](# "Données structurées sous forme d'objet natif 4D") décrivant le ou les enregistrement(s) actuellement verrouillé(s) dans *laTable*.<!-- END REF-->
 
 **Note :** Cette commande fonctionne uniquement avec 4D et 4D Server. Elle retourne toujours un objet invalide lorsqu'elle est appelée depuis un 4D distant. Elle peut toutefois être appelée depuis un 4D distant si la méthode d'appel dispose de l'option "Exécuter sur serveur" ; elle retourne dans ce cas les informations relatives au serveur. Lorsqu'elle est appelée depuis un composant, elle s'applique à la base hôte.
 
@@ -33,7 +33,7 @@ Chaque élément de collection "objet description" identifie un enregistrement v
 | **Propriété**     | **Type**      | **Description**                                                                                                                                                                                                                                                                                                                                  |
 | ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | contextID         | UUID (Chaîne) | UUID du contexte de la base à l'origine du verrouillage                                                                                                                                                                                                                                                                                          |
-| contextAttributes | Objet         | Objet contenant des informations semblables à la commande [LOCKED BY](locked-by.md) mais appliquées à l'enregistrement, à la différence près que **Get locked records info** retourne uniquement le nom de l'utilisateur défini dans le système (et pas celui de l'utilisateur 4D) ainsi que des informations supplémentaires (voir ci-dessous). |
+| contextAttributes | Objet         | Objet contenant des informations semblables à la commande [LOCKED BY](locked-by.md) mais appliquées à l'enregistrement, à la différence près que **Locked records info** retourne uniquement le nom de l'utilisateur défini dans le système (et pas celui de l'utilisateur 4D) ainsi que des informations supplémentaires (voir ci-dessous). |
 | recordNumber      | Entier long   | Numéro de l'enregistrement verrouillé                                                                                                                                                                                                                                                                                                            |
 
 L'objet *contextAttributes* est constitué des propriétés suivantes :
@@ -72,7 +72,7 @@ L'objet *contextAttributes* est constitué des propriétés suivantes :
 Vous exécutez le code suivant :
 
 ```4d
- $vOlocked :=Get locked records info([Table])
+ $vOlocked :=Locked records info([Table])
 ```
 
 Si deux enregistrements sont verrouillés dans la table \[Table\], l'objet suivant est retourné dans $vOlocked :
