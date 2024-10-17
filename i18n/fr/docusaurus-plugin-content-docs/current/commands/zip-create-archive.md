@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Paramètres      | Type                      |                                 | Description                                                               |
-| --------------- | ------------------------- | :-----------------------------: | ------------------------------------------------------------------------- |
-| fileToZip       | 4D.File   | &amp;srarr; | Objet fichier ou dossier à compresser                                     |
-| folderToZip     | 4D.Folder | &amp;srarr; | Objet fichier ou dossier à compresser                                     |
-| zipStructure    | Object                    | &amp;srarr; | Objet fichier ou dossier à compresser                                     |
-| destinationFile | 4D.File   | &amp;srarr; | Fichier de destination de l'archive                                       |
-| options         | Integer                   | &amp;srarr; | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
-| Résultat        | Object                    |  &amp;larr; | Objet statut                                                              |
+| Paramètres      | Type                      |                            | Description                                                               |
+| --------------- | ------------------------- | :------------------------: | ------------------------------------------------------------------------- |
+| fileToZip       | 4D.File   | &#8594 | Objet fichier ou dossier à compresser                                     |
+| folderToZip     | 4D.Folder | &#8594 | Objet fichier ou dossier à compresser                                     |
+| zipStructure    | Object                    | &#8594 | Objet fichier ou dossier à compresser                                     |
+| destinationFile | 4D.File   | &#8594 | Fichier de destination de l'archive                                       |
+| options         | Integer                   | &#8594 | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
+| Résultat        | Object                    | &#8592 | Objet statut                                                              |
 
 <!-- END REF -->
 
