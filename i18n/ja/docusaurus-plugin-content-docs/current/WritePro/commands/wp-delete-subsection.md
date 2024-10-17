@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
-| 引数             | 型      |                                | 説明                                                                                 |
-| -------------- | ------ | ------------------------------ | ---------------------------------------------------------------------------------- |
-| wpSection      | オブジェクト | &amp;rarr; | 4D Write Pro section                                                               |
-| subSectionType | 倍長整数   | &amp;rarr; | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | オブジェクト | &amp;rarr; | 4D Write Pro subsection                                                            |
+| 引数             | 型      |                            | 説明                                                                                 |
+| -------------- | ------ | -------------------------- | ---------------------------------------------------------------------------------- |
+| wpSection      | オブジェクト | &#8594 | 4D Write Pro section                                                               |
+| subSectionType | 倍長整数   | &#8594 | Subsection type (wk first page, wk left page, or wk right page) |
+| subSection     | オブジェクト | &#8594 | 4D Write Pro subsection                                                            |
 
 <!-- END REF-->
 
