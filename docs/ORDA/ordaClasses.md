@@ -892,7 +892,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-A function with `onHttpGet` accepts [parameters](../Concepts/parameters.md).
+A function with `onHttpGet` keyword accepts [parameters](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection). 
 
@@ -906,7 +906,7 @@ See the [Parameters](../REST/classFunctions#parameters) section in the REST serv
 
 ### result
 
-A function with `onHttpGet` can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+A function with `onHttpGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
 
 :::info
 

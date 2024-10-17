@@ -4,11 +4,12 @@ title: OutGoingMessage
 ---
 
 
-The `4D.OutGoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutGoingMessage`, the REST server does not return an object but the object instance of the OutgoingMessage class.
+The `4D.OutGoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutGoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
 
 Typically, this class can be used in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser. 
 
-An instance of this class is built on 4D Server and sent to the browser by the [4D REST Server](../REST/gettingStarted.md). 
+An instance of this class is built on 4D Server and can be sent to the browser by the [4D REST Server](../REST/gettingStarted.md) only. This class allows to use other technologies than HTTP (e.g. mobile).
+
 
 
 
@@ -20,6 +21,22 @@ An instance of this class is built on 4D Server and sent to the browser by the [
 
 </details>
 
+### Example
+
+In this example, a `getFile()` function is implemented in the [Datastore class](../ORDA/ordaClasses.md#datastore-class) and [can be called](../ORDA/ordaClasses.md#onhttpget-keyword) by a REST request. The purpose is to return a **testFile.pdf** file as a response to the request:
+
+```4d
+Class extends DataStoreImplementation
+
+exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
+	
+	var $result:=4D.OutgoingMessage.new()
+	var $file:=File("/RESOURCES/testFile.pdf")
+	
+	$result.setBody($file.getContent())  // This is binary content
+	$result.setHeader("Content-Type"; "application/pdf")
+	return $result
+```
 
 ### OutGoingMessage Object
 
@@ -52,12 +69,12 @@ A 4D.OutGoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 #### Description
 
-The `.body` property contains <!-- REF #OutGoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body`:
+The `.body` property contains <!-- REF #OutGoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body` property:
 
 - text
-- image
 - blob
 - object
+- image
 
 The `.body` property is read-write.
 
@@ -75,8 +92,7 @@ You can also set the `.body` property using the [`setBody()`](#setbody) function
 
 The `.headers` property contains <!-- REF #OutGoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->. 
 
-This property is read-only. To set a header, use the [`setHeader()`](#setheader) function. 
-
+The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function. 
 
 <!-- END REF -->
 
@@ -97,12 +113,17 @@ The `.setBody()` function <!-- REF #OutGoingMessageClass.setBody().Summary -->se
 
  The following data types are supported in the *body*:
 
-- text
-- image
-- blob
-- object
+- Text
+- Blob
+- Object
+- Image
 
-When this function is used, the content-type header is automatically set depending on the *body* type. 
+When this function is used, the content-type header is automatically set depending on the *body* type:
+
+- Content-Type:text/plain if the body is a Text
+- Content-Type:application/octet-stream if body is a Blob
+- Content-Type:application/json if body is an Object
+- Content-Type:image/jpeg, image/gif... if body is an Image
 
 If *body* is not of a supported value type, an error is returned.
 
@@ -128,8 +149,7 @@ When returning a 4D.OutGoingMessage object instance, 4D automatically sets some 
 
 :::note
 
-If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. 
-For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation. 
+If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation. 
 
 :::
 

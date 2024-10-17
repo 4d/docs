@@ -82,7 +82,7 @@ See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exp
 
 ### `onHttpGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the `onHttpGet` keyword. For example:
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). For example:
 
 ```4d
 //allowing GET requests
@@ -652,16 +652,49 @@ $ageAverage:=$students.getAgeAverage()
 
 ## GET request examples
 
-### Using an entity to download contents
+### Returning a document
 
-You want to download the User manual of a product. You pass an entity as parameter to a datastore function called by a REST GET request, and return of object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md). 
+You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md). 
+
+```4d
+// Product dataclass
+exposed onHTTPGet Function getUserManual($productId : Integer; $type : Text) : 4D.OutgoingMessage
+	
+var $file : 4D.File
+var $response:=4D.OutgoingMessage.new()
+var $doc:="/RESOURCES/User manuals/product_"+String($productId)
+
+Case of 
+	: ($type="pdf")
+		$file:=File($doc+".pdf")
+                $response.setBody($file.getContent()) // This is binary content 
+		$response.setHeader("Content-Type"; "application/pdf")
+			
+	: ($type="jpeg")
+		$file:=File($doc+".jpeg")
+                $response.setBody($file.getContent()) // This is binary content 
+		$response.setHeader("Content-Type"; "image/jpeg")
+End case 
+	
+return $response
+
+```
+
+You can call the function using a request like:
+
+**GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
+
+
+### Using an entity to download a PDF document 
+
+Same example as above but you want to pass an entity as parameter to the datastore function. 
 
 ```4d
 // Product dataclass
 exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.OutgoingMessage
 	
 	var $file : 4D.File
-	var $response : 4D.OutgoingMessage:=4D.OutgoingMessage.new()
+	var $response := 4D.OutgoingMessage.new()
 	
 	$file:=File("/RESOURCES/User manuals/"+$product.name+".pdf")
 	$response.setBody($file.getContent())
@@ -686,7 +719,7 @@ exposed onHTTPGet Function buildShoppingList($products : cs.ProductSelection) : 
 	
 	var $p : cs.ProductsEntity
 	var $content : Text
-	var $response : 4D.OutgoingMessage:=4D.OutgoingMessage.new()
+	var $response := 4D.OutgoingMessage.new()
 	
 	$content:=""
 	
