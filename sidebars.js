@@ -663,7 +663,6 @@ module.exports =
 						"commands-legacy/asserted",
 						"commands-legacy/filter-event",
 						"commands-legacy/get-assert-enabled",
-						"commands-legacy/get-last-error-stack",
 						"commands-legacy/last-errors",
 						"commands-legacy/method-called-on-error",
 						"commands-legacy/method-called-on-event",
@@ -1178,7 +1177,6 @@ module.exports =
 						"commands/process-activity",
 						"commands/process-info",
 						"commands/process-number",
-						"commands-legacy/process-properties",
 						"commands-legacy/process-state",
 						"commands-legacy/register-client",
 						"commands-legacy/resume-process",
@@ -1595,7 +1593,7 @@ module.exports =
 						"commands-legacy/select-rgb-color",
 						"commands-legacy/set-recent-fonts",
 						"commands-legacy/set-screen-depth",
-						"commands-legacy/system-folder",						"commands-legacy/system-info",
+						"commands-legacy/system-folder",
 						"commands-legacy/system-info",
 						"commands-legacy/temporary-folder"
 					]
