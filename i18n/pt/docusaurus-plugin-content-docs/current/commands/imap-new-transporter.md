@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.IMAP New transporter.Params -->
 
-| Parâmetro  | Tipo                               |                              | Descrição                                                                         |
-| ---------- | ---------------------------------- | :--------------------------: | --------------------------------------------------------------------------------- |
-| server     | Object                             | &#x1F852 | Informação de servidor de correio                                                 |
-| Resultados | 4D.IMAPTransporter | &#x1F850 | [IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object) |
+| Parâmetro  | Tipo                               |                            | Descrição                                                                         |
+| ---------- | ---------------------------------- | :------------------------: | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594 | Informação de servidor de correio                                                 |
+| Resultados | 4D.IMAPTransporter | &#8592 | [IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->
 
