@@ -5,7 +5,7 @@ title: $singleton
 
 [共有シングルトンの公開関数](../Concepts/classes.md#シングルトンクラス) は、REST で直接呼び出すことができます。
 
-シングルトン関数は、`$singleton` コマンド (`()`は不要です) を使用して POSTリクエストで呼び出されます。 たとえば、`VehicleFactory` 共有シングルトンクラスに `buildVehicle()` 関数を定義した場合、次のリクエストで呼び出すことができます:
+Singleton functions are called in POST or REST requests with the `$singleton` command and without `()`. たとえば、`VehicleFactory` 共有シングルトンクラスに `buildVehicle()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
@@ -27,9 +27,25 @@ RESTリクエストから直接呼び出すことができるのは、[`exposed`
 
 ## 関数の呼び出し
 
-シングルトン関数は必ず REST の **POST** リクエストで呼び出さなくてはなりません (GETリクエストの場合はエラーが返されます)。 シンタックスは次の通りです:
+Singleton functions can be called using REST **POST** or **GET** requests.
+
+シンタックスは次の通りです:
+
+#### POST request
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
+
+with data in the body of the POST request: `["myparam"]`
+
+#### GET request
+
+`/rest/$singleton/SingletonClass/SingletonClassFunction?$params='["myparam"]'`
+
+:::note
+
+The `SingletonClassFunction()` function must have been declared with the `onHttpGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)).
+
+:::
 
 > プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([*プリエンプティブプロセスを使用* の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
 
