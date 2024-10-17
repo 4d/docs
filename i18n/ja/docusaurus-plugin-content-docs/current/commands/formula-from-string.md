@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula from string.Params -->
 
-| 引数            | 型                           |                              | 説明                                                                                            |
-| ------------- | --------------------------- | :--------------------------: | --------------------------------------------------------------------------------------------- |
-| formulaString | テキスト                        | &#x1F852 | オブジェクトとして返されるフォーミュラ文字列                                                                        |
-| context       | Number                      | &#x1F852 | `sk execute in current database` (デフォルト) または `sk execute in host database` |
-| 戻り値           | 4D.Function | &#x1F850 | フォーミュラを格納しているネイティブなオブジェクト                                                                     |
+| 引数            | 型                           |                            | 説明                                                                                            |
+| ------------- | --------------------------- | :------------------------: | --------------------------------------------------------------------------------------------- |
+| formulaString | テキスト                        | &#8594 | オブジェクトとして返されるフォーミュラ文字列                                                                        |
+| context       | Number                      | &#8594 | `sk execute in current database` (デフォルト) または `sk execute in host database` |
+| 戻り値           | 4D.Function | &#8592 | フォーミュラを格納しているネイティブなオブジェクト                                                                     |
 
 <!-- END REF -->
 
@@ -64,4 +64,4 @@ This command is similar to [`Formula`](formula.md), except that it handles a tex
 #### 参照
 
 [Formula](formula.md)\
-[Parse formula](parse-formula.md)
+[Parse formula](../commands-legacy/parse-formula.md)
