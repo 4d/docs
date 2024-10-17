@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
-| Paramètres | Type       |                                | Description                                    |
-| ---------- | ---------- | ------------------------------ | ---------------------------------------------- |
-| Résultat   | Collection | &amp;larr; | Collection of the available Web Server objects |
+| Paramètres | Type       |                            | Description                                    |
+| ---------- | ---------- | -------------------------- | ---------------------------------------------- |
+| Résultat   | Collection | &#8592 | Collection of the available Web Server objects |
 
 <!-- END REF-->
 
