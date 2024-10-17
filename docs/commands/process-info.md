@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Process info.Syntax -->**Process info** ( *processNumber * : Integer ) : Object<!-- END REF -->
+<!-- REF #_command_.Process info.Syntax -->**Process info** ( *processNumber* : Integer ) : Object<!-- END REF -->
 
 
 <!-- REF #_command_.Process info.Params -->
