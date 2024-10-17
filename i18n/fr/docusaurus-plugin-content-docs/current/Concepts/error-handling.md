@@ -97,7 +97,7 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 4D gère automatiquement un certain nombre de variables appelées [**variables système**](variables.md#system-variables), répondant à différents besoins.
 :::
 
-- la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html) qui renvoie une collection contenant la pile courante des erreurs survenues dans l'application 4D. Vous pouvez également utiliser la commande [`GET LAST ERROR STACK`](https://doc.4d.com/4dv20/help/command/en/page1015.html) qui renvoie les mêmes informations sous forme de tableaux.
+- la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html) qui renvoie une collection contenant la pile courante des erreurs survenues dans l'application 4D.
 - la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
 
 #### Exemple
@@ -229,7 +229,8 @@ Le code placé entre les mots-clés `Try` et `Catch` est d'abord exécuté, puis
 
 - Si aucune erreur n'est levée, l'exécution du code se poursuit après le mot clé `End try` correspondant. Le code placé entre les mots-clés `Catch` et `End try` n'est pas exécuté.
 - Si l'exécution du bloc de code génère une _erreur non différée_, le flux d'exécution s'arrête et exécute le bloc de code `Catch` correspondant.
-- Si l'exécution du bloc de code lance une _erreur différée_, le flux d'exécution continue jusqu'à la fin du bloc `Try`, puis exécute le bloc de code `Catch` correspondant.
+- If the code block calls a method that throws a _deferred error_, the execution flow jumps directly to the corresponding `Catch` code block.
+- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
 
 :::note
 
