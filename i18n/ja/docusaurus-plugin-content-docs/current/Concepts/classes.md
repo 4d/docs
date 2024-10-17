@@ -740,7 +740,8 @@ shared Function Bar($value : Integer)
 
 :::note
 
-セッションシングルトンは自動的に共有されます (クラスのコンストラクターで `shared` キーワードを使う必要はありません)。
+- Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
+- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 
