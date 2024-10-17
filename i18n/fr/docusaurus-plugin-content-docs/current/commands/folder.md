@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| Paramètres     | Type                      |                              | Description                                                           |
-| -------------- | ------------------------- | :--------------------------: | --------------------------------------------------------------------- |
-| path           | Text                      | &#x1F852 | Chemin du dossier                                                     |
-| folderConstant | Integer                   | &#x1F852 | Constante de dossier 4D                                               |
-| pathType       | Integer                   | &#x1F852 | `fk posix path` (par défaut) ou `fk platform path` |
-| \*             | operator                  | &#x1F852 | \* pour retourner le dossier de la base hôte                          |
-| Résultat       | 4D.Folder | &#x1F850 | Nouvel objet dossier                                                  |
+| Paramètres     | Type                      |                            | Description                                                           |
+| -------------- | ------------------------- | :------------------------: | --------------------------------------------------------------------- |
+| path           | Text                      | &#8594 | Chemin du dossier                                                     |
+| folderConstant | Integer                   | &#8594 | Constante de dossier 4D                                               |
+| pathType       | Integer                   | &#8594 | `fk posix path` (par défaut) ou `fk platform path` |
+| \*             | operator                  | &#8594 | \* pour retourner le dossier de la base hôte                          |
+| Résultat       | 4D.Folder | &#8592 | Nouvel objet dossier                                                  |
 
 <!-- END REF -->
 
