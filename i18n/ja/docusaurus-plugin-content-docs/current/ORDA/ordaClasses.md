@@ -140,23 +140,22 @@ Function GetBestOnes()
 `City クラス` は API を提供しています:
 
 ```4d
-// cs.City クラス
+// cs.City class
 
 Class extends DataClass
 
 Function getCityName()
-    var $1; $zipcode : Integer
-    var $zip : 4D.Entity
-    var $0 : Text
+	var $1; $zipcode : Integer
+	var $zip : 4D.Entity
+	var $0 : Text
 
-    $zipcode:=$1
-    $zip:=ds.ZipCode.get($zipcode)
-    $0:="" 
+	$zipcode:=$1
+	$zip:=ds.ZipCode.get($zipcode)
+	$0:=""
 
-    If ($zip#Null)
-        $0:=$zip.city.name
-    End if
-
+	If ($zip#Null)
+		$0:=$zip.city.name
+	End if
 ```
 
 クライアントはまず、リモートデータストアのセッションを開始します:
@@ -184,16 +183,15 @@ ORDA で公開されるテーブル毎に、EntitySelection クラスが `cs` �
 #### 例題
 
 ```4d
-// cs.EmployeeSelection クラス
+// cs.EmployeeSelection class
 
 
 Class extends EntitySelection
 
-// 給与が平均超えの社員を当該エンティティセレクションから抽出します
+//Extract the employees with a salary greater than the average from this entity selection
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
-    return This.query("salary > :1";This.average("salary")).orderBy("salary")
-
+	return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -354,25 +352,23 @@ _$event_ パラメーターは、以下のプロパティが含みます:
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
 
-  Case of   
-    : (This.firstName=Null) & (This.lastName=Null)
-        $event.result:=Null // Null値を返すには result を使用します
-    : (This.firstName=Null)
-        $fullName:=This.lastName
-    : (This.lastName=Null)
-        $fullName:=This.firstName
-    Else 
-        $fullName:=This.firstName+" "+This.lastName
-    End case 
-
+  Case of 	
+	: (This.firstName=Null) & (This.lastName=Null)
+		$event.result:=Null //use result to return Null
+	: (This.firstName=Null)
+		$fullName:=This.lastName
+	: (This.lastName=Null)
+		$fullName:=This.firstName
+	Else
+		$fullName:=This.firstName+" "+This.lastName
+	End case
 ```
 
 - 計算属性は、エンティティにリレートされた属性に基づいて定義することができます。
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
-    $result:=This.manager.manager
-
+	$result:=This.manager.manager
 
 ```
 
@@ -382,7 +378,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else 
+    Else
         $result:=This.manager.directReports.minus(this)
     End if
 ```
@@ -437,8 +433,10 @@ Function query <attributeName>($event : Object) -> $result : Object
 
 - 最初のシンタックスでは、`$event.result` オブジェクトプロパティを通じてクエリ全体を処理します。
 - 2番目と 3番目のシンタックスでは、関数は _$result_ に値を返します:
+
   - _$result_ がテキストの場合、それは有効なクエリ文字列でなければなりません。
   - _$result_ がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:
+
   | プロパティ                              | 型          | 説明                                                                                     |
   | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
   | $result.query      | Text       | プレースホルダー (:1, :2, など) を使った有効なクエリ文字列 |
@@ -471,41 +469,40 @@ _$event_ パラメーターは、以下のプロパティが含みます:
 ```4d
 Function query fullName($event : Object)->$result : Object
 
-    var $fullname; $firstname; $lastname; $query : Text
-    var $operator : Text
-    var $p : Integer
-    var $parameters : Collection
+	var $fullname; $firstname; $lastname; $query : Text
+	var $operator : Text
+	var $p : Integer
+	var $parameters : Collection
 
-    $operator:=$event.operator
-    $fullname:=$event.value
+	$operator:=$event.operator
+	$fullname:=$event.value
 
-    $p:=Position(" "; $fullname) 
-    If ($p>0)
-        $firstname:=Substring($fullname; 1; $p-1)+"@"
-        $lastname:=Substring($fullname; $p+1)+"@"
-        $parameters:=New collection($firstname; $lastname) // 2要素のコレクション
-    Else 
-        $fullname:=$fullname+"@"
-        $parameters:=New collection($fullname) // 1要素のコレクション
-    End if 
+	$p:=Position(" "; $fullname)
+	If ($p>0)
+		$firstname:=Substring($fullname; 1; $p-1)+"@"
+		$lastname:=Substring($fullname; $p+1)+"@"
+		$parameters:=New collection($firstname; $lastname) // two items collection
+	Else
+		$fullname:=$fullname+"@"
+		$parameters:=New collection($fullname) // single item collection
+	End if
 
-    Case of 
-    : ($operator="==") | ($operator="===")
-        If ($p>0)
-            $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else 
-            $query:="firstName = :1 or lastName = :1"
-        End if 
-    : ($operator="!=")
-        If ($p>0)
-            $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else 
-            $query:="firstName != :1 and lastName != :1"
-        End if 
-    End case 
+	Case of
+	: ($operator="==") | ($operator="===")
+		If ($p>0)
+			$query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
+		Else
+			$query:="firstName = :1 or lastName = :1"
+		End if
+	: ($operator="!=")
+		If ($p>0)
+			$query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
+		Else
+			$query:="firstName != :1 and lastName != :1"
+		End if
+	End case
 
-    $result:=New object("query"; $query; "parameters"; $parameters)
-
+	$result:=New object("query"; $query; "parameters"; $parameters)
 ```
 
 > ユーザーのテキスト入力に基づくクエリでは、セキュリティ上の理由からプレースホルダーを使用することが推奨されています ([`query()` の説明](API/DataClassClass.md#query) 参照)。
@@ -521,53 +518,51 @@ $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 ```4d
 Function query age($event : Object)->$result : Object
 
-    var $operator : Text
-    var $age : Integer
-    var $_ages : Collection
+	var $operator : Text
+	var $age : Integer
+	var $_ages : Collection
 
-    $operator:=$event.operator
+	$operator:=$event.operator
 
-    $age:=Num($event.value)  // 整数
-    $d1:=Add to date(Current date; -$age-1; 0; 0)
-    $d2:=Add to date($d1; 1; 0; 0)
-    $parameters:=New collection($d1; $d2)
+	$age:=Num($event.value)  // integer
+	$d1:=Add to date(Current date; -$age-1; 0; 0)
+	$d2:=Add to date($d1; 1; 0; 0)
+	$parameters:=New collection($d1; $d2)
 
-    Case of 
+	Case of
 
-        : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // d1 より大きい、かつ d2 以下
+		: ($operator="==")
+			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
 
-        : ($operator="===") 
+		: ($operator="===")
 
-            $query:="birthday = :2"  // d2 = 2つ目の算出値 (= 誕生日)
+			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
 
-        : ($operator=">=")
-            $query:="birthday <= :2"
+		: ($operator=">=")
+			$query:="birthday <= :2"
 
-            //... その他の演算子           
-
-
-    End case 
+			//... other operators			
 
 
-    If (Undefined($event.result))
-        $result:=New object
-        $result.query:=$query
-        $result.parameters:=$parameters
-    End if
+	End case
 
+
+	If (Undefined($event.result))
+		$result:=New object
+		$result.query:=$query
+		$result.parameters:=$parameters
+	End if
 
 ```
 
 呼び出しコードの例:
 
 ```4d
-// 20歳以上で 21歳未満の人
-$twenty:=people.query("age = 20")  // "==" のケースを呼び出します
+// people aged between 20 and 21 years (-1 day)
+$twenty:=people.query("age = 20")  // calls the "==" case
 
-// 本日満 20歳になった人
-$twentyToday:=people.query("age === 20") // people.query("age is 20") と同じ 
-
+// people aged 20 years today
+$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20")
 
 ```
 
@@ -610,9 +605,9 @@ _$event_ パラメーターは、以下のプロパティが含みます:
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc" 
-    Else 
-        $result:="firstName, lastName" 
+        $result:="firstName desc, lastName desc"
+    Else
+        $result:="firstName, lastName"
     End if
 ```
 
@@ -631,11 +626,10 @@ Function orderBy fullName($event : Object)-> $result : Text
 Function orderBy age($event : Object)-> $result : Text
 
     If ($event.descending=True)
-        $result:="birthday asc" 
-    Else 
-        $result:="birthday desc" 
+        $result:="birthday asc"
+    Else
+        $result:="birthday desc"
     End if
-
 
 ```
 
@@ -716,8 +710,7 @@ Teacher データクラスに、教師の生徒をすべて返すエイリアス
 
 Class extends Entity
 
-Alias students courses.student //relatedEntities 
-
+Alias students courses.student //relatedEntities
 ```
 
 Student データクラスには、生徒の教師をすべて返すエイリアス属性を定義します:
@@ -727,8 +720,7 @@ Student データクラスには、生徒の教師をすべて返すエイリア
 
 Class extends Entity
 
-Alias teachers courses.teacher //relatedEntities 
-
+Alias teachers courses.teacher //relatedEntities
 ```
 
 Course データクラスには次を定義します:
@@ -738,36 +730,35 @@ Course データクラスには次を定義します:
 - 生徒の名前を返すエイリアス属性
 
 ```4d
-// cs.CourseEntity クラス
+// cs.CourseEntity class
 
 Class extends Entity
 
-Exposed Alias courseName name //スカラー値
-Exposed Alias teacherName teacher.name //スカラー値
-Exposed Alias studentName student.name //スカラー値
-
+Exposed Alias courseName name //scalar
+Exposed Alias teacherName teacher.name //scalar value
+Exposed Alias studentName student.name //scalar value
 
 ```
 
 すると、以下のクエリを実行することができます:
 
 ```4d
-// "Archaeology" の授業を検索します
+// Find course named "Archaeology"
 ds.Course.query("courseName = :1";"Archaeology")
 
-// Smith 教師が教えている授業を検索します
+// Find courses given by the professor Smith
 ds.Course.query("teacherName = :1";"Smith")
 
-// 生徒 "Martin" が参加している授業を検索します
+// Find courses where Student "Martin" assists
 ds.Course.query("studentName = :1";"Martin")
 
-// M. Smith 教師の生徒を検索します
+// Find students who have M. Smith as teacher
 ds.Student.query("teachers.name = :1";"Smith")
 
-// M. Martin を生徒に持つ教師を検索します
+// Find teachers who have M. Martin as Student
 ds.Teacher.query("students.name = :1";"Martin")
-// シンプルなクエリ文字列で複雑なクエリを実行していることに注目してください
-// queryPlan は次のとおりです:   
+// Note that this very simple query string processes a complex
+// query including a double join, as you can see in the queryPlan:   
 // "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
 //  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
 //  subquery:[ Student.name === Martin]]"
@@ -841,8 +832,86 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です) 
+$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
+```
 
+## onHttpGet keyword
+
+Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class.
+
+The `onHttpGet` keyword is available with:
+
+- ORDA Data model class functions
+- [Singletons class functions](../Concepts/classes.md#singleton-classes)
+
+シンタックスは次の通りです:
+
+```4d
+// declare an onHttpGet function
+exposed onHttpGet Function <functionName>(params) : result
+```
+
+:::info
+
+The `exposed` keyword must also be added in this case, otherwise an error will be generated.
+
+:::
+
+:::caution
+
+As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+
+:::
+
+### params
+
+A function with `onHttpGet` keyword accepts [parameters](../Concepts/parameters.md).
+
+In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
+
+```
+IP:port/rest/<dataclass>/functionName?$params='[<params>]'
+```
+
+See the [Parameters](../REST/classFunctions#parameters) section in the REST server documentation.
+
+### 戻り値
+
+A function with `onHttpGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+
+:::info
+
+You can return a value of the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+
+:::
+
+### 例題
+
+You have defined the following function:
+
+```4d
+Class extends DataClass
+
+
+exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height : Integer) : 4D.OutgoingMessage
+	
+	var $image; $thumbnail : Picture
+	var $blob : Blob
+	var $response := 4D.OutgoingMessage.new()
+	
+	var $file := File("/RESOURCES/Images/"+$name+".jpg")
+	READ PICTURE FILE($file.platformPath; $image)
+	CREATE THUMBNAIL($image; $thumbnail; $width; $height; Scaled to fit)
+	PICTURE TO BLOB($thumbnail; $blob; "image/jpeg")
+	$response.setBody($blob)	
+	$response.setHeader("Content-Type"; "image/jpeg")
+	return $response
+```
+
+It can be called by the following HTTP GET request:
+
+```
+IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 ```
 
 ## ローカル関数
@@ -890,10 +959,9 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else 
+Else
     $age:=Null
 End if
-
 ```
 
 #### 属性のチェック
@@ -911,13 +979,12 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="生年月日が入力されていません。" 
+        $status.statusText:="The birthdate is missing"
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
-        $status.statusText:="生徒の年齢は 15 〜 30 の範囲で入力してください。この生徒の年齢は "+String(This.age()+"です。")
+        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
 End case
-
 ```
 
 呼び出し元のコード:
