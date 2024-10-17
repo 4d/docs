@@ -1,26 +1,26 @@
 ---
 id: overview
-title: Settings
+title: Propriétés
 ---
 
-Les Paramètres configurent le fonctionnement du projet en cours. Ces paramètres peuvent être différents pour chaque projet. Ils comprennent les ports d'écoute, les configurations de sauvegarde, les options de sécurité, les paramètres Web, etc.
+Les Propriétés configurent le fonctionnement du projet en cours. Ces paramètres peuvent être différents pour chaque projet. Ils comprennent les ports d'écoute, les configurations de sauvegarde, les options de sécurité, les paramètres Web, etc.
 
 ![](../assets/en/settings/main.png)
 
 > 4D fournit un autre ensemble de paramètres, appelés **Préférences**, qui s'appliquent à l'application 4D IDE. Pour plus d'informations, reportez-vous à la section [Préférences](../Preferences/general.md).
 
-## Accès aux paramètres
+## Accès aux propriétés
 
-Vous pouvez accéder à la boîte de dialogue Paramètres :
+Vous pouvez accéder à la boîte de dialogue Propriétés :
 
-- en utilisant l'option de menu **Développement > Paramètres...**
-- en cliquant sur **Paramètres** dans la barre d'outils 4D
-- sur 4D Server, via l'option de menu **Edition > Paramètres...**
+- en utilisant l'option de menu **Développement > Propriétés...**
+- en cliquant sur **Propriétés** dans la barre d'outils 4D
+- sur 4D Server, via l'option de menu **Edition > Propriétés...**
 
-When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
+Lorsque le [**mode Propriétés utilisateur** est activé](../Desktop/user-settings.md), **Propriétés...** est renommé **Propriétés de la structure...** et deux commandes de menu supplémentaires sont disponibles à chaque emplacement :
 
-- **Paramètres utilisateur...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur. Si ceux-ci sont modifiés, ils sont utilisés à la place des paramètres de structure.
-- **Paramètres utilisateur pour le fichier de données...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur rattaché au fichier de données courant. S'ils sont modifiés, ils sont utilisés à la place des paramètres utilisateur ou des paramètres de structure.
+- **Propriétés utilisateur...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur. Si ceux-ci sont modifiés, ils sont utilisés à la place des paramètres de structure.
+- **Proppriétés utilisateur pour le fichier de données...** vous donne accès aux paramètres qui peuvent être stockés en externe dans un fichier utilisateur rattaché au fichier de données courant. S'ils sont modifiés, ils sont utilisés à la place des paramètres utilisateur ou des paramètres de structure.
 
 ### Informations sur le verrouillage
 

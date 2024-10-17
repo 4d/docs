@@ -45,8 +45,8 @@ L'Administrateur ne peut pas :
 
 Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. Dans la [boîte de dialogue de gestion des utilisateurs](#users-and-groups-editor), les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :
 
-- Designer icon: ![](../assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
+- Icône Super_Utilisateur : ![](../assets/en/Users/iconDesigner.png)
+- Icône Administrateur : ![](../assets/en/Users/iconAdmin.png)
 
 Vous pouvez renommer les utilisateurs Super_Utilisateur et Administrateur. Dans le langage, Super_Utilisateur porte toujours l'identifiant 1 et l'Administrateur l'identifiant 2.
 
@@ -72,7 +72,7 @@ Pour ajouter un utilisateur depuis la boite à outils :
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of users.
+2. Cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) situé au-dessous de la liste des utilisateurs.
    OU
    Cliquez avec le bouton droit de la souris dans la Liste des utilisateurs et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
@@ -121,9 +121,9 @@ Pour créer un groupe :
 1. Sélectionnez **Boîte à outils > Groupes** dans le menu **Développement** ou cliquez sur le bouton **Boîte outils** de la barre d’outils de 4D puis cliquez sur le bouton **Groupes**.
    4D affiche la fenêtre d’édition des groupes. La liste des groupes affiche tous les groupes du projet d'application.
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.\
-   OR\
-   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
+2. Cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) situé au-dessous de la liste des groupes.\
+   OU
+   Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande Dupliquer permet de créer rapidement plusieurs groupes ayant des caractéristiques communes.
 
@@ -204,7 +204,7 @@ Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans
 
 Ce fichier peut être stocké aux emplacements suivants, en fonction de vos besoins :
 
-- If you want to use the same directory for all data files (or if you use a single data file), store the **directory.json** file in the user settings folder, i.e. in the "Settings" folder at the [same level as the "Project" folder](Project/architecture.md#project-folder) (default location).
+- Si vous souhaitez utiliser le même répertoire pour tous les fichiers de données (ou si vous utilisez un seul fichier de données), stockez le fichier **directory.json** dans le dossier des paramètres de l'utilisateur, c'est-à-dire dans le dossier "Settings" au [même niveau que le dossier "Project"](Project/architecture.md#project-folder) (emplacement par défaut).
 - Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#setti Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
-> To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant l'[option correspondante du build application](../Desktop/building.md#incorporer-les-utilisateurs-et-les-groupes-du-projet-dans-l'application-serveur-construite).

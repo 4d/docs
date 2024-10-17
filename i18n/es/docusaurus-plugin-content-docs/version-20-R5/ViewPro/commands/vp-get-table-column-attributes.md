@@ -17,17 +17,17 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| tableName  | Text    | -> | Nombre de la tabla                                             |                  |
-| column     | Integer | -> | Índice de la columna en la tabla                               |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros | Tipo    |                             | Descripción                                                    |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
+| tableName  | Text    | ->                          | Nombre de la tabla                                             |                  |
+| column     | Integer | ->                          | Índice de la columna en la tabla                               |                  |
+| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result     | Object  | <- | Atributos de la _columna_                                      | <!-- END REF --> |
 
 #### Descripción
 
-The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified _column_ in the _tableName_<!-- END REF -->.
+El comando `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->devuelve los atributos actuales de _column_ especificados en la _tableName_<!-- END REF -->.
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 

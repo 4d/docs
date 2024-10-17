@@ -38,7 +38,7 @@ ds.webUser.save()
 
 "はじめに" の章の [例題](gettingStarted.md#ユーザー認証) も参照ください。
 
-カスタム認証が提供されていない場合、4D は [`On Web Authentication`](#on-web-authentication) データベースメソッドを呼び出します (あれば)。 $1 と $2 に加えて、ブラウザーとサーバーの IPアドレス ($3 と$ 4) のみが提供され、ユーザー名とパスワード ($5 と $6) は空です。 ユーザー認証が成功した場合、このメソッドは $0 に **True** を返さなければなりません。この場合、リクエストされたリソースが提供されます。認証が失敗した場合には、$0 に **False** を返します。
+カスタム認証が提供されていない場合、4D は [`On Web Authentication`](#on-web-authentication) データベースメソッドを呼び出します (あれば)。 In addition to $urll and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. ユーザー認証が成功した場合、このメソッドは $0 に **True** を返さなければなりません。この場合、リクエストされたリソースが提供されます。認証が失敗した場合には、$0 に **False** を返します。
 
 > **警告:** `On Web Authentication` データベースメソッドが存在しない場合、接続は自動的に受け入れられます (テストモード)。
 
@@ -61,7 +61,7 @@ ds.webUser.save()
 
 DIGESTモードはより高いセキュリティレベルを提供します。認証情報は復号が困難な一方向ハッシュを使用して処理されます。
 
-BASICモードと同様に、ユーザーは接続時に自分の名前とパスワードを入力する必要があります。 その後、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 DIGESTモードが有効の時、$6引数 (パスワード) は常に空の文字列が渡されます。 実際このモードを使用するとき、この情報はネットワークからクリアテキスト (平文) では渡されません。 この場合、接続リクエストは `WEB Validate digest` コマンドを使用して検証しなければなりません。
+BASICモードと同様に、ユーザーは接続時に自分の名前とパスワードを入力する必要があります。 その後、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 When the DIGEST mode is activated, the $password parameter (password) is always returned empty. 実際このモードを使用するとき、この情報はネットワークからクリアテキスト (平文) では渡されません。 この場合、接続リクエストは `WEB Validate digest` コマンドを使用して検証しなければなりません。
 
 > これらのパラメーターの変更を反映させるためには、Webサーバーを再起動する必要があります。
 
@@ -83,55 +83,48 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:
 
 - Webサーバーが有効な静的ページを要求する URL を受信したとき。
-- Webサーバーが `rest/` で始まる URL を受信し、RESTサーバーが起動したとき (この場合、認証は [`On REST Authentication`データベースメソッド](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する) または [ストラクチャー設定](REST/configuration.md#ストラクチャー設定を使用する) によって処理されます)。
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### シンタックス
 
-**On Web Authentication**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text ) -> $0 : Boolean
+**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
 
-| 引数 | タイプ     |     | 説明                                              |
-| -- | ------- | :-: | ----------------------------------------------- |
-| $1 | Text    |  <- | URL                                             |
-| $2 | Text    |  <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
-| $3 | Text    |  <- | Webクライアント (ブラウザー) の IPアドレス   |
-| $4 | Text    |  <- | サーバーの IPアドレス                                    |
-| $5 | Text    |  <- | ユーザー名                                           |
-| $6 | Text    |  <- | パスワード                                           |
-| $0 | Boolean |  -> | True = リクエストは受け入れられました、False = リクエストが拒否されました    |
+| 引数        | 型       |                             | 説明                                              |
+| --------- | ------- | :-------------------------: | ----------------------------------------------- |
+| $url      | Text    | <- | URL                                             |
+| $content  | Text    | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
+| $IPClient | Text    | <- | Webクライアント (ブラウザー) の IPアドレス   |
+| $IPServer | Text    | <- | サーバーの IPアドレス                                    |
+| $user     | Text    | <- | ユーザー名                                           |
+| $password | Text    | <- | パスワード                                           |
+| $accept   | Boolean |              ->             | True = リクエストは受け入れられました、False = リクエストが拒否されました    |
 
 これらの引数を以下のように宣言しなければなりません:
 
 ```4d
-// On Web Authentication データベースメソッド
-
- C_TEXT($1;$2;$3;$4;$5;$6)
- C_BOOLEAN($0)
-
-// メソッドのコード
-
-```
-
-あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
-
-```4d
-// On Web Authentication データベースメソッド
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
+// On Web Authentication database method
+#DECLARE ($url : Text; $content : Text; \
+  $IPClient : Text; $IPServer : Text; \
   $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+  -> $accept : Boolean
 
+//Code for the method
 
 ```
 
-> `On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 データベースメソッドが受け取る情報は、[認証モード](#authentication-mode)の設定により異なります。
+:::note
 
-#### $1 - URL
+`On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 データベースメソッドが受け取る情報は、[認証モード](#authentication-mode)の設定により異なります。
 
-最初の引数 (`$1`) は、ユーザーが Webブラウザーのアドレスエリアに入力したURLからホストのアドレスを取り除いたものです。
+:::
 
-イントラネット接続の場合をみてみましょう。 4D Webサーバーマシンの IPアドレスを 123.45.67.89 とします。 以下の表は Webブラウザーに入力された URL に対して、$1 が受け取る値を示しています:
+#### $url - URL
 
-| Webブラウザーに入力された値                                                                                                                                   | $1 の値                                                                                 |
+The first parameter (`$url`) is the URL received by the server, from which the host address has been removed.
+
+イントラネット接続の場合をみてみましょう。 4D Webサーバーマシンの IPアドレスを 123.45.67.89 とします。 The following table shows the values of $urll depending on the URL entered in the Web browser:
+
+| Webブラウザーに入力された値                                                                                                                                   | Value of parameter $urll                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -139,43 +132,46 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $2 - HTTPリクエストのヘッダーとボディ
+#### $content - Header and Body of the HTTP request
 
-二番目の引数 (`$2`) は、Webブラウザーから送信された HTTPリクエストのヘッダーとボディです。 この情報は `On Web Authentication` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
+The second parameter (`$content`) is the header and the body of the HTTP request sent by the web browser. この情報は `On Web Authentication` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
 
 アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
 
-> パフォーマンス上の理由により、$2 を介して渡されるデータのサイズは 32KB 以下でなくてはなりません。 これを超過する分は、4D HTTPサーバーにより切り取られます。
+> For performance reasons, the size of data passing through the $content parameter must not exceed 32 KB. これを超過する分は、4D HTTPサーバーにより切り取られます。
 
-#### $3 - Webクライアントの IPアドレス
+#### $IPClient - Web client IP address
 
-`$3` 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
+The `$IPClient` parameter receives the IP address of the browser’s machine. この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
 
 > 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
-#### $4 - サーバー IPアドレス
+#### $IPServer - Server IP address
 
-`$4` 引数は Webサーバーを呼び出すために使用された IPアドレスを受け取ります。 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-ipアドレス) を参照ください。
+The `$IPServer` parameter receives the IP address used to call the web server. 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-ipアドレス) を参照ください。
 
-#### $5 と $6 - ユーザー名とパスワード
+#### $user and $password - User Name and Password
 
-`$5` と `$6` 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります。 [BASIC](#basic認証) または [DIGEST](#digest認証) 認証が選択されていると、接続のたびにこのダイアログが表示されます。
+The `$user` and `$password` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. [BASIC](#basic認証) または [DIGEST](#digest認証) 認証が選択されていると、接続のたびにこのダイアログが表示されます。
 
-> ブラウザーから送信されたユーザー名が 4D に存在する場合、$6 引数 (ユーザーパスワード) はセキュリティのため渡されません。
+> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
 
-#### $0 引数
+#### $accept - Function return
 
-`On Web Authentication` データベースメソッドはブール値を $0 に返します:
+The `On Web Authentication` database method returns a boolean:
 
-- $0=True: 接続を受け入れます。
+- If it is True, the connection is accepted.
 
-- $0=False: 接続を受け入れません。
+- If it is False, the connection is refused.
 
 `On Web Connection` データベースメソッドは、`On Web Authentication` データベースメソッドにより接続が受け入れられた時にのみ実行されます。
 
-> **警告**<br/>$0 に値が設定されないか、`On Web Authentication`データベースメソッド内で $0 が定義されていない場合、接続は受け入れられたものとされ、`On Web Connection` データベースメソッドが実行されます。
+:::warning
 
-> - `On Web Authentication` データベースメソッド内でインターフェース要素を呼び出してはいけません (`ALERT`, `DIALOG` 等)。 メソッドの実行が中断され、接続が拒否されてしまいます。 処理中にエラーが発生した場合も同様です。
+- If no value is returned, the connection is considered as **accepted** and the `On Web Connection` database method is executed.
+- `On Web Authentication` データベースメソッド内でインターフェース要素を呼び出してはいけません (`ALERT`, `DIALOG` 等)。 メソッドの実行が中断され、接続が拒否されてしまいます。 処理中にエラーが発生した場合も同様です。
+
+:::
 
 ### 例題
 

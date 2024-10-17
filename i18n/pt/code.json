@@ -542,7 +542,7 @@
     "description": "The title of the tag list page"
   },
   "Release Notes": {
-    "message": "Notas de Lançamento"
+    "message": "Notas de lançamento"
   },
   "homepage.sections.core-development.langage-ref-url": {
     "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.en.html"
@@ -600,7 +600,7 @@
     "message": "Gerenciamento do código"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 item|{count} items",
+    "message": "1 item|{count} itens",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.admonition.warning": {
@@ -608,7 +608,7 @@
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expand sidebar category '{label}'",
+    "message": "Expandir a categoria '{label}' da barra lateral",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {

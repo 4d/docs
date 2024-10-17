@@ -18,13 +18,13 @@ Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçal
 For each user connected to the server, the list provides the following information:
 
 - Sistema da máquina cliente (macOS ou Windows) como um ícone.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
+- **Usuário 4D**: nome do usuário 4D, ou alias se definido com o comando [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) na máquina usuário. If passwords are not activated and no alias has been set, all users are named "Designer".
 - **Nombre de máquina**: Nombre de la máquina remota.
 - **Nombre de sesión**: nombre de la sesión abierta en la máquina remota.
 - **Dirección IP**: dirección IP de la máquina remota.
 - **Fecha de conexión**: fecha y hora de la conexión de la máquina remota.
 - **Tiempos CPU**: tiempos procesador consumidos por este usuario desde la conexión.
-- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica). "Dormindo" se a máquina remota entrou em modo de suspensão (veja abaixo).
 
 ### Gerir usuários adormecidos
 

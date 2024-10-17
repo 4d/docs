@@ -14,7 +14,7 @@ You'll often find that you need to pass data to your methods and functions. This
 ALERT("Hello")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this: 
+Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
 
 ```4d
 $area:=$o.getArea(50;100)
@@ -26,7 +26,7 @@ Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The input parameters are separated by semicolons (;). 
+The input parameters are separated by semicolons (;).
 
 The same principles are used when methods are executed through dedicated commands, for example:
 
@@ -49,7 +49,7 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 
 :::info Compatibility
 
-Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) and declared using compiler directives. Ex: `C_TEXT($1;$2)`. This legacy syntax is still supported but is no longer recommended. 
+The legacy declaration syntax, where parameters are automatically copied in sequentially numbered local variables $0, $1, etc. and declared using compiler directives such as `C_TEXT($1;$2)`, is **deprecated** as of 4D 20 R7.  
 
 :::
 
@@ -58,7 +58,7 @@ Throughout the 4D documentation, you might see examples where parameters are aut
 
 Inside called methods or class functions, parameter values are assigned to local variables. You usually declare parameters using a **parameter name** along with a **parameter type**, separated by colon.  
 
-- For class functions, parameters are declared along with the `Function` keyword.
+- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
 Examples:
@@ -76,12 +76,12 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 The following rules apply:
 
 - The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties). 
-- Multiple parameters (and types) are separated by semicolons (;). 
+- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties).
+- Multiple parameters (and types) are separated by semicolons (;).
 - Multiline syntaxes are supported (using "\\" character).
 
 
-For example, when you call a `getArea()` function with two parameters: 
+For example, when you call a `getArea()` function with two parameters:
 
 ```4d
 $area:=$o.getArea(50;100)
@@ -93,7 +93,7 @@ In the class function code, the value of each parameter is copied into the corre
 // Class: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
 	$area:=$width*$height
-``` 
+```
 
 >If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
 
@@ -116,8 +116,8 @@ You declare the return parameter of a function by adding an arrow (->) and the p
 ```4d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
- 
-You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). For example: 
+
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). For example:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -131,9 +131,9 @@ Parameters, which include the returned value, must be declared only once. In par
 
 ```qs
 	//invalid declaration
-Function myTransform ($x : Integer) -> $x : Integer 
+Function myTransform ($x : Integer) -> $x : Integer
 	//error: $x is declared twice
-``` 
+```
 
 :::
 
@@ -149,13 +149,13 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 :::note
 
-Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods). 
+Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
 :::
 
 ### Initialization
 
-When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned. 
+When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
 
 
 
@@ -168,24 +168,27 @@ When parameters are declared, they are initialized to the [**default value corre
 |19 R4|Added
 </details>
 
-The `return` statement ends function or method execution and can be used to return an expression to the caller. 
+The `return` statement ends function or method execution and can be used to return an expression to the caller.
 
 For example, the following function returns the square of its argument, $x, where $x is a number.
 
 ```4d
-Function square($x : Integer) 
+Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 
-> Internally, `return x` executes `$0:=x` or (if declared) `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+:::note
 
+Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+
+:::
 
 The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). However, note that it ends immediately the code execution. For example:
 
 
 ```4d
-Function getValue
-	$0:=10
+Function getValue -> $v : Integer
+	$v:=10
 	return 20
 	// returns 20
 
@@ -228,7 +231,7 @@ Note that even if you declared 0, 1, or more parameters, you can always pass the
 
 ```4d
 //foo method
-#DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
+#DECLARE($p1: Text;$p2 : Text; $p3 : Date)
 For($i;1;Count parameters)
 	ALERT("param "+String($i)+" = "+String(${$i}))
 End for
@@ -240,10 +243,10 @@ This method can be called:
 foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
 ```
 
-> Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. 
+> Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others.
 
 
-### Declaring variadic parameters 
+### Declaring variadic parameters
 
 It is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
 
@@ -274,20 +277,20 @@ Function myfunction (var1: Integer ; ... : Text)
 
 
 #### Example
- 
+
 Here we have a method called `SumNumbers` that returns the calculated total for all the numbers passed as parameters:
 
 ```4d
 
-#DECLARE( ... : Real) : Real 
+#DECLARE( ... : Real) : Real
 
 
 
-var $number; $total : Real 
+var $number; $total : Real
 
 For each ($number; 1; Count parameters)
 	$total+=${$number}
-End for each 
+End for each
 
 return $total
 
@@ -297,113 +300,26 @@ This method can be called with a variable number of Real parameters. In case of 
 
 ```4d
 
-$total1:=SumNumbers // returns 0 
+$total1:=SumNumbers // returns 0
 $total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
 $total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
 
 ```
 
-:::note Compatibility Note
+:::note Compatibility
 
-The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred. 
-
-:::
-
-## Compilation 
-
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must make sure that all method and function parameters are properly declared as soon as you intend to compile your project. 
-
-:::note
-
-You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). However this option significantly increases compilation time.
+The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecated as of 4D 20 R7.
 
 :::
 
 
-### Parameters declared in prototypes
-
-When using the `#DECLARE` or `Function` keywords, parameters are automatically declared and no additional information is needed for the compiler. Examples:
-
-```4d
-#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-	// all method parameters are declared with their type
-```
-
-```4d
-	// On Web Connection Database Method
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text)
-```
-
-```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
-	// all function parameters are declared with their type
-```
-
-:::tip
-
-Declaring parameters in prototypes is a good practice, even in non-compiled projects. 
-
-:::
-
-### Method parameters declared outside prototypes
-
-It can happen that method parameters are not declared in `#DECLARE` prototypes. Such statements can be found in particular in legacy 4D code. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters. 
-
-#### `Compiler_Methods` method
-
-When some method parameters are not declared in `#DECLARE` prototypes, the 4D compiler needs that you declare them in a specific method using a special syntax:
-
-- you can group all local variable parameters for project methods in one or more project method(s)
-- the method name(s) must start with "**Compiler_**", by default "Compiler_Methods".
-- within such a method, you predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
-
-For example:
-
-```4d  
- // Compiler_Methods
- C_REAL(OneMethodAmongOthers;$1;$2) 
-```  
-
-:::note
-
-This syntax is not executable in interpreted mode.
-
-:::
-
-You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
-
-:::info
-
-#### Particular cases
+## Triggers and On Drag Over
 
 Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method.
-**Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
 
-```4d
- C_LONGINT($0)
- If(Form event code=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
-```
-
-:::
-
-### Conflicts between declarations
-
-- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method, the entry from the  *Compiler_* method is ignored.
-- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method but with a different data type, the Code Live Checker generates an error during syntax checking and compilation.
- 
 
 
 ## Wrong parameter type
@@ -425,16 +341,16 @@ This case is handled by 4D depending on the context:
 - in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
 - in interpreted projects:
 	+ if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
-	+ if the parameter was declared using (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
+	+ if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 
 
 
 
 
-## Using object properties as named parameters 
+## Using object properties as named parameters
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read. 
+Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
 
 For example, using the `CreatePerson` method:
 
@@ -450,8 +366,7 @@ In the `ChangeAge` method you can write:
 
 ```4d
   //ChangeAge
- var $1; $para : Object
- $para:=$1  
+ #DECLARE ($para : Object)
  $para.Age:=$para.Age+10
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
@@ -465,8 +380,7 @@ In the `ChangeAge` method above, both Age and Name properties are mandatory and 
 
 ```4d
   //ChangeAge
- var $1; $para : Object
- $para:=$1  
+ #DECLARE ($para : Object)
  $para.Age:=Num($para.Age)+10
  ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
@@ -479,8 +393,7 @@ $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
 ChangeAge($person)
 
 //ChangeAge
-var $1;$para : Object
-$para:=$1  
+#DECLARE ($para : Object)  
 If ($para.toAdd=Null)
 	$para.toAdd:=10
 End if
@@ -490,7 +403,7 @@ ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 
 The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
 
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order. 
+With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
 
 
 
@@ -517,7 +430,12 @@ $result:=$param1+" "+$param2
  $class.concate() // Displays " "
 ```
 
-> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
+:::note
+
+You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
+
+:::
+
 
 Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
 
@@ -527,9 +445,9 @@ The following example displays a text message and can insert the text into a doc
 // APPEND TEXT Project Method
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
- 
+
  #DECLARE ($message : Text; $path : Text; $wpArea : Object)
-  
+
  ALERT($message)
  If(Count parameters>=3)
     WP SET TEXT($wpArea;$1;wk append)
@@ -547,8 +465,11 @@ APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document
 APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
+:::tip
 
+When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
+
+:::
 
 
 ## Values or references
@@ -559,13 +480,14 @@ When you pass a parameter, 4D always evaluates the parameter expression in the c
 	//Here is some code from the method MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
- 
+
 	//Here is the code of the method DO_SOMETHING
- $1:=Uppercase($1)
- ALERT($1)
+ #DECLARE($param : Text)
+ $param:=Uppercase($param)
+ ALERT($param)
 ```
 
-The alert box displayed by `DO_SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY_METHOD` will read "williams". The method locally changed the value of the parameter $1, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
+The alert box displayed by `DO_SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY_METHOD` will read "williams". The method locally changed the value of the parameter $param, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
 
 There are two ways to make the method `DO_SOMETHING` change the value of the field:
 
@@ -573,15 +495,16 @@ There are two ways to make the method `DO_SOMETHING` change the value of the fie
 
 ```4d
   //Here is some code from the method MY_METHOD
- DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
- ALERT([People]Last Name)
- 
+DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+ALERT([People]Last Name)
+
   //Here the code of the method DO_SOMETHING
- $1->:=Uppercase($1->)
- ALERT($1->)
+#DECLARE($param : Text)
+$param->:=Uppercase($param->)
+ALERT($param->)
 ```
 
-Here the parameter is not the field, but a pointer to it. Therefore, within the `DO SOMETHING` method, $1 is no longer the value of the field but a pointer to the field. The object **referenced** by $1 ($1-> in the code above) is the actual field. Consequently, changing the referenced object goes beyond the scope of the subroutine, and the actual field is affected. In this example, both alert boxes will read "WILLIAMS".
+Here the parameter is not the field, but a pointer to it. Therefore, within the `DO SOMETHING` method, $param is no longer the value of the field but a pointer to the field. The object **referenced** by $param ($param-> in the code above) is the actual field. Consequently, changing the referenced object goes beyond the scope of the subroutine, and the actual field is affected. In this example, both alert boxes will read "WILLIAMS".
 
 2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
 
@@ -591,18 +514,19 @@ Here the parameter is not the field, but a pointer to it. Therefore, within the 
  ALERT([People]Name)
 
 	//Here the code of the method DO SOMETHING
- $0:=Uppercase($1)
- ALERT($0)
+ #DECLARE ($param : Text) -> ($result : Text)
+ $result:=Uppercase($param)
+ ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph.
+This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returning-values) paragraph.
 
 
 ### Particular cases: objects and collections
 
-You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*). 
+You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
 
-Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+Consequently, when using such data types as parameters, `$param, $return...` do not contain *values* but *references*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
 
 For example, consider the `CreatePerson` method that creates an object and sends it as a parameter:
 
@@ -628,5 +552,3 @@ When you execute the `CreatePerson` method, both alert boxes will read "50" sinc
 
 
 **4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. In these cases, copies of object and collection parameters are sent instead of references.
-
-

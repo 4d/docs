@@ -3,9 +3,9 @@ id: WebFormItemClass
 title: WebFormItem
 ---
 
-`4D.WebFormItem` objects are properties of the [`4D.WebForm`](WebFormItemClass.md) object returned by the [`Web Form`](WebFormClass.md#web-form) command.
+Los objetos `4D.WebFormItem` son propiedades del objeto [`4D.WebForm`](WebFormItemClass.md) devuelto por el comando [`Web Form`](WebFormClass.md#web-form).
 
-The `WebFormItem` class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass).
+La clase `WebFormItem` se detalla en la [documentación Qodly](https://developer.qodly.com/docs/language/WebFormItemClass).
 
 <details><summary>Historia</summary>
 
@@ -74,7 +74,7 @@ Para más información, consulte la [descripción de `.show()` en la documentaci
 
 #### Descripción
 
-The `.addCSSClass` function <!-- REF #WebFormItemClass.addCSSClass().Summary -->adds the class specified in *className* to the component<!-- END REF -->.
+La función `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->añade la clase especificada en *className* al componente<!-- END REF -->.
 
 Para más información, consulte la [descripción de `.addCSSClass` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
 
@@ -94,4 +94,4 @@ Para más información, consulte la [descripción de `.addCSSClass` en la docume
 
 La función `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->elimina la clase especificada en *className* del componente<!-- END REF -->.
 
-For more information, please refer to the [`.removeCSSClass()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass).
+Para más información, consulte la [descripción de `.removeCSSClass()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass).

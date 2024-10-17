@@ -5,13 +5,13 @@ title: Fonte de dados
 
 ## Inserção automática
 
-When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory.
+Quando esta opção é selecionada, se usuário insere um valor que não é encontrado na lista associada ao objeto, este valor é automaticamente adicionado à lista armazenada na memória.
 
-Cuando la opción **inserción automática** no está definida (por defecto), el valor introducido se almacena en el objeto formulario pero no en la lista en memoria.
+Quando a opção **inserção automática** não está definida (padrão), o valor inserido é armazenado no objeto formulário, mas não na lista na memória.
 
 Esta propriedade é suportada por:
 
-- objetos formulario [Combo box](comboBox_overview.md) y [columna list box](listbox_overview.md#list-box-columns) asociadoa a una lista de selección.
+- Objetos formulário [Combo box](comboBox_overview.md) e [coluna list box](listbox_overview.md#list-box-columns) associado para uma lista de seleção.
 - objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
 
 For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
@@ -34,9 +34,9 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 ## Lista de escolha
 
-Associa uma lista de opções a um objeto. It can be a choice list name (a list reference) or a collection of default values.
+Associa uma lista de opções a um objeto. Pode ser um nome da lista de opções (uma referência da lista) ou uma coleção de valores padrão.
 
-También se pueden asociar listas de selección a objetos utilizando los comandos [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) o [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html).
+Você também pode associar listas de escolha a objetos usando os comandos [OBJECT SET LIST SET BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html).
 
 #### Gramática JSON
 
@@ -71,9 +71,9 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 `List box de tipo collection ou entity selection`
 
-Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
+Especifica uma variável ou expressão a que será atribuído o elemento/entidade da coleção selecionada pelo usuário. Você deve usar uma variável objeto ou uma expressão atribuível que aceita objetos. Se o usuário não selecionar nada ou se você usou uma coleção de valores escalares, o valor Null é atribuído.
 
-> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
+> Esta propriedade é "somente leitura", é atualizada automaticamente de acordo com as ações do usuário list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -91,13 +91,13 @@ Specifies a variable or expression that will be assigned the collection element/
 
 `List box de tipo collection ou entity selection`
 
-Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
+Especifica uma variável ou expressão a que será atribuída uma longa indicando a posição do elemento/entidade da coleção selecionada pelo usuário.
 
 - se nenhum elemento/entidade for selecionado, a variável ou expressão recebe zero,
-- if a single element/entity is selected, the variable or expression receives its location,
-- if multiple elements/entities are selected, the variable or expression receives the position of element/entity that was last selected.
+- se um único elemento/entidade for selecionado, a variável ou expressão recebe seu local,
+- se vários elementos/entidades forem selecionados, a variável ou expressão recebe a posição do elemento/entidade que foi selecionado pela última vez.
 
-> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
+> Esta propriedade é "somente leitura", é atualizada automaticamente de acordo com as ações do usuário list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -115,8 +115,8 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 Define o tipo de dados para a expressão apresentada. Esta propriedade é utilizada com:
 
-- [Columnas del List box](listbox_overview.md#list-box-columns) de los tipos de selección y colección.
-- [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
+- [Colunas do List box](listbox_overview.md#list-box-columns) de tipo seleção e coleção.
+- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
 
 See also [**Expression Type**](properties_Object.md#expression-type) section.
 
@@ -134,7 +134,7 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 ## Tipo de dados (lista)
 
-Define el tipo de datos a guardar en el campo o variable asociado a la [lista desplegable](dropdownList_Overview.md). Esta propriedade é utilizada com:
+Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). Esta propriedade é utilizada com:
 
 - Listas desplegables [asociadas a una lista de opciones](dropdownList_Overview.md#using-a-choice-list).
 - Listas desplegables [asociadas a una lista de selección jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
@@ -167,7 +167,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 
 ## Valores padrão (lista de)
 
-List of values that will be used as default values for the list box column (array type only). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Using the language, you can manage the object by referring to this array.
+List of values that will be used as default values for the list box column (array type only). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
 
 > No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
 
@@ -231,7 +231,7 @@ Si se utiliza un campo, una variable o una expresión asignable (_por ejemplo Pe
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -315,7 +315,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 Especifica a seleção nomeada a ser utilizada. Você deve inserir o nome de uma seleção nomeada válida. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
-> As selecções nomeadas são listas ordenadas de registos. They are used to keep the order and current record of a selection in memory. Para más información, consulte la sección **Selecciones temporales** del manual _Lenguaje 4D_.
+> As selecções nomeadas são listas ordenadas de registos. They are used to keep the order and current record of a selection in memory. Para obter mais informações, consulte a seção **Seleções nomeadas** no _manual de Linguagem 4D_.
 
 #### Gramática JSON
 

@@ -3,7 +3,7 @@ id: WebServerClass
 title: WebServer
 ---
 
-The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). This class is available from the `4D` class store.
+The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). Essa classe está disponível no "class store" de `4D`.
 
 ### Objeto Web Server
 
@@ -55,105 +55,11 @@ Eles oferecem as propriedades abaixo e funções:
 | [<!-- INCLUDE #WebServerClass.start().Syntax -->](#start)<br/><!-- INCLUDE #WebServerClass.start().Summary -->                                                            |
 | [<!-- INCLUDE #WebServerClass.stop().Syntax -->](#stop)<br/><!-- INCLUDE #WebServerClass.stop().Summary -->                                                               |
 
-## WEB Server
-
-<details><summary>História</summary>
-
-| Release | Mudanças                                            |
-| ------- | --------------------------------------------------- |
-| 18 R3   | Adicionado                                          |
-| 19      | suporte para .sessionCookieSameSite |
-
-</details>
-
-<!-- REF #_command_.WEB Server.Syntax -->**WEB Server** : 4D.WebServer<br/>**WEB Server**( *option* : Integer ) : 4D.WebServer<!-- END REF -->
-
-<!-- REF #_command_.WEB Server.Params -->
-
-| Parâmetro  | Tipo                          |    | Descrição                                                                         |
-| ---------- | ----------------------------- | -- | --------------------------------------------------------------------------------- |
-| option     | Integer                       | -> | Web server to get (default if omitted = `Web server database`) |
-| Resultados | 4D. WebServer | <- | Objeto Web Server                                                                 |
-
-<!-- END REF -->
-
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
-
-By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
-
-| Parâmetros                                   | Valor | Comentário                                                                     |
-| -------------------------------------------- | ----- | ------------------------------------------------------------------------------ |
-| `Web server database`                        | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
-| `<a href="#keepsession">.keepSession</a>`    | 2     | Servidor Web do banco de dados de host de um componente                        |
-| `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
-
-O objeto Servidor Web retornado contém os valores atuais das propriedades do Servidor Web.
-
-#### Exemplo
-
-Do seu componente, você quer saber se o servidor Web do banco de dados host está iniciado:
-
-```4d
-  // Método de um componente
- var $hostWS : 4D.WebServer
- $hostWS:=WEB Server(Web server host database)
- If($hostWS.isRunning)
-    ...
- End if
-```
-
-## WEB Server list
-
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R3   | Adicionado |
-
-</details>
-
-<!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
-
-<!-- REF #_command_.WEB Server list.Params -->
-
-| Parâmetro  | Tipo       |    | Descrição                                     |
-| ---------- | ---------- | -- | --------------------------------------------- |
-| Resultados | Collection | <- | Coleção de objetos do Servidor Web disponível |
-
-<!-- END REF -->
-
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
-
-Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
-
-- um servidor Web para o banco de dados host (servidor Web padrão)
-- um servidor web para cada componente.
-
-All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
-
-> O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
-
-You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
-
-#### Exemplo
-
-Queremos saber quantos servidores rodando estão disponíveis:
-
-```4d
- var $wSList : Collection
- var $vRun : Integer
-
- $wSList:=WEB Server list
- $vRun:=$wSList.countValues(True;"isRunning")
- ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
-
-```
-
 ## .accessKeyDefined
 
 <!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
 
-The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
+A propriedade **.accessKeyDefined** contém <!-- REF #WebServerClass.accessKeyDefined.Summary -->true se uma chave de acesso estiver definida nas configurações do servidor Web<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
 
@@ -226,14 +132,14 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - 192.168.5.17
   - 192.168.\*
   - 192.168.\*:8081
-  - http://192.168.5.17:8081
-  - http://\*.myDomain.com
-  - http://myProject.myDomain.com
+  - <http://192.168.5.17:8081>
+  - <http://\*.myDomain.com>
+  - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
   - \*
 
-- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separar cada método com um ";" (por exemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
+- **methods** (texto, opcional): métodos HTTP aceito(s) para o host CORS correspondente. Separar cada método com um ";" (por exemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
 
 <!-- END REF -->
 
@@ -651,9 +557,9 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                           |
-| ---------- | ------ | -- | --------------------------------------------------- |
-| settings   | Object | -> | Configurações do servidor Web a definir no arranque |
+| Parâmetro  | Tipo   |                             | Descrição                                           |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- |
+| settings   | Object | ->                          | Configurações do servidor Web a definir no arranque |
 | Resultados | Object | <- | Estado de arranque do servidor web                  |
 
 <!-- END REF -->

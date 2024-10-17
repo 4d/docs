@@ -20,7 +20,7 @@ The `VP SET BOOLEAN VALUE` command <!-- REF #_method_.VP SET BOOLEAN VALUE.Summa
 
 Em _rangeObj_, passe um intervalo de células (criado, por exemplo, com [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) cujo valor você deseja especificar. If _rangeObj_ includes multiple cells, the value specified will be repeated in each cell.
 
-The _boolValue_ parameter allows you to pass the boolean value (**True** or **False**) that will be assigned to the _rangeObj_.
+O parâmetro _boolValue_ permite que você passe o valor booleano (**True** ou **False**) que será atribuído ao _rangeObj_.
 
 #### Exemplo
 

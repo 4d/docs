@@ -37,15 +37,15 @@ Lorsque la barre de formule est visible :
 
 Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui s'y rattachent dans des onglets :
 
-| Onglet    | Actions                             | Interface Ruban | Interface Barre d'outils |
-| --------- | ----------------------------------- |:---------------:|:------------------------:|
-| File      | Gestion de fichiers                 |        X        |                          |
-| Accueil   | Apparence du texte                  |        X        |            X             |
-| Insérer   | Ajouter des éléments                |        X        |            X             |
-| Formules  | Calculs de formules et bibliothèque |        X        |            X             |
-| Data      | Gestion des données                 |        X        |            X             |
-| Affichage | Présentation visuelle               |        X        |            X             |
-| Settings  | Présentation de la feuille          |        X        |                          |
+| Onglet     | Actions                             | Interface Ruban | Interface Barre d'outils |
+| ---------- | ----------------------------------- |:---------------:|:------------------------:|
+| File       | Gestion de fichiers                 |        X        |                          |
+| Accueil    | Apparence du texte                  |        X        |            X             |
+| Insérer    | Ajouter des éléments                |        X        |            X             |
+| Formules   | Calculs de formules et bibliothèque |        X        |            X             |
+| Data       | Gestion des données                 |        X        |            X             |
+| Affichage  | Présentation visuelle               |        X        |            X             |
+| Propriétés | Présentation de la feuille          |        X        |                          |
 
 ## Evénements formulaire
 

@@ -37,27 +37,24 @@ title: 文字列
 
 ## 文字列演算子
 
-| 演算                         | シンタックス           | 戻り値     | 式                                         | 値                            |
-| -------------------------- | ---------------- | ------- | ----------------------------------------- | ---------------------------- |
-| 連結 (結合) | String + String  | String  | "abc" + "def"                             | "abcdef"                     |
-| 繰り返し                       | String \* Number | String  | "ab" \* 3                                 | "ababab"                     |
-| 等しい                        | String = String  | Boolean | "abc" = "abc"                             | true                         |
-|                            |                  |         | "abc" = "abd"                             | false                        |
-| 異なる                        | String # String  | Boolean | "abc" # "abd"                             | true                         |
-|                            |                  |         | "abc" # "abc"                             | false                        |
-| 大きい                        | 文字列 > 文字列        | Boolean | "abd" > "abc"                             | true                         |
-|                            |                  |         | "abc" > "abc"                             | false                        |
-| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"                             | true                         |
-|                            |                  |         | "abc" < "abc"                             | false                        |
-| 以上                         | 文字列 >= 文字列       | Boolean | "abd" >= "abc"                            | true                         |
-|                            |                  |         | "abc" >= "abd"                            | false                        |
-| 以下                         | String <= String | Boolean | "abc" <= "abd"                            | true                         |
-|                            |                  |         | "abd" <= "abc"                            | false                        |
-| キーワードを含む                   | String % String  | Boolean | "Alpha Bravo" % "Bravo"                   | true                         |
-|                            |                  |         | "Alpha Bravo" % "ravo"                    | false                        |
-|                            | Picture % String | Boolean | Picture_expr % "Mer" | true (\*) |
-
-(\*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
+| 演算                         | シンタックス                                    | 戻り値     | 式                                       | 値        |
+| -------------------------- | ----------------------------------------- | ------- | --------------------------------------- | -------- |
+| 連結 (結合) | String + String                           | String  | "abc" + "def"                           | "abcdef" |
+| 繰り返し                       | String \* Number                          | String  | "ab" \* 3                               | "ababab" |
+| 等しい                        | String = String                           | Boolean | "abc" = "abc"                           | true     |
+|                            |                                           |         | "abc" = "abd"                           | false    |
+| 異なる                        | String # String                           | Boolean | "abc" # "abd"                           | true     |
+|                            |                                           |         | "abc" # "abc"                           | false    |
+| 大きい                        | 文字列 > 文字列                                 | Boolean | "abd" > "abc"                           | true     |
+|                            |                                           |         | "abc" > "abc"                           | false    |
+| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"  | true     |
+|                            |                                           |         | "abc" < "abc"  | false    |
+| 以上                         | 文字列 >= 文字列                                | Boolean | "abd" >= "abc"                          | true     |
+|                            |                                           |         | "abc" >= "abd"                          | false    |
+| 以下                         | String <= String | Boolean | "abc" <= "abd" | true     |
+|                            |                                           |         | "abd" <= "abc" | false    |
+| キーワードを含む                   | String % String                           | Boolean | "Alpha Bravo" % "Bravo"                 | true     |
+|                            |                                           |         | "Alpha Bravo" % "ravo"                  | false    |
 
 ## 文字列比較の詳細
 
@@ -145,7 +142,7 @@ Character code("A")=Character code("a")
 
 > **注:**
 >
-> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: http://www.unicode.org/reports/tr29/#Word_Boundaries
+> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
 > - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、<a href="https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024">Mecab のサポート(日本語版)</a> を参照ください。
 
 ## 文字参照記号

@@ -16,7 +16,7 @@ L'événement `On Close Box` est généré lorsque l'utilisateur clique sur la c
 Cet exemple illustre comment vous pouvez répondre à un événement de fermeture de fenêtre à l'aide d'un formulaire utilisé pour la saisie de données d'enregistrement :
 
 ```4d
-  //Method for an input form
+  //Méthode d'un formulaire entrée
  $vpFormTable:=Current form table
  Case of
   //...

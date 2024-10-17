@@ -9,19 +9,19 @@ title: VP Get selection
 
 <!-- REF #_method_.VP Get selection.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres | Type    |                             | Description                                                                 |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
 #### Description
 
-The `VP Get selection` command <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
+La commande `VP Get selection` <!-- REF #_method_.VP Get selection.Summary -->retourne un nouvel objet plage référençant les cellules courantes sélectionnées<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 #### Exemple
 
@@ -33,7 +33,7 @@ Le code suivant récupèrera les coordonnées de la cellule active :
 $currentSelection:=VP Get selection("myVPArea")
 
  
-//returns a range object containing:  
+//retourne un objet plage contenant :  
 //$currentSelection.ranges[0].column=5
 //$currentSelection.ranges[0].columnCount=2
 //$currentSelection.ranges[0].row=8

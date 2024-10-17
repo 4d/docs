@@ -28,7 +28,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 | "/LOGS"      | Logs フォルダー                                               | "C:\\MyApps\\Students\\Data\\Logs\\"       |
 | "/PACKAGE"   | プロジェクトのルートフォルダー (拡張子 4dbase の有無に関わらず) | "C:\\MyApps\\Students\\"                     |
 | "/PROJECT"   | Project フォルダー                                            | "C:\\MyApps\\Students\\Project\\"           |
-| "/RESOURCES" | カレントプロジェクトの Resources フォルダー                              | "C:\\MyApps\\Resources\\"                    |
+| "/RESOURCES" | カレントプロジェクトの Resources フォルダー                              | "C:\\MyApps\\Students\\Resources\\"         |
 | "/SOURCES"   | カレントプロジェクトの Sources フォルダー                                | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## POSIX シンタックス
@@ -41,7 +41,7 @@ POSIX シンタックスはすべてのプラットフォームでサポート�
 - 絶対パス名は "/" で始まります。
 - 相対パスにおいて 1階層上に移動するには、パス名の前に "../" を使用します (セキュリティ上の理由から、filesystem から上へは移動できません)。
 
-POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドに `filesystem` パス名を使用します。例:
+In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 - パスは 2番目と 3番目の文字にそれぞれ ":" と "\" を含みます。
 - パスは "\\" で始まります。
 
-[`Folder`](../API/FolderClass.md#folder) を使用した例:
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ Windows では、`\` 文字をパスの区切り文字としても使用する�
 - フォルダーは ":" で区切られます。
 - パスは ":" で始まってはいけません。
 
-[`Folder`](../API/FolderClass.md#folder) を使用した例:
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() // ボリュームの名
 
 ### `File` および `Folder` コンストラクター
 
-[`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドは **絶対パス名** のみを受け付けます。 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
+[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
 
 ```4d
 //ERROR

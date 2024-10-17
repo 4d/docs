@@ -3,16 +3,53 @@ id: updates
 title: Release Notes
 ---
 
-## 4D 20.x
 
-Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.
+:::tip
 
-
-:::caution Minimal client version for 4D Server v20.2 and later
-
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D 20.2.
+Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.x LTS.
 
 :::
+
+## 4D 20.5 LTS
+
+#### Highlights
+
+- 4D 20.5 LTS is certified on Windows 11 24H2.
+- 4D 20.5 LTS is certified on macOS Sequoia (macOS 15).
+
+:::warning Known issue on Windows 11 24H2
+
+On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may fail due to an issue which is still under investigation. If you frequently print PDFs with your 4D application, we currently recommend that you do not upgrade to Windows 11 24H2.
+
+:::
+
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
+
+
+## 4D 20.4 LTS
+
+#### Highlights
+
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
+
+## 4D 20.3 LTS
+
+#### Highlights
+
+- CEF updated to Chromium 5993
+- SpreadJS updated to version 16.2.6 (in 4D 20.2 HF1).
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
+
+#### Behavior changes
+
+- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
+
+
+## 4D 20.2 LTS
+
+#### Highlights
+
+- 4D 20.2 is certified on macOS Sonoma (macOS 14).
 
 :::warning Security Note
 
@@ -20,25 +57,47 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 :::
 
-#### Index rebuild warning
+:::caution Minimal client version for 4D Server 20.2 and later
 
-4D 20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
+For internal reasons, the version of remote clients connecting to 4D Server 20.2 and later must be at least 4D 20.2.
+
+:::
+
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
+
+#### Behavior changes
+
+- As of 20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
+- **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.2** (20.1 HF1) and **20 R2** and the value is now 0.
+
+## 4D 20.1 LTS
+
+#### Highlights
 
 :::caution 4D 20.1 index rebuild and client/server versions
 
 4D 20.1 also includes an ICU library update, which has the following consequences:
 
 - It will force an automatic rebuild of indexes of type alpha, text, and object.
-- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server v20.1 and vice versa.
+- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server 20.1 and vice versa.
 
 :::
 
 
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+
+## 4D 20 LTS
+
+
 #### Highlights
 
-- *SpreadJS* updated to version 16.2.6 in 4D 20.2 HF1.
-- 4D 20.2 is certified on macOS Sonoma (macOS 14).
-- (4D 20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
+:::caution Index rebuild
+
+4D 20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
+
+:::
+
+- New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) support custom keywords.
 - New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
@@ -61,14 +120,11 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.   
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20): list of all bugs that have been fixed in 4D 20 LTS.
 
 
 #### Behavior changes
 
-- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
-- As of 20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
-- **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
 - For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new *option* property allows you to control this validation.
 - TLS v1.0 and TLS v1.1 are deprecated, they are no longer supported as `Min TLS version` on 4D Server. Version 1.3 is now selected by default and is automatically used if `_o_TLSv1_0` or `_o_TLSv1_1` constants are set with [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
@@ -76,7 +132,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - As of 4D 20, [4D for Mobile](https://developer.4d.com/go-mobile/) is no longer installed by default in the 4D environment. To benefit from the 4D for Mobile development features in 4D, you need to [install the 4D Mobile App component](https://developer.4d.com/go-mobile/docs/getting-started/installation) in the ["Components"](../Project/architecture.md#components) folder of your projects. If a converted project uses features from the [4D Mobile App Server component](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), make sure you also install it in the "Components" folder of the project.
 
 
-## 4D 19 R8
+### 4D 19 R8
 
 Read [**What’s new in 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), the blog post that lists all new features and enhancements in 4D 19 R8.
 
@@ -89,7 +145,6 @@ Read [**What’s new in 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
 - 4D View Pro:
 	- support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
-
 	- new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
@@ -104,7 +159,7 @@ Read [**What’s new in 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 
 
 
-## 4D 19 R7
+### 4D 19 R7
 
 Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), the blog post that lists all new features and enhancements in 4D 19 R7.
 
@@ -134,7 +189,7 @@ Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 - The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 
-## 4D 19 R6
+### 4D 19 R6
 
 - New [HTTPRequest](../API/HTTPRequestClass.md) class.
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](../API/CollectionClass.md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
@@ -147,7 +202,7 @@ Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 
 
 
-## 4D 19 R5
+### 4D 19 R5
 
 - The project [directory.json file](Users/editing#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
 - You can now [deselect useless modules](../Desktop/building.md#deselecting-modules) in your built applications.
@@ -179,7 +234,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 
 
 
-## 4D 19 R4
+### 4D 19 R4
 
 - [Alias attributes](../ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
 - Support for [break and continue](../Concepts/flow-control.md#break-and-continue) statements in loops.
@@ -200,7 +255,7 @@ $value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
 
 
 
-## 4D 19 R3
+### 4D 19 R3
 
 - [Computed properties](../Concepts/classes.md#function-get-and-function-set) are available in classes.
 - [Computed attributes](../ORDA/ordaClasses.md#computed-attributes) are available in ORDA classes. They are similar to computed properties but also support [query](../ORDA/ordaClasses.md#function-query-attributename) and [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) functions.
@@ -242,49 +297,18 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 
 
-## 4D 19 R2
+### 4D 19 R2
 
 - A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
 - New [Blob class API](../API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass.md#settext)
 
 
-## Previous releases
-
-<details><summary>Click to see the release notes for previous versions</summary>
+## 4D 19.x LTS
 
 
-### 4D 19
+See [**Release Notes for 4D 19.x LTS**](../../version-19/Notes/updates.md). 
 
-:::warning Security Note
-
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
-
-:::
-
-- [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
-- Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
-- New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
-- [Native compilation](../Project/compiler.md#compiler-methods-for) for Silicon processors.
-- [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](../Admin/cli.md) page.
-
-
-
-### 4D 18 R6
-
-- [Entity Selection Class](../API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
-- [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
-- New [WebAdmin](../Admin/webAdmin.md) web server component
-- New [DataExplorer](../Admin/dataExplorer.md) interface
-- New web [user sessions](../WebServer/sessions.md) and [their API](../API/SessionClass.md).
-
-
-</details>
 
 
 ## Library table (4D 20 LTS)
@@ -299,7 +323,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
 |SpreadJS|16.2.6|20.2 HF1|4D View Pro engine|
 ||16.0.4|20||
-|OpenSSL|3.1.1|20||
+|OpenSSL|3.1.6|**20.4 HF2**||
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
 |Zlib|1.2.13|20||

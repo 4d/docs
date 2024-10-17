@@ -97,8 +97,7 @@ Within a custom error method, you have access to several pieces of information t
   
 :::info
 
-4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
-
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. 
 :::
 
 - the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) command that returns a collection of the current stack of errors that occurred in the 4D application. You can also use the [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
@@ -240,7 +239,8 @@ The code placed between the `Try` and the `Catch` keywords is first executed, th
 
 - If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
 - If the code block execution throws a *non-deferred error*, the execution flow stops and executes the corresponding `Catch` code block. 
-- If the code block execution throws a *deferred error*, the execution flow continues until the end of the `Try` block and then executes the corresponding `Catch` code block. 
+- If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
+- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
 
 :::note
 

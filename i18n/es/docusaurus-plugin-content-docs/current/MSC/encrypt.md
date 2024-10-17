@@ -27,12 +27,12 @@ Para cifrar los datos por primera vez con el CSM es necesario seguir los siguien
 
 1. En el editor de estructuras, marque el atributo **Encriptable** de cada tabla cuyos datos desee encriptar. Ver la sección "Propiedades de las tablas".
 2. Abra la página de encriptación del CSM.
-   If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
+   Si abre la página sin defini ninguna tabla como **Encriptable**, se muestra el siguiente mensaje en la página:
    ![](../assets/en/MSC/MSC_encrypt1.png)
-   Otherwise, the following message is displayed:
+   En caso contrario, se muestra el siguiente mensaje:
    ![](../assets/en/MSC/MSC_encrypt2.png)<p>
-   This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
-   \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
+   Esto significa que el estado **Encriptable** de al menos una tabla ha sido modificado y el archivo de datos aún no ha sido encriptado.
+   \*\*Nota: \*\*El mismo mensaje se muestra cuando el estado **Encriptable** se ha modificado en un archivo de datos ya encriptado o después de que el archivo de datos haya sido desencriptado (ver más abajo).</p>
 3. Haga clic en el botón imagen Cifrar.\
    ![](../assets/en/MSC/MSC_encrypt3.png)\
    You will be prompted to enter a passphrase for your data file:
@@ -82,7 +82,7 @@ Esta operación es útil cuando se ha modificado el atributo **Encriptable** de 
 1. Haga clic en **Recibir los datos con la llave de cifrado actual**.
 2. Introduzca la llave de encriptación de datos actual.
 
-The data file is properly re-encrypted with the current key and a confirmation message is displayed:
+El archivo de datos se vuelve a cifrar correctamente con la llave actual y se muestra un mensaje de confirmación:
 ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Cambiar la frase secreta y volver a encriptar los datos
@@ -91,9 +91,9 @@ Esta operación es útil cuando se necesita cambiar la llave de datos de encript
 
 1. Haga clic en **Cambiar su frase de contraseña y volver a cifrar los datos**.
 2. Introduzca la llave de encriptación de datos actual.
-3. Enter the new passphrase (for added security, you are prompted to enter it twice):
+3. Ingrese la nueva frase de contraseña (para mayor seguridad, se le solicita ingresarla dos veces):
    ![](../assets/en/MSC/MSC_encrypt9.png)
-   The data file is encrypted with the new key and the confirmation message is displayed.
+   El archivo de datos se cifra con la nueva llave y se muestra el mensaje de confirmación.
    ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Desencriptar todos los datos
@@ -103,7 +103,7 @@ Esta operación elimina toda la codificación del archivo de datos. Si ya no des
 1. Haga clic en **Desencriptar todos los datos**.
 2. Introduzca la llave de encriptación de datos actual ( ver Suministrar la llave de encriptación de datos actual).
 
-The data file is fully decrypted and a confirmation message is displayed:
+El archivo de datos se descifra completamente y se muestra un mensaje de confirmación:
 ![](../assets/en/MSC/MSC_encrypt10.png)
 
 > Una vez descifrado el archivo de datos, el estado de cifrado de las tablas no coincide con sus atributos Encriptables. Para restablecer un estado coincidente, debe anular la selección de todos los atributos **Encriptable** al nivel de la estructura de la base.

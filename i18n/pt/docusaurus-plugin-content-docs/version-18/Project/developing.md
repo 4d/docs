@@ -5,7 +5,7 @@ title: Desenvolver um projeto
 
 ## Ferramentas de desenvolvimento
 
-Os projetos bancos de dados 4D são criados localmente, utilizando a aplicação **4D Developer**. Para abrir um projeto desde 4D Developer, selecione o arquivo principal do projeto, chamado *databaseName.4DProject* (ver [Arquitetura de um projeto 4D](architecture.md)). Lembre que também pode trabalhar com qualquer editor de texto, já que a maioria dos arquivos de projeto 4D são arquivos texto. Concurrent file access is handled via a file access manager (see below).
+Os projetos bancos de dados 4D são criados localmente, utilizando a aplicação **4D Developer**. Para abrir um projeto desde 4D Developer, selecione o arquivo principal do projeto, chamado *databaseName.4DProject* (ver [Arquitetura de um projeto 4D](architecture.md)). Lembre que também pode trabalhar com qualquer editor de texto, já que a maioria dos arquivos de projeto 4D são arquivos texto. O acesso simultâneo a arquivos é feito por meio de um gerenciador de acesso a arquivos (veja abaixo).
 
 4D Server pode abrir os arquivos *nome do banco de dados.4DProject* para realizar provas: as máquinas 4D remotas podem conectar-se e utilizar o banco de dados, mas todos os arquivos da estrutura do banco de dados são de apenas leitura.
 

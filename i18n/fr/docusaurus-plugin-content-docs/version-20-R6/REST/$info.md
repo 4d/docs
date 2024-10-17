@@ -58,7 +58,7 @@ Retourne des informations sur les entity sets stockés dans le cache de 4D Serve
 
 **Résultat** :
 
-```
+```json
 {
 cacheSize: 209715200,
 usedCache: 3136000,

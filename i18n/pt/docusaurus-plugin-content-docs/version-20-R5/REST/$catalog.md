@@ -12,7 +12,7 @@ O catálogo descreve todos os dataclasses e atributos disponíveis na datastore.
 | [**$catalog**](#catalog)                                                | `/$catalog`            | Devolve uma lista dos valores de referência do seu projecto juntamente com dois URIs |
 | [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Devolve informação sobre todos os dataclasses do seu projecto e os seus atributos    |
 | [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | Retorna informação sobre um dataclass e os seus atributos                            |
-| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Executes the datastore class function if it exists                                   |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Executa a função de classe do datastore se ela existir                               |
 
 ## $catalog
 
@@ -22,7 +22,7 @@ Devolve uma lista dos dados do seu projecto juntamente com dois URIs: um para ac
 
 Cuando se llama a `$catalog`, se devuelve una lista de las clases de datos junto con dos URI para cada clase de datos en el almacén de datos de su proyecto.
 
-Nesta lista apenas são mostrados os dataclasses expostos para a datastore do seu projecto. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+Nesta lista apenas são mostrados os dataclasses expostos para a datastore do seu projecto. Para obter mais informações, consulte a seção [**Expondo tabelas e campos**](configuration.md#exposing-tables-and-fields).
 
 Aqui está uma descrição das propriedades devolvidas para cada dataclass na datastore do seu projecto:
 

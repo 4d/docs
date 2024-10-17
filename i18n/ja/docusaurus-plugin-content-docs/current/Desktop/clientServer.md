@@ -87,7 +87,7 @@ title: クライアント/サーバー管理
 
 ## リモートユーザーセッション
 
-サーバー上では、[`Session`](../API/SessionClass.md#session) コマンドはカレントユーザーセッションの情報を格納する `Session` オブジェクトを返します。 このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 ### 効果
 
@@ -101,6 +101,7 @@ title: クライアント/サーバー管理
 
 - [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
 - トリガー
+- ORDA [データモデル関数](../ORDA/ordaClasses.md) ([`local`](../ORDA/ordaClasses.md#ローカル関数) キーワードで宣言されたものを除く)
 - `On Server Open Connection` および `On Server Shutdown Connection` データベースメソッド
 
 :::info

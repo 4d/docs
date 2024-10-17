@@ -70,7 +70,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF #_command_.Folder.Params -->
-| 引数             | タイプ       |    | 説明                                             |
+| 引数             | 型         |    | 説明                                             |
 | -------------- | --------- |:--:| ---------------------------------------------- |
 | path           | Text      | -> | フォルダーパス                                        |
 | folderConstant | Integer   | -> | 4Dフォルダー定数                                      |
@@ -82,7 +82,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`Folder` コマンドは、 <!-- REF #_command_.Folder.Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+`Folder` コマンドは、 <!-- REF #_command_.Folder.Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -137,7 +137,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`4D.Folder.new()` 関数は、 <!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`Folder`](#folder) コマンドと同一です。
+`4D.Folder.new()` 関数は、 <!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->. この関数の機能は、[`Folder`](#folder) コマンドと同一です。
 
 > `4D.Folder.new()` よりも、短い [`Folder`](#folder) コマンドの使用が推奨されます。
 
@@ -157,7 +157,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!--REF #FolderClass.create().Params -->
-| 引数  | タイプ     |    | 説明                                                                |
+| 引数  | 型       |    | 説明                                                                |
 | --- | ------- | -- | ----------------------------------------------------------------- |
 | 戻り値 | Boolean | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
 
@@ -167,7 +167,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`.create()` 関数は、 <!-- REF #FolderClass.create().Summary -->`Folder` オブジェクトのプロパティに基づいてディスク上にフォルダーを作成します<!-- END REF -->。
+`.create()` 関数は、 <!-- REF #FolderClass.create().Summary -->`Folder` オブジェクトのプロパティに基づいてディスク上にフォルダーを作成します<!-- END REF -->.
 
 必要であれば、 関数は [platformPath](#platformpath) あるいは [path](#path) プロパティの詳細に基づいてフォルダー階層を作成します。 フォルダーがディスク上にすでに存在する場合、関数は何もせず、false を返します (エラーは返されません)。
 
@@ -214,7 +214,7 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| 引数                | タイプ       |    | 説明                                                 |
+| 引数                | 型         |    | 説明                                                 |
 | ----------------- | --------- | -- | -------------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                           |
 | aliasName         | Text      | -> | エイリアスまたはショートカットの名称                                 |
@@ -270,7 +270,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| 引数     | タイプ     |    | 説明                                       |
+| 引数     | 型       |    | 説明                                       |
 | ------ | ------- | -- | ---------------------------------------- |
 | option | Integer | -> | フォルダー削除のオプション|<!-- END REF -->
 
@@ -278,7 +278,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### 説明
 
-`.delete()` 関数は、 <!-- REF #FolderClass.delete().Summary -->フォルダーを削除します<!-- END REF -->。
+`.delete()` 関数は、 <!-- REF #FolderClass.delete().Summary -->フォルダーを削除します<!-- END REF -->.
 
 セキュリティ上の理由から、option 引数を渡さなかった場合はデフォルトで、`.delete()` は空のフォルダーしか削除しません。 空でないフォルダーを削除するには、以下の定数のいずれか一つを option 引数として渡す必要があります:
 
@@ -344,7 +344,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!--REF #FolderClass.moveTo().Params -->
-| 引数                | タイプ       |    | 説明                                   |
+| 引数                | 型         |    | 説明                                   |
 | ----------------- | --------- | -- | ------------------------------------ |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                              |
 | newName           | Text      | -> | 移動先でのフォルダーの完全な名称                     |
@@ -354,7 +354,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### 説明
 
-`.moveTo( )` 関数は、 <!-- REF #FolderClass.moveTo().Summary -->`Folder` オブジェクト (ソースフォルダー) を *destinationFolder* が指定する移行先へと移動すると同時に、*newName* を指定した場合は名称も変更します<!-- END REF -->。
+`.moveTo( )` 関数は、 <!-- REF #FolderClass.moveTo().Summary -->`Folder` オブジェクト (ソースフォルダー) を *destinationFolder* が指定する移行先へと移動すると同時に、*newName* を指定した場合は名称も変更します<!-- END REF -->.
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -400,7 +400,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!--REF #FolderClass.rename().Params -->
-| 引数      | タイプ       |    | 説明                                      |
+| 引数      | 型         |    | 説明                                      |
 | ------- | --------- | -- | --------------------------------------- |
 | newName | Text      | -> | フォルダーの新しい完全な名称                          |
 | 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー|<!-- END REF -->
@@ -409,7 +409,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### 説明
 
-`.rename()` 関数は、 <!-- REF #FolderClass.rename().Summary -->フォルダー名を *newName* に指定した名称に変更し、名称変更後の `Folder` オブジェクトを返します<!-- END REF -->。
+`.rename()` 関数は、 <!-- REF #FolderClass.rename().Summary -->フォルダー名を *newName* に指定した名称に変更し、名称変更後の `Folder` オブジェクトを返します<!-- END REF -->.
 
 *newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 

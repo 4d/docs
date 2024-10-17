@@ -21,7 +21,7 @@ The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES
 
 Em _vpAreaName_, passe o nome da área 4D View Pro.
 
-In _visible_, pass `True` to display the print lines, and `False` to hide them. `True` é passado por padrão.
+Em _visible_, passe `True` para exibir as linhas de impressão e `False` para ocultá-las. `True` é passado por padrão.
 
 Em _sheet_, passe o índice da folha de destino. Se nenhum índice for especificado, o comando se aplica à folha atual.
 

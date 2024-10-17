@@ -9,7 +9,7 @@ title: VP SET SHEET OPTIONS
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| 引数           | タイプ    |    | 説明                                             |                  |
+| 引数           | 型      |    | 説明                                             |                  |
 | ------------ | ------ | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName   | Object | -> | 4D View Pro エリア名                               |                  |
 | sheetOptions | Object | -> | 設定するシートオプション                                   |                  |

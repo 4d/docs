@@ -28,7 +28,7 @@ title: VP INSERT TABLE COLUMNS
 
 #### Descripción
 
-The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
+El comando `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserta una o *count* columna(s) vacía(s) en el *tableName* especificado en el índice *column* especificado<!-- END REF -->.
 
 Cuando se ha insertado una columna con este comando, normalmente se modifica su contenido utilizando el comando [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
 
@@ -45,7 +45,7 @@ Si *tableName* no existe o si no hay suficiente espacio en la hoja, no ocurre na
 
 #### Ejemplo
 
-See examples for [VP INSERT TABLE ROWS](vp-insert-table-rows.md) and [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
+Ver ejemplos para [VP INSERT TABLE ROWS](vp-insert-table-rows.md) y [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
 
 #### Ver también
 

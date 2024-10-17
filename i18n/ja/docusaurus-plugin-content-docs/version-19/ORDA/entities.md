@@ -190,7 +190,7 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 **共有可能** なエンティティセレクションは以下のような特徴を持ちます:
 
 * 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で引数として受け渡しすることができます。
-* 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、*ロック識別子* を持っていないということです)。
+* 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です。
 * 新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、[`.add( )`](API/EntitySelectionClass.md#add) 関数を呼び出す前に、[`.copy( )`](API/EntitySelectionClass.md#copy) 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。
 
 > 大多数のエンティティセレクション関数 ([`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and) 等) は、呼び出し対象のエンティティセレクションを変更せずに新規のエンティティセレクションを返すため、共有可能なエンティティセレクションに対して使用できます。
@@ -230,7 +230,7 @@ $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 
 新規のエンティティセレクションは次の場合に、元となるエンティティセレクションの特性を **継承** します:
 
-* 既存のエンティティセレクションに対して呼び出された ORDAクラス関数 ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), 等) によって生成された場合 。
+* 既存のエンティティセレクションに対して呼び出された ORDAクラス関数 ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), 等) によって生成された場合 .
 * リレーションに基づいて生成された場合:
   * [entity.*attributeName*](API/EntityClass.md#attributename) (例: "company.employees") の *attributeName* が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 ([entity.getSelection()](API/EntityClass.md#getselection) エンティティセレクションと同じ特性になります)。
   * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (例: "employees.employer") の *attributeName* がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。

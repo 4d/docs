@@ -9,25 +9,25 @@ title: VP Column
 
 <!-- REF #_method_.VP Column.Params -->
 
-| Paramètres  | Type    |    | Description                                                                 |                  |
-| ----------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| column      | Integer | -> | Indice de la colonne                                                        |                  |
-| columnCount | Integer | -> | Nombre de colonnes                                                          |                  |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres  | Type    |                             | Description                                                                 |                  |
+| ----------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName  | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| column      | Integer | ->                          | Indice de la colonne                                                        |                  |
+| columnCount | Integer | ->                          | Nombre de colonnes                                                          |                  |
+| sheet       | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat    | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
 #### Description
 
-The `VP Column` command <!-- REF #_method_.VP Column.Summary -->returns a new range object referencing a specific column or columns<!-- END REF -->.
+La commande `VP Column` <!-- REF #_method_.VP Column.Summary -->retourne un nouvel objet de plage référencant une ou des colonnes spécifiques<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-The *column* parameter defines the first column of the column range. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. If the range contains multiple columns, you should also use the optional *columnCount* parameter.
+Le paramètre *column* définit la première colonne de la plage de colonnes. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Si la plage contient plusieurs colonnes, vous devez également utiliser le paramètre optionnel *columnCount*.
 
-The optional *columnCount* parameter allows you to define the total number of columns of the range. *columnCount* must be greater than 0. Si le paramètre est omis, la valeur 1 sera définie par défaut et une plage de type colonne sera créée.
+Le paramètre optionnel *columnCount* permet de définir le nombre total de colonnes de la plage. *columnCount* doit être supérieur à 0. Si le paramètre est omis, la valeur 1 sera définie par défaut et une plage de type colonne sera créée.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
 #### Exemple
 

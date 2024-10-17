@@ -9,7 +9,7 @@ title: Propriedades do formulário
 
 > A propriedade Esquema de cores só é aplicada no macOS.
 
-Esta propriedade define o esquema de cores para o formulário. This property defines the color scheme for the form. Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível do aplicativo] (https://doc.4d.com/4dv19/help/command/en/page1762.html)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
@@ -28,13 +28,13 @@ Esta propriedade define o esquema de cores para o formulário. This property def
 
 Esta propriedade permite-lhe carregar ficheiros CSS específicos para o formulário.
 
-Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de estilo predefinida(s). Para más información, consulte la página [Hojas de estilo](createStylesheet.md).
+Um arquivo CSS definido ao nível do formulário substituirá a(s) folha(s) de estilo predefinida(s). Para obter mais informações, consulte a página [Folhas de estilo] (createStylesheet.md).
 
 #### Gramática JSON
 
-| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                               |
-| ---- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \| "win"} objects </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                            |
+| ---- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css  | cadeia ou colecção | Caminho(s) do arquivo CSS fornecido(s) como<li>:uma string (um arquivo para ambas as plataformas)</li><li>uma coleção de strings (uma lista de arquivos para ambas as plataformas)</li><li>uma coleção de objetos {"path":string; "media": "mac" \| "win"} </li> |
 
 ---
 
@@ -45,7 +45,7 @@ Cada formulário é composto por, pelo menos, duas páginas:
 - uma página 0 (página de fundo)
 - uma página 1 (página principal)
 
-Para más información, consulte [Páginas formulario](forms.md#form-pages).
+Para obter mais informações, consulte [Páginas de formulário] (forms.md#form-pages).
 
 #### Gramática JSON
 
@@ -57,24 +57,24 @@ Para más información, consulte [Páginas formulario](forms.md#form-pages).
 
 ## Nome do formulário
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. El nombre del formulario debe cumplir con las [reglas especificadas para los identificadores](Concepts/identifiers.md) en 4D.
+Essa propriedade é o nome do próprio formulário sendo usada para fazer referência ao formulário pelo nome usando a linguagem 4D. O nome do formulário deve estar em conformidade com as [regras especificadas para identificadores] (Concepts/identifiers.md) em 4D.
 
 #### Gramática JSON
 
-The form name is defined by the name of the folder that contains the form.4Dform file. Ver [arquitectura del proyecto](Project/architecture.md#sources-folder) para más información.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
 
 ---
 
 ## Tipo de formulário
 
-El tipo de formulario, _es decir,_ su destino, define las características que tendrá el formulario. Por ejemplo, [marcadores](properties_Markers.md) sólo puede definirse para formularios tabla listados (de salida).
+O tipo de formulário, _ou seja_, seu destino, define as características que estarão disponíveis para o formulário. Por exemplo, [markers](properties_Markers.md) só pode ser definido para formulários de tabela de lista (saída).
 
 Cada tabela de um banco de dados tem geralmente pelo menos duas formas de tabela. Uma para listar os registos no ecrã e a outra para visualizar um registo de cada vez (utilizada para a introdução de dados e modificações):
 
-- Formulario de salida: el _formulario de salida_ o _formulario lista_ muestra una lista de registros, con una sola línea por registro. Os resultados das consultas são apresentados num formulário de saída e os usuários podem fazer duplo clique numa linha para visualizar o formulário de entrada para esse registo.
+- Formulário de saída - o _formulário de saída_ ou _formulário de lista_ exibe uma lista de registros, com uma única linha por registro. Os resultados das consultas são apresentados num formulário de saída e os usuários podem fazer duplo clique numa linha para visualizar o formulário de entrada para esse registo.
   ![](../assets/en/FormObjects/formOutput.png)
 
-- Formulário de entrada - utilizado para entrada de dados. Muestra un único registro por pantalla y suele tener botones para guardar y cancelar las modificaciones del registro y para navegar de registro en registro (\*es decir, \*, Primer registro, Último registro, Registro anterior, Registro siguiente).
+- Formulário de entrada - utilizado para entrada de dados. Exibe um único registro por tela e, normalmente, tem botões para salvar e cancelar modificações no registro e para navegar de registro em registro (\*primeiro registro, último registro, registro anterior, próximo registro).
   ![](../assets/en/FormObjects/formInput.png)
 
 Os tipos suportados dependem da categoria do formulário:
@@ -97,25 +97,25 @@ Os tipos suportados dependem da categoria do formulário:
 
 ## Nome do formulário herdado
 
-Esta propiedad designa el [formulario a heredar](forms.md#inherited-forms) en el formulario actual.
+Essa propriedade designa o [formulário a ser herdado] (forms.md#inherited-forms) no formulário atual.
 
-Para heredar de un formulario tabla, defina la tabla en la propiedad [Tabla de formulario heredada](#inherited-form-table).
+Para herdar de um formulário de tabela, defina a tabela na propriedade [Inherited Form Table] (#inherited-form-table).
 
-Para eliminar la herencia, seleccione `\<None>` en la lista de propiedades (o " " en JSON).
+Para remover a herança, selecione `\<None>` na Property List (ou " " em JSON).
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                                                                                  |
-| ------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| inheritedForm | string        | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                                                                     |
+| ------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| inheritedForm | string        | Nome do formulário da tabela ou do projeto OU um caminho POSIX para um arquivo .json que descreve o formulário OU um objeto que descreve o formulário |
 
 ---
 
 ## Tabelas de formulário herdadas
 
-Esta propiedad especifica la tabla de la base de datos de la que [hereda un formulario](forms.md#inherited-forms) en el formulario actual.
+Essa propriedade especifica a tabela do banco de dados da qual [herdar um formulário] (forms.md#inherited-forms) no formulário atual.
 
-Define `\<None>` en la lista de propiedades (o " " en JSON) para heredar un formulario proyecto.
+Defina como `\<None>` na Property List (ou " " em JSON) para herdar de um formulário de projeto.
 
 #### Gramática JSON
 
@@ -127,7 +127,7 @@ Define `\<None>` en la lista de propiedades (o " " en JSON) para heredar un form
 
 ## Publicado como subformulário
 
-Para que un formulario componente sea seleccionado como [subformulario](FormObjects/subform_overview.md) en una aplicación anfitriona, debe haber sido compartido explícitamente. When this property is selected, the form will be published in the host application.
+Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. Quando esta propriedade for selecionada, o formulário será publicado na aplicação do host.
 
 Apenas os projetos formulário podem ser especificados como subformulários publicados.
 
@@ -141,14 +141,14 @@ Apenas os projetos formulário podem ser especificados como subformulários publ
 
 ## Guardar geometria
 
-Cuando se utiliza esta opción, si la ventana se abre utilizando el comando `Open form window` con el parámetro `*`, varios parámetros del formulario son guardados automáticamente por 4D cuando se cierra la ventana, independientemente de cómo se hayan modi
+Quando a opção é usada, se a janela for aberta usando o comando "Abrir janela de formulário" com o parâmetro "\*", vários parâmetros de formulário são salvos automaticamente pelo 4D quando a janela é fechada, independentemente de como foram modificados durante a sessão:
 
 - a página atual,
 - a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
 
-> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
-Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/properties_Object.md#save-value) está disponible para ciertos objetos.
+Quando essa opção é selecionada, a opção [Save Value] (FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 
 #### Gramática JSON
 
@@ -158,19 +158,19 @@ Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/proper
 
 #### Veja também
 
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+[**Salvar valor**](FormObjects/properties_Object.md#save-value)
 
 ---
 
 ## Título da janela
 
-El título de la ventana se utiliza cuando se abre el formulario mediante los comandos `Open form window` y `Open window`4D en el entorno de la aplicación. O título da janela aparece na barra de título da janela.
+O título da janela é usado quando o formulário é aberto usando os comandos `Abrir janela do formulário` e `Abrir janela` 4D no ambiente de aplicativos. O título da janela aparece na barra de título da janela.
 
-Puede utilizar referencias dinámicas para definir los nombres de ventana de los formularios, _es decir_:
+Você pode usar referências dinâmicas para definir os títulos das janelas dos formulários, ou seja, \*:
 
 - Uma referência XLIFF padrão armazenada na pasta Resources.
-- Una etiqueta de tabla o de campo: la sintaxis a aplicar es `<?[TableNum]FieldNum>` o `<?[TableName]FieldName>`.
-- Una variable o un campo: la sintaxis a aplicar es `\<VariableName>` o `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
+- Um rótulo de tabela ou campo: A sintaxe a ser aplicada é `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
+- Uma variável ou um campo: A sintaxe a ser aplicada é `\<VariableName>` ou `<[TableName]FieldName>`. O valor atual do campo ou variável será exibido no título da janela.
 
 > O número de caracteres para um título de janela é limitado a 31.
 

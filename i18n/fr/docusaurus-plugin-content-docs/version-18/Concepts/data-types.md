@@ -49,7 +49,7 @@ Le tableau suivant illustre ces valeurs par défaut :
 
 | Type       | Interprocess/Process (interprété/compilé), Local (interprété/compilé "à zéro") | Local compilé "aberrant" | Local compilé "non"         |
 | ---------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------- |
-| Booléen    | False                                                                          | True                     | True (varie)                |
+| Booleen    | False                                                                          | True                     | True (varie)                |
 | Date       | 00-00-00                                                                       | 00-00-00                 | 00-00-00                    |
 | Longint    | 0                                                                              | 1919382119               | 909540880 (varie)           |
 | Time       | 00:00:00                                                                       | 533161:41:59             | 249345:34:24 (varie)        |

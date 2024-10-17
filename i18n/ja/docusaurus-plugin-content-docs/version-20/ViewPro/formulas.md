@@ -171,7 +171,7 @@ $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 ```
 
-> [4D View Pro: Use 4D formulas in your spreadsheet (英文ブログ記事)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/) も参照ください。
+> [4D View Pro: 4D のフォーミュラをスプレッドシートで使用する](https://blog.4d.com/ja/4d-view-pro-use-4d-formulas-in-your-spreadsheet/) も参照ください。
 
 
 ### Hello World 例題
@@ -243,7 +243,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 * [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。
 * 次の 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) (日付と時間の受け渡しを可能にします):
 
-    | プロパティ | タイプ  | 説明       |
+    | プロパティ | 型    | 説明       |
     | ----- | ---- | -------- |
     | value | Date | 日付値      |
     | time  | Real | 数値 (秒単位) |

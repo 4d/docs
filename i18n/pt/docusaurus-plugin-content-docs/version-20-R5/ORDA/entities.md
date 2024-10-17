@@ -10,7 +10,7 @@ En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [
 Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 - Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
-- You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
+- Você também pode criar uma entidade usando a função [`dataClass.new()`](../API/DataClassClass.md#new).
 
 Tenha em atenção que a entidade só é criada na memória. Se quiser adicioná-lo ao datastore, você deve chamar a função [`entity.save()`](../API/EntityClass.md#save).
 
@@ -259,7 +259,7 @@ An entity selection can be **shareable** (readable by multiple processes, but no
 Una entity selection **compartible** tiene las siguientes características:
 
 - ele pode ser armazenado em um objeto compartilhado ou em uma coleção compartilhada e pode ser passado como parâmetro entre vários processos ou trabalhadores;
-- puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo (no tiene un \* identificador de bloqueo\*);
+- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
 - não permite a adição de novas entidades. A tentativa de adicionar uma entidade a uma seleção de entidade compartilhável acionará um erro (1637 - Esta seleção de entidade não pode ser alterada). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
 
 > Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
@@ -437,7 +437,7 @@ Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una 
 
 ### Como definir um filtro restrito
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. O filtro é então ativado automaticamente.
+Você cria um filtro para uma classe de dados definindo uma função `event restrict` na [**classe dataclass**](dsMapping.md#dataclass-class) da dataclass. O filtro é então ativado automaticamente.
 
 ### `Function event restrict`
 
@@ -448,9 +448,9 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 // código
 ```
 
-Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. The filter is run once, when the entity selection is created.
+Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. O filtro é executado uma vez, quando a entity selection é criada.
 
-The filter must return an entity selection of the dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
+O filtro deve retornar uma seleção de entidade da dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
 
 :::note
 
@@ -513,9 +513,9 @@ Los filtros no se aplican a las selecciones heredadas de registros manejadas a t
 | [entity.reload()](../API/EntityClass.md#reload)                       | Somente em datastores cliente/servidor e remotos                                                                                                                                                                                                                                                                      |
 | [dataclass.all()](../API/DataClassClass.md#all)                       |                                                                                                                                                                                                                                                                                                                       |
 | [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection) | <li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li> |
-| [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Only entities matching the filter are returned                                                                                                                                                                                                                                                                        |
-| [entitySelection.or()](../API/EntitySelectionClass.md#or)             | Only entities matching the filter are returned                                                                                                                                                                                                                                                                        |
-| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Only entities matching the filter are returned                                                                                                                                                                                                                                                                        |
+| [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                        |
+| [entitySelection.or()](../API/EntitySelectionClass.md#or)             | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                        |
+| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                        |
 | [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                                                                                                                                                                       |
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                       |
 | [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtro aplicado si _attributeName_ es una entidad relacionada o entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                      |

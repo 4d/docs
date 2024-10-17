@@ -9,7 +9,7 @@ title: VP SET TIME VALUE
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
-| 引数            | タイプ    |    | 説明        |                  |
+| 引数            | 型      |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
 | rangeObj      | Object | -> | レンジオブジェクト |                  |
 | timeValue     | Text   | -> | 設定する時間値   |                  |

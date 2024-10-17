@@ -10,30 +10,30 @@ title: Página de Backup
 Uma cópia de segurança pode ser iniciada de três maneiras:
 
 - **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
-- Automatically, using the scheduler that can be set in the Database Settings,
+- Automaticamente, usando o agendador que pode ser definido nas Configurações do banco de dados,
 - Por programação, utilizando o comando `BACKUP`.
 
 > 4D Server: é possível iniciar uma cópia de segurança manualmente desde uma máquina remota mediante um método que chama ao comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
 
 ### You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
 
-1. Seleccione o comando **Backup...** no menu 4D **File** . The backup window appears: ![](../assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. Também se registra no banco de dados **Backup journal.txt**.
+1. Seleccione o comando **Backup...** no menu 4D **File** . A janela de backup aparece: ![](../assets/en/Backup/backup01.png) Você pode ver a localização da pasta de backup usando o menu pop-up ao lado da área de "Destino de backup". Também se registra no banco de dados **Backup journal.txt**.
 
 - Também pode abrir o [Centro de manutenção e segurança](MSC/overview.md) de 4D e mostrar a [página de cópias de segurança](MSC/backup.md).
 
-The **Database properties...** button causes the Backup/Configuration page of the Database Settings to be displayed.
+O botão **Propriedades do banco de dados...** faz com que a página Backup/Configuração das Configurações do banco de dados seja exibida.
 
  2. The **Backup** button is used to launch a manual backup.
 
 ### Backup automático periódico
 
-As cópias de segurança programadas são iniciadas automaticamente. They are configured in the **Backup/Scheduler** page of the **Database Settings**.
+As cópias de segurança programadas são iniciadas automaticamente. Elas estão configuradas na página **Backup/Agendador** da **Configurações do banco de dados**.
 
 As cópias de segurança são feitas automaticamente na hora definida nessa página sem nenhum tipo de intervenção do usuário. Para saber mais sobre o uso desta caixa de diálogo, consulte [Definir as cópias de segurança periódicas](settings.md#scheduler).
 
 ### Comando BACKUP
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Database settings. Pode utilizar os métodos `On Backup Startup` e `On Backup Shutdown` para controlar o processo de cópia de segurança (consulte o manual *Linguagem, de 4D*).
+Quando o comando `BACKUP` é executado a partir de qualquer método, o backup é iniciado usando os parâmetros atuais, conforme definido nas configurações do banco de dados. Pode utilizar os métodos `On Backup Startup` e `On Backup Shutdown` para controlar o processo de cópia de segurança (consulte o manual *Linguagem, de 4D*).
 
 ## Gerenciar o processo de  backup
 
@@ -49,12 +49,12 @@ O estado da última cópia de segurança (correta ou com erro) é armazenada na 
 
 ### Acesso à base de dados durante a cópia de segurança
 
-During a backup, access to the database is restricted by 4D according to the context. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura mas sim aos dados.
+Durante um backup, o acesso ao banco de dados é restrito por 4D conforme o contexto. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura mas sim aos dados.
 
 Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o acesso à estrutura continua sendo permitido. Neste caso, as possibilidades de acesso o banco de dados são as seguintes:
 
-- With the 4D single-user version, the database is locked for both read and write; all processes are frozen. Nenhuma ação é realizada.
-- With 4D Server, the database is only write locked; client machines can view data. Se uma máquina cliente enviar uma petição de adição, eliminação ou mudança ao servidor, uma janela aparece pedindo ao usuário que espere até o final da cópia de segurança. Depois que o banco de dados é salvo, a janela desaparece e a ação é executada. Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Para cancelar a petição em processo e não esperar a que finalize a cópia de segurança, basta dar um clique no botão **Cancelar a operação**. Entretanto, se a ação que espera ser executada vem de um método lançado antes da cópia de segurança, não deve cancelar a ação porque só são canceladas as operações restantes. Also, a partially executed method can cause logical inconsistencies in the database.
+- Com a versão 4D monousuário, o banco de dados é bloqueado para leitura e gravação; todos os processos são congelados. Nenhuma ação é realizada.
+- Com 4D Server, o banco de dados só é bloqueado para gravação; as máquinas clientes podem visualizar os dados. Se uma máquina cliente enviar uma petição de adição, eliminação ou mudança ao servidor, uma janela aparece pedindo ao usuário que espere até o final da cópia de segurança. Depois que o banco de dados é salvo, a janela desaparece e a ação é executada. Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Para cancelar a petição em processo e não esperar a que finalize a cópia de segurança, basta dar um clique no botão **Cancelar a operação**. Entretanto, se a ação que espera ser executada vem de um método lançado antes da cópia de segurança, não deve cancelar a ação porque só são canceladas as operações restantes. Além disso, um método parcialmente executado pode causar inconsistências lógicas no banco de dados.
 
 > Quando a ação que espera ser executada vir de um método e o usuário clicar no botão **Cancelar operação**, 4D Server devolve o erro -9976 (Este comando não pode ser executardo porque a copia de segurança está em progresso).
 
@@ -62,9 +62,9 @@ Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o ac
 
 Pode acontecer que uma cópia de segurança não seja executada corretamente. Pode haver várias causas de falha na cópia de segurança: interrupção do usuário, arquivo adjunto não encontrado, problemas no disco de destino, transação incompleta, etc. 4D processa a incidência segundo a causa.
 
-In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the database **Backup journal.txt**.
+Em todos os casos, lembre que o estado da última copia de segurança (correta ou com falha) se armazena na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server, assim como no banco de dados **Backup journal.txt**.
 
-- **Interrupção de Usuário**: The **Botão Parar** na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para e é gerado o erro 1406. Pode interceptar esse erro no método database `On Backup Shutdown`.
+- **Interrupção pelo usuário**: o **Botão Parar** na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para e é gerado o erro 1406. Pode interceptar esse erro no método database `On Backup Shutdown`.
 - **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of database files and accessible attached files) and returns an error.
 - **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. Se a segunda tentativa falhar, um diálogo de alerta de sistema é exibido e um erro é gerado. Pode interceptar esse erro no método database `On Backup Shutdown`.
 

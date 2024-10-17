@@ -9,9 +9,9 @@ title: VP Get sheet count
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |                  |
-| ---------- | ------- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                  |                  |
+| ---------- | ------- | --------------------------- | ------------------------------------------ | ---------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro |                  |
 | Resultado  | Integer | <- | Número de folhas                           | <!-- END REF --> |
 
 #### Descrição

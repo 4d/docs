@@ -13,7 +13,7 @@ Estas áreas indican la fecha, la hora y el estado de la última [verificación 
 
 ### Verificar registos e índices
 
-This button can be used to launch the verification operation directly, without interrupting the server. Note that the server may be noticeably slowed down during the operation.
+This button can be used to launch the verification operation directly, without interrupting the server. Observe que o servidor pode ficar visivelmente mais lento durante a operação.
 
 Todos os registros e todos os índices do banco de dados são verificados. Si desea poder orientar la verificación o disponer de opciones adicionales, deberá utilizar el [Centro de mantenimiento y seguridad](MSC/overview.md) (CSM).
 
@@ -39,7 +39,7 @@ This area indicates the duration of the 4D Server application execution since th
 
 ### Reiniciar o servidor...
 
-Este botão pode ser usado para fechar e reiniciar imediatamente o projeto. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. Os usuários 4D podem então ser reconectados.
+Este botão pode ser usado para fechar e reiniciar imediatamente o projeto. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. Após a validação, 4D Server fecha e reabre automaticamente o projeto. Os usuários 4D podem então ser reconectados.
 
 > If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
 
@@ -49,7 +49,7 @@ Esta área indica la fecha y la hora de la [última copia de seguridad](MSC/back
 
 - **Última copia de seguridad**: fecha y hora de la última copia de seguridad.
 - **Próxima copia de seguridad**: fecha y hora de la próxima copia de seguridad programada.
-- **Espacio necesario**: espacio estimado necesario para la copia de seguridad. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
+- **Espacio necesario**: espacio estimado necesario para la copia de seguridad. The actual size of the backup file may vary according to the settings (compression, etc.) e de acordo com as variações do arquivo de dados.
 - **Espacio disponible**: espacio disponible en el volumen de copia de seguridad.
 
 El botón **Iniciar copia de seguridad** permite realizar una copia de seguridad inmediata de la base utilizando los parámetros de copia de seguridad actuales (archivos de copia de seguridad, ubicación de los archivos, opciones, etc.). Puede ver estos parámetros haciendo clic en el botón **Propiedades...**. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.

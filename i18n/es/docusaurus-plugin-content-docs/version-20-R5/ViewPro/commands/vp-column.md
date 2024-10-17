@@ -9,12 +9,12 @@ title: VP Column
 
 <!-- REF #_method_.VP Column.Params -->
 
-| Parámetros  | Tipo    |    | Descripción                                                    |                  |
-| ----------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| column      | Integer | -> | Índice de la columna                                           |                  |
-| columnCount | Integer | -> | Número de columnas                                             |                  |
-| sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros  | Tipo    |                             | Descripción                                                    |                  |
+| ----------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName  | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
+| column      | Integer | ->                          | Índice de la columna                                           |                  |
+| columnCount | Integer | ->                          | Número de columnas                                             |                  |
+| sheet       | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result      | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
 #### Descripción

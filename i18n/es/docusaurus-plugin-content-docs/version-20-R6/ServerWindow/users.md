@@ -36,7 +36,7 @@ Este estado libera recursos en el servidor. Además, la aplicación 4D remota se
 
 Se soporta el siguiente escenario: un usuario remoto deja de trabajar durante un tiempo, por ejemplo durante una pausa para comer, pero mantiene abierta la conexión con el servidor. La máquina pasa al modo reposo. Cuando el usuario regresa, despierta la máquina y la aplicación 4D remota recupera automáticamente su conexión con el servidor, así como el contexto de la sesión.
 
-> Una sesión remota durmiente es abandonada automáticamente por el servidor tras 48 horas de inactividad. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
+> Una sesión remota durmiente es abandonada automáticamente por el servidor tras 48 horas de inactividad. Puede modificar este tiempo de espera por defecto utilizando el comando [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) con el selector `Remote connection sleep timeout`.
 
 ## Área de búsqueda/filtrado
 
@@ -64,6 +64,6 @@ Este botón permite mostrar directamente los procesos del usuario o usuarios sel
 
 ### Desconectar
 
-Este botón puede utilizarse para forzar al usuario(s) seleccionado a desconectarse. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+Este botón puede utilizarse para forzar al usuario(s) seleccionado a desconectarse. Al hacer clic en este botón, aparece un diálogo de alerta para que pueda confirmar o cancelar esta operación (mantenga presionada la tecla **Alt** mientras hace clic en el botón **Desconectar** para desconectar directamente a los usuarios seleccionados sin que aparezca el diálogo de confirmación).
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> Puede realizar la misma acción para usuarios remotos con el comando [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).

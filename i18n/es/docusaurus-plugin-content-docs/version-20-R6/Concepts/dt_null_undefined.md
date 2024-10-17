@@ -115,24 +115,24 @@ Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Greater t
 
 ## Operadores indefinidos
 
-| Operación         | Sintaxis                                           | Devuelve | Expression                                                          | Valor |
-| ----------------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------- | ----- |
-| Igual             | Undefined `=` Undefined                            | Boolean  | a.undefinedProp `=` b.undefinedProp | True  |
-|                   | Undefined `=` Null                                 | Boolean  | a.undefinedProp `=` c.nullProp      | True  |
-|                   | Undefined `=` *otros valores*                      | Boolean  | a.undefinedProp `=` 42                              | False |
-| Desigualdad       | Undefined `#` Undefined                            | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
-|                   | Undefined `#` Null                                 | Boolean  | a.undefinedProp `#` b.nullProp      | False |
-|                   | Undefined `#` *otros valores*                      | Boolean  | a.undefinedProp `#` 42                              | True  |
-| Mayor que         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"                           | False |
-| Menor que         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"                           | False |
-| Mayor o igual que | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"                          | False |
-| Menor o igual que | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"                          | False |
+| Operación         | Sintaxis                                  | Devuelve | Expression                                                          | Valor |
+| ----------------- | ----------------------------------------- | -------- | ------------------------------------------------------------------- | ----- |
+| Igual             | Undefined `=` Undefined                   | Boolean  | a.undefinedProp `=` b.undefinedProp | True  |
+|                   | Undefined `=` Null                        | Boolean  | a.undefinedProp `=` c.nullProp      | True  |
+|                   | Undefined `=` *otros valores*             | Boolean  | a.undefinedProp `=` 42                              | False |
+| Desigualdad       | Undefined `#` Undefined                   | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
+|                   | Undefined `#` Null                        | Boolean  | a.undefinedProp `#` b.nullProp      | False |
+|                   | Undefined `#` *otros valores*             | Boolean  | a.undefinedProp `#` 42                              | True  |
+| Mayor que         | Undefined `>` string, Date, Time, number  | Boolean  | a.undefinedProp `>` "abc"                           | False |
+| Menor que         | Undefined `<` string, Date, Time, number  | Boolean  | a.undefinedProp `<` "abc"                           | False |
+| Mayor o igual que | Undefined `>=` string, Date, Time, number | Boolean  | a.undefinedProp `>=` "abc"                          | False |
+| Menor o igual que | Undefined `<=` string, Date, Time, number | Boolean  | a.undefinedProp `<=` "abc"                          | False |
 
 *otros valores* son expresiones de todo tipo con un valor ni Undefined ni Null.
 
 :::info
 
-Las comparaciones de valores Undefined con valores Pointer, Picture, Blob, Object, Collection, Undefined o Null mediante los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no se admiten y devuelven un error.
+Las comparaciones de valores Undefined con valores Pointer, Picture, Boolean, Blob, Object, Collection, Undefined o Null mediante los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no se admiten y devuelven un error.
 
 :::
 

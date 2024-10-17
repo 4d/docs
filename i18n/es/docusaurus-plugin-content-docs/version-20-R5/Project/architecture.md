@@ -183,7 +183,7 @@ La carpeta Logs contiene todos los archivos de registro utilizados por el proyec
 
 ## `Settings` (usuario)
 
-This folder contains [**user settings**](../Desktop/user-settings.md#user-settings) used for application administration.
+Esta carpeta contiene [**parámetros de usuario**](../Desktop/user-settings.md#user-settings) utilizada para la administración de aplicaciones.
 
 > Estos parámetros tienen prioridad sobre el archivo de [parámetros de estructura](#sources). Sin embargo, si existen [parámetros de usuario para los datos](#settings-user-data), tienen prioridad sobre los parámetros de usuario. Ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings).
 
@@ -212,11 +212,11 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 
 ## `Componentes`
 
-Folder containing components that are embedded in the project (must be stored at the same level as the Project folder). Estos componentes tienen prioridad sobre cualquier otra ubicación.
+Carpeta que contiene los componentes anidados en el proyecto (debe almacenarse en el mismo nivel que la carpeta Project). Estos componentes tienen prioridad sobre cualquier otra ubicación.
 
 :::info
 
-You can also use the [**dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare components.
+También puede usar los archivos [**dependencies.json** y (opcionalmente) **environment4d.json**](components.md) para declarar componentes.
 
 :::
 

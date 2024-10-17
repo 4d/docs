@@ -5,7 +5,7 @@ title: On Window Opening Denied
 
 | Code | Peut être appelé par                           | Définition                       |
 | ---- | ---------------------------------------------- | -------------------------------- |
-| 53   | [Web Area](../FormObjects/webArea_overview.md) | Une fenêtre pop-up a été bloquée |
+| 53   | [Zone Web](../FormObjects/webArea_overview.md) | Une fenêtre pop-up a été bloquée |
 
 <details><summary>Historique</summary>
 
@@ -21,14 +21,14 @@ Cet événement est généré lorsque l'ouverture d'une fenêtre pop-up est bloq
 
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Vous pouvez accepter l'action de déposer en appelant :
+Cet événement est également généré lorsqu'une opération de déposer a été effectuée dans la zone Web (avec les [moteurs de rendu](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) système embarqué et Windows) si l'option [Glisser-déposer](../FormObjects/webArea_overview.md#user-interface) est également activée pour la zone. Vous pouvez accepter l'action de déposer en appelant :
 
 ```4d
-//web area object method
+//méthode objet zone web
 If (FORM Event.code=On Window Opening Denied)
 	WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
-	// or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-	// where UrlVariable is the URL variable associated to the web area
+	// ou UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+	// où UrlVariable est la variable URL associée à la zone web
 End if 
 ```
 

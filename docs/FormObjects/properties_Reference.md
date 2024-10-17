@@ -80,7 +80,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`events`](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |[`excludedList`](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.<a id="f"></a>|
 |**f**|||
-|[`fill`](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
+|[`fill`](properties_BackgroundAndBorder.md#background-color--fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[`focusable`](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[`fontFamily`](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
 |[`fontSize`](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0| 

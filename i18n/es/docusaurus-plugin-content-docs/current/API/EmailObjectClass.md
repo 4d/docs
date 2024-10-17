@@ -14,7 +14,7 @@ Los objetos `Email` se crean cuando se reciben correos a través de una función
 
 Los objetos `Email` se envían utilizando la función SMTP [`.send()`](SMTPTransporterClass.md#send).
 
-Los comandos [`MAIL Convert from MIME`](#mail-convert-from-mime) y [`MAIL Convert to MIME`](#mail-convert-to-mime) se pueden utilizar para convertir los objetos `Email` a y desde contenidos MIME.
+[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
 
 ### Objeto Email
 
@@ -54,8 +54,8 @@ Todas las propiedades que contienen direcciones de correo electrónico ([`from`]
 #### Text
 
 - correo electrónico único: "somebody@domain.com"
-- un solo nombre de visualización+correo electrónico: "Somebody somebody@domain.com"
-- varios correos electrónicos: "Somebody somebody@domain.com,me@home.org"
+- un solo nombre de visualización+correo electrónico: "Somebody <somebody@domain.com>"
+- varios correos electrónicos: "Somebody <somebody@domain.com>,me@home.org"
 
 #### Object
 
@@ -148,7 +148,7 @@ El objeto `.bodyStructure` contiene las siguientes propiedades:
 
 #### Descripción
 
-La propiedad `.bodyValues` contiene el <!-- REF #EmailObjectClass.bodyValues.Summary -->objeto *EmailBodyValue*, que contiene un objeto por cada \\<partID\> de `bodyStructure` (opcional)<!-- END REF -->. Ver la sección [Gestión del cuerpo](#gestión-del-cuerpo).
+La propiedad `.bodyValues` contiene el <!-- REF #EmailObjectClass.bodyValues.Summary -->objeto *EmailBodyValue*, que contiene un objeto por cada \<partID\> de `bodyStructure` (opcional)<!-- END REF -->. Ver la sección [Gestión del cuerpo](#gestión-del-cuerpo).
 
 El objeto `.bodyValues` contiene las siguientes propiedades:
 
@@ -247,9 +247,9 @@ La propiedad `.keywords` contiene un <!-- REF #EmailObjectClass.keywords.Summary
 
 Esta propiedad es el encabezado "keywords" (ver [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propiedad                       | Tipo    | Valor                                                               |
-| ------------------------------- | ------- | ------------------------------------------------------------------- |
-| .\\<keyword\> | boolean | Palabra clave a definir (el valor debe ser true) |
+| Propiedad                                               | Tipo    | Valor                                                               |
+| ------------------------------------------------------- | ------- | ------------------------------------------------------------------- |
+| .\<keyword\> | boolean | Palabra clave a definir (el valor debe ser true) |
 
 Palabras clave reservadas:
 
@@ -360,172 +360,3 @@ La propiedad `.textBody` contiene la <!-- REF #EmailObjectClass.textBody.Summary
 #### Descripción
 
 La propiedad `.to` contiene <!-- REF #EmailObjectClass.to.Summary -->las [direcciones de correo electrónico](#email-addresses) de los destinatarios principales del correo electrónico<!-- END REF -->.
-
-## MAIL Convert from MIME
-
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18          | Añadidos       |
-
-</details>
-
-<!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
-
-<!-- REF #_command_.MAIL Convert from MIME.Params -->
-
-| Parámetros | Tipo       |     | Descripción   |
-| ---------- | ---------- | :-: | ------------- |
-| mime       | Blob, Text |  -> | Email en MIME |
-| Result     | Object     |  <- | Objeto Email  |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.Summary -->convierte un documento MIME en un objeto de correo electrónico válido<!-- END REF -->.
-
-> 4D sigue la [especificación JMAP](https://jmap.io/spec-mail.html) para dar formato al objeto de correo electrónico devuelto.
-
-Pase en *mime* un documento MIME válido a convertir. Puede ser suministrado por cualquier servidor o aplicación de correo. Puede pasar un BLOB o un texto en el parámetro *mime*. Si el MIME proviene de un archivo, se recomienda utilizar un parámetro BLOB para evitar problemas relacionados con las conversiones del conjunto de caracteres y los saltos de línea.
-
-#### Objeto devuelto
-
-Objeto Email.
-
-#### Ejemplo 1
-
-Quiere cargar una plantilla de correo guardada como MIME en un documento de texto y enviar un correo electrónico:
-
-```4d
-var $mime: Blob
-var $mail;$server;$transporter;$status: Object
-
-$mime:=File("/PACKAGE/Mails/templateMail.txt").getContent())
-
-$mail:=MAIL Convert from MIME($mime)
-$mail.to:="smith@mail.com"
-$mail.subject:="Hello world"
-
-$server:=New object
-$server.host:="smtp.gmail.com"
-$server.port:=465
-$server.user:="test@gmail.com"
-$server.password:="XXXX"
-
-$transporter:=SMTP New transporter($server)
-$status:=$transporter.send($mail)
-```
-
-#### Ejemplo 2
-
-En este ejemplo, se envía directamente un documento de 4D Write Pro que contiene imágenes:
-
-```4d
-var $mime: Blob
-var $email;$server;$transporter;$status: Object
-
-// Exportación Mime del documento 4D Write Pro
-WP EXPORT VARIABLE(WParea;$mime;wk mime html)
-
-// convertir la variable Mime de 4D Write Pro en objeto email
-$email:=MAIL Convert from MIME($mime)
-
-// Llenar los encabezados del objeto email
-$email.subject:="4D Write Pro HTML body"
-$email.from:="YourEmail@gmail.com"
-$email.to:="RecipientEmail@mail.com"
-
-$server:=New object
-$server.host:="smtp.gmail.com"
-$server.port:=465
-$server.user:="YourEmail@gmail.com"
-$server.password:="XXXX"
-
-$transporter:=SMTP New transporter($server)
-$status:=$transporter.send($email)
-```
-
-## MAIL Convert to MIME
-
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 17 R4       | Añadidos       |
-| 17 R5       | Modificado     |
-
-</details>
-
-<!-- REF #_command_.MAIL Convert to MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
-
-<!-- REF #_command_.MAIL Convert to MIME.Params -->
-
-| Parámetros | Tipo   |     | Descripción                                    |
-| ---------- | ------ | :-: | ---------------------------------------------- |
-| mail       | Object |  -> | Objeto Email                                   |
-| options    | Object |  -> | Opciones de codificación y de charset del mail |
-| Result     | Text   |  <- | Objeto email convertido en MIME                |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convierte un objeto email en texto MIME<!-- END REF -->. Este comando es llamado internamente por [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) para formatear el objeto email antes de enviarlo. Se puede utilizar para analizar el formato MIME del objeto.
-
-En *mail*, pase el contenido y los detalles de la estructura del correo electrónico a convertir. Esto incluye información como las direcciones de correo electrónico (remitente y destinatario(s)), el propio mensaje y el tipo de visualización del mensaje.
-
-> 4D sigue la [especificación JMAP](https://jmap.io/spec-mail.html) para formatear el objeto email.
-
-En *options*, puede configurar la codificación y el charset del mail. Las siguientes propiedades están disponibles:
-
-| Propiedad     | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headerCharset | Text | Charset y codificación utilizados para las siguientes partes del correo electrónico: asunto, nombres de archivos adjuntos y atributo(s) del nombre del correo electrónico. Valores posibles:<table><tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr><tr><td>Modo correo ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII si es posible, japonés (ISO-2022-JP) & Quoted-printable si es posible, de lo contrario UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII si es posible, japonés (ISO-2022-JP) y 7 bits si es posible, de lo contrario UTF-8 y Quoted-printable</li></ul></td></tr><tr><td>Modo correo ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 y Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 y 8 bits</li></ul></td></tr><tr><td>Modo correo UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si es posible, en caso contrario UTF-8 & Quoted-printable (**valor por defecto**)</td></tr><tr><td>Modo correo UTF8 en base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si es posible, de lo contrario UTF-8 & base64</td></tr></table> |
-| bodyCharset   | Text | Charset y codificación utilizados para el contenido html y el texto del cuerpo del correo electrónico. Valores posibles: los mismos que para headerCharset (ver arriba)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-
-Si se omite el parámetro *options*, se utiliza la configuración del modo de correo UTF8 para las partes encabezado y cuerpo.
-
-#### Ejemplo
-
-```4d
-var $mail: Object
-var $mime: Text
-$mail:=New object
-
-// Creation of a mail
-$mail.from:="tsales@massmarket.com"
-$mail.subject:="Terrific Sale! This week only!"
-$mail.textBody:="Text format email"
-$mail.htmlBody:="<html><body>HTML format email</body></html>"
-$mail.to:=New collection
-$mail.to.push(New object ("email";"noreply@4d.com"))
-$mail.to.push(New object ("email";"test@4d.com"))
-
-// transform the mail object in MIME
-$mime:=MAIL Convert to MIME($mail)
-
-// Contents of $mime:
-// MIME-Version: 1.0
-// Date: Thu, 11 Oct 2018 15:42:25 GMT
-// Message-ID: <7CA5D25B2B5E0047A36F2E8CB30362E2>
-// Sender: tsales@massmarket.com
-// From: tsales@massmarket.com
-// To: noreply@4d.com
-// To: test@4d.com
-// Content-Type: multipart/alternative; boundary="E0AE5773D5E95245BBBD80DD0687E218"
-// Subject: Terrific Sale! This week only!
-//
-// --E0AE5773D5E95245BBBD80DD0687E218
-// Content-Type: text/plain; charset="UTF-8"
-// Content-Transfer-Encoding: quoted-printable
-//
-// Text format email
-// --E0AE5773D5E95245BBBD80DD0687E218
-// Content-Type: text/html; charset="UTF-8"
-// Content-Transfer-Encoding: quoted-printable
-//
-// <html><body>HTML format email</body></html>
-// --E0AE5773D5E95245BBBD80DD0687E218--
-```

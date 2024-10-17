@@ -222,7 +222,7 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 | Paramètres | Type               |    | Description                                                     |
 | ---------- | ------------------ |:--:| --------------------------------------------------------------- |
 | entity     | 4D.Entity          | -> | Entité à ajouter à l'entity selection                           |
-| Résultat   | 4D.EntitySelection | -> | Entity selection incluant l'*entity*|<!-- END REF -->
+| Résultat   | 4D.EntitySelection | <- | Entity selection incluant l'*entity*|<!-- END REF -->
 
 |
 
@@ -1649,15 +1649,15 @@ Une list box affiche l'entity selection Form.students, sur laquelle plusieurs cl
 <!-- REF #EntitySelectionClass.slice().Params -->
 | Paramètres | Type               |    | Description                                                                                       |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------- |
-| startFrom  | Integer            | -> | Position à laquelle démarrer l'opération (incluse)                                                |
-| end        | Integer            | -> | Position de fin (non incluse)                                                                     |
+| startFrom  | Integer            | -> | Indice auquel démarrer l'opération (inclus)                                                       |
+| end        | Integer            | -> | Indice de fin (non inclus)                                                                        |
 | Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection contenant les entités copiées (shallow copy)|<!-- END REF -->
 
 |
 
 #### Description
 
-La fonction `slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourne une partie d'une entity selection dans une nouvelle entity selection<!-- END REF -->, sélectionnée depuis l'indice *startFrom* jusqu'à l'indice *end* (*end* non inclus) ou jusqu'à la dernière entité de l'entity selection. Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
+La fonction `slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourne une partie d'une entity selection dans une nouvelle entity selection<!-- END REF -->, sélectionnée depuis l'indice (i.e. la position) *startFrom* jusqu'à l'indice *end* (*end* non inclus) ou jusqu'à la dernière entité de l'entity selection.  Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
 > Cette fonction ne modifie pas l'entity selection d'origine.
 
 L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, la sélection d'entités renvoyée contient toutes les entités à partir de *startFrom* jusqu'à la dernière entité de la sélection d'entités originale.
@@ -1701,6 +1701,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 | 17      | Ajout         |
 
 </details>
+
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 

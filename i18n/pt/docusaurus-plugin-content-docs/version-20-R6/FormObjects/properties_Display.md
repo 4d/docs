@@ -127,7 +127,7 @@ Em cada um dos formatos de exibição de números, o sinal de número (#), o zer
 | #                                                    | Não apresenta nada                         |
 | 0                                                    | Mostra 0                                   |
 | ^                                                    | Apresenta um espaço (1) |
-| -                                                    | Apresenta um asterisco                     |
+| \*                                                   | Apresenta um asterisco                     |
 
 (1) O acento circunflexo (^) gera um caractere de espaço que ocupa a mesma largura de um dígito na maioria das fontes.
 
@@ -148,7 +148,7 @@ Os formatos de exibição numérica (exceto para notações científicas) são a
 > No Windows, ao usar a tecla de separação decimal do teclado numérico, 4D faz uma distinção dependendo do tipo de campo onde o cursor está localizado:
 >
 > - em um campo do tipo Real, o uso dessa chave inserirá o separador decimal definido no sistema,
-> - in any other type of field, this key inserts the character associated with the key, usually a period (.) ou vírgula (,).
+> - em qualquer outro tipo de campo, essa chave insere o caractere associado à chave, geralmente um ponto (.) ou vírgula (,).
 
 ### Pontos decimais e outros caracteres de visualização
 
@@ -206,12 +206,12 @@ O formato de notação científica é o único formato que arredonda automaticam
 
 Você pode exibir um número em hexadecimal usando os seguintes formatos de exibição:
 
-- `&x`: este formato muestra números hexadecimales utilizando el formato “0xFFFF”.
-- `&$`: este formato muestra números hexadecimales utilizando el formato "$FFFF".
+- `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
+- `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
 
 ### Notação XML
 
-El formato `&xml` hará que un número cumpla las normas estándar XML. Em particular, o caractere separador decimal será um ponto "." em todos os casos, independentemente das configurações do sistema.
+The `&xml` format will make a number compliant with XML standard rules. Em particular, o caractere separador decimal será um ponto "." em todos os casos, independentemente das configurações do sistema.
 
 ### Mostrar um número como hora
 
@@ -229,35 +229,35 @@ corresponde ao 5.º formato de hora no menu pop-up, especificamente a hora AM/PM
 
 A tabela a seguir mostra como os diferentes formatos afetam a exibição dos números. As três colunas - Positivo, Negativo e Zero - mostram como 1.234,50, -1.234,50 e 0 seriam exibidos.
 
-| Formato Introduzido                                                                   | Positivo                   | Negativo                                       | Zero                           |
-| ------------------------------------------------------------------------------------- | -------------------------- | ---------------------------------------------- | ------------------------------ |
-| ###                                                                                   | <<<                        | <<<                                            |                                |
-| ####                                                                                  | 1234                       | <<<<                                           |                                |
-| #######                                                                               | 1234                       | -1234                                          |                                |
-| #####.##                                                              | 1234.5     | -1234.5                        |                                |
-| ####0.00                                                              | 1234.50    | -1234.50                       | 0.00           |
-| #####0                                                                                | 1234                       | -1234                                          | 0                              |
-| +#####0;–#####0;0                                                                     | +1234                      | -1234                                          | 0                              |
-| #####0DB;#####0CR;0                                                                   | 1234DB                     | 1234CR                                         | 0                              |
-| #####0;(#####0)                                                    | 1234                       | (1234)                      | 0                              |
-| ###,##0                                                                               | 1,234                      | -1,234                                         | 0                              |
-| ##,##0.00                                                             | 1,234.50   | -1,234.50                      | 0.00           |
-| \^\^\^\^\^\^\^                                                                 | 1234                       | -1234                                          |                                |
-| \^\^\^\^\^\^0                                                                   | 1234                       | -1234                                          | 0                              |
-| \^\^\^,\^\^0                                                                     | 1,234                      | -1,234                                         | 0                              |
-| \^\^,\^\^0.00                                                     | 1,234.50   | -1,234.50                      | 0.00           |
-| \*\*\*\*\*\*\*                                                                        | \*\*\*1234                 | \*\*-1234                                      | \*\*\*\*\*\*\*                 |
-| \*\*\*\*\*\*0                                                                         | \*\*\*1234                 | \*\*-1234                                      | \*\*\*\*\*\*0                  |
-| \*\*\*,\*\*0                                                                          | \*\*1,234                  | \*-1,234                                       | \*\*\*\*\*\*0                  |
-| \*\*,\*\*0.00                                                         | \*1,234.50 | -1,234.50                      | \*\*\*\*\*0.00 |
-| $\*,\*\*0.00;–$\*,\*\*0.00                            | $1,234.50  | -$1,234.50                     | $\*\*\*\*0.00  |
-| $\^\^\^\^0                                                                        | $ 1234                     | $–1234                                         | $    0                         |
-| $\^\^\^0;–$\^\^\^0                                                              | $1234                      | –$1234                                         | $   0                          |
-| $\^\^\^0 ;($\^\^\^0)                                         | $1234                      | ($1234)                     | $   0                          |
-| $\^,\^\^0.00 ;($\^,\^\^0.00) | $1,234.50  | ($1,234.50) | $    0.00      |
-| &2                                                                | 1.2e+3     | -1.2e+3                        | 0.0e+0         |
-| &5                                                                | 1.23450e+3 | -1.23450e+3                    | 0.00000        |
-| &xml                                                              | 1234.5     | -1234.5                        | 0                              |
+| Formato Introduzido                                                                   | Positivo                                                                       | Negativo                                                                                                 | Zero                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| ###                                                                                   | <<< | <<<                           |                                |
+| ####                                                                                  | 1234                                                                           | <<<< |                                |
+| #######                                                                               | 1234                                                                           | -1234                                                                                                    |                                |
+| #####.##                                                              | 1234.5                                                         | -1234.5                                                                                  |                                |
+| ####0.00                                                              | 1234.50                                                        | -1234.50                                                                                 | 0.00           |
+| #####0                                                                                | 1234                                                                           | -1234                                                                                                    | 0                              |
+| +#####0;–#####0;0                                                                     | +1234                                                                          | -1234                                                                                                    | 0                              |
+| #####0DB;#####0CR;0                                                                   | 1234DB                                                                         | 1234CR                                                                                                   | 0                              |
+| #####0;(#####0)                                                    | 1234                                                                           | (1234)                                                                                | 0                              |
+| ###,##0                                                                               | 1,234                                                                          | -1,234                                                                                                   | 0                              |
+| ##,##0.00                                                             | 1,234.50                                                       | -1,234.50                                                                                | 0.00           |
+| \^\^\^\^\^\^\^                                                                 | 1234                                                                           | -1234                                                                                                    |                                |
+| \^\^\^\^\^\^0                                                                   | 1234                                                                           | -1234                                                                                                    | 0                              |
+| \^\^\^,\^\^0                                                                     | 1,234                                                                          | -1,234                                                                                                   | 0                              |
+| \^\^,\^\^0.00                                                     | 1,234.50                                                       | -1,234.50                                                                                | 0.00           |
+| \*\*\*\*\*\*\*                                                                        | \*\*\*1234                                                                     | \*\*-1234                                                                                                | \*\*\*\*\*\*\*                 |
+| \*\*\*\*\*\*0                                                                         | \*\*\*1234                                                                     | \*\*-1234                                                                                                | \*\*\*\*\*\*0                  |
+| \*\*\*,\*\*0                                                                          | \*\*1,234                                                                      | \*-1,234                                                                                                 | \*\*\*\*\*\*0                  |
+| \*\*,\*\*0.00                                                         | \*1,234.50                                                     | -1,234.50                                                                                | \*\*\*\*\*0.00 |
+| $\*,\*\*0.00;–$\*,\*\*0.00                            | $1,234.50                                                      | -$1,234.50                                                                               | $\*\*\*\*0.00  |
+| $\^\^\^\^0                                                                        | $ 1234                                                                         | $–1234                                                                                                   | $    0                         |
+| $\^\^\^0;–$\^\^\^0                                                              | $1234                                                                          | –$1234                                                                                                   | $   0                          |
+| $\^\^\^0 ;($\^\^\^0)                                         | $1234                                                                          | ($1234)                                                                               | $   0                          |
+| $\^,\^\^0.00 ;($\^,\^\^0.00) | $1,234.50                                                      | ($1,234.50)                                                           | $    0.00      |
+| &2                                                                | 1.2e+3                                                         | -1.2e+3                                                                                  | 0.0e+0         |
+| &5                                                                | 1.23450e+3                                                     | -1.23450e+3                                                                              | 0.00000        |
+| &xml                                                              | 1234.5                                                         | -1234.5                                                                                  | 0                              |
 
 #### Gramática JSON
 
@@ -281,7 +281,7 @@ As opções de truncagem e escala não afetam a imagem em si. O conteúdo de um 
 
 `Gramática JSON: "scaled"`
 
-El formato **A escala para ajustarse** hace que 4D redimensione la imagen para ajustarla a las dimensiones del área.
+O formato **Scaled to fit** faz com que o 4D redimensione a imagem para se ajustar às dimensões da área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -291,9 +291,9 @@ El formato **A escala para ajustarse** hace que 4D redimensione la imagen para a
 
 El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D corta igualmente de cada borda e da parte superior e inferior.
 
-El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior izquierda de la imagen en la esquina superior izquierda del área y recorte cualquier parte que no quepa dentro del área. 4D corta da direita e de baixo para cima.
+O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 
-> Cuando el formato de la imagen es **Truncado (no centrado)**, es posible añadir barras de desplazamiento al área de entrada.
+> Quando o formato da imagem for **Truncado (não centrado)**, é possível adicionar barras de deslocamento à área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
@@ -360,7 +360,7 @@ A tabela abaixo mostra os formatos de exibição do campo Hora e dá exemplos:
 
 ### Formato personalizado
 
-Customized time formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Por exemplo:
+Formatos de hora personalizados podem ser construídos usando vários padrões descritos na página [**Formatos de Data e Hora**](../Project/date-time-formats.md). Por exemplo:
 
 | Padrão                                  | Exemplo (sistema americano) |
 | --------------------------------------- | ---------------------------------------------- |
@@ -390,15 +390,15 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 - un texto en un [objeto de entrada](input_overview.md)
 - un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
-... you can select the text to display for each value:
+... pode selecionar o texto a apresentar para cada valor:
 
 - **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
 - **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                               |
-| ------------- | ------------- | ------------------------------------------------------------------------------- |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                                 |
+| ------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | booleanFormat | string        | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", por ejemplo "Assigned;Unassigned" |
 
 #### Objectos suportados
@@ -417,13 +417,13 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. En este c
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                                                                             |
-| ----------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string        | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| Nome        | Tipo de dados | Valores possíveis                                                                                                                 |
+| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | string        | <li>**colunas de números**: "automatic" (padrão) ou "checkbox"</li><li>**colunas booleanas**: "checkbox" (padrão) ou "popup"</li> |
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -492,7 +492,7 @@ Nesse caso, o título da caixa de seleção pode ser inserido usando essa propri
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -529,7 +529,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objectos suportados
 
-[Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-footers)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 ---
 
@@ -537,7 +537,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 Esta propriedade permite ocultar o objeto no ambiente Aplicação.
 
-É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. En este contexto, a menudo es necesario ocultar objetos por programación durante el evento `On load` del formulario y luego mostrar determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
+É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. Nesse contexto, muitas vezes é necessário ocultar objetos programaticamente durante o evento `On load` do formulário e, depois, exibir determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
 
 #### Visibilidade automática em formulários lista
 

@@ -61,7 +61,7 @@ Para adicionar um item de menu:
    Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list.
    4D adds a new item with the default name “Item X” where X is the number of items already created.
 3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name.
-   OR Enter the custom name in the "Title" area. Pode conter até 31 caracteres. You can enter the name as "hard coded" or enter a reference (see below).
+   OR Enter the custom name in the "Title" area. Pode conter até 31 caracteres. Você pode digitar o nome como "código duro" ou insira uma referência (veja abaixo).
 
 ### Utilizar a linguagem 4D
 

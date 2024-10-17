@@ -39,24 +39,24 @@ Vous devez impérativement distinguer l'opérateur d'affectation := des autres o
 Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide du mot-clé `var`. Par exemple, pour créer une variable du type date, vous pouvez écrire : Par exemple, pour créer une variable du type date, vous pouvez écrire :
 
 ```4d
-var MyDate : Date 
+var MyDate : Date
 ```
 
 Le mot-clé `var` permet de déclarer des variables objet d'un type de classe défini, par exemple :
 
 ```4d
-var myPerson : cs.Person 
+var myPerson : cs.Person
 //variable de la classe utilisateur Person
 ```
 
 
-Même si cela est généralement déconseillé, vous pouvez déclarer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
+Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable déclarée par affectation est interprétée comme étant non typée, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes, puis changée de type de manière dynamique. Une variable typée avec `var` ne peut pas changer le type. En revanche, en [mode compilé](interpreted.md), le type ne peut jamais être modifié, quelle que soit la façon dont la variable a été déclarée.
+La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
 
 ## Commandes
 
@@ -101,6 +101,8 @@ vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lectu
 ```
 
 > Les constantes prédéfinies apparaissent <u>soulignées</u> par défaut dans l'éditeur de code 4D.
+
+
 
 ## Methods
 
@@ -182,7 +184,7 @@ $vAge:=employee.children[2].age
 
 A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world !"))
 $f.message() //affiche "Hello world!"
@@ -204,12 +206,13 @@ Pour instancier un objet de la classe dans une méthode, appelez la classe utili
 
 ```4d  
 // dans une méthode 4D
-$o:=cs.myClass.new() 
+$o:=cs.myClass.new()
 ```
 
 In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
+
 //in the myClass.4dm file
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
@@ -227,10 +230,10 @@ $message:=$o.myClass.hello()
 Vous pouvez utiliser le mot-clé `Class constructor` pour déclarer les propriétés de l'objet.
 
 ```4d  
-//in the Rectangle.4dm file
+//dans le fichier Rectangle.4dm
 Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
-This.width:=$width 
+This.width:=$width
 This.name:="Rectangle"
 ```
 
@@ -352,7 +355,7 @@ $str:=String("hello world !")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Commentaires
@@ -426,4 +429,3 @@ Dans 4D, les séquences d'échappement suivantes peuvent être utilisées:
 In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-

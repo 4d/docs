@@ -24,13 +24,13 @@ Dans ce contexte, la séquence d'appels de méthodes et d'événements de formul
     - Méthode objet avec l'événement `On Display Detail`
   - Méthode formulaire avec l'événement `On Display Detail`
 
-> The header area is handled using the [`On Header`](onHeader.md) event.
+> La zone d'en-tête est gérée à l'aide de l'événement [`On Header`](onHeader.md).
 
 L'appel d'une commande 4D qui affiche une boîte de dialogue à partir de l'événement `On Display Detail` n'est pas autorisé et générera une erreur de syntaxe. Plus particulièrement, les commandes concernées sont : `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, et `MODIFY SELECTION`.
 
 ### Liste box sélection
 
-This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
+Cet événement est généré lorsqu'une ligne d'une list box de [**type de sélection**](FormObjects/listbox_overview.md#selection-list-boxes) est affichée.
 
 ### Numéro de ligne affiché
 

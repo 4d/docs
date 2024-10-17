@@ -38,7 +38,7 @@ Esta área ofrece información específica sobre el servidor SOAP de 4D Server e
 
 - **Peticiones SOAP**: aceptadas o rechazadas. Esta información indica si el servidor SOAP está activado. Para que las peticiones SOAP sean aceptadas, el servidor HTTP debe estar iniciado y el servidor SOAP debe aceptar explícitamente las peticiones (ver el botón Aceptar/Rechazar).
 - **Conexiones máximas**: número máximo de conexiones SOAP permitidas. Este valor depende de la licencia instalada en el equipo servidor.
-- Botón **Aceptar/rechazar las peticiones SOAP**: este botón se alterna y puede utilizarse para controlar la activación del servidor SOAP de 4D Server. Este botón modifica el valor de la opción **Autorizar peticiones de servicios web** en la página "Servicios web" de las Propiedades de la base (y viceversa). You can also use the [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
+- Botón **Aceptar/rechazar las peticiones SOAP**: este botón se alterna y puede utilizarse para controlar la activación del servidor SOAP de 4D Server. Este botón modifica el valor de la opción **Autorizar peticiones de servicios web** en la página "Servicios web" de las Propiedades de la base (y viceversa). También puede utilizar el comando [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) para rechazar nuevas peticiones SOAP, sin embargo esto no modifica el valor de la opción **Permitir solicitudes de servicios web**.
 
 Si presiona el botón **Aceptar las peticiones SOAP** y el servidor HTTP está detenido, 4D lo inicia automáticamente.
 
@@ -49,5 +49,5 @@ Esta área ofrece información sobre los parámetros de configuración y el func
 - **Lanzamiento automático al inicio**: parámetro definido a través de las Propiedades.
 - **Proceso servidor HTTP (utilizado/total)**: número de procesos HTTP creados en el servidor (número actual de procesos / total de todos los procesos creados).
 - **Memoria caché**: tamaño de la memoria caché del servidor HTTP, cuando está activada (tamaño realmente utilizado por la caché / tamaño máximo teóricamente asignado a la caché en las Propiedades). Puede hacer clic en el botón **Borrar caché** para vaciar la caché actual.
-- **Listening to IP**, **HTTP Port** (80 by default), **TLS enabled** for HTTP connections (does not concern 4D nor SQL connections) and **HTTPS Port** used: current [configuration parameters](WebServer/webServerConfig.md) of the HTTP server, specified through the Settings or by programming.
+- **Escuchando IP**, **puerto HTTP** (80 por defecto), **TLS habilitado** para conexiones HTTP (no afecta a conexiones 4D ni SQL) y **puerto HTTP** utilizado: [parámetros de configuración](WebServer/webServerConfig. d) del servidor HTTP, especificado a través de la Configuración o por programación.
 - **Información del archivo de registro**: nombre, formato y fecha de la siguiente copia de seguridad automática del registro del servidor HTTP (archivo logweb.txt).

@@ -9,9 +9,9 @@ Ruta de una imagen source estática para un [botón imagen](pictureButton_overvi
 
 As seguintes localizações podem ser utilizadas para imagens estáticas:
 
-- en la carpeta **Resources** del proyecto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Adequado quando as imagens estáticas forem utilizadas apenas no formulário ou se pretende poder mover ou duplicar todo o formulário dentro do projeto ou em projetos diferentes. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
-- numa variável de imagem 4D. A imagem deve ser carregada na memória quando o formulário for executado. Neste caso, o nome do caminho é "var:\<variableName\>".
+- en la carpeta **Resources** del proyecto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. In this case, the Pathname is "/RESOURCES/<picture path\>".
+- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Adequado quando as imagens estáticas forem utilizadas apenas no formulário ou se pretende poder mover ou duplicar todo o formulário dentro do projeto ou em projetos diferentes. In this case, the Pathname is "<picture path\>" and is resolved from the root of the form folder.
+- numa variável de imagem 4D. A imagem deve ser carregada na memória quando o formulário for executado. Neste caso, o nome do caminho é "var:<variableName\>".
 
 #### Gramática JSON
 
@@ -31,7 +31,7 @@ As seguintes localizações podem ser utilizadas para imagens estáticas:
 
 `Gramática JSON: "scaled"`
 
-El formato **A escala para ajustarse** hace que 4D redimensione la imagen para ajustarla a las dimensiones del área.
+O formato **Scaled to fit** faz com que o 4D redimensione a imagem para se ajustar às dimensões da área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -51,9 +51,9 @@ Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem
 
 El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D corta igualmente de cada borda e da parte superior e inferior.
 
-El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior izquierda de la imagen en la esquina superior izquierda del área y recorte cualquier parte que no quepa dentro del área. 4D corta da direita e de baixo para cima.
+O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 
-> Cuando el formato de la imagen es **Truncado (no centrado)**, es posible añadir barras de desplazamiento al área de entrada.
+> Quando o formato da imagem for **Truncado (não centrado)**, é possível adicionar barras de deslocamento à área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 

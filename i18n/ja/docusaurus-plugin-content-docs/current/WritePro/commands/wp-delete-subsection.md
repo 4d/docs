@@ -1,0 +1,74 @@
+---
+id: wp-delete-subsection
+title: WP DELETE SUBSECTION
+slug: /WritePro/commands/wp-delete-subsection
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WP DELETE SUBSECTION.Syntax-->**WP DELETE SUBSECTION** ( *wpSection* ; *subSectionType* )<br/>**WP DELETE SUBSECTION** ( *subSection* )<!-- END REF-->
+
+<!--REF #_command_.WP DELETE SUBSECTION.Params-->
+
+| 引数             | 型      |                            | 説明                                                                                 |
+| -------------- | ------ | -------------------------- | ---------------------------------------------------------------------------------- |
+| wpSection      | オブジェクト | &#8594 | 4D Write Pro section                                                               |
+| subSectionType | 倍長整数   | &#8594 | Subsection type (wk first page, wk left page, or wk right page) |
+| subSection     | オブジェクト | &#8594 | 4D Write Pro subsection                                                            |
+
+<!-- END REF-->
+
+#### 説明
+
+The **WP DELETE SUBSECTION** command <!--REF #_command_.WP DELETE SUBSECTION.Summary-->removes the *subSectionType* subsection elements from the *wpSection* 4D Write Pro section, or it directly removes the passed *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Note that the body of the document is left untouched.
+
+In *wpSection*, pass the section from which you want to remove the subsection elements. The section can be obtained using the [WP Get sections](../commands-legacy/wp-get-sections.md) or [WP Get section](../commands-legacy/wp-get-section.md) commands.
+
+The *subSectionType* parameter specifes the subsection to delete. You can pass one of the following constants:
+
+| 定数            | 型    | 値 |
+| ------------- | ---- | - |
+| wk first page | 倍長整数 | 1 |
+| wk left page  | 倍長整数 | 2 |
+| wk right page | 倍長整数 | 3 |
+
+:::note
+
+Deleting a left page or right page subsection will automatically delete the opposite subsection. For example, if you delete a right page subsection, the left page subsection is automatically deleted.
+
+:::
+
+If the *subSectionType* does not exist, the command does nothing (no error is generated).
+
+:::note
+
+When a subsection is deleted, the header and footer are removed, as well as anchored pictures and textboxes but the body remains untouched.
+
+:::
+
+#### 例題 1
+
+You want to delete the first page subsection of the first section:
+
+```4d
+ var $section;$subsection : Object
+  // get first section
+ $section:=WP Get section(wpDoc;1)
+  // Delete the subsection
+ WP DELETE SUBSECTION($section;wk first page)
+```
+
+#### 例題 2
+
+You want to delete the right page subsection of section 3:
+
+```4d
+
+$subSection:=WP Get subsection(WP Get section($document;3);wk right page)
+ WP DELETE SUBSECTION($subSection)
+ 
+```
+
+#### 参照
+
+[WP Get subsection](../commands-legacy/wp-get-subsection.md)\
+[WP New subsection](../commands-legacy/wp-new-subsection.md)

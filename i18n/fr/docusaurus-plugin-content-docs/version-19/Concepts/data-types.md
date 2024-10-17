@@ -39,7 +39,7 @@ La valeur par défaut dépend du type de variable :
 
 | Type       | La valeur par défaut |
 | ---------- | -------------------- |
-| Booléen    | False                |
+| Booleen    | False                |
 | Date       | 00-00-00             |
 | Longint    | 0                    |
 | Time       | 00:00:00             |

@@ -282,9 +282,9 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
 これらのログファイルは、以下のコマンドを使用して始動された、4Dアプリケーションとメールサーバー (SMTP、POP3、IMAP) 間の通信をそれぞれ記録します:
 
-- SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
-- POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
-- IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
+- SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
+- POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
 
 2種類のログファイルを生成することができます:
 

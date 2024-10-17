@@ -9,9 +9,9 @@ title: VP Get cell style
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
-| Paramètres | Type   |    | Description |                  |
-| ---------- | ------ | -- | ----------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage |                  |
+| Paramètres | Type   |                             | Description |                  |
+| ---------- | ------ | --------------------------- | ----------- | ---------------- |
+| rangeObj   | Object | ->                          | Objet plage |                  |
 | Résultat   | Object | <- | Objet style | <!-- END REF --> |
 
 #### Description

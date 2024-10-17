@@ -136,7 +136,7 @@ title: データエクスプローラー
 - **null** は、その属性値が定義されていないことを示します。
 - **not null** は、属性値が定義されていることを示します (つまり、true または false)。
 
-#### Text
+#### テキスト
 
 テキストフィルターは、文字の大小を区別しません (a = A)。
 
@@ -208,7 +208,7 @@ firstname = "Marie Sophie" AND manager.lastname = "@th"
 
 次のスカラー属性値が編集できます:
 
-- text
+- テキスト
 - boolean
 - numeric
 - date

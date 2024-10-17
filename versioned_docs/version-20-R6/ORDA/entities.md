@@ -275,7 +275,7 @@ An entity selection can be **shareable** (readable by multiple processes, but no
 A **shareable** entity selection has the following characteristics:
 
 - it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
+- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
 - it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
 
 > Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).

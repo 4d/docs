@@ -53,7 +53,7 @@ Os valores introduzidos são então avaliados:
 - Si la opción **Incluir contraseñas de 4D** está marcada, las credenciales de los usuarios se evaluarán primero contra la [tabla interna de usuarios 4D](Users/overview.md).
   - Se o nome de usuário enviado pelo navegador existir na tabela de usuários 4D e a senha estiver correta, a conexão será aceita. Se a palavra-passe estiver incorreta, a ligação é recusada.
   - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
-- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
+- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) para que você possa processá-los. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 
 > Com o servidor da Web 4D Client, lembre-se de que todos os sites publicados pelas máquinas 4D Client compartilharão a mesma tabela de usuários. Validação de usuários/senhas é realizada pela aplicação 4D Server.
 
@@ -83,21 +83,21 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxe
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parâmetros | Tipo       |     | Descrição                                                                |
-| ---------- | ---------- | :-: | ------------------------------------------------------------------------ |
-| $1         | Text       |  <- | URL                                                                      |
-| $2         | Text       |  <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
-| $3         | Text       |  <- | Endereço IP do cliente Web (browser)                  |
-| $4         | Text       |  <- | Endereço IP do servidor                                                  |
-| $5         | Text       |  <- | Nome de usuario                                                          |
-| $6         | Text       |  <- | Senha                                                                    |
-| $0         | Parâmetros |  -> | True = pedido aceite, False = pedido rejeitado                           |
+| Parâmetros | Tipo       |                             | Descrição                                                                |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------ |
+| $1         | Text       | <- | URL                                                                      |
+| $2         | Text       | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $3         | Text       | <- | Endereço IP do cliente Web (browser)                  |
+| $4         | Text       | <- | Endereço IP do servidor                                                  |
+| $5         | Text       | <- | Nome de usuario                                                          |
+| $6         | Text       | <- | Senha                                                                    |
+| $0         | Parâmetros |              ->             | True = pedido aceite, False = pedido rejeitado                           |
 
 Estes parâmetros devem ser declarados da seguinte forma:
 

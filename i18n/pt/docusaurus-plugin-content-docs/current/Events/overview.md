@@ -20,11 +20,11 @@ End if
 
 Cada evento es devuelto como un objeto por el comando `FORM Event`. Por padrão, ele contém as seguintes propriedades:
 
-| Propriedade | Tipo          | Descrição                                                                                        |
-| ----------- | ------------- | ------------------------------------------------------------------------------------------------ |
-| objectName  | text          | Name of the object triggering the event - Not included if the event is triggered by the form     |
-| code        | inteiro longo | Numeric value of the form event. Also returned by the `Form event code` command  |
-| description | text          | Name of the form event (e.g. "On After Edit") |
+| Propriedade | Tipo          | Descrição                                                                                               |
+| ----------- | ------------- | ------------------------------------------------------------------------------------------------------- |
+| objectName  | text          | Name of the object triggering the event - Not included if the event is triggered by the form            |
+| code        | inteiro longo | Valor numérico do evento de formulário. Também retornado pelo comando `Form event code` |
+| description | text          | Nome do evento do formulário (por exemplo, "On After Edit")                          |
 
 Propriedades adicionais são retornadas quando o evento ocorre em objetos específicos. Em particular:
 

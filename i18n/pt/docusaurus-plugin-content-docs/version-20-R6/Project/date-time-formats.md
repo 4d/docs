@@ -102,7 +102,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                                                          | zzzzz         | -08:00, -07:52:58, Z  |
 |         |                                                                          |               |                                                                       |
 | '       | escape for text                                                          | '             | '                                                                     |
-| ' '     | two single quotes produce one                                            | ' '           | ' '                                                                   |
+| ' '     | duas aspas simples produzem uma                                          | ' '           | ' '                                                                   |
 
 ## Explorando padrões
 

@@ -18,7 +18,7 @@ La partie centrale de la fenêtre affiche le nom et l’emplacement du projet et
   La commande **Copier le chemin** copie le chemin complet comme texte dans le presse-papiers, en utilisant les séparateurs de la plate-forme courante.
 
 - **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Tous les fichiers de licence installés dans votre environnement 4D sont regroupés dans ce dossier, placé sur votre disque dur. Lorsqu’ils sont ouverts avec un navigateur Web, ces fichiers affichent des informations relatives aux licences qu’ils contiennent et à leurs caractéristiques.
-  L’emplacement du dossier "Licenses" peut varier en fonction de la version ou de la langue de votre système d’exploitation. For more information about the location of this folder, refer to the `Get 4D folder` command.
+  L’emplacement du dossier "Licenses" peut varier en fonction de la version ou de la langue de votre système d’exploitation. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande `Get 4D folder`.
   ***Note :** Vous pouvez également accéder à ce dossier depuis la boîte de dialogue “Mise à jour des licences” (accessible depuis le menu Aide).*
 
 ## Tables
@@ -53,7 +53,7 @@ Ces informations sont fournies sous forme de valeurs en octets et sont égalemen
 
 > La page Données ne tient pas compte de la taille des données éventuellement stockées à l’extérieur du fichier de données (cf. section Stockage externe des données).
 
-Des fichiers trop fragmentés réduisent les performances du disque dur et donc de la base. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
+Des fichiers trop fragmentés réduisent les performances du disque dur et donc de la base. Si le taux d’occupation est trop faible, 4D vous le signale par une icône d’avertissement (qui apparaît dans le bouton Informations et dans l’onglet du type de fichier correspondant) et indique qu’un compactage est requis:![](../assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page:
+Une icône d'avertissement est également affichée sur le bouton de la page [Compacte](compact.md):
 ![](../assets/en/MSC/MSC_compactwarn.png)

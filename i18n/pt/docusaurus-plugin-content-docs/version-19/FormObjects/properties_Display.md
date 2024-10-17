@@ -481,7 +481,7 @@ A propriedade Truncate with ellipsis (Truncar com reticências) pode ser aplicad
 
 #### Objectos suportados
 
-[Coluna da caixa de listagem](listbox_overview.md#list-box-columns) - [Cabeçalho da caixa de listagem](listbox_overview.md#list-box-footers)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 ---
 
@@ -548,7 +548,7 @@ Nas caixas de lista, qualquer texto muito longo é truncado e exibido com uma el
 
 Observe que, independentemente do valor da opção Wordwrap, a altura da linha não será alterada. Se o texto com quebras de linha não puder ser exibido inteiramente na coluna, ele é truncado (sem uma elipse). No caso de caixas de lista exibindo apenas uma única linha, somente a primeira linha do texto é exibida:
 
-![](../assets/en/FormObjects/property_wordwrap2.png)
+![](../assets/en/FormObjects/property_wordwrap1.png)
 
 #### Automático para entrada (opção padrão)
 

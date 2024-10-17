@@ -105,10 +105,10 @@ Usar a datastore principal do banco de dados 4D:
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças                         |
-| ------- | -------------------------------- |
-| 20.3    | New *passwordAlgorithm* property |
-| 18      | Adicionado                       |
+| Release | Mudanças                             |
+| ------- | ------------------------------------ |
+| 20.3    | Nova propriedade *passwordAlgorithm* |
+| 18      | Adicionado                           |
 
 </details>
 

@@ -28,7 +28,7 @@ Se soportan los siguientes nombres de rutas de filesystem:
 | "/LOGS"      | Carpeta Logs                                                              | "C:\\MyApps\\Students\\Data\\Logs\\"       |
 | "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) | "C:\\MyApps\\Students\\"                     |
 | "/PROJECT"   | Carpeta Project                                                           | "C:\\MyApps\\Students\\Project\\"           |
-| "/RESOURCES" | Carpeta de recursos actual del proyecto                                   | "C:\\MyApps\\Resources\\"                    |
+| "/RESOURCES" | Carpeta de recursos actual del proyecto                                   | "C:\\MyApps\\Students\\Resources\\"         |
 | "/SOURCES"   | Carpeta de fuentes del proyecto actual                                    | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Sintaxis POSIX
@@ -41,7 +41,7 @@ Con esta sintaxis:
 - los nombres de ruta absolutos empiezan por "/"
 - para subir una carpeta en una ruta relativa, utilice "../" delante del nombre de la ruta (por seguridad, no puede subir en el sistema de archivos).
 
-En la sintaxis POSIX, generalmente se utilizará los nombres de rutas `filesystem` con los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder), por ejemplo:
+In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ Se soportan los siguientes modelos:
 - el texto contiene ":" y "\" como segundo y tercer caracter,
 - el texto comienza con "\\".
 
-Ejemplos con [`Folder`](../API/FolderClass.md#folder):
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ Se soportan los siguientes modelos (sintaxis HFS+):
 - los separadores de carpetas son ":"
 - la ruta no debe comenzar con un ":"
 
-Ejemplos con [`Folder`](../API/FolderClass.md#folder):
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ### Constructores `File` y `Folder`
 
-Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas de acceso absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
+[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
 
 ```4d
 //ERROR
@@ -114,9 +114,9 @@ Funciones de objetos folder tales como [`folder.file()`](../API/FolderClass.md#f
 ```4d
 var $userImages : 4D.Folder
 var $ok : Boolean
-  //to reference a "Picture" folder within the user documents folder
+  //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para crear una carpeta en el escritorio
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 

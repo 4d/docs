@@ -54,9 +54,6 @@ title: 文字列
 |          |                  |         | "abd" <= "abc"          | false    |
 | キーワードを含む | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
 |          |                  |         | "Alpha Bravo" % "ravo"  | false    |
-|          | Picture % String | Boolean | Picture_expr % "Mer"    | true (*) |
-
-(*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
 
 ## 文字列比較の詳細
 

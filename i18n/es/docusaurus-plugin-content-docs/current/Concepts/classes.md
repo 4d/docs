@@ -98,8 +98,8 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
 
 Las clases disponibles son accesibles desde sus class stores. Hay dos class stores disponibles:
 
-- `cs` para el almacén de clases de usuario
-- `4D` para el class store integrado
+- [`cs`](../commands/cs.md) for user class store
+- [`4D`](../commands/4d.md) for built-in class store
 
 ### `cs`
 
@@ -107,9 +107,9 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 
 <!-- REF #_command_.cs.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                       |                  |
-| ---------- | ------ | -- | ------------------------------------------------- | ---------------- |
-| classStore | Object | <- | Class store usuario para el proyecto o componente | <!-- END REF --> |
+| Parámetros | Tipo   |                                | Descripción                                       |                  |
+| ---------- | ------ | ------------------------------ | ------------------------------------------------- | ---------------- |
+| classStore | Object | &amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
 
 El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
@@ -127,18 +127,26 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parámetros | Tipo   |    | Descripción    |                  |
-| ---------- | ------ | -- | -------------- | ---------------- |
-| classStore | Object | <- | Class store 4D | <!-- END REF --> |
+| Parámetros | Tipo   |                                | Descripción    |                  |
+| ---------- | ------ | ------------------------------ | -------------- | ---------------- |
+| classStore | Object | &amp;larr; | Class store 4D | <!-- END REF --> |
 
 El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases 4D integradas<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
-#### Ejemplo
+#### Ejemplos
 
 Quiere crear una nueva llave en la clase `CryptoKey`:
 
 ```4d
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+```
+
+You want to list 4D built-in classes:
+
+```4d
+ var $keys : collection
+ $keys:=OB Keys(4D)
+ ALERT("There are "+String($keys.length)+" built-in classes.")
 ```
 
 ## El objeto clase
@@ -150,6 +158,7 @@ Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el
 - función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase
 - propiedad [`isShared`](API/ClassClass.md#isshared), true si la clase es [compartida](#clases-compartidas)
 - propiedad [`isSingleton`](API/ClassClass.md#issingleton), verdadero si la clase define una [clase singleton](#singleton-classes).
+- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
 - Propiedad [`me`](API/ClassClass.md#me), que permite instanciar y acceder a [singletons](#singleton-classes).
 
 Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
@@ -171,6 +180,7 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 - `property` para definir propiedades estáticas de los objetos con un tipo.
 - `Function get <Name>` y `Function set <Name>` para definir las propiedades calculadas de los objetos.
 - `Class extends <ClassName>` para definir la herencia.
+- `This` and `Super` are commands that have special
 
 ### `Function`
 
@@ -311,7 +321,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 ```4d
 // Class: MyClass
-{shared} {singleton} Class Constructor({$parameterName : type; ...})
+{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // code
 ```
 
@@ -325,7 +335,7 @@ Puede crear y escribir propiedades de instancia dentro del constructor (ver ejem
 
 Utilizando la palabra clave `shared` se crea una **clase compartida**, utilizada para instanciar únicamente objetos compartidos. Para obtener más información, consulte el párrafo [Clases compartidas](#shared-classes).
 
-Utilizando la palabra clave `singleton` se crea un **singleton**, utilizado para crear una única instancia. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
+Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. Un `session singleton` crea una sola instancia por sesión. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
 
 #### Ejemplo
 
@@ -429,13 +439,13 @@ Si una clase [extiende a](#class-extends-classname) otra, las propiedades de la 
 
 :::note
 
-If you initialize a property in its declaration line with an object or a collection in a [shared class](#shared-classes), the value is automatically transformed into a shared value:
+Si inicializa una propiedad en su línea de declaración con un objeto o una colección en una [clase compartida](#clases-compartidas), el valor se transforma automáticamente en un valor compartido:
 
 ```4d
-// in a shared class
+// en una clase compartida
 property myCollection := ["something"]
-// myCollection will be a shared collection
-// equivalent to:
+// myCollection será una colección compartida
+// equivalente a:
 myCollection := New shared collection("something")
 ```
 
@@ -584,180 +594,39 @@ Llama al constructor de la clase padre con las longitudes
   $area:=This.height*This.width
 ```
 
+## Class function commands
+
+The following commands have specific features when they are used within class functions:
+
 ### `Super`
 
-<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
 
-<!-- REF #_command_.Super.Params -->
-
-| Parámetros | Tipo   |    | Descripción                                                              |
-| ---------- | ------ | -- | ------------------------------------------------------------------------ |
-| param      | any    | -> | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto                                                         |
-
-<!-- END REF -->
-
-La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a la `superclass`, es decir, la clase padre<!-- END REF -->.
-
-`Super` tiene dos propósitos diferentes:
-
-1. Dentro de un código [constructor](#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. Cuando se utiliza en un constructor, el comando `Super` aparece solo y debe ser usado antes de usar la palabra clave `This`.
-
-- Si todos los class constructors en el árbol de herencia no son llamados correctamente, se genera el error -10748. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.
-- Si el comando `This` es llamado en un objeto cuyas superclases no han sido construidas, se genera el error -10743.
-- Si se llama a `Super` fuera de un contexto de objeto, o en un objeto cuyo constructor de superclase ya ha sido llamado, se genera el error -10746.
-
-```4d
-// dentro del constructor myClass
-var $text1; $text2 : Texto
-Super($text1) //llamada del constructor de la superclase con un parámetro texto
-Este. aram:=$text2 // usar un segundo parámetro
-```
-
-2. Dentro de una [función de clase](#class-function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
-
-```4d
-Super.doSomething(42) //llama a la función "doSomething"  
-//declarada en superclases
-```
-
-#### Ejemplo 1
-
-Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
-
-```4d
-// Clase: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
-
-
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
-
-// Definición de función
-Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
-```
-
-```4d
-//Class: Square
-
-Class extends Rectangle
-
-Class constructor ($side : Integer)
-
- // Llama al class constructor de la clase padre con longitudes
- // proporcionadas para el ancho y alto del rectángulo
- Super($side;$side)
- // En las clases derivadas, Super debe ser llamado antes de que 
- // pueda utilizar 'This'
- This. ame:="Square"
-
-Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
-```
-
-#### Ejemplo 2
-
-Este ejemplo ilustra el uso de `Super` en un método miembro clase. Ha creado la clase `Rectangle` con una función:
-
-```4d
-//Class: Rectangle
-
-Function nbSides()
- var $0 : Text
- $0:="I have 4 sides"
-```
-
-También creó la clase `Square` con una función que llama a la función superclase:
-
-```4d
-//Class: Square
-
-Class extends Rectangle
-
-Function description()
- var $0 : Text
- $0:=Super.nbSides()+" which are all equal"
-```
-
-Entonces puede escribir en un método proyecto:
-
-```4d
-var $square : Objeto
-var $message : Texto
-$square:=cs.Square.new()
-$message:=$square.description() //tengo 4 lados iguales
-```
+For more details, see the [`Super`](../commands/super.md) command description.
 
 ### `This`
 
-<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
+The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
-<!-- REF #_command_.This.Params -->
-
-| Parámetros | Tipo   |    | Descripción   |
-| ---------- | ------ | -- | ------------- |
-| Result     | Object | <- | Objeto actual |
-
-<!-- END REF -->
-
-La palabra clave `This` <!-- REF #_command_.This.Summary -->devuelve una referencia al objeto que se está procesando actualmente<!-- END REF -->.
-
-En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
-
-Cuando se llama a una [fórmula](../API/FunctionClass.md) como método miembro de un objeto, su `This` se define en el objeto sobre el que se llama al método. Por ejemplo:
-
-```4d
-$o:=New object("prop";42;"f";Formula(This.prop))
-$val:=$o.f() //42
-```
-
-Cuando se utiliza una [función constructora de clase](#class-constructor) (con la función [`new()`](API/ClassClass.md#new)), su `This` está vinculado al nuevo objeto que se está construyendo.
+Ejemplo:
 
 ```4d
 //Class: ob
 
-Class Constructor  
-
-    // Crear las propiedades en This 
-    // asignándolas
-    This.a:=42
+Function f() : Integer
+ return This.a+This.b
 ```
 
-```4d
-// en un método 4D  
-$o:=cs.ob.new()
-$val:=$o.a //42
-```
-
-> Al llamar a la superclase del constructor en un constructor utilizando la palabra clave [Super](#super), tenga en cuenta que `This` no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. Ver [este ejemplo](#example-1).
-
-En todos los casos, `This` se refiere al objeto sobre el que se ha llamado el método, como si el método fuera una función del objeto.
-
-```4d
-//Class: ob
-
-Function f()
- $0:=This.a+This.b
-```
-
-Entonces puede escribir en un método proyecto:
+Then you can write in a method:
 
 ```4d
 $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
-
 ```
 
-En este ejemplo, el objeto asignado a la variable $o no tiene su propia propiedad _f_, la hereda de su clase. Como _f_ es llamado como un método de $o, su `This` se refiere a $o.
+For more details, see the [`This`](../commands/this.md) command description.
 
 ## Comandos de clases
 
@@ -832,25 +701,17 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 ## Clases Singleton
 
-Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern). A singleton has a unique instance for the process in which it is instantiated, while a _shared_ singleton has a unique instance for all processes on the machine. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
+Una **clase singleton** es una clase usuario que sólo produce una única instancia. For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
+### Singletons types
 
-Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
+4D soporta tres tipos de singletons:
 
-La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
+- a **process singleton** has a unique instance for the process in which it is instantiated,
+- a **shared singleton** has a unique instance for all processes on the machine.
+- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
-### Alcance
-
-The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its _shared_ property.
-
-| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| 4D monopuesto        | Proceso                                                                                                  | Application       |
-| 4D Server            | Proceso                                                                                                  | 4D Server machine |
-| 4D remote mode       | Process (_note_: singletons are not synchronized on the twin process) | 4D remote machine |
-
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
+Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
 :::info
 
@@ -858,9 +719,41 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 :::
 
-### Creating a singleton
+The following table indicates the scope of a singleton instance depending on where it was created:
 
-Para crear una clase singleton, añada la palabra clave `singleton` antes del [`Class Constructor`](#class-constructor). Por ejemplo:
+| Singleton creado en | Alcance del proceso singleton                                                                                   | Alcance del singleton compartido | Alcance del singleton de sesión                                                |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------ |
+| **4D monopuesto**   | Proceso                                                                                                         | Aplicación                       | Application or Web/REST session                                                |
+| **4D Server**       | Proceso                                                                                                         | Máquina 4D Server                | Sesión cliente/servidor o sesión Web/REST o sesión de procedimiento almacenado |
+| **Modo remoto 4D**  | Proceso (_nota_: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D                | 4D remote machine or Web/REST session                                          |
+
+Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
+
+### Creating and using singletons
+
+You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+
+- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- To declare a shared singleton class, write `shared singleton Class constructor()`.
+- To declare a session singleton class, write `session singleton Class constructor()`.
+
+:::note
+
+Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
+
+:::
+
+La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
+
+Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
+
+La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
+
+The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+
+### Ejemplos
+
+#### Process singleton
 
 ```4d
 	//class: ProcessTag
@@ -889,9 +782,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-### Creación de un singleton compartido
-
-To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
+#### Shared singleton
 
 ```4d
 //Class VehicleFactory
@@ -918,7 +809,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
+Luego puede llamar al singleton **cs.VehicleFactory** para obtener un nuevo vehículo desde cualquier lugar de la aplicación en su máquina con una sola línea:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
@@ -926,6 +817,30 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 
 Dado que la función _buildVehicle()_ modifica el singleton **cs.VehicleFactory** (incrementando `This.vehicleBuilt`), debe agregar la palabra clave `shared`.
 
+#### Session singleton
+
+In an inventory application, you want to implement an item inventory using session singletons.
+
+```4d
+//class ItemInventory
+
+property itemList : Collection:=[]
+
+session singleton Class constructor()
+
+shared function addItem($item:object)
+    This.itemList.push($item)
+```
+
+By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Acceder al inventario del usuario es tan simple como:
+
+```4d
+//in a user session
+$myList := cs.ItemInventory.me.itemList
+//current user's item list
+
+```
+
 #### Ver también
 
-Ver también [esta entrada de blog](https://blog.4d.com/singleton) para más detalles.
+[Singletons in 4D](https://blog.4d.com/singletons-in-4d) (blog post) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (blog post).

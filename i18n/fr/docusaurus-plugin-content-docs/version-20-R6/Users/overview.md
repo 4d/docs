@@ -8,7 +8,7 @@ Si plusieurs personnes utilisent une application, ce qui est souvent le cas dans
 La stratégie de contrôle d'accès 4D dépend de la configuration de votre déploiement :
 
 - dans les applications multi-utilisateurs, vous pouvez vous appuyer sur les utilisateurs et les groupes 4D,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
+- dans les applications monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
@@ -30,17 +30,17 @@ Les applications monoposte sont des applications de bureau, déployées avec 4D 
 
 ### Identification de l'utilisateur
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
+Pour identifier l'utilisateur courant dans une application 4D monoposte, vous pouvez vous appuyer sur la commande [`Current system user`](https://doc.4d.com/4dv19R/help/command/fr/page484.html), qui retourne l'utilisateur ayant ouvert la session système. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
 
 Vous pouvez alors autoriser ou refuser les accès à votre application en utilisant un code suivant :
 
 ```4d
-If(Current system user = $user) //you can store users in a database table
-	// give access to some features
+If(Current system user = $user) //vous pouvez stocker des utilisateurs dans une table de base de données
+    // accorder les accès à certaines fonctionnalités
 End if
 ```
 
-If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:
+Si vous souhaitez utiliser le nom d'utilisateur du système dans 4D au lieu du "Designer" (par exemple dans les fichiers journaux), vous pouvez appeler la commande [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html), par exemple:
 
 ```4d
 SET USER ALIAS(Current system user)

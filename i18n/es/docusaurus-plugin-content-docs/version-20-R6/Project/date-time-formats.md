@@ -9,7 +9,7 @@ A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valore
 
 - el comando [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html),
 - los comandos [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) y [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html),
-- the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
+- el formato de fecha y hora de las propiedades del objeto de formulario, disponibles en la lista de propiedades o en las propiedades JSON [`dateFormat`](../FormObjects/properties_Display.md/#date-format) y [`timeFormat`](../FormObjects/properties_Display.md/#time-format).
 
 ## Lista de patrones
 
@@ -59,7 +59,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         |                                                                          | eeee         | Tuesday                                                               |
 |         |                                                                          | eeeee        | T                                                                     |
 |         |                                                                          | eeeeee       | Tu                                                                    |
-| c       | stand-alone local day of week                                            | c o cc       | 2                                                                     |
+| c       | día de la semana local independiente                                     | c o cc       | 2                                                                     |
 |         |                                                                          | ccc          | Tue                                                                   |
 |         |                                                                          | cccc         | Tuesday                                                               |
 |         |                                                                          | ccccc        | T                                                                     |
@@ -116,7 +116,7 @@ En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente 
 
 ### `e` vs `c`
 
-Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and `e` is for a day in a date ("Tuesday January 15, 1951").
+La misma observación que para `L` y `M`: `c` es para un día utilizado solo "todos los martes") y `e` es para un día en una fecha ("martes 15 de enero de 1951").
 
 ### `E` vs `e`
 

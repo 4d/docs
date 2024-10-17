@@ -22,11 +22,11 @@ title: Signal
 
 また、コードのブロックを避けるため、`.wait()` 呼び出しの際に定義したタイムアウト時間に達することでも待機状態を脱することができます。
 
-Signal オブジェクトは、[New signal](#new-signal) コマンドによって作成されます。
+Signal objects are created with the [`New signal`](../commands/new-signal.md) command.
 
 ### シグナルの使い方
 
-4D では、[`New signal`](#new-signal) コマンドを呼び出すことで新規 Signal オブジェクトを作成します。 作成したシグナルは、`New process` あるいは `CALL WORKER` コマンドに引数として渡す必要があります。それにより、プロセスやワーカーはタスクを完了した際にシグナルを書き換えることができます。
+In 4D, you create a new signal object by calling the [`New signal`](../commands/new-signal.md) command. 作成したシグナルは、`New process` あるいは `CALL WORKER` コマンドに引数として渡す必要があります。それにより、プロセスやワーカーはタスクを完了した際にシグナルを書き換えることができます。
 
 - `signal.wait()` は、他のワーカー/プロセスのタスクが完了するまで待機するワーカー/プロセスから呼び出す必要があります。
 - `signal.trigger()` は、他のワーカー/プロセスを待機状態から解放するために、タスク実行を終えたワーカー/プロセスが呼び出す必要があります。
@@ -85,78 +85,6 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 | [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)<br/><!-- INCLUDE #SignalClass.signaled.Summary -->          |
 | [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)<br/><!-- INCLUDE #SignalClass.trigger().Summary -->         |
 | [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)<br/><!-- INCLUDE #SignalClass.wait().Summary -->                  |
-
-<!-- REF SignalClass.New signal.Desc -->
-
-## New signal
-
-<details><summary>履歴</summary>
-
-| リリース  | 内容 |
-| ----- | -- |
-| 17 R4 | 追加 |
-
-</details>
-
-<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
-
-<!-- REF #_command_.New signal.Params -->
-
-| 引数          | タイプ                       |     | 説明                   |
-| ----------- | ------------------------- | :-: | -------------------- |
-| description | Text                      |  -> | シグナルの詳細              |
-| 戻り値         | 4D.Signal |  <- | シグナルを格納するネイティブオブジェクト |
-
-<!-- END REF -->
-
-#### 説明
-
-`New signal` コマンドは、<!-- REF #_command_.New signal.Summary -->`4D.Signal` オブジェクトを作成します<!-- END REF -->。
-
-シグナルは、ワーカー/プロセスから他のワーカー/プロセスへと引数のように渡せる共有オブジェクトです。 そのため、以下のようなことが可能になります:
-
-- 呼び出されたワーカー/プロセスは特定の処理が完了した後に Signal オブジェクトを更新することができます。
-- 呼び出し元のワーカー/プロセスは CPUリソースを消費することなく、実行を停止してシグナルが更新されるまで待つことができます。
-
-任意で *description* 引数に、シグナルの詳細を説明するカスタムテキストを渡すことができます。 テキストは、シグナルの作成後に定義することも可能です。
-
-Signal オブジェクトは共有オブジェクトのため、`Use...End use` 構文を使用することで、[`.description`](#description) プロパティのほか、ユーザー独自のプロパティを管理するのに使用することもできます。
-
-**戻り値**
-
-新規の [`4D.Signal` オブジェクト](#signal-object)。
-
-#### 例題
-
-以下は、シグナルを設定するワーカーの典型的な例です:
-
-```4d
- var $signal : 4D.Signal
- $signal:=New signal("This is my first signal")
-
- CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) // 最大で 1秒待機します
-
- If($signaled)
-    ALERT("myworker はタスクを終了しました。 結果: "+$signal.myresult)
- Else
-    ALERT("myworker は 1秒以内にタスクを終了できませんでした。")
- End if
-```
-
-以下は、***doSomething*** メソッドの一例です:
-
-```4d
- #DECLARE ($signal : 4D.Signal)
-  // 何らかの処理
-  //...
- Use($signal)
-    $signal.myresult:=$processingResult  // 結果を返します
- End use
- $signal.trigger() // 処理が完了しました
-```
-
-<!-- END REF -->
 
 <!-- REF SignalClass.description.Desc -->
 
@@ -220,9 +148,9 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 <!-- REF #SignalClass.trigger().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -250,9 +178,9 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 <!-- REF #SignalClass.wait().Params -->
 
-| 引数      | タイプ     |    | 説明                                   |
-| ------- | ------- | -- | ------------------------------------ |
-| timeout | Real    | -> | シグナルの最大待機時間 (秒単位) |
+| 引数      | 型       |                             | 説明                                   |
+| ------- | ------- | --------------------------- | ------------------------------------ |
+| timeout | Real    | ->                          | シグナルの最大待機時間 (秒単位) |
 | 戻り値     | Boolean | <- | `.signaled` プロパティの状態                 |
 
 <!-- END REF -->

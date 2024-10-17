@@ -5,7 +5,7 @@ title: On Open External Link
 
 | Code | Pode ser chamado por                        | Definição                              |
 | ---- | ------------------------------------------- | -------------------------------------- |
-| 52   | [Web Area](FormObjects/webArea_overview.md) | Foi aberto um URL externo no navegador |
+| 52   | [Área Web](FormObjects/webArea_overview.md) | Foi aberto um URL externo no navegador |
 
 ## Descrição
 

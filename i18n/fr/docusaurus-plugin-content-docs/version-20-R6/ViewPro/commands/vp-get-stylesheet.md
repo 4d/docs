@@ -9,22 +9,22 @@ title: VP Get stylesheet
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| styleName  | Text    | -> | Nom du style                                                                |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres | Type    |                             | Description                                                                 |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| styleName  | Text    | ->                          | Nom du style                                                                |                  |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet feuille de style                                                      | <!-- END REF --> |
 
 #### Description
 
-The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->returns the *styleName* style sheet object containing the property values which have been defined<!-- END REF -->.
+La commande `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet. ummary -->retourne l'objet de la feuille de style *styleName* contenant les valeurs de propriété qui ont été définies<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-In *styleName*, pass the name of the style sheet to get.
+Dans *styleName*, passez le nom de la feuille de style que vous souhaitez lire.
 
-You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
+Vous pouvez définir où obtenir la feuille de style dans le paramètre optionnel *sheet* en utilisant l'index de la feuille (la numérotation commence à partir de 0) ou avec les constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
@@ -37,7 +37,7 @@ Le code suivant :
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the *GreenDashDotStyle* style object from the current sheet:
+... retournera l'objet de style *GreenDashDotStyle* de la feuille courante :
 
 ```4d
 {

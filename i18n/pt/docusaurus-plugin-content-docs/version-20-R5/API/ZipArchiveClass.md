@@ -36,10 +36,10 @@ End if
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                                              |
-| ------- | --------------------------------------------------------------------- |
-| 19 R3   | Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property |
-| 18      | Adicionado                                                            |
+| Release | Mudanças                                                                       |
+| ------- | ------------------------------------------------------------------------------ |
+| 19 R3   | Adição das propriedades `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` |
+| 18      | Adicionado                                                                     |
 
 </details>
 
@@ -47,14 +47,14 @@ End if
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parâmetro       | Tipo                       |     | Descrição                                                            |
-| --------------- | -------------------------- | :-: | -------------------------------------------------------------------- |
-| fileToZip       | 4D. File   |  -> | Objeto File ou Folder a comprimir                                    |
-| folderToZip     | 4D. Folder |  -> | Objeto File ou Folder a comprimir                                    |
-| zipStructure    | Object                     |  -> | Objeto File ou Folder a comprimir                                    |
-| destinationFile | 4D. File   |  -> | Arquivo destino para o arquivo                                       |
-| options         | Integer                    |  -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Resultados      | Object                     |  <- | Objeto de estado                                                     |
+| Parâmetro       | Tipo                       |                             | Descrição                                                           |
+| --------------- | -------------------------- | :-------------------------: | ------------------------------------------------------------------- |
+| fileToZip       | 4D. File   |              ->             | Objeto File ou Folder a comprimir                                   |
+| folderToZip     | 4D. Folder |              ->             | Objeto File ou Folder a comprimir                                   |
+| zipStructure    | Object                     |              ->             | Objeto File ou Folder a comprimir                                   |
+| destinationFile | 4D. File   |              ->             | Arquivo destino para o arquivo                                      |
+| options         | Integer                    |              ->             | Opção *folderToZip*: `ZIP Without enclosing folder` |
+| Resultados      | Object                     | <- | Objeto de estado                                                    |
 
 <!-- END REF -->
 
@@ -68,7 +68,7 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 
 - *folderToZip*: você passa um `4D.Folder` para compactar. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
-- *zipStructure*: You pass an object describing the ZIP archive object. As propriedades abaixo estão disponíveis para definir a estrutura:
+- *zipStructure*: pode passar um objeto descrevendo o objeto ZIP archive. As propriedades abaixo estão disponíveis para definir a estrutura:
 
 | Propriedade | Tipo                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -109,7 +109,7 @@ Para compactar um `4D.File`:
 
 #### Exemplo 2
 
-To compress a `4D.Folder` without the folder itself:
+Para comprimir uma `4D.Folder` sem a própria pasta:
 
 ```4d
  var $folder : 4D.Folder
@@ -201,11 +201,11 @@ $err:=ZIP Create archive($zip; $destination)
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parâmetro  | Tipo                     |     | Descrição                       |
-| ---------- | ------------------------ | :-: | ------------------------------- |
-| zipFile    | 4D. File |  -> | Arquivos Zip                    |
-| senha      | Text                     |  -> | Senha do arquivo ZIP, se houver |
-| Resultados | Parâmetros               |  <- | Objeto arquivo                  |
+| Parâmetro  | Tipo                     |                             | Descrição                       |
+| ---------- | ------------------------ | :-------------------------: | ------------------------------- |
+| zipFile    | 4D. File |              ->             | Arquivos Zip                    |
+| senha      | Text                     |              ->             | Senha do arquivo ZIP, se houver |
+| Resultados | Parâmetros               | <- | Objeto arquivo                  |
 
 <!-- END REF -->
 

@@ -15,11 +15,11 @@ title: VP INSERT COLUMNS
 
 #### Description
 
-The `VP INSERT COLUMNS` command <!-- REF #_method_.VP INSERT COLUMNS.Summary -->inserts columns into the _rangeObj_<!-- END REF -->.
+La commande `VP INSERT COLUMNS` <!-- REF #_method_.VP INSERT COLUMNS.Summary -->insère les colonnes définies dans l'objet _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range of the starting column (the column which designates where the new column will be inserted) and the number of columns to insert. Si le nombre de colonnes à insérer est omis (non défini), une seule colonne est insérée.
+Dans _rangeObj_, passer un objet contenant une plage de la colonne de début (la colonne qui indique l'emplacement de la nouvelle colonne à insérer) et le nombre de colonnes à insérer. Si le nombre de colonnes à insérer est omis (non défini), une seule colonne est insérée.
 
-New columns are inserted on the left, directly before the starting column in the _rangeObj_.
+De nouvelles colonnes sont insérées sur la gauche, directement avant la première colonne de _rangeObj_.
 
 #### Exemple
 

@@ -123,7 +123,7 @@ Se devuelve el conjunto de entidades y sigue conteniendo 3 entidades. Hay una en
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A?$clean=true&$method=entityset`
 
-We clean the entity set DF6903FB5879404A9A818884CFC6F62A and receive a new entity set (entity set D7BFBC49375B4FE5A94CDD17AA535F73) that does not contain the dropped entity:
+Limpiamos el conjunto de entidades DF6903FB5879404A9A818884CFC6F62A y recibimos un nuevo conjunto de entidades (conjunto de entidades D7BFBC49375B4FE5A94CDD17AA535F73) que no contiene la entidad eliminada:
 
 ```json
 {

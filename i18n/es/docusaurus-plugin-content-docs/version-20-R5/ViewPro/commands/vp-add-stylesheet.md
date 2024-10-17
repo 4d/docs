@@ -72,7 +72,7 @@ creará y aplicará el siguiente objeto estilo llamado _GreenDashDotStyle_:
 
 #### Ver también
 
-[4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
+[Objetos de Estilo y Hojas de Estilo 4D View Pro](../configuring.md#style-objects--style-sheets)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>
 [VP Get stylesheets](vp-get-stylesheets.md)<br/>
 [VP REMOVE STYLESHEET](vp-remove-stylesheet.md)<br/>

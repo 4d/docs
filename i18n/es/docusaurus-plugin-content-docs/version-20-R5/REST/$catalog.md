@@ -180,7 +180,7 @@ Devuelve información sobre una clase de datos y sus atributos
 
 ### Descripción
 
-La llamada de `$catalog/\{dataClass\}` para una clase de datos específica devolverá la siguiente información sobre la clase de datos y los atributos que contiene. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+La llamada de `$catalog/\{dataClass\}` para una clase de datos específica devolverá la siguiente información sobre la clase de datos y los atributos que contiene. Si quiere recuperar esta información para todas las dataclasses de su proyecto, utilice [`$catalog/$all`](#catalogall).
 
 La información que recupera se refiere a lo siguiente:
 

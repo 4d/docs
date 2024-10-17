@@ -13,7 +13,7 @@ De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fou
 
 ## Chemins des filesystem
 
-4D accepte plusieurs chemins de `filesystem` qui désignent des dossiers 4D spécifiques avec un emplacement variable sur macOS et Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
+4D accepte plusieurs chemins de `filesystem` qui désignent des dossiers 4D spécifiques avec un emplacement variable sur macOS et Windows. Un chemin d'accès filesystem est évalué par rapport au contexte et est renvoyé sous forme de chemin absolu.
 
 Les chemins des filesystem sont utiles pour deux raisons principales :
 
@@ -28,7 +28,7 @@ Les filesystem suivants sont pris en charge :
 | "/LOGS"      | Dossier Logs                                                                | "C:\\MyApps\\Students\\Data\\Logs\\"       |
 | "/PACKAGE"   | Dossier racine du projet (avec ou sans extension 4dbase) | "C:\\MyApps\\Students\\"                     |
 | "/PROJECT"   | Dossier Project                                                             | "C:\\MyApps\\Students\\Project\\"           |
-| "/RESOURCES" | Dossier de ressources du projet courant                                     | "C:\\MyApps\\Resources\\"                    |
+| "/RESOURCES" | Dossier de ressources du projet courant                                     | "C:\\MyApps\\Students\\Resources\\"         |
 | "/SOURCES"   | Dossier des sources du projet courant                                       | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Syntaxe POSIX
@@ -41,7 +41,7 @@ Avec cette syntaxe :
 - les chemins absolus commencent par un "/"
 - pour remonter d'un dossier dans un chemin relatif, utilisez "../" devant le nom du chemin (par sécurité, vous ne pouvez pas remonter au-dessus du filesystem).
 
-Dans la syntaxe POSIX, vous utiliserez généralement les chemins `filesystem` avec les commandes [`File`](../API/FileClass.md#file) et [`Folder`](../API/FolderClass.md#folder), par exemple :
+In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ Les règles suivantes sont pris en charge :
 - le texte contient " :" et "\" comme deuxième et troisième caractère,
 - le texte commence par "\".
 
-Exemples avec [`Folder`](../API/FolderClass.md#folder) :
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ Les règles suivantes s'appliquent (syntaxe HFS+) :
 - les séparateurs de dossiers sont ":"
 - le chemin ne doit pas commencer par un ":"
 
-Exemples avec [`Folder`](../API/FolderClass.md#folder) :
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume doit s'appel
 
 ### Constructeurs `File` et `Folder`
 
-Les commandes [`File`](../API/FileClass.md#file) et [`Folder`](../API/FolderClass.md#folder) n'acceptent que les **chemins d'accès absolus**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
+[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
 
 ```4d
 	//ERREUR
@@ -114,9 +114,9 @@ Les fonctions des objets folder telles que [`folder.file()`](../API/FolderClass.
 ```4d
 var $userImages : 4D.Folder
 var $ok : Boolean
-  //to reference a "Picture" folder within the user documents folder
+  //pour référencer un dossier "Picture" dans le dossier des documents de l'utilisateur
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //pour créer un dossier sur le bureau
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 

@@ -433,12 +433,12 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #document.copyTo().Params -->
 
-| Paramètres         | Type                      |     | Description                                        |
-| ------------------ | ------------------------- | :-: | -------------------------------------------------- |
-| dossierDestination | 4D.Folder |  -> | Dossier de destination                             |
-| nouveauNom         | Text                      |  -> | Nom de la copie                                    |
-| overwrite          | Integer                   |  -> | `fk overwrite` pour écraser les éléments existants |
-| Résultat           | 4D.File   |  <- | Fichier copié                                      |
+| Paramètres         | Type                      |                             | Description                                        |
+| ------------------ | ------------------------- | :-------------------------: | -------------------------------------------------- |
+| dossierDestination | 4D.Folder |              ->             | Dossier de destination                             |
+| nouveauNom         | Text                      |              ->             | Nom de la copie                                    |
+| overwrite          | Integer                   |              ->             | `fk overwrite` pour écraser les éléments existants |
+| Résultat           | 4D.File   | <- | Fichier copié                                      |
 
 <!-- END REF -->
 
@@ -489,8 +489,8 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
-| Paramètres | Type                    |    | Description        |
-| ---------- | ----------------------- | -- | ------------------ |
+| Paramètres | Type                    |                             | Description        |
+| ---------- | ----------------------- | --------------------------- | ------------------ |
 | Résultat   | 4D.Blob | <- | Contenu du fichier |
 
 <!-- END REF -->
@@ -533,9 +533,9 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 
 <!-- REF #document.getIcon().Params -->
 
-| Paramètres | Type    |    | Description                                                       |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
+| Paramètres | Type    |                             | Description                                                       |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------------- |
+| size       | Integer | ->                          | Longueur du côté de l'image retournée (pixels) |
 | Résultat   | Picture | <- | Icône                                                             |
 
 <!-- END REF -->
@@ -570,11 +570,11 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 
 <!-- REF #document.getText().Params -->
 
-| Paramètres  | Type    |    | Description                               |
-| ----------- | ------- | -- | ----------------------------------------- |
-| charSetName | Text    | -> | Nom du jeu de caractères                  |
-| charSetNum  | Integer | -> | Numéro du jeu de caractères               |
-| breakMode   | Integer | -> | Mode de traitement des retours à la ligne |
+| Paramètres  | Type    |                             | Description                               |
+| ----------- | ------- | --------------------------- | ----------------------------------------- |
+| charSetName | Text    | ->                          | Nom du jeu de caractères                  |
+| charSetNum  | Integer | ->                          | Numéro du jeu de caractères               |
+| breakMode   | Integer | ->                          | Mode de traitement des retours à la ligne |
 | Résultat    | Text    | <- | Texte du document                         |
 
 <!-- END REF -->

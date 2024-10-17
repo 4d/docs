@@ -71,7 +71,7 @@ Le tableau suivant répertorie les pages de paramètres que l'on trouve dans les
 | [Page SQL](../settings/sql.md)                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
 | [Page PHP](../settings/php.md)                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
 | [Page sécurité](../settings/security.md)                                              | N/a                                             | N/a                                                         |
-| [Page de compatibilité](../settings/compatibility.md)                                 | N/a                                             | N/a                                                         |
+| [Page Compatibilité](../settings/compatibility.md)                                    | N/a                                             | N/a                                                         |
 
 Lorsque vous modifiez des paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier *settings.4DSettings* correspondant (voir ci-dessous).
 

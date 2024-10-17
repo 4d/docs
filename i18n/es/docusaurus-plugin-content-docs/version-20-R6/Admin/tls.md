@@ -80,7 +80,7 @@ El formato de cifrado ECDSA no es compatible por 4D [capa de red legacy](../sett
 
 :::
 
-### Instalación de archivos de certificado
+### Instalación de archivos de certificados
 
 Los archivos de certificados incluyen:
 

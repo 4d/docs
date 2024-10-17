@@ -23,13 +23,15 @@ Pour un aperçu détaillé de l'architecture des permissions, veuillez lire l'ar
 
 ## Ressources
 
-Vous pouvez assigner des actions de permission spécifiques aux ressources exposées suivantes dans votre projet :
+You can assign specific permission actions to the following resources in your project:
 
 - le datastore
 - une dataclass
 - un attribut (y compris calculé et alias)
 - une fonction de classe du modèle de données
 - une fonction [singleton](../REST/$singleton.md)
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 Une action de permission définie à un certain niveau est héritée par défaut aux niveaux inférieurs, mais plusieurs niveaux de permissions peuvent être définis :
 

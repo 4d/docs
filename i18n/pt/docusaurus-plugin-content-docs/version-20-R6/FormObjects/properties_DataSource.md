@@ -5,13 +5,13 @@ title: Fonte de dados
 
 ## Inserção automática
 
-When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory.
+When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
 
-Cuando la opción **inserción automática** no está definida (por defecto), el valor introducido se almacena en el objeto formulario pero no en la lista en memoria.
+Quando a opção **inserção automática** não está definida (padrão), o valor inserido é armazenado no objeto formulário, mas não na lista na memória.
 
 Esta propriedade é suportada por:
 
-- objetos formulario [Combo box](comboBox_overview.md) y [columna list box](listbox_overview.md#list-box-columns) asociadoa a una lista de selección.
+- Objetos formulário [Combo box](comboBox_overview.md) e [coluna list box](listbox_overview.md#list-box-columns) associado para uma lista de seleção.
 - objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
 
 For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
@@ -36,7 +36,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 Associa uma lista de opções a um objeto. It can be a choice list name (a list reference) or a collection of default values.
 
-También se pueden asociar listas de selección a objetos utilizando los comandos [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) o [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html).
+Você também pode associar listas de escolha a objetos usando os comandos [OBJECT SET LIST SET BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html).
 
 #### Gramática JSON
 
@@ -115,8 +115,8 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 Define o tipo de dados para a expressão apresentada. Esta propriedade é utilizada com:
 
-- [Columnas del List box](listbox_overview.md#list-box-columns) de los tipos de selección y colección.
-- [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
+- [Colunas do List box](listbox_overview.md#list-box-columns) de tipo seleção e coleção.
+- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
 
 See also [**Expression Type**](properties_Object.md#expression-type) section.
 
@@ -134,7 +134,7 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 ## Tipo de dados (lista)
 
-Define el tipo de datos a guardar en el campo o variable asociado a la [lista desplegable](dropdownList_Overview.md). Esta propriedade é utilizada com:
+Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). Esta propriedade é utilizada com:
 
 - Listas desplegables [asociadas a una lista de opciones](dropdownList_Overview.md#using-a-choice-list).
 - Listas desplegables [asociadas a una lista de selección jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
@@ -167,7 +167,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 
 ## Valores padrão (lista de)
 
-List of values that will be used as default values for the list box column (array type only). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Using the language, you can manage the object by referring to this array.
+List of values that will be used as default values for the list box column (array type only). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
 
 > No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
 
@@ -231,7 +231,7 @@ Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Pe
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -315,7 +315,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 Especifica a seleção nomeada a ser utilizada. Você deve inserir o nome de uma seleção nomeada válida. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
-> As selecções nomeadas são listas ordenadas de registos. They are used to keep the order and current record of a selection in memory. Para más información, consulte la sección **Selecciones temporales** del manual *Lenguaje 4D*.
+> As selecções nomeadas são listas ordenadas de registos. They are used to keep the order and current record of a selection in memory. Para obter mais informações, consulte a seção **Seleções nomeadas** no *manual de Linguagem 4D*.
 
 #### Gramática JSON
 

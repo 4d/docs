@@ -9,7 +9,7 @@ title: VP SET CELL STYLE
 
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
 
-| 引数       | タイプ    |    | 説明         |                  |
+| 引数       | 型      |    | 説明         |                  |
 | -------- | ------ | -- | ---------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト  |                  |
 | styleObj | Object | -> | スタイルオブジェクト | <!-- END REF --> |

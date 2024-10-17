@@ -16,7 +16,7 @@ El evento `On Close Box` se genera cuando el usuario hace clic en una caja de ci
 Este exemplo mostra como responder a um evento de fecho de janela com um formulário utilizado para a introdução de dados de registo:
 
 ```4d
-  //Method for an input form
+  //Método para um formulário de entrada
  $vpFormTable:=Current form table
  Case of
   //...

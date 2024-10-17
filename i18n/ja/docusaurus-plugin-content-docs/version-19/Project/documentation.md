@@ -41,7 +41,7 @@ title: ドキュメンテーション
   - **DatabaseMethods**
     - onStartup.md
     - ...
-  - **Forms**
+  - **フォーム**
     - loginDial.md
     - ...
   - **Methods**

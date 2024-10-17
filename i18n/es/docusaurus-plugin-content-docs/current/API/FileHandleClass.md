@@ -206,8 +206,8 @@ Esta propiedad es de **solo lectura**.
 
 <!--REF #FileHandleClass.getSize().Params -->
 
-| Parámetros | Tipo |    | Descripción                   |
-| ---------- | ---- | -- | ----------------------------- |
+| Parámetros | Tipo |                             | Descripción                   |
+| ---------- | ---- | --------------------------- | ----------------------------- |
 | Result     | Real | <- | Tamaño del documento en bytes |
 
 <!-- END REF -->
@@ -310,9 +310,9 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readBlob().Params -->
 
-| Parámetros | Tipo                                 |    | Descripción              |
-| ---------- | ------------------------------------ | -- | ------------------------ |
-| *bytes*    | Real                                 | -> | Número de bytes a leer   |
+| Parámetros | Tipo                                 |                             | Descripción              |
+| ---------- | ------------------------------------ | --------------------------- | ------------------------ |
+| *bytes*    | Real                                 | ->                          | Número de bytes a leer   |
 | Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
 
 <!-- END REF -->
@@ -345,8 +345,8 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.readLine().Params -->
 
-| Parámetros | Tipo |    | Descripción    |
-| ---------- | ---- | -- | -------------- |
+| Parámetros | Tipo |                             | Descripción    |
+| ---------- | ---- | --------------------------- | -------------- |
 | Result     | Text | <- | Línea de texto |
 
 <!-- END REF -->
@@ -387,9 +387,9 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 <!--REF #FileHandleClass.readText().Params -->
 
-| Parámetros | Tipo |    | Descripción                                              |
-| ---------- | ---- | -- | -------------------------------------------------------- |
-| *stopChar* | Text | -> | Caracter(es) en los que dejar de leer |
+| Parámetros | Tipo |                             | Descripción                                              |
+| ---------- | ---- | --------------------------- | -------------------------------------------------------- |
+| *stopChar* | Text | ->                          | Caracter(es) en los que dejar de leer |
 | Result     | Text | <- | Texto del archivo                                        |
 
 <!-- END REF -->

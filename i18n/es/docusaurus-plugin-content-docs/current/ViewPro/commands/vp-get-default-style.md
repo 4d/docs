@@ -9,15 +9,15 @@ title: VP Get default style
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario                   |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros | Tipo    |                             | Descripción                                                    |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre del área 4D View Pro en el formulario                   |                  |
+| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result     | Object  | <- | Parámetros de estilo por defecto                               | <!-- END REF --> |
 
 #### Descripción
 
-El comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devuelve un objeto de estilo predeterminado para una hoja<!-- END REF -->. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](vp-set-default-style.md) method. Para obtener más información sobre las propiedades de estilo, consulte [Objetos de estilo y hojas de estilo](../configuring.md#style-objects--style-sheets).
+El comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devuelve un objeto de estilo predeterminado para una hoja<!-- END REF -->. El objeto devuelto contiene las propiedades básicas de renderización del documento, así como la configuración de estilo por defecto (si la hay) definida previamente por el método [VP SET DEFAULT STYLE](vp-set-default-style.md). Para obtener más información sobre las propiedades de estilo, consulte [Objetos de estilo y hojas de estilo](../configuring.md#style-objects--style-sheets).
 
 En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 

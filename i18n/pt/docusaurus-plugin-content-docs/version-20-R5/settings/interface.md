@@ -55,7 +55,7 @@ Os seguintes esquemas estão disponíveis:
 
 - **Light**: the application will use the Default Light Theme
   ![](../assets/en/settings/light-appearance.png)
-- **Dark**: the application will use the Default Dark Theme
+- **Escuro**: o aplicativo irá usar o Tema Escuro Padrão
   ![](../assets/en/settings/dark-appearance.png)
 - **Heredado** (por defecto): la aplicación heredará el nivel de prioridad superior (es decir, las preferencias del usuario del sistema operativo)
 

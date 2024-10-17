@@ -23,7 +23,7 @@ Um atributo é a célula de armazenamento mais pequena num banco de dados relaci
 
 ## AttributePath
 
-Um attributePath é o caminho de um atributo em uma determinada dataclass ou entidade. Ver também [PropertyPath](#propertyPath).
+Um attributePath é o caminho de um atributo em uma determinada dataclass ou entidade. See also [PropertyPath](#propertypath).
 
 
 ## Class code

@@ -179,7 +179,7 @@ $vAge:=employee.children[2].age
 
 A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
@@ -252,9 +252,9 @@ Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de 
 
 | Opérateur | Opération      | Exemple    |
 | --------- | -------------- | ---------- |
-| -         | Addition       | 1 +2 = 3   |
+| +         | Addition       | 1 +2 = 3   |
 | –         | Soustraction   | 3 - 2 = 1  |
-| *         | Multiplication | 2 \* 3 = 6 |
+| \*        | Multiplication | 2 \* 3 = 6 |
 | /         | Division       | 6 / 2 = 3  |
 
 Les opérateurs numériques ne représentent qu’un seul des différents types d’opérateurs disponibles. Comme 4D traite de multiples types de données, tels que des nombres, des dates ou des images, vous disposez d’opérateurs particuliers effectuant des opérations sur ces données.
@@ -349,7 +349,7 @@ $str:=String("hello world !")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Commentaires

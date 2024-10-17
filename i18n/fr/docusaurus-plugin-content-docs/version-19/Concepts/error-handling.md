@@ -57,14 +57,16 @@ Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERRE
 
 Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
 
-- Variables système (*) :
+- des variables système dédiées :
 
   - `Error` (entier long): Code d'erreur
   - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
   - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
   - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
 
-(*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
+:::info
+
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. :::
 
 - La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
 - la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.

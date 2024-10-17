@@ -19,7 +19,7 @@ Le bouton **Sélectionner...** vous permet de définir la police et la taille de
 La police et la taille de police par défaut dépendent de la plate-forme d'exécution de 4D.
 
 > Les parties suivantes de 4D sont également affectées par cette propriété : <li>certaines zones d’aperçu de l’Explorateur,</li><li>la règle de L'Editeur de formulaires</li>
-### Display Windows
+### Afficher fenêtres
 
 D'autres options permettent de configurer l'affichage de diverses fenêtres du mode Application.
 

@@ -5,7 +5,7 @@ title: On URL Loading Error
 
 | Code | Peut être appelé par                        | Définition                                            |
 | ---- | ------------------------------------------- | ----------------------------------------------------- |
-| 50   | [Web Area](FormObjects/webArea_overview.md) | Une erreur s'est produite lors du chargement de l'URL |
+| 50   | [Zone Web](FormObjects/webArea_overview.md) | Une erreur s'est produite lors du chargement de l'URL |
 
 ## Description
 

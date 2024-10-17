@@ -9,6 +9,6 @@ title: On Delete Action
 
 ## Description
 
-This event is generated each time a user attempts to delete the selected item(s) by pressing a deletion key (**Delete** or **Backspace**) or selecting a menu item whose associated standard action is 'Clear' (such as the **Clear** command in the **Edit** menu).
+Cet événement est généré à chaque fois qu'un utilisateur tente de supprimer le(s) élément(s) sélectionné(s) en appuyant sur une touche de suppression (**Suppr** ou **Retour arrière**) ou en sélectionnant un élément de menu dont l'action standard associée est 'Effacer' (comme la commande **Supprimer** dans le menu **Edition**).
 
 A noter que la génération de l'événement est la seule action réalisée par 4D : le programme ne supprime aucun élément. Il appartient au développeur de gérer la suppression et tous les messages d'avertissement précédents qui sont affichés.

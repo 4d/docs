@@ -3,16 +3,53 @@ id: updates
 title: Release Notes
 ---
 
-## 4D 20.x
 
-Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/), le billet de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20.
+:::tip
 
-
-:::caution Version minimale du client pour 4D Server v20.2 et supérieur
-
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D 20.2.
+Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/), le billet de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20.x LTS.
 
 :::
+
+## 4D 20.5 LTS
+
+#### Points forts
+
+- 4D 20.5 LTS est certifié sur Windows 11 24H2.
+- 4D 20.5 est certifié sur macOS Sequoia (macOS 15).
+
+:::warning Problème connu avec Windows 11 24H2
+
+Sous Windows 11 24H2, la génération de fichiers PDF à l'aide du pilote Microsoft Print to PDF peut échouer en raison d'un problème qui est toujours en cours d'investigation. Si vous imprimez fréquemment des PDF avec votre application 4D, nous vous recommandons actuellement de ne pas passer à Windows 11 24H2.
+
+:::
+
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.5): liste de tous les bugs qui ont été corrigés dans 4D 20.5 LTS.
+
+
+## 4D 20.4 LTS
+
+#### Points forts
+
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.4): liste de tous les bugs qui ont été corrigés dans 4D 20.4 LTS.
+
+## 4D 20.3 LTS
+
+#### Points forts
+
+- CEF mis à jour en Chromium 5993
+- SpreadJS mis à jour en version 16.2.6 (dans 4D 20.2 HF1).
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.3): liste de tous les bugs qui ont été corrigés dans 4D 20.3 LTS.
+
+#### Changements de comportement
+
+- A compter de 4D 20.3, afin de permettre la vérification du mot de passe lorsque \[l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt\](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande \[`Open datastore`\](../commands-legacy/open-datastore.md) est maintenant envoyée en clair par défaut. Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Dans certains cas spécifiques, une nouvelle option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande `Open datastore`).
+
+
+## 4D 20.2 LTS
+
+#### Points forts
+
+- 4D 20.2 est certifié sur macOS Sonoma (macOS 14).
 
 :::warning Note de sécurité
 
@@ -20,25 +57,47 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 :::
 
-#### Avertissement concernant la reconstruction de l'index
+:::caution Version minimale du client pour 4D Server 20.2 et suivant
 
-4D 20 inclut une mise à jour de la bibliothèque ICU (voir ci-dessous) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
+Pour des raisons internes, la version des clients distants se connectant à 4D Server 20.2 et suivantes doit être au moins 4D 20.2.
+
+:::
+
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.2): liste de tous les bugs qui ont été corrigés dans 4D 20.2 LTS.
+
+#### Changements de comportement
+
+- À partir de la version 20.2, 4D 20 LTS n'est plus compatible avec Windows Server 2012 R2.
+- **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) avait été incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.2** (20.1 HF1) et **20 R2** et la valeur est maintenant 0.
+
+## 4D 20.1 LTS
+
+#### Points forts
 
 :::caution 4D 20.1 reconstruction de l'index et versions client/serveur
 
 4D 20.1 comprend également une mise à jour de la bibliothèque ICU, ce qui a les conséquences suivantes :
 
 - Elle forcera une reconstruction automatique des index de type alpha, texte et objet.
-- Pour des raisons de cohérence des tris, il est nécessaire que les clients distants 4D et le serveur 4D utilisent la même version : seuls les clients distants 4D 20.1 peuvent se connecter au serveur 4D 20.1 et vice versa.
+- Pour des raisons de cohérence des tris, il est nécessaire que les clients distants 4D et le serveur 4D utilisent la même version : seuls les clients distants 4D 20.1 peuvent se connecter à 4D Server 20.1 et vice versa.
 
 :::
 
 
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+
+## 4D 20 LTS
+
+
 #### Points forts
 
-- *SpreadJS* updated to version 16.2.6 in 4D 20.2 HF1.
-- 4D 20.2 est certifié sur macOS Sonoma (macOS 14).
-- (4D 20.1) Nouvelle propriété `plugins` dans le paramètre *options* de la commande [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) .
+:::caution Reconstruction des index
+
+4D 20 inclut une mise à jour de la bibliothèque ICU (voir ci-dessous) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
+
+:::
+
+- New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server intègre automatiquement plusieurs journaux : [Restauration automatique](../Backup/settings.md#automatic-restore).
 - [Classe IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) renvoie *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) renvoie *id*, *flags* et *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) et [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) supportent les mots-clés personnalisés.
 - Nouvelles classes [WebSocketServer](../API/WebSocketServerClass.md) et [WebSocketConnection](../API/WebSocketConnectionClass.md) pour créer et gérer des connexions WebSocket à partir de 4D.
@@ -61,14 +120,11 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 - Nouvelle option `validateTLSCertificate` pour [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) permettant de contrôler la validation automatique des certificats.
 - Commandes du langage 4D : [Liste des nouveautés](https://doc.4d.com/4Dv20/4D/20.2/Liste-des-nouveautes.901-6719903.fe.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20/4D/20/Liste-des-nouveautes.901-6229455.fe.html) sur doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20): liste de tous les bugs qui ont été corrigés dans 4D 20 LTS.
 
 
 #### Changements de comportement
 
-- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
-- As of 20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
-- **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) avait été incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.1 HF1** et **20 R2** et la valeur est maintenant 0.
 - Pour des raisons de conformité avec la RFC HTTP, la propriété [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) renvoie désormais tous les noms d'en-têtes **en minuscules**. Si vous souhaitez que votre code continue à fonctionner comme auparavant, utilisez la nouvelle propriété [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) .
 - Les certificats TLS sont désormais automatiquement validés par 4D lors de l'envoi de requêtes HTTP avec [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), et rejetés avec une erreur s'ils ne sont pas valides. Une nouvelle propriété *option* vous permet de contrôler cette validation.
 - TLS v1.0 et TLS v1.1 sont obsolètes, ils ne sont plus pris en charge par `Min TLS version` sur 4D Server. La version 1.3 est désormais sélectionnée par défaut et est automatiquement utilisée si les constantes `_o_TLSv1_0` ou `_o_TLSv1_1` sont définies avec [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
@@ -76,7 +132,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 - Depuis 4D 20, [4D for Mobile](https://developer.4d.com/go-mobile/) n'est plus installé par défaut dans l'environnement 4D. Pour bénéficier des fonctionnalités de développement de 4D for Mobile dans 4D, vous devez [installer le composant 4D Mobile App](https://developer.4d.com/go-mobile/docs/getting-started/installation) dans le dossier ["Components"](../Project/architecture.md#components) de vos projets. Si un projet converti utilise des fonctionnalités du composant [4D Mobile App Server](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), veillez à l'installer également dans le dossier "Components" du projet.
 
 
-## 4D 19 R8
+### 4D 19 R8
 
 Lisez [**Les nouveautés de 4D 19 R8**](https://blog.4d.com/fr-whats-new-in-4d-v19-r8/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations dans 4D 19 R8.
 
@@ -89,7 +145,6 @@ Lisez [**Les nouveautés de 4D 19 R8**](https://blog.4d.com/fr-whats-new-in-4d-v
 - Prise en charge du [mode SDI dans le mode test application](../Menus/sdi.md#sdi-mode-availability) sous Windows.
 - 4D View Pro :
     - prise en charge des thèmes dans les tables : nouvelles commandes [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) et [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) , prise en charge des options de thème dans [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
-
     - nouvelle commande [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
@@ -104,7 +159,7 @@ Lisez [**Les nouveautés de 4D 19 R8**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 
 
-## 4D 19 R7
+### 4D 19 R7
 
 Lisez [**Les nouveautés de 4D 19 R7**](https://blog.4d.com/fr-whats-new-in-4d-v19-r8/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations dans 4D 19 R7.
 
@@ -134,11 +189,11 @@ Lisez [**Les nouveautés de 4D 19 R7**](https://blog.4d.com/fr-whats-new-in-4d-v
 - La possibilité d'utiliser le protocole REST de Wakanda/4D Mobile pour appeler une méthode de projet a été supprimée. Vous pouvez utiliser les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) ou les [urls /4DACTION](../WebServer/httpRequests.md#4daction) à la place.
 
 
-## 4D 19 R6
+### 4D 19 R6
 
 - Nouvelle classe [HTTPRequest](../API/HTTPRequestClass.md) .
 - Les fonctions de collection qui peuvent appeler du code prennent désormais en charge les objets function en tant que paramètre *formula* : [`.every()`](../API/CollectionClass.md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
-- Listbox cells support [horizontal](../FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](../FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
+- Les cellules de listbox prennent en charge le padding [horizontal](../FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) et [vertical](../FormObjects/properties_CoordinatesAndSizing.md#vertical-padding).
 - 4D View Pro : nouvelles commandes [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) et [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) pour gérer les tableaux dans les feuilles.
 - Possibilité de voir les attributs liés, calculés et alias dans le [data explorer web](../Admin/dataExplorer.md#basics).
 - Pour nous aider à améliorer nos produits, nous collectons désormais automatiquement des données concernant les statistiques d'utilisation des applications 4D Server en cours d'exécution. Cela n'aura aucun impact sur les performances. Voir la nouvelle page expliquant [pourquoi et comment 4D collecte des données](../Admin/data-collect.md).
@@ -147,12 +202,12 @@ Lisez [**Les nouveautés de 4D 19 R7**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 
 
-## 4D 19 R5
+### 4D 19 R5
 
 - Le fichier [directory.json](Users/editing#directoryjson-file) du projet peut désormais être [intégré dans le serveur](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) au moment du build, ce qui vous permet de déployer une application client/serveur avec une configuration de sécurité de base pour les utilisateurs et les groupes.
 - Vous pouvez désormais [désélectionner les modules inutiles](../Desktop/building.md#deselecting-modules) dans les applications que vous avez créées.
 - La bibliothèque *MeCab* est incluse par défaut dans toutes les applications 4D sur macOS. Dans les versions précédentes, cette bibliothèque, spécialement conçue pour gérer le texte japonais, n'était disponible que dans la version japonaise de 4D sur macOS. Si vous n'avez pas besoin de cette bibliothèque dans vos applications finales, vous pouvez maintenant [la désélectionner](../Desktop/building.md#deselecting-modules).
-- [Client/Server optimization](../ORDA/remoteDatastores.md#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. Voir [Préconfiguration des contextes](../ORDA/remoteDatastores.md#preconfiguring-contexts) et [Cache ORDA](../ORDA/remoteDatastores.md#orda-cache) pour plus d'informations.
+- [Optimisation client/serveur](../ORDA/remoteDatastores.md#clientserver-optimization) : De nouvelles fonctions de classe vous permettent de gérer le cache ORDA et le contenu d'un contexte d'optimisation. Voir [Préconfiguration des contextes](../ORDA/remoteDatastores.md#preconfiguring-contexts) et [Cache ORDA](../ORDA/remoteDatastores.md#orda-cache) pour plus d'informations.
 
    > Ces fonctions sont destinées aux développeurs qui ont besoin de personnaliser les fonctions par défaut d'ORDA pour des configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de les utiliser.
 - [Classe DataClass](../API/DataClassClass.md): La nouvelle fonction [.getCount()](../API/DataClassClass.md#getcount) renvoie le nombre d'entités dans une classe de données.
@@ -160,8 +215,8 @@ Lisez [**Les nouveautés de 4D 19 R7**](https://blog.4d.com/fr-whats-new-in-4d-v
 - L'appel à `Use()` sur un objet non partagé ou une collection non partagée ne fait rien (il ne génère plus d'erreur). Ainsi, il est désormais inutile de tester si l'objet ou la collection passé(e) à Use() est effectivement partagé(e).
 - Pour plus de clarté, deux commandes SQL ont été préfixées : `GET DATA SOURCE LIST` a été renommée en `SQL GET DATA SOURCE LIST`, `Get current data source` a été renommée en `SQL Get current data source`.
 - **4D View Pro**:
-    - The new [VP SET DATA CONTEXT](../ViewPro/method-list.md#vp-set-data-context), [VP Get data context](../ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list.md#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
-    - [VP EXPORT DOCUMENT](../ViewPro/method-list.md#vp-get-binding-path) and [VP Export to object](../ViewPro/method-list.md#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
+    - Les nouvelles commandes [VP SET DATA CONTEXT](../ViewPro/method-list.md#vp-set-data-context), [VP Get data context](../ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list.md#vp-get-binding-path) vous permettent de créer des contextes de données et de lier leur contenu aux cellules de la feuille.
+    - [VP EXPORT DOCUMENT](../ViewPro/method-list.md#vp-get-binding-path) et [VP Export to object](../ViewPro/method-list.md#vp-get-binding-path) acceptent désormais la nouvelle option `includeBindingSource` qui exporte le contenu d'un contexte de données sous forme de valeurs de cellules.
     - (Windows uniquement) Les zones de 4D View Pro utilisent désormais une nouvelle fenêtre de paramètres d'impression.
 - **Web areas**:
     + Nouveau moteur de rendu du système Windows : Les zones Web utilisant le [moteur de rendu du système Windows](../FormObjects/webArea_overview.md#web-rendering-engine) sont désormais basées sur **Microsoft Edge WebView2**. Cela a un impact sur les caractéristiques suivantes :
@@ -180,7 +235,7 @@ WA OPEN URL(* ; "WebArea";WA Get last filtered URL(* ; "WebArea"))
 
 
 
-## 4D 19 R4
+### 4D 19 R4
 
 - Les [attributs Alias](../ORDA/ordaClasses.md#alias-attributes-1) sont disponibles dans les classes ORDA.
 - Prise en charge des instructions [break et continue](../Concepts/flow-control.md#break-and-continue) dans les boucles.
@@ -201,7 +256,7 @@ $value:=($size>1000)? a:b // Ici, "a:b" est considéré comme un opérateur tern
 
 
 
-## 4D 19 R3
+### 4D 19 R3
 
 - [Les propriétés calculées](../Concepts/classes.md#function-get-and-function-set) sont disponibles dans les classes.
 - [Les attributs calculés](../ORDA/ordaClasses.md#computed-attributes) sont disponibles dans les classes ORDA. Ils sont similaires aux propriétés calculées mais prennent également en charge les fonctions [query](../ORDA/ordaClasses.md#function-query-attributename) et [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename).
@@ -233,7 +288,7 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 - Suppression du raccourci "Runtime Explorer" dans les projets générés : Le raccourci **Cmd/Ctrl+Shift+F9** n'affiche plus la fenêtre Runtime Explorer dans les applications de projets fusionnés mono-utilisateurs. Ce raccourci peut désormais être un raccourci d'application utilisateur. Vous pouvez appeler la fenêtre Runtime Explorer à l'aide de la nouvelle commande `OPEN RUNTIME EXPLORER`.
 - Capacités de débogage étendues avec 4D Server : En mode interprété, 4D Server peut désormais déboguer tous les types de process, y compris les sessions web évolutives. Cette fonction est disponible lorsque le débogueur est attaché au serveur ou à un client distant.   
   *Attention : En mode interprété, afin de rendre le débogage étendu disponible sur la machine serveur, tous les process serveur sont maintenant automatiquement exécutés en mode coopératif lorsque le débogueur est attaché au serveur (paramètre par défaut). Cela peut avoir un impact significatif sur les performances de vos applications converties lorsqu'elles fonctionnent avec 4D Server v19 R3 et plus. Pour rétablir l'exécution préemptive sur le serveur dans ce cas, il suffit de détacher le débogueur du serveur (et de l'attacher à un client distant si nécessaire).*
-- Sous Windows, les projets et les bases de données créés avec 4D 19 R3 et releases ultérieures utilisent l'API [DirectWrite](https://docs.microsoft.com/en-us/windows/win32/DirectWrite/direct-write-portal) dans les formulaires. Cette API améliore le rendu du texte, en particulier dans les configurations à DPI élevé. DirectWrite est utilisé pour le rendu de textes statiques et de textes saisis, de cases à cocher, de boutons et de boutons radio. Notez que les listbox utilisent déjà DirectWrite. A compatibility option allows you to enable DirectWrite in projects and databases created with previous 4D ersions.
+- Sous Windows, les projets et les bases de données créés avec 4D 19 R3 et releases ultérieures utilisent l'API [DirectWrite](https://docs.microsoft.com/en-us/windows/win32/DirectWrite/direct-write-portal) dans les formulaires. Cette API améliore le rendu du texte, en particulier dans les configurations à DPI élevé. DirectWrite est utilisé pour le rendu de textes statiques et de textes saisis, de cases à cocher, de boutons et de boutons radio. Notez que les listbox utilisent déjà DirectWrite. Une option de compatibilité vous permet d'activer DirectWrite dans les projets et les bases de données créés avec des versions antérieures de 4D.
 - Si vous utilisez des composants compilés avec 4D 19.0 for Silicon (Apple ARM CPUs) qui appellent la commande `Count parameters` , nous vous recommandons de les recompiler avec 4D 19 R3 pour assurer la compatibilité avec 4D 19 R3 et les releases ultérieures. Si un composant n'est pas compilé pour Silicon, il n'est pas nécessaire de le recompiler.
 
 
@@ -243,51 +298,21 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 
 
 
-## 4D 19 R2
+### 4D 19 R2
 
-- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
+- Un [fichier .gitignore par défaut](../Preferences/general.md#create-gitignore-file) peut être créé avec les nouveaux projets
 - Nouvelle [class API Blob ](../API/BlobClass.md) pour gérer de nouveaux objets [`4D.Blob`](Concepts/dt_blob.md#blob-types)
 - Prise en charge de `no-bom` et nouveaux caractères de fin de ligne par défaut dans [`.setText()`](../API/FileClass.md#settext)
 
 
-## Versions précédentes
+## 4D 19.x LTS
 
-<details><summary>Cliquez pour voir les notes de mise à jour des versions précédentes</summary>
 
-### 4D 19
-
-:::warning Note de sécurité
-
-Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettre à jour 4D en release 19.7 LTS build 288986 ou plus. Pour plus d'informations, reportez-vous à ce [bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
-
-:::
-
-- [Classe IMAPTransporter](../API/IMAPTransporterClass.md): nouvelles fonctions `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, et `.unsubscribe()` .
-- [Classe File](../API/FileClass.md) : nouvelles fonctions `setAppInfo()` et `getAppInfo()`.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
-- Serveur Web : nouveau paramètre [SameSite pour les cookies de session](../WebServer/webServerConfig.md#session-cookie-samesite).
-- Prise en charge des couleurs dark et light pour les [formulaires](../FormEditor/properties_FormProperties.md#color-scheme) et les [feuilles de style](../FormEditor/stylesheets#media-queries)
-- Nouveaux thèmes dark et light par défaut dans les [préférences de l'éditeur de code](../Preferences/methods.md#theme-list).
-- [Compilation native](../Project/compiler.md#compiler-methods-for) pour les processeurs Silicon.
-- La propriété [Calcul de variable](../FormObjects/properties_Object.md#variable-calculation) est désormais prise en charge par les colonnes des listbox entity selection.
-- Nouvelle page [CLI](../Admin/cli.md) complète.
+Voir [**Release notes pour 4D 19.x LTS**](../../version-19/Notes/updates.md).
 
 
 
-### 4D 18 R6
-
-- [Classe Entity Selection](../API/EntitySelectionClass.md): les fonctions `.average()`, `.max()` et `.min()` renvoient désormais *undefined* si l'entity selection est vide.
-- [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) et [SMTP Mail](../API/SMTPTransporterClass.md) : la propriété `authenticationMode` active OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass.md): nouvelles fonctions `.expunge()` et `.append()`
-- Nouveau composant serveur web [WebAdmin](../Admin/webAdmin.md)
-- Nouvelle interface [DataExplorer](../Admin/dataExplorer.md)
-- Nouvelles [sessions web](../WebServer/sessions.md) et [leur API](../API/SessionClass.md).
-
-
-</details>
-
-
-## Library table (4D 20 LTS)
+## Tableau des bibliothèques (4D 20 LTS)
 
 
 
@@ -299,7 +324,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 | PDFWriter    | 4.3              | 20                  | FreeType dependency dans 12.2.1                                                                               |
 | SpreadJS     | 16.2.6           | 20.2 HF1            | Moteur 4D View Pro                                                                                            |
 |              | 16.0.4           | 20                  |                                                                                                               |
-| OpenSSL      | 3.1.1            | 20                  |                                                                                                               |
+| OpenSSL      | 3.1.6            | **20.4 HF2**        |                                                                                                               |
 | libZip       | 1.9.2            | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                    |
 | LZMA         | 5.4.1            | 20                  |                                                                                                               |
 | Zlib         | 1.2.13           | 20                  |                                                                                                               |

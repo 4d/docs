@@ -92,8 +92,7 @@ Dentro de um método de erro personalizado, você tem acesso a várias informaç
 
 :::info
 
-O 4D mantém automaticamente uma série de variáveis chamadas **variáveis sistema**, que respondem a diferentes necessidades. Ver o manual da linguagem 4D\*.
-
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
 :::
 
 - o comando [`Últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. Você também pode usar o comando [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que retorna a mesma informação que as matrizes.
@@ -162,7 +161,7 @@ Se um método de tratamento de erros for instalado por _expressão_, ele é cham
 
 ### Exemplos
 
-1. Você quer exibir o conteúdo de um arquivo se o arquivo pode ser aberto sem erro e se o seu conteúdo pode ser lido. Você pode escrever:
+1. You want to display the contents of a file if the file can be open without error, and if its contents can be read. Você pode escrever:
 
 ```4d
 var $text : Text

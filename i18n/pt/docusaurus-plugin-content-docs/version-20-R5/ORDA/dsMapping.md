@@ -28,7 +28,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 > O mapeamento ORDA não leva em consideração:
 >
 > - a opção "Invisível" para tabelas ou campos,
-> - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
+> - a estrutura virtual definida através de `SET TABLE TITLES` ou `SET FIELD TITLES`,
 > - a propriedade "Manual" ou "Automática" das relações.
 
 ### Regras para o controlo do acesso remoto

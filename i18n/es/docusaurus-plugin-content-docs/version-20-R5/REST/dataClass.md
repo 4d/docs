@@ -24,7 +24,7 @@ Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase
 
 ### Descripción
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+Cuando llame a este parámetro en su petición REST, se devolverán las 100 primeras entidades a menos que haya especificado un valor utilizando [`$top/$limit`]($top_$limit.md).
 
 A continuación se describen los datos devueltos:
 

@@ -224,7 +224,7 @@ The resulting object is an entity selection of Employee with duplications remove
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to be added to the entity selection|
-|Result|4D.EntitySelection|->|Entity selection including the added *entity*|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection including the added *entity*|<!-- END REF -->
 
 #### Description
 
@@ -1677,6 +1677,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 |17|Added|
 
 </details>
+
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 

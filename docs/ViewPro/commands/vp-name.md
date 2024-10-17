@@ -2,7 +2,7 @@
 id: vp-name
 title: VP Name
 ---
- 
+
 
 <!-- REF #_method_.VP Name.Syntax -->
 **VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object <!-- END REF -->
@@ -36,7 +36,7 @@ You want to give a value to the "Total" named range.
 ```4d
 // name the B5 cell as Total
 VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";" Total")
+$name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 

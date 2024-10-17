@@ -13,30 +13,30 @@ title: VP SET SHEET NAME
 | ---------- | ------- | -- | --------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
 | name       | Text    | -> | Nouveau nom de la feuille               |                  |
-| sheet      | Integer | -> | Index of the sheet to be renamed        | <!-- END REF --> |
+| sheet      | Integer | -> | Index de la feuille à renommer          | <!-- END REF --> |
 
 #### Description
 
-The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in _vpAreaName_<!-- END REF -->.
+La commande `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->renomme une feuille dans le document chargé dans _vpAreaName_<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _name_, pass a new name for the sheet.
+Dans _name_, passez le nouveau nom de la feuille.
 
-In _sheet_, pass the index of the sheet to rename.
+Dans _sheet_, passez le numéro de la feuille à renommer.
 
 > La numérotation démarre à 0.
 
-If no _sheet_ is passed, the command renames the current sheet.
+Si aucune _sheet_ n'est fournie, la commande renomme la feuille courante.
 
-The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
+Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
 
 La commande ne fait rien si :
 
 - le nouveau nom contient des caractères interdits
 - la valeur du nouveau nom est vide
 - le nouveau nom existe déjà
-- the passed _sheet_ index does not exist
+- l'index _sheet_ transmis n'existe pas
 
 #### Exemple
 

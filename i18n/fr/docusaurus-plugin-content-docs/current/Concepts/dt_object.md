@@ -47,7 +47,7 @@ L'instanciation d'un objet peut se faire de l'une des manières suivantes :
 
 :::info
 
-Plusieurs commandes et fonctions 4D retournent des objets, par exemple [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) ou [`File`](../API/FileClass.md#file). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
+Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../commands/file.md). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
 
 :::
 
@@ -227,14 +227,14 @@ Voici un exemple :
  x:=vPtr->a //x=10
 ```
 
-## Object operators
+## Opérateurs sur les objets
 
-You can use comparison operators with **object references**, which means that you can evaluate if two or more references point to the same instance of an object.
+Vous pouvez utiliser des opérateurs de comparaison avec des **références d'objet**, ce qui signifie que vous pouvez évaluer si deux ou plusieurs références pointent vers la même instance d'un objet.
 
 ```4d
-var $o1:={a: 42} //reference to an instance
-var $o2:={a: 42} //reference to a different instance
-var $o3:=$o1 //reference to the same instance
+var $o1:={a: 42} //référence à une instance
+var $o2:={a: 42} //référence à une instance différente
+var $o3:=$o1 //référence à la même instance
 ```
 
 Sur la base du code ci-dessus, la table de comparaison est :

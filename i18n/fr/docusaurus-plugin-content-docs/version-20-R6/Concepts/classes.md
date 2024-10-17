@@ -107,8 +107,8 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <!-- REF #_command_.cs.Params -->
 
-| Paramètres | Type   |    | Description                                                         |                  |
-| ---------- | ------ | -- | ------------------------------------------------------------------- | ---------------- |
+| Paramètres | Type   |                             | Description                                                         |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- | ---------------- |
 | classStore | Object | <- | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
 
 La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
@@ -127,8 +127,8 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Paramètres | Type   |    | Description    |                  |
-| ---------- | ------ | -- | -------------- | ---------------- |
+| Paramètres | Type   |                             | Description    |                  |
+| ---------- | ------ | --------------------------- | -------------- | ---------------- |
 | classStore | Object | <- | Class store 4D | <!-- END REF --> |
 
 La commande `4D` <!-- REF #_command_.4D.Summary -->retourne le class store des classes 4D intégrées disponibles<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
@@ -379,7 +379,7 @@ Le type de propriété peut être l'un des suivants :
 | `Date`                       | Valeur date                                                               |
 | `Time`                       | Valeur Heure                                                              |
 | `Boolean`                    | Valeur booléen                                                            |
-| `Entier`                     | Valeur entier long                                                        |
+| `Integer`                    | Valeur entier long                                                        |
 | `Real`                       | Valeur réel                                                               |
 | `Pointer`                    | Valeur pointeur                                                           |
 | `Picture`                    | Valeur image                                                              |
@@ -590,9 +590,9 @@ Class constructor ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 
-| Paramètres | Type   |    | Description                                                                   |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------- |
-| param      | any    | -> | Paramètre(s) à passer au constructeur de la classe parente |
+| Paramètres | Type   |                             | Description                                                                   |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------- |
+| param      | any    | ->                          | Paramètre(s) à passer au constructeur de la classe parente |
 | Résultat   | Object | <- | Parent de l'objet                                                             |
 
 <!-- END REF -->
@@ -701,15 +701,15 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 <!-- REF #_command_.This.Params -->
 
-| Paramètres | Type   |    | Description   |
-| ---------- | ------ | -- | ------------- |
+| Paramètres | Type   |                             | Description   |
+| ---------- | ------ | --------------------------- | ------------- |
 | Résultat   | Object | <- | Objet courant |
 
 <!-- END REF -->
 
 Le mot-clé `This` <!-- REF #_command_.This.Summary -->retourne une référence à l'objet en cours de traitement<!-- END REF -->.
 
-Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
+Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Elle ne peut pas être définie par affectation lors de l'exécution, et elle peut être différente à chaque fois que la fonction est appelée.
 
 Lorsqu'une [formula](../API/FunctionClass.md) est appelée en tant que méthode membre d'un objet, son `This` désigne l'objet sur lequel la méthode est appelée. Par exemple :
 
@@ -832,7 +832,7 @@ Si le mot-clé `shared` est utilisé devant une fonction dans une classe utilisa
 
 ## Classes Singleton
 
-Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern). A singleton has a unique instance for the process in which it is instantiated, while a *shared* singleton has a unique instance for all processes on the machine. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
+Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern). Un singleton a une instance unique pour le process dans lequel il est instancié, tandis qu'un singleton *partagé* a une instance unique pour tous les process de la machine. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
 
 Le singleton de la classe est instancié lors du premier appel de la propriété [`cs.<class>.me`](../API/ClassClass.md#me). Le singleton instancié de la classe est ensuite toujours renvoyé lorsque la propriété [`me`](../API/ClassClass.md#me) est utilisée.
 
@@ -842,15 +842,15 @@ La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Cla
 
 ### Portée
 
-The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its *shared* property.
+La portée d'une instance de singleton peut être le process dans lequel elle est instanciée ou tous les process de la machine, en fonction de sa propriété *shared*.
 
-| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| 4D single-user       | Process                                                                                                  | Application       |
-| 4D Server            | Process                                                                                                  | 4D Server machine |
-| 4D remote mode       | Process (*note*: singletons are not synchronized on the twin process) | 4D remote machine |
+| Singleton créé sur  | Portée si non partagé                                                                                                | Portée si partagé  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| 4D mono-utilisateur | Process                                                                                                              | Application        |
+| 4D Server           | Process                                                                                                              | Machine 4D Server  |
+| 4D mode distant     | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant |
 
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
+Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 
 :::info
 
@@ -891,7 +891,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### Création d'un singleton partagé
 
-To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Par exemple :
+Pour créer un singleton partagé par tous les process sur la machine, ajoutez les mots-clés `shared singleton` devant le [constructeur de classe](#class-constructor). Par exemple :
 
 ```4d
 //Class VehicleFactory
@@ -918,7 +918,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
+Vous pouvez alors appeler le singleton **cs.VehicleFactory** pour obtenir un nouveau véhicule depuis n'importe où dans votre application sur le poste avec une seule ligne :
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")

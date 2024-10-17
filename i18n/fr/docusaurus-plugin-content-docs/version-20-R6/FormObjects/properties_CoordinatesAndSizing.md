@@ -44,7 +44,7 @@ Etant donné qu'elle nécessite des calculs supplémentaires lors de l'exécutio
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -206,7 +206,7 @@ La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut 
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -224,7 +224,7 @@ La largeur minimale de la colonne (en pixels). La largeur de la colonne ne peut 
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 ---
 

@@ -6,7 +6,7 @@ title: Using preemptive web processes
 
 The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your applications. You can configure your web-related code, including 4D tags, web database methods or ORDA REST class functions to run simultaneously on as many cores as possible.
 
-For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
+For in-depth information on preemptive process in 4D, please refer to the [Preemptive Processes](../Develop/preemptive.md) section.
 
 ## Availability of preemptive mode for web processes  
 
@@ -29,8 +29,8 @@ The following table indicates whether the preemptive mode is used or is availabl
 - Web Service Server: handles SOAP requests
 - ***web setting*** means that the preemptive mode depends on a setting value:
 	- when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the [preemptive mode is automatically used](sessions.md#preemptive-mode) for web processes.
-	- otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account. 
-	- regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler. 
+	- otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+	- regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler. 
 
 
 
@@ -40,10 +40,10 @@ The following table indicates whether the preemptive mode is used or is availabl
 All 4D code executed by the web server must be thread-safe if you want your web processes to be run in preemptive mode. When the [preemptive mode is enabled](#availability-of-preemptive-mode-for-web-processes), the following parts of the application will be automatically evaluated by the 4D compiler:
 
 *	All web-related database methods:
-	*	[`On Web Authentication`](authentication.md#on-web-authentication) 
+	*	[`On Web Authentication`](authentication.md#on-web-authentication)
 	*	[`On Web Connection`](httpRequests.md#on-web-connection)
 	*	[`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
-	*	[`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) 
+	*	[`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 *	The `compiler_web` project method (regardless of its actual "Execution mode" property);
 
@@ -59,7 +59,7 @@ For each of these methods and code parts, the compiler will check if the thread-
 
 ## Thread-safety of 4D web code  
 
-Most of the web-related 4D commands and functions, database methods and URLs are thread-safe and can be used in preemptive mode. 
+Most of the web-related 4D commands and functions, database methods and URLs are thread-safe and can be used in preemptive mode.
 
 ### 4D commands and database methods  
 
@@ -95,5 +95,3 @@ Both the Runtime Explorer and the 4D Server administration window display a spec
 |Process type|Icon|
 |---|---|
 |Preemptive web method| ![](../assets/en/WebServer/processIcon.png)|
-
-

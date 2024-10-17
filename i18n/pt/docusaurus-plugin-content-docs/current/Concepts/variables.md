@@ -17,10 +17,7 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 ## Criação de variáveis
 
-Normalmente, você cria variáveis declarando-as. A linguagem 4D oferece duas maneiras de declarar variáveis:
-
-- usando a palavra-chave `var` (recomendada especialmente se o seu código usar objetos e classes, pois essa sintaxe aprimora as sugestões do editor de código e os recursos de antecipação de digitação),
-- usando um dos comandos da linguagem 4D do tema "Compiler" ou "Arrays" (sintaxe herdada).
+You create variables by declaring them using the `var` keyword.
 
 Quando as variáveis são declaradas, elas são inicializadas com o [**valor padrão correspondente ao seu tipo**] (data-types.md#default-values), que elas manterão durante a sessão, desde que não tenham sido [atribuídas] (#assigning-data). Como alternativa, ao declarar variáveis, você pode [inicializar](#initializing-variables-in-the-declaration-line) o valor delas juntamente com o tipo de dados, tudo em uma única linha.
 
@@ -52,7 +49,7 @@ var $myVar //a variant variable
 ```
 
 `varName` é o nome da variável, que deve estar em conformidade com as [regras 4D] (Concepts/identifiers.md) sobre identificadores.
-Essa sintaxe só é compatível com declarações de [variáveis locais e de processo](#local-process-and-interprocess-variables), excluindo, portanto, [variáveis interprocessos](#interprocess-variables) e [matrizes](Concepts/arrays.md).
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) (deprecated) and [arrays](Concepts/arrays.md).
 
 `varType` pode ser:
 
@@ -63,23 +60,29 @@ Se `varType` for omitido, será criada uma variável do tipo **variant**.
 
 A tabela seguinte enumera todos os valores `varType` suportados:
 
-| varType                     | Conteúdos                                                                |
-| --------------------------- | ------------------------------------------------------------------------ |
-| `Text`                      | Valor texto                                                              |
-| `Date`                      | Valor data                                                               |
-| `Time`                      | Valor Hora                                                               |
-| `Boolean`                   | Valor booleano                                                           |
-| `Integer`                   | Valor inteiro longo                                                      |
-| `Real`                      | Valor real                                                               |
-| `Pointer`                   | Valor ponteiro                                                           |
-| `Picture`                   | Valor imagem                                                             |
-| `Blob`                      | Valor BLOB                                                               |
-| `Collection`                | Valor colecção                                                           |
-| `Variant`                   | Valor variant                                                            |
-| `Object`                    | Object with default class (4D.Object) |
-| `4D.<className>`            | Objecto do nome da classe 4D                                             |
-| `cs.<className>`            | Objeto do nome da classe usuário                                         |
-| `cs.<namespace><className>` | Objeto do nome da classe do componente `<namespace>`                     |
+| varType                     | Conteúdos                                            |
+| --------------------------- | ---------------------------------------------------- |
+| `Text`                      | Valor texto                                          |
+| `Date`                      | Valor data                                           |
+| `Time`                      | Valor Hora                                           |
+| `Boolean`                   | Valor booleano                                       |
+| `Integer`                   | Valor inteiro longo                                  |
+| `Real`                      | Valor real                                           |
+| `Pointer`                   | Valor ponteiro                                       |
+| `Picture`                   | Valor imagem                                         |
+| `Blob`                      | Valor BLOB                                           |
+| `Collection`                | Valor colecção                                       |
+| `Variant`                   | Valor variant                                        |
+| `Object`                    | Object with default class                            |
+| `4D.<className>`            | Objecto do nome da classe 4D                         |
+| `cs.<className>`            | Objeto do nome da classe usuário                     |
+| `cs.<namespace><className>` | Objeto do nome da classe do componente `<namespace>` |
+
+:::note Compatibidade
+
+The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
+
+:::
 
 ### Exemplos
 
@@ -124,15 +127,16 @@ var $d : cs.Customer:=cs.Customer.new()
 As variáveis também podem ser declaradas e inicializadas sem mencionar explicitamente seu tipo de dados, caso em que seu tipo será inferido por 4D. Aqui estão alguns exemplos:
 
 ```4d
-var $text:="hello" // Inferido como texto 
-var $number:=20 // Inferido como real 
-var $obj:={}  // Inferido como um objeto 
-var $mycol:=[] // Inferido como uma coleção
+var $text:="hello"  // Inferred as Text
+var $number:=20  // Inferred as Real
+var $obj:={}  // Inferred as an Object
+var $mycol:=[]  // Inferred as a Collection  
+
 ```
 
 :::note
 
-O tipo inferido pode ser diferente entre [modo interpretado e compilado] (interpreted.md) se a avaliação do valor for muito ambígua. Nesse caso, um aviso é gerado pelo compilador e um tipo variante é usado. Por exemplo, no seguinte $a, o tipo será inferido corretamente no modo interpretado (Text), mas a verificação de sintaxe gerará um aviso e $a será digitado como uma variante para o modo compilado.
+O tipo inferido pode ser diferente entre [modo interpretado e compilado] (interpreted.md) se a avaliação do valor for muito ambígua. Nesse caso, um aviso é gerado pelo compilador e um tipo variante é usado. For example, in the following _$a_ type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and _$a_ will be typed as a variant for the compiled mode.
 
 ```4d
 var $class:={test: "a"}
@@ -178,12 +182,6 @@ Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obte
 ```
 
 Nesse caso, _[Products]Size_ seria igual a 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
-
-Atribui-se dados a elementos de matriz utilizando chaves ({...}):
-
-```4d
-atNames{1}:="Richard"
-```
 
 ## Variáveis locais, processo e inter-processo
 
@@ -234,10 +232,38 @@ Para obter mais informações, consulte o capítulo **Processos** e a descriçã
 
 ### Variáveis interprocesso
 
-As variáveis interprocessadas estão disponíveis em toda a base de dados e são partilhadas em todos os processos cooperativos. São utilizados principalmente para partilhar informação entre processos.
+:::warning Obsoleto
 
-> O uso de variáveis interprocessadas não é recomendado, uma vez que não estão disponíveis a partir de processos preventivos e tendem a tornar o código mais difícil para manutenção.
+Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
+
+:::
+
+As variáveis interprocessadas estão disponíveis em toda a base de dados e são partilhadas em todos os processos cooperativos. São utilizados principalmente para partilhar informação entre processos.
 
 O nome de uma variável de processo sempre começa com os símbolos `<>` — um sinal "menor que" seguido de um sinal de "maior que"— seguido de 31 caracteres.
 
 Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) partilham a mesma definição de variáveis interprocessadas, mas cada máquina tem um exemplo diferente para cada variável.
+
+## Variáveis do sistema
+
+A linguagem 4D gerencia diversas **variáveis sistema**, que permitem controlar a execução de diferentes operações. You can test their values and use them as any variable. Todas as variáveis do sistema são [variáveis processo](#process-variables).
+
+System variables are used by [4D commands](commands.md). Refer to the "System variables and sets" paragraph in the description of a command to find out whether it affects a system variable.
+
+| System variable name                                   | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OK`                                                   | Longint       | Usually set to 1 after a command has displayed a dialog box and the user clicked the **OK** button, and 0 if they clicked **Cancel**. Some commands also modify the value of the `OK` system variable when a operation is successfully executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `Document`                                             | Text          | Contains the "long name" (full path+name) of the last file opened or created using commands such as [Open document](https://doc.4d.com/4dv20/help/command/en/page264.html) or [SELECT LOG FILE](https://doc.4d.com/4dv20/help/command/en/page345.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `FldDelimit`, `RecDelimit`                             | Text          | Contain the character codes that will be used respectively as a field separator (default is **Tab** (9)) and record separator (default is **carriage return** (13)) when importing or exporting text. Para usar um separador diferente, atribua um novo valor à variável do sistema.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `Error`, `Error method`, `Error line`, `Error formula` | Text, Longint | Used in an error-catching method installed by the [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/en/page155.html) command. See [Handling errors within the method](../Concepts/error-handling.md#handling-errors-within-the-method).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `MouseDown`                                            | Longint       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Set to 1 when the mouse button is pushed, otherwise set to 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `MouseX`, `MouseY`                                     | Longint       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. <li>In a `MouseDown=1` event, `MouseX` and `MouseY` are respectively set to the vertical and horizontal coordinates of the click. Both values are expressed in pixels and use the local coordinate system of the window. </li><li>In case of a picture field or variable, `MouseX` and `MouseY` return the local coordinates of a mouse click in the [`On Clicked`](../Events/onClicked.md), [`On Double Clicked`](../Events/onDoubleClicked.md) and [`On Mouse Up`](../Events/onMouseUp.md) form events. Local coordinates of the mouse cursor are also returned in the [`On Mouse Enter`](../Events/onMouseEnter.md) and [`On Mouse Move`](../Events/onMouseMove.md) form events. For more information, see the [Mouse Coordinates in a picture](../FormEditor/pictures.md#mouse-coordinates-in-a-picture) section.</li> |
+| `KeyCode`                                              | Longint       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Set to the character code of the key that was just pressed. If the key is a function key, `KeyCode` is set to a special code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `Modifiers`                                            | Longint       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Set to the keyboard modifier keys (Ctrl/Command, Alt/Option, Shift, Caps Lock).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `MouseProc`                                            | Longint       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Set to the process number in which the last event took place                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+
+:::note
+
+Therefore, you cannot create a variable, method, or function using any of these variable names.
+
+:::

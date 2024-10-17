@@ -6,7 +6,7 @@ title: Propriétés des menus
 Vous pouvez définir plusieurs propriétés à partir des lignes de menu, telles que des actions, des styles de police, les lignes de séparation, des raccourcis clavier ou des icônes.
 
 
-## Titre de menu
+## Titre
 
 La propriété **Title** contient le libellé d'un menu ou d'une ligne de menu, tel qu'il sera affiché dans l'interface de l'application.
 

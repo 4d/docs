@@ -9,11 +9,11 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                                   |                  |
-| ---------- | ------ | -- | ------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                  |                  |
-| name       | Text   | -> | Nombre del rango nombrado                                     |                  |
-| scope      | Number | -> | Alcance objetivo (por defecto=hoja actual) |                  |
+| Parámetros | Tipo   |                             | Descripción                                                   |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text   | ->                          | Nombre de objeto formulario área 4D View Pro                  |                  |
+| name       | Text   | ->                          | Nombre del rango nombrado                                     |                  |
+| scope      | Number | ->                          | Alcance objetivo (por defecto=hoja actual) |                  |
 | Result     | Object | <- | Definición de la fórmula o rango con nombre                   | <!-- END REF --> |
 
 #### Descripción

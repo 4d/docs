@@ -47,7 +47,7 @@ Com a notação de objetos, pode acessar às propriedades dos objetos de duas ma
 
 :::info
 
-Vários comandos e funções 4D retornam objetos, por exemplo, [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) ou [`File`](../API/FileClass.md#file). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
+Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../commands/file.md). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
 
 :::
 
@@ -229,7 +229,7 @@ Exemplo:
 
 ## Operadores Objeto
 
-You can use comparison operators with **object references**, which means that you can evaluate if two or more references point to the same instance of an object.
+É possível usar operadores de comparação com **referências de objeto**, o que significa que você pode avaliar se duas ou mais referências apontam para a mesma instância de um objeto.
 
 ```4d
 var $o1:={a: 42} //referência a uma instância

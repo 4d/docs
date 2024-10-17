@@ -9,15 +9,15 @@ title: VP Get stylesheets
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
 
-| Parámetros | Tipo       |    | Descripción                                                     |                  |
-| ---------- | ---------- | -- | --------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                    |                  |
-| sheet      | Integer    | -> | Alcance objetivo (por defecto = hoja actual) |                  |
+| Parámetros | Tipo       |                             | Descripción                                                     |                  |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                    |                  |
+| sheet      | Integer    | ->                          | Alcance objetivo (por defecto = hoja actual) |                  |
 | Result     | Collection | <- | Colección de objetos de hojas de estilo                         | <!-- END REF --> |
 
 #### Descripción
 
-The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated _sheet_<!-- END REF -->.
+El comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->devuelve la colección de objetos de hojas de estilo definidos de la _sheet_ designada<!-- END REF -->.
 
 En _vpAreaName_, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 

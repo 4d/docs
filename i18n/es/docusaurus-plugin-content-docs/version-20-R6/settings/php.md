@@ -7,7 +7,7 @@ Puede [ejecutar scripts PHP en 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PH
 
 :::note
 
-Estos parámetros se especifican para todas las máquinas conectadas y todas las sesiones. You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands. Los parámetros modificados por el comando `SET DATABASE PARAMETER` tienen prioridad para la sesión actual.
+Estos parámetros se especifican para todas las máquinas conectadas y todas las sesiones. También puede modificarlos y leerlos por separado para cada máquina y cada sesión utilizando los comandos [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) y [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html). Los parámetros modificados por el comando `SET DATABASE PARAMETER` tienen prioridad para la sesión actual.
 
 :::
 

@@ -31,7 +31,7 @@ Quando a operação estiver concluída, os arquivos compactados substituem autom
 
 ## Abrir arquivo de registo
 
-Depois que a compactação é completada, 4D gera um arquivo de log na pasta Logs da base de dados. Este arquivo permite visualizar todas as operações efectuadas. It is created in XML format and named:  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+Depois que a compactação é completada, 4D gera um arquivo de log na pasta Logs da base de dados. Este arquivo permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* é o carimbo de data/hora do arquivo, com base na hora do sistema local quando a operação de manutenção foi iniciada, por exemplo "2019-02-11 15-20-45".

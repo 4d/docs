@@ -10,7 +10,7 @@ Puede obtener varias informaciones del servidor REST:
 
 ## Catálogo
 
-Use the [`$catalog`]($catalog.md), [`$catalog/\{dataClass\}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed dataclasses and their attributes](configuration.md#exposing-tables-and-fields).
+Utilice los parámetros [`$catalog`]($catalog.md), [`$catalog/\{dataClass\}`]($catalog.md#catalogdataclass), o [`$catalog/$all`]($catalog.md#catalogall) para obtener la lista de [clases de datos expuestas y sus atributos](configuration.md#exposing-tables-and-fields).
 
 Para obtener la colección de todas las clases de datos expuestas junto con sus atributos:
 
@@ -22,7 +22,7 @@ Utilice el parámetro [`$info`]($info.md) para obtener información sobre las se
 
 ## queryPath y queryPlan
 
-Las selecciones de entidades generadas a través de búsquedas pueden tener las dos propiedades siguientes: `queryPlan` y `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
+Las selecciones de entidades generadas a través de búsquedas pueden tener las dos propiedades siguientes: `queryPlan` y `queryPath`. Para calcular y devolver estas propiedades, basta con añadir [`$queryPlan`]($queryplan.md) y/o [`$queryPath`]($querypath.md) en la petición REST.
 
 Por ejemplo:
 

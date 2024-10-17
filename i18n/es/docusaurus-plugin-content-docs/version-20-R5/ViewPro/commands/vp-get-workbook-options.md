@@ -11,15 +11,14 @@ title: VP Get workbook options
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                           |                  |
-| ---------- | ------ | -- | ----------------------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro          |                  |
+| Parámetros | Tipo   |                             | Descripción                                           |                  |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------- | ---------------- |
+| vpAreaName | Text   | ->                          | Nombre de objeto formulario área 4D View Pro          |                  |
 | Result     | Object | <- | Objeto que contiene las opciones del libro de trabajo | <!-- END REF --> |
 
 #### Descripción
 
-`VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
-returns an object containing all the workbook options in _vpAreaName_<!-- END REF -->
+`VP Get workbook options`<!-- REF #_method_.Get workbook options. Summary -->devuelve un objeto que contiene todas las opciones del libro de trabajo en vpAreaName -->
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 

@@ -1,18 +1,18 @@
 ---
 id: overview
-title: Settings
+title: Propriétés
 ---
 
-Les Paramètres configurent le fonctionnement du projet en cours. Ces paramètres peuvent être différents pour chaque projet. Ils comprennent les ports d'écoute, les configurations de sauvegarde, les options de sécurité, les paramètres Web, etc.
+Les Propriétés configurent le fonctionnement du projet en cours. Ces paramètres peuvent être différents pour chaque projet. Ils comprennent les ports d'écoute, les configurations de sauvegarde, les options de sécurité, les paramètres Web, etc.
 
 ![](../assets/en/settings/main.png)
 
 > 4D fournit un autre ensemble de paramètres, appelés **Préférences**, qui s'appliquent à l'application 4D IDE. Pour plus d'informations, reportez-vous à la section [Préférences](../Preferences/general.md).
 
 
-## Accès aux paramètres
+## Accès aux propriétés
 
-Vous pouvez accéder à la boîte de dialogue Paramètres :
+Vous pouvez accéder à la boîte de dialogue Propriétés :
 
 -   en utilisant l'option de menu **Développement > Paramètres...**
 -   en cliquant sur **Paramètres** dans la barre d'outils 4D

@@ -150,4 +150,4 @@ title: プロセスとワーカー
 
 ### 参照
 
-ワーカーの使い方の詳細については、[このブログ記事](https://blog.4d.com/ja/4d-summit-2016-laurnt-esnault-presents-works-and-ui-in-preemptive-mode/) を参照ください。
+ワーカーの使い方の詳細については、[このブログ記事](https://blog.4d.com/ja/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) を参照ください。

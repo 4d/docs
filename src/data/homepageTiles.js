@@ -129,9 +129,6 @@ const Sections = [
         <Link to="Admin/licenses">
           <Translate>Licenses</Translate>
         </Link>
-        <Link to="Users/overview">
-          <Translate>Access Rights</Translate>
-        </Link>
         <Link to="MSC/overview">
           <Translate>Maintenance and Security Center</Translate>
         </Link>
@@ -168,7 +165,7 @@ const Sections = [
        <Link to="https://github.com/4d/4D-Mobile-App-Server">
           <Translate>4D Mobile App Server</Translate>
         </Link>
-        <Link to="https://github.com/4d/4D-NetKit/tree/20R6">
+        <Link to="https://developer.4d.com/4D-NetKit/">
           <Translate>4D NetKit</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>
@@ -230,6 +227,9 @@ const Sections = [
       <div className="homepageLinks">
         <Link to="Desktop/clientServer" >
           <Translate>Client/Server</Translate>
+        </Link>
+        <Link to="Users/overview">
+          <Translate>Access Rights</Translate>
         </Link>
         <Link to="FormEditor/forms" >
           <Translate>Forms</Translate>

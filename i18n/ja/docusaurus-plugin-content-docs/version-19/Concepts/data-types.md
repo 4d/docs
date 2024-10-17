@@ -22,7 +22,7 @@ title: データタイプの概要
 | [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                                       | -                                               |
 | [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | Pointer                                 | `C_POINTER`, `ARRAY POINTER`                    |
 | [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | Picture                                 | `C_PICTURE`, `ARRAY PICTURE`                    |
-| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | Blob                                    | `C_BLOB`, `ARRAY BLOB`                          |
+| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | BLOB                                    | `C_BLOB`, `ARRAY BLOB`                          |
 | [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | Object                                  | `C_OBJECT`, `ARRAY OBJECT`                      |
 | [コレクション](Concepts/dt_collection.md)   | -       | ◯       | Collection                              | `C_COLLECTION`                                  |
 | [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | Variant                                 | `C_VARIANT`                                     |
@@ -37,7 +37,7 @@ title: データタイプの概要
 
 デフォルト値は変数の型に依存します:
 
-| タイプ    | デフォルト値     |
+| 型      | デフォルト値     |
 | ------ | ---------- |
 | ブール    | false      |
 | 日付     | 00-00-00   |

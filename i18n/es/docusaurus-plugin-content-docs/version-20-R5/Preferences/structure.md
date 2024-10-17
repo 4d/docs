@@ -5,7 +5,7 @@ title: Página Estructura
 
 ## Llave primaria
 
-These options in the preferences modify the default name and type of the primary key fields that are added automatically by 4D when new tables are created or by means of the [Primary key manager](https://doc.4d.com/4Dv18R6/4D/18-R6/Primary-key-manager.300-5217742.en.html)).
+Estas opciones en las preferencias modifican el nombre y el tipo por defecto de los campos llaves primaria añadidos automáticamente por 4D cuando se crean nuevas tablas o mediante el [Gestor de llaves primarias](https://doc.4d.com/4Dv18R6/4D/18-R6/Primary-key-manager.300-5217742.en.html)).
 
 Las siguientes opciones están disponibles:
 

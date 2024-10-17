@@ -354,7 +354,7 @@ El parámetro *$event* contiene las siguientes propiedades:
 | attributeName | Text    | Nombre de atributo calculado                                                                 |
 | dataClassName | Text    | Nombre de la clase de datos                                                                  |
 | kind          | Text    | "get"                                                                                        |
-| result        | Variant | Opcional. Añada esta propiedad con valor Null si desea que un atributo escalar devuelva Null |
+| resultado     | Variant | Opcional. Añada esta propiedad con valor Null si desea que un atributo escalar devuelva Null |
 
 
 #### Ejemplos
@@ -467,7 +467,7 @@ El parámetro *$event* contiene las siguientes propiedades:
 | kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                     |
 | value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                                    |
 | operator      | Text    | Operador de consulta (ver también la función de clase [`query`](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (igual a, @ no es comodín)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (mayor o igual que)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
-| result        | Variant | Valor a tratar por el atributo calculado. Pase `Null` en esta propiedad si desea que 4D ejecute la consulta por defecto (siempre secuencialmente para los atributos calculados).                                                                                                                                                                                            |
+| resultado     | Variant | Valor a tratar por el atributo calculado. Pase `Null` en esta propiedad si desea que 4D ejecute la consulta por defecto (siempre secuencialmente para los atributos calculados).                                                                                                                                                                                            |
 
 > Si la función devuelve un valor en *$result* y se asigna otro valor a la propiedad `$event.result`, se da prioridad a `$event.result`.
 
@@ -574,7 +574,7 @@ El parámetro *$event* contiene las siguientes propiedades:
 | value         | Variant | Valor a tratar por el atributo calculado                                                                 |
 | operator      | Text    | "desc" o "asc" (por defecto)                                                                             |
 | descending    | Boolean | `true` para orden descendente, `false` para orden ascendente                                             |
-| result        | Variant | Valor a tratar por el atributo calculado. Pase `Null` si desea que 4D ejecute la ordenación por defecto. |
+| resultado     | Variant | Valor a tratar por el atributo calculado. Pase `Null` si desea que 4D ejecute la ordenación por defecto. |
 
 > Puede utilizar el `operator` o la propiedad `descending`. Es esencialmente una cuestión de estilo de programación (ver ejemplos).
 

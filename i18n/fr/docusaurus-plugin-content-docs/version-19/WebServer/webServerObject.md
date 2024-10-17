@@ -4,7 +4,7 @@ title: Objet Web Server
 ---
 
 
-Un projet 4D peut démarrer et surveiller un serveur Web pour l'application principale (hôte) ainsi que chaque composant hébergé.
+Un projet 4D peut démarrer et piloter un serveur Web pour l'application principale (hôte) ainsi que pour chaque composant hébergé.
 
 Par exemple, si vous avez installé deux composants dans votre application principale, vous pouvez démarrer et contrôler jusqu'à trois serveurs Web indépendants à partir de votre application :
 
@@ -94,7 +94,7 @@ Ces propriétés sont définies :
 
 1. de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
 2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
-3. si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.
+3. si elles ne sont pas utilisées, dans les propriétés de l'application hôte ou du composant.
 
 - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
 - Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start).

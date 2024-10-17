@@ -17,7 +17,7 @@ Con la API REST, puede realizar todas las manipulaciones a los datos como puede 
 
 Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). Si desea eliminar una o varias entidades, puede utilizar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [\{dataClass\}/\{method\}](%7BdataClass%7D.html#dataclassmethod).
+Además de recuperar una sola entidad en una dataclass utilizando [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), también puede escribir un método en su clase DataClass y llamarlo para devolver una selección de entidades (o una colección) utilizando [\{dataClass\}/\{method\}](%7BdataClass%7D.html#dataclassmethod).
 
 Antes de devolver la colección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o varios atributos (incluso los atributos de relación).
 
@@ -43,7 +43,7 @@ Si se modifica alguno de los atributos de la entidad en el conjunto de entidades
 
 Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
-Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
+Utilizando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), puede combinar dos conjuntos de entidades que haya creado previamente. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
 
 Se devuelve una nueva selección de entidades; sin embargo, también se puede crear un nuevo conjunto de entidades llamando [`$method=entityset`]($method.md#methodentityset) al final de la petición REST.
 
@@ -92,7 +92,7 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
-Method calls are detailed in the [\{dataClass\}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
+Las llamadas de métodos se detallan en la sección [\{dataClass\}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod).
 
 ## Selección de atributos a obtener
 
@@ -249,6 +249,6 @@ Si quiere guardar un BLOB almacenado en su clase de datos, puedes escribir lo si
 
 ## Recuperar sólo una entidad
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
+Puede utilizar la sintaxis [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) cuando quiera recuperar sólo una entidad. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
 
  `GET  /rest/Company:companyCode("Acme001")`

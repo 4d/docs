@@ -59,7 +59,7 @@ Vous pouvez configurer le composant `WebAdmin` dans la [fenêtre de configuratio
 > Si vous utilisez une application 4D sans interface, vous pouvez utiliser des [arguments de *l'interface de ligne de commande*](#webadmin-headless-configuration) pour définir des paramètres de base. La définition de paramètres avancés se fait via le fichier de paramètres.
 
 
-### Fenêtre de configuration
+### Boîte de dialogue des Propriétés
 
 Pour ouvrir la fenêtre de configuration des paramètres d'administration web, sélectionnez **Fichier > Administration web > Propriétés...**.
 

@@ -36,7 +36,7 @@ Algunos otros elementos tienen una capitalización diferente (por ejemplo: `this
 Los nombres de comandos y constantes de QodlyScript se escriben en mayúsculas y sin espacios. Además, los nombres de las constantes de QodlyScript comienzan con la letra `k`. Puede que necesite adaptar estos elementos de QodlyScript al lenguaje 4D.
 
 - Normalmente, sólo tendrá que convertir los nombres. Por ejemplo, `newCollection` en QodlyScript es `New collection` en lenguaje 4D.
-- However, some commands have been renamed for a better compliance, for example `atan` and `sqrt` are QodlyScript names for `Arctan` and `Square root` commands in 4D Language.
+- Sin embargo, algunos comandos han sido renombrados para un mejor cumplimiento, por ejemplo `atan` y `sqrt` son nombres de QodlyScript para los comandos `Arctan` y `Square root` en Lenguaje 4D.
 
 ### Ejemplo
 

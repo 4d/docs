@@ -3,6 +3,9 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+
+A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Uma vez que o servidor 4D WebSocket está ativo, você pode abrir e usar conexões WebSocket entre 4D e clientes usando a classe [`WebSocketConnection`](WebSocketConnectionClass.md).
+
 <details><summary>Histórico</summary>
 
 | Release | Mudanças   |
@@ -11,8 +14,6 @@ title: WebSocketServer
 
 </details>
 
-
-A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Uma vez que o servidor 4D WebSocket está ativo, você pode abrir e usar conexões WebSocket entre 4D e clientes usando a classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 :::note Sobre os servidores WebSocket
 
@@ -68,16 +69,16 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
 Function onConnection($wss : Object; $event : Object) : Object
     //retorna uma instância da classe de utilizador
     //que tratará as mensagens
-    return cs.myConnectionHandler.new() 
+    return cs.myConnectionHandler.new()
 ```
 
 3. Definir a classe de utilizador `myConnectionHandler` que contém funções de retorno de chamada utilizadas para tratar mensagens:
 
 ```4d
-// classe myConnectionHandler
+// myConnectionHandler class
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    //envia a mensagem em maiúsculas  
+    //resends the message in uppercase
     $ws.send(Uppercase($message.data))
 
 ```
@@ -92,14 +93,14 @@ Consulte [esta publicação do blogue](https://blog.4d.com/websocket-server/) pa
 
 Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções:
 
-|                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.connections.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->|
+|                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)<br/><!-- INCLUDE #WebSocketServerClass.connections.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)<br/><!-- INCLUDE #WebSocketServerClass.path.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #WebSocketServerClass.terminated.Summary -->|
 
 
 
@@ -114,10 +115,8 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 | ----------------------------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             | -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |
 | [options](#options-parameter)       | Object             | -> | Parâmetros de configuração do WebSocket                                                  |
-| Resultados                          | 4D.WebSocketServer | <- | Novo objecto WebSocketServer|<!-- END REF -->
-
-
-|
+| Resultados                          | 4D.WebSocketServer | <- | Novo objeto WebSocketServer                                                              |
+<!-- END REF -->
 
 
 A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que utilizará as chamadas de retorno *WSSHandler* e (opcionalmente) as opções *especificadas*, e devolve um objecto `4D.WebSocketServer`<!-- END REF -->.
@@ -191,23 +190,23 @@ Evento emitido quando ocorre um erro no servidor WebSocket.
 Este exemplo de um recurso básico de bate-papo ilustra como lidar com conexões de servidor WebSocket em uma classe *WSSHandler* .
 
 ```4d
-//myWSServerHandler class 
+//myWSServerHandler class
 
-Function onConnection($wss : Object; $event: Object) : Object
+Function onConnection($wss : Object; $event : Object) : Object
 
     If (VerifyAddress($event.request.remoteAddress))
-        // O método VerifyAddress valida o endereço do cliente
-        // O objeto WSConnectionHandler retornado será usado 
-        // por 4D para instanciar o objeto 4D.WebSocketConnection
-        // relacionado a essa conexão
+        // The VerifyAddress method validates the client address
+        // The returned WSConnectionHandler object will be used
+        // by 4D to instantiate the 4D.WebSocketConnection object
+        // related to this connection
         return cs.myConnectionHandler.new()   
-        // Ver objecto connectionHandler
-    Else 
-        // A ligação é cancelada      
-        return Null 
-    End if 
+        // See connectionHandler object
+    Else
+        // The connection is cancelled      
+        return Null
+    End if
 
-Function onOpen($wss : Object; $event: Object)
+Function onOpen($wss : Object; $event : Object)
 LogFile("*** Server started")
 
 Function onTerminate($wss : Object; $event : Object)
@@ -296,28 +295,28 @@ Este exemplo de uma funcionalidade básica de conversação ilustra como tratar 
 // myConnectionHandler Class
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    // Reenviar a mensagem a todos os clientes do chat   
+    // Resend the message to all chat clients
     This.broadcast($ws;$message.data)
 
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
-    // Enviar uma mensagem aos novos utilizadores ligados
-    $ws.send("Welcome on the chat!")    
-    // Enviar a mensagem "Novo cliente ligado" a todos os outros clientes de chat
-    This.broadcast($ws; "Novo cliente ligado")
+    // Send a message to new connected users
+    $ws.send("Welcome on the chat!")
+    // Send "New client connected" message to all other chat clients
+    This.broadcast($ws;"New client connected")
 
 Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
-    // Enviar a mensagem "Cliente desligado" a todos os outros clientes de chat
-    This.broadcast($ws; "Cliente desligado")
+    // Send "Client disconnected" message to all other chat clients
+    This.broadcast($ws;"Client disconnected")
 
 Function broadcast($ws : 4D.WebSocketConnection; $message:text)
     var $client:4D.WebSocketConnection
-    // Reenviar a mensagem a todos os clientes de conversação
+    // Resend the message to all chat clients
     For each ($client; $ws.wss.connections)
-        // Verificar se o id não é a ligação actual
+        // Check that the id is not the current connection
         If ($client.id#$ws.id)
             $client.send($message)
-        End if 
-    End for each 
+        End if
+    End for each
 
 ```
 
@@ -388,21 +387,28 @@ Esta propriedade é só de leitura.
 <!-- REF #WebSocketServerClass.terminate().Desc -->
 ## .terminate()
 
-<!-- REF #WebSocketServerClass.terminate().Syntax -->**.terminate()**<!-- END REF -->
+<!-- REF #WebSocketServerClass.terminate().Syntax -->**.terminate**()<br/>**.terminate**( *timeout* : Integer )<!-- END REF -->
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo    |    | Descrição                                                       |
+| --------- | ------- |:--:| --------------------------------------------------------------- |
+| timeout   | Integer | -> | Waiting time in seconds before terminating the WebSocket server |
+<!-- END REF -->
 
 
 #### Descrição
 
-A função `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->fecha o servidor WebSocket<!-- END REF -->. 
+A função `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->fecha o servidor WebSocket<!-- END REF -->.
+
+By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. When answer received, the socket is destroyed.
+
+If a *timeout* value is set:
+- when the waiting time is reached, forcibly destroys the socket.
+- if *timeout* = 0, forcibly destroys the socket without closing frames or fin packets exchange, and does it instantly without waiting time.
+
+
+
 
 <!-- END REF -->
 
@@ -417,4 +423,3 @@ A propriedade `.terminated` contém <!-- REF #WebSocketServerClass.terminated.Su
 
 Esta propriedade é só de leitura.
 <!-- END REF -->
-

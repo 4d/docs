@@ -9,10 +9,10 @@ title: VP Get default style
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres | Type    |                             | Description                                                                 |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Default style settings                                                      | <!-- END REF --> |
 
 #### Description
@@ -21,7 +21,7 @@ The `VP Get default style` command <!-- REF #_method_.VP Get default style.Summa
 
 In _vpAreaName_, pass the name property of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can define where to get the column count in the optional _sheet_ parameter using the sheet index (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+You can define where to get the column count in the optional _sheet_ parameter using the sheet index (counting begins at 0). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 #### Exemple
 

@@ -149,7 +149,7 @@ Por exemplo, se você quiser que a página inicial padrão seja "MyHome. tm", e 
 
 Se não especificar nenhuma página inicial padrão, o método da base de dados `Conexão Web` é chamado. Cabe-lhe a si processar o pedido de forma processual.
 
-## Activar CORS
+## Ativar CORS
 
 | Pode ser definido com              | Nome                                               | Comentários                                           |
 | ---------------------------------- | -------------------------------------------------- | ----------------------------------------------------- |

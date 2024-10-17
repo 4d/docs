@@ -28,7 +28,7 @@ title: VP INSERT TABLE ROWS
 
 #### Descripción
 
-The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or *count* empty row(s) in the specified *tableName* at the specified *row* index<!-- END REF -->.
+El comando `VP INSERT TABLE ROWS` <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserta una o *count* fila(s) vacía(s) en el *tableName* especificado en el índice *row* especificado<!-- END REF -->.
 
 En el parámetro *insertAfter*, puede pasar una de las siguientes constantes para indicar si la(s) línea(s) debe(n) ser insertada(s) antes o después del índice *row*:
 

@@ -9,25 +9,25 @@ title: VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres | Type    |                             | Description                                                                 |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet options de la feuille                                                 | <!-- END REF --> |
 
 #### Description
 
-The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the *vpAreaName* area<!-- END REF -->.
+La commande `VP Get sheet options` <!-- REF #_method_.VP Obtenir les options de la feuille. ummary -->retourne un objet contenant les options de la feuille courante de la zone *vpAreaName* <!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 #### Objet retourné
 
-La commande retourne un objet contenant les valeurs courantes pour toutes les options de feuille disponibles. An option value may have been modified by the user or by the [VP SET SHEET OPTIONS](vp-set-sheet-options.md) method.
+La commande retourne un objet contenant les valeurs courantes pour toutes les options de feuille disponibles. La valeur d'une option peut avoir été modifiée par l'utilisateur ou par la méthode [VP SET SHEET OPTIONS](vp-set-sheet-options.md).
 
-To view the full list of the options, see [Sheet Options](../configuring.md#sheet-options).
+Pour consulter la liste complète des options, voir [Options feuille](../configuring.md#sheet-options).
 
 #### Exemple
 

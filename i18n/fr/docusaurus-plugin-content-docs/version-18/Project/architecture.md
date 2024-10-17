@@ -9,7 +9,7 @@ Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un 
   - Composants
   - Data
     - Logs
-    - Settings
+    - Propriétés
   - Documentation
   - Plugins
   - Project
@@ -17,7 +17,7 @@ Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un 
     - Sources
     - Trash
   - Resources
-  - Settings
+  - Propriétés
   - userPreferences.username
   - WebFolder
 

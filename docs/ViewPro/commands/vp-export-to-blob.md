@@ -30,7 +30,6 @@ In *paramObj*, you can pass several properties:
 |includeFormulas|Boolean|Whether to include the formula when saving, default=true.|
 |includeStyles|Boolean|Whether to include the style when saving, default=true.|
 |includeUnusedNames|Boolean|Whether to include the unused custom name when saving, default=true.|
-
 |saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 

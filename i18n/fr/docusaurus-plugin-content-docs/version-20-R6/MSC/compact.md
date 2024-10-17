@@ -79,6 +79,6 @@ A noter que cette option ralentit le compactage de façon conséquente et qu’e
 - Le compactage tient compte des enregistrements des tables placées dans la corbeille. La présence d’un grand nombre d’enregistrements dans la corbeille peut constituer un facteur de ralentissement supplémentaire pour l’opération.
 - L'utilisation de cette option rend la table d'adresses, et donc la base de données, incompatibles avec le fichier d'historique courant (s'il en existe un). Il sera automatiquement sauvegardé et un nouveau fichier d'historique devra être créé au prochain lancement de l'application.
 - Vous pouvez déterminer si la table d'adresses a besoin d'être compactée en comparant sa taille avec le nombre total d'enregistrements dans la Page [Informations](information.md) du CSM.
-- The [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) command automatically resets the address table for the specified table.
+- La commande [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) réinitialise automatiquement la table d'adresse pour la table spécifiée.
 
 :::

@@ -68,9 +68,9 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                               |
-| --------- | ------ | :-: | --------------------------------------- |
-| state     | string |  -> | Name of state to enable on the web form |
+| Parâmetro | Tipo   |     | Descrição                                      |
+| --------- | ------ | :-: | ---------------------------------------------- |
+| state     | string |  -> | Nome do estado a ser ativado no formulário Web |
 
 <!-- END REF -->
 
@@ -158,9 +158,9 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 <!-- REF #_command_.Web Form.Params -->
 
-| Parâmetro  | Tipo                       |     | Descrição                   |
-| ---------- | -------------------------- | :-: | --------------------------- |
-| Resultados | 4D.WebForm |  <- | Novo objeto proxy `WebForm` |
+| Parâmetro  | Tipo                       |                             | Descrição                   |
+| ---------- | -------------------------- | :-------------------------: | --------------------------- |
+| Resultados | 4D.WebForm | <- | Novo objeto proxy `WebForm` |
 
 <!-- END REF -->
 
@@ -176,9 +176,9 @@ For more information, please refer to the [`webForm` command description in the 
 
 <!-- REF #_command_.Web Event.Params -->
 
-| Parâmetro  | Tipo   |     | Descrição |
-| ---------- | ------ | :-: | --------- |
-| Resultados | object |  <- | object    |
+| Parâmetro  | Tipo   |                             | Descrição |
+| ---------- | ------ | :-------------------------: | --------- |
+| Resultados | object | <- | object    |
 
 <!-- END REF -->
 

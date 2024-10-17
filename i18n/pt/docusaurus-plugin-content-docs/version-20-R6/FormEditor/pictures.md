@@ -7,11 +7,11 @@ title: Imagens
 
 ## Formatos Nativos Compatíveis
 
-4D integra a gestão nativa dos formatos de imagem. Isso significa que imagens serão mostradas e armazenadas em seu formato original, sem qualquer interpretação em 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. Este soporte nativo es válido para todas las imágenes almacenadas en los formularios de 4D: [imágenes estáticas](FormObjects/staticPicture.md) pegadas en el modo Diseño, imágenes pegadas en [objetos de entrada](FormObjects/input_overview.md) en ejecución,
+4D integra a gestão nativa dos formatos de imagem. Isso significa que imagens serão mostradas e armazenadas em seu formato original, sem qualquer interpretação em 4D. As funcionalidades específicas dos diferentes formatos (sombreado, áreas transparentes, etc.) serão mantidos quando forem copiados e colados, e serão exibidos sem alterações. Esse suporte nativo é válido para todas as imagens armazenadas em formulários 4D: [imagens estáticas](FormObjects/staticPicture.md) coladas no modo Desenho, imagens coladas em [objetos de entrada](FormObjects/input_overview.md) em execução, etc.
 
 Os formatos de imagem mais comuns são compatíveis com ambas as plataformas: .jpeg, .gif, .png, .tiff, .bmp, etc. Em macOS, o formato pdf também está disponível para codificar e decodificar.
 
-> A lista completa dos formatos suportados varia de acordo com o sistema operativo e os codecs personalizados que são instalados nas máquinas. Para saber qué códecs están disponibles, debe utilizar el comando `PICTURE CODEC LIST` (ver también la descripción de [tipo de datos imagen](Concepts/dt_picture.md)).
+> A lista completa dos formatos suportados varia de acordo com o sistema operativo e os codecs personalizados que são instalados nas máquinas. Para descobrir quais codecs estão disponíveis, você deve usar o comando `PICTURE CODEC LIST` (veja também a descrição de [tipo de dados imagem](Concepts/dt_picture.md)).
 
 ### Formato de imagem não disponível
 
@@ -31,9 +31,9 @@ O ícone indica que a imagem não pode ser exibida ou manipulada localmente - ma
 
 ### Factor de escala
 
-As telas de alta resolução têm uma densidade de pixels maior do que as telas padrão tradicionais. Para que las imágenes se muestren correctamente en pantallas de alta resolución, el número de píxeles de la imagen debe multiplicarse por el *factor de escala* (*es decir*, dos veces más grande, tres veces más grande, etc.).
+As telas de alta resolução têm uma densidade de pixels maior do que as telas padrão tradicionais. Para que as imagens sejam renderizadas corretamente em ecrãs de alta resolução, o número de píxeis na imagem deve ser multiplicado pelo *fator de escala* (*ou seja*, duas vezes maior, três vezes maior, etc.).
 
-Cuando se utilizan imágenes de alta resolución, se puede especificar el factor de escala añadiendo "@nx" en el nombre de la imagen (donde *n* designa el factor de escala). En la tabla siguiente, puede ver que el factor de escala se indica en los nombres de las imágenes de alta resolución, *circle@2x.png* y *circle@3x.png*.
+Ao utilizar imagens de alta resolução, pode especificar o fator de escala adicionando "@nx" no nome da imagem (onde *n* designa o fator de escala). En la tabla siguiente, puede ver que el factor de escala se indica en los nombres de las imágenes de alta resolución, *circle@2x.png* y *circle@3x.png*.
 
 | Tipo de exibição     | Fator de Escala                                                         | Exemplo                                                                                                                                                                                         |
 | -------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,45 +42,45 @@ Cuando se utilizan imágenes de alta resolución, se puede especificar el factor
 
 As imagens de alta resolução com a convenção @nx podem ser utilizadas nos seguintes objectos:
 
-- [Static pictures](FormObjects/staticPicture.md)
+- [Imagens estáticas](FormObjects/staticPicture.md)
 - [Botones](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[casillas de selección](FormObjects/checkbox_overview.md)
 - [Botones imagen](FormObjects/pictureButton_overview.md)/[imagen Pop-up](FormObjects/picturePopupMenu_overview.md)
-- [Tab controls](FormObjects/tabControl.md)
-- [List box headers](FormObjects/listbox_overview.md#list-box-headers)
-- [Menu icons](Menus/properties.md#item-icon)
+- [Controles de tabulação](FormObjects/tabControl.md)
+- [Cabeçalhos List box](FormObjects/listbox_overview.md#list-box-headers)
+- [Ícones de menu](Menus/properties.md#item-icon)
 
-4D dá automaticamente prioridade às imagens com a resolução mais alta. Por exemplo, ao usar duas telas (uma de alta resolução e outra padrão) e mover um formulário de uma tela para outra, 4D renderiza automaticamente a resolução mais alta possível da imagem. Incluso si un comando o propiedad especifica *circle.png*, se utilizará *circle@3x.png* (si existe).
+4D dá automaticamente prioridade às imagens com a resolução mais alta. Por exemplo, ao usar duas telas (uma de alta resolução e outra padrão) e mover um formulário de uma tela para outra, 4D renderiza automaticamente a resolução mais alta possível da imagem. Mesmo que um comando ou propriedade especifique *circle.png*, *circle@3x.png* será usado (se existir).
 
 > Note que a priorização da resolução ocorre apenas para a apresentação de imagens no ecrã, não havendo priorização automática durante a impressão.
 
 ### DPI (macOS and Windows)
 
-Aunque 4D prioriza automáticamente la resolución más alta, existen, sin embargo, algunas diferencias de comportamiento en función de los ppp de la pantalla y de la imagen\*(\*)\*, y del formato de la imagen:
+Embora 4D priorize automaticamente a resolução mais alta, há, no entanto, algumas diferenças de comportamento dependendo da tela e da imagem dpi\*(\*)\*, e do formato da imagem:
 
-| Operação                                                                                                                                                                        | Comportamento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Soltar o pegar                                                                                                                                                                  | If the picture has:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels \* screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul> |
-| [Tamaño automático](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (menú contextual del editor de formularios) | If the picture's display format  is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels \* screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul>                                                                                                                                                                                                                                                    |
+| Operação                                                                                                                                                                        | Comportamento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Soltar o pegar                                                                                                                                                                  | Se a imagem tem:<ul><li>**72dpi ou 96dpi** - A imagem é "[Center](FormObjects/properties_Picture. d#center--trunca-não-centralizado)" formatado e o objeto que contém a imagem tem o mesmo número de pixels.</li><li>**Outros dpi** - A imagem é "[Dimensionada para fit](FormObjects/properties_Picture. d#scaled-to-fit)" formatado e o objeto que contém a imagem é igual (número de pixels \* tela dpi) / (imagem dpi)</li> <li>**Sem dpi** - A imagem é "[Escalonado para caber](FormObjects/properties_Picture. d#escaled-to-fit)" formatado.</li></ul> |
+| [Tamanho automático](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (Menu de contexto do Editor de Formulário) | Se o formato de exibição da imagem for:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - O objeto que contém a imagem é redimensionado de acordo com (número de pixels da imagem \* dpi da tela) / (dpi da imagem) </li> <li>**Não dimensionado** - O objeto que contém a imagem tem o mesmo número de pixels que a imagem.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 *(\*) Normalmente, macOS = 72 dpi, Windows = 96 dpi*
 
 ## Imagens em modo escuro (apenas macOS)
 
-Puede definir imágenes e iconos específicos que se utilizarán en lugar de las imágenes estándar cuando [los formularios utilicen el esquema oscuro](properties_FormProperties.md#color-scheme).
+Você pode definir imagens e ícones específicos a serem usados em vez de imagens padrão quando [os formulários usam o esquema escuro] (properties_FormProperties.md#color-scheme).
 
 Uma imagem em modo escuro é definida da seguinte forma:
 
-- la imagen en modo oscuro tiene el mismo nombre que la versión estándar (modo claro) con el sufijo "`_dark`"
+- A imagem do modo escuro tem o mesmo nome da versão padrão (esquema de luz) com o sufixo "`_dark`"
 - a imagem do modo escuro é guardada ao lado da versão padrão.
 
-En tiempo de ejecución, 4D cargará automáticamente la imagen clara u oscura según el [modo de colores de formulario actual](https://doc.4d.com/4dv19/help/command/en/1761.html).
+Em tempo de execução, 4D carregará automaticamente a imagem clara ou escura de acordo com o [esquema de cores do formulário atual] (https://doc.4d.com/4dv19/help/command/en/1761.html).
 
 ![](../assets/en/FormEditor/darkicon.png)
 
 ## Coordenadas do mouse numa imagem
 
-4D lets you retrieve the local coordinates of the mouse in an [input object](FormObjects/input_overview.md) associated with a [picture expression](FormObjects/properties_Object.md#expression-type), in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. Esse mecanismo, similar ao de um mapa de imagens, pode ser utilizado, por exemplo, para manejar barras de botões deslocáveis ou a interface de um software de cartografia.
+4D permite recuperar as coordenadas locais do mouse em um [objeto de entrada](FormObjects/input_overview.md) associado a uma [expressão de imagem](FormObjects/properties_Object. d#expression-type), em caso de um clique ou um mouse, mesmo que um rolagem ou zoom tenha sido aplicado à imagem. Esse mecanismo, similar ao de um mapa de imagens, pode ser utilizado, por exemplo, para manejar barras de botões deslocáveis ou a interface de um software de cartografia.
 
-Las coordenadas se devuelven en las *MouseX* and *MouseY* [Variables Sistema](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). As coordenadas são expressas em píxeis em relação ao canto superior esquerdo da imagem (0,0). Si el ratón está fuera del sistema de coordenadas de la imagen, se devuelve -1 en *MouseX* y *MouseY*.
+The coordinates are returned in the *MouseX* and *MouseY* [System Variables](../Concepts/variables.md#system-variables). As coordenadas são expressas em píxeis em relação ao canto superior esquerdo da imagem (0,0). Se o mouse estiver fora do sistema de coordenadas da imagem, se devolverá -1 em MouseX e MouseY\*.
 
-You can get the value of these variables as part of the [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), or [`On Mouse Move`](Events/onMouseMove.md) form events.
+Você pode obter o valor dessas variáveis como parte do eventos de formulário [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked. d), [`No Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), ou [`On Mouse Move`](Events/onMouseMove.md).

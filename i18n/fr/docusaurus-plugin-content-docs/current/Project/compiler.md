@@ -35,13 +35,13 @@ Double-cliquez sur chaque erreur détectée pour ouvrir la méthode ou la classe
 
 Utilisez les commandes **Erreur précédente** / **Erreur suivante** du menu **Méthode** pour naviguer d'une erreur à l'autre.
 
-Le nombre d'erreurs trouvées lors de vos premières compilations peut être déconcertant, mais ne vous laissez pas décourager. Vous découvrirez rapidement qu'elles proviennent souvent de la même source, à savoir la non-conformité avec certaines conventions du projet. The compiler always provides a [precise diagnosis](#error-file) of the errors in order to help you correct them.
+Le nombre d'erreurs trouvées lors de vos premières compilations peut être déconcertant, mais ne vous laissez pas décourager. Vous découvrirez rapidement qu'elles proviennent souvent de la même source, à savoir la non-conformité avec certaines conventions du projet. Le compilateur fournit toujours un [diagnostic précis](#error-file) des erreurs afin de vous aider à les corriger.
 
 > La compilation nécessite une licence appropriée. Sans cette licence, il n'est pas possible d'effectuer une compilation (les boutons sont désactivés). Néanmoins, il est toujours possible de vérifier la syntaxe et de générer des méthodes de typage.
 
 ## Exécuter la compilation
 
-Une fois le projet compilé, il est possible de passer du [mode interprété au mode compilé](Concepts/interpreted.md), et vice versa, à tout moment et sans avoir à quitter l'application 4D (sauf si le code interprété a été supprimé). To do this, use the **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. La [boîte de dialogue d'ouverture de projet ](GettingStarted/creating.md#options) de 4D permet également de choisir le mode interprété ou compilé au lancement du projet.
+Une fois le projet compilé, il est possible de passer du [mode interprété au mode compilé](Concepts/interpreted.md), et vice versa, à tout moment et sans avoir à quitter l'application 4D (sauf si le code interprété a été supprimé). Pour ce faire, utilisez les commandes **Redémarrer en interprété** et **Redémarrer en compilé** du menu **Exécution**. La [boîte de dialogue d'ouverture de projet ](GettingStarted/creating.md#options) de 4D permet également de choisir le mode interprété ou compilé au lancement du projet.
 
 Lorsque vous passez d'un mode à l'autre, 4D ferme le mode courant et ouvre le nouveau. Cela équivaut à quitter et à rouvrir l'application. Chaque fois que vous passez d'un mode à l'autre, 4D exécute les deux méthodes base suivantes (si elles sont spécifiées) dans cet ordre : `On Exit` -> `On Startup`.
 
@@ -49,7 +49,7 @@ Si vous modifiez votre projet en mode interprété, vous devez le recompiler pou
 
 ## Caractéristiques de la fenêtre du compilateur
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+En plus du bouton [**Compiler**](#compiler), la fenêtre du compilateur fournit des fonctionnalités supplémentaires qui sont utiles pendant la phase de développement du projet.
 
 ### Vérifier la syntaxe
 
@@ -59,19 +59,15 @@ Le contrôle syntaxique peut également être lancé directement à l'aide de la
 
 ### Générer le typage
 
-Le bouton **Générer le typage** crée ou met à jour les méthodes de compilation du typage. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet d'accélérer les durées de compilation.
+:::info Compatibilité
 
-Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le nom par défaut de chacune des 5 méthodes du compilateur dans [la fenêtre des paramètres du compilateur](#compiler-methods-for). Les méthodes de compilation qui sont générées et gérées par 4D ont automatiquement l'attribut `Invisible` :
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
 
-![](../assets/en/Project/compilerWin3.png)
-
-Seules les méthodes de compilation nécessaires (c'est-à-dire celles pour lesquelles des éléments existent déjà dans le projet) sont générées.
-
-La zone d'information indique toute erreur trouvée lors de la création ou de la mise à jour de la méthode. Un double-clic sur une ligne d'erreur entraîne l'affichage de la méthode et de la ligne concernées dans l'éditeur de code.
+:::
 
 ### Effacer le code compilé
 
-Le bouton **Effacer le code compilé** permet de supprimer le code compilé du projet. Lorsque vous cliquez dessus, tout le [code généré lors de la compilation](#classic-compiler) est supprimé, la commande **Restart Compiled** du menu **Run** est désactivée et l'option "Compiled Project" n'est pas disponible au démarrage.
+Le bouton **Effacer le code compilé** permet de supprimer le code compilé du projet. Lorsque vous cliquez dessus, tout le [code généré lors de la compilation](#classic-compiler) est supprimé, la commande **Redémarrer en compilé** du menu **Exécution** est désactivée et l'option "Projet compilé" n'est pas disponible au démarrage.
 
 ### Afficher/masquer les warnings
 
@@ -103,20 +99,6 @@ Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-f
 
 Permet de générer le fichier d'erreurs (voir [fichier d'erreurs](#fichier-derreurs)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](Project/architecture.md#logs) du projet et est nommé `ProjectName_errors.xml`.
 
-#### Chemin de compilation
-
-Permet de définir le nombre de passes (analyse du code) effectuées par le compilateur et donc la durée de la compilation.
-
-- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed.
-
-:::tip
-
-You can use the [Generate Typing](#generate-typing) button then compile with one of the two last options.
-
-:::
-
 #### Cible de compilation
 
 <details><summary>Historique</summary>
@@ -141,26 +123,32 @@ Deux options de cible sont proposées. Le résultat dépend du processeur de la 
 
 > La cible de compilation Apple Silicon nécessite que l'application **Clang** soit installée sur votre machine. Clang est fournie avec la dernière version de Xcode. Voir les [pré-requis du compilateur Silicon](#requirements) pour plus d'informations.
 
-### Typage par défaut
+### Additional options (Compatibility)
 
-Utilisez cette zone pour définir le type par défaut pour les objets de base de données ambigus.
+In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **Numérique** : Permet de forcer le typage numérique de manière non ambiguë, soit en Réel, soit en Entier long. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Vous pouvez optimiser le fonctionnement de votre base de données en choisissant le type Entier long.
-- **Bouton** : Utilisé pour forcer le typage d'un bouton de manière non ambiguë, soit en Réel, soit en Entier long. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Ce type s'applique aux boutons ainsi qu'aux cases à cocher, aux boutons image, aux grilles de boutons, aux pop-up menus image et aux listes déroulantes.
+- **Compilation Path**
+- **Default typing**
+- **Compiler Methods for...**
 
-### Méthodes Compilateur pour...
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 
-Cette zone vous permet de renommer les méthodes du compilateur qui sont générées automatiquement par le compilateur lorsque vous cliquez sur [Générer le typage](#générer-le-typage).
+In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de compilateur n'est générée que si le projet contient les éléments suivants :
+- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
-- **Variables** : Regroupe les déclarations de variables process ;
-- **Variables interprocess** : Regroupe les déclarations de variables interprocess ;
-- **Tableaux** : Regroupe les déclarations de tableaux de process ;
-- **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
-- **Methods**: Groups together method parameter declarations (e.g `C_LONGINT(mymethod;$1;$2)`) for [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+#### Enabling direct typing
 
-Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées de l'étiquette `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
+:::info
+
+The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+
+:::
+
+Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+
+Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
 
 ## Warnings
 
@@ -233,7 +221,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Fichier de symboles
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Il est divisé en plusieurs parties :
+Si vous cochez l'option [**Générer le fichier de symboles**](#generate-the-symbol-file) dans les paramètres du compilateur, un fichier de symboles appelé `ProjectName_symbols.txt` est créé dans le dossier [Logs](architecture.md#logs) du projet pendant la compilation. Il est divisé en plusieurs parties :
 
 #### Liste des variables process et interprocess
 
@@ -281,7 +269,7 @@ type résultat, nombre d'appels, Thread Safe ou Thread Unsafe
 
 ### Fichier d’erreurs
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. Le fichier d'erreur est automatiquement nommé `projectName_errors.xml` et est placé dans le [dossier Logs](Project/architecture.md#logs) du projet.
+Vous pouvez choisir de générer ou non un fichier d'erreurs lors de la compilation en utilisant l'option [**Générer le fichier d'erreur**](#generate-error-file) dans les paramètres du compilateur. Le fichier d'erreur est automatiquement nommé `projectName_errors.xml` et est placé dans le [dossier Logs](Project/architecture.md#logs) du projet.
 
 Bien que les erreurs soient directement accessibles via la [fenêtre de compilation](#compilation), il peut être intéressant de disposer d’un fichier d’erreurs qu’il est alors possible de transmettre d’un poste à l’autre. Le fichier d’erreurs est généré au format XML afin de faciliter l’analyse automatique de son contenu. Il permet également la création d’interfaces personnalisées de présentation des erreurs.
 
@@ -318,11 +306,11 @@ Dans certains cas, vous pouvez souhaiter que le contrôle d’exécution ne s’
 Pour cela, vous devez encadrer le code à exclure du contrôle d’exécution avec les commentaires spéciaux `//%R-` et `//%R+`. Le commentaire `//%R-` désactive le contrôle d’exécution et `//%R+` le réactive :
 
 ```4d
-  // %R-   to disable range checking
+  // %R-  pour désactiver le contrôle d'exécution
  
- ... //Place the code to be excluded from range checking here
+ ... //Placez ici le code exclus du contrôle d'exécution
  
-  // %R+   to enable range checking again for the rest
+  // %R+  pour réactiver le contrôle d'exécution pour la suite de la méthode
 ```
 
 ## A propos des compilateurs
@@ -362,7 +350,7 @@ Le code compilé qui en résulte est stocké dans le dossier [Libraries](archite
   - **Si vous avez déjà installé** Xcode ou Developer Tools sur votre ordinateur, vous devez juste vous assurer que sa version est conforme aux spécifications de 4D.
   - **Si vous n'avez pas déjà installé** l'un de ces outils sur votre machine, il vous sera nécessaire d'en télécharger un depuis le site web Apple Developer.
 
-> Nois recommandons **Xcode**, qui est plus simple à installer. Il est tout à fait possible d'installer **Developer Tools** qui est plus compact, mais son installation est un peu plus complexe.
+> Nous recommandons **Xcode**, qui est plus simple à installer. Il est tout à fait possible d'installer **Developer Tools** qui est plus compact, mais son installation est un peu plus complexe.
 
 Dans tous les cas, le compilateur Silicon de 4D vous avertira si votre configuration ne correspond pas aux conditions requises.
 

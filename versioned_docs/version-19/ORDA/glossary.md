@@ -18,7 +18,7 @@ An attribute is the smallest storage cell in a relational database (see also [Re
 
 ## AttributePath  
 
-An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
+An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertypath).
 
 ## Class code
 

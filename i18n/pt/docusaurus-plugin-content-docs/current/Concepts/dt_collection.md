@@ -46,7 +46,7 @@ As coleções devem ter sido inicializadas, por exemplo utilizando o comando <co
 
 A instanciação da colecção pode ser feita de uma das seguintes formas:
 
-- usando o comando [`New collection`](../API/CollectionClass.md#new-collection),
+- using the [`New collection`](../command/new-collection.md) command,
 - utilizando o operador [].
 
 :::info
@@ -57,7 +57,7 @@ Vários comandos 4D e coleções de retorno de funções, por exemplo [`Obter At
 
 ### Comando `New object`
 
-O comando [`Nova coleção`](../API/CollectionClass.md#new-collection) cria uma nova coleção vazia ou pré-preenchida e retorna sua referência.
+The [`New collection`](../command/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
 
 Exemplos:
 
@@ -105,8 +105,8 @@ Se você criar um literal de coleção contendo um único elemento, certifique-s
 
 Pode criar dois tipos de coleções:
 
-- coleções regulares (não compartilhadas), usando o comando [`New collection`] (API/CollectionClass.md#new-collection) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- coleções compartilhadas, usando o comando [`New shared collection`] (API/CollectionClass.md#new-shared-collection). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`] (Concepts/shared.md#useend-use).
+- regular (non-shared) collections, using the [`New collection`](command/new-collection.md) command or collection literal syntax (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- shared collections, using the [`New shared collection`](command/new-shared-collection.md) command. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`] (Concepts/shared.md#useend-use).
 
 Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
 
@@ -142,7 +142,7 @@ Várias funções aceitam um _propriedadePath_ como parâmetro. Este parâmetro 
  $vmin:=$col.min(["My.special.property"]) //erro
 ```
 
-## Collection operators
+## Operadores em coleções
 
 You can use comparison operators with **collection references**, which means that you can evaluate if two or more references point to the same instance of a collection.
 

@@ -9,12 +9,12 @@ Um subformulário é um formulário incluído noutro formulário.
 
 Para definir claramente os conceitos implementados com subformulários, aqui estão algumas definições para certos termos utilizados:
 
-- **Subformulario**: un formulario destinado a ser incluido en otro formulario, llamado a su vez formulario padre.
-- **Formulario padre**: un formulario que contiene uno o más subformularios.
-- **Contenedor de subformulario**: un objeto incluido en el formulario padre, que muestra una instancia del subformulario.
-- **Instancia de subformulario**: la representación de un subformulario en un formulario padre. Esse conceito é importante porque é possível exibir várias instâncias do mesmo subformulário em um formulário pai.
-- **Formulario listado**: instancia de subformulario mostrada como una lista.
-- **Formulario detallado**: formulario de entrada tipo página asociado a un subformulario tipo lista al que se accede haciendo doble clic en la lista.
+- **Subformulário**: um formulário destinado a ser incluído em outro formulário, ele próprio chamado formulário pai.
+- **Formulário pai**: um formulário que contém um ou mais subformulários.
+- **Contêiner de subformulário**: um objeto incluído no formulário pai, que exibe uma instância do subformulário.
+- **Instância de subformulário**: a representação de um subformulário em um formulário pai. Esse conceito é importante porque é possível exibir várias instâncias do mesmo subformulário em um formulário pai.
+- **Formulário lista**: instância do subformulário exibido como uma lista.
+- **Formulário detalhado**: formulário de entrada do tipo página associado a um subformulário do tipo lista que pode ser acessado com um clique duplo na lista.
 
 ## Sub formulários lista
 
@@ -27,36 +27,36 @@ Embora os subformulários de lista geralmente estejam associados a muitas tabela
 Também é possível permitir que o usuário introduza dados no formulário Lista.
 Dependendo da configuração do subformulário, o usuário pode exibir o formulário detalhado clicando duas vezes em um subregistro ou usando os comandos para adicionar e editar subregistros.
 
-> 4D ofrece tres acciones estándar para satisfacer las necesidades básicas de gestión de los subregistros: `Edit Subrecord`, `Delete Subrecord` y `Add Subrecord`. Quando o formulário incluir várias instâncias de subformulários, a ação será aplicada ao subformulário que tiver o foco.
+> 4D oferece três ações padrão para atender às necessidades básicas de gerenciamento de sub-registros: `Edit Subrecord`, `Delete Subrecord`, e `Add Subrecord`. Quando o formulário incluir várias instâncias de subformulários, a ação será aplicada ao subformulário que tiver o foco.
 
 ## Subformulários em página
 
 Os subformulários de página podem exibir os dados do subregistro atual ou qualquer tipo de valor pertinente, dependendo do contexto (variáveis, figuras etc.). Uma das principais vantagens do uso de subformulários de página é que eles podem incluir funcionalidades avançadas e interagir diretamente com o formulário pai (widgets). Os subformulários de página também têm suas próprias propriedades e eventos específicos; você pode gerenciá-los inteiramente por meio de programação.
 
-El subformulario en página utiliza el formulario de entrada indicado por la propiedad [Formulario detallado](properties_Subform.md#detail-form). Ao contrário de um subformulário de lista, o formulário usado pode vir da mesma tabela que o formulário pai. Também é possível usar um formulário de projeto. Quando executado, um subformulário de página tem as mesmas características de exibição padrão de um formulário de entrada.
+O subformulário na página utiliza o formulário de entrada indicado pela propriedade [Formulário detalhado](properties_Subform.md#detail-form). Ao contrário de um subformulário de lista, o formulário usado pode vir da mesma tabela que o formulário pai. Também é possível usar um formulário de projeto. Quando executado, um subformulário de página tem as mesmas características de exibição padrão de um formulário de entrada.
 
-> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. Se describen detalladamente en un manual aparte, [4D Widgets](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html).
+> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. Eles são descritos em detalhes em um manual separado, [Widgets 4D](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html).
 
 ### Utilizar a variável ou expressão ligada
 
-Puede vincular [una variable o una expresión](properties_Object.md#variable-or-expression) a un objeto contenedor de subformulario. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários.
+Você pode vincular [uma variável ou uma expressão](properties_Object.md#variable-or-expression) a um objeto de contêiner de subformulação. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários.
 
-By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command ([see below](#using-the-subform-bound-object)). However, you can use a variable or expression of any scalar type (time, integer, etc.) especially if you only need to share a single value:
+Por padrão, 4D cria uma variável ou expressão de [tipo de objeto](properties_Object.md#expression-type) para um contêiner de subformulário, que lhe permite compartilhar valores no contexto do subformulário usando o comando `Form` ([veja abaixo](#using-the-subform-bound-object)). No entanto, você pode usar uma variável ou expressão de qualquer tipo escalar (tempo, inteiro, etc.) especialmente se você só precisa compartilhar um único valor:
 
-- Define a bound variable or expression of a scalar type and call the `OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands to exchange values when [On Bound Variable Change](../Events/onBoundVariableChange.md) or [On Data Change](../Events/onDataChange.md) form events occur. Esta solução é recomendada para sincronizar um único valor.
+- Defina uma variável vinculada ou expressão de um tipo escalar e chame os comandos `OBJECT Get subform container value` e `OBJETO SET SUBFORM CONTAINADOR VALUE` para trocar valores quando ocorreram eventos os eventos [On Bound Variable Change](../Events/onBoundVariableChange.md) ou [On Data Change](../Events/onDataChange.md). Esta solução é recomendada para sincronizar um único valor.
 - Defina una variable o expresión vinculada del tipo **objecto** y utilice el comando `Form` para acceder a sus propiedades desde el subformulario. Esta solução é recomendada para sincronizar vários valores.
 
 ### Sincronização do formulário principal e do subformulário (valor único)
 
-A vinculação da mesma variável ou expressão ao contêiner do subformulário e a outros objetos do formulário pai permite vincular os contextos do formulário pai e do subformulário para dar os toques finais em interfaces sofisticadas. Imagine un subformulario que contiene un reloj que muestra una hora estática, insertado en un formulario padre que contiene un [área de entrada](input_overview.md):
+A vinculação da mesma variável ou expressão ao contêiner do subformulário e a outros objetos do formulário pai permite vincular os contextos do formulário pai e do subformulário para dar os toques finais em interfaces sofisticadas. Imagine um subformulário que contém um relógio que exibe uma hora estática, inserido em um formulário pai que contém uma[ área de entrada](input_overview.md):
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) **tienen el mismo valor que _Variable o Expresión_**. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
+No formulário pai, ambos os objetos (área de entrada e contêiner de subformulário) **possuem o mesmo valor que _Variável ou Expressão_**. Pode ser uma variável (ex: `parisTime`), ou uma expressão (ex: `Form.parisTime`).
 
 :::info
 
-Para mostrar una hora estática, debe utilizar el [tipo de datos](properties_DataSource.md#data-type-expression-type) apropiado para la [variable o la expresión](properties_Object.md#variable-or-expression):
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
 - Si utiliza una variable (por ejemplo, `parisTime`), debe ser del tipo `texto` o `tiempo`.
 - Si utiliza una expresión (por ejemplo, `Form.myValue`), debe contener un valor `texto`.

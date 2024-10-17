@@ -15,7 +15,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Se quiser excluir uma ou mais entidades, você pode usar [`$method=delete`]($method.md#methoddelete).
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
@@ -29,7 +29,7 @@ Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$l
 
 Un conjunto de entidades (también conocido como _selección de entidades_) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
 
-To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
+Para criar um conjunto de entidades, chame [`$method=entityset`]($method.md#methodentityset) em sua solicitação REST. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
 To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
 
@@ -45,13 +45,13 @@ Qualquer entidade que apagar não será mais parte do conjunto de entidades. How
 
 Se o conjunto de entidades não existir mais no cache 4D Server, será recriada com um novo timeout padrão de 10 minutos. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
 
-Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
+Usando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
 ## Calcular dados
 
-By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. Pode também computar todos os valores com a palavra chave $all.
+Ao usar [`$compute`]($compute.md), você pode calcular **average**, **count**, **min**, **max**, ou **sum** de um atributo específico em uma dataclass. Pode também computar todos os valores com a palavra chave $all.
 
 Por exemplo, para obter o maior salário:
 

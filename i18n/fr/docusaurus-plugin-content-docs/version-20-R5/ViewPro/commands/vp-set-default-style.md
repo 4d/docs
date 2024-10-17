@@ -19,7 +19,7 @@ title: VP SET DEFAULT STYLE
 
 The `VP SET DEFAULT STYLE` command <!-- REF #_method_.VP SET DEFAULT STYLE.Summary -->defines the style in the _styleObj_ as the default style for a _sheet_<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 The _styleObj_ lets you pass an object containing style settings. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. For more information, see the [Style objects](../configuring.md#style-objects) paragraph.
 

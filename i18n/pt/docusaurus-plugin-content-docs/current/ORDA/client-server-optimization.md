@@ -12,15 +12,15 @@ title: Otimização cliente/servidor
 
 ORDA client/server architectures that support the optimization are:
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
-- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests).
+- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
+- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
 
 ## Contexto de otimização
 
 O contexto de otimização é baseado nas seguintes implementações:
 
 - Quando um cliente solicita uma seleção de entidade do servidor, 4D "aprende" automaticamente quais atributos da seleção de entidade são realmente usados no lado do cliente durante a execução do código e constrói um "contexto de otimização" correspondente. Esse contexto é anexado à seleção da entidade e armazena os atributos usados. Será atualizado dinamicamente se outros atributos forem usados depois. Os seguintes métodos e funções accionam a fase de aprendizagem:
-  - [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
+  - [`Create entity selection`](../commands/create-entity-selection.md)
   - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   - [`dataClass.all()`](../API/DataClassClass.md#all)
   - [`dataClass.get()`](../API/DataClassClass.md#get)
@@ -43,7 +43,7 @@ O contexto de otimização é baseado nas seguintes implementações:
 
 :::note Nota de compatibilidade
 
-Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
+Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
 
 :::
 
@@ -62,7 +62,7 @@ Thanks to the optimization, this request will only get data from used attributes
 
 ### Reutilizando a propriedade `context`
 
-You can increase the benefits of the optimization by using the **context** property. Essa propriedade faz referência a um contexto de otimização "aprendido" para uma seleção de entidade. Ele pode ser passado como parâmetro para funções ORDA que retornam novas seleções de entidades, de modo que as seleções de entidades solicitem diretamente os atributos usados ao servidor e ignorem a fase de aprendizado.
+Você pode aumentar os benefícios da otimização usando a propriedade **context**. Essa propriedade faz referência a um contexto de otimização "aprendido" para uma seleção de entidade. Ele pode ser passado como parâmetro para funções ORDA que retornam novas seleções de entidades, de modo que as seleções de entidades solicitem diretamente os atributos usados ao servidor e ignorem a fase de aprendizado.
 
 > You can also create contexts using the [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function.
 

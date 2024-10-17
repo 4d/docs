@@ -29,7 +29,7 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 
 4D prend en charge des images haute résolution sur les plateformes macOS et Windows. Les images haute résolution peuvent être définies par le facteur d'échelle ou le dpi.
 
-### Facteur d'échelle (macOS uniquement)
+### Facteur d'échelle
 
 Les écrans haute résolution ont une densité de pixels plus élevée que les écrans standard traditionnels. Pour que les images s'affichent correctement sur des écrans haute résolution, le nombre de pixels de l'image doit être multiplié par le *facteur d'échelle* (c'est-à-dire deux fois plus grand, trois fois plus grand, etc.).
 
@@ -49,17 +49,17 @@ Les images haute résolution avec la convention @nx peuvent être utilisées dan
 * [En-têtes de list box](FormObjects/listbox_overview.md#list-box-headers)
 * [Icônes de menu](Menus/properties.md#item-icon)
 
-4D priorise automatiquement les images avec la résolution la plus élevée. <br/><br/> **Exemple** : lorsque vous utilisez deux écrans (un écran haute résolution, un écran standard) et que vous déplacez un formulaire d'un écran à un autre, 4D restitue automatiquement la résolution la plus élevée possible de l'image. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).
+4D priorise automatiquement les images avec la résolution la plus élevée. 4D priorise automatiquement les images avec la résolution la plus élevée. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).
 > A noter que cette résolution se produit uniquement pour l'affichage des images à l'écran, aucune hiérarchisation automatique n'est effectuée lors de l'impression.
 
-### DPI (macOs et Windows)
+### DPI
 
 Si 4D donne automatiquement la priorité à la résolution la plus élevée, il existe cependant des différences de comportement en fonction de la résolution de l'écran et de l'image *(\*)* et du format de l'image :
 
 | Opération                                                                                                                                                       | Comportement                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | Déposer ou Coller                                                                                                                                               | Si l'image est de :<ul><li>**72dpi ou 96dpi** - L'image est "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatée et l'objet contenant l'image contient le même nombre de pixels.</li><li>**Autre dpi** - L'image est formatée "[Mise à l'échelle](FormObjects/properties_Picture.md#scaled-to-fit)" et l'objet contenant l'image est égal à (nombre de pixels de l'image * dpi de l'écran) / (depi de l'image)</li> <li>**Pas de dpi** - L'image est formatée "[Mise à l'échelle](FormObjects/properties_Picture.md#scaled-to-fit)".</li></ul>                       |
-| [Taille automatique](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (menu contextuel de l'éditeur de formulaires) | Si le format d'affichage de l'image est :<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - L'objet contenant l'image est redimensionné en fonction de (nombre de pixels de l'image * dpi écran) / (dpi de l'image) </li> <li>**Non mis à l'échelle** - L'objet contenant l'image a le même nombre de pixels que l'image.</li></ul> |
+| [Taille automatique](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (menu contextuel de l'éditeur de formulaires) | Si le format d'affichage de l'image est :<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - L'objet contenant l'image est redimensionné en fonction de (nombre de pixels de l'image * dpi écran) / (dpi de l'image) </li> <li>**Non mis à l'échelle** - L'objet contenant l'image a le même nombre de pixels que l'image.</li></ul> |
 
 *(\*) Généralement, macOS = 72 dpi, Windows = 96 dpi*
 
@@ -80,6 +80,6 @@ Au moment de l'exécution, 4D charge automatiquement l'image en mode clair ou so
 
 4D vous permet de récupérer les coordonnées locales de la souris dans un [objet de saisie](FormObjects/input_overview.md) associé à une [expression d'image](FormObjects/properties_Object.md#expression-type), en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie.
 
-Les coordonnées sont retournées dans les [Variables système](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html) *MouseX* et *MouseY*. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*.
+The coordinates are returned in the *MouseX* and *MouseY* [System Variables](../Concepts/variables.md#system-variables). Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*.
 
 Vous pouvez lire la valeur des variables des événements formulaire [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), ou [`On Mouse Move`](Events/onMouseMove.md).

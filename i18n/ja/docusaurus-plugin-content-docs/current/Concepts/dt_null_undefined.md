@@ -115,24 +115,24 @@ var $text : Text
 
 ## 未定義演算子
 
-| 演算  | シンタックス                                             | 戻り値     | 式                                                                   | 値     |
-| --- | -------------------------------------------------- | ------- | ------------------------------------------------------------------- | ----- |
-| 等しい | Undefined `=` Undefined                            | Boolean | a.undefinedProp `=` b.undefinedProp | true  |
-|     | Undefined `=` Null                                 | Boolean | a.undefinedProp `=` c.nullProp      | true  |
-|     | Undefined `=` _その他の値_                              | Boolean | a.undefinedProp `=` 42                              | false |
-| 異なる | Undefined `#` Undefined                            | Boolean | a.undefinedProp `#` b.undefinedProp | false |
-|     | Undefined `#` Null                                 | Boolean | a.undefinedProp `#` b.nullProp      | false |
-|     | Undefined `#` _その他の値_                              | Boolean | a.undefinedProp `#` 42                              | true  |
-| 大きい | Undefined `>` String, Date, Time, Boolean, Number  | Boolean | a.undefinedProp `>` "abc"                           | false |
-| 小さい | Undefined `<` String, Date, Time, Boolean, Number  | Boolean | a.undefinedProp `<` "abc"                           | false |
-| 以上  | Undefined `>=` String, Date, Time, Boolean, Number | Boolean | a.undefinedProp `>=` "abc"                          | false |
-| 以下  | Undefined `<=` String, Date, Time, Boolean, Number | Boolean | a.undefinedProp `<=` "abc"                          | false |
+| 演算  | シンタックス                                    | 戻り値     | 式                                                                   | 値     |
+| --- | ----------------------------------------- | ------- | ------------------------------------------------------------------- | ----- |
+| 等しい | Undefined `=` Undefined                   | Boolean | a.undefinedProp `=` b.undefinedProp | true  |
+|     | Undefined `=` Null                        | Boolean | a.undefinedProp `=` c.nullProp      | true  |
+|     | Undefined `=` _その他の値_                     | Boolean | a.undefinedProp `=` 42                              | false |
+| 異なる | Undefined `#` Undefined                   | Boolean | a.undefinedProp `#` b.undefinedProp | false |
+|     | Undefined `#` Null                        | Boolean | a.undefinedProp `#` b.nullProp      | false |
+|     | Undefined `#` _その他の値_                     | Boolean | a.undefinedProp `#` 42                              | true  |
+| 大きい | Undefined `>` string, Date, Time, number  | Boolean | a.undefinedProp `>` "abc"                           | false |
+| 小さい | Undefined `<` string, Date, Time, number  | Boolean | a.undefinedProp `<` "abc"                           | false |
+| 以上  | Undefined `>=` string, Date, Time, number | Boolean | a.undefinedProp `>=` "abc"                          | false |
+| 以下  | Undefined `<=` string, Date, Time, number | Boolean | a.undefinedProp `<=` "abc"                          | false |
 
 _その他の値_ は、未定義でも Null でもない値を持つ任意の型の式です。
 
 :::info
 
-大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による未定義値の比較は、ポインター、ピクチャー、BLOB、オブジェクト、コレクション、未定義値または Null値に対応しておらず、エラーが返されます。
+大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による未定義値の比較は、ポインター、ピクチャー、ブール、BLOB、オブジェクト、コレクション、未定義値または Null値に対応しておらず、エラーが返されます。
 
 :::
 

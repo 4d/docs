@@ -241,7 +241,7 @@ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンテ
 
 - [データクラス](API/DataClassClass.md#query) または [既存のエンティティセレクション](API/EntitySelectionClass.md#query) のエンティティに対してクエリを実行する;
 - [`.all()`](API/DataClassClass.md#all) DataClassクラス関数を使用して、データクラス内の全エンティティを選択する;
-- [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) コマンドあるいは [`.newSelection()`](API/DataClassClass.md#newselection) DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;
+- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
 - [`.copy()`](API/EntitySelectionClass.md#copy) EntitySelectionクラス関数を使用して、既存のエンティティセレクションを複製する;
 - [EntitySelectionクラス](API/EntitySelectionClass.md) の様々な関数の中から、[`.or()`](API/EntitySelectionClass.md#or) のように新しいエンティティセレクションを返すものを使用する;
 - "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
@@ -269,7 +269,7 @@ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンテ
 **共有可能** なエンティティセレクションは以下のような特徴を持ちます:
 
 - 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で引数として受け渡しすることができます。
-- 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、_ロック識別子_ を持っていないということです)。
+- 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です。
 - 新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、[`.add()`](API/EntitySelectionClass.md#add) 関数を呼び出す前に、[`.copy()`](API/EntitySelectionClass.md#copy) 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。
 
 > 大多数のエンティティセレクション関数 ([`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and) 等)  は、呼び出し対象のエンティティセレクションを変更せずに新規のエンティティセレクションを返すため、共有可能なエンティティセレクションに対して使用できます。
@@ -312,7 +312,7 @@ $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 
 新規のエンティティセレクションは次の場合に、元となるエンティティセレクションの特性を **継承** します:
 
-- 既存のエンティティセレクションに対して呼び出された ORDAクラス関数 ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), 等) によって生成された場合 。
+- 既存のエンティティセレクションに対して呼び出された ORDAクラス関数 ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), 等) によって生成された場合 .
 - リレーションに基づいて生成された場合:
   - [entity._attributeName_](API/EntityClass.md#attributename) (例: "company.employees") の _attributeName_ が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 ([entity.getSelection()](API/EntityClass.md#getselection) エンティティセレクションと同じ特性になります)。
   - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (例: "employees.employer") の _attributeName_ がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。
@@ -535,7 +535,7 @@ Function event restrict() : cs.CustomersSelection
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                    |
 | [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | _attributeName_ が、制限されたデータクラスのリレートエンティティまたはリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                        |
 | [entity.attributeName](../API/EntityClass.md#attributename)                              | _attributeName_ が、制限されたデータクラスのリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                                     |
-| [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)                        |                                                                                                                                                                    |
+| [Create entity selection](../commands/create-entity-selection.md)                                        |                                                                                                                                                                    |
 
 その他の ORDA関数によるデータアクセスはフィルターを直接的にトリガーしないものの、その恩恵を受けることがあります。 たとえば、[`entity.next()`](../API/EntityClass.md#next) 関数は、すでにフィルタリングされたエンティティセレクションにおける次のエンティティを返します。 一方、制限されていないエンティティセレクションの場合、[`entity.next()`](../API/EntityClass.md#next) はフィルタリングされていないエンティティ群に対して動作します。
 

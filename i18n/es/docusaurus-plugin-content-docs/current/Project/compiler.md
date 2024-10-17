@@ -49,7 +49,7 @@ Si modifica su proyecto en modo interpretado, debe recompilarlo para que sus mod
 
 ## Características de la ventana del compilador
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+Además del [botón **Compilar**](#compile), la ventana Compilador ofrece otras funcionalidades útiles durante la fase de desarrollo del proyecto.
 
 ### Verificar la sintaxis
 
@@ -59,15 +59,11 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Declarar tipos
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
+:::info Compatibilidad
 
-El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
 
-![](../assets/en/Project/compilerWin3.png)
-
-Sólo se generan los métodos de compilación necesarios (es decir, aquellos para los que ya existen elementos en el proyecto).
-
-El área de información indica todo error encontrado durante la creación o actualización del método. Hacer doble clic en una línea de error provoca que el método y la línea en cuestión se muestren en el editor de código.
+:::
 
 ### Eliminar el código de compilación
 
@@ -87,7 +83,7 @@ Al hacer doble clic en un aviso se abre el método correspondiente.
 
 ## Parámetros del compilador
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
+La pestaña "Compilador" de la caja de diálogo Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -102,20 +98,6 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 #### Generar archivo de errores
 
 Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
-
-#### Ruta de compilación
-
-Permite definir el número de pases (análisis de código) que realiza el compilador y, por tanto, la duración de la compilación.
-
-- **Declare las variables**: marque esta opción si quiere que el compilador infiera el tipo de variables y parámetros en su código. Esta opción requiere que el compilador realice todas las etapas que hacen posible la compilación, lo que aumenta la duración de la compilación.
-- **Las variables proceso e interproceso se declaran**: el paso para declarar variables proceso e interproceso así como parámetros de método declarados fuera de prototipos no se realiza. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
-- **Todas las variables están declaradas**: no se realiza el paso para declarar variables locales, proceso e interproceso, así como parámetros de método declarados fuera de prototipos. Utilice esta opción cuando esté seguro de que todas las variables locales, proceso e interproceso, así como los parámetros de los métodos, han sido claramente declarados.
-
-:::tip
-
-Puede utilizar el botón [Generar declaración](#generate-typing) y luego compilar con una de las dos últimas opciones.
-
-:::
 
 #### Objetivo de compilación
 
@@ -141,40 +123,46 @@ Se proponen dos opciones de objetivo. El resultado depende del procesador de la 
 
 > El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang viene con la última versión de Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
 
-### Declaración de tipos por defecto
+### Opciones adicionales (Compatibilidad)
 
-Utilice este área para definir el tipo por defecto para los objetos de base de datos ambiguos.
+In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **Numérico**: se utiliza para forzar un tipo numérico de manera no ambigua, bien sea real o entero largo. Esto no anulará las directivas que haya establecido en su proyecto. Puede optimizar el funcionamiento de su base de datos eligiendo el tipo Longint.
-- **Botón**: se utiliza para forzar el tecleo de un botón de manera no ambigua, ya sea Real o Entero largo. Esto no anulará las directivas que haya establecido en su proyecto. Este tipo se aplica a los botones y a las casillas de selección, a los botones imagen, a las rejillas de botones, a los botones radio, a los menús pop-up imagen y a las listas desplegables.
+- **Ruta de compilación**
+- **Declaración de tipos por defecto**
+- **Métodos Compilador para...**
 
-### Métodos Compilador para...
+Estas opciones solo se mantienen por compatibilidad con código antiguo. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 
-Esta área le permite renombrar los métodos del compilador que son generados automáticamente por el compilador cuando hace clic en [Declarar tipos](#generate-typing).
+In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-Se pueden generar hasta 5 métodos de compilación; un método de compilación sólo se genera si el proyecto contiene los siguientes elementos:
+- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
-- **Variables**: agrupa las declaraciones de variables proceso;
-- **Variables interproceso**: agrupa las declaraciones de variables interproceso;
-- **Arrays**: agrupa las declaraciones de arrays de proceso;
-- **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Para más información, ver [método `Compiler_Methods`](../Concepts/parameters.md#compiler_methods-method).
+#### Enabling direct typing
 
-Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
+:::info
+
+El modo de escritura directa es opcional sólo en proyectos convertidos. Se utiliza nativamente en proyectos creados con 4D 20 R7 y superiores.
+
+:::
+
+Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+
+Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
 
 ## Advertencias
 
 Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
 
-Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. Puede activar o desactivar las advertencias, en el diálogo del compilador, y en los editores de código (editor de código 4D y VS Code), de forma global a través de la [pestaña advertencias](#pestaña-advertencias) o localmente usando [`//%W`](#desactivar-y-activar-las-advertencias-localmente).
 
-### Warnings tab
+### Pestaña Advertencias
 
 ![](../assets/en/Project/warnings-tab.png)
 
 Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. De la lista de todas las advertencias posibles con sus tipos, su código y su etiqueta localizada, ordenadas por código de advertencia.
 
-To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+Para reducir la lista, puede buscar palabras por etiquetas de advertencia y códigos utilizandola caja de texto **Buscar en códigos y etiquetas** o el icono de la lupa de la izquierda.
 
 Por defecto, todos los tipos de advertencia están marcados y activados.
 
@@ -182,7 +170,7 @@ Cuando se modifica el estado de visualización de una advertencia, la informaci�
 
 El botón **Restablecer parámetros de fábrica** define todas las casillas de verificación de estado de visualización de advertencias en los valores predeterminados y borra el archivo "warnings.json".
 
-### Disabling and enabling warnings locally
+### Desactivar y activar advertencias localmente
 
 Puede controlar las advertencias en partes específicas de su código utilizando comentarios especiales para desactivarlas o activarlas.
 
@@ -225,7 +213,7 @@ _1: Redefinición de la variable $a (550.10)_
 
 :::note
 
-The special warnings comments have priority over the warnings display settings set in the warning tab.
+Los comentarios de advertencias especiales tienen prioridad sobre la configuración de la pantalla de advertencias definida en la pestaña de advertencias.
 
 :::
 
@@ -233,7 +221,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Archivo Symbol
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
+Si activa la opción [**Generar el archivo de símbolos**](#generate-the-symbol-file) en la configuración del compilador, se creará un archivo de símbolos llamado `ProjectName_symbols.txt` en la [carpeta Logs](Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 

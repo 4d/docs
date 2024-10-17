@@ -48,13 +48,13 @@ var myPerson : cs.Person
 //variable de la clase usuario Person
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
+Aunque no se suele recomendar, se pueden crear variables simplemente utilizándolas; no es necesario definirlas formalmente. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea crea la variable, la asigna con el tipo de fecha (temporal) y un contenido. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
+La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea crea la variable, la asigna con el tipo de fecha (temporal) y un contenido. Una variable creada por asignación se interpreta como sin tipo, es decir, puede ser asignada con otros tipos en otras líneas y cambia el tipo dinámicamente. Esta flexibilidad no se aplica a las variables declaradas con la palabra clave `var` (su tipo no puede cambiar) y en [modo compilado](interpreted.md), donde el tipo nunca puede cambiarse, independientemente de cómo se haya creado la variable.
 
 ## Comandos
 
@@ -181,7 +181,7 @@ $vAge:=employee.children[2].age
 
 Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que encapsula un método (una fórmula), debe añadir paréntesis () al nombre de la propiedad para ejecutar el método:
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
 $f.message() //muestra "Hello world!"
@@ -254,9 +254,9 @@ Cuando se utiliza el lenguaje, es raro que se quiera simplemente un dato. Es má
 
 | Operador | Operación      | Ejemplo    |
 | -------- | -------------- | ---------- |
-| -        | Adición        | 1 + 2 = 3  |
+| +        | Adición        | 1 + 2 = 3  |
 | –        | Resta          | 3 - 2 = 1  |
-| *        | Multiplicación | 2 \* 3 = 6 |
+| \*       | Multiplicación | 2 \* 3 = 6 |
 | /        | División       | 6 / 2 = 3  |
 
 Los operadores numéricos son sólo un tipo de operador disponible. 4D soporta múltiples tipos de datos, como números, texto, fechas e imágenes, por lo que existen operadores que realizan operaciones con estos diferentes tipos de datos.
@@ -349,7 +349,7 @@ $str:=String("hello world!")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Comentarios

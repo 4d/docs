@@ -18,7 +18,7 @@ title: Directory クラス
 
 #### 説明
 
-`.creationDate` プロパティは、 <!-- REF #directory.creationDate.Summary -->フォルダーの作成日を返します<!-- END REF -->。
+`.creationDate` プロパティは、 <!-- REF #directory.creationDate.Summary -->フォルダーの作成日を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -84,7 +84,7 @@ title: Directory クラス
 
 #### 説明
 
-`.extension` プロパティは、 <!-- REF #directory.extension.Summary -->フォルダー名の拡張子を返します (あれば)<!-- END REF -->。 拡張子は必ず"." で始まります。 フォルダー名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
+`.extension` プロパティは、 <!-- REF #directory.extension.Summary -->フォルダー名の拡張子を返します (あれば)<!-- END REF -->. 拡張子は必ず"." で始まります。 フォルダー名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。
 
@@ -108,7 +108,7 @@ title: Directory クラス
 
 #### 説明
 
-`.fullName` プロパティは、 <!-- REF #directory.fullName.Summary -->拡張子 (あれば) を含めたフォルダーの完全な名称を返します<!-- END REF -->。
+`.fullName` プロパティは、 <!-- REF #directory.fullName.Summary -->拡張子 (あれば) を含めたフォルダーの完全な名称を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -152,7 +152,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isAlias` プロパティは、 <!-- REF #directory.isAlias.Summary -->`Folder` オブジェクトに対しては常に **false** を返します<!-- END REF -->。
+`.isAlias` プロパティは、 <!-- REF #directory.isAlias.Summary -->`Folder` オブジェクトに対しては常に **false** を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -174,7 +174,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isFile` プロパティは、 <!-- REF #directory.isFile.Summary -->フォルダーに対しては常に **false** を返します<!-- END REF -->。
+`.isFile` プロパティは、 <!-- REF #directory.isFile.Summary -->フォルダーに対しては常に **false** を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -196,7 +196,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isFolder` プロパティは、 <!-- REF #directory.isFolder.Summary -->フォルダーに対しては常に **true** を返します<!-- END REF -->。
+`.isFolder` プロパティは、 <!-- REF #directory.isFolder.Summary -->フォルダーに対しては常に **true** を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -218,7 +218,7 @@ title: Directory クラス
 
 #### 説明
 
-`.isPackage` プロパティは、 <!-- REF #directory.isPackage.Summary -->フォルダーが macOS上のパッケージである (かつディスク上に存在している) 場合に true を返します<!-- END REF -->。 それ以外の場合は false を返します。
+`.isPackage` プロパティは、 <!-- REF #directory.isPackage.Summary -->フォルダーが macOS上のパッケージである (かつディスク上に存在している) 場合に true を返します<!-- END REF -->. それ以外の場合は false を返します。
 
 Windows 上においては、`.isPackage` は常に **false** を返します。
 
@@ -242,7 +242,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.modificationDate` プロパティは、 <!-- REF #directory.modificationDate.Summary --> フォルダーの最終変更日を返します<!-- END REF -->。
+`.modificationDate` プロパティは、 <!-- REF #directory.modificationDate.Summary --> フォルダーの最終変更日を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -286,7 +286,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.name` プロパティは、 <!-- REF #directory.name.Summary --> 拡張子 (あれば) を含まないフォルダー名を返します<!-- END REF -->。
+`.name` プロパティは、 <!-- REF #directory.name.Summary --> 拡張子 (あれば) を含まないフォルダー名を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -308,7 +308,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.original` プロパティは、 <!-- REF #directory.original.Summary -->対象フォルダーと同じフォルダーオブジェクトを返します<!-- END REF -->。
+`.original` プロパティは、 <!-- REF #directory.original.Summary -->対象フォルダーと同じフォルダーオブジェクトを返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 > このプロパティは、フォルダーやファイルを処理する汎用的なコードを書くために使用できます。
@@ -331,7 +331,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.parent` プロパティは、 <!-- REF #directory.parent.Summary -->対象フォルダーの親フォルダーオブジェクトを返します<!-- END REF -->。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
+`.parent` プロパティは、 <!-- REF #directory.parent.Summary -->対象フォルダーの親フォルダーオブジェクトを返します<!-- END REF -->. パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
 親フォルダーが存在しない場合 (root) は、このプロパティは null値を返します。
 
@@ -355,7 +355,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #directory.path.Summary -->フォルダーの POSIXパスを返します<!-- END REF -->。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
+`.path` プロパティは、 <!-- REF #directory.path.Summary -->フォルダーの POSIXパスを返します<!-- END REF -->. パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -377,7 +377,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.platformPath` プロパティは、 <!-- REF #directory.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたフォルダーのパスを返します<!-- END REF -->。
+`.platformPath` プロパティは、 <!-- REF #directory.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたフォルダーのパスを返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -399,7 +399,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 
 <!-- REF #directory.copyTo().Params -->
-| 引数                | タイプ       |    | 説明                                     |
+| 引数                | 型         |    | 説明                                     |
 | ----------------- | --------- |:--:| -------------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                                |
 | newName           | Text      | -> | コピー先フォルダーの名前                           |
@@ -410,7 +410,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 説明
 
-`.copyTo()` 関数は、 <!-- REF #directory.copyTo().Summary -->`Folder` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします<!-- END REF -->。
+`.copyTo()` 関数は、 <!-- REF #directory.copyTo().Summary -->`Folder` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします<!-- END REF -->.
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -454,7 +454,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| 引数   | タイプ     |    | 説明                                                               |
+| 引数   | 型       |    | 説明                                                               |
 | ---- | ------- | -- | ---------------------------------------------------------------- |
 | path | Text    | -> | ファイルのPOSIX相対パス名                                                  |
 | 戻り値  | 4D.File | <- | `File` オブジェクト (無効な POSIXパスの場合には null)|<!-- END REF -->
@@ -463,7 +463,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 #### 説明
 
-`.file()` 関数は、 <!-- REF #directory.file().Summary -->`Folder` オブジェクト内に `File` オブジェクトを作成し、その参照を返します<!-- END REF -->。
+`.file()` 関数は、 <!-- REF #directory.file().Summary -->`Folder` オブジェクト内に `File` オブジェクトを作成し、その参照を返します<!-- END REF -->.
 
 *path* には、返すべきファイルの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
@@ -496,7 +496,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
-| 引数      | タイプ        |    | 説明                                            |
+| 引数      | 型          |    | 説明                                            |
 | ------- | ---------- | -- | --------------------------------------------- |
 | options | Integer    | -> | ファイルリストのオプション                                 |
 | 戻り値     | Collection | <- | 子ファイルオブジェクトのコレクション|<!-- END REF -->
@@ -505,7 +505,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### 説明
 
-`.files()` 関数は、 <!-- REF #directory.files().Summary -->フォルダーに格納されている `File` オブジェクトのコレクションを返します<!-- END REF -->。
+`.files()` 関数は、 <!-- REF #directory.files().Summary -->フォルダーに格納されている `File` オブジェクトのコレクションを返します<!-- END REF -->.
 > エイリアスまたはシンボリックリンクは解決されません。
 
 *options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるファイルのみがコレクションに返されます。これには非表示のファイルや、フォルダーも含まれます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
@@ -559,7 +559,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.folder().Params -->
-| 引数   | タイプ       |    | 説明                                                                             |
+| 引数   | 型         |    | 説明                                                                             |
 | ---- | --------- | -- | ------------------------------------------------------------------------------ |
 | path | Text      | -> | ファイルのPOSIX相対パス名                                                                |
 | 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な POSIX *path* の場合には null)|<!-- END REF -->
@@ -568,7 +568,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### 説明
 
-`.folder()` 関数は、 <!-- REF #directory.folder().Summary -->親の `Folder` オブジェクト内に新しい `Folder` オブジェクトを作成し、その参照を返します<!-- END REF -->。
+`.folder()` 関数は、 <!-- REF #directory.folder().Summary -->親の `Folder` オブジェクト内に新しい `Folder` オブジェクトを作成し、その参照を返します<!-- END REF -->.
 
 *path* には、返すべきフォルダーの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
@@ -601,7 +601,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.folders().Params -->
-| 引数      | タイプ        |    | 説明                                             |
+| 引数      | 型          |    | 説明                                             |
 | ------- | ---------- | -- | ---------------------------------------------- |
 | options | Integer    | -> | フォルダーリストのオプション                                 |
 | 戻り値     | Collection | <- | 子フォルダーオブジェクトのコレクション|<!-- END REF -->
@@ -610,7 +610,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### 説明
 
-`.folders()` 関数は、 <!-- REF #directory.folders().Summary -->親フォルダーに格納されている `Folder` オブジェクトのコレクションを返します<!-- END REF -->。
+`.folders()` 関数は、 <!-- REF #directory.folders().Summary -->親フォルダーに格納されている `Folder` オブジェクトのコレクションを返します<!-- END REF -->.
 
 *options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるフォルダーのみがコレクションに返されます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
@@ -650,7 +650,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.getIcon().Params -->
-| 引数   | タイプ     |    | 説明                              |
+| 引数   | 型       |    | 説明                              |
 | ---- | ------- | -- | ------------------------------- |
 | size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
 | 戻り値  | Picture | <- | アイコン|<!-- END REF -->
@@ -659,7 +659,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### 説明
 
-`.getIcon()` 関数は、 <!-- REF #directory.getIcon().Summary -->フォルダーのアイコンを返します<!-- END REF -->。
+`.getIcon()` 関数は、 <!-- REF #directory.getIcon().Summary -->フォルダーのアイコンを返します<!-- END REF -->.
 
 任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
 

@@ -4,13 +4,13 @@ title: Preemptive Processes
 ---
 
 
-The compiled 4D code can be executed in **preemptive processes**. Thanks to this feature, your 4D compiled applications can take full advantage of multi-core computers so that their execution is faster and they can support more connected users. 
+The compiled 4D code can be executed in **preemptive processes**. Thanks to this feature, your 4D compiled applications can take full advantage of multi-core computers so that their execution is faster and they can support more connected users.
 
-## What is a preemptive process? 
+## What is a preemptive process?
 
 When run in *preemptive* mode, a process is dedicated to a CPU. Process management is then delegated to the system, which can allocate each CPU separately on a multi-core machine.
 
-When run in *cooperative* mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine. 
+When run in *cooperative* mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine.
 
 As a result, in preemptive mode, overall performance of the application is improved, especially on multi-core machines, since multiple processes (threads) can truly run simultaneously. However, actual gains depend on the operations being executed. In return, since each thread is independent from the others in preemptive mode, and not managed directly by the application, there are specific constraints applied to code that you want to be compliant with preemptive use. Additionally, preemptive execution is only available in certain specific contexts.
 
@@ -81,7 +81,7 @@ Note that with this option, whatever the internal thread safety evaluation, the 
 
 If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
 
-::: 
+:::
 
 ## When is a process started preemptively?
 
@@ -142,7 +142,7 @@ Executing a method in preemptive mode will depend on its "execution" property an
 |![](../assets/en/Develop/scenar9.png)|OK|![](../assets/en/Develop/scenar10.png)|Cooperative|Since CallDial is the parent method (property was "Indifferent"), then the process is cooperative and compilation is successful|
 
 
-### How to find out the actual execution mode 
+### How to find out the actual execution mode
 
 4D allows you to identify the execution mode of processes in compiled mode:
 
@@ -162,7 +162,7 @@ To be thread-safe, a method must respect the following rules:
 - It must not call interface objects(2) (there are exceptions however, see below).
 
 (1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) catalog.
-[Worker processes](processes.md#worker-processes) also allow you to exchange messages between any processes, including preemptive processes. 
+[Worker processes](processes.md#worker-processes) also allow you to exchange messages between any processes, including preemptive processes.
 
 (2) The [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) command provides an elegant solution to call interface objects from a preemptive process.
 
@@ -203,7 +203,7 @@ The only possible accesses to the user interface from a preemptive thread are:
 
 ### Triggers
 
-When a method uses a command that can call a trigger, the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SAVE RECORD([Table_1]) //trigger on Table_1, if it exists, must be thread-safe
@@ -211,7 +211,7 @@ When a method uses a command that can call a trigger, the 4D compiler evaluates 
 
 Here is the list of commands that are checked at compilation time for trigger thread safety:
 
-`SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`. 
+`SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`.
 
 If the table is passed dynamically, the compiler may sometimes not be able to find out which trigger it needs to evaluate. Here are some examples of such situations:
 
@@ -223,6 +223,12 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
 ```
 
 In this case, all triggers are evaluated. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
+
+:::note
+
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+
+:::
 
 ### Error-handling methods
 
@@ -269,19 +275,17 @@ The use of DocRef type parameters (opened document reference, used or returned b
 
 ## Disabling thread safety checking locally
 
-There may be some cases where you prefer that thread safety checking of commands not be applied to certain parts of code, for example when it contains thread-unsafe commands that you know to be never called. 
+There may be some cases where you prefer that thread safety checking of commands not be applied to certain parts of code, for example when it contains thread-unsafe commands that you know to be never called.
 
 To do this, you must surround the code to be excluded from command thread safety checking with the special directives `%T-` and `%T+` as comments. The `//%T-` comment disables thread safety checking and `//%T+` enables it again:
 
 ```4d
   // %T- to disable thread safety checking
- 
+
   // Place the code containing commands to be excluded from thread safety checking here
  $w:=Open window(10;10;100;100) //for example
- 
+
   // %T+ to enable thread safety checking again for the rest of the method
 ```
 
 Of course, the 4D developer is responsible for the preemptive mode compatibility of the code between the deactivation and reactivation directives. Runtime errors will be generated if thread-unsafe code is executed in a preemptive thread.
-
-

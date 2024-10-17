@@ -9,21 +9,21 @@ title: VP Get values
 
 <!-- REF #_method_.VP Get values.Params -->
 
-| Paramètres | Type       |    | Description           |                  |
-| ---------- | ---------- | -- | --------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objet plage           |                  |
+| Paramètres | Type       |                             | Description           |                  |
+| ---------- | ---------- | --------------------------- | --------------------- | ---------------- |
+| rangeObj   | Object     | ->                          | Objet plage           |                  |
 | Résultat   | Collection | <- | Collection de valeurs | <!-- END REF --> |
 
 #### Description
 
-The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated *rangeObj*<!-- END REF -->.
+La commande `VP Get values` <!-- REF #_method_.VP Get values.Summary --> récupère les valeurs du *rangeObj* désigné<!-- END REF -->.
 
-In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* includes multiple ranges, only the first range is used.
+Dans *rangeObj*, passez une plage dont vous souhaitez récupérer les valeurs. Si *rangeObj* comprend plusieurs plages, seule la première plage est utilisée.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+La collection retournée par `VP Get values` contient une collection bidimensionnelle:
 
 - Chaque élément de la collection de premier niveau représente une ligne et contient une sous-collection de valeurs
-- Chaque sous-collection contient des valeurs des cellule de la ligne. Values can be Integer, Real, Boolean, Text, Object, or Null. Si une valeur est de type date ou heure, elle est retournée en un objet dont les propriétés sont les suivantes :
+- Chaque sous-collection contient des valeurs des cellule de la ligne. Les valeurs peuvent être de type entier long, réel, booléen, texte, objet ou null. Si une valeur est de type date ou heure, elle est retournée en un objet dont les propriétés sont les suivantes :
 
 | Propriété | Type | Description                                                               |
 | --------- | ---- | ------------------------------------------------------------------------- |

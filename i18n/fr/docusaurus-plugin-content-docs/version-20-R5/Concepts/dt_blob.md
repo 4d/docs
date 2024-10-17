@@ -23,7 +23,7 @@ Chaque type de blob a ses avantages. Utilisez le tableau suivant pour détermine
 | Modifiable                              |  Oui |           Non           |
 | Partageable en objets et collections    |  Non |           Oui           |
 | Passé par référence\*                   |  Non |           Oui           |
-| Performances lors de l'accès aux octets |   -  |            *            |
+| Performances lors de l'accès aux octets |   +  |            -            |
 | Taille maximale                         |  2Go |         Mémoire         |
 
 A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes. Vous pouvez passer des blobs et des objets blob (`4D.Blob`) aux méthodes.

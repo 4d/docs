@@ -11,6 +11,7 @@ title: HTTPリクエストの処理
 - `WEB GET HTTP BODY`、`WEB GET HTTP HEADER`、`WEB GET BODY PART` などのコマンドによって、リクエスト処理をカスタマイズすることができます (cookie 含む)。
 - 変数を宣言するための *COMPILER_WEB* プロジェクトメソッド。
 
+
 ## On Web Connection
 
 `On Web Connection` データベースメソッドは、4D Webサーバーのエントリーポイントとして使用できます。
@@ -27,7 +28,7 @@ title: HTTPリクエストの処理
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| 引数 | タイプ  |    | 説明                           |
+| 引数 | 型    |    | 説明                           |
 | -- | ---- |:--:| ---------------------------- |
 | $1 | Text | <- | URL                          |
 | $2 | Text | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
@@ -35,6 +36,7 @@ title: HTTPリクエストの処理
 | $4 | Text | <- | サーバーの IPアドレス                 |
 | $5 | Text | <- | ユーザー名                        |
 | $6 | Text | <- | パスワード                        |
+
 
 これらの引数を以下のように宣言しなければなりません:
 
@@ -56,7 +58,9 @@ title: HTTPリクエストの処理
 
 ```
 
+
 > インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など) の呼び出しは許可されず、メソッドの処理を終了します。
+
 
 ### $1 - URL追加データ
 
@@ -67,12 +71,13 @@ title: HTTPリクエストの処理
 | Webブラウザーに入力された値                      | $1 の値                    |
 | ------------------------------------ | ------------------------ |
 | 123.4.567.89                         | /                        |
-| <http://123.45.67.89>                | /                        |
+| http://123.45.67.89                  | /                        |
 | 123.4.567.89/Customers               | /Customers               |
-| <http://123.45.67.89/Customers/Add>  | /Customers/Add           |
+| http://123.45.67.89/Customers/Add    | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
 この引数は必要に応じて自由に利用できます。 4D は単に URL のホスト部より後の部分を無視し、$1 に渡します。 たとえば、値 "*/Customers/Add*" が "`[Customers]` テーブルに新規レコードを直接追加する" ということを意味するような、オリジナルのルールを作成できます。 利用可能な値やデフォルトブックマークを Webユーザーに提供することで、アプリケーションの異なる部分へのショートカットを提供できます。 このようにして、Webユーザーは新しく接続するたびにナビゲーションを通過することなく、素早く Webサイトのリソースにアクセスできます。
+
 
 ### $2 - HTTPリクエストのヘッダーとボディ
 
@@ -80,6 +85,7 @@ title: HTTPリクエストの処理
 
 アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
 > パフォーマンス上の理由により、$2 を介して渡されるデータのサイズは 32KB 以下でなくてはなりません。 これを超過する分は、4D HTTPサーバーにより切り取られます。
+
 
 ### $3 - Webクライアントの IPアドレス
 
@@ -95,11 +101,14 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 `$5` と `$6` 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります (入力されていれば; [認証ページ](authentication.md) 参照)。
 > ブラウザーから送信されたユーザー名が 4D に存在する場合、$6 引数 (ユーザーパスワード) はセキュリティのため渡されません。
 
+
+
+
 ## /4DACTION
 
 ***/4DACTION/****MethodName*<br/> ***/4DACTION/****MethodName/Param*
 
-| 引数         | タイプ  |    | 説明                    |
+| 引数         | 型    |    | 説明                    |
 | ---------- | ---- |:--:| --------------------- |
 | MethodName | Text | -> | 実行する 4Dプロジェクトメソッド名    |
 | Param      | Text | -> | プロジェクトメソッドに渡されるテキスト引数 |
@@ -137,7 +146,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- // Resources フォルダー内の Images フォルダー内でピクチャーを探します 
+ // Resources フォルダー内の Images フォルダー内でピクチャーを探します
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) // ピクチャーをピクチャー変数に入れます
@@ -150,7 +159,6 @@ WEB SEND BLOB($BLOB;"image/png")
 4D Webサーバーでは、ポストされたフォームを使用することもできます。これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
 
 フォームは 2つのメソッドを使用してサブミットできます (4D では両方のタイプを使用できます):
-
 - POST は通常 Webサーバーにデータを送信するのに使用します。
 - GET は通常 Webサーバーからデータをリクエストするのに使用します。
 
@@ -213,6 +221,10 @@ OK="Search"
 End if
 ```
 
+
+
+
+
 ## HTTPリクエストから値を取得する
 
 4D Web サーバーでは、Webフォームや URL を介して POST や GET リクエストで送信されたデータを復元することができます。
@@ -250,15 +262,15 @@ return false
  name="frmWelcome"
  onsubmit="return GetBrowserInformation(frmWelcome)">
   <h1>Welcome to Spiders United</h1>
-  <b>Please enter your name:</b>
+  <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -317,6 +329,7 @@ return false
 - 3つの投稿ボタンにバインドされている変数 *vsbLogOn*, *vsbRegister* と *vsbInformation* のうち、クリックされたボタンに対応するもののみが `WEB GET VARIABLES` コマンドによって取得されます。 この 3つのうちいずれかのボタンによって投稿がおこなわれたとき、ブラウザーはクリックされたボタンの値を 4D に返します。 これにより、どのボタンがクリックされたのかが分かります。
 
 HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
+
 
 ## その他の Webサーバーコマンド
 

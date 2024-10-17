@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session オブジェクトは [`Session`](#session) コマンドによって返されます。 このオブジェクトは、カレントユーザーセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理を可能にします。
+Session objects are returned by the [`Session`](../commands/session.md) command. このオブジェクトは、カレントユーザーセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理を可能にします。
 
 ### セッションの種類
 
@@ -35,98 +35,6 @@ Session オブジェクトは [`Session`](#session) コマンドによって返�
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
 
-## Session
-
-<details><summary>履歴</summary>
-
-| リリース  | 内容                               |
-| ----- | -------------------------------- |
-| 20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
-| 18 R6 | 追加                               |
-
-</details>
-
-<!-- REF #_command_.Session.Syntax -->**Session** : 4D.Session<!-- END REF -->
-
-<!-- REF #_command_.Session.Params -->
-
-| 引数  | タイプ                        |     | 説明             |
-| --- | -------------------------- | :-: | -------------- |
-| 戻り値 | 4D.Session |  <- | Session オブジェクト |
-
-<!-- END REF -->
-
-#### 説明
-
-`Session` コマンドは、<!-- REF #_command_.Session.Summary -->カレントのユーザーセッションに対応する `Session` オブジェクトを返します<!-- END REF -->。
-
-コマンドを呼び出したプロセスによって、カレントユーザーセッションは次のいずれかです:
-
-- Webセッション ([スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合)
-- リモートクライアントセッション
-- ストアドプロシージャーセッション
-
-詳細については、[セッションの種類](#セッションの種類) の段落を参照ください。
-
-サポートされていないコンテキスト (シングルユーザーアプリケーション、スケーラブルセッションが無効...) から呼び出されると、コマンドは *Null* を返します。
-
-#### Webセッション
-
-Webセッションの `Session` オブジェクトは、どの Webプロセスからも利用できます:
-
-- `On Web Authentication`、`On Web Connection`、および `On REST Authentication` データベースメソッド
-- セミダイナミックページにおいて、4Dタグ (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE) を介して処理されるコード
-- "公開オプション: 4DタグとURL(4DACTION...)" を有効化されたうえで、4DACTION/ URL から呼び出されたプロジェクトメソッド
-- モバイルリクエスト用の [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) データベースメソッド
-- [RESTリクエストで呼び出された](../REST/ClassFunctions.md) ORDA関数。
-
-Webユーザーセッションの詳細については、[Webサーバーセッション](WebServer/sessions.md) の章を参照ください。
-
-#### リモートクライアントセッション
-
-リモートクライアントの `Session` オブジェクトは、次のいずれかから利用できます:
-
-- [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
-- トリガー
-- `On Server Open Connection` および `On Server Shutdown Connection` データベースメソッド
-
-リモートユーザーセッションの詳細については、[**リモートクライアントユーザーセッション**](../Desktop/clientServer.md#リモートユーザーセッション) の段落を参照ください。
-
-#### ストアドプロシージャーセッション
-
-すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。 ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
-
-- [`Execute on server`](https://doc.4d.com/4dv20/help/command/ja/page373.html) コマンドで呼び出されるメソッド
-- `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
-
-ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html) のページを参照ください。
-
-#### 例題
-
-"公開オプション: 4DタグとURL(4DACTION...)" を有効にした `action_Session` メソッドを定義しました。 ブラウザーに次の URL を入力してメソッドを呼び出します:
-
-```
-IP:port/4DACTION/action_Session
-```
-
-```4d
-  //action_Session メソッド
- Case of
-    :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) // hasPrivilege 関数を呼び出します
-          WEB SEND TEXT("4DACTION --> セッションは WebAdmin です")
-       Else
-          WEB SEND TEXT("4DACTION --> セッションは WebAdmin ではありません")
-       End if
-    Else
-       WEB SEND TEXT("4DACTION --> セッションは null です")
- End case
-```
-
-### 参照
-
-[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/ja/page1839.html)
-
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
 ## .clearPrivileges()
@@ -143,9 +51,9 @@ IP:port/4DACTION/action_Session
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
-| 引数  | タイプ     |     | 説明                  |
-| --- | ------- | :-: | ------------------- |
-| 戻り値 | Boolean |  <- | 実行が正常に終わった場合には true |
+| 引数  | 型       |                             | 説明                  |
+| --- | ------- | :-------------------------: | ------------------- |
+| 戻り値 | Boolean | <- | 実行が正常に終わった場合には true |
 
 <!-- END REF -->
 
@@ -223,9 +131,9 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| 引数  | タイプ        |     | 説明                                        |
-| --- | ---------- | :-: | ----------------------------------------- |
-| 戻り値 | Collection |  <- | アクセス権の名称 (文字列) のコレクション |
+| 引数  | 型          |                             | 説明                                        |
+| --- | ---------- | :-------------------------: | ----------------------------------------- |
+| 戻り値 | Collection | <- | アクセス権の名称 (文字列) のコレクション |
 
 <!-- END REF -->
 
@@ -318,10 +226,10 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| 引数        | タイプ     |     | 説明                                                |
-| --------- | ------- | :-: | ------------------------------------------------- |
-| privilege | Text    |  -> | 確認するアクセス権の名称                                      |
-| 戻り値       | Boolean |  <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
+| 引数        | 型       |                             | 説明                                                |
+| --------- | ------- | :-------------------------: | ------------------------------------------------- |
+| privilege | Text    |              ->             | 確認するアクセス権の名称                                      |
+| 戻り値       | Boolean | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
 
 <!-- END REF -->
 
@@ -447,7 +355,7 @@ End if
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | タイプ                              | 説明                                                                                  |
+| プロパティ            | 型                                | 説明                                                                                  |
 | ---------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
 | type             | Text                             | セッションタイプ: "remote" または "storedProcedure"                            |
 | userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                          |
@@ -484,9 +392,9 @@ End if
 
 <!-- REF #SessionClass.isGuest().Params -->
 
-| 引数  | タイプ     |     | 説明                            |
-| --- | ------- | :-: | ----------------------------- |
-| 戻り値 | Boolean |  <- | ゲストセッションの場合は true、それ以外は false |
+| 引数  | 型       |                             | 説明                            |
+| --- | ------- | :-------------------------: | ----------------------------- |
+| 戻り値 | Boolean | <- | ゲストセッションの場合は true、それ以外は false |
 
 <!-- END REF -->
 
@@ -529,12 +437,12 @@ End if
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
-| 引数         | タイプ        |     | 説明                                                             |
-| ---------- | ---------- | :-: | -------------------------------------------------------------- |
-| privilege  | Text       |  -> | アクセス権の名称                                                       |
-| privileges | Collection |  -> | アクセス権の名称のコレクション                                                |
-| settings   | Object     |  -> | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
-| 戻り値        | Boolean    |  <- | 実行が正常に終わった場合には true                                            |
+| 引数         | 型          |                             | 説明                                                             |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------- |
+| privilege  | テキスト       |              ->             | アクセス権の名称                                                       |
+| privileges | Collection |              ->             | アクセス権の名称のコレクション                                                |
+| settings   | Object     |              ->             | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
+| 戻り値        | Boolean    | <- | 実行が正常に終わった場合には true                                            |
 
 <!-- END REF -->
 
@@ -554,7 +462,7 @@ End if
 
 - *settings* には、以下のプロパティを持つオブジェクトを渡します:
 
-| プロパティ      | タイプ                 | 説明                                        |
+| プロパティ      | 型                   | 説明                                        |
 | ---------- | ------------------- | ----------------------------------------- |
 | privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li> |
 | roles      | Text または Collection | <li>ロールの文字列</li><li>ロールの文字列のコレクション</li>   |

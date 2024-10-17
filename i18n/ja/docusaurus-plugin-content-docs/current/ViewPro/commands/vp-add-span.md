@@ -9,7 +9,7 @@ title: VP ADD SPAN
 
 <!-- REF #_method_.VP ADD SPAN.Params -->
 
-| 引数       | タイプ    |    | 説明        |                  |
+| 引数       | 型      |    | 説明        |                  |
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 

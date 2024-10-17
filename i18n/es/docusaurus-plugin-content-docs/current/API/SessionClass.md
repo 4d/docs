@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Los objetos de sesión son devueltos por el comando [`Session`](#session). Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo web) gestionar [privilegios](../ORDA/privileges.md).
+Session objects are returned by the [`Session`](../commands/session.md) command. Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo web) gestionar [privilegios](../ORDA/privileges.md).
 
 ### Tipos de sesiones
 
@@ -35,98 +35,6 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
 
-## Session
-
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                                                     |
-| ----------- | ------------------------------------------------------------------ |
-| 20 R5       | Soporte de cliente remoto y sesiones de procedimientos almacenados |
-| 18 R6       | Añadidos                                                           |
-
-</details>
-
-<!-- REF #_command_.Session.Syntax -->**Session** : 4D.Session<!-- END REF -->
-
-<!-- REF #_command_.Session.Params -->
-
-| Parámetros | Tipo                       |     | Descripción    |
-| ---------- | -------------------------- | :-: | -------------- |
-| Result     | 4D.Session |  <- | Objeto Session |
-
-<!-- END REF -->
-
-#### Descripción
-
-El comando `Session` <!-- REF #_command_.Session.Summary -->devuelve el objeto `Session` correspondiente a la sesión usuario actual<!-- END REF -->.
-
-Dependiendo del proceso desde el que se llame al comando, la sesión de usuario actual puede ser:
-
-- una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-sessions)),
-- una sesión de cliente remoto,
-- la sesión de procedimientos almacenados.
-
-Para más información, consulte el párrafo [Tipos de sesión](#tipos-de-sesión).
-
-Si el comando se llama desde un contexto no soportado (aplicación monousuario, sesiones escalables desactivadas...), devuelve *Null*.
-
-#### Sesiones web
-
-El objeto `Session` de las sesiones web está disponible desde cualquier proceso web:
-
-- Métodos base `On Web Authentication`, `On Web Connection` y `On REST Authentication`,
-- código procesado a través de las etiquetas 4D en las páginas semidinámicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
-- los métodos proyecto con el atributo "Available through 4D tags and URLs (4DACTION...)" y llamados a través de 4DACTION/ urls,
-- métodos base [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) y [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) para peticiones móviles,
-- Funciones ORDA [llamadas con peticiones REST](../REST/ClassFunctions.md).
-
-Para más información sobre las sesiones usuario web, consulte la sección [Sesiones web](WebServer/sessions.md).
-
-#### Sesiones de cliente remoto
-
-El objeto `Session` de las sesiones cliente remotas está disponible desde:
-
-- Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
-- Triggers,
-- Los métodos base `On Server Open Connection` y `On Server Shutdown Connection` de la base de datos.
-
-Para más información sobre las sesiones usuario remoto, por favor consulte el párrafo [**Sesiones usuario cliente remoto**](../Desktop/clientServer.md#remote-user-sessions).
-
-#### Sesión de procedimientos almacenados
-
-Todos los procesos de procedimientos almacenados comparten la misma sesión virtual de usuario. El objeto `Session` de los procedimientos almacenados está disponible desde:
-
-- métodos llamados con el comando [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html),
-- Los métodos base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown` y `On System event`
-
-Para obtener información sobre la sesión de usuario virtual de los procedimientos almacenados, consulte la página [4D Server y lenguaje 4D](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
-
-#### Ejemplo
-
-Ha definido el método `action_Session` con el atributo "Disponible a través de etiquetas 4D y URLs". Se llama al método introduciendo la siguiente URL en el navegador:
-
-```
-IP:port/4DACTION/action_Session
-```
-
-```4d
-  //método action_Session
- Case of
-    :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) //llamando a la función hasPrivilege
-          WEB SEND TEXT("4DACTION --> Session is WebAdmin")
-       Else
-          WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
-       End if
-    Else
-       WEB SEND TEXT("4DACTION --> Session is null")
- End case
-```
-
-### Ver también
-
-[`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html)
-
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
 ## .clearPrivileges()
@@ -143,9 +51,9 @@ IP:port/4DACTION/action_Session
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                        |
-| ---------- | ------- | :-: | -------------------------------------------------- |
-| Result     | Boolean |  <- | True si la ejecución se ha realizado correctamente |
+| Parámetros | Tipo    |                             | Descripción                                        |
+| ---------- | ------- | :-------------------------: | -------------------------------------------------- |
+| Result     | Boolean | <- | True si la ejecución se ha realizado correctamente |
 
 <!-- END REF -->
 
@@ -223,9 +131,9 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                      |
-| ---------- | ---------- | :-: | ---------------------------------------------------------------- |
-| Result     | Collection |  <- | Colección de nombres de privilegios (cadenas) |
+| Parámetros | Tipo       |                             | Descripción                                                      |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------- |
+| Result     | Collection | <- | Colección de nombres de privilegios (cadenas) |
 
 <!-- END REF -->
 
@@ -298,7 +206,7 @@ $privileges := Session.getPrivileges()
 #### Ver también
 
 [.setPrivileges()](#setprivileges)<br/>
-[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+[Permisos - Inspeccionar los privilegios en la sesión para una fácil depuración (entrada de blog)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
 
 <!-- END REF -->
 
@@ -318,10 +226,10 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                  |
-| ---------- | ------- | :-: | ------------------------------------------------------------ |
-| privilege  | Text    |  -> | Nombre del privilegio a verificar                            |
-| Result     | Boolean |  <- | True si la sesión tiene *privilege*, False en caso contrario |
+| Parámetros | Tipo    |                             | Descripción                                                  |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------ |
+| privilege  | Text    |              ->             | Nombre del privilegio a verificar                            |
+| Result     | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
 
 <!-- END REF -->
 
@@ -485,9 +393,9 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 
 <!-- REF #SessionClass.isGuest().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                    |
-| ---------- | ------- | :-: | -------------------------------------------------------------- |
-| Result     | Boolean |  <- | True si la sesión es una sesión Guest, False en caso contrario |
+| Parámetros | Tipo    |                             | Descripción                                                    |
+| ---------- | ------- | :-------------------------: | -------------------------------------------------------------- |
+| Result     | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
 
 <!-- END REF -->
 
@@ -530,12 +438,12 @@ End if
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                                    |
-| ---------- | ---------- | :-: | ------------------------------------------------------------------------------ |
-| privilege  | Text       |  -> | Nombre del privilegio                                                          |
-| privileges | Collection |  -> | Colección de nombres de privilegios                                            |
-| settings   | Object     |  -> | Objeto con una propiedad "privilegios" (cadena o colección) |
-| Result     | Boolean    |  <- | True si la ejecución se ha realizado correctamente                             |
+| Parámetros | Tipo       |                             | Descripción                                                                    |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------ |
+| privilege  | Text       |              ->             | Nombre del privilegio                                                          |
+| privileges | Collection |              ->             | Colección de nombres de privilegios                                            |
+| settings   | Object     |              ->             | Objeto con una propiedad "privilegios" (cadena o colección) |
+| Result     | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
 
 <!-- END REF -->
 

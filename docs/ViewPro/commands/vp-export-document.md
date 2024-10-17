@@ -76,7 +76,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 
 **Notes about SpreadJS file format**:
 
-* [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files. 
+* [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
@@ -101,7 +101,7 @@ You want to export the contents of the "VPArea" area to a 4D View Pro document o
 
 ```4d
 var $docPath: Text
- 
+
 $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
 VP EXPORT DOCUMENT("VPArea";$docPath)
 //MyExport.4VP is saved on your disk
@@ -127,9 +127,9 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format //".xlsx"
+ $params.format:=vk MS Excel format //".xlsx"
  $params.valuesOnly:=True
- 
+
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
 ```
 
@@ -137,7 +137,7 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
 
 ```4d
  #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
- 
+
  If($status.success=False)
     ALERT($status.errorMessage)
  Else
@@ -171,4 +171,3 @@ Here's the result:
 [VP Export to object](vp-export-to-object.md)<br/>
 [VP IMPORT DOCUMENT](vp-import-document.md)<br/>
 [VP Print](vp-print.md)
-

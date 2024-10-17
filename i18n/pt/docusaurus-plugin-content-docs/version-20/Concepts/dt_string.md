@@ -54,9 +54,6 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 |                      |                  |            | "abd" <= "abc"          | False    |
 | Contém palavra chave | String % String  | Parâmetros | "Alpha Bravo" % "Bravo" | True     |
 |                      |                  |            | "Alpha Bravo" % "ravo"  | False    |
-|                      | Picture % String | Parâmetros | Picture_expr % "Mer"    | True (*) |
-
-(*) Se a palavra-chave "Mer" estiver associada à imagem armazenada na expressão de imagem (campo ou variável).
 
 ## Comparações de cadeias
 

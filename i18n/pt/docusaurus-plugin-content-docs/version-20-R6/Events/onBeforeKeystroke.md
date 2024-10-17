@@ -3,9 +3,9 @@ id: onBeforeKeystroke
 title: On Before Keystroke
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                                                                                                                       | Definição                                                                                                                                                                   |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 17   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Get edited text` devuelve el texto del objeto **sin** este carácter. |
+| Code | Pode ser chamado por                                                                                                                                                                                                                                                                            | Definição                                                                                                                                                                     |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 17   | [Área 4D Write Pro](FormObjects/writeProArea_overview) - [Caixa de Combinação](FormObjects/comboBox_overview.md) - Formulário - [Entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Obter texto editado` devolve o texto do objeto **sem** este caractere. |
 
 <details><summary>História</summary>
 
@@ -17,22 +17,22 @@ title: On Before Keystroke
 
 ## Descrição
 
-After the `On Before Keystroke` and [`On After Keystroke event`](onAfterKeystroke.md) events are selected for an object, you can detect and handle the keystrokes within the object, using the `Form event code` command that will return `On Before Keystroke` and then [`On After Keystroke event`](onAfterKeystroke.md) (for more information, please refer to the description of the `Get edited text` command). En el evento `On Before Keystroke`, se puede utilizar el comando `FILTER KEYSTROKE` para filtrar los caracteres digitados.
+Depois que o evento `On Before Keystroke` e os eventos [`On After Keystroke`](onAfterKeystroke.md) são selecionados para um objeto, você pode detectar e manipular as teclas pressionadas dentro do objeto, usando o comando `Form event code` que retornará `On Before Keystroke` e então o evento [`On After Keystroke`](onAfterKeystroke.md) (para mais informações, consulte a descrição do comando `Get edited text`). No evento `On Before Keystroke`, o comando `FILTER KEYROKE` pode ser usado para filtrar caracteres tipados.
 
-> Estos eventos también son activados por comandos del lenguaje que simulan una acción del usuario como `POST KEY`.
+> Esses eventos também são ativados por comandos de linguagem que simulam uma ação do usuário, como `POST KEY`.
 
-El evento `On Before Keystroke` no se genera:
+O evento `On Before Keystroke` não é gerado:
 
-- en un método [columnas de list box](FormObjects/listbox_overview.md#list-box-columns) excepto cuando se está editando una celda (sin embargo se genera en cualquier caso en el método de [list box](FormObjects/listbox_overview.md)),
-- quando as modificações do usuário não forem realizadas usando o teclado (colar, arrastar e soltar, caixa de seleção, lista suspensa, caixa de seleção). To process these events, you must use [`On After Edit`](onAfterEdit.md).
+- em um método de coluna de uma [list box](FormObjects/listbox_overview.md#list-box-columns) exceto quando uma célula está sendo editada (no entanto, é gerado em todos os casos no método da [list box](FormObjects/listbox_overview.md))
+- quando as modificações do usuário não forem realizadas usando o teclado (colar, arrastar e soltar, caixa de seleção, lista suspensa, caixa de seleção). Para processar estes eventos, você deve usar [`No After Edit`](onAfterEdit.md).
 
 ### Objectos não enterráveis
 
-El evento `On Before Keystroke` puede generarse en objetos no introducibles, por ejemplo, en un list box aunque las celdas del list box no sean introducibles, o las líneas no sean seleccionables. This allows you to build interfaces where the user can scroll dynamically to a specific row in a list box by entering the first letters of a value. En el caso de que las celdas del cuadro del list box sean editables, puede utilizar el comando `Is editing text` para saber si el usuario está realmente introduciendo texto en una celda o está utilizando la función de tecleo predictivo y entonces, ejecuta
+O evento `On Before Keystroke` pode ser gerado em objetos não inseríveis, por exemplo, em uma caixa de seleção mesmo se as células da caixa de seleção não forem inseríveis, ou as linhas não forem selecionáveis. This allows you to build interfaces where the user can scroll dynamically to a specific row in a list box by entering the first letters of a value. No caso em que as células da caixa de listagem são editáveis, você pode usar o comando `Is editing text` para saber se o usuário está realmente digitando texto em uma célula ou está usando o recurso de preenchimento automático e, em seguida, executar o código apropriado.
 
 ### Sequência de teclas
 
-When an entry requires a sequence of keystrokes, the `On Before Keystroke` and [`On After Keystroke`](onAfterKeystroke.md) events are generated only when the entry is fully validaded by the user. El comando `Keystroke` devuelve el carácter validado. Este caso ocorre principalmente:
+Quando uma entrada requer uma sequência de pressionamentos de teclas, os eventos `On Before Keystroke` e [`On After Keystroke`](onAfterKeystroke.md) são gerados apenas quando a entrada é totalmente validada pelo usuário. O comando `Keystroke` retorna o caractere validado. Este caso ocorre principalmente:
 
 - ao usar teclas "mortas", como ^ ou ~: eventos são gerados somente quando o caractere ampliado for inserido depois (por exemplo, "e├" ou n^\\),
 - quando um IME (Input Code Editor) exibir uma caixa de diálogo intermediária na qual o usuário pode inserir uma combinação de caracteres: os eventos são gerados somente quando a caixa de diálogo do IME for validada.

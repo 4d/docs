@@ -27,7 +27,7 @@ São compatíveis os seguintes nomes de caminho do sistema de arquivos:
 | "/LOGS"      | Pasta Logs                                            | "C:\\MyApps\\Students\\Data\\Logs\\"       |
 | "/PACKAGE"   | Pasta de raiz do projeto (com ou sem extensão 4dbase) | "C:\\MyApps\\Students\\"                       |
 | "/PROJECT"   | Pasta Project                                         | "C:\\MyApps\\Students\\Project\\"            |
-| "/RESOURCES" | Pasta de recursos do projeto atual                    | "C:\\MyApps\\Resources\\"                      |
+| "/RESOURCES" | Pasta de recursos do projeto atual                    | "C:\\MyApps\\Students\\Resources\\"          |
 | "/SOURCES"   | Pasta de fontes do projeto atual                      | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Sintaxe POSIX

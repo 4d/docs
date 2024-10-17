@@ -34,17 +34,17 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 
 <!-- REF #_command_.MAIL New attachment.Params -->
 
-| Paramètres  | Type                              |     | Description                                                                                          |
-| ----------- | --------------------------------- | :-: | ---------------------------------------------------------------------------------------------------- |
-| file        | 4D.File           |  -> | Fichier joint                                                                                        |
-| zipFile     | 4D.ZipFile        |  -> | Fichier Zip joint                                                                                    |
-| blob        | 4D.Blob           |  -> | Blob contenant la pièce jointe                                                                       |
-| path        | Text                              |  -> | Chemin de la pièce jointe                                                                            |
-| name        | Text                              |  -> | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe                   |
-| cid         | Text                              |  -> | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis |
-| type        | Text                              |  -> | Valeur de l'en-tête content-type                                                                     |
-| disposition | Text                              |  -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                   |
-| Résultat    | 4D.MailAttachment |  <- | Objet pièce jointe                                                                                   |
+| Paramètres  | Type                              |                             | Description                                                                                          |
+| ----------- | --------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------- |
+| file        | 4D.File           |              ->             | Fichier joint                                                                                        |
+| zipFile     | 4D.ZipFile        |              ->             | Fichier Zip joint                                                                                    |
+| blob        | 4D.Blob           |              ->             | Blob contenant la pièce jointe                                                                       |
+| path        | Text                              |              ->             | Chemin de la pièce jointe                                                                            |
+| name        | Text                              |              ->             | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe                   |
+| cid         | Text                              |              ->             | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis |
+| type        | Text                              |              ->             | Valeur de l'en-tête content-type                                                                     |
+| disposition | Text                              |              ->             | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                   |
+| Résultat    | 4D.MailAttachment | <- | Objet pièce jointe                                                                                   |
 
 <!-- END REF -->
 
@@ -179,17 +179,17 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| Paramètres  | Type                              |     | Description                                                                                          |
-| ----------- | --------------------------------- | :-: | ---------------------------------------------------------------------------------------------------- |
-| file        | 4D.File           |  -> | Fichier joint                                                                                        |
-| zipFile     | 4D.ZipFile        |  -> | Fichier Zip joint                                                                                    |
-| blob        | 4D.Blob           |  -> | Blob contenant la pièce jointe                                                                       |
-| path        | Text                              |  -> | Chemin de la pièce jointe                                                                            |
-| name        | Text                              |  -> | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe                   |
-| cid         | Text                              |  -> | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis |
-| type        | Text                              |  -> | Valeur de l'en-tête content-type                                                                     |
-| disposition | Text                              |  -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                   |
-| Résultat    | 4D.MailAttachment |  <- | Objet pièce jointe                                                                                   |
+| Paramètres  | Type                              |                             | Description                                                                                          |
+| ----------- | --------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------- |
+| file        | 4D.File           |              ->             | Fichier joint                                                                                        |
+| zipFile     | 4D.ZipFile        |              ->             | Fichier Zip joint                                                                                    |
+| blob        | 4D.Blob           |              ->             | Blob contenant la pièce jointe                                                                       |
+| path        | Text                              |              ->             | Chemin de la pièce jointe                                                                            |
+| name        | Text                              |              ->             | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe                   |
+| cid         | Text                              |              ->             | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis |
+| type        | Text                              |              ->             | Valeur de l'en-tête content-type                                                                     |
+| disposition | Text                              |              ->             | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                   |
+| Résultat    | 4D.MailAttachment | <- | Objet pièce jointe                                                                                   |
 
 <!-- END REF -->
 
@@ -222,9 +222,9 @@ La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 
-| Paramètres | Type                    |     | Description                |
-| ---------- | ----------------------- | :-: | -------------------------- |
-| Résultat   | 4D.Blob |  <- | Contenu de la pièce jointe |
+| Paramètres | Type                    |                             | Description                |
+| ---------- | ----------------------- | :-------------------------: | -------------------------- |
+| Résultat   | 4D.Blob | <- | Contenu de la pièce jointe |
 
 <!-- END REF -->
 

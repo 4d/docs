@@ -12,15 +12,15 @@ title: Optimisation client/serveur
 
 Les architectures client/serveur de l'ORDA qui prennent en charge l'optimisation sont :
 
-- Les datastores serveur auxquels accèdent les applications 4D distantes via [**`ds`**](../API/DataStoreClass.md#ds),
-- Les [datastores distants](remoteDatastores.md), ouverts via la commande [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (requêtes clientes REST).
+- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
+- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
 
 ## Contexte d'optimisation
 
 Le contexte d'optimisation est fondé sur ce qui suit :
 
 - Lorsqu'un client requête une entity selection au serveur, 4D "apprend" automatiquement quels attributs de l'entity selection sont réellement utilisés côté client lors de l'exécution du code, et génère un "contexte d'optimisation" correspondant. Ce contexte est lié à l'entity selection et stocke les attributs utilisés. Il sera mis à jour dynamiquement si d'autres attributs sont utilisés par la suite. Les commandes et fonctions suivantes déclenchent la phase d'apprentissage :
-  - [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
+  - [`Create entity selection`](../commands/create-entity-selection.md)
   - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   - [`dataClass.all()`](../API/DataClassClass.md#all)
   - [`dataClass.get()`](../API/DataClassClass.md#get)
@@ -43,7 +43,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
 
 :::note Note de compatibilité
 
-Les contextes gérés dans les connexions établies via [`Open datastore`](../API/DataStoreClass.md#open-datastore) peuvent uniquement être utilisés entre des versions principales similaires de 4D. Par exemple, une application distante 4D 20.x ne peut utiliser que les contextes d'un datastore 4D Server 20.x.
+Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. Par exemple, une application distante 4D 20.x ne peut utiliser que les contextes d'un datastore 4D Server 20.x.
 
 :::
 
@@ -66,9 +66,9 @@ Vous pouvez augmenter les avantages de l'optimisation en utilisant la propriét�
 
 > Vous pouvez également créer des contextes en utilisant la fonction [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Toutes les fonctions ORDA qui gèrent les entity selections prennent en charge la propriété **context** (par exemple [`dataClass.query()`](../API/DataClassClass.md#query) ou [`dataClass.all()`](../API/DataClass.md#all)). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
+Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Toutes les fonctions ORDA qui gèrent les entity selections prennent en charge la propriété **context** (par exemple [`dataClass.query()`](../API/DataClassClass.md#query) ou [`dataClass.all()`](../API/DataClassClass.md#all)). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
 
-> Un mécanisme similaire est implémenté pour les entités qui sont chargées, de sorte que seuls les attributs utilisés sont demandés (voir la fonction [`dataClass.get()`](../API/DataClass.md#get)).
+> Un mécanisme similaire est implémenté pour les entités qui sont chargées, de sorte que seuls les attributs utilisés sont demandés (voir la fonction [`dataClass.get()`](../API/DataClassClass.md#get)).
 
 **Exemple avec `dataClass.query()`:**
 

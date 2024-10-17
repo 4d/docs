@@ -17,14 +17,14 @@ title: VP Cells
 
 <!-- REF #_method_.VP Cells.Params -->
 
-| Parámetros  | Tipo    |    | Descripción                                                    |                  |
-| ----------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| column      | Integer | -> | Índice de la columna                                           |                  |
-| row         | Integer | -> | Índice de la línea                                             |                  |
-| columnCount | Integer | -> | Número de columnas                                             |                  |
-| rowCount    | Integer | -> | Número de líneas                                               |                  |
-| sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros  | Tipo    |                             | Descripción                                                    |                  |
+| ----------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName  | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
+| column      | Integer | ->                          | Índice de la columna                                           |                  |
+| row         | Integer | ->                          | Índice de la línea                                             |                  |
+| columnCount | Integer | ->                          | Número de columnas                                             |                  |
+| rowCount    | Integer | ->                          | Número de líneas                                               |                  |
+| sheet       | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result      | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
 #### Descripción

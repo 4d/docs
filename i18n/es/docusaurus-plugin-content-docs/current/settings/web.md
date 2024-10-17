@@ -288,11 +288,11 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 :::info Obsoleto
 
-**Esta sección está obsoleta** a partir de 4D 20 R6. Si la configuración actual del proyecto es obsoleta y debe actualizarse, se mostrará esta sección, incluido el botón **Activar la autenticación REST mediante la función ds.authentify()** (ver más abajo). Si su proyecto ya es compatible con el modo [Force login](../REST/configuration.md#configuring-rest-access), la sección no existe y puede ignorar este párrafo.
+**Esta sección está obsoleta** a partir de 4D 20 R6. Si la configuración actual del proyecto es obsoleta y debe actualizarse, se mostrará esta sección, incluido el botón **Activar la autenticación REST mediante la función ds.authentify()** (ver más abajo). If your project is already compatible with the [Force login](../REST/authUsers.md#force-login-mode) mode, the section is missing and you can ignore this paragraph.
 
 :::
 
-Consulte [Configuring REST access](../REST/configuration.md#configuring-rest-access) para conocer la forma recomendada de controlar y gestionar el acceso REST en sus proyectos 4D.
+See [Users and sessions](../REST/authUsers.md) to know the recommended way to control and manage REST access in your 4D projects.
 
 #### Activar la autenticación REST mediante la función ds.authentify()
 
@@ -312,7 +312,7 @@ El botón activa la siguiente secuencia de actualización:
 
 Recuerde reiniciar su proyecto después de realizar esta actualización.
 
-El siguiente paso es modificar su código en consecuencia. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
+El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 

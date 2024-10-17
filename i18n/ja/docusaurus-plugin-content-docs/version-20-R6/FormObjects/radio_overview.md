@@ -148,7 +148,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
-[式の型](properties_Object.md#式の型) -
+[式の型](properties_Object.md#式の型式タイプ) -
 [タイトル](properties_Object.md#タイトル) -
 [ラジオグループ](properties_Object.md#ラジオグループ) -
 [値を記憶](properties_Object.md#値を記憶) -

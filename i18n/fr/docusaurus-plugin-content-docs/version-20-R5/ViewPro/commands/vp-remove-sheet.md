@@ -18,7 +18,7 @@ title: VP REMOVE SHEET
 
 The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->removes the sheet with the specified _index_ from the document loaded in _vpAreaName_<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
 In _index_, pass the index of the sheet to remove. If the passed _index_ does not exist, the command does nothing.
 

@@ -28,7 +28,7 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
 -   O arquivo *settings.4DSettings* é 'Somente leitura' (Projetos somente). A modificação de uma configuração exibirá um alerta para desbloqueá-la, se possível.
--   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
+-   Dois ou mais usuários tentam modificar as mesmas configurações ao mesmo tempo. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
 
 In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
 

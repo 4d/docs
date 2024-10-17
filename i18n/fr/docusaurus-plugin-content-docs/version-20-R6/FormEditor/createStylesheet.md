@@ -15,13 +15,13 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 
 Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension ".css" dans le dossier "/SOURCES" du projet.
 
-La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plate-forme.
+La Boîte à Outils comporte une page **Style** qui est un raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plate-forme.
 
-1. Ouvrez la page **Style Sheets** en choisissant **Tool Box > Style Sheet** dans le menu Développement ou en cliquant sur l'icône **Tool Box** dans la barre d'outils de l'éditeur de formulaires.
+1. Ouvrez la page **Styles** en choisissant **Boîte à outils > Feuilles de style** dans le menu Développement ou en cliquant sur l'icône **Boîte outils** dans la barre d'outils de 4D.
 
 ![](../assets/en/FormEditor/stylesheets.png)
 
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](../assets/en/FormEditor/createButton.png)
+2. Sélectionnez le type de feuille de style à créer et cliquez sur le bouton **Créer** ou **Modifier** : ![](../assets/en/FormEditor/createButton.png)
 
 3. La feuille de style s'ouvrira dans votre éditeur de texte par défaut.
 
@@ -195,24 +195,24 @@ text[text|=Hello]
 
 ### Media Queries
 
-Media queries are used to apply color schemes to an application.
+Les requêtes de média sont utilisées pour appliquer des schémas de couleurs à une application.
 
-A media query is composed of a media feature and a value (e.g., `\<media feature>:\<value>` ).
+Une requête média est composée d'une fonctionnalité média et d'une valeur (`\<fonctionnalité média>:\<valeur>`).
 
-Available media features:
+Fonctionnalités média disponibles :
 
 - `prefers-color-scheme`
 
-Available media feature expressions:
+Expressions de fonctionnalité média disponibles :
 
-- **light**<br/>For using a light scheme
-- **dark**<br/>For using a dark scheme
+- **light**<br/>Pour utiliser un schéma de couleur clair
+- **dark**<br/>Pour utiliser un schéma de couleur sombre
 
-> Color schemes are only supported on macOS.
+> Les schémas de couleurs sont pris en charge sur macOS uniquement.
 
 ##### Exemple
 
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+Cette CSS définit une combinaison de couleurs pour le texte et l'arrière-plan du texte dans le schéma clair (par défaut) et une autre combinaison lorsque le schéma sombre est sélectionné :
 
 ```
 @media (prefers-color-scheme: light) {
@@ -230,19 +230,19 @@ This CSS defines a color combination for text and text background in the light s
 }
 ```
 
-### Object Attributes
+### Attributs d'objets
 
 La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
 
 - `method`
 - `type`
-- `classe`
-- `evénement`
+- `class`
+- `event`
 - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
 Les attributs d'objet formulaire peuvent être déclarés avec leur [nom JSON](FormObjects/properties_Reference.md) en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes).
 
-#### Mappage d'attributs
+#### Correspondance d'attributs
 
 Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 
@@ -259,7 +259,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
 
-> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+> Les valeurs spécifiques à 4D (*par exemple*, `sunken`) ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
 
 #### Valeurs d'attributs spécifiques
 
@@ -290,13 +290,13 @@ Si un attribut est défini dans la description du formulaire JSON et dans une fe
 
 Pour remplacer ce comportement, la valeur du style doit être suivie d'une déclaration `! Important`.
 
-**Example 1:**
+**Exemple 1**
 
 | Description du formulaire JSON | Feuille de style | 4D affiche |
 | ------------------------------ | ---------------- | ---------- |
 | `"text": "Button",`            | `text: Edit;`    | `"Button"` |
 
-**Example 2:**
+**Exemple 2**
 
 | Description du formulaire JSON | Feuille de style         | 4D affiche |
 | ------------------------------ | ------------------------ | ---------- |
@@ -336,9 +336,9 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 > Les chemins de fichiers peuvent être relatifs ou absolus.
 >
-> - Relative paths are resolved relative to the JSON form description file.
-> - For security reasons, only filesystem paths are accepted for absolute paths. (*ex :*, "/RESOURCES", "/DATA")
+> - Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON.
+> - Pour des raisons de sécurité, seuls les chemins filesystem sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 ## Voir également
 
-See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.
+Voir la présentation vidéo [**CSS pour les formulaires 4D**](https://www.youtube.com/watch?v=3Hk4FUQENyQ).

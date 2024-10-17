@@ -17,17 +17,17 @@ title: VP Get data context
 
 <!-- REF #_method_.VP Get data context.Params -->
 
-| Parâmetro  | Tipo                 |    | Descrição                                                     |                  |
-| ---------- | -------------------- | -- | ------------------------------------------------------------- | ---------------- |
-| vpAreaName | Object               | -> | Nome de objeto formulário área 4D View Pro                    |                  |
-| sheet      | Integer              | -> | Índice da folha a partir da qual se obtém o contexto de dados |                  |
+| Parâmetro  | Tipo                 |                             | Descrição                                                     |                  |
+| ---------- | -------------------- | --------------------------- | ------------------------------------------------------------- | ---------------- |
+| vpAreaName | Object               | ->                          | Nome de objeto formulário área 4D View Pro                    |                  |
+| sheet      | Integer              | ->                          | Índice da folha a partir da qual se obtém o contexto de dados |                  |
 | Resultados | Object \| Collection | <- | Contexto de dados                                             | <!-- END REF --> |
 
 #### Descrição
 
 The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. O contexto retornado inclui todas as modificações feitas no conteúdo do contexto de dados.
 
-In _sheet_, pass the index of the sheet to get the data context from. Se nenhum índice for passado, o comando retornará o contexto de dados da planilha atual. If there is no context for the worksheet, the command returns `Null`.
+Em _sheet_, passe o índice da planilha para obter o contexto de dados. Se nenhum índice for passado, o comando retornará o contexto de dados da planilha atual. Se não houver contexto para a planilha, o comando retornará `Null`.
 
 The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](vp-set-data-context.md).
 

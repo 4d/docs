@@ -158,9 +158,9 @@ Para más información, consulte la [descripción de `.setWarning()` en la docum
 
 <!-- REF #_command_.Web Form.Params -->
 
-| Parámetros | Tipo                       |     | Descripción                  |
-| ---------- | -------------------------- | :-: | ---------------------------- |
-| Result     | 4D.WebForm |  <- | Nuevo objeto proxy `WebForm` |
+| Parámetros | Tipo                       |                             | Descripción                  |
+| ---------- | -------------------------- | :-------------------------: | ---------------------------- |
+| Result     | 4D.WebForm | <- | Nuevo objeto proxy `WebForm` |
 
 <!-- END REF -->
 
@@ -176,9 +176,9 @@ Para más información, consulte la [descripción de `webForm` en la documentaci
 
 <!-- REF #_command_.Web Event.Params -->
 
-| Parámetros | Tipo   |     | Descripción |
-| ---------- | ------ | :-: | ----------- |
-| Result     | object |  <- | object      |
+| Parámetros | Tipo   |                             | Descripción |
+| ---------- | ------ | :-------------------------: | ----------- |
+| Result     | object | <- | object      |
 
 <!-- END REF -->
 

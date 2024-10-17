@@ -31,18 +31,18 @@ L’emplacement courant de ce dossier est affiché dans la zone “Actuel :”. 
 
 Trois options d’emplacement sont proposées :
 
-- \*\*Système \*\*: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
+- \*\*Système \*\*: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. Vous pouvez connaître l'emplacement courant défini par votre système en utilisant la commande 4D [`Temporary folder`](https://doc.4d.com/4dv20/help/command/fe/page486.html). Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
 - **Dossier du fichier de données** (option par défaut) : Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier nommé “temporary files” situé au même niveau que le fichier de données de la base.
 - **Défini par l’utilisateur** : Cette option permet de définir un emplacement personnalisé. En cas de modification de cette option, sa prise en compte nécessitera le redémarrage de la base. 4D vérifie que le dossier sélectionné est accessible en écriture. Si ce n’est pas le cas, l’application essaiera les autres options jusqu’à ce qu’un dossier valide soit trouvé.
 
-> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
+> Cette option est stockée dans les "propriétés additionnelles" de la structure qui est disponible lorsque la définition de structure est exportée au format XML (voir [Exporter et importer des définitions de structure](https://doc.4d.com/4Dv19/4D/19/Exporter-et-importer-des-definitions-de-structure.300-5416829.fe.html)).
 
 ### Comparaison de texte
 
 > Si vous modifiez ces options, vous devez quitter et rouvrir la base afin que la modification soit prise en compte. A la réouverture, une réindexation automatique est effectuée sur tous les index de la base.
 
-- **Considérer @ comme joker uniquement au début et à la fin des chaînes de caractères** : cette option vous permet de définir la manière dont 4D doit évaluer le caractère @ (arobase) lors des recherches ou des comparaisons de chaînes de caractères, lorsqu’
-  Lorsque l’option n’est pas cochée (valeur par défaut), le caractère @ est considéré comme un “joker”, c’est-à-dire un remplaçant de tout caractère (voir [Joker de recherche (@)](https://doc.4d.com/4Dv19/4D/19/Editeur-de-recherches.300-5416813.fe.html#4638
+- **Considérer @ comme joker uniquement au début et à la fin des chaînes de caractères** : Cette option vous permet de définir la manière dont le symbole "@" sera interprété lorsqu'il est utilisé dans une recherche ou une comparaison de chaînes de caractères, lorsqu'il se trouve au sein d'un mot.
+  Lorsque cette option n'est pas cochée (valeur par défaut), le signe @ est utilisé comme joker de recherche, en d'autres termes, il remplace n'importe quel caractère (voir [Joker de recherche (@)](https://doc.4d.com/4Dv19/4D/19/Editeur-de-recherches.300-5416813.fe.html#463876)).
 
   Lorsque l’option est cochée, le caractère @ est considéré comme un simple caractère s’il se trouve au milieu d’un mot. Cette possibilité est particulièrement utile pour les bases de données stockant des adresses e-mail (qui se présentent sous la forme “nom@fournisseur.xx”). Cette option influe sur les recherches, les tris et les comparaisons de chaînes de caractères, pour les données stockées dans les tables ou en mémoire (tableaux). Sont concernés les champs alpha (indexés ou non) et texte ainsi que les variables alpha et texte.
 
@@ -84,17 +84,17 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
 
 - **Calcul du cache adaptatif** : Lorsque cette option est cochée, la gestion de la mémoire cache est assurée dynamiquement par le système — dans des limites que vous définissez. Ce principe permet de configurer une mémoire cache performante, adaptée à la plupart des configurations. La taille du cache est alors calculée dynamiquement en fonction des paramétrages définis. Les valeurs proposées par défaut correspondent à une utilisation standard de 4D.
 
-  - **Mémoire à réserver pour le système et les autres applications**: partie de la mémoire RAM à réserver au Système et aux autres applications. Cette valeur peut être augmentée à des fins d’optimisation lorsque d’autres applications consommatrices de mémoire tournent sur le même poste que 4D.
-  - **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
-    To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. Dans le mode adaptatif, la taille de mémoire cache varie dynamiquement en fonction des besoins de l’application et du système. Vous pouvez fixer les bornes de ces variations à l’aide des deux options suivantes :
+  - **Mémoire à réserver pour le système et les autres applications** : partie de la mémoire RAM à réserver au Système et aux autres applications. Cette valeur peut être augmentée à des fins d’optimisation lorsque d’autres applications consommatrices de mémoire tournent sur le même poste que 4D.
+  - **Mémoire disponible utilisée pour le cache** : Pourcentage de la mémoire restante allouée par défaut au cache.\
+    Pour obtenir la taille allouée par défaut au cache, il suffit donc d’effectuer le calcul suivant : (Mémoire physique -- Mémoire physique à réserver) X Pourcentage de la mémoire utilisé pour le cache. Dans le mode adaptatif, la taille de mémoire cache varie dynamiquement en fonction des besoins de l’application et du système. Vous pouvez fixer les bornes de ces variations à l’aide des deux options suivantes :
   - **Taille minimale** : Quantité minimale de mémoire devant être réservée pour le cache. Cette valeur ne peut être inférieure à 100 Mo.
-  - **Taille maximale** : Quantité maximale de mémoire pouvant être utilisée par le cache. This value is virtually unlimited.\\
-    Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. Dans ce cas, les bornes vous permettent de garantir des performances minimales dans tous les cas. Le schéma suivant illustre ce fonctionnement :
+  - **Taille maximale** : Quantité maximale de mémoire pouvant être utilisée par le cache. Cette valeur est virtuellement illimitée.\\
+    La définition de bornes est particulièrement utile pour les bases de données distribuées sur des machines dont vous ne connaissez pas a priori la configuration mémoire. Dans ce cas, les bornes vous permettent de garantir des performances minimales dans tous les cas. Le schéma suivant illustre ce fonctionnement :
 
-  Example for calculating cache memory:
-  _Physical memory to reserve = 256 MB
-  Percentage of the available memory used for the cache = 50%
-  Maximum size = 1 GB Minimum size = 128 MB_
+  Exemple de calcul de la mémoire cache :
+  _Mémoire physique à réserver = 256 Mo
+  Pourcentage de la mémoire disponible utilisé pour le cache = 50%
+  Taille maximale = 1 Go Taille minimale = 128 Mo_
 
   ![](../assets/en/settings/memory-maximum-size.png)
 

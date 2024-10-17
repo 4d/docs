@@ -17,7 +17,7 @@ The original picture must be stored in a format managed natively by 4D (4D recog
 
 Podem ser utilizadas duas localizações principais para o percurso da imagem estática:
 
-- en la carpeta **Resources** del proyecto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. En este caso, el nombre de la ruta es en "/RESOURCES/\\<picture path\>".
+- en la carpeta **Resources** del proyecto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. En este caso, el nombre de la ruta es en "/RESOURCES/\<picture path\>".
 - en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Appropriate when the static pictures are used only in the form and/or yon want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "<\picture path\>" and is resolved from the root of the form folder.
 
 ## Propriedades compatíveis

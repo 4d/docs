@@ -22,8 +22,8 @@ There are different ways to configure the 4D web server settings, depending on t
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|Settings dialog box|[Configuration page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)||
-|Settings dialog box|[Configuration page/Page Cache Size](../settings/web.md#page-cache-size)||
+|Settings dialog box|[Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)||
+|Settings dialog box|[Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)||
 
 Enables and configures the web page cache. 
 
@@ -307,7 +307,7 @@ Listening IP port number for HTTPS connections via TLS. By default, the value is
 |`WEB SET OPTION`|`Web inactive process timeout`||
 |Settings dialog box|[Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout)|Slider|
 
-Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
+Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
 
 Default: 480 minutes (pass 0 to restore the default value)
 
@@ -430,9 +430,9 @@ Possible values: 500 000 to 2 147 483 648.
 |Can be set with|Name|Comments|
 |---|---|---|
 |webServer object|[`maxSessions`](API/WebServerClass.md#maxsessions)||
-|`WEB SET OPTION`|`Web max sessions	`||
+|`WEB SET OPTION`|`Web max sessions`||
 
-Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default). 
+Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default). 
 
 Default value: 100 (pass 0 to restore the default value).
 
@@ -488,7 +488,7 @@ True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forwa
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|Settings dialog box|[Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#reuse-temporary-contexts)||
+|Settings dialog box|[Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts)||
 
 > This option is only available when **No sessions** option is checked. 
 
@@ -572,7 +572,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 |`WEB SET OPTION`|`Web scalable session`||
 |Settings dialog box|[Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions)||
 
-Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [Web sessions](sessions.md) page.
 
 
 
@@ -631,7 +631,7 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|Settings dialog box|[Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#use-preemptive-processes)||
+|Settings dialog box|[Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes)||
 
 This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 

@@ -3,7 +3,7 @@ id: configuration
 title: Configuración del servidor
 ---
 
-Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your application directly, _i.e._ to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
+Utilizando peticiones HTTP estándar, el servidor 4D REST permite a las aplicaciones externas acceder directamente a los datos de su aplicación, _es decir_, para recuperar información sobre las clases de datos de su proyecto, manipular datos, entrar en su aplicación web, y mucho más.
 
 Para comenzar a utilizar las funcionalidades REST, es necesario iniciar y configurar el servidor 4D REST.
 
@@ -25,20 +25,20 @@ Por defecto, los accesos REST están abiertos a todos los usuarios, lo que obvia
 
 Puede configurar los accesos REST de una de las siguientes maneras:
 
-- (recommended) enable the **force login** mode and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)).
-- assign a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
-- write an `On REST Authentication` database method to intercept and handle every initial REST request.
+- (recomendado) activar el modo de **inicio de sesión forzado** y crear una función de clase [`authentify()`](authUsers.md#authentify) en la clase datastore para autenticar usuarios y asignar privilegios a su sesión web (ver [Modos de inicio de sesión de usuario](authUsers.md#user-login-modes)).
+- asignar un grupo de usuarios **Lectura/Escritura** a los servicios REST en la página "**Web** > **Funcionalidades web**" de los Parámetros de estructura;
+- escribir un método base `On REST Authentication` para interceptar y manejar cada petición REST inicial.
 
 :::info Importante
 
 - Se recomienda no habilitar simultáneamente diferentes características de control de acceso REST para evitar conflictos.
-- If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+- Si se ha definido un método base `On REST Authentication`, se ignorará cualquier ajuste realizado mediante el menú "Lectura/Escritura" de la página **Web** > **Funcionalidades web** de los Parámetros de estructura.
 
 :::
 
 ### Uso de los parámetros de la Estructura
 
-The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
+El menú **Lectura/Escritura** en la página "**Web** > **Funciones web**" de la configuración de la estructura especifica un grupo de usuarios 4D que está autorizado para establecer el enlace con la aplicación 4D utilizando las consultas REST.
 
 Por defecto, el menú muestra `\<Anyone>`, lo que significa que los accesos REST están abiertos a todos los usuarios. Una vez que haya especificado un grupo, sólo una cuenta de usuario de 4D que pertenezca a este grupo podrá ser utilizada para [acceder a 4D mediante una petición REST](authUsers.md). Si se utiliza una cuenta que no pertenece a este grupo, 4D devuelve un error de autenticación al remitente de la petición.
 
@@ -47,7 +47,7 @@ Por defecto, el menú muestra `\<Anyone>`, lo que significa que los accesos REST
 ### Método base On REST Authentication
 
 El método base `On REST Authentication` le ofrece una forma personalizada de controlar la apertura de sesiones REST en 4D. Este método base se llama automáticamente cuando se abre una nueva sesión a través de una solicitud REST. Cuando se recibe una [solicitud para abrir una sesión REST](authUsers.md), los identificadores de conexión se ofrecen en el encabezado de la solicitud. Se llama al método base `On REST Authentication` para poder evaluar estos identificadores. Puede utilizar la lista de usuarios de la aplicación 4D o puede utilizar su propia tabla de identificadores.
-For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
+Para más información, consulte la [documentación](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html) del método base `On REST Authentication`.
 
 ## Exponer tablas y campos
 

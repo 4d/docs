@@ -294,7 +294,7 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 | --------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------- |
 | entity          | 4D.Entity          | -> | Entidad que debe añadirse a la entity selection                                                      |
 | entitySelection | 4D.EntitySelection | -> | Selección de entidades que se añade a la selección de entidades original                             |
-| Result          | 4D.EntitySelection | -> | Selección de entidades incluyendo la *entity* añadida o *entitySelection*|<!-- END REF --> |
+| Result          | 4D.EntitySelection | <- | Selección de entidades incluyendo la *entity* añadida o *entitySelection*|<!-- END REF --> |
 
 
 #### Descripción
@@ -465,10 +465,10 @@ La función devuelve Null si *index* está más allá de los límites de selecci
 ```4d
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
-$emp2:=$employees.at(-3) //starting from the end, 3rd entity
-    //of the $employees entity selection
+$employees:=ds.Employee.query("lastName = :1"; "H@")
+$emp1:=$employees.at(2) /3ª entidad de la selección de entidades $employees 
+$emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
+    //de la selección de entidades $employees
 ```
 
 
@@ -1134,7 +1134,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 | Parámetros | Tipo |    | Descripción                                                                                               |
 | ---------- | ---- | -- | --------------------------------------------------------------------------------------------------------- |
-| result     | Text | <- | Atributos de contexto vinculados a la entity selection, separados por una coma|<!-- END REF --> |
+| resultado  | Text | <- | Atributos de contexto vinculados a la entity selection, separados por una coma|<!-- END REF --> |
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 

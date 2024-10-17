@@ -87,7 +87,7 @@ Veillez cependant aux différences de comportement suivantes, comparées à [l'a
 
 ## Sessions utilisateur distant
 
-Sur le serveur, la commande [`Session`](../API/SessionClass.md#session) renvoie un objet `session` décrivant la session utilisateur courante. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
+On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
 
 ### Utilisation
 
@@ -101,6 +101,7 @@ L'objet `session` de l'utilisateur distant est disponible depuis :
 
 - Les méthodes projet qui ont l'attribut [Exécuter sur serveur](../Project/code-overview.md#execute-on-server) (elles sont exécutées dans le process jumeau du process client),
 - Les Triggers,
+- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword,
 - Les méthodes base `On Server Open Connection` et `On Server Shutdown Connection`.
 
 :::info
@@ -109,6 +110,6 @@ Toutes les procédures stockées sur le serveur partagent la même session utili
 
 :::
 
-### See also (blog post)
+### Voir aussi (blog post)
 
 [Objet session distante 4D avec connexion Client/Serveur et procédure stockée](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).

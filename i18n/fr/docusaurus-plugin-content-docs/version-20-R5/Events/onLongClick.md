@@ -1,11 +1,11 @@
 ---
 id: onLongClick
-title: Sur clic long
+title: On Long Click
 ---
 
 | Code | Peut être appelé par                     | Définition                                                                            |
 | ---- | ---------------------------------------- | ------------------------------------------------------------------------------------- |
-| 39   | [Button](FormObjects/button_overview.md) | Un bouton est cliqué et le bouton de la souris reste enfoncé pendant un certain temps |
+| 39   | [Bouton](FormObjects/button_overview.md) | Un bouton est cliqué et le bouton de la souris reste enfoncé pendant un certain temps |
 
 ## Description
 
@@ -15,15 +15,15 @@ Cet événement peut être généré pour les styles de boutons suivants :
 
 - [Toolbar](FormObjects/button_overview.md#toolbar)
 - [Bevel](FormObjects/button_overview.md#bevel)
-- [Rounded Bevel](FormObjects/button_overview.md#rounded-bevel)
+- [Bevel arrondi](FormObjects/button_overview.md#rounded-bevel)
 - [OS X Gradient](FormObjects/button_overview.md#os-x-gradient)
-- [OS X Textured](FormObjects/button_overview.md#os-x-textured)
+- [OS X Texture](FormObjects/button_overview.md#os-x-textured)
 - [Office XP](FormObjects/button_overview.md#office-xp)
-- [Help](FormObjects/button_overview.md#help)
-- [Circle](FormObjects/button_overview.md#circle)
-- [Custom](FormObjects/button_overview.md#custom)
+- [Aide](FormObjects/button_overview.md#help)
+- [Rond](FormObjects/button_overview.md#circle)
+- [Personnalisé](FormObjects/button_overview.md#custom)
 
-Cet événement est généralement utilisé pour afficher des pop-up menus en cas de longs clics sur les boutons. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
+Cet événement est généralement utilisé pour afficher des pop-up menus en cas de longs clics sur les boutons. L'événement [`On Clicked`](onClicked.md), s'il est activé, est généré si l'utilisateur relâche le bouton de la souris avant la limite de temps du "clic long".
 
 ### Voir également
 

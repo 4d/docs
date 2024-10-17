@@ -15,11 +15,11 @@ title: VP INSERT ROWS
 
 #### Description
 
-The `VP INSERT ROWS` command <!-- REF #_method_.VP INSERT ROWS.Summary -->inserts rows defined by the _rangeObj_<!-- END REF -->.
+La commande `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->insère les lignes définies dans _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. Si le nombre de lignes à insérer est omis (non défini), une seule ligne est insérée.
+Dans _rangeObj_, passez un objet contenant une plage de la ligne de début (la ligne qui indique où la nouvelle ligne sera insérée) et le nombre de lignes à insérer. Si le nombre de lignes à insérer est omis (non défini), une seule ligne est insérée.
 
-New rows are inserted directly before the first row in the _rangeObj_.
+De nouvelles lignes sont insérées directement avant la première ligne dans _rangeObj_.
 
 #### Exemple
 

@@ -3,4 +3,4 @@ id: compiler
 title: Page Compilateur
 ---
 
-These parameters are detailed in the [**Compiler Settings**](../Project/compiler.md#compiler-settings) section.
+Ces paramètres sont détaillés dans la section [**Paramètres du compilateur**](../Project/compiler.md#parametres-du-compilateur).

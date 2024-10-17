@@ -3,23 +3,23 @@ id: formSize
 title: Tamanho formulário
 ---
 
-4D permite definir el tamaño tanto del formulario como de la [ventana](properties_WindowSize.md). Estas propriedades são interdependentes e a interface da aplicação resulta da sua interação.
+4D permite que você defina o tamanho tanto do formulário e da [janela](propriedades_WindowSize.md). Estas propriedades são interdependentes e a interface da aplicação resulta da sua interação.
 
-Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
+As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 
 ---
 
 ## Tamanho baseado em
 
-- **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor Margin**](#hor-margin) and [**Vert Margin**](#vert-margin) fields.
+- **Tamanho automático**: o tamanho do formulário será o necessário para exibir todos os objetos, aos quais serão adicionados os valores de margem (em píxeis) inseridos nos campos [**Hor Margin**](#hor-margin) e [**Vert Margin**](#vert-margin).
 
-  Puede elegir esta opción cuando desee utilizar objetos activos situados en un área fuera de la pantalla (_es decir_, fuera del rectángulo delimitador de la ventana) con una ventana de tamaño automático. Thanks to this option, the presence of these objects will not modify the size of the window.
+  Você pode escolher essa opção quando quiser usar objetos ativos colocados em uma área fora da tela (ou seja, fora do retângulo delimitador da janela) com uma janela de tamanho automático. Thanks to this option, the presence of these objects will not modify the size of the window.
 
-- **Set Size**: The size of the form will be based on what you enter (in pixels) in the [**Width**](#width) and [**Height**](#height) fields.
+- **Definir tamanho**: o tamanho do formulário será baseado no que você inserir (em píxeis) nos campos [**Largura**](#width) e [**Altura**](#height).
 
-- `<object name>`: el tamaño del formulario se basará en la posición del objeto formulario seleccionado. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.
+- `<object name>`: o tamanho do formulário será baseado na posição do objeto de formulário selecionado. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.
 
-> For output forms, only the [**Hor margin**](#hor-margin) or [**Width**](#width) fields are available.
+> Para formulários de saída, somente os campos [**Margem Hor**](#hor-margin) ou [**Largura**](#width) estão disponíveis.
 
 #### Gramática JSON
 

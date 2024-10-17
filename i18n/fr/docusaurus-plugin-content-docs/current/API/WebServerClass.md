@@ -55,100 +55,6 @@ Leurs propriétés et fonctions sont les suivantes :
 | [<!-- INCLUDE #WebServerClass.start().Syntax -->](#start)<br/><!-- INCLUDE #WebServerClass.start().Summary -->                                                            |
 | [<!-- INCLUDE #WebServerClass.stop().Syntax -->](#stop)<br/><!-- INCLUDE #WebServerClass.stop().Summary -->                                                               |
 
-## WEB Server
-
-<details><summary>Historique</summary>
-
-| Release | Modifications                                             |
-| ------- | --------------------------------------------------------- |
-| 18 R3   | Ajout                                                     |
-| 19      | prise en charge de .sessionCookieSameSite |
-
-</details>
-
-<!-- REF #_command_.WEB Server.Syntax -->**WEB Server** : 4D.WebServer<br/>**WEB Server**( *option* : Integer ) : 4D.WebServer<!-- END REF -->
-
-<!-- REF #_command_.WEB Server.Params -->
-
-| Paramètres | Type                         |    | Description                                                                          |
-| ---------- | ---------------------------- | -- | ------------------------------------------------------------------------------------ |
-| option     | Integer                      | -> | Serveur Web à référencer (défaut si omis = `Web server database`) |
-| Résultat   | 4D.WebServer | <- | Objet Serveur Web                                                                    |
-
-<!-- END REF -->
-
-La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'objet Web server par défaut, ou l'objet Web server défini via le paramètre *option*<!-- END REF -->.
-
-Par défaut, si le paramètre *option* est omis, la commande renvoie une référence au serveur Web de la base de données, c'est-à-dire le serveur Web par défaut. Pour désigner le serveur Web à renvoyer, vous pouvez passer l'une des constantes suivantes dans le paramètre *option* :
-
-| Constante                      | Valeur | Commentaire                                                                 |
-| ------------------------------ | ------ | --------------------------------------------------------------------------- |
-| `Web server database`          | 1      | Le serveur Web de la base courante (par défaut si omis)  |
-| `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                 |
-| `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
-
-L'objet Web server retourné contient les valeurs courantes des propriétés du serveur Web.
-
-#### Exemple
-
-L'objet Web server retourné contient les valeurs courantes des propriétés du serveur Web.
-
-```4d
-  // Méthode d'un composant
- var $hostWS : 4D.WebServer
- $hostWS:=WEB Server(Web server host database)
- If($hostWS.isRunning)
-    ...
- End if
-```
-
-## WEB Server list
-
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 18 R3   | Ajout         |
-
-</details>
-
-<!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
-
-<!-- REF #_command_.WEB Server list.Params -->
-
-| Paramètres | Type       |    | Description                                  |
-| ---------- | ---------- | -- | -------------------------------------------- |
-| Résultat   | Collection | <- | Collection des objets Web server disponibles |
-
-<!-- END REF -->
-
-La commande `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->renvoie une collection de tous les objets serveur Web disponibles dans l'application 4D<!-- END REF -->.
-
-Une application 4D peut contenir de un à plusieurs serveurs Web :
-
-- un serveur Web pour la base de données hôte (serveur Web par défaut)
-- un serveur Web pour chaque composant.
-
-Tous les serveurs Web disponibles sont renvoyés par la commande `WEB Server list` , qu'ils soient en cours d'exécution ou non.
-
-> L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. En revanche, chaque serveur Web de composant que vous souhaitez utiliser doit être instancié à l'aide de la commande [`WEB Server`](#web-server).
-
-Vous pouvez utiliser la propriété [.name](#name) de l'objet Web server pour identifier le projet ou le composant auquel chaque objet Web server de la liste est rattaché.
-
-#### Exemple
-
-Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
-
-```4d
- var $wSList : Collection
- var $vRun : Integer
-
- $wSList:=WEB Server list
- $vRun:=$wSList.countValues(True;"isRunning")
- ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
-
-```
-
 ## .accessKeyDefined
 
 <!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
@@ -226,9 +132,9 @@ Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et d
   - 192.168.5.17
   - 192.168.\*
   - 192.168.\*:8081
-  - http://192.168.5.17:8081
-  - http://\*.myDomain.com
-  - http://myProject.myDomain.com
+  - <http://192.168.5.17:8081>
+  - <http://\*.myDomain.com>
+  - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
   - \*
@@ -651,9 +557,9 @@ Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-sa
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Paramètres | Type   |    | Description                            |
-| ---------- | ------ | -- | -------------------------------------- |
-| settings   | Object | -> | Paramètres du serveur web au démarrage |
+| Paramètres | Type   |                             | Description                            |
+| ---------- | ------ | --------------------------- | -------------------------------------- |
+| settings   | Object | ->                          | Paramètres du serveur web au démarrage |
 | Résultat   | Object | <- | État du démarrage du serveur web       |
 
 <!-- END REF -->

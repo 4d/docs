@@ -41,7 +41,7 @@ title: 進捗インジケーター
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[式の型](properties_Object.md#式の型) ("整数", "数値", "日付", "時間" のみ) -
+[式の型](properties_Object.md#式の型式タイプ) ("整数", "数値", "日付", "時間" のみ) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [最小](properties_Scale.md#最小) -
@@ -91,7 +91,7 @@ title: 進捗インジケーター
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[式の型](properties_Object.md#式の型) ("整数", "数値", "日付", "時間" のみ) -
+[式の型](properties_Object.md#式の型式タイプ) ("整数", "数値", "日付", "時間" のみ) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [バーバーショップ](properties_Scale.md#バーバーショップ) -

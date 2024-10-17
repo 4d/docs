@@ -22,7 +22,7 @@ La seguridad de los datos está presente en todas las etapas de las implementaci
 
 - Soporte extendido del [**Protocolo TLS (HTTPS)**](../Admin/tls.md),
 
-- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+- **Autenticación**: flexible y personalizable [funcionalidades de autenticación](authentication.md) basado en configuraciones creadas así como en métodos base de reserva ([`On Web Authentication`](autentication. d#on-web-authation) para el servidor web y [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) para el servidor REST),
 
 - **Control de los contenidos expuestos**: sólo los elementos que exponga explícitamente pueden estar disponibles desde peticiones web directaso peticiones REST. Debe declarar:
   - [Los métodos proyecto](templates.md#allowing-project-methods) expuestos a través de peticiones HTTP

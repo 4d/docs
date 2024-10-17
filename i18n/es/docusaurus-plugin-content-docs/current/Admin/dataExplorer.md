@@ -190,7 +190,7 @@ Haga clic derecho en el área de consulta para mostrar las anteriores consultas 
 
 El Explorador de datos permite modificar los valores de los atributos y añadir o eliminar entidades. Esta función está destinada a los administradores, por ejemplo para probar implementaciones o solucionar problemas con datos inválidos.
 
-### Allow editing
+### Permitir edición
 
 Por motivos de seguridad, para poder editar datos a través del Explorador de datos, primero debe habilitar el modo de edición mediante el selector **Allow editing**. Cuando está activado, los botones de acción de edición se muestran a la derecha:
 

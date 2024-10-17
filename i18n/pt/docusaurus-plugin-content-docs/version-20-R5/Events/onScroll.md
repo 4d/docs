@@ -3,22 +3,22 @@ id: onScroll
 title: On Scroll
 ---
 
-| Code | Pode ser chamado por                                                                                                                                     | Definição                                                                                                  |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| 59   | [Área de entrada](FormObjects/input_overview.md) de [tipo](FormObjects/properties_Object.md#type) `imagen` - [List Box](FormObjects/listbox_overview.md) | The user scrolls the contents of a picture object or list box using the mouse or keyboard. |
+| Code | Pode ser chamado por                                                                                                                                     | Definição                                                                                               |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 59   | [Zona de entrada](FormObjects/input_overview.md) de [tipo](FormObjects/properties_Object.md#type) `imagem` - [List Box](FormObjects/listbox_overview.md) | O usuário rola o conteúdo de um objeto imagem ou list box usando o mouse, ou o teclado. |
 
 ## Descrição
 
 Esse evento pode ser gerado no contexto de uma entrada imagem ou de um list box.
 
-Este evento se desencadena después de cualquier otro evento usuario relacionado con la acción de desplazamiento ([On Clicked](onClicked.md), [On After Keystroke](onAfterKeystroke.md), etc.). The event is only generated in the object method (not in the form method).
+Esse evento é acionado após qualquer outro evento usuário relacionado à ação de rolagem ([On Clicked](onClicked.md), [On After Keystroke](onAfterKeystroke.md), etc.). O evento só é gerado no método objeto (não no método formulário).
 
-El evento se dispara cuando el desplazamiento es el resultado de una acción del usuario: utilizando las barras de desplazamiento y/o los cursores, utilizando la rueda del ratón o [el teclado](FormObjects/properties_Appearance.md#vertical-scroll-bar). No se genera cuando el objeto se desplaza debido a la ejecución del comando `OBJECT SET SCROLL POSITION`.
+O evento é acionado quando a rolagem é o resultado de uma ação do usuário: usando as barras de rolagem e/ou os cursores, usando a roda do mouse ou [o teclado](FormObjects/properties_Appearance.md#vertical-scroll-bar). Ele não é gerado quando o objeto é rolado devido à execução do comando `OBJECT SET SCROLL POSITION`.
 
 ### Entrada de imagem
 
-The event is generated as soon as a user scrolls a picture within the picture input (field or variable) that contains it. Puede desplazar el contenido de un área de imagen cuando el tamaño del área es menor que su contenido y el [formato de visualización](FormObjects/properties_Display.md#picture-format) es "Truncado (no centrado)".
+O evento é gerado assim que um usuário rola uma imagem na entrada de imagem (campo ou variável) que a contém. Você pode rolar o conteúdo de uma área de imagem quando o tamanho da área for menor que seu conteúdo e o [formato de exibição](FormObjects/properties_Display.md#picture-format) for "Truncado (não centralizado)".
 
 ### List box
 
-The event is generated as soon as a user scrolls the rows or columns of the list box.
+O evento é gerado assim que um usuário rola as linhas ou colunas do list box.

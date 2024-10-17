@@ -5,8 +5,8 @@ title: DataStore
 
 [データストア](ORDA/dsMapping.md#datastore) とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 `Datastore` オブジェクトは以下のコマンドによって返されます:
 
-- [ds](#ds): メインデータストアへのショートカット
-- [Open datastore](#open-datastore): リモートデータストアを開きます
+- [ds](../commands/ds.md): a shortcut to the main datastore
+- [Open datastore](../commands/open-datastore.md): to open any remote datastore
 
 ### 概要
 
@@ -33,215 +33,6 @@ title: DataStore
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<br/><!-- INCLUDE #DataStoreClass.stopRequestLog().Summary -->                            |
 | [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)<br/><!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
 | [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)<br/><!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
-
-## ds
-
-<details><summary>履歴</summary>
-
-| リリース | 内容                  |
-| ---- | ------------------- |
-| 18   | localID パラメーターをサポート |
-| 17   | 追加                  |
-
-</details>
-
-<!-- REF #_command_.ds.Syntax -->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
-
-<!-- REF #_command_.ds.Params -->
-
-| 引数      | タイプ                          |    | 説明                        |
-| ------- | ---------------------------- | -- | ------------------------- |
-| localID | Text                         | -> | 参照を取得したいリモートデータストアのローカルID |
-| 戻り値     | cs.DataStore | <- | データストア参照                  |
-
-<!-- END REF -->
-
-#### 説明
-
-`ds` コマンドは、<!-- REF #_command_.ds.Summary -->カレントの 4Dデータベース、または *localID* で指定したデータベースに合致するデータストアの参照を返します<!-- END REF -->。
-
-*localID* を省略した (または空の文字列 "" を渡した) 場合には、ローカル4Dデータベース (4D Server でリモートデータベースを開いている場合にはそのデータベース) に合致するデータストアの参照を返します。 データストアは自動的に開かれ、`ds` を介して直接利用することができます。
-
-開かれているリモートデータストアのローカルIDを *localID* パラメーターに渡すと、その参照を取得できます。 このデータストアは、あらかじめカレントデータベース (ホストまたはコンポーネント) によって [`Open datastore`](#open-datastore) コマンドで開かれている必要があります。 このコマンドを使用したときにローカルIDが定義されます。
-
-> ローカルIDのスコープは、当該データストアを開いたデータベースです。
-
-*localID* に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
-
-`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
-
-#### 例題 1
-
-4Dデータベースのメインデータストアを使用します:
-
-```4d
- $result:=ds.Employee.query("firstName = :1";"S@")
-```
-
-#### 例題 2
-
-```4d
- var $connectTo; $firstFrench; $firstForeign : Object
-
- var $frenchStudents; $foreignStudents : cs.DataStore
-
- $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
- $frenchStudents:=Open datastore($connectTo;"french")
-
- $connectTo.hostname:="192.168.18.11:8050"
- $foreignStudents:=Open datastore($connectTo;"foreign")
-  //...
-  //...
- $firstFrench:=getFirst("french";"Students")
- $firstForeign:=getFirst("foreign";"Students")
-```
-
-```4d
-  // getFirst メソッド
-  // getFirst(localID;dataclass) -> entity
- #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
-
- $0:=ds($localId)[$dataClassName].all().first()
-```
-
-## Open datastore
-
-<details><summary>履歴</summary>
-
-| リリース  | 内容                            |
-| ----- | ----------------------------- |
-| 20 R6 | Qodly インスタンスへのアクセスをサポート       |
-| 20 R4 | 新しい *passwordAlgorithm* プロパティ |
-| 18    | 追加                            |
-
-</details>
-
-<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
-
-<!-- REF #_command_.Open datastore.Params -->
-
-| 引数             | タイプ                          |    | 説明                                                            |
-| -------------- | ---------------------------- | -- | ------------------------------------------------------------- |
-| connectionInfo | Object                       | -> | リモートデータストアへの接続に使用する接続プロパティ                                    |
-| localID        | Text                         | -> | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
-| 戻り値            | cs.DataStore | <- | データストアオブジェクト                                                  |
-
-<!-- END REF -->
-
-#### 説明
-
-`Open datastore` コマンドは、<!-- REF #_command_.Open datastore.Summary -->
-*connectionInfo* 引数が指定するリモートデータストアにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
-
-以下のリモートデータストアが、このコマンドでサポートされています:
-
-| データストアの種類                                                           | 説明                                                                                                                                                                                                                                                                                  |
-| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| リモート4Dアプリケーション                                                      | 次の条件を満たし、リモートデータストアとして利用可能な 4Dアプリケーション:<li>http および/または https が有効な状態で Webサーバーが起動されている。</li><li>データストアが REST に公開されている ([**RESTサーバーとして公開**](REST/configuration.md#restサーバーを開始する) オプションがチェックされている)。</li>ライセンスが必要な場合があります (注記参照)。 |
-| [Qodly アプリケーション](https://developer.qodly.com/docs/cloud/getStarted) | 定義されたロールに関連付けられた有効な **APIキー** と **APIエンドポイント** が提供されている Qodly Serverアプリケーション。 *connectionInfo* オブジェクトの `api-key` プロパティを使って APIキーを渡す必要があります。 その後、そのロールに付与された権限の範囲で、返されたデータストアオブジェクトを操作できます。                                                                                          |
-
-:::note
-
-`Open datastore` のリクエストは 4D REST API に依存し、リモートの 4D Server上で接続を開くにあたって、4D クライアントライセンスが必要な場合があります。 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#ユーザーログインモード) を参照ください。
-
-:::
-
-*connectionInfo* には、接続したいリモートデータストアの詳細を格納したオブジェクトを渡します。 オブジェクトは以下のプロパティを格納することができます (*hostname* を除き、すべてのプロパティは任意です):
-
-| プロパティ       | タイプ     | リモート4Dアプリケーション                                                                                                                                                                                                                                                                                                                             | Qodly アプリケーション                             |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| hostname    | Text    | リモートデータストアの名前または IPアドレス + ":" + ポート番号 (ポート番号は必須)                                                                                                                                                                                                                                                        | Qodly クラウドインスタンスの APIエンドポイント               |
-| user        | Text    | ユーザー名                                                                                                                                                                                                                                                                                                                                      | - (無視されます)              |
-| password    | Text    | ユーザーパスワード                                                                                                                                                                                                                                                                                                                                  | * (無視されます)              |
-| idleTimeout | Longint | アクティビティがなかった場合に、セッションがタイムアウトするまでの時間 (分単位)。この時間を過ぎると、4D によって自動的にセッションが閉じられます。 省略時のデフォルトは 60 (1時間) です。 60 (分) 未満の値を指定することはできません (60 未満の値を渡した場合、タイムアウトは 60 (分) に設定されます)。 詳細については、[**セッションの終了**](../ORDA/remoteDatastores.md#セッションの終了) を参照ください。 | - (無視されます)              |
-| tls         | Boolean | セキュアな接続を使用する場合は true (1)。 省略時のデフォルトは false です。 可能なかぎり安全な接続を使用することが推奨されます。                                                                                                                                                                                                                                               | セキュアな接続を使用する場合は true。 省略時のデフォルトは false です。 |
-| type        | Text    | "4D Server" でなければなりません                                                                                                                                                                                                                                                                                                                     | * (無視されます)              |
-| api-key     | Text    | - (無視されます)                                                                                                                                                                                                                                                                                                              | Qodly クラウドインスタンスの APIキー                    |
-
-(\*) `tls` が true である場合、以下の条件が満たされていれば、HTTPSプロトコルが使用されます:
-
-- リモートデータストアで HTTPS が有効化されている。
-- 指定されたポート番号は、データベース設定で設定されている HTTPS ポートと合致している。
-- 4Dアプリケーションに有効な証明書と非公開暗号鍵がインストールされている。 条件を満たさない場合、エラー "1610 - ホスト xxx へのリモートリクエストに失敗しました" が生成されます。
-
-*localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。
-
-一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
-
-```4d
- $myds:=Open datastore(connectionInfo;"myLocalId")
- $myds2:=ds("myLocalId")
-  //$myds と $myds2 は同一のものです
-```
-
-`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいてマッピングされます。
-
-合致するデータストアが見つからない場合、`Open datastore` は **Null** を返します。
-
-#### 例題 1
-
-user / password を指定せずにリモートデータストアに接続します:
-
-```4d
- var $connectTo : Object
- var $remoteDS : cs.DataStore
- $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
-```
-
-#### 例題 2
-
-user / password / timeout / tls を指定してリモートデータストアに接続します:
-
-```4d
- var $connectTo : Object
- var $remoteDS : cs.DataStore
- $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
-  "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
-```
-
-#### 例題 3
-
-複数のリモートデータストアと接続します:
-
-```4d
- var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
- $connectTo:=New object("hostname";"192.168.18.11:8044")
- $frenchStudents:=Open datastore($connectTo;"french")
- $connectTo.hostname:="192.168.18.11:8050"
- $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("フランスの生徒は "+String($frenchStudents.Students.all().length)+" 名です")
- ALERT("外国の生徒は "+String($foreignStudents.Students.all().length)+" 名です")
-```
-
-#### 例題 4
-
-Qodly アプリケーションへの接続:
-
-```4d
-var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
-
-var $remoteDS : 4D.DataStoreImplementation
-var $data : 4D.EntitySelection
-
-$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" // 実際にはハードコードせず 
-  // APIキーを安全な場所 (ファイルなど) に保存し、
-  // コードで読み込むることが推奨されます
-
-$remoteDS:=Open datastore($connectTo; "remoteId")
-$data:=$remoteDS.item.all()
-
-ALERT(String($data.length)+" 件の項目が読み込まれました")
-
-```
-
-#### エラー管理
-
-エラーが起きた場合、コマンドは **Null** を返します。 リモートデータベースにアクセスできなかった場合 (アドレス違い、Webサーバーが開始されていない、http/https が有効化されていない、等)、エラー1610 "ホスト XXX へのリモートリクエストに失敗しました" が生成されます。 このエラーは `ON ERR CALL` で実装されたメソッドで割り込み可能です。
 
 <!-- REF DataStoreClass.dataclassName.Desc -->
 
@@ -291,9 +82,9 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -327,9 +118,9 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -361,9 +152,9 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 
-| 引数  | タイプ    |     | 説明                           |
-| --- | ------ | :-: | ---------------------------- |
-| 戻り値 | Object |  <- | カレントデータストアと、各テーブルの暗号化についての情報 |
+| 引数  | 型      |                             | 説明                           |
+| --- | ------ | :-------------------------: | ---------------------------- |
+| 戻り値 | Object | <- | カレントデータストアと、各テーブルの暗号化についての情報 |
 
 <!-- END REF -->
 
@@ -377,11 +168,11 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ       |             |               | タイプ     | 説明                                                            |
+| プロパティ       |             |               | 型       | 説明                                                            |
 | ----------- | ----------- | ------------- | ------- | ------------------------------------------------------------- |
 | isEncrypted |             |               | Boolean | データファイルが暗号化されていれば true                                        |
 | keyProvided |             |               | Boolean | 暗号化されたデータファイルに合致する暗号化キーが提供されていれば true (\*) |
-| tables      |             |               | Object  | 暗号化可能および暗号化されたテーブルと同じ数のプロパティを持つオブジェクト                         |
+| テーブル        |             |               | Object  | 暗号化可能および暗号化されたテーブルと同じ数のプロパティを持つオブジェクト                         |
 |             | *tableName* |               | Object  | 暗号化可能または暗号化されたテーブル                                            |
 |             |             | name          | Text    | テーブル名                                                         |
 |             |             | num           | Number  | テーブル番号                                                        |
@@ -436,9 +227,9 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
 
-| 引数 | タイプ |   | 説明         |
-| -- | --- | - | ---------- |
-|    |     |   | 引数を必要としません |
+| 引数 | 型 |   | 説明         |
+| -- | - | - | ---------- |
+|    |   |   | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -450,7 +241,7 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 この関数は次の場合にのみ使えます:
 
-- ローカルデータストア ([`ds`](#ds)) を対象に。
+- on the local datastore ([`ds`](../commands/ds.md)).
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -515,8 +306,8 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 
-| 引数  | タイプ        |    | 説明                     |
-| --- | ---------- | -- | ---------------------- |
+| 引数  | 型          |                             | 説明                     |
+| --- | ---------- | --------------------------- | ---------------------- |
 | 戻り値 | Collection | <- | 最適化コンテキストオブジェクトのコレクション |
 
 <!-- END REF -->
@@ -592,8 +383,8 @@ $info:=$ds.getAllRemoteContexts()
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 
-| 引数  | タイプ  |    | 説明                |
-| --- | ---- | -- | ----------------- |
+| 引数  | 型    |                             | 説明                |
+| --- | ---- | --------------------------- | ----------------- |
 | 戻り値 | Real | <- | グローバル変更スタンプのカレント値 |
 
 <!-- END REF -->
@@ -606,7 +397,7 @@ $info:=$ds.getAllRemoteContexts()
 
 この関数は次の場合にのみ使えます:
 
-- ローカルデータストア ([`ds`](#ds)) を対象に。
+- on the local datastore ([`ds`](../commands/ds.md)).
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -644,9 +435,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 
-| 引数  | タイプ    |     | 説明           |
-| --- | ------ | :-: | ------------ |
-| 戻り値 | Object |  <- | データストアのプロパティ |
+| 引数  | 型      |                             | 説明           |
+| --- | ------ | :-------------------------: | ------------ |
+| 戻り値 | Object | <- | データストアのプロパティ |
 
 <!-- END REF -->
 
@@ -656,7 +447,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 **返されるオブジェクト**
 
-| プロパティ      | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| プロパティ      | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type       | string  | <li>"4D": ds で利用可能なメインデータストア</li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | networked  | boolean | <li>true: ネットワーク接続を介してアクセスされたデータストア</li><li>false: ネットワーク接続を介さずにアクセスしているデータストア (ローカルデータベース)</li>                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -714,9 +505,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 
-| 引数          | タイプ    |    | 説明           |
-| ----------- | ------ | -- | ------------ |
-| contextName | Text   | -> | コンテキストの名称    |
+| 引数          | 型      |                             | 説明           |
+| ----------- | ------ | --------------------------- | ------------ |
+| contextName | Text   | ->                          | コンテキストの名称    |
 | 戻り値         | Object | <- | 最適化コンテキストの詳細 |
 
 <!-- END REF -->
@@ -733,7 +524,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ                               | タイプ  | 説明                                                                                                                                                                                    |
+| プロパティ                               | 型    | 説明                                                                                                                                                                                    |
 | ----------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name                                | Text | コンテキストの名称                                                                                                                                                                             |
 | main                                | Text | コンテキストに関連する属性 (複数の場合はカンマ区切り)                                                                                                                                       |
@@ -766,9 +557,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 
-| 引数  | タイプ        |     | 説明                                                    |
-| --- | ---------- | :-: | ----------------------------------------------------- |
-| 戻り値 | Collection |  <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します) |
+| 引数  | 型          |                             | 説明                                                    |
+| --- | ---------- | :-------------------------: | ----------------------------------------------------- |
+| 戻り値 | Collection | <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します) |
 
 <!-- END REF -->
 
@@ -806,9 +597,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 
-| 引数  | タイプ     |     | 説明                                                                            |
-| --- | ------- | :-: | ----------------------------------------------------------------------------- |
-| 戻り値 | Boolean |  <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト) |
+| 引数  | 型       |                             | 説明                                                                            |
+| --- | ------- | :-------------------------: | ----------------------------------------------------------------------------- |
+| 戻り値 | Boolean | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト) |
 
 <!-- END REF -->
 
@@ -840,8 +631,8 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- REF #DataStoreClass.locked().Params -->
 
-| 引数  | タイプ     |    | 説明               |
-| --- | ------- | -- | ---------------- |
+| 引数  | 型       |                             | 説明               |
+| --- | ------- | --------------------------- | ---------------- |
 | 戻り値 | Boolean | <- | ロックされている場合は true |
 
 <!-- END REF -->
@@ -878,9 +669,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -913,10 +704,10 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 
-| 引数            | タイプ    |    | 説明            |
-| ------------- | ------ | -- | ------------- |
-| curPassPhrase | Text   | -> | カレントのパスフレーズ   |
-| curDataKey    | Object | -> | カレントのデータ暗号化キー |
+| 引数            | 型      |                             | 説明            |
+| ------------- | ------ | --------------------------- | ------------- |
+| curPassPhrase | Text   | ->                          | カレントのパスフレーズ   |
+| curDataKey    | Object | ->                          | カレントのデータ暗号化キー |
 | 戻り値           | Object | <- | 暗号化キーのチェックの結果 |
 
 <!-- END REF -->
@@ -941,7 +732,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 コマンドの実行結果は、戻り値のオブジェクトに格納されます:
 
-| プロパティ      |                                                                                              | タイプ        | 説明                                                  |
+| プロパティ      |                                                                                              | 型          | 説明                                                  |
 | ---------- | -------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------- |
 | success    |                                                                                              | Boolean    | 提供された暗号化キーが暗号化データと合致すれば true、それ以外は false            |
 |            |                                                                                              |            | 以下のプロパティは、success が *FALSE* であった場合にのみ返されます。         |
@@ -989,7 +780,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
-| 引数     | タイプ     |    | 説明                                                                                               |
+| 引数     | 型       |    | 説明                                                                                               |
 | ------ | ------- | -- | ------------------------------------------------------------------------------------------------ |
 | status | Boolean | -> | `webAdmin`ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト) |
 
@@ -1033,7 +824,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
 
-| 引数       | タイプ  |    | 説明               |
+| 引数       | 型    |    | 説明               |
 | -------- | ---- | -- | ---------------- |
 | newStamp | Real | -> | グローバル変更スタンプの新しい値 |
 
@@ -1053,7 +844,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 この関数は次の場合にのみ使えます:
 
-- ローカルデータストア ([`ds`](#ds)) を対象に。
+- on the local datastore ([`ds`](../commands/ds.md)).
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -1090,7 +881,7 @@ ds.setGlobalStamp($newValue)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 
-| 引数              | タイプ                          |    | 説明                                                                                          |
+| 引数              | 型                            |    | 説明                                                                                          |
 | --------------- | ---------------------------- | -- | ------------------------------------------------------------------------------------------- |
 | contextName     | Text                         | -> | コンテキストの名称                                                                                   |
 | dataClassName   | Text                         | -> | データクラスの名称                                                                                   |
@@ -1222,7 +1013,7 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
-| 引数      | タイプ                     |    | 説明                                             |
+| 引数      | 型                       |    | 説明                                             |
 | ------- | ----------------------- | -- | ---------------------------------------------- |
 | file    | 4D.File | -> | File オブジェクト                                    |
 | options | Integer                 | -> | ログレスポンスオプション (サーバーのみ)       |
@@ -1334,9 +1125,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -1400,9 +1191,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 
-| 引数 | タイプ |   | 説明         |
-| -- | --- | - | ---------- |
-|    |     |   | 引数を必要としません |
+| 引数 | 型 |   | 説明         |
+| -- | - | - | ---------- |
+|    |   |   | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -1436,9 +1227,9 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <!-- REF #DataStoreClass.unlock().Params -->
 
-| 引数 | タイプ |   | 説明         |
-| -- | --- | - | ---------- |
-|    |     |   | 引数を必要としません |
+| 引数 | 型 |   | 説明         |
+| -- | - | - | ---------- |
+|    |   |   | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -1472,9 +1263,9 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 
-| 引数 | タイプ |   | 説明         |
-| -- | --- | - | ---------- |
-|    |     |   | 引数を必要としません |
+| 引数 | 型 |   | 説明         |
+| -- | - | - | ---------- |
+|    |   |   | 引数を必要としません |
 
 <!-- END REF -->
 

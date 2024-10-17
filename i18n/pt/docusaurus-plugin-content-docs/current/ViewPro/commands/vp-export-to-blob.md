@@ -30,8 +30,7 @@ Em *paramObj*, você pode passar várias propriedades:
 | includeFormulas         | Parâmetros                   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                                                                                                                                                                        |
 | includeStyles           | Parâmetros                   | Se deve incluir o estilo ao salvar, padrão=true.                                                                                                                                                                                                                |
 | includeUnusedNames      | Parâmetros                   | Se deve incluir o nome personalizado não utilizado ao salvar, padrão=true.                                                                                                                                                                                      |
-
-|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
+| saveAsView              | Parâmetros                   | Whether to apply the format string to exporting value when saving, default=false.                                                                                                                                                                               |
 
 Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 

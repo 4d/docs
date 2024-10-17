@@ -34,7 +34,7 @@ $nbSrv:=WEB Server list.length
 //$nbSrv の値は 1
 ```
 
-Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](API/WebServerClass.md#web-server) コマンドを呼び出します。
+To instantiate a web server object, call the [`WEB Server`](commands/web-server.md) command:
 
 ```4d
 	// 4D.WebServer クラスのオブジェクト変数を作成します。
@@ -70,7 +70,7 @@ webServer:=WEB Server(Web server receiving request)
 | 関数                                       | 引数                                   | 戻り値                                | 説明            |
 | ---------------------------------------- | ------------------------------------ | ---------------------------------- | ------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (オブジェクト) | status (オブジェクト) | Webサーバーを開始します |
-| [`stop()`](API/WebServerClass.md#start)  | -                                    | *                                  | Webサーバーを停止します |
+| [`stop()`](API/WebServerClass.md#start)  | -                                    | -                                  | Webサーバーを停止します |
 
 Webサーバーを起動・停止するには、Webサーバーオブジェクトの [`start()`](API/WebServerClass.md#start) および [`stop()`](API/WebServerClass.md#stop) 関数を呼び出すだけです。
 

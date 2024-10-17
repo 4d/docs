@@ -9,14 +9,14 @@ title: VP Get cell style
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |                  |
-| ---------- | ------ | -- | ------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango |                  |
+| Parámetros | Tipo   |                             | Descripción  |                  |
+| ---------- | ------ | --------------------------- | ------------ | ---------------- |
+| rangeObj   | Object | ->                          | Objeto rango |                  |
 | Result     | Object | <- | Objeto style | <!-- END REF --> |
 
 #### Descripción
 
-The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->returns a [style object](../configuring.md#style-objects) for the first cell in the *rangeObj*<!-- END REF -->.
+El comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->devuelve un [objeto estilo](../configuring.md#style-objects) para la primera celda del *rangeObj*<!-- END REF -->.
 
 En *rangeObj*, pase un rango que contenga el estilo a recuperar.
 

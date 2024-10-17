@@ -3,9 +3,9 @@ id: advanced-programming
 title: Programmation avancée avec Javascript
 ---
 
-Une zone 4D View Pro est un [objet de formulaire de zone Web](../FormObjects/webArea_overview.md) qui utilise le [moteur de rendu Web intégré](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). As such, it behaves just like any other web area, and you can get it to execute Javascript code by calling the [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html) 4D command.
+Une zone 4D View Pro est un [objet de formulaire de zone Web](../FormObjects/webArea_overview.md) qui utilise le [moteur de rendu Web intégré](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). En tant que telle, elle se comporte comme n'importe quelle autre zone Web, et vous pouvez lui faire exécuter du code Javascript en appelant la commande 4D [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html).
 
-Since 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://developer.mescius.com/spreadjs), you can also call SpreadJS Javascript methods in 4D View Pro areas.
+Étant donné que 4D View Pro est alimenté par la [solution de feuille de calcul SpreadJS](https://developer.mescius.com/spreadjs), vous pouvez également appeler les méthodes Javascript de SpreadJS dans les zones 4D View Pro.
 
 ## Exemple concret : masquer le ruban
 
@@ -27,7 +27,7 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 Vous pouvez exploiter la bibliothèque de méthodes Javascript de SpreadJS et les appeler directement pour gérer vos feuilles de calcul.
 
-4D has a built-in `Utils.spread` property that gives access to the spreadsheet document (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://developer.mescius.com/spreadjs/api/modules/GC.Data).
+4D dispose d'une propriété intégrée `Utils.spread` qui donne accès au document de feuille de calcul (également appelé workbook) à l'intérieur de la zone 4D View Pro, ce qui simplifie l'appel des [méthodes de Workbook SpreadJS](https://developer.mescius.com/spreadjs/api/modules/GC.Data).
 
 #### Exemple
 

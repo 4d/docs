@@ -5,13 +5,13 @@ title: Datastores distants
 
 Un **datastore distant** est une référence, dans une application 4D locale (4D ou 4D Server), à un [datastore](dsMapping.md#datastore) stocké dans une autre application 4D.
 
-L'application 4D locale se connecte et référence le datastore distant à l'aide de la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore).
+The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../commands/open-datastore.md) command.
 
 Sur la machine distante, 4D ouvre une [session](../WebServer/sessions.md) pour gérer les requêtes de l'application qui a appelé `Open datastore`. Les requêtes utilisent en interne [l'API REST](../REST/gettingStarted.md), ce qui signifie qu'elles peuvent avoir besoin de [licences disponibles](../REST/authUsers.md).
 
 ## Utiliser des sessions web
 
-Lorsque vous travaillez avec un datastore distant référencé par des appels à la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore), la connexion avec les process de requête est gérée via des [sessions web](../WebServer/sessions.md) sur la machine distante.
+When you work with a remote datastore referenced through calls to the [`Open datastore`](../commands/open-datastore.md) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
 
 La session web créée sur le datastore distant est identifiée à l'aide d'un ID de session interne, associé au `localID` du côté de l'application 4D. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
 
@@ -29,7 +29,7 @@ Ces principes sont illustrés dans les graphiques suivants :
 
 Les process qui gèrent les sessions d'accès aux datastore apparaissent dans la fenêtre d'administration de 4D Server :
 
-- nom : "REST Handler : \\<nom du process\>"
+- nom : "REST Handler : \<nom du process\>"
 - type : type Worker Server HTTP
 - session : le nom de session est le nom d'utilisateur passé à la commande `Open datastore`.
 

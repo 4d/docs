@@ -9,7 +9,7 @@ title: VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-| 引数            | タイプ    |    | 説明        |                  |
+| 引数            | 型      |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
 | rangeObj      | Object | -> | レンジオブジェクト |                  |
 | dateValue     | Date   | -> | 設定する日付値   |                  |

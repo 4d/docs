@@ -17,9 +17,9 @@ Le bouton **Sélectionner...** vous permet de définir la police et la taille de
 
 La police et la taille de police par défaut dépendent de la plate-forme d'exécution de 4D.
 
-> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
+> Cette propriété affecte également les parties suivantes de 4D : <li>certains espaces de prévisualisation de l'Explorateur</li><li>la règle de l'éditeur de formulaire</li>
 
-### Display Windows
+### Afficher fenêtres
 
 D'autres options permettent de configurer l'affichage de diverses fenêtres du mode Application.
 
@@ -35,7 +35,7 @@ Vous pouvez définir la [fréquence d'écriture du cache](database.md#memory-pag
 
 - **Progression de l'impression** : permet, lors de l'impression, d'activer ou de désactiver l'affichage de la boîte de dialogue de progression de l'impression.
 
-- **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
+- **Utiliser le mode SDI sous Windows** : Lorsque cette option est cochée, 4D active automatiquement le [mode SDI (Interface à document unique)](../Menus/sdi.md) dans votre application lorsqu'elle est exécutée dans un [contexte pris en charge](../Menus/sdi.md#disponibilité-du-mode-sdi). Lorsque vous sélectionnez cette option, sur Windows le menu **Exécuter** de la barre de menus 4D vous permet de sélectionner le mode dans lequel vous souhaitez tester l'application :
 
   ![](../assets/en/settings/sdi-mdi.png)
 
@@ -53,9 +53,9 @@ Ce menu vous permet de sélectionner la palette de couleurs à utiliser au nivea
 
 Les palettes suivants sont disponibles :
 
-- **Light**: the application will use the Default Light Theme
+- **Clair**: l'application utilisera le thème clair par défaut
   ![](../assets/en/settings/light-appearance.png)
-- **Dark**: the application will use the Default Dark Theme
+- **Foncé** : l'application utilisera le thème foncé par défaut
   ![](../assets/en/settings/dark-appearance.png)
 - **Héritée** (par défaut) : l'application hérite du niveau de priorité le plus élevé (c'est-à-dire les préférences de l'utilisateur du système d'exploitation)
 

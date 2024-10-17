@@ -9,16 +9,16 @@ Os formulários constituem a interface através da qual a informação é introd
 
 Os formulários também podem conter outros formulários através das seguintes funcionalidades:
 
-- [subform objects](FormObjects/subform_overview.md)
-- [inherited forms](properties_FormProperties.md#inherited-forms)
+- [objetos de subformulário](FormObjects/subform_overview.md)
+- [formulários herdados](properties_FormProperties.md#inherited-forms)
 
 ## Criar formulários
 
 É possível adicionar ou modificar formulários 4D usando os seguintes elementos:
 
-- **La interfaz 4D Developer:** cree nuevos formularios desde el menú **Archivo** o la ventana del **Explorador**.
-- **El editor de formularios**: modifique sus formularios utilizando el **[editor de formularios](FormEditor/formEditor.md)**.
-- **El código JSON:** cree y diseñe sus formularios utilizando JSON y guarde los archivos de los formularios en la [ubicación adecuada](Project/architecture.md#sources-folder). Exemplo:
+- **Interface de Desenvolvedor 4D:** Crie novos formulários a partir do menu **Arquivo** ou da janela **Explorador**.
+- **Form Editor**: Modifique seus formulários usando o **[Form Editor] (FormEditor/formEditor.md)**.
+- **Código JSON:** Crie e projete seus formulários usando JSON e salve os arquivos de formulário no [local apropriado] (Project/architecture.md#sources-folder). Exemplo:
 
 ```
 {
@@ -70,9 +70,9 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 Existem duas categorias de formulários:
 
-- **Los formularios de proyecto** - Formularios independientes que no están unidos a ninguna tabla. Eles são destinados principalmente para criar caixas de diálogo de interface, bem como componentes. Os formulários do projeto podem ser usados para criar interfaces que estejam em conformidade com os padrões do sistema operacional.
+- **Formulários de projeto** - Formulários independentes que não estão anexados a nenhuma tabela. Eles são destinados principalmente para criar caixas de diálogo de interface, bem como componentes. Os formulários do projeto podem ser usados para criar interfaces que estejam em conformidade com os padrões do sistema operacional.
 
-- **Los formularios tablas** - Se adjuntan a tablas específicas y, por tanto, se benefician de funciones automáticas útiles para el desarrollo de aplicaciones basadas en bases de datos. Normalmente, uma tabela tem formulários de entrada e saída separados.
+- **Formulários de tabela** - Vinculados a tabelas específicas e, portanto, beneficiam-se de funções automáticas úteis para o desenvolvimento de aplicativos baseados em bancos de dados. Normalmente, uma tabela tem formulários de entrada e saída separados.
 
 Normalmente, você seleciona a categoria do formulário quando o cria, mas pode alterá-la posteriormente.
 
@@ -87,7 +87,7 @@ Cada formulário é composto por, pelo menos, duas páginas:
 
 - Coloque as informações mais importantes na primeira página e as informações menos importantes nas outras páginas.
 - Organize cada tópico na sua própria página.
-- Reducir o eliminar el desplazamiento durante la entrada de datos definiendo el [orden de entrada](../FormEditor/formEditor.html#data-entry-order).
+- Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](../FormEditor/formEditor.html#data-entry-order).
 - Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
 
 As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
@@ -98,7 +98,7 @@ Um formulário de múltiplas páginas possui tanto uma página de fundo quanto v
 
 ## Formulários herdados
 
-Los formularios 4D pueden utilizar y ser utilizados como "formularios heredados", lo que significa que todos los objetos de *Formulario A* pueden ser utilizados en *Formulario B*. En este caso, *Formulario B* "hereda" los objetos de *Formulario A*.
+Formulários 4D podem usar e ser usados como "formulários herdados," o que significa que todos os objetos do *Formulário A* podem ser usados no *Formulário B*. Neste caso, *Formulário B* "herda" os objetos do *Formulário A*.
 
 Referências a um formulário herdado estão sempre ativas: se um elemento de um formulário herdado for modificado (estilos de botão, por exemplo), todos os formulários que utilizam esse elemento serão automaticamente modificados.
 
@@ -111,20 +111,20 @@ Quando um formulário é executado, os objetos são carregados e combinados na s
 3. Página zero do formulário aberto
 4. Página actual do formulário aberto.
 
-Este orden determina el [orden de entrada](../FormEditor/formEditor.html#data-entry-order) de los objetos en el formulario.
+Essa ordem determina a [ordem de entrada] padrão (../FormEditor/formEditor.html#data-entry-order) dos objetos no formulário.
 
 > Apenas as páginas 0 e 1 de um formulário herdado podem aparecer noutros formulários.
 
 As propriedades e o método de um formulário não são considerados quando esse formulário é usado como um formulário herdado. Por outro lado, são chamados os métodos dos objetos que contém.
 
-To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
+Para definir um formulário herdado, as propriedades [Inherited Form Name](properties_FormProperties.md#inherited-form-name) e [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (para formulário de tabela) devem ser definidas no formulário que herdará algo de outro formulário.
 
-Un formulario puede heredar de un formulario proyecto, definiendo la propiedad [Inherited Form Table](properties_FormProperties.md#inherited-form-table) en `\<None>` en la Lista de propiedades (o " " en JSON).
+Um formulário pode herdar de um formulário de projeto, definindo a propriedade [Inherited Form Table] (properties_FormProperties.md#inherited-form-table) como `\<None>` na Property List (ou " " em JSON).
 
-Para dejar de heredar un formulario, seleccione `\<None>` en la lista de propiedades (o " " en JSON) para la propiedad [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
+Para interromper a herança de um formulário, selecione `\<None>` na Property List (ou " " em JSON) para a propriedade [Inherited Form Name] (properties_FormProperties.md#inherited-form-name).
 
 > É possível definir um formulário herdado em um formulário que eventualmente será usado como um formulário herdado para um terceiro formulário. A combinação de objetos é feita de forma recursiva. 4D detecta loops recursivos (por exemplo, se o formulário [table1]form1 é definido como o formulário herdado de [table1]form1, ou seja, ele mesmo) e interrompe a cadeia de formulários.
 
 ## Propriedades compatíveis
 
-[Associated Menu Bar](properties_Menu.md#associated-menu-bar) - [Fixed Height](properties_WindowSize.md#fixed-height) - [Fixed Width](properties_WindowSize.md#fixed-width) - [Form Break](properties_Markers.md#form-break) - [Form Detail](properties_Markers.md#form-detail) - [Form Footer](properties_Markers.md#form-footer) - [Form Header](properties_Markers.md#form-header) - [Form Name](properties_FormProperties.md#form-name) - [Form Type](properties_FormProperties.md#form-type) - [Inherited Form Name](properties_FormProperties.md#inherited-form-name) - [Inherited Form Table](properties_FormProperties.md#inherited-form-table) - [Maximum Height](properties_WindowSize.md#maximum-height-minimum-height) - [Maximum Width](properties_WindowSize.md#maximum-width-minimum-width) - [Method](properties_Action.md#method) - [Minimum Height](properties_WindowSize.md#maximum-height-minimum-height) - [Minimum Width](properties_WindowSize.md#maximum-width-minimum-width) - [Pages](properties_FormProperties.md#pages) - [Print Settings](properties_Print.md#settings) - [Published as Subform](properties_FormProperties.md#published-as-subform) - [Save Geometry](properties_FormProperties.md#save-geometry) - [Window Title](properties_FormProperties.md#window-title)
+[Barra de Menu Associado](properties_Menu.md#associated-menu-bar) - [Form Break](properties_WindowSize.md#fixed-height) - [Form Detail](properties_Markers.md#fixed-width) - [Form Break](properties_Markers.md#form-break) - [Form Detail](properties_Markers.md#form-detail) - [Form Footer](properties_Markers. d#form-footer) - [Cabeçalho do Formulário](properties_Markers.md#form-header) - [Nome do Formulário](properties_FormProperties.md#form-name) - [Tipo de Formulário](properties_FormProperties.md#form-type) - [Nome do Formulário herdado](properties_FormProperties.md#inherited-form-name) - [Tabela de Formulário Herdades](properties_FormProperties. d#hererited-form-table) - [Altura Máxima](properties_WindowSize.md#maximum-height-minimum-height) - [Largura Máxima](properties_WindowSize.md#maximum-width-minimum-width) - [Method](properties_Action.md#method) - [Altura Mínima](properties_WindowSize.md#maximum-height-minimum-height) - [Widget Mínimo](properties_WindowSize. d#maximum-width-minimum-width) - [Pages](properties_FormProperties.md#pages) - [Configurações de impressão](properties_Print.md#settings) - [Publicado como subform](properties_FormProperties.md#published-as-subform) - [Salvar Geometry](properties_FormProperties.md#save-geometry) - [Título da Janela](properties_FormProperties.md#window-title)

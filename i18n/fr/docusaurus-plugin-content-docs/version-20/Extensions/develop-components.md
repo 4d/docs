@@ -97,7 +97,7 @@ component_method("host_method_name")
 EXECUTE METHOD($param)
 ```
 
-> Une base hôte interprétée qui contient des composants interprétés peut être compilée ou soumise à un contrôle syntaxique si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il ne sera pas possible d'effectuer l'opération.   
+> Vous pouvez compiler ou effectuer une vérification syntaxique dans une base hôte interprétée qui contient des composants interprétés si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il ne sera pas possible d'effectuer l'opération.   
 > A noter qu'une méthode interprétée peut appeler une méthode compilée, mais pas l'inverse, sauf si vous utilisez les commandes `EXECUTE METHOD` et `EXECUTE FORMULA`.
 
 
@@ -116,7 +116,7 @@ Pour permettre aux classes et aux fonctions de votre composant d'être exposées
 Lorsque vous saisissez une valeur, vous déclarez que les classes et les fonctions du composant seront disponibles dans [user class store (**cs**)](../Concepts/classes.md#cs) du code du projet hôte, par le biais du namespace `cs.<value>`. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
 
 ```4d
-//in host project
+//dans le projet hôte
 var $rect: cs.eGeometry.Rectangle
 $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
@@ -201,7 +201,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et le projet 
 
 - La commande `Get pointer` ne retournera pas un pointeur vers une variable du projet hôte si elle est appelée depuis un composant et inversement.
 
-- L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans le même projet hôte.
+- L'architecture des composants permet la coexistence, au sein du même projet interprété, de composants à la fois interprétés et compilés (inversement, seuls des composants compilés peuvent être utilisés dans un projet compilé). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans le même projet hôte.
  - Si le composant C définit la variable `mavarC`, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur `->mavarC`.
  - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution.
 

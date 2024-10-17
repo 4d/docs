@@ -22,7 +22,7 @@ Un atributo es la celda de almacenamiento más pequeña de una base de datos rel
 
 ## AttributePath
 
-Un attributePath es la ruta de un atributo al interior de una determinada clase de datos o de una entidad. Ver también [PropertyPath](#propertyPath).
+Un attributePath es la ruta de un atributo al interior de una determinada clase de datos o de una entidad. See also [PropertyPath](#propertypath).
 
 ## Class code
 

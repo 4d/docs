@@ -3,11 +3,11 @@ id: getting-started
 title: Prise en main
 ---
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [commands](commands.md). Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
+4D View Pro est un [composant 4D](Concepts/components.md) qui inclut une [zone de formulaire 4D](FormObjects/viewProArea_overview.md) et des [commandes](commands.md) spécifiques. Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://developer.mescius.com/spreadjs) integrated in 4D.
+Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro est alimenté par la [solution de feuille de calcul SpreadJS](https://developer.mescius.com/spreadjs) intégrée en 4D.
 
 L'intégration de zones 4D View Pro dans vos formulaires vous permet d'importer et d'exporter des documents de type tableur à l'aide des commandes 4D View Pro.
 
@@ -27,9 +27,9 @@ Les documents 4D View Pro sont affichés et modifiés manuellement dans un [obje
 
 Vous pouvez également sélectionner une zone 4D View Pro préconfigurée dans la [bibliothèque d'objets](FormEditor/objectLibrary.md).
 
-> 4D View Pro areas can also be [created and used offscreen](commands/vp-run-offscreen-area.md).
+> Les zones 4D View Pro peuvent également être [créées et utilisées hors écran](commands/vp-run-offscreen-area.md).
 
-You can [configure the area](configuring.md) using the Property List and 4D View Pro commands.
+Vous pouvez [configurer la zone](configuring.md) à l'aide de la liste de propriétés et des commandes 4D View Pro.
 
 ## Fondamentaux de la sélection, de la saisie et de la navigation
 
@@ -41,7 +41,7 @@ Les feuilles de calcul sont composées de lignes et de colonnes. Un numéro est 
 
 - Pour sélectionner plusieurs cellules continues, faites glisser la souris d'une extrémité à l'autre de la sélection. Vous pouvez également cliquer sur les deux extrémités de la sélection tout en maintenant la touche Maj enfoncée.
 
-- To select all cells in the spreadsheet, click on the cell at the top left of the area:
+- Pour sélectionner toutes les cellules dans la feuille de calcul, cliquez sur la cellule en haut à gauche de la zone :
   ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
 - Pour sélectionner une colonne, cliquez sur la lettre (ou le groupe de lettres) correspondant(e).
@@ -78,20 +78,20 @@ En fonction de la zone cliquée, les options suivantes sont également disponibl
 
 - cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
 - cliquez sur une cellule ou une plage de cellules :
-  - **Filter**: allows hiding row through filters (see "Filtering rows" in the [SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/)).
+  - **Filtrer** : permet de masquer la ligne via des filtres (voir "Filtrer les lignes" dans la [documentation SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
   - **Trier** : permet de trier le contenu des colonnes.
-  - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
+  - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :\
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
-## Using 4D View Pro commands
+## Utilisation des commandes 4D View Pro
 
-4D View Pro commands can be used in the 4D Code Editor, just like 4D language commands.
+Les commandes 4D View Pro peuvent être utilisées dans l'éditeur de code 4D, tout comme les commandes du langage 4D.
 
-Since 4D View Pro is a built-in 4D component, you can access its list of commands from the Explorer, in the **Component Methods** section:
+Étant donné que 4D View Pro est un composant 4D intégré, vous pouvez accéder à sa liste de commandes depuis l'Explorateur, dans la section **Méthodes composants** :
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-For a detailed list, see [Commands](commands.md).
+Pour une liste détaillée, consultez [Commands](commands.md).
 
 ### Traiter une zone 4D View Pro
 
@@ -99,7 +99,7 @@ Une zone 4D View Pro gère plusieurs objets et éléments.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro commands require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
+La plupart des commandes 4D View Pro nécessitent un paramètre *vpAreaName*, qui correspond au [**nom de la zone de formulaire 4D View Pro**](FormObjects/viewProArea_overview.md) (objet de formulaire 4D). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
 
 Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone nommée "myVpArea", saisissez le code suivant :
 
@@ -111,20 +111,20 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilisation d'objets de plage
 
-Some 4D View Pro commands require a *rangeObj* parameter. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
+Certaines commandes 4D View Pro nécessitent un paramètre *rangeObj*. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des commandes 4D View Pro, vous pouvez créer des plages et les passer à d'autres commandes pour lire ou écrire dans des emplacements spécifiques de votre document.
 
 Par exemple, pour créer un objet plage pour les cellules suivantes :
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-You can use the [VP Cells](commands/vp-cells.md) method:
+Vous pouvez utiliser la méthode [VP Cells](commands/vp-cells.md) :
 
 ```4d
 var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 ```
 
-You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](commands/vp-set-border.md)).
+Ensuite, vous pouvez passer `$myRange` à une autre méthode 4D View Pro pour modifier ces cellules (par exemple ajouter une bordure à l'ensemble des cellules avec [VP SET BORDER](commands/vp-set-border.md)).
 
 Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
@@ -152,4 +152,4 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 - .sjs
 - .pdf (à des fins d'export uniquement)
 
-For more details, check out the description of [VP IMPORT DOCUMENT](commands/vp-import-document.md) and [VP EXPORT DOCUMENT](commands/vp-export-document.md).
+Pour plus de détails, consultez la description de [VP IMPORT DOCUMENT](commands/vp-import-document.md) et [VP EXPORT DOCUMENT](commands/vp-export-document.md).

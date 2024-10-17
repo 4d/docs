@@ -9,9 +9,9 @@ title: VP Get value
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Parámetros | Tipo   |    | Descripción                           |                  |
-| ---------- | ------ | -- | ------------------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objeto rango                          |                  |
+| Parámetros | Tipo   |                             | Descripción                           |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------- | ---------------- |
+| rangeObj   | Object | ->                          | Objeto rango                          |                  |
 | Result     | Object | <- | Objeto que contiene un valor de celda | <!-- END REF --> |
 
 #### Descripción
@@ -22,7 +22,7 @@ En *rangeObj*, pase un rango cuyo valor desea recuperar.
 
 #### Objeto devuelto
 
-The object returned will contain the `value` property, and, in case of a js date value, a `time` property:
+El objeto devuelto contendrá la propiedad `value` y, en caso de un valor fecha js, una propiedad `time`:
 
 | Propiedad | Tipo                                       | Descripción                                                                     |
 | --------- | ------------------------------------------ | ------------------------------------------------------------------------------- |

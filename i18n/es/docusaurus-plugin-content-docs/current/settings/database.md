@@ -35,7 +35,7 @@ Se ofrecen tres opciones de ubicación:
 - **Carpeta de archivos de datos** (opción por defecto): cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta llamada "archivos temporales" situada en el mismo nivel que el archivo de datos de la base de datos.
 - **Definido por el usuario**: esta opción se utiliza para definir una ubicación personalizada. Si se modifica la opción de ubicación, será necesario reiniciar la base para que se tenga en cuenta la nueva opción. 4D verifica si se puede acceder a la carpeta seleccionada mediante escritura. Si no es así, la aplicación prueba otras opciones hasta encontrar una carpeta válida.
 
-> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
+> Esta opción se almacena en las "propiedades adicionales" de la estructura, accesibles durante la exportación XML de la definición de estructura (ver [Exportar e importar las definiciones de estructura](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
 
 ### Comparación de texto
 
@@ -85,16 +85,16 @@ Utilice los parámetros de esta pestaña para configurar la memoria caché de la
 - **Cálculo de la caché adaptable**: cuando esta opción está marcada, la gestión de la memoria caché es realizada dinámicamente por el sistema, respetando los límites que defina. Esto permite configurar una memoria caché de alto rendimiento adaptada a la mayoría de las configuraciones. A continuación, el tamaño de la memoria caché se calcula dinámicamente en función de los parámetros definidos. Los valores ofrecidos por defecto corresponden al uso estándar de 4D.
 
   - **Memoria a reservar para el sistema y las otras aplicaciones**: parte de la memoria RAM a reservar para el Sistema y las otras aplicaciones. Este valor aumenta para la optimización cuando otras aplicaciones se ejecutan en la misma máquina que 4D.
-  - **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
-    To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. En el modo adaptativo, el tamaño de la memoria caché varía dinámicamente en función de las necesidades de la aplicación y del sistema. Puede definir los límites utilizando las siguientes dos opciones:
+  - **Porcentaje de memoria disponible utilizada para la caché**: porcentaje de la memoria restante asignada por defecto a la caché.\
+    Para obtener el tamaño asignado por defecto a la caché, basta con realizar el siguiente cálculo: (Memoria física -- Memoria física a reservar) X Porcentaje de la memoria utilizada para la caché. En el modo adaptativo, el tamaño de la memoria caché varía dinámicamente en función de las necesidades de la aplicación y del sistema. Puede definir los límites utilizando las siguientes dos opciones:
   - **Tamaño mínimo**: cantidad mínima de memoria que debe reservarse para la caché. Este valor no puede ser inferior a 100 MB.
-  - **Tamaño máximo**: cantidad máxima de memoria que puede utilizar la caché. This value is virtually unlimited.\\
-    Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. En este caso, los límites definidos permiten garantizar un rendimiento mínimo en todos los casos. El siguiente diagrama ilustra este comportamiento:
+  - **Tamaño máximo**: cantidad máxima de memoria que puede utilizar la caché. Este valor es prácticamente ilimitado.\\
+    Definir límites es especialmente útil para bases distribuidas en máquinas de las que no se conoce a priori la configuración de memoria. En este caso, los límites definidos permiten garantizar un rendimiento mínimo en todos los casos. El siguiente diagrama ilustra este comportamiento:
 
-  Example for calculating cache memory:
-  _Physical memory to reserve = 256 MB
-  Percentage of the available memory used for the cache = 50%
-  Maximum size = 1 GB Minimum size = 128 MB_
+  Ejemplo de cálculo de la memoria caché:
+  _Memoria física a reservar = 256 MB
+  Porcentaje de la memoria disponible utilizado para la caché = 50%
+  Tamaño máximo = 1 GB Tamaño mínimo = 128 MB_
 
   ![](../assets/en/settings/memory-maximum-size.png)
 

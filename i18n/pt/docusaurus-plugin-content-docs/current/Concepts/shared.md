@@ -8,7 +8,7 @@ title: Objetos e coleções compartilhados
 Objetos compartilhados e coleções compartilhadas são armazenados em variáveis padrão [`Object`](dt_object.md) e [`Collection`](dt_collection.md) do tipo, mas devem ser instanciados usando comandos específicos:
 
 - para criar um objeto compartilhado, use o comando [`Novo objeto compartilhado`](https://doc.4d.com/4dv20/help/command/en/page1471.html) ou chame a função [`new()`](../API/ClassClass.md#new) de uma [classe compartilhada](classes.md#shared-classes),
-- para criar uma coleção compartilhada, use o comando [`Nova coleção compartilhada`](../API/CollectionClass.md#new-shared-collecation).
+- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
@@ -68,8 +68,6 @@ A atribuição de objectos/colecções partilhados a propriedades ou elementos d
 - Os objetos/coleções partilhados agrupados não podem ser desagrupados. Uma vez incluído num grupo partilhado, um objeto/coleção partilhado está permanentemente ligado a esse grupo durante toda a sessão. Mesmo que todas as referências de um objeto/coleção sejam removidas do objeto/coleção pai, permanecerão linkadas.
 
 Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
-
-**Nota:** Os grupos partilhados são geridos através de uma propriedade interna denominada _identificador de bloqueio_. Para obter informações detalhadas sobre este valor, consulte a Referência da Linguagem 4D.
 
 ### Leitura
 

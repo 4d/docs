@@ -40,24 +40,24 @@ Debe distinguir el operador de asignación := de los demás operadores. En lugar
 El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. Por ejemplo, para crear una variable de tipo fecha, puede escribir: Se crea una variable digitada utilizando la palabra clave `var`.
 
 ```4d
-var MyDate : Date 
+var MyDate : Date
 ```
 
 La palabra clave `var` permite declarar variables objeto de un tipo de clase definido, por ejemplo:
 
 ```4d
-var myPerson : cs.Person 
-//de la clase de usuario Person
+var myPerson : cs.Person
+//variable de la clase usuario Person
 ```
 
 
-Aunque no se suele recomendar, se pueden declarar variables simplemente utilizándolas; no es necesario definirlas formalmente. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
+Aunque no se suele recomendar, se pueden crear variables simplemente utilizándolas; no es necesario definirlas formalmente. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Una variable declarada por asignación se interpreta como sin tipo, es decir, puede ser asignada con otros tipos en otras líneas y entonces cambia el tipo dinámicamente. Una variable digitada con `var` no puede cambiar de tipo. Sin embargo, en [modo compilado](interpreted.md), el tipo nunca puede cambiarse, independientemente de cómo se haya declarado la variable.
+La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Esta línea declara la variable, la asigna con el tipo de fecha (temporal) y un contenido. Esta línea crea la variable, la asigna con el tipo de fecha (temporal) y un contenido. Una variable creada por asignación se interpreta como sin tipo, es decir, puede ser asignada con otros tipos en otras líneas y cambia el tipo dinámicamente. Esta flexibilidad no se aplica a las variables declaradas con la palabra clave `var` (su tipo no puede cambiar) y en [modo compilado](interpreted.md), donde el tipo nunca puede cambiarse, independientemente de cómo se haya creado la variable.
 
 ## Comandos
 
@@ -102,6 +102,8 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo d
 ```
 
 > Las constantes predefinidas aparecen <u>subrayadas</u> por defecto en el editor de código 4D.
+
+
 
 ## Métodos
 
@@ -183,7 +185,7 @@ $vAge:=employee.children[2].age
 
 Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que encapsula un método (una fórmula), debe añadir paréntesis () al nombre de la propiedad para ejecutar el método:
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
@@ -205,12 +207,13 @@ Para instanciar un objeto de la clase en un método, llame la clase usuario desd
 
 ```4d  
 // en un método 4D
-$o:=cs.myClass.new() 
+$o:=cs.myClass.new()
 ```
 
 En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase *methodName*. Una función miembro de clase puede recibir y devolver parámetros como todo método, y utilizar `This` como instancia del objeto.
 
 ```4d  
+
 //en el archivo myClass.4dm
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
@@ -229,9 +232,9 @@ Opcionalmente, utilice la palabra clave `Class constructor` para declarar las pr
 
 ```4d  
 //en el archivo Rectangle.4dm
-Class constructor ($width: Integer; $height : Integer)
+Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
-This.width:=$width 
+This.width:=$width
 This.name:="Rectangle"
 ```
 
@@ -351,7 +354,7 @@ $str:=String("hello world!")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Comentarios
@@ -396,7 +399,7 @@ End for
 For ($vCounter;1;100)
 /*
 comentarios  
-    /* 
+    /*
     otros comentarios
     */
 */
@@ -425,4 +428,3 @@ En 4D, se pueden utilizar las siguientes secuencias de escape:
 En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `\r`) se inserta en una sentencia para obtener un diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-

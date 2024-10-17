@@ -8,7 +8,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 `Email` objects are created when receiving mails through a *transporter* class function:
 
 - IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
-- POP3 - [`.getMail()`](POP3TransporterClass.md#getmail) function to get an email from a POP3 server.
+- POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
 
 > You can also create a new, blank `Email` object and then fill it with [Email object properties](#email-object).
 
@@ -54,8 +54,8 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 #### Text
 
 - e-mail único: "somebody@domain.com"
-- single display name+email: "Somebody somebody@domain.com"
-- several emails: "Somebody somebody@domain.com,me@home.org"
+- single display name+email: "Somebody <somebody@domain.com>"
+- vários e-mails: "Somebody <somebody@domain.com>,me@home.org"
 
 #### Object
 
@@ -128,7 +128,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
-The `.bodyStructure` object contains the following properties:
+O objeto `.bodyStructure` contém as seguintes propriedades:
 
 | Propriedade | Tipo                   | Valor                                                                                                                                                                      |
 | ----------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -148,9 +148,9 @@ The `.bodyStructure` object contains the following properties:
 
 #### Descrição
 
-The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \\<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
-The `.bodyValues` object contains the following properties:
+O objeto `.bodyValues` contém as seguintes propriedades:
 
 | Propriedade                                | Tipo    | Valor                                                                                                                                                                                               |
 | ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -185,7 +185,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
 
-Each email you send out has both the [sender](#sender) and **from** addresses:
+Cada e-mail que você envia tem os endereços [sender](#sender) e **from**:
 
 - o domínio do remetente é o que o servidor de e-mail de recebimento recebe ao abrir a sessão,
 - o endereço a partir é o que o(s) destinatário(s) verá(s).
@@ -247,9 +247,9 @@ The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary 
 
 This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propriedade                     | Tipo    | Valor                                                                  |
-| ------------------------------- | ------- | ---------------------------------------------------------------------- |
-| .\\<keyword\> | boolean | Palavra-chave a definir (valor deve ser verdadeiro) |
+| Propriedade                                             | Tipo    | Valor                                                                  |
+| ------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
+| .\<keyword\> | boolean | Palavra-chave a definir (valor deve ser verdadeiro) |
 
 Palavra-chave reservada.
 
@@ -375,10 +375,10 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| Parâmetro  | Tipo       |     | Descrição      |
-| ---------- | ---------- | :-: | -------------- |
-| mime       | Blob, Text |  -> | E-mail no MIME |
-| Resultados | Object     |  <- | Objeto Email   |
+| Parâmetro  | Tipo       |                             | Descrição      |
+| ---------- | ---------- | :-------------------------: | -------------- |
+| mime       | Blob, Text |              ->             | E-mail no MIME |
+| Resultados | Object     | <- | Objeto Email   |
 
 <!-- END REF -->
 
@@ -461,11 +461,11 @@ $status:=$transporter.send($email)
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Parâmetro  | Tipo   |     | Descrição                       |
-| ---------- | ------ | :-: | ------------------------------- |
-| mail       | Object |  -> | Objeto Email                    |
-| options    | Object |  -> | Opções de codificação e Charset |
-| Resultados | Text   |  <- | Email objeto convertido em MIME |
+| Parâmetro  | Tipo   |                             | Descrição                       |
+| ---------- | ------ | :-------------------------: | ------------------------------- |
+| mail       | Object |              ->             | Objeto Email                    |
+| options    | Object |              ->             | Opções de codificação e Charset |
+| Resultados | Text   | <- | Email objeto convertido em MIME |
 
 <!-- END REF -->
 

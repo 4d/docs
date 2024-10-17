@@ -7,7 +7,7 @@ title: SMTPTransporter
 
 ### SMTP Transporter オブジェクト
 
-SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transporter) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
+SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -25,110 +25,22 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                        |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                             |
 
-<!-- REF SMTPTransporterClass.SMTP New transporter.Desc -->
-
-## SMTP New transporter
-
-<details><summary>履歴</summary>
-
-| リリース  | 内容                                   |
-| ----- | ------------------------------------ |
-| 18    | logFile プロパティを追加                     |
-| 17 R5 | bodyCharset と headerCharset プロパティを追加 |
-| 17 R4 | 追加                                   |
-
-</details>
-
-<!-- REF #_command_.SMTP New transporter.Syntax -->**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
-
-<!-- REF #_command_.SMTP New transporter.Params -->
-
-| 引数     | タイプ                                |     | 説明                                                  |
-| ------ | ---------------------------------- | :-: | --------------------------------------------------- |
-| server | Object                             |  -> | メールサーバー情報                                           |
-| 戻り値    | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
-
-<!-- END REF -->
-
-#### 説明
-
-`SMTP New transporter` コマンドは、*server* 引数の指定に応じて <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。 戻り値は、新しい *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。
-
-> このコマンドは SMTPサーバーとの接続を開始しません。 SMTP接続は、実際には [`.send()`](#send) 関数が実行された時に開かれます。
->
-> SMTP接続は、以下の場合に自動的に閉じられます:
->
-> - [`.keepAlive`](#keepalive) プロパティが true (デフォルト) の場合には、`transporter` オブジェクトが消去された時。
-> - [`.keepAlive`](#keepalive) プロパティが false の場合には、各 [`.send( )`](#send) 関数が実行された後。
-
-*server* 引数として、以下のプロパティを持つオブジェクトを渡します:
-
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                   | デフォルト値 (省略時)                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                              | false                                                                                            |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトには返されません。 | なし                                                                                               |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                | サーバーがサポートするもっともセキュアな認証モードが使用されます                                                                 |
-| [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<br/><!-- INCLUDE #transporter.bodyCharset.Summary -->                                                                                                                                                                                                                                                                                     | `mail mode UTF8` (US-ASCII_UTF8_QP) |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                   | 30                                                                                               |
-| [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<br/><!-- INCLUDE #transporter.headerCharset.Summary -->                                                                                                                                                                                                                                                                               | `mail mode UTF8` (US-ASCII_UTF8_QP) |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                          | *mandatory*                                                                                      |
-| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<br/><!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->                                                                                                                                                                                                                                                                         | true                                                                                             |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                 | なし                                                                                               |
-| **password** : Text<br/>サーバーとの認証のためのユーザーパスワード。 *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                                                                                                                                              | なし                                                                                               |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                          | 587                                                                                              |
-| [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                                                                                                                     | 100                                                                                              |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                          | なし                                                                                               |
-
-#### 戻り値
-
-この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-オブジェクト) を返します。 返されるプロパティはすべて **読み取り専用** です。
-
-#### 例題
-
-```4d
- $server:=New object
- $server.host:="smtp.gmail.com" // 必須
- $server.port:=465
- $server.user:="4D@gmail.com"
- $server.password:="XXXX"
- $server.logFile:="LogTest.txt" // Logsフォルダーに保存する拡張されたログ
-
- var $transporter : 4D.SMTPTransporter
- $transporter:=SMTP New transporter($server)
-
- $email:=New object
- $email.subject:="my first mail "
- $email.from:="4d@gmail.com"
- $email.to:="4d@4d.com;test@4d.com"
- $email.textBody:="Hello World"
- $email.htmlBody:="<h1>Hello World</h1><h4>'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'</h4>\
- <p>There are many variations of passages of Lorem Ipsum available."\
- +"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>"
-
- $status:=$transporter.send($email)
- If(Not($status.success))
-    ALERT("メール送信中にエラーが発生しました: "+$status.message)
- End if
-```
-
-<!-- END REF -->
-
 ## 4D.SMTPTransporter.new()
 
 <!-- REF #4D.SMTPTransporter.new().Syntax -->**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
-| 引数     | タイプ                                |     | 説明                                                  |
-| ------ | ---------------------------------- | :-: | --------------------------------------------------- |
-| server | Object                             |  -> | メールサーバー情報                                           |
-| 戻り値    | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
+| 引数     | 型                                  |                             | 説明                                                  |
+| ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
+| server | Object                             |              ->             | メールサーバー情報                                           |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
 
 <!-- END REF -->
 
 #### 説明
 
-`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -210,10 +122,10 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
-| 引数   | タイプ    |     | 説明                                           |
-| ---- | ------ | :-: | -------------------------------------------- |
-| mail | Object |  -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
-| 戻り値  | Object |  <- | SMTP ステータス                                   |
+| 引数   | 型      |                             | 説明                                           |
+| ---- | ------ | :-------------------------: | -------------------------------------------- |
+| mail | Object |              ->             | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
+| 戻り値  | Object | <- | SMTP ステータス                                   |
 
 <!-- END REF -->
 
@@ -231,7 +143,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 この関数は、SMTP ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ      | タイプ     | 説明                                                         |
+| プロパティ      | 型       | 説明                                                         |
 | ---------- | ------- | ---------------------------------------------------------- |
 | success    | boolean | 送信に成功した場合は true、それ以外は false                                |
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |

@@ -196,24 +196,24 @@ text[text|=Hello]
 
 ### Media Queries
 
-Media queries are used to apply color schemes to an application.
+Les requêtes de média sont utilisées pour appliquer des schémas de couleurs à une application.
 
 A media query is composed of a media feature and a value (e.g., `\&#060;media feature&#062;:\&#060;value&#062;` ).
 
-Available media features:
+Fonctionnalités média disponibles :
 
 * `prefers-color-scheme`
 
-Available media feature expressions:
+Expressions de fonctionnalité média disponibles :
 
 * **light**<br/>For using a light scheme
 * **dark**<br/>For using a dark scheme
 
-> Color schemes are only supported on macOS.
+> Les schémas de couleurs sont pris en charge sur macOS uniquement.
 
 ##### Exemple
 
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+Cette CSS définit une combinaison de couleurs pour le texte et l'arrière-plan du texte dans le schéma clair (par défaut) et une autre combinaison lorsque le schéma sombre est sélectionné :
 
 ```
 @media (prefers-color-scheme: light) {
@@ -231,7 +231,7 @@ This CSS defines a color combination for text and text background in the light s
 }
 ```
 
-### Object Attributes
+### Attributs d'objets
 
 La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
  - `method`
@@ -242,7 +242,7 @@ La majorité des attributs d'objet formulaire peuvent être définis dans une fe
 
 Les attributs d'objet formulaire peuvent être déclarés avec leur [nom JSON](FormObjects/properties_Reference.md) en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes).
 
-#### Mappage d'attributs
+#### Correspondance d'attributs
 
 Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 
@@ -335,8 +335,8 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 > Les chemins de fichiers peuvent être relatifs ou absolus.
 > 
-> * Relative paths are resolved relative to the JSON form description file.
-> * For security reasons, only filesystem paths are accepted for absolute paths. (*ex :*, "/RESOURCES", "/DATA")
+> * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON.
+> * Pour des raisons de sécurité, seuls les chemins filesystem sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 ## Voir également
 

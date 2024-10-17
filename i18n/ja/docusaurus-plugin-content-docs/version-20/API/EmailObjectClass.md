@@ -61,7 +61,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 2つのプロパティを持つオブジェクト:
 
-| プロパティ | タイプ  | 説明             |
+| プロパティ | 型    | 説明             |
 | ----- | ---- | -------------- |
 | name  | Text | 表示名 (null も可能) |
 | email | Text | メールアドレス        |
@@ -108,7 +108,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 #### 説明
 
-`.attachments` プロパティは、 <!-- REF #EmailObjectClass.attachments.Summary -->`4D.MailAttachment` オブジェクトのコレクションを格納します<!-- END REF -->。
+`.attachments` プロパティは、 <!-- REF #EmailObjectClass.attachments.Summary -->`4D.MailAttachment` オブジェクトのコレクションを格納します<!-- END REF -->.
 
 MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) コマンドによって定義されます。 MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
 
@@ -118,7 +118,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.bcc` プロパティは、 <!-- REF #EmailObjectClass.bcc.Summary -->非表示 (BCC: Blind Carbon Copy) のメール受信者 [アドレス](#メールアドレス) を格納します<!-- END REF -->。
+`.bcc` プロパティは、 <!-- REF #EmailObjectClass.bcc.Summary -->非表示 (BCC: Blind Carbon Copy) のメール受信者 [アドレス](#メールアドレス) を格納します<!-- END REF -->.
 
 ## .bodyStructure
 
@@ -126,11 +126,11 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全な MIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全な MIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ       | タイプ                 | 値                                                                                                     |
+| プロパティ       | 型                   | 値                                                                                                     |
 | ----------- | ------------------- | ----------------------------------------------------------------------------------------------------- |
 | partID      | Text                | メールのパートを固有に識別する ID                                                                                    |
 | type        | Text                | (必須) パートの Content-Type ヘッダーフィールドの値                                                                    |
@@ -148,11 +148,11 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.bodyValues` プロパティは、 <!-- REF #EmailObjectClass.bodyValues.Summary -->`bodyStructure` の \<partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクトを格納します (任意)。<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyValues` プロパティは、 <!-- REF #EmailObjectClass.bodyValues.Summary -->`bodyStructure` の \<partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクトを格納します (任意)。<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ                      | タイプ     | 値                                                                                                         |
+| プロパティ                      | 型       | 値                                                                                                         |
 | -------------------------- | ------- | --------------------------------------------------------------------------------------------------------- |
 | *partID*.value             | text    | 本文パートの値                                                                                                   |
 | *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。 デフォルトは false。 |
@@ -163,7 +163,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.cc` プロパティは、 <!-- REF #EmailObjectClass.cc.Summary -->追加 (CC: Carbon Copy) のメール受信者 [アドレス](#メールアドレス) を格納します<!-- END REF -->。
+`.cc` プロパティは、 <!-- REF #EmailObjectClass.cc.Summary -->追加 (CC: Carbon Copy) のメール受信者 [アドレス](#メールアドレス) を格納します<!-- END REF -->.
 
 ## .comments
 
@@ -171,7 +171,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.comments` プロパティは、 <!-- REF #EmailObjectClass.comments.Summary -->追加のコメントのヘッダーを格納します<!-- END REF -->。
+`.comments` プロパティは、 <!-- REF #EmailObjectClass.comments.Summary -->追加のコメントのヘッダーを格納します<!-- END REF -->.
 
 コメントはメッセージのヘッダーセクション内にのみ表示されます (つまり本文部分には触れないということです)。
 
@@ -183,7 +183,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.from` プロパティは、 <!-- REF #EmailObjectClass.from.Summary -->メールの送信元 [アドレス](#メールアドレス) を格納します<!-- END REF -->。
+`.from` プロパティは、 <!-- REF #EmailObjectClass.from.Summary -->メールの送信元 [アドレス](#メールアドレス) を格納します<!-- END REF -->.
 
 送信されるメールには、それぞれ [sender](#sender) および **from** アドレスの両方がついています:
 
@@ -198,13 +198,13 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.headers` プロパティは、 <!-- REF #EmailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクションを格納します<!-- END REF -->。 これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
+`.headers` プロパティは、 <!-- REF #EmailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクションを格納します<!-- END REF -->. これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
 
 > メールレベルですでにプロパティとして設定されている "from" または "cc" などのヘッダーを `EmailHeader` オブジェクトプロパティが定義している場合、`EmailHeader` プロパティは無視されます。
 
 ヘッダーコレクションの各オブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ    | タイプ  | 値                                                                                                                       |
+| プロパティ    | 型    | 値                                                                                                                       |
 | -------- | ---- | ----------------------------------------------------------------------------------------------------------------------- |
 | [].name  | text | (必須) [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド名。 null または未定義の場合には、ヘッダーフィールドは MIME ヘッダーに追加されません。 |
 | [].value | text | [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド値。                                                     |
@@ -215,7 +215,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.htmlBody` プロパティは、 <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.htmlBody` プロパティは、 <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .id
 
@@ -225,7 +225,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 [IMAP transporter](IMAPTransporterClass.md) のみ。
 
-`.id` プロパティは、 <!-- REF #EmailObjectClass.id.Summary -->IMAP サーバーからの固有ID を格納します<!-- END REF -->。
+`.id` プロパティは、 <!-- REF #EmailObjectClass.id.Summary -->IMAP サーバーからの固有ID を格納します<!-- END REF -->.
 
 ## .inReplyTo
 
@@ -233,7 +233,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.inReplyTo` プロパティは、 <!-- REF #EmailObjectClass.inReplyTo.Summary -->カレントメッセージが返信している、元のメッセージのメッセージID を格納します<!-- END REF -->。
+`.inReplyTo` プロパティは、 <!-- REF #EmailObjectClass.inReplyTo.Summary -->カレントメッセージが返信している、元のメッセージのメッセージID を格納します<!-- END REF -->.
 
 特定のフォーマット条件についての詳細は、[RFC#5322](https://tools.ietf.org/html/rfc5322) を参照ください。
 
@@ -243,11 +243,11 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.keywords` プロパティは、 <!-- REF #EmailObjectClass.keywords.Summary -->各プロパティ名がキーワードであり、各値が true であるキーワードセットのオブジェクトを格納します<!-- END REF -->。
+`.keywords` プロパティは、 <!-- REF #EmailObjectClass.keywords.Summary -->各プロパティ名がキーワードであり、各値が true であるキーワードセットのオブジェクトを格納します<!-- END REF -->.
 
 このプロパティは "keywords" ヘッダーです ([RFC#4021](https://tools.ietf.org/html/rfc4021) 参照)。
 
-| プロパティ          | タイプ     | 値                               |
+| プロパティ          | 型       | 値                               |
 | -------------- | ------- | ------------------------------- |
 | .\<keyword\> | boolean | 設定するキーワード (値は true でなければなりません)。 |
 
@@ -271,7 +271,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.messageId` プロパティは、 <!-- REF #EmailObjectClass.messageId.Summary -->メッセージ識別ヘッダー ("message-id") を格納します<!-- END REF -->。
+`.messageId` プロパティは、 <!-- REF #EmailObjectClass.messageId.Summary -->メッセージ識別ヘッダー ("message-id") を格納します<!-- END REF -->.
 
 通常は、"lettersOrNumbers@domainname" の形式、たとえば "abcdef.123456@4d.com" などです。 この固有ID は特にフォーラムや公開メーリングリストで使用されています。 一般的に、メールサーバーは送信するメッセージにこのヘッダーを自動的に追加します。
 
@@ -283,7 +283,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 [IMAP transporter](IMAPTransporterClass.md) のみ。
 
-`.receivedAt` プロパティは、 <!-- REF #EmailObjectClass.receivedAt.Summary -->IMAPサーバーにメールが到着した時間の、ISO 8601 UTC フォーマットでのタイムスタンプ (例: 2020-09-13T16:11:53Z) を格納します<!-- END REF -->。
+`.receivedAt` プロパティは、 <!-- REF #EmailObjectClass.receivedAt.Summary -->IMAPサーバーにメールが到着した時間の、ISO 8601 UTC フォーマットでのタイムスタンプ (例: 2020-09-13T16:11:53Z) を格納します<!-- END REF -->.
 
 ## .references
 
@@ -291,7 +291,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.references` プロパティは、 <!-- REF #EmailObjectClass.references.Summary -->返信チェーン内メッセージの、全メッセージID のコレクションを格納します<!-- END REF -->。
+`.references` プロパティは、 <!-- REF #EmailObjectClass.references.Summary -->返信チェーン内メッセージの、全メッセージID のコレクションを格納します<!-- END REF -->.
 
 特定のフォーマット条件についての詳細は、[RFC#5322](https://tools.ietf.org/html/rfc5322) を参照ください。
 
@@ -301,7 +301,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.replyTo` プロパティは、 <!-- REF #EmailObjectClass.replyTo.Summary -->返信用 [アドレス](#メールアドレス) を格納します<!-- END REF -->。
+`.replyTo` プロパティは、 <!-- REF #EmailObjectClass.replyTo.Summary -->返信用 [アドレス](#メールアドレス) を格納します<!-- END REF -->.
 
 ## .sendAt
 
@@ -309,7 +309,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.sendAt` プロパティは、 <!-- REF #EmailObjectClass.sendAt.Summary -->メールのタイムスタンプ (ISO 8601 UTCフォーマット) を格納します<!-- END REF -->。
+`.sendAt` プロパティは、 <!-- REF #EmailObjectClass.sendAt.Summary -->メールのタイムスタンプ (ISO 8601 UTCフォーマット) を格納します<!-- END REF -->.
 
 ## .sender
 
@@ -317,7 +317,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.sender` プロパティは、 <!-- REF #EmailObjectClass.sender.Summary -->メールのソース [アドレス](#メールアドレス) を格納します<!-- END REF -->。
+`.sender` プロパティは、 <!-- REF #EmailObjectClass.sender.Summary -->メールのソース [アドレス](#メールアドレス) を格納します<!-- END REF -->.
 
 送信されるメールには、それぞれ **sender** および **[from](#from)** アドレスの両方がついています:
 
@@ -334,7 +334,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 [IMAP transporter](IMAPTransporterClass.md) のみ。
 
-`.size` プロパティは、 <!-- REF #EmailObjectClass.size.Summary -->IMAPサーバーから返された Email オブジェクトのサイズ (バイト単位) を格納します<!-- END REF -->。
+`.size` プロパティは、 <!-- REF #EmailObjectClass.size.Summary -->IMAPサーバーから返された Email オブジェクトのサイズ (バイト単位) を格納します<!-- END REF -->.
 
 ## .subject
 
@@ -342,7 +342,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.subject` プロパティは、 <!-- REF #EmailObjectClass.subject.Summary -->メールの件名を格納します<!-- END REF -->。
+`.subject` プロパティは、 <!-- REF #EmailObjectClass.subject.Summary -->メールの件名を格納します<!-- END REF -->.
 
 ## .textBody
 
@@ -350,7 +350,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.textBody` プロパティは、 <!-- REF #EmailObjectClass.textBody.Summary -->標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.textBody` プロパティは、 <!-- REF #EmailObjectClass.textBody.Summary -->標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .to
 
@@ -358,7 +358,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.to` プロパティは、 <!-- REF #EmailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス) を格納します<!-- END REF -->。
+`.to` プロパティは、 <!-- REF #EmailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス) を格納します<!-- END REF -->.
 
 ## MAIL Convert from MIME
 
@@ -374,7 +374,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
-| 引数   | タイプ        |    | 説明                                      |
+| 引数   | 型          |    | 説明                                      |
 | ---- | ---------- |:--:| --------------------------------------- |
 | mime | Blob, Text | -> | MIME形式のメール                              |
 | 戻り値  | Object     | <- | Email オブジェクト|<!-- END REF -->
@@ -383,7 +383,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`MAIL Convert from MIME` コマンドは、 <!-- REF #_command_.MAIL Convert from MIME.Summary -->MIMEドキュメントを有効な Emailオブジェクトへと変換します<!-- END REF -->。
+`MAIL Convert from MIME` コマンドは、 <!-- REF #_command_.MAIL Convert from MIME.Summary -->MIMEドキュメントを有効な Emailオブジェクトへと変換します<!-- END REF -->.
 > 戻り値の Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
 
 *mime* には、変換する有効な MIME ドキュメントを渡します。 これはどのメールサーバーまたはアプリケーションから提供されたものでも可能です。 *mime* 引数として、BLOB またはテキストを渡すことができます。 MIME がファイルから渡された場合、文字セットと改行コード変換に関する問題を避けるため、BLOB型の引数を使用することが推奨されます。
@@ -460,7 +460,7 @@ $status:=$transporter.send($email)
 
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
-| 引数      | タイプ    |    | 説明                                                 |
+| 引数      | 型      |    | 説明                                                 |
 | ------- | ------ |:--:| -------------------------------------------------- |
 | mail    | Object | -> | Email オブジェクト                                       |
 | options | Object | -> | 文字セットとエンコーディングのメールオプション                            |
@@ -470,14 +470,14 @@ $status:=$transporter.send($email)
 
 #### 説明
 
-`MAIL Convert to MIME` コマンドは、 <!-- REF #_command_.MAIL Convert to MIME.Summary -->Emailオブジェクトを MIMEテキストへと変換します<!-- END REF -->。 このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。 また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
+`MAIL Convert to MIME` コマンドは、 <!-- REF #_command_.MAIL Convert to MIME.Summary -->Emailオブジェクトを MIMEテキストへと変換します<!-- END REF -->. このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。 また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
 
 *mail* には、変換するメールのコンテンツとストラクチャーの詳細を渡します。 この情報には、メールアドレス (送信者と受信者)、メッセージそのもの、メッセージの表示タイプなどが含まれます。
 > Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
 
 *options* 引数を渡すと、メールに対して特定の文字セットとエンコーディング設定を指定することができます。 次のプロパティを利用することができます:
 
-| プロパティ         | タイプ  | 説明                                                                                 |
+| プロパティ         | 型    | 説明                                                                                 |
 | ------------- | ---- | ---------------------------------------------------------------------------------- |
 | headerCharset | Text | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 とりうる値:<table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 &amp; Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (**デフォルト値**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64</td></tr></table> |
 | bodyCharset   | Text | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取りうる値: headerCharset と同じ(上記参照)       |

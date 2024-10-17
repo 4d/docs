@@ -109,6 +109,6 @@ Toutes les procédures stockées sur le serveur partagent la même session utili
 
 :::
 
-### See also (blog post)
+### Voir aussi (blog post)
 
 [Objet session distante 4D avec connexion Client/Serveur et procédure stockée](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).

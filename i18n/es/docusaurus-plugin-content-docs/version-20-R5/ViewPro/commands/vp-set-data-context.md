@@ -27,7 +27,7 @@ title: VP SET DATA CONTEXT
 
 #### Descripción
 
-El comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define el contexto de datos de una hoja<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](vp-set-binding-path.md) method. Por otro lado, el comando [VP Get data context](vp-get-data-context.md) puede devolver un contexto que contenga modificaciones del usuario.
+El comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define el contexto de datos de una hoja<!-- END REF -->. Un contexto de datos es un objeto o una colección vinculada a una hoja de cálculo, y cuyo contenido puede utilizarse para llenar automáticamente las celdas de la hoja, ya sea utilizando una opción de autogeneración o el método [VP SET BINDING PATH](vp-set-binding-path). Por otro lado, el comando [VP Get data context](vp-get-data-context.md) puede devolver un contexto que contenga modificaciones del usuario.
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -49,7 +49,7 @@ En _options_, puede pasar un objeto que especifique las opciones adicionales. La
 
 En _sheet_, pase el índice de la hoja que recibirá el contexto de datos. Si no se pasa ningún índice, el contexto se aplica a la hoja actual.
 
-If you export your document to an object using [VP Export to object](vp-export-to-object.md), or to a 4DVP document using [VP EXPORT DOCUMENT](vp-export-document.md), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para más detalles, consulte la descripción de esos métodos.
+Si exporta su documento a un objeto utilizando [VP Export to object](vp-export-to-object.md), o a un documento 4DVP utilizando [VP EXPORT DOCUMENT](vp-export-document.md), la opción `includeBindingSource` le permite copiar el contenido de los contextos actuales como valores de celda en el objeto o documento exportado. Para más detalles, consulte la descripción de esos métodos.
 
 #### Ejemplo
 

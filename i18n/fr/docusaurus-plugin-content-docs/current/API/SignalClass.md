@@ -22,11 +22,11 @@ Tout worker/process appelant la méthode `.wait()` suspend son exécution jusqu'
 
 A noter que pour éviter les situations de blocage, la méthode `.wait()` peut également revenir après qu'un délai d'attente défini ait été atteint.
 
-Les objets signal sont créés à l'aide de la commande [New signal](#new-signal).
+Signal objects are created with the [`New signal`](../commands/new-signal.md) command.
 
 ### Travailler avec des signaux
 
-Dans 4D, vous créez un nouvel objet signal en appelant la commande [`New signal`](#new-signal). Une fois créé, ce signal doit être passé en paramètre aux commandes `New process` ou `CALL WORKER` afin qu'elles puissent le modifier lorsqu'elles ont terminé la tâche que vous souhaitez attendre.
+In 4D, you create a new signal object by calling the [`New signal`](../commands/new-signal.md) command. Une fois créé, ce signal doit être passé en paramètre aux commandes `New process` ou `CALL WORKER` afin qu'elles puissent le modifier lorsqu'elles ont terminé la tâche que vous souhaitez attendre.
 
 - `signal.wait()` doit être appelé par le worker/process qui a besoin qu'un autre worker/process termine une tâche pour pouvoir continuer.
 - `signal.trigger()` doit être appelé par le worker/process qui a terminé son exécution afin de libérer tous les autres.
@@ -85,78 +85,6 @@ Méthode ***OpenForm*** :
 | [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)<br/><!-- INCLUDE #SignalClass.signaled.Summary -->          |
 | [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)<br/><!-- INCLUDE #SignalClass.trigger().Summary -->         |
 | [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)<br/><!-- INCLUDE #SignalClass.wait().Summary -->                  |
-
-<!-- REF SignalClass.New signal.Desc -->
-
-## New signal
-
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 17 R4   | Ajout         |
-
-</details>
-
-<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
-
-<!-- REF #_command_.New signal.Params -->
-
-| Paramètres  | Type                      |     | Description                  |
-| ----------- | ------------------------- | :-: | ---------------------------- |
-| Description | Text                      |  -> | Description du signal        |
-| Résultat    | 4D.Signal |  <- | Object encapsulant le signal |
-
-<!-- END REF -->
-
-#### Description
-
-La commande `New signal` <!-- REF #_command_.New signal.Summary -->crée un objet `4D.Signal`<!-- END REF -->.
-
-Un signal est un objet partagé qui peut être passé en paramètre depuis un worker ou un process à un autre worker ou process, de manière à ce que :
-
-- le worker/process appelé puisse mettre à jour l'objet signal après qu'un traitement spécifique soit terminé
-- le worker/process appelant puisse stopper son exécution et attende jusqu'à ce que le signal soit mis à jour, sans consommer aucune ressource CPU.
-
-Optionnellement, dans le paramètre *description*, vous pouvez passer un texte personnalisé décrivant le signal. Ce texte peut également être défini après la création du signal.
-
-Comme l'objet signal est un objet partagé, il peut aussi être utilisé pour maintenir des propriétés utilisateur, y compris la propriété [`.description`](#description), via l'appel de la structure `Use...End use`.
-
-**Valeur retournée**
-
-Un nouvel objet [`4D.Signal`](#signal-object).
-
-#### Exemple
-
-Voici un exemple type de worker qui définit un signal :
-
-```4d
- var $signal : 4D.Signal
- $signal:=New signal("Ceci est mon premier signal")
-
- CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) //patienter 1 seconde au maximum
-
- If($signaled)
-    ALERT("myworker a terminé le travail. Résultat : "+$signal.myresult)
- Else
-    ALERT("myworker n'a pas terminé en moins d'1 seconde")
- End if
-```
-
-La méthode ***doSomething*** est par exemple :
-
-```4d
- #DECLARE ($signal : 4D.Signal)
-  //tout traitement
-  //...
- Use($signal)
-    $signal.myresult:=$processingResult  //renvoi du résultat
- End use
- $signal.trigger() // Le travail est terminé
-```
-
-<!-- END REF -->
 
 <!-- REF SignalClass.description.Desc -->
 
@@ -250,9 +178,9 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Paramètres | Type    |    | Description                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| timeout    | Real    | -> | Délai d'attente maximum du signal en secondes |
+| Paramètres | Type    |                             | Description                                   |
+| ---------- | ------- | --------------------------- | --------------------------------------------- |
+| timeout    | Real    | ->                          | Délai d'attente maximum du signal en secondes |
 | Résultat   | Boolean | <- | Etat de la propriété `.signaled`              |
 
 <!-- END REF -->

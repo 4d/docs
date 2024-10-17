@@ -9,4 +9,4 @@ title: On After Sort
 
 ## Description
 
-This event is generated just after a standard sort is performed (_i.e._ it is NOT generated if $0 returns -1 in the [`On Header Click`](onHeaderClick.md) event). Ce mécanisme est utile pour stocker les directions du dernier tri effectué par l'utilisateur. Dans ce cas, la commande `Self` retourne un pointeur vers la variable de l'en-tête de colonne triée.
+Cet événement est généré juste après un tri standard (ce qui signifie qu'il n'est PAS généré si $0 retourne -1 dans l'événement [`On Header Click`](onHeaderClick.md)). Ce mécanisme est utile pour stocker les directions du dernier tri effectué par l'utilisateur. Dans ce cas, la commande `Self` retourne un pointeur vers la variable de l'en-tête de colonne triée.

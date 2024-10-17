@@ -83,21 +83,21 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:
 
 - Webサーバーが有効な静的ページを要求する URL を受信したとき。
-- Webサーバーが `rest/` で始まる URL を受信し、RESTサーバーが起動したとき (この場合、認証は [`On REST Authentication`データベースメソッド](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する) または [ストラクチャー設定](REST/configuration.md#ストラクチャー設定を使用する) によって処理されます)。
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### シンタックス
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| 引数 | タイプ     |     | 説明                                              |
-| -- | ------- | :-: | ----------------------------------------------- |
-| $1 | Text    |  <- | URL                                             |
-| $2 | Text    |  <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
-| $3 | Text    |  <- | Webクライアント (ブラウザー) の IPアドレス   |
-| $4 | Text    |  <- | サーバーの IPアドレス                                    |
-| $5 | Text    |  <- | ユーザー名                                           |
-| $6 | Text    |  <- | パスワード                                           |
-| $0 | Boolean |  -> | True = リクエストは受け入れられました、False = リクエストが拒否されました    |
+| 引数 | 型       |                             | 説明                                              |
+| -- | ------- | :-------------------------: | ----------------------------------------------- |
+| $1 | Text    | <- | URL                                             |
+| $2 | Text    | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
+| $3 | Text    | <- | Webクライアント (ブラウザー) の IPアドレス   |
+| $4 | Text    | <- | サーバーの IPアドレス                                    |
+| $5 | Text    | <- | ユーザー名                                           |
+| $6 | Text    | <- | パスワード                                           |
+| $0 | Boolean |              ->             | True = リクエストは受け入れられました、False = リクエストが拒否されました    |
 
 これらの引数を以下のように宣言しなければなりません:
 

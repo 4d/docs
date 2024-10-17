@@ -29,7 +29,7 @@ O ícone indica que a imagem não pode ser exibida ou manipulada localmente - ma
 
 4D admite imagens de alta resolução tanto em plataformas MacOS como Windows. As imagens de alta resolução podem ser definidas quer por factor de escala quer por dpi.
 
-### Fator de escala (somente macOS)
+### Factor de escala
 
 As telas de alta resolução têm uma densidade de pixels maior do que as telas padrão tradicionais. Para que as imagens sejam renderizadas correctamente em ecrãs de alta resolução, o número de pixels na imagem deve ser multiplicado pelo factor de escala ** (*ou seja*, duas vezes maior, três vezes maior, etc.).
 
@@ -49,17 +49,17 @@ As imagens de alta resolução com a convenção @nx podem ser utilizadas nos se
 * [Cabeçalhos de list box](FormObjects/listbox_overview.md#list-box-headers)
 * [Ícones de menu](Menus/properties.md#item-icon)
 
-4D dá automaticamente prioridade às imagens com a resolução mais alta. <br/><br/> **Example**: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D  automatically renders the highest possible resolution of the picture. Mesmo que um comando ou propriedade especifique *circle.png*, *circle@3x.png* será utilizado (se existir).
+4D dá automaticamente prioridade às imagens com a resolução mais alta. Por exemplo, ao usar duas telas (uma de alta resolução e outra padrão) e mover um formulário de uma tela para outra, 4D renderiza automaticamente a resolução mais alta possível da imagem. Mesmo que um comando ou propriedade especifique *circle.png*, *circle@3x.png* será utilizado (se existir).
 > Note que a priorização da resolução ocorre apenas para a apresentação de imagens no ecrã, não havendo priorização automática durante a impressão.
 
-### DPI (macOS e Windows)
+### DPI (macOS and Windows)
 
 Embora 4D priorize automaticamente a resolução mais alta, há, no entanto, algumas diferenças de comportamento dependendo da tela e da imagem dpi*(\*)*e do formato da imagem:
 
 | Operação                                                                                                                                                     | Comportamento                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | Soltar o pegar                                                                                                                                               | Se a imagem tiver:<ul><li>**72dpi ou 96dpi** - A imagem é "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatada e o objeto que contém a imagem tem o mesmo número de pixels.</li><li>**Outros dpi** - A imagem está formatada como "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" e o objeto que contém a imagem é igual a (número de pixels da imagem * dpi da tela) / (dpi da imagem)</li> <li>**No dpi** - A imagem é formatada como "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)".</li></ul>                        |
-| [Tamanho automático](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (menu contextual do Editor de formulários) | Se o formato de apresentação da imagem é:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - O objeto que contém a imagem é redimensionado de acordo com (número de pixels da imagem * dpi da tela) / (dpi da imagem) </li> <li>**Não dimensionado** - O objeto que contém a imagem tem o mesmo número de pixels que a imagem.</li></ul> |
+| [Tamanho automático](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (menu contextual do Editor de formulários) | Se o formato de apresentação da imagem é:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - O objeto que contém a imagem é redimensionado de acordo com (número de pixels da imagem * dpi da tela) / (dpi da imagem) </li> <li>**Não dimensionado** - O objeto que contém a imagem tem o mesmo número de pixels que a imagem.</li></ul> |
 
 *(\*) Normalmente, macOS = 72 dpi, Windows = 96 dpi*
 
@@ -80,6 +80,6 @@ Em tempo de execução, 4D carregará automaticamente a imagem clara ou escura d
 
 4D permite recuperar as coordenadas locais do mouse em um [objeto de entrada](FormObjects/input_overview.md) associado a uma [expressão de imagem](FormObjects/properties_Object.md#expression-type), no caso de que clique ou passe o cursor por cima, mesmo se não tiver aplicado um deslocamento ou zoom na imagem. Esse mecanismo, similar ao de um mapa de imagens, pode ser utilizado, por exemplo, para manejar barras de botões deslocáveis ou a interface de um software de cartografia.
 
-As coordenadas são devolvidas nas [Variáveis de Sistema](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). *MouseX* e*MouseY*. As coordenadas são expressas em píxeis em relação ao canto superior esquerdo da imagem (0,0). Se o mouse estiver fora do sistema de coordenadas da imagem, se devolverá -1 em *MouseX* e *MouseY*.
+The coordinates are returned in the *MouseX* and *MouseY* [System Variables](../Concepts/variables.md#system-variables). As coordenadas são expressas em píxeis em relação ao canto superior esquerdo da imagem (0,0). Se o mouse estiver fora do sistema de coordenadas da imagem, se devolverá -1 em *MouseX* e *MouseY*.
 
 Pode obter o valor dessas variáveis como parte dos eventos formulário `On Clicked`, `On Double Clicked`, `On Mouse up`, `On Mouse Enter`, ou `On Mouse Move`.

@@ -87,13 +87,13 @@ Sin embargo, debe prestar atención a las siguientes diferencias de comportamien
 
 ## Sesiones de usuarios remotos
 
-En el servidor, el comando [`Session`](../API/SessionClass.md#session) devuelve un objeto `session` que describe la sesión actual del usuario. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
+On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
 ### Utilización
 
 El objeto `session` permite obtener información sobre la sesión del usuario remoto. Puede compartir datos entre todos los procesos de la sesión del usuario utilizando el objeto compartido [`session.storage`](../API/SessionClass.md#storage).
 
-For example, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
+Por ejemplo, puede iniciar un procedimiento de autenticación y verificación de usuario cuando un cliente se conecta al servidor, que involucra ingresar un código enviado por correo electrónico o SMS en la aplicación. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
 
 ### Disponibilidad
 
@@ -101,6 +101,7 @@ El objeto `session` del usuario remoto está disponible en:
 
 - Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
+- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword,
 - Los métodos base `On Server Open Connection` y `On Server Shutdown Connection` de la base de datos.
 
 :::info

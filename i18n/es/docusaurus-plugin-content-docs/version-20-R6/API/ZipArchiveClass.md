@@ -49,14 +49,14 @@ End if
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parámetros      | Tipo                      |     | Descripción                                                          |
-| --------------- | ------------------------- | :-: | -------------------------------------------------------------------- |
-| fileToZip       | 4D.File   |  -> | Objeto archivo o carpeta a comprimir                                 |
-| folderToZip     | 4D.Folder |  -> | Objeto archivo o carpeta a comprimir                                 |
-| zipStructure    | Object                    |  -> | Objeto archivo o carpeta a comprimir                                 |
-| destinationFile | 4D.File   |  -> | Archivo de destino del archivo                                       |
-| options         | Integer                   |  -> | Opción *folderToZip*: `ZIP Without enclosing folder` |
-| Result          | Object                    |  <- | Objeto estado                                                        |
+| Parámetros      | Tipo                      |                             | Descripción                                                          |
+| --------------- | ------------------------- | :-------------------------: | -------------------------------------------------------------------- |
+| fileToZip       | 4D.File   |              ->             | Objeto archivo o carpeta a comprimir                                 |
+| folderToZip     | 4D.Folder |              ->             | Objeto archivo o carpeta a comprimir                                 |
+| zipStructure    | Object                    |              ->             | Objeto archivo o carpeta a comprimir                                 |
+| destinationFile | 4D.File   |              ->             | Archivo de destino del archivo                                       |
+| options         | Integer                   |              ->             | Opción *folderToZip*: `ZIP Without enclosing folder` |
+| Result          | Object                    | <- | Objeto estado                                                        |
 
 <!-- END REF -->
 
@@ -83,7 +83,7 @@ Puede pasar un objeto 4D.File, 4D.Folder, o una estructura zip como primer pará
 
 En el parámetro *destinationFile*, pase un objeto `4D.File` que describa el archivo ZIP a crear (nombre, ubicación, etc.). Se aconseja utilizar la extensión ".zip" si quiere que el archivo ZIP sea procesado automáticamente por cualquier software.
 
-Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
+Una vez creado un archivo, puede utilizar el comando [ZIP Read archive](#zip-read-archive) para acceder a él.
 
 **Status object**
 
@@ -140,7 +140,7 @@ Para comprimir una estructura de archivo ZIP con una contraseña y una barra de 
  $zip.password:="password"
  $zip.callback:=Formula(myFormulaCompressingMethod($1))
 
- progID:=Progress New //we use the 4D Progress component
+ progID:=Progress New //utilizamos el componente 4D Progress
 
  $status:=ZIP Create archive($zip;$destination)
 
@@ -203,23 +203,23 @@ $err:=ZIP Create archive($zip; $destination)
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parámetros | Tipo                          |     | Descripción                           |
-| ---------- | ----------------------------- | :-: | ------------------------------------- |
-| zIPFile    | 4D.File       |  -> | Archivos Zip                          |
-| contraseña | Text                          |  -> | Contraseña del archivo ZIP, si la hay |
-| Result     | 4D.ZipArchive |  <- | Objeto archivo                        |
+| Parámetros | Tipo                          |                             | Descripción                           |
+| ---------- | ----------------------------- | :-------------------------: | ------------------------------------- |
+| zIPFile    | 4D.File       |              ->             | Archivos Zip                          |
+| contraseña | Text                          |              ->             | Contraseña del archivo ZIP, si la hay |
+| Result     | 4D.ZipArchive | <- | Objeto archivo                        |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+El comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->recupera el contenido de *zipFile* y lo devuelve como un objeto `4D.ZipArchive`<!-- END REF -->.
 
-> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. To extract the contents of an archive, you need to use methods such as [file.copyTo()](Document.md#copyto) or [folder.copyTo()](Directory.md#copyto).
+> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. Para extraer el contenido de un archivo, es necesario utilizar métodos como [file.copyTo()](Document.md#copyto) o [folder.copyTo()](Directory.md#copyto).
 
-Pase un objeto `4D.File` que haga referencia al archivo ZIP comprimido en el parámetro *zipFile*. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
+Pase un objeto `4D.File` que haga referencia al archivo ZIP comprimido en el parámetro *zipFile*. El archivo de destino se abrirá hasta que el `ZIP Read archive` haya terminado de ejecutarse y todos los contenidos/referencias hayan sido extraídos/liberados, entonces se cerrará automáticamente.
 
-If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. Si se requiere una contraseña pero no se pasa al intentar leer el contenido del archivo, se genera un error.
+Si el *zipFile* está protegido por contraseña, es necesario utilizar el parámetro opcional *password* para suministrar una contraseña. Si se requiere una contraseña pero no se pasa al intentar leer el contenido del archivo, se genera un error.
 
 **Objeto archivo**
 
@@ -258,10 +258,10 @@ Para leer el contenido de un archivo sin extraerlo de la carpeta root:
 Para extraer desde la carpeta root:
 
 ```4d
-  //extract a file
+  //extraer un archivo
  $folderResult:=$files[$i].copyTo(Folder(fk desktop folder).folder("MyDocs"))
 
-  //extract all files
+  //extraer todos los archivos
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 
@@ -273,6 +273,6 @@ Para extraer desde la carpeta root:
 
 La propiedad `.root` contiene <!-- REF #ZipArchiveClass.root.Summary -->una carpeta virtual que permite acceder al contenido del archivo ZIP<!-- END REF -->.
 
-The `root` folder and its contents can be manipulated with the [ZipFile](ZipFileClass.md) and [ZipFolder](ZipFolderClass.md) functions and properties.
+La carpeta `root` y su contenido se pueden manipular con las funciones y propiedades [ZipFile](ZipFileClass.md) y [ZipFolder](ZipFolderClass.md).
 
 Esta propiedad es de **solo lectura**.

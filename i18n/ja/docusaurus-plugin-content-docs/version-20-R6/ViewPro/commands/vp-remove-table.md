@@ -17,7 +17,7 @@ title: VP REMOVE TABLE
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
-| 引数         | タイプ     |    | 説明                                             |                  |
+| 引数         | 型       |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro エリア名                               |                  |
 | tableName  | Text    | -> | 削除する表組みの名称                                     |                  |

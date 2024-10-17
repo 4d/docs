@@ -161,11 +161,11 @@ En este ejemplo, un usuario es asignado a uno de los tres grupos en función de 
 
 A continuación, los grupos se anidan para que los privilegios se distribuyan correctamente entre los usuarios de cada grupo.
 
-- The General Management group contains only “high-level” users. ![](../assets/en/Users/schema1.png)
+- El grupo de Dirección General sólo contiene usuarios de "alto nivel". ![](../assets/en/Users/schema1.png)
 
-- The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well. ![](../assets/en/Users/schema2.png)
+- El grupo Finanzas contiene usuarios de mantenimiento de datos, así como también usuarios de Dirección General, por lo que los usuarios de Dirección General también tienen los privilegios del grupo Finanzas. ![](../assets/en/Users/schema2.png)
 
-- The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](../assets/en/Users/schema3.png)
+- El grupo Contabilidad contiene usuarios de entrada de datos así como usuarios del grupo Finanzas, por lo que los usuarios que pertenecen al grupo Finanzas y al grupo Dirección General disfrutan también de los privilegios del grupo Contabilidad. ![](../assets/en/Users/schema3.png)
 
 Puede decidir qué privilegios de acceso asignar a cada grupo en función del nivel de responsabilidad de los usuarios que contiene.
 

@@ -37,7 +37,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 <!-- REF #_command_.MAIL New attachment.Params -->
 
-| 引数          | タイプ               |    | 説明                                                     |
+| 引数          | 型                 |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
 | file        | 4D.File           | -> | 添付ファイル                                                 |
 | zipFile     | 4D.ZipFile        | -> | 添付 Zipファイル                                             |
@@ -55,7 +55,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`MAIL New attachment` コマンドは、 <!-- REF #_command_.MAIL New attachment.Summary -->[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) に追加できる添付オブジェクトを作成します<!-- END REF -->。
+`MAIL New attachment` コマンドは、 <!-- REF #_command_.MAIL New attachment.Summary -->[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) に追加できる添付オブジェクトを作成します<!-- END REF -->.
 
 添付を定義するには、次のパラメーターが使えます:
 
@@ -186,7 +186,7 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| 引数          | タイプ               |    | 説明                                                     |
+| 引数          | 型                 |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
 | file        | 4D.File           | -> | 添付ファイル                                                 |
 | zipFile     | 4D.ZipFile        | -> | 添付 Zipファイル                                             |
@@ -204,7 +204,7 @@ $transporter.send($email)
 
 #### 説明
 
-`4D.MailAttachment.new()` 関数は、 <!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`MAIL New attachment`](#mail-new-attachment) コマンドと同一です。
+`4D.MailAttachment.new()` 関数は、 <!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新しいオブジェクトを作成して返します<!-- END REF -->. この関数の機能は、[`MAIL New attachment`](#mail-new-attachment) コマンドと同一です。
 
 
 ## .cid
@@ -214,7 +214,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.cid` プロパティは、 <!-- REF #MailAttachmentClass.cid.Summary --> 添付ファイルの ID を格納します<!-- END REF -->。 このプロパティは HTMLメッセージでのみ使用されます。 このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
+`.cid` プロパティは、 <!-- REF #MailAttachmentClass.cid.Summary --> 添付ファイルの ID を格納します<!-- END REF -->. このプロパティは HTMLメッセージでのみ使用されます。 このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
 
 
 ## .disposition
@@ -224,7 +224,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.disposition` プロパティは、 <!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値を格納します<!-- END REF -->。 二つの値が利用可能です:
+`.disposition` プロパティは、 <!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値を格納します<!-- END REF -->. 二つの値が利用可能です:
 
 *   "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 レンダリングの結果はメールクライアントによって異なります。
 *   "attachment": 添付ファイルはメッセージ内でリンクとして提供されます。
@@ -236,7 +236,7 @@ $transporter.send($email)
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 引数  | タイプ     |    | 説明                               |
+| 引数  | 型       |    | 説明                               |
 | --- | ------- |:--:| -------------------------------- |
 | 戻り値 | 4D.Blob | <- | 添付の中身|<!-- END REF -->
 
@@ -246,7 +246,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を `4D.Blob` オブジェクトとして返します<!-- END REF -->。 [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
+`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を `4D.Blob` オブジェクトとして返します<!-- END REF -->. [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
 
 
@@ -257,7 +257,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.name` プロパティは、 <!-- REF #MailAttachmentClass.name.Summary -->添付ファイルの名前と拡張子を格納します<!-- END REF -->。  [`MAIL New attachment`](#mail-new-attachment) コマンドで別の名称を指定しなかった場合のデフォルトは、ファイルの名称です。
+`.name` プロパティは、 <!-- REF #MailAttachmentClass.name.Summary -->添付ファイルの名前と拡張子を格納します<!-- END REF -->.  [`MAIL New attachment`](#mail-new-attachment) コマンドで別の名称を指定しなかった場合のデフォルトは、ファイルの名称です。
 
 ## .path
 
@@ -266,7 +266,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #MailAttachmentClass.path.Summary -->添付ファイルの POSIX パス (存在すれば) を格納します<!-- END REF -->。
+`.path` プロパティは、 <!-- REF #MailAttachmentClass.path.Summary -->添付ファイルの POSIX パス (存在すれば) を格納します<!-- END REF -->.
 
 
 ## .platformPath
@@ -283,7 +283,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.platformPath` プロパティは、 <!-- REF #MailAttachmentClass.platformPath.Summary -->カレントプラットフォームのシンタックスで表現された添付ファイルのパスを返します<!-- END REF -->。
+`.platformPath` プロパティは、 <!-- REF #MailAttachmentClass.platformPath.Summary -->カレントプラットフォームのシンタックスで表現された添付ファイルのパスを返します<!-- END REF -->.
 
 
 ## .size
@@ -293,7 +293,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.size` プロパティは、 <!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します<!-- END REF -->。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
+`.size` プロパティは、 <!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します<!-- END REF -->. `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
 
 
 ## .type
@@ -303,4 +303,4 @@ $transporter.send($email)
 
 #### 説明
 
-`.type` プロパティは、 <!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type` を格納します<!-- END REF -->。 [`MAIL New attachment`](#mail-new-attachment) コマンドにて、このタイプが明示的に渡されていない場合、`content-type` はファイルの拡張子に基づきます。
+`.type` プロパティは、 <!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type` を格納します<!-- END REF -->. [`MAIL New attachment`](#mail-new-attachment) コマンドにて、このタイプが明示的に渡されていない場合、`content-type` はファイルの拡張子に基づきます。

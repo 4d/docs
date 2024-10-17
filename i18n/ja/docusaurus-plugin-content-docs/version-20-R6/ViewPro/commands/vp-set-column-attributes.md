@@ -9,7 +9,7 @@ title: VP SET COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
-| 引数          | タイプ    |    | 説明                  |                  |
+| 引数          | 型      |    | 説明                  |                  |
 | ----------- | ------ | -- | ------------------- | ---------------- |
 | rangeObj    | Object | -> | レンジオブジェクト           |                  |
 | propertyObj | Object | -> | カラムプロパティを格納したオブジェクト | <!-- END REF --> |
@@ -22,7 +22,7 @@ title: VP SET COLUMN ATTRIBUTES
 
 *propertyObj* 引数は、*rangeObj* 引数のレンジ内のカラムに対して適用する属性を指定します。 指定できる属性は以下の通りです:
 
-| プロパティ     | タイプ     | 説明                                          |
+| プロパティ     | 型       | 説明                                          |
 | --------- | ------- | ------------------------------------------- |
 | width     | number  | カラムの幅 (ピクセル単位)           |
 | pageBreak | boolean | レンジ内の先頭カラムの前に改ページを挿入する場合には true、それ以外は false |

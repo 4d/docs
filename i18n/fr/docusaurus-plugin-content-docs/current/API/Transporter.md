@@ -368,9 +368,9 @@ La propriété `.user` contient <!-- REF #transporter.user.Summary -->le nom d'u
 
 <!-- REF #transporter.checkConnection().Params -->
 
-| Paramètres | Type   |     | Description                                    |
-| ---------- | ------ | :-: | ---------------------------------------------- |
-| Résultat   | Object |  <- | Statut de la connexion de l'objet transporteur |
+| Paramètres | Type   |                             | Description                                    |
+| ---------- | ------ | :-------------------------: | ---------------------------------------------- |
+| Résultat   | Object | <- | Statut de la connexion de l'objet transporteur |
 
 <!-- END REF -->
 

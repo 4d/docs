@@ -109,7 +109,7 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 
 <!-- REF #_command_.New signal.Params -->
-| 引数          | タイプ       |    | 説明                                              |
+| 引数          | 型         |    | 説明                                              |
 | ----------- | --------- |:--:| ----------------------------------------------- |
 | description | Text      | -> | シグナルの詳細                                         |
 | 戻り値         | 4D.Signal | <- | シグナルを格納するネイティブオブジェクト|<!-- END REF -->
@@ -120,7 +120,7 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 #### 説明
 
-`New signal` コマンドは、 <!-- REF #_command_.New signal.Summary -->`4D.Signal` オブジェクトを作成します<!-- END REF -->。
+`New signal` コマンドは、 <!-- REF #_command_.New signal.Summary -->`4D.Signal` オブジェクトを作成します<!-- END REF -->.
 
 シグナルは、ワーカー/プロセスから他のワーカー/プロセスへと引数のように渡せる共有オブジェクトです。 そのため、以下のようなことが可能になります:
 
@@ -185,7 +185,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 #### 説明
 
-`.description` プロパティは、 <!-- REF #SignalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細を格納します<!-- END REF -->。
+`.description` プロパティは、 <!-- REF #SignalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細を格納します<!-- END REF -->.
 
 `.description` は、Signal オブジェクトの作成時、あるいはその他のタイミングでも設定することができます。 ただし、`Signal` オブジェクトは共有オブジェクトであるため、`.description` プロパティに書き込む際には必ず `Use...End use` 構文を使わなくてはならない点に留意が必要です。
 
@@ -210,7 +210,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 #### 説明
 
-`.signaled` プロパティは、 <!-- REF #SignalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態を格納します<!-- END REF -->。 Signal オブジェクトが作成された時点では、`.signaled` は **false** です。 Signal オブジェクトに対して `.trigger()` が呼び出された時に **true** となります。
+`.signaled` プロパティは、 <!-- REF #SignalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態を格納します<!-- END REF -->. Signal オブジェクトが作成された時点では、`.signaled` は **false** です。 Signal オブジェクトに対して `.trigger()` が呼び出された時に **true** となります。
 
 このプロパティは **読み取り専用** です。
 
@@ -233,9 +233,9 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| 引数 | タイプ |  | 説明                                           |
-| -- | --- |::| -------------------------------------------- |
-|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
+| 引数 | 型 |  | 説明                                           |
+| -- | - |::| -------------------------------------------- |
+|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 
 |
@@ -266,7 +266,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 
 <!-- REF #SignalClass.wait().Params -->
-| 引数      | タイプ     |    | 説明                                              |
+| 引数      | 型       |    | 説明                                              |
 | ------- | ------- | -- | ----------------------------------------------- |
 | timeout | Real    | -> | シグナルの最大待機時間 (秒単位)                               |
 | 戻り値     | Boolean | <- | `.signaled` プロパティの状態|<!-- END REF -->
@@ -277,7 +277,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 #### 説明
 
-`.wait( )` 関数は、 <!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
+`.wait( )` 関数は、 <!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->.
 
 コード実行のブロックを防ぐため、*timeout* 引数を使用して最長待機時間を秒単位で指定することもできます(小数を使用できます)。
 > **警告**: *timeout* 引数を渡さずに `.wait()` を 4D のメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。

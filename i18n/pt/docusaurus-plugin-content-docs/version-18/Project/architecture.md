@@ -43,7 +43,7 @@ A pasta Project contém normalmente a seguinte hierarquia:
 Arquivo de desenvolvimento do projeto, utilizado para designar e lançar o projeto. Esse arquivo pode ser aberto por:
 
 - 4D Developer
-- 4D Server (read-only, see [Developing a project](developing.md))
+- 4D Server (somente leitura, consulte [Desenvolver um projeto](developing.md))
 
 **Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server pode abrir arquivos .4DProject para fins de teste.
 

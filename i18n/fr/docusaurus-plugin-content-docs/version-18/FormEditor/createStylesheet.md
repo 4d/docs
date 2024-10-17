@@ -188,7 +188,7 @@ La majorité des attributs d'objet formulaire peuvent être définis dans une fe
 
 Les attributs d'objet formulaire peuvent être déclarés avec leur nom JSON en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes). Pour plus d'informations, voir la page **Formulaires dynamiques** dans le manuel du mode Développement.
 
-### Mappage d'attributs
+### Correspondance d'attributs
 
 Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 
@@ -281,8 +281,8 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 > Les chemins de fichiers peuvent être relatifs ou absolus.
 > 
-> * Relative paths are resolved relative to the JSON form description file.
-> * For security reasons, only filesystem paths are accepted for absolute paths. (*ex :*, "/RESOURCES", "/DATA")
+> * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON.
+> * Pour des raisons de sécurité, seuls les chemins filesystem sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 ## Création ou modification d'une feuille de style
 

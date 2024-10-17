@@ -1030,7 +1030,7 @@ Desea exportar un documento 4D View Pro en formato ".xlsx" y llamar a un método
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format //".xlsx"
+ $params.format:=vk MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
@@ -1199,7 +1199,7 @@ $range:=VP All("ViewProArea")
 
 $condition:=New object
 $condition.target:=vk find target text
-$condition.all:=True //Search entire document
+$condition.all:=True //Buscar en todo el documento
 $condition.flags:=vk find flag exact match
 
   // Reemplazar las celdas que contienen sólo "Total" en la hoja actual con "Grand Total"
@@ -1250,7 +1250,7 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
      $tableName:=VP Find table(FORM Event.range)
      If ($tableName#"")
          ALERT("La"+$tableName+" tabla ha sido modificada.")
-     End if 
+     End if
 End if
 ```
 
@@ -1380,7 +1380,7 @@ El siguiente código recuperará las coordenadas de la celda activa:
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
 
-  //devuelve un objeto rango que contiene: 
+  //devuelve un objeto rango que contiene:
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0
@@ -2382,7 +2382,7 @@ Para centrar el texto de las celdas fusionadas en este documento:
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Buscar todas las celdas fusionadas 
+// Buscar todas las celdas fusionadas
 $range:=VP Get spans(VP All("ViewProArea"))
 
 //centrar el texto
@@ -2487,10 +2487,10 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 [
    {
      backColor:green,
-     borderLeft:{color:green,style:10}, 
-     borderTop:{color:green,style:10}, 
-     borderRight:{color:green,style:10}, 
-     borderBottom:{color:green,style:10}, 
+     borderLeft:{color:green,style:10},
+     borderTop:{color:green,style:10},
+     borderRight:{color:green,style:10},
+     borderBottom:{color:green,style:10},
      name:GreenDashDotStyle
    },
    {
@@ -3063,12 +3063,12 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
 ```4d
-    //myImport callback method
+    //método de retrollamada myImport
 #DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
 
 If ($status.success)
      ALERT("Import successfully completed")
-Else 
+Else
      ALERT("Error: "+$status.errorMessage)
 End if
 ```
@@ -3445,7 +3445,7 @@ Quiere asignar un valor al rango llamado "Total".
 ```4d
 // llama la celda B5 Total
 VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";" Total")
+$name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
@@ -4243,7 +4243,7 @@ En el objeto *parameters*, pase una de las siguientes propiedades opcionales. Es
 | onEvent                  | objet (fórmula) | Un método retro llamada que se lanzará cuando el área fuera de la pantalla esté lista. Puede ser:<li>una función `onEvent` de una clase, o</li><li>un objeto `Formula`</li>Por defecto, el método de retrollamada es llamado en los eventos [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), o [`On Timer`](../Events/onTimer.md). El método de retrollamada puede ser utilizado para acceder a [la variable del objeto 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
 | autoQuit                 | boolean         | True (valor por defecto) si el comando debe detener la ejecución de la fórmula cuando se produzcan los eventos [`On End URL Loading`](../Events/onEndUrlLoading.md) o [`On URL Loading Error`](../Events/onUrlLoadingError.md). Si es false, debe utilizar los comandos `CANCEL` o `ACCEPT` en el método de retrollamada *onEvent*.                                                                                                                                                                                                                                                                                                                                                                      |
 | timeout                  | number          | Tiempo máximo (expresado en segundos) antes de que el área se cierre automáticamente si no se genera ningún evento. Si se fija en 0, no se aplica ninguna limitación. Valor por defecto: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| result                   | mixto           | Resultado del procesamiento (si hay)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| resultado                | mixto           | Resultado del procesamiento (si hay)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `<customProperty>` | mixto           | Todo atributo personalizado que esté disponible en el método de retrollamada *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 
@@ -4268,17 +4268,17 @@ Los siguientes comandos se pueden utilizar en el método de retrollamada:
 Quiere crear un área 4D View Pro fuera de la pantalla y obtener el valor de una celda:
 
 ```4d
-// Declaración de la clase cs.OffscreenArea 
+// Declaración de la clase cs.OffscreenArea
 Class constructor ($path : Text)
  This.filePath:=$path
 
-// Esta función será llamada en cada evento del área offscreen 
+// Esta función será llamada en cada evento del área offscreen
 Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
       VP IMPORT DOCUMENT(This.area;This.filePath)
        This.result:=VP Get value(VP Cell(This.area;6;22))
-
+ 
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
 
@@ -4332,7 +4332,7 @@ Function onEvent()
         VP EXPORT DOCUMENTO(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
      :(FORM Event.code=On URL Loading Error)
-         CANCEL 
+         CANCEL
  End case
 ```
 
@@ -5020,13 +5020,13 @@ var $options : Object
 $data:= New collection()
 
 // Las fechas pueden pasarse como valores escalares
-$data.push(New collection("Date"; Current date)) 
+$data.push(New collection("Date"; Current date))
 
 // Los valores hora deben pasarse como atributos objeto
 $data.push(New collection("Time"; New object("time"; 5140)))
 
 // Ejemplo de fecha + hora
-$data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140))) 
+$data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140)))
 
 $options:=New object("autoGenerateColumns"; True)
 
@@ -6487,5 +6487,3 @@ End if
 #### Ver también
 
 [VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
-
-

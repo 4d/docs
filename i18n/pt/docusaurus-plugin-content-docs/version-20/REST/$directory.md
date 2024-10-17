@@ -19,7 +19,7 @@ Todos os parâmetros devem ser transmitidos nos **cabeçalhos ** de um método P
 | Chave de cabeçalho | Valor do cabeçalho                                                                     |
 | ------------------ | -------------------------------------------------------------------------------------- |
 | username-4D        | Usuário - Não obrigatório                                                              |
-| password-4D        | Password in plain text - Not mandatory                                                 |
+| password-4D        | Senha em texto simples - Não obrigatório                                               |
 | session-4D-length  | Tempo de inatividade da sessão (minutos). Não pode ser inferior a 60 - Não obrigatório |
 
 :::caution

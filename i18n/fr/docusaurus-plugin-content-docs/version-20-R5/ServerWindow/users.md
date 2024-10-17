@@ -56,14 +56,14 @@ Ce bouton permet d’envoyer un message aux utilisateurs 4D sélectionnés dans 
 
 Le message sera affiché sous forme d’alerte sur les postes distants.
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
+> Vous pouvez effectuer la même action pour les utilisateurs distants avec la commande [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html).
 
 ### Visualiser process
 
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. Lorsque vous cliquez sur ce bouton, 4D Server bascule sur la page Process et pré-remplit la zone de recherche/filtrage de cette page avec les noms des utilisateurs sélectionnés.
+Ce bouton permet de visualiser directement les process du ou des utilisateur(s) sélectionné(s) dans la [page **Processus** ](processes.md) de la fenêtre d’administration. Lorsque vous cliquez sur ce bouton, 4D Server bascule sur la page Process et pré-remplit la zone de recherche/filtrage de cette page avec les noms des utilisateurs sélectionnés.
 
 ### Déconnecter
 
 Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> Vous pouvez effectuer la même action pour les utilisateurs distants avec la commande [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).

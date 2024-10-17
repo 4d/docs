@@ -6,12 +6,8 @@ title: Collection
 
 The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
 
-A collection is initialized with:
+A collection is initialized with the [`New collection`](../commands/new-collection.md) or [`New shared collection`](../commands/new-shared-collection.md) commands.
 
-||
-|---|
-|[<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<br/><!-- INCLUDE #_command_.New collection.Summary -->|
-|[<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<br/><!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
 ### Example
@@ -76,157 +72,6 @@ A collection is initialized with:
 |[<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<br/><!-- INCLUDE #collection.unshift().Summary -->|
 
 
-
-## `New collection`
-
-
-<!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
-
-
-<!-- REF #_command_.New collection.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|The new collection|
-<!-- END REF -->
-
-
-#### Description
-
-The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
-
-If you do not pass any parameters, `New collection` creates an empty collection and returns its reference.
-
-You must assign the returned reference to a 4D variable of the Collection type.
-
->Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
-
-Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
-
-Otherwise, you can add or modify elements subsequently through assignment. For example:
-
-```4d
- myCol[10]:="My new element"
-```
-
-If the new element index is beyond the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
-
-You can pass any number of values of any supported type (number, text, date, picture, pointer, object, collection...). Unlike arrays, collections can mix data of different types.
-
-You must pay attention to the following conversion issues:
-
-*	If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
-*	Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
-*	If you pass a time, it is stored as a number of milliseconds (Real).
-
-#### Example 1
-
-
-
-You want to create a new empty collection and assign it to a 4D collection variable:
-
-```4d
- var $myCol : Collection
- $myCol:=New collection
-  //$myCol=[]
-```
-
-#### Example 2
-
-You want to create a prefilled collection:
-
-```4d
- var $filledColl : Collection
- $filledColl:=New collection(33;"mike";"november";->myPtr;Current date)
-  //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
-```
-
-#### Example 3
-
-You create a new collection and then add a new element:
-
-```4d
- var $coll : Collection
- $coll:=New collection("a";"b";"c")
-  //$coll=["a","b","c"]
- $coll[9]:="z" //add a 10th element with value "z"
- $vcolSize:=$coll.length //10
-  //$coll=["a","b","c",null,null,null,null,null,null,"z"]
-```
-
-
-
-
-## `New shared collection`
-
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|v16 R6|Added|
-
-</details>
-
-<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
-
-
-<!-- REF #_command_.New shared collection.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
-|Result|Collection|<-|The new shared collection|
-<!-- END REF -->
-
-
-#### Description
-
-The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
-
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
-
-:::info
-
-For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
-
-:::
-
-If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
-
-You must assign the returned reference to a 4D variable of the Collection type.
-
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
-
-Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Otherwise, you can add or modify elements subsequently through object notation assignment (see example).
-
-If the new element index is beyond the last existing element of the shared collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
-
-You can pass any number of values of the following supported types:
-
-*	number (real, longint...). Number values are always stored as reals.
-*	text
-*	boolean
-*	date
-*	time (stored as number of milliseconds - real)
-*	null
-*	shared object(*)
-*	shared collection(*)
-
-:::note
-
-Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.  
-
-:::
-
-(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
-
-#### Example
-
-```4d
- $mySharedCol:=New shared collection("alpha";"omega")
- Use($mySharedCol)
-    $mySharedCol[1]:="beta"
- End use
-```
 
 
 
@@ -353,6 +198,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 |v16 R6|Added|
 
 </details>
+
 
 <!-- REF #collection.clear().Syntax -->**.clear()** : Collection<!-- END REF -->
 
@@ -2358,6 +2204,7 @@ The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a ne
 This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
 
 
+
 >This function does not modify the original collection.
 
 If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned with an internal order). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
@@ -3070,6 +2917,7 @@ The callback sets the following parameter(s):
 #### Example 1
 
 
+
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
@@ -3219,7 +3067,7 @@ With the following ***Flatten*** method:
 |---------|--- |:---:|------|
 |index |Integer|->|Element at which to start removal|
 |howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Original collection without removed element(s)|
+|Result|Collection|<-|Modified collection without removed element(s)|
 <!-- END REF -->
 
 

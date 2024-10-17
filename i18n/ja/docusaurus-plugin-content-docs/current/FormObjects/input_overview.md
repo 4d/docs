@@ -39,7 +39,7 @@ title: 入力
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
-[式の型](properties_Object.md#式の型) -
+[式の型](properties_Object.md#式の型式タイプ) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [選択リスト](properties_DataSource.md#選択リスト) -
 [左](properties_CoordinatesAndSizing.md#左) -
@@ -63,8 +63,7 @@ title: 入力
 [除外リスト](properties_RangeOfValues.md#除外リスト) -
 [文字フォーマット](properties_Display.md#文字フォーマット) -
 [数値フォーマット](properties_Display.md#数値フォーマット) -
-[テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) -
-[テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) -
+[テキスト (True時)/テキスト (False時) (ブール型)](properties_Display.md#テキスト-true時テキスト-false時) -
 [日付フォーマット](properties_Display.md#日付フォーマット) -
 [時間フォーマット](properties_Display.md#時間フォーマット) -
 [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) -
@@ -73,7 +72,8 @@ title: 入力
 [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) -
 [横スクロールバー](properties_Appearance.md#横スクロールバー) -
 [縦スクロールバー](properties_Appearance.md#縦スクロールバー) -
-[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[背景色](properties_BackgroundAndBorder.md#背景色塗りカラー) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
 [フォント](properties_Text.md#フォント) -
 [フォントサイズ](properties_Text.md#フォントサイズ) -

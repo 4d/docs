@@ -1031,7 +1031,7 @@ Vous souhaitez exporter un document 4D View Pro au format ".xlsx" et appeler une
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format //".xlsx"
+ $params.format:=vk MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
@@ -1196,22 +1196,22 @@ Pour trouver "Total" et le remplacer par "Grand Total" :
 ```4d
 var $range;$condition;$result : Object
 
- $range:=VP All("ViewProArea")
+$range:=VP All("ViewProArea")
 
- $condition:=New object
- $condition.target:=vk find target text
- $condition.all:=True //Rechercher le document entier
- $condition.flags:=vk find flag exact match
+$condition:=New object
+$condition.target:=vk find target text
+$condition.all:=True //Search entire document
+$condition.flags:=vk find flag exact match
 
-  // Remplacer les cellules contenant uniquement 'Total' dans la feuille courante par "Grand Total"
- $result:=VP Find($range;"Total";$condition;"Grand Total")
+  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+$result:=VP Find($range;"Total";$condition;"Grand Total")
 
-  // Rechercher un objet de plage vide
- If($result.ranges.length=0)
-    ALERT("Aucun résultat trouvé")
- Else
-    ALERT($result.ranges.length+" résultats trouvés")
- End if
+  // Check for empty range object
+If($result.ranges.length=0)
+    ALERT("No result found")
+Else
+    ALERT($result.ranges.length+" results found")
+End if
 ```
 
 
@@ -1252,6 +1252,7 @@ $attributes:=VP Get table column attributes("ViewProArea"; $tableName; 1)
 If ($attributes.dataField#"")
      ...
      End if
+End if
 ```
 
 
@@ -1380,7 +1381,7 @@ Le code suivant récupèrera les coordonnées de la cellule active :
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
 
-  //returns a range object containing: 
+  //returns a range object containing:
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0
@@ -2381,12 +2382,12 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Rechercher toutes les cellules fusionnées
- $range:=VP Get spans(VP All("ViewProArea"))
+// Search for all cell spans
+$range:=VP Get spans(VP All("ViewProArea"))
 
- //centrer le texte
- $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
- VP SET CELL STYLE($range;$style)
+//center text
+$style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
+VP SET CELL STYLE($range;$style)
 ```
 
 #### Voir également
@@ -2486,10 +2487,10 @@ Dans ce cas, la feuille courante utilise deux objets style :
 [
    {
      backColor:green,
-     borderLeft:{color:green,style:10}, 
-     borderTop:{color:green,style:10}, 
-     borderRight:{color:green,style:10}, 
-     borderBottom:{color:green,style:10}, 
+     borderLeft:{color:green,style:10},
+     borderTop:{color:green,style:10},
+     borderRight:{color:green,style:10},
+     borderBottom:{color:green,style:10},
      name:GreenDashDotStyle
    },
    {
@@ -3066,7 +3067,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 
 If ($status.success)
      ALERT("Import successfully completed")
-Else 
+Else
      ALERT("Error: "+$status.errorMessage)
 End if
 ```
@@ -3441,10 +3442,10 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 Vous souhaitez assigner une valeur à une plage nommée "Total".
 
 ```4d
-// nommez la cellule B5 Total
- VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
- $name:=VP Name("ViewProArea";" Total")
- VP SET NUM VALUE($name;285;"$#,###.00")
+// name the B5 cell as Total
+VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
+$name:=VP Name("ViewProArea";"Total")
+VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
 #### Voir également
@@ -4265,11 +4266,11 @@ Les commandes suivantes peuvent être utilisées dans la méthode callback (de r
 Vous souhaitez créer une zone 4D View Pro hors écran et lire la valeur d'une cellule :
 
 ```4d
-// cs.OffscreenArea class declaration 
+// cs.OffscreenArea class declaration
 Class constructor ($path : Text)
  This.filePath:=$path
 
-// This function will be called on each event of the offscreen area 
+// This function will be called on each event of the offscreen area
 Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
@@ -4329,7 +4330,7 @@ Function onEvent()
         VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
      :(FORM Event.code=On URL Loading Error)
-         CANCEL 
+         CANCEL
  End case
 ```
 
@@ -5015,13 +5016,13 @@ var $options : Object
 $data:= New collection()
 
 // Dates can be passed as scalar values
-$data.push(New collection("Date"; Current date)) 
+$data.push(New collection("Date"; Current date))
 
 // Time values must be passed as object attributes
 $data.push(New collection("Time"; New object("time"; 5140)))
 
 // Date + time example
-$data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140))) 
+$data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140)))
 
 $options:=New object("autoGenerateColumns"; True)
 
@@ -6493,5 +6494,3 @@ End if
 #### Voir également
 
 [VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
-
-

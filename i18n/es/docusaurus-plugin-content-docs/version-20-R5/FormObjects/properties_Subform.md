@@ -63,7 +63,7 @@ Acción a realizar en caso de doble clic en una línea vacía de un subformulari
 
 #### Ver también
 
-[Double click on row](#double-click-on-row)
+[Doble clic en la línea](#double-click-on-row)
 
 ---
 
@@ -93,7 +93,7 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 #### Ver también
 
-[Double click on empty row](#double-click-on-empty-row)
+[Doble clic en la fila vacía](#double-click-on-empty-row)
 
 ---
 

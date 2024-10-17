@@ -13,7 +13,7 @@ São suportados os seguintes formatos:
 
 | Formato  | Descrição                                                                                         |
 | -------- | ------------------------------------------------------------------------------------------------- |
-| `json`   | Standard 4D REST server format (used by default)                               |
+| `json`   | Formato padrão do servidor 4D REST (usado por padrão)                          |
 | `looker` | JSON format compliant with the [Looker Studio](https://lookerstudio.google.com/). |
 
 ## Exemplo

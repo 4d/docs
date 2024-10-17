@@ -21,7 +21,7 @@ The `VP REMOVE NAME` command <!-- REF #_method_.VP REMOVE NAME.Summary -->remove
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the named range or named formula that you want to remove in *name*.
+Passe o intervalo ou a fórmula nomeada que você deseja remover no *name*.
 
 You can define where to remove the name in *scope* using either the sheet index (counting begins at 0) or the following constants:
 

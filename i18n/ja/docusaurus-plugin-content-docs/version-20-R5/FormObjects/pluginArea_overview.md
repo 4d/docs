@@ -31,7 +31,7 @@ title: プラグインエリア
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [プラグインの種類](properties_Object.md#プラグインの種類) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
-[式の型](properties_Object.md#式の型) -
+[式の型](properties_Object.md#式の型式タイプ) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [詳細設定](properties_Plugins.md) -
 [左](properties_CoordinatesAndSizing.md#左) -

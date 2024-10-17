@@ -9,16 +9,16 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Paramètres | Type   |    | Description                                                                        |                  |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage                                                                        |                  |
+| Paramètres | Type   |                             | Description                                                                        |                  |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------------------------------- | ---------------- |
+| rangeObj   | Object | ->                          | Objet plage                                                                        |                  |
 | Résultat   | Object | <- | Objet de cellules fusionnées (cell spans) dans la plage définie | <!-- END REF --> |
 
 #### Description
 
-The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
+La commande `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->récupère les cellules fusionnées (cell spans) dans le *rangeObj* désigné<!-- END REF -->.
 
-In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
+Dans *rangeObj*, passez une plage de cellules fusionnées que vous souhaitez récupérer. Si *rangeObj* ne contient pas de cellules fusionnées, une plage vide est retournée.
 
 #### Exemple
 
@@ -27,10 +27,10 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 ![](../../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans 
+// Rechercher toutes les cellules fusionnées 
 $range:=VP Get spans(VP All("ViewProArea"))
  
-//center text
+//centrer le texte
 $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```

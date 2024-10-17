@@ -17,6 +17,11 @@ As seguintes convenções são utilizadas na sintaxe da função:
 - o `{ ; ...param }` notação indica um número ilimitado de parâmetros. Por exemplo, `.concat( valor : qualquer { ;...valorN } ) : A colecção` significa que um número ilimitado de valores de qualquer tipo pode ser passado para a função.
 - a `any` é utilizada para parâmetros que podem ser de qualquer tipo e que podem ser armazenados dentro dos atributos (número, texto, booleano, data, hora, objecto, colecção...).
 
+### Veja também
+
+[Classes in the 4D Language](../Concepts/classes.md).
+
+
 ## Comandos clássicos
 
 In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. Estes comandos são descritos no manual *Linguagem 4D* em [doc.4d.com](https://doc.4d.com). A título de referência, são enumerados a seguir:

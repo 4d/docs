@@ -5,7 +5,7 @@ title: On End URL Loading
 
 | Code | Peut être appelé par                        | Définition                                      |
 | ---- | ------------------------------------------- | ----------------------------------------------- |
-| 49   | [Web Area](FormObjects/webArea_overview.md) | Toutes les ressources de l'URL ont été chargées |
+| 49   | [Zone Web](FormObjects/webArea_overview.md) | Toutes les ressources de l'URL ont été chargées |
 
 ## Description
 

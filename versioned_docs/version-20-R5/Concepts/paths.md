@@ -29,7 +29,7 @@ The following filesystem pathnames are supported:
 |"/LOGS"|Logs folder|"C:\\MyApps\\Students\\Data\\Logs\\"|
 |"/PACKAGE"|Project root folder (with or without 4dbase extension)|"C:\\MyApps\\Students\\"|
 |"/PROJECT"|Project folder|"C:\\MyApps\\Students\\Project\\"|
-|"/RESOURCES"|Current project resources folder|"C:\\MyApps\\Resources\\"|
+|"/RESOURCES"|Current project resources folder|"C:\\MyApps\\Students\\Resources\\"|
 |"/SOURCES"|Current project sources folder|"C:\\MyApps\\Students\\Project\\Sources\\"|
 
 ## POSIX syntax

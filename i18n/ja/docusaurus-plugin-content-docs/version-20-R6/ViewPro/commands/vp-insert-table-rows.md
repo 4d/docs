@@ -17,7 +17,7 @@ title: VP INSERT TABLE ROWS
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 
-| 引数          | タイプ     |    | 説明                                                   |                  |
+| 引数          | 型       |    | 説明                                                   |                  |
 | ----------- | ------- | -- | ---------------------------------------------------- | ---------------- |
 | vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                              |                  |
 | tableName   | Text    | -> | Table name                                           |                  |

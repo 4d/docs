@@ -30,7 +30,7 @@ Depuis macOS Sierra, les applications Mac bénéficient d'onglets automatiques f
 
 Vous pouvez bénéficier de cette fonctionnalité dans les environnements de 4D suivants (versions 64 bits uniquement) :
 
-- Code Editor windows
+- Fenêtres de l'éditeur de code
 - Fenêtres de l'éditeur de formulaires
 
 Toutes les fenêtres de ces éditeurs peuvent être ouvertes sous forme d'onglets :
@@ -94,7 +94,7 @@ Grâce à ce principe, sous macOS les dossiers des bases apparaissent sous forme
 
 ### Inclure les tokens dans les fichiers sources des projets
 
-Lorsque cette option est cochée, les [fichiers sources des méthodes](../Project/architecture.md#sources) enregistrées dans les nouveaux projets 4D contiendront des **tokens** pour les objets classiques du langage et de la base (constantes, commandes, tabl Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+Lorsque cette option est cochée, les [fichiers sources des méthodes](../Project/architecture.md#sources) enregistrées dans les nouveaux projets 4D contiendront des **tokens** pour les objets du langage classic et de la base (constantes, commandes, tables et champs). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
 Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes avec vos nouveaux projets, il est préférable de décocher cette option pour une meilleure lisibilité du code avec ces outils.
 

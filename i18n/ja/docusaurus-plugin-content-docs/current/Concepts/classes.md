@@ -98,8 +98,8 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
-- `cs` - ユーザークラスストア
-- `4D` - ビルトインクラスストア
+- [`cs`](../commands/cs.md) for user class store
+- [`4D`](../commands/4d.md) for built-in class store
 
 ### `cs`
 
@@ -107,9 +107,9 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 <!-- REF #_command_.cs.Params -->
 
-| 引数         | タイプ    |    | 説明                          |                  |
-| ---------- | ------ | -- | --------------------------- | ---------------- |
-| classStore | Object | <- | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
+| 引数         | 型      |                                | 説明                          |                  |
+| ---------- | ------ | ------------------------------ | --------------------------- | ---------------- |
+| classStore | オブジェクト | &amp;larr; | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
 
 `cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| 引数         | タイプ    |    | 説明       |                  |
-| ---------- | ------ | -- | -------- | ---------------- |
-| classStore | Object | <- | 4Dクラスストア | <!-- END REF --> |
+| 引数         | 型      |                                | 説明       |                  |
+| ---------- | ------ | ------------------------------ | -------- | ---------------- |
+| classStore | オブジェクト | &amp;larr; | 4Dクラスストア | <!-- END REF --> |
 
 `4D` コマンドは、<!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
@@ -141,6 +141,14 @@ $instance:=cs.myClass.new()
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
+You want to list 4D built-in classes:
+
+```4d
+ var $keys : collection
+ $keys:=OB Keys(4D)
+ ALERT("There are "+String($keys.length)+" built-in classes.")
+```
+
 ## Class オブジェクト
 
 プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
@@ -150,6 +158,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 - [`new()`](API/ClassClass.md#new) 関数 (Class オブジェクトをインスタンス化します)
 - [`isShared`](API/ClassClass.md#isshared) プロパティ (クラスが [共有](#共有クラス)されている場合に true)
 - [`isSingleton`](API/ClassClass.md#issingleton) プロパティ ([シングルトン](#シングルトンクラス)の場合に true)
+- [`isSessionSingleton`](API/ClassClass.md#issessionsingleton) プロパティ ([セッションシングルトン](#シングルトンクラス)の場合に true)
 - [`me`](API/ClassClass.md#me) プロパティ ([シングルトン](シングルトンクラス) をインスタンス化および取得します)
 
 また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です (任意)。
@@ -171,6 +180,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 - `property`: オブジェクトのスタティックプロパティを型定義します。
 - `Function get <Name>` と `Function set <Name>`: オブジェクトの計算プロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
+- `This` and `Super` are commands that have special
 
 ### `Function`
 
@@ -195,7 +205,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 :::tip
 
-アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "`.
+アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass."` とタイプしても、この関数は候補として提示されません 。
 
 :::
 
@@ -311,7 +321,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 ```4d
 // クラス: MyClass
-{shared} {singleton} Class Constructor({$parameterName : type; ...})
+{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // コード
 ```
 
@@ -325,7 +335,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 `shared` キーワードを使うと **共有クラス** が作成されます。共有クラスは、共有オブジェクトのインスタンス化にのみ使われます。 詳細については、後述の [共有クラス](#共有クラス) の項目を参照ください。
 
-`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。 詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
+`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。 `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。 詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
 
 #### 例題
 
@@ -585,180 +595,39 @@ Class constructor ($side : Integer)
   $area:=This.height*This.width
 ```
 
+## Class function commands
+
+The following commands have specific features when they are used within class functions:
+
 ### `Super`
 
-<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
 
-<!-- REF #_command_.Super.Params -->
-
-| 引数    | タイプ    |    | 説明               |
-| ----- | ------ | -- | ---------------- |
-| param | any    | -> | 親コンストラクターに受け渡す引数 |
-| 戻り値   | Object | <- | 親オブジェクト          |
-
-<!-- END REF -->
-
-`Super` キーワードによって、<!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->。
-
-`Super` は次の 2つの目的のために使います:
-
-1. [コンストラクターコード](#class-constructor) 内において、`Super` はスーパークラスのコンストラクターを呼び出すコマンドです。 コンストラクター内で使用する際には、`Super` コマンドは単独で使用され、また `This` キーワードよりも先に使用される必要があります。
-
-- 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
-- スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
-- オブジェクトのスコープ外で `Super` を呼び出した場合、または、スーパークラスコンストラクターがすでに呼び出されたオブジェクトを対象に呼び出した場合には、エラー -10746 が生成されます。
-
-```4d
-// myClass コンストラクター
-var $text1; $text2 : Text
-Super($text1) // テキスト型引数をスーパークラスコンストラクターに渡します
-This.param:=$text2 // 2番目の引数を使用します
-```
-
-2. [クラスメンバー関数](#function) 内において、`Super` はスーパークラスのプロトタイプを指し、スーパークラス階層のメンバーメソッドの呼び出しを可能にします。
-
-```4d
-Super.doSomething(42) // スーパークラスにて宣言されている
-// "doSomething" メンバーメソッドを呼び出します
-```
-
-#### 例題 1
-
-クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラス の共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
-
-```4d
-// クラス: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
-
-
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
-
-// 関数定義
-Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
-```
-
-```4d
-// クラス: Square
-
-Class extends Rectangle
-
-Class constructor ($side : Integer)
-
- // 親クラスのコンストラクターを呼び出します
- // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
- Super($side;$side)
- // 派生クラスにおいては、'This' を使用するより先に
- // Super を呼び出しておく必要があります
- This.name:="Square"
-
-Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
-```
-
-#### 例題 2
-
-クラスメンバーメソッド内で `Super` を使う例です。 メンバーメソッドを持つ `Rectangle` クラスを作成します:
-
-```4d
-// クラス: Rectangle
-
-Function nbSides()
- var $0 : Text
- $0:="I have 4 sides"
-```
-
-`Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します:
-
-```4d
-// クラス: Square
-
-Class extends Rectangle
-
-Function description()
- var $0 : Text
- $0:=Super.nbSides()+" which are all equal"
-```
-
-この場合、プロジェクトメソッド内には次のように書けます:
-
-```4d
-var $square : Object
-var $message : Text
-$square:=cs.Square.new()
-$message:=$square.description() // "I have 4 sides which are all equal"
-```
+For more details, see the [`Super`](../commands/super.md) command description.
 
 ### `This`
 
-<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
+The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
-<!-- REF #_command_.This.Params -->
-
-| 引数  | タイプ    |    | 説明         |
-| --- | ------ | -- | ---------- |
-| 戻り値 | Object | <- | カレントオブジェクト |
-
-<!-- END REF -->
-
-`This` キーワードは、<!-- REF #_command_.This.Summary -->現在処理中のオブジェクトへの参照を返します<!-- END REF -->。
-
-`This` の値は、呼ばれ方によって決まります。 <code>This</code> の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
-
-オブジェクトのメンバーメソッドとして [フォーミュラ](../API/FunctionClass.md) が呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 例:
+例:
 
 ```4d
-$o:=New object("prop";42;"f";Formula(This.prop))
-$val:=$o.f() //42
+//Class: ob
+
+Function f() : Integer
+ return This.a+This.b
 ```
 
-[クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
-
-```4d
-// クラス: ob
-
-Class Constructor  
-
- // This のプロパティを
- // 代入によって作成します
- This.a:=42
-```
-
-```4d
-// 4Dメソッドにて 
-$o:=cs.ob.new()
-$val:=$o.a //42
-```
-
-> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。
-
-基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
-
-```4d
-// クラス: ob
-
-Function f()
- $0:=This.a+This.b
-```
-
-この場合、プロジェクトメソッド内には次のように書けます:
+Then you can write in a method:
 
 ```4d
 $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
-
 ```
 
-この例では、変数 $o に代入されたオブジェクトは _f_ プロパティを持たないため、これをクラスより継承します。 _f_ は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
+For more details, see the [`This`](../commands/this.md) command description.
 
 ## クラスコマンド
 
@@ -833,25 +702,17 @@ shared Function Bar($value : Integer)
 
 ## シングルトンクラス
 
-**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。 シングルトンは、それがインスタンス化されたプロセスにおいて一意のインスタンスを持ち、_共有_ シングルトンは、そのマシン上のすべてのプロセスにおいて一意のインスタンスを持ちます。 アプリケーションやプロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
+**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンのコンセプトに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。
 
-クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
+### シングルトンの種類
 
-シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
+4D は 3種類のシングルトンをサポートしています:
 
-クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
+- **プロセスシングルトン** は、自身がインスタンス化されたプロセス内において、インスタンスを一つのみ持つことができます。
+- **共有シングルトン** は、マシン上のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。
+- **セッションシングルトン** も共有シングルトンですが、特定の [セッション](../API/SessionClass.md) 内のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。 セッションシングルトンは、セッション内で全体的に共有されますが、セッションごとに異なります。 クライアントサーバーまたは Webアプリケーションのコンテキストで セッションシングルトンを使用すると、各セッションごと (つまり各ユーザーごと) に異なるインスタンスを作成して使用することができます。
 
-### スコープ
-
-シングルトンインスタンスのスコープは、それがインスタンス化されたプロセスで、_共有_ シングルトンの場合はそのマシン上のすべてのプロセスです。
-
-| シングルトンが作成された場所 | 共有されていない場合のスコープ                                                            | 共有されている場合のスコープ |
-| -------------- | -------------------------------------------------------------------------- | -------------- |
-| 4D シングルユーザー    | プロセス                                                                       | アプリケーション       |
-| 4D Server      | プロセス                                                                       | 4D Server のマシン |
-| 4Dリモートモード      | プロセス (_注意_: シングルトンは "双子" プロセス間で同期されません) | 4Dリモートのマシン     |
-
-インスタンス化されると、シングルトンクラス (およびそのシングルトン) は、マシン上で実行中のアプリケーション内に参照が存在する限り存在し続けます。
+アプリケーションやセッション、プロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
 
 :::info
 
@@ -859,9 +720,41 @@ shared Function Bar($value : Integer)
 
 :::
 
-### シングルトンの作成
+次の表は、作成された場所に応じたシングルトンインスタンスのスコープを示しています:
 
-シングルトンクラスを作成するには、[`Class Constructor`](#class-constructor) の前に `singleton` キーワードを追加します。 例:
+| シングルトンが作成された場所 | プロセスシングルトンのスコープ                                                            | 共有シングルトンのスコープ  | セッションシングルトンのスコープ                                   |
+| -------------- | -------------------------------------------------------------------------- | -------------- | -------------------------------------------------- |
+| **4Dシングルユーザー** | プロセス                                                                       | アプリケーション       | アプリケーションまたは Web/RESTセッション                          |
+| **4D Server**  | プロセス                                                                       | 4D Server のマシン | クライアント/サーバーセッション、Web/RESTセッション、またはストアドプロシージャーセッション |
+| **4Dリモートモード**  | プロセス (_注意_: シングルトンは "双子" プロセス間で同期されません) | 4Dリモートのマシン     | 4Dリモートマシンまたは Web/RESTセッション                         |
+
+インスタンス化されると、シングルトンクラス (およびそのシングルトン) は、マシン上で実行中のアプリケーション内に参照が存在する限り存在し続けます。
+
+### シングルトンの作成と利用
+
+シングルトンクラスを宣言するには、[`Class constructor`](#class-constructor) の前に適切なキーワードを追加します:
+
+- (プロセス) シングルトンクラスを宣言するには、`singleton Class constructor()` と書きます。
+- 共有シングルトンクラスを宣言するには、`shared singleton Class constructor()` と書きます。
+- セッションシングルトンクラスを宣言するには、`session singleton Class constructor()` と書きます。
+
+:::note
+
+セッションシングルトンは自動的に共有されます (クラスのコンストラクターで `shared` キーワードを使う必要はありません)。
+
+:::
+
+クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
+
+シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
+
+クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
+
+クラスがセッションシングルトンかどうかは、Classオブジェクトの .[`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) プロパティで確認できます。
+
+### 例題
+
+#### プロセスシングルトン
 
 ```4d
 // クラス: ProcessTag
@@ -890,9 +783,7 @@ var $myOtherSingleton := cs.ProcessTag.me
     // $myOtherSingleton.tag = 14856
 ```
 
-### 共有シングルトンの作成
-
-マシン上の全プロセスで共有されるシングルトンを作成するには、[Class Constructor](#class-constructor) の前に `shared singleton` キーワードを追加します。 例:
+#### 共有シングルトン
 
 ```4d
 // クラス: VehicleFactory
@@ -927,6 +818,30 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("トラック")
 
 _buildVehicle()_ 関数は (`This.vehicleBuilt` をインクリメントして) **cs.VehicleFactory** シングルトンを変更するので、`shared` キーワードを使う必要があります。
 
+#### セッションシングルトン
+
+在庫管理アプリケーションで、セッションシングルトンを使った在庫管理機能を実装します。
+
+```4d
+// クラス: ItemInventory
+
+property itemList : Collection:=[]
+
+session singleton Class constructor()
+
+shared function addItem($item:object)
+    This.itemList.push($item)
+```
+
+ItemInventorクラスをセッションシングルトンとして定義することで、各セッションと各ユーザーが独自の在庫を持つことができます。 ユーザー在庫へのアクセスは以下のように簡単です:
+
+```4d
+// ユーザーセッションにおいて
+$myList := cs.ItemInventory.me.itemList
+// カレントユーザーの在庫リスト
+
+```
+
 #### 参照
 
-詳細に関しては、[このブログ記事](https://blog.4d.com/ja/singleton) を参照ください。
+[4D のシングルトン](https://blog.4d.com/ja/singletons-in-4d/) (ブログ記事) <br/> [セッションシングルトン](https://blog.4d.com/ja/introducing-session-singletons) (ブログ記事)
