@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parâmetro       | Tipo                       |                                 | Descrição                                                           |
-| --------------- | -------------------------- | :-----------------------------: | ------------------------------------------------------------------- |
-| fileToZip       | 4D. File   | &amp;srarr; | Objeto File ou Folder a comprimir                                   |
-| folderToZip     | 4D. Folder | &amp;srarr; | Objeto File ou Folder a comprimir                                   |
-| zipStructure    | Object                     | &amp;srarr; | Objeto File ou Folder a comprimir                                   |
-| destinationFile | 4D. File   | &amp;srarr; | Arquivo destino para o arquivo                                      |
-| options         | Integer                    | &amp;srarr; | Opção *folderToZip*: `ZIP Without enclosing folder` |
-| Resultados      | Object                     |  &amp;larr; | Objeto de estado                                                    |
+| Parâmetro       | Tipo                       |                            | Descrição                                                           |
+| --------------- | -------------------------- | :------------------------: | ------------------------------------------------------------------- |
+| fileToZip       | 4D. File   | &#8594 | Objeto File ou Folder a comprimir                                   |
+| folderToZip     | 4D. Folder | &#8594 | Objeto File ou Folder a comprimir                                   |
+| zipStructure    | Object                     | &#8594 | Objeto File ou Folder a comprimir                                   |
+| destinationFile | 4D. File   | &#8594 | Arquivo destino para o arquivo                                      |
+| options         | Integer                    | &#8594 | Opção *folderToZip*: `ZIP Without enclosing folder` |
+| Resultados      | Object                     | &#8592 | Objeto de estado                                                    |
 
 <!-- END REF -->
 
