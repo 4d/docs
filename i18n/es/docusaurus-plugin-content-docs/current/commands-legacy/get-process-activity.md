@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Get process activity.Summary-->El comando **Get process activity** devuelve una instantánea de las sesiones de los usuarios conectados y/o de los procesos relacionados que se ejecutan en un momento dado.<!-- END REF--> Este comando devuelve todos los procesos, incluyendo los procesos internos que no eran accesibles por el comando [PROCESS PROPERTIES](process-properties.md). 
+<!--REF #_command_.Get process activity.Summary-->El comando **Get process activity** devuelve una instantánea de las sesiones de los usuarios conectados y/o de los procesos relacionados que se ejecutan en un momento dado.<!-- END REF--> Este comando devuelve todos los procesos, incluyendo los procesos internos que no eran accesibles por el comando [Process info](../commands/process-info.md). 
 
 * Cuando se ejecuta en el servidor, por defecto si omite el parámetro *opciones*, **Get process activity** devuelve las listas de sesiones usuario y de los procesos, como se muestra a continuación:  
     
@@ -100,6 +100,6 @@ Usted quiere obtener la colección de todas las sesiones de usuario:
 
 #### Ver también 
 
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Session storage](session-storage.md)  
 [WEB Get server info](web-get-server-info.md)  

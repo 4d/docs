@@ -43,7 +43,7 @@ Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la
 
 ##### Nom du process : 
 
-Vous passez le nom du nouveau process dans *nom*. Avec 4D monoposte, ce nom s'affichera dans la liste des process de l'Explorateur d'exécution et sera retourné par la commande [PROCESS PROPERTIES](process-properties.md) appliquée à ce process. En client/serveur, ce nom apparaîtra en bleu dans la liste des **Procédures stockées** de la fenêtre principale de 4D Server. 
+Vous passez le nom du nouveau process dans *nom*. Avec 4D monoposte, ce nom s'affichera dans la liste des process de l'Explorateur d'exécution et sera retourné par la commande [Process info](../commands/process-info.md) appliquée à ce process. En client/serveur, ce nom apparaîtra en bleu dans la liste des **Procédures stockées** de la fenêtre principale de 4D Server. 
 
 Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. 
 

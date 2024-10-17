@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get process activity.Summary-->The **Get process activity** command returns a snapshot of connected user sessions and/or related running processes at a given time.<!-- END REF--> This command returns all processes, including internal processes that were not reachable by the [PROCESS PROPERTIES](process-properties.md) command. 
+<!--REF #_command_.Get process activity.Summary-->The **Get process activity** command returns a snapshot of connected user sessions and/or related running processes at a given time.<!-- END REF--> This command returns all processes, including internal processes that were not reachable by the [Process info](../commands/process-info.md) command. 
 
 * When executed on the server, by default if you omit the *options* parameter, **Get process activity** returns both user session and process lists, as shown below:  
     
@@ -95,6 +95,6 @@ You want to get the collection of all user sessions:
 
 #### See also 
 
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Session storage](session-storage.md)  
 [WEB Get server info](web-get-server-info.md)  

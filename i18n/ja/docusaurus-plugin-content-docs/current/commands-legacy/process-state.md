@@ -30,7 +30,7 @@ displayed_sidebar: docs
 | Waiting for input output  | 倍長整数 | 3     |                                                                                                                                                                             |
 | Waiting for internal flag | 倍長整数 | 4     |                                                                                                                                                                             |
 | Paused                    | 倍長整数 | 5     |                                                                                                                                                                             |
-| \_o\_Hidden modal dialog  | 倍長整数 | 6     | **互換性に関する注意:** このプロセス状態は4D v16 以降存在しません。[PROCESS PROPERTIES](process-properties.md) コマンドに*procState*\=Waiting for user event および *procMode*\=False を渡すことでこれと同等のステータスが返されます。 |
+| \_o\_Hidden modal dialog  | 倍長整数 | 6     | **互換性に関する注意:** このプロセス状態は4D v16 以降存在しません。[Process info](../commands/process-info.md) コマンドに*procState*\=Waiting for user event および *procMode*\=False を渡すことでこれと同等のステータスが返されます。 |
 
 プロセスが存在しない (つまり1から[Count tasks](count-tasks.md) までの番号を渡さなかった) 場合、**Process state** はDoes not exist (-100)を返します。
 
@@ -58,4 +58,4 @@ displayed_sidebar: docs
 #### 参照 
 
 [Count tasks](count-tasks.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  

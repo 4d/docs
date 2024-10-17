@@ -731,7 +731,6 @@ module.exports =
 					"items": [
 						"commands-legacy/change-licenses",
 						"commands-legacy/create-deployment-license",
-						"commands-legacy/get-serial-information",
 						"commands-legacy/is-license-available",
 						"commands-legacy/license-info",
 						"commands-legacy/license-usage",

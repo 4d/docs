@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Get process activity.Summary-->O comando **Get process activity** devolve uma foto instantânea das sessôes dos usuários conectados ou dos processos relacionados que são executados em um momento dado.<!-- END REF--> Este comando devolve todos os processos, incluindo os processos internos que não eram acessíveis pelo comando [PROCESS PROPERTIES](process-properties.md). 
+<!--REF #_command_.Get process activity.Summary-->O comando **Get process activity** devolve uma foto instantânea das sessôes dos usuários conectados ou dos processos relacionados que são executados em um momento dado.<!-- END REF--> Este comando devolve todos os processos, incluindo os processos internos que não eram acessíveis pelo comando [Process info](../commands/process-info.md). 
 
 * Quando executar no servidor, como padrão se omitir o parâmetro *opções*, **Get process activity** devolve as listas de sessões usuário e dos processos, como abaixo:
 * ```RAW  
@@ -97,6 +97,6 @@ Se quiser obter a coleção de todas as sessões de usuário:
 
 #### Ver também 
 
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Session storage](session-storage.md)  
 [WEB Get server info](web-get-server-info.md)  

@@ -431,7 +431,6 @@ title: Index
 [`Get resource name`](../commands-legacy/get-resource-name.md)<br/>
 [`Get resource properties`](../commands-legacy/get-resource-properties.md)<br/>
 [`Get selected menu item parameter`](../commands-legacy/get-selected-menu-item-parameter.md)<br/>
-[`GET SERIAL INFORMATION`](../commands-legacy/get-serial-information.md)<br/>
 [`GET SERIAL PORT MAPPING`](../commands-legacy/get-serial-port-mapping.md)<br/>
 [`Get string resource`](../commands-legacy/get-string-resource.md)<br/>
 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md)<br/>
@@ -1126,7 +1125,6 @@ title: Index
 [`SET QUERY LIMIT`](../commands-legacy/set-query-limit.md)<br/>
 [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md)<br/>
 [`SET RECENT FONTS`](../commands-legacy/set-recent-fonts.md)<br/>
-[`SET SCREEN DEPTH`](../commands-legacy/set-screen-depth.md)<br/>
 [`SET TABLE CACHE PRIORITY`](../commands-legacy/set-table-cache-priority.md)<br/>
 [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md)<br/>
 [`SET TEXT TO PASTEBOARD`](../commands-legacy/set-text-to-pasteboard.md)<br/>

@@ -58,4 +58,3 @@ Sua aplicação mostra vários gráficos a cor. Pode escrever em alguma parte em
 #### Ver também 
 
 [Count screens](count-screens.md)  
-[SET SCREEN DEPTH](set-screen-depth.md)  

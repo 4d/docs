@@ -27,5 +27,5 @@ Ver el ejemplo para [Process state](process-state.md "Process state") y [On Exit
 
 [Count user processes](count-user-processes.md)  
 [Count users](count-users.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  

@@ -41,7 +41,7 @@ Em *pilha*, passa a quantidade de memória atribuída para a pilha do processo. 
 
 ##### Nome do processo 
 
-Passe o nome do novo processo em *nome*. Este nome aparecerá na lista de processos do Runtime Explorer e será devolvido pelo comando [PROCESS PROPERTIES](process-properties.md) quando for aplicado a este novo processo. Pode omitir esse parâmetro; se assim o fizer, o nome do processo será uma string vazia. Pode fazer que um processo seja local em seu escopo ao prefixar seu nome com o símbolo de cifrão (*$*).  
+Passe o nome do novo processo em *nome*. Este nome aparecerá na lista de processos do Runtime Explorer e será devolvido pelo comando [Process info](../commands/process-info.md) quando for aplicado a este novo processo. Pode omitir esse parâmetro; se assim o fizer, o nome do processo será uma string vazia. Pode fazer que um processo seja local em seu escopo ao prefixar seu nome com o símbolo de cifrão (*$*).  
   
 **Importante:** Lembre que os processos locais não deveriam acessar dados em Cliente/Servidor Para saber mais veja a seção *Processos globais e locais*
 

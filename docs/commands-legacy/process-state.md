@@ -30,7 +30,7 @@ The function result can be one of the values provided by the following predefine
 | Waiting for input output  | Longint | 3     |                                                                                                                                                                                                                                           |
 | Waiting for internal flag | Longint | 4     |                                                                                                                                                                                                                                           |
 | Paused                    | Longint | 5     |                                                                                                                                                                                                                                           |
-| \_o\_Hidden modal dialog  | Longint | 6     | **Compatibility:** This process state no longer exists starting with 4D v16\. An equivalent status is returned by the [PROCESS PROPERTIES](process-properties.md) command when *procState*\=Waiting for user event and *procMode*\=False. |
+| \_o\_Hidden modal dialog  | Longint | 6     | **Compatibility:** This process state no longer exists starting with 4D v16\. An equivalent status is returned by the [Process info](../commands/process-info.md) command when *procState*\=Waiting for user event and *procMode*\=False. |
 
 If the process does not exist (which means you did not pass a number in the range 1 to [Count tasks](count-tasks.md)), **Process state** returns Does not exist (-100).
 
@@ -58,4 +58,4 @@ The following example puts the name and process reference number for each proces
 #### See also 
 
 [Count tasks](count-tasks.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  

@@ -22,7 +22,7 @@ Le résultat de la fonction peut être l'une des valeurs des constantes prédéf
 
 | Constante                 | Type        | Valeur | Comment                                                                                                                                                                                                                                                 |
 | ------------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \_o\_Hidden modal dialog  | Entier long | 6      | **Compatibilité:** Ce statut du process n'existe plus à partir de 4D v16\. Un statut équivalent est retourné par la commande [PROCESS PROPERTIES](process-properties.md) lorsque *procStatut*\=Waiting for user event et *procMode*\=Faux.<br/> |
+| \_o\_Hidden modal dialog  | Entier long | 6      | **Compatibilité:** Ce statut du process n'existe plus à partir de 4D v16\. Un statut équivalent est retourné par la commande [Process info](../commands/process-info.md) lorsque *procStatut*\=Waiting for user event et *procMode*\=Faux.<br/> |
 | Aborted                   | Entier long | \-1    |                                                                                                                                                                                                                                                         |
 | Delayed                   | Entier long | 1      |                                                                                                                                                                                                                                                         |
 | Does not exist            | Entier long | \-100  |                                                                                                                                                                                                                                                         |
@@ -58,4 +58,4 @@ L'exemple suivant retourne le nom et le numéro de référence de chaque process
 #### Voir aussi 
 
 [Count tasks](count-tasks.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  

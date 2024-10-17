@@ -41,7 +41,7 @@ El parámetro *pila*, le permite indicar la cantidad de memoria asignada para la
 
 ##### Nombre del proceso 
 
- Pase el nombre del nuevo proceso en *nombre*. Este nombre aparecerá en la lista de procesos del Explorador de ejecución y será devuelto por el comando [PROCESS PROPERTIES](process-properties.md) cuando se aplica a este nuevo proceso. Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena vacía. Puede crear un proceso local colocando como prefijo el símbolo dólar (*$*). 
+ Pase el nombre del nuevo proceso en *nombre*. Este nombre aparecerá en la lista de procesos del Explorador de ejecución y será devuelto por el comando [Process info](../commands/process-info.md) cuando se aplica a este nuevo proceso. Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena vacía. Puede crear un proceso local colocando como prefijo el símbolo dólar (*$*). 
 
 **Importante:** Recuerde que en cliente/servidor, los procesos locales no deben acceder a los datos. Para más información, consulte la sección *Procesos globales y locales*. 
 

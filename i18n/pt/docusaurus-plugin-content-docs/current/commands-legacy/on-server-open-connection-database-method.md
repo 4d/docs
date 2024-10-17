@@ -43,7 +43,7 @@ O On Server Open Connection database method é executado no equipo servidor no p
 
 Por exemplo, se um 4D remoto se conecta a uma base 4D Server interpretada, é iniciado o processo usuário, o processo de desenho e o processo de registro do cliente (por defeito). O On Server Open Connection database method se executa três vezes seguidas. A primeira vez dentro do processo principal, a segunda vez no processo de inscrição do cliente e a terceira vez no processo de desenhoo. Se os três processos são respectivamente o sexto, sétimo e oitavo processo a iniciar-se no equipo servidor, e é chamado [Current process](current-process.md) desde o On Server Open Connection database method, a primeira vez [Current process](current-process.md) devolve 6, a segunda vez 7 e a terceira 8.
 
-Observe que o On Server Open Connection database method se executa no equipo servidor, ao interior do processo 4D Client no servidor, independente do processo executado no cliente. Além disso, no momento em que se invoca o método, o processo 4D Client ainda não foi nomeado ([PROCESS PROPERTIES](process-properties.md) não devolverá neste momento o nome do processo 4D Client).
+Observe que o On Server Open Connection database method se executa no equipo servidor, ao interior do processo 4D Client no servidor, independente do processo executado no cliente. Além disso, no momento em que se invoca o método, o processo 4D Client ainda não foi nomeado ([Process info](../commands/process-info.md) não devolverá neste momento o nome do processo 4D Client).
 
 O On Server Open Connection database method não têm acesso à tabela das variáveis processo do processo executado no client. Esta tabela reside no equipo client, não no equipo servidor. 
 

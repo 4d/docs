@@ -24,5 +24,5 @@ Ver os exemplos de [DELAY PROCESS](delay-process.md "DELAY PROCESS") e [PROCESS 
 #### Ver também 
 
 [Process number](process-number.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
