@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula from string.Params -->
 
-| Parâmetro     | Tipo                         |                              | Descrição                                                                                         |
-| ------------- | ---------------------------- | :--------------------------: | ------------------------------------------------------------------------------------------------- |
-| formulaString | Text                         | &#x1F852 | Fórmula texto a ser retornada como objeto                                                         |
-| context       | Number                       | &#x1F852 | `sk execute in current database` (por padrão) ou `sk execute in host database` |
-| Resultados    | 4D. Function | &#x1F850 | Objeto nativo encapsulando a fórmula                                                              |
+| Parâmetro     | Tipo                         |                            | Descrição                                                                                         |
+| ------------- | ---------------------------- | :------------------------: | ------------------------------------------------------------------------------------------------- |
+| formulaString | Text                         | &#8594 | Fórmula texto a ser retornada como objeto                                                         |
+| context       | Number                       | &#8594 | `sk execute in current database` (por padrão) ou `sk execute in host database` |
+| Resultados    | 4D. Function | &#8592 | Objeto nativo encapsulando a fórmula                                                              |
 
 <!-- END REF -->
 
@@ -64,4 +64,4 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 #### Veja também
 
 [Formula](formula.md)\
-[Parse formula](parse-formula.md)
+[Parse formula](../commands-legacy/parse-formula.md)
