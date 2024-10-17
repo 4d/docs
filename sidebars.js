@@ -1592,7 +1592,6 @@ module.exports =
 						"commands-legacy/screen-width",
 						"commands-legacy/select-rgb-color",
 						"commands-legacy/set-recent-fonts",
-						"commands-legacy/set-screen-depth",
 						"commands-legacy/system-folder",
 						"commands-legacy/system-info",
 						"commands-legacy/temporary-folder"
