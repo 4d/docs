@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| 引数    | 型                                                                   |                                 | 説明                    |
-| ----- | ------------------------------------------------------------------- | ------------------------------- | --------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &amp;srarr; | 共有コレクションの値            |
-| 戻り値   | コレクション                                                              | &amp;larr;  | New shared collection |
+| 引数    | 型                                                                   |                            | 説明                    |
+| ----- | ------------------------------------------------------------------- | -------------------------- | --------------------- |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &#8594 | 共有コレクションの値            |
+| 戻り値   | コレクション                                                              | &#8592 | New shared collection |
 
 <!-- END REF-->
 
