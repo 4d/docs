@@ -3,33 +3,18 @@ id: classFunctions
 title: クラス関数の呼び出し
 ---
 
-RESTリクエストを使って、ORDAデータモデルに定義されている [データモデルクラス関数](ORDA/ordaClasses.md) を呼び出すことで、ターゲット 4Dアプリケーションの公開API を活用できます。
+You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model and [singleton class functions]($singleton.md) through REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
-:::note
+Functions can be called in two ways:
 
-シングルトン関数を呼び出すこともできます。詳細は [このページ]($singleton.md) を参照ください。
+- using **POST requests**, with data parameters passed in the body of the request.
+- using **GET requests**, with parameters directly passed in the URL.
 
-:::
-
-関数を呼び出すには () を省き、適切な ORDA のコンテキストにおいて POST リクエストでおこないます。 たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
-
-`/rest/City/getCity`
-
-POST リクエストのボディに関数に渡す引数を含めます: `["Aguada"]`
-
-この呼び出しは、4Dランゲージでは次のステートメントに相当します:
-
-```4d
-$city:=ds.City.getCity("Aguada")
-```
-
-> RESTリクエストで直接呼び出せるのは `exposed` キーワードが付いた関数のみです。 [公開vs非公開関数](ORDA/ordaClasses.md#公開vs非公開関数) の章を参照ください。
+POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. However, GET requests can be more compliant with user experience, allowing to call functions by entering an URL in a browser (note: the developer must ensure no sensitive action is done in such functions).
 
 ## 関数の呼び出し
 
-関数は必ず REST の **POST** リクエストで呼び出さなくてはなりません (GETリクエストの場合はエラーが返されます)。
-
-サーバーのデータストアーの対応するオブジェクトを対象に、関数は呼び出されます。
+The following ORDA and singleton functions can be called in REST:
 
 | クラス関数                                                          | シンタックス                                                                                                           |
 | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -42,36 +27,104 @@ $city:=ds.City.getCity("Aguada")
 | [Entity クラス](ORDA/ordaClasses.md#entity-クラス)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                |
 | [シングルトンクラス](../Concepts/classes.md#シングルトンクラス)                  | `/rest/$singleton/SingletonClass/SingletonClassFunction` ([$singleton ページ]($singleton.md) 参照) |
 
-> `/rest/\{dataClass\}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/\{dataClass\}` はデータクラスの全エンティティをエンティティセレクションに返します)。\
-> EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
+:::note
 
-> プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([_プリエンプティブプロセスを使用_ の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
+`/rest/\{dataClass\}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/\{dataClass\}` はデータクラスの全エンティティをエンティティセレクションに返します)。 EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
+
+:::
+
+Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parameters](#parameters) are passed either in the body of the POST request (`POST` calls) or in the `params` collection in the URL (`GET` calls).
+
+たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
+
+#### POST request
+
+`/rest/City/getCity`
+
+POST リクエストのボディに関数に渡す引数を含めます: `["Aguada"]`
+
+#### GET request
+
+`/rest/City/getCity?$params='["Aguada"]'`
+
+:::note
+
+The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+
+:::
+
+この呼び出しは、4Dランゲージでは次のステートメントに相当します:
+
+```4d
+$city:=ds.City.getCity("Aguada")
+```
+
+## Function configuration
+
+### `exposed`
+
+All functions allowed to be called directly from HTTP REST requests (`POST` or `GET`) must be declared with the `exposed` keyword. 例:
+
+```4d
+exposed Function getSomeInfo() : 4D.OutgoingMessage
+```
+
+See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+
+### `onHttpGet`
+
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). 例:
+
+```4d
+//allowing GET requests
+exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+```
+
+### Thread-safe
+
+プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([_プリエンプティブプロセスを使用_ の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
+
+:::
+
+:::info
+
+You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+
+:::
 
 ## 引数
 
-ORDAユーザークラスに定義された関数には、引数を渡すことができます。 サーバーサイドでこれらの引数は、クラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
+You can send parameters to functions defined in ORDA user classes or singletons. サーバーサイドでこれらの引数は、クラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
 
 次のルールが適用されます:
 
-- 引数はすべて、**POSTリクエストのボディ** に渡す必要があります:
-- 引数はコレクション (JSON形式) の中に格納する必要があります。
+- In functions called through POST requests, parameters must be passed **in the body of the POST request**.
+- In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
+- Parameters must be enclosed within a collection (JSON format).
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
-- エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (`__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`) を JSONオブジェクトに含めなくてはなりません。
+- エンティティやエンティティセレクションも引数として受け渡せます。 The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 [エンティティを引数として受け取る例題](#エンティティを引数として受け取る) と [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
 
 ### スカラー値の引数
 
-引数は、ボディに定義されたコレクションに格納します。 たとえば、DataClass クラス関数 `getCities()` がテキスト引数を受け取る場合:
+Scalar value parameter(s) must simply be enclosed in a collection. 引数としてサポートされるのは、JSONポインターを含むすべての JSON のデータ型です。 日付は ISO 8601形式の文字列として渡せます (例: "2020-08-22T22:00:000Z")。
+
+For example, with a  dataclass function `getCities()` receiving text parameters:
+
+#### POST request
+
 `/rest/City/getCities`
 
 **ボディの引数:** ["Aguada","Paris"]
 
-引数としてサポートされるのは、JSONポインターを含むすべての JSON のデータ型です。 日付は ISO 8601形式の文字列として渡せます (例: "2020-08-22T22:00:000Z")。
+#### GET request
+
+`/rest/City/getCities?$params='["Aguada","Paris"]'`
 
 ### エンティティ引数
 
-引数として渡されたエンティティは、キー (__KEY プロパティ) によってサーバー上で参照されます。 リクエストにおいてキーが省略されていれば、サーバーのメモリに新規エンティティが読み込まれます。
+引数として渡されたエンティティは、キー (__KEY プロパティ) によってサーバー上で参照されます。 If the key parameter is omitted in a request, a new entity is loaded in memory on the server.
 エンティティが持つ属性について、値を受け渡すことも可能です。 サーバー上でこれらの値は自動的に当該エンティティ用に使用されます。
 
 > サーバー上の既存エンティティについて変更された属性値をリクエストが送信した場合、呼び出した ORDAデータモデル関数は自動的に変更後の値で実行されます。 この機能によって、たとえばエンティティに対する処理の、すべてのビジネスルールを適用した後の結果をクライアントアプリケーションから確認することが可能です。 その結果をもとにエンティティをサーバー上で保存するかどうかを判断できます。
@@ -86,7 +139,8 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 - `__KEY` が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
 - `__KEY` が提供された場合、`__KEY` が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
-エンティティを [作成](#エンティティを作成する) または [更新](#エンティティを更新する) する例題を参照ください。
+See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
+See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
 
 #### リレートエンティティ引数
 
@@ -106,9 +160,10 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 | __DATASET  | String  | 必須 - エンティティセレクションのエンティティセットID (UUID) |
 | __ENTITIES | Boolean | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
 
-[エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
+See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
+See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
 
-## リクエストの例題
+## POST request examples
 
 このデータベースは、localhost (ポート8111) 上でリモートデータストアーとして公開されています。
 
@@ -488,25 +543,26 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 `Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの _finalExam_ 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// Students クラス
+// Students class
 
 Class extends DataClass
 
 exposed Function setFinalExam()
+
 
     var $1, $es, $student, $status : Object
     var $2, $examResult : Text
 
     var $keys, $0 : Collection
 
-      // エンティティセレクション
+      //Entity selection
     $es:=$1
 
     $examResult:=$2
 
     $keys:=New collection()
 
-      // エンティティセレクションを捜査します
+      //Loop on the entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -574,3 +630,89 @@ $students.add($newStudent)
 $ageAverage:=$students.getAgeAverage()
 
 ```
+
+## GET request examples
+
+### Returning a document
+
+You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+
+```4d
+// Product dataclass
+exposed onHTTPGet Function getUserManual($productId : Integer; $type : Text) : 4D.OutgoingMessage
+	
+var $file : 4D.File
+var $response:=4D.OutgoingMessage.new()
+var $doc:="/RESOURCES/User manuals/product_"+String($productId)
+
+Case of 
+	: ($type="pdf")
+		$file:=File($doc+".pdf")
+                $response.setBody($file.getContent()) // This is binary content 
+		$response.setHeader("Content-Type"; "application/pdf")
+			
+	: ($type="jpeg")
+		$file:=File($doc+".jpeg")
+                $response.setBody($file.getContent()) // This is binary content 
+		$response.setHeader("Content-Type"; "image/jpeg")
+End case 
+	
+return $response
+
+```
+
+You can call the function using a request like:
+
+**GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
+
+### Using an entity to download a PDF document
+
+Same example as above but you want to pass an entity as parameter to the datastore function.
+
+```4d
+// Product dataclass
+exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.OutgoingMessage
+	
+	var $file : 4D.File
+	var $response := 4D.OutgoingMessage.new()
+	
+	$file:=File("/RESOURCES/User manuals/"+$product.name+".pdf")
+	$response.setBody($file.getContent())
+	$response.setHeader("Content-Type"; "application/pdf")
+	
+	return $response
+```
+
+You can call the function using this request:
+
+**GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
+
+### Using an entity selection to get a list
+
+You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+
+```4d
+shared singleton Class constructor()
+	
+exposed onHTTPGet Function buildShoppingList($products : cs.ProductSelection) : 4D.OutgoingMessage
+	
+	var $p : cs.ProductsEntity
+	var $content : Text
+	var $response := 4D.OutgoingMessage.new()
+	
+	$content:=""
+	
+	For each ($p; $products)
+		$content:=$content+" "+$p.manufacturer+" - "+$p.name
+		$content:=$content+Char(Carriage return)
+	End for each 
+	
+	$response.setBody($content)
+	$response.setHeader("Content-Type"; "text/plain")
+	
+	return $response
+```
+
+You can call the function using this request:
+
+**GET** `http://127.0.0.1:8044/rest/$singleton/Shopping/buildShoppingList?$params='[{"__DATASET":"8DB0556854HDK52FR5974F","__ENTITIES":true}]'`
