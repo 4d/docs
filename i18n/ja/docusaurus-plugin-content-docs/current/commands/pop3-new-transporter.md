@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP3 New transporter.Params-->
 
-| 引数     | 型                                  |                                 | 説明                                                                                |
-| ------ | ---------------------------------- | ------------------------------- | --------------------------------------------------------------------------------- |
-| server | オブジェクト                             | &amp;srarr; | メールサーバー情報                                                                         |
-| 戻り値    | 4D.POP3Transporter | &amp;larr;  | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
+| 引数     | 型                                  |                            | 説明                                                                                |
+| ------ | ---------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
+| server | オブジェクト                             | &#8594 | メールサーバー情報                                                                         |
+| 戻り値    | 4D.POP3Transporter | &#8592 | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
 <!-- END REF-->
 
