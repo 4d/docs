@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Paramètres | Type   |                                | Description              |
-| ---------- | ------ | ------------------------------ | ------------------------ |
-| Résultat   | Object | &amp;larr; | Élément ou objet courant |
+| Paramètres | Type   |                            | Description              |
+| ---------- | ------ | -------------------------- | ------------------------ |
+| Résultat   | Object | &#8592 | Élément ou objet courant |
 
 <!-- END REF-->
 
@@ -71,7 +71,7 @@ Dans cet exemple, l'objet affecté à la variable $o n'a pas de propriété *f*,
 
 Dans le contexte de l'exécution d'un objet formule créé par les commandes [Formula](formula.md) ou [Formula from string](formula-from-string.md), `This` renvoie une référence à l'objet en cours de traitement par la formule.
 
-Par exemple, vous souhaitez utiliser une méthode projet en tant que formule encapsulée dans un objet :
+For example, you want to use a project method as a formula encapsulated in an object:
 
 ```4d
  var $person : Objet := New object
@@ -134,11 +134,11 @@ La méthode projet *GetPicture* est automatiquement exécutée lors de l'événe
 
 ```4d
   //GetPicture Method
- var $0 : Picture
+ #DECLARE -> $genderPict : Picture
  If(This.isFemale)
-    $0:=Form.genericFemaleImage
+    $genderPict:=Form.genericFemaleImage
  Else
-    $0:=Form.genericMaleImage
+    $genderPict:=Form.genericMaleImage
  End if
 ```
 
