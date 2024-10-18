@@ -51,7 +51,7 @@ _expression_ には正の整数を返す有効な 4D 式であればどんなも
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](../commands-legacy/get-monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
