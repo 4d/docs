@@ -162,7 +162,7 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 
 コンピュータがインターネットに接続されていない状態でも、Qodly Studio を使って開発することができます。 ただしこの場合、以下の機能は使用できません:
 
-- [テンプレート](https://developer.qodly.com/docs/studio/design-webforms/templates): テンプレートライブラリは空です。
+- [Templates](https://developer.qodly.com/docs/studio/pageLoaders/templates): the Template library is empty
 - UI Tips: ![alt-text](../assets/en/WebServer/tips.png)アイコンをクリックしても表示されません。
 
 ## 運用
@@ -220,7 +220,7 @@ Qodly Studio for 4D で ["強制ログイン" モード](../REST/authUsers.md#�
 
 ### 設定
 
-[Roles and Privileges ページ](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) の **Force login** オプションを使って、4Dアプリケーションの ["強制ログイン" モード](../REST/authUsers.md#強制ログインモード) が有効化されていることを確認してください。
+Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is enabled for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview), using the **Force login** option:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
