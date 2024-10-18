@@ -65,7 +65,7 @@ This function does nothing if:
 
 If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 
 
@@ -90,7 +90,7 @@ This function does nothing if:
 
 If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 #### Example
 
