@@ -75,7 +75,7 @@ Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legac
   **Notas**:
 
   - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
-  - Puede saber si una aplicación 4D se está ejecutando con una capa de red QUIC utilizando el comando [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html).
+  - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
   - Como o QUIC usa o protocolo UDP, certifique-se de que o UDP seja permitido em suas configurações de segurança de rede.
   - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
   - Quando a opção de camada QUIC é selecionada:
