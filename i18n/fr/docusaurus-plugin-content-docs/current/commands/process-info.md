@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Paramètres    | Type    |                            | Description                   |
-| ------------- | ------- | :------------------------: | ----------------------------- |
-| processNumber | Integer | &#8594 | Process number                |
-| Résultat      | Object  | &#8592 | Information about the process |
+| Paramètres    | Type    |     | Description                   |
+| ------------- | ------- | :-: | ----------------------------- |
+| processNumber | Integer |  →  | Process number                |
+| Résultat      | Object  |  ←  | Information about the process |
 
 <!-- END REF -->
 
@@ -158,6 +158,6 @@ $preemptive:=Process info(Current process).preemptive
 #### Voir également
 
 [Count tasks](../commands-legacy/count-tasks.md)\
-[Process activity](../commands-legacy/process-activity.md)\
+[Process activity](process-activity.md)\
 [Process state](../commands-legacy/process-state.md)\
 [Session info](session-info.md)
