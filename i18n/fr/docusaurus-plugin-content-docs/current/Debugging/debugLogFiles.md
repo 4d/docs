@@ -598,7 +598,7 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
             "type": "object",
             "properties": {
                 "state": {
-                    "description": "Enable/Disable SMTP log recording (form 0 to N)",
+                    "description": "Enable/Disable SMTP log recording (from 0 to N)",
                     "type": "integer",
                     "minimum": 0
                 }
@@ -609,7 +609,7 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
             "type": "object",
             "properties": {
                 "state": {
-                    "description": "Enable/Disable IMAP log recording (form 0 to N)",
+                    "description": "Enable/Disable IMAP log recording (from 0 to N)",
                     "type": "integer"
                 }
             }
@@ -630,6 +630,14 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
     }
 }
 ```
+
+:::note
+
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\`,...).
+- For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+- For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
+
+:::
 
 ### Exemple
 
