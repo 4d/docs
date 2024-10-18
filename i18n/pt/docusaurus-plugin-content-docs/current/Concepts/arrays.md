@@ -107,21 +107,21 @@ No seguinte exemplo, um ponteiro a cada campo de cada tabela do banco de dados s
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Criar tantas linhas (vazias e sem colunas) como tabelas
+  // Create as many rows (empty and without columns) as there are tables
  $vlLastTable:=Last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) /Array 2D com X linhas e zero colunas
-  // Para cada tabela
+ ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
+  // For each table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Last field number($vlTable)
-  // Dar valor aos elementos
+  // Give value of elements
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  //Insere uma coluna em uma linha da tabela em curso
+  //Insert a column in a row of the table underway
              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  //Atribuir à "célula" com o ponteiro
+  //Assign the "cell" with the pointer
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
