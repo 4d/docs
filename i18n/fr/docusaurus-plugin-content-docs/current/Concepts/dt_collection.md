@@ -51,7 +51,7 @@ L'instanciation d'une collection peut se faire de l'une des manières suivantes 
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](../commands-legacy/get-monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). Dans ce cas, il n'est pas nécessaire d'instancier explicitement la collection, le langage 4D le fait pour vous.
+Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). Dans ce cas, il n'est pas nécessaire d'instancier explicitement la collection, le langage 4D le fait pour vous.
 
 :::
 
