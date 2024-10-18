@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| Paramètres | Type       |                            | Description   |
-| ---------- | ---------- | :------------------------: | ------------- |
-| mime       | Blob, Text | &#8594 | Email en MIME |
-| Résultat   | Object     | &#8592 | Objet email   |
+| Paramètres | Type       |     | Description   |
+| ---------- | ---------- | :-: | ------------- |
+| mime       | Blob, Text |  →  | Email en MIME |
+| Résultat   | Object     |  ←  | Objet email   |
 
 <!-- END REF -->
 
