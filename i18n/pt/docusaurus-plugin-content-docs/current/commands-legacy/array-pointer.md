@@ -49,7 +49,7 @@ Este exemplo cria um array local de 100 linhas de 50 elementos do tipo [Ponteiro
 Este exemplo cria um array de interprocesso de elementos do tipo [Ponteiro](# "A reference to another variable (including arrays and array elements), table, or field") e determina a cada elemento a que aponta a tabela cujo número é o mesmo do elemento. O tamanho do array é igual ao número de tabelas na base de dados. No caso de uma tabela deletada, o resultado da linha será Nil.
 
 ```4d
- ARRAY POINTER(◊apValores;Get last table number)
+ ARRAY POINTER(◊apValores;Last table number)
  For($vlElem;1;Size of array(◊apValores);1;-1)
     If(Is table number valid($vlElem))
        ◊apValores{$vlElem}:=Table($vlElem)

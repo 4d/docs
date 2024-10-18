@@ -27,10 +27,8 @@ Each error object contains the following attributes:
 
 This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command.
 
-**Note:** See also the [GET LAST ERROR STACK](get-last-error-stack.md) legacy command that returns the same information as arrays. 
 
 #### See also 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  

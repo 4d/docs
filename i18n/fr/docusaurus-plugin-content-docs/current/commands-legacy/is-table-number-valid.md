@@ -22,5 +22,5 @@ Cette commande permet de détecter d’éventuelles suppressions de tables, ce q
 
 #### Voir aussi 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  

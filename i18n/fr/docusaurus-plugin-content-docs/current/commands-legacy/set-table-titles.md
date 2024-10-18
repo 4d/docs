@@ -64,7 +64,7 @@ La commande **SET TABLE TITLES** est utile dans les cas suivants :
  var $Langue : Text
  $Langue:=$1
  
- For($vlTable;1;Get last table number) // Passer sur chaque table
+ For($vlTable;1;Last table number) // Passer sur chaque table
     If($vlTable#(Table(->[Traductions]))) //Ne pas traduire la table des traductions
   // Vérifier s'il existe une traduction du nom de la table pour la langue spécifiée
        QUERY([Traductions];[Traductions]CodeLangage=$Langue;*)   //langue souhaitée
@@ -82,7 +82,7 @@ La commande **SET TABLE TITLES** est utile dans les cas suivants :
              SAVE RECORD([Traductions])
           End if
  
-          For($vlChamp;1;Get last field number($vlTable))
+          For($vlChamp;1;Last field number($vlTable))
   // Vérifier s'il existe une traduction pour le nom du champ dans la langue spécifiée
              QUERY([Traductions];[Traductions]CodeLangage=$Langue;*)   //langue souhaitée
              QUERY([Traductions]; & ;[Traductions]TableID=$vlTable;*)   //numéro de table
@@ -150,7 +150,7 @@ La méthode projet TABLES\_ET\_CHAMPS\_LOCALISES est la suivante :
  SET TABLE TITLES($asNoms;$aiNuméros)
  
   //Mise à jour des noms de champs
- $vlNumTable:=Get last table number // Obtenir le nombre de tables dans la base
+ $vlNumTable:=Last table number // Obtenir le nombre de tables dans la base
  For($vlTable;1;$vlNumTable)   // Passer sur chaque table
     If(Is table number valid($vlTable))
        QUERY([Traductions];[Traductions]CodeLangage=$Langue;*)
@@ -174,7 +174,7 @@ Vous voulez supprimer tous les noms de tables et de champs personnalisés défin
 
 #### Voir aussi 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  

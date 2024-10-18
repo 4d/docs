@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.START MONITORING ACTIVITY.Summary-->El comando **START MONITORING ACTIVITY** registra las operaciones que excedan una *duracion* especificada en la memoria.<!-- END REF--> Se puede invocar y ejecutar en un 4D remoto, 4D Server y en aplicaciones 4D autonomas (si *fuente* no proviene de una actividad de red). Las actividades registradas se puede recuperar utilizando el comando [Get Monitored Activity](get-monitored-activity.md). Llame a [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) cuando desee detener la actividad de seguimiento.
+<!--REF #_command_.START MONITORING ACTIVITY.Summary-->El comando **START MONITORING ACTIVITY** registra las operaciones que excedan una *duracion* especificada en la memoria.<!-- END REF--> Se puede invocar y ejecutar en un 4D remoto, 4D Server y en aplicaciones 4D autonomas (si *fuente* no proviene de una actividad de red). Las actividades registradas se puede recuperar utilizando el comando [Monitored activity](monitored-activity.md). Llame a [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) cuando desee detener la actividad de seguimiento.
 
 En el parámetro *duracion*, pase un número que defina un período de tiempo antes de que comience el inicio de sesión (en segundos, puede expresarse como un decimal) para la ejecución de una operación. Una vez que la ejecución de una operación excede la *duracion*, la operación se grabará en la memoria.
 
@@ -43,7 +43,7 @@ Desea iniciar/detener la supervisión y revisión de los datos 4D y las activida
  $coll:=ds.Persons.all().toCollection("firstname, lastname, address.*")
  
   //devuelve todas las operaciones de más de 1 milisegundo de la actividad de datos 4D y el historial de depuración
- $activities:=Get Monitored Activity
+ $activities:=Monitored activity
  
  $text:=JSON Stringify($activities.orderBy("startTime");*)
  TEXT TO DOCUMENT("result.txt";$text)
@@ -90,5 +90,5 @@ Desea iniciar/detener la supervisión y revisión de los datos 4D y las activida
 
 #### Ver también 
 
-[Get Monitored Activity](get-monitored-activity.md)  
+[Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  

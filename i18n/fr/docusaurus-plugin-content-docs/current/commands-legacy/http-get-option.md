@@ -14,6 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilité
+
+Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../API/HTTPRequestClass.md).
+
+:::
+
 #### Description 
 
 <!--REF #_command_.HTTP GET OPTION.Summary-->La commande **HTTP GET OPTION** retourne la valeur courante des options HTTP (options utilisées par le client pour la prochaine requête déclenchée par la commande [HTTP Get](http-get.md) ou [HTTP Request](http-request.md)).<!-- END REF--> La valeur courante d'une option peut être la valeur par défaut ou avoir été modifiée à l'aide de la commande [HTTP SET OPTION](http-set-option.md).

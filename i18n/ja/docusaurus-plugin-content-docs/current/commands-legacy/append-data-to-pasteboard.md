@@ -58,7 +58,7 @@ displayed_sidebar: docs
   // レコードのテキストイメージを保持するテキスト変数を初期化
     $vtRecordData:=""
   // レコードのフィールドごとに
-    For($vlField;1;Get last field number($1))
+    For($vlField;1;Last field number($1))
   // フィールドの型を取得
        GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
   // フィールドのポインタを取得
@@ -170,7 +170,7 @@ GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメ
   // フィールド番号をインクリメント
                 $vlField:=$vlField+1
   // ペーストボードには必要以上のデータが含まれていることがある...
-                If($vlField<=Get last field number($vpTable))
+                If($vlField<=Last field number($vpTable))
   // フィールドタイプを取得
                    GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
   // フィールドへのポインタを取得

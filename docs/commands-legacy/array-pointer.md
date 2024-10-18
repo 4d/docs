@@ -49,7 +49,7 @@ This example creates a local array of 100 rows of 50 [Pointer](# "A reference to
 This example creates an interprocess array of [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") elements and sets each element pointing to the table whose number is the same as the element. The size of the array is equal to the number of tables in the database. In the case of a deleted table, the row will return [Is nil pointer](is-nil-pointer.md).
 
 ```4d
- ARRAY POINTER(◊apValues;Get last table number)
+ ARRAY POINTER(◊apValues;Last table number)
  For($vlElem;1;Size of array(◊apValues);1;-1)
     If(Is table number valid($vlElem))
        ◊apValues{$vlElem}:=Table($vlElem)

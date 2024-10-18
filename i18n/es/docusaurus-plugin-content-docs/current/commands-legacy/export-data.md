@@ -45,7 +45,7 @@ Este ejemplo presenta el uso del comando EXPORT DATA para exportar datos en form
  var $i : Integer
  $ExportPath:=Select folder("Por favor seleccione la carpeta de exportación:")
  If(Ok=1)
-    For($i;1;Get last table number)
+    For($i;1;Last table number)
        If(Is table number valid($i))
           ExportBinary(Table($i);$ExportPath+Table name($i);True)
        End if
@@ -65,7 +65,7 @@ Este ejemplo presenta el uso del comando EXPORT DATA para exportar datos en form
   // Exportar la tabla "$1" en formato binario '4D', todos los registros o únicamente la selección actual
  DOM SET XML ATTRIBUTE($ref;"table_no";Table($1);"format";"4D";"all_records";$3)
   // Definición de los campos a exportar
- For($i;1;Get last field number($1))
+ For($i;1;Last field number($1))
     If(Is field number valid($1;$i))
        $elt:=DOM Create XML element($ref;"field";"table_no";Table($1);"field_no";$i)
     End if

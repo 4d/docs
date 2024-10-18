@@ -59,7 +59,7 @@ La méthode projet MON RACCOURCI fait apparaître un pop up menu de navigation :
 
 ```4d
   // Méthode projet MON RACCOURCI
- GET MOUSE($vlMouseX;$vlMouseY;$vlBouton)
+ MOUSE POSITION($vlMouseX;$vlMouseY;$vlBouton)
  If(Macintosh control down | ($vlBouton=2))
     $vtItems:="A propos de cette base...<i;(-;!-autres options;(-"=""     for($vltable;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltable))=""           $vtitems:="$vtItems+";"+Table" name($vltable)=""        end="" if=""     end="" for=""     $vlchoixutilisateur:="Pop" up="" menu($vtitems)=""     case="" of=""        :($vlchoixutilisateur="1)"   //="" afficher="" les="" informations="" options=""        else=""           if($vlchoixutilisateur="">0)
   // Aller à la table dont le numéro est $vlChoixUtilisateur-4
@@ -85,4 +85,4 @@ Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS
 #### Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[GET MOUSE](get-mouse.md)  
+[MOUSE POSITION](mouse-position.md)  

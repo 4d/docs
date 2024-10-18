@@ -43,7 +43,7 @@ O parâmetro *pilha* permite indicar a quantidade de memória atribuída para a 
 
 ##### Nome do processo 
 
-O nome do novo processo é passado em *nome*. Em monousuário, este nome aparece na lista de processos ambiente de Design, e será devolvido pelo comando[PROCESS PROPERTIES](process-properties.md) quando aplicada a este novo processo. Em Cliente / Servidor, esse nome aparece em azul na lista de **procedimentos armazenados** da janela principal de 4D Server.  
+O nome do novo processo é passado em *nome*. Em monousuário, este nome aparece na lista de processos ambiente de Design, e será devolvido pelo comando[Process info](../commands/process-info.md) quando aplicada a este novo processo. Em Cliente / Servidor, esse nome aparece em azul na lista de **procedimentos armazenados** da janela principal de 4D Server.  
 
 Você pode omitir este parâmetro; se isso acontecer, o nome do processo é uma string vazia.  
   

@@ -48,5 +48,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get localized document path](get-localized-document-path.md)  
+[Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  

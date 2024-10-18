@@ -65,5 +65,5 @@ Timestamp log file nameオプションを渡していた場合、ログファイ
 
 #### 参照 
 
-[Get table fragmentation](get-table-fragmentation.md)  
+[Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  

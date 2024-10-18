@@ -63,9 +63,9 @@ Windowsにおいて以下のような確認ダイアログボックスを表示�
 
 ```4d
  var $title;$yes;$no : Text
- $title:=Get localized string("add_Memo")
- $yes:=Get localized string("yes")
- $no:=Get localized string("no")
+ $title:=Localized string("add_Memo")
+ $yes:=Localized string("yes")
+ $no:=Localized string("no")
  CONFIRM($title;$yes;$no)
 ```
 

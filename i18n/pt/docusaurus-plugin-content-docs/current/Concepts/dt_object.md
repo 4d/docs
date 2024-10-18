@@ -47,7 +47,7 @@ Com a notação de objetos, pode acessar às propriedades dos objetos de duas ma
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../commands/file.md). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
+Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
 
 :::
 
@@ -163,7 +163,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
   Exemplo:
 
 ```4d
-     $measures:=Get database measures.DB.tables
+     $measures:=Database measures.DB.tables
 ```
 
 - **Métodos projeto** ou **Funções** que retornam objetos.

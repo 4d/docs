@@ -34,7 +34,7 @@ El siguiente es un ejemplo de un método genérico que muestra los registros de 
 #### Ver también 
 
 [Field name](field-name.md)  
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  

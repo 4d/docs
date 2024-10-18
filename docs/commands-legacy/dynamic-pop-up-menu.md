@@ -39,7 +39,7 @@ If a menu item has been selected, the command returns its associated custom char
 
 **Starting with 4D v16 R3:** If a standard action is associated to a menu item, it is taken into account by the **Dynamic pop up menu** command at several levels:
 
-* If an associated standard action is not enabled (i.e. it cannot be invoked) in the context of the pop up menu, the item is automatically hidden. You can know if an action is enabled using the [Get action info](get-action-info.md) command.
+* If an associated standard action is not enabled (i.e. it cannot be invoked) in the context of the pop up menu, the item is automatically hidden. You can know if an action is enabled using the [Action info](action-info.md) command.
 * Items with a toggle associated action are automatically checked, unchecked or "mixed" depending on the selection.
 * If the action title has been set to the item using the ak standard action title constant, the localized name is displayed in the menu.
 * When the item is selected, the associated standard action is invoked (execution is asynchronous).

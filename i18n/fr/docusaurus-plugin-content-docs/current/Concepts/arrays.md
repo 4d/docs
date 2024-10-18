@@ -108,12 +108,12 @@ Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // Créer autant de lignes (vides et sans colonnes) qu'il y a de tables
-  $vlLastTable:=Get last table number
+  $vlLastTable:=Last table number
  ARRAY POINTER(<>apFields;$vlLastTable;0) //Tableau 2D avec N lignes et zéro colonnes
   // Pour chaque table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
-       $vlLastField:=Get last field number($vlTable)
+       $vlLastField:=Last field number($vlTable)
   // Donner la valeur des éléments
              $vlColumnNumber:=0
        For($vlField;1;$vlLastField)

@@ -86,7 +86,7 @@ Cette commande est utile pour passer des objets en paramètres :
 
 ```4d
  var $measures : Object
- $measures:=Get database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
+ $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
 #### Exemple 4 

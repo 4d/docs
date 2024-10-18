@@ -226,7 +226,7 @@ When `Delete with contents` is passed:
 
 * The folder, along with all of its contents, is deleted.
 **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-* If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
+* If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
 * If the folder does not exist, the command does nothing and no error is returned.
 (*) Windows: -54 (Attempt to open locked file for writing)
 macOS: -45 (The file is locked or the pathname is not correct)

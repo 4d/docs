@@ -63,6 +63,6 @@ Con esta función, el método de proyecto listado pega el texto recibido como pa
 #### Ver también 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  

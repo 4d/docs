@@ -19,10 +19,10 @@ displayed_sidebar: docs
 
 #### Example 
 
-See the examples for [DELAY PROCESS](delay-process.md) and [PROCESS PROPERTIES](process-properties.md).
+See the examples for [DELAY PROCESS](delay-process.md) and [Process info](../commands/process-info.md).
 
 #### See also 
 
 [Process number](process-number.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  

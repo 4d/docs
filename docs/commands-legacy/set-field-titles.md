@@ -55,6 +55,6 @@ See example for the [SET TABLE TITLES](set-table-titles.md) command.
 
 [Field name](field-name.md)  
 [GET FIELD TITLES](get-field-titles.md)  
-[Get last field number](get-last-field-number.md)  
+[Last field number](last-field-number.md)  
 [Parse formula](parse-formula.md)  
 [SET TABLE TITLES](set-table-titles.md)  

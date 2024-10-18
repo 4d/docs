@@ -57,7 +57,7 @@ Dans ce formulaire, un message d'aide est affiché et change dynamiquement lorsq
        SET DATABASE PARAMETER(Message aide délai;0) // Le message est affiché dès que la souris s'arrête
        SET DATABASE PARAMETER(Message aide durée;60*10) // Affichage de 10 secondes
     :(FORM Event=On Mouse Move)
-       GET MOUSE($x;$y;$b)
+       MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
        $y:=$y-$top
@@ -100,7 +100,7 @@ Vous avez défini une list box "liste de commandes" et vous souhaitez proposer d
  
     :(FORM Event=On Mouse Move)
   //#1 : trouver quelle ligne est survolée
-       GET MOUSE($mouseX;$mouseY;$mouseZ)
+       MOUSE POSITION($mouseX;$mouseY;$mouseZ)
        LISTBOX GET CELL POSITION(*;"Commands List";$mouseX;$mouseY;$col;$row)
  
   //#2 : définir l'infobulle à afficher

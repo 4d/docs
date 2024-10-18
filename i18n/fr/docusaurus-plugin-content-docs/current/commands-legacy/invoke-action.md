@@ -42,7 +42,7 @@ En fonction de la *cible*, l'exécution de la commande **INVOKE ACTION** sera sy
 
 **Note :** Les actions standard d'édition (Couper, Copier, Coller, Tout sélectionner, Effacer, Annuler édition/Répéter) ignore le paramètre *cible*, s'il est passé. Ces actions sont toujours exécutées de façon synchrone dans le contexte de l'objet éditable qui a le focus.
 
-La commande **INVOKE ACTION** ne génère pas une erreur, par exemple, si la commande requise n'est pas disponible dans le contexte courant. Vous devez valider l'action attendue en utilisant la commande [Get action info](get-action-info.md). 
+La commande **INVOKE ACTION** ne génère pas une erreur, par exemple, si la commande requise n'est pas disponible dans le contexte courant. Vous devez valider l'action attendue en utilisant la commande [Action info](action-info.md). 
 
 #### Exemple 1 
 
@@ -62,4 +62,4 @@ Vous souhaitez exécuter l'action standard **Aller a page** (page 3) dans le for
 
 #### Voir aussi 
 
-[Get action info](get-action-info.md)  
+[Action info](action-info.md)  

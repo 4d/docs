@@ -50,5 +50,5 @@ O idioma atual do banco de dados pode ser usada para determinar a pasta. lproj o
 
 #### Ver também 
 
-[Get localized document path](get-localized-document-path.md)  
+[Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  

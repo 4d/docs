@@ -29,7 +29,7 @@ La méthode suivante passe un enregistrement en plein écran (sous Mac OS) jusqu
  FORM SET INPUT([Tableaux];"Plein écran 800")
  DISPLAY RECORD([Tableaux])
  Repeat
-    GET MOUSE($vlX;$vlY;$vlBouton)
+    MOUSE POSITION($vlX;$vlY;$vlBouton)
  Until($vlBouton#0)
  CLOSE WINDOW
  SHOW MENU BAR

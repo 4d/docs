@@ -23,5 +23,5 @@ Este comando permite detectar las eventuales eliminaciones de campos, que crean 
 
 #### Ver también 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  

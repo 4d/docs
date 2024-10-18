@@ -32,4 +32,4 @@ Nota: em um aplicativo 4D compilado e fusionado com 4D Volume Desktop, o comando
 #### Ver também 
 
 [BACKUP](backup.md)  
-[GET RESTORE INFORMATION](get-restore-information.md)  
+[RESTORE INFO](restore-info.md)  

@@ -65,5 +65,5 @@ Si l’opération de compactage s’est déroulée correctement, la variable sys
 
 #### Voir aussi 
 
-[Get table fragmentation](get-table-fragmentation.md)  
+[Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  

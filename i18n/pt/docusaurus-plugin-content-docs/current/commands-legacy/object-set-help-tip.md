@@ -58,7 +58,7 @@ Neste formulário, uma mensagem de ajuda se visualiza e muda dinamicamente quand
        SET DATABASE PARAMETER(Tips delay;0) // Sugestão mostrada imediatamente ao deter o mouse
        SET DATABASE PARAMETER(Tips duration;60*10) // 10 segundos máximo de visualização
     :(FORM Event=On Mouse Move)
-       GET MOUSE($x;$y;$b)
+       MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
        $y:=$y-$top
@@ -104,7 +104,7 @@ Se tiver um list box, "Commands List", que contenha uma lista e quiser definir u
  
   //#1 : encontra a fila que se se moveu
  
-       GET MOUSE($mouseX;$mouseY;$mouseZ)
+       MOUSE POSITION($mouseX;$mouseY;$mouseZ)
        LISTBOX GET CELL POSITION(*;"Commands List";$mouseX;$mouseY;$col;$row)
  
   //#2 : configure a mensagem de ajuda correspondente

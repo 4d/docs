@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 Esto concierne a todos los entornos 4D: 4D en modo local, 4D Server, 4D en modo remoto, 4D Desktop y bases fusionadas con 4D Desktop.
 
-El [GET BACKUP INFORMATION](get-backup-information.md) permite verificar el inicio del backup. En este método, debe devolver en el parámetro $0 un valor que autorice o rechace el backup:
+El [BACKUP INFO](backup-info.md) permite verificar el inicio del backup. En este método, debe devolver en el parámetro $0 un valor que autorice o rechace el backup:
 
 * Si $0 = 0, el backup puede comenzar.
 * Si $0 # 0, el backup no es autorizado. La operación se cancela y devuelve un error. Puede obtener el error utilizando el comando Método base On Backup Startup.

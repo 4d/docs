@@ -30,7 +30,7 @@ O resultado da função pode ser um dos valores das seguintes constantes predefi
 | Waiting for input output  | Inteiro longo | 3     |                                                                                                                                                                                                                                                  |
 | Waiting for internal flag | Inteiro longo | 4     |                                                                                                                                                                                                                                                  |
 | Paused                    | Inteiro longo | 5     |                                                                                                                                                                                                                                                  |
-| \_o\_Hidden modal dialog  | Inteiro longo | 6     | **Compatibilidad**e: este estado de processo já não existe a partir de 4D v16\. O comando [PROCESS PROPERTIES](process-properties.md) <br/>devolve um estado equivalente quando *procState*\=Waiting for user event e *procMode*\=False. |
+| \_o\_Hidden modal dialog  | Inteiro longo | 6     | **Compatibilidad**e: este estado de processo já não existe a partir de 4D v16\. O comando [Process info](../commands/process-info.md) <br/>devolve um estado equivalente quando *procState*\=Waiting for user event e *procMode*\=False. |
 
 Se o processo não existe (o qual significa que não passou um número no intervalo de 1 a [Count tasks](count-tasks.md "Count tasks")), Process state devolve Does not exist (-100).
 
@@ -58,4 +58,4 @@ O seguinte exemplo coloca o nome e número de referencia para cada processo nos 
 #### Ver também 
 
 [Count tasks](count-tasks.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  

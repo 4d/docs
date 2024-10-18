@@ -29,7 +29,7 @@ El siguiente método muestra un registro en toda la pantalla (Macintosh) hasta q
  FORM SET INPUT([Pinturas];"Full Screen 800")
  DISPLAY RECORD([Pinturas])
  Repeat
-    GET MOUSE($vlX;$vlY;$vlBoton)
+    MOUSE POSITION($vlX;$vlY;$vlBoton)
  Until($vlBoton#0)
  CLOSE WINDOW
  SHOW MENU BAR

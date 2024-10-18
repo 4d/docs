@@ -97,8 +97,8 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 4D gère automatiquement un certain nombre de variables appelées [**variables système**](variables.md#system-variables), répondant à différents besoins.
 :::
 
-- la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html) qui renvoie une collection contenant la pile courante des erreurs survenues dans l'application 4D.
-- la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
+- la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html) qui renvoie une collection contenant la pile courante des erreurs survenues dans l'application 4D. Vous pouvez également utiliser la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1015.html) qui renvoie les mêmes informations sous forme de tableaux.
+- la commande `Call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
 
 #### Exemple
 

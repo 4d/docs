@@ -66,12 +66,12 @@ You want to open a pop-up menu at the bottom left corner of the "MyObject" objec
 
 #### Example 2 
 
-You want to open a pop-up window at the position of the mouse cursor. On Windows, you need to convert the coordinates since [GET MOUSE](get-mouse.md) (with the \* parameter) returns values based on the position of the MDI window:
+You want to open a pop-up window at the position of the mouse cursor. On Windows, you need to convert the coordinates since [MOUSE POSITION](mouse-position.md) (with the \* parameter) returns values based on the position of the MDI window:
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
  var $window : Integer
- GET MOUSE($mouseX;$mouseY;$mouseButtons)
+ MOUSE POSITION($mouseX;$mouseY;$mouseButtons)
  CONVERT COORDINATES($mouseX;$mouseY;XY Current window;XY Main window)
  $window:=Open form window("PopupWindowForm";Pop up form window;$mouseX;$mouseY)
  DIALOG("PopupWindowForm")

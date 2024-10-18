@@ -507,9 +507,9 @@ Here are two examples:
 ```4d
  ARRAY POINTER($apDateFields;0)
  $vlElem:=0
- For($vlTable;1;Get last table number)
+ For($vlTable;1;Last table number)
     If(Is table number valid($vlTable))
-       For($vlField;1;Get last field number($vlTable))
+       For($vlField;1;Last field number($vlTable))
           If(Is field number valid($vlTable;$vlField))
              $vpField:=Field($vlTable;$vlField)
              If(Type($vpField->)=Is date)

@@ -37,5 +37,5 @@ Vous permettrez ainsi à un utilisateur d‘activer des licences sans avoir à m
 
 #### Voir aussi 
 
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Is license available](is-license-available.md)  

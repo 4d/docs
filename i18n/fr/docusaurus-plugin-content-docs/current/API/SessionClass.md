@@ -274,7 +274,7 @@ La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant
 
 :::tip
 
-Vous pouvez utiliser cette propriété pour obtenir l'objet [`storage`](#storage) d'une session grâce à la commande [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/fr/page1839.html).
+Vous pouvez utiliser cette propriété pour obtenir l'objet [`storage`](#storage) d'une session grâce à la commande [`Session storage`](https://doc.4d.com/4dv20R6/help/command/fr/page1839.html).
 
 :::
 
@@ -532,7 +532,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 :::tip
 
-Vous pouvez obtenir la propriété `.storage` d'une session en utilisant la commande [`Session storage by ID`](https://doc.4d.com/4dv20R6/help/command/fr/page1839.html).
+Vous pouvez obtenir la propriété `.storage` d'une session en utilisant la commande [`Session storage`](https://doc.4d.com/4dv20R6/help/command/fr/page1839.html).
 
 :::
 

@@ -59,4 +59,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Count screens](count-screens.md)  
-[SET SCREEN DEPTH](set-screen-depth.md)  

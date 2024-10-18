@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Dica:** este comando necessita um nível de conhecimento avançado em programação. Geralmente, não necessita utilizar**ON EVENT CALL** para trabalhar com eventos. Quando utiliza formulários, 4D administra os eventos e os envia aos objetos e formulários apropriados. 
 
-**Dica:** comandos tais como [GET MOUSE](get-mouse.md), [Shift down](shift-down.md), etc., para obter informação sobre eventos. Estes comandos podem chamar-se desde os métodos de objeto para obter a informação que necessita sobre um evento envolvido com um objeto. Utilizá-los lhe economiza a escritura de um algoritmo baseado em uma estrutura de tipo **ON EVENT CALL**.
+**Dica:** comandos tais como [MOUSE POSITION](mouse-position.md), [Shift down](shift-down.md), etc., para obter informação sobre eventos. Estes comandos podem chamar-se desde os métodos de objeto para obter a informação que necessita sobre um evento envolvido com um objeto. Utilizá-los lhe economiza a escritura de um algoritmo baseado em uma estrutura de tipo **ON EVENT CALL**.
 
 O alcance deste comando é a sessão de trabalho atual. Automaticamente, o método se executa em um processo local separado. Só pode ter um método de gestão de eventos a la vez. Para deter um método de gestão de eventos, chame novamente **ON EVENT CALL** e passe uma cadeia vazia em *metodoEvento*.
 
@@ -103,6 +103,6 @@ Se um relatório for impresso utilizando [PRINT SELECTION](print-selection.md "P
 #### Ver também 
 
 [FILTER EVENT](filter-event.md)  
-[GET MOUSE](get-mouse.md)  
+[MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  

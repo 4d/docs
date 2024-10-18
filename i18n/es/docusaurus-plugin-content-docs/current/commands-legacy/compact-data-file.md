@@ -67,5 +67,5 @@ Si la operación de compactación se lleva a cabo correctamente, la variable sis
 
 #### Ver también 
 
-[Get table fragmentation](get-table-fragmentation.md)  
+[Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  

@@ -46,7 +46,7 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
  var $i : Integer
  $ExportPath:=Select folder("Please select the export folder:")
  If(Ok=1)
-    For($i;1;Get last table number
+    For($i;1;Last table number
        If(Is table number valid($i))
           ExportBinary(Table($i);$ExportPath+Table name($i);True)
        End if
@@ -66,7 +66,7 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
   // Export the table "$1" in '4D' binary format, all the records or only the current selection
  DOM SET XML ATTRIBUTE($ref;"table_no";Table($1);"format";"4D";"all_records";$3)
   // Definition of fields to export
- For($i;1;Get last field number($1))
+ For($i;1;Last field number($1))
     If(Is field number valid($1;$i))
        $elt:=DOM Create XML element($ref;"field";"table_no";Table($1);"field_no";$i)
     End if

@@ -21,7 +21,7 @@ Tous les environnements 4D sont concernés : 4D (tous modes), 4D Server ainsi qu
 La **On Backup Startup database method**  permet de contrôler le déclenchement de la sauvegarde. Au sein de la méthode, vous devez retourner dans le paramètre $0 une valeur autorisant ou refusant la sauvegarde :
 
 * si $0 = 0, vous autorisez la sauvegarde.
-* si $0 # 0, vous n'autorisez pas la sauvegarde. L’opération est annulée et une erreur est retournée. Vous pouvez récupérer l’erreur à l’aide de la commande [GET BACKUP INFORMATION](get-backup-information.md).
+* si $0 # 0, vous n'autorisez pas la sauvegarde. L’opération est annulée et une erreur est retournée. Vous pouvez récupérer l’erreur à l’aide de la commande [BACKUP INFO](backup-info.md).
 
 Vous pouvez utiliser cette méthode base pour contrôler les conditions d’exécution de la sauvegarde (utilisateur, date de la dernière sauvegarde, etc.).
 

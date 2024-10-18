@@ -50,7 +50,7 @@ El Método base On Server Open Connection se ejecuta en el equipo servidor en el
 
 Por ejemplo, si un 4D remoto se conecta a una base 4D Server interpretada, se inicia el proceso usuario, el proceso de diseño y el proceso de registro del cliente (por defecto). El Método base On Server Open Connection se ejecuta tres veces seguidas. La primera vez dentro del proceso principal, la segunda vez en el proceso de inscripción del cliente y la tercera vez en el proceso de diseño. Si los tres procesos son respectivamente el sexto, séptimo y octavo proceso a iniciar en el equipo servidor, y si llama [Current process](current-process.md) desde el Método base On Server Open Connection, la primera vez [Current process](current-process.md) devuelve 6, la segunda vez 7 y la tercera 8.
 
-Note que el Método base On Server Open Connection se ejecuta en el equipo servidor, al interior del proceso 4D Client en el servidor, independiente del proceso ejecutado en el cliente. Adicionalmente, en el momento en que se invoca el método, el proceso 4D Client no se ha nombrado aún ([PROCESS PROPERTIES](process-properties.md) no devolverá en este momento el nombre del proceso 4D Client).
+Note que el Método base On Server Open Connection se ejecuta en el equipo servidor, al interior del proceso 4D Client en el servidor, independiente del proceso ejecutado en el cliente. Adicionalmente, en el momento en que se invoca el método, el proceso 4D Client no se ha nombrado aún ([Process info](../commands/process-info.md) no devolverá en este momento el nombre del proceso 4D Client).
 
 El Método base On Server Open Connection no tiene acceso a la tabla de las variables proceso del proceso ejecutado en el client. Esta tabla reside en el equipo client, no en el equipo servidor. 
 

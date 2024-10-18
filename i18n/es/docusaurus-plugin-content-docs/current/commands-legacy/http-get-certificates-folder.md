@@ -13,6 +13,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidad
+
+Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomienda utilizar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
 #### Descripción 
 
 <!--REF #_command_.HTTP Get certificates folder.Summary-->El comando **HTTP Get certificates folder** devuelve la ruta completa de la carpeta de certificados activa del cliente.<!-- END REF--> 

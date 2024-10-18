@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get process activity.Summary-->**Get process activity** コマンドは特定の時刻での、接続ユーザーセッションや関連する実行中のスナップショットを返します。<!-- END REF-->このコマンドは、全てのプロセスを返します。これには、[PROCESS PROPERTIES](process-properties.md) コマンドでもアクセスできない内部プロセスも含まれます。
+<!--REF #_command_.Get process activity.Summary-->**Get process activity** コマンドは特定の時刻での、接続ユーザーセッションや関連する実行中のスナップショットを返します。<!-- END REF-->このコマンドは、全てのプロセスを返します。これには、[Process info](../commands/process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。
 
 * サーバー上で実行され、*options* 引数を省略した場合には、**Get process activity** はデフォルトでユーザーセッションとプロセスの一覧の両方を、以下のように返します。  
     
@@ -95,6 +95,6 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[PROCESS PROPERTIES](process-properties.md)  
-[Session storage by ID](session-storage-by-id.md)  
+[Process info](../commands/process-info.md)  
+[Session storage](session-storage.md)  
 [WEB Get server info](web-get-server-info.md)  

@@ -108,7 +108,7 @@ En el siguiente ejemplo, un puntero a cada campo de cada tabla de la base se alm
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // Crear tantas líneas (vacías y sin columnas) como tablas haya
- $vlLastTable:=Get last table number
+ $vlLastTable:=Last table number
   ARRAY POINTER(<>apFields;$vlLastTable;0) //Array 2D con X líneas y cero columnas
   // Para cada tabla
  For($vlTable;1;$vlLastTable)

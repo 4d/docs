@@ -28,10 +28,8 @@ Cada objeto de error contiene los siguientes atributos:
   
 Este comando debe ser llamado desde un método de llamada de error instalado por el comando [ON ERR CALL](on-err-call.md). 
 
-**Nota:** ver también el comando heredado [GET LAST ERROR STACK](get-last-error-stack.md) que devuelve la misma información que los arrays.
 
 #### Ver también 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  

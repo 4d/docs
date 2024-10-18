@@ -52,4 +52,4 @@ Se quiser obter informação da cache do banco de dados e todos os componentes a
 
 #### Ver também 
 
-[GET MEMORY STATISTICS](get-memory-statistics.md)  
+[MEMORY STATISTICS](memory-statistics.md)  

@@ -71,7 +71,7 @@ displayed_sidebar: docs
  var $Language : Text
  $Language:=$1
  
- For($vlTable;1;Get last table number) //各テーブルを渡す
+ For($vlTable;1;Last table number) //各テーブルを渡す
     If($vlTable#((->[Translations]))) //翻訳テーブルを翻訳しない
   //特定ランゲージ用のテーブル名の翻訳があるかどうかをチェックする
        QUERY([Translations];[Translations]LanguageCode=$Language;*) //目的のランゲージ
@@ -89,7 +89,7 @@ displayed_sidebar: docs
              SAVE RECORD([Translations])
           End if
  
-          For($vlField;1;Get last field number($vlTable))
+          For($vlField;1;Last field number($vlTable))
   //特定ランゲージ用のフィールド名の翻訳があるかどうかをチェックする
              QUERY([Translations];[Translations]LanguageCode=$Language;*) //目的のランゲージ
              QUERY([Translations]; & ;[Translations]TableID=$vlTable;*) //テーブル番号
@@ -158,7 +158,7 @@ displayed_sidebar: docs
  SET TABLE TITLES($asNames;$aiNumbers)
  
   //フィールド名を更新する
- $vlTableNum:=Get last table number //データベース上のテーブルの数を数える
+ $vlTableNum:=Last table number //データベース上のテーブルの数を数える
  For($vlTable;1;$vlTableNum) //テーブルを渡す
     If(Is table number valid($vlTable))
        QUERY([Translations];[Translations]LanguageCode=$Language;*)
@@ -183,7 +183,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  

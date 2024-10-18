@@ -32,5 +32,5 @@ Les deux derniers paramètres ne sont remplis que si l’erreur provient de la s
 
 #### Voir aussi 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
+[Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  

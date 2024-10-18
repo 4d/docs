@@ -49,7 +49,7 @@ Este ejemplo crea un array local de 100 filas de 50 elementos de tipo [Puntero](
 Este ejemplo crea un array interproceso de elementos de tipo [Puntero](# "A reference to another variable (including arrays and array elements), table, or field") y asigna a cada elemento al que apunta a la tabla cuyo número es el mismo del elemento. El tamaño del array es igual al número de tablas en la base de datos. En el caso de suprimir una tabla, la linea devolverá Nil
 
 ```4d
- ARRAY POINTER(◊apValores;Get last table number)
+ ARRAY POINTER(◊apValores;Last table number)
  For($vlElem;1;Size of array(◊apValores);1;-1)
     If(Is table number valid($vlElem))
        ◊apValores{$vlElem}:=Table($vlElem)

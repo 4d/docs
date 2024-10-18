@@ -48,5 +48,5 @@ La langue courante de la base définit le dossier .lproj dans lequel le programm
 
 #### Voir aussi 
 
-[Get localized document path](get-localized-document-path.md)  
+[Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  

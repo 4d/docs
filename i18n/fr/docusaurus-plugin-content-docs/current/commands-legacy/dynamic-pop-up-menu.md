@@ -38,7 +38,7 @@ Si une ligne de menu a été sélectionnée, la commande retourne sa chaîne de 
 
 **A partir de 4D v16 R3** : si une action standard est associée à une ligne de menu, elle est prise en compte par la commande **Dynamic pop up menu** à différents niveaux :
 
-* Si une action standard n'est pas activée (c'est-à-dire ne peut pas être appelée) dans le contexte du pop-up menu, le libellé est automatiquement caché. Vous pouvez savoir si une action est disponible en utilisant la commande [Get action info](get-action-info.md).
+* Si une action standard n'est pas activée (c'est-à-dire ne peut pas être appelée) dans le contexte du pop-up menu, le libellé est automatiquement caché. Vous pouvez savoir si une action est disponible en utilisant la commande [Action info](action-info.md).
 * Les propriétés liées à une action associée sont automatiquement "checked", "unchecked" ou "mixed" selon la sélection.
 * Si le titre de l'action de la ligne de menu a été défini en utilisant la constante ak standard action title, le nom localisé est affiché dans le menu.
 * Lorsque la ligne de menu est sélectionnée, l'action standard associée est appelée (l'exécution est asynchrone).

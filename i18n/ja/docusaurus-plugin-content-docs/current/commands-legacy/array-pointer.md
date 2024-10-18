@@ -51,7 +51,7 @@ displayed_sidebar: docs
 この例題はポインタインタプロセス配列を作成し、それぞれの要素に要素番号に対応するテーブルのポインタを格納します。要素数はテーブル数と同じです。テーブルが削除されていた場合、Nilが返されます。 
 
 ```4d
- ARRAY POINTER(<>apValues;Get last table number)
+ ARRAY POINTER(<>apValues;Last table number)
  For($vlElem;1;Size of array(<>apValues);1;-1)
     If(Is table number valid($vlElem))
        <>apValues{$vlElem}:=Table($vlElem)

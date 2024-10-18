@@ -43,7 +43,7 @@ The *stack* parameter allows you indicate the amount of memory allocated for the
 
 ##### Process Name 
 
- You pass the name of the new process in *name*. In single-user, this name will appear in the list of processes of the Runtime Explorer and will be returned by the [PROCESS PROPERTIES](process-properties.md) command when applied to this new process. In Client/Server, this name will appear in blue in the Stored Procedure list of the 4D Server main window.
+ You pass the name of the new process in *name*. In single-user, this name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](../commands/process-info.md) command when applied to this new process. In Client/Server, this name will appear in blue in the Stored Procedure list of the 4D Server main window.
 
 You can omit this parameter; if you do so, the name of the process will be the empty string. 
 

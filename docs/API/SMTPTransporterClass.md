@@ -146,7 +146,7 @@ The function returns an object describing the SMTP status of the operation. This
 |status|number|Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing)|
 |statusText|text|Status message returned by the SMTP server|
 
-In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `GET LAST ERROR STACK` command for information about the error.
+In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `Last errors` command for information about the error.
 
 In this case, the resulting status object contains the following values:
 

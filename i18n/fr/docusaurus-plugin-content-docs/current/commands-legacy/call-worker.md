@@ -28,7 +28,7 @@ Dans le paramètre *process*, vous passez soit le nom soit le numéro du process
 
 **Note :** Le **process principal**, créé par 4D pour l'interface utilisateur et le mode application à l'ouverture de la base, est un process worker et peut être appelé par **CALL WORKER**. Le nom de ce process pouvant varier en fonction de la langue de 4D, il est préférable de le désigner par son numéro (toujours 1) lorsque vous utilisez **CALL WORKER**.
 
-Le process worker est affiché dans la liste des process de l'Explorateur d'exécution et est retourné par la commande [PROCESS PROPERTIES](process-properties.md) lorsqu'elle est appliquée à ce process.
+Le process worker est affiché dans la liste des process de l'Explorateur d'exécution et est retourné par la commande [Process info](../commands/process-info.md) lorsqu'elle est appliquée à ce process.
 
 Dans le paramètre *formule*, vous désignez le code 4D que vous souhaitez exécuter dans le contexte du process worker. Vous pouvez passer soit : 
 

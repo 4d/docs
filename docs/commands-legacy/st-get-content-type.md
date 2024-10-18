@@ -92,7 +92,7 @@ You want to display context-menu commands based on the type of contents selected
                    ...
              End case
           End if
-          GET MOUSE($xCoord;$yCoord;$ButtonState)
+          MOUSE POSITION($xCoord;$yCoord;$ButtonState)
           $AlphaVar:=Dynamic pop up menu(<>menu_STYLEDTEXT;"";$xCoord;$yCoord)
           startSel:=-3
           endSel:=-3

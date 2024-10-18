@@ -86,12 +86,12 @@ _quit_ (終了) 標準アクションが割り当てられているメニュー�
 | `SHOW MENU BAR` / `HIDE MENU BAR` | カレントの (コードが実行されている場所の) フォームウィンドウにのみ適用されます                                                                                                                                |
 | `MAXIMIZE WINDOW`                 | ウィンドウはスクリーンサイズいっぱいまで最大化されます                                                                                                                                                                 |
 | `CONVERT COORDINATES`             | `XY Screen` はメインスクリーンが (0,0) に位置するグローバルな座標系です。 座標系の左側、あるいは上側にあるスクリーンについては、負の値の座標を持つことができ、右側、あるいは下側にあるスクリーンについては `Screen height` や `Screen width` から返される値より大き値を持つことができます。 |
-| `GET MOUSE`                       | グローバル座標はスクリーンからの相対位置になります                                                                                                                                                                   |
+| `MOUSE POSITION`                       | グローバル座標はスクリーンからの相対位置になります                                                                                                                                                                   |
 | `GET WINDOW RECT`                 | window パラメーターに -1 を渡した場合、コマンドは 0;0;0;0 を返します                                                                                                                                                |
 | `On Drop database method`         | サポートされていません                                                                                                                                                                                 |
 
 :::info
 
-[**Get application info**](https://doc.4d.com/4dv19R/help/command/ja/page1599.html) コマンドを使用すると、Windows で現在実行中のモードを確認することができます。
+[**Application info**](https://doc.4d.com/4dv19R/help/command/ja/page1599.html) コマンドを使用すると、Windows で現在実行中のモードを確認することができます。
 
 :::
