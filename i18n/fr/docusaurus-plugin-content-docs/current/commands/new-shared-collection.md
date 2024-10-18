@@ -8,18 +8,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Paramètres | Type                                                                |                            | Description                                            |
-| ---------- | ------------------------------------------------------------------- | -------------------------- | ------------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &#8594 | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                                          | &#8592 | New shared collection                                  |
+| Paramètres | Type                                                                |   | Description                                            |
+| ---------- | ------------------------------------------------------------------- | - | ------------------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | → | Valeur(s) de la collection partagée |
+| Résultat   | Collection                                                          | ← | New shared collection                                  |
 
 <!-- END REF-->
 
 #### Description
 
-nombres Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
+La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou préremplie<!-- END REF --> et retourne sa référence. Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
 
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](../Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](../API/CollectionClass.md#push) or [`map()`](../API/CollectionClass.md#map) because they automatically trigger an internal *Use...End use*). Copie inversée de la collection
+Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](../Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](../API/CollectionClass.md#push) or [`map()`](../API/CollectionClass.md#map) because they automatically trigger an internal *Use...End use*). La lecture d'un élément sans structure *Use...End use* est cependant possible.
 
 :::info
 
@@ -27,15 +27,15 @@ For more information on shared collections, please refer to the [Shared objects 
 
 :::
 
-Symbole(s)
+Si vous ne passez aucun paramètre, `New shared collection` crée une collection vide et retourne sa référence.
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
 > Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
 
-Symbole(s) Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
+Optionnellement, vous pouvez préremplir la nouvelle collection partagée en passant une ou plusieurs *value*(s) comme paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
-Prise en charge des formules
+Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection partagée, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires reçoivent la valeur **null**.
 
 Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge :
 
