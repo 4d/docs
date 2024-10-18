@@ -107,21 +107,21 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // テーブルと同じ数の空行 (つまり、列なし) を持つ配列作成します
+  // Create as many rows (empty and without columns) as there are tables
  $vlLastTable:=Last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) // X行 0列の 2D配列
-  // テーブル毎に
+ ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
+  // For each table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Last field number($vlTable)
-  // 全フィールドをチェックします
+  // Give value of elements
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  // 当該テーブルの行にフィールドに対応する列を挿入していきます
+  //Insert a column in a row of the table underway
              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  // 作成した "セル" にポインターを割り当てます
+  //Assign the "cell" with the pointer
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
