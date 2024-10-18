@@ -14,11 +14,11 @@ A propriedade não está selecionada por padrão. Note that only columns with th
 
 :::note
 
-When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+Ao redimensionar a forma, se a propriedade de [dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Crescer" foi atribuída o list box, a coluna mais direita será aumentada além da largura máxima se necessário.
 
 :::
 
-Cuando esta propiedad está activada, la altura de cada línea se calcula automáticamente para que el contenido de la celda quepa por completo sin ser truncado (a menos que la opción [Wordwrap](properties_Display.md#wordwrap) esté desactivada.
+Quando essa propriedade está ativada, a altura de cada linha é calculada automaticamente para que o conteúdo da célula caiba totalmente sem ser truncado (a menos que a opção [Wordwrap](properties_Display.md#wordwrap) esteja desativada).
 
 - O cálculo da altura da linha tem em conta:
   - any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
