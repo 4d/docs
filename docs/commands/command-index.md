@@ -900,7 +900,6 @@ title: Index
 [`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
 [`Process info`](process-info.md) - **new 4D 20 R7**<br/>
 [`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
-[`PROCESS PROPERTIES`](../commands-legacy/process-properties.md)<br/>
 [`Process state`](../commands-legacy/process-state.md)<br/>
 [`PUSH RECORD`](../commands-legacy/push-record.md)<br/>
 
@@ -1063,7 +1062,7 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
-[`Session info`](/session-info.md) - **new 4D 20 R7**<br/> 
+[`Session info`](session-info.md) - **new 4D 20 R7**<br/> 
 [`Session storage`](../commands-legacy/session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands-legacy/set-allowed-methods.md)<br/>

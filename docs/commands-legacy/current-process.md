@@ -23,6 +23,6 @@ See the examples for [DELAY PROCESS](delay-process.md) and [Process info](../com
 
 #### See also 
 
-[Process number](process-number.md)  
+[Process number](../commands/process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  

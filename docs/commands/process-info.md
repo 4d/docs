@@ -159,6 +159,6 @@ $preemptive:=Process info(Current process).preemptive
 #### See also 
 
 [Count tasks](../commands-legacy/count-tasks.md)  
-[Process activity](../commands-legacy/process-activity.md)  
+[Process activity](process-activity.md)  
 [Process state](../commands-legacy/process-state.md)  
 [Session info](session-info.md)  

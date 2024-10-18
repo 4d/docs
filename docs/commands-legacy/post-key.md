@@ -52,7 +52,7 @@ If you specify the *process* parameter, the keystroke is sent to the process who
 
 #### Example 
 
-See example for the [Process number](process-number.md) command.
+See example for the [Process number](../commands/process-number.md) command.
 
 #### See also 
 
