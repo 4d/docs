@@ -41,7 +41,7 @@ Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la
 
 ##### Nom du process 
 
-Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [PROCESS PROPERTIES](process-properties.md). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. Vous pouvez créer un process local en préfixant son nom d'un symbole dollar (*$*). 
+Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [Process info](../commands/process-info.md). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. Vous pouvez créer un process local en préfixant son nom d'un symbole dollar (*$*). 
 
 **Important :** Rappelez-vous que, en client/serveur, les process locaux ne doivent pas accéder aux données. Pour plus d'informations, veuillez consulter la section *Process globaux et locaux*.
 

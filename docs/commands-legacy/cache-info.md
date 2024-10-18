@@ -52,4 +52,4 @@ You want to get cache information for the database and all opened components:
 
 #### See also 
 
-[GET MEMORY STATISTICS](get-memory-statistics.md)  
+[MEMORY STATISTICS](memory-statistics.md)  

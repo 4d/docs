@@ -94,7 +94,7 @@ displayed_sidebar: docs
                    ...
              End case
           End if
-          GET MOUSE($xCoord;$yCoord;$ButtonState)
+          MOUSE POSITION($xCoord;$yCoord;$ButtonState)
           $AlphaVar:=Dynamic pop up menu(<>menu_STYLEDTEXT;"";$xCoord;$yCoord)
           startSel:=-3
           endSel:=-3

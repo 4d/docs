@@ -30,7 +30,7 @@ Durante una transacción, [LOAD RECORD](load-record.md) y Locked se utilizan con
 
 #### Ver también 
 
-[Get locked records info](get-locked-records-info.md)  
+[Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Record Locking*  

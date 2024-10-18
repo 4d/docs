@@ -22,7 +22,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+:::info Compatibility
+
+This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
+#### Description 
 
 <!--REF #_command_.HTTP Request.Summary-->The **HTTP Request** command enables all types of HTTP requests to be sent to a specific URL and processes the HTTP server response.<!-- END REF-->
 
@@ -40,13 +46,13 @@ Pass the HTTP method of the request in the *httpMethod* parameter. You can use o
 
 Pass the URL where you want the request sent in the *url* parameter. The syntax to use is:  
 
-```RAW
+```
 http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
 For example, you can pass the following strings:  
 
-```RAW
+```
     http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
 ```
 

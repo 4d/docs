@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Tip:** このコマンドの使用には、上級のプログラミング知識が必要です。通常、イベントを用いて作業を実行する際に、**ON EVENT CALL** コマンドを使用する必要はありません。フォームの使用において、イベントは4Dによって管理され、適切なフォームやオブジェクトにイベントが送信されます。
 
-**Tip:** [GET MOUSE](get-mouse.md)や[Shift down](shift-down.md)等のコマンドを使用して、イベントに関する情報を取得できます。これらのコマンドをオブジェクトメソッドでコールし、オブジェクトに関連するイベントについての必要な情報を取得することができます。これらのコマンドにより、**ON EVENT CALL** コマンドをもとにしたアルゴリズムを作成する必要がなくなります。
+**Tip:** [MOUSE POSITION](mouse-position.md)や[Shift down](shift-down.md)等のコマンドを使用して、イベントに関する情報を取得できます。これらのコマンドをオブジェクトメソッドでコールし、オブジェクトに関連するイベントについての必要な情報を取得することができます。これらのコマンドにより、**ON EVENT CALL** コマンドをもとにしたアルゴリズムを作成する必要がなくなります。
 
 このコマンドのスコープは、現在の作業セッションです。デフォルトで、別々のローカルプロセス内でメソッドが実行されます。いちどに1つのイベント処理メソッドだけを使用できます。メソッドを用いたイベントの検知を中止するには、*eventMethod*に空の文字列を指定して再度**ON EVENT CALL** コマンドをコールします。
 
@@ -109,6 +109,6 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
 #### 参照 
 
 [FILTER EVENT](filter-event.md)  
-[GET MOUSE](get-mouse.md)  
+[MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  

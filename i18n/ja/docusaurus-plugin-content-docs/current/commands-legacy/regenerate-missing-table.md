@@ -31,8 +31,8 @@ displayed_sidebar: docs
  $SizeArray:=Size of array($arrMissingTables)
  If($SizeArray#0)
   // 配列をデータベース中のテーブル名で埋める
-    ARRAY TEXT(arrTables;Get last table number)
-    If(Get last table number>0) //テーブルが実際に存在すれば
+    ARRAY TEXT(arrTables;Last table number)
+    If(Last table number>0) //テーブルが実際に存在すれば
        For($vlTables;Size of array(arrTables);1;-1)
           If(Is table number valid($vlTables))
              arrTables{$vlTables}:=Table name($vlTables)

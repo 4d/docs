@@ -28,7 +28,7 @@ En el parámetro *proceso*, puede especificar el worker utilizando su nombre o s
 
 **Nota:** el **proceso principal**, creado por 4D para la interfaz de usuario y el modo de aplicación cuando se abre una base, es un proceso worker y puede ser llamado por **CALL WORKER**.Sin embargo, ya que su nombre puede variar en función del lenguaje de 4D, es preferible designar este proceso utilizando su número (siempre 1) cuando se utiliza **CALL WORKER**.
 
-El proceso worker aparece en la lista de procesos del Explorador de ejecución y es devuelto por el comando [PROCESS PROPERTIES](process-properties.md) cuando se aplica a este proceso.
+El proceso worker aparece en la lista de procesos del Explorador de ejecución y es devuelto por el comando [Process info](../commands/process-info.md) cuando se aplica a este proceso.
 
 En *formula*, designe el código 4D que se ejecutará en el contexto del proceso padre de *ventana*. Puede pasar:
 

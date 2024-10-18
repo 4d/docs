@@ -52,4 +52,4 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[GET MEMORY STATISTICS](get-memory-statistics.md)  
+[MEMORY STATISTICS](memory-statistics.md)  

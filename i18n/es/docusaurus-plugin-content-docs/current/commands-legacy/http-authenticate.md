@@ -16,6 +16,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidad
+
+Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomienda utilizar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
 #### Descripción 
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->El comando **HTTP AUTHENTICATE** permite efectuar peticiones HTTP a los servidores que necesitan la autenticación de la aplicación cliente.<!-- END REF--> Los métodos BASIC y DIGEST son compatibles, así como también la presencia de un proxy.  

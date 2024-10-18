@@ -56,7 +56,7 @@ Usted desea definir como lista de opciones de un menú emergente jerárquico una
 #### Ver también 
 
 [APPEND TO LIST](append-to-list.md)  
-[Get action info](get-action-info.md)  
+[Action info](action-info.md)  
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  

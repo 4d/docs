@@ -52,4 +52,4 @@ Vous souhaitez obtenir des informations sur la base courante et tous les composa
 
 #### Voir aussi 
 
-[GET MEMORY STATISTICS](get-memory-statistics.md)  
+[MEMORY STATISTICS](memory-statistics.md)  

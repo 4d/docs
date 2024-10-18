@@ -32,5 +32,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
+[Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  

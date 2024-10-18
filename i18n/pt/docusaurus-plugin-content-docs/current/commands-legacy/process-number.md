@@ -63,6 +63,6 @@ Com esta função, o método de projeto listado cola o texto recebido como parâ
 #### Ver também 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  

@@ -66,7 +66,7 @@ Ejecutar **SET TABLE TITLES** sin parámetros reiniciará toda la estructura vir
  var $Idioma : Text
  $Idioma:=$1
  
- For($vlTabla;1;Get last table number) //Pasar por cada tabla
+ For($vlTabla;1;Last table number) //Pasar por cada tabla
     If($vlTabla#(Table(->[Traducciones]))) //No traducir la tabla de traducciones
   //Verificar si existe una traducción de nombre de la tabla para el idioma especificado
        QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Idioma;*) //idioma deseado
@@ -152,7 +152,7 @@ con el método de proyecto TABLAS\_Y\_CAMPOS\_LOCALIZADOS:
  SET TABLE TITLES($asNombres;$aiNumeros)
  
   //Actualización de los nombres de campos
- $vlNumTabla:=Get last table number //Obtener el número de tablas en la base
+ $vlNumTabla:=Last table number //Obtener el número de tablas en la base
  For($vlTabla;1;$vlNumTabla) //Pasar por cada tabla
     If(Is table number valid($vlTabla))
        QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Idioma;*)
@@ -177,7 +177,7 @@ Desea eliminar todos los nombres de tablas y campos personalizados definidos:
 
 #### Ver también 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  

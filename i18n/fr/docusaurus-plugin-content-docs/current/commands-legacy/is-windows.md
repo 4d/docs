@@ -31,5 +31,5 @@ Vous voulez savoir si le système d'exploitation courant est Windows :
 
 #### Voir aussi 
 
-[Get system info](get-system-info.md)  
+[System info](system-info.md)  
 [Is macOS](is-macos.md)  

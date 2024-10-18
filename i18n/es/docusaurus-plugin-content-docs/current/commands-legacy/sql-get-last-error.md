@@ -32,5 +32,5 @@ Los dos últimos parámetros sólo se llenan cuando el error viene de la fuente 
 
 #### Ver también 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
+[Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  

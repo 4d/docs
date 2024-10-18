@@ -65,9 +65,9 @@ Vous développez une application 4D pour le marché international. Vous avez éc
 
 ```4d
  var $title;$yes;$no : Text
- $title:=Get localized string("add_Memo")
- $yes:=Get localized string("Yes")
- $no:=Get localized string("No")
+ $title:=Localized string("add_Memo")
+ $yes:=Localized string("Yes")
+ $no:=Localized string("No")
  CONFIRM($title;$yes;$no)
 ```
 

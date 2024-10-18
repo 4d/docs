@@ -62,6 +62,6 @@ Avec cette fonction, la méthode projet listée ci-dessous colle le texte reçu 
 #### Voir aussi 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
-[PROCESS PROPERTIES](process-properties.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  

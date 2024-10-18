@@ -58,7 +58,7 @@ Using Pasteboard commands and BLOBs, you can build sophisticated Cut/Copy/Paste 
   //Initialize the text variable that will hold the text image of the record
     $vtRecordData:=""
   // For each field of the record:
-    For($vlField;1;Get last field number($1))
+    For($vlField;1;Last field number($1))
   //Get the type of the field
        GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
   // Get a pointer to the field
@@ -168,7 +168,7 @@ You can paste this image of the record to another record, using the method GET R
   // Increment field number
                 $vlField:=$vlField+1
   // Pasteboard may contain more data than we need...
-                If($vlField<=Get last field number($vpTable))
+                If($vlField<=Last field number($vpTable))
   // Get the type of the field
                    GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
   // Get a pointer to the field

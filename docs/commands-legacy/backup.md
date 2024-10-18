@@ -34,6 +34,6 @@ If an incident occurs during backup, information about the incident is written i
 
 #### See also 
 
-[GET BACKUP INFORMATION](get-backup-information.md)  
+[BACKUP INFO](backup-info.md)  
 *On Backup Startup Database Method*  
 [RESTORE](restore.md)  

@@ -41,7 +41,7 @@ Is license available returns [False](false.md "False") if the plug-in is operati
 #### See also 
 
 [CHANGE LICENSES](change-licenses.md)  
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  

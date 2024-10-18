@@ -48,5 +48,5 @@ The current language of the database determines the .lproj folder where the prog
 
 #### See also 
 
-[Get localized document path](get-localized-document-path.md)  
+[Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  

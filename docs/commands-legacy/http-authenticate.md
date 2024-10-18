@@ -16,6 +16,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+
+:::info Compatibility
+
+This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
 #### Description 
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->The **HTTP AUTHENTICATE** command enables HTTP requests to servers requiring authentication of the client application.<!-- END REF--> The BASIC and DIGEST methods are supported, as well as the presence of a proxy.
@@ -40,11 +47,11 @@ By default, authentication information is stored temporarily and reused for each
 Examples of requests with authentication:
 
 ```4d
-  // Authentication on HTTP server in DIGEST mode
- HTTP AUTHENTICATE("httpUser";"123";2)
-  // Authentication on proxy in default mode
- HTTP AUTHENTICATE("ProxyUser";"456";*)
- $httpStatus:=HTTP Get(...)
+  // Authentication on HTTP server in DIGEST mode
+ HTTP AUTHENTICATE("httpUser";"123";2)
+  // Authentication on proxy in default mode
+ HTTP AUTHENTICATE("ProxyUser";"456";*)
+ $httpStatus:=HTTP Get(...)
 ```
 
 #### See also 

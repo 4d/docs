@@ -67,7 +67,7 @@ In your database, add the following table:
  var $Language : Text
  $Language:=$1
  
- For($vlTable;1;Get last table number) //Pass through each table
+ For($vlTable;1;Last table number) //Pass through each table
     If($vlTable#(Table(->[Translations]))) //Do not translate table of translations
   //Check if there is a translation of the table name for the specified language
        QUERY([Translations];[Translations]LanguageCode=$Language;*) //desired language
@@ -85,7 +85,7 @@ In your database, add the following table:
              SAVE RECORD([Translations])
           End if
  
-          For($vlField;1;Get last field number($vlTable))
+          For($vlField;1;Last field number($vlTable))
   //Check if there is a translation of the field name for the specified language
              QUERY([Translations];[Translations]LanguageCode=$Language;*) //desired language
              QUERY([Translations];&;[Translations]TableID=$vlTable;*) //table number
@@ -156,7 +156,7 @@ with the project method LOCALIZED TABLES AND FIELDS:
  SET TABLE TITLES($asNames;$aiNumbers)
  
   //Updating field names
- $vlTableNum:=Get last table number //Get number of tables in database
+ $vlTableNum:=Last table number //Get number of tables in database
  For($vlTable;1;$vlTableNum) //Pass through each table
     If(Is table number valid($vlTable))
        QUERY([Translations];[Translations]LanguageCode=$Language;*)
@@ -181,7 +181,7 @@ You want to remove all defined custom field and table names:
 
 #### See also 
 
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  

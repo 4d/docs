@@ -46,7 +46,7 @@ displayed_sidebar: docs
  var $i : Integer
  $ExportPath:=Select folder("書き出しフォルダーを選択:")
  If(OK=1)
-    For($i;1;Get last table number)
+    For($i;1;Last table number)
        If(Is table number valid($i))
           ExportBinary(Table($i);$ExportPath+Table name($i);True)
        End if
@@ -66,7 +66,7 @@ displayed_sidebar: docs
   // "$1"テーブルの全レコードまたはカレントセレクションを'4D'バイナリーフォーマットで書き出す。
  DOM SET XML ATTRIBUTE($ref;"table_no";Table($1);"format";"4D";"all_records";$3)
   // 書き出すフィールドの指定
- For($i;1;Get last field number($1))
+ For($i;1;Last field number($1))
     If(Is field number valid($1;$i))
        $elt:=DOM Create XML element($ref;"field";"table_no";Table($1);"field_no";$i)
     End if

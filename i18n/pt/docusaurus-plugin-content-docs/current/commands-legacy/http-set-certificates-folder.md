@@ -13,6 +13,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidade
+
+Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomendável usar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
 #### Descrição 
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Summary-->O comando **HTTP SET CERTIFICATES FOLDER** permite modificar a pasta de certificados cliente ativa para o conjunto dos processos na sessão atual.<!-- END REF-->

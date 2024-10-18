@@ -79,7 +79,7 @@ The following project method empties some or all of the fields for the current r
  Else
     $vlTypeFlags:=0xFFFFFFFF
  End if
- For($vlField;1;Get last field number($1))
+ For($vlField;1;Last field number($1))
     $vpField:=Field(Table($1);$vlField)
     $vlFieldType:=Type($vpField->)
     If($vlTypeFlags ??$vlFieldType )

@@ -47,7 +47,7 @@ L'instanciation d'un objet peut se faire de l'une des manières suivantes :
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../commands/file.md). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
+Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
 
 :::
 
@@ -163,7 +163,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
   Voici un exemple :
 
 ```4d
-     $measures:=Get database measures.DB.tables
+     $measures:=Database measures.DB.tables
 ```
 
 - **les méthodes projet** ou **les fonctions** qui retournent des objets.

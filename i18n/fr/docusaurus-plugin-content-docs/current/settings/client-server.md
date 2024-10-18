@@ -75,7 +75,7 @@ Cette liste déroulante contient 3 options de couche réseau : **Historique**, *
   **Notes** :
 
   - La sélection de cette option remplace l'option Utiliser l'ancienne couche réseau si elle a été définie à l'aide de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
-  - Vous pouvez savoir si une application 4D est en cours d'exécution avec une couche réseau QUIC en utilisant la commande [Get application info](https://doc.4d.com/4Dv20/help/command/page1599.html).
+  - Vous pouvez savoir si une application 4D est en cours d'exécution avec une couche réseau QUIC en utilisant la commande [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html).
   - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.
   - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
   - Lorsque l'option de couche QUIC est sélectionnée :

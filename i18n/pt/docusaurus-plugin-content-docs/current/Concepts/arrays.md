@@ -108,12 +108,12 @@ No seguinte exemplo, um ponteiro a cada campo de cada tabela do banco de dados s
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
   // Criar tantas linhas (vazias e sem colunas) como tabelas
- $vlLastTable:=Get last table number
+ $vlLastTable:=Last table number
  ARRAY POINTER(<>apFields;$vlLastTable;0) /Array 2D com X linhas e zero colunas
   // Para cada tabela
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
-       $vlLastField:=Get last field number($vlTable)
+       $vlLastField:=Last field number($vlTable)
   // Dar valor aos elementos
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)

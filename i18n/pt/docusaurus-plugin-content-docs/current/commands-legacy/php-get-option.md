@@ -14,6 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidade
+
+**PHP está obsoleto em 4D**. Recomenda-se usar a classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
 #### Descrição 
 
 <!--REF #_command_.PHP GET OPTION.Summary-->O comando PHP GET OPTION permite conhecer o valor atual de uma opção relativa à execução de scripts PHP.<!-- END REF--> 

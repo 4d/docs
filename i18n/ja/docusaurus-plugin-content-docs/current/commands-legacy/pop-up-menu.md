@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 ```4d
   // MY SPEED MENU プロジェクトメソッド
- GET MOUSE($vlMouseX;$vlMouseY;$vlButton)
+ MOUSE POSITION($vlMouseX;$vlMouseY;$vlButton)
  If(Macintosh control down|($vlButton=2))
     $vtItems:="About this database...<i;(-;!-other options;(-"=""     for($vltable;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltable))=""           $vtitems:="$vtItems+";"+Table" name($vltable)=""        end="" if=""     end="" for=""     $vluserchoice:="Pop" up="" menu($vtitems)=""     case="" of=""        :($vluserchoice="1)"   //="" display="" information=""   `オプションを表示する=""        else=""           if($vluserchoice="">0)
   //番号が $vlUserChoice-4 のテーブルに移動する
@@ -85,4 +85,4 @@ Windows上 (左) とMacintosh上 (右)で表示されるポップアップメニ
 #### 参照 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[GET MOUSE](get-mouse.md)  
+[MOUSE POSITION](mouse-position.md)  

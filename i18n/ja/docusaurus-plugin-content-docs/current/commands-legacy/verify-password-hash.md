@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 ##### エラー管理 
 
-以下のエラーが返される可能性があります。これらのエラーは[GET LAST ERROR STACK](get-last-error-stack.md) および [ON ERR CALL](on-err-call.md) コマンドで分析することができます。
+以下のエラーが返される可能性があります。これらのエラーは[Last errors](last-errors.md)  および [ON ERR CALL](on-err-call.md) コマンドで分析することができます。
 
 | **番号** | **メッセージ**                       |
 | ------ | ------------------------------- |

@@ -85,6 +85,6 @@ Depois de executar o código abaixo:
 
 #### Ver também 
 
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Get process activity](get-process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  

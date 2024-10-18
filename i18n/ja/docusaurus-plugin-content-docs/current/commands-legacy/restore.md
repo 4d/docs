@@ -32,4 +32,4 @@ RESTORE コマンドは*OK*および*Document*変数を更新します。復元�
 #### 参照 
 
 [BACKUP](backup.md)  
-[GET RESTORE INFORMATION](get-restore-information.md)  
+[RESTORE INFO](restore-info.md)  

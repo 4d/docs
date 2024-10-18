@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.START MONITORING ACTIVITY.Summary-->**START MONITORING ACTIVITY** コマンドは*duration* 引数で指定した時間を超えるオペレーションをメモリ内に記録します。<!-- END REF-->4D リモート、4D Server、スタンドアロン版4D から呼び出しまたは実行が可能です(ただしスタンドアロン版は*source* 引数のソースがネットワークアクティビティでない場合)。記録されたアクティビティは[Get Monitored Activity](get-monitored-activity.md) コマンドを使用することで取得可能です。アクティビティの記録を停止したい場合には[STOP MONITORING ACTIVITY](stop-monitoring-activity.md) を呼び出してください。
+<!--REF #_command_.START MONITORING ACTIVITY.Summary-->**START MONITORING ACTIVITY** コマンドは*duration* 引数で指定した時間を超えるオペレーションをメモリ内に記録します。<!-- END REF-->4D リモート、4D Server、スタンドアロン版4D から呼び出しまたは実行が可能です(ただしスタンドアロン版は*source* 引数のソースがネットワークアクティビティでない場合)。記録されたアクティビティは[Monitored activity](monitored-activity.md) コマンドを使用することで取得可能です。アクティビティの記録を停止したい場合には[STOP MONITORING ACTIVITY](stop-monitoring-activity.md) を呼び出してください。
 
 *duration* 引数には、オペレーションの実行に対してログが始まるまでの時間を定義する数値を渡します(秒単位、小数での表現も可能)。オペレーションの実行が*duration* 引数の時間を超えると、オペレーションはメモリに記録されます。
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
  $coll:=ds.Persons.all().toCollection("firstname, lastname, address.*")
  
   // 4D データアクティビティとデバッグログから1ミリ秒を超える全てのオペレーションを返す
- $activities:=Get Monitored Activity
+ $activities:=Monitored activity
  
  $text:=JSON Stringify($activities.orderBy("startTime");*)
  TEXT TO DOCUMENT("result.txt";$text)
@@ -90,5 +90,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get Monitored Activity](get-monitored-activity.md)  
+[Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  

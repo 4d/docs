@@ -67,5 +67,5 @@ Se um arquivo de histórico for gerado, seu nome de caminho completo é retornad
 
 #### Ver também 
 
-[Get table fragmentation](get-table-fragmentation.md)  
+[Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  

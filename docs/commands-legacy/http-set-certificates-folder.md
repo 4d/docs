@@ -13,6 +13,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibility
+
+This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+
+:::
+
 #### Description 
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Summary-->The **HTTP SET CERTIFICATES FOLDER** command modifies the active client certificates folder for all processes of the current session.<!-- END REF--> 

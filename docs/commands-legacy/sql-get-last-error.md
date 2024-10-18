@@ -32,5 +32,5 @@ The last two parameters are only filled when the error comes from the ODBC sourc
 
 #### See also 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
+[Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  

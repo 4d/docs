@@ -88,12 +88,12 @@ Although it is transparently handled by 4D, the SDI mode introduces small variat
 |`SHOW MENU BAR` / `HIDE MENU BAR`|Applied to the current form window only (from where the code is executed)|
 |`MAXIMIZE WINDOW`|The window is maximized to the screen size|
 |`CONVERT COORDINATES`|`XY Screen` is the global coordinate system where the main screen is positioned at (0,0). Screens on its left side or on top of it can have negative coordinates and any screens on its right side or underneath it can have coordinates greater than the values returned by `Screen height` or `Screen width`.|
-|`GET MOUSE`|Global coordinates are relative to the screen|
+|`MOUSE POSITION`|Global coordinates are relative to the screen|
 |`GET WINDOW RECT`|When -1 is passed in window parameter, the command returns 0;0;0;0|
 |`On Drop database method`|Not supported|
 
 :::info
 
-You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+You can use the [**Application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
 
 :::

@@ -27,10 +27,8 @@ displayed_sidebar: docs
 
 このコマンドは、[ON ERR CALL](on-err-call.md) コマンドでインストールされたエラー処理メソッド内から呼び出されている必要があります。
 
-**注意:** 同様の情報を配列として返す、[GET LAST ERROR STACK](get-last-error-stack.md) 旧式コマンドの説明も参照してください。
 
 #### 参照 
 
-[GET LAST ERROR STACK](get-last-error-stack.md)  
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  

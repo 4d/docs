@@ -28,7 +28,7 @@ In the *process* parameter, you can specify the worker using its process name or
 
 **Note:** The **main process**, created by 4D for the user interface and the application mode when a database is opened, is a worker process and can be called by **CALL WORKER**. However, since its name can vary depending on the 4D language, it is preferable to designate this process using its number (always 1) when you use **CALL WORKER**.
 
-The worker process appears in the list of processes of the Runtime Explorer and is returned by the [PROCESS PROPERTIES](process-properties.md) command when applied to this process.
+The worker process appears in the list of processes of the Runtime Explorer and is returned by the [Process info](../commands/process-info.md) command when applied to this process.
 
 In *formula*, you designate the 4D code to execute in the context of the worker process. You can pass either:
 

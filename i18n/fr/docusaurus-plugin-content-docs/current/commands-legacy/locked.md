@@ -30,7 +30,7 @@ Au cours d'une transaction, [LOAD RECORD](load-record.md) et **Locked** sont sou
 
 #### Voir aussi 
 
-[Get locked records info](get-locked-records-info.md)  
+[Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Verrouillage d'enregistrements*  

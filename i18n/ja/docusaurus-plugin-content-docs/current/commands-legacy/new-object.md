@@ -86,7 +86,7 @@ displayed_sidebar: docs
 
 ```4d
  var $measures : Object
- $measures:=Get database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
+ $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
 #### 例題 4 

@@ -35,6 +35,6 @@ Em caso de que ocorram incidentes durante o backup, a informação relativa ao i
 
 #### Ver também 
 
-[GET BACKUP INFORMATION](get-backup-information.md)  
+[BACKUP INFO](backup-info.md)  
 *Método de Banco de Dados On Backup Startup*  
 [RESTORE](restore.md)  

@@ -90,6 +90,6 @@ IP:port/4DACTION/action_Session
 
 ### See also
 
-[Session storage by ID](../commands-legacy/session-storage-by-id.md)  
+[Session storage](../commands-legacy/session-storage.md)  
 [Session API](../API/SessionClass.md)  
 [Web server user sessions](../WebServer/sessions.md)  

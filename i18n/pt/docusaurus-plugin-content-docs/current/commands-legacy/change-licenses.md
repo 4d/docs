@@ -38,5 +38,5 @@ Desta forma um usuário pode ativar licenças sem ter que modificar a base.
 
 #### Ver também 
 
-[Get license info](get-license-info.md)  
+[License info](license-info.md)  
 [Is license available](is-license-available.md)  

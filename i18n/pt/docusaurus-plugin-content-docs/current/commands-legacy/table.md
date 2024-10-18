@@ -58,5 +58,5 @@ Este exemplo, a variável *numTabela* é igual ao número da tabela a qual perte
 #### Ver também 
 
 [Field](field.md)  
-[Get last table number](get-last-table-number.md)  
+[Last table number](last-table-number.md)  
 [Table name](table-name.md)  

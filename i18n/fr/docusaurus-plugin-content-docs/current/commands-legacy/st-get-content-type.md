@@ -92,7 +92,7 @@ Vous souhaitez afficher des commandes d’un menu contextuel en fonction du type
                    ...
              End case
           End if
-          GET MOUSE($xCoord;$yCoord;$StateButton)
+          MOUSE POSITION($xCoord;$yCoord;$StateButton)
           $AlphaVar:=Dynamic pop up menu(<>menu_STYLEDTEXT;"";$xCoord;$yCoord)
           startSel:=-3
           endSel:=-3

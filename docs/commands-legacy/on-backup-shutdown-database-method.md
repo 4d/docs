@@ -24,7 +24,7 @@ The On Backup Shutdown database method allows verifying that the backup was exec
 * If the backup was interrupted by the user or following an error, *$1* is different from 0\.  
    * If the backup was stopped by the *On Backup Startup Database Method* (*$0* \# 0), *$1* gets the value actually returned in the *$0* parameter. This allows you to implement a customized error management system.  
    * If the backup was stopped due to an error, the error code is returned in *$1*.  
-In any case, you can get information about the error using the [GET BACKUP INFORMATION](get-backup-information.md) command.
+In any case, you can get information about the error using the [BACKUP INFO](backup-info.md) command.
 
 **Note**: You must declare the *$1* parameter (longint) in the database method:
 

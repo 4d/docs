@@ -32,7 +32,7 @@ In the *options* object, pass the properties to use when generating the password
 
 ##### Error management 
 
-The following errors may be returned. You can review an error with the [GET LAST ERROR STACK](get-last-error-stack.md) and [ON ERR CALL](on-err-call.md) commands.  
+The following errors may be returned. You can review an error with the [Last errors](last-errors.md)  and [ON ERR CALL](on-err-call.md) commands.  
 
 | **Number** | **Message**                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------ |

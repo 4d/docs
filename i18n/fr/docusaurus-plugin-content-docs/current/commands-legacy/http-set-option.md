@@ -14,6 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilité
+
+Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../API/HTTPRequestClass.md).
+
+:::
+
 #### Description 
 
 <!--REF #_command_.HTTP SET OPTION.Summary-->La commande **HTTP SET OPTION** permet de définir différentes options qui seront utilisées lors de la prochaine requête HTTP déclenchée par les commandes [HTTP Get](http-get.md) ou [HTTP Request](http-request.md).<!-- END REF--> Vous pouvez appeler cette commande autant de fois qu’il y a d’options à fixer. 

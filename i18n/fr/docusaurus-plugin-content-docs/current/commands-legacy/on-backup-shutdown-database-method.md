@@ -24,7 +24,7 @@ La **On Backup Shutdown database method** permet de vérifier que la sauvegarde 
 * Si la sauvegarde a été interrompue à la suite d'une erreur ou par l'utilisateur, *$1* est différent de 0.  
    * Si la sauvegarde a été stoppée par la *Méthode base Sur démarrage sauvegarde* (*$0* \# 0), *$1* retourne le code effectivement retourné dans le paramètre *$0*. Ce principe vous permet de mettre en place un système de gestion d’erreurs personnalisé.  
    * Si la sauvegarde a été stoppée à la suite d'une erreur, le code de l'erreur est retourné dans *$1*.  
-Dans tous les cas, vous pouvez obtenir des informations sur l'erreur à l’aide de la commande [GET BACKUP INFORMATION](get-backup-information.md).
+Dans tous les cas, vous pouvez obtenir des informations sur l'erreur à l’aide de la commande [BACKUP INFO](backup-info.md).
 
 **Note** : Vous devez impérativement déclarer le paramètre *$1* (entier long) dans la méthode base :
 

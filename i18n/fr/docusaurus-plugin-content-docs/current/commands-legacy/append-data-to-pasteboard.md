@@ -58,7 +58,7 @@ A l'aide des commandes du thème Conteneur de données et des BLOBs, vous pouvez
   // Initialiser la variable Texte qui contiendra l'image de texte de l'enregistrement
     $vtDonnéesEnregistrement:=""
   // For each champ de l'enregistrement :
-    For($vlChamp;1;Get last field number($1))
+    For($vlChamp;1;Last field number($1))
   // Obtenir le type du champ
        GET FIELD PROPERTIES($1;$vlChamp;$vlTypeChamp)
   // Obtenir un pointeur vers le champ
@@ -162,7 +162,7 @@ Vous pouvez coller cette image de l'enregistrement dans un autre enregistrement,
   // Incrémenter le numéro du champ
                 $vlChamp:=$vlChamp+1
   // Le Presse-papiers peut contenir plus de données dont nous n'avons pas besoin...
-                If($vlChamp<=Get last field number($vpTable))
+                If($vlChamp<=Last field number($vpTable))
   // Obtenir le type du champ
                    GET FIELD PROPERTIES($1;$vlChamp;$vlTypeChamp)
   // Obtenir un pointeur vers le champ

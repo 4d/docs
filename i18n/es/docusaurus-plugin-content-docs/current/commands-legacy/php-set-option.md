@@ -15,6 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilidad
+
+**PHP es obsoleto en 4D**. Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
 #### Descripción 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->El comando **PHP SET OPTION** se utiliza para definir opciones específicas antes de llamar el comando [PHP Execute](php-execute.md).<!-- END REF--> El alcance de este comando es el proceso actual.
