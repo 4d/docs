@@ -28,6 +28,8 @@ L’utilisateur peut modifier la *formule* affichée et la sauvegarder. Il peut 
 
 * Par défaut, l'accès aux méthodes et aux commandes est restreint dans l'éditeur de formules pour tous les utilisateurs (sauf, dans les bases de données créées avec 4D 2004.4 et suivantes, pour le Super\_Utilisateur et l’Administrateur). Lorsque ce mécanisme est actif, vous devez explicitement désigner les éléments accessibles aux utilisateurs à l’aide de la commande [SET ALLOWED METHODS](set-allowed-methods.md). Si la formule fait appel à des méthodes qui n’ont pas été préalablement autorisées, une erreur de syntaxe est générée et il n’est pas possible de valider la boîte de dialogue.
 * L'éditeur de formules n'est associé à aucune barre de menus par défaut. L'équivalent d'un menu **Edition** standard doit être installé dans le process appelant si vous souhaitez que l'utilisateur bénéficie des raccourcis couper / copier / coller dans l'éditeur de formules.
+* La structure virtuelle éventuellement définie par les commandes [FIXER TITRES TABLES](set-table-titles.md) et FIXER TITRES CHAMPS(set-field-titles.md) ne doit pas être utilisée dans la variable *formule* - elle ne sera pas non plus utilisée par 4D dans la variable retournée. La structure virtuelle n'est utilisée que dans la boîte de dialogue de l'éditeur de formules. 
+
 
 A noter qu’au moment de la validation de la boîte de dialogue, la commande n’exécute pas la *formule*, seul le contenu de la variable est validé et mis à jour. Si vous voulez exécuter la *formule*, vous devez utiliser la commande [EXECUTE FORMULA](execute-formula.md).
 

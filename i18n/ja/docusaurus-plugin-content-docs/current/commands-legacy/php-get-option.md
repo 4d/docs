@@ -14,6 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info 互換性
+
+**4D のビルトインPHPインタープリターは削除されました**。[`4D.SystemWorkerクラス`](../API/SystemWorkerClass.md) を使用して外部PHPインタープリターをご利用ください。
+
+:::
+
 #### 説明 
 
 <!--REF #_command_.PHP GET OPTION.Summary-->PHP GET OPTION コマンドを使用して、PHPスクリプトの実行に関連するオプションの現在値を取得できます。<!-- END REF-->

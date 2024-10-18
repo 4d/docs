@@ -22,6 +22,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info 互換性
+
+このコマンドは互換性のためだけに維持されています。現在は [`4D.HTTPRequest クラス`](../API/HTTPRequestClass.md) を使用することが推奨されています。
+
+:::
+
 #### 
 
 <!--REF #_command_.HTTP Request.Summary-->**HTTP Request**コマンドは指定したURLに任意のメソッドでHTTPリクエストを送信し、HTTPサーバーのレスポンスを処理することを可能にします。<!-- END REF-->

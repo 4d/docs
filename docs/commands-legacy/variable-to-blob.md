@@ -36,7 +36,7 @@ VARIABLE TO BLOB accepts any type of variable (including other BLOBs), except th
 Note that:
 
 * if you store a Long Integer variable that is a reference to a hierarchical list (ListRef), VARIABLE TO BLOB stores the Long Integer variable, not the list. To store and retrieve hierarchical lists in and from a BLOB, use the [LIST TO BLOB](list-to-blob.md) and [BLOB to list](blob-to-list.md) commands.
-* if you pass an object or a collection in the *variable* parameter, the command places a copy (and not a reference) of it in the BLOB as JSON in UTF-8\. If the object or collection contains pointers, their dereferenced values are stored in the BLOB, not the pointers themselves.
+* if you pass an object or a collection in the *variable* parameter, the command places a copy (and not a reference) of it in the BLOB. If the object or collection contains pointers, their dereferenced values are stored in the BLOB, not the pointers themselves.
 
 **WARNING:** If you use a BLOB for storing variables, you must later use the command [BLOB TO VARIABLE](blob-to-variable.md) for reading back the contents of the BLOB, because variables are stored in BLOBs using a 4D internal format.
 

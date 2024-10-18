@@ -36,7 +36,7 @@ Après l'exécution de la commande, la variable du paramètre *offset* est incr�
 A noter que :
 
 * si vous stockez une variable de type Entier long qui est une référence à une liste hiérarchique (ListRef), **VARIABLE TO BLOB** stockera la variable Entier long, pas la liste. Pour stocker et récupérer des listes hiérarchiques dans un BLOB, utilisez les commandes [LIST TO BLOB](list-to-blob.md) et [BLOB to list](blob-to-list.md).
-* si vous passez dans le paramètre *variable* un objet [C\_OBJECT](c-object.md) ou une collection [C\_COLLECTION](c-collection.md), la commande en place une copie (et non une référence) dans le BLOB sous la forme JSON en utf-8\. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont stockées dans le BLOB, pas les pointeurs eux-mêmes.
+* si vous passez dans le paramètre *variable* un objet ou une collection, la commande en place une copie (et non une référence) dans le BLOB. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont stockées dans le BLOB, pas les pointeurs eux-mêmes.
 
 **ATTENTION :** Si vous utilisez un BLOB pour stocker les variables, utilisez par la suite la commande [BLOB TO VARIABLE](blob-to-variable.md) pour récupérer le contenu du BLOB car les variables sont stockées dans les BLOBs avec un format interne à 4D.
 

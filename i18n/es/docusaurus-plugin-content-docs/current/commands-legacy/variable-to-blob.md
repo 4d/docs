@@ -36,7 +36,7 @@ VARIABLE TO BLOB acepta todo tipo de variables (incluyendo otros BLOBs), excepto
 Note que:
 
 * si guarda una variable de tipo Entero largo que es una referencia a una lista jerárquica (ListRef), VARIABLE TO BLOB guardará la variable Entero largo, no la lista. Para guardar y recuperar las listas jerárquicas en un BLOB, utilice los comandos [LIST TO BLOB](list-to-blob.md) y [BLOB to list](blob-to-list.md).
-* si pasa un objeto [C\_OBJECT](c-object.md) o una colección [C\_COLLECTION](c-collection.md)) en el parámetro *variable*, el comando ubica una copia (y no una referencia) en el BLOB como JSON en UTF-8\. Si el objeto o colección contiene punteros, los valores no referenciados se guardan en el BLOB, no los punteros mismos.
+* si pasa un objeto o una colección en el parámetro *variable*, el comando ubica una copia (y no una referencia) en el BLOB. Si el objeto o colección contiene punteros, los valores no referenciados se guardan en el BLOB, no los punteros mismos.
 
 Sin embargo, si almacena una variable de tipo [Entero largo](# "Entre -2 millardos y +2 millardos") que es una referencia a una lista jerárquica ([ListRef](# "Una referencia a una lista jerárquica")), VARIABLE TO BLOB almacenará la variable [Entero largo](# "Entre -2 millardos y +2 millardos"), no la lista. Para guardar y recuperar las listas jerárquicas en un BLOB, utilice los comandos [LIST TO BLOB](list-to-blob.md) y [BLOB to list](blob-to-list.md).
 

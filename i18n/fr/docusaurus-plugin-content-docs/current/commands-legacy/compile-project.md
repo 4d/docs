@@ -42,7 +42,7 @@ Les erreurs de compilation, le cas échéant, sont retournées sous forme d'obje
 
 Le paramètre *options* est un objet. Voici les options de compilation disponibles :
 
-| **Propriété**          | **Type**              | **Descriptio**n                                                                                                                                                                                                                                                        |
+| **Propriété**          | **Type**              | **Description**                                                                                                                                                                                                                                                        |
 | ---------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | components             | Collection            | Collection d'objets 4D.File vers des composants dépendants (doit être déjà compilé)                                                                                                                                                                                    |
 | defaultTypeForButtons  | Entier                | Valeur possible : Is real ou Is longint                                                                                                                                                                                                                                |
@@ -50,15 +50,15 @@ Le paramètre *options* est un objet. Voici les options de compilation disponibl
 | generateSymbols        | Booléen               | Vrai pour générer des informations de symbole dans l'objet retourné .symbol                                                                                                                                                                                            |
 | generateSyntaxFile     | Booléen               | Vrai pour générer un fichier de syntaxe pour la complétion de code dans le dossier \\Resources\\en.lproj du projet.                                                                                                                                                    |
 | generateTypingMethods  | Chaîne                | "reset" ou "append" pour générer des méthodes de typage. Si la valeur est "append", les déclarations de variables existantes ne seront pas modifiées (comportement de la fenêtre du compilateur)                                                                       |
-| plugins                | Objet 4D.Folder       | Dossier Plug-ins à utiliser en lieu et place du [Dossier Plugins du projet courant](https://developer.4d.com/docs/fr/Project/architecture#plugins). Cette propriété est disponible uniquement avec la syntaxe utilisant *projectFile*.                                 |
-| targets                | collection de chaînes | Valeurs possibles : "x86\_64\_generic", "arm64\_macOS\_lib". Passez une collection vide pour exécuter une vérification de syntaxe uniquement                                                                                                                           |
+| plugins                | Objet 4D.Folder       | Dossier Plug-ins à utiliser en lieu et place du [Dossier Plugins du projet courant](../Project/architecture.md#plugins). Cette propriété est disponible uniquement avec la syntaxe utilisant *projectFile*.                                 |
+| targets                | collection de chaînes | Valeurs possibles : "x86\_64\_generic", "arm64\_macOS\_lib". Passez une collection vide pour exécuter une vérification de syntaxe uniquement    |
 | typeInference          | Chaîne                | "all": le compilateur déduit les types de toutes les variables non déclarées explicitement "locals": le compilateur déduit les types des variables locales non déclarées explicitement, "none": Toutes les variables doivent être explicitement déclarées dans le code |
-| warnings               | Collection d'objets   | Définit l'état des avertissements                                                                                                                                                                                                                                      |
-| \[\].major             | Numérique             | Avertissement numéro principal, avant le point                                                                                                                                                                                                                         |
-| \[\].minor             | Numérique             | Avertissement deuxième numéro, après le point                                                                                                                                                                                                                          |
-| \[\].enabled           | Booléen               | État d'activation de l'avertissement                                                                                                                                                                                                                                   |
+| warnings               | Collection d'objets   | Définit l'état des warnings   |
+| \[\].major             | Numérique             | numéro warning principal, avant le point                                                                           |
+| \[\].minor             | Numérique             | numéro warning secondaire, après le point                                                                             |
+| \[\].enabled           | Booléen               | État d'activation du warning |
 
-**Note :** Lorsque l'attribut *warnings* n'est pas défini dans l'objet options, la commande **Compile project** utilise les statuts de génération d'avertissement par défaut définis dans les paramètres.
+**Note :** Lorsque l'attribut *warnings* n'est pas défini dans l'objet options, la commande **Compile project** utilise les statuts de génération des warnings par défaut définis dans les paramètres.
 
 ##### Function result 
 
@@ -110,7 +110,7 @@ La propriété *code* dans **methods\[ \].code** et **errors\[ \].code** est un 
 
 | **Propriété**                                        | **Type**  | **Description**                                                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type                                                 | Chaîne    | "projectMethod", "formObjectMethod", <li<"formmethod",< li=""> "databaseMethod", "triggerMethod", "executeOnServer" (lors de l'appel de la méthode projet avec *Attribut Exécuter sur serveur*.), "executeFormula" (lors de l'exécution d'une formule via [PROCESS 4D TAGS](process-4d-tags.md) ou l'évaluation d'une formule dans un document 4D Write Pro.)"class""classFunction"</li<"formmethod",<> |
+| type                                                 | Chaîne    | "projectMethod", "formObjectMethod", "formmethod", "databaseMethod", "triggerMethod", "executeOnServer" (lors de l'appel de la méthode projet avec *Attribut Exécuter sur serveur*.), "executeFormula" (lors de l'exécution d'une formule via [PROCESS 4D TAGS](process-4d-tags.md) ou l'évaluation d'une formule dans un document 4D Write Pro.), "class","classFunction", "formmethod" |
 | path                                                 | Chaîne    | Chemin de méthode (format identique à celui de [METHOD OPEN PATH](method-open-path.md))                                                                                                                                                                                                                                                                                                                 |
 | file                                                 | 4D.File   | Fichier méthode                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Retournée selon la valeur de propriété du type :** |           |                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -171,8 +171,11 @@ Compilez un projet et déclarez son composant :
 
 Désactivez les avertissements 518.1 et 518.2 lors de la compilation de votre projet :
 
-```RAW
-var $options:={}$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})$options.warnings.push({major: 518; minor: 2; enabled: False})var $result:=Compile project($options)
+```4d
+var $options:={}
+$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})
+$options.warnings.push({major: 518; minor: 2; enabled: False})
+var $result:=Compile project($options)
 ```
 
 #### Voir aussi 

@@ -36,7 +36,7 @@ VARIABLE TO BLOB aceita qualquer tipo de variável (incluindo outros BLOBs), exc
 Note que:
 
 * Se guardar uma variável de tipo Inteiro longo que é uma referência a uma lista hierárquica (ListRef), VARIABLE TO BLOB guardará a variável Inteiro longo, não a lista. Para guardar e recuperar as listas hierárquicas em um BLOB, utilize os comandos [LIST TO BLOB](list-to-blob.md) e [BLOB to list](blob-to-list.md).
-* Se passar um objeto [C\_OBJECT](c-object.md) ou uma coleção ([C\_COLLECTION](c-collection.md))no parâmetro *variavel*, o comando põe uma cópia (e não uma referência) no BLOB como JSON em UTF-8\. Se o objeto contém ponteiros, os valores não referenciados são guardados no BLOB, não os ponteiros mesmos.
+* Se passar um objeto ou uma coleção no parâmetro *variavel*, o comando põe uma cópia (e não uma referência) no BLOB. Se o objeto contém ponteiros, os valores não referenciados são guardados no BLOB, não os ponteiros mesmos.
 
 **ATENÇÃO:** Se você usar um BLOB para armazenar as variáveis, você deve usar mais tarde o comando [BLOB TO VARIABLE](blob-to-variable.md) para reler o conteúdo do BLOB, pois as variáveis são armazenadas em BLOBs usando um formato interno de 4D.
 

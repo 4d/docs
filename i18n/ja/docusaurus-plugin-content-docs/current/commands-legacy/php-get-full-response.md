@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info 互換性
+
+**4D のビルトインPHPインタープリターは削除されました**。[`4D.SystemWorkerクラス`](../API/SystemWorkerClass.md) を使用して外部PHPインタープリターをご利用ください。
+
+:::
+
 #### 説明 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->PHP GET FULL RESPONSE コマンドを使用して PHPインタープリターから返されるレスポンスに関する追加の情報を取得できます。<!-- END REF--> このコマンドは特にスクリプトの実行中にエラーが発生したときに有効です。

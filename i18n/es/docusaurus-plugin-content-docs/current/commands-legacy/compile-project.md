@@ -111,7 +111,7 @@ La propiedad *code* en **methods\[ \].code** y **errors\[ \].code** es un objeto
 
 | **Propiedad**                                               | **Tipo** | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type                                                        | Cadena   | "projectMethod", "formObjectMethod", <li<"formmethod",< li=""> "databaseMethod", "triggerMethod", "executeOnServer" (cuando se llama a un método del proyecto con el *Atributo Ejecutar en servidor*.), "executeFormula" (cuando se ejecuta una fórmula a través de [PROCESS 4D TAGS](process-4d-tags.md) o la evaluación de una fórmula en un documento de 4D Write Pro.)"class""classFunction"</li<"formmethod",<> |
+| type                                                        | Cadena   | "projectMethod", "formObjectMethod", "formmethod","databaseMethod", "triggerMethod", "executeOnServer" (cuando se llama a un método del proyecto con el *Atributo Ejecutar en servidor*.), "executeFormula" (cuando se ejecuta una fórmula a través de [PROCESS 4D TAGS](process-4d-tags.md) o la evaluación de una fórmula en un documento de 4D Write Pro.), "class", "classFunction"|
 | path                                                        | Cadena   | Ruta del método (mismo formato que [METHOD OPEN PATH](method-open-path.md))                                                                                                                                                                                                                                                                                                                                          |
 | file                                                        | 4D.File  | Archivo método                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Se devuelve en función del valor de propiedad del tipo:** |          |                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -174,7 +174,11 @@ Compila un proyecto y declara su componente:
 Desactiva las advertencias 518.1 y 518.2 al compilar su proyecto:  
   
 ```RAW
-var $options:={}$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})$options.warnings.push({major: 518; minor: 2; enabled: False})var $result:=Compile project($options)
+var $options:={}
+$options.warnings:=[]
+$options.warnings.push({major: 518; minor: 1; enabled: False})
+$options.warnings.push({major: 518; minor: 2; enabled: False})
+var $result:=Compile project($options)
 ```
 
 #### Ver también 

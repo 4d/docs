@@ -108,7 +108,7 @@ interprocessVariables.variables および processVariables.variables には以�
 
 | **プロパティ**                                                 | **型**   | **詳細**                                                                                                                                                                                                                                                                                                           |
 | --------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type                                                      | 文字列     | "projectMethod", "formObjectMethod", <li<"formmethod",< li=""> "databaseMethod", "triggerMethod", "executeOnServer" (*サーバー上で実行属性* をつけてプロジェクトメソッドを呼び出した場合), "executeFormula" (フォーミュラを[PROCESS 4D TAGS](process-4d-tags.md) 経由で実行した、または4D Write Pro ドキュメント内でフォーミュラを評価した)"class""classFunction"</li<"formmethod",<> |
+| type                                                      | 文字列     | "projectMethod", "formObjectMethod", "formmethod","databaseMethod", "triggerMethod", "executeOnServer" (*サーバー上で実行属性* をつけてプロジェクトメソッドを呼び出した場合), "executeFormula" (フォーミュラを[PROCESS 4D TAGS](process-4d-tags.md) 経由で実行した、または4D Write Pro ドキュメント内でフォーミュラを評価した),"class", "classFunction"|
 | path                                                      | 文字列     | メソッドパス([METHOD OPEN PATH](method-open-path.md) と同じフォーマット)                                                                                                                                                                                                                                                        |
 | file                                                      | 4D.File | メソッドファイル                                                                                                                                                                                                                                                                                                         |
 | **Returned depending on the value of the type property:** |         |                                                                                                                                                                                                                                                                                                                  |
@@ -169,8 +169,12 @@ Silicon Mac 上において、カレントのプロジェクトをARM のみに�
 
 プロジェクトをコンパイルするときに、518.1と518.2の警告を無効化してコンパイルする場合:  
   
-```RAW
-var $options:={}$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})$options.warnings.push({major: 518; minor: 2; enabled: False})var $result:=Compile project($options)
+```4d
+var $options:={}
+$options.warnings:=[]
+$options.warnings.push({major: 518; minor: 1; enabled: False})
+$options.warnings.push({major: 518; minor: 2; enabled: False})
+var $result:=Compile project($options)
 ```
 
 #### 参照 

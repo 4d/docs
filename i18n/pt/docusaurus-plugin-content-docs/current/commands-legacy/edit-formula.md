@@ -28,6 +28,7 @@ O usuário pode modificar e guardar a *formula* mostrada. Também é possível e
 
 * por padrão, o acesso aos métodos e aos comandos está restrito para os usuários (exceto para o Desenhista (designer) e Administrador, em bancos de dados criadas com 4D 2004.4 e posteriores). Quando este mecanismo estiver ativado, você deve designar explicitamente os elementos acessíveis aos usuários utilizando o comando [SET ALLOWED METHODS](set-allowed-methods.md). Se a *formula* chama métodos que não foram autorizados previamente no editor de fórmulas utilizando o comando [SET ALLOWED METHODS](set-allowed-methods.md), é gerado um erro de sintaxe e não poderá validar a caixa de diálogo.
 * O editor de fórmula não está associado com qualquer barra de menu por padrão. É preciso instalar um menu padrão Edit no processo de chamada se quiser que os usuários possam se beneficiar de atalhos cortar/copiar/pegar no editor de fórmula.
+* A estrutura virtual definida pelos comandos [SET TABLE TITLES](set-table-titles.md) e [SET FIELD TITLES](set-field-titles.md) (se houver) não pode ser usada na variável fórmula - nem será usada por 4D na variável retornada. A estrutura virtual é usada apenas na caixa de diálogo editor Fórmula. 
 
 Lembre que quando se valida a caixa de diálogo, o comando não executa a *formula*; só valida e atualiza o conteúdo da variável. Se quer executar a *formula*, deve utilizar o comando [EXECUTE FORMULA](execute-formula.md) . 
 

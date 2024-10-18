@@ -14,6 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info 互換性
+
+このコマンドは互換性のためだけに維持されています。現在は [`4D.HTTPRequest クラス`](../API/HTTPRequestClass.md) を使用することが推奨されています。
+
+:::
+
 #### 説明 
 
 <!--REF #_command_.HTTP SET OPTION.Summary-->**HTTP SET OPTION**コマンドは ([HTTP Get](http-get.md)や[HTTP Request](http-request.md)コマンドで実行される次のリクエストでクライアントにより使用される) HTTPオプションの値を設定します。<!-- END REF-->設定するオプションの数だけこのコマンドを呼び出します。

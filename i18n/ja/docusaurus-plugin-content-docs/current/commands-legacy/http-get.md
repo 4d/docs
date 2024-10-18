@@ -20,6 +20,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info 互換性
+
+このコマンドは互換性のためだけに維持されています。現在は [`4D.HTTPRequest クラス`](../API/HTTPRequestClass.md) を使用することが推奨されています。
+
+:::
+
+
 #### 説明 
 
 <!--REF #_command_.HTTP Get.Summary-->**HTTP Get**コマンドは指定したURLにHTTP GETリクエストを送信し、HTTPサーバーからのレスポンスを処理します。<!-- END REF-->

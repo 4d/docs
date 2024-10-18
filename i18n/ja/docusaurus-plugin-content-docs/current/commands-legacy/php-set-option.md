@@ -15,6 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info 互換性
+
+**4D のビルトインPHPインタープリターは削除されました**。[`4D.SystemWorkerクラス`](../API/SystemWorkerClass.md) を使用して外部PHPインタープリターをご利用ください。
+
+:::
+
 #### 説明 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->**PHP SET OPTION** コマンドを使用して、[PHP Execute](php-execute.md) コマンド呼び出し前に、特定のオプションを設定することができます。<!-- END REF-->このコマンドのスコープはカレントプロセスです。

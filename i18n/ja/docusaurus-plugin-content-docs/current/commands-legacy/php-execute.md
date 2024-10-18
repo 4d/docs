@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info 互換性
+
+**4D のビルトインPHPインタープリターは削除されました**。[`4D.SystemWorkerクラス`](../API/SystemWorkerClass.md) を使用して外部PHPインタープリターをご利用ください。
+
+:::
+
 #### 説明 
 
 <!--REF #_command_.PHP Execute.Summary-->**PHP Execute**コマンドはPHPスクリプトや関数を実行するために使用します。<!-- END REF-->.

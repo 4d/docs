@@ -42,7 +42,7 @@ Compilation errors, if any, are returned as objects in the *errors* collection.
 
 The *options* parameter is an object. Here are the available compilation options:
 
-| **Property**           | **Type**              | **Descriptio**n                                                                                                                                                                                                               |
+| **Property**           | **Type**              | **Description**                                                                                                                                                                                                               |
 | ---------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | components             | Collection            | Collection of 4D.File objects to dependent components (must be already compiled)                                                                                                                                              |
 | defaultTypeForButtons  | Integer               | Possible value: Is real or Is longint                                                                                                                                                                                         |
@@ -110,7 +110,7 @@ The *code* property in **methods\[ \].code** and **errors\[ \].code** is an obje
 
 | **Property**                                              | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type                                                      | String   | "projectMethod", "formObjectMethod", <li<"formmethod",< li=""> "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*.), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](process-4d-tags.md) or the evaluation of a formula in a 4D Write Pro document.)"class""classFunction"</li<"formmethod",<> |
+| type                                                      | String   | "projectMethod", "formObjectMethod", "formmethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*.), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](process-4d-tags.md) or the evaluation of a formula in a 4D Write Pro document.); "class", "classFunction"|
 | path                                                      | String   | Method path (same format as [METHOD OPEN PATH](method-open-path.md))                                                                                                                                                                                                                                                                                                                    |
 | file                                                      | 4D.File  | Method file                                                                                                                                                                                                                                                                                                                                                                             |
 | **Returned depending on the value of the type property:** |          |                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -171,8 +171,12 @@ Compile a project and declare its component:
 
 Disable warnings 518.1 and 518.2 when compiling your project:  
   
-```RAW
-var $options:={}$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})$options.warnings.push({major: 518; minor: 2; enabled: False})var $result:=Compile project($options)
+```4d
+var $options:={}
+$options.warnings:=[]
+$options.warnings.push({major: 518; minor: 1; enabled: False})
+$options.warnings.push({major: 518; minor: 2; enabled: False})
+var $result:=Compile project($options)
 ```
 
 #### See also 
