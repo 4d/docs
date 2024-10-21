@@ -71,7 +71,7 @@ Dans cet exemple, l'objet affecté à la variable $o n'a pas de propriété *f*,
 
 Dans le contexte de l'exécution d'un objet formule créé par les commandes [Formula](formula.md) ou [Formula from string](formula-from-string.md), `This` renvoie une référence à l'objet en cours de traitement par la formule.
 
-For example, you want to use a project method as a formula encapsulated in an object:
+Par exemple, vous souhaitez utiliser une méthode projet en tant que formule encapsulée dans un objet :
 
 ```4d
  var $person : Objet := New object
