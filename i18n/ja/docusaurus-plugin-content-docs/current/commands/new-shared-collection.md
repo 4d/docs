@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | 引数    | 型                                                                   |                            | 説明                    |
 | ----- | ------------------------------------------------------------------- | -------------------------- | --------------------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &#8594 | 共有コレクションの値            |
-| 戻り値   | コレクション                                                              | &#8592 | New shared collection |
+| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &#8594; | 共有コレクションの値            |
+| 戻り値   | コレクション                                                              | &#8592; | New shared collection |
 
 <!-- END REF-->
 
