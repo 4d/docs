@@ -19,11 +19,11 @@ displayed_sidebar: docs
 
 | Parâmetro      | Tipo                       |                            | Descrição                                                         |
 | -------------- | -------------------------- | :------------------------: | ----------------------------------------------------------------- |
-| path           | Text                       | &#8594 | Folder path                                                       |
+| path           | Text                       | &#8594; | Folder path                                                       |
 | folderConstant | Integer                    | &#8594 | Constante Pasta 4D                                                |
 | pathType       | Integer                    | &#8594 | `fk posix path` (padrão) ou `fk platform path` |
 | \*             | operator                   | &#8594 | \* para devolver a pasta da base de dados do anfitrião            |
-| Resultados     | 4D. Folder | &#8592 | Novo Objeto Folder                                                |
+| Resultados     | 4D. Folder | &#8592; | Novo Objeto Folder                                                |
 
 <!-- END REF -->
 
