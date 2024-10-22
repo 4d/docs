@@ -12,14 +12,14 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId * : Integer ) : Object<!-- END REF -->
+<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #_command_.Session info.Params -->
 
 | Parámetros | Tipo    |                            | Descripción                   |
 | ---------- | ------- | :------------------------: | ----------------------------- |
-| sessionID  | Integer | &#8594 | Session ID                    |
-| Result     | Object  | &#8592 | Information about the session |
+| sessionID  | Integer | &#8594; | Session ID                    |
+| Result     | Object  | &#8592; | Information about the session |
 
 <!-- END REF -->
 
@@ -48,7 +48,7 @@ This command returns the [`.info`](../API/SessionClass.md#info) property of the 
 
 :::
 
-Here is an example of output object:
+He aquí un ejemplo de objeto de salida:
 
 ```json
 
