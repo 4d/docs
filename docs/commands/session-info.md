@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId * : Integer ) : Object<!-- END REF -->
+<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
 
 
 <!-- REF #_command_.Session info.Params -->
