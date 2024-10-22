@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo   |                            | Descripción               |
 | ---------- | ------ | -------------------------- | ------------------------- |
-| Resultado  | Object | &#8592 | Current element or object |
+| Resultado  | Object | &#8592; | Current element or object |
 
 <!-- END REF-->
 
