@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | 引数  | 型      |                            | 説明                                             |
 | --- | ------ | -------------------------- | ---------------------------------------------- |
-| 戻り値 | コレクション | &#8592 | Collection of the available Web Server objects |
+| 戻り値 | コレクション | &#8592; | Collection of the available Web Server objects |
 
 <!-- END REF-->
 
