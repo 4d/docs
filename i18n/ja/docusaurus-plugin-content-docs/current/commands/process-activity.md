@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 | 引数        | 型      |                            | 説明                                                                                     |
 | --------- | ------ | -------------------------- | -------------------------------------------------------------------------------------- |
-| sessionID | テキスト   | &#8594 | Session ID                                                                             |
+| sessionID | テキスト   | &#8594; | Session ID                                                                             |
 | options   | 整数     | &#8594 | Return options                                                                         |
-| 戻り値       | オブジェクト | &#8592 | Snapshot of running processes and/or (4D Server only) user sessions |
+| 戻り値       | オブジェクト | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
 
 <!-- END REF-->
 
