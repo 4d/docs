@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo                               |                            | Descripción                                                                                     |
 | ---------- | ---------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------- |
-| dsTable    | Tabla                              | &#8594 | Tabla de la base 4D cuya selección actual se utilizará para construir la selección de entidades |
+| dsTable    | Tabla                              | &#8594; | Tabla de la base 4D cuya selección actual se utilizará para construir la selección de entidades |
 | settings   | Object                             | &#8594 | Opciones de construcción: context                                               |
-| Resultado  | 4D.EntitySelection | &#8592 | Selección de entidades que coinciden con la clase de datos relacionada con la tabla dada        |
+| Resultado  | 4D.EntitySelection | &#8592; | Selección de entidades que coinciden con la clase de datos relacionada con la tabla dada        |
 
 <!-- END REF-->
 
