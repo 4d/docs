@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo                        |                            | Descrição       |
 | --------- | --------------------------- | -------------------------- | --------------- |
-| Resultado | 4D. Session | &#8592 | Objecto Session |
+| Resultado | 4D. Session | &#8592; | Objecto Session |
 
 <!-- END REF-->
 
