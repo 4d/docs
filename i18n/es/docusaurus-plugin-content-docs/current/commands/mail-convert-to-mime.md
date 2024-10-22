@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo   |                            | Descripción                                    |
 | ---------- | ------ | :------------------------: | ---------------------------------------------- |
-| mail       | Object | &#8594 | Objeto Email                                   |
+| mail       | Object | &#8594; | Objeto Email                                   |
 | options    | Object | &#8594 | Opciones de codificación y de charset del mail |
-| Result     | Text   | &#8592 | Objeto email convertido en MIME                |
+| Result     | Text   | &#8592; | Objeto email convertido en MIME                |
 
 <!-- END REF -->
 
