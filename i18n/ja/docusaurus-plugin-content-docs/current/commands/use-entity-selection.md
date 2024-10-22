@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | 引数              | 型                                  |                            | 説明           |
 | --------------- | ---------------------------------- | -------------------------- | ------------ |
-| entitySelection | 4D.EntitySelection | &#8594 | エンティティセレクション |
+| entitySelection | 4D.EntitySelection | &#8594; | エンティティセレクション |
 
 <!-- END REF-->
 
