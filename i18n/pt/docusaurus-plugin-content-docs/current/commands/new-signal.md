@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parâmetro   | Tipo                       |                            | Descrição                          |
 | ----------- | -------------------------- | -------------------------- | ---------------------------------- |
-| description | Text                       | &#8594 | Descrição para o sinal             |
-| Resultado   | 4D. Signal | &#8592 | Objeto nativo encapsulando o sinal |
+| description | Text                       | &#8594; | Descrição para o sinal             |
+| Resultado   | 4D. Signal | &#8592; | Objeto nativo encapsulando o sinal |
 
 <!-- END REF-->
 
