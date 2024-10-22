@@ -11,10 +11,10 @@ displayed_sidebar: docs
 
 | 引数   | 型    |                            | 説明                                                       |
 | ---- | ---- | -------------------------- | -------------------------------------------------------- |
-| name | テキスト | &#8594 | Name of process for which to retrieve the process number |
+| name | テキスト | &#8594; | Name of process for which to retrieve the process number |
 | id   | テキスト | &#8594 | ID of process for which to retrieve the process number   |
 | \*   | 演算子  | &#8594 | Return the process number from the server                |
-| 戻り値  | 倍長整数 | &#8592 | Process number                                           |
+| 戻り値  | 倍長整数 | &#8592; | Process number                                           |
 
 <!-- END REF-->
 
