@@ -5,7 +5,7 @@ title: $singleton
 
 [共有シングルトンの公開関数](../Concepts/classes.md#シングルトンクラス) は、REST で直接呼び出すことができます。
 
-Singleton functions are called in POST or REST requests with the `$singleton` command and without `()`. たとえば、`VehicleFactory` 共有シングルトンクラスに `buildVehicle()` 関数を定義した場合、次のリクエストで呼び出すことができます:
+Singleton functions are called in POST or GET requests with the `$singleton` command and without `()`. たとえば、`VehicleFactory` 共有シングルトンクラスに `buildVehicle()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
