@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo       |                            | Descripción                                    |
 | ---------- | ---------- | -------------------------- | ---------------------------------------------- |
-| Resultado  | Collection | &#8592 | Collection of the available Web Server objects |
+| Resultado  | Collection | &#8592; | Collection of the available Web Server objects |
 
 <!-- END REF-->
 
