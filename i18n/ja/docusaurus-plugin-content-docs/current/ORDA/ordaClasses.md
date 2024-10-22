@@ -892,18 +892,15 @@ You have defined the following function:
 ```4d
 Class extends DataClass
 
-
 exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height : Integer) : 4D.OutgoingMessage
 	
+	var $file := File("/RESOURCES/Images/"+$name+".jpg")
 	var $image; $thumbnail : Picture
-	var $blob : Blob
 	var $response := 4D.OutgoingMessage.new()
 	
-	var $file := File("/RESOURCES/Images/"+$name+".jpg")
 	READ PICTURE FILE($file.platformPath; $image)
 	CREATE THUMBNAIL($image; $thumbnail; $width; $height; Scaled to fit)
-	PICTURE TO BLOB($thumbnail; $blob; "image/jpeg")
-	$response.setBody($blob)	
+	$response.setBody($thumbnail)	
 	$response.setHeader("Content-Type"; "image/jpeg")
 	return $response
 ```
