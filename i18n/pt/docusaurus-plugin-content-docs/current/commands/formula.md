@@ -20,8 +20,8 @@ displayed_sidebar: docs
 
 | Parâmetro  | Tipo                         |                            | Descrição                            |
 | ---------- | ---------------------------- | :------------------------: | ------------------------------------ |
-| formulaExp | Expression                   | &#8594 | Fórmula a ser retornada como objeto  |
-| Resultados | 4D. Function | &#8592 | Função nativa encapsulando a fórmula |
+| formulaExp | Expression                   | &#8594; | Fórmula a ser retornada como objeto  |
+| Resultados | 4D. Function | &#8592; | Função nativa encapsulando a fórmula |
 
 <!-- END REF -->
 
