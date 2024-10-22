@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo                                                                    |                            | Descrição                                  |
 | --------- | ----------------------------------------------------------------------- | -------------------------- | ------------------------------------------ |
-| value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594 | Valor(es) de collection |
-| Resultado | Collection                                                              | &#8592 | Nova coleção                               |
+| value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | Valor(es) de collection |
+| Resultado | Collection                                                              | &#8592; | Nova coleção                               |
 
 <!-- END REF-->
 
