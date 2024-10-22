@@ -21,15 +21,15 @@ The following ORDA and singleton functions can be called in REST:
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                             |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                      |
 | [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                     |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                                                        |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                                                       |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                   |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                         |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                                                            |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                                                           |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                                                                       |
 | [Classe singleton](../Concepts/classes.md#classes-singleton)       | `/rest/$singleton/SingletonClass/SingletonClassFunction` (voir [page $singleton]($singleton.md)) |
 
 :::note
 
-`/rest/\{dataClass\}/Function` peut être utilisé pour appeler une fonction de dataclass ou d'entity selection (`/rest/\{dataClass\}` renvoie toutes les entités de la dataclass en tant qu'entity selection). La fonction est d'abord recherchée dans la classe Entity selection. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
+`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). La fonction est d'abord recherchée dans la classe Entity selection. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
 :::
 
@@ -84,8 +84,6 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 La totalité du code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [_Utiliser un process préemptif_](../WebServer/preemptiveWeb.md#activer-le-mode-préemptif-pour-le-serveur-web) est ignorée par le serveur REST).
 
-:::
-
 :::info
 
 You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
@@ -104,7 +102,7 @@ Les règles suivantes s'appliquent :
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
 - L'entity selection et l'entité peuvent être passées en tant que paramètres. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
-Voir [cet exemple](#utiliser-une-entite-a-creer-sur-le-serveur) et [cet exemple](#recevoir-une-entity-selection-comme-parametre).
+See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
 
 ### Paramètre de valeur scalaire
 
@@ -136,8 +134,8 @@ Vous pouvez également transmettre des valeurs pour tous les attributs de l'enti
 | __ENTITY    | Boolean                                                              | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
 | __KEY       | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
-- Si `__KEY` n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
-- Si `__KEY` est fourni, l'entité correspondant à `__KEY` est chargée sur le serveur avec les attributs donnés
+- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
+- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
 See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
 See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
