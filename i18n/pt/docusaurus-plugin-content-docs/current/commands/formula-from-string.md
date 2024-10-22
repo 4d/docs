@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 | Parâmetro     | Tipo                         |                            | Descrição                                                                                         |
 | ------------- | ---------------------------- | :------------------------: | ------------------------------------------------------------------------------------------------- |
-| formulaString | Text                         | &#8594 | Fórmula texto a ser retornada como objeto                                                         |
+| formulaString | Text                         | &#8594; | Fórmula texto a ser retornada como objeto                                                         |
 | context       | Number                       | &#8594 | `sk execute in current database` (por padrão) ou `sk execute in host database` |
-| Resultados    | 4D. Function | &#8592 | Objeto nativo encapsulando a fórmula                                                              |
+| Resultados    | 4D. Function | &#8592; | Objeto nativo encapsulando a fórmula                                                              |
 
 <!-- END REF -->
 
