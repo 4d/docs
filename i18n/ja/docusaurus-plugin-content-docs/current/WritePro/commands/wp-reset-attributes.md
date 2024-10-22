@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | 引数                  | 型      |                            | 説明                                                |
 | ------------------- | ------ | -------------------------- | ------------------------------------------------- |
-| targetObj           | オブジェクト | &#8594 | Range or element or 4D Write Pro document         |
+| targetObj           | オブジェクト | &#8594; | Range or element or 4D Write Pro document         |
 | sectionOrSubsection | オブジェクト | &#8594 | Section or subsection of a 4D Write Pro document  |
 | attribName          | String | &#8594 | Name of attribute(s) to remove |
 
