@@ -21,15 +21,15 @@ The following ORDA and singleton functions can be called in REST:
 | [DataStore クラス](ORDA/ordaClasses.md#datastore-クラス)             | `/rest/$catalog/DataStoreClassFunction`                                                                          |
 | [DataClass クラス](ORDA/ordaClasses.md#dataclass-クラス)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                   |
 | [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-クラス) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                             |
-|                                                                | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                  |
-|                                                                | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                                                     |
-|                                                                | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                                                    |
-| [Entity クラス](ORDA/ordaClasses.md#entity-クラス)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                      |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                                                         |
+|                                                                | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                                                        |
+| [Entity クラス](ORDA/ordaClasses.md#entity-クラス)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                                                                    |
 | [シングルトンクラス](../Concepts/classes.md#シングルトンクラス)                  | `/rest/$singleton/SingletonClass/SingletonClassFunction` ([$singleton ページ]($singleton.md) 参照) |
 
 :::note
 
-`/rest/\{dataClass\}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/\{dataClass\}` はデータクラスの全エンティティをエンティティセレクションに返します)。 EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
+`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
 
 :::
 
@@ -84,8 +84,6 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([_プリエンプティブプロセスを使用_ の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
 
-:::
-
 :::info
 
 You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
@@ -133,11 +131,11 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 | ----------------------------------------------------- | ------------------------------------ | ------------------------------------ |
 | エンティティの属性                                             | mixed                                | 任意 - 変更する値                           |
 | __DATACLASS | String                               | 必須 - エンティティのデータクラスを指定します             |
-| __ENTITY    | Boolean                              | 必須 - true は引数がエンティティであることをサーバーに通知します |
+| __ENTITY    | ブール                                  | 必須 - true は引数がエンティティであることをサーバーに通知します |
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
-- `__KEY` が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
-- `__KEY` が提供された場合、`__KEY` が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
+- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
+- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
 See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
 See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
@@ -154,11 +152,11 @@ See an example of [contents downloading using an entity](#using-an-entity-to-dow
 
 > 変更されたエンティティセレクションをリクエストがサーバーに送信した場合、呼び出した ORDAデータモデル関数は自動的に変更後のエンティティセレクションで実行されます。
 
-| プロパティ                                                | 型       | 説明                                                      |
-| ---------------------------------------------------- | ------- | ------------------------------------------------------- |
-| エンティティの属性                                            | mixed   | 任意 - 変更する値                                              |
-| __DATASET  | String  | 必須 - エンティティセレクションのエンティティセットID (UUID) |
-| __ENTITIES | Boolean | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
+| プロパティ                                                | 型      | 説明                                                      |
+| ---------------------------------------------------- | ------ | ------------------------------------------------------- |
+| エンティティの属性                                            | mixed  | 任意 - 変更する値                                              |
+| __DATASET  | String | 必須 - エンティティセレクションのエンティティセットID (UUID) |
+| __ENTITIES | ブール    | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
 See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
