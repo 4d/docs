@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | 引数  | 型      |                            | 説明                        |
 | --- | ------ | -------------------------- | ------------------------- |
-| 戻り値 | オブジェクト | &#8592 | Current element or object |
+| 戻り値 | オブジェクト | &#8592; | Current element or object |
 
 <!-- END REF-->
 
