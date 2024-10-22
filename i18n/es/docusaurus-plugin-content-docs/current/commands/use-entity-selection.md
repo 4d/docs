@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros      | Tipo                               |                            | Descripción          |
 | --------------- | ---------------------------------- | -------------------------- | -------------------- |
-| entitySelection | 4D.EntitySelection | &#8594 | Una entity selection |
+| entitySelection | 4D.EntitySelection | &#8594; | Una entity selection |
 
 <!-- END REF-->
 
