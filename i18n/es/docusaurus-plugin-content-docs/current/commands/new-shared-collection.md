@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo                                                                |                            | Descripción                                              |
 | ---------- | ------------------------------------------------------------------- | -------------------------- | -------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &#8594 | Valor(es) de la collection compartida |
-| Resultado  | Collection                                                          | &#8592 | New shared collection                                    |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &#8594; | Valor(es) de la collection compartida |
+| Resultado  | Collection                                                          | &#8592; | New shared collection                                    |
 
 <!-- END REF-->
 
