@@ -38,14 +38,14 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 4D.OutGoingMessage objects provide the following properties and functions:
 
-|                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #OutGoingMessageClass.body.Syntax -->](#body)<br/><!-- INCLUDE #OutGoingMessageClass.body.Summary -->                |
-| [<!-- INCLUDE #OutGoingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #OutGoingMessageClass.headers.Summary -->       |
-| [<!-- INCLUDE #OutGoingMessageClass.setBody.Syntax -->](#setbody)<br/><!-- INCLUDE #OutGoingMessageClass.setBody.Summary -->       |
-| [<!-- INCLUDE #OutGoingMessageClass.setHeader.Syntax -->](#setheader)<br/><!-- INCLUDE #OutGoingMessageClass.setHeader.Summary --> |
-| [<!-- INCLUDE #OutGoingMessageClass.setStatus.Syntax -->](#setstatus)<br/><!-- INCLUDE #OutGoingMessageClass.setStatus.Summary --> |
-| [<!-- INCLUDE #OutGoingMessageClass.status.Syntax -->](#status)<br/><!-- INCLUDE #OutGoingMessageClass.status.Summary -->          |
+|                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #OutGoingMessageClass.body.Syntax -->](#body)<br/><!-- INCLUDE #OutGoingMessageClass.body.Summary -->                    |
+| [<!-- INCLUDE #OutGoingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #OutGoingMessageClass.headers.Summary -->           |
+| [<!-- INCLUDE #OutGoingMessageClass.setBody().Syntax -->](#setbody)<br/><!-- INCLUDE #OutGoingMessageClass.setBody().Summary -->       |
+| [<!-- INCLUDE #OutGoingMessageClass.setHeader().Syntax -->](#setheader)<br/><!-- INCLUDE #OutGoingMessageClass.setHeader().Summary --> |
+| [<!-- INCLUDE #OutGoingMessageClass.setStatus().Syntax -->](#setstatus)<br/><!-- INCLUDE #OutGoingMessageClass.setStatus().Summary --> |
+| [<!-- INCLUDE #OutGoingMessageClass.status.Syntax -->](#status)<br/><!-- INCLUDE #OutGoingMessageClass.status.Summary -->              |
 
 :::note
 
