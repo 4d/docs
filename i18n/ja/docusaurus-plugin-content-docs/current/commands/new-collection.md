@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | 引数    | 型                                                                       |                            | 説明             |
 | ----- | ----------------------------------------------------------------------- | -------------------------- | -------------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594 | コレクションの値       |
-| 戻り値   | コレクション                                                                  | &#8592 | New collection |
+| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | コレクションの値       |
+| 戻り値   | コレクション                                                                  | &#8592; | New collection |
 
 <!-- END REF-->
 
