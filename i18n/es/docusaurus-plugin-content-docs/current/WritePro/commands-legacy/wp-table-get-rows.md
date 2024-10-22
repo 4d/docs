@@ -13,13 +13,13 @@ displayed_sidebar: docs
 | refTabla | Object | &#8594;  | Referencia de tabla |
 | lineaIni | Integer, Text | &#8594;  | Posición de la primera línea |
 | numLíneas | Integer | &#8594;  | Número de líneas a obtener |
-| Resultado | Object | &#8592; | Nuevo rango de tablas que contiene las filas seleccionadas |
+| Resultado | Object | &#8592; | Nuevo rango de líneas que contiene las filas seleccionadas |
 
 <!-- END REF-->
 
 #### Descripción 
 
-<!--REF #_command_.WP Table get rows.Summary-->El comando **WP Table get rows** \[#descv\]devuelve un nuevo objeto de rango de celdas que contiene una selección de las líneas de *objTarget* o *refTabla*.<!-- END REF-->
+<!--REF #_command_.WP Table get rows.Summary-->El comando **WP Table get rows** \[#descv\]devuelve un nuevo objeto de rango de líneas que contiene una selección de las líneas de *objTarget* o *refTabla*.<!-- END REF-->
 
 Pase:
 
@@ -51,7 +51,7 @@ Desea definir un color de fondo específico para las dos primeras líneas de una
 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$rows;$rows2 : Object
- $wpRange:=WP Create range(WParea;wk start text;wk end text)
+ $wpRange:=WP Text range(WParea;wk start text;wk end text)
  
  $wpTable:=WP Insert table($wpRange;wk append)
  $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)

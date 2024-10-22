@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$rows;$rows2 : Object
- $wpRange:=WP Create range(WParea;wk start text;wk end text)
+ $wpRange:=WP Text range(WParea;wk start text;wk end text)
  
  $wpTable:=WP Insert table($wpRange;wk append)
  $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)

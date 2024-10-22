@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.WP Table get rows.Summary-->O comando **WP Table get rows** devolve um novo objeto de range de células que contenha a seleção das filas de *objTarget* ou *refTabela* (definidas por *filaIni* e *numFilas*)
+<!--REF #_command_.WP Table get rows.Summary-->O comando **WP Table get rows** devolve um novo objeto de range de filas que contenha a seleção das filas de *objTarget* ou *refTabela* (definidas por *filaIni* e *numFilas*)
 
 Passe:
 
@@ -52,7 +52,7 @@ Se quiser estabelecer uma cor de fundo específico para as duas primeiras filas 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$rows;$rows2 Object
 
-$wpRange: :=WP Create range(WParea;wk start text;wk end text)
+$wpRange: :=WP Text range(WParea;wk start text;wk end text)
  
  $wpTable:=WP Insert table($wpRange;wk append)
  $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)

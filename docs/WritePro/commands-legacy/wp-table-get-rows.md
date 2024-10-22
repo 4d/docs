@@ -13,13 +13,13 @@ displayed_sidebar: docs
 | tableRef | Object | &#8594;  | Table reference |
 | startRow &#124; wk header rows | Longint, String | &#8594;  | Position of first row OR wk header rows |
 | numRows | Longint | &#8594;  | Number of rows to get |
-| Function result | Object | &#8592; | New table range containing selected rows |
+| Function result | Object | &#8592; | New row range containing selected rows |
 
 <!-- END REF-->
 
 #### Description 
 
-<!--REF #_command_.WP Table get rows.Summary-->The **WP Table get rows** command returns a new cell range object containing a selection of rows from *targetObj* or *tableRef*.<!-- END REF--> 
+<!--REF #_command_.WP Table get rows.Summary-->The **WP Table get rows** command returns a new row range object containing a selection of rows from *targetObj* or *tableRef*.<!-- END REF--> 
 
 Pass either:
 
@@ -51,7 +51,7 @@ You want to set a specific background color for the first two rows of a table, a
 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$rows;$rows2 : Object
- $wpRange:=WP Create range(WParea;wk start text;wk end text)
+ $wpRange:=WP Text range(WParea;wk start text;wk end text)
  
  $wpTable:=WP Insert table($wpRange;wk append)
  $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.WP Table get rows.Summary-->La commande **WP Table get rows** retourne un nouvel objet plage cellule contenant une sélection de lignes de objCible ou de *refTableau*.<!-- END REF-->
+<!--REF #_command_.WP Table get rows.Summary-->La commande **WP Table get rows** retourne un nouvel objet plage de lignes contenant une sélection de lignes de *objCible* ou de *refTableau*.<!-- END REF-->
 
 Passez soit :
 
@@ -28,7 +28,7 @@ Passez soit :
    * un élément (ligne / paragraphe / corps / en-tête / pied / image en ligne / section / sous-section), ou  
    * un document 4D Write Pro
 
-Si objCible n'intersecte pas une plage de tableau ou de texte là où une sélection de lignes peut être récupérée, la commande retourne Null.
+Si *objCible* n'intersecte pas une plage de tableau ou de texte là où une sélection de lignes peut être récupérée, la commande retourne Null.
 
 **OU**
 
@@ -51,7 +51,7 @@ Vous souhaitez fixer une couleur d'arrière-plan spécifique pour les deux premi
 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$rows;$rows2 : Object
- $wpRange:=WP Create range(WParea;wk start text;wk end text)
+ $wpRange:=WP Text range(WParea;wk start text;wk end text)
  
  $wpTable:=WP Insert table($wpRange;wk append)
  $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)
