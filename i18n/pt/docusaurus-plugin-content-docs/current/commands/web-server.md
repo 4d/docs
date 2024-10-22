@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo                          |                            | Descrição                                                                                |
 | --------- | ----------------------------- | -------------------------- | ---------------------------------------------------------------------------------------- |
-| option    | Integer                       | &#8594 | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
-| Resultado | 4D. WebServer | &#8592 | Objeto Web Server                                                                        |
+| option    | Integer                       | &#8594; | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
+| Resultado | 4D. WebServer | &#8592; | Objeto Web Server                                                                        |
 
 <!-- END REF-->
 
