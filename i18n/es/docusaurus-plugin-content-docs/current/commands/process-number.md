@@ -11,10 +11,10 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo     |                            | Descripción                                              |
 | ---------- | -------- | -------------------------- | -------------------------------------------------------- |
-| name       | Text     | &#8594 | Name of process for which to retrieve the process number |
+| name       | Text     | &#8594; | Name of process for which to retrieve the process number |
 | id         | Text     | &#8594 | ID of process for which to retrieve the process number   |
 | \*         | Operador | &#8594 | Return the process number from the server                |
-| Resultado  | Longint  | &#8592 | Process number                                           |
+| Resultado  | Longint  | &#8592; | Process number                                           |
 
 <!-- END REF-->
 
