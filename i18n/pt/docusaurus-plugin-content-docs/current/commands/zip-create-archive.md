@@ -10,12 +10,12 @@ displayed_sidebar: docs
 
 | Parâmetro       | Tipo                       |                            | Descrição                                                           |
 | --------------- | -------------------------- | :------------------------: | ------------------------------------------------------------------- |
-| fileToZip       | 4D. File   | &#8594 | Objeto File ou Folder a comprimir                                   |
+| fileToZip       | 4D. File   | &#8594; | Objeto File ou Folder a comprimir                                   |
 | folderToZip     | 4D. Folder | &#8594 | Objeto File ou Folder a comprimir                                   |
 | zipStructure    | Object                     | &#8594 | Objeto File ou Folder a comprimir                                   |
 | destinationFile | 4D. File   | &#8594 | Arquivo destino para o arquivo                                      |
 | options         | Integer                    | &#8594 | Opção *folderToZip*: `ZIP Without enclosing folder` |
-| Resultados      | Object                     | &#8592 | Objeto de estado                                                    |
+| Resultados      | Object                     | &#8592; | Objeto de estado                                                    |
 
 <!-- END REF -->
 
