@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro       | Tipo                                |                            | Descrição            |
 | --------------- | ----------------------------------- | -------------------------- | -------------------- |
-| entitySelection | 4D. EntitySelection | &#8594 | Seleção de entidades |
+| entitySelection | 4D. EntitySelection | &#8594; | Seleção de entidades |
 
 <!-- END REF-->
 
