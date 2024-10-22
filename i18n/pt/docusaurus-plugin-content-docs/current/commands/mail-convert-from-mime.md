@@ -18,8 +18,8 @@ displayed_sidebar: docs
 
 | Parâmetro  | Tipo       |                            | Descrição      |
 | ---------- | ---------- | :------------------------: | -------------- |
-| mime       | Blob, Text | &#8594 | E-mail no MIME |
-| Resultados | Object     | &#8592 | Objeto Email   |
+| mime       | Blob, Text | &#8594; | E-mail no MIME |
+| Resultados | Object     | &#8592; | Objeto Email   |
 
 <!-- END REF -->
 
