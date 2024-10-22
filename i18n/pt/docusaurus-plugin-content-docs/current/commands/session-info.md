@@ -12,14 +12,14 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId * : Integer ) : Object<!-- END REF -->
+<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #_command_.Session info.Params -->
 
 | Parâmetro  | Tipo    |                            | Descrição                     |
 | ---------- | ------- | :------------------------: | ----------------------------- |
-| sessionID  | Integer | &#8594 | Session ID                    |
-| Resultados | Object  | &#8592 | Information about the session |
+| sessionID  | Integer | &#8594; | Session ID                    |
+| Resultados | Object  | &#8592; | Information about the session |
 
 <!-- END REF -->
 
