@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo                               |                            | Descrição                                                                         |
 | --------- | ---------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
-| server    | Object                             | &#8594 | Informação de servidor de correio                                                 |
-| Resultado | 4D.SMTPTransporter | &#8592 | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| server    | Object                             | &#8594; | Informação de servidor de correio                                                 |
+| Resultado | 4D.SMTPTransporter | &#8592; | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 
