@@ -18,8 +18,8 @@ displayed_sidebar: docs
 
 | 引数     | 型                                  |                            | 説明                                                                                |
 | ------ | ---------------------------------- | :------------------------: | --------------------------------------------------------------------------------- |
-| server | オブジェクト                             | &#8594 | メールサーバー情報                                                                         |
-| 戻り値    | 4D.IMAPTransporter | &#8592 | [IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object) |
+| server | オブジェクト                             | &#8594; | メールサーバー情報                                                                         |
+| 戻り値    | 4D.IMAPTransporter | &#8592; | [IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->
 
