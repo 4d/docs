@@ -18,8 +18,8 @@ displayed_sidebar: docs
 
 | Parámetros    | Tipo    |                            | Descripción                   |
 | ------------- | ------- | :------------------------: | ----------------------------- |
-| processNumber | Integer | &#8594 | Process number                |
-| Result        | Object  | &#8592 | Information about the process |
+| processNumber | Integer | &#8594; | Process number                |
+| Result        | Object  | &#8592; | Information about the process |
 
 <!-- END REF -->
 
@@ -29,22 +29,22 @@ The `Process info` command <!-- REF #_command_.Process info.Summary -->returns a
 
 El objeto devuelto contiene las siguientes propiedades:
 
-| Propiedad        | Tipo                                    | Descripción                                                                      |
-| ---------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
-| cpuTime          | Real                                    | Running time (seconds)                                        |
-| cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
-| creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | Longint                                 | Process unique ID                                                                |
-| name             | Text                                    | Nombre del proceso                                                               |
-| number           | Longint                                 | Process number                                                                   |
-| apropiativo      | Boolean                                 | True if run preemptive, false otherwise                                          |
-| sessionID        | Text                                    | Session UUID                                                                     |
-| state            | Longint                                 | Current status. Possible values: see below       |
-| systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
-| type             | Longint                                 | Running process type. Possible values: see below |
-| visible          | Boolean                                 | True if visible, false otherwise                                                 |
+| Propiedad        | Tipo                                    | Descripción                                                                               |
+| ---------------- | --------------------------------------- | ----------------------------------------------------------------------------------------- |
+| cpuTime          | Real                                    | Tiempo en ejecución (segundos)                                         |
+| cpuUsage         | Real                                    | Porcentaje de tiempo dedicado a este proceso (entre 0 y 1)             |
+| creationDateTime | Text (Date ISO 8601) | Fecha y hora de creación del proceso                                                      |
+| ID               | Longint                                 | ID único del proceso                                                                      |
+| name             | Text                                    | Nombre del proceso                                                                        |
+| number           | Longint                                 | Process number                                                                            |
+| apropiativo      | Boolean                                 | True si se ejecuta de forma apropiativa, false en caso contrario                          |
+| sessionID        | Text                                    | Session UUID                                                                              |
+| state            | Longint                                 | Estado actual. Valores posibles: ver abajo                |
+| systemID         | Text                                    | ID del proceso de usuario, proceso 4D o proceso de reserva                                |
+| type             | Longint                                 | Tipo de proceso en ejecución. Valores posibles: ver abajo |
+| visible          | Boolean                                 | True si es visible, false en caso contrario                                               |
 
-- Possible values for "state":
+- Valores posibles para "state":
 
 | Constante                 | Valor |
 | ------------------------- | ----- |
@@ -118,11 +118,11 @@ El objeto devuelto contiene las siguientes propiedades:
 
 :::note
 
-4D's internal processes have a negative type value and processes generated by the user have a positive value. Worker processes launched by user have type 5.
+Los procesos internos de 4D tienen un valor de tipo negativo y los procesos generados por el usuario tienen un valor positivo. Los procesos worker lanzados por el usuario son de tipo 5.
 
 :::
 
-Here is an example of output object:
+He aquí un ejemplo de objeto de salida:
 
 ```json
 
@@ -145,7 +145,7 @@ Here is an example of output object:
 
 #### Ejemplo
 
-You want to know if the process is preemptive:
+Quiere saber si el proceso es apropiativo:
 
 ```4d
 
