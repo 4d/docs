@@ -12,14 +12,14 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId * : Integer ) : Object<!-- END REF -->
+<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #_command_.Session info.Params -->
 
 | 引数        | 型      |                            | 説明                            |
 | --------- | ------ | :------------------------: | ----------------------------- |
-| sessionID | 整数     | &#8594 | Session ID                    |
-| 戻り値       | オブジェクト | &#8592 | Information about the session |
+| sessionID | 整数     | &#8594; | Session ID                    |
+| 戻り値       | オブジェクト | &#8592; | Information about the session |
 
 <!-- END REF -->
 
