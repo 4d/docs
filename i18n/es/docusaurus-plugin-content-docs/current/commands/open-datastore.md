@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 | Parámetros     | Tipo                         |                            | Descripción                                                                                         |
 | -------------- | ---------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | &#8594 | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
+| connectionInfo | Object                       | &#8594; | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
 | localID        | Text                         | &#8594 | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Resultado      | cs.DataStore | &#8592 | Objeto del almacén de datos                                                                         |
+| Resultado      | cs.DataStore | &#8592; | Objeto del almacén de datos                                                                         |
 
 <!-- END REF-->
 
