@@ -97,12 +97,11 @@ The following table indicates the *option* available per export *format*:
 You want to export the contents of the *myArea* 4D Write Pro object in MIME format and add "gmail.com" as the host domain:
 
 ```4d
- var $option : Object
- var $option : Object
- 
- $option[wk CID host domain name]:="gmail.com"
- 
- WP EXPORT VARIABLE(myArea;$path;wk mime html;$option)
+ var $option;$export : Object
+ 
+ $option[wk CID host domain name]:="gmail.com"
+ 
+ WP EXPORT VARIABLE(myArea;$export;wk mime html;$option)
 ```
 
 #### Example 2 
@@ -110,31 +109,31 @@ You want to export the contents of the *myArea* 4D Write Pro object in MIME form
 You want to send an email containing styled text, 4D references and images. You can use a 4D Write Pro area exported in MIME format and sent using SMTP:
 
 ```4d
-  // create the transporter
- $server:=New object
- $server.host:="smtp.gmail.com"
- $server.port:=465
- $server.user:="4D@gmail.com"
- $server.password:="XXXX"
- 
- $transporter:=SMTP New transporter($server)
- 
- WP EXPORT VARIABLE(WParea;$mime;wk mime html)
- 
- $mailTmp:=MAIL Convert from MIME($mime)
- 
-  // add pictures (if any)
- If($mailTmp.attachments#Null)
-    $email.attachments:=$mailTmp.attachments
- End if
- 
- $email.bodyStructure:=$mailTmp.bodyStructure
- $email.bodyValues:=$mailTmp.bodyValues
- 
- $status:=$transporter.send($email)
- If(Not($status.success))
-    ALERT("An error occurred: "+$status.statusText)
- End if
+  // create the transporter
+ $server:=New object
+ $server.host:="smtp.gmail.com"
+ $server.port:=465
+ $server.user:="4D@gmail.com"
+ $server.password:="XXXX"
+ 
+ $transporter:=SMTP New transporter($server)
+ 
+ WP EXPORT VARIABLE(WParea;$mime;wk mime html)
+ 
+ $mailTmp:=MAIL Convert from MIME($mime)
+ 
+  // add pictures (if any)
+ If($mailTmp.attachments#Null)
+    $email.attachments:=$mailTmp.attachments
+ End if
+ 
+ $email.bodyStructure:=$mailTmp.bodyStructure
+ $email.bodyValues:=$mailTmp.bodyValues
+ 
+ $status:=$transporter.send($email)
+ If(Not($status.success))
+    ALERT("An error occurred: "+$status.statusText)
+ End if
 ```
 
 #### Example 3 
@@ -142,13 +141,13 @@ You want to send an email containing styled text, 4D references and images. You 
 To export the first page of a 4D Write Pro as SVG in a Text variable and hide the headers: 
 
 ```4d
- var $options : Object
- var $destination : Text
- 
- $options:=New object
- $options[wk optimized for]:=wk screen
- $options[wk visible headers]:=False
- WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
+ var $options : Object
+ var $destination : Text
+ 
+ $options:=New object
+ $options[wk optimized for]:=wk screen
+ $options[wk visible headers]:=False
+ WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
 ```
 
 #### See also 

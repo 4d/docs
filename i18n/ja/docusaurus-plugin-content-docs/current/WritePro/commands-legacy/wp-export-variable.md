@@ -95,12 +95,12 @@ displayed_sidebar: docs
 *myArea* 4D Write Pro オブジェクトのコンテンツをMIME 形式で書き出し、ホストドメインとして"gmail.com" を追加したい場合を考えます:
 
 ```4d
- var $option : Object
- var $option Object: 
- 
- $option[wk CID host domain name]:="gmail.com"
- 
- WP EXPORT VARIABLE(myArea;$path;wk mime html;$option)
+ var $option : Object
+ 
+ $option[wk CID host domain name]:="gmail.com"
+ 
+ WP EXPORT VARIABLE(myArea;$export;wk mime html;$option)
+
 ```
 
 #### 例題 2 
@@ -108,31 +108,31 @@ displayed_sidebar: docs
 スタイル付テキストと4D参照と画像を含んだEメールを送信したい場合を考えます。この場合、MIME HTMLフォーマットで書き出された4D Write Proエリアを、SMTP を使用して送信することができます:
 
 ```4d
-  // transporter オブジェクトを作成
- $server:=New object
- $server.host:="smtp.gmail.com"
- $server.port:=465
- $server.user:="4D@gmail.com"
- $server.password:="XXXX"
- 
- $transporter:=SMTP New transporter($server)
- 
- WP EXPORT VARIABLE(WParea;$mime;wk mime html)
- 
- $mailTmp:=MAIL Convert from MIME($mime)
- 
-  // ピクチャーを追加(あれば)
- If($mailTmp.attachments#Null)
-    $email.attachments:=$mailTmp.attachments
- End if
- 
- $email.bodyStructure:=$mailTmp.bodyStructure
- $email.bodyValues:=$mailTmp.bodyValues
- 
- $status:=$transporter.send($email)
- If(Not($status.success))
-    ALERT("An error occurred: "+$status.statusText)
- End if
+  // transporter オブジェクトを作成
+ $server:=New object
+ $server.host:="smtp.gmail.com"
+ $server.port:=465
+ $server.user:="4D@gmail.com"
+ $server.password:="XXXX"
+ 
+ $transporter:=SMTP New transporter($server)
+ 
+ WP EXPORT VARIABLE(WParea;$mime;wk mime html)
+ 
+ $mailTmp:=MAIL Convert from MIME($mime)
+ 
+  // ピクチャーを追加(あれば)
+ If($mailTmp.attachments#Null)
+    $email.attachments:=$mailTmp.attachments
+ End if
+ 
+ $email.bodyStructure:=$mailTmp.bodyStructure
+ $email.bodyValues:=$mailTmp.bodyValues
+ 
+ $status:=$transporter.send($email)
+ If(Not($status.success))
+    ALERT("An error occurred: "+$status.statusText)
+ End if
 ```
 
 #### 例題 3 
@@ -140,13 +140,13 @@ displayed_sidebar: docs
 4D Wrie Pro の最初のページをSVG で、ヘッダーを隠してテキスト変数に書き出す場合を考えます:
 
 ```4d
- var $options : Object
- var $destination : Text
- 
- $options:=New object
- $options[wk optimized for]:=wk screen
- $options[wk visible headers]:=False
- WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
+ var $options : Object
+ var $destination : Text
+ 
+ $options:=New object
+ $options[wk optimized for]:=wk screen
+ $options[wk visible headers]:=False
+ WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
 ```
 
 #### 参照 

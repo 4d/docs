@@ -97,10 +97,12 @@ Le tableau suivant indique l'*option* disponible par *format* d'export :.
 Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* au format MIME et ajouter "gmail.com" comme domaine hôte :
 
 ```4d
- var $option : Object
- var $option : Objet
- $option[wk CID host domain name]:="gmail.com"
- WP EXPORT VARIABLE(myArea;$path;wk mime html;$option)
+ var $option : Object
+ 
+ $option[wk CID host domain name]:="gmail.com"
+ 
+ WP EXPORT VARIABLE(myArea;$export;wk mime html;$option)
+
 ```
 
 #### Exemple 2 
@@ -108,27 +110,27 @@ Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* au format MI
 Vous voulez envoyer un mail contenant du texte multistyle, des références 4D et des images. Vous pouvez utiliser une zone 4D Write Pro exportée au format MIME HTML et l'envoyer en utilisant 4D Internet Commands :
 
 ```4d
- var $smtpid_l;$err_l;$smtpOption_l;$smtpPort_l : Integer
- var $str;$emailBody_t;$smtpHost_t;$emailTo_t;$emailFrom_t;$smtpPass_t : Text
- 
-  //export zone dans le format approprié
- WP EXPORT VARIABLE(myWPArea;$str;wk mime html)
- $emailTo_t:="johnsmith@4d.com"
- $emailFrom_t:="testWritePro@gmail.com"
- $emailBody_t:=$str
- $smtpHost_t:="smtp.gmail.com"
- $smtpOption_l:=9
- $smtpPort_l:=465
- $smtpPass_t:="QRN_on_bretzelburg"
- 
- $err_l:=SMTP_QuickSend($smtpHost_t;$emailFrom_t;$emailTo_t;$emailTitle_t;\
- $emailBody_t;$smtpOption_l;$smtpPort_l;$smtpUser_t;$smtpPass_t)
- 
- If(($err_l=0))
-    ALERT("Message envoyé à "+emailTo_t)
- Else
-    ALERT("Erreur dans les paramètres, veuillez réessayer.")
- End if
+ var $smtpid_l;$err_l;$smtpOption_l;$smtpPort_l : Integer
+ var $str;$emailBody_t;$smtpHost_t;$emailTo_t;$emailFrom_t;$smtpPass_t : Text
+ 
+  //export zone dans le format approprié
+ WP EXPORT VARIABLE(myWPArea;$str;wk mime html)
+ $emailTo_t:="johnsmith@4d.com"
+ $emailFrom_t:="testWritePro@gmail.com"
+ $emailBody_t:=$str
+ $smtpHost_t:="smtp.gmail.com"
+ $smtpOption_l:=9
+ $smtpPort_l:=465
+ $smtpPass_t:="QRN_on_bretzelburg"
+ 
+ $err_l:=SMTP_QuickSend($smtpHost_t;$emailFrom_t;$emailTo_t;$emailTitle_t;\
+ $emailBody_t;$smtpOption_l;$smtpPort_l;$smtpUser_t;$smtpPass_t)
+ 
+ If(($err_l=0))
+    ALERT("Message envoyé à "+emailTo_t)
+ Else
+    ALERT("Erreur dans les paramètres, veuillez réessayer.")
+ End if
 ```
 
 #### Exemple 3 
@@ -136,13 +138,13 @@ Vous voulez envoyer un mail contenant du texte multistyle, des références 4D e
 Pour exporter la première page d'un 4D Write Pro au format SVG dans une variable Texte et masquer les en-têtes :
 
 ```4d
- var $options : Object
- var $destination : Text
- 
- $options:=New object
- $options[wk optimized for]:=wk screen
- $options[wk visible headers]:=false
- WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
+ var $options : Object
+ var $destination : Text
+ 
+ $options:=New object
+ $options[wk optimized for]:=wk screen
+ $options[wk visible headers]:=false
+ WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
 ```
 
 #### Voir aussi 
