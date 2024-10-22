@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parâmetro  | Tipo      |                            | Descrição                                       |
 | ---------- | --------- | -------------------------- | ----------------------------------------------- |
-| localID    | Text      | &#8594 | ID local del armazém de dados remoto a devolver |
-| Resultados | DataStore | &#8592 | Referencia ao armazém de dados                  |
+| localID    | Text      | &#8594; | ID local del armazém de dados remoto a devolver |
+| Resultados | DataStore | &#8592; | Referencia ao armazém de dados                  |
 
 <!-- END REF-->
 
