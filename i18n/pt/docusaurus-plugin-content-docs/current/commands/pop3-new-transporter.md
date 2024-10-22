@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo                               |                            | Descrição                                                                         |
 | --------- | ---------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
-| server    | Object                             | &#8594 | Informação de servidor de correio                                                 |
-| Resultado | 4D.POP3Transporter | &#8592 | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
+| server    | Object                             | &#8594; | Informação de servidor de correio                                                 |
+| Resultado | 4D.POP3Transporter | &#8592; | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
 <!-- END REF-->
 
