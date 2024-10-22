@@ -20,7 +20,7 @@ displayed_sidebar: docs
 | ----------- | --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Parámetros  | Tipo                              |                                       | Descripción                                                                                        |
 | ***         | ***                               | :---: | ***                                                                                                |
-| file        | 4D.File           | &#8594            | Archivo adjunto                                                                                    |
+| file        | 4D.File           | &#8594;            | Archivo adjunto                                                                                    |
 | zIPFile     | 4D.ZipFile        | &#8594            | Archivo zip adjunto                                                                                |
 | blob        | 4D.Blob           | &#8594            | BLOB que contiene el adjunto                                                                       |
 | path        | Text                              | &#8594            | Ruta del archivo adjunto                                                                           |
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 | cid         | Text                              | &#8594            | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
 | type        | Text                              | &#8594            | Valor del encabezado content-type                                                                  |
 | disposition | Text                              | &#8594            | Valor del encabezado content-disposition: "inline" o "attachment". |
-| Result      | 4D.MailAttachment | &#8592            | Objeto adjunto                                                                                     |
+| Result      | 4D.MailAttachment | &#8592;            | Objeto adjunto                                                                                     |
 
 <!-- END REF-->
 
