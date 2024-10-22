@@ -18,8 +18,8 @@ displayed_sidebar: docs
 
 | 引数            | 型      |                            | 説明                            |
 | ------------- | ------ | :------------------------: | ----------------------------- |
-| processNumber | 整数     | &#8594 | Process number                |
-| 戻り値           | オブジェクト | &#8592 | Information about the process |
+| processNumber | 整数     | &#8594; | Process number                |
+| 戻り値           | オブジェクト | &#8592; | Information about the process |
 
 <!-- END REF -->
 
