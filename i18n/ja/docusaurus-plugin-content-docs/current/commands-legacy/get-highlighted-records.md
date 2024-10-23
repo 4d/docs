@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->GET HIGHLIGHTED RECORDS コマンドは、*aTable*中で (例: リストフォームでユーザにより選択されて) ハイライトされたレコードを*setName*で指定したセットに格納します。<!-- END REF-->*aTable*を省略すると、カレントフォームまたはサブフォームのテーブルが使用されます。

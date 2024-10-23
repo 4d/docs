@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES コマンドは、引数 *groupID* に渡したユニークなグループID番号を持つグループのプロパティを返します。<!-- END REF-->[GET GROUP LIST](get-group-list.md) コマンドによって返される有効なグループID番号を必ず渡さなければなりません。

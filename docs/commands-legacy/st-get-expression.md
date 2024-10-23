@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.ST Get expression.Summary-->The **ST Get expression** command returns the first expression found in the current selection of the styled text field or variable designated by the *object* parameter.<!-- END REF--> 

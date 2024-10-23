@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->El comando **LISTBOX SET HEADERS HEIGHT** modifica por programación la altura de la línea de encabezado del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

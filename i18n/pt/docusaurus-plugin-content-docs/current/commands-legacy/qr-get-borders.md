@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->O comando QR GET BORDERS permite recuperar o estilo do borda de uma célula determinada.<!-- END REF-->   

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->GET PICTURE RESOURCE コマンドは、*resID*のIDを持つピクチャ ("PICT") リソースに格納されているピクチャを*resData*のピクチャフィールドまたは変数に返します。<!-- END REF-->

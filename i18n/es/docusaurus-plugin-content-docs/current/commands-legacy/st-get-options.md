@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->El comando **ST GET OPTIONS** obtiene el valor actual de una o varias opciones de funcionamiento del campo o de la variable de texto con estilo designada por el parámetro *objeto*.<!-- END REF-->

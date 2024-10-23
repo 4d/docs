@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->**OBJECT Get placeholder**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたプレースホルダーテキストを返します。<!-- END REF-->オブジェクトにプレースホルダーテキストが何も関連付けられていない場合は、空の文字列を返します。

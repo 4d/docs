@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT は*object* で指定したフォームオブジェクトに、*font* に渡したフォント名またはフォント番号のフォントが表示されるよう設定します。<!-- END REF--> *font* 引数には有効なフォント名を渡さなければなりません。

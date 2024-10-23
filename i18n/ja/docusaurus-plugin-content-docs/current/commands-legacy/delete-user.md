@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.DELETE USER.Summary-->DELETE USER コマンドは、引数 *userID* に渡したユニークなユーザID番号を持つユーザを削除します。<!-- END REF--> この場合、必ず[GET USER LIST](get-user-list.md "GET USER LIST") コマンドによって返された有効なユーザID番号を渡さなければなりません。 

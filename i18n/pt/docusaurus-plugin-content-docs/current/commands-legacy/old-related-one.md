@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->OLD RELATED ONE funciona da mesma forma que [RELATE ONE](relate-one.md "RELATE ONE"), com a diferença de que OLD RELATED ONE utiliza o valor anterior de *campo* para estabelecer a relação.<!-- END REF-->  

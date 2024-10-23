@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->O comando **LISTBOX INSERT ROWS** insere uma nova linha no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

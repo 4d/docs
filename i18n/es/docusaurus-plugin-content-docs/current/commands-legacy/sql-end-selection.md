@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL End selection.Summary-->El comando SQL End selection se utiliza para determinar si los límites del resultado obtenido se han alcanzado.<!-- END REF-->

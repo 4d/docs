@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA REFRESH CURRENT URL.Summary-->WA REFRESH CURRENT URL コマンドは、*\** と *object* 引数で指定したWebエリアに現在表示されているURLを再読み込みします。<!-- END REF-->

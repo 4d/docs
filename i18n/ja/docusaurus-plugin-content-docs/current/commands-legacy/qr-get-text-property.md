@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get text property.Summary-->QR Get text property コマンドは、*colNum* と *rowNum* で指定されたセルのテキスト属性のプロパティ値を返します。<!-- END REF--> 

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ACCEPT.Summary-->El comando **ACCEPT** se utiliza en métodos de objeto o de formulario (o en subrutinas) para:

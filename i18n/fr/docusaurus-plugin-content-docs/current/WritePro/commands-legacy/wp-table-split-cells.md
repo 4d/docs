@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->La commande **WP TABLE SPLIT CELLS** fractionne la sélection intersectée de cellules contenues dans *targetObj* ou *tableRef* (défini par *startColumn*, *startRow*, *columnCount*, et *rowCount*).<!-- END REF--> Une cellule ne sera fractionnée que si elle a déjà été fusionnée horizontalement, verticalement ou les deux ; dans le cas contraire, la cellule ne sera pas modifiée.

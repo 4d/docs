@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ST Get text.Summary-->La commande **ST Get text** retourne le texte multistyle présent dans le champ ou la variable de texte désigné(e) par le paramètre *objet*.<!-- END REF--> 

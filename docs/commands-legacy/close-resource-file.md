@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->The **CLOSE RESOURCE FILE** command closes the resource file whose reference number is passed in *resFile*.<!-- END REF-->

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR GET SELECTION.Summary-->El comando QR GET SELECTION devuelve las coordenadas de la selección actual de *area*.<!-- END REF-->

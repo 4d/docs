@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->**SET WINDOW RECT**コマンドは*window*に渡した参照番号のウィンドウのグローバル座標を変更します。<!-- END REF-->ウィンドウが存在しない場合、コマンドはなにも行いません。

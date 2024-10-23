@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->La commande **OBJECT SET KEYBOARD LAYOUT** vous permet de définir ou de modifier dynamiquement la configuration clavier associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 

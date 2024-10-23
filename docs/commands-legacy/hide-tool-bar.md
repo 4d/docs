@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.HIDE TOOL BAR.Summary-->The **HIDE TOOL BAR** command handles the display of custom toolbars created by the [Open form window](open-form-window.md) command for the current process.<!-- END REF-->

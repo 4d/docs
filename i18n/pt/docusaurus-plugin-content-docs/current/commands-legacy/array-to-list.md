@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->O comando ARRAY TO LIST cria ou substitui a lista hierárquica ou a lista de escolha (criada no editor LIsta) que é especificada em *lista* usando os elementos do *array* *.<!-- END REF-->*

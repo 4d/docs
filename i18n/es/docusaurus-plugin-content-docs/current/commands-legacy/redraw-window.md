@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->El comando REDRAW WINDOW provoca una actualización del contenido de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> 

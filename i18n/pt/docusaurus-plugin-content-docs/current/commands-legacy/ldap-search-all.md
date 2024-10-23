@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->O comando **LDAP SEARCH ALL** encontra todas as ocorrências que correspondem aos critérios definidos no servidor LDAP objetivo.<!-- END REF--> Este comando deve ser executado dentro de uma conexão com um servidor LDAP aberto com *LDAP LOGIN*; caso contrário, um erro 1003 é retornado.  

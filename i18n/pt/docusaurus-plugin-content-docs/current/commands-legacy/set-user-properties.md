@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties permite modificar e atualizar as propriedades de uma conta ativa de usuário existente cujo número de referência se passa no parâmetro *refUsuario* ou para adicionar um novo usuário.<!-- END REF-->

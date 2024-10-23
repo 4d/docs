@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->El comando **ON EVENT CALL** instala el método, cuyo nombre se pasa en *metodoEvento*, como método de gestión de eventos.<!-- END REF--> 

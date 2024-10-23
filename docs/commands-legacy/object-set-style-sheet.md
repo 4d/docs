@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->The **OBJECT SET STYLE SHEET** command modifies, for the current process, the style sheet associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> A style sheet modifies the font, font size and (except for automatic style sheets) font style.

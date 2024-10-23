@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->APPEND DATA TO PASTEBOARD コマンドは、*dataType*で指定されたデータタイプで*data*BLOB内にあるデータをペーストボードに追加します。<!-- END REF-->

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->La commande **SET MENU ITEM ICON** permet de modifier l’icône associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->

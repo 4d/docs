@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->El comando SCREEN COORDINATES devuelve en los parámetros *izquierda*, *arriba*, *derecha,* y *abajo* las coordenadas de la pantalla especificada por *IDpantalla*.<!-- END REF-->

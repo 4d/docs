@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->O comando [ST SET PLAIN TEXT](st-set-plain-text.md) insere o texto passado no parâmetro *novTexto* no campo ou a variável de texto com estilo designado pelo parâmetro *objeto* .<!-- END REF--> Este comando aplica unicamente ao texto plano do parâmetro *objeto*, sem modificar as possíveis etiquetas de estilo que contenha. 

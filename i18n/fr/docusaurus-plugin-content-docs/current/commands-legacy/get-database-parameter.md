@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get database parameter.Summary-->La commande **Get database parameter** permet de lire la valeur courante d'un paramètre de la base 4D.<!-- END REF--> Lorsque la valeur du paramètre est une chaîne de caractères, elle est retournée dans le paramètre *valeurAlpha*.

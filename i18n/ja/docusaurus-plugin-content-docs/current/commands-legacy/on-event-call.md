@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->**ON EVENT CALL** コマンドは、イベントを検知するメソッドである*eventMethod*をインストールします。<!-- END REF-->このメソッドは、**イベント処理メソッド**または**イベントキャッチメソッド**と呼ばれます。

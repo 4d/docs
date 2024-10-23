@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->El comando QR INSERT COLUMN inserta o crea una columna en una posición específica.<!-- END REF--> Las columnas situadas a la derecha de la columna añadida serán desplazadas en consecuencia.

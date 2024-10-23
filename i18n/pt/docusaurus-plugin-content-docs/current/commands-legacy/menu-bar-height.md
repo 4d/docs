@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Menu bar height.Summary-->Menu bar height retorna a altura da barra menu, expressa em pixels.<!-- END REF-->

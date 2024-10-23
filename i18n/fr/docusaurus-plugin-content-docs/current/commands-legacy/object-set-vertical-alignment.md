@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->La commande **OBJECT SET VERTICAL ALIGNMENT** vous permet de modifier par programmation le type d’alignement vertical appliqué à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->

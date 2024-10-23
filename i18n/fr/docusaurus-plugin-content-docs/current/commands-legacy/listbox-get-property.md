@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->La commande **LISTBOX Get property** retourne la valeur courante de la *propriété* de list box ou de colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 

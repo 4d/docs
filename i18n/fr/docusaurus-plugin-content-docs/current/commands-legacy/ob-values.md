@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OB Values.Summary-->La commande **OB Values** retourne une collection de variants contenant toutes les valeurs des propriétés énumérables de l'*objet*.<!-- END REF--> 

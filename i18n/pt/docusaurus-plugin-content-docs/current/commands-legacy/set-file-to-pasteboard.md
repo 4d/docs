@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->O comando SET FILE TO PASTEBOARD adiciona a área de transferência à rota de acesso completa do arquivo passada no parâmetro *arquivo*.<!-- END REF--> Este comando permite criar interfaces permitindo arrastar e soltar objetos 4D aos arquivos no escritório por exemplo.  

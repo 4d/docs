@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->QR SET DOCUMENT PROPERTY コマンドを使用し、印刷ダイアログの表示の有無、またはドキュメントで使用する単位の指定を行うことができます。<!-- END REF-->

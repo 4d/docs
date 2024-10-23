@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP SET FRAME.Summary-->**WP SET FRAME** コマンドは*wpArea* 引数で指定した4D Write Pro エリア内の、*frameSelector* 引数で指定したフレーム内、または *textBoxID* 引数で指定したテキストボックス内にカーソルを設定します。<!-- END REF-->

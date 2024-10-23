@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->The FORM SCREENSHOT command returns a form as a picture.<!-- END REF--> This command accepts two different syntaxes: depending on the syntax used, you get either a picture of an executed form, or a picture of the form in the Form editor.

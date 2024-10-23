@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 
 
 <!--REF #_command_.On Exit database method.Summary-->**On Exitデータベースメソッド**は、データベースを終了すると一回呼び出されます。<!-- END REF-->

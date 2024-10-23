@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->O comando **SET DATABASE PARAMETER** permite modificar vários parâmetros internos do banco de dados 4D.<!-- END REF-->  

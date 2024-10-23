@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM LOAD.Summary-->El comando **FORM LOAD** se utiliza para cargar el *formulario* en memoria en el proceso actual junto con *dataForm* (opcional) con el fin de imprimir sus datos o analizar sus contenidos.<!-- END REF--> Sólo puede haber un formulario actual por proceso.

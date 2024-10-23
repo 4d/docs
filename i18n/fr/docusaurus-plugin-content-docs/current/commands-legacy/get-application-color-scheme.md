@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get application color scheme.Summary-->La commande **Get application color scheme** retourne le nom du schéma de couleur utilisé dans l'application.<!-- END REF--> 

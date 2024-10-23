@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WP SELECT.Summary-->La commande **WP SELECT** crée une nouvelle sélection dans la zone de 4D Write Pro *zoneWP*, basée sur l'*objCible* ou la plage définie par *débutPlage* et *finPlage*.<!-- END REF-->

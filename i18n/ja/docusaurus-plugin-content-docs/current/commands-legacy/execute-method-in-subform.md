@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->**EXECUTE METHOD IN SUBFORM** コマンドを使用して サブフォームオブジェクト*subformObject* のコンテキストにおいて*formula* 引数で指定したコードを実行できます。<!-- END REF-->

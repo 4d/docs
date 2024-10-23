@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->SHOW PROCESS muestra todas las ventanas que pertenecen a *proceso*.<!-- END REF--> Este comando no trae las ventanas de *proceso* al primer plano. Para hacer esto, utilice el comando [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").  

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->El comando OBJECT SET SCROLLBAR le permite mostrar u ocultar las barras de desplazamiento horizontal o vertical en el objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->

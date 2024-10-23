@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get visible.Summary-->OBJECT Get visible コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループが 表示属性を持っていればTrueを、そうでなければFalseを返します。<!-- END REF-->

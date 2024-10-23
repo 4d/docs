@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->O comando SET PRINTABLE MARGIN\[#descv\]permite atribuir os valores de varias margens de impressão utilizando os comandos [Print form](print-form.md), [PRINT SELECTION](print-selection.md) e [PRINT RECORD](print-record.md).<!-- END REF--> 

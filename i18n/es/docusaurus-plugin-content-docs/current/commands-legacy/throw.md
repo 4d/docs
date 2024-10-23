@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.throw.Summary-->El comando **throw** crea un error que será lanzado inmediatamente o cuando el método que lo llama devuelva a su llamador (modo diferido).<!-- END REF-->

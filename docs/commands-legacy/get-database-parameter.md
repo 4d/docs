@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get database parameter.Summary-->The **Get database parameter** command allows you to get the current value of a 4D database parameter.<!-- END REF--> When the parameter value is a character string, it is returned in the *stringValue* parameter.

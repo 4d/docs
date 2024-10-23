@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->El comando **CLOSE PRINTING JOB** permite cerrar el trabajo de impresión previamente abierto por el comando [OPEN PRINTING JOB](open-printing-job.md) y enviar a la impresora actual el documento de impresión creado.<!-- END REF-->

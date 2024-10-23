@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA Get last filtered URL.Summary-->WA Get last filtered URL コマンドは、*\** と *object* 引数で指定したWebエリアで、最後にフィルタされたURLを返します。<!-- END REF-->

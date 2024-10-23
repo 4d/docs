@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->4Dに統合されたSQLカーネルのメリットを利用ためにQUERY BY SQLコマンドを使用できます。<!-- END REF-->このコマンドで以下のような簡単なSELECTクエリを実行できます:

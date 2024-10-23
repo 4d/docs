@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->La commande **LISTBOX SET HIERARCHY** vous permet de configurer l'objet list box désigné par les paramètres *objet* et *\** en mode hiérarchique ou non.<!-- END REF--> 

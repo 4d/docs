@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Compatibilidad 
 
 <!--REF #_command_.Form event code.Summary-->**Form event code** se llamaba **Form event** en versiones anteriores de 4D.<!-- END REF--> Se renombró para mayor claridad cuando se agregó el comando [FORM Event](form-event.md), que devuelve un objeto.

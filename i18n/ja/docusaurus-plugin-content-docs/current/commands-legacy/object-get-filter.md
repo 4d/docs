@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get filter.Summary-->OBJECT Get filter コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループに割り当てられたフィルターの名前を返します。<!-- END REF-->.

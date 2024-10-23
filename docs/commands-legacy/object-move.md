@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->The OBJECT MOVE command allows you to move the object(s) in the current form, defined by the *\** and *object* parameters *moveH* pixels horizontally and *moveV* pixels vertically.<!-- END REF--> 

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA Forward URL available.Summary-->O comando WA Forward URL available permite conhecer se existe uma URL seguinte disponível na sequência de URLs abertas na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  

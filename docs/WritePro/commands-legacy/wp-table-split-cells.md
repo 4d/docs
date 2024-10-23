@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->The **WP TABLE SPLIT CELLS** command splits the intersecting selection of cells in the *targetObj* or *tableRef* (defined by *startColumn*, *startRow*, *columnCount*, and *rowCount*).<!-- END REF--> A cell will be split only if it has already been merged horizontally, vertically, or both; otherwise, the cell will not be modified.

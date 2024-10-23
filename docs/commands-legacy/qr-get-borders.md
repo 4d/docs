@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->The **QR GET BORDERS** command allows you to retrieve the border style for a border of a given cell.<!-- END REF-->

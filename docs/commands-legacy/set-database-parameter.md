@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->The **SET DATABASE PARAMETER** command allows you to modify various internal parameters of the 4D database.<!-- END REF-->

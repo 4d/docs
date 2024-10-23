@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->**SPELL ADD TO USER DICTIONARY**コマンドはカレントのユーザー辞書に単語を追加します。<!-- END REF-->

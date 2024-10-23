@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->MINIMIZE WINDOW コマンドは、*window*に渡された参照番号のウィンドウサイズを、最大化される前に戻します。<!-- END REF-->この引数が省略されると、アプリケーションのそれぞれのウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) に適用されます。

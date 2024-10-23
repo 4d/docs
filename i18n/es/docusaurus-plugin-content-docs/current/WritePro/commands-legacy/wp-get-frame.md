@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WP Get frame.Summary-->El comando **WP Get frame** devuelve el marco en el que se encuentra actualmente el cursor en el área 4D Write Pro *wpArea*.<!-- END REF-->

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR RUN.Summary-->The **QR RUN** command executes the report *area* whose reference was passed as parameter with the Quick Report current settings, including the output type.<!-- END REF--> You can use the [QR SET DESTINATION](qr-set-destination.md) command to modify the output type.

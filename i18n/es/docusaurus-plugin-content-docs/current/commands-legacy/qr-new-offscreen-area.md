@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR New offscreen area.Summary-->El comando QR New offscreen area crea un área de informe rápido fuera de pantalla y devuelve su número de referencia.<!-- END REF-->

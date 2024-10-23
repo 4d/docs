@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->The **RESIZE FORM WINDOW** command lets you change the size of the current form window.<!-- END REF--> 

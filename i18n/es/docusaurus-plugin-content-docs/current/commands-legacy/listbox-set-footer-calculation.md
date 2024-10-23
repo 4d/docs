@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->El comando **LISTBOX SET FOOTER CALCULATION** permite definir el cálculo automático asociado al área de pie del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

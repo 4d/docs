@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->O comando RESOURCE TYPE LIST preenche o array *resTipos* com os tipos de recursos presentes no(os) arquivo(s) de recursos aberto(s).<!-- END REF-->  

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET TOTALS SPACING.Summary-->O comando QR SET TOTALS SPACING permite definir um espaço sobre a linha de subtotal.<!-- END REF--> Aplica unicamente ao modo lista.  

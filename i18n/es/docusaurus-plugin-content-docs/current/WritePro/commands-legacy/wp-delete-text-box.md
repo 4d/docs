@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->El comando **WP DELETE TEXT BOX** borra la caja de texto definida por el parámetro *textBox*.<!-- END REF-->

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->**LISTBOX GET GRID COLORS**コマンドは*object*と*\** 引数で指定したリストボックスの縦横グリッドカラーをそれぞれ返します。<!-- END REF-->

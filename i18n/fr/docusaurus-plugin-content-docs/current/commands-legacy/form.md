@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Form.Summary-->La commande **Form** retourne l'objet associé au formulaire courant, s'il existe.<!-- END REF--> 4D associe automatiquement un objet au formulaire courant dans les cas suivants :

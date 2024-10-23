@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA GET URL HISTORY.Summary-->El comando WA GET URL HISTORY devuelve uno o dos arrays que contienen los URLs visitados durante la sesión en el área web designada por los parámetros *\** y *objeto*.<!-- END REF--> Permite construir una interfaz de navegación personalizada.

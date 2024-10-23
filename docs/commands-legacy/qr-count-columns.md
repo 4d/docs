@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR Count columns.Summary-->The QR Count columns command returns the number of columns present in the Quick Report *area*.<!-- END REF-->

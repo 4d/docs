@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Summary-->**OBJECT SET MINIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトの最小値を、カレントプロセスにおいて変更します。<!-- END REF-->

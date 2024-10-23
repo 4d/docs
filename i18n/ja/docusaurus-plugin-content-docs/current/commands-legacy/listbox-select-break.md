@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->**LISTBOX SELECT BREAK** を使用して *object*と*\**で指定したリストボックス中でブレーク行を選択できます。<!-- END REF-->リストボックスは階層モードで表示されていなければなりません。

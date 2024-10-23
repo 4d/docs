@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->El comando **METHOD GET CODE** devuelve en el parámetro *codigo*, el contenido de los métodos designados por el parámetro *ruta*.<!-- END REF--> Este comando puede devolver el código de todos los tipos de métodos: métodos base, definiciones de clases, triggers, métodos proyecto, métodos formulario y métodos objeto.  

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA Forward URL available.Summary-->WA Forward URL available コマンドは、*\** と *object* 引数で指定したWebエリアに開かれた一連のURLで、次のURLが利用できるかどうかを知るために使用します。<!-- END REF--> 

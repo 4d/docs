@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.BLOB to list.Summary-->El comando BLOB to list crea una nueva lista jerárquica con los datos almacenados en el BLOB *blob* en el offset de bytes (a partir de cero) especificado por *offset* y devuelve un número de referencia de lista jerárquica para esa nueva lista.<!-- END REF-->

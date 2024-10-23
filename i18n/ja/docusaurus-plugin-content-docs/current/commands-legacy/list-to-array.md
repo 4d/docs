@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->LIST TO ARRAY コマンドは、*list* で指定したリストまたは選択リストの第一レベルの項目で、配列*array*を作成または上書きします。<!-- END REF-->

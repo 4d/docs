@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->**WP TABLE SPLIT CELLS** コマンドは、*targetObj* または(startColumn、*startRow*、columnCount、および rowCount によって定義される)tableRef 内のセルのセレクションの結合を解除します。<!-- END REF-->セルは、それが縦方向/横方向/その両方向に既に結合されていた場合にのみ結合を解除され分割されます。そうでない場合は、セルは変更されません。

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->La commande **OBJECT SET STYLE SHEET** vous permet de modifier, pour le process courant, la feuille de style associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> Une feuille de style modifie la police, la taille de police et (hormis pour les feuilles de style automatique) le style de police.

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->O comando APPEND DATA TO PASTEBOARD adiciona na área de transferência os dados do tipo especificado em *tipoDados* no BLOB *dados*.<!-- END REF-->

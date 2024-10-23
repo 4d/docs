@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->O comando MINIMIZE WINDOW define o tamanho da janela, cujo número foi passado em *janela*, do tamanho que tinha antes de ser maximizada.<!-- END REF--> Se for omitido janela, o comando aplica a cada janela da aplicação (Windows) ou a janela do primeiro plano do processo atual (em Mac OS).  

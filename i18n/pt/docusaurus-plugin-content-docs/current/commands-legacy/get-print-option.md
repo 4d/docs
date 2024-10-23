@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->O comando **GET PRINT OPTION** devolve os valores atuais de uma opção de impressão.<!-- END REF-->

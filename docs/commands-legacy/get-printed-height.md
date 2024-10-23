@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get printed height.Summary-->The **Get printed height** command returns the overall height (in pixels) of the section printed using the [Print form](print-form.md) command.<!-- END REF-->

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->**SPELL SET CURRENT DICTIONARY**コマンドは、現在の辞書を引数*dictionary*に よって指定された辞書で置き換えます。<!-- END REF-->カレント辞書は、4Dに内蔵されているスペルチェック機能に使用されています(詳細については、 4D Design Referenceマニュアルや4D Write Proドキュメントを参照してください) 。設定された現在の辞書は即座にセッションを通して、データベースのすべてのプロセス、および4D Writeや4D Viewプラグインエリアに反映されます。

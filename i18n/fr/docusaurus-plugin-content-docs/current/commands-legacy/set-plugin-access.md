@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->La commande **SET PLUGIN ACCESS** permet de spécifier par programmation le groupe d’utilisateurs autorisé à utiliser chaque plug-in “sérialisé” installé dans la base.<!-- END REF--> Cette définition permet de gérer la répartition des licences des plug-ins.

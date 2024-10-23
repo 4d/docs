@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->The **OBJECT SET AUTO SPELLCHECK** command sets or dynamically modifies the status of the **Auto spellcheck** option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> This option enables or disables the automatic spellcheck when data is entered for the object (Text type objects only).

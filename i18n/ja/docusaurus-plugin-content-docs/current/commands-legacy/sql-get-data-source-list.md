@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->*GET DATA SOURCE LIST*コマンドは、オペレーションシステムのODBCマネージャで定義されている*sourceType* データソースのドライバと名前を*sourceNamesArr*と*driversArr*の配列に返します。<!-- END REF-->

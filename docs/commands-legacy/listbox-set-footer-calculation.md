@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->The **LISTBOX SET FOOTER CALCULATION** command sets the automatic calculation associated with the footer of the list box designated by the *object* and *\** parameters

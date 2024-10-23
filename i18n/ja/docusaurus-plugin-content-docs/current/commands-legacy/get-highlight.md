@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->**GET HIGHLIGHT**コマンドは、*object*中で現在反転表示されているテキストを検出するために使用します。<!-- END REF--> 

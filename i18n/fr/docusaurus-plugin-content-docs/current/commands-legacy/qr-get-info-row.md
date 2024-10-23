@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR Get info row.Summary-->La commande **QR Get info row** indique si la ligne désignée par le paramètre *ligne* est affichée ou masquée dans la *zone*.<!-- END REF--> 

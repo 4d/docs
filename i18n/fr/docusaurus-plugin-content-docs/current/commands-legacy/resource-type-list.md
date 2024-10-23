@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->La commande **RESOURCE TYPE LIST** remplit le tableau *resTypes* avec les types des ressources présentes dans le(s) fichier(s) de resources ouvert(s).<!-- END REF-->

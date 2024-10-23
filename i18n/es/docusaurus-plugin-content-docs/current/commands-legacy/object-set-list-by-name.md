@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->El comando OBJECT SET LIST BY NAME define, reemplaza o disocia la lista asociada al objeto o al grupo de objetos designado por *objeto.<!-- END REF-->* La lista cuyo nombre se pasa en el parámetro *lista* debe haber sido creada en el editor de listas en el entorno Diseño*.*

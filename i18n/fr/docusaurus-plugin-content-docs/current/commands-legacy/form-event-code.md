@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Compatibilité 
 
 <!--REF #_command_.Form event code.Summary-->La commande **Form event code** était nommée **Evenement formulaire** dans les versions précédentes de 4D.<!-- END REF--> Elle a été renommée pour plus de clarté, depuis l'ajout de la commande [FORM Event](form-event.md) qui retourne un objet.

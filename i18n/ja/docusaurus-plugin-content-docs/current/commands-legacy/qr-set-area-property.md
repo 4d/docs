@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->**QR SET AREA PROPERTY** コマンドを使用し、*property* に渡したインタフェース要素 (ツールバーやメニューバー) を表示、または非表示に設定できます。<!-- END REF-->

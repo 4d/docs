@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get number of columns.Summary-->The **LISTBOX Get number of columns** command returns the total number of columns (visible or invisible) present in the list box set in the *object* and *\** parameters.<!-- END REF-->

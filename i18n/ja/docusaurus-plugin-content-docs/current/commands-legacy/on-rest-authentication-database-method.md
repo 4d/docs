@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.On REST Authentication database method.Summary-->**On REST Authentication データベースメソッド** は4D 20 R6 以降は廃止予定となります。<!-- END REF-->

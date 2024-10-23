@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->RESIZE FORM WINDOW コマンドはカレントフォームウィンドウのサイズを変更します。<!-- END REF-->

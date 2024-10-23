@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get visible.Summary-->O comando OBJECT Get visible devolve True se o objeto ou grupo de objetos designado por *objeto* tem o atributo visível e do contrário False.<!-- END REF-->  

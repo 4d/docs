@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get resource name.Summary-->**Get resource name**コマンドは、*resType*のタイプで*resID*のIDを持つリソースの名前を返します。<!-- END REF-->

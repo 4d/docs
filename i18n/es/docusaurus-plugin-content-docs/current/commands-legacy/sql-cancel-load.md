@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->El comando SQL CANCEL LOAD finaliza la solicitud SELECT actual e inicializa los parámetros.<!-- END REF--> 

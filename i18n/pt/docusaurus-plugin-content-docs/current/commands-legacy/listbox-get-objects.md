@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->O comando **LISTBOX GET OBJECTS** devolve um array que contém os nomes de todos os objetos que compõem o list box designado pelos parâmetros *objeto* e *\** .<!-- END REF-->  

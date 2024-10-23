@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.IMPORT DIF.Summary-->IMPORT DIF コマンドは、WindowsまたはMacintoshの標準的なDIF形式のドキュメント*document*から *aTable*にデータを読み込み、新しいレコードを作成します。<!-- END REF-->

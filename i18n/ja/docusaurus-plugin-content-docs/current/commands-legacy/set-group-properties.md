@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties コマンドは、引数 *groupID* に渡したユニークなグループID番号を持つ既存のグループのプロパティを変更・更新するか、新規グループを追加します。<!-- END REF-->

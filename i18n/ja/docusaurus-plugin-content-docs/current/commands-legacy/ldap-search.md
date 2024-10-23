@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LDAP Search.Summary-->**LDAP Search** コマンドはターゲットとなるLDAPサーバー内にて、定義された条件に合致する最初のオカレンスを検索します。<!-- END REF-->このコマンドは*RuntimeVLIncludeIt* によって開かれたLDAPサーバーへの接続の中で実行される必要があります(それ以外の場合にはエラー1003が返されます)。

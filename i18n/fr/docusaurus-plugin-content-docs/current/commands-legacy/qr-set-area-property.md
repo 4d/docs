@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->La commande **QR SET AREA PROPERTY** vous permet d'afficher ou de masquer l'élément d'interface dont la référence est passée dans le paramètre *propriété*.<!-- END REF-->

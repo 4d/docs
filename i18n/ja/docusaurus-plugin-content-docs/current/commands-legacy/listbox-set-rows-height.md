@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Summary-->**LISTBOX SET ROWS HEIGHT**コマンドを使用すると、*object*引数および *\** で指定されたリストボックス内の行の高さをプログラムで変更することができます。<!-- END REF--> 

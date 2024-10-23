@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->El comando QR SET REPORT KIND define el *tipo* del informe presente en *area*.<!-- END REF-->

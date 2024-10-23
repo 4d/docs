@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->El comando OBJECT Get enabled devuelve True si el objeto o grupo de objetos designado por objeto está activo en el formulario y False si no está activo.<!-- END REF-->   

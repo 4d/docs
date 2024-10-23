@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->La commande **PRINT OPTION VALUES** retourne dans le tableau *tabNoms* la liste des noms de valeurs disponibles pour l’*option* d’impression définie.<!-- END REF--> Facultativement, vous pouvez récupérer des informations sur chaque valeur dans les tableaux *tabInfo1* et *tabInfo2*. 

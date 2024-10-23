@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get visible.Summary-->La commande **OBJECT Get visible** retourne Vrai si l'objet ou le groupe d'objets désigné(s) par *objet* dispose de l’attribut visible et Faux sinon.<!-- END REF--> 

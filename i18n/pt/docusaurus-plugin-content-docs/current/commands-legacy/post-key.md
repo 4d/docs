@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.POST KEY.Summary-->O comando POST KEY simula uma tecla.<!-- END REF--> Esse efeito funciona como se o usuário tivesse entrado um caractere no teclado.  

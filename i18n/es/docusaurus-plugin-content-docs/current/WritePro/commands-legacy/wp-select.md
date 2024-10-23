@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WP SELECT.Summary-->El comando **WP SELECT** crea una nueva selección de texto en el área 4D Write Pro *wpArea*, basado en el *rangoObj* o un nuevo rango definido por *rangoInicio* y *rangoFinal*.<!-- END REF-->

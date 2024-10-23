@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->SQL CANCEL LOAD コマンドコマンドは、現在のSELECTリクエストを終了してパラメタを初期化します。<!-- END REF-->

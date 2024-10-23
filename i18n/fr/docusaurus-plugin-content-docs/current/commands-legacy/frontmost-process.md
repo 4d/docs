@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Frontmost process.Summary-->**Frontmost process** retourne le numéro du process dont la ou les fenêtre(s) est (sont) au premier plan.<!-- END REF--> 

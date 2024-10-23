@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->**SQL SET OPTION** コマンドを使用して、optionに渡したオプションのvalueを変更します。<!-- END REF-->

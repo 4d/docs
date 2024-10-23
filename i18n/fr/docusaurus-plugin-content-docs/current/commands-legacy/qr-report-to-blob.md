@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->La commande **QR REPORT TO BLOB** place dans le BLOB *blob* (variable ou champ) l’état dont la référence a été passée dans le paramètre *zone*.<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CLEAR LIST.Summary-->El comando CLEAR LIST borra de la memoria la lista jerárquica cuyo número de referencia se pasa en *lista*.<!-- END REF-->

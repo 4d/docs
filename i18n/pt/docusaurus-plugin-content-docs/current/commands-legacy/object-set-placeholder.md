@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->O comando **OBJECT SET PLACEHOLDER** associa um texto de exemplo ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  

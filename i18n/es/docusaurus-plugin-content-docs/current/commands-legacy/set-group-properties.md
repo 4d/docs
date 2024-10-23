@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties permite modificar y actualizar las propiedades de un grupo existente cuyo número de referencia único se pasa en *refGrupo*, o para añadir un nuevo grupo.<!-- END REF--> 

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Select RGB Color.Summary-->The Select RGB Color command displays the system color selection window and returns the RGB value of the color selected by the user.<!-- END REF-->

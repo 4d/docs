@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Validate password.Summary-->Validate password devuelve True si la cadena pasada en *contraseña* es la contraseña para la cuenta de usuario cuyo número de referencia se pasa en *refUsuario*.<!-- END REF-->

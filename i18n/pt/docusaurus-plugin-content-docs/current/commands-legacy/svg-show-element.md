@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->O comando SVG SHOW ELEMENT move o documento SVG *objetoImagem* para mostrar o elemento cujo atributo "id" é especificado pelo parâmetro *id*.<!-- END REF-->  

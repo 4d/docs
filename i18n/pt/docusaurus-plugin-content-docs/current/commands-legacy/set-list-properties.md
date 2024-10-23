@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->O comando SET LIST PROPERTIES define a aparência da lista hierárquica cuja referência é passada no parâmetro *lista*.<!-- END REF-->  

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->La commande **WA Evaluate JavaScript** exécute dans la zone Web désignée par les paramètres *\** et *objet* le code JavaScript passé dans *codeJS* et retourne le résultat.<!-- END REF--> Cette commande doit être appelée après le chargement complet de la page (l'événement formulaire On End URL Loading doit avoir été généré).

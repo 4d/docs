@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->The **LISTBOX Get static columns** command returns the number of static columns in the list box designated by the *object* and *\** parameters.<!-- END REF-->

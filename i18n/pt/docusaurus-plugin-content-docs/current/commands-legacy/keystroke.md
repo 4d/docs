@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Keystroke.Summary-->Keystroke retorna o caractere introduzido pelo usuário em um campo o em uma área editável.<!-- END REF--> 

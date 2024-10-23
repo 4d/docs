@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->**LISTBOX GET TABLE SOURCE**コマンドを使用して、*object*と *\** 引数で指定したリストボックスに表示されるデータの現在のソースを知ることができます。<!-- END REF-->

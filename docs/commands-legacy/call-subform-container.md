@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->The CALL SUBFORM CONTAINER command lets a subform instance send the *event* to the subform object that contains it.<!-- END REF--> The subform object can then process the *event* in the context of the parent form. 

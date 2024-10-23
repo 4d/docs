@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Window kind.Summary-->La commande **Window kind** retourne le type de fenêtre 4D dont vous avez passé la référence dans *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, **Window kind** retourne 0 (zéro).  

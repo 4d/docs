@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ST GET URL.Summary-->El comando **ST GET URL** devuelve la etiqueta y la dirección de la primera URL detectada en el campo o la variable de texto multiestilo designado por el parámetro *objeto*.<!-- END REF--> 

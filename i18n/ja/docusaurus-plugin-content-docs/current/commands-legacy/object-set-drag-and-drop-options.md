@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->**OBJECT SET DRAG AND DROP OPTIONS**コマンドは*object* と *\** 引数で指定したオブジェクトのドラッグ＆ドロップオプションをカレントプロセス内で動的に設定します。<!-- END REF-->

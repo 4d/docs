@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->**HIDE PROCESS** hides all windows that belong to *process*.<!-- END REF--> All interface elements of *process* are hidden until the next [SHOW PROCESS](show-process.md). The menu bar of the process is also hidden. This means that opening a window while the process is hidden does not make the screen redraw or display. If the process is already hidden, the command has no effect.

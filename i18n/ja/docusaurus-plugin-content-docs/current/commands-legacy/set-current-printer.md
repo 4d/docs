@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->**SET CURRENT PRINTER** コマンドは現行の4Dアプリケーションでの印刷に使用するプリンターを指定するために使用します。<!-- END REF-->

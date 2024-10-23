@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WP Get frame.Summary-->La commande **WP Get frame** retourne le cadre de la zone 4D Write Pro *zoneWP* dans lequel se trouve actuellement le curseur.<!-- END REF-->

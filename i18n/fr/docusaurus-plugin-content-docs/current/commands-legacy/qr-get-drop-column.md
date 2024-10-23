@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR Get drop column.Summary-->La commande **QR Get drop column** retourne une valeur indiquant l'emplacement auquel un “déposer” a été effectué dans *zone* :

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->O comando **OBJECT GET SUBFORM CONTAINER SIZE** devolve a *largura* e a *altura* (em pixels) de um objeto sub-formulário "atual", mostrado no formulário pai.<!-- END REF-->  

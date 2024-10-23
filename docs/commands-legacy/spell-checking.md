@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->The **SPELL CHECKING** command triggers the spell check of the field or variable having the focus in the currently displayed form.<!-- END REF--> The object checked must be of the string or text type.

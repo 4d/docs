@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Is user deleted.Summary-->El comando Is user deleted prueba la cuenta de usuario cuyo número de identificación único se pasa en *refUsuario*.<!-- END REF--> 

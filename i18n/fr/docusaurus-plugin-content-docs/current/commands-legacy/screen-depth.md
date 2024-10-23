@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->La commande **SCREEN DEPTH** retourne dans les paramètres *profondeur* et *couleur* les caractéristiques du moniteur utilisé.<!-- END REF-->

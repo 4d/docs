@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->La commande **WA SET EXTERNAL LINKS FILTERS** permet de mettre en place un ou plusieurs filtre(s) de liens externes pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Les filtres de liens externes déterminent si un URL associé à la page courante via un lien doit être ouvert dans la zone Web ou dans le navigateur Web par défaut de la machine.

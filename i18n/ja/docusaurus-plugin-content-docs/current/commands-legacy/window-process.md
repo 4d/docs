@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Window process.Summary-->Window process コマンドは*window*に渡されたウィンドウが実行されているプロセスの番号を返します。<!-- END REF-->ウィンドウが存在しない場合0が返されます。

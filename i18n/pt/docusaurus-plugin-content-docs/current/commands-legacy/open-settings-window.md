@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 O comando OPEN SETTINGS WINDOW abre a caixa de diálogo Preferências de 4D ou as configurações do banco de dados do aplicativo atual 4D e exibe os parâmetros ou a página correspondente à chave *seletor* fornecida.  

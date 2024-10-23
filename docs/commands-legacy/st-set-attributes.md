@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->The ST SET ATTRIBUTES command can be used to modify one or more style attributes in the form object(s) designated by *object*.<!-- END REF--> 

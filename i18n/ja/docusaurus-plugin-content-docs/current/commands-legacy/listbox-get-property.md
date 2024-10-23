@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->**LISTBOX Get property**コマンドは、引数*object*および *\** で指定されたリストボックスまたはカラムについて、*property* の値を返します。<!-- END REF-->

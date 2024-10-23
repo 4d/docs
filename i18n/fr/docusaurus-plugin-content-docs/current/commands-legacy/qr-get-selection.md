@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR GET SELECTION.Summary-->La commande **QR GET SELECTION** retourne les coordonnées de la sélection courante de la *zone*.<!-- END REF--> 

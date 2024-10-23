@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->**OBJECT SET SHORTCUT**コマンドは*object* と*\** で指定したオブジェクトのキーボードショートカットをカレントプロセスで動的に変更します。<!-- END REF-->

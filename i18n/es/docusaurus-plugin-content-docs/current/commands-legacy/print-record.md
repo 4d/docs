@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** imprime el registro actual de *tabla*, sin modificar la selección actual.<!-- END REF--> El formulario de salida actual se utiliza para la impresión. Si no hay registro actual para *tabla*, **PRINT RECORD** no hace nada.

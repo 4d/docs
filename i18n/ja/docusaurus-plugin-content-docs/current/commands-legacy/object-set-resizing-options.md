@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Summary-->**OBJECT SET RESIZING OPTIONS**コマンドは*object*と*\** で指定したオブジェクトのリサイズオプションをカレントプロセス内で動的に変更します。<!-- END REF-->これらのオプションを使用して、フォームウィンドウのサイズが変更されたときにオブジェクトをどのように表示するかを指定できます。

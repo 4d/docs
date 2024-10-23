@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.throw.Summary-->La commande **throw** crée une erreur qui sera levée soit immédiatement, soit lorsque la méthode appelante retournera à l'appelant (mode différé).<!-- END REF--> 

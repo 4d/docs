@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->La commande **SET APPLICATION COLOR SCHEME** définit le schéma de couleurs à utiliser au niveau de l'application pour la session courante.<!-- END REF--> Ce schéma sera appliqué aux formulaires qui ne déclarent pas déjà un schéma spécifique (un schéma de couleurs défini au niveau du formulaire est prioritaire sur le niveau de l'application).

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->CHANGE LICENSES コマンドは、4Dライセンス管理ダイアログボックスを表示します。<!-- END REF-->

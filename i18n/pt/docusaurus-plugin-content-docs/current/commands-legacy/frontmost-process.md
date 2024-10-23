@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Frontmost process.Summary-->Frontmost process devolve o número do processo cuja janela (ou janelas) estão no primeiro plano.<!-- END REF--> 

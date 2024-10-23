@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get text resource.Summary-->El comando Get text resource devuelve el texto guardado en el recurso texto (“TEXT”) cuyo número de identificación se pasa en *resNum*.<!-- END REF-->

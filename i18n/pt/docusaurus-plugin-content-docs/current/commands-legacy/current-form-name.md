@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Current form name.Summary-->O comando **Current form name** retorna o nome do formulário atual definido para o processo.<!-- END REF--> O formulário atual pode ser um formulário de projeto ou formulário de tabela. 

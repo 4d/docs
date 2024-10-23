@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Menu bar height.Summary-->Menu bar height devuelve la altura de la barra de menús, expresada en píxeles.<!-- END REF-->

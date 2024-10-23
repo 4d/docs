@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->**OBJECT SET CORNER RADIUS** コマンドは、*object* 引数で指定したオブジェクトの角の半径を*radius* 引数で指定した半径に変更します。<!-- END REF-->新しい半径はそのプロセスに対してのみ有効で、フォーム内には保存されません。

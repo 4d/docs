@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->DISPLAY NOTIFICATION コマンドは ユーザーへの通知メッセージを表示します。<!-- END REF-->

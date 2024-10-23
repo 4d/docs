@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->The **SET MENU ITEM SHORTCUT** command assigns a new shortcut to a menu item.<!-- END REF--> 

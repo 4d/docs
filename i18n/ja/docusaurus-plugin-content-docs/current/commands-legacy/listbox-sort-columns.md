@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->LISTBOX SORT COLUMNS コマンドは、1つ以上の列の値に基づいて、*object* 引数および*\**で指定されたリストボックスの行に対して、標準の並べ替えを適用します。<!-- END REF-->

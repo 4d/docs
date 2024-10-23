@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->El comando QR GET HEADER AND FOOTER permite recuperar el contenido y el tamaño del encabezado o pie de página.<!-- END REF-->

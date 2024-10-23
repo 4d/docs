@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->El comando **QR SET AREA PROPERTY** muestra u oculta el elemento de interfaz cuya referencia se pasa en *propiedad*.<!-- END REF-->

@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.POST EVENT.Summary-->O comando POST EVENT simula um evento de teclado ou de mouse.<!-- END REF--> Tem o mesmo efeito que quando o usuário atua através do teclado ou do mouse.  

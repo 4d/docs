@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->El comando **FORM Convert to dynamic** convierte el *nomFormulario* (formulario clásico) a un formulario dinámico y lo devuelve en un objeto.<!-- END REF-->

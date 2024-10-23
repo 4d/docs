@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->O comando QR SET HEADER AND FOOTER permite definir o conteúdo e o tamanho do cabeçalho e o rodapé de *area*.<!-- END REF-->  

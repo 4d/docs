@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->QR SET REPORT TABLE コマンドは、*area*に渡した参照のレポートエリアに、*table*に渡した番号のテーブルをカレントテーブルとして設定します。<!-- END REF-->

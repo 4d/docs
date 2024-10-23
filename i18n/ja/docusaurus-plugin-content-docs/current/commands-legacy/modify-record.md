@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.MODIFY RECORD.Summary-->MODIFY RECORDコマンドは、*aTable*テーブルまたは*aTable*引数を省略した場合デフォルトテーブルのカレントレコードを修正するために使用します。<!-- END REF-->MODIFY RECORDは、カレントプロセスにレコードがまだロードされていない場合にレコードをロードし、カレント入力フォームにレコードを表示します。カレントレコードがなければ、MODIFY RECORDは何も行いません。またMODIFY RECORDはカレントセレクションに影響を与えません。

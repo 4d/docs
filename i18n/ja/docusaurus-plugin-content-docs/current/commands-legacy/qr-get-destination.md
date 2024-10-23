@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->QR GET DESTINATION コマンドは、*area*に渡したエリア参照のレポート出力先を取得します。<!-- END REF-->

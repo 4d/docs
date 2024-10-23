@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->**OPEN COLOR PICKER**コマンドは、システムのカラーピッカーダイアログボックスを表示させます。<!-- END REF-->

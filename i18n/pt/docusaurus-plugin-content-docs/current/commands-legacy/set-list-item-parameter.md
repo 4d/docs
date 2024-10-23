@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->O comando SET LIST ITEM PARAMETER permite modificar o parâmetro *seletor* para o elemento *refElem* da lista hierárquica cuja referência ou nome de objeto são passadas no parâmetro *lista*.<!-- END REF-->

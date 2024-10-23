@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->O comando **TEXT TO ARRAY** transforma uma variável texto em um array texto.<!-- END REF--> El texto original (com estilo ou não) se divide e cada parte se converte em um elemento do array *arrText* que é devolvido pelo comando. Este comando se pode utilizar por exemplo para encher as páginas ou as colunas com texto de um tamanho fixo.  

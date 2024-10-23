@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->LISTBOX DELETE COLUMN コマンドは、引数*object*および *\** で指定されたリストボックスから1つ以上の列 (表示または非表示) を取り除きます。<!-- END REF-->

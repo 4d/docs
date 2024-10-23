@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get font size.Summary-->OBJECT Get font size コマンドは*object*で指定されたフォームオブジェクトで使用されている文字フォントのサイズをポイント単位で返します。<!-- END REF--> . 

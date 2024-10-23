@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Summary-->O comando LISTBOX SET ROWS HEIGHT lhe permite modificar por programação a altura das filas do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 

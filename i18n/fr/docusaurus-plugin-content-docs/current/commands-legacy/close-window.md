@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** referme la dernière fenêtre créée à l'aide de la commande [Open window](open-window.md) ou [Open form window](open-form-window.md) dans le process courant.<!-- END REF--> S'il n'y a pas de fenêtre personnalisée ouverte, **CLOSE WINDOW** ne fait rien ; la commande ne ferme pas les fenêtres système. Si **CLOSE WINDOW** est appelée alors qu'un formulaire est actif dans la fenêtre, elle n'a pas d'effet non plus. Vous devez appeler **CLOSE WINDOW** lorsque vous avez fini d'utiliser une fenêtre ouverte avec [Open window](open-window.md) ou [Open form window](open-form-window.md). 

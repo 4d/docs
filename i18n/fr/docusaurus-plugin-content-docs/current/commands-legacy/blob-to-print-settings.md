@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.BLOB to print settings.Summary-->La commande **BLOB to print settings** remplace les paramètres d’impression courants de 4D par les paramètres stockés dans le BLOB *paramImpression*.<!-- END REF--> Ce BLOB doit avoir été généré par la commande [Print settings to BLOB](print-settings-to-blob.md) ou par la commande de 4D Pack  (voir ci-dessous).

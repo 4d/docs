@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Open form window.Summary-->El comando Open form window abre una nueva ventana utilizando las propiedades de tamaño y de redimensionamiento del formulario *nomForm*.<!-- END REF-->

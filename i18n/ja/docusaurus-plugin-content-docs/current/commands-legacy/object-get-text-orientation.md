@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->**OBJECT Get text orientation**コマンドは、引数 *object* と *\** で指定したオブジェクトのテキストに適用されたカレントの方向の値を返します。<!-- END REF-->

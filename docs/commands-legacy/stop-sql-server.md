@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->The STOP SQL SERVER command stops the integrated SQL server in the 4D application where it has been executed.<!-- END REF-->

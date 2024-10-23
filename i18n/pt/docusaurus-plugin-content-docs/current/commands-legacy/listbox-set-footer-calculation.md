@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->O comando **LISTBOX SET FOOTER CALCULATION** permite definir o cálculo automático associado à área de rodapé do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  

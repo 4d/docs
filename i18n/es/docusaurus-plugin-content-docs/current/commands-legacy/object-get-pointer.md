@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->El comando **OBJECT Get pointer** devuelve un puntero a la variable de un objeto de formulario.<!-- END REF-->   

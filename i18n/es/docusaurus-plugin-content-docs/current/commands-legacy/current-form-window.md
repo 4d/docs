@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Current form window.Summary-->El comando Current form window devuelve la referencia de la ventana del formulario actual.<!-- END REF--> Si ninguna ventana ha sido definida para el formulario actual, el comando devuelve 0.

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->El comando **LISTBOX SET COLUMN FORMULA** modifica la *formula* asociada a la columna de list box designada por los parámetros *objeto* y *\**.<!-- END REF--> Las fórmulas no se pueden utilizar cuando la propiedad “Fuente de datos” del list box es **Selección actual**, **Selección temporal** o **Colección** o **Selección de entidades**.

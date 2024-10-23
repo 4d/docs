@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->**OBJECT SET ENTERABLE** コマンドは、*object* で指定したフォームオブジェクトを入力可または入力不可に設定するとともに、*フォーカス可能* 属性も設定します。<!-- END REF-->

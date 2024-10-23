@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX Get footers height.Summary-->El comando **LISTBOX Get footers height** devuelve la altura de la línea de pie del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

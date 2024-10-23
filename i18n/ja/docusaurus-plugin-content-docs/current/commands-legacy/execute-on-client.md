@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->EXECUTE ON CLIENT コマンドは、*clientName*という名前で登録されている4D Clientで、必要であれば*param1.<!-- END REF-->.. paramN*を引数とし、*methodName*メソッドを実行します。4D Clientの登録名は[REGISTER CLIENT](register-client.md "REGISTER CLIENT") コマンドで定義します。  

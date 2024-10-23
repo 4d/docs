@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE cambia la página actual de un formulario para mostrar la página anterior.<!-- END REF--> Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](form-load.md) o si ya se muestra la primera página del formulario, FORM PREVIOUS PAGE no hace nada.

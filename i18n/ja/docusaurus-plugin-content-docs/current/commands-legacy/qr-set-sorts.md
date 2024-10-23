@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET SORTS.Summary-->QR SET SORTS コマンド使用し、*area*に渡した参照のレポート内にあるカラムのソート順を設定できます。<!-- END REF-->

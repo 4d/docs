@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->El comando **ST SET OPTIONS** modifica una o varias opciones de funcionamiento del campo o de la variable de texto con estilo designada por el parámetro *objeto* .<!-- END REF-->  

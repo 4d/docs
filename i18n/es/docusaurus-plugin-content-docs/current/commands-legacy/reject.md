@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.REJECT.Summary-->**REJECT** tiene dos sintaxis.<!-- END REF--> La primera sintaxis no tiene parámetros. En este caso, el comando rechaza la totalidad de la entrada y obliga al usuario a permanecer en el formulario. La segunda sintaxis rechaza solamente el *campo* y obliga al usuario a permanecer en el campo. 

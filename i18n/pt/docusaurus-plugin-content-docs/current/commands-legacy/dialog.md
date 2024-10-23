@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.DIALOG.Summary-->O comandoDIALOG  apresenta o formulário *formulario* ao usuário.<!-- END REF--> Este comando se designa para trabalhar com interfaces de usuário avançadas e personalizadas baseadas em formulários. Pode utilizá-lo para mostrar informação do banco de dados ou de outras localizações, ou para oferecer funcionalidades de entrada de dados. Diferente de [ADD RECORD](add-record.md) o u [MODIFY RECORD](modify-record.md), **DIALOG** lhe dá controle total sobre o formulário, seu conteúdo e os botões de navegação e validação. 

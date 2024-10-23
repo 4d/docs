@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get multiline.Summary-->**OBJECT Get multiline**コマンドは、引数 *object* と *\** で指定したオブジェクトの、"複数行"のオプションのカレントの状態を返します。<!-- END REF-->

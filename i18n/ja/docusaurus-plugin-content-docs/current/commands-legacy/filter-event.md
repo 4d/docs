@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FILTER EVENT.Summary-->**FILTER EVENT** コマンドは、[ON EVENT CALL](on-event-call.md) コマンドでインストールされたイベント処理プロジェクトメソッドから呼び出されます。<!-- END REF-->

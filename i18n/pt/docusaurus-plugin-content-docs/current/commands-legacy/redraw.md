@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.REDRAW.Summary-->Quando utilizar um método para modificar o conteúdo de um campo ou sub campo mostrado em um sub-formulário, deve executar REDRAW para ter certeza que o formulário esteja corretamente atualizado.<!-- END REF--> .  

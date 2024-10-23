@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->El comando OBJECT DUPLICATE permite crear una copia del objeto designado por el parámetro *objeto* en el contexto del formulario que está siendo ejecutado (modo Aplicación).<!-- END REF--> El formulario de origen, generado en modo Diseño, no se modifica. 

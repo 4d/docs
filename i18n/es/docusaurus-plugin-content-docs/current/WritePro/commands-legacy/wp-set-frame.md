@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WP SET FRAME.Summary-->El comando **WP SET FRAME** coloca el cursor en el marco designado por *selectorMarco* y opcionalmente, *textBoxID*, en el área *areaWP* 4D Write Pro.<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Pasteboard data size.Summary-->Pasteboard data size コマンドを使用して、*dataType* に渡したデータがペーストボード内に存在するかどうかを調べることができます。<!-- END REF--> 

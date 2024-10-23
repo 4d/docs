@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Is user deleted.Summary-->La commande **Is user deleted** teste le compte de l'utilisateur dont le numéro d'identification unique est passé dans *réfUtilisateur*.<!-- END REF-->

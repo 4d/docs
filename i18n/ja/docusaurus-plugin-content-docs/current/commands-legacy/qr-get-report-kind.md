@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get report kind.Summary-->QR Get report kind コマンドは、*area*に渡したエリアのレポートタイプを取得します。<!-- END REF-->

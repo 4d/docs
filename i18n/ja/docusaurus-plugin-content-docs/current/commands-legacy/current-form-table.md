@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Current form table.Summary-->Current form tableコマンドは、カレントプロセスで表示または印刷されているフォームが属するテーブルのポインタを返します。<!-- END REF-->

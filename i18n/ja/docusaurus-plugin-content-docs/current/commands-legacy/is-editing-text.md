@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Is editing text.Summary-->**Is editing text** は、ユーザーが入力フォームオブジェクトに値を入力中であれば**True** を、それ以外の場合には**False** を返します。<!-- END REF-->

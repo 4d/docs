@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->El comando **OBJECT SET KEYBOARD LAYOUT** permite definir o modificar dinámicamente la configuración de teclado asociada al objeto o los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  

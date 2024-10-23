@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->El comando SQL LOAD RECORD recupera en 4D uno o más registros de la fuente de datos abierta en la conexión actual.<!-- END REF-->

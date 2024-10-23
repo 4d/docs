@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->O comando **METHOD GET COMMENTS** devolve no parâmetro *comentários*, os comentários dos métodos designados pelo parâmetro *rota*.<!-- END REF-->  

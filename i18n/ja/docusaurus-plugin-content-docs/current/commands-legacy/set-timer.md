@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET TIMER.Summary-->**SET TIMER** コマンドは、On Timerフォームイベントを有効にし、カレントプロセスのカレントフォームでOn Timerフォームイベント間の間隔Tick数を設定します。<!-- END REF--> 

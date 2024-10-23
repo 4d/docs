@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->OBJECT SET ENABLED コマンドは*object*で指定されたカレントフォーム中のオブジェクトあるいはオブジェクトグループを、有効または無効にするために使用します。<!-- END REF-->有効なオブジェクトはマウスクリックやキーボードショートカットに反応します。

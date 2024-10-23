@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->La commande **LISTBOX SET FOOTER CALCULATION** permet de définir le calcul automatique associé à la zone de pied de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->El comando SET FILE TO PASTEBOARD añade al portapapeles la ruta de acceso completa del archivo pasada en el parámetro *archivo*.<!-- END REF--> Este comando permite crear interfaces permitiendo arrastrar y soltar objetos 4D a los archivos en el escritorio por ejemplo.  

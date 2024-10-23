@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->O comando SET ALLOWED METHODS lhe \[#descv\]permite definir os métodos de projeto que podem ser chamados diretamente da aplicação  

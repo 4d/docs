@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->O comando **OBJECT SET STYLE SHEET** modifica, para o processo atual, a folha de estilo associada ao objeto(s) designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF--> Uma folha de estilo modifica a fonte, o tamanho de fonte e o estilo de fonte.

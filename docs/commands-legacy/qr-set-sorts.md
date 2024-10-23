@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET SORTS.Summary-->The QR SET SORTS command sets the sort orders for the columns in the report whose reference is passed in *area*.<!-- END REF-->

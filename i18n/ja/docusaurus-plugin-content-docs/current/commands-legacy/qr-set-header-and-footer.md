@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->QR SET HEADER AND FOOTER コマンドを使用し、ヘッダまたはフッタの内容とサイズを設定することができます。<!-- END REF-->

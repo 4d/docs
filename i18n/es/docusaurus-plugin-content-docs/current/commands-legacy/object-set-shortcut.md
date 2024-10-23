@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->El comando **OBJECT SET SHORTCUT** permite definir o modificar dinámicamente el atajo de teclado asociado al objeto o a los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  

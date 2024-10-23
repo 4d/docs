@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->El comando **IMPORT STRUCTURE** importa, en la base actual, la definición XML de la estructura de la base 4D pasada en el parámetro *estructuraXML*.<!-- END REF--> 

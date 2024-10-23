@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET SORTS.Summary-->O comando QR SET SORTS permite definir o sentido de ordenação de cada coluna do relatório rápido cuja referência é passada em *area*.<!-- END REF-->  

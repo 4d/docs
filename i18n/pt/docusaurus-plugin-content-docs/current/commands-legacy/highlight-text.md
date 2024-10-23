@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->O comando HIGHLIGHT TEXT seleciona uma parte de texto em *objeto*.<!-- END REF-->  

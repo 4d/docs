@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->El comando **OBJECT Get keyboard layout** devuelve la configuración del teclado actual asociada a los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  

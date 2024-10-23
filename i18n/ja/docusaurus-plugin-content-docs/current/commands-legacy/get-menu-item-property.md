@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->**GET MENU ITEM PROPERTY** コマンドは、*menu*と*menuItem*引数で指定したメニュー項目の、現在のプロパティ値を返します。<!-- END REF-->  

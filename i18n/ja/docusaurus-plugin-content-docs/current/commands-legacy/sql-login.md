@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL LOGIN.Summary-->**SQL LOGIN**コマンドを使用すると、*dataEntry*引数で指定されたSQLデータソースへ接続することができます。<!-- END REF-->このコマンドは、カレントプロセスでこのコマンドの後に実行される以下のSQLクエリの対象を指定します:

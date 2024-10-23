@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR Get report kind.Summary-->El comando QR Get report kind devuelve el tipo del informe presente en *area*.<!-- END REF-->

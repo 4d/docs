@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Frontmost window.Summary-->The Frontmost window command returns the window reference number of the frontmost window.<!-- END REF-->

@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->SVG Find element IDs by rect コマンドは、 バインドされた四角が選択領域に交差するXML要素のID ("id"または"xml:id"属性) をテキストまたは文字配列の*arrIDs*配列に返します。<!-- END REF-->選択領域は*x*および*y*引数で指定されます。

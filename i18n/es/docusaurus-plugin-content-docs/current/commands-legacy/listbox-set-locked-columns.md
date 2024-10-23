@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->El comando **LISTBOX SET LOCKED COLUMNS** bloquea las primeras *numColumnas* columnas izquierdas del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

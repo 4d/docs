@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Selected list items.Summary-->**Selected list items** コマンドは、*list*引数に渡された参照番号またはオブジェクト名のリストにおいて、選択された項目の位置または参照番号を返します。<!-- END REF--> 

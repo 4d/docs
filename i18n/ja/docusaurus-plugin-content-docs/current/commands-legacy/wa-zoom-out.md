@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->WA ZOOM OUT コマンドは、*\** と *object* 引数で指定したWebエリアに表示されているテキストのサイズを小さくします。<!-- END REF-->

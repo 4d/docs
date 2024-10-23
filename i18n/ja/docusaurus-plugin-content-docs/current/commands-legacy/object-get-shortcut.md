@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->**OBJECT GET SHORTCUT**コマンドは*object*と*\**引数で指定されたオブジェクトに割り当てられたカレントプロセスのキーボードショートカットを返します。<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->**OBJECT Get auto spellcheck**コマンドは*object*と*\** 引数で指定したオブジェクトのカレントプロセスの自動スペルチェックオプションに関する設定値を返します。<!-- END REF-->

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Summary-->El comando **WP TABLE MERGE CELLS** fusiona la selección de celdas en el *targetObj* o *tableRef* (definido por *startColumn*, *startRow*, *columnCount* y *rowCount*).<!-- END REF-->

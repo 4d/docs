@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ST Get expression.Summary-->**ST Get expression**コマンドは、*object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内のカレントセレクションの中で、最初に見つけた 4D 式を返します。<!-- END REF-->

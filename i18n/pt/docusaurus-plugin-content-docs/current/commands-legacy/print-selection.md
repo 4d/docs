@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->PRINT SELECTION imprime a seleção atual de tabela.<!-- END REF--> Os registros se imprimem no formulário de salida atual da tabela do processo atual. PRINT SELECTION realiza a mesma ação que o comando Imprimir do ambiente Usuário. Se a seleção está vazia, PRINT SELECTION não faz nada.  

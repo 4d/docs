@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->El comando QR BLOB TO REPORT coloca el informe contenido en el *blob* en el área de informe rápido pasada en *area*.<!-- END REF--> 

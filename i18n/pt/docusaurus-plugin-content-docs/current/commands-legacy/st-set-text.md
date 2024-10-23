@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ST SET TEXT.Summary-->O comando OBJECT SET STYLED TEXT insere o texto passado no parâmetro *novoTexto* no campo ou variável de texto com estilo designado pelo parâmetro *objeto*.<!-- END REF--> Este comando só é aplicado ao texto sem formato do parâmetro de *objeto*, sem modificar as etiquetas de estilo que contenha. Se pode utilizar para modificar por programação, texto com estilo na tela. 

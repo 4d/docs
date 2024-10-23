@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get row height.Summary-->O comando **LISTBOX Get row height**  devolve a altura da *fila* especificada no objeto list box designado utilizando o *objeto* e os parâmetros *\**.<!-- END REF-->

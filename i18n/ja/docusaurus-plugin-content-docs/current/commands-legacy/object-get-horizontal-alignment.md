@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->**OBJECT Get horizontal alignment**コマンドは、引数*object*および *\** で指定されたオブジェクトに適用された整列タイプを示すコードを返します。<!-- END REF-->

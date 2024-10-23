@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->El comando **SET CURRENT PRINTER** designa la impresora a utilizar para imprimir con la aplicación 4D actual.<!-- END REF-->

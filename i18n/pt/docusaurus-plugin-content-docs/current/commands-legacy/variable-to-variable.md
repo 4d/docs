@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->O comando VARIABLE TO VARIABLE escreve as variáveis processo *dstVar* (*dstVar2*, etc.) do processo de destino cujo número se passa em processo utilizando os valores das variáveis *srcVar1 srcVar2*, etc.<!-- END REF-->. 

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD Get path.Summary-->O comando **METHOD Get path** devolve a rota de acesso interna completa de um método.<!-- END REF-->

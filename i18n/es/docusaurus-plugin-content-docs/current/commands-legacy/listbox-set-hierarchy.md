@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->El comando LISTBOX SET HIERARCHY permite configurar el objeto list box designado por los parámetros objeto y *\** en modo jerárquico o no jerárquico.<!-- END REF-->   

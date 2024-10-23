@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->The **OBJECT Get keyboard layout** command returns the current keyboard layout associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->

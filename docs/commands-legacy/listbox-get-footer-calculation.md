@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->The **LISTBOX Get footer calculation** command returns the type of calculation associated with the footer area of the list box designated by the *object* and *\** parameters.<!-- END REF-->

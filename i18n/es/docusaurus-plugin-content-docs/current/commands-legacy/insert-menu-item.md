@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->El comando **INSERT MENU ITEM** inserta nuevas líneas en el menú cuyo número o referencia se pasa en *menu* y las ubica después de la línea de menú cuyo número se pasa en *despuesItem*.<!-- END REF-->

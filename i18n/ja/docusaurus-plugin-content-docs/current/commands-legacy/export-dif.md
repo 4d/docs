@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.EXPORT DIF.Summary-->EXPORT DIF コマンドは、カレントプロセスにおける*aTable*のカレントセレクションのレコードをディスクに書き出します。<!-- END REF-->このデータは*document*に書き込まれます。*document*は、WindowsまたはMacintoshの標準的なDIF形式のドキュメントです。 

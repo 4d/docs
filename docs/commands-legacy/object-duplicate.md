@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->The **OBJECT DUPLICATE** command is used to create a copy of the object designated by the *object* parameter in the context of the form being executed (Application mode).<!-- END REF--> The source form, generated in Design mode, is not modified. 

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->O comando OBJECT GET RGB COLORS devolve as cores de fundo e primeiro plano do objeto ou grupo de objetos designados por *objeto*.<!-- END REF-->  

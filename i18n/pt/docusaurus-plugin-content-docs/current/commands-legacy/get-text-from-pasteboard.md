@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard devolve o texto na área de transferência.<!-- END REF--> 

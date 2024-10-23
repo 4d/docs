@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA Get current URL.Summary-->La commande **WA Get current URL** retourne l’adresse URL de la page affichée dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 

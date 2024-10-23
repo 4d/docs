@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get print marker.Summary-->La commande **Get print marker** permet de récupérer la position courante d’un taquet lors d’une impression.<!-- END REF--> Les coordonnées sont retournées en pixels (1 pixel = 1/72 pouce). 

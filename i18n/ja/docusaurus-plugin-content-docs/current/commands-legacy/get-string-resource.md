@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get string resource.Summary-->Get string resource コマンドは、*resID*に渡されるIDを持つストリング ("STR ") リソースに格納されている文字列を返します。<!-- END REF-->

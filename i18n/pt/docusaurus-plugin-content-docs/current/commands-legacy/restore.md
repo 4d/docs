@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.RESTORE.Summary-->O comando RESTORE permite restaurar o ou os arquivos incluidos em um arquivo de 4D.<!-- END REF--> Este comando é útil com interfaces personalizadas para a gestão de backups. 

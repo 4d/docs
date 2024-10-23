@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->O comando SQL SET PARAMETER permite o uso do valor de uma variável, array ou campo 4D nas pedidos SQL.<!-- END REF-->

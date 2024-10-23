@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->The QR INSERT COLUMN command inserts or creates a column at the specified position.<!-- END REF--> Columns located to the right of that position will be shifted accordingly.

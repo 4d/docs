@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->El comando **METHOD SET CODE** modifica el código de los métodos designados por el parámetro *ruta* con el contenido pasado en el parámetro *codigo*.<!-- END REF-->

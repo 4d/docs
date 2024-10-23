@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->El comando SQL EXECUTE se utiliza para ejecutar un comando SQL y asociar el resultado a objetos 4D (arrays, variables o campos).<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get menu title.Summary-->O comando Get menu title devolve o título do menu cujo número ou referência é passada em *menu.<!-- END REF-->*  

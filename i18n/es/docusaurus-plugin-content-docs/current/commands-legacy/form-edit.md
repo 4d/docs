@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM EDIT.Summary-->El comando **FORM EDIT** abre el *form* asociado a *tabla* en el editor de formularios 4D.<!-- END REF--> Tenga en cuenta que debe tener acceso al entorno Diseño; de lo contrario, se genera el error -9804 ("No se puede abrir el formulario").

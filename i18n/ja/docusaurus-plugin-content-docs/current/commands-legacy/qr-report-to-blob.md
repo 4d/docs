@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->QR REPORT TO BLOB コマンドは、*area*に渡された参照番号のレポートをBLOB (変数またはフィールド) に格納します。<!-- END REF-->

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->**LISTBOX DELETE ROWS**コマンドは、*object*引数および *\** で指定されたリストボックスから、*rowPosition* から始まるひとつ以上の行（表示または非表示）を削除します。<!-- END REF--> 

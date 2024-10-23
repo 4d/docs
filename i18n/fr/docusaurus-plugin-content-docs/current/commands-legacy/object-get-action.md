@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get action.Summary-->La commande **OBJECT Get action** retourne le nom et (s'il existe), le paramètre de l'action standard associée à l'objet désigné par les paramètres *objet* et *\**.<!-- END REF-->

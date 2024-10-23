@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Right click.Summary-->O comando Right click retorna [True](true.md "True") se fizer clique no botão direito do mouse.<!-- END REF-->

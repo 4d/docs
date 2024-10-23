@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->QR SET HTML TEMPLATEコマンドは、クイックレポートエリアに使用されるHTMLテンプレートを設定します。<!-- END REF-->テンプレートは、HTML形式でレポートを作成する際に使用されます。

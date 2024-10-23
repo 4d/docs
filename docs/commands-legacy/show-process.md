@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->**SHOW PROCESS** displays all the windows belonging to *process*.<!-- END REF--> This command does not bring the windows of *process* to the frontmost level. To do this, use the [BRING TO FRONT](bring-to-front.md) command.

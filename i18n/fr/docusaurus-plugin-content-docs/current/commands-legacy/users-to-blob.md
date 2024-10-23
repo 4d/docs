@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Note de compatibilité :** Cette commande fonctionne uniquement dans les bases binaires.<!-- END REF--> Elle retourne toujours un BLOB vide dans les projets.

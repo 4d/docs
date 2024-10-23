@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->El comando GET ALLOWED METHODS devuelve, en *arrMetodos*, los nombres de los métodos que pueden utilizarse para escribir fórmulas.<!-- END REF--> Estos métodos están listados al final de la lista de comandos en el editor.

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WP SET FRAME.Summary-->La commande **WP SET FRAME** place le curseur dans le cadre désigné par le paramètre *sélecteurCadre* et, facultativement, textBoxID, de la zone 4D Write Pro *wpZone*.<!-- END REF-->

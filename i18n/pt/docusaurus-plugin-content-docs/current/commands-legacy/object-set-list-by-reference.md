@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->O comando **OBJECT SET LIST BY REFERENCE** define ou substitui a lista associada com o objeto ou objetos definidos pelos parâmetros *objeto* e *\**, com a lista hierárquica definida no parâmetro *lista*.<!-- END REF-->

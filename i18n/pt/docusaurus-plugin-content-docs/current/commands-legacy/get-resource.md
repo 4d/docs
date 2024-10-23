@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET RESOURCE.Summary-->o comando GET RESOURCE retorna no campo o a variável BLOB *resDados* o conteúdo do recurso cujo tipo e número se passa em *resTipo* e *resNum*.<!-- END REF-->  

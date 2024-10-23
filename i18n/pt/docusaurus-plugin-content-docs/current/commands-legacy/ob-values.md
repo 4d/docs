@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OB Values.Summary-->O comando **OB Values** retorna uma coleção de variantes contendo todas os valores de propriedade enumeráveis de *objeto*.<!-- END REF--> 

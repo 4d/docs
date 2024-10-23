@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->El comando DELETE FROM LIST borra el elemento designado por el parámetro *refElem* de la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->

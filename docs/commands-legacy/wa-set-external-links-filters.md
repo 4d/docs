@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->The **WA SET EXTERNAL LINKS FILTERS** command sets up one or more external link filters for the Web area designated by the *\** and *object* parameters.<!-- END REF--> External link filters determine whether a URL associated with the current page via a link must be opened in the Web area or in the default Web browser of the machine.

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WP SET DATA CONTEXT.Summary-->O Comando **WP SET DATA CONTEXT** estabelece o objeto *contextData* como contexto de dados do documento *wpDoc* 4D Write Pro para o processo atual.<!-- END REF--> Estabelecer um novo contexto no mesmo processo substitui qualquer contexto existene para o documento. 

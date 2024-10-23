@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->El comando QR GET DESTINATION recupera el *tipo* de salida del informe para el área cuya referencia se pasó en *area*.<!-- END REF--> 

@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->O comando GET LIST ITEM retorna a informação sobre o elemento especificado por *posiçaoElem* da lista cujo número de referencia ou nome de objeto se passa em *lista*.<!-- END REF--> 

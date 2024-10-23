@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get menu item key.Summary-->O comando Get menu item key devolve o código do atalho **Ctrl** (Windows) ou **Comando** (Mac OS) para o comando de menu cujo número ou referência de menu se passa em *menu* e cujo número de comando se passa em *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu.*

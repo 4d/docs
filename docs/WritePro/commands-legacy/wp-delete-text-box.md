@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->The **WP DELETE TEXT BOX** command deletes the text box defined by the *textBox* parameter.<!-- END REF-->

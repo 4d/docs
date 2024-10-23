@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 例題 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** は、*objectName* 引数で指定したフォームオブジェクトのカレントのデータソースに対して*value* 引数の値を設定します。<!-- END REF-->

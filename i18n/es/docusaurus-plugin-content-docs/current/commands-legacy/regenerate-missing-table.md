@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->El comando REGENERATE MISSING TABLE reconstruye la tabla faltante cuyo nombre se pasa en el parámetro *nomTabla*.<!-- END REF--> Cuando se reconstruye una tabla faltante, se vuelve visible en el editor de estructura y sus datos son accesibles nuevamente.

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->O comando QUERY BY SQL permite aproveitar diretamente o motor SQL integrado de 4D.<!-- END REF--> Este comando pode executar um pedido simples SELECT que pode ser escrito desta forma: 

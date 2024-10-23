@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->O comando QR SET INFO ROW mostra/oculta a fila cuja referência se passa em *linha*.<!-- END REF-->  

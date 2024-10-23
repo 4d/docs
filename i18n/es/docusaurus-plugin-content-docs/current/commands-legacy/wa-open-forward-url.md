@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA OPEN FORWARD URL.Summary-->El comando WA OPEN FORWARD URL carga en el área web designada por los parámetros *\** y *objeto* el URL siguiente en la secuencia de los URLs abiertos.<!-- END REF-->

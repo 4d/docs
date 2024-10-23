@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.CANCEL.Summary-->La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 

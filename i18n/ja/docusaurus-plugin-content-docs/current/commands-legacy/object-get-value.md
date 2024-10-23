@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get value.Summary-->**OBJECT Get value** コマンドは、*objectName* 引数で指定されたフォームオブジェクトのデータソースのカレント値を返します。<!-- END REF-->

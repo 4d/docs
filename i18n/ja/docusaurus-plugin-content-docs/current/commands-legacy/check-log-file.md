@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->**CHECK LOG FILE** コマンドは、データベースのカレントログファイルの内容をブラウズできるダイアログを表示します。<!-- END REF-->このダイアログにはMaintenance & Security Centerからもアクセスできます:

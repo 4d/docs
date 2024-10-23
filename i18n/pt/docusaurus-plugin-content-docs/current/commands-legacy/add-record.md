@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Compatibilidade 
 
 <!--REF #_command_.ADD RECORD.Summary-->Esse comando foi implementado em 4D em lançamentos anteriores e é ainda útil para desenvolvimento básico ou protótipos.<!-- END REF--> Entretanto, para construir interfaces personalizadas e modernas, agora não é recomendado usar formulários genéricos baseados no comando *[DIALOG](dialog.md) que oferece propriedades avançadas e melhor controle sobre o fluxo de dados*

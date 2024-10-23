@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get menu title.Summary-->Get menu title コマンドは、*menu*に渡されたメニュー番号または参照を持つメニューのタイトルを返します。<!-- END REF-->  

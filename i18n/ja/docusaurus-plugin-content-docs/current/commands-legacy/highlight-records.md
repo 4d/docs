@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->HIGHLIGHT RECORDS コマンドは、出力フォーム内で指定されたレコードをハイライトします。<!-- END REF-->この動作は、クリックまたは**Shift+クリック**、**Ctrl+クリック** (Windows) や**Command+クリック** (Mac OS) キーコンビネーションを使用し、リストモードでレコードを手動で選択する場合と同じです。カレントセレクションは変更されません。

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->**LISTBOX INSERT ROWS**コマンドは、*object*引数および *\** で指定されたリストボックスにひとつ以上の新しい行を挿入します。<!-- END REF--> 

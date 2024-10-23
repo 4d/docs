@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->El comando **GET LIST ITEM PARAMETER ARRAYS** permite recuperar en una sola llamada el conjunto de los parámetros (así como también, opcionalmente, sus valores) asociados al elemento *refElemento* de la lista jerárquica cuya referencia o nombre de objeto se pasó en el parámetro *lista*.<!-- END REF-->

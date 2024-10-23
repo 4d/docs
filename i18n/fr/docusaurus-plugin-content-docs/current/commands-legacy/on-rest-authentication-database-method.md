@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.On REST Authentication database method.Summary-->La **On REST Authentication database method** est obsolète dans les projets à partir de 4D 20 R6.<!-- END REF-->

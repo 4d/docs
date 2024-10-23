@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->O comando FORM GET OBJECTS retorna em forma de array(s) a lista de todos os objetos presentes no formulário atual da tabela atual.<!-- END REF--> Esta lista pode estar restrita à página atual do formulário. O comando pode ser utilizado com os formulários de entrada e de saída.

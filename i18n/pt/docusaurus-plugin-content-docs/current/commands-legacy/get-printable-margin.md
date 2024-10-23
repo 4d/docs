@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET PRINTABLE MARGIN.Summary-->O comando GET PRINTABLE MARGIN devolve os valores atuais das diferentes margens definidas utilizando o comando [Print form](print-form.md) [PRINT SELECTION](print-selection.md) e [PRINT RECORD](print-record.md).<!-- END REF-->. 

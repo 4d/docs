@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->SVG SHOW ELEMENT コマンドは、*id*引数で指定した"id"属性を持つ要素を表示するように、*pictureObject* SVGドキュメントを移動します。<!-- END REF-->. 

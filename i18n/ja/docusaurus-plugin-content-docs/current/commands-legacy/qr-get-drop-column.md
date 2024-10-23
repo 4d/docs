@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get drop column.Summary-->QR Get drop column コマンドは、ドロップ動作が行われた場所の値を返します。<!-- END REF-->

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->REGENERATE MISSING TABLE コマンドは tableName引数に渡された名前の失われたテーブルを再構築します。<!-- END REF-->失われたテーブルが再構築されると、ストラクチャエディタにそれらが現れ、データに再びアクセスできるようになります。

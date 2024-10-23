@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->**LISTBOX SET AUTO ROW HEIGHT** コマンドは、*object* 引数および *\** 引数を使用して指定したリストボックスオブジェクトの行の高さの最小値あるいは最大値を、*value* 引数で設定します。<!-- END REF-->

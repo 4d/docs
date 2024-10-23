@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->O comando **OPEN COLOR PICKER** mostra a caixa de diálogo de seleção de cor do sistema.<!-- END REF-->  

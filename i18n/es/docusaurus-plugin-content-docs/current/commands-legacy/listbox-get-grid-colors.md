@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->El comando **LISTBOX GET GRID COLORS** devuelve el color de las líneas horizontales y verticales que componen la rejilla del objeto list box object designado por los parámetros *objeto* y *\**.<!-- END REF-->

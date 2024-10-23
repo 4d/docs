@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->La commande **GET PRINT OPTION** retourne la ou les valeur(s) courante(s) d’une option d’impression.<!-- END REF--> 

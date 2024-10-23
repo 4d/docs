@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get resource properties.Summary-->El comando **Get resource properties** devuelve los atributos del recurso cuyo tipo se pasa en *resTipo* y cuyo número de identificación se pasa en *resNum*.<!-- END REF--> 

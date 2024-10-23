@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get report table.Summary-->QR Get report table コマンドは、*area*に渡した参照のレポートエリア用のカレントテーブル番号を返します。<!-- END REF-->

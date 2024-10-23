@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->El comando **WP TABLE SPLIT CELLS** divide la selección de intersección de celdas en el *targetObj* o *tableRef* (definido por *startColumn*, *startRow*, *columnCount* y *rowCount*).<!-- END REF--> Una celda será dividida sólo si ya ha sido combinada horizontalmente, verticalmente, o ambas; de lo contrario, la celda no será modificada.

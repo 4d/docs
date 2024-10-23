@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->El comando **OBJECT GET SUBFORM CONTAINER SIZE** devuelve el *ancho* y el *alto* (en píxeles) de un objeto subformulario "actual", mostrado en el formulario padre.<!-- END REF-->  

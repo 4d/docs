@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS lets the user edit the password system.<!-- END REF--> When this command is executed, the Toolbox window with only the Users and User groups pages appears.

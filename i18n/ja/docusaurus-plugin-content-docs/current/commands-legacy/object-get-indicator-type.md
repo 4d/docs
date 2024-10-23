@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->**OBJECT Get indicator type**コマンドは、引数 *object* と *\** で指定したサーモメーターに割り当てられた、カレントのインジケーターの型を返します。<!-- END REF-->

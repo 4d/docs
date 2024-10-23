@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->O comando **METHOD SET COMMENTS** substitui os comentários dos métodos designados pelo parâmtero *rota* pelos definidos no parâmetro *comentarios*.<!-- END REF-->

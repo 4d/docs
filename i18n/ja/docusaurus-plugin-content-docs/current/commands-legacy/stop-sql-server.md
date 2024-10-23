@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->STOP SQL SERVERコマンドは、実行済み4Dアプリケーションの統合SQLサーバを停止します。<!-- END REF-->

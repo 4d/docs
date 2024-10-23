@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.ST INSERT URL.Summary-->The **ST INSERT URL** command inserts a URL link in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get text resource.Summary-->The **Get text resource** command returns the text stored in the text (“TEXT”) resource whose ID is passed in *resID*.<!-- END REF-->

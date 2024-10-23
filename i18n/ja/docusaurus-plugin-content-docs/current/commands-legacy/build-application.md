@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->BUILD APPLICATION コマンドはアプリケーションの生成処理を開始します。<!-- END REF-->処理に使用されるのは、カレントのアプリケーションビルド設定ファイル、または*buildAppSettings* 引数で渡した設定ファイルのパラメーターです。

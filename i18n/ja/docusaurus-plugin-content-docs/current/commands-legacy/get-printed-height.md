@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get printed height.Summary-->**Get printed height** コマンドは、 [Print form](print-form.md) コマンドを使って印刷された部分全体の高さ（ピクセル単位）を返します。<!-- END REF-->

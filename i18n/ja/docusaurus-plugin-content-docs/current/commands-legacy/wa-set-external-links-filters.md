@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->WA SET EXTERNAL LINKS FILTERS コマンドを使用して、*\** と *object* 引数で指定したWebエリアの外部リンクフィルタを設定できます。<!-- END REF-->外部リンクフィルタは、リンクを使用して現在のページに関連付けられているURLをWebエリアで開くか、マシンのデフォルトWebブラウザで開くかどうか決定するために使用されます。

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard devuelve el texto en el portapapeles.<!-- END REF--> 

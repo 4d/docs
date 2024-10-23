@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->O comando **OBJECT Get auto spellcheck** devolve o estado da opção Correção ortográfica automática do ou dos objeto(s) designado(s) pelos parâmetros *objeto* e *\** para o processo atual .<!-- END REF-->  

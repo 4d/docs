@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get resource name.Summary-->El comando Get resource name devuelve el nombre del recurso cuyo tipo se pasa en *resTipo* y cuyo número de referencia (ID) en *resNum*.<!-- END REF--> 

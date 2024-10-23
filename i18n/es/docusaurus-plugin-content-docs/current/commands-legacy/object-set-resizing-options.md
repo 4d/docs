@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Summary-->El comando **OBJECT SET RESIZING OPTIONS** permite definir o modificar dinámicamente las opciones de redimensionamiento del objeto o de los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF--> Estas opciones definen la visualización del objeto en caso de redimensionamiento de la ventana del formulario.  

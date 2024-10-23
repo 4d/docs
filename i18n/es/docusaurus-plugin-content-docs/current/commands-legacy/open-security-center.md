@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->El comando OPEN SECURITY CENTERmuestra la ventana del Centro de seguridad y mantenimiento (CSM).<!-- END REF-->Para más información, consulte la página *Centro de seguridad y mantenimiento*.   

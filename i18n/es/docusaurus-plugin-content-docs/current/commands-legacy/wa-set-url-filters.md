@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->El comando WA SET URL FILTERS permite colocar uno o más filtros para el área Web designada por los parámetros *\** y *objeto*.<!-- END REF-->

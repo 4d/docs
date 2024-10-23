@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->O comando **LISTBOX DUPLICATE COLUMN** duplica a coluna definida pelos parâmetros *objeto* e *\** por programação no contexto do formulário executado (Modo Aplicação).<!-- END REF--> O formulário original, gerado em modo Desenho não se modifica. 

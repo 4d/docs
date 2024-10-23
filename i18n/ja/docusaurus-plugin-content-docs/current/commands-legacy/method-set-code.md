@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->**METHOD SET CODE**コマンドは*path*引数で指定したメソッドのコードを*code*引数に渡した内容で置き換えます。<!-- END REF-->

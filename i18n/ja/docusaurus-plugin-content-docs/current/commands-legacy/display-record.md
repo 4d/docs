@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->DISPLAY RECORDコマンドは、カレント入力フォームを使って、*aTable*のカレントレコードを表示します。<!-- END REF-->レコードはイベントがウィンドウを更新するまでのみ表示されます。このイベントとは、[ADD RECORD](add-record.md "ADD RECORD")を実行する、または入力フォームへ戻る、メニューバーに戻ることです。DISPLAY RECORDは、カレントレコードが存在しない場合には何も行いません。

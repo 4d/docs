@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->O comando RESOURCE LIST preenche os arrays *resNum* e *resNomes* com os números e os nomes dos recursos cujo tipo se passa em *resTipo*.<!-- END REF-->  

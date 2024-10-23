@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Level.Summary-->Levelは、現在のブレークまたはヘッダのレベルを調べるために使用します。<!-- END REF-->このコマンドは、On HeaderおよびOn Printing Breakイベント中でレベル数を返します。

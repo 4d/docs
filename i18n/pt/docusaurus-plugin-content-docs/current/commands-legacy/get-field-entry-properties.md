@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->O comando GET FIELD ENTRY PROPERTIES retorna as propriedades de entrada de dados para o campo especificado por *numTabela* e *numCampo* ou por *pontCampo*.<!-- END REF-->  

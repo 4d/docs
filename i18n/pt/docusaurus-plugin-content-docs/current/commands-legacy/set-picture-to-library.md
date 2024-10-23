@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->O comando SET PICTURE TO LIBRARY cria uma nova imagem ou substitui uma imagem existente na biblioteca de imagens.<!-- END REF-->

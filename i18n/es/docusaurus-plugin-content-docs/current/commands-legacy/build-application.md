@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->El comando BUILD APPLICATION lanza el proceso de generación de la aplicación teniendo en cuenta los parámetros definidos en el proyecto de aplicación actual o en el proyecto de aplicación designado por el parámetro *nomProyecto*.<!-- END REF-->

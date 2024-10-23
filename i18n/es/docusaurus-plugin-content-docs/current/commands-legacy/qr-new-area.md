@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR NEW AREA.Summary-->El comando **QR NEW AREA** crea una nueva área de informe rápido y almacena su número de referencia en la variable de tipo Entero largo referenciada por el puntero *ptr*.<!-- END REF-->

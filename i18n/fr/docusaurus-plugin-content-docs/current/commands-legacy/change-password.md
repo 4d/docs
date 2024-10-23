@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.CHANGE PASSWORD.Summary-->**CHANGE PASSWORD** permet de changer le mot de passe de l'utilisateur courant.<!-- END REF--> Cette commande remplace le mot de passe courant par le nouveau mot de passe que vous passez dans *motDePasse*. 

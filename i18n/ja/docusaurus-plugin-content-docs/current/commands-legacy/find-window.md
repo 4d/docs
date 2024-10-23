@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Find window.Summary-->Find window コマンドは、*left* と *top*に渡した座標のポイントにある最初のウィンドウの参照を返します。<!-- END REF-->

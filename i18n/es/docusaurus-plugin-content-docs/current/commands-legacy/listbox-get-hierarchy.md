@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->El comando LISTBOX GET HIERARCHY permite buscar las propiedades jerárquicas del objeto list box designado por los parámetros *objeto* y *\** .<!-- END REF-->  

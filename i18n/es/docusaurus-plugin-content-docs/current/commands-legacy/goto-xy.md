@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GOTO XY.Summary-->El comando GOTO XY se utiliza conjuntamente con el comando [MESSAGE](message.md "MESSAGE") cuando usted muestra mensajes en una ventana abierta por el comando [Open window](open-window.md "Open window").<!-- END REF-->  

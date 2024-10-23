@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->El comando SCREEN DEPTH devuelve en los parámetros *profundidad* y *color* la información sobre el monitor.<!-- END REF--> 

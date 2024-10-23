@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 互換性に関する注意 
 
 <!--REF #_command_.Focus object.Summary-->このコマンドは互換性の目的で保持されています。<!-- END REF-->4D v12からは[OBJECT Get pointer](object-get-pointer.md "OBJECT Get pointer")コマンドの利用が推奨されます。

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->GET PICTURE FROM LIBRARY コマンドは、*picRef*に渡された参照番号または*picName*に渡された名前を持つピクチャライブラリの画像を*picture*引数に返します。<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->La commande **QR MOVE COLUMN** déplace la colonne *numColonne* de sa position courante à la position *nouvPosition*.<!-- END REF-->

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->O comando LISTBOX COLLAPSE é utilizado para contrair linhas de quebra do objeto list box designado pelos parâmetros *objeto* e *\** .<!-- END REF--> 

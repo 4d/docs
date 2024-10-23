@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->CLEAR PASTEBOARD コマンドは、クリップボードの内容をすべて消去します。<!-- END REF-->クリップボードに同じデータの複数のインスタンスが含まれる場合には、すべてのインスタンスが消去されます。CLEAR PASTEBOARDコマンドを呼び出した後、クリップボードは空になります。

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.POST CLICK.Summary-->The POST CLICK command simulates a mouse click.<!-- END REF--> Its effect as if the user actually clicked the mouse button.

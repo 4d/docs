@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->The **OPEN COLOR PICKER** command displays the system color picker dialog box.<!-- END REF--> 

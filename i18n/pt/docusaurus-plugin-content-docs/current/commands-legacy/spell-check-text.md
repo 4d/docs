@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->O comando **SPELL CHECK TEXT** verifica o conteúdo do parâmetro *texto* a partir do caracter *posVerif* e devolve a posição da primeira palavra desconhecida encontrada (se houver).<!-- END REF-->

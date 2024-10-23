@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CHANGE PASSWORD.Summary-->CHANGE PASSWORD cambia la contraseña del usuario actual.<!-- END REF--> Este comando reemplaza la contraseña actual con la nueva contraseña que se pasa en *contraseña*. 

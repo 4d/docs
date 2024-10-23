@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ST Get text.Summary-->**ST Get text** コマンドは *object* 引数で指定されたフィールドや変数中のスタイル付きテキストを返します。<!-- END REF-->

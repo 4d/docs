@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->El comando QR DELETE COLUMN borra del *area* la columna cuyo número se pasó en *numColumna*.<!-- END REF--> Este comando no aplica a los informes de tablas cruzadas.

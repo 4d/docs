@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SORT LIST.Summary-->El comando SORT LIST ordena la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->

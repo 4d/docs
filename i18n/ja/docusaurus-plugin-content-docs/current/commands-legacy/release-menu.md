@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.RELEASE MENU.Summary-->RELEASE MENU コマンドは*menu* に渡したIDを持つメニューをメモリから解放します。<!-- END REF-->このメニューは[Create menu](create-menu.md "Create menu") コマンドで作成されたものでなければなりません。以下のルールが適用されます: 各[Create menu](create-menu.md)に対応する[RELEASE MENU](release-menu.md)コマンドが呼び出されなければなりません。

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR RUN.Summary-->QR RUNコマンドは、出力先を含め、クイックレポートの現在の設定を使用して、*area*引数に渡された参照番号のレポートエリアを実行します。<!-- END REF-->[QR SET DESTINATION](qr-set-destination.md "QR SET DESTINATION")コマンドで出力タイプを変更できます。 

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Screen width.Summary-->Em Windows, Screen width devolve o largo da janela da aplicação 4D (janela MDI).<!-- END REF--> Se passado o parâmetro opcional *\**, Screen width devolve o largo da tela.  

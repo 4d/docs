@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ST Get content type.Summary-->O comando **ST Get content type** devolve o tipo de conteúdo encontrado no campo ou a variável de texto multi estilo designada pelo parâmetro *objeto* .<!-- END REF--> 

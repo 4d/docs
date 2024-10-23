@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Summary-->**LISTBOX GET ARRAYS**コマンドは一連の同期化された配列を返し、*object*引数および *\** で指定されたリストボックスの各列（表示または非表示）に関する情報を提供します。<!-- END REF-->

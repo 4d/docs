@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get default user.Summary-->Get default user コマンドは、データベース設定において "デフォルトユーザー" として定義されたユーザーのユニークなユーザーIDを返します。<!-- END REF-->

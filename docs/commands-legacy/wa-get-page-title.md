@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WA Get page title.Summary-->The WA Get page title command returns the title of the current page or the page being displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> The title corresponds to the HTML "Title" tag.

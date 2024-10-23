@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### When is the On Server Open Connection Database Method Called? 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->The **On Server Open Connection database method** is called once on the Server machine each time a connection process is started by a 4D remote workstation.<!-- END REF--> The **On Server Open Connection database method** is NOT invoked by any 4D environment other than 4D Server.

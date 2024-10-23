@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->MODIFY SELECTION es casi idéntico al comando [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION").<!-- END REF--> Consulte la descripción del comando [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION") para una descripción detallada. Las diferencias entre los dos comandos son: 

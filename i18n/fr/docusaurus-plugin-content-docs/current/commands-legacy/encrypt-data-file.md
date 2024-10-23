@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Encrypt data file.Summary-->La commande **Encrypt data file** est utilisée pour chiffrer ou déchiffrer le fichier de données indiqué par le paramètre *cheminDonnées* associé au paramètre *cheminStructure*.<!-- END REF--> Elle peut également être utilisée pour enlever le chiffrement de la base. La commande ne modifie pas les fichiers originaux, elle retourne le nom du chemin d'accès complet au dossier qui a été créé pour la sauvegarde du fichier de données original.

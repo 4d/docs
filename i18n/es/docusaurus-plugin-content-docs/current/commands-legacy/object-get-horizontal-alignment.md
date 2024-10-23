@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->El comando **OBJECT Get horizontal alignment** devuelve un código indicando el tipo de alineación horizontal aplicada al objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->

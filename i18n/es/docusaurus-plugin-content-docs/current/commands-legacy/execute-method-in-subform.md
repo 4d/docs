@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->El comando EXECUTE METHOD IN SUBFORM permite ejecutar el código desigando por *formula* en el contexto del subformulario *objetoSubform*.<!-- END REF-->   

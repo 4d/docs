@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->**OBJECT Get vertical alignment**コマンドは*object* と*\** 引数で指定したオブジェクトのテキスト縦位置タイプを示す値を返します。<!-- END REF-->

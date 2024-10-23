@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Count columns.Summary-->QR Count columns コマンドは、クイックレポート*area*に存在するカラムの数を返します。<!-- END REF-->

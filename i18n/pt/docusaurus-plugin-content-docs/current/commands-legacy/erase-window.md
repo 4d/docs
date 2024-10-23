@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->O comando ERASE WINDOW apaga o conteúdo da janela cujo número de referência se passa em janela.<!-- END REF-->  

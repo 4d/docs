@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->O comando **FORM GET ENTRY ORDER** devolve em *nomObjetos* os nomes ordenados dos objetos que definem a ordem de entrada do formulario.<!-- END REF--> 

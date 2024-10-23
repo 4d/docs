@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get application color scheme.Summary-->O comando **Get application color scheme** retorna o nome do esquema de cor atual para uso ao nível da aplicação.<!-- END REF--> 

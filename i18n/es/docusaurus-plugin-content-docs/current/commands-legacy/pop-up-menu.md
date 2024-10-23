@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Pop up menu.Summary-->El comando Pop up menu muestra un menú pop up en la ubicación actual del ratón.<!-- END REF-->

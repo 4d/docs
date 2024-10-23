@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->O comando PRINTERS LIST preenche os arrays passados como parâmetros com os nomes e opcionalmente com a localização os nomes personalizados e os modelos de impressão disponíveis para a máquina.<!-- END REF-->

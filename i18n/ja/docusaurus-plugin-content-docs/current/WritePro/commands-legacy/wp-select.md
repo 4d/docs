@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP SELECT.Summary-->**WP SELECT**コマンドは*wpArea* 引数で指定した4D Write Proエリアから、*targetObj* に基づいた、あるいは*startRange* と*endRange* で定義された新しいレンジに基づいた新しいセレクションを作成します。<!-- END REF-->

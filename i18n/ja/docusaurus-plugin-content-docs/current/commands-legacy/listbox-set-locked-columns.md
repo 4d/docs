@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->**LISTBOX SET LOCKED COLUMNS**コマンドは*object* と*\** 引数で指定したリストボックスで左端からはじめて*numColumns*列をロックします。<!-- END REF-->

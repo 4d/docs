@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->SCREEN COORDINATES コマンドは、*screenID* に指定した画面のグローバル座標を引数*left*、*top*、*right*と*bottom*に返します。<!-- END REF-->

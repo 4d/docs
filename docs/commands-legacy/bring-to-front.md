@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->**BRING TO FRONT** brings all the windows belonging to *process* to the front.<!-- END REF--> If the process is already the frontmost process, the command does nothing. If the process is hidden, you must use [SHOW PROCESS](show-process.md) to display the process, otherwise **BRING TO FRONT** has no effect.

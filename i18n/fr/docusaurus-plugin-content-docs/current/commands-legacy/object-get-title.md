@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get title.Summary-->La commande **OBJECT Get title** retourne le titre (libellé) du ou des objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 

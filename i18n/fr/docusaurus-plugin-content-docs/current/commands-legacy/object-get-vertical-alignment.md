@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->La commande **OBJECT Get vertical alignment** retourne une valeur indiquant le type d’alignement vertical appliqué à l’objet désigné par les paramètres *objet* et *\**.<!-- END REF--> 

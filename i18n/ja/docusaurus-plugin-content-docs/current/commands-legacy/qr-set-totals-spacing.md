@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET TOTALS SPACING.Summary-->QR SET TOTALS SPACING コマンドを使用し、小計行の下部の行間を設定できます。<!-- END REF-->このコマンドはリストモードにのみ適用されます。 

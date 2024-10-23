@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->REMOVE PICTURE FROM LIBRARY コマンドは、*picRef*引数に渡した参照番号または*picName*引数の名前を持つピクチャをピクチャライブラリから消去します。<!-- END REF-->

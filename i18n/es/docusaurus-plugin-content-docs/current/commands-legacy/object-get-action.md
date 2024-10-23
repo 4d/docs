@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get action.Summary-->El comando **OBJECT Get action** devuelve el nombre y (si es el caso) el parámetro de la acción estándar asociada con el objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Load list.Summary-->Load list は、*listName*で指定した名前のリストのコピーを作成し、そのリスト参照番号を返します。<!-- END REF--> 

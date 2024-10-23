@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 
 
 <!--REF #_command_.On Server Shutdown database method.Summary-->**On Server Shutdownデータベースメソッド**は、カレントのデータベースが4D Server上で閉じられるときに、サーバマシン上で一度呼び出されます。<!-- END REF-->4D Server以外の4D 環境では**On Server Shutdownデータベースメソッド**が起動されることはありません。

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->**ST COMPUTE EXPRESSIONS**コマンドは、*object* 引数で指定したマルチスタイルあるいは4D Write Proのフィールドあるいは変数内にあるダイナミック 4D 式を更新します。<!-- END REF-->

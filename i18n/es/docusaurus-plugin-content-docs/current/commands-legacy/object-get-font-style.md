@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->El comando OBJECT Get font style devuelve el estilo actual de la fuente utilizada por el objeto de formulario designado por *objeto*.<!-- END REF--> 

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL Get current data source.Summary-->La commande **SQL Get current data source** retourne le nom de la source de données courante de l’application.<!-- END REF--> La source de données courante reçoit les requêtes SQL exécutées au sein de structures [Begin SQL](begin-sql.md)/[End SQL](end-sql.md).  

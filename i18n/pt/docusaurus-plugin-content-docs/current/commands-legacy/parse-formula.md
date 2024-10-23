@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Parse formula.Summary-->A função **Parse formula** analisa a *fórmula* 4D, verifica sua sintaxe e devolve seu formulário normalizado.<!-- END REF--> Isto permite que a fórmula continue sendo válida no caso de que se mude o nome de uma linguagem 4D ou elemento de estrutura (comando, constante, tabela, campo ou0 Plugin 4D). 

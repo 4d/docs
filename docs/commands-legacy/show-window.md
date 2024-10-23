@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->The **SHOW WINDOW** command displays the window whose number was passed in *window*.<!-- END REF--> If this parameter is omitted, the frontmost window of the current process will be displayed.

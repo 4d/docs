@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->La commande **INVOKE ACTION** déclenche l'action standard définie par le paramètre *action*, optionnellement dans le contexte de la *cible*.<!-- END REF-->

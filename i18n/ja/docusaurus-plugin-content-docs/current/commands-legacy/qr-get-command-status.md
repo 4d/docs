@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get command status.Summary-->QR Get command status コマンドは、*command*が使用不可であれば0を、使用可能であれば1を返します。<!-- END REF--> 

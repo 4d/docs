@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WA GET LAST URL ERROR.Summary-->The WA GET LAST URL ERROR command recovers several items of information about the last error that occurred in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 

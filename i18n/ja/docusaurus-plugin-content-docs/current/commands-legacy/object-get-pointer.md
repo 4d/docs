@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->**OBJECT Get pointer**コマンドはフォームオブジェクトの変数へのポインタを返します。<!-- END REF-->

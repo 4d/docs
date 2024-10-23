@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->Get menu item modifiers コマンドは、*menu*と*menuItem*引数で指定したメニュー項目の、標準ショートカットに割り当てられた追加のモディファイアキーを返します。<!-- END REF-->  

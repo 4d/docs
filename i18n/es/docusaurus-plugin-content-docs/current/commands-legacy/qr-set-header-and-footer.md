@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->El comando QR SET HEADER AND FOOTER permite definir el contenido y el tamaño del encabezado y el pie de página de *area*.<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->O comando SET PLUGIN ACCESS permite especificar por programação o grupo de usuários autorizado a utilizar cada plug-in com “número de série” instalado na base.<!-- END REF--> Ao fazer isto, pode administrar a repartição das licenças dos plug-ins.

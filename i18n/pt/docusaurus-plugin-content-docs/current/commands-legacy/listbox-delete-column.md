@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->O comando LISTBOX DELETE COLUMN apaga uma ou mais colunas (visíveis ou não) no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

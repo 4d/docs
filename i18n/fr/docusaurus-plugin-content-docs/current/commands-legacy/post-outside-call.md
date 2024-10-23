@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Note de compatibilité 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->Cette commande était nommée **CALL PROCESS** dans les versions précédentes de 4D.<!-- END REF--> 

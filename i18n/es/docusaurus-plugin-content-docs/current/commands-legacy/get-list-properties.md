@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->El comando GET LIST PROPERTIES devuelve información sobe la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->

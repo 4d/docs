@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->El comando **SPELL ADD TO USER DICTIONARY** añade una o más palabras al diccionario usuario actual.<!-- END REF-->  

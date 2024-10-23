@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get print preview.Summary-->El comando **Get print preview** devuelve True si el comando [SET PRINT PREVIEW](set-print-preview.md) se llamó con el valor **True** en el proceso actual.<!-- END REF-->

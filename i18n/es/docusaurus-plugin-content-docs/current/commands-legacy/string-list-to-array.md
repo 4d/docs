@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->El comando STRING LIST TO ARRAY llena el array *cadenas* con: 

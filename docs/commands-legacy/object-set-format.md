@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** sets the display format for the objects specified by *object* to the format you pass in *displayFormat*.<!-- END REF--> The new format is only used for the current display; it is not stored with the form.

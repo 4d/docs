@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->O comando DISPLAY RECORD mostra o registro atual de *tabela*, utilizando o formulário de entrada atual.<!-- END REF--> O registro se mostra até que um evento provoque um redesenho da janela. Tal evento pode ser a execução de um comando ADD RECORD, o regresso ao formulário de entrada, ou a barra de menus. DISPLAY RECORD não faz nada se não houver registro atual.  

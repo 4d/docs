@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->QR GET HEADER AND FOOTER コマンドを使用し、ヘッダまたはフッタの内容とサイズを取得できます。<!-- END REF-->

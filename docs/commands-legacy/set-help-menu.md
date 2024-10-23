@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET HELP MENU.Summary-->The **SET HELP MENU** command allows you to replace the default 4D **Help** menu with the *menuCol* collection of menu items in the application mode.<!-- END REF--> 

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->El comando **WA OPEN WEB INSPECTOR** abre un inspector web para el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->

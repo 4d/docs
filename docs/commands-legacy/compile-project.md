@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, see the *Compilation page on developer.4d.com*.

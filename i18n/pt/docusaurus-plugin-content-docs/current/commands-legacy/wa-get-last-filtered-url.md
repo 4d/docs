@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA Get last filtered URL.Summary-->O comando WA Get last filtered URL retorna a última URL filtrada na área web designada pelos parâmetros \* e *objeto*.<!-- END REF-->  

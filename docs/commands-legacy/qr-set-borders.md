@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->The **QR SET BORDERS** command sets the border style for a given cell.<!-- END REF-->

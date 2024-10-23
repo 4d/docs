@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get edited text.Summary-->The **Get edited text** command is mainly to be used with the On After Edit form event to retrieve the text as it is being entered.<!-- END REF--> It can also be used with the On Before Keystroke and On After Keystroke form events. For more information about those form events, please refer to the description of the command [Form event code](form-event-code.md).

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->El comando LIST TO ARRAY crea o reemplaza el array a*rray* con los elementos del primer nivel de la lista o de la lista de selección designada por *lista*.<!-- END REF--> 

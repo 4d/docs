@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->La commande **OBJECT SET SCROLLBAR** permet d’afficher ou de masquer les barres de défilement horizontale et/ou verticale dans l’objet désigné par les paramètres *objet* et *\**.<!-- END REF-->

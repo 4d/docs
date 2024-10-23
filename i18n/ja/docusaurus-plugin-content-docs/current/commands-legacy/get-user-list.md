@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET USER LIST.Summary-->GET USER LIST コマンドは、パスワードエディターに表示されるユーザー名とユニークなユーザーID番号を配列 *userNames* と *userNumbers* に返します。<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->O comando FORM SET OUTPUT define o formulário de salida atual de *formulario* ou *formUsuario*.<!-- END REF--> O formulário deve pertencer a *tabela*.

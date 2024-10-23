@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->**SET LIST ITEM PROPERTIES** コマンドは、引数*list*に渡された参照番号またはオブジェクト名のリスト内で、*itemRef*によって指定された項目を変更します。<!-- END REF-->

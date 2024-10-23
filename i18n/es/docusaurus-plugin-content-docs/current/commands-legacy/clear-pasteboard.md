@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->El comando CLEAR PASTEBOARD borra el contenido del portapapeles.<!-- END REF--> Si el portapapeles contiene múltiples instancias de los mismos datos, todas las instancias se borran. Después de llamar a CLEAR PASTEBOARD, el portapapeles queda vacío.

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR Get area property.Summary-->El comando **QR Get area property** devuelve 0 si no se muestra el elemento de interfaz pasado en *propiedad*; de lo contrario, devuelve 1.<!-- END REF-->

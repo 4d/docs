@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->O comando **CLOSE RESOURCE FILE** fecha o arquivo de recursos cujo número de referência se passa em *resArquivo*.<!-- END REF-->  

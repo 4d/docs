@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Find in list.Summary-->Find in list コマンドは、*value*に渡した文字列と同じ値を持つ項目を*list*リスト中で検索し、最初に見つけた項目の位置または項目参照番号を返します。<!-- END REF-->複数の項目を見つけた場合、コマンドは *itemsArray* 配列にそれらの一または項目参照番号を返します。

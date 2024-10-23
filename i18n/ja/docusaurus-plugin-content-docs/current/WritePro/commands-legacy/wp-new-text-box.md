@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP New text box.Summary-->**WP New text box** コマンドは、*wpDoc* 引数で指定したドキュメントの*pageNum* 引数で指定したページ内に、新しいテキストボックスオブジェクトを作成してそれを返します。<!-- END REF-->

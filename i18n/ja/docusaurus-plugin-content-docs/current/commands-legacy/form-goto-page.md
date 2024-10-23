@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE**コマンドは、現在表示されているフォームページを*pageNumber*で指定したフォームページに変更します。<!-- END REF--> 

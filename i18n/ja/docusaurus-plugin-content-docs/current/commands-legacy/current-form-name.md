@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Current form name.Summary-->**Current form name**コマンドは、プロセスのために定義されたカレントのフォームの名前を返します。<!-- END REF-->カレントフォームはプロジェクトフォームでもテーブルフォームでも可能です。

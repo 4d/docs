@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Compatibilidad 
 
 <!--REF #_command_.ADD RECORD.Summary-->**Este comando se implementó en las primeras versiones de 4D y sigue siendo útil para la creación de prototipos o desarrollos básicos.<!-- END REF--> Sin embargo, para construir interfaces personalizadas y modernas, ahora se recomienda utilizar formularios genéricos basados en el comando [DIALOG](dialog.md) que ofrecen funciones avanzadas y un mejor control sobre el flujo de datos.* 

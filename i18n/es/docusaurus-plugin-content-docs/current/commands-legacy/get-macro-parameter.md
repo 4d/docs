@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET MACRO PARAMETER.Summary-->El comando GET MACRO PARAMETER devuelve, en el parámetro *paramText*, una parte o la totalidad del texto del método desde el cual se llama.<!-- END REF--> 

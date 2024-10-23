@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get default user.Summary-->El comando Get default user devuelve el número de referencia único del usuario designado como “Usuario por defecto” en la caja de diálogo de Preferencias de la base:

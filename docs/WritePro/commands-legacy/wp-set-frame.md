@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WP SET FRAME.Summary-->The **WP SET FRAME** command sets the cursor into the frame designated by *frameSelector* and optionally, *textBoxID*, in the 4D Write Pro *wpArea* area.<!-- END REF-->

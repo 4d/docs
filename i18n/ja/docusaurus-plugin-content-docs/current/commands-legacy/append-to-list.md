@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->**APPEND TO LIST** コマンドは、*list*に渡した参照番号を持つ階層リストに新規項目を追加します。<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->La commande **FORM GET ENTRY ORDER** retourne dans *nomsObjets* les noms des objets dans l'ordre de saisie du formulaire courant.<!-- END REF--> 

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get column width.Summary-->O comando LISTBOX Get column width devolve a largura (em pixels) da coluna designada pelos parâmetros *objeto* e *\*.<!-- END REF-->* Pode passar indiferentemente uma coluna ou um título de coluna de list box no parâmetro *objeto*. 

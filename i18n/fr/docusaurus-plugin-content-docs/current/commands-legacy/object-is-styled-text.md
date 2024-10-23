@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->La commande **OBJECT Is styled text** retourne **Vrai** si l’option "Multistyle" est cochée pour l’objet ou les objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->

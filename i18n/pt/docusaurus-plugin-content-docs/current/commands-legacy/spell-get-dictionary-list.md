@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->O comando **SPELL GET DICTIONARY LIST** devolve nos arrays *lingID*, *lingArquivos* e *lingNoms*, os IDs, os nomes de arquivos e os nomes dos linguagens correspondentes aos arquivos de dicionário Hunspell instalados no equipo.<!-- END REF-->  

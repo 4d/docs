@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Process state.Summary-->O comando Process state devolve o estado do processo cujo número foi passado em *processo*.<!-- END REF--> 

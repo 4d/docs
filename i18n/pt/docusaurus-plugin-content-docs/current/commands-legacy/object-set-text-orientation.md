@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->O comando **OBJECT SET TEXT ORIENTATION** modifica a orientação do conteúdo do objeto ou dos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->

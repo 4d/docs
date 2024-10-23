@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Activated.Summary-->**Activated** コマンドは、(廃止予定)フォームを含むウインドウがプロセスの最前面のウインドウになると、そのフォームメソッドで**True** を返します。<!-- END REF-->

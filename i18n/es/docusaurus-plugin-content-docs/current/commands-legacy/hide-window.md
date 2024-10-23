@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->El comando HIDE WINDOW permite ocultar la ventana cuyo número de referencia se pasa en *ventana* o, si se omite este parámetro, la ventana del primer plano del proceso actual.<!-- END REF--> Este comando permite, por ejemplo, en un proceso con varias ventanas, mostrar únicamente la ventana activa. 

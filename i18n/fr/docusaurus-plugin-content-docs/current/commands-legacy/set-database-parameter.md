@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->La commande **SET DATABASE PARAMETER** permet de modifier divers paramètres internes de la base de données 4D.<!-- END REF-->

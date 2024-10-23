@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->The **LISTBOX INSERT COLUMN** command inserts a column in the list box set by the *object* and *\** parameters.<!-- END REF--> 

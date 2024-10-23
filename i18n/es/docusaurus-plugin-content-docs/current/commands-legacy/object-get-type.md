@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get type.Summary-->El comando **OBJECT Get type** devuelve el tipo del objeto designado por los parámetros *objeto* y *\** en el formulario actual .<!-- END REF-->

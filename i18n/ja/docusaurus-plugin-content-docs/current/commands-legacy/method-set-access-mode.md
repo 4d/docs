@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Summary-->**METHOD SET ACCESS MODE**コマンドは他のユーザーやプロセスによって更新のためにさきにロードされているオブジェクトに書き込みアクセスを行おうとした時の振る舞いを設定します。<!-- END REF-->このコマンドのスコープはカレントセッションです。

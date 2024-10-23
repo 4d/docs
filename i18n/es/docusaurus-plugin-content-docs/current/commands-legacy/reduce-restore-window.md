@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->El comando **REDUCE RESTORE WINDOW** reduce/expande la ventana cuyo número de referencia se pasó en *ventana* a/desde la barra de tareas en Windows o el dock en macOS.<!-- END REF-->   

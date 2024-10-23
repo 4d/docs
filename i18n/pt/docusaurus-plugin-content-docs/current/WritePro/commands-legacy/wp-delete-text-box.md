@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->O comando **WP DELETE TEXT BOX** apaga a text box definida no parâmetro *textBox* .<!-- END REF-->

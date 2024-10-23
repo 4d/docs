@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->O comando QR SET BORDERS permite definir o estilo da borda de uma célula dada.<!-- END REF-->   

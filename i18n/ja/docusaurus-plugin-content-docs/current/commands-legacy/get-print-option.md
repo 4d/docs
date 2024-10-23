@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->**GET PRINT OPTION** コマンドは、プリントオプションの現在の値を返します。<!-- END REF--> 

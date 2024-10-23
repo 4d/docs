@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.CANCEL.Summary-->No contexto de entrada de dados, **CANCEL** realiza a mesma ação que se o usuário tivesse pressionado a tecla de cancelação (**Esc**).<!-- END REF--> Também é possível colocar no método de caixa de fechamento opcional de uma janela criada pelo comando[Open window](open-window.md)

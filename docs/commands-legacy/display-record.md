@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->The **DISPLAY RECORD** command displays the current record of *aTable*, using the current input form.<!-- END REF--> The record is displayed only until an event redraws the window. Such an event might be the execution of an [ADD RECORD](add-record.md) command, returning to an input form, or returning to the menu bar. **DISPLAY RECORD** does nothing if there is no current record.

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->El comando SVG GET ATTRIBUTE se utiliza para obtener el valor actual del atributo *nomAtrib* en un objeto o una imagen SVG.<!-- END REF-->   

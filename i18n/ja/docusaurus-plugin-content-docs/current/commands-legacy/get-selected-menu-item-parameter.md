@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get selected menu item parameter.Summary-->Get selected menu item parameter コマンドは、選択されたメニュー項目に割り当てられたカスタム文字列を返します。<!-- END REF-->このパラメタは事前に[SET MENU ITEM PARAMETER](set-menu-item-parameter.md "SET MENU ITEM PARAMETER")コマンドを使用してあらかじめ設定されていなければなりません。  

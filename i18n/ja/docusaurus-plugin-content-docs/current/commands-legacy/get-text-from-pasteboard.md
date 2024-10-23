@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard は、ペーストボードに存在するテキストを返します。<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->La commande **PICTURE LIBRARY LIST** retourne les numéros de référence et le nom des images stockées dans la bibliothèque d’images de la base de données.<!-- END REF--> 

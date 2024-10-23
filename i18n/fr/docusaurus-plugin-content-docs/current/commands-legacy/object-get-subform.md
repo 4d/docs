@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->La commande **OBJECT GET SUBFORM** vous permet d’obtenir les noms du ou des formulaire(s) associé(s) à l’objet sous-formulaire désigné par les paramètres *objet* et *\**.<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->VARIABLE TO VARIABLEコマンドは、引数*srcVar1* *srcVar2*に渡す値を、*process*に渡す番号を持つ送り先プロセスの*dstVar* (*dstVar2*等) プロセス変数に書き込みます。<!-- END REF--> 

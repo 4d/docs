@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->The **IMPORT SYLK** command reads data from *document*, a Windows or Macintosh SYLK document, into the table *aTable* by creating new records for that table.<!-- END REF-->

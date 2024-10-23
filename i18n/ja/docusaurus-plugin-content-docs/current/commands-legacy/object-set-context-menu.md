@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->**OBJECT SET CONTEXT MENU**コマンドは、引数 *object* と *\** で指定したオブジェクトのデフォルトでのコンテキストメニューの関連付けを、カレントプロセスにおいて有効化または無効化します。<!-- END REF-->

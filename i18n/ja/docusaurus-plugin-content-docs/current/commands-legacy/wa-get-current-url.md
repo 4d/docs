@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA Get current URL.Summary-->WA Get current URL コマンドは、*\** と *object* 引数で指定したWebエリアに現在表示されているページのURLアドレスを返します。<!-- END REF-->

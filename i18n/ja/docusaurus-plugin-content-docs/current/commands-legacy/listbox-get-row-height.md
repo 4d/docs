@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get row height.Summary-->**LISTBOX Get row height** コマンドは、*object* および *\** パラメーターで指定されたリストボックスの、*row* で指定された行の高さを返します。<!-- END REF-->行の高さは、[LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)コマンド、あるいはプロパティリストを使うなどしてグローバルに指定するほかに、[LISTBOX SET ROW HEIGHT](listbox-set-row-height.md) コマンドを使って個別に指定することもできます。

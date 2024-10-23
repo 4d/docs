@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->La commande **LISTBOX Get auto row height** retourne la limite minimum ou maximum de hauteur de ligne automatique définie pour l'objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->GET REGISTERED CLIENTS コマンドは2つの配列を作成します:

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ACCUMULATE.Summary-->ACCUMULATEは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってプリントするフォームレポート中で累計するフィールドまたは変数を指定します。<!-- END REF-->

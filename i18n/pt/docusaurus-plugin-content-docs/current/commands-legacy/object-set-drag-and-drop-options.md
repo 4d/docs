@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->O comando **OBJECT SET DRAG AND DROP OPTIONS** define ou modifica dinamicamente as opções de arrastar e soltar para o objeto ou aos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->

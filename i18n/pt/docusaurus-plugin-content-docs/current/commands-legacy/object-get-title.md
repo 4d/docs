@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get title.Summary-->O comando OBJECT Get title devolve o título (etiqueta) do objeto de formulário designado por *objeto* .<!-- END REF--> Você pode usar esse comando com todos os objetos simples que tenham uma etiqueta:   

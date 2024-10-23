@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->La **On Server Close Connection database method** est exécutée sur le poste serveur à chaque fois qu'un process 4D Client est refermé.<!-- END REF-->

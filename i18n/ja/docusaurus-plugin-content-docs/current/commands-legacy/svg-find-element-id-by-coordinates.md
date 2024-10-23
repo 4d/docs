@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SVG Find element ID by coordinates.Summary-->SVG Find element ID by coordinatesコマンドは、 *pictureObject*引数で指定されたSVGピクチャ内で、*x*, *y*座標により設定された場所で見つかるXML要素のID ("id" または "xml:id" 属性) を返します。<!-- END REF--> このコマンドは特に、SVGオブジェクトを使用してインタラクティブなインタフェースを作成する際に使用します。

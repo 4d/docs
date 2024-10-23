@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->O comando **LISTBOX SET TABLE SOURCE** permite modificar a fonte de dados mostrada no listbox desenhado pelos parâmetros *\** e *objeto*

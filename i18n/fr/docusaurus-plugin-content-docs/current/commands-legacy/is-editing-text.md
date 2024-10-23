@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Is editing text.Summary-->La commande **Is editing text** retourne **Vrai** si l'utilisateur saisit des valeurs dans un objet de formulaire d'entrée, et **Faux** dans tous les autres cas.<!-- END REF--> 

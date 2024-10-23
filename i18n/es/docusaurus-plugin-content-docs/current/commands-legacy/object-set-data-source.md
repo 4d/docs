@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->El comando **OBJECT SET DATA SOURCE** modifica la fuente de datos de los objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  

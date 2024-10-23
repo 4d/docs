@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->LIST TO BLOB コマンドは、*blob*に階層リスト*list*を格納します。<!-- END REF-->

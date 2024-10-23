@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get footers height.Summary-->La commande **LISTBOX Get footers height** retourne la hauteur de la ligne de pied de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->

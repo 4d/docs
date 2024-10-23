@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties lets you change and update the properties of an existing user account whose unique user ID number you pass in *userID*, or add a new user.<!-- END REF-->

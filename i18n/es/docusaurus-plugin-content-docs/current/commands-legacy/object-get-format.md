@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get format.Summary-->El comando OBJECT Get format devuelve el formato de salida actual aplicado al objeto especificado en el parámetro *objeto*.<!-- END REF-->

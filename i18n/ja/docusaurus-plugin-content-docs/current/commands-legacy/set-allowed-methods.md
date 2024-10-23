@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->SET ALLOWED METHODS コマンドを使用して、アプリケーションから直接呼び出すことができるメソッドを指定することができます。<!-- END REF-->

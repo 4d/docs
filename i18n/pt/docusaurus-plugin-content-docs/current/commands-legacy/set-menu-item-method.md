@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->O comando SET MENU ITEM METHOD pode ser utilizada para modificar o método de projeto 4D associado à linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> 

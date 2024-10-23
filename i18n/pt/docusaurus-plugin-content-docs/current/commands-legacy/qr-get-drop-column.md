@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR Get drop column.Summary-->O comando QR Get drop column devolve um valor dependendo de onde se realiza uma ação soltar:

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->El comando *GET DATA SOURCE LIST* devuelve en los arrays *arrayNomsFuentes* y *arrayDrivers*, los nombres y drivers de las fuentes de datos de tipo *tipoFuente* definidas en el administrador ODBC del sistema operativo.<!-- END REF--> 

@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Open form window.Summary-->La commande **Open form window** crée une nouvelle fenêtre utilisant les propriétés de taille et de redimensionnement du formulaire *nomForm*, passé en paramètre.<!-- END REF-->

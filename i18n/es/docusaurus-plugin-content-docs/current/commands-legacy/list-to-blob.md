@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->El comando LIST TO BLOB almacena la lista jerárquica *list* en el BLOB *blob*.<!-- END REF-->

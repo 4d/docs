@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->La commande **SPELL CHECKING** déclenche la vérification de l’orthographe du champ ou de la variable ayant le focus dans le formulaire affiché à l’écran.<!-- END REF--> L’objet vérifié doit être de type Alpha ou Texte.

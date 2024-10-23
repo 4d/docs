@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->**PRINTERS LIST** コマンドは、引数として渡された各配列にそのマシンで使用できるプリンタの名前、およびオプションとしてプリンタの場所とモデルを返します。<!-- END REF-->

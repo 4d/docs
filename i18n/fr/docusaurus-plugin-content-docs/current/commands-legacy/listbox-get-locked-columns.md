@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->La commande **LISTBOX Get locked columns** retourne le nombre de colonnes verrouillées dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 

@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->**LISTBOX INSERT COLUMN FORMULA**コマンドは、*object*引数および *\** で指定されたリストボックスに列を挿入します。<!-- END REF--> 

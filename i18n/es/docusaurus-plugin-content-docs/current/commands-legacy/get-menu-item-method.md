@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get menu item method.Summary-->El comando Get menu item method devuelve el nombre del método de proyecto 4D asociado a la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> 

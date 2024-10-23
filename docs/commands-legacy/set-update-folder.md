@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->The **SET UPDATE FOLDER** command specifies the folder containing the update of the current merged 4D application.<!-- END REF--> This information is stored in the 4D session until the [RESTART 4D](restart-4d.md) method is called. If the application is exited manually, this information is not kept.

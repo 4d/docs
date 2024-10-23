@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->The **OPEN PRINTING JOB** command opens a print job and stacks all the subsequent printing orders there until the [CLOSE PRINTING JOB](close-printing-job.md) command is called.<!-- END REF--> This command lets you control the print jobs and, more particularly, ensure that no other unexpected print job can be inserted into a printing sequence.

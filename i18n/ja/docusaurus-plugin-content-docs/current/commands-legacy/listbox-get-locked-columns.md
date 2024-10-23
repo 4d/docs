@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->**LISTBOX Get locked columns**コマンドは*object*と *\** 引数で指定したリストボックスで横スクロールしない列数を返します。<!-- END REF-->

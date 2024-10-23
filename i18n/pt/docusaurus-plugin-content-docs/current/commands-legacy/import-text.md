@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->O comando IMPORT TEXT lê dados de *documento*, um documento texto Windows ou Macintosh e os escreve em *tabela* criando novos registros para essa tabela.<!-- END REF--> 

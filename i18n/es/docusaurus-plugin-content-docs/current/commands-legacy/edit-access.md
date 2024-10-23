@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS permite modificar el sistema de contraseñas.<!-- END REF--> Cuando se ejecuta este comando, se muestra la ventana de la caja de herramientas que contiene las páginas Usuarios y Grupos. 

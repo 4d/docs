@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->El comando **FORM GET NAMES** llena el array *arrayNoms* con los nombres de los formularios de la aplicación.<!-- END REF--> 

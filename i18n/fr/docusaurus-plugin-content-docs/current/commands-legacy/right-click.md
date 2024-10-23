@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Right click.Summary-->La commande **Right click** retourne Vrai si un clic effectué avec le bouton droit de la souris a été effectué.<!-- END REF--> 

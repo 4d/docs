@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->WA GET PREFERENCE コマンドを使用して、*\** と *object* によって指定されたWebエリアの環境設定の現在値を取得します。<!-- END REF-->

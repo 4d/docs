@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** permite compilar el proyecto local actual o el proyecto especificado en el parámetro *archivoProyecto*.<!-- END REF--> Para más información sobre la compilación, consulte la *página de compilación en developer.4d.com*.

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->El comando GET PICTURE RESOURCE devuelve en el campo o en la variable *resDatos* la imagen guardada en el recurso imagen (“PICT”) cuyo número se pasa en *resNum*.<!-- END REF--> 

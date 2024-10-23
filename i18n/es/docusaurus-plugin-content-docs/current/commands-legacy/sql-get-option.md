@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->El comando SQL GET OPTION devuelve el *valor* actual de la opción pasada en el parámetro *opcion*.<!-- END REF-->

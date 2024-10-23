@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->QR DELETE COLUMNは、*area*にある*colNumber*に渡された番号のカラムを削除します。<!-- END REF-->このコマンドはクロステーブルレポートに対しては適用されません。

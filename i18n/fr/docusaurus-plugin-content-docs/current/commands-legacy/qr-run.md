@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR RUN.Summary-->La commande **QR RUN** provoque l'exécution de l'état rapide désigné par le paramètre *zone*.<!-- END REF--> L'état est généré avec ses paramétrages courants, notamment son type de sortie. Vous pouvez utiliser la commande [QR SET DESTINATION](qr-set-destination.md) pour modifier le type de sortie.

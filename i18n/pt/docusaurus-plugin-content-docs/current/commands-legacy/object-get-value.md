@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get value.Summary-->O comando **OBJECT Get value** retorna o valor atual da fonte de dados para os objetos formulários determinados pelo parâmetro *nomObjeto*.<!-- END REF-->

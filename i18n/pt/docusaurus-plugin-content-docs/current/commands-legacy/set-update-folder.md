@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->O comando **SET UPDATE FOLDER** especifica a pasta que contém a atualização da aplicação 4D fusionada atual.<!-- END REF--> Esta informação se armazena na sessão 4D até que se chama o método [RESTART 4D](restart-4d.md). Se sair da aplicação manualmente, esta informação não se conserva.  

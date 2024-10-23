@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->WA EXECUTE JAVASCRIPT FUNCTION コマンドは、*\** と *object* で指定したWebエリアで、*jsFunction*に渡したJavaScript関数を実行し、*result* 引数に結果を返します (オプション)。<!-- END REF-->

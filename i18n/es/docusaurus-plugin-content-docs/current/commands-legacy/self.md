@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Nota de compatibilidad 
 
 <!--REF #_command_.Self.Summary-->Este comando sólo se conserva por razones de compatibilidad.<!-- END REF--> A partir de la versión 12 de 4D, se recomienda utilizar el comando OBJECT Get pointer.

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Keystroke.Summary-->Keystroke はユーザがフィールドや入力可能エリアに入力した文字を返します。<!-- END REF-->

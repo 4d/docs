@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->El comando **OBJECT GET MINIMUM VALUE** devuelve, en la variable *valorMin*, el valor mínimo actual del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF-->

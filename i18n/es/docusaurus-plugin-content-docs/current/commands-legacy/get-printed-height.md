@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get printed height.Summary-->El comando Get printed height devuelve la altura global (en píxeles) de la sección impresa por el comando [Print form](print-form.md "Print form").<!-- END REF-->

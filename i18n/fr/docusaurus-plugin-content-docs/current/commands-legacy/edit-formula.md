@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->La commande **EDIT FORMULA** affiche l’éditeur de formules afin de permettre à l’utilisateur d’écrire ou de modifier une formule.<!-- END REF--> L’éditeur contient à l'ouverture :

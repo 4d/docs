@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->SQL GET OPTIONコマンドは、*option*に渡したオプションの現在の*value*を返します。<!-- END REF-->

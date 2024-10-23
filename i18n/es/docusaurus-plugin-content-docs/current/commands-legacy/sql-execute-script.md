@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->El comando SQL EXECUTE SCRIPT permite ejecutar una serie de instrucciones SQL ubicadas en el archivo de script designado por *rutaScript*.<!-- END REF-->  

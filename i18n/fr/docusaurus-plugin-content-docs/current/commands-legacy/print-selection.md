@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->La commande **PRINT SELECTION** imprime la sélection courante de *laTable*.<!-- END REF--> Les enregistrements sont imprimés dans le formulaire sortie courant de la table du process en cours. **PRINT SELECTION** a le même effet que la commande **Imprimer...** du mode Développement. Si la sélection courante est vide, **PRINT SELECTION** ne fait rien.  

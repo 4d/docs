@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->La commande **LISTBOX EXPAND** vous permet de provoquer le déploiement des lignes de rupture de l’objet list box affiché en mode hiérarchique désigné par les paramètres *objet* et *\**.<!-- END REF-->

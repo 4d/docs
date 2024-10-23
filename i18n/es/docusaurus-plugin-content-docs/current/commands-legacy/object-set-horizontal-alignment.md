@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->El comando **OBJECT SET HORIZONTAL ALIGNMENT** permite determinar el tipo de alineación aplicado al objeto o a los objetos designados por los parámetros *objeto* y *\**.<!-- END REF-->

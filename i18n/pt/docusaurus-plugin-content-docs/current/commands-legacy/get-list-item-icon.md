@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->O comando GET LIST ITEM ICON retorna, em *ícone*, o ícone associado ao elemento cujo número de referencia se passa em *refElem* da lista cujo número de referencia o nome de objeto passa em *lista*.<!-- END REF-->  

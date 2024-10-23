@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->O comando GET MENU ITEM ICON devolve, na variável *refIcone*, a referencia do ícone associado a linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> Esta referência é o nome ou número da imagem na biblioteca de imagens.

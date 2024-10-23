@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->**LISTBOX Get footer calculation**コマンドは*object*と*\** 引数で指定したリストボックスのフッターエリアに割り当てられた自動計算のタイプを返します。<!-- END REF-->

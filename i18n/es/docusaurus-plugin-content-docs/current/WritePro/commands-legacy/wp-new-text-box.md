@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WP New text box.Summary-->El comando **WP New text box** crea y devuelve un nuevo objeto caja de texto en la página *numPag* de *wpDoc*.<!-- END REF-->

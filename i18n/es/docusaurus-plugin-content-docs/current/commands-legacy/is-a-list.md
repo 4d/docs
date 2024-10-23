@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Is a list.Summary-->El comando Is a list devuelve TRUE si el valor pasado en *lista* es una referencia válida a una lista jerárquica.<!-- END REF--> De lo contrario, devuelve FALSE.

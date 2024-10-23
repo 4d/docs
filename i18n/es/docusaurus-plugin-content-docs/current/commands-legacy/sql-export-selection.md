@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->El comando SQL EXPORT SELECTION exporta al formato SQL los registros de la selección actual de la tabla 4D designada por el parámetro *Tabla*.<!-- END REF-->   

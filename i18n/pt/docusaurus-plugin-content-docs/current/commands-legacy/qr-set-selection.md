@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->O comando QR SET SELECTION permite selecionar uma célula, uma fila, uma coluna ou toda uma *area* como seria feito com um mouse.<!-- END REF--> Este comando também lhe permite desmarcar a seleção atual.  

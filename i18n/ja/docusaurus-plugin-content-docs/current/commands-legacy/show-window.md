@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->SHOW WINDOW コマンドは*window*に渡した参照番号のウィンドウを表示します。<!-- END REF-->この引数が省略されていると、カレントプロセスの最前面ウィンドウが表示されます。

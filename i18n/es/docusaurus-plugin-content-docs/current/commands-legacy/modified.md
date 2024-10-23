@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Modified.Summary-->**Modified** devuelve **True** si un valor ha sido asignado por programación a *campo* o si ha sido modificado durante la entrada de datos.<!-- END REF--> El comando **Modified**debe utilizarse únicamente en un método de formulario (o una subrutina llamada por un método de formulario).

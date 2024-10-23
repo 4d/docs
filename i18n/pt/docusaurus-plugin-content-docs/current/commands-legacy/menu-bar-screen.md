@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Menu bar screen.Summary-->Menu bar screen devolve o número da tela onde está a barra de menus.<!-- END REF-->

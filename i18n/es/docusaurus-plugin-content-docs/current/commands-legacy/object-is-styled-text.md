@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->El comando **OBJECT Is styled text** devuelve **True** sila opción "Multiestilo" está seleccionada para el(los) objeto(s) designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->

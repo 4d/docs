@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->La commande **QR SET TEXT PROPERTY** permet de définir les propriétés de texte de la cellule désignée par les paramètres *numColonne* et *numLigne*.<!-- END REF--> 

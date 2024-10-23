@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.CLEAR LIST.Summary-->CLEAR LIST コマンドは、*list*に渡したリスト参照番号を持つ階層リストを廃棄します。<!-- END REF-->

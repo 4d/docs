@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Displayed line number.Summary-->El comando Displayed line number funciona únicamente en el contexto del evento de formulario On Display Detail.<!-- END REF-->  Devuelve el número de la línea que está siendo procesada mientras una lista de registros es mostrada en pantalla. Si Displayed line number se llama cuando no se muestra una lista, devuelve 0.

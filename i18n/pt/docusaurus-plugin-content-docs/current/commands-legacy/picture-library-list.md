@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->O comando PICTURE LIBRARY LIST devolve os números de referência e os nomes das imagens armazenadas na biblioteca de imagens do banco de dados.<!-- END REF--> 

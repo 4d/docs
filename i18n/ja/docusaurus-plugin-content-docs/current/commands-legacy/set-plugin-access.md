@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->SET PLUGIN ACCESS コマンドを使用すれば、データベース上にインストールされた各 "シリアルされた" プラグインをプログラムで設定する環境をユーザグループに提供することができます。<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->OBJECT SET FILTER は、*object*で指定されたオブジェクトの入力フィルタを*entryFilter*に設定します。<!-- END REF-->

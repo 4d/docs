@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Pop up menu.Summary-->O comando Pop up menu mostra um menu pop up na localização atual do mouse ou na localização definida pelos parâmetros opcionais *coordX* e *coordY*.<!-- END REF-->  

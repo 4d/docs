@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ST INSERT URL.Summary-->O comando **ST INSERT URL** insere um link URL no campo ou a variável de texto com estilo designada pelo parâmetro *objeto* .<!-- END REF--> 

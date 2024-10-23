@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->OBJECT Get enabled コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループがフォーム中で有効ならTrueを、無効ならFalseを返します。<!-- END REF-->

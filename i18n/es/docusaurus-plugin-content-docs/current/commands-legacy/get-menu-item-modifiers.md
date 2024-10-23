@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->El comando Get menu item modifiers devuelve los modificadores adicionales asociados a los atajos de teclado estándar de la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF-->

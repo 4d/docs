@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Open resource file.Summary-->**Open resource file**コマンドは、*resFileName*に渡した名前またはパス名を持つリソースファイルを開きます。<!-- END REF--> 

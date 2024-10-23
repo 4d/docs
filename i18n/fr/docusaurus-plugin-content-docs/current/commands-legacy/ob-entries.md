@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OB Entries.Summary-->La commande **OB Entries** retourne une collection d'objets dont le contenu correspond à l'*objet* comme une paire de propriétés key/value.<!-- END REF--> 

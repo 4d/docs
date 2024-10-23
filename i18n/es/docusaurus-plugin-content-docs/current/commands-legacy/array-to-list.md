@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->El comando ARRAY TO LIST crea o reemplaza la lista jerárquica o la *lista* utilizando los elementos del *array* *.<!-- END REF-->*

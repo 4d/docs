@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->El comando FORM SET HORIZONTAL RESIZING permite cambiar por programación las propiedades de redimensionamiento horizontal del formulario actual.<!-- END REF--> Por defecto, estas propiedades son definidas en el editor de formularios en el entorno Diseño. Las nuevas propiedades son definidas para el proceso actual; no se almacenan con el formulario. 

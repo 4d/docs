@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->O comando **GET STYLE SHEET INFO** devolve a configuração atual da folha de estilo *nomeFolhaEstilo* .<!-- END REF--> 

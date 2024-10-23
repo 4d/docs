@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->**GET STYLE SHEET INFO**コマンドは、*styleSheetName*パラメーターで指定したスタイルシートの現在の構成を返します。<!-- END REF--> 

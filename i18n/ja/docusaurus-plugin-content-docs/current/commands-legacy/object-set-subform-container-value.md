@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->**OBJECT SET SUBFORM CONTAINER VALUE** コマンドは、オヤフォーム内に表示されたサブフォームコンテナにバインドされたデータソースのカレント値を設定します。<!-- END REF-->

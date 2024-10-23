@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Screen height.Summary-->Windowsでは、Screen heightは、4Dアプリケーションウィンドウ(MDIウィンドウ) の高さを返します。<!-- END REF-->任意の引数*\** を指定した場合、Screen heightは画面の高さを返します。

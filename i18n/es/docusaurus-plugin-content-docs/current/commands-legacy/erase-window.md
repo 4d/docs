@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->El comando ERASE WINDOW borra el contenido de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> 

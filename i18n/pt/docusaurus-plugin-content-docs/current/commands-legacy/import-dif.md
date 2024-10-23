@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.IMPORT DIF.Summary-->O comando IMPORT DIF lê dados de *documento*, um documento DIF Windows ou Macintosh e os escreve em *tabela* criando novos registros para essa tabela.<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SAVE LIST.Summary-->El comando SAVE LIST guarda la lista cuyo número de referencia pasó en *lista*, en el editor de listas en el entorno Diseño, bajo el nombre que pasó en *nomLista*.<!-- END REF-->

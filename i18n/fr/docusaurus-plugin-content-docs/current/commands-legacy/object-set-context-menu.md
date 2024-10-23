@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->La commande **OBJECT SET CONTEXT MENU** vous permet d’activer ou de désactiver, pour le process courant, l’association d’un menu contextuel par défaut à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 

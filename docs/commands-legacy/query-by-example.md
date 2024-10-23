@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->**QUERY BY EXAMPLE** performs the same action as the Query by Example menu command in the Design environment.<!-- END REF--> It displays the current input form as a query window. **QUERY BY EXAMPLE** queries *aTable* for the data that the user enters into the query window. The form must contain the fields that you want the user to be able to query. The query is optimized; indexed fields are automatically used to optimize the query.

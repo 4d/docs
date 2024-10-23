@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->El comando OBJECT Get enterable devuelve True si el objeto o grupo de objetos designado por *objeto* tiene el atributo **editable**; de lo contrario, devuelve False.<!-- END REF--> 

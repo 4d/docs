@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.PAGE BREAK.Summary-->La commande **PAGE BREAK** déclenche l'impression des données envoyées à l'imprimante et provoque un saut de page.<!-- END REF--> **PAGE BREAK** s'utilise conjointement avec [Print form](print-form.md) (dans le cadre de l'événement formulaire On Printing Detail) pour forcer des sauts de page et imprimer la dernière page créée en mémoire.   

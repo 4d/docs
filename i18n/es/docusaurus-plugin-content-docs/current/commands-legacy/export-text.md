@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->El comando EXPORT TEXT escribe datos de los registros de la selección actual de la *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento de texto Windows o Macintosh en el disco.

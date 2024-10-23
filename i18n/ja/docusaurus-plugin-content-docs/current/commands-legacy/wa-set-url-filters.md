@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->WA SET URL FILTERS コマンドは、*\** と *object* 引数で指定したWebエリアで、1 つ以上のフィルタを設定するために使用します。<!-- END REF--> 

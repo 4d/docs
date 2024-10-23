@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get menu bar reference.Summary-->**Get menu bar reference** コマンドはカレントのメニューバーあるいは指定されたプロセスのメニューバーのIDを返します。<!-- END REF-->

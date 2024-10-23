@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** désigne les champ(s) ou variable(s) à cumuler dans un état créé à l'aide de la commande [PRINT SELECTION](print-selection.md).<!-- END REF-->

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->El comando CHANGE LICENSES muestra la caja de diálogo de gestión de licencias 4D.<!-- END REF--> 

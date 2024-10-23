@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.POST CLICK.Summary-->O comando POST CLICK simula um clique do mouse.<!-- END REF--> Tem o mesmo efeito que quando o usuário clicar no botão do mouse 

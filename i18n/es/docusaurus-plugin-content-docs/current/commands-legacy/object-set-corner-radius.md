@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->El comando **OBJECT SET CORNER RADIUS** modifica el *radio* de las esquinas de los objetos pasados en el parámetro *objeto*.<!-- END REF--> El nuevo radio sólo se define para el proceso y no se guarda en el formulario. 

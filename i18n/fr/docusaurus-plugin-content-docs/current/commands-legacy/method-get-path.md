@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.METHOD Get path.Summary-->La commande **METHOD Get path** retourne le chemin d’accès interne complet d’une méthode.<!-- END REF-->

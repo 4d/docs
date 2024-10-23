@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->OBJECT SET FONT SIZE define o tamanho da fonte dos objetos de formulário especificados por *objeto* utilizando o tamanho de fonte que se passa em *tamanho*.<!-- END REF-->

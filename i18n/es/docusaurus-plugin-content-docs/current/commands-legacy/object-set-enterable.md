@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->El comando **OBJECT SET ENTERABLE** \]vuelve editables o no editables los objetos de formulario especificados por *objeto* y puede definir el atributo enfocable.<!-- END REF-->

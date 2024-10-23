@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.New list.Summary-->New list cria uma nova lista hierárquica vazia em memória e retorna seu número de referência único.<!-- END REF--> 

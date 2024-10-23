@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->The SET ALLOWED METHODS command designates the project methods that can be called directly from the application.<!-- END REF-->

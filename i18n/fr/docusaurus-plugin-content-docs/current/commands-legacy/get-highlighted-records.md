@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->La commande **GET HIGHLIGHTED RECORDS** stocke dans l’ensemble désigné par le paramètre *nomEnsemble* les enregistrements marqués (c'est-à-dire, les enregistrements “surlignés” par l'utilisateur dans le formulaire liste) de *laTable* passée en paramètre.<!-- END REF--> Si le paramètre *laTable* est omis, la table du formulaire ou du sous-formulaire courant est utilisée.

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->El comando GOTO OBJECT se utiliza para seleccionar el objeto editable *objeto* como el área activa del formulario.<!-- END REF--> Es equivalente de un clic del usuario en el área o de utilizar la tecla Tab para seleccionar el campo o la variable. 

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->El comando LISTBOX DELETE ROWS borra una o varias líneas a partir de *posicion* (visible o no) del list box definido por los parámetros *objeto* y \*.<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WP New text box.Summary-->The **WP New text box** command creates and returns a new text box object in the page *pageNum* of *wpDoc*.<!-- END REF-->

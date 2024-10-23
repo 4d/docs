@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->**SET MENU ITEM PROPERTY**コマンドは、*menu* と *menuItem*引数で指定されたメニュー項目に、*property*の*value*を設定するために使用します。<!-- END REF-->

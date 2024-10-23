@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get title.Summary-->El comando OBJECT Get title devuelve el título (etiqueta) del objeto de formulario designado por *objeto* .<!-- END REF--> 

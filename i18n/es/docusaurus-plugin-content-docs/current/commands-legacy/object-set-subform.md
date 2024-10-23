@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->El comando **OBJECT SET SUBFORM** permite modificar dinámicamente el formulario detallado así como también, opcionalmente, el formulario listado asociado al objeto subformulario designado por los parámetros *objeto* y *\**.<!-- END REF-->  

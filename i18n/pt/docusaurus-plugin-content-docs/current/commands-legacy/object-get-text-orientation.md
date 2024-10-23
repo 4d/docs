@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->O comando **OBJECT Get text orientation** devolve o valor de orientação atual aplicado ao texto do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\**.<!-- END REF-->

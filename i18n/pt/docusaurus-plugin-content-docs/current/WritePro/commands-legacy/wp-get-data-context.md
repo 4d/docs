@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WP Get data context.Summary-->O comando **WP Get data context** devolve o contexto de dados do documento wpDoc para o processo atual.<!-- END REF--> Os contextos de dados se definem com o comando [WP SET DATA CONTEXT](wp-set-data-context.md).

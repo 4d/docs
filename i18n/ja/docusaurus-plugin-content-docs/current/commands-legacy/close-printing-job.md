@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->**CLOSE PRINTING JOB** コマンドは、[OPEN PRINTING JOB](open-printing-job.md) コマンドで開かれたプリントジョブを閉じ、組み立てたプリントドキュメントをカレントプリンタに送信するために使用できます。<!-- END REF-->

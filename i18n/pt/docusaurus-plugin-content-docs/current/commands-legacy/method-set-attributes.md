@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->O novo comando **METHOD SET ATTRIBUTES** permite que você defina os valores dos *atributos* para os métodos especificados no parâmetro *caminho*.<!-- END REF-->

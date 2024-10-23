@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->OBJECT GET SCROLL POSITION は*object*で指定されたフォームオブジェクトの、スクロールバーの位置に関連する情報を*vPosition*と*hPosition*引数に返します。<!-- END REF-->

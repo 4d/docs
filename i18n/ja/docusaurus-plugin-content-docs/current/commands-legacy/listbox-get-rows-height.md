@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->**LISTBOX Get rows height**コマンドは、*object*引数および *\** で指定されたリストボックスの現在の行の高さを返します。<!-- END REF-->

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->The **LISTBOX SELECT ROWS** command selects the rows of an entity selection or collection list box that correspond to the entities or objects in the *selection* parameter.<!-- END REF--> 

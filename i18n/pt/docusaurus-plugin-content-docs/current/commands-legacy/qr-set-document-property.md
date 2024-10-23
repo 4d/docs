@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->O comando QR SET DOCUMENT PROPERTY permite mostrar a caixa de diálogo de impressão ou definir a unidade utilizada pelo documento.<!-- END REF-->  

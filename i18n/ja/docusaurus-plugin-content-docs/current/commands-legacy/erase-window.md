@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->ERASE WINDOW コマンドは*window*で指定されたウィンドウの内容をクリアします。<!-- END REF-->

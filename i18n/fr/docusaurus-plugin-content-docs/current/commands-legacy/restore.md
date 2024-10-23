@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.RESTORE.Summary-->La commande **RESTORE** permet restituer le ou les fichier(s) inclus dans une archive 4D.<!-- END REF--> Cette commande est utile dans le cadre d’interfaces personnalisées pour la gestion des sauvegardes. 

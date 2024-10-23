@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->The SQL LOGOUT command closes the connection with an ODBC source that is open in the current process (if applicable).<!-- END REF--> If there is no ODBC connection open, the command does nothing. 

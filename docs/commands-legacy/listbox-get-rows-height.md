@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->The **LISTBOX Get rows height** command returns the current row height for the list box object set using the *object* and *\** parameters.<!-- END REF--> 

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->La commande **QR GET DESTINATION** retourne le *type* de destination de l'état rapide contenu dans la *zone*.<!-- END REF--> 

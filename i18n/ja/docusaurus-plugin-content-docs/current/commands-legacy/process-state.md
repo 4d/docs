@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Process state.Summary-->**Process state** コマンドは、*process*に指定したプロセス番号を持つプロセスの状態を返します。<!-- END REF--> 

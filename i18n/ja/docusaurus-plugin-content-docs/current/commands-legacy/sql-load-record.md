@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->SQL LOAD RECORDコマンドは、現在の接続において開かれたODBCソースからのレコードを1件以上4D内に取り込みます。<!-- END REF-->

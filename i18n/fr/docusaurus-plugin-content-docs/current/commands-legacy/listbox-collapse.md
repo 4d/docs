@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->La commande **LISTBOX COLLAPSE** vous permet de provoquer la contraction des lignes de rupture de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->

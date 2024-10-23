@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->OBJECT GET COORDINATES コマンドは、引数 *\** および*object*によって指定された、現在のフォームのオブジェクトの*left*, *top*, *right* および *bottom*の座標 (ポイント) を返します。<!-- END REF-->

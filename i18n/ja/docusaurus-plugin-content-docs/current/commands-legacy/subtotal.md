@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Subtotal.Summary-->**Subtotal** は、現在または最後のブレークレベルにおける*data*の小計を返します。<!-- END REF-->**Subtotal** は、ソートされたセレクションを[PRINT SELECTION](print-selection.md) コマンドで印刷する場合と、デザインモードでプリント...メニューから印刷を行う場合にのみ機能します。*data*引数のタイプは実数、整数、倍長整数のいずれかでなければなりません。フォームのブレークエリアに変数を配置し、**Subtotal** の結果を代入します。

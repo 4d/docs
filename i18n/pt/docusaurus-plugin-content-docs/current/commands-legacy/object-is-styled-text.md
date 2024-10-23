@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->O comando **OBJECT Is styled text** devolve **True** se a opção "Multiestilo" está selecionada para o(s) objeto(s) designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->

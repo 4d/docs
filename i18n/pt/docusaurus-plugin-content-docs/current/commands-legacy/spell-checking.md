@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->O comando **SPELL CHECKING** ativa a revisão ortográfica de campo ou variável que tem o foco no formulário em tela.<!-- END REF--> O objeto verificado deve ser de tipo Alfa ou Texto.

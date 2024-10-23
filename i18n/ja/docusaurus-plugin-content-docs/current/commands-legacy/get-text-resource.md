@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get text resource.Summary-->Get text resource コマンドは、*resID*に渡されるIDを持つテキスト ("TEXT") リソースに格納されているテキストを返します。<!-- END REF-->

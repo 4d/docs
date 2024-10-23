@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA OPEN URL.Summary-->O comando **WA OPEN URL** carrega na área web designada pelos parâmetros *\** e *objeto* o URL passado no parâmetro *url*.<!-- END REF-->

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->**OBJECT SET THREE STATES CHECKBOX**コマンドは、引数 *object* と *\** で指定したチェックボックスの"スリーステート"のプロパティを、カレントのプロセスにおいて変更します。<!-- END REF-->

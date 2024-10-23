@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->**ON EVENT CALL** installe la méthode dont le nom est passé dans *méthodeEvén* comme méthode de gestion des événements.<!-- END REF--> 

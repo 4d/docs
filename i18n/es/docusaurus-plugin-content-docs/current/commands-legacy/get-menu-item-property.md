@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->El comando **GET MENU ITEM PROPERTY** devuelve, en el parámetro *valor*, el valor actual de la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> 

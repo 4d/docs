@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WP Get data context.Summary-->La commande **WP Get data context** returne le contexte de données du document wpDoc\[#/descv\].<!-- END REF--> Les contextes de données sont définis à l'aide de la commande [WP SET DATA CONTEXT](wp-set-data-context.md).

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->La commande **BUILD APPLICATION** lance le processus de génération d’application en prenant en compte les paramètres définis dans le fichier de configuration d’application courant ou le fichier de configuration défini dans le paramètre *buildAppSettings*.<!-- END REF-->

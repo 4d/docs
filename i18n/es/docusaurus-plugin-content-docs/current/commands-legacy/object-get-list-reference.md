@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->El comando **OBJECT Get list reference** devuelve el número de referencia (*RefList*) de la lista jerárquica asociada al objeto o grupo de objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  

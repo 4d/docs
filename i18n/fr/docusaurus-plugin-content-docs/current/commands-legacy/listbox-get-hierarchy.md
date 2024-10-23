@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->La commande **LISTBOX GET HIERARCHY** vous permet de connaître les propriétés hiérarchiques de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.RELOAD PROJECT.Summary-->La commande **RELOAD PROJECT** recharge les définitions du fichier source (méthodes, formulaires, etc.) à partir du disque, pour exécuter le projet dans l'environnement 4D courant.<!-- END REF--> Elle peut être utilisée uniquement avec des projets 4D exécutés en **mode** **interprété**. L'exécution de la commande est asynchrone. 

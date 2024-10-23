@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get menu title.Summary-->La commande **Get menu title** retourne le titre du menu dont vous avez passé le numéro ou la référence dans *menu*.<!-- END REF-->

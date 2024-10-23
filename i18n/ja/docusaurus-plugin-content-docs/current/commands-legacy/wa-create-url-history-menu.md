@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA Create URL history menu.Summary-->**WA Create URL history menu** コマンドは、*\** と *object* で指定したWebエリアがセッション中に訪問したURL間をナビゲートするメニューを作成します。<!-- END REF-->このコマンドを使用して、カスタムのナビゲーションインタフェースを作成できます。

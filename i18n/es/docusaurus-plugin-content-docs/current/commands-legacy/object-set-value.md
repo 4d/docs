@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Ejemplo 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** define el *valor* de la fuente de datos actual para los objetos de formulario designados por el parámetro *nomObjeto*.<!-- END REF-->

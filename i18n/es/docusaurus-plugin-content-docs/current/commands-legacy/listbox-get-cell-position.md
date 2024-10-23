@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->El comando **LISTBOX GET CELL POSITION** devuelve los números de la *columna* y de la *fila* correspondientes a la ubicación en el list box (designado por *\** y *objeto*) del último clic, última selección realizada con el teclado, o las coordenadas vertical y horizontal del ratón.<!-- END REF-->

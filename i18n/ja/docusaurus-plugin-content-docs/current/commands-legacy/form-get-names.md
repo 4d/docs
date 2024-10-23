@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->**FORM GET NAMES**コマンドはアプリケーション中のフォーム名を*arrNames*配列に返します。<!-- END REF--> 

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->La commande **OPEN SECURITY CENTER** provoque l’affichage de la fenêtre du Centre de sécurité et de maintenance (CSM).<!-- END REF--> Pour plus d'informations, veuillez consulter la page *Centre de Sécurité et de Maintenance*.

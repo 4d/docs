@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->La commande **LISTBOX Get rows height** retourne la hauteur courante des lignes de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> La valeur retournée correspond à la hauteur d'une seule ligne. 

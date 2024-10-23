@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->El comando **APPEND MENU ITEM** añade nueva líneas de menú al menú cuyo número o referencia se pasa en *menu*.<!-- END REF-->

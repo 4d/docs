@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP Get data context.Summary-->**WP Get data context** コマンドは、 wpDoc 引数で指定したドキュメントのデータコンテキストを返します。<!-- END REF-->データコンテキストは、[WP SET DATA CONTEXT](wp-set-data-context.md) コマンドを使用することで定義されます。

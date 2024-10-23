@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->QR SET INFO ROW コマンドは、*row*に渡した行を表示/非表示に設定します。<!-- END REF-->

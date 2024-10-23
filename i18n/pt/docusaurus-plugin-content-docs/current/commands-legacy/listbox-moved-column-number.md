@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Summary-->O comando LISTBOX MOVED COLUMN NUMBER devolve dois números em *antPosição* e *novPosição* indicando respectivamente a posição anterior e a nova posição da coluna movida no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

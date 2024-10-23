@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Export structure file.Summary-->La commande **Export structure file** décompose la structure de la base de données 4D courante en un ensemble de fichiers de type texte ou de fichiers natifs de type image et les stocke dans le *cheminDossier* spécifié.<!-- END REF--> Par défaut, la structure de la base (méthodes, formulaires, catalogues, etc.) est intégralement exportée. Vous pouvez filtrer les contenus à exporter à l'aide du paramètre *options* (voir ci-dessous).

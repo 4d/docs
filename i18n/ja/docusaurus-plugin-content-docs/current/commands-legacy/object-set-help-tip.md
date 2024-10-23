@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET HELP TIP.Summary-->**OBJECT SET HELP TIP**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたヘルプをカレントプロセス内で動的に変更します。<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Compatibility 
 
 <!--REF #_command_.ADD RECORD.Summary-->*This command was implemented in 4D's early releases and is still useful for prototyping or basic developments.<!-- END REF--> However, to build customized and modern interfaces, it is now recommended to use generic forms based upon the [DIALOG](dialog.md) command which provide advanced features and better control over the data flow.*

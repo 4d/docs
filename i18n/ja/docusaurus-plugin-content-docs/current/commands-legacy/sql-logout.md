@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->SQL LOGOUT コマンドは、カレントプロセスにおいて開かれているODBCソースとの接続をクローズします(すでに接続されていれば)。<!-- END REF-->ODBC接続が行われていない場合、コマンドは何も行いません。

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get format.Summary-->The **OBJECT Get format** command returns the current display format applied to the object specified in the *object* parameter.<!-- END REF-->

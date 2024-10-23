@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->La commande **OBJECT GET RGB COLORS** retourne les couleurs d’avant-plan et d’arrière-plan de l'objet ou du groupe d'objets désigné(s) par *objet*.<!-- END REF-->

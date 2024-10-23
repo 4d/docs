@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.FILTER EVENT.Summary-->You call the **FILTER EVENT** command from within an event-handling project method installed using the [ON EVENT CALL](on-event-call.md) command.<!-- END REF-->

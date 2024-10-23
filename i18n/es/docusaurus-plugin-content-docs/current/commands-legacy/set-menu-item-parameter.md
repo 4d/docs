@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->El comando SET MENU ITEM PARAMETER permite asociar una cadena de caracteres personalizada con una línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> 

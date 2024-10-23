@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->O comando SET MENU ITEM PROPERTY permite fixar o *valor* da *propriedade* para a linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF-->

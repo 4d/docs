@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->The **QR MOVE COLUMN** command moves the column currently found at the *column* position to the *newPos* position.<!-- END REF-->

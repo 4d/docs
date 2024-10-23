@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OB Entries.Summary-->**OB Entries** コマンドは*object* 引数で指定したオブジェクトのコンテンツを、キー/値のペアとして格納したオブジェクトのコレクションを返します。<!-- END REF-->

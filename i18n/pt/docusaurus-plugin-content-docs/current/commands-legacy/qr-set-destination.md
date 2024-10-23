@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->O comando QR SET DESTINATION permite definir o tipo de saída do relatório rápido em *area*.<!-- END REF-->  

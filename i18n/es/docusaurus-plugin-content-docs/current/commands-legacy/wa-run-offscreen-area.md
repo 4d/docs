@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->El comando **WA Run offscreen area** crea un área web en memoria que se puede utilizar para cargar y analizar automáticamente las páginas web.<!-- END REF-->

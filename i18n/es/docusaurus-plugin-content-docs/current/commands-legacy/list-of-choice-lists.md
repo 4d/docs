@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->El comando LIST OF CHOICE LISTS devuelve, en los arrays sincronizados *arraysNums* y *arrayNoms*, los números y los nombres de las listas definidas en el editor de listas en el entorno Diseño.<!-- END REF-->

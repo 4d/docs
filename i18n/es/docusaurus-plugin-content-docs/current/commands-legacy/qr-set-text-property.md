@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->El comando QR SET TEXT PROPERTY permite definir las propiedades de texto de la celda determinada por los parámetros *numColumna* y *numLinea*.<!-- END REF-->

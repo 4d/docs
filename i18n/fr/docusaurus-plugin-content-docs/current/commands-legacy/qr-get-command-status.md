@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR Get command status.Summary-->La commande **QR Get command status** retourne 0 si la commande désignée par le paramètre *numCommande* est inactivée et 1 si elle est activée.<!-- END REF-->

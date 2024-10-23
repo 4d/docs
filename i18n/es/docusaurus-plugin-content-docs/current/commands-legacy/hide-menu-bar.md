@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.HIDE MENU BAR.Summary-->El comando HIDE MENU BAR vuelve invisible la barra de menús.<!-- END REF--> 

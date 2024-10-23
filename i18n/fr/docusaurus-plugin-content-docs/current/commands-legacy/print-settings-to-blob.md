@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->La commande **Print settings to BLOB** sauvegarde les paramètres d'impression courants de 4D dans le BLOB *paramImpression*.<!-- END REF--> Le paramètre *paramImpression* stocke tous les paramètres utilisés pour l'impression :

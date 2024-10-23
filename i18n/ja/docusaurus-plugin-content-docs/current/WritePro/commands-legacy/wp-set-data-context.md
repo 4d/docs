@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP SET DATA CONTEXT.Summary-->**WP SET DATA CONTEXT** コマンドは、*contextData* 引数で指定したオブジェクトを、*wpDoc* 引数で指定した4D Write Pro ドキュメントのデータコンテキストとして設定します。<!-- END REF-->新しいコンテキスト設定した場合には、ドキュメントの既存のコンテキストは全て上書きされます。

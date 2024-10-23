@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->The OBJECT SET TITLE command changes the title of the object(s) specified by *object* to the value you pass in *title*.<!-- END REF-->

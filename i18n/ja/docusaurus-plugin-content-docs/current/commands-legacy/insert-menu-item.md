@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->**INSERT MENU ITEM** コマンドは、*menu*に渡されたメニュー番号または参照を持つメニューにおいて、*afterItem*に渡された番号の既存のメニュー項目の後ろに新しいメニュー項目を挿入します。<!-- END REF-->

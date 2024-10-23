@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->El comando EDIT FORMULA muestra el editor de fórmulas con el fin de permitir al usuario escribir o modificar una fórmula.<!-- END REF--> El editor contiene al abrir:

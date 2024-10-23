@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA OPEN URL.Summary-->La commande **WA OPEN URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL passé dans le paramètre *url*.<!-- END REF--> 

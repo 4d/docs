@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->La commande **LISTBOX SELECT BREAK** permet de sélectionner des lignes de rupture dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> La list box doit être affichée en mode hiérarchique. 

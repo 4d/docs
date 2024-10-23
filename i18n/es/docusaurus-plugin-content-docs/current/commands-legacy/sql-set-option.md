@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->El comando **SQL SET OPTION** se utiliza para modificar el *valor* de la opción pasada en *opcion*.<!-- END REF-->

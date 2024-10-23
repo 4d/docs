@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->**OBJECT SET EVENTS**コマンドは、引数 *object* と *\** で指定したフォームまたはオブジェクトのフォームイベントの設定を、カレントのプロセスにおいて変更します。<!-- END REF-->

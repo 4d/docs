@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->QR INSERT COLUMN コマンドは指定された位置にカラムの作成または挿入を行います。<!-- END REF-->挿入された場所の右にあるカラムはすべて右側へ移動します。

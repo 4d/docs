@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->El comando **LISTBOX Get static columns** devuelve el número de columnas estáticas en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OB Entries.Summary-->El comando **OB Entries** devuelve una colección de objetos que contienen el contenido del *objeto* como pares de propiedades llave/valor.<!-- END REF--> 

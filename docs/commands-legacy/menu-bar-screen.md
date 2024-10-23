@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Menu bar screen.Summary-->Menu bar screen returns the number of the screen where the menu bar is located.<!-- END REF-->

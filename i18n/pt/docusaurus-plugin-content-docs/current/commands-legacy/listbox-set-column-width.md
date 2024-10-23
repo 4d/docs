@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->O comando LISTBOX SET COLUMN WIDTH le permite modificar por programação a largura de uma ou todas as colunas do objeto (list box, coluna ou título) designado utilizando os parâmetros *objeto* e *\**.<!-- END REF-->

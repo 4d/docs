@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.PRINT RECORD.Summary-->Cette commande provoque l'impression de l'enregistrement courant de *laTable*, sans modifier la sélection courante.<!-- END REF--> Le formulaire sortie courant est utilisé pour l'impression. S’il n’y a pas d’enregistrement courant dans *laTable*, **PRINT RECORD** ne fait rien.

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->La commande **QR INSERT COLUMN** insère ou crée dans *zone* une colonne à un emplacement spécifique.<!-- END REF--> Les colonnes situées à droite de la colonne ajoutée seront décalées en conséquence.

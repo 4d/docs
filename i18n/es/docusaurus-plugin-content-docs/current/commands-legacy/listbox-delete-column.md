@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->El comando LISTBOX DELETE COLUMN borra una o más columnas (visibles o no) en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->

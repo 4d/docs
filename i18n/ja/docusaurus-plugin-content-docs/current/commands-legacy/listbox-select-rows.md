@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->**LISTBOX SELECT ROWS** コマンドはエンティティセレクション型リストボックス/コレクション型リストボックスにおいて、*selection* 引数で指定したエンティティまたはオブジェクトに対応する行を選択します。<!-- END REF-->

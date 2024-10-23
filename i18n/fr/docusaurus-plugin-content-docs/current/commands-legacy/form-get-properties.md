@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->La commande **FORM GET PROPERTIES** retourne des propriétés du formulaire *nomForm*.<!-- END REF--> 

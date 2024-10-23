@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP Get frame.Summary-->**WP Get frame** コマンドは*wpArea* 引数で指定した4D Write Pro エリア内で、カーソルが現在設定されているフレームを返します。<!-- END REF-->

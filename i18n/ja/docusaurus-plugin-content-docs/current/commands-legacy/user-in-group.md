@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.User in group.Summary-->User in group コマンドは*user* が*group* に存在する場合、[True](true.md "True")を返します。<!-- END REF-->

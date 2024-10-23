@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->El comando **Print settings to BLOB** guarda los ajustes de impresión 4D actuales en el BLOB *confImp*.<!-- END REF--> El parámetro *confImp* almacena todos los valores utilizados para la impresión:

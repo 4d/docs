@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.CLEAR LIST.Summary-->O comando CLEAR LIST apaga da memória a lista hierárquica cujo número de referência é passado em *lista*.<!-- END REF-->

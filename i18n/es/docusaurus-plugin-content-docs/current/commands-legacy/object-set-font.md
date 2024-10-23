@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT muestra el *objeto* utilizando la fuente especificada en el parámetro *fuente*.<!-- END REF--> El parámetro *fuente* debe contener un nombre de fuente válido.

@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->El comando OBJECT MOVE permite mover los objetos en el formulario actual, definido por los parámetros *\** y *objeto, moveH* píxeles horizontalmente y *moveV* píxeles verticalmente.<!-- END REF-->   

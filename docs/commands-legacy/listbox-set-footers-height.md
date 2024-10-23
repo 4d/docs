@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Summary-->The **LISTBOX SET FOOTERS HEIGHT** command modifies by programming the height of the footer row in the list box designated by the *object* and *\** parameters.<!-- END REF-->

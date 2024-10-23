@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->El comando LISTBOX GET PRINT INFORMATION devuelve la información actual relativa a la impresión del objeto list box designado por los parámetros *objeto* y *\** .<!-- END REF--> Este comando permite controlar la impresión del contenido del list box.

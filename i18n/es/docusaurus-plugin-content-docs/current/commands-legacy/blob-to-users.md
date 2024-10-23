@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->El comando BLOB TO USERS remplaza las cuentas usuarios y los grupos presentes en el BLOB *usuarios* en la base actual.<!-- END REF--> El BLOB *usuarios* está encriptado y debe haber sido creado utilizando el comando [USERS TO BLOB](users-to-blob.md).

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->El comando WA EXECUTE JAVASCRIPT FUNCTION ejecuta en el área Web designada por los parámetros *\** y *objeto*, la función JavaScript *funcionJS* y devuelve opcionalmente su resultado en el parámetro *resultado*.<!-- END REF-->

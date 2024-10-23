@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->REDRAW WINDOW コマンドは*window*に渡した参照番号を持つウィンドウのグラフィックな更新を行います。<!-- END REF-->

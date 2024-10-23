@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP USE PAGE SETUP.Summary-->**WP USE PAGE SETUP** コマンドはカレントのプリンターページ設定を、4D Write Proドキュメント属性のページサイズとページの向きに変更します。<!-- END REF-->このコマンドは、カレントのプリンターページ設定を4D Write Proドキュメントページ設定と同期させるために、[WP PRINT](wp-print.md)の直前に呼び出される必要があります。

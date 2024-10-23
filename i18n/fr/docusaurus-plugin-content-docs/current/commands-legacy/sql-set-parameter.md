@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->La commande **SQL SET PARAMETER** permet d’utiliser la valeur d’une variable, d’un tableau ou d’un champ 4D dans les requêtes SQL.<!-- END REF-->

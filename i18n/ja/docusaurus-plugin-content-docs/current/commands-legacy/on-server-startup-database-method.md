@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 
 
 <!--REF #_command_.On Server Startup database method.Summary-->**On Server Startupデータベースメソッド**は、4D Server でデータベースを開くと、サーバマシン上で一度呼び出されます。<!-- END REF-->4D Server 以外の4D環境で**On Server Startupデータベースメソッド**が起動されることはありません。

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get plugin access.Summary-->El comando Get plugin access devuelve el nombre del grupo de usuarios autorizados a utilizar el plug-in cuyo número se pasa en el parámetro *plugIn*.<!-- END REF--> Si ningún grupo está asociado al plug-in, el comando devuelve una cadena vacía (""). 

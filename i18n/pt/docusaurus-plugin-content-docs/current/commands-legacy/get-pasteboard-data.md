@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->O comando GET PASTEBOARD DATA devolve no campo ou variável de tipo BLOB ou na variável *dados*, os dados que se encontram na área de transferência e cujo tipo se passa em *tipoDados*.<!-- END REF-->(Se a cópia contiver texto copiado dentro de 4D, então o conjunto de caracteres do BLOB é provavelmente UTF-16)

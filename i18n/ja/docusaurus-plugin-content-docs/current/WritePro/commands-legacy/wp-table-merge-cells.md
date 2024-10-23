@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Summary-->**WP TABLE MERGE CELLS** コマンドは、*targetObj* または(*startColumn*、*startRow*、*columnCount*、および *rowCount* によって定義される)*tableRef* 内のセルのセレクションを結合します。<!-- END REF-->

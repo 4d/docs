@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR Get text property.Summary-->El comando QR Get text property devuelve el valor de la propiedad de los atributos texto en la celda determinada por *numColumna* y *numLinea*.<!-- END REF-->

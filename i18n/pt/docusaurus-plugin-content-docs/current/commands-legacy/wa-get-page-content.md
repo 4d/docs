@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA Get page content.Summary-->O comando WA Get page content retorna o código HTML da página atual ou da página que vai ser mostrada na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  

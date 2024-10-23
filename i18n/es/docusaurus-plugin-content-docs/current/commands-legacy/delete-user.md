@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.DELETE USER.Summary-->El comando DELETE USER borra el usuario cuyo número se pasa en *refUsuario*.<!-- END REF--> Debe pasar un número válido de usuario devuelto por el comando [GET USER LIST](get-user-list.md "GET USER LIST"). 

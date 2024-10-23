@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->O comando SELECT LIST ITEMS BY REFERENCE seleciona os elementos cujo número de referência se passa em *refElem* e opcionalmente em *refArray*, na lista cujo número de referência se passa em *lista*.<!-- END REF-->

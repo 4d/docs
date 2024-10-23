@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SQL Get current data source.Summary-->O comando SQL Get current data source retorna o nome da fonte de dados atual da aplicação.<!-- END REF--> A fonte de dados atual recebe as pesquisas SQL executadas dentro das estruturas **Begin SQL/End SQL**.  

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get type.Summary-->**OBJECT Get type**コマンドは、カレントフォーム内の、引数 *object* と *\** で指定したオブジェクトのタイプを返します。<!-- END REF-->

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->El comando WA GET PREFERENCE permite obtener el valor actual de una preferencia en el área web designada por los parámetros *\** y *objeto*.<!-- END REF--> 

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->O comando LISTBOX DELETE ROWS apaga a fila número *posição* (visível ou não) do list box definido pelos parâmetros *objeto* e \*.<!-- END REF-->

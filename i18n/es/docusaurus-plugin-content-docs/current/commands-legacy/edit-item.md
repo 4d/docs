@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.EDIT ITEM.Summary-->El comando **EDIT ITEM** le permite editar el elemento actual o el elemento de número *elemento* del array o la lista designada por el parámetro *objeto*.<!-- END REF-->  

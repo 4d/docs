@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->**SET PICTURE TO PASTEBOARD** place dans le conteneur de données une copie de l'image que vous avez passée dans *image*.<!-- END REF--> Les données éventuellement présentes dans le conteneur sont préalablement effacées. 

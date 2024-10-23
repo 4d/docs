@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->**STRING LIST TO ARRAY**コマンドは以下の要素から構築される*strings*配列を生成します:

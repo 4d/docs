@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->El comando IMPORT SYLK lee los datos de *documento*, un documento SYLK Windows o Macintosh, y los escribe en *tabla* creando nuevos registros.<!-- END REF-->

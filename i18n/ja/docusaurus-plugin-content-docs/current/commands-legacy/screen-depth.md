@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->Screen depthコマンドは、モニターについての情報を引数*depth*と*color*に返します。<!-- END REF-->

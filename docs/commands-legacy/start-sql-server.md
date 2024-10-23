@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.START SQL SERVER.Summary-->The START SQL SERVER command launches the integrated SQL server in the 4D application where it has been executed.<!-- END REF--> Once launched, the SQL server can respond to external SQL queries.

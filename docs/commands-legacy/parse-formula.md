@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Parse formula.Summary-->The **Parse formula** function analyzes the 4D *formula*, checks its syntax, and returns its normalized form.<!-- END REF--> This allows the formula to remain valid in the event that a 4D language or structure element (command, constant, table, field, or 4D Plugin) is renamed. 

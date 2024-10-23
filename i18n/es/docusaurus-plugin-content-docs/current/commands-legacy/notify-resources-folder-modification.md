@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->El comando NOTIFY RESOURCES FOLDER MODIFICATION permite "forzar" el envío por 4D Server de una notificación indicando a todos los puestos 4D conectados que el contenido de la carpeta Resources de la base ha sido modificado, de manera que puedan sincronizar su carpeta Resources local.<!-- END REF-->   

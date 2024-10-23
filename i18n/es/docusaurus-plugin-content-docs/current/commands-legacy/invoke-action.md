@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->El comando **INVOKE ACTION** activa la acción estándar definida por el parámetro accion, opcionalmente en el contexto objetivo.<!-- END REF-->

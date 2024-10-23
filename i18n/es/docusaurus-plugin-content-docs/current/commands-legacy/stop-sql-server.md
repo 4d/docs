@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->El comando STOP SQL SERVER detiene el servidor SQL integrado de la aplicación 4D en la cual ha sido ejecutado.<!-- END REF--> 

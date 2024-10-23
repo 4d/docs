@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->SET LIST ITEM コマンドは、*list*引数に渡した参照番号またはオブジェクト名のリストにおいて、*itemRef*で指定した項目を変更します。<!-- END REF-->

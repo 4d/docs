@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->**SQL SET PARAMETER**コマンドを使用すると、4D変数や配列、フィールドをSQLリクエストで使用することができます。<!-- END REF-->

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->El comando QR SET REPORT TABLE define la tabla actual para el área del informe referenciada por el parámetro *area* a la tabla número *tabla*.<!-- END REF-->

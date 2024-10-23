@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get database parameter.Summary-->O comando **Get database parameter** permite obter o valor atual de um parâmetro do banco 4D.<!-- END REF--> Quando o valor do parâmetro é uma cadeia de caracteres, é retornado o o parâmetro *valorAlfa*.

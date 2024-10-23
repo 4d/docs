@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->La commande **OPEN COLOR PICKER** affiche la boîte de dialogue de sélection de couleur du système.<!-- END REF--> 

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->El comando **SET ALLOWED METHODS** permite designar los métodos proyecto que pueden ser llamados directamente desde la aplicación.<!-- END REF-->

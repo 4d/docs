@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->The LISTBOX SELECT ROW command selects the row whose number is passed in *position* in the list box set in the *object* and *\** parameters.<!-- END REF-->

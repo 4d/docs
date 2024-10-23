@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.List item position.Summary-->List item position コマンドは、*list*に渡された項目参照番号またはオブジェクト名リスト中で、*itemRef*で指定した項目の位置を返します。<!-- END REF-->

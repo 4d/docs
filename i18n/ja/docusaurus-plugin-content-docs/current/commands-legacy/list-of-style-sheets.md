@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->**LIST OF STYLE SHEETS**コマンドは、*arrStyleSheets*配列にアプリケーション内のスタイルシートのリストを返します。<!-- END REF-->.

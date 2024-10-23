@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->O comando WA SET PREFERENCE permite fixar diferentes preferências para o área web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  

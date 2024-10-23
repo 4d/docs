@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->**HIDE PROCESS** masque toutes les fenêtres appartenant au process dont le numéro est *process*.<!-- END REF--> Tous les éléments d'interface de *process* sont cachés jusqu'au [SHOW PROCESS](show-process.md) suivant. La barre de menus du process est aussi cachée. L'ouverture d'une fenêtre alors que le process est caché ne provoquera aucun redessinement d'écran. Si le process est déjà caché, cette commande ne fait rien.

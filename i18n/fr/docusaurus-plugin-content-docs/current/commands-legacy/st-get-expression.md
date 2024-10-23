@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ST Get expression.Summary-->La commande **ST Get expression** retourne la première expression présente dans la sélection courante du champ ou de la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 

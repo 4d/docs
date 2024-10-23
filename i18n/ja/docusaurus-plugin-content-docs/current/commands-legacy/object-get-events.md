@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->**OBJECT GET EVENTS**コマンドは、引数 *object* と *\** で指定したオブジェクトの、フォームイベントのカレントの設定を取得します。<!-- END REF-->

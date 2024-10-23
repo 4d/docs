@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Form.Summary-->O comando **Form** devolve o objeto associado com o formulário atual, se houver.<!-- END REF--> 4D associa automaticamente um objeto ao formulário atual nos casos abaixo:

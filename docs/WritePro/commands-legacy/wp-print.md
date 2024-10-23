@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WP PRINT.Summary-->The **WP PRINT** command launches a print job for the 4D Write Pro document specified in *wpDoc*, or adds the document to the current print job if it is called between [OPEN PRINTING JOB](../../commands-legacy/open-printing-job.md) and [CLOSE PRINTING JOB](../../commands-legacy/close-printing-job.md).<!-- END REF--> **WP PRINT** uses print settings defined by the 4D [PRINT SETTINGS](../../commands-legacy/print-settings.md) or [SET PRINT OPTION](../../commands-legacy/set-print-option.md) commands, except for page margins which are always based on the 4D Write Pro document page settings. **WP PRINT** uses current page setup options (such as page size and orientation), or those of the document if [WP USE PAGE SETUP](wp-use-page-setup.md) was called previously.

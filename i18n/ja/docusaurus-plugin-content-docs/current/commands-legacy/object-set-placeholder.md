@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->**OBJECT SET PLACEHOLDER**コマンドは、引数 *object* と *\** で指定したオブジェクトにプレースホルダーテキストを関連付けます。<!-- END REF-->

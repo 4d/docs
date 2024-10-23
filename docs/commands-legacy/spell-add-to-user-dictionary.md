@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->The **SPELL ADD TO USER DICTIONARY** command adds one or more words to the current user dictionary.<!-- END REF-->

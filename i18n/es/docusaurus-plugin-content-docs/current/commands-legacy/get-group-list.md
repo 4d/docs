@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST llena los arrays *nomGrupos y* *numGrupos* con los nombres y los números de referencia únicos de los grupos tal como aparecen en la ventana del editor de contraseñas.<!-- END REF-->

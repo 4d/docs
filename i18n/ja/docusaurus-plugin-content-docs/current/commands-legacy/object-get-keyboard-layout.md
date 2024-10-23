@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->**OBJECT Get keyboard layout**コマンドは*object* と *\** 引数で指定したオブジェクトにカレントプロセスで割り当てられたカレントキーボードレイアウトを返します。<!-- END REF-->

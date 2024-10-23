@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.List item position.Summary-->O comando List item position retorna a posição do elemento cujo número de referencia ou nome de objeto se passa em *refElem*,na lista cujo número de referência se passa na lista.<!-- END REF-->

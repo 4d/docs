@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->LIST OF CHOICE LISTS コマンドは同期された*numsArr* と *namesArr* 配列に、デザインモードのリストエディタで定義された選択リストの番号と名前を返します。<!-- END REF-->

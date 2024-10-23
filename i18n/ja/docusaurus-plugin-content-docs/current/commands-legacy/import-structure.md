@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->**IMPORT STRUCTURE** コマンドは、カレントデータベース内に、 *xmlStructure* に渡した4D XMLストラクチャー定義を読み込みます。<!-- END REF-->

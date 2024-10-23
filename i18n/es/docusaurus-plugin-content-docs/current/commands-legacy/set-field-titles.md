@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->**SET FIELD TITLES** permite ocultar, renombrar y reorganizar los campos de la tabla pasada en *tabla* cuando aparecen en las cajas de diálogo estándar de 4D, tal como el editor de búsquedas, en el entorno Aplicación(es decir, cuando el modo de inicio es **Aplicación**, o después de seleccionar **Probar aplicación** en el menú **Ejecutar**).<!-- END REF-->

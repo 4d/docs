@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->O comando **LISTBOX SET PROPERTY** define o *valor* da *propriedade* da coluna list box ou list box especificada utilizando os parâmetros *objeto* e *\**.<!-- END REF-->

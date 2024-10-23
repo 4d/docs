@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 
 
 <!--REF #_command_.On Startup database method.Summary-->**On Startupデータベースメソッド**は、データベースを開くと1度呼び出されます。<!-- END REF--> 

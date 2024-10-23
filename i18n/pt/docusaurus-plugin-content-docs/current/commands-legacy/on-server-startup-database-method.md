@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### 
 
 <!--REF #_command_.On Server Startup database method.Summary-->O On Server Startup database method é chamado uma vez na máquina servidor quando abre uma base com 4D Server.<!-- END REF--> O On Server Startup database method NÃO é executado em um ambiente diferente a 4D Server.

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->**LISTBOX SET STATIC COLUMNS**コマンドは*object* と *\** 引数で指定したリストボックス中のスタティック列の数を左端から*numColumns*に設定します。<!-- END REF-->

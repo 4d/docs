@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->The SET PLUGIN ACCESS command sets, by programming, the user group allowed to use each “serialized” plug-in that is installed in the database.<!-- END REF--> This way you can manage how plug-in licenses are used.

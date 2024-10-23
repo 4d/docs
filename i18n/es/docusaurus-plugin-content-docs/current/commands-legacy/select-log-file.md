@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->El comando **SELECT LOG FILE** crea, o cierra el archivo historial de acuerdo al valor que se pase en *historial*.<!-- END REF-->

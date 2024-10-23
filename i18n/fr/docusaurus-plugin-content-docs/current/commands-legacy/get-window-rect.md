@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->La commande **GET WINDOW RECT** retourne les coordonnées globales de la fenêtre dont vous avez passé le numéro de référence dans le paramètre *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, les variables des paramètres sont inchangées.

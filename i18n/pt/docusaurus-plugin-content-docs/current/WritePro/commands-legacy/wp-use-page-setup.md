@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WP USE PAGE SETUP.Summary-->O comando **WP USE PAGE SETUP** modifica as opções de impressão da página atual, baseado nos atributos de documento 4D Write Pro para o tamanho de página e a orientação.<!-- END REF--> Este comando deve ser chamado justo antes de [WP PRINT](wp-print.md) com o objetivo de sincronizar os parâmetros atuais de impressão da página com as opções de página de documento 4D Write Pro. 

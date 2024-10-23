@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Summary-->O comando QR DELETE OFFSCREEN AREA apaga da memória a área fora de tela do relatório rápido cuja referência se passa no parâmetro *area*.<!-- END REF--> 

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### 
 
 <!--REF #_command_.On Startup database method.Summary-->La **On Startup database method** est exécutée une seule fois, au moment de l'ouverture de la base.<!-- END REF-->

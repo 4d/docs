@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->El comando **LISTBOX GET GRID** devuelve el estado visible/oculto de las líneas horizontales y/o verticales que componen la rejilla del objeto list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

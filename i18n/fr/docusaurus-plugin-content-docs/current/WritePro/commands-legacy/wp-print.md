@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WP PRINT.Summary-->La commande **WP PRINT** lance une tâche d'impression pour le document 4D Write Pro désigné par *docWP*, ou ajoute le document dans la tâche d'impression courante si elle est appelée entre les commandes [OPEN PRINTING JOB](../../commands-legacy/open-printing-job.md) et [CLOSE PRINTING JOB](../../commands-legacy/close-printing-job.md).<!-- END REF--> **WP PRINT** utilise les paramètres d'impression définis par les commandes 4D [PRINT SETTINGS](../../commands-legacy/print-settings.md) ou [SET PRINT OPTION](../../commands-legacy/set-print-option.md), excepté pour les marges des pages qui sont toujours définies avec les options d'impression du document 4D Write Pro. **WP PRINT** utilise les options courantes de mise en page (comme la taille de la page et l'orientation), ou celles du document si [WP USE PAGE SETUP](wp-use-page-setup.md) a été appelée au préalable.

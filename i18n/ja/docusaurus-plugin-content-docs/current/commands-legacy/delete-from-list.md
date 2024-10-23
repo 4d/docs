@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->DELETE FROM LIST コマンドは、*list*に指定した参照番号またはオブジェクト名を持つリストから、*itemRef*引数で指定した項目を削除します。<!-- END REF-->

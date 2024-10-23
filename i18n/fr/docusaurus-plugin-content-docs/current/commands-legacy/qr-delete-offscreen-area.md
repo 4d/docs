@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Summary-->La commande **QR DELETE OFFSCREEN AREA** efface de la mémoire la zone hors écran dont la référence a été passée dans le paramètre *zone*.<!-- END REF-->

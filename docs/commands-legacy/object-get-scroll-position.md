@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->The OBJECT GET SCROLL POSITION returns, in the *vPosition* and *hPosition* parameters, information related to the position of the scroll bars of the form object designated by the *\** and *object* parameters.<!-- END REF-->

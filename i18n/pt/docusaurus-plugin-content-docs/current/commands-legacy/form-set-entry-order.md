@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->O comando **FORM SET ENTRY ORDER** permite definir dinâmicamente a ordem de entrada do formulário atual para o processo atual baseado no array *nomObjetos*.<!-- END REF--> 

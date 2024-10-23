@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->The SET FILE TO PASTEBOARD command adds the complete pathname of the file passed in the *file* parameter.<!-- END REF--> This command can be used to set up interfaces allowing the drag and drop of 4D objects to files on the desktop for example.

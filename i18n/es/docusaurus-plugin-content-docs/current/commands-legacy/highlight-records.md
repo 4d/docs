@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->El comando HIGHLIGHT RECORDS permite seleccionar registros en un formulario listado.<!-- END REF--> Esta operación es idéntica a la selección de registros manual en modo listado utilizando el ratón o las combinaciones de teclado **Mayús+Clic** o **Ctrl+Clic** (Windows) o **comando+Clic** (Mac OS). La selección actual no se modifica. 

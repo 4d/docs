@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->La commande **OBJECT Get pointer** retourne un pointeur vers la variable d’un objet de formulaire.<!-- END REF--> 

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->La commande **SELECT LOG FILE** crée ou ferme le fichier d'historique de la base de données, suivant la valeur que vous passez dans *historique*.<!-- END REF-->

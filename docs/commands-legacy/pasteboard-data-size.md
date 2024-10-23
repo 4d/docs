@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Pasteboard data size.Summary-->The **Pasteboard data size** command checks whether there is any data of the type you passed in *dataType* present in the pasteboard.<!-- END REF--> 

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Is editing text.Summary-->O comando **Is editing text** devolve **True** se o usuário estiver ingressando valores em um objeto de formulário de entrada e **False** em todos os demais casos.<!-- END REF-->

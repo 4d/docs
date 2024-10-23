@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OB Keys.Summary-->O comando **OB Keys** retorna uma coleção de strings contendo todos os nomes de propriedade enumeráveis do *objeto*.<!-- END REF--> 

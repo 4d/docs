@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Summary-->El comando **METHOD SET ACCESS MODE** permite definir el comportamiento de 4D cuando intenta acceder en escritura a un objeto ya cargado en modificación por otro usuario o proceso.<!-- END REF--> El alcance de este comando es la sesión actual.

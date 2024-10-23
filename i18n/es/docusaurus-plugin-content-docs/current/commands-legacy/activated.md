@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Activated.Summary-->El comando **Activated** (obsoleto) devuelve **True** en un método formulario cuando la ventana que contiene el formulario se convierte en la ventana del primer plano del proceso del primer plano.<!-- END REF-->

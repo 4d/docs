@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->OLD RELATED ONEは、リレーションを実行する際に*aField*の古い値を使用することを除き、[RELATE ONE](relate-one.md "RELATE ONE")と同じ処理を行います。<!-- END REF-->

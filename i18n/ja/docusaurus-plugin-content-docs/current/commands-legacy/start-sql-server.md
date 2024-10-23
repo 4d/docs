@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.START SQL SERVER.Summary-->START SQL SERVERコマンドを使用して、実行中の4Dのアプリケーションで、統合されたSQLサーバを起動させます。<!-- END REF-->起動すると、SQLサーバは外部SQLクエリに応答します。

@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->O comando FORM GET PROPERTIES retorna as propriedades do formulário *nomForm*.<!-- END REF-->

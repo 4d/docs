@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Count menus.Summary-->O comando Count menus devolve o número de menus presentes na barra de menus.<!-- END REF-->

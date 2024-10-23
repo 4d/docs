@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get three states checkbox.Summary-->**OBJECT Get three states checkbox**コマンドは、引数 *object* と *\** で指定したチェックボックスの"スリーステート"プロパティの、カレントの状態を返します。<!-- END REF-->

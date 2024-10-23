@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Deactivated.Summary-->El comando **Deactivated** devuelve True en un método formulario u objeto cuando la ventana del primer plano del proceso de primer plano, contiene el formulario, se traslada a la parte posterior.<!-- END REF-->

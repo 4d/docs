@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->La commande **QR SET DOCUMENT PROPERTY** permet d'afficher la boîte de dialogue d'impression ou de définir l'unité du document présent dans la *zone*.<!-- END REF-->  

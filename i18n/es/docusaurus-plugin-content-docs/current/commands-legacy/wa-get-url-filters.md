@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->El comando WA GET URL FILTERS devuelve en los arrays *arrFiltros* y *arrAutorizRechazar*, los filtros activos en el área web designada por los parámetros *\** y *objeto* .<!-- END REF--> Si ningún filtro está activo, los arrays se devuelven vacíos. 

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Nota:** este comando sólo funciona con los list boxes de tipo array.<!-- END REF-->  

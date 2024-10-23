@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Compatibilidad 
 
 <!--REF #_command_.WP Selection range.Summary-->**WP Selection range** fue nombrado **WP Get selection** en versiones anteriores de 4D Write Pro.<!-- END REF--> Ha sido renombrado por claridad.

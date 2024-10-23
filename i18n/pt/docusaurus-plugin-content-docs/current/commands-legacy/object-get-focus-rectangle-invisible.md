@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->O comando **OBJECT Get focus rectangle invisible** devolve o estado da opção de invisibilidade do retângulo de foco do objeto e dos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF--> Esta configuração corresponde à opção **Ocultar retângulo de foco** disponível para os objetos editados na Lista de propriedades em modo Desenho. Este comando devolve o estado atual da opção, como se definiu em modo Desenho ou utilizando o comando [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md).

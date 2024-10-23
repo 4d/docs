@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ST INSERT URL.Summary-->**ST INSERT URL**コマンドは、*object* 引数で指定したスタイル付テキストフィールドまたはテキスト変数内に、 URL のリンクを挿入します。<!-- END REF-->

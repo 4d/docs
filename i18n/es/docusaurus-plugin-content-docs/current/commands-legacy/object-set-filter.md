@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->OBJECT SET FILTER reemplaza el filtro de entrada para los objetos especificados por *objeto* por *filtroEntrada*.<!-- END REF--> 

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Count screens.Summary-->O comando Count screens devolve o número de telas conectadas a seu equipo.<!-- END REF-->

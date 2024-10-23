@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WP SELECT.Summary-->The **WP SELECT** command creates a new selection in the 4D Write Pro *wpArea* area, based upon the *targetObj* or a new range defined by *startRange* and *endRange*.<!-- END REF-->

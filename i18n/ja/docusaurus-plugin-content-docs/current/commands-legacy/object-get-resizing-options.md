@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->**OBJECT GET RESIZING OPTIONS**コマンドは*object*と*\** 引数で指定したオブジェクトのカレントプロセスのリサイズオプションを返します。<!-- END REF-->

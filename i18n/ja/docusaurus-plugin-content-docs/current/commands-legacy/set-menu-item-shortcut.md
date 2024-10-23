@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->**SET MENU ITEM SHORTCUT** コマンドは、あるメニュー項目に新しいショートカットを割り当てます。<!-- END REF-->

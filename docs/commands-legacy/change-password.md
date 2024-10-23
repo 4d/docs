@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.CHANGE PASSWORD.Summary-->CHANGE PASSWORD changes the password of the current user.<!-- END REF--> This command replaces the current password with the new password you pass in *password*. 

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get string resource.Summary-->El comando Get string resource devuelve la cadena almacenada en el recurso cadena (“STR ”) cuyo número de referencia se pasa en *resNum*.<!-- END REF--> 

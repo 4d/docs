@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM Get current page.Summary-->The **FORM Get current page** command returns the number of the currently displayed form page or of the current form loaded by the [FORM LOAD](form-load.md) command.<!-- END REF--> 

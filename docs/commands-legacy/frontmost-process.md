@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Frontmost process.Summary-->**Frontmost process** returns the number of the process whose window (or windows) are in the front.<!-- END REF--> 

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Load list.Summary-->Load list crea una lista jerárquica cuyo contenido se copia de la lista pasada en *nomLista*.<!-- END REF--> Luego devuelve el número de referencia de la lista creada recientemente. 

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->El comando GET HIGHLIGHTED RECORDS  guarda en el conjunto designado por el parámetro *nomConjunto* los registros seleccionados (es decir, los registros seleccionados por el usuario en el formulario listado) de la *tabla* pasada como parámetro.<!-- END REF--> Si el parámetro *tabla* se omite, se utiliza la tabla del formulario o del subformulario actual. 

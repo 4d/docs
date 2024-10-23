@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->La commande **QR SET HTML TEMPLATE** permet de définir le *modèle* HTML à utiliser pour la zone d'état rapide référencée par *zone*.<!-- END REF--> Ce modèle sera utilisé lors de l'exécution des états au format HTML. 
