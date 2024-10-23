@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP3 New transporter.Params-->
 
-| Parámetros | Tipo                               |                                 | Descripción                                                                       |
-| ---------- | ---------------------------------- | ------------------------------- | --------------------------------------------------------------------------------- |
-| server     | Object                             | &amp;srarr; | Información del servidor de correo                                                |
-| Resultado  | 4D.POP3Transporter | &amp;larr;  | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
+| Parámetros | Tipo                               |                            | Descripción                                                                       |
+| ---------- | ---------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Información del servidor de correo                                                |
+| Resultado  | 4D.POP3Transporter | &#8592; | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
 <!-- END REF-->
 

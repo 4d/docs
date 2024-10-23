@@ -226,7 +226,8 @@ O código colocado entre as palavras-chave `Try` e `Catch` é executado primeiro
 
 - Se nenhum erro for lançado, a execução do código continuará após a palavra-chave `End try` correspondente. O código colocado entre as palavras-chave `Catch` e `End try` não é executado.
 - Se a execução do bloco de código lançar um *erro não diferido*, o fluxo de execução é interrompido e o bloco de código `Catch` correspondente é executado.
-- Se o bloco de execução de código lançar um *erro atrasado*, o fluxo de execução continua até o final do bloco `Try` e, em seguida, executa o bloco de código `Catch` correspondente.
+- If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
+- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
 
 :::note
 

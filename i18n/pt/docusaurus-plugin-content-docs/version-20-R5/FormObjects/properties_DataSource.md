@@ -14,7 +14,7 @@ Esta propriedade é suportada por:
 - Objetos formulário [Combo box](comboBox_overview.md) e [coluna list box](listbox_overview.md#list-box-columns) associado para uma lista de seleção.
 - objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
 
-For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
+Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" que está associada a um combo box "Countries": se a propriedade **inserção automática** estiver definida e um usuário digitar "Espanha", o valor "Espanha" será automaticamente adicionado à lista na memória:
 
 ![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
@@ -63,7 +63,7 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controle de guias](tabControl.md)
 
 ---
 
@@ -116,9 +116,9 @@ Especifica uma variável ou expressão a que será atribuída uma longa indicand
 Define o tipo de dados para a expressão apresentada. Esta propriedade é utilizada com:
 
 - [Colunas do List box](listbox_overview.md#list-box-columns) de tipo seleção e coleção.
-- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
+- [Listas suspensas](dropdownList_Overview.md) associadas a objetos ou arrays.
 
-See also [**Expression Type**](properties_Object.md#expression-type) section.
+Veja também [**Tipo de expressão**](properties_Object.md#expression-type).
 
 #### Gramática JSON
 

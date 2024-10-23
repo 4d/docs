@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| 引数  | 型      |                                | 説明                        |
-| --- | ------ | ------------------------------ | ------------------------- |
-| 戻り値 | オブジェクト | &amp;larr; | Current element or object |
+| 引数  | 型      |                            | 説明                        |
+| --- | ------ | -------------------------- | ------------------------- |
+| 戻り値 | オブジェクト | &#8592; | Current element or object |
 
 <!-- END REF-->
 
@@ -72,7 +72,7 @@ $val:=$o.f() //8
 
 In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
 
-For example, tou want to use a project method as a formula encapsulated in an object:
+For example, you want to use a project method as a formula encapsulated in an object:
 
 ```4d
  var $person : Object := New object
@@ -135,11 +135,11 @@ The *GetPicture* project method is automatically executed during the **On displa
 
 ```4d
   //GetPicture Method
- var $0 : Picture
+ #DECLARE -> $genderPict : Picture
  If(This.isFemale)
-    $0:=Form.genericFemaleImage
+    $genderPict:=Form.genericFemaleImage
  Else
-    $0:=Form.genericMaleImage
+    $genderPict:=Form.genericMaleImage
  End if
 ```
 

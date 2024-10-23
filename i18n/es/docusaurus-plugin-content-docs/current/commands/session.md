@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| Parámetros | Tipo                       |                                | Descripción    |
-| ---------- | -------------------------- | ------------------------------ | -------------- |
-| Resultado  | 4D.Session | &amp;larr; | Objeto Session |
+| Parámetros | Tipo                       |                            | Descripción    |
+| ---------- | -------------------------- | -------------------------- | -------------- |
+| Resultado  | 4D.Session | &#8592; | Objeto Session |
 
 <!-- END REF-->
 
@@ -92,6 +92,6 @@ IP:port/4DACTION/action_Session
 
 ### Ver también
 
-[Session storage](session-storage.md)\
+[Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)

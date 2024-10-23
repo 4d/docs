@@ -61,7 +61,7 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 
 同じユーザー関数内で複数の state を [有効化](#enablestate) または無効化した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states) を参照ください。
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 ### .enableState()
 
@@ -87,7 +87,7 @@ Webフォームの state に関する詳細については、[developer.qodly.co
 
 同じユーザー関数内で複数の state を有効化または [無効化](#disablestate)した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states) を参照ください。
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 #### 例題
 

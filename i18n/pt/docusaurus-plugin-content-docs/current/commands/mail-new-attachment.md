@@ -20,15 +20,15 @@ displayed_sidebar: docs
 | ----------- | ---------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | Parâmetro   | Tipo                               |                                       | Descrição                                                                                         |
 | ***         | ***                                | :---: | ***                                                                                               |
-| file        | 4D. File           | &#x1F852          | Parâmetros                                                                                        |
-| zipFile     | 4D. ZipFile        | &#x1F852          | Arquivo zip                                                                                       |
-| blob        | 4D. Blob           | &#x1F852          | Blob contendo o anexo                                                                             |
-| path        | Text                               | &#x1F852          | Pode passar uma rota ou um Blob para definir o anexo.                             |
-| name        | Text                               | &#x1F852          | Nome + extensão usado pelo cliente email para designar o anexo                                    |
-| cid         | Text                               | &#x1F852          | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
-| type        | Text                               | &#x1F852          | Valor do cabeçalho content-type                                                                   |
-| disposition | Text                               | &#x1F852          | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
-| Resultados  | 4D. MailAttachment | &#x1F850          | Objeto anexo                                                                                      |
+| file        | 4D. File           | &#8594;            | Parâmetros                                                                                        |
+| zipFile     | 4D. ZipFile        | &#8594            | Arquivo zip                                                                                       |
+| blob        | 4D. Blob           | &#8594            | Blob contendo o anexo                                                                             |
+| path        | Text                               | &#8594            | Pode passar uma rota ou um Blob para definir o anexo.                             |
+| name        | Text                               | &#8594            | Nome + extensão usado pelo cliente email para designar o anexo                                    |
+| cid         | Text                               | &#8594            | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
+| type        | Text                               | &#8594            | Valor do cabeçalho content-type                                                                   |
+| disposition | Text                               | &#8594            | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
+| Resultados  | 4D. MailAttachment | &#8592;            | Objeto anexo                                                                                      |
 
 <!-- END REF-->
 

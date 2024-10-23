@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| 引数  | 型                          |                                | 説明             |
-| --- | -------------------------- | ------------------------------ | -------------- |
-| 戻り値 | 4D.Session | &amp;larr; | Session オブジェクト |
+| 引数  | 型                          |                            | 説明             |
+| --- | -------------------------- | -------------------------- | -------------- |
+| 戻り値 | 4D.Session | &#8592; | Session オブジェクト |
 
 <!-- END REF-->
 
@@ -92,6 +92,6 @@ IP:port/4DACTION/action_Session
 
 ### 参照
 
-[Session storage](session-storage.md)\
+[Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)

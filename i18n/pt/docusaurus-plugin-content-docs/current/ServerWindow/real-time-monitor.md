@@ -37,7 +37,7 @@ You can resume monitoring of the operations by performing the same action as for
 
 The RTM page can display additional information, if necessary, for each listed operation.
 
-Para acceder al modo avanzado de una operación, presione **Mayús** y seleccione la operación deseada. A continuación, se muestra toda la información disponible en el área "Detalles del proceso" sin ningún filtro (tal y como devuelve el comando `ACTIVITY SNAPSHOT`). As informações disponíveis dependem da operação selecionada.
+Para acceder al modo avanzado de una operación, presione **Mayús** y seleccione la operación deseada. All available information is then displayed in the "Process Details" area without any filtering (as returned by the `ACTIVITY SNAPSHOT` command). As informações disponíveis dependem da operação selecionada.
 
 Eis um exemplo de informações apresentadas no modo padrão:
 

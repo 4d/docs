@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Paramètres | Type                          |                                 | Description                                   |
-| ---------- | ----------------------------- | :-----------------------------: | --------------------------------------------- |
-| zipFile    | 4D.File       | &amp;srarr; | Fichier archive ZIP                           |
-| password   | Text                          | &amp;srarr; | Mot de passe de l'archive ZIP, le cas échéant |
-| Résultat   | 4D.ZipArchive |  &amp;larr; | Objet archive                                 |
+| Paramètres | Type                          |     | Description                                   |
+| ---------- | ----------------------------- | :-: | --------------------------------------------- |
+| zipFile    | 4D.File       |  →  | Fichier archive ZIP                           |
+| password   | Text                          |  →  | Mot de passe de l'archive ZIP, le cas échéant |
+| Résultat   | 4D.ZipArchive |  ←  | Objet archive                                 |
 
 <!-- END REF -->
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | 引数          | 型      |                            | 説明                                 |
 | ----------- | ------ | -------------------------- | ---------------------------------- |
-| section     | オブジェクト | &#8594 | 4D Write Pro section               |
+| section     | オブジェクト | &#8594; | 4D Write Pro section               |
 | wpDoc       | オブジェクト | &#8594 | 4D Write Pro document              |
 | indexNumber | 整数     | &#8594 | Index of the section to be deleted |
 | count       | 整数     | &#8594 | Number of sections to be deleted   |

@@ -138,7 +138,7 @@ El catálogo _City_ siguiente está expuesto en un datastore remoto (vista parci
 La clase `City` ofrece una API:
 
 ```4d
-// clase cs.City 
+// cs.City class
 
 Class extends DataClass
 
@@ -149,7 +149,7 @@ Function getCityName()
 
 	$zipcode:=$1
 	$zip:=ds.ZipCode.get($zipcode)
-	$0:="" 
+	$0:=""
 
 	If ($zip#Null)
 		$0:=$zip.city.name
@@ -185,7 +185,7 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 
 Class extends EntitySelection
 
-//Extraer los empleados con un salario superior a la media de esta selección de entidades 
+//Extract the employees with a salary greater than the average from this entity selection
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
 	return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -354,9 +354,9 @@ Function get fullName($event : Object)-> $fullName : Text
 		$fullName:=This.lastName
 	: (This.lastName=Null)
 		$fullName:=This.firstName
-	Else 
+	Else
 		$fullName:=This.firstName+" "+This.lastName
-	End case 
+	End case
 ```
 
 - Un atributo calculado puede basarse en un atributo relativo a una entidad:
@@ -364,7 +364,7 @@ Function get fullName($event : Object)-> $fullName : Text
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 	$result:=This.manager.manager
-    
+
 ```
 
 - Un atributo calculado puede basarse en un atributo relacionado con una entity selection:
@@ -373,7 +373,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else 
+    Else
         $result:=This.manager.directReports.minus(this)
     End if
 ```
@@ -426,8 +426,10 @@ Esta función soporta tres sintaxis:
 
 - Con la primera sintaxis, se maneja toda la consulta a través de la propiedad del objeto `$event.result`.
 - Con la segunda y tercera sintaxis, la función devuelve un valor en _$result_:
+
   - Si _$result_ es un texto, debe ser una cadena de consulta válida
   - Si _$result_ es un Objeto, debe contener dos propiedades:
+
   | Propiedad                          | Tipo       | Descripción                                                                                                                            |
   | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
   | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
@@ -468,30 +470,30 @@ Function query fullName($event : Object)->$result : Object
 	$operator:=$event.operator
 	$fullname:=$event.value
 
-	$p:=Position(" "; $fullname) 
+	$p:=Position(" "; $fullname)
 	If ($p>0)
 		$firstname:=Substring($fullname; 1; $p-1)+"@"
 		$lastname:=Substring($fullname; $p+1)+"@"
 		$parameters:=New collection($firstname; $lastname) // two items collection
-	Else 
+	Else
 		$fullname:=$fullname+"@"
 		$parameters:=New collection($fullname) // single item collection
-	End if 
+	End if
 
-	Case of 
+	Case of
 	: ($operator="==") | ($operator="===")
 		If ($p>0)
 			$query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-		Else 
+		Else
 			$query:="firstName = :1 or lastName = :1"
-		End if 
+		End if
 	: ($operator="!=")
 		If ($p>0)
 			$query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-		Else 
+		Else
 			$query:="firstName != :1 and lastName != :1"
-		End if 
-	End case 
+		End if
+	End case
 
 	$result:=New object("query"; $query; "parameters"; $parameters)
 ```
@@ -508,36 +510,36 @@ $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 
 ```4d
 Function query age($event : Object)->$result : Object
-	
+
 	var $operator : Text
 	var $age : Integer
 	var $_ages : Collection
-	
+
 	$operator:=$event.operator
-			
+
 	$age:=Num($event.value)  // integer
 	$d1:=Add to date(Current date; -$age-1; 0; 0)
 	$d2:=Add to date($d1; 1; 0; 0)
 	$parameters:=New collection($d1; $d2)
-	
-	Case of 
-			
-		: ($operator="==")
-			$query:="birthday > :1 and birthday <= :2"  // después de d1 y antes o igual a d2
-			
-		: ($operator="===") 
 
-			$query:="birthday = :2"  // d2 = segunda fecha calculada (= birthday date)
+	Case of
+
+		: ($operator="==")
+			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+
+		: ($operator="===")
+
+			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
 
 		: ($operator=">=")
 			$query:="birthday <= :2"
-			
-			//... Otros operadores	
-			
-			
-	End case 
-	
-	
+
+			//... other operators			
+
+
+	End case
+
+
 	If (Undefined($event.result))
 		$result:=New object
 		$result.query:=$query
@@ -549,11 +551,11 @@ Function query age($event : Object)->$result : Object
 Código de llamada, por ejemplo:
 
 ```4d
-// personas de entre 20 y 21 años (-1 día)
-$twenty:=people.query("age = 20")  // llama al case "=="
+// people aged between 20 and 21 years (-1 day)
+$twenty:=people.query("age = 20")  // calls the "==" case
 
-// personas de 20 años hoy
-$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20")
+// people aged 20 years today
+$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20")
 
 ```
 
@@ -596,9 +598,9 @@ Puede escribir código condicional:
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc" 
-    Else 
-        $result:="firstName, lastName" 
+        $result:="firstName desc, lastName desc"
+    Else
+        $result:="firstName, lastName"
     End if
 ```
 
@@ -616,9 +618,9 @@ El código condicional es necesario en algunos casos:
 Function orderBy age($event : Object)-> $result : Text
 
     If ($event.descending=True)
-        $result:="birthday asc" 
-    Else 
-        $result:="birthday desc" 
+        $result:="birthday asc"
+    Else
+        $result:="birthday desc"
     End if
 
 ```
@@ -700,7 +702,7 @@ En la clase de datos Teacher, un atributo alias devuelve todos los alumnos de un
 
 Class extends Entity
 
-Alias students courses.student //relatedEntities 
+Alias students courses.student //relatedEntities
 ```
 
 En la clase Student, un atributo alias devuelve todos los profesores de un alumno:
@@ -710,7 +712,7 @@ En la clase Student, un atributo alias devuelve todos los profesores de un alumn
 
 Class extends Entity
 
-Alias teachers courses.teacher //relatedEntities 
+Alias teachers courses.teacher //relatedEntities
 ```
 
 En la dataclass Course:
@@ -724,9 +726,9 @@ En la dataclass Course:
 
 Class extends Entity
 
-Exposed Alias courseName name //scalar 
-Exposed Alias teacherName teacher.name //valor escalar
-Exposed Alias studentName student.name //valor escalar
+Exposed Alias courseName name //scalar
+Exposed Alias teacherName teacher.name //scalar value
+Exposed Alias studentName student.name //scalar value
 
 ```
 
@@ -734,23 +736,23 @@ Luego puede ejecutar las siguientes consultas:
 
 ```4d
 // Find course named "Archaeology"
-ds. Course.query("courseName = :1";"Archaeology")
+ds.Course.query("courseName = :1";"Archaeology")
 
 // Find courses given by the professor Smith
-ds. Course.query("teacherName = :1";"Smith")
+ds.Course.query("teacherName = :1";"Smith")
 
 // Find courses where Student "Martin" assists
-ds. Course.query("studentName = :1";"Martin")
+ds.Course.query("studentName = :1";"Martin")
 
-// Find students who have M. Smith as teacher 
-ds. Student.query("teachers.name = :1";"Smith")
+// Find students who have M. Smith as teacher
+ds.Student.query("teachers.name = :1";"Smith")
 
 // Find teachers who have M. Martin as Student
-ds. Teacher.query("students.name = :1";"Martin")
-// Note that this very simple query string processes a complex 
+ds.Teacher.query("students.name = :1";"Martin")
+// Note that this very simple query string processes a complex
 // query including a double join, as you can see in the queryPlan:   
-// "Join on Table : Course  :  Teacher. ID = Course.teacherID,    
-//  subquery:[ Join on Table : Student  :  Course.studentID = Student. ID,
+// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
+//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
 //  subquery:[ Student.name === Martin]]"
 ```
 
@@ -820,7 +822,83 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
+$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
+```
+
+## onHttpGet keyword
+
+Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class.
+
+The `onHttpGet` keyword is available with:
+
+- ORDA Data model class functions
+- [Singletons class functions](../Concepts/classes.md#singleton-classes)
+
+La sintaxis formal es:
+
+```4d
+// declare an onHttpGet function
+exposed onHttpGet Function <functionName>(params) : result
+```
+
+:::info
+
+The `exposed` keyword must also be added in this case, otherwise an error will be generated.
+
+:::
+
+:::caution
+
+As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+
+:::
+
+### params
+
+A function with `onHttpGet` keyword accepts [parameters](../Concepts/parameters.md).
+
+In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
+
+```
+IP:port/rest/<dataclass>/functionName?$params='[<params>]'
+```
+
+See the [Parameters](../REST/classFunctions#parameters) section in the REST server documentation.
+
+### resultado
+
+A function with `onHttpGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+
+:::info
+
+You can return a value of the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+
+:::
+
+### Ejemplo
+
+You have defined the following function:
+
+```4d
+Class extends DataClass
+
+exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height : Integer) : 4D.OutgoingMessage
+	
+	var $file := File("/RESOURCES/Images/"+$name+".jpg")
+	var $image; $thumbnail : Picture
+	var $response := 4D.OutgoingMessage.new()
+	
+	READ PICTURE FILE($file.platformPath; $image)
+	CREATE THUMBNAIL($image; $thumbnail; $width; $height; Scaled to fit)
+	$response.setBody($thumbnail)	
+	$response.setHeader("Content-Type"; "image/jpeg")
+	return $response
+```
+
+It can be called by the following HTTP GET request:
+
+```
+IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 ```
 
 ## Funciones locales
@@ -866,7 +944,7 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else 
+Else
     $age:=Null
 End if
 ```
@@ -886,7 +964,7 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing" 
+        $status.statusText:="The birthdate is missing"
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False

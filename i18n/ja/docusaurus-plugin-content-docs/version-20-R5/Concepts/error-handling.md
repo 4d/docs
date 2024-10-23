@@ -229,7 +229,8 @@ The code placed between the `Try` and the `Catch` keywords is first executed, th
 
 - If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
 - If the code block execution throws a _non-deferred error_, the execution flow stops and executes the corresponding `Catch` code block.
-- If the code block execution throws a _deferred error_, the execution flow continues until the end of the `Try` block and then executes the corresponding `Catch` code block.
+- If the code block calls a method that throws a _deferred error_, the execution flow jumps directly to the corresponding `Catch` code block.
+- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
 
 :::note
 

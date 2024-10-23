@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parámetros      | Tipo                      |                                 | Descripción                                                          |
-| --------------- | ------------------------- | :-----------------------------: | -------------------------------------------------------------------- |
-| fileToZip       | 4D.File   | &amp;srarr; | Objeto archivo o carpeta a comprimir                                 |
-| folderToZip     | 4D.Folder | &amp;srarr; | Objeto archivo o carpeta a comprimir                                 |
-| zipStructure    | Object                    | &amp;srarr; | Objeto archivo o carpeta a comprimir                                 |
-| destinationFile | 4D.File   | &amp;srarr; | Archivo de destino del archivo                                       |
-| options         | Integer                   | &amp;srarr; | Opción *folderToZip*: `ZIP Without enclosing folder` |
-| Result          | Object                    |  &amp;larr; | Objeto estado                                                        |
+| Parámetros      | Tipo                      |                            | Descripción                                                          |
+| --------------- | ------------------------- | :------------------------: | -------------------------------------------------------------------- |
+| fileToZip       | 4D.File   | &#8594; | Objeto archivo o carpeta a comprimir                                 |
+| folderToZip     | 4D.Folder | &#8594 | Objeto archivo o carpeta a comprimir                                 |
+| zipStructure    | Object                    | &#8594 | Objeto archivo o carpeta a comprimir                                 |
+| destinationFile | 4D.File   | &#8594 | Archivo de destino del archivo                                       |
+| options         | Integer                   | &#8594 | Opción *folderToZip*: `ZIP Without enclosing folder` |
+| Result          | Object                    | &#8592; | Objeto estado                                                        |
 
 <!-- END REF -->
 

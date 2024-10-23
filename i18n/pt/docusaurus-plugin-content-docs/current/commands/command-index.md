@@ -5,7 +5,6 @@ title: Index
 
 [4D](#4D) - [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
-
 <a id="4D"><b>4D</b></a>
 
 [`4D`](4d.md)<br/>
@@ -422,7 +421,6 @@ title: Index
 [`GET PRINTABLE AREA`](../commands-legacy/get-printable-area.md)<br/>
 [`GET PRINTABLE MARGIN`](../commands-legacy/get-printable-margin.md)<br/>
 [`Get printed height`](../commands-legacy/get-printed-height.md)<br/>
-[`Get process activity`](../commands-legacy/get-process-activity.md)<br/>
 [`GET PROCESS VARIABLE`](../commands-legacy/get-process-variable.md)<br/>
 [`GET QUERY DESTINATION`](../commands-legacy/get-query-destination.md)<br/>
 [`Get query limit`](../commands-legacy/get-query-limit.md)<br/>
@@ -432,7 +430,6 @@ title: Index
 [`Get resource name`](../commands-legacy/get-resource-name.md)<br/>
 [`Get resource properties`](../commands-legacy/get-resource-properties.md)<br/>
 [`Get selected menu item parameter`](../commands-legacy/get-selected-menu-item-parameter.md)<br/>
-[`GET SERIAL INFORMATION`](../commands-legacy/get-serial-information.md)<br/>
 [`GET SERIAL PORT MAPPING`](../commands-legacy/get-serial-port-mapping.md)<br/>
 [`Get string resource`](../commands-legacy/get-string-resource.md)<br/>
 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md)<br/>
@@ -631,7 +628,7 @@ title: Index
 [`LONGINT TO BLOB`](../commands-legacy/longint-to-blob.md)<br/>
 [`Lowercase`](../commands-legacy/lowercase.md)<br/>
 
-<a id="M"><b>M</b></a>
+<a id="M"><b>L</b></a>
 
 [`Macintosh command down`](../commands-legacy/macintosh-command-down.md)<br/>
 [`Macintosh control down`](../commands-legacy/macintosh-control-down.md)<br/>
@@ -703,7 +700,6 @@ title: Index
 [`Num`](../commands-legacy/num.md)<br/>
 
 <a id="O"><b>O</b></a>
-
 
 [`OB Class`](../commands-legacy/ob-class.md)<br/>
 [`OB Copy`](../commands-legacy/ob-copy.md)<br/>
@@ -899,8 +895,9 @@ title: Index
 [`Printing page`](../commands-legacy/printing-page.md)<br/>
 [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)<br/>
 [`Process aborted`](../commands-legacy/process-aborted.md)<br/>
-[`Process number`](../commands-legacy/process-number.md)<br/>
-[`PROCESS PROPERTIES`](../commands-legacy/process-properties.md)<br/>
+[`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
+[`Process info`](process-info.md) - **new 4D 20 R7**<br/>
+[`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
 [`Process state`](../commands-legacy/process-state.md)<br/>
 [`PUSH RECORD`](../commands-legacy/push-record.md)<br/>
 
@@ -1063,6 +1060,7 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
+[`Session info`](session-info.md) - **new 4D 20 R7**<br/>
 [`Session storage`](../commands-legacy/session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands-legacy/set-allowed-methods.md)<br/>
@@ -1124,7 +1122,6 @@ title: Index
 [`SET QUERY LIMIT`](../commands-legacy/set-query-limit.md)<br/>
 [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md)<br/>
 [`SET RECENT FONTS`](../commands-legacy/set-recent-fonts.md)<br/>
-[`SET SCREEN DEPTH`](../commands-legacy/set-screen-depth.md)<br/>
 [`SET TABLE CACHE PRIORITY`](../commands-legacy/set-table-cache-priority.md)<br/>
 [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md)<br/>
 [`SET TEXT TO PASTEBOARD`](../commands-legacy/set-text-to-pasteboard.md)<br/>
@@ -1133,6 +1130,7 @@ title: Index
 [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)<br/>
 [`SET USER ALIAS`](../commands-legacy/set-user-alias.md)<br/>
 [`Set user properties`](../commands-legacy/set-user-properties.md)<br/>
+[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands-legacy/set-window-rect.md)<br/>
 [`SET WINDOW TITLE`](../commands-legacy/set-window-title.md)<br/>
 [`Shift down`](../commands-legacy/shift-down.md)<br/>

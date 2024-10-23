@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| 引数   | 型          |                              | 説明           |
-| ---- | ---------- | :--------------------------: | ------------ |
-| mime | Blob, Text | &#x1F852 | MIME形式のメール   |
-| 戻り値  | オブジェクト     | &#x1F850 | Email オブジェクト |
+| 引数   | 型          |                            | 説明           |
+| ---- | ---------- | :------------------------: | ------------ |
+| mime | Blob, Text | &#8594; | MIME形式のメール   |
+| 戻り値  | オブジェクト     | &#8592; | Email オブジェクト |
 
 <!-- END REF -->
 
@@ -88,5 +88,5 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($email)
 ```
 
-\| mime | BLOB, Text | 🡒 | Email in MIME |
-\| Function result | Object | 🡐 | Email object |
+\| mime | BLOB, Text | →  | Email in MIME |
+\| Function result | Object | ← | Email object |

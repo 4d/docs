@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Paramètres      | Type                      |                                 | Description                                                               |
-| --------------- | ------------------------- | :-----------------------------: | ------------------------------------------------------------------------- |
-| fileToZip       | 4D.File   | &amp;srarr; | Objet fichier ou dossier à compresser                                     |
-| folderToZip     | 4D.Folder | &amp;srarr; | Objet fichier ou dossier à compresser                                     |
-| zipStructure    | Object                    | &amp;srarr; | Objet fichier ou dossier à compresser                                     |
-| destinationFile | 4D.File   | &amp;srarr; | Fichier de destination de l'archive                                       |
-| options         | Integer                   | &amp;srarr; | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
-| Résultat        | Object                    |  &amp;larr; | Objet statut                                                              |
+| Paramètres      | Type                      |     | Description                                                               |
+| --------------- | ------------------------- | :-: | ------------------------------------------------------------------------- |
+| fileToZip       | 4D.File   |  →  | Objet fichier ou dossier à compresser                                     |
+| folderToZip     | 4D.Folder |  →  | Objet fichier ou dossier à compresser                                     |
+| zipStructure    | Object                    |  →  | Objet fichier ou dossier à compresser                                     |
+| destinationFile | 4D.File   |  →  | Fichier de destination de l'archive                                       |
+| options         | Integer                   |  →  | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
+| Résultat        | Object                    |  ←  | Objet statut                                                              |
 
 <!-- END REF -->
 

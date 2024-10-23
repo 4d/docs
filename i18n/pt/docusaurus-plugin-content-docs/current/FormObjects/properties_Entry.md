@@ -5,9 +5,9 @@ title: Entrada
 
 ## Verificação automática da ortografia
 
-4D inclui funcionalidades de verificação ortográfica integrado e personalizável. Se pueden verificar las [entradas](input_overview.md) de tipo texto, así como también los documentos [4D Write Pro](writeProArea_overview.md).
+4D inclui funcionalidades de verificação ortográfica integrado e personalizável. O tipo de texto [entradas](input_overview.md) pode ser verificado, assim como os documentos [4D Write Pro](writeProArea_overview.md).
 
-A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objeto. Quando usada, a verificação ortográfica é realizada automaticamente durante a entrada de dados. También puede ejecutar el comando de lenguaje 4D `SPELL CHECKING` para cada objeto a verificar.
+A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objeto. Quando usada, a verificação ortográfica é realizada automaticamente durante a entrada de dados. Você também pode executar o comando de linguagem 4D `SPELL CHECKING` para cada objeto a ser verificado.
 
 #### Gramática JSON
 
@@ -25,9 +25,9 @@ A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objet
 
 Permite ao usuário aceder a um menu de contexto padrão no objeto quando o formulário é executado.
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
+Para uma imagem do tipo [entrada](input_overview.md), além dos comandos de edição padrão (Recortar, Copiar, Colar e Limpar), o menu contém o comando **Importar...**, que pode ser usado para importar uma imagem armazenada em um arquivo, bem como o comando **Salvar como...**, que pode ser usado para salvar a imagem no disco. O menu também pode ser usado para modificar o formato de exibição da imagem: são oferecidas as opções **Truncado não centralizado**, **Escalonado para caber** e **Escalonado para caber na imagem centralizada**. A modificação do [formato de exibição](properties_Display.md#picture-format) usando esse menu é temporária; ela não é salva com o registro.
 
-Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](input_overview.md), además de los comandos de edición estándar, el menú contextual ofrece los siguientes comandos:
+For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). Por defeito, esta lista está vazia e a opção não é apresentada. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
@@ -196,7 +196,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 #### Objectos suportados
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 

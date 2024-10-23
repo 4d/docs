@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Parámetros | Tipo                                                                |                                 | Descripción                                              |
-| ---------- | ------------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &amp;srarr; | Valor(es) de la collection compartida |
-| Resultado  | Collection                                                          | &amp;larr;  | New shared collection                                    |
+| Parámetros | Tipo                                                                |                            | Descripción                                              |
+| ---------- | ------------------------------------------------------------------- | -------------------------- | -------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | &#8594; | Valor(es) de la collection compartida |
+| Resultado  | Collection                                                          | &#8592; | New shared collection                                    |
 
 <!-- END REF-->
 

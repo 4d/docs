@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo    |                            | Descripción                        |
 | ----------- | ------- | -------------------------- | ---------------------------------- |
-| section     | Object  | &#8594 | 4D Write Pro section               |
+| section     | Object  | &#8594; | 4D Write Pro section               |
 | wpDoc       | Object  | &#8594 | 4D Write Pro document              |
 | indexNumber | Integer | &#8594 | Index of the section to be deleted |
 | count       | Integer | &#8594 | Number of sections to be deleted   |

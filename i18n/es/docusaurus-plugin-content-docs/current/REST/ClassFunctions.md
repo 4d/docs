@@ -3,19 +3,55 @@ id: classFunctions
 title: Llamando a funciones de clase
 ---
 
-Puede llamar a [funciones de clase de modelos de datos](ORDA/ordaClasses.md) definidas para el modelo de datos ORDA a través de sus peticiones REST, para poder beneficiarse de la API expuesta de la aplicación 4D objetivo.
+You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model and [singleton class functions]($singleton.md) through REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+
+Functions can be called in two ways:
+
+- using **POST requests**, with data parameters passed in the body of the request.
+- using **GET requests**, with parameters directly passed in the URL.
+
+POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. However, GET requests can be more compliant with user experience, allowing to call functions by entering an URL in a browser (note: the developer must ensure no sensitive action is done in such functions).
+
+## Llamadas de las funciones
+
+The following ORDA and singleton functions can be called in REST:
+
+| Función de clase                                                   | Sintaxis                                                                                                                |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                                 |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                          |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                    |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                             |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                                                                |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                                                               |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                                                                           |
+| [Clase Singleton](../Concepts/classes.md#singleton-classes)        | `/rest/$singleton/SingletonClass/SingletonClassFunction` (ver la [página $singleton]($singleton.md)) |
 
 :::note
 
-También puede llamar a funciones singleton, consulte [esta página]($singleton.md) para obtener más información.
+`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
 :::
 
-Las funciones se llaman simplemente en peticiones POST en la interfaz ORDA apropiada, sin (). Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
+Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parameters](#parameters) are passed either in the body of the POST request (`POST` calls) or in the `params` collection in the URL (`GET` calls).
+
+Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
+
+#### POST request
 
 `/rest/City/getCity`
 
 con los datos en el cuerpo de la petición POST: `["Aguada"]`
+
+#### GET request
+
+`/rest/City/getCity?$params='["Aguada"]'`
+
+:::note
+
+The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+
+:::
 
 En el lenguaje 4D, esta llamada equivale a:
 
@@ -23,54 +59,70 @@ En el lenguaje 4D, esta llamada equivale a:
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Sólo las funciones con la palabra clave `exposed` pueden ser llamadas directamente desde las peticiones REST. Ver la sección [Funciones expuestas vs. no expuestas](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
+## Function configuration
 
-## Llamadas de las funciones
+### `exposed`
 
-Las funciones deben llamarse siempre utilizando peticiones **POST** (una petición GET recibirá un error).
+All functions allowed to be called directly from HTTP REST requests (`POST` or `GET`) must be declared with the `exposed` keyword. Por ejemplo:
 
-Las funciones son llamadas en el objeto correspondiente en el almacén de datos del servidor.
+```4d
+exposed Function getSomeInfo() : 4D.OutgoingMessage
+```
 
-| Función de clase                                                   | Sintaxis                                                                                                                |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                                 |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                          |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                    |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                         |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                                                            |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                                                           |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                       |
-| [Clase Singleton](../Concepts/classes.md#singleton-classes)        | `/rest/$singleton/SingletonClass/SingletonClassFunction` (ver la [página $singleton]($singleton.md)) |
+See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
-> `/rest/\{dataClass\}/Function` puede utilizarse para llamar a una función de dataclass o de entity selection (`/rest/\{dataClass\}` devuelve todas las entidades de la dataClass como una selección de entidades).\
-> La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
+### `onHttpGet`
 
-> Todo el código 4D llamado desde las peticiones REST **debe ser hilo-seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [_Utilizar proceso apropiativo_](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+
+```4d
+//allowing GET requests
+exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+```
+
+### Thread-safe
+
+Todo el código 4D llamado desde las peticiones REST **debe ser hilo-seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [_Utilizar proceso apropiativo_](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+
+:::info
+
+You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+
+:::
 
 ## Parámetros
 
-Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. Del lado del servidor, serán recibidos en los [parámetros declarados](../Concepts/parameters.md#declaring-parameters) de las funciones clase.
+You can send parameters to functions defined in ORDA user classes or singletons. Del lado del servidor, serán recibidos en los [parámetros declarados](../Concepts/parameters.md#declaring-parameters) de las funciones clase.
 
 Se aplican las siguientes reglas:
 
-- Los parámetros deben pasarse en el **cuerpo de la petición POST**
-- Los parámetros deben estar incluidos en una colección (formato JSON)
+- In functions called through POST requests, parameters must be passed **in the body of the POST request**.
+- In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
+- Parameters must be enclosed within a collection (JSON format).
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
-- La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
+- La selección de entidades y la entidad se pueden pasar como parámetros. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 Ver [este ejemplo](#usando-una-entidad-que-se-creará-en-el-servidor) y [este ejemplo](#recibiendo-una-selección-de-entidades-como-parámetro).
 
 ### Parámetro de valor escalar
 
-El(los) parámetros deben estar simplemente incluirse en una colección definida en el cuerpo. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+Scalar value parameter(s) must simply be enclosed in a collection. Todos los tipos de datos JSON son soportados en los parámetros, incluidos los punteros JSON. Las fechas se pueden pasar como cadenas en formato de fecha ISO 8601 (por ejemplo, "2020-08-22T22:00:000Z").
+
+For example, with a  dataclass function `getCities()` receiving text parameters:
+
+#### POST request
+
+`/rest/City/getCities`
 
 **Parámetros en el cuerpo:** ["Aguada","Paris"]
 
-Todos los tipos de datos JSON son soportados en los parámetros, incluidos los punteros JSON. Las fechas se pueden pasar como cadenas en formato de fecha ISO 8601 (por ejemplo, "2020-08-22T22:00:000Z").
+#### GET request
+
+`/rest/City/getCities?$params='["Aguada","Paris"]'`
 
 ### Parámetro de entidad
 
-Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY). Si el parámetro llave se omite en una petición, una nueva entidad se carga en memoria del servidor.
+Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY). If the key parameter is omitted in a request, a new entity is loaded in memory on the server.
 También puede pasar valores para todos los atributos de la entidad. Estos valores se utilizarán automáticamente para la entidad manejada en el servidor.
 
 > Si la petición envía los valores de atributo modificados para una entidad existente en el servidor, la función de modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con los valores modificados. Esta funcionalidad le permite, por ejemplo, verificar el resultado de una operación en una entidad, tras aplicar todas las reglas de negocio, desde la aplicación cliente. A continuación, puede decidir guardar o no la entidad en el servidor.
@@ -82,10 +134,11 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | __ENTITY    | Boolean                                                     | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
-- Si no se proporciona `__KEY`, se crea una nueva entidad en el servidor con los atributos dados.
-- Si `__KEY` es suministrado, la entidad correspondiente a `__KEY` se carga en el servidor con los atributos dados
+- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
+- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
-Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
+See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
+See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
 
 #### Parámetro de entidad asociado
 
@@ -105,9 +158,10 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | __DATASET  | String  | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
-Ver ejemplo para [recibir una selección de entidades](#receiving-an-entity-selection-as-parameter).
+See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
+See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
 
-## Ejemplos de peticiones
+## POST request examples
 
 Esta base de datos se expone como un almacén de datos remoto en localhost (puerto 8111):
 
@@ -488,6 +542,7 @@ Class extends DataClass
 
 exposed Function setFinalExam()
 
+
     var $1, $es, $student, $status : Object
     var $2, $examResult : Text
 
@@ -500,14 +555,14 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      //Bucle en la selección de entidades
+      //Loop on the entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
         If ($status.success)
             $keys.push($student.ID)
-        End if 
-    End for each 
+        End if
+    End for each
 
     $0:=$keys
 ```
@@ -567,3 +622,89 @@ $students.add($newStudent)
 $students que incluía al estudiante añadido por el cliente
 $ageAverage:=$students.getAgeAverage()
 ```
+
+## GET request examples
+
+### Returning a document
+
+You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+
+```4d
+// Product dataclass
+exposed onHTTPGet Function getUserManual($productId : Integer; $type : Text) : 4D.OutgoingMessage
+	
+var $file : 4D.File
+var $response:=4D.OutgoingMessage.new()
+var $doc:="/RESOURCES/User manuals/product_"+String($productId)
+
+Case of 
+	: ($type="pdf")
+		$file:=File($doc+".pdf")
+                $response.setBody($file.getContent()) // This is binary content 
+		$response.setHeader("Content-Type"; "application/pdf")
+			
+	: ($type="jpeg")
+		$file:=File($doc+".jpeg")
+                $response.setBody($file.getContent()) // This is binary content 
+		$response.setHeader("Content-Type"; "image/jpeg")
+End case 
+	
+return $response
+
+```
+
+You can call the function using a request like:
+
+**GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
+
+### Using an entity to download a PDF document
+
+Same example as above but you want to pass an entity as parameter to the datastore function.
+
+```4d
+// Product dataclass
+exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.OutgoingMessage
+	
+	var $file : 4D.File
+	var $response := 4D.OutgoingMessage.new()
+	
+	$file:=File("/RESOURCES/User manuals/"+$product.name+".pdf")
+	$response.setBody($file.getContent())
+	$response.setHeader("Content-Type"; "application/pdf")
+	
+	return $response
+```
+
+You can call the function using this request:
+
+**GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
+
+### Using an entity selection to get a list
+
+You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+
+```4d
+shared singleton Class constructor()
+	
+exposed onHTTPGet Function buildShoppingList($products : cs.ProductSelection) : 4D.OutgoingMessage
+	
+	var $p : cs.ProductsEntity
+	var $content : Text
+	var $response := 4D.OutgoingMessage.new()
+	
+	$content:=""
+	
+	For each ($p; $products)
+		$content:=$content+" "+$p.manufacturer+" - "+$p.name
+		$content:=$content+Char(Carriage return)
+	End for each 
+	
+	$response.setBody($content)
+	$response.setHeader("Content-Type"; "text/plain")
+	
+	return $response
+```
+
+You can call the function using this request:
+
+**GET** `http://127.0.0.1:8044/rest/$singleton/Shopping/buildShoppingList?$params='[{"__DATASET":"8DB0556854HDK52FR5974F","__ENTITIES":true}]'`

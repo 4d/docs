@@ -107,21 +107,21 @@ Dans l'exemple suivant, un pointeur vers chaque champ de chaque table de la base
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Créer autant de lignes (vides et sans colonnes) qu'il y a de tables
-  $vlLastTable:=Last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) //Tableau 2D avec N lignes et zéro colonnes
-  // Pour chaque table
+  // Create as many rows (empty and without columns) as there are tables
+ $vlLastTable:=Last table number
+ ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
+  // For each table
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Last field number($vlTable)
-  // Donner la valeur des éléments
-             $vlColumnNumber:=0
+  // Give value of elements
+       $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  // Insérer une colonne dans la ligne de la table en cours
-              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  // Affecter la "celulle" avec le pointeur
+  //Insert a column in a row of the table underway
+             INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
+  //Assign the "cell" with the pointer
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for

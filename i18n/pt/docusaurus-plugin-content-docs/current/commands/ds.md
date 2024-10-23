@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
-| Parâmetro  | Tipo      |                              | Descrição                                       |
-| ---------- | --------- | ---------------------------- | ----------------------------------------------- |
-| localID    | Text      | &#x1F852 | ID local del armazém de dados remoto a devolver |
-| Resultados | DataStore | &#x1F850 | Referencia ao armazém de dados                  |
+| Parâmetro  | Tipo      |                            | Descrição                                       |
+| ---------- | --------- | -------------------------- | ----------------------------------------------- |
+| localID    | Text      | &#8594; | ID local del armazém de dados remoto a devolver |
+| Resultados | DataStore | &#8592; | Referencia ao armazém de dados                  |
 
 <!-- END REF-->
 

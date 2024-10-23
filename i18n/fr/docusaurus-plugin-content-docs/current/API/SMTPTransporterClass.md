@@ -149,7 +149,7 @@ La fonction retourne un objet décrivant le statut SMTP de l"opération. Cet obj
 | status     | number  | Code du statut retourné par le serveur SMTP (0 si problème non lié au traitement de l'email) |
 | statusText | text    | Message de statut retourné par le serveur SMTP                                                                  |
 
-En cas de problème non lié au traitement SMTP (par exemple une propriété obligatoire qui est manquante dans l'objet mail), 4D génère une erreur que vous pouvez intercepter à l'aide d'une méthode installée via la commande `ON ERR CALL`. Utilisez la commande `Last errors` pour obtenir des informations sur l'erreur.
+En cas de problème non lié au traitement SMTP (par exemple une propriété obligatoire qui est manquante dans l'objet mail), 4D génère une erreur que vous pouvez intercepter à l'aide d'une méthode installée via la commande `ON ERR CALL`. Use the `Last errors` command for information about the error.
 
 Dans ce cas, l'objet erreur qui en résulte contient les valeurs suivantes :
 

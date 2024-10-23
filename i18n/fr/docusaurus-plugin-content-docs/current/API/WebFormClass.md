@@ -60,7 +60,7 @@ Cette fonction ne fait rien si :
 
 Si vous [activez](#enablestate) ou désactivez plusieurs états dans la même fonction utilisateur, toutes les modifications sont envoyées en même temps au client une fois que la fonction se termine.
 
-Pour plus d'informations sur les états des formulaires web, veuillez consulter [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 ### .enableState()
 
@@ -85,7 +85,7 @@ Cette fonction ne fait rien si :
 
 Si vous activez ou [désactivez](#disablestate) plusieurs états dans la même fonction utilisateur, toutes les modifications sont envoyées en même temps au client une fois que la fonction se termine.
 
-Pour plus d'informations sur les états des formulaires web, veuillez consulter [developer.qodly.com](https://developer.qodly.com/docs/studio/design-webforms/states).
+For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 #### Exemple
 

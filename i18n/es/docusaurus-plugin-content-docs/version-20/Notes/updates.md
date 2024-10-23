@@ -37,8 +37,8 @@ En Windows 11 24H2, la generación de archivos pdf mediante el driver Microsoft 
 #### Lo más destacado
 
 - CEF actualizado a Chromium 5993
-- SpreadJS updated to version 16.2.6 (in 4D 20.2 HF1).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
+- SpreadJS actualizado a la versión 16.2.6 (en 4D 20.2 HF1).
+- [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20.3): lista de todos los bugs corregidos en 4D 20.3 LTS.
 
 #### Cambios de comportamiento
 

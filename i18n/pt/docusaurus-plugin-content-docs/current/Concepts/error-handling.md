@@ -95,8 +95,8 @@ Within the custom error method, you have access to several pieces of information
 4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
 :::
 
-- o comando [`Últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. Você também pode usar o comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que retorna a mesma informação que as matrizes.
-- o comando `Call chain` que retorna uma coleção de objetos que descrevem cada etapa da cadeia de chamadas de métodos no processo atual.
+- o comando [`Últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. You can also use the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
+- the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Exemplo
 
@@ -226,7 +226,8 @@ O código colocado entre as palavras-chave `Try` e `Catch` é executado primeiro
 
 - Se nenhum erro for lançado, a execução do código continuará após a palavra-chave `End try` correspondente. O código colocado entre as palavras-chave `Catch` e `End try` não é executado.
 - Se a execução do bloco de código lançar um _erro não diferido_, o fluxo de execução é interrompido e o bloco de código `Catch` correspondente é executado.
-- Se o bloco de execução de código lançar um _erro atrasado_, o fluxo de execução continua até o final do bloco `Try` e, em seguida, executa o bloco de código `Catch` correspondente.
+- If the code block calls a method that throws a _deferred error_, the execution flow jumps directly to the corresponding `Catch` code block.
+- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
 
 :::note
 

@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Parámetros     | Tipo                         |                              | Descripción                                                                                         |
-| -------------- | ---------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | &#x1F852 | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
-| localID        | Text                         | &#x1F852 | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Resultado      | cs.DataStore | &#x1F850 | Objeto del almacén de datos                                                                         |
+| Parámetros     | Tipo                         |                            | Descripción                                                                                         |
+| -------------- | ---------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                       | &#8594; | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
+| localID        | Text                         | &#8594 | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
+| Resultado      | cs.DataStore | &#8592; | Objeto del almacén de datos                                                                         |
 
 <!-- END REF-->
 

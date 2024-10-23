@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Paramètres | Type   |                                | Description              |
-| ---------- | ------ | ------------------------------ | ------------------------ |
-| Résultat   | Object | &amp;larr; | Élément ou objet courant |
+| Paramètres | Type   |   | Description              |
+| ---------- | ------ | - | ------------------------ |
+| Résultat   | Object | ← | Élément ou objet courant |
 
 <!-- END REF-->
 
@@ -134,11 +134,11 @@ La méthode projet *GetPicture* est automatiquement exécutée lors de l'événe
 
 ```4d
   //GetPicture Method
- var $0 : Picture
+ #DECLARE -> $genderPict : Picture
  If(This.isFemale)
-    $0:=Form.genericFemaleImage
+    $genderPict:=Form.genericFemaleImage
  Else
-    $0:=Form.genericMaleImage
+    $genderPict:=Form.genericMaleImage
  End if
 ```
 

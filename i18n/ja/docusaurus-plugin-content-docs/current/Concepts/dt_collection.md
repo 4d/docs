@@ -46,18 +46,18 @@ _expression_ には正の整数を返す有効な 4D 式であればどんなも
 
 コレクションのインスタンス化は、以下のいずれかの方法でおこなうことができます:
 
-- using the [`New collection`](../command/new-collection.md) command,
+- using the [`New collection`](../commands/new-collection.md) command,
 - `[]` 演算子を使用する。
 
 :::info
 
-いくつかの 4Dコマンドや関数はコレクションを返します。たとえば、 [`Monitored activity`](https://doc.4d.com/4dv19R/help/command/ja/page1713.html) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
 ### `New collection` コマンド
 
-The [`New collection`](../command/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
+The [`New collection`](../commands/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
 
 例:
 
@@ -105,8 +105,8 @@ $users:=[{name: "Alice"; \
 
 二種類のコレクションを作成することができます:
 
-- regular (non-shared) collections, using the [`New collection`](command/new-collection.md) command or collection literal syntax (`[]`). 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- shared collections, using the [`New shared collection`](command/new-shared-collection.md) command. 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
+- regular (non-shared) collections, using the [`New collection`](commands/new-collection.md) command or collection literal syntax (`[]`). 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- shared collections, using the [`New shared collection`](commands/new-shared-collection.md) command. 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
 
 詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 

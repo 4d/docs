@@ -168,7 +168,7 @@ Recomendamos utilizar funciones clase en lugar de métodos proyecto. Sólo las f
 
 Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a Internet. En este caso, sin embargo, las siguientes funciones no están disponibles:
 
-- [Plantillas](https://developer.qodly.com/docs/studio/design-webforms/templates): la librería de plantillas está vacía
+- [Templates](https://developer.qodly.com/docs/studio/pageLoaders/templates): the Template library is empty
 - Consejos de interfaz de usuario: no se muestran al hacer clic en los iconos ![alt-text](../assets/en/WebServer/tips.png).
 
 ## Despliegue
@@ -226,7 +226,7 @@ Con Qodly Studio for 4D, puede utilizar el modo ["forzar inicio de sesión"](../
 
 ### Definir el modo de inicio de sesión forzado
 
-Puede definir el [modo "inicio de sesión forzado"](../REST/authUsers.md#force-login-mode) para su aplicación 4D en la página de [Roles y Privilegios](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), utilizando la opción **Force login**:
+You can set the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview), using the **Force login** option:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 

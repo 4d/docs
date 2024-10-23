@@ -18,10 +18,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula.Params -->
 
-| Parámetros | Tipo                        |                              | Descripción                             |
-| ---------- | --------------------------- | :--------------------------: | --------------------------------------- |
-| formulaExp | Expression                  | &#x1F852 | Fórmula a devolver como objeto          |
-| Result     | 4D.Function | &#x1F850 | Función nativa que encapsula la fórmula |
+| Parámetros | Tipo                        |                            | Descripción                             |
+| ---------- | --------------------------- | :------------------------: | --------------------------------------- |
+| formulaExp | Expression                  | &#8594; | Fórmula a devolver como objeto          |
+| Result     | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
 
 <!-- END REF -->
 
