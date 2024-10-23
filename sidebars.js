@@ -2487,11 +2487,6 @@ module.exports =
 								]
 							},
 						{
-						  type: 'doc',
-						  label: '4D Write Pro Interface', // The link label
-						  id: "WritePro/writeprointerface",
-						},
-						{
 						  type: 'link',
 						  label: '4D Mobile App Server', // The link label
 						  href: 'https://github.com/4d-go-mobile/4D-Mobile-App-Server',
