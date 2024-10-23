@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | entero | Integer | &#8594;  | Valor entero a escribir en el BLOB |
 | Blob | Blob | &#8594;  | BLOB a recibir el valor entero |
 | byteOrden | Integer | &#8594;  | 0 Orden de bytes en modo nativo 1 Orden de los bytes Macintosh 2 Orden de los bytes PC |
-| offset &#124; * | Variable, Operador | &#8594;  | Offset expresado en bytes en el BLOB o * para añadir el valor |
-| &#8592; | Nuevo offset después de la escritura si se omite * |
+| offset &#124; * | Variable, Operador |&#8596;  | Offset expresado en bytes en el BLOB o * para añadir el valor |
+| ||| Nuevo offset después de la escritura si se omite * |
 
 <!-- END REF-->
 

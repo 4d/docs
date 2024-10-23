@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB del cual obtener el texto |
 | formatoTexto | Integer | &#8594;  | Formato y conjunto de caracteres de texto |
-| offset | Variable | &#8594;  | Offset en el BLOB (expresado en bytes) |
-| &#8592; | Nuevo offset después de la lectura |
+| offset | Variable |&#8596;  | Offset en el BLOB (expresado en bytes) |
+| || | Nuevo offset después de la lectura |
 | longitudTexto | Integer | &#8594;  | Número de caracteres a leer |
 | Resultado | Text | &#8592; | Valor del texto |
 

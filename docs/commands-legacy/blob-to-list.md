@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB containing a hierarchical list |
-| offset | Integer | &#8594;  | Offset within the BLOB (expressed in bytes) |
-| &#8592; | New offset after reading |
+| offset | Integer | &#8596;  | Offset within the BLOB (expressed in bytes) |
+|||| New offset after reading |
 | Function result | ListRef | &#8592; | Reference to newly created list |
 
 <!-- END REF-->

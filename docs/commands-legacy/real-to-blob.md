@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | real | Real | &#8594;  | Real value to write into the BLOB |
 | blob | Blob | &#8594;  | BLOB to receive the Real value |
 | realFormat | Integer | &#8594;  | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
-| offset &#124; * | Variable, Operator | &#8594;  | Offset within the BLOB (expressed in bytes) or * to append the value |
-| &#8592; | New offset after writing if not * |
+| offset &#124; * | Variable, Operator | &#8596; | Offset within the BLOB (expressed in bytes) or * to append the value |
+| ||| New offset after writing if not * |
 
 <!-- END REF-->
 

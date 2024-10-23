@@ -15,7 +15,7 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore** **Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore<!-- END REF-->
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore<!-- END REF-->
 
 <!--REF #_command_.Open datastore.Params-->
 | Parameter | Type |  | Description |

@@ -216,7 +216,6 @@ You want to know the number of encrypted tables in the current data file:
 <details><summary>History</summary>
 
 |Release|Changes|
-
 |---|---|
 |20|Added|
 

@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB from which to get the integer value |
 | byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset | Variable | &#8594;  | Offset within the BLOB (expressed in bytes) |
-| &#8592; | New offset after reading |
+| offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
+| ||| New offset after reading |
 | Function result | Integer | &#8592; | 2-byte Integer value |
 
 <!-- END REF-->

@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | entier | Integer | &#8594;  | Integer value to write into the BLOB |
 | blob | Blob | &#8594;  | BLOB to receive the Integer value |
 | ordreOctet | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset &#124; * | Variable, Operator | &#8594;  | Offset expressed in bytes within the BLOB or * to append the value |
-| &#8592; | New offset after writing if not * |
+| offset &#124; * | Variable, Operator | &#8596;  | Offset expressed in bytes within the BLOB or * to append the value |
+| ||| New offset after writing if not * |
 
 <!-- END REF-->
 

@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | longInt | Integer | &#8594;  | Long Integer value to write into the BLOB |
 | blob | Blob | &#8594;  | BLOB to receive the Long Integer value |
 | byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset &#124; * | Variable, Operator | &#8594;  | Offset within the BLOB (expressed in bytes) or * to append the value |
-| &#8592; | New offset after writing if not * |
+| offset &#124; * | Variable, Operator | &#8596;  | Offset within the BLOB (expressed in bytes) or * to append the value |
+|||| New offset after writing if not * |
 
 <!-- END REF-->
 

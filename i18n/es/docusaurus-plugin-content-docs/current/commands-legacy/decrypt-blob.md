@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aDescifrar | Blob | &#8594;  | Datos a descifrar |
-| &#8592; | Datos descifrados |
+| aDescifrar | Blob | &#8596;  | Datos a descifrar |
+| || | Datos descifrados |
 | enviarLlavePub | Blob | &#8594;  | Llave pública del emisor |
 | recepLlavePriv | Blob | &#8594;  | Llave privada del receptor |
 

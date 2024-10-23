@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB del cual obtener el valor de tipo Real |
 | formatoReal | Integer | &#8594;  | 0 Formato real nativo 1 Formato real extendido 2  Formato real doble Macintosh 3  Formato real doble Windows |
-| offset | Variable | &#8594;  | Offset en el BLOB (expresado en bytes) |
-| &#8592; | Nuevo offset después de la lectura |
+| offset | Variable | &#8596; | Offset en el BLOB (expresado en bytes) |
+|||| Nuevo offset después de la lectura |
 | Resultado | Real | &#8592; | Valor real |
 
 <!-- END REF-->

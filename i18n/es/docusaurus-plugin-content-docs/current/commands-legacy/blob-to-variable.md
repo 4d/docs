@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB que contiene variables 4D |
 | variable | Variable | &#8592; | Variable a escribir con el contenido del BLOB |
-| offset | Integer | &#8594;  | Posición de la variable en el BLOB |
-| &#8592; | Posición de la variable siguiente en el  BLOB |
+| offset | Integer | &#8596; | Posición de la variable en el BLOB |
+| || | Posición de la variable siguiente en el  BLOB |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB que contiene una lista jerárquica |
-| offset | Integer | &#8594;  | Offset en el BLOB (expresado en bytes) |
-| &#8592; | Nuevo offset después de la lectura |
+| offset | Integer | &#8596;  | Offset en el BLOB (expresado en bytes) |
+||| | Nuevo offset después de la lectura |
 | Resultado | Integer | &#8592; | Referencia de la lista creada recientemente |
 
 <!-- END REF-->
