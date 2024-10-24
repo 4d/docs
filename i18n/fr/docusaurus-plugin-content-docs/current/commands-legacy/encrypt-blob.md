@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aCrypter | Blob | &#8594;  | Données à crypter |
-| &#8592; | Données cryptées |
+| aCrypter | Blob | &#8596; | Données à crypter |
+| || | Données cryptées |
 | cléPrivEmetteur | Blob | &#8594;  | Clé privée de l’émetteur |
 | cléPubRécepteur | Blob | &#8594;  | Clé publique du récepteur |
 

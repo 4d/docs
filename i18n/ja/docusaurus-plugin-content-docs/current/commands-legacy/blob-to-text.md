@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | テキストを取り出すBLOB |
 | textFormat | Integer | &#8594;  | テキストのフォーマットと文字セット |
-| offset | Variable | &#8594;  | BLOB内のオフセット (バイト単位) |
-| &#8592; | 読み込み後の新しいオフセット |
+| offset | Variable |&#8596; | BLOB内のオフセット (バイト単位) |
+| ||| 読み込み後の新しいオフセット |
 | textLength | Integer | &#8594;  | 読み込む文字数 |
 | 戻り値 | Text | &#8592; | 取り出したテキスト |
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB que contém variáveis 4D |
-| variável | Variable | &#8592; | Variável a ser escrita com o conteúdo do BLOB |
-| offset | Integer | &#8594;  | Posição da variável no BLOB |
+| variável | Variable | &#8596;| Variável a ser escrita com o conteúdo do BLOB |
+| || | Integer | &#8594;  | Posição da variável no BLOB |
 | &#8592; | Posição da próxima variável no BLOB |
 
 <!-- END REF-->

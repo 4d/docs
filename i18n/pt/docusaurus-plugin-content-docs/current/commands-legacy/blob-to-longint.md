@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB do qual obter o valor inteiro longo |
 | byteOrdem | Integer | &#8594;  | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
-| offset | Variable | &#8594;  | Offset no BLOB (expressado em bytes) |
-| &#8592; | Novo offset depois da leitura |
+| offset | Variable |&#8596;  | Offset no BLOB (expressado em bytes) |
+| || | Novo offset depois da leitura |
 | Resultado da função | Inteiro longo | &#8592; | Valor inteiro longo (4 bytes) |
 
 <!-- END REF-->

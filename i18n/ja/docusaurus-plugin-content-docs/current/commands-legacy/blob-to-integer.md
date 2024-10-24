@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | 整数値を取り出すBLOB |
 | byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset | Variable | &#8594;  | BLOB中のオフセット (バイト単位) |
-| &#8592; | 読み込み後、新しいオフセット |
+| offset | Variable | &#8596; | BLOB中のオフセット (バイト単位) |
+| || | 読み込み後、新しいオフセット |
 | 戻り値 | Integer | &#8592; | 2バイト整数値 |
 
 <!-- END REF-->

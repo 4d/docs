@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | longint | Integer | &#8594;  | BLOBに書き込む倍長整数値 |
 | Blob | Blob | &#8594;  | 倍長整数値を受け取るBLOB |
 | byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset &#124; * | 変数, 演算子 | &#8594;  | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
-| &#8592; | *でない場合、書き込み後の新しいオフセット |
+| offset &#124; * | 変数, 演算子 | &#8596; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
+| || | *でない場合、書き込み後の新しいオフセット |
 
 <!-- END REF-->
 

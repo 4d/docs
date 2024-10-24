@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | variable | Variable | &#8594;  | Variable à stocker dans le BLOB |
 | blob | Blob | &#8594;  | BLOB devant recevoir la variable |
-| offset &#124; * | Variable, Opérateur | &#8594;  | Offset de la variable (en octets) dans BLOB ou * pour ajouter la variable à la fin du BLOB |
-| &#8592; | Nouvel offset après écriture si * omis |
+| offset &#124; * | Variable, Opérateur | &#8596; | Offset de la variable (en octets) dans BLOB ou * pour ajouter la variable à la fin du BLOB |
+|||| Nouvel offset après écriture si * omis |
 
 <!-- END REF-->
 

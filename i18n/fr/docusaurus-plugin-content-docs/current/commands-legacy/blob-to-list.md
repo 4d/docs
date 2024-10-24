@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB contenant la liste hiérarchique |
-| offset | Integer | &#8594;  | Offset (en octets) dans le BLOB |
-| &#8592; | Nouvel offset après la lecture |
+| offset | Integer | &#8596;  | Offset (en octets) dans le BLOB |
+| ||| Nouvel offset après la lecture |
 | Résultat | Integer | &#8592; | Référence de la liste nouvellement créée |
 
 <!-- END REF-->

@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | texto | Text | &#8594;  | Texto a escrever no BLOB |
 | Blob | Blob | &#8594;  | BLOB a receber o texto |
 | textFormat | Integer | &#8594;  | Formato e conjunto de caracteres de texto |
-| offset &#124; * | Variável, Operador | &#8594;  | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
-| &#8592; | Novo offset depois da escritura se * for omitido |
+| offset &#124; * | Variável, Operador | &#8596; | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
+||| | Novo offset depois da escritura se * for omitido |
 
 <!-- END REF-->
 

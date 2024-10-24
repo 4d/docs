@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | 4D変数を格納したBLOB |
 | variable | Variable | &#8592; | BLOBの内容を書き込む変数 |
-| offset | Integer | &#8594;  | BLOB内の変数の位置 |
-| &#8592; | BLOB内の次の変数の位置 |
+| offset | Integer |&#8596;  | BLOB内の変数の位置 |
+| || | BLOB内の次の変数の位置 |
 
 <!-- END REF-->
 
