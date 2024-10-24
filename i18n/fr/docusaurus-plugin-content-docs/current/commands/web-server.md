@@ -15,8 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
+*This command is not thread-safe, it cannot be used in preemptive code.*
 
 <details><summary>Historique</summary>
 
