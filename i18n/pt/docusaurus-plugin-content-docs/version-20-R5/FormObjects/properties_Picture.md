@@ -5,23 +5,23 @@ title: Imagem
 
 ## Pathname
 
-Ruta de una imagen source estática para un [botón imagen](pictureButton_overview.md), [menú emergente de imagen](picturePopupMenu_overview.md), o [imagen estática](staticPicture.md). É necessário utilizar a sintaxe POSIX.
+Nome do uma imagem source estática para um [botão imagem](pictureButton_overview.md), [menu pop-up imagem](picturePopupMenu_overview.md) ou [imagem estática](staticPicture.md). É necessário utilizar a sintaxe POSIX.
 
 As seguintes localizações podem ser utilizadas para imagens estáticas:
 
-- en la carpeta **Resources** del proyecto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. In this case, the Pathname is "/RESOURCES/<picture path\>".
-- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Adequado quando as imagens estáticas forem utilizadas apenas no formulário ou se pretende poder mover ou duplicar todo o formulário dentro do projeto ou em projetos diferentes. In this case, the Pathname is "<picture path\>" and is resolved from the root of the form folder.
+- na pasta **Resources** do projeto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. Neste caso, o nome do caminho é "/RESOURCES/<picture path\>".
+- numa pasta de imagens (por exemplo, **Images**) na pasta do formulário. Adequado quando as imagens estáticas forem utilizadas apenas no formulário ou se pretende poder mover ou duplicar todo o formulário dentro do projeto ou em projetos diferentes. Nesse caso, o nome do caminho é "<picture path\>" sendo resolvido a partir da raiz da pasta do formulário.
 - numa variável de imagem 4D. A imagem deve ser carregada na memória quando o formulário for executado. Neste caso, o nome do caminho é "var:<variableName\>".
 
 #### Gramática JSON
 
-|   Nome  | Tipo de dados | Valores possíveis                           |
-| :-----: | :-----------: | ------------------------------------------- |
-| picture |      text     | Relative or filesystem path in POSIX syntax |
+|   Nome  | Tipo de dados | Valores possíveis                                                                                                                                    |
+| :-----: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| picture |      text     | Caminho relativo ou do sistema de arquivos na sintaxe POSIX, ou "var:<variableName\>" para variável imagem |
 
 #### Objectos suportados
 
-[Botón imagen](pictureButton_overview.md) - [Menú emergente imagen](picturePopupMenu_overview.md) - [Imagen estática](staticPicture.md)
+[Botão imagem](pictureButton_overview.md) - [Menu pop-up imagem](picturePopupMenu_overview.md) - [Imagem estática](staticPicture.md)
 
 ---
 
@@ -39,7 +39,7 @@ O formato **Scaled to fit** faz com que o 4D redimensione a imagem para se ajust
 
 `Gramática JSON: "tiled"`
 
-Cuando se amplía el área que contiene una imagen con el formato **Replicada**, la imagen no se deforma sino que se replica tantas veces como sea necesario para llenar el área por completo.
+Quando a área que conter uma imagem com o formato **Replicated** for ampliada, a imagem não é deformada, mas é replicada tantas vezes quantas as necessárias para preencher totalmente a área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
@@ -49,7 +49,7 @@ Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D corta igualmente de cada borda e da parte superior e inferior.
+O formato **Center** faz com que o 4D centralize a imagem na área e corte qualquer parte que não caiba na área. 4D corta igualmente de cada borda e da parte superior e inferior.
 
 O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 
@@ -65,4 +65,4 @@ O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior e
 
 #### Objectos suportados
 
-[Static Picture](staticPicture.md)
+[Imagem estática](staticPicture.md)
