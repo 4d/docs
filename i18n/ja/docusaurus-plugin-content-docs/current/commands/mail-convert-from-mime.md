@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| 引数   | 型          |                            | 説明           |
-| ---- | ---------- | :------------------------: | ------------ |
-| mime | Blob, Text | &#8594; | MIME形式のメール   |
-| 戻り値  | オブジェクト     | &#8592; | Email オブジェクト |
+| 引数   | 型          |     | 説明           |
+| ---- | ---------- | :-: | ------------ |
+| mime | Blob, Text |  →  | MIME形式のメール   |
+| 戻り値  | オブジェクト     |  ←  | Email オブジェクト |
 
 <!-- END REF -->
 
