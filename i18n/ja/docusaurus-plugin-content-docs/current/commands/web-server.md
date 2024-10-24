@@ -8,15 +8,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-| 引数     | 型                            |                            | 説明                                                                  |
-| ------ | ---------------------------- | -------------------------- | ------------------------------------------------------------------- |
-| option | 整数                           | &#8594; | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
-| 戻り値    | 4D.WebServer | &#8592; | WebServer オブジェクト                                                    |
+| 引数     | 型                            |   | 説明                                                                  |
+| ------ | ---------------------------- | - | ------------------------------------------------------------------- |
+| option | 整数                           | → | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
+| 戻り値    | 4D.WebServer | ← | WebServer オブジェクト                                                    |
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
+*This command is not thread-safe, it cannot be used in preemptive code.*
 
 <details><summary>履歴</summary>
 
