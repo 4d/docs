@@ -131,7 +131,7 @@ USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee e
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
-## &#91*index*&#93
+## \[*index*]
 
 <details><summary>Historique</summary>
 
