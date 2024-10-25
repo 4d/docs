@@ -43,7 +43,7 @@ para definir o começo do documento e wk end text em *faixaFim* para definir o f
 
 Se quiser selecionar uma faixa de 12 caracteres começando desde o principio do campo 4D Write Pro. O campo se mostra em um objeto de formulário:
 
-![](../../assets/en/WritePro/commands/pict2644268.EN.png)
+![](../../assets/en/WritePro/commands/pict2644268.en.png)
 
 Se executar:
 
@@ -54,7 +54,7 @@ Se executar:
 
 ...o resultado é:
 
-![](../../assets/en/WritePro/commands/pict2644270.EN.png)
+![](../../assets/en/WritePro/commands/pict2644270.en.png)
 
 #### Exemplo 2 
 

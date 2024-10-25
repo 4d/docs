@@ -56,7 +56,7 @@ Se quiser inserir duas linhas ao final da tabela *Invoice (faturas)*:
 
 Insere as duas filas novas na localização corrcta:
 
-![](../../assets/en/WritePro/commands/pict4680266.EN.png)
+![](../../assets/en/WritePro/commands/pict4680266.en.png)
 
 #### Ver também 
 

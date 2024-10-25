@@ -81,7 +81,7 @@ Se quiser inserir uma quebra de seção contínua para ter uma seção de uma co
 ```  
     
     
-![](../../assets/en/WritePro/commands/pict5562056.EN.png)
+![](../../assets/en/WritePro/commands/pict5562056.en.png)
 2. Defina a contagem de colunas a 2 para a primeira seção:  
     
 ```4d  
@@ -90,7 +90,7 @@ Se quiser inserir uma quebra de seção contínua para ter uma seção de uma co
 ```  
     
     
-![](../../assets/en/WritePro/commands/pict5562058.EN.png)
+![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
 #### Ver também 
 

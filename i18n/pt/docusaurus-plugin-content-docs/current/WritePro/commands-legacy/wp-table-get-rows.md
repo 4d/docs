@@ -71,7 +71,7 @@ $wpRange: :=WP Text range(WParea;wk start text;wk end text)
 ```
 
   
-![](../../assets/en/WritePro/commands/pict3307142.EN.png)
+![](../../assets/en/WritePro/commands/pict3307142.en.png)
 
 #### Exemplo 2 
 

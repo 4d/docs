@@ -52,7 +52,7 @@ Se quiser agregar uma imagem com a configuração pré-determinada utilizando um
 
 O resultado é:
 
-![](../../assets/en/WritePro/commands/pict3617325.EN.png)
+![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
 #### Exemplo 2 
 
@@ -69,7 +69,7 @@ Se quiser agregar uma imagem redimensionada, centrada e ancorada ao cabeçalho:
 
 O resultado é:
 
-![](../../assets/en/WritePro/commands/pict3617351.EN.png)
+![](../../assets/en/WritePro/commands/pict3617351.en.png)
 
 #### Exemplo 3 
 

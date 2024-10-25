@@ -153,7 +153,7 @@ Os exemplos abaixo ilustram as coordenadas do retângulo delimitador devolvidas,
 
 **Nota: no** caso de uma visualização em várias colunas, a propriedade *rangeHeight* (línhas sem formato) podería ser maior que *bounds.bottom*\-*bounds.top* (linhas de pontos):
 
-![](../../assets/en/WritePro/commands/pict4096411.EN.png)  
+![](../../assets/en/WritePro/commands/pict4096411.en.png)  
 
 #### Ver também 
 

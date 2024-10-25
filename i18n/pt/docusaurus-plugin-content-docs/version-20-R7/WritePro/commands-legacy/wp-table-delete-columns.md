@@ -48,7 +48,7 @@ Se quiser eliminar uma coluna da tabela *Invoice (faturas)*. Este código:
 
 Eliminará a coluna da localização correta:
 
-![](../../assets/en/WritePro/commands/pict4680318.EN.png)
+![](../../assets/en/WritePro/commands/pict4680318.en.png)
 
 #### Ver também 
 

@@ -96,7 +96,7 @@ Se quiser utilizar um nome de fórmula para o nome do cliente:
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict6433508.EN.png)
+![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
 #### Ver também 
 

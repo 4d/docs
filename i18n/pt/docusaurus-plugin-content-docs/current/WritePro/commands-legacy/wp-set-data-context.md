@@ -74,7 +74,7 @@ Quando trabalhar com um documento modelo, pode associar um contexto para preench
 
 Quando se carregar um modelo e se estabelece o contexto de dados, um modelo de carta poderia ter o aspecto abaixo:
 
-![](../../assets/en/WritePro/commands/pict5867835.EN.png)
+![](../../assets/en/WritePro/commands/pict5867835.en.png)
 
 O exemplo abaixo recorre uma seleção de entidades e cria uma vista previa de impressão para cada entidade:
 

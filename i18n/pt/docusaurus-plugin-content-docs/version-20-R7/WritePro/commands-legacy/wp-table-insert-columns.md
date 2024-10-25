@@ -53,7 +53,7 @@ Para inserir três colunas depois da primeira coluna na tabela *Invoice (Faturas
 
 Insertará as novas colunas na localização correta:
 
-![](../../assets/en/WritePro/commands/pict4680283.EN.png)  
+![](../../assets/en/WritePro/commands/pict4680283.en.png)  
   
   
 

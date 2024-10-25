@@ -58,7 +58,7 @@ Se quiser designar um intervalo de células e fusioná\~lo:
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict6398108.EN.png)
+![](../../assets/en/WritePro/commands/pict6398108.en.png)
 
   
 Os dados existentes das células originais sã concatenadas na célula fusionada resultante.

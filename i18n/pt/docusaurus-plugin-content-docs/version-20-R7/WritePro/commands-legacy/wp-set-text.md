@@ -50,7 +50,7 @@ Se não passar um parâmetro *rangeAtualiz* como padrão o conteúdo inserido é
 
 Se quiser agregar texto a este documento:
 
-![](../../assets/en/WritePro/commands/pict3772543.EN.png)
+![](../../assets/en/WritePro/commands/pict3772543.en.png)
 
 *Se targetObj* é um documento 4D Write Pro:
 

@@ -51,7 +51,7 @@ O parâmetro opcional *expressões* dá instruções para a avaliação de expre
 
 Para recuperar o texto neste documento:
 
-![](../../assets/en/WritePro/commands/pict3772381.EN.png)
+![](../../assets/en/WritePro/commands/pict3772381.en.png)
 
 pode escrever:
 
