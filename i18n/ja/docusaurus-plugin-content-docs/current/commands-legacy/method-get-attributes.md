@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 実行後、$att には例えば以下のような値が含まれます:
 
-```undefined
+```json
 {
     "invisible":false,
     "preemptive":"capable",

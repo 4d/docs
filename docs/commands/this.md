@@ -106,7 +106,7 @@ If you use a collection of scalar values in a list box, 4D creates an object for
 
 A collection of objects, each with this structure:
 
-```undefined
+```json
 {  
 "ID": 1234
 "name": "Xavier",  

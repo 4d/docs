@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 返されたオブジェクトには以下のようなプロパティが含まれます:
 
-```RAW
+```json
 {    "name": string    "licenseNumber": string    "version": string    "attributes": optional, array of strings    "userName": string    "userMail": string    "companyName": string    "platforms": array of strings    "expirationDate": optional, object    "renewalFailureCount": optional, number    "products":[ //for each registered expansion product        {            "id": number            "name": string            "usedCount": number            "allowedCount": number            "rights": [                 {                    "count": number                    "expirationDate" optional, object                 }            ]        }    ]}
 ```
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 
 *$obj* には例えば、以下のような情報が返されます:
 
-```undefined
+```json
 {
     "name": "4D Server v16 R3",
     "licenseNumber": "xxxx",

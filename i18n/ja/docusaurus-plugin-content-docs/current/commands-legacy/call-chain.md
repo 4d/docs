@@ -39,12 +39,12 @@ displayed_sidebar: docs
 
 プロジェクトメソッドが実行された場合、呼び出しチェーンには例えば以下のような情報が格納されます:
 
-```RAW
+```json
 [   {    "type":"projectMethod",    "name":"detailForm",    "line":1,    "database":"myDatabase"   }]
 ```
 
 フォームオブジェクトメソッドが実行された場合、呼び出しチェーンには例えば以下のような情報が格納されます:
 
-```RAW
+```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```

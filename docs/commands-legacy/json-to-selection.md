@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 The *jsonArray* parameter is a [text](# "A character string that may contain from 0 to 2 GB of text") representing an array of objects formatted in JSON and containing one or more elements. The expected syntax is of the type:
 
-```undefined
+```json
 "[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
 ```
 

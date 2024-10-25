@@ -60,7 +60,7 @@ JSON Pointer é um padrão que define uma sintaxe de string que pode ser utiliza
 
 Um ponteiro JSON é, estritamente falando, uma string composta de partes separadas por '/'. Um ponteiro JSON normalmente é encontrado em uma URL que especifica o documento no qual se resolverá o ponteiro. O caractere de fragmento "#" é utilizado na URI para especificar o ponteiro JSON Por convenção, pode encontrar uma URI que contenha um ponteiro JSON em uma propriedade de objeto JSON que deve ser chamada de "$ ref".
 
-```undefined
+```json
 {
    "$ref":<path>#<json_pointer>
 }
@@ -112,7 +112,7 @@ Este exemplo básico ilustra como um ponteiro JSON pode ser definido e substitu�
 
 Se quiser reutilizar "billingAddress" como "shippingAddress" no objeto JSON abaixo (chamado $oMyConfig):
 
-```undefined
+```json
 {
     "lastname": "Doe",
     "firstname": "John",
@@ -133,7 +133,7 @@ Depois de executar este código:
 
 ... o objeto abaixo é devolvido:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -157,7 +157,7 @@ Depois de executar este código:
 
 Este exemplo ilustra o efeito da opção "fusionar". Se quiser editar os direitos de um usuário baseando-se em um arquivo pré-determinado.
 
-```undefined
+```json
 {
     "rights": { 
         "$ref": "defaultSettings.json#/defaultRights",
@@ -169,7 +169,7 @@ Este exemplo ilustra o efeito da opção "fusionar". Se quiser editar os direito
 
 O arquivo *defaultSettings.json* contém:
 
-```undefined
+```json
 {
     "defaultRights":
     {
@@ -190,7 +190,7 @@ Se executar:
 
 o valor resultante é exatamente o conteúdo do arquivo *defaultSettings.json*:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -213,7 +213,7 @@ Se executar:
 
 ...o valor resultante é uma versão modificada do objeto original:
 
-```undefined
+```json
 {
     "success": true,
     "value": {

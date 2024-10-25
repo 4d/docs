@@ -103,7 +103,7 @@ Si vous utilisez une collection de valeurs scalaires dans une list box, 4D crée
 
 Une collection d'objets, chacun avec cette structure :
 
-```undefined
+```json
 {  
 "ID": 1234
 "name": "Xavier",  

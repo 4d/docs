@@ -109,7 +109,7 @@ The **Get database parameter** command can be used in preemptive processes when 
 
 You want your application to restart after a first launch. The application is launched with, for example, a command line on Windows:
 
-```RAW
+```json
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myDB.4dbase\myDB.4db --user-param "First launch"
 ```
 

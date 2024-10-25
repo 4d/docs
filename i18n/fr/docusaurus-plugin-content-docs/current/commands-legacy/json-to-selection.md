@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 Le paramètre *jsonTab* est un [texte](# "Une chaine de caractères jusqu'à 2 Go") représentant un tableau d'objets JSON contenant un ou plusieurs élément(s). Le format attendu est du type :
 
-```undefined
+```json
 "[{"attribut1":"valeur1","attribut2":"valeur2",...},...,{"attribut1":"valeurN","attribut2":"valeurN",...}]"
 ```
 

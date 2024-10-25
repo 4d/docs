@@ -54,7 +54,7 @@ Quelle que soit la façon dont le tri a été défini, si l'opération de tri do
 
 Vous souhaitez trier la sélection courante par âge (descendant) puis par nom (ascendant). L'ordre par défaut est :
 
-```undefined
+```json
 // [Customer]OB_Info contient un export partiel
 {"LastName":"Giorgio","age":33,"client":true},
 {"LastName":"Sarah","age":42,"client":true},
@@ -86,7 +86,7 @@ Après exécution du tri :
 
 Les enregistrements sont dans l'ordre suivant : 
 
-```undefined
+```json
 {"LastName":"Smeldorf","age":70,"client":true}
 {"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
 {"LastName":"Delaferme","age":54,"client":true}, 

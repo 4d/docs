@@ -20,7 +20,7 @@ displayed_sidebar: docs
   
 O parâmetro jsonArray é um texto representando um array de objetos formatado em JSON e contendo um ou mais elementos. A sintaxe esperada é do tipo:
 
-```undefined
+```json
 "[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
 ```
 

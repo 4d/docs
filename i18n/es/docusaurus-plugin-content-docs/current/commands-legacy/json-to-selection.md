@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 El parámetro *jsonArray* es un [texto](# "A character string that may contain from 0 to 2 GB of text") representando un array de objetos JSON y contiene uno o más elementos. La sintaxis es del tipo:
 
-```undefined
+```json
 "[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
 ```
 

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 *jsonArray* 引数はJSON形式にフォーマットされた配列を表すtextで、一つ以上の要素を含んでいます。シンタックスは以下のような形になっています:
 
-```undefined
+```json
 "[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
 ```
 

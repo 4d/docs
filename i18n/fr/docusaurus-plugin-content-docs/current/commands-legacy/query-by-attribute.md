@@ -124,7 +124,7 @@ Quelle que soit la manière dont la recherche a été définie :
 
 Les dates sont stockées dans les objets en fonction des paramètres de la base ; par défaut, la *timezone* est prise en compte (voir le sélecteur JSON use local time dans la commande [SET DATABASE PARAMETER](set-database-parameter.md)). 
 
-```undefined
+```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
 ```
 

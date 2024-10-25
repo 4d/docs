@@ -34,8 +34,10 @@ If no text has been selected, *paramText* is inserted into the method.
 
  In order for the [GET MACRO PARAMETER](get-macro-parameter.md) and **SET MACRO PARAMETER** commands to work correctly, the new “version” attribute must be declared in the macro itself. The “version” attribute must be declared as follows:
 
-```RAW
+```xml
+<macro name="MyMacro" version="2">
 --- Text of macro ---
+</macro>
 ```
 
 #### Example 

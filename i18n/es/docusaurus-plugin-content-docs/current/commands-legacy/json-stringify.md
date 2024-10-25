@@ -133,11 +133,11 @@ Serialización de un objeto 4D que contiene un valor fecha (zona horaria de Par�
 ```
 
 * Si la opción "Utilizar tipo fecha en lugar de formato fecha ISO en objetos" no está seleccionada:  
-```RAW  
+```json  
 "name":"Smith","birthday":"1975-10-21T22:00:00.000Z"  
 ```
 * Si la opción "Utilizar tipo fecha en lugar de formato fecha ISO en objetos" está seleccionada:  
-```RAW  
+```json  
 "name":"Smith","birthday":"1975-10-22"  
 ```
 
@@ -155,11 +155,11 @@ Conversión de una colección (zona horaria de París). La cadena resultante dep
 ```
 
 * Si la opción "Utilizar tipo fecha en lugar de formato fecha ISO en objetos" no está seleccionada:  
-```RAW  
+```json  
 $myTxtCol="[33,"mike","2017-08-27T22:00:00.000Z",false]"  
 ```
 * Si la opción "Utilizar tipo fecha en lugar de formato fecha ISO en objetos" está seleccionada:  
-```RAW  
+```json  
 $myTxtCol="[33,"mike","2017-08-28",false]"  
 ```
 

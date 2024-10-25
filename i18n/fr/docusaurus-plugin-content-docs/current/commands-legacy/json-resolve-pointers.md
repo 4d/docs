@@ -61,7 +61,7 @@ Dans tous les cas, la commande retourne un objet contenant les propriétés suiv
 
 Un pointeur JSON est, à proprement parler, une chaîne composée de parties séparées par des '/'. Un pointeur JSON est généralement placé dans un URI qui spécifie le document dans lequel le pointeur sera résolu. Le caractère "#' est utilisé dans l'URI pour désigner le fragment contenant le pointeur JSON. Par convention, un URI contenant un pointeur JSON doit être placé dans une propriété d'objet JSON nommée "$ref".
 
-```undefined
+```json
 {
    "$ref":<chemin>#<pointeur_json>
 }
@@ -113,7 +113,7 @@ Cet exemple basique illustre comment un pointeur JSON peut être défini et remp
 
 Vous voulez réutiliser l'adresse "billingAddress" comme adresse "shippingAddress" dans l'objet JSON suivant (nommé $oMyConfig):
 
-```undefined
+```json
 {
     "lastname": "Doe",
     "firstname": "John",
@@ -134,7 +134,7 @@ Après l'exécution de ce code :
 
 ... l'objet suivant est retourné :
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -158,7 +158,7 @@ Après l'exécution de ce code :
 
 Cet exemple illustre l'effet de l'option "merge". Vous souhaitez modifier les droits d'un utilisateur, basés sur un fichier par défaut.
 
-```undefined
+```json
 {
     "rights": { 
         "$ref": "defaultSettings.json#/defaultRights",
@@ -170,7 +170,7 @@ Cet exemple illustre l'effet de l'option "merge". Vous souhaitez modifier les dr
 
 Le fichier *defaultSettings.json* contient :
 
-```undefined
+```json
 {
     "defaultRights":
     {
@@ -191,7 +191,7 @@ Si vous exécutez :
 
 ... la valeur résultante est exactement le contenu du fichier *defaultSettings.json* :
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -214,7 +214,7 @@ Si vous exécutez :
 
 ... la valeur résultante est une version modifiée de l'objet original :
 
-```undefined
+```json
 {
     "success": true,
     "value": {

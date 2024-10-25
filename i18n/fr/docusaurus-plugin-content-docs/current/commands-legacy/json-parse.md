@@ -47,7 +47,7 @@ Par défaut, si vous omettez le paramètre *type*, 4D tentera de convertir la va
 
 Si vous passez le paramètre optionnel *\** et si le paramètre *chaîneJSON* représente un objet, l'objet retourné contiend une propriété supplémentaire nommée *\_\_symbols* qui fournit le chemin, l'emplacement de la ligne et la position dans la ligne de chaque propriété et sous-propriété de l'objet. Cette information est utile pour le débogage. La structure de la propriété *\_\_symbols* est la suivante :
 
-```undefined
+```json
 __symbols:{//description de l'objet
    myAtt.mySubAtt...:{ //chemin de la propriété
       line:10, //numéro de la ligne de la propriété
@@ -146,7 +146,7 @@ Vous souhaitez créer une collection 4D à partir d'un tableau JSON :
 
 Vous souhaitez analyser la chaîne suivante et obtenir le chemin et la position de chaque propriété :
 
-```undefined
+```json
 {
     "alpha": 4552,
     "beta": [
@@ -172,7 +172,7 @@ Vous pouvez écrire :
 
 L'objet *$obInfo* contient :
 
-```undefined
+```json
 {alpha:4552,
 beta:[{echo:45,delta:text1},{echo:52,golf:text2}],
 __symbols:{alpha:{line:2,offset:4},

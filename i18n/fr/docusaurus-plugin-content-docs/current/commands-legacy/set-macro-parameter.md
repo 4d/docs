@@ -34,8 +34,10 @@ Si aucun texte n’était sélectionné, *paramTexte* est inséré dans la méth
 
  Pour que les commandes [GET MACRO PARAMETER](get-macro-parameter.md) et **SET MACRO PARAMETER** fonctionnent correctement, l'attribut “version” doit être déclaré dans la macro elle-même, de la façon suivante :
 
-```RAW
+```xml
+<macro name="MaMacro" version="2">
 --- Texte de la macro ---
+</macro>
 ```
 
 #### Exemple 

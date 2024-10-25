@@ -40,7 +40,7 @@ Vous souhaitez connaître les attributs de la méthode projet *sendMail*. Vous p
 
 A l'issue de l'exécution, $att contient, par exemple :
 
-```undefined
+```json
 {
     "invisible":false,
     "preemptive":"capable",

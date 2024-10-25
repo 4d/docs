@@ -21,7 +21,7 @@ Si la commande est exécutée dans une application 4D qui n'utilise pas localeme
 
 L'objet retourné contient les propriétés suivantes :
 
-```RAW
+```json
 {    "name": string    "licenseNumber": string    "version": string    "attributes": optional, array of strings    "userName": string    "userMail": string    "companyName": string    "platforms": array of strings    "expirationDate": optional, object    "renewalFailureCount": optional, number    "products":[ //for each registered expansion product        {            "id": number            "name": string            "usedCount": number            "allowedCount": number            "rights": [                 {                    "count": number                    "expirationDate" optional, object                 }            ]        }    ]}
 ```
 
@@ -57,7 +57,7 @@ Vous souhaitez obtenir des informations sur la licence de votre 4D Server couran
 
 *$obj* peut contenir, par exemple :
 
-```undefined
+```json
 {
     "name": "4D Server v16 R3",
     "licenseNumber": "xxxx",

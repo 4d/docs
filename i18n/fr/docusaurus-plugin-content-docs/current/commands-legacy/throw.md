@@ -75,25 +75,25 @@ Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie
 
 #### Example 2 
 
-```RAW
+```4d
 throw({errCode: 1; message: "Ceci est une erreur"}) // Lance une erreur avec errCode = 1 et le message "Ceci est une erreur"
 ```
 
 #### Example 3 
 
-```RAW
+```4d
 throw({errCode: 1}) // Lance une erreur avec errCode = 1 et le message "Error code : 1 (host)"
 ```
 
 #### Example 4 
 
-```RAW
+```4d
 throw({message: "Ceci est une erreur"}) //  Lance une erreur avec errCode = -1 et le message "Ceci est une erreur"
 ```
 
 #### Example 5 
 
-```RAW
+```4d
 throw({message: "Ceci est mon erreur"; deferred: True}) // Lance une erreur avec le message "Ceci est mon erreur" et errCode = -1 en deferred mode 
 ```
 
@@ -101,7 +101,7 @@ throw({message: "Ceci est mon erreur"; deferred: True}) // Lance une erreur avec
 
 #### Example 6 
 
-```RAW
+```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Lance une erreur avec le message "File myFileName not found (myFilePath)" en mode différé
 ```
 

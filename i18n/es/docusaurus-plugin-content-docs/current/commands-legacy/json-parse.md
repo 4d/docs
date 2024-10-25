@@ -48,7 +48,7 @@ Por defecto, si se omite el parámetro *tipo*, 4D intentará convertir el valor 
 
 Si pasa el parámetro opcional *\** y si el parámetro *cadenaJSON* representa un objeto, el objeto devuelto contiene una propiedad adicional llamada \_\_*symbols* que da la ruta, posición de línea y desplazamiento de línea de cada propiedad y sub-propiedad del objeto. Esta información puede ser útil para fines de depuración. La estructura de la propiedad \_\_*symbols* es:
 
-```undefined
+```json
 __symbols:{//descripción del objeto
    myAtt.mySubAtt...:{ //ruta de la propiedad
       line:10, //número de línea de la propiedad
@@ -147,7 +147,7 @@ Usted desea crear una colección 4D desde un array JSON:
 
 Usted desea analizar la siguiente cadena y obtener la posición de la línea y el desplazamiento de cada propiedad:
 
-```undefined
+```json
 {
     "alpha": 4552,
     "beta": [
@@ -173,7 +173,7 @@ Puede escribir:
 
 El objeto *$obInfo* contiene:
 
-```undefined
+```json
 {alpha:4552,
 beta:[{echo:45,delta:text1},{echo:52,golf:text2}],
 __symbols:{alpha:{line:2,offset:4},

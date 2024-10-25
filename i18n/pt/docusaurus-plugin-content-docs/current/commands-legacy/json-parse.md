@@ -48,7 +48,7 @@ Por padrão, se omitir o parâmetro *tipo*, 4D tentará converter o valor obtido
 
 Se passar o parâmetro opcional \* e se o parâmetro jsonString representar um objeto, o objeto retornado contém uma propriedade adicional chamada \_\_symbols que oferece rota, posição de linha e o deslocamento de linha de cada propriedade e sub-propriedade do objeto. Essa informação pode ser útil para debugar. A estrtura das propriedades \_\_symbols é:  
   
-```undefined
+```json
 __symbols:{//descrição objeto
    myAtt.mySubAtt...:{ //propriedade rota
       line:10, //número da linha da propriedade
@@ -146,7 +146,7 @@ Se quiser criar uma coleção 4D de um array JSON:
 
 Se quiser analisar a string abaixo e obter a posição de linha e deslocamento de linha de cada propriedade:
 
-```undefined
+```json
 {
     "alpha": 4552,
     "beta": [
@@ -172,7 +172,7 @@ Pode escrever:
 
 O objeto *$obInfo* contém:
 
-```undefined
+```json
 {alpha:4552,
 beta:[{echo:45,delta:text1},{echo:52,golf:text2}],
 __symbols:{alpha:{line:2,offset:4},

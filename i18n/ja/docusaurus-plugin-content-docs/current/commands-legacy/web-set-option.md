@@ -74,9 +74,7 @@ HTTP デバッグログをボディ部分なしで有効化する場合を考え
 
 ```RAW
 # REQUEST
-```
-
-`# SocketID: 1592  
+# SocketID: 1592  
 # PeerIP: 127.0.0.1  
 # PeerPort: 54912  
 # TimeStamp: 39089388  
@@ -106,7 +104,8 @@ Date: Thu, 20 Apr 2017 10:51:29 GMT
 Expires: Thu, 20 Apr 2017 10:51:29 GMT  
 Server: 4D/16.0.1  
   
-[Body Size: 3555]`
+[Body Size: 3555]
+```
 
 #### 参照 
 

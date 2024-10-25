@@ -39,12 +39,12 @@ Le code suivant retourne une collection d'objets contenant des informations sur 
 
 Si une méthode projet est exécutée, la chaîne d'appel peut contenir (par exemple) :
 
-```RAW
+```json
 [   {    "type":"projectMethod",    "name":"detailForm",    "line":1,    "database":"myDatabase"   }]
 ```
 
 Si une méthode formulaire est exécutée, la chaîne d'appel peut contenir (par exemple) :
 
-```RAW
+```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```

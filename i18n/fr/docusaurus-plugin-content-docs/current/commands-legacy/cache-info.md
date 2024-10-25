@@ -27,7 +27,7 @@ Par défaut, l'information retournée se réfère seulement à la base courante 
 
 La commande **Cache info** retourne un objet unique qui contient toutes les informations pertinentes à propos du cache. L'objet retourné a la structure suivante :
 
-```RAW
+```json
 {    "maxMem": Maximum cache size (real),    "usedMem": Current cache size (real),    "objects": [...] Array of objects currently loaded in cache}
 ```
 

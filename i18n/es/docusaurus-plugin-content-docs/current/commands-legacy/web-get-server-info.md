@@ -81,11 +81,9 @@ Después de ejecutar el siguiente código:
 
 ... $webServerInfo contendrá por ejemplo:
 
-```RAW
+```json
 { 
-```
-
-` "started": true,  
+ "started": true,  
  "uptime": 40,  
  "SOAPServerStarted": true,  
  "startMode": "manual",  
@@ -122,7 +120,8 @@ Después de ejecutar el siguiente código:
  {...},{...}  
  ]  
  }  
-}`
+}
+```
 
 #### Ver también 
 

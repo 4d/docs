@@ -39,12 +39,12 @@ O código abaixo devolve uma coleção de objetos que contenham informação sob
 
 Se for executado um un método projeto, a string de chamadas poderia conter (por exemplo):
 
-```RAW
+```json
 [   {    "type":"projectMethod",    "name":"detailForm",    "line":1,    "database":"myDatabase"   }]
 ```
 
 Se for executado um método de objeto de formulário, a cadeia de chamadas poderia conter (por exemplo):
 
-```RAW
+```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```

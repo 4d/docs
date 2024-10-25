@@ -57,7 +57,7 @@ El comando devuelve en resultado la referencia XML del elemento creado.
 
 Queremos crear el siguiente elemento: 
 
-```RAW
+```json
                                       
 ```
 
@@ -111,7 +111,7 @@ Si desea insertar un elemento después, puede escribir:
 
 Tiene entonces:
 
-```RAW
+```json
                                                 
 ```
 

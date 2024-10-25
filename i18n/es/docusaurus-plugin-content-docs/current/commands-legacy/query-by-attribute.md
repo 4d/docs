@@ -123,7 +123,7 @@ No importa la forma en que una búsqueda se haya definido:
 
 Las fechas se almacenan en los objetos en función de los parámetros de la base; por defecto, se tiene en cuenta la zona horaria (ver el selector JSON use local time en el comando [SET DATABASE PARAMETER](set-database-parameter.md)). 
 
-```undefined
+```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
 ```
 
@@ -156,7 +156,7 @@ Puede utilizar la propiedad virtual "longitud" con este comando. Esta propiedad 
 
 Por ejemplo, con los dos registros siguientes:
 
-```undefined
+```json
 {
     "name":"martin",
     "locations" : [ {
@@ -231,7 +231,7 @@ El comando **QUERY BY ATTRIBUTE** se puede utilizar para encontrar registros en 
 
 Usted quiere buscar un campo que contiene los atributos array. Con los dos registros siguientes:
 
-```undefined
+```json
 {
     "name":"martin",
     "locations" : [ {

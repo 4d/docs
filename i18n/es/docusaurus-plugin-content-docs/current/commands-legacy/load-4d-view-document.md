@@ -50,7 +50,7 @@ Por ejemplo, si convierte el siguiente documento:
 
 Obtendrá el siguiente resultado (objeto stringified):
 
-```undefined
+```json
 {
     "version": 9,
     "title": "4D View test",

@@ -83,7 +83,7 @@ If two records were locked in the \[Table\] table, the following object is retur
 
 If the code is executed on a 4D Server and the locking is caused by a remote client machine, the following object is returned in $vOlocked:
 
-```RAW
+```json
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 

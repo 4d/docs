@@ -138,11 +138,11 @@ Sérialisation d'un objet 4D contenant une valeur de date (Fuseau horaire de Par
 ```
 
 * Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" n'est pas cochée :  
-```RAW  
+```json  
 "name":"Smith","birthday":"1975-10-21T22:00:00.000Z"  
 ```
 * Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" est cochée :  
-```RAW  
+```json  
 "name":"Smith","birthday":"1975-10-22"  
 ```
 
@@ -160,11 +160,11 @@ Conversion d'une collection (fuseau horaire Paris). La chaîne résultante dépe
 ```
 
 * Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" n'est pas cochée :  
-```RAW  
+```json  
 $myTxtCol="[33,"mike","2017-08-27T22:00:00.000Z",false]"  
 ```
 * Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" est cochée :  
-```RAW  
+```json  
 $myTxtCol="[33,"mike","2017-08-28",false]"  
 ```
 

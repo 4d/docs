@@ -39,12 +39,12 @@ The following code returns a collection of objects containing information about 
 
 If a project method is executed, the call chain could contain (for example):
 
-```RAW
+```json
 [   {    "type":"projectMethod",    "name":"detailForm",    "line":1,    "database":"myDatabase"   }]
 ```
 
 If a form object method is executed, the call chain could contain (for example):
 
-```RAW
+```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```

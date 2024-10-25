@@ -55,7 +55,7 @@ The command returns the XML reference of the element(s) found. When the *arrElem
 
 Give the following XML structure:
 
-```RAW
+```json
   Harry Potter  29.99  Learning XML  39.95
 ```
 
@@ -82,7 +82,7 @@ The same search can also be done as follows:
 
 Given the following XML structure: 
 
-```RAW
+```json
          aaa      bbb      ccc   
 ```
 

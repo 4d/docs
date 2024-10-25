@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 L'objet retourné par la commande contient une seule propriété, nommée "DB", dont la structure est la suivante :
 
-```RAW
+```json
 {    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
 ```
 
@@ -49,7 +49,7 @@ Les propriétés élémentaires peuvent être présentes à différents niveaux 
 
 Ces huit propriétés élémentaires ont toutes la même structure d'objet, par exemple :
 
-```undefined
+```json
 "diskReadBytes": {
     "value": 33486473620,
     "history": [        // optionnel
@@ -73,7 +73,7 @@ Ces huit propriétés élémentaires ont toutes la même structure d'objet, par 
 
 Les propriétés "dataSegment1" et "indexSegment" peuvent contenir jusqu'à quatre propriétés élémentaires (le cas échéant) : 
 
-```RAW
+```json
 "dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
 ```
 
@@ -84,7 +84,7 @@ Ces propriétés retournent les mêmes informations que les propriétés éléme
 
 Par exemple, vous pouvez obtenir l'objet suivant : 
 
-```undefined
+```json
 {
 "DB": {
 "diskReadBytes": {
@@ -123,7 +123,7 @@ Les valeurs retournées correspondent aux formules suivantes :
 
 La propriété "tables" contient autant de propriétés qu'il y a de tables ayant été utilisées en lecture ou en écriture depuis l'ouverture de la base. Le nom de chaque propriété est le nom de la table concernée. Par exemple : 
 
-```undefined
+```json
 "tables": {
     "Employees": {…)
     "Companies": {…)
@@ -144,7 +144,7 @@ Chaque objet "table" contient jusqu' à 12 propriétés :
    Cet attribut n'est pas basé sur l'utilisation des index ; tous les types de recherches et de tris sont pris en compte.  
    Exemple : Depuis le lancement de la base, plusieurs recherches et tris ont été effectués en utilisant les champs *CompID*, *Name* et *FirstName*. L'objet retourné contient le sous-objet "fields" suivant (*options* sans historique) :  
          
-   ```undefined  
+   ```json  
    {  
        "DB": {  
            "tables": {  
@@ -181,7 +181,7 @@ Chaque objet "table" contient jusqu' à 12 propriétés :
                   * "value" (numérique) : nombre de millisecondes  
                   * "history" (tableau d'objets) (si requis via le paramètre *options*) : propriétés d'historique standard "value" et "time".  
    Exemple : Depuis le lancement de la base, une seule recherche a été effectuée sur la table Employees (*options* avec historique) :  
-   ```undefined  
+   ```json  
    {  
        "DB": {  
            "tables": {  
@@ -219,7 +219,7 @@ Il s'agit de l'objet ayant la structure la plus complexe. Toutes les tables auxq
 
 Exemple : Depuis le lancement de la base, divers index du champ \[Employees\]EmpLastName ont été sollicités. En outre, 2 enregistrements ont été créés et 16 enregistrements ont été supprimés dans la table \[Companies\]. Cette table comporte un champ "name" qui est indexé. Des recherches et des tris ont été effectués dans la table via ce champ. L'objet résultant contient :
 
-```undefined
+```json
 "indexes": {
     "Employees": {
         "EmpLastName": {
@@ -304,7 +304,7 @@ Vous souhaitez connaître uniquement le nombre global d'octets lus dans le cache
 
 L'objet retourné contiendra, par exemple :
 
-```undefined
+```json
 {
     "DB": {
         "cacheReadBytes": {

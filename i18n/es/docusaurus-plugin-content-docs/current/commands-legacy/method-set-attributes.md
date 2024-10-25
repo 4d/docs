@@ -38,7 +38,7 @@ Si el comando se ejecuta desde un componente, por defecto se aplica a los métod
 
 Los atributos soportados son:
 
-```RAW
+```json
 {    "invisible" : false, //  true si visible    "preemptive" : "capable" // o "incapable" o "indifferent"    "publishedWeb" : false,  // true si está disponible a través de las etiquetas 4D y URLs     "publishedSoap": false,  // true si se ofrece como servicio web    "publishedWsdl": false,  // si se ha publicado en WSDL    "shared" : false,  //  true si es compartida por los componentes y la base local    "publishedSql" : false,  //  true si está disponible a través de SQL    "executedOnServer" : false, // true si se ejecuta en el servidor}
 ```
 

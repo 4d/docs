@@ -124,7 +124,7 @@ displayed_sidebar: docs
 
 日付はオブジェクト内において、データベース設定に沿った形で保存されています。デフォルトでは、タイムゾーンは考慮されます([SET DATABASE PARAMETER](set-database-parameter.md) コマンドのJSON use local time を参照して下さい)。
 
-```undefined
+```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
 ```
 

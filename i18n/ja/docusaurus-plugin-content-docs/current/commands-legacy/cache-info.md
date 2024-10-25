@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **Cache info** コマンドはキャッシュに関係のある情報を一つのオブジェクトに格納して返します。返されたオブジェクトの基本的な構造は下記のとおりです:
 
-```RAW
+```json
 {    "maxMem": Maximum cache size (real),    "usedMem": Current cache size (real),    "objects": [...] Array of objects currently loaded in cache}
 ```
 

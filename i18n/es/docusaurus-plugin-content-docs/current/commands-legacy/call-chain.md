@@ -39,12 +39,12 @@ El siguiente código devuelve una colección de objetos que contienen informaci�
 
 Si se ejecuta un método proyecto, la cadena de llamadas podría contener (por ejemplo):
 
-```RAW
+```json
 [   {    "type":"projectMethod",    "name":"detailForm",    "line":1,    "database":"myDatabase"   }]
 ```
 
 Si se ejecuta un método de objeto de formulario, la cadena de llamadas podría contener (por ejemplo):
 
-```RAW
+```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```

@@ -38,7 +38,7 @@ O comando **ACTIVITY SNAPSHOT**  aceita duas sintaxes:
 
 Com esta sintaxe, todas as operações se devolvem em um formulário estruturado no array de objetos 4D (*arrAtividades*). Cada elemento do array é um objeto construído da seguinte maneira:
 
-```RAW
+```json
 [    {        "message":"xxx",        "maxValue":12321,        "currentValue":63212,        "interruptible:0,        "remote":0,        "uuid":"deadbeef",        "taskId":xxx,        "startTime":"2014-03-20 13:37:00:123",        "duration":92132,        "dbContextInfo":{            "task_id": xxx,            "user_name": Jean,            "host_name": HAL,            "task_name": "CreateIndexLocal",            "client_uid": "DE4DB33F33F"            "user4d_id ": 1,            "client_version ": 123456        },        "dbOperationDetails":{            table: "myTable"            field: "Field_1"        },        "subOperations":[            {"message":"xxx",            ...}            ]    },    {...}]
 ```
 

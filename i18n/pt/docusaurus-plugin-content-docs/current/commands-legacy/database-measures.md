@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 O objeto devolvido contém uma só propriedade chamada "DB", que têm a seguinte estrutura básica:
 
-```RAW
+```json
 {    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
 ```
 
@@ -49,7 +49,7 @@ As propriedades elementares podem ser encontradas nos diferentes níveis do obje
 
 As oito propriedades elementares têm a mesma estrutura do objeto, por exemplo:
 
-```undefined
+```json
 "diskReadBytes": {
     "value": 33486473620,
     "history": [        // optional
@@ -74,7 +74,7 @@ Este exemplo pode ser representado no seguinte diagrama:
 
 As propriedades "dataSegment1" e "indexSegment" podem conter até quatro propriedades elementares (quando estão disponíveis): 
 
-```RAW
+```json
 "dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
 ```
 
@@ -86,7 +86,7 @@ Estas propriedades devolvem a mesma informação que as propriedades elementares
   
 Por exemplo, pode ser obtido o seguinte objeto:
 
-```undefined
+```json
 {
 "DB": {
 "diskReadBytes": {
@@ -125,7 +125,7 @@ Os valores devolvidos correspondem as fórmulas seguintes:
 
 A propriedade "tables" contém tantas propriedades como tabelas que tenham sido acessadas, seja em modo de leitura ou escritura desde a abertura da base. O nome de cada propriedade é o nome da tabela em questão. Por exemplo:  
   
-```undefined
+```json
 "tables": {
     "Employees": {…)
     "Companies": {…)
@@ -146,7 +146,7 @@ Cada objeto "table" contém 12 propriedades:
          Este atributo não se baseia no uso de índices; Todos os tipos de pequisas e de ordenações são levadas em conta.  
          Exemplo: desde o lançamento da base, várias pesquisas e ordenações foram levadas a cabo utilizando os campos *CompID*, *Name* *e FirstName*. TEl objeto devolvido contém o seguinte sub-objeto "fields" (*opcoes* com rota e sem histórico):  
                  
-         ```undefined  
+         ```json  
          {  
              "DB": {  
                  "tables": {  
@@ -183,7 +183,7 @@ Cada objeto "table" contém 12 propriedades:
                   * "value" (número): número de milissegundos  
                   * "history" (array de objetos) (se solicitar em *opcoes*): propriedades do histórico estandarte "value" e "time"  
 Exemplo: desde o momento em que se lança a base, uma só pesquisa foi realizada na tabela Employees (*opcoes* são com rota e com histórico):  
-```undefined  
+```json  
 {  
             "DB": {  
               "tables": {  
@@ -220,7 +220,7 @@ Este é o objeto mais complexo. Todas as tabelas as quais tiveram acesso utiliza
 
 Exemplo: desde o lançamento da base, vários índices do campo \[Employees\] EmpLastName foram solicitados. Além disso, 2 registros foram criados e 16 se suprimiram na tabela \[Companies\]. Esta tabela tem um campo "name" que está indexado. A tabela também consultou e ordenou utilizando este campo. O objeto resultante conterá:
 
-```undefined
+```json
 "indexes": {
     "Employees": {
         "EmpLastName": {
@@ -306,7 +306,7 @@ Só queremos saber o número total de bytes lidos na memória cachê ("cacheRead
 
 O objeto devolvido contém, por exemplo:
 
-```undefined
+```json
 {
     "DB": {
         "cacheReadBytes": {

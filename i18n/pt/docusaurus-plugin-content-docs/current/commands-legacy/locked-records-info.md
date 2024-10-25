@@ -22,7 +22,7 @@ displayed_sidebar: docs
   
 O objeto devolvido contém uma propriedade "registros", que é um array de objetos:
 
-```RAW
+```json
 {    "records": [        objeto descrição,        (…)    ]}
 ```
 
@@ -77,13 +77,13 @@ Execute o seguinte código:
 
 Se dois registros estão bloqueados na tabela \[Table\], o seguinte objeto se devolve em $vOlocked:
 
-```RAW
+```json
 {    "records": [        {            "contextID": "A9BB84C0E57349E089FA44E04C0F2F25",            "contextAttributes": {                "task_id": 8, (*)                "user_name": "roland", (*)                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 1        },        {            "contextID": "8916338D1B8A4D86B857D92F593CCAC3",            "contextAttributes": {                "task_id": 9,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 2        }    ]}
 ```
 
 Se o código é executado em um 4D Server e o bloqueio é causado por uma máquina cliente remota, o seguinte objeto é devolvido em $vOlocked:  
   
-```RAW
+```json
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                "user_name": "achim",                "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 

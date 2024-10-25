@@ -54,7 +54,7 @@ Cases of non-critical errors are:
 
 When one of these anomalies occurs in auto-repair mode, the record concerned is automatically "repaired" and the related operation is logged in the *errObject* parameter. After execution is completed, the *errObject* parameter lists all the repaired records. It contains a single object array named "operations" built as follows:
 
-```RAW
+```json
 {"operations":    [        {            "operationType":24,            "operationName":"Create record",            "operationNumber":2,            "contextID":48,            "timeStamp":"2015-07-10T07:53:02.413Z",            "dataLen":24,            "recordNumber":0,            "tableID":"F4CXXXXX",            "tableName":"Customers",            "fields": {                "1": 9,                "2": "test value",                "3": "2003-03-03T00:00:00.000Z",                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",                "8": "BlobID: 2"              }        },        {...}     ]
 ```
 

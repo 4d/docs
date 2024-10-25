@@ -66,7 +66,7 @@ Le code suivant sur une machine Windows :
 
 retourne un objet contenant les informations suivantes :
 
-```RAW
+```json
 {        "machineName":"LAPTOP-M3BLHGSG",        "osVersion":"Windows 10 Pro 1809 (17763.1577)",        "osLanguage":"fr",        "accountName":"msmith",        "userName":"mary smith",        "processor":"Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz",        "cores":4,        "cpuThreads":8,        "networkInterfaces": [                   {"type":"ethernet", "name":"Intel(R) 82574L Gigabit Network Connection",                   "ipAddresses": [                     {"type":"ipV4", "ip":"129.138.10.17"},                      {"type":"ipV6","ip":"z1009:0yxw:0000:85v6:0000:0000:ut1s:8001"}                      ]                   },                   {"type":"wifi", "name":"Wi-Fi",                   "ipAddresses": [                     {"type":"ipV4", "ip":"129.138.50.8"},                      {"type":"ipV6","ip":"a1002:0bc8:0000:85d6:0000:0000:ef1g:7001"}                      ]                   }            ],        "uptime":3600,        "model":"HP",        "macRosetta":Faux,        "physicalMemory":16777216, 
 ```
 

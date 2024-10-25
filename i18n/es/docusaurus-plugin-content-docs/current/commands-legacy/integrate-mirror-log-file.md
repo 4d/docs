@@ -57,7 +57,7 @@ Los casos de errores no críticos son:
 Cuando se produce una de las anomalías en modo auto reparación, el registro en cuestión queda automáticamente "reparado" y la operación relacionada se registra en el parámetro *obj* *Error*.   
 Una vez finalizada la ejecución, el parámetro *obj* *Error* lista todos los registros reparados. Contiene un único array de objetos denominado "operaciones" construido de la siguiente manera:
 
-```RAW
+```json
 {"operations":    [        {            "operationType":24,            "operationName":"Create record",            "operationNumber":2,            "contextID":48,            "timeStamp":"2015-07-10T07:53:02.413Z",            "dataLen":24,            "recordNumber":0,            "tableID":"F4CXXXXX",            "tableName":"Customers",            "fields": {                "1": 9,                "2": "test value",                "3": "2003-03-03T00:00:00.000Z",                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",                "8": "BlobID: 2"              }        },        {...}     ]
 ```
 

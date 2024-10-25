@@ -75,31 +75,31 @@ Lanza todos los errores actuales en **modo diferido**, lo que significa que se a
 
 #### Ejemplo 2 
 
-```RAW
+```4d
 throw({errCode: 1; message: "This an error"}) // Lanza un error con el mensaje errCode = 1 y mensaje "This an error"
 ```
 
 #### Ejemplo 3 
 
-```RAW
+```4d
 throw({errCode: 1}) // Lanza un error con errCode = 1 y el mensaje "Error code: 1 (host)"
 ```
 
 #### Ejemplo 4 
 
-```RAW
+```4d
 throw({message: "This an error"}) // Lanza un error con errCode = -1 y el mensaje "This is my error"
 ```
 
 #### Ejemplo 5 
 
-```RAW
+```4d
 throw({message: "This is my error"; deferred: True}) // Lanza un error con el mensaje "This is my error" y errCode = -1 en modo diferido
 ```
 
 #### Ejemplo 6 
 
-```RAW
+```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Lanza un error con el mensaje "File myFileName not found (myFilePath)" en modo diferido.
 ```
 

@@ -47,7 +47,7 @@ By default, if you omit the *type* parameter, 4D attempts to convert the value o
 
 If you pass the *\** optional parameter and if the *jsonString* parameter represents an object, the returned object contains an additional property named *\_\_symbols* that provides path, line position, and line offset of each property and sub-property of the object. This information can be useful for debugging purposes. The structure of the *\_\_symbols* property is: 
 
-```undefined
+```json
 __symbols:{//object description
    myAtt.mySubAtt...:{ //property path
       line:10, //line number of the property 
@@ -146,7 +146,7 @@ You want to create a 4D collection from a JSON array:
 
 You want to parse the following string and get line position and offset of each property:
 
-```undefined
+```json
 {
     "alpha": 4552,
     "beta": [
@@ -172,7 +172,7 @@ You can write:
 
 The *$obInfo* object contains:
 
-```undefined
+```json
 {alpha:4552,
 beta:[{echo:45,delta:text1},{echo:52,golf:text2}],
 __symbols:{alpha:{line:2,offset:4},

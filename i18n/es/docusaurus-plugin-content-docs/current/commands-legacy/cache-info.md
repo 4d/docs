@@ -27,7 +27,7 @@ Por defecto, la información devuelta se refiere solamente a la base en ejecuci�
 
 El comando **Cache info** devuelve un único objeto que contiene toda la información relevante acerca de la caché. El objeto devuelto tiene la siguiente estructura básica:
 
-```RAW
+```json
 {    "maxMem": Maximum cache size (real),    "usedMem": Current cache size (real),    "objects": [...] Array of objects currently loaded in cache}
 ```
 

@@ -54,7 +54,7 @@ Não importa que forma de ordenação tenha sido definido, se a operação de or
 
 Se desejar ordenar a seleção atual por idade (descendente) e depois por nome (ascendente), a ordem por padrão é:
 
-```undefined
+```json
 // [Customer]OB_Info contents partial export
 {"LastName":"Giorgio","age":33,"client":true},
 {"LastName":"Sarah","age":42,"client":true},
@@ -86,7 +86,7 @@ Se executar:
 
 Os registros estão na seguinte ordem:
 
-```undefined
+```json
 {"LastName":"Smeldorf","age":70,"client":true}
 {"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
 {"LastName":"Delaferme","age":54,"client":true},

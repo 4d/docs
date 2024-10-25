@@ -21,7 +21,7 @@ Si el comando se ejecuta en una aplicación 4D que no utiliza localmente una lic
 
 El objeto devuelto contiene las siguientes propiedades:
 
-```RAW
+```json
 {    "name": string    "licenseNumber": string    "version": string    "attributes": optional, array of strings    "userName": string    "userMail": string    "companyName": string    "platforms": array of strings    "expirationDate": optional, object    "renewalFailureCount": optional, number    "products":[ //para cada producto de expansión registrado        {            "id": number            "name": string            "usedCount": number            "allowedCount": number            "rights": [                {                    "count": number                    "expirationDate" optional, object                }            ]        }    ]}
 ```
 
@@ -57,7 +57,7 @@ Usted desea obtener información osobre su licencia 4D Server actual:
 
 *$obj* puede contener, por ejemplo:
 
-```undefined
+```json
 {
     "name": "4D Server v16 R3",
     "licenseNumber": "xxxx",

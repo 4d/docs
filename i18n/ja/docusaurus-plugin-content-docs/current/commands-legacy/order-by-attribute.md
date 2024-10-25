@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 カレントセレクションを年齢 (age; 降順 )、次に名前 (name; 昇順) でソートします。元の順番は次の通りです:
 
-```undefined
+```json
 // [Customer]OB_Info の中身を部分的に出力
 {"LastName":"Giorgio","age":33,"client":true},
 {"LastName":"Sarah","age":42,"client":true},
@@ -88,7 +88,7 @@ displayed_sidebar: docs
 
 レコードは次の順番にソートされます:
 
-```undefined
+```json
 {"LastName":"Smeldorf","age":70,"client":true}
 {"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
 {"LastName":"Delaferme","age":54,"client":true}, 

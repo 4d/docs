@@ -57,8 +57,16 @@ The command returns the XML reference of the element created as a result.
 
 We want to create the following element: 
 
-```RAW
-                                      
+```xml
+     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RootElement>
+   <Elem1>
+      <Elem2>
+         <Elem3> </Elem3>
+         <Elem3> </Elem3>
+      </Elem2>
+   </Elem1>
+</RootElement>                                 
 ```
 
 To do so, simply write:
@@ -74,8 +82,16 @@ To do so, simply write:
 
 We want to create the following element (containing attributes): 
 
-```RAW
-                                      
+```xml
+       <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RootElement>
+   <Elem1>
+      <Elem2>
+         <Elem3 Font=Verdana Size=10> </Elem3>
+         <Elem3 Font=Verdana Size=8> </Elem3>
+      </Elem2>
+   </Elem1>
+</RootElement>                               
 ```
 
 To do so, simply write:
@@ -107,15 +123,25 @@ If you want to insert an element afterwards, you can write:
 
 You have then:
 
-```RAW
-                                                
+```xml
+     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RootElement>
+   <Elem1>
+      <Elem2>
+         <Elem3 Font=Verdana Size=10> </Elem3>
+         <Elem3 Font=Arial> </Elem3>
+         <Elem3 Font=Verdana Size=8> </Elem3>
+      </Elem2>
+   </Elem1>
+</RootElement>
+                                           
 ```
 
 #### Example 3 
 
 We want to create and export the following structure: 
 
-```XML
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Root>
    <Elem1>Hello</Elem1>

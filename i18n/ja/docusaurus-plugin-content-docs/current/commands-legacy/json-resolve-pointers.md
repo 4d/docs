@@ -60,7 +60,7 @@ JSON ポインターとは、JSON ドキュメント全体の中にある特定�
 
 JSON ポインターは、厳密な話をすると、'/'によって分割される部分から構成される文字列です。JSON ポインターは通常、ポインターが解決されるドキュメントを指定するURI内で見つけることができます。URI内でフラグメント文字"#"を使用することでJSON ポインターを指定しています。習慣に則り、JSON ポインターを格納しているURIは、"$ref"と名付けられたJSON オブジェクトプロパティ内にあります。
 
-```undefined
+```json
 {
    "$ref":<path>#<json_pointer>
 }
@@ -112,7 +112,7 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 
 以下の($oMyConfig という名前の)JSON オブジェクト内において、請求先住所("billingAddress")を送付先住所("shippingAddress")として再使用したい場合を考えます:
 
-```undefined
+```json
 {
     "lastname": "Doe",
     "firstname": "John",
@@ -133,7 +133,7 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 
 ... 以下のオブジェクトが返されます:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -157,7 +157,7 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 
 この例題では、"merge" オプションの効果を紹介しています。デフォルトのファイルに基づいてユーザーの権限を編集したい場合を考えます。
 
-```undefined
+```json
 {
     "rights": { 
         "$ref": "defaultSettings.json#/defaultRights",
@@ -169,7 +169,7 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 
 *defaultSettings.json* ファイルの中身は以下のようになっています:
 
-```undefined
+```json
 {
     "defaultRights":
     {
@@ -190,7 +190,7 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 
 ... 結果の値は*defaultSettings.json* ファイルの中身そのものと完全に同じです:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -213,7 +213,7 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 
 ... 結果の値は、元のオブジェクトを一部変更した値になります:
 
-```undefined
+```json
 {
     "success": true,
     "value": {

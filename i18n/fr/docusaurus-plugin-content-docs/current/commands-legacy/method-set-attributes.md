@@ -34,7 +34,7 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 
 ##### 
 
-```undefined
+```json
 {
     "invisible" : false, // true si visible
     "preemptive" : "capable" // ou bien "incapable" ou "indifferent"

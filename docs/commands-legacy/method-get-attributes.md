@@ -40,7 +40,7 @@ You want to get the attributes of the *sendMail* project method. You can write:
 
 After execution, $att contains, for example:
 
-```undefined
+```json
 {
     "invisible":false,
     "preemptive":"capable",

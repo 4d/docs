@@ -60,7 +60,7 @@ JSON Pointer es un estándar que define una sintaxis de cadena que se puede util
 
 Un puntero JSON es, estrictamente hablando, una cadena compuesta de partes separadas por '/'. Un puntero JSON normalmente se encuentra en un URI que especifica el documento en el que se resolverá el puntero. El carácter de fragmento "#" se utiliza en la URI para especificar el puntero JSON Por convención, se puede encontrar un URI que contenga un puntero JSON en una propiedad de objeto JSON que debe llamarse "$ ref".
 
-```undefined
+```json
 {
    "$ref":<path>#<json_pointer>
 }
@@ -112,7 +112,7 @@ Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar
 
 Usted quiere reutilizar "billingAddress" como "shippingAddress" en el siguiente objeto JSON (llamado $oMyConfig):
 
-```undefined
+```json
 {
     "lastname": "Doe",
     "firstname": "John",
@@ -133,7 +133,7 @@ Después de ejecutar este código:
 
 ... se devuelve el siguiente objeto:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -157,7 +157,7 @@ Después de ejecutar este código:
 
 Este ejemplo ilustra el efecto de la opción "fusionar". Usted desea editar los derechos de un usuario basándose en un archivo predeterminado.
 
-```undefined
+```json
 {
     "rights": { 
         "$ref": "defaultSettings.json#/defaultRights",
@@ -169,7 +169,7 @@ Este ejemplo ilustra el efecto de la opción "fusionar". Usted desea editar los 
 
 El archivo *defaultSettings.json* contiene:
 
-```undefined
+```json
 {
     "defaultRights":
     {
@@ -190,7 +190,7 @@ Si ejecuta:
 
 el valor resultante es exactamente el contenido del archivo *defaultSettings.json*:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -213,7 +213,7 @@ Si ejecuta:
 
 ...el valor resultante es una versión modificada del objeto original:
 
-```undefined
+```json
 {
     "success": true,
     "value": {

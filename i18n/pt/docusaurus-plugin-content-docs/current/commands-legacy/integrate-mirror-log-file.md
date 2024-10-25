@@ -61,7 +61,7 @@ Quando uma das anomalias ocorre no modo auto-reparo, o registro em questão é a
 
 O diagrama seguinte (pseudo código) detalha o processo de integração dependendo dos diferentes casos. No arquivo de histórico a integrar, X é o número da primeira operação e Y é o número da última:
 
-```RAW
+```json
 {"operations":    [        {            "operationType":24,            "operationName":"Create record",            "operationNumber":2,            "contextID":48,            "timeStamp":"2015-07-10T07:53:02.413Z",            "dataLen":24,            "recordNumber":0,            "tableID":"F4CXXXXX",            "tableName":"Customers",            "fields": {                "1": 9,                "2": "test value",                "3": "2003-03-03T00:00:00.000Z",                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",                "8": "BlobID: 2"              }        },        {...}    ]
 ```
   

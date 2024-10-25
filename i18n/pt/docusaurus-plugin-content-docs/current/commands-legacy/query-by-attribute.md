@@ -157,7 +157,7 @@ Pode usar a propriedade virtual "comprimento" com este comando. Esta propriedade
 
 Por exemplo, com os dois registros abaixo:
 
-```undefined
+```json
 {
     "name":"martin",
     "locations" : [ {
@@ -234,7 +234,7 @@ O comando **QUERY BY ATTRIBUTE** pode ser usado para encontrar registros nos qua
 
 Você quer encontrar um campo que contém os atributos do array. Com os dois registros a seguir:
 
-```undefined
+```json
 {
     "name":"martin",
     "locations" : [ {
@@ -285,7 +285,7 @@ Se quiser obter os registros para qualquer cliente que tenha duas ou mais crian�
 
 Estes exemplos ilustram as várias combinações disponíveis de argumentos de pesquisa linkados em arrays. Assuma que você tem os registros abaixo:
 
-```undefined
+```json
 [ {
     "Name": "Sam",
     "Children": [ {

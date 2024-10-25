@@ -21,7 +21,7 @@ If the command is executed on a 4D application that does not use locally a licen
 
 The returned object contains the following properties:
 
-```RAW
+```json
 {    "name": string    "licenseNumber": string    "version": string    "attributes": optional, array of strings    "userName": string    "userMail": string    "companyName": string    "platforms": array of strings    "expirationDate": optional, object    "renewalFailureCount": optional, number    "products":[ //for each registered expansion product        {            "id": number            "name": string            "usedCount": number            "allowedCount": number            "rights": [                 {                    "count": number                    "expirationDate" optional, object                 }            ]        }    ]}
 ```
 
@@ -57,7 +57,7 @@ You want to get information on your current 4D Server license:
 
 *$obj* can contain, for example:
 
-```undefined
+```json
 {
     "name": "4D Server v16 R3",
     "licenseNumber": "xxxx",

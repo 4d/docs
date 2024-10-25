@@ -74,31 +74,31 @@ description 引数を渡さなかった場合には、次の情報が提示さ�
 
 #### 例題 2 
 
-```RAW
+```4d
 throw({errCode: 1; message: "これはエラーです"}) // "これはエラーです" というメッセージと errCode = 1 でエラーをスローします
 ```
 
 #### 例題 3 
 
-```RAW
+```4d
 throw({errCode: 1}) // "Error code: 1 (host)" というメッセージと errCode = 1 でエラーをスローします
 ```
 
 #### 例題 4 
 
-```RAW
+```4d
 throw({message: "これはエラーです"})  // "これはエラーです" というメッセージと errCode = -1 でエラーをスローします
 ```
 
 #### 例題 5 
 
-```RAW
+```4d
 throw({message: "これはエラーです"; deferred: True}) // "これはエラーです" というメッセージと errCode = -1 でエラーを遅延モードでスローします
 ```
 
 #### 例題 6 
 
-```RAW
+```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// "ファイル myFileName が見つかりません (myFilePath)" というメッセージのエラーを遅延モードでスローします
 ```
 

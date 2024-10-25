@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 例題 1 
+#### 説明 
 
 <!--REF #_command_.Application info.Summary-->**Application info** コマンドはアクティブなアプリケーションのアクティビティと、ネットワーク設定に関する詳細な情報を格納したオブジェクト型を返します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 (\*) Windows 上では、例えば[On Startupデータベースメソッド](on-startup-database-method.md) 内で**Application info** コマンドを呼び出すなどして、カウンターを事前に初期化しておく必要があります。
 
-#### 例題 2 
+#### 例題
 
 以下のコードを実行すると、実行中のアプリケーションについての情報を格納したオブジェクトが返されます:
 
@@ -56,20 +56,73 @@ displayed_sidebar: docs
 
  コードがスタンドアロン環境で実行された場合、返されたオブジェクトには(一例として)以下のような情報が格納されています: 
 
-```RAW
-{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.035875,    "uptime": 469,    "headless": false,    "pid": 16500,    "networkInputThroughput": 377263157,    "networkOutputThroughput": 12345242236 }
+```json
+{
+  "launchedAsService": false,
+  "volumeShadowCopyStatus": "notAvailable",
+  "cpuUsage": 10.035875,
+  "uptime": 469,
+  "headless": false,
+  "pid": 16500,
+  "networkInputThroughput": 377263157,
+  "networkOutputThroughput": 12345242236
+}
 ```
 
  コードが4D リモートクライアントで実行された場合には、返されたオブジェクトには(一例として)以下のような情報が格納されています: 
 
-```RAW
-{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.035875,    "portID": 19814,    "TLSEnabled": false,    "uptime": 143,    "headless": false,    "pid": 1550,    "useLegacyNetworkLayer": true,    "networkInputThroughput": 268047058,    "networkOutputThroughput": 12207686274 }
+```json
+{
+  "launchedAsService": false,
+  "volumeShadowCopyStatus": "notAvailable",
+  "cpuUsage": 10.035875,
+  "portID": 19814,
+  "TLSEnabled": false,
+  "uptime": 143,
+  "headless": false,
+  "pid": 1550,
+  "useLegacyNetworkLayer": true,
+  "networkInputThroughput": 268047058,
+  "networkOutputThroughput": 12207686274
+}
 ```
 
  コードが4D Server で実行された場合には、返されたオブジェクトには(一例として)以下のような情報が格納されています: 
 
-```RAW
-{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.016125,    "portID": 19814,    "TLSEnabled": false,    "uptime": 192,    "headless": false,    "pid": 9560,    "useLegacyNetworkLayer": true,    "useQUICNetworkLayer": false,    "newConnectionsAllowed": true,    "IPAddressesToListen": [        "192.168.18.8",        "192.168.18.7"     ],      "IPAddressesAllowDeny": [       {"mode": "allow", "ip": "192.168.*"},       {"mode": "deny", "ip": "192.167.15.3"},       {"mode": "allow", "ip": "192.167.1.2" }    ],    "networkInputThroughput": 149014925,    "networkOutputThroughput": 80238805 }
+```json
+{
+  "launchedAsService": false,
+  "volumeShadowCopyStatus": "notAvailable",
+  "cpuUsage": 10.016125,
+  "portID": 19814,
+  "TLSEnabled": false,
+  "uptime": 192,
+  "headless": false,
+  "pid": 9560,
+  "useLegacyNetworkLayer": true,
+  "useQUICNetworkLayer": false,
+  "newConnectionsAllowed": true,
+  "IPAddressesToListen": [
+    "192.168.18.8",
+    "192.168.18.7"
+  ],
+  "IPAddressesAllowDeny": [
+    {
+      "mode": "allow",
+      "ip": "192.168.*"
+    },
+    {
+      "mode": "deny",
+      "ip": "192.167.15.3"
+    },
+    {
+      "mode": "allow",
+      "ip": "192.167.1.2"
+    }
+  ],
+  "networkInputThroughput": 149014925,
+  "networkOutputThroughput": 80238805
+}
 ```
 
 #### 参照 

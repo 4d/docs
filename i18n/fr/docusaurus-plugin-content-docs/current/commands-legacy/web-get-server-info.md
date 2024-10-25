@@ -71,9 +71,55 @@ Si vous passez **Vrai** dans le paramètre *avecCache*, la commande retourne les
 
 #### Exemple 
 
-```undefined
-{<br />   "started": true,<br />   "uptime": 40,<br />   "SOAPServerStarted": true,<br />   "startMode": "manual",<br />   "httpRequestCount": 0,<br />   "options": {<br />      "CORSEnabled": false,<br />      "CORSSettings": null,<br />      "webCharacterSet": "UTF-8",<br />      "webHTTPCompressionLevel": 1,<br />      "webHTTPCompressionThreshold": 1024,<br />      "webHTTPSPortID": 443,<br />      "webIPAddressToListen": ["192.168.xxx.xxx"],<br />      "webInactiveProcessTimeout": 28800,<br />      "webInactiveSessionTimeout": 28800,<br />      "webMaxConcurrentProcesses": 100,<br />      "webPortID": 80<br />   },<br />   "security": {<br />      "HTTPSEnabled": true,<br />      "HTTPEnabled": true,<br />      "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",<br />      "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",<br />      "perfectForwardSecrecy": true,<br />      "minTLSVersion": "1.2" <br />   },<br />    "cache": {<br />        "cacheUsage": 1,<br />        "numOfLoads": 24,<br />        "currentSize": 154219,<br />        "maxSize": 10485760,<br />        "objectMaxSize": 524288,<br />        "enabled": true,<br />        "nbCachedObjects": 23,<br />        "cachedObjects": [<br />            {...},{...}<br />         ]<br />   }<br />}
+Après exécution du code suivant :
+
+```4d
+$webServerInfo:=WEB Get server info(True)
 ```
+
+... $webServerInfo contiendra par exemple :
+
+
+```json
+{
+   "started": true,
+   "uptime": 40,
+   "SOAPServerStarted": true,
+   "startMode": "manual",
+   "httpRequestCount": 0,
+   "options": {
+      "CORSEnabled": false,
+      "CORSSettings": null,
+      "webCharacterSet": "UTF-8",
+      "webHTTPCompressionLevel": 1,
+      "webHTTPCompressionThreshold": 1024,
+      "webHTTPSPortID": 443,
+      "webIPAddressToListen": ["192.168.xxx.xxx"],
+      "webInactiveProcessTimeout": 28800,
+      "webInactiveSessionTimeout": 28800,
+      "webMaxConcurrentProcesses": 100,
+      "webPortID": 80
+   },
+   "security": {
+      "HTTPEnabled": true,
+      "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",
+      "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",
+      "perfectForwardSecrecy": true,
+      "minTLSVersion": "1.2"
+   },
+    "cache": {
+        "cacheUsage": 1,
+        "numOfLoads": 24,
+        "currentSize": 154219,
+        "maxSize": 10485760,
+        "objectMaxSize": 524288,
+        "enabled": true,
+        "nbCachedObjects": 23,
+        "cachedObjects": [
+            {...},{...}
+         ]
+   }
+}```
 
 #### Voir aussi 
 

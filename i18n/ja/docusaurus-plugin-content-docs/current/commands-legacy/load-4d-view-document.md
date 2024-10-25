@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 以下の結果を取得します(文字列化されたオブジェクト):
 
-```undefined
+```json
 {
     "version": 9,
     "title": "4D View test",

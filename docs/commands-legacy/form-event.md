@@ -29,7 +29,7 @@ Each returned object includes the following main properties:
 
 For example, in the case of a click on a button, the object contains the following properties:
 
-```RAW
+```json
 {"code":4,"description":"On Clicked","objectName":"Button2"}
 ```
 

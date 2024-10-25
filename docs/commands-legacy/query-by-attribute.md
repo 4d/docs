@@ -121,7 +121,7 @@ No matter which way a query has been defined:
 
 Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](set-database-parameter.md) command). 
 
-```undefined
+```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
 ```
 

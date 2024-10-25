@@ -176,7 +176,7 @@ Compila un proyecto y declara su componente:
 
 Desactiva las advertencias 518.1 y 518.2 al compilar su proyecto:  
   
-```RAW
+```4d
 var $options:={}
 $options.warnings:=[]
 $options.warnings.push({major: 518; minor: 1; enabled: False})

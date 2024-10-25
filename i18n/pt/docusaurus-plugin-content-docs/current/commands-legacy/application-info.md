@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Exemplo 1 
+#### Descrição 
 
 <!--REF #_command_.Application info.Summary-->O comando **Application info** retorna um objeto que traz informação detalhada sobre a atividade da aplicação ativa e da configuração de rede.<!-- END REF-->
 
@@ -45,7 +45,7 @@ O objeto retornado contém as propriedades abaixo:
 
 (\*) Em Windows, deve ser iniciado previamente este contador, por exemplo, mediante uma chamada ao comando **Application info** em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md).
 
-#### Exemplo 2 
+#### Exemplo
 
 O código abaixo retorna um objeto que contém informação sobre a aplicação que está rodando:
 
@@ -56,20 +56,73 @@ O código abaixo retorna um objeto que contém informação sobre a aplicação 
 
 Se o código for executado de um ambiente standalone, o objeto vai conter (por exemplo):
 
-```RAW
-{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.035875,    "uptime": 469,    "networkInputThroughput": 377263157,    "networkOutputThroughput": 12345242236 }
+```json
+{
+  "launchedAsService": false,
+  "volumeShadowCopyStatus": "notAvailable",
+  "cpuUsage": 10.035875,
+  "uptime": 469,
+  "headless": false,
+  "pid": 16500,
+  "networkInputThroughput": 377263157,
+  "networkOutputThroughput": 12345242236
+}
 ```
 
 Se o código for executado de um cliente remoto 4D, o objeto vai conter (por exemplo):
 
-```RAW
-{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.035875,    "portID": 19814,    "TLSEnabled": false,    "uptime": 143,    "useLegacyNetworkLayer": true,    "networkInputThroughput": 268047058,    "networkOutputThroughput": 12207686274 }
+```json
+{
+  "launchedAsService": false,
+  "volumeShadowCopyStatus": "notAvailable",
+  "cpuUsage": 10.035875,
+  "portID": 19814,
+  "TLSEnabled": false,
+  "uptime": 143,
+  "headless": false,
+  "pid": 1550,
+  "useLegacyNetworkLayer": true,
+  "networkInputThroughput": 268047058,
+  "networkOutputThroughput": 12207686274
+}
 ```
 
 Se o código for executado em 4D Server, o objeto contém (por exemplo):
 
-```RAW
-{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.016125,    "portID": 19814,    "TLSEnabled": false,    "uptime": 192,    "useLegacyNetworkLayer": true,    "newConnectionsAllowed": true,    "IPAddressesToListen": [        "192.168.18.8",        "192.168.18.7"     ],      "IPAddressesAllowDeny": [       { "mode": "allow", "ip": "192.168.*"},       {"mode": "deny", "ip": "192.167.15.3"},       {"mode": "allow", "ip": "192.167.1.2" }    ],    "networkInputThroughput": 149014925,    "networkOutputThroughput": 80238805 }
+```json
+{
+  "launchedAsService": false,
+  "volumeShadowCopyStatus": "notAvailable",
+  "cpuUsage": 10.016125,
+  "portID": 19814,
+  "TLSEnabled": false,
+  "uptime": 192,
+  "headless": false,
+  "pid": 9560,
+  "useLegacyNetworkLayer": true,
+  "useQUICNetworkLayer": false,
+  "newConnectionsAllowed": true,
+  "IPAddressesToListen": [
+    "192.168.18.8",
+    "192.168.18.7"
+  ],
+  "IPAddressesAllowDeny": [
+    {
+      "mode": "allow",
+      "ip": "192.168.*"
+    },
+    {
+      "mode": "deny",
+      "ip": "192.167.15.3"
+    },
+    {
+      "mode": "allow",
+      "ip": "192.167.1.2"
+    }
+  ],
+  "networkInputThroughput": 149014925,
+  "networkOutputThroughput": 80238805
+}
 ```
 
 #### Ver também 

@@ -83,7 +83,7 @@ Nota: Formatos podem variar dependendo das configurações do sistema.
   
 Estes são alguns exemplos de formatos simples (asumindo que a data atual é 
 
-```undefined
+```json
 2/29/2006): $vsResult:=String(Current date) //$vsResult toma el valor "12/29/06"
  $vsResult:=String(Current date;Internal date long) // $vsResult toma el valor "December 29, 2006"
  $vsResult:=String(Current date;ISO Date GMT) // $vsResult toma el valor "2009-03-04T23:00:00"

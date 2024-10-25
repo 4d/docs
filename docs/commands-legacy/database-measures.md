@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 The returned object contains a single property named "DB" that has the following basic structure:
 
-```RAW
+```json
 {    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
 ```
 
@@ -49,7 +49,7 @@ Elementary properties can be found at different levels in the DB object. They re
 
 The eight elementary properties all have the same object structure, for example:
 
-```undefined
+```json
 "diskReadBytes": {
     "value": 33486473620,
     "history": [        // optional
@@ -74,7 +74,7 @@ The eight elementary properties all have the same object structure, for example:
 
 The "dataSegment1" and "indexSegment" properties contain up to four elementary properties (when available): 
 
-```RAW
+```json
 "dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
 ```
 
@@ -85,7 +85,7 @@ These properties return the same information as the elementary properties, but d
 
 For example, you can get the following object:
 
-```undefined
+```json
 {
 "DB": {
 "diskReadBytes": {
@@ -124,7 +124,7 @@ You can figure out how it works by adding up the returned values:
 
 The "tables" property contains as many properties as there are tables that have been accessed either in read or write mode since the opening of the database. The name of each property is the name of the table involved. For example: 
 
-```undefined
+```json
 "tables": {
     "Employees": {…)
     "Companies": {…)
@@ -145,7 +145,7 @@ Each table objects contains up to 12 properties:
    This attribute is not based on index use; all types of queries and sorts are taken into account.  
    Example: Since the moment the database was launched, several queries and sorts have been carried out using the *CompID*, *Name* and *FirstName* fields. The returned object contains the following "fields" sub-object (*options* are with path and without history):  
          
-   ```undefined  
+   ```json  
    {  
        "DB": {  
            "tables": {  
@@ -182,7 +182,8 @@ Each table objects contains up to 12 properties:
                   * "value" (number): number of milliseconds  
                   * "history" (array of objects) (if requested in *options*): "value" and "time" standard history properties.  
    Example: Since the moment the database was launched, a single query has been performed on the Employees table (*options* are with path and with history):  
-   ```undefined  
+
+   ```json  
    {  
        "DB": {  
            "tables": {  
@@ -220,7 +221,7 @@ This is the most complex object. All tables that have been accessed using one or
 
 Example: Since the moment the database was launched, several indexes of the \[Employees\]EmpLastName field have been solicited. In addition, 2 records were created and 16 were deleted in the \[Companies\] table. This table has a "name" field that is indexed. The table also has been queried and sorted using this field. The resulting object will contain:
 
-```undefined
+```json
 "indexes": {
     "Employees": {
         "EmpLastName": {
@@ -307,7 +308,7 @@ We only want to know the global number of bytes read in the cache ("cacheReadByt
 
 The object returned contains, for example:
 
-```undefined
+```json
 {
     "DB": {
         "cacheReadBytes": {

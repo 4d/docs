@@ -35,8 +35,10 @@ displayed_sidebar: docs
 
 [GET MACRO PARAMETER](get-macro-parameter.md "GET MACRO PARAMETER")とSET MACRO PARAMETERコマンドが正確に起動するには、新しい"バージョン" の属性が、以下のようにマクロ自体に記述されていなければなりません。
 
-```RAW
+```xml
+<macro name="MyMacro" version="2">
 --- Text of macro ---
+</macro>
 ```
 
 #### 例題 

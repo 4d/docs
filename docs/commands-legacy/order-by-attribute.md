@@ -54,7 +54,7 @@ No matter what way a sort has been defined, if the actual sort operation is goin
 
 You want to sort the current selection by age (descending) and then by name (ascending). Default order is:
 
-```undefined
+```json
 // [Customer]OB_Info contents partial export
 {"LastName":"Giorgio","age":33,"client":true},
 {"LastName":"Sarah","age":42,"client":true},
@@ -86,7 +86,7 @@ If you execute:
 
 Records are in the following order:
 
-```undefined
+```json
 {"LastName":"Smeldorf","age":70,"client":true}
 {"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
 {"LastName":"Delaferme","age":54,"client":true}, 

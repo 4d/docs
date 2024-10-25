@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 自動修復モードで上記のいずれかのエラーが発生した場合、関連するレコードは自動的に"修復"され、関連したオペレーションは*errObject*引数に記録されます。実行が完了した後、*errObject*引数は修復したレコードを全て格納します。ここには以下のようにビルドされた、"operations"という名前の単一のオブジェクト配列が含まれます:
 
-```RAW
+```json
 {"operations":    [        {            "operationType":24,            "operationName":"Create record",            "operationNumber":2,            "contextID":48,            "timeStamp":"2015-07-10T07:53:02.413Z",            "dataLen":24,            "recordNumber":0,            "tableID":"F4CXXXXX",            "tableName":"Customers",            "fields": {                "1": 9,                "2": "test value",                "3": "2003-03-03T00:00:00.000Z",                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",                "8": "BlobID: 2"              }        },        {...}     ]
 ```
 

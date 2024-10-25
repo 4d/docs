@@ -61,7 +61,7 @@ JSON Pointer is a standard that defines a string syntax which can be used to acc
 
 A JSON pointer is, strictly speaking, a string composed of parts separated by '/'. A JSON pointer is usually found in a URI that specifies the document into which the pointer will be resolved. The fragment character "#' is used in the URI to specify the JSON pointer. By convention, a URI containing a JSON pointer can be found in a JSON object property that must be named "$ref".
 
-```undefined
+```json
 {
    "$ref":<path>#<json_pointer>
 }
@@ -113,7 +113,7 @@ This basic example illustrates how a JSON pointer can be set and replaced in an 
 
 You want to reuse the "billingAddress" as the "shippingAddress" in the following JSON object (named $oMyConfig):
 
-```undefined
+```json
 {
     "lastname": "Doe",
     "firstname": "John",
@@ -134,7 +134,7 @@ After executing this code:
 
 ... the following object is returned:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -158,7 +158,7 @@ After executing this code:
 
 This example illustrates the effect of the "merge" option. You want to edit an user's rights based upon a default file.
 
-```undefined
+```json
 {
     "rights": { 
         "$ref": "defaultSettings.json#/defaultRights",
@@ -170,7 +170,7 @@ This example illustrates the effect of the "merge" option. You want to edit an u
 
 The *defaultSettings.json* file contains:
 
-```undefined
+```json
 {
     "defaultRights":
     {
@@ -191,7 +191,7 @@ If you execute:
 
 ... the resulting value is exactly the *defaultSettings.json* file contents:
 
-```undefined
+```json
 {
     "success": true,
     "value": {
@@ -214,7 +214,7 @@ If you execute:
 
 ... the resulting value is a modified version of the original object:
 
-```undefined
+```json
 {
     "success": true,
     "value": {

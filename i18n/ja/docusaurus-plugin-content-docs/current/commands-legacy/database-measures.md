@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 返されたオブジェクトには、以下の基本構造を持つ、"DB"という名の単一のプロパティを格納しています:
 
-```RAW
+```json
 {    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
 ```
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 8つの要素プロパティは全て同じオブジェクト構造を持ちます。例えば:
 
-```undefined
+```json
 "diskReadBytes": {
     "value": 33486473620,
     "history": [        // 任意
@@ -74,7 +74,7 @@ displayed_sidebar: docs
 
 "dataSegment1" と "indexSegment"プロパティには、最大で4つの要素プロパティが格納されます: 
 
-```RAW
+```json
 "dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
 ```
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
 
 例えば、以下のオブジェクトが返ってきます:
 
-```undefined
+```json
 {
 "DB": {
 "diskReadBytes": {
@@ -124,7 +124,7 @@ displayed_sidebar: docs
 
 "tables" プロパティには、データベースが開かれて以来、読み込み・書き込みのいずれかでアクセスされたテーブルの数だけプロパティが格納されています。それぞれのプロパティ名は関連するテーブル名となっています。例えば: 
 
-```undefined
+```json
 "tables": {
     "Employees": {…)
     "Companies": {…)
@@ -145,7 +145,7 @@ displayed_sidebar: docs
    この属性はインデックスの使用には基づいていません。クエリや並べ替えが考慮の対象となります。  
    例: データベースが起動した瞬間から、複数のクエリと並べ替えが*CompID*、*Name* そして *FirstName* フィールドを使用して実行されてきました。返されたオブジェクトには以下のような"fileds"サブオブジェクトが格納されます(*options* 引数ではパスあり、履歴なしを指定しています):  
          
-   ```undefined  
+   ```json  
    {  
        "DB": {  
            "tables": {  
@@ -182,7 +182,7 @@ displayed_sidebar: docs
                   * "value" (数値): ミリ秒数  
                   * "history" (オブジェクト配列) (*options*引数でリクエストされた場合に限る): "value" と "time" の標準の履歴のプロパティ  
    例題: データベースが起動した瞬間から、単一のクエリがEmployees テーブル上で実行されてきました。(*options* 引数ではパスあり、履歴ありを指定しています):  
-   ```undefined  
+   ```json  
    {  
        "DB": {  
            "tables": {  
@@ -220,7 +220,7 @@ displayed_sidebar: docs
 
 例: データベースが起動したときから、\[Employees\]EmpLastName フィールドの複数のインデックスがアクセスされています。それに加え、\[Companies\] テーブル内で2レコードが作成され、16レコードが削除されました。このテーブルはインデックス付けがなされている"name" フィールドがあります。このテーブルはまた、このフィールドを使用してクエリと並び替えが行われました。返されるオブジェクトには、以下のようなデータが格納されます:
 
-```undefined
+```json
 "indexes": {
     "Employees": {
         "EmpLastName": {
@@ -306,7 +306,7 @@ displayed_sidebar: docs
 
 返されたオブジェクトには、以下の様な情報が含まれます:
 
-```undefined
+```json
 {
     "DB": {
         "cacheReadBytes": {

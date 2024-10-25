@@ -37,7 +37,7 @@ La commande **ACTIVITY SNAPSHOT** admet deux syntaxes :
 
 Avec cette syntaxe, toutes les opérations sont retournées sous forme structurée dans le tableau d’objets 4D *tabActivités*. Chaque élément du tableau est un objet construit de la manière suivante :
 
-```RAW
+```json
 [    {        "message":"xxx",        "maxValue":12321,        "currentValue":63212,        "interruptible:0,        "remote":0,        "uuid":"deadbeef",        "taskId":xxx,        "startTime":"2014-03-20 13:37:00:123",        "duration":92132,        "dbContextInfo":{            "task_id": xxx,            "user_name": Jean,            "host_name": HAL,            "task_name": "CreateIndexLocal",            "client_uid": "DE4DB33F33F"            "user4d_id ": 1,            "client_version ": 123456        },        "dbOperationDetails":{            table: "maTable"            field: "Champ_1"        },        "subOperations":[            {"message":"xxx",            ...}            ]    },    {...}]
 ```
 

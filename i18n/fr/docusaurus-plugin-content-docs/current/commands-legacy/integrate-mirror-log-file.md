@@ -54,7 +54,7 @@ Les cas d'erreurs non critiques sont les suivants :
 
 Lorsqu'une anomalie se produit en mode réparation auto, l'enregistrement concerné est automatiquement "réparé" et l'opération associée est enregistrée dans le paramètre *objErreur*. Une fois l'intégration terminée, le paramètre *objErreur* contient la liste de tous les enregistrements réparés. Il se compose d'un unique tableau d'objets nommé "operations", structuré de la manière suivante :
 
-```RAW
+```json
 {"operations":    [        {            "operationType":24,            "operationName":"Create record",            "operationNumber":2,            "contextID":48,            "timeStamp":"2015-07-10T07:53:02.413Z",            "dataLen":24,            "recordNumber":0,            "tableID":"F4CXXXXX",            "tableName":"Customers",            "fields": {                "1": 9,                "2": "test value",                "3": "2003-03-03T00:00:00.000Z",                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",                "8": "BlobID: 2"              }        },        {...}     ]
 ```
 

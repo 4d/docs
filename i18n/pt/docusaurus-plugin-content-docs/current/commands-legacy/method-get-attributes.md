@@ -40,7 +40,7 @@ Se você quiser obter os atributos do método de projeto *sendMail*, pode escrev
 
 Depois da execução, $att contém, por exemplo:
 
-```undefined
+```json
 {
     "invisible":false,
     "publishedWeb":false,
