@@ -28,7 +28,7 @@ As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 
 ---
 
-## Alto
+## Height
 
 Altura do formulário (em pixéis) quando o [tamanho do formulário](#size-based-on) é **Definir tamanho**.
 

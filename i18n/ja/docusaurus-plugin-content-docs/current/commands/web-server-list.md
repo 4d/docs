@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
-| 引数  | 型      |                            | 説明                                             |
-| --- | ------ | -------------------------- | ---------------------------------------------- |
-| 戻り値 | コレクション | &#8592; | Collection of the available Web Server objects |
+| 引数  | 型      |   | 説明                                             |
+| --- | ------ | - | ---------------------------------------------- |
+| 戻り値 | コレクション | ← | Collection of the available Web Server objects |
 
 <!-- END REF-->
 

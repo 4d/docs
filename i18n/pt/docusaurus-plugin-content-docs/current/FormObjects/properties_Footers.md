@@ -5,7 +5,7 @@ title: Rodapés
 
 ## Exibir rodapés
 
-Esta propiedad se utiliza para mostrar u ocultar [los pies de columna listbox](listbox_overview.md#list-box-footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
+Essa propriedade é usada para exibir ou ocultar [os rodapés de coluna list box](listbox_overview.md#list-box-footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
 
 #### Gramática JSON
 
@@ -19,18 +19,18 @@ Esta propiedad se utiliza para mostrar u ocultar [los pies de columna listbox](l
 
 ---
 
-## Alto
+## Height
 
-Esta propiedad se utiliza para definir la altura de línea de un pie de list box en **píxeles** o **líneas de texto** (cuando se muestra). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
+Esta propriedade é usada para definir a altura da linha para um rodapé de list box em **píxeis** ou em **linhas de texto** (quando exibido). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-- _Píxel_ - el valor de la altura se aplica directamente a la línea en cuestión, independientemente del tamaño de la fuente contenida en las columnas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
+- _Píxel_ - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
-- _Línea_ - la altura se calcula teniendo en cuenta el tamaño de la fuente de la línea en cuestión.
+- _Linha_ - a altura é calculada considerando o tamanho da fonte da linha em questão.
   - Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
   - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   - In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
 
-> > This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/List-box-footer-specific-properties.300-4354808.en.html) command.
+> Esta propriedade também pode ser configurada dinamicamente usando o comando [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/List-box-footer-specific-properties.300-4354808.en.html).
 
 Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is "Lucida grande 24", a height of "1 line" is converted to "30 pixels" and a height of "60 pixels" is converted to "2 lines".
 

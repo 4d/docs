@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Params-->
 
-| Parámetros | Tipo     |                            | Descripción                                              |
-| ---------- | -------- | -------------------------- | -------------------------------------------------------- |
-| name       | Text     | &#8594; | Name of process for which to retrieve the process number |
-| id         | Text     | &#8594 | ID of process for which to retrieve the process number   |
-| \*         | Operador | &#8594 | Return the process number from the server                |
-| Resultado  | Longint  | &#8592; | Process number                                           |
+| Parámetros | Tipo     |   | Descripción                                              |
+| ---------- | -------- | - | -------------------------------------------------------- |
+| name       | Text     | → | Name of process for which to retrieve the process number |
+| id         | Text     | → | ID of process for which to retrieve the process number   |
+| \*         | Operador | → | Return the process number from the server                |
+| Resultado  | Longint  | ← | Process number                                           |
 
 <!-- END REF-->
 

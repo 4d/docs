@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| 引数            | 型      |                            | 説明                            |
-| ------------- | ------ | :------------------------: | ----------------------------- |
-| processNumber | 整数     | &#8594; | Process number                |
-| 戻り値           | オブジェクト | &#8592; | Information about the process |
+| 引数            | 型      |     | 説明                            |
+| ------------- | ------ | :-: | ----------------------------- |
+| processNumber | 整数     |  →  | Process number                |
+| 戻り値           | オブジェクト |  ←  | Information about the process |
 
 <!-- END REF -->
 

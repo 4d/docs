@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
-| 引数                  | 型      |                            | 説明                                                |
-| ------------------- | ------ | -------------------------- | ------------------------------------------------- |
-| targetObj           | オブジェクト | &#8594; | Range or element or 4D Write Pro document         |
-| sectionOrSubsection | オブジェクト | &#8594 | Section or subsection of a 4D Write Pro document  |
-| attribName          | String | &#8594 | Name of attribute(s) to remove |
+| 引数                  | 型      |   | 説明                                                |
+| ------------------- | ------ | - | ------------------------------------------------- |
+| targetObj           | オブジェクト | → | Range or element or 4D Write Pro document         |
+| sectionOrSubsection | オブジェクト | → | Section or subsection of a 4D Write Pro document  |
+| attribName          | String | → | Name of attribute(s) to remove |
 
 <!-- END REF-->
 

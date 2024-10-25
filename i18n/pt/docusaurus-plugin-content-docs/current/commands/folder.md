@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| Parâmetro      | Tipo                       |                            | Descrição                                                         |
-| -------------- | -------------------------- | :------------------------: | ----------------------------------------------------------------- |
-| path           | Text                       | &#8594; | Folder path                                                       |
-| folderConstant | Integer                    | &#8594 | Constante Pasta 4D                                                |
-| pathType       | Integer                    | &#8594 | `fk posix path` (padrão) ou `fk platform path` |
-| \*             | operator                   | &#8594 | \* para devolver a pasta da base de dados do anfitrião            |
-| Resultados     | 4D. Folder | &#8592; | Novo Objeto Folder                                                |
+| Parâmetro      | Tipo                       |     | Descrição                                                         |
+| -------------- | -------------------------- | :-: | ----------------------------------------------------------------- |
+| path           | Text                       |  →  | Folder path                                                       |
+| folderConstant | Integer                    |  →  | Constante Pasta 4D                                                |
+| pathType       | Integer                    |  →  | `fk posix path` (padrão) ou `fk platform path` |
+| \*             | operator                   |  →  | \* para devolver a pasta da base de dados do anfitrião            |
+| Resultados     | 4D. Folder |  ←  | Novo Objeto Folder                                                |
 
 <!-- END REF -->
 

@@ -32,7 +32,7 @@ As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 | formSizeAnchor | string        | Nome do objeto a utilizar para definir o tamanho do formulário |
 
 ---
-## Alto
+## Height
 
 Altura do formulário (em pixéis) quando o [tamanho do formulário](#size-based-on) é **Definir tamanho**.
 
