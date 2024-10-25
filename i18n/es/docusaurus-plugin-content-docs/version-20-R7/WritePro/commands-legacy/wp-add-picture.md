@@ -52,7 +52,7 @@ Desea agregar una imagen con la configuración predeterminada utilizando un arch
 
 El resultado es:
 
-![](../../assets/en/WritePro/commands/pict3617325.EN.png)
+![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
 #### Ejemplo 2 
 
@@ -69,7 +69,7 @@ Desea agregar una imagen redimensionada, centrada y anclada al encabezado:
 
 El resultado es:
 
-![](../../assets/en/WritePro/commands/pict3617351.EN.png)  
+![](../../assets/en/WritePro/commands/pict3617351.en.png)  
 
 #### Ejemplo 3 
 
@@ -83,7 +83,7 @@ Usted desea utilizar una expresión campo para agregar una imagen anclada a un d
  WP SET ATTRIBUTES($obImage;wk image formula;Formula([Flowers]Image))
 ```
 
-![](../../assets/en/WritePro/commands/pict3841719.EN.png)
+![](../../assets/en/WritePro/commands/pict3841719.en.png)
 
 #### Ver también 
 

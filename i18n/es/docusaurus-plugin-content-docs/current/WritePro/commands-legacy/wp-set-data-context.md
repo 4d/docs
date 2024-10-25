@@ -64,7 +64,7 @@ Inserta un objeto en el contexto del documento de 4D Write Pro y muestra su info
 
 Este es el resultado:
 
-![](../../assets/en/WritePro/commands/pict5867255.EN.png)
+![](../../assets/en/WritePro/commands/pict5867255.en.png)
 
   
 //   
@@ -78,7 +78,7 @@ Cuando se trabaja con un documento plantilla, se puede asociar un contexto a él
 
 Una vez que se carga una plantilla y se establece el contexto de datos, una plantilla de carta podría tener el siguiente aspecto:
 
-![](../../assets/en/WritePro/commands/pict5867835.EN.png)
+![](../../assets/en/WritePro/commands/pict5867835.en.png)
 
 El siguiente ejemplo recorre una selección de entidades y crea una vista previa de impresión para cada entidad:
 

@@ -58,7 +58,7 @@ Desea designar un rango de celdas y fusionarlo:
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict6398108.EN.png)
+![](../../assets/en/WritePro/commands/pict6398108.en.png)
 
   
 Los datos existentes de las celdas originales se concatenan en la celda fusionada resultante.

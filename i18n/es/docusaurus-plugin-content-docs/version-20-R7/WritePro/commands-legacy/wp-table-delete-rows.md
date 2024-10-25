@@ -48,7 +48,7 @@ Desea eliminar dos líneas de la tabla *Invoice*. Este código:
 
 Eliminará las dos líneas de la ubicación inicial:
 
-![](../../assets/en/WritePro/commands/pict4680306.EN.png)
+![](../../assets/en/WritePro/commands/pict4680306.en.png)
 
 #### Ver también 
 

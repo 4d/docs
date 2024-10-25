@@ -63,7 +63,7 @@ En un documento en blanco, usted desea agregar una nueva tabla con 3 columnas y 
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict3306926.EN.png)
+![](../../assets/en/WritePro/commands/pict3306926.en.png)
 
 #### Ver también 
 

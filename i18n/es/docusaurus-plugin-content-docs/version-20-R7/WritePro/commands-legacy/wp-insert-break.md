@@ -81,7 +81,7 @@ Desea insertar un salto de sección continuo para tener una sección de una colu
 ```  
     
     
-![](../../assets/en/WritePro/commands/pict5562056.EN.png)
+![](../../assets/en/WritePro/commands/pict5562056.en.png)
 2. Defina el conteo de columnas a 2 para la primera sección:  
     
 ```4d  
@@ -90,7 +90,7 @@ Desea insertar un salto de sección continuo para tener una sección de una colu
 ```  
     
     
-![](../../assets/en/WritePro/commands/pict5562058.EN.png)
+![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
 #### Ver también 
 

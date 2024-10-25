@@ -58,7 +58,7 @@ Desea designar un rango de celdas (que contenga algunas celdas ya combinadas) y 
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict6398103.EN.png)
+![](../../assets/en/WritePro/commands/pict6398103.en.png)
 
 Los datos de la celda ya fusionada se mantienen todos en la primera celda (superior izquierda) después de la división, las otras celdas resultantes de la división permanecen vacías.
 

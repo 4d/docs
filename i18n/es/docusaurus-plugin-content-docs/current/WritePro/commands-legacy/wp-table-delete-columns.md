@@ -48,7 +48,7 @@ Desea eliminar una columna de la tabla *Invoice*. Este código:
 
 Eliminará la columna de la ubicación correcta:
 
-![](../../assets/en/WritePro/commands/pict4680318.EN.png)
+![](../../assets/en/WritePro/commands/pict4680318.en.png)
 
 #### Ver también 
 

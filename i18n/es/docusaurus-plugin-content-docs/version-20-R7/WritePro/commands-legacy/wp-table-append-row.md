@@ -42,7 +42,7 @@ Desea crear una tabla vacía y agregar varias filas de diferentes tamaños. Pued
  $wpRow3:=WP Table append row($wpTable;"Mary";"Trenton";18;"New!")
 ```
 
-![](../../assets/en/WritePro/commands/pict3306976.EN.png)
+![](../../assets/en/WritePro/commands/pict3306976.en.png)
 
 #### Ejemplo 2 
 
@@ -73,7 +73,7 @@ $wpRange:=WP Text range(4DWPArea;wk start text;wk end text)
 
 ```
 
-![](../../assets/en/WritePro/commands/pict3369663.EN.png)
+![](../../assets/en/WritePro/commands/pict3369663.en.png)
 
 #### Ver también 
 

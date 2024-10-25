@@ -53,7 +53,7 @@ Desea insertar tres columnas después de la primera columna en la tabla *Invoice
 
 Insertará las nuevas columnas en la ubicación correcta:
 
-![](../../assets/en/WritePro/commands/pict4680283.EN.png)  
+![](../../assets/en/WritePro/commands/pict4680283.en.png)  
   
   
 

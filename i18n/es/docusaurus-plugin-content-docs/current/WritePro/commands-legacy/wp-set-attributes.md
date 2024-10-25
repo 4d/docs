@@ -35,7 +35,7 @@ Puede pasar tantos pares de *nomAtrib*/ *valorAtrib* como desee.
 
 En esta área 4D Write Pro, usted selecciona una palabra:
 
-![](../../assets/en/WritePro/commands/pict2643639.EN.png)
+![](../../assets/en/WritePro/commands/pict2643639.en.png)
 
 Si ejecuta el siguiente código:
 
@@ -54,7 +54,7 @@ Si ejecuta el siguiente código:
 
 Obtiene el siguiente resultado:
 
-![](../../assets/en/WritePro/commands/pict2643642.EN.png)
+![](../../assets/en/WritePro/commands/pict2643642.en.png)
 
 #### Ejemplo 2 
 
@@ -69,7 +69,7 @@ Este ejemplo ilustra el uso de las constantes wk inside y wk outside:
 
 Suponiendo que todo el contenido fue seleccionado, el resultado es:
 
-![](../../assets/en/WritePro/commands/pict2821715.EN.png)
+![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
 #### Ejemplo 3 
 
@@ -86,7 +86,7 @@ Usted desea definir una imagen de fondo para el documento:
 
 El resultado es:
 
-![](../../assets/en/WritePro/commands/pict3514231.EN.png)
+![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
 Usted desea definir una imagen de fondo que cubre todo el área imprimible:
 
@@ -103,7 +103,7 @@ Usted desea definir una imagen de fondo que cubre todo el área imprimible:
 
 El resultado es:
 
-![](../../assets/en/WritePro/commands/pict3514233.EN.png)
+![](../../assets/en/WritePro/commands/pict3514233.en.png)
 
 **Nota**: el valor paper box sólo es aplicable a documentos y secciones.
 
@@ -146,7 +146,7 @@ Usted desea definir pestañas en intervalos variables y designar diferentes cara
 
 El resultado es:
 
-![](../../assets/en/WritePro/commands/pict3634557.EN.png)
+![](../../assets/en/WritePro/commands/pict3634557.en.png)
 
 #### Ver también 
 

@@ -56,7 +56,7 @@ Desea insertar dos líneas al final de la tabla *Invoice*:
 
 Insertará las dos filas nuevas en la ubicación correcta:
 
-![](../../assets/en/WritePro/commands/pict4680266.EN.png) 
+![](../../assets/en/WritePro/commands/pict4680266.en.png) 
 
 #### Ver también 
 

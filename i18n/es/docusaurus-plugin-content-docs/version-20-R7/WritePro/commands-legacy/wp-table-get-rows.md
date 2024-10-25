@@ -68,7 +68,7 @@ Desea definir un color de fondo específico para las dos primeras líneas de una
 ```
 
   
-![](../../assets/en/WritePro/commands/pict3307142.EN.png)
+![](../../assets/en/WritePro/commands/pict3307142.en.png)
 
 #### Ejemplo 2 
 

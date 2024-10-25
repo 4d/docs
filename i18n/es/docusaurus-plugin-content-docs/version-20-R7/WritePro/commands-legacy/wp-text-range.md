@@ -42,7 +42,7 @@ En *rangoInicio* y *rangoFin*, pase los valores correspondientes a la posición 
 
 Usted desea seleccionar un rango de 12 caracteres comenzando desde el principio del campo 4D Write Pro. El campo se muestra en un objeto de formulario:
 
-![](../../assets/en/WritePro/commands/pict2644268.EN.png)
+![](../../assets/en/WritePro/commands/pict2644268.en.png)
 
 Si ejecuta:
 
@@ -53,7 +53,7 @@ Si ejecuta:
 
 ...el resultado es:
 
-![](../../assets/en/WritePro/commands/pict2644270.EN.png)
+![](../../assets/en/WritePro/commands/pict2644270.en.png)
 
 #### Ejemplo 2 
 

@@ -58,7 +58,7 @@ Usted desea modificar algunos atributos de las dos últimas columnas de una tabl
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict3307213.EN.png)
+![](../../assets/en/WritePro/commands/pict3307213.en.png)
 
 #### Ejemplo 2 
 

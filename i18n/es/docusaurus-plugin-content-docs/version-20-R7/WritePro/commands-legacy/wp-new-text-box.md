@@ -58,7 +58,7 @@ Desea crear una caja de texto vacía por defecto:
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict6196750.EN.png)
+![](../../assets/en/WritePro/commands/pict6196750.en.png)
 
 #### Ejemplo 2 
 
@@ -91,7 +91,7 @@ En una plantilla de una carta, desea añadir una caja de texto para mostrar la d
 
 Resultado:
 
-![](../../assets/en/WritePro/commands/pict6196766.EN.png)
+![](../../assets/en/WritePro/commands/pict6196766.en.png)
 
 #### Ver también 
 
