@@ -4,23 +4,23 @@ import Link from '@docusaurus/Link';
 
 const localizedLinks = {
   "homepage.sections.core-development.langage-ref-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.en.html',
+    message: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Language-Reference.100-7241753.en.html',
     id: 'homepage.sections.core-development.langage-ref-url',
   }),
   "homepage.sections.textensions.4D-Write-Pro-Reference-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html',
+    message: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Write-Pro-Reference.100-7239607.en.html',
     id: 'homepage.sections.textensions.4D-Write-Pro-Reference-url',
   }),
   "homepage.sections.textensions.4D-Progress-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Progress.100-7183762.en.html',
+    message: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Progress.100-7455831.en.html',
     id: 'homepage.sections.textensions.4D-Progress-url',
   }),
   "homepage.sections.textensions.4D-SVG-Component-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-SVG-Component.100-7184636.en.html',
+    message: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-SVG-Component.100-7456702.en.html',
     id: 'homepage.sections.textensions.4D-SVG-Component-url',
   }),
   "homepage.sections.textensions.4D-Widgets-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Widgets.100-7185285.en.html',
+    message: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Widgets.100-7457351.en.html',
     id: 'homepage.sections.textensions.4D-Widgets-url',
   }),
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
@@ -81,14 +81,8 @@ const Sections = [
          <Link to="ORDA/overview" >
           <Translate>Object Relational Data Access (ORDA)</Translate>
         </Link>
-       <Link to="Concepts/about">
-          <Translate>Language Concepts</Translate>
-        </Link>
-       <Link to={localizedLinks["homepage.sections.core-development.langage-ref-url"]} >
-          <Translate>Language Reference (4D Doc Center)</Translate>
-        </Link>
-        <Link to="API/overview" >
-          <Translate>Class Functions</Translate>
+       <Link to="category/language">
+          <Translate>Language</Translate>
         </Link>
         <Link to="Develop/processes" >
           <Translate>Processes</Translate>
@@ -156,11 +150,8 @@ const Sections = [
         <Link to="ViewPro/getting-started">
           <Translate>4D View Pro</Translate>
         </Link>
-         <Link to={localizedLinks["homepage.sections.textensions.4D-Write-Pro-Reference-url"]}>
+        <Link to="category/4d-write-pro">
           <Translate>4D Write Pro</Translate>
-        </Link>
-        <Link to="WritePro/writeprointerface">
-          <Translate>4D Write Pro Interface</Translate>
         </Link>
        <Link to="https://github.com/4d/4D-Mobile-App-Server">
           <Translate>4D Mobile App Server</Translate>

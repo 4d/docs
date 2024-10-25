@@ -135,6 +135,13 @@ module.exports =
 {
 	type: "category",
 	label: "Language",
+	link: {
+		type: 'generated-index',
+		title: 'Language',
+		slug: '/category/language',
+		keywords: ['language'],
+		image: '/img/docusaurus.png',
+		},
 	items: [
 		{
 			type: "category",
@@ -2487,22 +2494,22 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D NetKit', // The link label
-						  href: 'https://github.com/4d/4D-NetKit/tree/20R6',
+						  href: 'https://developer.4d.com/4D-NetKit/',
 						},
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Progress.100-7183762.en.html',
+						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Progress.100-7455831.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-SVG-Component.100-7184636.en.html',
+						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-SVG-Component.100-7456702.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Widgets.100-7185285.en.html',
+						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Widgets.100-7457351.en.html',
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
