@@ -46,18 +46,18 @@ Les collections doivent avoir été instanciées, sinon toute tentative de lectu
 
 L'instanciation d'une collection peut se faire de l'une des manières suivantes :
 
-- using the [`New collection`](../commands/new-collection.md) command,
+- en utilisant la commande [`New collection`](../commands/new-collection.md),
 - en utilisant l'opérateur `[]`.
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). Dans ce cas, il n'est pas nécessaire d'instancier explicitement la collection, le langage 4D le fait pour vous.
+Plusieurs commandes et fonctions 4D renvoient des collections, par exemple [`Monitored activity`](../commandes-legacy/monitored-activity.md) ou [`collection.copy`](../API/CollectionClass.md#copy). Dans ce cas, il n'est pas nécessaire d'instancier explicitement la collection, le langage 4D le fait pour vous.
 
 :::
 
 ### Commande `New collection`
 
-The [`New collection`](../commands/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
+La commande [`New collection`](../commands/new-collection.md) crée une nouvelle collection vide ou préremplie et renvoie sa référence.
 
 Exemples :
 
@@ -105,8 +105,8 @@ Si vous créez une collection littérale contenant un seul élément, assurez-vo
 
 Vous pouvez créer deux types de collections :
 
-- regular (non-shared) collections, using the [`New collection`](commands/new-collection.md) command or collection literal syntax (`[]`). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
-- shared collections, using the [`New shared collection`](commands/new-shared-collection.md) command. Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections est contrôlé par des structures [`Use...End use`](Concepts/shared.md#useend-use).
+- les collections standard (non partagées), en utilisant la commande [`New collection`] (../commands/new-collection.md) ou la syntaxe littérale des collections (`[]`). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
+- les collections partagées, en utilisant la commande [`New shared collection`] (../commands/new-shared-collection.md). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections est contrôlé par des structures [`Use...End use`](Concepts/shared.md#useend-use).
 
 Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
