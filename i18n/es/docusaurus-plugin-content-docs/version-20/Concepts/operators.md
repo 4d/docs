@@ -135,7 +135,7 @@ $x3/=2 // $x3=5
 
 // Multiplication
 $x2:=10
-$x2*=5 // $x2=10
+$x2*=5 // $x2=50
 
 $t2:="Hello" 
 $t2*=2 // $t2="HelloHello"
@@ -155,7 +155,7 @@ $x3/=2 // $x3=5
 
 // Multiplicación
 $x2:=10
-$x2*=5 // $x2=10
+$x2*=5 // $x2=50
 
 $t2:="Hello" 
 $t2*=2 // $t2="HelloHello"
