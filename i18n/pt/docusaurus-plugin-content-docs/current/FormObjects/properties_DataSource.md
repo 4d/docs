@@ -18,7 +18,7 @@ Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" qu
 
 ![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-> If the list was created from a list defined in Design mode, the original list is not modified.
+> If the choice list was created from a list defined in Design mode, the original list is not modified.
 
 #### Gramática JSON
 
@@ -122,9 +122,9 @@ Veja também [**Tipo de expressão**](properties_Object.md#expression-type).
 
 #### Gramática JSON
 
-| Nome               | Tipo de dados | Valores possíveis                                                                                                                                                                                                                       |
-| ------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string        | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| Nome               | Tipo de dados | Valores possíveis                                                                                                                                                                                                                         |
+| ------------------ | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string        | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Somente array/list box seleção*: "integer", "object"</li><li>**listas suspensas:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### Objectos suportados
 
@@ -134,20 +134,20 @@ Veja também [**Tipo de expressão**](properties_Object.md#expression-type).
 
 ## Tipo de dados (lista)
 
-Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). Esta propriedade é utilizada com:
+Define o tipo de dados a serem salvos no campo ou na variável associada à [lista suspensa](dropdownList_Overview.md). Esta propriedade é utilizada com:
 
-- Listas desplegables [asociadas a una lista de opciones](dropdownList_Overview.md#using-a-choice-list).
-- Listas desplegables [asociadas a una lista de selección jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
+- Listas suspensas [associadas a uma lista de opções](dropdownList_Overview.md#using-a-choice-list).
+- Listas desdobráveis [associadas a una lista de selección jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
 
 Estão disponíveis três opções:
 
-- **Referencia de lista**: declara que la lista desplegable es jerárquica. Significa que la lista desplegable puede mostrar hasta dos niveles jerárquicos y su contenido puede gestionarse mediante los comandos del lenguaje 4D del tema **Listas jerárquicas**.
-- **Valor del elemento seleccionado** (por defecto): la lista desplegable no es jerárquica y el valor del elemento elegido en la lista por el usuario se guarda directamente. For example, if the user chooses the value "Blue", then this value is saved in the field.
-- **Referencia del elemento seleccionado**: la lista desplegable no es jerárquica y la referencia del elemento de la lista de selección se guarda en el objeto. This reference is the numeric value associated with each item either through the _itemRef_ parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor. This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
+- **Referência de lista**: declara que a lista suspensa é hierárquica. Isso significa que a lista suspensa pode exibir até dois níveis hierárquicos e seu conteúdo pode ser gerenciado pelos comandos de linguagem 4D do tema **Listas hierárquicas**.
+- **Valor do item selecionado** (padrão): a lista suspensa não é hierárquica e o valor do item escolhido na lista pelo usuário é salvo diretamente. For example, if the user chooses the value "Blue", then this value is saved in the field.
+- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro _itemRef_ dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas. This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
 
-La utilización de la opción **Referencia del elemento seleccionado** requiere el cumplimiento de los siguientes principios:
+O uso da opção **Referência de item selecionado** exige a conformidade com os seguintes princípios:
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). La propiedad [expresión ](properties_Object.md#expression-type) se define automáticamente.
+- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). A propriedade [expressão](properties_Object.md#expression-type) é definida automaticamente.
 - Devem ser associadas referências válidas e únicas aos itens da lista.
 - A lista pendente deve estar associada a um campo ou a uma variável.
 
@@ -157,25 +157,25 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 | ------ | ------------- | -------------------- |
 | saveAs | string        | "value", "reference" |
 
-> Definir sólo `"dataSourceTypeHint" : "integer"` con un `"type": "dropdown"` objeto de formulario declarará una lista desplegable jerárquica.
+> Definir apenas `"dataSourceTypeHint" : "integer"` com um objeto de formulário `"type": "dropdown"` declarará uma lista suspensa hierárquica.
 
 #### Objectos suportados
 
-[Listas desplegables](dropdownList_Overview.md) asociadas a listas
+[Listas suspensas](dropdownList_Overview.md) associadas a listas
 
 ---
 
 ## Valores padrão (lista de)
 
-List of values that will be used as default values for the list box column (array type only). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
+List of values that will be used as default values for the list box column (array type only). Esses valores estão automaticamente disponíveis na [variable array](properties_Object.md#variable-or-expression) associada a essa coluna quando o formulário é executado. Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
 
-> No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
+> Não faça confusão entre esta propriedade e a propriedade "[valor padrão](properties_RangeOfValues.md#default-list-of-values)" que permite definir um valor de campo em novos registros.
 
 É necessário introduzir uma lista de valores. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
 ![](../assets/en/FormObjects/defaultValues.png)
 
-> También puede definir una [lista de selección](properties_DataSource.md#choice-list) con la columna list box. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
+> Você também pode definir uma [lista de opções](properties_DataSource.md#choice-list) com a coluna de list box. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
 
 #### Gramática JSON
 
@@ -185,13 +185,14 @@ List of values that will be used as default values for the list box column (arra
 
 #### Objectos suportados
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[Coluna List Box (somente tipo array)](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Expression
 
-This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
+Essa descrição é específica para colunas de list box do tipo [seleção](listbox_overview.md#selection-list-boxes)
+e [collection](listbox_overview.md#collection-or-entity-selection-list-boxes). Consulte também a seção **[Variable or Expression](properties_Object.md#variable-or-expression)**.
 
 Uma expressão 4D a associar a uma coluna. Você pode entrar:
 
@@ -265,13 +266,13 @@ Esta propriedade está disponível nas seguintes condições:
 This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
 
 - **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. For example, if the user chooses the value "Blue", then this value is saved in the field.
-- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. This reference is the numeric value associated with each item either through the _itemRef_ parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor.
+- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro _itemRef_ dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas.
 
 This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
 
 A utilização deste bem exige o cumprimento dos seguintes princípios:
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). La propiedad [expresión ](properties_Object.md#expression-type) se define automáticamente.
+- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). A propriedade [expressão](properties_Object.md#expression-type) é definida automaticamente.
 - Devem ser associadas referências válidas e únicas aos itens da lista.
 
 #### Gramática JSON
