@@ -61,8 +61,7 @@ module.exports = {
               banner: 'none',
             },
           },
-          //includeCurrentVersion: isProduction ? false : true, // false for prod only
-          includeCurrentVersion: false, // false for prod only
+          includeCurrentVersion: isProduction ? false : true, // false for prod only
         },
         theme: {
           customCss: [require.resolve('./src/css/customTheme.css')],
