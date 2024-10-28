@@ -274,7 +274,7 @@ La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificado
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -532,7 +532,7 @@ Esta propiedad es **sólo lectura** en sí misma pero devuelve un objeto de lect
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -580,7 +580,7 @@ End use
 La propiedad `.userName` contiene <!-- REF #SessionClass.userName.Summary -->el nombre de usuario asociado a la sesión<!-- END REF -->. Puede utilizarlo para identificar al usuario dentro de su código.
 
 - Con las sesiones web, esta propiedad es una cadena vacía por defecto. Puede definirse mediante la propiedad `privileges` de la función [`setPrivileges()`](#setprivileges).
-- Con sesiones remotas y de procedimientos almacenados, esta propiedad devuelve el mismo nombre de usuario que el comando [`Current userl`](https://doc.4d.com/4dv20/help/command/en/page182.html).
+- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
 
 Esta propiedad es **solo lectura**.
 
