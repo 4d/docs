@@ -15,7 +15,7 @@ title: Email
 
 `Email` オブジェクトは SMTP [`.send()`](SMTPTransporterClass.md#send) 関数を使って送信します。
 
-[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
+[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) および [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) コマンドは、MIME コンテンツから `Email` オブジェクトに、またはその逆の変換をおこなうのに使用できます。
 
 ### Email オブジェクト
 
