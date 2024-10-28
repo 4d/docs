@@ -273,7 +273,7 @@ End if
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -531,7 +531,7 @@ End if
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -579,7 +579,7 @@ End use
 `.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
 - Webセッションでは、このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
-- リモートおよびストアドプロシージャーセッションでは、このプロパティは [`Current user`](https://doc.4d.com/4dv20/help/command/ja/page182.html) コマンドと同じユーザー名を返します。
+- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
 
 このプロパティは **読み取り専用** です。
 
