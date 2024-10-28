@@ -16,8 +16,10 @@ title: Index
 [`Abs`](../commands-legacy/abs.md)<br/>
 [`ACCEPT`](../commands-legacy/accept.md)<br/>
 [`ACCUMULATE`](../commands-legacy/accumulate.md)<br/>
+[`Action info`](../commands-legacy/action-info.md)<br/>
 [`Activated`](../commands-legacy/activated.md)<br/>
 [`Active transaction`](../commands-legacy/active-transaction.md)<br/>
+[`ACTIVITY SNAPSHOT`](../commands-legacy/activity-snapshot.md)<br/>
 [`ADD RECORD`](../commands-legacy/add-record.md)<br/>
 [`Add to date`](../commands-legacy/add-to-date.md)<br/>
 [`ADD TO SET`](../commands-legacy/add-to-set.md)<br/>
@@ -33,6 +35,7 @@ title: Index
 [`APPEND TO ARRAY`](../commands-legacy/append-to-array.md)<br/>
 [`APPEND TO LIST`](../commands-legacy/append-to-list.md)<br/>
 [`Application file`](../commands-legacy/application-file.md)<br/>
+[`Application info`](../commands-legacy/application-info.md)<br/>
 [`Application type`](../commands-legacy/application-type.md)<br/>
 [`Application version`](../commands-legacy/application-version.md)<br/>
 [`APPLY TO SELECTION`](../commands-legacy/apply-to-selection.md)<br/>
@@ -58,6 +61,7 @@ title: Index
 <a id="B"><b>B</b></a>
 
 [`BACKUP`](../commands-legacy/backup.md)<br/>
+[`BACKUP INFO`](../commands-legacy/backup-info.md)<br/>
 [`BASE64 DECODE`](../commands-legacy/base64-decode.md)<br/>
 [`BASE64 ENCODE`](../commands-legacy/base64-encode.md)<br/>
 [`BEEP`](../commands-legacy/beep.md)<br/>
@@ -85,6 +89,7 @@ title: Index
 <a id="C"><b>C</b></a>
 
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
+[`Call chain`](../commands-legacy/call-chain.md)<br/>
 [`CALL FORM`](../commands-legacy/call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>
 [`CALL WORKER`](../commands-legacy/call-worker.md)<br/>
@@ -179,6 +184,7 @@ title: Index
 
 [`Data file`](../commands-legacy/data-file.md)<br/>
 [`Data file encryption status`](../commands-legacy/data-file-encryption-status.md)<br/>
+[`Database measures`](../commands-legacy/database-measures.md)<br/>
 [`Date`](../commands-legacy/date.md)<br/>
 [`Day number`](../commands-legacy/day-number.md)<br/>
 [`Day of`](../commands-legacy/day-of.md)<br/>
@@ -347,22 +353,16 @@ title: Index
 [`Generate UUID`](../commands-legacy/generate-uuid.md)<br/>
 [`Get 4D file`](../commands-legacy/get-4d-file.md)<br/>
 [`Get 4D folder`](../commands-legacy/get-4d-folder.md)<br/>
-[`Get action info`](../commands-legacy/get-action-info.md)<br/>
-[`GET ACTIVITY SNAPSHOT`](../commands-legacy/get-activity-snapshot.md)<br/>
 [`Get adjusted blobs cache priority`](../commands-legacy/get-adjusted-blobs-cache-priority.md)<br/>
 [`Get adjusted index cache priority`](../commands-legacy/get-adjusted-index-cache-priority.md)<br/>
 [`Get adjusted table cache priority`](../commands-legacy/get-adjusted-table-cache-priority.md)<br/>
 [`GET ALLOWED METHODS`](../commands-legacy/get-allowed-methods.md)<br/>
 [`Get application color scheme`](../commands-legacy/get-application-color-scheme.md)<br/>
-[`Get application info`](../commands-legacy/get-application-info.md)<br/>
 [`Get assert enabled`](../commands-legacy/get-assert-enabled.md)<br/>
 [`GET AUTOMATIC RELATIONS`](../commands-legacy/get-automatic-relations.md)<br/>
-[`GET BACKUP INFORMATION`](../commands-legacy/get-backup-information.md)<br/>
 [`Get cache size`](../commands-legacy/get-cache-size.md)<br/>
-[`Get call chain`](../commands-legacy/get-call-chain.md)<br/>
 [`Get current printer`](../commands-legacy/get-current-printer.md)<br/>
 [`Get database localization`](../commands-legacy/get-database-localization.md)<br/>
-[`Get database measures`](../commands-legacy/get-database-measures.md)<br/>
 [`Get database parameter`](../commands-legacy/get-database-parameter.md)<br/>
 [`Get default user`](../commands-legacy/get-default-user.md)<br/>
 [`GET DOCUMENT ICON`](../commands-legacy/get-document-icon.md)<br/>
@@ -382,14 +382,7 @@ title: Index
 [`GET HIGHLIGHT`](../commands-legacy/get-highlight.md)<br/>
 [`GET HIGHLIGHTED RECORDS`](../commands-legacy/get-highlighted-records.md)<br/>
 [`Get indexed string`](../commands-legacy/get-indexed-string.md)<br/>
-[`GET LAST ERROR STACK`](../commands-legacy/get-last-error-stack.md)<br/>
-[`Get last field number`](../commands-legacy/get-last-field-number.md)<br/>
-[`Get last query path`](../commands-legacy/get-last-query-path.md)<br/>
-[`Get last query plan`](../commands-legacy/get-last-query-plan.md)<br/>
-[`Get last table number`](../commands-legacy/get-last-table-number.md)<br/>
 [`Get last update log path`](../commands-legacy/get-last-update-log-path.md)<br/>
-[`Get license info`](../commands-legacy/get-license-info.md)<br/>
-[`Get license usage`](../commands-legacy/get-license-usage.md)<br/>
 [`GET LIST ITEM`](../commands-legacy/get-list-item.md)<br/>
 [`Get list item font`](../commands-legacy/get-list-item-font.md)<br/>
 [`GET LIST ITEM ICON`](../commands-legacy/get-list-item-icon.md)<br/>
@@ -397,11 +390,7 @@ title: Index
 [`GET LIST ITEM PARAMETER ARRAYS`](../commands-legacy/get-list-item-parameter-arrays.md)<br/>
 [`GET LIST ITEM PROPERTIES`](../commands-legacy/get-list-item-properties.md)<br/>
 [`GET LIST PROPERTIES`](../commands-legacy/get-list-properties.md)<br/>
-[`Get localized document path`](../commands-legacy/get-localized-document-path.md)<br/>
-[`Get localized string`](../commands-legacy/get-localized-string.md)<br/>
-[`Get locked records info`](../commands-legacy/get-locked-records-info.md)<br/>
 [`GET MACRO PARAMETER`](../commands-legacy/get-macro-parameter.md)<br/>
-[`GET MEMORY STATISTICS`](../commands-legacy/get-memory-statistics.md)<br/>
 [`Get menu bar reference`](../commands-legacy/get-menu-bar-reference.md)<br/>
 [`Get menu item`](../commands-legacy/get-menu-item.md)<br/>
 [`GET MENU ITEM ICON`](../commands-legacy/get-menu-item-icon.md)<br/>
@@ -415,8 +404,6 @@ title: Index
 [`GET MENU ITEMS`](../commands-legacy/get-menu-items.md)<br/>
 [`Get menu title`](../commands-legacy/get-menu-title.md)<br/>
 [`GET MISSING TABLE NAMES`](../commands-legacy/get-missing-table-names.md)<br/>
-[`Get Monitored Activity`](../commands-legacy/get-monitored-activity.md)<br/>
-[`GET MOUSE`](../commands-legacy/get-mouse.md)<br/>
 [`GET PASTEBOARD DATA`](../commands-legacy/get-pasteboard-data.md)<br/>
 [`GET PASTEBOARD DATA TYPE`](../commands-legacy/get-pasteboard-data-type.md)<br/>
 [`Get picture file name`](../commands-legacy/get-picture-file-name.md)<br/>
@@ -434,7 +421,6 @@ title: Index
 [`GET PRINTABLE AREA`](../commands-legacy/get-printable-area.md)<br/>
 [`GET PRINTABLE MARGIN`](../commands-legacy/get-printable-margin.md)<br/>
 [`Get printed height`](../commands-legacy/get-printed-height.md)<br/>
-[`Get process activity`](../commands-legacy/get-process-activity.md)<br/>
 [`GET PROCESS VARIABLE`](../commands-legacy/get-process-variable.md)<br/>
 [`GET QUERY DESTINATION`](../commands-legacy/get-query-destination.md)<br/>
 [`Get query limit`](../commands-legacy/get-query-limit.md)<br/>
@@ -443,16 +429,12 @@ title: Index
 [`GET RESOURCE`](../commands-legacy/get-resource.md)<br/>
 [`Get resource name`](../commands-legacy/get-resource-name.md)<br/>
 [`Get resource properties`](../commands-legacy/get-resource-properties.md)<br/>
-[`GET RESTORE INFORMATION`](../commands-legacy/get-restore-information.md)<br/>
 [`Get selected menu item parameter`](../commands-legacy/get-selected-menu-item-parameter.md)<br/>
-[`GET SERIAL INFORMATION`](../commands-legacy/get-serial-information.md)<br/>
 [`GET SERIAL PORT MAPPING`](../commands-legacy/get-serial-port-mapping.md)<br/>
 [`Get string resource`](../commands-legacy/get-string-resource.md)<br/>
 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md)<br/>
 [`Get subrecord key`](../commands-legacy/get-subrecord-key.md)<br/>
 [`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md)<br/>
-[`Get system info`](../commands-legacy/get-system-info.md)<br/>
-[`Get table fragmentation`](../commands-legacy/get-table-fragmentation.md)<br/>
 [`GET TABLE PROPERTIES`](../commands-legacy/get-table-properties.md)<br/>
 [`GET TABLE TITLES`](../commands-legacy/get-table-titles.md)<br/>
 [`Get text from pasteboard`](../commands-legacy/get-text-from-pasteboard.md)<br/>
@@ -549,7 +531,11 @@ title: Index
 <a id="L"><b>L</b></a>
 
 [`Last errors`](../commands-legacy/last-errors.md)<br/>
+[`Last field number`](../commands-legacy/last-field-number.md)<br/>
+[`Last query path`](../commands-legacy/last-query-path.md)<br/>
+[`Last query plan`](../commands-legacy/last-query-plan.md)<br/>
 [`LAST RECORD`](../commands-legacy/last-record.md)<br/>
+[`Last table number`](../commands-legacy/last-table-number.md)<br/>
 [`LAUNCH EXTERNAL PROCESS`](../commands-legacy/launch-external-process.md)<br/>
 [`LDAP LOGIN`](../commands-legacy/ldap-login.md)<br/>
 [`LDAP LOGOUT`](../commands-legacy/ldap-logout.md)<br/>
@@ -557,6 +543,8 @@ title: Index
 [`LDAP SEARCH ALL`](../commands-legacy/ldap-search-all.md)<br/>
 [`Length`](../commands-legacy/length.md)<br/>
 [`Level`](../commands-legacy/level.md)<br/>
+[`License info`](../commands-legacy/license-info.md)<br/>
+[`License usage`](../commands-legacy/license-usage.md)<br/>
 [`List item parent`](../commands-legacy/list-item-parent.md)<br/>
 [`List item position`](../commands-legacy/list-item-position.md)<br/>
 [`LIST OF CHOICE LISTS`](../commands-legacy/list-of-choice-lists.md)<br/>
@@ -627,8 +615,11 @@ title: Index
 [`LOAD RECORD`](../commands-legacy/load-record.md)<br/>
 [`LOAD SET`](../commands-legacy/load-set.md)<br/>
 [`LOAD VARIABLES`](../commands-legacy/load-variables.md)<br/>
+[`Localized document path`](../commands-legacy/localized-document-path.md)<br/>
+[`Localized string`](../commands-legacy/localized-string.md)<br/>
 [`Locked`](../commands-legacy/locked.md)<br/>
 [`LOCKED BY`](../commands-legacy/locked-by.md)<br/>
+[`Locked records info`](../commands-legacy/locked-records-info.md)<br/>
 [`Log`](../commands-legacy/log.md)<br/>
 [`LOG EVENT`](../commands-legacy/log-event.md)<br/>
 [`Log File`](../commands-legacy/log-file.md)<br/>
@@ -648,6 +639,7 @@ title: Index
 [`Match regex`](../commands-legacy/match-regex.md)<br/>
 [`Max`](../commands-legacy/max.md)<br/>
 [`MAXIMIZE WINDOW`](../commands-legacy/maximize-window.md)<br/>
+[`MEMORY STATISTICS`](../commands-legacy/memory-statistics.md)<br/>
 [`Menu bar height`](../commands-legacy/menu-bar-height.md)<br/>
 [`Menu bar screen`](../commands-legacy/menu-bar-screen.md)<br/>
 [`Menu selected`](../commands-legacy/menu-selected.md)<br/>
@@ -682,7 +674,9 @@ title: Index
 [`Modified record`](../commands-legacy/modified-record.md)<br/>
 [`MODIFY RECORD`](../commands-legacy/modify-record.md)<br/>
 [`MODIFY SELECTION`](../commands-legacy/modify-selection.md)<br/>
+[`Monitored activity`](../commands-legacy/monitored-activity.md)<br/>
 [`Month of`](../commands-legacy/month-of.md)<br/>
+[`MOUSE POSITION`](../commands-legacy/mouse-position.md)<br/>
 [`MOVE DOCUMENT`](../commands-legacy/move-document.md)<br/>
 [`MULTI SORT ARRAY`](../commands-legacy/multi-sort-array.md)<br/>
 
@@ -901,8 +895,9 @@ title: Index
 [`Printing page`](../commands-legacy/printing-page.md)<br/>
 [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)<br/>
 [`Process aborted`](../commands-legacy/process-aborted.md)<br/>
-[`Process number`](../commands-legacy/process-number.md)<br/>
-[`PROCESS PROPERTIES`](../commands-legacy/process-properties.md)<br/>
+[`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
+[`Process info`](process-info.md) - **new 4D 20 R7**<br/>
+[`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
 [`Process state`](../commands-legacy/process-state.md)<br/>
 [`PUSH RECORD`](../commands-legacy/push-record.md)<br/>
 
@@ -1010,6 +1005,7 @@ title: Index
 [`RESOURCE TYPE LIST`](../commands-legacy/resource-type-list.md)<br/>
 [`RESTART 4D`](../commands-legacy/restart-4d.md)<br/>
 [`RESTORE`](../commands-legacy/restore.md)<br/>
+[`RESTORE INFO`](../commands-legacy/restore-info.md)<br/>
 [`RESUME INDEXES`](../commands-legacy/resume-indexes.md)<br/>
 [`RESUME PROCESS`](../commands-legacy/resume-process.md)<br/>
 [`RESUME TRANSACTION`](../commands-legacy/resume-transaction.md)<br/>
@@ -1064,7 +1060,8 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
-[`Session storage by ID`](../commands-legacy/session-storage-by-id.md)<br/>
+[`Session info`](session-info.md) - **new 4D 20 R7**<br/>
+[`Session storage`](../commands-legacy/session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands-legacy/set-allowed-methods.md)<br/>
 [`SET APPLICATION COLOR SCHEME`](../commands-legacy/set-application-color-scheme.md)<br/>
@@ -1125,7 +1122,6 @@ title: Index
 [`SET QUERY LIMIT`](../commands-legacy/set-query-limit.md)<br/>
 [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md)<br/>
 [`SET RECENT FONTS`](../commands-legacy/set-recent-fonts.md)<br/>
-[`SET SCREEN DEPTH`](../commands-legacy/set-screen-depth.md)<br/>
 [`SET TABLE CACHE PRIORITY`](../commands-legacy/set-table-cache-priority.md)<br/>
 [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md)<br/>
 [`SET TEXT TO PASTEBOARD`](../commands-legacy/set-text-to-pasteboard.md)<br/>
@@ -1134,6 +1130,7 @@ title: Index
 [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)<br/>
 [`SET USER ALIAS`](../commands-legacy/set-user-alias.md)<br/>
 [`Set user properties`](../commands-legacy/set-user-properties.md)<br/>
+[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands-legacy/set-window-rect.md)<br/>
 [`SET WINDOW TITLE`](../commands-legacy/set-window-title.md)<br/>
 [`Shift down`](../commands-legacy/shift-down.md)<br/>
@@ -1213,10 +1210,12 @@ title: Index
 [`SVG SET ATTRIBUTE`](../commands-legacy/svg-set-attribute.md)<br/>
 [`SVG SHOW ELEMENT`](../commands-legacy/svg-show-element.md)<br/>
 [`System folder`](../commands-legacy/system-folder.md)<br/>
+[`System info`](../commands-legacy/system-info.md)<br/>
 
 <a id="T"><b>T</b></a>
 
 [`Table`](../commands-legacy/table.md)<br/>
+[`Table fragmentation`](../commands-legacy/table-fragmentation.md)<br/>
 [`Table name`](../commands-legacy/table-name.md)<br/>
 [`Tan`](../commands-legacy/tan.md)<br/>
 [`Temporary folder`](../commands-legacy/temporary-folder.md)<br/>
@@ -1338,84 +1337,7 @@ title: Index
 [`WINDOW LIST`](../commands-legacy/window-list.md)<br/>
 [`Window process`](../commands-legacy/window-process.md)<br/>
 [`Windows Alt down`](../commands-legacy/windows-alt-down.md)<br/>
-[`Windows Ctrl down`](../commands-legacy/windows-ctrl-down.md)<br/>
-[`WP Add picture`](../WritePro/commands-legacy/wp-add-picture.md)<br/>
-[`WP Bookmark range`](../WritePro/commands-legacy/wp-bookmark-range.md)<br/>
-[`WP COMPUTE FORMULAS`](../WritePro/commands-legacy/wp-compute-formulas.md)<br/>
-[`WP DELETE BOOKMARK`](../WritePro/commands-legacy/wp-delete-bookmark.md)<br/>
-[`WP DELETE FOOTER`](../WritePro/commands-legacy/wp-delete-footer.md)<br/>
-[`WP DELETE HEADER`](../WritePro/commands-legacy/wp-delete-header.md)<br/>
-[`WP DELETE PICTURE`](../WritePro/commands-legacy/wp-delete-picture.md)<br/>
-[`WP DELETE STYLE SHEET`](../WritePro/commands-legacy/wp-delete-style-sheet.md)<br/>
-[`WP DELETE SUBSECTION`](../WritePro/commands-legacy/wp-delete-subsection.md)<br/>
-[`WP DELETE TEXT BOX`](../WritePro/commands-legacy/wp-delete-text-box.md)<br/>
-[`WP EXPORT DOCUMENT`](../WritePro/commands-legacy/wp-export-document.md)<br/>
-[`WP EXPORT VARIABLE`](../WritePro/commands-legacy/wp-export-variable.md)<br/>
-[`WP Find all`](../WritePro/commands-legacy/wp-find-all.md)<br/>
-[`WP Find next`](../WritePro/commands-legacy/wp-find-next.md)<br/>
-[`WP Find previous`](../WritePro/commands-legacy/wp-find-previous.md)<br/>
-[`WP FREEZE FORMULAS`](../WritePro/commands-legacy/wp-freeze-formulas.md)<br/>
-[`WP GET ATTRIBUTES`](../WritePro/commands-legacy/wp-get-attributes.md)<br/>
-[`WP Get body`](../WritePro/commands-legacy/wp-get-body.md)<br/>
-[`WP GET BOOKMARKS`](../WritePro/commands-legacy/wp-get-bookmarks.md)<br/>
-[`WP Get breaks`](../WritePro/commands-legacy/wp-get-breaks.md)<br/>
-[`WP Get data context`](../WritePro/commands-legacy/wp-get-data-context.md)<br/>
-[`WP Get element by ID`](../WritePro/commands-legacy/wp-get-element-by-id.md)<br/>
-[`WP Get elements`](../WritePro/commands-legacy/wp-get-elements.md)<br/>
-[`WP Get footer`](../WritePro/commands-legacy/wp-get-footer.md)<br/>
-[`WP Get formulas`](../WritePro/commands-legacy/wp-get-formulas.md)<br/>
-[`WP Get frame`](../WritePro/commands-legacy/wp-get-frame.md)<br/>
-[`WP Get header`](../WritePro/commands-legacy/wp-get-header.md)<br/>
-[`WP Get links`](../WritePro/commands-legacy/wp-get-links.md)<br/>
-[`WP Get page count`](../WritePro/commands-legacy/wp-get-page-count.md)<br/>
-[`WP Get position`](../WritePro/commands-legacy/wp-get-position.md)<br/>
-[`WP Get section`](../WritePro/commands-legacy/wp-get-section.md)<br/>
-[`WP Get sections`](../WritePro/commands-legacy/wp-get-sections.md)<br/>
-[`WP Get style sheet`](../WritePro/commands-legacy/wp-get-style-sheet.md)<br/>
-[`WP Get style sheets`](../WritePro/commands-legacy/wp-get-style-sheets.md)<br/>
-[`WP Get subsection`](../WritePro/commands-legacy/wp-get-subsection.md)<br/>
-[`WP Get text`](../WritePro/commands-legacy/wp-get-text.md)<br/>
-[`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md)<br/>
-[`WP Import document`](../WritePro/commands-legacy/wp-import-document.md)<br/>
-[`WP IMPORT STYLE SHEETS`](../WritePro/commands-legacy/wp-import-style-sheets.md)<br/>
-[`WP INSERT BREAK`](../WritePro/commands-legacy/wp-insert-break.md)<br/>
-[`WP INSERT DOCUMENT`](../WritePro/commands-legacy/wp-insert-document.md)<br/>
-[`WP INSERT FORMULA`](../WritePro/commands-legacy/wp-insert-formula.md)<br/>
-[`WP INSERT PICTURE`](../WritePro/commands-legacy/wp-insert-picture.md)<br/>
-[`WP Insert table`](../WritePro/commands-legacy/wp-insert-table.md)<br/>
-[`WP Is font style supported`](../WritePro/commands-legacy/wp-is-font-style-supported.md)<br/>
-[`WP New`](../WritePro/commands-legacy/wp-new.md)<br/>
-[`WP NEW BOOKMARK`](../WritePro/commands-legacy/wp-new-bookmark.md)<br/>
-[`WP New footer`](../WritePro/commands-legacy/wp-new-footer.md)<br/>
-[`WP New header`](../WritePro/commands-legacy/wp-new-header.md)<br/>
-[`WP New style sheet`](../WritePro/commands-legacy/wp-new-style-sheet.md)<br/>
-[`WP New subsection`](../WritePro/commands-legacy/wp-new-subsection.md)<br/>
-[`WP New text box`](../WritePro/commands-legacy/wp-new-text-box.md)<br/>
-[`WP Paragraph range`](../WritePro/commands-legacy/wp-paragraph-range.md)<br/>
-[`WP Picture range`](../WritePro/commands-legacy/wp-picture-range.md)<br/>
-[`WP PRINT`](../WritePro/commands-legacy/wp-print.md)<br/>
-[`WP RESET ATTRIBUTES`](../WritePro/commands-legacy/wp-reset-attributes.md)<br/>
-[`WP SELECT`](../WritePro/commands-legacy/wp-select.md)<br/>
-[`WP Selection range`](../WritePro/commands-legacy/wp-selection-range.md)<br/>
-[`WP SET ATTRIBUTES`](../WritePro/commands-legacy/wp-set-attributes.md)<br/>
-[`WP SET DATA CONTEXT`](../WritePro/commands-legacy/wp-set-data-context.md)<br/>
-[`WP SET FRAME`](../WritePro/commands-legacy/wp-set-frame.md)<br/>
-[`WP SET LINK`](../WritePro/commands-legacy/wp-set-link.md)<br/>
-[`WP SET TEXT`](../WritePro/commands-legacy/wp-set-text.md)<br/>
-[`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)<br/>
-[`WP Table append row`](../WritePro/commands-legacy/wp-table-append-row.md)<br/>
-[`WP TABLE DELETE COLUMNS`](../WritePro/commands-legacy/wp-table-delete-columns.md)<br/>
-[`WP TABLE DELETE ROWS`](../WritePro/commands-legacy/wp-table-delete-rows.md)<br/>
-[`WP Table get cells`](../WritePro/commands-legacy/wp-table-get-cells.md)<br/>
-[`WP Table get columns`](../WritePro/commands-legacy/wp-table-get-columns.md)<br/>
-[`WP Table get rows`](../WritePro/commands-legacy/wp-table-get-rows.md)<br/>
-[`WP Table insert columns`](../WritePro/commands-legacy/wp-table-insert-columns.md)<br/>
-[`WP Table insert rows`](../WritePro/commands-legacy/wp-table-insert-rows.md)<br/>
-[`WP TABLE MERGE CELLS`](../WritePro/commands-legacy/wp-table-merge-cells.md)<br/>
-[`WP Table range`](../WritePro/commands-legacy/wp-table-range.md)<br/>
-[`WP TABLE SPLIT CELLS`](../WritePro/commands-legacy/wp-table-split-cells.md)<br/>
-[`WP Text range`](../WritePro/commands-legacy/wp-text-range.md)<br/>
-[`WP USE PAGE SETUP`](../WritePro/commands-legacy/wp-use-page-setup.md)<br/>
+[`Windows Ctrl down`](../commands-legacy/windows-ctrl-down.md)<br>
 [`WRITE PICTURE FILE`](../commands-legacy/write-picture-file.md)<br/>
 
 <a id="X"><b>X</b></a>

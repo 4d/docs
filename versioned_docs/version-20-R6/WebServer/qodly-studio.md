@@ -176,7 +176,7 @@ We recommend using class functions over project methods. Only class functions ca
 
 You can develop with Qodly Studio while your computer is not connected to the internet. In this case however, the following features are not available:
 
-- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
+- [Templates](https://developer.qodly.com/docs/studio/pageLoaders/templates): the Template library is empty
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
 
@@ -242,7 +242,7 @@ With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-lo
 
 ### Configuration
 
-Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is enabled for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
+Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is enabled for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview), using the **Force login** option:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 

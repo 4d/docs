@@ -124,7 +124,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 ---
 
-## Alto
+## Height
 
 Esta propriedade designa o tamanho vertical de um objeto.
 > Alguns objetos podem ter uma altura predefinida que não pode ser alterada.

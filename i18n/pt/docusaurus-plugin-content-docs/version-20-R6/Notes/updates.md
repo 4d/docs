@@ -1,6 +1,6 @@
 ---
 id: updates
-title: Notas de Lançamento
+title: Notas de lançamento
 ---
 
 ## 4D 20 R6

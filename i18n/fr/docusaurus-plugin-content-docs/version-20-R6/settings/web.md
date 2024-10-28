@@ -287,11 +287,11 @@ Démarre et stoppe le serveur REST. Voir [Configuration du serveur REST](../REST
 
 :::info Obsolète
 
-**Cette section est obsolète** à partir de 4D 20 R6. Si la configuration actuelle du projet est obsolète et doit être mise à niveau, cette section, y compris le bouton **Activer l'authentification REST via la fonction ds.authentify()** (voir ci-dessous), est affichée. Si votre projet est déjà compatible avec le mode [Connexion forcée](../REST/configuration.md#configuration-de-l-accès-rest), la section n'apparaît pas et vous pouvez ignorer ce paragraphe.
+**Cette section est obsolète** à partir de 4D 20 R6. Si la configuration actuelle du projet est obsolète et doit être mise à niveau, cette section, y compris le bouton **Activer l'authentification REST via la fonction ds.authentify()** (voir ci-dessous), est affichée. If your project is already compatible with the [Force login](../REST/authUsers.md#force-login-mode) mode, the section is missing and you can ignore this paragraph.
 
 :::
 
-Reportez-vous à [Configurer les accès REST](../REST/configuration.md#configuring-rest-access) pour plus d'informations sur la manière recommandée de contrôler et gérer les accès REST dans vos projets 4D.
+See [Users and sessions](../REST/authUsers.md) to know the recommended way to control and manage REST access in your 4D projects.
 
 #### Activer l'authentification REST via la fonction ds.authentify()
 

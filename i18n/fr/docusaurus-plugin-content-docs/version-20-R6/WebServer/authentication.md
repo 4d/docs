@@ -83,7 +83,7 @@ La méthode base `On Web Authentication` est donc appelée :
 La méthode base `On Web Authentication` n'est PAS appelée :
 
 - lorsque le serveur web reçoit une URL demandant une page statique valide.
-- lorsque le serveur web reçoit une URL commençant par `rest/` et que le serveur REST est lancé (dans ce cas, l'authentification est gérée via la méthode base [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou les [paramètres de structure](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### Syntaxe
 

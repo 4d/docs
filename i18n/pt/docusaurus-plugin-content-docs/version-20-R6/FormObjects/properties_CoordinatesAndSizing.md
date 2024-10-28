@@ -14,11 +14,11 @@ A propriedade não está selecionada por padrão. Note that only columns with th
 
 :::note
 
-When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+Ao redimensionar a forma, se a propriedade de [dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Crescer" foi atribuída o list box, a coluna mais direita será aumentada além da largura máxima se necessário.
 
 :::
 
-Cuando esta propiedad está activada, la altura de cada línea se calcula automáticamente para que el contenido de la celda quepa por completo sin ser truncado (a menos que la opción [Wordwrap](properties_Display.md#wordwrap) esté desactivada.
+Quando essa propriedade está ativada, a altura de cada linha é calculada automaticamente para que o conteúdo da célula caiba totalmente sem ser truncado (a menos que a opção [Wordwrap](properties_Display.md#wordwrap) esteja desativada).
 
 - O cálculo da altura da linha tem em conta:
   - any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
@@ -131,16 +131,16 @@ Maximum value depends on the rectangle size (it cannot exceed half the size of t
 
 :::note
 
-Con [áreas de texto](text.md) y [entradas](input_overview.md):
+Com as [áreas de texto](text.md) e [entradas](input_overview.md):
 
 - la propiedad de radio de la esquina sólo está disponible con los [estilos de línea de borde](properties_BackgroundAndBorder.md#border-line-style) "ninguno", "sólido" o "punteado",
-- la redondez de la esquina se dibuja fuera del área del objeto (el objeto aparece más grande en el formulario pero su [ancho](properties_CoordinatesAndSizing.md#width) y [alto](properties_CoordinatesAndSizing.md#height) no se amplían).
+- o arredondamento do canto é desenhado fora da área do objeto (o objeto aparece maior no formulário, mas sua [largura](properties_CoordinatesAndSizing.md#width) e [altura](properties_CoordinatesAndSizing.md#height) não são estendidas).
 
 ![](../assets/en/FormObjects/radius-text.png)
 
 :::
 
-You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
+Você também pode definir essa propriedade usando os comandos [OBJECT Get corner radius] (https://doc.4d.com/4dv19/help/command/en/page1323.html) e [OBJECT SET CORNER RADIUS] (https://doc.4d.com/4dv19/help/command/en/page1324.html).
 
 #### Gramática JSON
 
@@ -154,7 +154,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 ---
 
-## Alto
+## Height
 
 Esta propriedade designa o tamanho vertical de um objeto.
 
@@ -178,7 +178,7 @@ Esta propriedade designa o tamanho horizontal de um objeto.
 
 > - Alguns objetos podem ter uma altura predefinida que não pode ser alterada.
 > - Si la propiedad [Redimensionable](properties_ResizingOptions.md#resizable) se utiliza para una [columna de list box](listbox_overview.md#list-box-columns), el usuario también puede cambiar manualmente el tamaño de la columna.
-> - Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+> - When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
 
@@ -196,7 +196,7 @@ Esta propriedade designa o tamanho horizontal de um objeto.
 
 A largura máxima da coluna (em píxeis). The width of the column cannot be increased beyond this value when resizing the column or form.
 
-> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
 
@@ -214,7 +214,7 @@ A largura máxima da coluna (em píxeis). The width of the column cannot be incr
 
 A largura mínima da coluna (em píxeis). A largura da coluna não pode ser reduzida abaixo deste valor quando se redimensiona a coluna ou o formulário.
 
-> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
 
@@ -264,7 +264,7 @@ RowHeights{5}:=3
 Assuming that the unit of the rows is "lines," then the fifth row of the list box will have a height of three lines, while every other row will keep its default height.
 
 > - The Row Height Array property is not taken into account for hierarchical list boxes.
-> - Para los array y list boxes colecciones/selección de entidades, esta propiedad sólo está disponible si la opción [Alto de línea automático](#automatic-row-height) no está seleccionada.
+> - Para os list box de tipo array e collection/entity selection, essa propriedade só estará disponível se a opção [Altura da linha automática](#automatic-row-height) não estiver selecionada.
 
 #### Gramática JSON
 

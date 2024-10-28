@@ -17,7 +17,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### Objectos suportados
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 
@@ -481,4 +481,4 @@ Quando a propriedade for ativada, a área armazena todas as informações de for
 
 #### Objectos suportados
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)

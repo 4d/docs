@@ -83,7 +83,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita una página estática válida.
-- cuando el servidor web recibe una URL que empieza por `rest/` y se lanza el servidor REST (en este caso, la autenticación se gestiona a través del método base [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) o los [parámetros de estructura](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxis
 

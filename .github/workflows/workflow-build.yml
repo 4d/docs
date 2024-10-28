@@ -7,6 +7,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Get disk space
+        run: |
+          sudo rm -rf \
+          "$AGENT_TOOLSDIRECTORY" \
+          /opt/google/chrome \
+          /opt/microsoft/msedge \
+          /opt/microsoft/powershell \
+          /opt/pipx \
+          /usr/lib/mono \
+          /usr/local/julia* \
+          /usr/local/lib/android \
+          /usr/local/lib/node_modules \
+          /usr/local/share/chromium \
+          /usr/local/share/powershell \
+          /usr/share/dotnet \
+          /usr/share/swift
+          df -h /
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
