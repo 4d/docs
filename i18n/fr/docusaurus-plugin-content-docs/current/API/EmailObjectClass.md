@@ -14,7 +14,7 @@ Des objets `Email` sont créés lorsque vous recevez des emails via une fonction
 
 Vous envoyez des objets `Email` à l'aide de la fonction SMTP [`send()`](SMTPTransporterClass.md#send).
 
-[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
+Les commandes [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) et [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) peuvent être utilisées pour convertir les objets `Email` vers et depuis des contenus MIME.
 
 ### Objet Email
 
