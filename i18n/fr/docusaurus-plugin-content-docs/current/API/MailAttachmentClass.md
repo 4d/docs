@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Les objets Attachment (pièce jointe) permettent de référencer des fichiers dans un objet [`Email`](EmailObjectClass.md). Attachment objects are created using the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+Les objets Attachment (pièce jointe) permettent de référencer des fichiers dans un objet [`Email`](EmailObjectClass.md). Les objets Attachment sont créés à l'aide de la commande [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ### Objet Attachment
 
@@ -50,7 +50,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 
 #### Description
 
-La fonction `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crée et retourne un nouvel objet de type `4D.MailAttachment`<!-- END REF -->. It is identical to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command (shortcut).
+La fonction `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crée et retourne un nouvel objet de type `4D.MailAttachment`<!-- END REF -->. Elle est identique à la commande [`MAIL New attachment`](../commands/mail-new-attachment.md) (raccourci).
 
 ## .cid
 
@@ -93,7 +93,7 @@ La fonction `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -
 
 #### Description
 
-La propriété `.name` contient <!-- REF #MailAttachmentClass.name.Summary -->le nom et l'extension de la pièce jointe<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+La propriété `.name` contient <!-- REF #MailAttachmentClass.name.Summary -->le nom et l'extension de la pièce jointe<!-- END REF -->.  Par défaut, c'est le nom du fichier, à moins qu'un autre nom n'ait été spécifié dans la commande [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ## .path
 
@@ -133,4 +133,4 @@ La propriété `.size` contient <!-- REF #MailAttachmentClass.size.Summary -->la
 
 #### Description
 
-La propriété `.type` contient <!-- REF #MailAttachmentClass.type.Summary -->le `content-type` du fichier de la pièce jointe<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.
+La propriété `.type` contient <!-- REF #MailAttachmentClass.type.Summary -->le `content-type` du fichier de la pièce jointe<!-- END REF -->. Si ce type n'est pas explicitement passé à la commande [`MAIL New attachment`](../commands/mail-new-attachment.md), le `content-type` est basé sur l'extension du fichier.
