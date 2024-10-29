@@ -70,11 +70,11 @@ Lista de cifrado utilizada para el protocolo seguro; establece la prioridad de l
 
 ## Parámetros CORS
 
-| Puede ajustarse con           | Nombre                                                                                                                             | Comentarios                                                                                                                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                               | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
-| `WEB SET OPTION`              | `Web CORS settings`                                                                                                                | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
-| Caja de diálogo de parámetros | [Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-names-HTTP-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
+| Puede ajustarse con           | Nombre                                                                                                                                        | Comentarios                                                                                                                                                                      |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                          | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
+| `WEB SET OPTION`              | `Web CORS settings`                                                                                                                           | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
+| Caja de diálogo de parámetros | [Página Opciones (II)/Nombres de dominio y métodos HTTP autorizados](../settings/web.md#domain-names-HTTP-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
 
 Lista de hosts y métodos permitidos para el servicio CORS.
 
@@ -351,11 +351,11 @@ Estado de activación de la gestión de sesiones heredada para el servidor web 4
 
 ## Registro de los logs
 
-| Puede ajustarse con           | Nombre                                                              | Comentarios |
-| ----------------------------- | ------------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`logRecording`](API/WebServerClass.md#logrecording)                |             |
-| `WEB SET OPTION`              | `Web log recording`                                                 |             |
-| Caja de diálogo de parámetros | [Log (type) page](../settings/web.md#log-format) | Menú popup  |
+| Puede ajustarse con           | Nombre                                                                     | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`logRecording`](API/WebServerClass.md#logrecording)                       |             |
+| `WEB SET OPTION`              | `Web log recording`                                                        |             |
+| Caja de diálogo de parámetros | [Página Historial(tipo)](../settings/web.md#log-format) | Menú popup  |
 
 Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Por defecto, las peticiones no se registran (0/Sin archivo de registro). Cuando se activa, el archivo *logweb.txt* se coloca automáticamente en la carpeta Logs.
 
