@@ -7,7 +7,7 @@ L'interface de 4D WritePro offre un ensemble de palettes, qui permettent aux uti
 
 Un développeur 4D peut facilement implémenter ces palettes dans leur application. Ainsi, les utilisateurs finaux peuvent gérer toutes les propriétés de 4D Write Pro, telles que les polices, l'alignement du texte, les signets, la mise en page des tableaux et les cadres.
 
-La documentation principale de l'[interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se trouve dans le _4D - Mode Développement_.
+La documentation principale de l'[interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se trouve dans le *4D - Mode Développement*.
 
 Vous trouverez ci-dessous la documentation de configuration de l'Assistant de table.
 
