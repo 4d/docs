@@ -113,7 +113,7 @@ La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indiqu
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de _source_<!-- END REF -->. Default = False
+La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de *source*<!-- END REF -->. Default = False
 
 ### .tableColumns
 
