@@ -3,13 +3,13 @@ id: attributes
 title: $attributes
 ---
 
-データクラスから取得するリレート属性を選択するのに使います (_例:_ `Company(1)?$attributes=employees.lastname`、 `Employee?$attributes=employer.name`)。
+データクラスから取得するリレート属性を選択するのに使います (*例:* `Company(1)?$attributes=employees.lastname`、 `Employee?$attributes=employer.name`)。
 
 ## 説明
 
 データクラスにリレーション属性が含まれていて、リレート先のエンティティまたはエンティティセレクションの属性のうち値を取得するものを選択したい場合、そのパスを指定するのに `$attributes` を使用します。
 
-`$attributes` はエンティティ (_例:_ People(1)) またはエンティティセレクション (_例:_ People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) に対して適用できます。
+`$attributes` はエンティティ (*例:* People(1)) またはエンティティセレクション (*例:* People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) に対して適用できます。
 
 - クエリに `$attributes` が指定されていない場合、または "\*" が渡された場合、すべての取得可能な属性が取得されます。 **リレートエンティティ** 属性は、`__KEY` (プライマリーキー) と `URI` プロパティを持つオブジェクトという簡単な形で抽出されます。 **リレートエンティティズ** 属性は抽出されません。
 
