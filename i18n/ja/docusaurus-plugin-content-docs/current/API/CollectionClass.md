@@ -5,7 +5,7 @@ title: Collection
 
 Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変数を扱います。
 
-A collection is initialized with the [`New collection`](../commands/new-collection.md) or [`New shared collection`](../commands/new-shared-collection.md) commands.
+コレクションは [`New collection`](../commands/new-collection.md) または [`New shared collection`](../commands/new-shared-collection.md) コマンドで初期化されます。
 
 ### 例題
 
