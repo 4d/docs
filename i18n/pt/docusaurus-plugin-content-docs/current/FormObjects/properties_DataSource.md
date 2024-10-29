@@ -196,19 +196,18 @@ e [collection](listbox_overview.md#collection-or-entity-selection-list-boxes). C
 
 Uma expressão 4D a associar a uma coluna. Você pode entrar:
 
-- Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Pode utilizar qualquer tipo de variável, exceto BLOBs e arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
+- Uma **variável simple** (nesse caso, ela deve ser declarada explicitamente para compilação). Pode utilizar qualquer tipo de variável, exceto BLOBs e arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes)
-  only), for example: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
+- Um **campo** usando a sintaxe padrão [Tabela]Campo (solo [selection type list box](listbox_overview.md#selection-list-boxes)), por exemplo: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
   - String
   - Numeric
   - Date
   - Hora
   - Imagem
-  - Boolean\
-    You can use fields from the Master Table or from other tables.
+  - Booliano\
+    Você pode usar campos da tabela mestre ou de outras tabelas.
 
-- Una **expresión 4D** (expresión simple, fórmula o método 4D). A expressão deve devolver um valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Se estiver vazia, a coluna não apresentará nenhum resultado.
+- Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. O valor será avaliado nos eventos `On Display Detail` e `On Data Change`. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Se estiver vazia, a coluna não apresentará nenhum resultado.
   São suportados os seguintes tipos de expressão:
   - String
   - Numeric
@@ -216,9 +215,9 @@ Uma expressão 4D a associar a uma coluna. Você pode entrar:
   - Imagem
   - Parâmetros
 
-For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
-If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. En este caso, utilizará `This.value` como expresión.
+Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
+Ao usar coleções ou seleções de entidades, você geralmente declara a propriedade do elemento ou o atributo da entidade associado a uma coluna em uma expressão contendo [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
+If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. Nesse caso, você usará `This.value` como expressão.
 
 Si se utiliza una expresión no asignable  (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
 
