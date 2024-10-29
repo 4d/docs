@@ -35,10 +35,10 @@ ds.Company.city // retourne le nom de la ville
 
 > ORDA est sensible à la casse. `ds.company.city` ne fera pas référence à l'attribut ds.Company.city.
 
-Vous avez également remarqué la propriété extra `hires` dans la dataclass ds.Company. Cela ne correspond pas à un champ. `hire`est en fait le nom de la relation _1 vers N_ entre Company et Employee :
+Vous avez également remarqué la propriété extra `hires` dans la dataclass ds.Company. Cela ne correspond pas à un champ. `hire`est en fait le nom de la relation *1 vers N* entre Company et Employee :
 
 ![](../assets/en/ORDA/struc2s.png)
-_Name of the relation as defined in the Inspector_
+*Name of the relation as defined in the Inspector*
 
 Cela signifie que, chaque fois que vous avez besoin d'accéder à la liste des employés travaillant pour une entreprise, il vous suffit d'écrire, dans ORDA :
 
