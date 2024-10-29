@@ -1845,6 +1845,7 @@ module.exports =
 						"commands-legacy/redraw-window",
 						"commands-legacy/reduce-restore-window",
 						"commands-legacy/resize-form-window",
+						"commands-legacy/set-window-document-icon",
 						"commands-legacy/set-window-rect",
 						"commands-legacy/set-window-title",
 						"commands-legacy/show-tool-bar",
