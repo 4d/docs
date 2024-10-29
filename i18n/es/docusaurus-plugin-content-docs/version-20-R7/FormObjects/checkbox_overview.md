@@ -77,7 +77,7 @@ Para información detallada sobre estas acciones, consulte la sección [Acciones
 
 Las casillas de selección utilizan [los estilos de botón](properties_TextAndPicture.md#button-style) para controlar la apariencia general de una casilla de selección, así como sus posibles propiedades. Es posible aplicar diferentes estilos predefinidos a las casillas de selección. Se puede obtener un gran número de variaciones combinando estas propiedades/comportamientos.
 
-Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos casilla de selección son _estructuralmente_ idénticos. La diferencia está en el tratamiento de sus variables asociadas.
+Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos casilla de selección son *estructuralmente* idénticos. La diferencia está en el tratamiento de sus variables asociadas.
 
 4D ofrece casillas de selección en los siguientes estilos de botón predefinidos:
 
@@ -152,7 +152,7 @@ Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
 ### Bevel
 
-El estilo del botón casilla de selección Bevel combina la apariencia del estilo de botón [Clásico ](#regular) (_es decir_, un rectángulo con un título descriptivo) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
+El estilo del botón casilla de selección Bevel combina la apariencia del estilo de botón [Clásico ](#regular) (*es decir*, un rectángulo con un título descriptivo) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
 
 El estilo de botón Bevel redondeado tiene un fondo gris claro con un título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -236,11 +236,11 @@ El estilo de botón OS X Textured es similar al estilo del botón [Bevel](#bevel
 
 Por defecto, el estilo del botón OS X Textured aparece como:
 
-- _Windows_ - un botón sistema estándar con un fondo azul claro con un título en el centro.
+- *Windows* - un botón sistema estándar con un fondo azul claro con un título en el centro.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
-- _macOS_ - un botón de sistema estándar. Su altura está predefinida: no es posible ampliarla o reducirla.
+- *macOS* - un botón de sistema estándar. Su altura está predefinida: no es posible ampliarla o reducirla.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -264,11 +264,11 @@ El estilo de botón Office XP combina la apariencia del estilo del botón [Clás
 
 Los colores (resaltado y fondo) de una casilla de selección con el estilo de botón Office XP se basan en los colores del sistema. La apariencia de la casilla de selección puede ser diferente cuando el cursor pasa por encima, dependiendo del sistema operativo:
 
-- _Windows_ - su fondo sólo aparece cuando el ratón pasa por encima. Ejemplo con estados seleccionado / no seleccionado / subrayado:
+- *Windows* - su fondo sólo aparece cuando el ratón pasa por encima. Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
 ![](../assets/en/FormObjects/checkbox_officexp.png)
 
-- _macOS_ - su fondo se muestra siempre. Ejemplo con estados seleccionado / no seleccionado:
+- *macOS* - su fondo se muestra siempre. Ejemplo con estados seleccionado / no seleccionado:
 
 ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -293,11 +293,11 @@ Los colores (resaltado y fondo) de una casilla de selección con el estilo de bo
 
 Este estilo de botón de casilla de selección se puede utilizar para añadir un icono estándar de contraer/expandir. Estos iconos se utilizan de forma nativa en las listas jerárquicas.
 
-- _Windows_ - el icono se ve como un [+] o un [-]
+- *Windows* - el icono se ve como un [+] o un [-]
 
 ![](../assets/en/FormObjects/checkbox_collapse.png)
 
-- _macOS_ - se ve como un triángulo que apunta hacia la derecha o hacia abajo.
+- *macOS* - se ve como un triángulo que apunta hacia la derecha o hacia abajo.
 
 ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
@@ -325,11 +325,11 @@ El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del
 
 En macOS y Windows, una casilla de selección con el estilo de botón "Divulgación" aparece como un botón de información estándar, normalmente utilizado para mostrar/ocultar información adicional. Cuando se utiliza como botón radio, el símbolo del botón apunta hacia abajo con el valor 0 y hacia arriba con el valor 1.
 
-- _Windows_
+- *Windows*
 
   ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
-- _macOS_
+- *macOS*
 
   ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
