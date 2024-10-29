@@ -84,7 +84,7 @@ En este modo, puede configurar los parámetros del servidor web adicionales:
 
 - [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
 - [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
-- [Use preemptive processes](#use-preemptive-web-processes)
+- [Usar procesos apropiativos](#use-preemptive-web-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
 
