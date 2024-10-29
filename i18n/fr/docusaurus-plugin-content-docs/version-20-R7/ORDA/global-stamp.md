@@ -34,7 +34,7 @@ Pour activer le suivi des changements de données, la structure de l'application
 
 De plus, pour assurer la bonne marche de la fonctionnalité, les conditions suivantes sont requises :
 
-- Le champ `__GlobalStamp` doit être de type _Integer 64 bits_, avec _index automatique_, _Exposer comme ressource REST_, et _Invisible_ sélectionné.
+- Le champ `__GlobalStamp` doit être de type *Integer 64 bits*, avec *index automatique*, *Exposer comme ressource REST*, et *Invisible* sélectionné.
 - Une table `__DeletedRecords` doit être ajoutée, avec les champs suivants :
 
 | Champ                                                   | Type            | Description                                |
