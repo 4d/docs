@@ -616,7 +616,7 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.unlistedContent.title": {
-    "message": "Unlisted page",
+    "message": "Página não listada",
     "description": "The unlisted content banner title"
   },
   "theme.unlistedContent.message": {
