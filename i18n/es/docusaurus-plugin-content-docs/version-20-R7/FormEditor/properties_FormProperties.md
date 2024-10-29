@@ -68,11 +68,11 @@ El nombre del formulario está definido por el nombre de la carpeta que contiene
 
 ## Tipo de formulario
 
-El tipo de formulario, _es decir,_ su destino, define las características que tendrá el formulario. Por ejemplo, [marcadores](properties_Markers.md) sólo puede definirse para formularios tabla listados (de salida).
+El tipo de formulario, *es decir,* su destino, define las características que tendrá el formulario. Por ejemplo, [marcadores](properties_Markers.md) sólo puede definirse para formularios tabla listados (de salida).
 
 Cada tabla de una base de datos suele tener al menos dos formas de tabla. Uno para listar los registros en pantalla y el otro para mostrar un registro a la vez (utilizado para la entrada de datos y las modificaciones):
 
-- Formulario de salida: el _formulario de salida_ o _formulario lista_ muestra una lista de registros, con una sola línea por registro. Los resultados de las consultas se muestran en un formulario de salida y los usuarios pueden hacer doble clic en una línea para mostrar el formulario de entrada de ese registro.
+- Formulario de salida: el *formulario de salida* o *formulario lista* muestra una lista de registros, con una sola línea por registro. Los resultados de las consultas se muestran en un formulario de salida y los usuarios pueden hacer doble clic en una línea para mostrar el formulario de entrada de ese registro.
   ![](../assets/en/FormObjects/formOutput.png)
 
 - Formulario de entrada - utilizado para la entrada de datos. Muestra un único registro por pantalla y suele tener botones para guardar y cancelar las modificaciones del registro y para navegar de registro en registro (\*es decir, \*, Primer registro, Último registro, Registro anterior, Registro siguiente).
@@ -86,7 +86,7 @@ Los tipos soportados dependen de la categoría de formulario:
 | Formulario detallado imprimible | detailPrinter    | Un informe impreso con una página por registro, como una factura | Formularios proyecto - Formularios tabla |
 | Formulario listado              | listScreen       | Un formulario para listar los registros en la pantalla           | Formularios tabla                        |
 | Formulario de lista imprimible  | listPrinter      | Un informe impreso que lista los registros                       | Formularios tabla                        |
-| Ninguno                         | _no destination_ | Un formulario sin característica específica                      | Formularios proyecto - Formularios tabla |
+| Ninguno                         | *no destination* | Un formulario sin característica específica                      | Formularios proyecto - Formularios tabla |
 
 #### Gramática JSON
 
@@ -167,7 +167,7 @@ Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/proper
 
 El título de la ventana se utiliza cuando se abre el formulario mediante los comandos `Open form window` y `Open window`4D en el entorno de la aplicación. El nombre de la ventana aparece en la barra de título de la ventana.
 
-Puede utilizar referencias dinámicas para definir los nombres de ventana de los formularios, _es decir_:
+Puede utilizar referencias dinámicas para definir los nombres de ventana de los formularios, *es decir*:
 
 - Una referencia estándar XLIFF almacenada en la carpeta Resources.
 - Una etiqueta de tabla o de campo: la sintaxis a aplicar es `<?[TableNum]FieldNum>` o `<?[TableName]FieldName>`.
