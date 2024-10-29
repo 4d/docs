@@ -12,7 +12,7 @@ title: VP Get data context
 </details>
 
 <!-- REF #_method_.VP Get data context.Syntax -->
-**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Collection<!-- END REF -->
+**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #_method_.VP Get data context.Params -->
 
