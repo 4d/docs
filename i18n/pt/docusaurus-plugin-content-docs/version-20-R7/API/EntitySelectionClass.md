@@ -683,7 +683,7 @@ No parâmetro *attributePath*, passe o atributo de entidade cujos valores distin
 
 Você pode usar a notação `[]` para designar uma coleção quando *attributePath* é um caminho dentro de um objeto (ver exemplos).
 
-No parâmetro *options*, você pode passar uma ou uma combinação das seguintes constantes:
+In the *options* parameter, you can pass one or a combination of the following constants:
 
 | Parâmetros        | Valor | Comentário                                                                                                                                                                                                                                 |
 | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2012,10 +2012,10 @@ A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna 
 
 A seleção de entidade retornada contém as entidades especificadas por *startFrom* e todas as entidades subsequentes até, mas não incluindo, a entidade especificada por *end*. Se apenas o parâmetro *startFrom* for especificado, a seleção de entidades retornada contém todas as entidades desde *startFrom* até a última entidade da seleção de entidades original.
 
-- Se *startFrom* < 0, ele será recalculado como *startFrom:=startFrom+length* (ele é considerado como o deslocamento do final da seleção da entidade). Se o valor calculado < 0, *startFrom* é definido como 0.
+- Se *startFrom* < 0, ele será recalculado como *startFrom:=startFrom+length* (ele é considerado como o deslocamento do final da seleção da entidade). If the calculated value < 0, *startFrom* is set to 0.
 - Se *startFrom >= length*, a função retorna uma seleção vazia de entidade.
 - Se *end* < 0, ele será recalculado como *end:=end+length*.
-- Se *end < startFrom* (valores passados ou calculados), o método não fará nada.
+- If *end < startFrom* (passed or calculated values), the method does nothing.
 
 Se a seleção de entidade contém entidades que foram abandonadas, também serão retornadas.
 
@@ -2138,7 +2138,7 @@ Se um filtro for especificado para um atributo do tipo `relatedEntity`:
 
 Se um filtro for especificado para um atributo do tipo `relatedEntities`:
 
-- propertyPath = "relatedEntities.\*" \*" -> se extraem todas as propriedades
+- propertyPath = "relatedEntities.\*" -> all the properties are extracted
 - propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> só se extraem essas propriedades
 
 No parâmetro *options*, você pode passar o(s) seletor(es) `dk with primary key` e/ou `dk with stamp` para adicionar as chaves primárias e/ou os selos da entidade nos objetos extraídos.
