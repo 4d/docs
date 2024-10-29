@@ -13,14 +13,14 @@ title: VP Get data context
 
 <!-- REF #_method_.VP Get data context.Syntax -->
 
-**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Collection<!-- END REF -->
+**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #_method_.VP Get data context.Params -->
 
 | 引数         | 型                    |                             | 説明                       |                  |
 | ---------- | -------------------- | --------------------------- | ------------------------ | ---------------- |
-| vpAreaName | Object               | ->                          | 4D View Pro フォームオブジェクト名  |                  |
-| sheet      | Integer              | ->                          | データコンテキストを取得するシートのインデックス |                  |
+| vpAreaName | オブジェクト               | ->                          | 4D View Pro フォームオブジェクト名  |                  |
+| sheet      | 整数                   | ->                          | データコンテキストを取得するシートのインデックス |                  |
 | 戻り値        | Object \| Collection | <- | データコンテキスト                | <!-- END REF --> |
 
 #### 説明
