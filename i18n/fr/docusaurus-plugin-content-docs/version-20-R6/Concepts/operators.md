@@ -109,7 +109,7 @@ $t+=" World" //$t="Hello World"
 $d:=!2000-11-10!
 $d+=10 //$d=!2000-11-20!
 
-// Soustraction
+// Subtraction
 $x1:=10
 $x1-=5 //$x1=5
 
@@ -123,7 +123,7 @@ $x3/=2 // $x3=5
 
 // Multiplication
 $x2:=10
-$x2*=5 // $x2=10
+$x2*=5 // $x2=50
 
 $t2:="Hello" 
 $t2*=2 // $t2="HelloHello"
