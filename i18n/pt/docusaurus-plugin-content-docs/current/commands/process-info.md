@@ -44,7 +44,7 @@ O objeto retornado contém as propriedades abaixo:
 | type             | Longint                                 | Running process type. Possible values: see below |
 | visible          | Parâmetros                              | True if visible, false otherwise                                                 |
 
-- Possible values for "state":
+- Valores possíveis para "state":
 
 | Parâmetros                | Valor |
 | ------------------------- | ----- |
