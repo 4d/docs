@@ -11,7 +11,7 @@ title: On Mouse Enter
 
 This event is generated once, when the mouse cursor enters the graphic area of a form object.
 
-O evento `On Mouse Enter` atualiza as variáveis sistema _MouseX_ e _MouseY_.
+O evento `On Mouse Enter` atualiza as variáveis sistema *MouseX* e *MouseY*.
 
 Os objetos tornados invisíveis por meio do comando `OBJECT SET VISIBLE` ou da propriedade [Visibility](FormObjects/properties_Display.md#visibility) não geram esse evento.
 
