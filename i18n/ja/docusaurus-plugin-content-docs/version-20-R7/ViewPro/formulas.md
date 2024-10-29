@@ -205,7 +205,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-_methodName_ はこれらの引数を $1, $2...$N に受け取ります。
+*methodName* はこれらの引数を $1, $2...$N に受け取ります。
 
 引数を渡さない場合でも ( ) の使用は必須です:
 
@@ -213,7 +213,7 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 =METHODWITHOUTNAME()
 ```
 
-[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) コマンドを使用して宣言したファンクションの _parameters_ コレクションを使って、引数の名前、型、数を宣言することができます。 オプションとして、_minParams_ および _maxParams_ プロパティにより、ユーザーから渡される引数の数を制御することができます。
+[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) コマンドを使用して宣言したファンクションの *parameters* コレクションを使って、引数の名前、型、数を宣言することができます。 オプションとして、*minParams* および *maxParams* プロパティにより、ユーザーから渡される引数の数を制御することができます。
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) コマンドの説明を参照ください。
 
@@ -221,18 +221,18 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 
 日付およびオブジェクト引数は次のように扱われます:
 
-- _jstype_ の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
+- *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
 
-| プロパティ | 型    | 説明                          |
-| ----- | ---- | --------------------------- |
-| value | 日付   | 日付値                         |
-| time  | Real | 数値 (秒単位) |
+| プロパティ | 型  | 説明                          |
+| ----- | -- | --------------------------- |
+| value | 日付 | 日付値                         |
+| time  | 実数 | 数値 (秒単位) |
 
 - オブジェクト引数は、`オブジェクト` 内の [.value](Concepts/dt_object.md) プロパティに格納されて渡されます:
 
 | プロパティ | 型      | 説明       |
 | ----- | ------ | -------- |
-| value | Object | オブジェクト引数 |
+| value | オブジェクト | オブジェクト引数 |
 
 ### 戻り値
 
@@ -246,10 +246,10 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 - [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。
 - 次の 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) (日付と時間の受け渡しを可能にします):
 
-  | プロパティ | 型    | 説明                          |
-  | ----- | ---- | --------------------------- |
-  | value | 日付   | 日付値                         |
-  | time  | Real | 数値 (秒単位) |
+  | プロパティ | 型  | 説明                          |
+  | ----- | -- | --------------------------- |
+  | value | 日付 | 日付値                         |
+  | time  | 実数 | 数値 (秒単位) |
 
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
 
