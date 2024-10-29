@@ -13,7 +13,7 @@ Para acceder a un elemento de la colección, hay que pasar el número del elemen
 collectionRef[expression]
 ```
 
-Puede pasar toda expresión 4D válida que devuelva un entero positivo en _expression_. Ejemplos:
+Puede pasar toda expresión 4D válida que devuelva un entero positivo en *expression*. Ejemplos:
 
 ```4d
  myCollection[5]  //acceso al 6º elemento de la colección
@@ -112,7 +112,7 @@ Para más información, consulte la sección [Objetos y colecciones compartidos]
 
 ## Funciones de colección
 
-Las referencias a colecciones 4D se benefician de funciones de clase específicas (a veces llamados _funciones miembro_). Las funciones de colección están listadas en la sección [Referencia de la API de Clase](../API/CollectionClass.md).
+Las referencias a colecciones 4D se benefician de funciones de clase específicas (a veces llamados *funciones miembro*). Las funciones de colección están listadas en la sección [Referencia de la API de Clase](../API/CollectionClass.md).
 
 Por ejemplo:
 
@@ -130,12 +130,12 @@ Ciertas funciones devuelven la colección original después de la modificación,
 
 ### parámetro rutaPropiedad
 
-Varias funciones aceptan un _propertyPath_ como parámetro. Este parámetro significa:
+Varias funciones aceptan un *propertyPath* como parámetro. Este parámetro significa:
 
 - o bien un nombre de propiedad del objeto, por ejemplo "apellido"
 - o una ruta de propiedades del objeto, es decir, una secuencia jerárquica de subpropiedades vinculadas con caracteres de punto, por ejemplo "empleado.hijos.nombre".
 
-**Atención:** Cuando utilice funciones y parámetros _propertyPath_, no puede utilizar ".", "[ ]", o espacios en los nombres de las propiedades ya que impedirá que 4D analice correctamente la ruta:
+**Atención:** Cuando utilice funciones y parámetros *propertyPath*, no puede utilizar ".", "[ ]", o espacios en los nombres de las propiedades ya que impedirá que 4D analice correctamente la ruta:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined
