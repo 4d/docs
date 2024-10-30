@@ -19,7 +19,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 ![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-> If the list was created from a list defined in Design mode, the original list is not modified.
+> If the choice list was created from a list defined in Design mode, the original list is not modified.
 
 #### Gramática JSON
 

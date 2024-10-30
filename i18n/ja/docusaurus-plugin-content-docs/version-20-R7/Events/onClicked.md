@@ -33,13 +33,13 @@ title: On Clicked
 
 このイベントは、4D View Pro ドキュメント上でクリックが発生したときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ       | 型       | 説明               |
-| ----------- | ------- | ---------------- |
-| code        | longint | On Clicked       |
-| description | text    | "On Clicked"     |
-| objectName  | text    | 4D View Pro エリア名 |
-| sheetName   | text    | イベントが発生したシート名    |
-| range       | object  | セルのレンジ           |
+| プロパティ       | 型      | 説明               |
+| ----------- | ------ | ---------------- |
+| code        | 倍長整数   | On Clicked       |
+| description | テキスト   | "On Clicked"     |
+| objectName  | テキスト   | 4D View Pro エリア名 |
+| sheetName   | テキスト   | イベントが発生したシート名    |
+| range       | object | セルのレンジ           |
 
 #### 例題
 

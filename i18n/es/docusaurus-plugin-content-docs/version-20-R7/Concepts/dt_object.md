@@ -187,7 +187,7 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
 
 ### Valor Null
 
-Al usar los objetos, el valor _null_ es soportado mediante el comando _Null_. Este comando se puede utilizar para asignar o comparar el valor null a propiedades de objetos, por ejemplo:
+Al usar los objetos, el valor *null* es soportado mediante el comando *Null*. Este comando se puede utilizar para asignar o comparar el valor null a propiedades de objetos, por ejemplo:
 
 ```4d
  myObject.address.zip:=Null
@@ -248,7 +248,7 @@ Basándonos en el código anterior, la tabla comparativa es:
 
 ## Resources
 
-Los objetos utilizan _recursos_ tales documentos, bloqueos de entidades y, por supuesto, memoria. Estos recursos se conservan siempre que los objetos los necesiten. Normalmente, no tiene que preocuparse por ellos, 4D libera automáticamente todos los recursos adjuntos a un objeto cuando detecta que el objeto en sí ya no está referenciado por ninguna variable u otro objeto.
+Los objetos utilizan *recursos* tales documentos, bloqueos de entidades y, por supuesto, memoria. Estos recursos se conservan siempre que los objetos los necesiten. Normalmente, no tiene que preocuparse por ellos, 4D libera automáticamente todos los recursos adjuntos a un objeto cuando detecta que el objeto en sí ya no está referenciado por ninguna variable u otro objeto.
 
 Por ejemplo, cuando ya no hay referencias a una entidad sobre la que se ha establecido un bloqueo con [`$entity.lock()`](../API/EntityClass.md#lock), 4D liberará la memoria pero también liberará automáticamente el bloqueo asociado, una llamada a [`$entity.unlock()`](../API/EntityClass.md#unlock) es inútil.
 

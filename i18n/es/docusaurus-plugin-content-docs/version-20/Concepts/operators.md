@@ -148,12 +148,12 @@ $x1-=5 //$x1=5
 $d1:=!2000-11-10!
 $d1-=10 // $d1=!2000-10-31!
 
-// División
+// Division
 $x3:=10
 $x3/=2 // $x3=5
 
 
-// Multiplicación
+// Multiplication
 $x2:=10
 $x2*=5 // $x2=50
 

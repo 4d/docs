@@ -11,8 +11,8 @@ title: VP SET ROW ATTRIBUTES
 
 | 引数          | 型      |    | 説明                 |                  |
 | ----------- | ------ | -- | ------------------ | ---------------- |
-| rangeObj    | Object | -> | 行レンジ               |                  |
-| propertyObj | Object | -> | 行のプロパティを格納したオブジェクト | <!-- END REF --> |
+| rangeObj    | オブジェクト | -> | 行レンジ               |                  |
+| propertyObj | オブジェクト | -> | 行のプロパティを格納したオブジェクト | <!-- END REF --> |
 
 #### 説明
 
@@ -28,7 +28,7 @@ title: VP SET ROW ATTRIBUTES
 | pageBreak | boolean | レンジ内の先頭行の前に改ページを挿入する場合には true、それ以外は false |
 | visible   | boolean | 行が表示状態であれば true、それ以外は false               |
 | resizable | boolean | 行がリサイズ可能であれば true、それ以外は false             |
-| header    | text    | 行ヘッダーのテキスト                                |
+| header    | テキスト    | 行ヘッダーのテキスト                                |
 
 #### 例題
 

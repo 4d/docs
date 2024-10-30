@@ -17,13 +17,13 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
-| 引数         | 型       |    | 説明                                             |                  |
-| ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | Table name                                     |                  |
-| column     | Integer | -> | 表の列のインデックス                                     |                  |
-| attributes | Object  | -> | *column* の列に適用する属性                             |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
+| 引数         | 型      |    | 説明                                             |                  |
+| ---------- | ------ | -- | ---------------------------------------------- | ---------------- |
+| vpAreaName | テキスト   | -> | 4D View Pro フォームオブジェクト名                        |                  |
+| tableName  | テキスト   | -> | Table name                                     |                  |
+| column     | 整数     | -> | 表の列のインデックス                                     |                  |
+| attributes | オブジェクト | -> | *column* の列に適用する属性                             |                  |
+| sheet      | 整数     | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
 #### 説明
 
@@ -35,11 +35,11 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 | プロパティ               | 型       | 説明                                                                                                                                               |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataField           | text    | データコンテキストにおける、表の列のプロパティ名。                                                                                                                        |
-| name                | text    | 表の列の名前。 表組み内でユニークでなくてはなりません。 すでに他の列で使われている場合、名前は適用されず、自動的にデフォルトの名前が使われます。                                                                        |
-| formula             | text    | 列の各セルにフォーミュラを設定します。 SpreadJS のドキュメント [Structured Reference Formulas](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) 参照 |
-| footerText          | text    | 列のフッター値                                                                                                                                          |
-| footerFormula       | text    | 列のフッターのフォーミュラ。                                                                                                                                   |
+| dataField           | テキスト    | データコンテキストにおける、表の列のプロパティ名。                                                                                                                        |
+| name                | テキスト    | 表の列の名前。 表組み内でユニークでなくてはなりません。 すでに他の列で使われている場合、名前は適用されず、自動的にデフォルトの名前が使われます。                                                                        |
+| formula             | テキスト    | 列の各セルにフォーミュラを設定します。 SpreadJS のドキュメント [Structured Reference Formulas](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) 参照 |
+| footerText          | テキスト    | 列のフッター値                                                                                                                                          |
+| footerFormula       | テキスト    | 列のフッターのフォーミュラ。                                                                                                                                   |
 | filterButtonVisible | boolean | 表組みの列のフィルターボタンを表示するかどうかを設定します (表組み作成時のデフォルトは `true`)。                                                                         |
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。

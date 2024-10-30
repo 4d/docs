@@ -29,9 +29,9 @@ Cada objeto de formulário ativo está associado a um nome de objeto. Cada nome 
 
 > Os nomes dos objectos estão limitados a um tamanho de 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
+Ao usar a linguagem 4D, você pode se referir a um objeto de formulário ativo pelo nome do objeto (para obter mais informações sobre isso, consulte [Propriedades Objeto](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) no manual de referência da linguagem 4D).
 
-Para más información sobre las reglas de denominación de los objetos de formulario, consulte la sección [Identificadores](Concepts/identifiers.md).
+Para obter mais informações sobre regras de nomenclatura para objetos de formulário, consulte a seção [Identificadores](Concepts/identifiers.md).
 
 #### Gramática JSON
 
@@ -47,18 +47,18 @@ Para más información sobre las reglas de denominación de los objetos de formu
 
 ## Guardar valor
 
-Esta propiedad está disponible cuando la opción [Guardar geometría](FormEditor/properties_FormProperties.md#save-geometry) está marcada para el formulario.
+Esta propriedade está disponível quando a opção [Salvar Geometria](FormEditor/properties_FormProperties.md#save-geometry) está marcada para o formulário.
 
 This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
 
 Eis a lista de objetos cujo valor pode ser guardado:
 
-| Object                                                                                                                                                | Valor guardado                                                                                            |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [Caixa de seleção] (checkbox_overview.md) | Valor da variável associada (0, 1, 2)                                                  |
-| [Lista suspensa](dropdownList_Overview.md)                                                                                                            | Número da linha seleccionada                                                                              |
-| [Radio Button](radio_overview.md)                                                                                                                     | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
-| [Tab control](tabControl.md)                                                                                                                          | Número da aba selecionada                                                                                 |
+| Object                                     | Valor guardado                                                                                            |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| [Caixa de seleção](checkbox_overview.md)   | Valor da variável associada (0, 1, 2)                                                  |
+| [Lista suspensa](dropdownList_Overview.md) | Número da linha seleccionada                                                                              |
+| [Botão de rádio](radio_overview.md)        | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
+| [Controle de guias](tabControl.md)         | Número da aba selecionada                                                                                 |
 
 #### Gramática JSON
 
@@ -74,11 +74,11 @@ Eis a lista de objetos cujo valor pode ser guardado:
 
 ## Variável ou expressão
 
-> Ver también **[Expression](properties_DataSource.md#expression)** para las columnas de list box de tipo selección y colección.
+> Consulte também **[Expression](properties_DataSource.md#expression)** para colunas do list box do tipo seleção e coleção.
 
-Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. O nome da variável pode diferir do nome do objeto. En el mismo formulario, puede utilizar la misma variable varias veces, mientras que cada [nombre de objeto](#object-name) debe ser único.
+Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. O nome da variável pode diferir do nome do objeto. No mesmo formulário, você pode usar a mesma variável várias vezes, mas cada [nome do objeto](#object-name) deve ser exclusivo.
 
-> O tamanho do nome da variável é limitado a 31 bytes. Consulte la sección [Identificadores](Concepts/identifiers.md) para obtener más información sobre las reglas de asignación de nombres.
+> O tamanho do nome da variável é limitado a 31 bytes. Consulte a seção [Identificadores](Concepts/identifiers.md) para obter mais informações sobre regras de nomenclatura.
 
 As variáveis de objeto do formulário permitem controlar e monitorar os objetos. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
 
@@ -130,7 +130,7 @@ Este mecanismo tem duas vantagens:
 
 ### List box array
 
-Para un list box array, la propiedad **Variable o Expresión** normalmente contiene el nombre de la variable array definida para el list box y para cada columna. Sin embargo, puede utilizar un array de cadenas (que contenga nombres de arrays) como _dataSource_ valor de una columna list box para definir un [list box jerárquico](listbox_overview.md#hierarchical-list-boxes).
+Para un list box array, la propiedad **Variable o Expresión** normalmente contiene el nombre de la variable array definida para el list box y para cada columna. Sin embargo, puede utilizar un array de cadenas (que contenga nombres de arrays) como *dataSource* valor de una columna list box para definir un [list box jerárquico](listbox_overview.md#hierarchical-list-boxes).
 
 #### Objectos suportados
 
@@ -255,7 +255,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objectos suportados
 
-[Radio Button](radio_overview.md)
+[Botão de rádio](radio_overview.md)
 
 ---
 
@@ -311,7 +311,7 @@ Existem vários tipos de cálculos disponíveis. The following table shows which
 
 Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
-_Null_ no se tienen en cuenta para ningún cálculo.
+*Null* no se tienen en cuenta para ningún cálculo.
 
 If the column contains different types of values (collection-based column for example):
 

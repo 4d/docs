@@ -35,10 +35,10 @@ ds. Company.city //returns the name of the city
 
 > ORDA e sensíveis às maiúsculas e minúsculas. `ds.company.city` no hará referencia al atributo ds.Company.city.
 
-También habrá notado la propiedad extra `hires` en la dataclass ds.Company. Não corresponde a um campo. `hires` es en realidad el nombre de la relación _Uno a muchos_ entre Company y Employee:
+También habrá notado la propiedad extra `hires` en la dataclass ds.Company. Não corresponde a um campo. `hires` es en realidad el nombre de la relación *Uno a muchos* entre Company y Employee:
 
 ![](../assets/en/ORDA/struc2s.png)
-_Name of the relation as defined in the Inspector_
+*Name of the relation as defined in the Inspector*
 
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 

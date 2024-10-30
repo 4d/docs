@@ -87,17 +87,17 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 ### シンタックス
 
-**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
+**On Web Authentication**( *$url* : Text ; *$content* : Text ; *$IPClient* : Text ; *$IPServer* : Text ; *$user* : Text ; *$password* : Text ) -> $accept : Boolean
 
-| 引数        | 型       |                             | 説明                                              |
-| --------- | ------- | :-------------------------: | ----------------------------------------------- |
-| $url      | Text    | <- | URL                                             |
-| $content  | Text    | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
-| $IPClient | Text    | <- | Webクライアント (ブラウザー) の IPアドレス   |
-| $IPServer | Text    | <- | サーバーの IPアドレス                                    |
-| $user     | Text    | <- | ユーザー名                                           |
-| $password | Text    | <- | パスワード                                           |
-| $accept   | Boolean |              ->             | True = リクエストは受け入れられました、False = リクエストが拒否されました    |
+| 引数        | 型    |                             | 説明                                              |
+| --------- | ---- | :-------------------------: | ----------------------------------------------- |
+| $url      | テキスト | <- | URL                                             |
+| $content  | テキスト | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
+| $IPClient | テキスト | <- | Webクライアント (ブラウザー) の IPアドレス   |
+| $IPServer | テキスト | <- | サーバーの IPアドレス                                    |
+| $user     | テキスト | <- | ユーザー名                                           |
+| $password | テキスト | <- | パスワード                                           |
+| $accept   | ブール  |              ->             | True = リクエストは受け入れられました、False = リクエストが拒否されました    |
 
 これらの引数を以下のように宣言しなければなりません:
 

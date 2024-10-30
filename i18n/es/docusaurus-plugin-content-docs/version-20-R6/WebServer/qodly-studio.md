@@ -16,12 +16,6 @@ Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se f
 - activar código 4D configurando eventos
 - y mucho más.
 
-:::info
-
-El desarrollo con Qodly Studio para 4D requiere al menos una [licencia 4D Silver Partner](https://us.4d.com/4d-partner-program). Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
-
-:::
-
 ## Configuración
 
 ### Requisitos

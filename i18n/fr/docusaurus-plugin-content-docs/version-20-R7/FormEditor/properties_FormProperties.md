@@ -67,14 +67,14 @@ The form name is defined by the name of the folder that contains the form.4Dform
 
 ## Form Type
 
-The form type, _i.e._ its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
+The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
 
 Each table in a database generally has at least two table forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
 
-- Output form - the _output form_ or _list form_ displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record.
+- Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record.
   ![](../assets/en/FormObjects/formOutput.png)
 
-- Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (_i.e._, First Record, Last Record, Previous Record, Next Record).
+- Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record).
   ![](../assets/en/FormObjects/formInput.png)
 
 Supported types depend on the form category:
@@ -85,7 +85,7 @@ Supported types depend on the form category:
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
 | List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
 | List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| Aucun                    | _no destination_ | A form with no specific feature                               | Project forms - Table forms |
+| Aucun                    | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
 #### Grammaire JSON
 

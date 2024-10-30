@@ -6,7 +6,7 @@ title: リリースノート
 
 :::tip
 
-Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.x LTS.
+[**4D 20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D 20.x LTS の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 :::
 
@@ -14,31 +14,31 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### ハイライト
 
-- 4D 20.5 LTS is certified on Windows 11 24H2.
-- 4D 20.5 LTS is certified on macOS Sequoia (macOS 15).
+- 4D 20.5 LTD は Windows 11 24H2 対応です。
+- 4D 20.5 LTS は macOS Sequoia (macOS 15) 対応です。
 
-:::warning Known issue on Windows 11 24H2
+:::warning Windows 11 24H2における既知の問題
 
-On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may fail due to an issue which is still under investigation. If you frequently print PDFs with your 4D application, we currently recommend that you do not upgrade to Windows 11 24H2.
+Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PDF を生成すると、現在調査中の問題が原因で失敗する可能性があります。 4Dアプリケーションで頻繁に PDF を印刷する場合、Windows 11 24H2 へのアップグレードはされないことをお勧めします。
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.5): 4D 20.5 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 
 ## 4D 20.4 LTS
 
 #### ハイライト
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.4): 4D 20.4 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 ## 4D 20.3 LTS
 
 #### ハイライト
 
-- CEF updated to Chromium 5993
-- SpreadJS updated to version 16.2.6 (in 4D 20.2 HF1).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
+- CEF が Chromium 5993 にアップデートされました。
+- SpreadJS は 4D 20.2 HF1 でバージョン 16.2.6 にアップデートされました。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.3): 4D 20.3 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 #### 動作の変更
 
@@ -57,18 +57,18 @@ On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may f
 
 :::
 
-:::caution Minimal client version for 4D Server 20.2 and later
+:::caution 4D Server 20.2 以降の最小クライアントバージョンについて
 
 内部的な理由により、4D 20.2 以降の 4D Server に接続するリモートクライアントのバージョンは、4D 20.2 以上でなければなりません。
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.2): 4D 20.2 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 #### 動作の変更
 
 - 4D 20.2 以降、4D 20 LTS は Windows Server 2012 R2 との互換性がなくなりました。
-- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 A fix has been made in 4D as of versions **20.2** (20.1 HF1) and **20 R2** and the value is now 0.
+- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 **20.2** (20.1 HF1) および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 
 ## 4D 20.1 LTS
 
@@ -79,25 +79,25 @@ On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may f
 4D 20.1 には ICUライブラリーのアップデートが含まれており、以下の影響があります:
 
 - 文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。
-- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D 20.1 can connect to 4D Server 20.1 and vice versa.
+- 並べ替えの一貫性のため、4Dリモートクライアントと 4D Server は同じバージョンを使用する必要があります。4D 20.1 のリモートと 4D Server 20.1 のみが互いに接続できます。
 
 :::
 
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.1): 4D 20.1 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 ## 4D 20 LTS
 
 
 #### ハイライト
 
-:::caution Index rebuild
+:::caution インデックス再構築
 
 4D 20 では、ICUライブラリのアップデート (後述参照) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
 
 :::
 
-- New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
+- [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
 - 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
@@ -120,7 +120,7 @@ On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may f
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20): list of all bugs that have been fixed in 4D 20 LTS.
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20): 4D 20 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 
 #### 動作の変更
@@ -308,7 +308,7 @@ ALERT($param1+" "+$param2)
 ## 4D 19.x LTS
 
 
-See [**Release Notes for 4D 19.x LTS**](../../version-19/Notes/updates.md).
+[**4D 19.x LTS のリリースノート**](../../version-19/Notes/updates.md) 参照。
 
 
 

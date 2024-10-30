@@ -30,7 +30,7 @@ Para más información, consulte la sección [Clases](../Concepts/classes.md).
 
 Para eliminar um método ou classe existente, pode:
 
-- en su disco, elimine el archivo _.4dm_ de la carpeta "Sources",
+- en su disco, elimine el archivo *.4dm* de la carpeta "Sources",
 - in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 > Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
@@ -46,8 +46,8 @@ A função de importação/exportação é multiplataforma: um método exportado
 
 4D pode exportar e importar métodos em dois formatos:
 
-- Método 4D (extensión _.c4d_): en este formato, los métodos se exportan codificados. Os nomes dos objectos são tokenizados. Este formato é utilizado em particular para o intercâmbio de métodos entre aplicações 4D e plug-ins em diferentes línguas. Por outro lado, não é possível visualizá-los num editor de texto.
-- Texto (extensión _.txt_): en este formato, los métodos se exportan en forma de texto. Neste caso, os métodos podem ser lidos utilizando um editor de texto normal ou uma ferramenta de controlo da fonte.
+- Método 4D (extensión *.c4d*): en este formato, los métodos se exportan codificados. Os nomes dos objectos são tokenizados. Este formato é utilizado em particular para o intercâmbio de métodos entre aplicações 4D e plug-ins em diferentes línguas. Por outro lado, não é possível visualizá-los num editor de texto.
+- Texto (extensión *.txt*): en este formato, los métodos se exportan en forma de texto. Neste caso, os métodos podem ser lidos utilizando um editor de texto normal ou uma ferramenta de controlo da fonte.
 
 ## Propriedades do método projeto
 
@@ -149,7 +149,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 #### Servidor REST
 
-_Esta opção está obsoleta. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md)._
+*Esta opção está obsoleta. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
 #### Definição de lotes para atributos de métodos
 

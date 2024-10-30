@@ -99,7 +99,7 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna
 
 A função `.create()` <!-- REF #FolderClass.create().Summary -->cria uma pasta no disco de acordo com as propriedades do objeto `Folder`<!-- END REF -->.
 
-Se necessário, a função cria a hierarquia de pastas conforme descrito nas propriedades [platformPath](#platformpath) ou [path](#path). Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
+If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
 **Valor retornado**
 
@@ -159,7 +159,7 @@ End if
 
 A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um alias (macOS) ou um atalho (Windows)<!-- END REF --> para a pasta com o nome *aliasName* especificado na pasta designada pelo objeto *destinationFolder*.
 
-Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName*.
+Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType*. Estão disponíveis as seguintes constantes:
 
@@ -168,7 +168,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 | `fk alias link`    | 0     | Alias link (padrão)          |
 | `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
+On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
 **Objeto devolvido**
 
@@ -295,7 +295,7 @@ Quando `Delete with contents` é passado:
 
 A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renomeia o objeto `Folder` (pasta de origem) para a *destinationFolder* especificada<!-- END REF -->.
 
-A *destinationFolder* deve existir em disco, senão um erro é gerado.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, a pasta mantém o seu nome quando movida. Se quiser renomear a pasta movida, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
@@ -353,7 +353,7 @@ Quer mover-se e renomear uma pasta:
 
 A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a pasta com o nome que você passou em *newName* e retorna o objeto `Folder` renomeado<!-- END REF -->.
 
-O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
 **Objeto devolvido**
 

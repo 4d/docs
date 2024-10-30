@@ -3,7 +3,7 @@ id: format
 title: $format
 ---
 
-Define un formato específico para devolver datos de una clase de datos, (_e.g._, `$format=looker`)
+Define un formato específico para devolver datos de una clase de datos, (*e.g.*, `$format=looker`)
 
 ## Descripción
 

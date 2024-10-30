@@ -7,7 +7,7 @@ La classe `POP3Transporter` vous permet de récupérer des messages à partir d'
 
 ### Objet POP3 Transporter
 
-POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command. Leurs propriétés et fonctions sont les suivantes :
+Les objets POP3 Transporter sont instanciés avec la commande [`POP3 New transporter`](../commands/pop3-new-transporter.md). Leurs propriétés et fonctions sont les suivantes :
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../c
 
 #### Description
 
-La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary -->crée et retourne un nouvel objet de type `4D.POP3Transporter`<!-- END REF -->. It is identical to the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command (shortcut).
+La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary -->crée et retourne un nouvel objet de type `4D.POP3Transporter`<!-- END REF -->. Elle est identique à la commande [`POP3 New transporter`](../commands/pop3-new-transporter.md) (raccourci).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

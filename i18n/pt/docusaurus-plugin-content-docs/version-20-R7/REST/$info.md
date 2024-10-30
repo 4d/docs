@@ -41,7 +41,7 @@ Para obtener información sobre cómo crear una selección de entidades, consult
 
 ### sessionInfo
 
-Para cada sesión de usuario, se devuelve la siguiente información en la colección _sessionInfo_:
+Para cada sesión de usuario, se devuelve la siguiente información en la colección *sessionInfo*:
 
 | Propriedade | Tipo   | Descrição                                                                                                     |
 | ----------- | ------ | ------------------------------------------------------------------------------------------------------------- |

@@ -160,7 +160,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Left](properties_CoordinatesAndSizing.md#left)                                                                                                                                                           | X              | X                | X                                    |
 | [Master Table](properties_DataSource.md#table)                                                                                                                                                            |                | X                |                                      |
 | [Meta info expression](properties_Text.md#meta-info-expression)                                                                                                                                           |                |                  | X                                    |
-| [Method](properties_Action.md#method)                                                                                                                                                                     | X              | X                | X                                    |
+| [Method](propriedades_Ação.md#method)                                                                                                                                                                     | X              | X                | X                                    |
 | [Movable Rows](properties_Action.md#movable-rows)                                                                                                                                                         | X              |                  |                                      |
 | [Named Selection](properties_DataSource.md#selectionName)                                                                                                                                                 |                | X                |                                      |
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                                                                                                                              | X              | X                | X                                    |
@@ -182,7 +182,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Style Expression](properties_Text.md#style-expression)                                                                                                                                                   |                | X                | X                                    |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                                                                                                                             | X              | X                | X                                    |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                                                                                                                              | X              | X                | X                                    |
-| [Type](properties_Object.md#type)                                                                                                                                                                         | X              | X                | X                                    |
+| [Tipo](properties_Object.md#type)                                                                                                                                                                         | X              | X                | X                                    |
 | [Underline](properties_Text.md#underline)                                                                                                                                                                 | X              | X                | X                                    |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                                                                                                                                     | X              | X                |                                      |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                                                                                                                               | X              | X                | X                                    |
@@ -727,13 +727,13 @@ Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três 
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-As matrizes não são ordenadas antes de a hierarquia ser construída. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
-\>    A
-\>    B
-\>    A
-\>    C
+As matrizes não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
+\> A
+\> B
+\> A
+\> C
 
-Para expandir ou colapsar um "nó" hierárquico, pode simplesmente clicar sobre ele. Si hace **Alt+clic** (Windows) o **Opción+clic** (macOS) en el nodo, todos sus subelementos se desplegarán o contraerán también. Estas operaciones también pueden realizarse por programación utilizando los comandos `LISTBOX EXPAND` y `LISTBOX COLLAPSE`.
+Para expandir ou colapsar um "nó" hierárquico, pode simplesmente clicar sobre ele. Se você **Alt+click** (Windows) ou **Option+click** (macOS) no nó, todos os seus subelementos também serão expandidos ou recolhidos. Essas operações também podem ser executadas por meio de programação, usando os comandos `LISTBOX EXPAND` e `LISTBOX COLLAPSE`.
 
 Quando valores do tipo de data ou hora são incluídos numa caixa de listagem hierárquica, eles são exibidos no formato de sistema curto.
 
@@ -807,11 +807,11 @@ Quando todas as filas de uma sub-hierarquia estão escondidas, a linha de quebra
 
 #### Linhas de quebra
 
-Si el usuario selecciona una línea de ruptura, `LISTBOX GET CELL POSITION` devuelve la primera ocurrencia de la línea en el array correspondiente. No caso seguinte:
+Se o usuário selecionar uma linha de interrupção, `LISTBOX GET CELL POSITION` retornará a primeira ocorrência da linha na matriz correspondente. No caso seguinte:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` retorna (2;4). Para seleccionar una línea de ruptura por programación, deberá utilizar el comando `LISTBOX SELECT BREAK`.
+... `LISTBOX GET CELL POSITION` retorna (2;4). Para selecionar uma linha de interrupção por programação, você precisará usar o comando `LISTBOX SELECT BREAK`.
 
 As linhas de quebra não são tidas em conta nos arrays internos utilizados para gerir o aspecto gráfico das caixas de listagem (estilos e cores). No entanto, é possível modificar estas características para linhas de quebra através dos comandos de gestão gráfica dos objectos. Basta executar os comandos apropriados nas matrizes que constituem a hierarquia.
 
@@ -823,7 +823,7 @@ Dada, por exemplo, a seguinte caixa de listagem (os nomes dos arrays associados 
 *Representação hierárquica:*
 ![](../assets/en/FormObjects/hierarch13.png)
 
-En modo jerárquico, los niveles de ruptura no son tenidos en cuenta por los arrays de modificación de estilo denominados `tStyle` y `tColors`. Para modificar a cor ou o estilo dos níveis de quebra, é necessário executar as seguintes declarações:
+No modo hierárquico, os níveis de interrupção não são levados em consideração pelas matrizes de modificação de estilo denominadas `tStyle` e `tColors`. Para modificar a cor ou o estilo dos níveis de quebra, é necessário executar as seguintes declarações:
 
 ```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
@@ -840,7 +840,7 @@ Resultados:
 
 Pode optimizar a exibição e gerenciamento de caixas de listagem hierárquica usando os eventos de formulário `On Expand` e `On Collapse`.
 
-Uma caixa de listagem hierárquica é construída a partir do conteúdo de seus arrays de modo a só poder ser exibida quando todas estas matrizes são carregadas na memória. Esto dificulta la generación de list box jerárquicos de gran tamaño basados en arrays generados a partir de datos (a través del comando `SELECTION TO ARRAY`), no sólo por la velocidad de visualización sino también por la memoria utilizada.
+Uma caixa de listagem hierárquica é construída a partir do conteúdo de seus arrays de modo a só poder ser exibida quando todas estas matrizes são carregadas na memória. Isto torna difícil construir grandes caixas de listagem hierárquica com base em arrays gerados a partir de dados (através do comando SELECTION TO ARRAY ), não só devido à velocidade de visualização mas também à memória utilizada.
 
 Usando os formulários `On Expand` e `On Collapse`, os eventos podem ultrapassar estas restrições: por exemplo, é possível exibir apenas parte da hierarquia e carregar/descarregar as arrays a qualquer momento, com base nas ações dos usuários. No contexto destes eventos, o comando `LISTBOX GET CELL POSITION` devolve a célula onde o usuário clicou para expandir ou colapsar uma fila.
 
@@ -1137,14 +1137,14 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Utilice este atributo para definir unidades con una lista 4D creada con el comando [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [New list] (https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
 - "unitsListName": a name of a design-based 4D list that contains available units. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Regardless of the way the unit list is defined, it can be associated with the following attribute:
 
 - "unitReference": a single value that contains the index (from 1 to x) of the selected item in the "unitList", "unitsListReference" or "unitsListName" values list.
 
-Independientemente de la forma en que se defina la lista de unidades, puede asociarse con el siguiente atributo:
+A unidade atual é exibida como um botão que percorre os valores "unitList", "unitsListReference" ou "unitsListName" sempre que é clicado (por exemplo, "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
 Exemplo:
 
@@ -1163,9 +1163,9 @@ OB SET($ob;"value";2) // 2 "units" OB SET($ob;"unitReference";1) //"lines" OB SE
 
 #### alternateButton
 
-Se você quiser adicionar um botão de elipses [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. O botão será automaticamente apresentado na célula.
+Se você quiser adicionar um botão de elipses [...] para uma célula, basta passar o "alternateButton" com o valor True no objeto. O botão será automaticamente apresentado na célula.
 
-Cuando este botón es presionado por un usuario, se generará un evento `On Alternate Click`, y usted podrá manejarlo como quiera (vea el párrafo "Manejo de eventos" para más información).
+Quando esse botão for clicado por um usuário, será gerado um evento `On Alternate Click`, e você poderá tratá-lo como quiser (consulte o parágrafo "Gerenciamento de eventos" para obter mais informações).
 
 Exemplo:
 

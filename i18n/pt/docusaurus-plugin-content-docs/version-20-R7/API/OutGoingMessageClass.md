@@ -161,9 +161,9 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 <!-- REF #OutGoingMessageClass.setStatus().Params -->
 
-| Parâmetro | Tipo    |    | Descrição     |
-| --------- | ------- | -- | ------------- |
-| status    | Integer | -> | Status to set |
+| Parâmetro | Tipo    |    | Descrição           |
+| --------- | ------- | -- | ------------------- |
+| status    | Integer | -> | Status para definir |
 
 <!-- END REF -->
 

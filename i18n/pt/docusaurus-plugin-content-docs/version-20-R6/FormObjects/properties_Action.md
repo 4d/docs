@@ -32,7 +32,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Veja também
 
-[Droppable](#droppable)
+[Soltável](#droppable)
 
 ---
 
@@ -60,13 +60,13 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Veja também
 
-[Draggable](#draggable)
+[Arrastável](#draggable)
 
 ---
 
 ## Executar método objecto
 
-Cuando esta opción está activada, el método objeto se ejecuta con el evento `On Data Change` *en el mismo momento* en que el usuario cambia el valor del indicador. Cuando la opción está desactivada, el método se ejecuta *tras* la modificación.
+Quando essa opção está ativada, o método objeto é executado com o evento `On Data Change` *no mesmo momento* em que o usuário altera o valor do indicador. Cuando la opción está desactivada, el método se ejecuta *tras* la modificación.
 
 #### Gramática JSON
 

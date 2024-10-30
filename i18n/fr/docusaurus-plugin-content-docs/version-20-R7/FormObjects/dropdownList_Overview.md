@@ -20,7 +20,7 @@ You can create different types of drop-down lists with different features. To de
 | Choice list saved as value     | Built upon a choice list (standard)           | List            | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                          |
 | Choice list saved as reference | Built upon a choice list. Item position is saved | List            | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                   |
 | Hierarchical choice list       | Can display hierarchical contents                                | List            | List reference               | `dataSourceTypeHint: integer`                                                                                                         |
-| Action standard                | Automatically built by the action                                | _any_           | _any except List reference_  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                     |
+| Action standard                | Automatically built by the action                                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                     |
 
 ## Handling drop-down lists
 

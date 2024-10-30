@@ -5,8 +5,8 @@ title: DataStore
 
 [データストア](ORDA/dsMapping.md#datastore) とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 `Datastore` オブジェクトは以下のコマンドによって返されます:
 
-- [ds](../commands/ds.md): a shortcut to the main datastore
-- [Open datastore](../commands/open-datastore.md): to open any remote datastore
+- [ds](../commands/ds.md): メインデータストアへのショートカット
+- [Open datastore](../commands/open-datastore.md): リモートデータストアを開きます
 
 ### 概要
 
@@ -216,10 +216,9 @@ title: DataStore
 
 <details><summary>履歴</summary>
 
-|リリース|変更内容|
-
-\|---|---|
-|20|追加|
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -241,7 +240,7 @@ title: DataStore
 
 この関数は次の場合にのみ使えます:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- ローカルデータストア ([`ds`](../commands/ds.md)) を対象に。
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -397,7 +396,7 @@ $info:=$ds.getAllRemoteContexts()
 
 この関数は次の場合にのみ使えます:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- ローカルデータストア ([`ds`](../commands/ds.md)) を対象に。
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -844,7 +843,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 この関数は次の場合にのみ使えます:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- ローカルデータストア ([`ds`](../commands/ds.md)) を対象に。
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::

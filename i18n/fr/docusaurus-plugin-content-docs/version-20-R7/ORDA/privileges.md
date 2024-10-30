@@ -21,7 +21,7 @@ Si un utilisateur tente d'exécuter une action et ne dispose pas des droits d'ac
 
 Pour un aperçu détaillé de l'architecture des permissions, veuillez lire l'article de blog [**Filtrer l'accès à vos données avec un système complet de permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/).
 
-## Ressources
+## Resources
 
 You can assign specific permission actions to the following resources in your project:
 
@@ -64,7 +64,7 @@ Les actions disponibles sont liées à la ressource cible.
 - Un alias peut être lu dès que les privilèges de session permettent l'accès à l'alias lui-même, même si les privilèges de session ne permettent pas l'accès aux attributs résolvant l'alias.
 - Il est possible d'accéder à un attribut calculé même s'il n'y a pas de permissions sur les attributs sur lesquels il est construit.
 - Vous pouvez assigner une action de permission à une classe singleton (type `singleton`), auquel cas elle sera appliquée à toutes ses fonctions exposées, ou bien à une fonction de singleton (type `singletonMethod`).
-- Valeurs par défaut : dans l'implémentation actuelle, seul _Null_ est disponible en tant que valeur par défaut.
+- Valeurs par défaut : dans l'implémentation actuelle, seul *Null* est disponible en tant que valeur par défaut.
 - En mode REST [force login](../REST/authUsers.md/#force-login-mode), la fonction [`authentify()`](../REST/authUsers.md#function-authentify) est toujours exécutable par les utilisateurs guest, quelle que soit la configuration des permissions.
 
 Le paramétrage des permissions nécessite d'être cohérent, en particulier :

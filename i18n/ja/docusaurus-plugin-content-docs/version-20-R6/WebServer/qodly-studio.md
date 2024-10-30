@@ -16,12 +16,6 @@ Qodly Studio では、全く新しい WebUI を使い、Qodly Sources の概念�
 - イベントを設定して 4Dコードをトリガーする
 - さらに沢山のことが可能です
 
-:::info
-
-Qodly Studio for 4D を使って開発するには、シルバー以上の [4Dパートナーライセンス](https://jp.4d.com/4d-partner-program) が必要です。 ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
-
-:::
-
 ## 設定
 
 ### 要件

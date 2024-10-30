@@ -94,7 +94,7 @@ La page contient plusieurs zones :
 
 Vous pouvez réorganiser la liste des entités affichées en fonction des valeurs des attributs. Tous les types d'attributs peuvent être utilisés pour un tri, sauf l'image et l'objet.
 
-- Cliquez sur un en-tête de colonne pour ordonner les entités en fonction des valeurs d'attribut correspondantes. Par défaut, le tri est ascendant. Cliquez deux fois pour un tri décroissant. Une colonne utilisée pour trier les entités est affichée avec une petite icône et son nom est en _italique_.
+- Cliquez sur un en-tête de colonne pour ordonner les entités en fonction des valeurs d'attribut correspondantes. Par défaut, le tri est ascendant. Cliquez deux fois pour un tri décroissant. Une colonne utilisée pour trier les entités est affichée avec une petite icône et son nom est en *italique*.
 
 ![alt-text](../assets/en/Admin/dataExplorer7.png)
 
@@ -106,7 +106,7 @@ Dans ce mode, vous pouvez filtrer les entités en saisissant les valeurs à rech
 
 ![alt-text](../assets/en/Admin/dataExplorer6.png)
 
-Si vous saisissez plusieurs attributs, un "ET" est automatiquement appliqué. Par exemple, le filtre suivant affiche les entités dont l'attribut _prénom_ commence par "flo" ET la valeur de l'attribut _salaire_ > 50000 :
+Si vous saisissez plusieurs attributs, un "ET" est automatiquement appliqué. Par exemple, le filtre suivant affiche les entités dont l'attribut *prénom* commence par "flo" ET la valeur de l'attribut *salaire* > 50000 :
 
 ![alt-text](../assets/en/Admin/dataExplorer9.png)
 
@@ -159,7 +159,7 @@ Lorsque vous sélectionnez cette option, une zone de requête s'affiche au-dessu
 
 ![alt-text](../assets/en/Admin/dataExplorer8.png)
 
-Vous pouvez saisir des requêtes avancées qui ne sont pas disponibles en tant que requêtes d'attributs. Par exemple, si vous voulez trouver des entités dont l'attribut _firstname_ contient "Jim" mais pas "Jimmy", vous pouvez écrire :
+Vous pouvez saisir des requêtes avancées qui ne sont pas disponibles en tant que requêtes d'attributs. Par exemple, si vous voulez trouver des entités dont l'attribut *firstname* contient "Jim" mais pas "Jimmy", vous pouvez écrire :
 
 ```
 firstname=="Jim"
@@ -168,7 +168,7 @@ firstname=="Jim"
 Vous pouvez utiliser n'importe quelle expression de requête ORDA comme documenté dans la fonction [`query()`] (API/DataClassClass.md#query), avec les limitations ou différences suivantes :
 
 - Par sécurité, vous ne pouvez pas exécuter de formules en utilisant `eval()`.
-- Les placeholders ne peuvent pas être utilisés ; vous devez saisir une _queryString_ avec des valeurs.
+- Les placeholders ne peuvent pas être utilisés ; vous devez saisir une *queryString* avec des valeurs.
 - Les valeurs de chaîne contenant des caractères d'espacement doivent être intégrées dans des guillemets doubles ("").
 
 Par exemple, avec la dataclass Employee, vous pouvez écrire :

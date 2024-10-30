@@ -51,9 +51,9 @@ Session objects are returned by the [`Session`](../commands/session.md) command.
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
-| 引数  | 型       |                             | 説明                  |
-| --- | ------- | :-------------------------: | ------------------- |
-| 戻り値 | Boolean | <- | 実行が正常に終わった場合には true |
+| 引数  | 型   |                             | 説明                  |
+| --- | --- | :-------------------------: | ------------------- |
+| 戻り値 | ブール | <- | 実行が正常に終わった場合には true |
 
 <!-- END REF -->
 
@@ -131,9 +131,9 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| 引数  | 型          |                             | 説明                                        |
-| --- | ---------- | :-------------------------: | ----------------------------------------- |
-| 戻り値 | Collection | <- | アクセス権の名称 (文字列) のコレクション |
+| 引数  | 型      |                             | 説明                                        |
+| --- | ------ | :-------------------------: | ----------------------------------------- |
+| 戻り値 | コレクション | <- | アクセス権の名称 (文字列) のコレクション |
 
 <!-- END REF -->
 
@@ -226,10 +226,10 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| 引数        | 型       |                             | 説明                                                |
-| --------- | ------- | :-------------------------: | ------------------------------------------------- |
-| privilege | Text    |              ->             | 確認するアクセス権の名称                                      |
-| 戻り値       | Boolean | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
+| 引数        | 型    |                             | 説明                                                |
+| --------- | ---- | :-------------------------: | ------------------------------------------------- |
+| privilege | テキスト |              ->             | 確認するアクセス権の名称                                      |
+| 戻り値       | ブール  | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
 
 <!-- END REF -->
 
@@ -273,7 +273,7 @@ End if
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -357,16 +357,16 @@ End if
 
 | プロパティ            | 型                                | 説明                                                                                  |
 | ---------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
-| type             | Text                             | セッションタイプ: "remote" または "storedProcedure"                            |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                          |
-| machineName      | Text                             | リモートセッション: リモートマシンの名前。 ストアドプロシージャーセッション: サーバーマシンの名前 |
-| systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                               |
-| IPAddress        | Text                             | リモートマシンの IPアドレス。                                                                    |
-| hostType         | Text                             | ホストタイプ: "windows" または "mac"                                         |
+| type             | テキスト                             | セッションタイプ: "remote" または "storedProcedure"                            |
+| userName         | テキスト                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                          |
+| machineName      | テキスト                             | リモートセッション: リモートマシンの名前。 ストアドプロシージャーセッション: サーバーマシンの名前 |
+| systemUserName   | テキスト                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                               |
+| IPAddress        | テキスト                             | リモートマシンの IPアドレス。                                                                    |
+| hostType         | テキスト                             | ホストタイプ: "windows" または "mac"                                         |
 | creationDateTime | 日付 (ISO 8601) | セッション作成の日時                                                                          |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                         |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                   |
-| persistentID     | Text                             | セッションの永続的な ID                                                                       |
+| state            | テキスト                             | セッションの状態: "active", "postponed", "sleeping"                         |
+| ID               | テキスト                             | セッションUUID ([`.id`](#id) と同じ値))                                   |
+| persistentID     | テキスト                             | セッションの永続的な ID                                                                       |
 
 :::note
 
@@ -392,9 +392,9 @@ End if
 
 <!-- REF #SessionClass.isGuest().Params -->
 
-| 引数  | 型       |                             | 説明                            |
-| --- | ------- | :-------------------------: | ----------------------------- |
-| 戻り値 | Boolean | <- | ゲストセッションの場合は true、それ以外は false |
+| 引数  | 型   |                             | 説明                            |
+| --- | --- | :-------------------------: | ----------------------------- |
+| 戻り値 | ブール | <- | ゲストセッションの場合は true、それ以外は false |
 
 <!-- END REF -->
 
@@ -437,12 +437,12 @@ End if
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
-| 引数         | 型          |                             | 説明                                                             |
-| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------- |
-| privilege  | テキスト       |              ->             | アクセス権の名称                                                       |
-| privileges | Collection |              ->             | アクセス権の名称のコレクション                                                |
-| settings   | Object     |              ->             | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
-| 戻り値        | Boolean    | <- | 実行が正常に終わった場合には true                                            |
+| 引数         | 型      |                             | 説明                                                             |
+| ---------- | ------ | :-------------------------: | -------------------------------------------------------------- |
+| privilege  | テキスト   |              ->             | アクセス権の名称                                                       |
+| privileges | コレクション |              ->             | アクセス権の名称のコレクション                                                |
+| settings   | オブジェクト |              ->             | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
+| 戻り値        | ブール    | <- | 実行が正常に終わった場合には true                                            |
 
 <!-- END REF -->
 
@@ -466,7 +466,7 @@ End if
 | ---------- | ------------------- | ----------------------------------------- |
 | privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li> |
 | roles      | Text または Collection | <li>ロールの文字列</li><li>ロールの文字列のコレクション</li>   |
-| userName   | Text                | (任意) セッションと紐づけるユーザー名   |
+| userName   | テキスト                | (任意) セッションと紐づけるユーザー名   |
 
 :::note
 
@@ -531,7 +531,7 @@ End if
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -579,7 +579,7 @@ End use
 `.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
 - Webセッションでは、このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
-- リモートおよびストアドプロシージャーセッションでは、このプロパティは [`Current user`](https://doc.4d.com/4dv20/help/command/ja/page182.html) コマンドと同じユーザー名を返します。
+- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
 
 このプロパティは **読み取り専用** です。
 

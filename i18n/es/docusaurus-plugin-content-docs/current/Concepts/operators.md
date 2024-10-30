@@ -99,29 +99,29 @@ La operación "source `operator` value" no es estrictamente equivalente a "sourc
 #### Ejemplos
 
 ```4d
-// Adición
+// Addition
 $x:=2
 $x+=5 //$x=7
 
-$t:="Hola" 
-$t+=" World" //$t="Hola Mundo" 
+$t:="Hello" 
+$t+=" World" //$t="Hello World" 
 
-$d:=! ¡000-11-10!
+$d:=!2000-11-10!
 $d+=10 //$d=!2000-11-20!
 
-// Restar
+// Subtraction
 $x1:=10
 $x1-=5 //$x1=5
 
-$d1:=!
+$d1:=!2000-11-10!
 $d1-=10 // $d1=!2000-10-31!
 
-// División
+// Division
 $x3:=10
 $x3/=2 // $x3=5
 
 
-// Multiplicación
+// Multiplication
 $x2:=10
 $x2*=5 // $x2=50
 

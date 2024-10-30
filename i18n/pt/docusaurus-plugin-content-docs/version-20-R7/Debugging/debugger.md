@@ -405,11 +405,11 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Goto Definition**: Vai para o local onde o objeto selecionado está definido. Este comando está disponível para:
-  - _Métodos do projeto:_ exibe o conteúdo do método em uma nova janela do Editor de Código
-  - _Campos:_ Exibe as propriedades do campo no inspetor da janela de estrutura
-  - _Tabelas:_ Exibe as propriedades da tabela no inspetor da janela Estrutura
-  - _Formulários:_ Apresenta o formulário no editor de formulários
-  - _Variáveis_ (parâmetro local, de processo, entre processos ou $n ): exibe a linha no método atual ou entre os métodos do compilador em que a variável é declarada
+  - *Métodos do projeto:* exibe o conteúdo do método em uma nova janela do Editor de Código
+  - *Campos:* Exibe as propriedades do campo no inspetor da janela de estrutura
+  - *Tabelas:* Exibe as propriedades da tabela no inspetor da janela Estrutura
+  - *Formulários:* Apresenta o formulário no editor de formulários
+  - *Variáveis* (parâmetro local, de processo, entre processos ou $n ): exibe a linha no método atual ou entre os métodos do compilador em que a variável é declarada
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.

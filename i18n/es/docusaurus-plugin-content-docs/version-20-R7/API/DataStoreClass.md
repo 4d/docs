@@ -216,10 +216,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 <details><summary>Historia</summary>
 
-|Lanzamiento|Cambios|
-
-\|---|---|
-|20|Añadido|
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 

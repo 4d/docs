@@ -48,7 +48,7 @@ Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Con
  End if
 ```
 
-La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso si _MethodA_ devuelve FALSE, 4D seguirá evaluando _MethodB_, lo que supone una pérdida de tiempo. En este caso, es más interesante utilizar una estructura como:
+La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso si *MethodA* devuelve FALSE, 4D seguirá evaluando *MethodB*, lo que supone una pérdida de tiempo. En este caso, es más interesante utilizar una estructura como:
 
 ```4d
  If(MethodA)
@@ -58,7 +58,7 @@ La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso s
  End if
 ```
 
-El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
+El resultado es similar y *MethodB* se evalúa sólo si es necesario.
 
 > **Nota:** el [operador ternario](operators.md#ternary-operator) permite escribir expresiones condicionales de una sola línea y puede reemplazar una secuencia completa de declaraciones If..Else.
 
@@ -260,7 +260,7 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 Es común inicializar el valor probado en la expresión booleana inmediatamente antes de entrar en el bucle `While...End while`. Inicializar el valor significa asignarle un contenido adecuado, normalmente para que la expresión booleana sea TRUE y `While...End while` ejecute el bucle.
 
-El valor de la expresión booleana debe poder ser modificado por un elemento dentro del bucle, de lo contrario se ejecutará indefinidamente. El siguiente bucle continúa para siempre porque _TextStop_ es siempre TRUE:
+El valor de la expresión booleana debe poder ser modificado por un elemento dentro del bucle, de lo contrario se ejecutará indefinidamente. El siguiente bucle continúa para siempre porque *TextStop* es siempre TRUE:
 
 ```4d
  NeverStop:=True
@@ -323,17 +323,17 @@ End for
 
 El bucle `For...End for` es un bucle controlado por un contador:
 
-- La variable contador _Counter_Variable_ es una variable numérica (Real o Entero largo) inicializada por `For...End for` con el valor especificado por _Start_Expression_.
-- Cada vez que se ejecuta el bucle, la variable del contador se incrementa en el valor especificado en el valor opcional _Increment_Expression_. Si no se especifica _Increment_Expression_, la variable del contador se incrementa en uno (1), que es el valor predeterminado.
-- Cuando la variable del contador pasa el valor _End_Expression_, el bucle se detiene.
+- La variable contador *Counter_Variable* es una variable numérica (Real o Entero largo) inicializada por `For...End for` con el valor especificado por *Start_Expression*.
+- Cada vez que se ejecuta el bucle, la variable del contador se incrementa en el valor especificado en el valor opcional *Increment_Expression*. Si no se especifica *Increment_Expression*, la variable del contador se incrementa en uno (1), que es el valor predeterminado.
+- Cuando la variable del contador pasa el valor *End_Expression*, el bucle se detiene.
 
-**Importante:** las expresiones numéricas _Start_Expression_, _End_Expression_ y _Increment_Expression_ se evalúan una vez al principio del bucle. Si estas expresiones son variables, el cambio de una de estas variables dentro del bucle no afectará al bucle.
+**Importante:** las expresiones numéricas *Start_Expression*, *End_Expression* y *Increment_Expression* se evalúan una vez al principio del bucle. Si estas expresiones son variables, el cambio de una de estas variables dentro del bucle no afectará al bucle.
 
-**Consejo:** Sin embargo, para fines especiales, puede cambiar el valor de la variable _Counter_Variable_ dentro del bucle; esto afectará al bucle.
+**Consejo:** Sin embargo, para fines especiales, puede cambiar el valor de la variable *Counter_Variable* dentro del bucle; esto afectará al bucle.
 
-- Normalmente _Start_Expression_ es menor que _End_Expression_.
-- Si _Start_Expression_ y _End_Expression_ son iguales, el bucle se ejecutará sólo una vez.
-- Si _Start_Expression_ es mayor que _End_Expression_, el bucle no se ejecutará en absoluto a menos que se especifique una _Increment_Expression_ negativa. Ver los ejemplos.
+- Normalmente *Start_Expression* es menor que *End_Expression*.
+- Si *Start_Expression* y *End_Expression* son iguales, el bucle se ejecutará sólo una vez.
+- Si *Start_Expression* es mayor que *End_Expression*, el bucle no se ejecutará en absoluto a menos que se especifique una *Increment_Expression* negativa. Ver los ejemplos.
 
 Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
@@ -386,7 +386,7 @@ La mayoría de los bucles `For...End for` que escribirá en sus proyectos se par
 
 #### Variable contador decreciente
 
-En algunos casos, puede querer tener un bucle cuya variable de contador sea decreciente en lugar de creciente. Para ello, debe especificar _Start_Expression_ mayor que _End_Expression_ y _Increment_Expression_ debe ser negativa. Los siguientes ejemplos hacen lo mismo que los anteriores, pero en orden inverso:
+En algunos casos, puede querer tener un bucle cuya variable de contador sea decreciente en lugar de creciente. Para ello, debe especificar *Start_Expression* mayor que *End_Expression* y *Increment_Expression* debe ser negativa. Los siguientes ejemplos hacen lo mismo que los anteriores, pero en orden inverso:
 
 5. El siguiente ejemplo ejecuta 100 iteraciones:
 
@@ -431,7 +431,7 @@ En algunos casos, puede querer tener un bucle cuya variable de contador sea decr
 
 #### Incrementar la variable del contador en más de uno
 
-Si lo requiere, puede utilizar una _Increment_Expression_ (positiva o negativa) cuyo valor absoluto sea mayor que uno.
+Si lo requiere, puede utilizar una *Increment_Expression* (positiva o negativa) cuyo valor absoluto sea mayor que uno.
 
 9. El siguiente bucle aborda sólo los elementos pares del array anArray:
 
@@ -544,7 +544,7 @@ La sintaxis de la estructura condicional `For each... End for each` es:
  End for each
 ```
 
-La estructura `For each... End for each` ejecuta un _Current_item_ especificado sobre todos los valores de _Expression_. El tipo _Current_item_ depende del tipo _Expression_. El bucle `For each... End for each` puede iterar a través de tres tipos de _Expression_:
+La estructura `For each... End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. El bucle `For each... End for each` puede iterar a través de tres tipos de *Expression*:
 
 - colecciones: bucle en cada elemento de la colección,
 - selecciones de entidades: bucle en cada entidad,
@@ -560,8 +560,8 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 | Soporte de parámetros begin / end                 | Sí                                                          | Sí                                    | No                               |
 
 - El número de bucles se evalúa al inicio y no cambiará durante el proceso. La adición o eliminación de elementos durante el bucle no suele ser recomendable, ya que puede resultar en redundancia o perdidas de iteraciones.
-- Por defecto, los _statement(s)_ adjuntos se ejecutan para cada valor de _Expression_. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
-- Los parámetros opcionales _begin_ y _end_ pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
+- Por defecto, los *statement(s)* adjuntos se ejecutan para cada valor de *Expression*. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
+- Los parámetros opcionales *begin* y *end* pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
 - El bucle `For each... End for each` puede utilizarse en una **colección compartida** o en un **objeto compartido**. Si su código necesita modificar uno o más elementos de la colección o de las propiedades del objeto, debe utilizar las palabras clave `Use...End use`. Dependiendo de sus necesidades, puede llamar a las palabras clave `Use...End use`:
   - antes de entrar en el bucle, si los elementos deben modificarse juntos por razones de integridad, o
   - dentro del bucle cuando sólo hay que modificar algunos elementos/propiedades y no es necesario gestionar la integridad.
@@ -570,15 +570,15 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 ### Bucle en las colecciones
 
-Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
+Cuando `For each...End for each` se utiliza con una *Expression* del tipo *Collection*, el parámetro *Current_Item* es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
 
-La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
+La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable *Current_Item* se le asigne el primer tipo de valor diferente.
 
-En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
+En cada iteración del bucle, la variable *Current_Item* se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
-- Si la variable _Current_Item_ es de tipo objeto o de tipo colección (es decir, si _Expression_ es una colección de objetos o de colecciones), al modificar esta variable se modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
-- La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
-- Si la colección contiene elementos con un valor **Null**, se generará un error si el tipo de variable _Current_Item_ no soporta valores **Null** (como las variables longint).
+- Si la variable *Current_Item* es de tipo objeto o de tipo colección (es decir, si *Expression* es una colección de objetos o de colecciones), al modificar esta variable se modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
+- La variable *Current_Item* debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- Si la colección contiene elementos con un valor **Null**, se generará un error si el tipo de variable *Current_Item* no soporta valores **Null** (como las variables longint).
 
 #### Ejemplo
 
@@ -607,9 +607,9 @@ Usted quiere calcular algunas estadísticas para una colección de números:
 
 ### Bucle en las selecciones de entidades
 
-Cuando `For each... End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección.
+Cuando `For each... End for each` se utiliza con una *Expression* del tipo *Collection*, el parámetro *Current_Item* es una variable del mismo tipo que los elementos de la colección.
 
-El número de bucles se basa en el número de entidades de la selección de entidades. En cada iteración del bucle, el parámetro _Current_Item_ se llena automáticamente con la entidad de la selección de entidades que se procesa actualmente.
+El número de bucles se basa en el número de entidades de la selección de entidades. En cada iteración del bucle, el parámetro *Current_Item* se llena automáticamente con la entidad de la selección de entidades que se procesa actualmente.
 
 **Nota:** si la selección de entidades contiene una entidad que fue eliminada mientras tanto por otro proceso, se salta automáticamente durante el bucle.
 
@@ -629,7 +629,7 @@ Quiere aumentar el salario de todos los empleados británicos en una selección 
 
 ### Bucles en las propiedades de objetos
 
-Cuando se utiliza `For each... End for each` con una _Expression_ de tipo Object, el parámetro _Current_Item_ es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
+Cuando se utiliza `For each... End for each` con una *Expression* de tipo Object, el parámetro *Current_Item* es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
 
 Las propiedades del objeto se procesan de acuerdo con su orden de creación. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.
 
@@ -667,16 +667,16 @@ Puede escribir:
 
 Puede definir los límites de la iteración utilizando los parámetros opcionales inicio y fin.
 
-\*\*Nota:\*\*los parámetros _inicio_ y _fin_ sólo pueden utilizarse en iteraciones a través de colecciones y selecciones de entidades (se ignoran en las propiedades de objetos).
+\*\*Nota:\*\*los parámetros *inicio* y *fin* sólo pueden utilizarse en iteraciones a través de colecciones y selecciones de entidades (se ignoran en las propiedades de objetos).
 
-- En el parámetro _begin_, pase la posición del elemento en _Expression_ en la que se iniciará la iteración (se incluye _begin_).
-- En el parámetro _end_, también se puede pasar la posición del elemento en _Expression_ en la que se debe detener la iteración (se excluye _end_).
+- En el parámetro *begin*, pase la posición del elemento en *Expression* en la que se iniciará la iteración (se incluye *begin*).
+- En el parámetro *end*, también se puede pasar la posición del elemento en *Expression* en la que se debe detener la iteración (se excluye *end*).
 
-Si se omite _fin_ o si _fin_es mayor que el número de elementos de _Expression_, se iteran los elementos desde _inicio_ hasta el último (incluido).
-Si los parámetros _inicio_ y _fin_ son valores positivos, representan posiciones reales de elementos en _Expression_.
-Si _comienzo_ es un valor negativo, se recalcula como `comienzo:=comienzo+tamaño de la expresión` (se considera como el desplazamiento desde el final de _Expression_). Si el valor calculado es negativo, _inicio_ toma el valor 0.
+Si se omite *fin* o si *fin*es mayor que el número de elementos de *Expression*, se iteran los elementos desde *inicio* hasta el último (incluido).
+Si los parámetros *inicio* y *fin* son valores positivos, representan posiciones reales de elementos en *Expression*.
+Si *comienzo* es un valor negativo, se recalcula como `comienzo:=comienzo+tamaño de la expresión` (se considera como el desplazamiento desde el final de *Expression*). Si el valor calculado es negativo, *inicio* toma el valor 0.
 **Nota:** aunque inicio sea negativo, la iteración se sigue realizando en el orden estándar.
-Si _fin_ es un valor negativo, se recalcula como `fin:=fin+tamaño de la expresión`
+Si *fin* es un valor negativo, se recalcula como `fin:=fin+tamaño de la expresión`
 
 Por ejemplo:
 
@@ -707,7 +707,7 @@ Puede controlar la ejecución de `For each... End for each` añadiendo una condi
 
 Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
 
-- La condición `Until` se comprueba al final de cada iteración, por lo que si _Expression_ no está vacía o es nula, el bucle se ejecutará al menos una vez.
+- La condición `Until` se comprueba al final de cada iteración, por lo que si *Expression* no está vacía o es nula, el bucle se ejecutará al menos una vez.
 - La condición `While` se prueba al principio de cada iteración, por lo que según el resultado de la condición, el bucle puede no ejecutarse en absoluto.
 
 #### Ejemplo

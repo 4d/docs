@@ -65,7 +65,7 @@ A entidade modificada é devolvida:
 
 ## Exemplo com um cliente 4D HTTP
 
-El siguiente ejemplo muestra cómo subir un archivo _.pdf_ al servidor utilizando el cliente 4D HTTP.
+El siguiente ejemplo muestra cómo subir un archivo *.pdf* al servidor utilizando el cliente 4D HTTP.
 
 ```4d
 var $params : Text

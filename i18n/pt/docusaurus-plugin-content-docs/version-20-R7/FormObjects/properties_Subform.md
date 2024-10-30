@@ -73,13 +73,13 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 Sets the action to be performed when a user double-clicks on a row in a list subform. As opções disponíveis são:
 
-- **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
+- **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
 - **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el [formulario detallado](#detail-form) definido para el subformulario lista. O registo é aberto em modo de leitura-escrita para poder ser modificado.
-- **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
+- **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
 
-Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
+Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
-Para las dos últimas acciones, también se genera el evento de formulario `On Open Detail`. `On Close Detail` se genera cuando un registro mostrado en el formulario detallado asociado al list box está a punto de cerrarse (independientemente de que el registro se haya modificado o no).
+Para as duas últimas ações, o evento do formulário `On Open Detail` também é gerado. `On Close Detail` é gerado quando um registro exibido no formulário detalhado associado à list box está prestes a ser fechado (independentemente de o registro ter sido modificado ou não).
 
 #### Gramática JSON
 
@@ -153,10 +153,10 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 
 Designa a opção que permite aos utilizadores selecionar linhas:
 
-- **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](subform_overview.md#enterable-in-list) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
-- **Simple**: en este modo se puede seleccionar una línea a la vez. Ao clicar em uma linha, ela será selecionada. Um **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em uma linha alterna seu estado (entre selecionado ou não).\
-  The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
-- **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.
+- **Nenhum**: Linhas não podem ser selecionadas se esse modo for escolhido. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](subform_overview.md#enterable-in-list) esté activada. As teclas de navegação só fazem a lista rolar, o evento de formulário `Ao selecionar mudança` não é gerado.
+- **Simples**: Uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. Um **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em uma linha alterna seu estado (entre selecionado ou não).\
+  As teclas de seta para cima e para baixo selecionam a linha anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento de formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
+- **Multiplique**: Várias linhas podem ser selecionadas simultaneamente neste modo.
   - Los subregistros seleccionados son devueltos por el comando `GET HIGHLIGHTED RECORDS`.
   - Clicking on the record will select it, but it does not modify the current record.
   - Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en un registro cambia su estado (entre seleccionado o no). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. El evento de formulario `On Selection Change` se genera cada vez que el registro seleccionado se modifica.

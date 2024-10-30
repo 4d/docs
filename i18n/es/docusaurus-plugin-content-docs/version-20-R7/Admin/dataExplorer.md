@@ -95,7 +95,7 @@ La página contiene varias áreas:
 
 Puede reordenar la lista de entidades mostrada según los valores de los atributos. Todos los tipos de atributos pueden utilizarse para una ordenación, excepto la imagen y el objeto.
 
-- Haga clic en el encabezado de una columna para ordenar entidades de acuerdo a los valores de atributo correspondientes. Por defecto, la ordenación es ascendente. Haga clic dos veces para una ordenación descendente. Una columna utilizada para ordenar las entidades se muestra con un pequeño icono y su nombre está en _itálica_.
+- Haga clic en el encabezado de una columna para ordenar entidades de acuerdo a los valores de atributo correspondientes. Por defecto, la ordenación es ascendente. Haga clic dos veces para una ordenación descendente. Una columna utilizada para ordenar las entidades se muestra con un pequeño icono y su nombre está en *itálica*.
 
 ![alt-text](../assets/en/Admin/dataExplorer7.png)
 
@@ -107,7 +107,7 @@ En este modo, puede filtrar las entidades introduciendo los valores que desea en
 
 ![alt-text](../assets/en/Admin/dataExplorer6.png)
 
-Si introduce varios atributos, se aplica automáticamente un AND. Por ejemplo, el siguiente filtro muestra las entidades con el atributo _firstname_ que empieza por "flo" AND el valor del atributo _salary_ > 50000:
+Si introduce varios atributos, se aplica automáticamente un AND. Por ejemplo, el siguiente filtro muestra las entidades con el atributo *firstname* que empieza por "flo" AND el valor del atributo *salary* > 50000:
 
 ![alt-text](../assets/en/Admin/dataExplorer9.png)
 
@@ -160,7 +160,7 @@ Cuando se selecciona esta opción, aparece un área de consulta sobre la lista d
 
 ![alt-text](../assets/en/Admin/dataExplorer8.png)
 
-Puede introducir consultas avanzadas que no están disponibles como consultas de atributos. Por ejemplo, si quiere encontrar entidades con el atributo _firstname_ que contenga "Jim" pero no "Jimmy", puede escribir:
+Puede introducir consultas avanzadas que no están disponibles como consultas de atributos. Por ejemplo, si quiere encontrar entidades con el atributo *firstname* que contenga "Jim" pero no "Jimmy", puede escribir:
 
 ```
 firstname=="Jim"
@@ -169,7 +169,7 @@ firstname=="Jim"
 Puede utilizar toda expresión de consulta ORDA como [se documenta con la función `query()`](API/DataClassClass.md#query), con las siguientes limitaciones o diferencias:
 
 - Por seguridad, no se pueden ejecutar fórmulas utilizando `eval()`.
-- No se pueden utilizar marcadores de posición; hay que escribir un _queryString_ con valores.
+- No se pueden utilizar marcadores de posición; hay que escribir un *queryString* con valores.
 - Los valores de las cadenas que contienen caracteres de espacio deben ir entre comillas dobles ("").
 
 Por ejemplo, con la clase de datos Employee, puede escribir:
