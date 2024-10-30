@@ -5,7 +5,7 @@ title: Variables
 
 Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
 
-When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
+When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](data-types.md)).
 
 Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:
 
@@ -252,7 +252,7 @@ In Client/Server, each machine (Client machines and Server machine) share the sa
 
 The 4D language manages several **system variables**, which allow you to control the execution of different operations. You can test their values and use them as any variable. All system variables are [process variables](#process-variables).
 
-System variables are used by [4D commands](commands.md). Refer to the "System variables and sets" paragraph in the description of a command to find out whether it affects a system variable.
+System variables are used by [4D commands](../commands/command-index.md). Refer to the "System variables and sets" paragraph in the description of a command to find out whether it affects a system variable.
 
 
 |System variable name|Type|Description|

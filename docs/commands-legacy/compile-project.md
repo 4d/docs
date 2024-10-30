@@ -51,7 +51,7 @@ The *options* parameter is an object. Here are the available compilation options
 | defaultTypeForButtons || Integer | Possible value: Is real or Is longint |
 | defaultTypeForNumerics || Integer | Possible value: Is real or Is longint |
 | generateSymbols || Boolean | True to generate symbol information in the .symbols returned object |
-| generateSyntaxFile | |Boolean | True to generate a [syntax file for code completion](..settings/general.md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project |
+| generateSyntaxFile | |Boolean | True to generate a [syntax file for code completion](../settings/general.md).md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project |
 | generateTypingMethods || String | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand. |
 | plugins || 4D.Folder object | Plug-ins folder to be used instead of the [Plugins folder of the current project](../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax. |
 | targets || Collection of strings | Possible values: "x86_64_generic", "arm64_macOS_lib". Pass an empty collection to execute syntax check only |

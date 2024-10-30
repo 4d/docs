@@ -12,8 +12,6 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | port | Integer | &#8594;  | Serial port number |
 | settings | Integer | &#8594;  | Serial port settings |
-| SET CHANNEL ( operation ; document ) |
-| Parameter | Type | Description |
 | operation | Integer | &#8594;  | Document operation to perform |
 | document | Text | &#8594;  | Document name |
 
@@ -97,34 +95,33 @@ If you want to use the COM 25 port with the RTS/CTS protocol, you need to use th
   
 The *settings* parameter sets the speed, number of data bits, number of stop bits, and parity. You determine the value for *settings* by adding the speed, data bits, stop bits, and parity values as listed in the following table. For example, to set 1200 baud, 8 data bits, 1 stop bit, and no parity, you would add 94 + 3072 + 16384 + 0 = 19550\. You would then use 19550 as the value of the *setup* parameter.
 
-| **Value to accumulate**   | **Description** |      |
-| ------------------------- | --------------- | ---- |
-| **in settings parameter** |                 |      |
+| Control |Value to accumulate in settings parameter   | Description | 
+|------------------------ | --------------- | ---- |
 | Speed                     | 380             | 300  |
 | (in baud)                 | 189             | 600  |
-| | 94                      | 1200            |      |
-| | 62                      | 1800            |      |
-| | 46                      | 2400            |      |
-| | 30                      | 3600            |      |
-| | 22                      | 4800            |      |
-| | 14                      | 7200            |      |
-| | 10                      | 9600            |      |
-| | 4                       | 19200           |      |
-| | 2                       | 28800           |      |
-| | 1                       | 38400           |      |
-| | 0                       | 57600           |      |
-| | 1022                    | 115200          |      |
-| | 1021                    | 230400          |      |
+| | 94                      | 1200            |      
+| | 62                      | 1800            |      
+| | 46                      | 2400            |      
+| | 30                      | 3600            |      
+| | 22                      | 4800            |      
+| | 14                      | 7200            |      
+| | 10                      | 9600            |      
+| | 4                       | 19200           |      
+| | 2                       | 28800           |      
+| | 1                       | 38400           |      
+| | 0                       | 57600           |      
+| | 1022                    | 115200          |      
+| | 1021                    | 230400          |      
 | Data bits                 | 0               | 5    |
-| | 2048                    | 6               |      |
-| 1024                      | 7               |      |
-| 3072                      | 8               |      |
+| | 2048                    | 6               |      
+| | 1024                      | 7               |      
+| | 3072                      | 8               |      
 | Stop bits                 | 16384           | 1    |
-| –32768                    | 1.5             |      |
-| –16384                    | 2               |      |
+| | –32768                    | 1.5             |      
+| | –16384                    | 2               |      
 | Parity                    | 0               | None |
-| 4096                      | Odd             |      |
-| 12288                     | Even            |      |
+||  4096                      | Odd             |      
+||  12288                     | Even            |      
 
 **Tip:** The various numeric values to be accumulated and passed in *port* and *settings* (but not including the values for COM1...COM99) are available as predefined constants in the theme *Communications* within the Design environment Explorer windows. For COM1...COM99, use numeric literals.
 
@@ -142,10 +139,8 @@ For example, to display an Open File dialog box to open a text file, you would u
 
 | **Operation**                                                      | **Document**      | **Result**                                                                            |
 | ------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------------------------------- |
-| 10                                                                 | String            | Opens the document specified by String.                                               |
-| If the document doesn’t exist, the document is opened and created. |                   |                                                                                       |
-| 10                                                                 | "" (empty string) | Displays the Open File dialog box to open a file.                                     |
-| All file types are displayed.                                      |                   |                                                                                       |
+| 10                                                                 | String            | Opens the document specified by String. If the document doesn’t exist, the document is opened and created. |                   |                                                                                       |
+| 10                                                                 | "" (empty string) | Displays the Open File dialog box to open a file. All file types are displayed.                                      |                   |                                                                                       |
 | 11                                                                 | none              | Closes an open file.                                                                  |
 | 12                                                                 | "" (empty string) | Displays the Save File dialog box to create a new file.                               |
 | 13                                                                 | "" (empty string) | Displays the Open File dialog box to open a file. Only text file types are displayed. |
@@ -159,7 +154,7 @@ See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-time
 #### See also 
 
 [Append document](append-document.md)  
-*Communications*  
+[Communications](/category/commands/Communications)  
 [Create document](create-document.md)  
 [GET SERIAL PORT MAPPING](get-serial-port-mapping.md)  
 [Open document](open-document.md)  

@@ -190,11 +190,25 @@ module.exports =
 		{
 			type: "category",
 			label: "Commands",
+			link: {
+				type: 'generated-index',
+				title: 'Commands',
+				slug: '/category/commands',
+				keywords: ['commands'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 					"commands/command-index",
 					{
 					"type": "category",
 					"label": "4D Environment",
+					link: {
+						type: 'generated-index',
+						title: '4D Environment',
+						slug: '/category/commands/4D Environment',
+						keywords: ['4D Environment'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/application-file",
 						"commands-legacy/application-info",
@@ -245,6 +259,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Arrays",
+					link: {
+						type: 'generated-index',
+						title: 'Arrays',
+						slug: '/category/commands/Arrays',
+						keywords: ['Arrays'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/append-to-array",
 						"commands-legacy/array-blob",
@@ -283,6 +304,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Backup",
+					link: {
+						type: 'generated-index',
+						title: 'Backup',
+						slug: '/category/commands/Backup',
+						keywords: ['Backup'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/backup",
 						"commands-legacy/backup-info",
@@ -299,6 +327,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "BLOB",
+					link: {
+						type: 'generated-index',
+						title: 'BLOB',
+						slug: '/category/commands/BLOB',
+						keywords: ['BLOB'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/blob-properties",
 						"commands-legacy/blob-size",
@@ -329,6 +364,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Boolean",
+					link: {
+						type: 'generated-index',
+						title: 'Boolean',
+						slug: '/category/commands/Boolean',
+						keywords: ['Boolean'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/bool",
 						"commands-legacy/false",
@@ -339,6 +381,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Cache Management",
+					link: {
+						type: 'generated-index',
+						title: 'Cache Management',
+						slug: '/category/commands/Cache Management',
+						keywords: ['Cache Management'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/adjust-blobs-cache-priority",
 						"commands-legacy/adjust-index-cache-priority",
@@ -359,6 +408,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Collections",
+					link: {
+						type: 'generated-index',
+						title: 'Collections',
+						slug: '/category/commands/Collections',
+						keywords: ['Collections'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/array-to-collection",
 						"commands-legacy/collection-to-array",
@@ -369,6 +425,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Communications",
+					link: {
+						type: 'generated-index',
+						title: 'Communications',
+						slug: '/category/commands/Communications',
+						keywords: ['Communications'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/get-serial-port-mapping",
 						"commands-legacy/receive-buffer",
@@ -386,6 +449,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Compiler",
+					link: {
+						type: 'generated-index',
+						title: 'Compiler',
+						slug: '/category/commands/Compiler',
+						keywords: ['Compiler'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/compile-project",
 						"commands-legacy/idle"
@@ -394,6 +464,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Data Entry",
+					link: {
+						type: 'generated-index',
+						title: 'Data Entry',
+						slug: '/category/commands/Data Entry',
+						keywords: ['Data Entry'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/accept",
 						"commands-legacy/add-record",
@@ -408,6 +485,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Data Security",
+					link: {
+						type: 'generated-index',
+						title: 'Data Security',
+						slug: '/category/commands/Data Security',
+						keywords: ['Data Security'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/data-file-encryption-status",
 						"commands-legacy/decrypt-data-blob",
@@ -421,6 +505,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Database Methods",
+					link: {
+						type: 'generated-index',
+						title: 'Database Methods',
+						slug: '/category/commands/Database Methods',
+						keywords: ['Database Methods'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/on-backup-shutdown-database-method",
 						"commands-legacy/on-backup-startup-database-method",
@@ -445,6 +536,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Date and Time",
+					link: {
+						type: 'generated-index',
+						title: 'Date and Time',
+						slug: '/category/commands/Date and Time',
+						keywords: ['Date and Time'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/add-to-date",
 						"commands-legacy/current-date",
@@ -465,6 +563,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Design Object Access",
+					link: {
+						type: 'generated-index',
+						title: 'Design Object Access',
+						slug: '/category/commands/Design Object Access',
+						keywords: ['Design Object Access'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/current-method-path",
 						"commands-legacy/form-edit",
@@ -491,6 +596,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Drag and Drop",
+					link: {
+						type: 'generated-index',
+						title: 'Drag and Drop',
+						slug: '/category/commands/Drag and Drop',
+						keywords: ['Drag and Drop'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/drop-position",
 						"commands-legacy/set-drag-icon"
@@ -499,6 +611,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Entry Control",
+					link: {
+						type: 'generated-index',
+						title: 'Entry Control',
+						slug: '/category/commands/Entry Control',
+						keywords: ['Entry Control'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/edit-item",
 						"commands-legacy/filter-keystroke",
@@ -513,6 +632,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "File and Folder",
+					link: {
+						type: 'generated-index',
+						title: 'File and Folder',
+						slug: '/category/commands/File and Folder',
+						keywords: ['File and Folder'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands/file",
 						"commands/folder",
@@ -523,6 +649,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Form Events",
+					link: {
+						type: 'generated-index',
+						title: 'Form Events',
+						slug: '/category/commands/Form Events',
+						keywords: ['Form Events'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/activated",
 						"commands-legacy/after",
@@ -548,6 +681,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Forms",
+					link: {
+						type: 'generated-index',
+						title: 'Forms',
+						slug: '/category/commands/Forms',
+						keywords: ['Forms'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/current-form-name",
 						"commands-legacy/form",
@@ -578,6 +718,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Formulas",
+					link: {
+						type: 'generated-index',
+						title: 'Formulas',
+						slug: '/category/commands/Formulas',
+						keywords: ['Formulas'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/edit-formula",
 						"commands-legacy/execute-formula",
@@ -591,6 +738,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Graphs",
+					link: {
+						type: 'generated-index',
+						title: 'Graphs',
+						slug: '/category/commands/Graphs',
+						keywords: ['Graphs'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/graph",
 						"commands-legacy/graph-settings"
@@ -599,6 +753,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "HTTP",
+					link: {
+						type: 'generated-index',
+						title: 'HTTP',
+						slug: '/category/commands/HTTP',
+						keywords: ['HTTP'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/http-authenticate",
 						"commands-legacy/http-get",
@@ -613,6 +774,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Hierarchical Lists",
+					link: {
+						type: 'generated-index',
+						title: 'Hierarchical Lists',
+						slug: '/category/commands/Hierarchical Lists',
+						keywords: ['Hierarchical Lists'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/append-to-list",
 						"commands-legacy/clear-list",
@@ -650,6 +818,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Import and Export",
+					link: {
+						type: 'generated-index',
+						title: 'Import and Export',
+						slug: '/category/commands/Import and Export',
+						keywords: ['Import and Export'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/export-data",
 						"commands-legacy/export-dif",
@@ -664,6 +839,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Interruptions",
+					link: {
+						type: 'generated-index',
+						title: 'Interruptions',
+						slug: '/category/commands/Interruptions',
+						keywords: ['Interruptions'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/abort",
 						"commands-legacy/assert",
@@ -682,6 +864,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "JSON",
+					link: {
+						type: 'generated-index',
+						title: 'JSON',
+						slug: '/category/commands/JSON',
+						keywords: ['JSON'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/json-parse",
 						"commands-legacy/json-parse-array",
@@ -696,6 +885,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "LDAP",
+					link: {
+						type: 'generated-index',
+						title: 'LDAP',
+						slug: '/category/commands/LDAP',
+						keywords: ['LDAP'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/ldap-login",
 						"commands-legacy/ldap-logout",
@@ -706,6 +902,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Language",
+					link: {
+						type: 'generated-index',
+						title: 'Language',
+						slug: '/category/commands/Language',
+						keywords: ['Language'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands/4d",
 						"commands-legacy/action-info",
@@ -734,6 +937,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Licenses",
+					link: {
+						type: 'generated-index',
+						title: 'Licenses',
+						slug: '/category/commands/Licenses',
+						keywords: ['Licenses'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/change-licenses",
 						"commands-legacy/create-deployment-license",
@@ -746,6 +956,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "List Box",
+					link: {
+						type: 'generated-index',
+						title: 'List Box',
+						slug: '/category/commands/List Box',
+						keywords: ['List Box'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/listbox-collapse",
 						"commands-legacy/listbox-delete-column",
@@ -811,6 +1028,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Mail",
+					link: {
+						type: 'generated-index',
+						title: 'Mail',
+						slug: '/category/commands/Mail',
+						keywords: ['Mail'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands/imap-new-transporter",
 						"commands/mail-convert-from-mime",
@@ -823,6 +1047,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Math",
+					link: {
+						type: 'generated-index',
+						title: 'Math',
+						slug: '/category/commands/Math',
+						keywords: ['Math'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/abs",
 						"commands-legacy/arctan",
@@ -845,6 +1076,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Menus",
+					link: {
+						type: 'generated-index',
+						title: 'Menus',
+						slug: '/category/commands/Menus',
+						keywords: ['Menus'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/append-menu-item",
 						"commands-legacy/count-menu-items",
@@ -885,6 +1123,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Messages",
+					link: {
+						type: 'generated-index',
+						title: 'Messages',
+						slug: '/category/commands/Messages',
+						keywords: ['Messages'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/alert",
 						"commands-legacy/confirm",
@@ -899,6 +1144,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Named Selections",
+					link: {
+						type: 'generated-index',
+						title: 'Named Selections',
+						slug: '/category/commands/Named Selections',
+						keywords: ['Named Selections'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/clear-named-selection",
 						"commands-legacy/copy-named-selection",
@@ -909,6 +1161,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Objects (Forms)",
+					link: {
+						type: 'generated-index',
+						title: 'Objects (Forms)',
+						slug: '/category/commands/Objects (Forms)',
+						keywords: ['Objects (Forms)'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/get-style-sheet-info",
 						"commands-legacy/list-of-style-sheets",
@@ -1009,6 +1268,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Objects (Language)",
+					link: {
+						type: 'generated-index',
+						title: 'Objects (Language)',
+						slug: '/category/commands/Objects (Language)',
+						keywords: ['Objects (Language)'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/new-object",
 						"commands-legacy/new-shared-object",
@@ -1035,6 +1301,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "On a Series",
+					link: {
+						type: 'generated-index',
+						title: 'On a Series',
+						slug: '/category/commands/On a Series',
+						keywords: ['On a Series'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/average",
 						"commands-legacy/max",
@@ -1048,6 +1321,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "PHP",
+					link: {
+						type: 'generated-index',
+						title: 'PHP',
+						slug: '/category/commands/PHP',
+						keywords: ['PHP'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/php-execute",
 						"commands-legacy/php-get-full-response",
@@ -1058,6 +1338,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Pasteboard",
+					link: {
+						type: 'generated-index',
+						title: 'Pasteboard',
+						slug: '/category/commands/Pasteboard',
+						keywords: ['Pasteboard'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/append-data-to-pasteboard",
 						"commands-legacy/clear-pasteboard",
@@ -1075,6 +1362,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Pictures",
+					link: {
+						type: 'generated-index',
+						title: 'Pictures',
+						slug: '/category/commands/Pictures',
+						keywords: ['Pictures'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/blob-to-picture",
 						"commands-legacy/combine-pictures",
@@ -1104,6 +1398,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Printing",
+					link: {
+						type: 'generated-index',
+						title: 'Printing',
+						slug: '/category/commands/Printing',
+						keywords: ['Printing'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/accumulate",
 						"commands-legacy/blob-to-print-settings",
@@ -1142,6 +1443,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Process (Communications)",
+					link: {
+						type: 'generated-index',
+						title: 'Process (Communications)',
+						slug: '/category/commands/Process (Communications)',
+						keywords: ['Process (Communications)'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/call-worker",
 						"commands-legacy/clear-semaphore",
@@ -1157,6 +1465,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Process (User Interface)",
+					link: {
+						type: 'generated-index',
+						title: 'Process (User Interface)',
+						slug: '/category/commands/Process (User Interface)',
+						keywords: ['Process (User Interface)'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/bring-to-front",
 						"commands-legacy/frontmost-process",
@@ -1167,6 +1482,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Processes",
+					link: {
+						type: 'generated-index',
+						title: 'Processes',
+						slug: '/category/commands/Processes',
+						keywords: ['Processes'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/abort-process-by-id",
 						"commands-legacy/count-tasks",
@@ -1196,6 +1518,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Queries",
+					link: {
+						type: 'generated-index',
+						title: 'Queries',
+						slug: '/category/commands/Queries',
+						keywords: ['Queries'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/describe-query-execution",
 						"commands-legacy/find-in-field",
@@ -1223,6 +1552,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Quick Report",
+					link: {
+						type: 'generated-index',
+						title: 'Quick Report',
+						slug: '/category/commands/Quick Report',
+						keywords: ['Quick Report'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/qr-blob-to-report",
 						"commands-legacy/qr-count-columns",
@@ -1275,6 +1611,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Record Locking",
+					link: {
+						type: 'generated-index',
+						title: 'Record Locking',
+						slug: '/category/commands/Record Locking',
+						keywords: ['Record Locking'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/load-record",
 						"commands-legacy/locked",
@@ -1289,6 +1632,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Records",
+					link: {
+						type: 'generated-index',
+						title: 'Records',
+						slug: '/category/commands/Records',
+						keywords: ['Records'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/create-record",
 						"commands-legacy/delete-record",
@@ -1309,6 +1659,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Relations",
+					link: {
+						type: 'generated-index',
+						title: 'Relations',
+						slug: '/category/commands/Relations',
+						keywords: ['Relations'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/create-related-one",
 						"commands-legacy/get-automatic-relations",
@@ -1327,6 +1684,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Resources",
+					link: {
+						type: 'generated-index',
+						title: 'Resources',
+						slug: '/category/commands/Resources',
+						keywords: ['Resources'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/close-resource-file",
 						"commands-legacy/get-indexed-string",
@@ -1345,6 +1709,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "SQL",
+					link: {
+						type: 'generated-index',
+						title: 'SQL',
+						slug: '/category/commands/SQL',
+						keywords: ['SQL'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/begin-sql",
 						"commands-legacy/end-sql",
@@ -1373,6 +1744,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "SVG",
+					link: {
+						type: 'generated-index',
+						title: 'SVG',
+						slug: '/category/commands/SVG',
+						keywords: ['SVG'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/svg-export-to-picture",
 						"commands-legacy/svg-find-element-id-by-coordinates",
@@ -1385,6 +1763,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Secured Protocol",
+					link: {
+						type: 'generated-index',
+						title: 'Secured Protocol',
+						slug: '/category/commands/Secured Protocol',
+						keywords: ['Secured Protocol'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/generate-certificate-request",
 						"commands-legacy/generate-encryption-keypair"
@@ -1393,6 +1778,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Selection",
+					link: {
+						type: 'generated-index',
+						title: 'Selection',
+						slug: '/category/commands/Selection',
+						keywords: ['Selection'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/all-records",
 						"commands-legacy/apply-to-selection",
@@ -1421,6 +1813,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Sets",
+					link: {
+						type: 'generated-index',
+						title: 'Sets',
+						slug: '/category/commands/Sets',
+						keywords: ['Sets'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/add-to-set",
 						"commands-legacy/clear-set",
@@ -1442,6 +1841,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Spell Checker",
+					link: {
+						type: 'generated-index',
+						title: 'Spell Checker',
+						slug: '/category/commands/Spell Checker',
+						keywords: ['Spell Checker'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/spell-add-to-user-dictionary",
 						"commands-legacy/spell-check-text",
@@ -1454,6 +1860,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "String",
+					link: {
+						type: 'generated-index',
+						title: 'String',
+						slug: '/category/commands/String',
+						keywords: ['String'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/change-string",
 						"commands-legacy/char",
@@ -1480,6 +1893,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Structure Access",
+					link: {
+						type: 'generated-index',
+						title: 'Structure Access',
+						slug: '/category/commands/Structure Access',
+						keywords: ['Structure Access'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/create-index",
 						"commands-legacy/delete-index",
@@ -1510,6 +1930,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Styled Text",
+					link: {
+						type: 'generated-index',
+						title: 'Styled Text',
+						slug: '/category/commands/Styled Text',
+						keywords: ['Styled Text'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/st-compute-expressions",
 						"commands-legacy/st-freeze-expressions",
@@ -1531,13 +1958,27 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Subrecords",
-					"items": [
+					link: {
+						type: 'generated-index',
+						title: 'Subrecords',
+						slug: '/category/commands/Subrecords',
+						keywords: ['Subrecords'],
+						image: '/img/docusaurus.png',
+						},
+				"items": [
 						"commands-legacy/get-subrecord-key"
 					]
 					},
 					{
 					"type": "category",
 					"label": "System Documents",
+					link: {
+						type: 'generated-index',
+						title: 'System Documents',
+						slug: '/category/commands/System Documents',
+						keywords: ['System Documents'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/append-document",
 						"commands-legacy/close-document",
@@ -1577,6 +2018,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "System Environment",
+					link: {
+						type: 'generated-index',
+						title: 'System Environment',
+						slug: '/category/commands/System Environment',
+						keywords: ['System Environment'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/count-screens",
 						"commands-legacy/current-client-authentication",
@@ -1607,6 +2055,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Table",
+					link: {
+						type: 'generated-index',
+						title: 'Table',
+						slug: '/category/commands/Table',
+						keywords: ['Table'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/current-default-table",
 						"commands-legacy/current-form-table",
@@ -1617,6 +2072,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Tools",
+					link: {
+						type: 'generated-index',
+						title: 'Tools',
+						slug: '/category/commands/Tools',
+						keywords: ['Tools'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/activity-snapshot",
 						"commands-legacy/base64-decode",
@@ -1642,6 +2104,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Transactions",
+					link: {
+						type: 'generated-index',
+						title: 'Transactions',
+						slug: '/category/commands/Transactions',
+						keywords: ['Transactions'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/active-transaction",
 						"commands-legacy/cancel-transaction",
@@ -1656,6 +2125,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Triggers",
+					link: {
+						type: 'generated-index',
+						title: 'Triggers',
+						slug: '/category/commands/Triggers',
+						keywords: ['Triggers'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/trigger-event",
 						"commands-legacy/trigger-level",
@@ -1665,6 +2141,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "User Interface",
+					link: {
+						type: 'generated-index',
+						title: 'User Interface',
+						slug: '/category/commands/User Interface',
+						keywords: ['User Interface'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/beep",
 						"commands-legacy/caps-lock-down",
@@ -1697,6 +2180,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Users and Groups",
+					link: {
+						type: 'generated-index',
+						title: 'Users and Groups',
+						slug: '/category/commands/Users and Groups',
+						keywords: ['Users and Groups'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/blob-to-users",
 						"commands-legacy/change-current-user",
@@ -1725,6 +2215,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Variables",
+					link: {
+						type: 'generated-index',
+						title: 'Variables',
+						slug: '/category/commands/Variables',
+						keywords: ['Variables'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/clear-variable",
 						"commands-legacy/load-variables",
@@ -1734,6 +2231,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Web Area",
+					link: {
+						type: 'generated-index',
+						title: 'Web Area',
+						slug: '/category/commands/Web Area',
+						keywords: ['Web Area'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/wa-back-url-available",
 						"commands-legacy/wa-create-url-history-menu",
@@ -1767,6 +2271,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Web Server",
+					link: {
+						type: 'generated-index',
+						title: 'Web Server',
+						slug: '/category/commands/Web Server',
+						keywords: ['Web Server'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/web-get-body-part",
 						"commands-legacy/web-get-body-part-count",
@@ -1800,6 +2311,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Web Services (Client)",
+					link: {
+						type: 'generated-index',
+						title: 'Web Services (Client)',
+						slug: '/category/commands/Web Services (Client)',
+						keywords: ['Web Services (Client)'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/web-service-authenticate",
 						"commands-legacy/web-service-call",
@@ -1812,6 +2330,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Web Services (Server)",
+					link: {
+						type: 'generated-index',
+						title: 'Web Services (Server)',
+						slug: '/category/commands/Web Services (Server)',
+						keywords: ['Web Services (Server)'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/soap-declaration",
 						"commands-legacy/soap-get-info",
@@ -1823,6 +2348,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "Windows",
+					link: {
+						type: 'generated-index',
+						title: 'Windows',
+						slug: '/category/commands/Windows',
+						keywords: ['Windows'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/close-window",
 						"commands-legacy/convert-coordinates",
@@ -1859,6 +2391,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "XML DOM",
+					link: {
+						type: 'generated-index',
+						title: 'XML DOM',
+						slug: '/category/commands/XML DOM',
+						keywords: ['XML DOM'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/dom-append-xml-child-node",
 						"commands-legacy/dom-append-xml-element",
@@ -1900,6 +2439,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "XML SAX",
+					link: {
+						type: 'generated-index',
+						title: 'XML SAX',
+						slug: '/category/commands/XML SAX',
+						keywords: ['XML SAX'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/sax-add-processing-instruction",
 						"commands-legacy/sax-add-xml-cdata",
@@ -1923,6 +2469,13 @@ module.exports =
 					{
 					"type": "category",
 					"label": "XML",
+					link: {
+						type: 'generated-index',
+						title: 'XML',
+						slug: '/category/commands/XML',
+						keywords: ['XML'],
+						image: '/img/docusaurus.png',
+						},
 					"items": [
 						"commands-legacy/xml-decode",
 						"commands-legacy/xml-get-error",
