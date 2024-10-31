@@ -255,7 +255,7 @@ Los eventos formulario de los objetos list box o columnas de list box pueden dev
 
 > Si un evento se produce en una columna o línea "fake" que no existe, se suele devolver una cadena vacía.
 
-## Columnas de list box
+## List box columns {#list-box-columns}
 
 Un list box está formado por uno o varios objetos columna que tienen propiedades específicas. Puede seleccionar una columna de list box en el editor de formularios haciendo clic en ella cuando el objeto list box está seleccionado:
 
