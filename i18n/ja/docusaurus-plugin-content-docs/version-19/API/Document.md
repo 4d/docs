@@ -25,6 +25,7 @@ title: Document クラス
 
 <!-- END REF -->
 
+<!-- REF document.creationTime.Desc -->
 ## .creationTime
 
 <details><summary>履歴</summary>
@@ -41,6 +42,9 @@ title: Document クラス
 `.creationTime` プロパティは、 <!-- REF #document.creationTime.Summary -->ファイルの作成時刻を返します<!-- END REF --> (00:00 からの経過秒数の形式)。
 
 このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
+
 
 <!-- REF document.exists.Desc -->
 ## .exists
