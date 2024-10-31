@@ -255,7 +255,7 @@ Les événements formulaire sur les list box ou colonnes de list box peuvent ret
 
 > Si un événement se produit sur une "fake" colonne ou ligne qui n'existe pas, une chaîne vide est généralement renvoyée.
 
-## Colonnes de list box
+## List box columns {#list-box-columns}
 
 Une list box est composée d'un ou plusieurs objets colonnes qui ont des propriétés spécifiques. Vous pouvez sélectionner une colonne de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :
 
