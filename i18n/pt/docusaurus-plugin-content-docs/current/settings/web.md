@@ -57,7 +57,7 @@ Ativar o cache da página Web. Consulte [Cache](../WebServer/webServerConfig.md#
 
 #### Tamanho da cache das Páginas
 
-Define o tamanho da cache. Ver [Caché](../WebServer/webServerConfig.md#cache).
+Define o tamanho da cache. Consulte [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Limpar cache
 

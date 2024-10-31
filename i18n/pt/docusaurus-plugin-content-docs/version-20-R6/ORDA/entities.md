@@ -3,13 +3,13 @@ id: entities
 title: Trabalhar com dados
 ---
 
-En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [selecciones de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
+No ORDA, você acessa os dados através de [entidades](dsMapping.md#entity) e [seleções de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
 
 ## Criar uma entidade
 
 Existem duas maneiras de criar uma nova entidade numa dataclass:
 
-- Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
+- Como as entidades são referências a registros de banco de dados, é possível criar entidades criando registros usando a linguagem 4D e, em seguida, referenciá-los com funções ORDA, como [`entity.next()`](../API/EntityClass.md#next) ou [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
 - Você também pode criar uma entidade usando a função [`dataClass.new()`](../API/DataClassClass.md#new).
 
 Tenha em atenção que a entidade só é criada na memória. Se quiser adicioná-lo ao datastore, você deve chamar a função [`entity.save()`](../API/EntityClass.md#save).
@@ -35,12 +35,12 @@ Uma entidade contém uma referência a um registo 4D. Entidades diferentes podem
 Se executar o seguinte código:
 
 ```4d
- var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ var $e1; $e2 : cs. EmployeeEntity
+ $e1:=ds. Employee.get(1) //acessa o funcionário com ID 1
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //ambas as variáveis $e1 e $e2 compartilham a referência à mesma entidade
+  //$e2.name contém "Hammer"
  If($e1=$e2) //True
 ```
 
@@ -55,9 +55,9 @@ Agora, se executar:
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //variável $e1 contém uma referência a uma entidade
+  //variável $e2 contém outra referência a outra entidade
+  //$e2.name contém "smith"
  If($e1=$e2) //False
 ```
 
@@ -90,7 +90,7 @@ Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referen
 
 :::info
 
-Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No entanto, no cliente/servidor, a entidade pode ser carregada automaticamente de forma direta, se necessário.
+Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. Também não há bloqueio automático em uma entidade (consulte [Entity locking](#entity-locking)). Quando uma entidade é carregada, ela usa o mecanismo [lazy loading](glossary.md#lazy-loading), o que significa que somente as informações necessárias são carregadas. No entanto, no cliente/servidor, a entidade pode ser carregada automaticamente de forma direta, se necessário.
 
 :::
 
@@ -98,14 +98,14 @@ Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. 
 
 Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente.
 
-- los atributos de tipo **storage** pueden definirse u obtenerse como propiedades simples del objeto de la entidad,
-- los atributos del tipo **RelatedEntity** devolverán una entidad,
-- los atributos de tipo **relatedEntities** devolverán una selección de entidad,
-- los atributos de tipo **computed** y **alias** pueden devolver todo tipo de datos, dependiendo de cómo estén configurados.
+- os atributos do tipo **storage** podem ser definidos ou obtidos como propriedades simples do objeto de entidade,
+- atributos do tipo **relatedEntity** retornarão uma entidade,
+- atributos do tipo **relatedEntities** retornarão uma seleção de entidade,
+- os atributos do tipo **calculado** e **alias**podem retornar qualquer tipo de dados, dependendo de como eles estão configurados.
 
 :::info
 
-Para más información sobre el tipo de atributo, consulte el párrafo [Atributos de almacenamiento y de relación](dsMapping.md#storage-and-relation-attributes).
+Para obter mais informações sobre o tipo de atributos, consulte o parágrafo [Atributos de armazenamento e de relação](dsMapping.md#storage-and-relation-attributes).
 
 :::
 
@@ -118,7 +118,7 @@ Por exemplo, para obter e definir um valor de atributo de armazenamento do tipo 
  $entity.save() //salvar as modificações
 ```
 
-> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
+> Os campos Blob dos banco de dados ([blobs scalaires](Concepts/dt_blob.md) são automaticamente convertidos de e para atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) quando manipulados por ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
 
 O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
@@ -164,9 +164,9 @@ Function createCompany($name : Text; $logo : 4D.File)
 	$company:=ds.Company.new()
 
 	$company.name:=$name
-		//assignment using a file object
+		//atribuição usando um objeto file
 	$company.logo:=$logo
-		//assignment using a path
+		//atribuição usando um caminho
 	$company.datablob:="/RESOURCES/"+$name+"/data.bin"
 	$company.save()
 ```
@@ -227,10 +227,10 @@ Isso é particularmente útil quando você está importando grandes quantidades 
 Você pode atribuir ou modificar o valor de um "1" atributo da entidade relacionada a partir do dataclass "N" diretamente através do atributo relacionado. Por exemplo, se você deseja modificar o atributo de nome de uma entidade relacionada da Empresa de uma entidade funcional, você pode escrever:
 
 ```code4d
- $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
+ $emp:=ds.Employee.get(2) // carrega a entidade Employee com a chave primária 2
+ $emp.employer.name:="4D, Inc." //modificar o atributo name da empresa relacionada
+ $emp.employer.save() //salvar o atributo relacionado
+  //a entidade relacionada é atualizada
 ```
 
 ## Criar uma selecção de entidade
