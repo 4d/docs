@@ -16,12 +16,6 @@ Qodly Studio proposes a full-featured web UI, allowing you to:
 - acionar o código 4D configurando eventos
 - e muito mais.
 
-:::info
-
-The development with Qodly Studio for 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). Qodly Studio options and menu items won't appear if the license is not activated.
-
-:::
-
 ## Configuração
 
 ### Requisitos
