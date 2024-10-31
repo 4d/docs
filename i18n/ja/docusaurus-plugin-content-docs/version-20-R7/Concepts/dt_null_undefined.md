@@ -88,16 +88,16 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 
 ## Null 演算子
 
-| 演算  | シンタックス                  | 戻り値     | 式                                                              | 値     |
-| --- | ----------------------- | ------- | -------------------------------------------------------------- | ----- |
-| 等しい | Null `=` Null           | Boolean | a.nullProp `=` b.nullProp      | true  |
-|     | Null `=` Undefined      | Boolean | a.nullProp `=` b.undefinedProp | true  |
-|     | Null `=` _scalar value_ | Boolean | a.nullProp `=` 42                              | false |
-| 異なる | Null `#` Null           | Boolean | a.nullProp `#` b.nullProp      | false |
-|     | Null `#` Undefined      | Boolean | a.nullProp `#` b.undefinedProp | false |
-|     | Null `#` _scalar value_ | Boolean | a.nullProp `#` 42                              | true  |
+| 演算  | シンタックス                  | 戻り値 | 式                                                              | 値     |
+| --- | ----------------------- | --- | -------------------------------------------------------------- | ----- |
+| 等しい | Null `=` Null           | ブール | a.nullProp `=` b.nullProp      | true  |
+|     | Null `=` Undefined      | ブール | a.nullProp `=` b.undefinedProp | true  |
+|     | Null `=` *scalar value* | ブール | a.nullProp `=` 42                              | false |
+| 異なる | Null `#` Null           | ブール | a.nullProp `#` b.nullProp      | false |
+|     | Null `#` Undefined      | ブール | a.nullProp `#` b.undefinedProp | false |
+|     | Null `#` *scalar value* | ブール | a.nullProp `#` 42                              | true  |
 
-_スカラー値_ は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 スカラー値が宣言されている場合、その [デフォルト値](data-types.md#デフォルト値) は未定義でも null でもありません。 それ以外のデータ型 (ポインター、ピクチャー、オブジェクト、コレクション) の場合、デフォルト値は未定義または null となります。 例:
+*スカラー値* は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 スカラー値が宣言されている場合、その [デフォルト値](data-types.md#デフォルト値) は未定義でも null でもありません。 それ以外のデータ型 (ポインター、ピクチャー、オブジェクト、コレクション) の場合、デフォルト値は未定義または null となります。 例:
 
 ```4d
 var $object : Object
@@ -115,20 +115,20 @@ var $text : Text
 
 ## 未定義演算子
 
-| 演算  | シンタックス                                    | 戻り値     | 式                                                                   | 値     |
-| --- | ----------------------------------------- | ------- | ------------------------------------------------------------------- | ----- |
-| 等しい | Undefined `=` Undefined                   | Boolean | a.undefinedProp `=` b.undefinedProp | true  |
-|     | Undefined `=` Null                        | Boolean | a.undefinedProp `=` c.nullProp      | true  |
-|     | Undefined `=` _その他の値_                     | Boolean | a.undefinedProp `=` 42                              | false |
-| 異なる | Undefined `#` Undefined                   | Boolean | a.undefinedProp `#` b.undefinedProp | false |
-|     | Undefined `#` Null                        | Boolean | a.undefinedProp `#` b.nullProp      | false |
-|     | Undefined `#` _その他の値_                     | Boolean | a.undefinedProp `#` 42                              | true  |
-| 大きい | Undefined `>` string, Date, Time, number  | Boolean | a.undefinedProp `>` "abc"                           | false |
-| 小さい | Undefined `<` string, Date, Time, number  | Boolean | a.undefinedProp `<` "abc"                           | false |
-| 以上  | Undefined `>=` string, Date, Time, number | Boolean | a.undefinedProp `>=` "abc"                          | false |
-| 以下  | Undefined `<=` string, Date, Time, number | Boolean | a.undefinedProp `<=` "abc"                          | false |
+| 演算  | シンタックス                                    | 戻り値 | 式                                                                   | 値     |
+| --- | ----------------------------------------- | --- | ------------------------------------------------------------------- | ----- |
+| 等しい | Undefined `=` Undefined                   | ブール | a.undefinedProp `=` b.undefinedProp | true  |
+|     | Undefined `=` Null                        | ブール | a.undefinedProp `=` c.nullProp      | true  |
+|     | Undefined `=` *その他の値*                     | ブール | a.undefinedProp `=` 42                              | false |
+| 異なる | Undefined `#` Undefined                   | ブール | a.undefinedProp `#` b.undefinedProp | false |
+|     | Undefined `#` Null                        | ブール | a.undefinedProp `#` b.nullProp      | false |
+|     | Undefined `#` *その他の値*                     | ブール | a.undefinedProp `#` 42                              | true  |
+| 大きい | Undefined `>` string, Date, Time, number  | ブール | a.undefinedProp `>` "abc"                           | false |
+| 小さい | Undefined `<` string, Date, Time, number  | ブール | a.undefinedProp `<` "abc"                           | false |
+| 以上  | Undefined `>=` string, Date, Time, number | ブール | a.undefinedProp `>=` "abc"                          | false |
+| 以下  | Undefined `<=` string, Date, Time, number | ブール | a.undefinedProp `<=` "abc"                          | false |
 
-_その他の値_ は、未定義でも Null でもない値を持つ任意の型の式です。
+*その他の値* は、未定義でも Null でもない値を持つ任意の型の式です。
 
 :::info
 

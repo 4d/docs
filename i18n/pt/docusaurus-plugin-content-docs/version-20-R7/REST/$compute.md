@@ -3,7 +3,7 @@ id: compute
 title: $compute
 ---
 
-Cálculo de atributos específicos (_e._, `Employee/salary/?$compute=sum)` o en el caso de un atributo Objeto (_por ejemplo_, Employee/objectAtt.property1/?$compute=sum)
+Cálculo de atributos específicos (*e.*, `Employee/salary/?$compute=sum)` o en el caso de un atributo Objeto (*por ejemplo*, Employee/objectAtt.property1/?$compute=sum)
 
 ## Descrição
 

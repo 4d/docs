@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-`Folder` objects are created with the [`Folder`](../commands/folder.md) command. Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `Folder` pour créer un nouveau dossier, un objet `Folder` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`folder.create()`](#create).
+Les objets `Folder` sont créés avec la commande [`Folder`](../commands/folder.md). Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `Folder` pour créer un nouveau dossier, un objet `Folder` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`folder.create()`](#create).
 
 ### Exemple
 
@@ -67,9 +67,9 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 
 #### Description
 
-La fonction `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et retourne un nouvel objet de type `4D.Folder`<!-- END REF -->. It is identical to the [`Folder`](../commands/folder.md) command (shortcut).
+La fonction `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et retourne un nouvel objet de type `4D.Folder`<!-- END REF -->. Elle est identique à la commande [`Folder`](../commands/folder.md) (raccourci).
 
-> It is recommended to use the [`Folder`](../commands/folder.md) shortcut command instead of `4D.Folder.new()`.
+> Il est recommandé d'utiliser la commande [`Folder`](../commands/folder.md) au lieu de `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
@@ -231,7 +231,7 @@ Lorsque la constante `Delete with contents` est passée :
 
 - Le dossier, ainsi que tout son contenu, est supprimé.
   **Attention** : Même si ce dossier et/ou son contenu sont verrouillés ou définis comme étant en lecture seule, si l'utilisateur dispose des droits d'accès appropriés, le dossier (et son contenu) est supprimé malgré tout.
-- Si ce dossier, ou l'un des fichiers qu'il contient, ne peut être supprimé, la suppression est interrompue dès que le premier élément inaccessible est détecté, et une erreur(\*) est retournée. Dans ce cas, le dossier ne peut être que partiellement supprimé. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
+- Si ce dossier, ou l'un des fichiers qu'il contient, ne peut être supprimé, la suppression est interrompue dès que le premier élément inaccessible est détecté, et une erreur(\*) est retournée. Dans ce cas, le dossier ne peut être que partiellement supprimé. Lorsque la suppression est interrompue, vous pouvez utiliser la commande `Last errors` pour récupérer le nom et le chemin du fichier incriminé.
 - Si le dossier n'existe pas, la commande ne fait rien et aucune erreur n'est retournée.
   (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 

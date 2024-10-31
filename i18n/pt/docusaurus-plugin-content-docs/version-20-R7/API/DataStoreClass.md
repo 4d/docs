@@ -216,10 +216,9 @@ C_LONGINT($vcount)
 
 <details><summary>História</summary>
 
-|Lançamento|Mudanças|
-
-\|---|---|
-|20|Adicionado|
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 

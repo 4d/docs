@@ -41,7 +41,7 @@ A resolução recomendada é 1920x1080.
 - Desenvolvimento: 4D v20 R2 ou superior
 - Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
-- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
 - O código 4D chamado pelos formulários Qodly deve ser [hilo seguro] (preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
@@ -138,10 +138,10 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
 | Visualizar e editar tabelas (classes de dados), atributos e relações | Editor de estrutura 4D(1)                                                                                                                                                                 | Qodly Studio Model Editor                                                           |
 | Páginas Qodly                                                                           | Editor de páginas Qodly Studio                                                                                                                                                                               | Editor de páginas Qodly Studio                                                      |
-| Formulários para desktop                                                                | 4D IDE                                                                                                                                                                                                       | _não suportado_                                                                     |
+| Formulários para desktop                                                                | 4D IDE                                                                                                                                                                                                       | *não suportado*                                                                     |
 | Linguagem de programação                                                                | Linguagem 4D com ORDA                                                                                                                                                                                        | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) featuring ORDA |
-| IDE de codificação                                                                      | 4D IDE code editor _or_ VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)<br/>_4D Server only_: Qodly Studio code editor (see (2)) | Editor de código Qodly Studio                                                       |
-| Depurador                                                                               | 4D IDE debugger<br/>_4D Server only_: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                    | Depurador Qodly Studio                                                              |
+| IDE de codificação                                                                      | 4D IDE code editor *or* VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)<br/>*4D Server only*: Qodly Studio code editor (see (2)) | Editor de código Qodly Studio                                                       |
+| Depurador                                                                               | 4D IDE debugger<br/>*4D Server only*: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                    | Depurador Qodly Studio                                                              |
 | REST/Web roles and privileges                                                           | roles.json direct edit/Qodly Studio roles and privileges editor                                                                                                                              | Qodly Studio role and privileges editor                                             |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
@@ -211,7 +211,7 @@ Your Qodly pages are available through the following url:
 IP:port/$lib/renderer/?w=QodlyPageName
 ```
 
-...where _IP:port_ represents the address of the web server and _QodlyPageName_ is the name of the Qodly page.
+...where *IP:port* represents the address of the web server and *QodlyPageName* is the name of the Qodly page.
 
 Por exemplo:
 

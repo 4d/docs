@@ -49,7 +49,7 @@ Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
 > Esto es texto normal.<br/>
-> _Este es texto en cursiva._
+> *Este es texto en cursiva.*
 
 #### Gramática JSON
 
@@ -118,8 +118,8 @@ Hay tres temas de fuentes disponibles:
 
 Hay dos tipos de nombres de familias de fuentes:
 
-- _family-name:_ El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
-- _generic-family:_ El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
+- *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
+- *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
 Puede configurarlo utilizando el comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
 
@@ -191,7 +191,7 @@ También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERT
 
 > Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
 
-El siguiente ejemplo utiliza un nombre de variable: introduzca _CompanyColor_ para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
+El siguiente ejemplo utiliza un nombre de variable: introduzca *CompanyColor* para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
@@ -307,14 +307,14 @@ La propiedad especial "cell" permite aplicar un conjunto de propiedades a una so
 | Nombre de propiedad |              |                | Tipo   | Descripción                                                                                                                                                                                                                                                                                                         |
 | ------------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cell                |              |                | object | Propiedades aplicables a una o varias columnas                                                                                                                                                                                                                                                                      |
-|                     | _columnName_ |                | object | _columnName_ es el nombre del objeto de la columna del list box                                                                                                                                                                                                                                                     |
-|                     |              | _propertyName_ | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
+|                     | *columnName* |                | object | *columnName* es el nombre del objeto de la columna del list box                                                                                                                                                                                                                                                     |
+|                     |              | *propertyName* | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
 
 > Los ajustes de estilo hechos con esta propiedad son ignorados si otros ajustes de estilo ya están definidos a través de expresiones (\*por ejemplo, [Expresión de estilo](#style-expression), [Expresión de color de fuente](#font-color-expression), [Expresión de color de fondo](#background-color-expression)).
 
 **Ejemplos**
 
-En un método proyecto _Color_, escriba el siguiente código:
+En un método proyecto *Color*, escriba el siguiente código:
 
 ```4d
 //Método Color
@@ -343,7 +343,7 @@ End if
  End case
 ```
 
-Entonces, el método _Color_ contendría:
+Entonces, el método *Color* contendría:
 
 ```4d
   //Método Color

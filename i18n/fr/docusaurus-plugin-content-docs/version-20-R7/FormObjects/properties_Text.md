@@ -49,7 +49,7 @@ Le texte sélectionné est légèrement penché vers la droite.
 You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 
 > This is normal text.<br/>
-> _This is text in italics._
+> *This is text in italics.*
 
 #### Grammaire JSON
 
@@ -118,7 +118,7 @@ Trois thèmes de polices sont disponibles :
 
 Il existe deux types de noms de familles de polices :
 
-- _family-name :_ Le nom d'une famille de polices, comme "times", "courier", "arial", etc.
+- *family-name :* Le nom d'une famille de polices, comme "times", "courier", "arial", etc.
 - \*generic-family \*: Le nom d'une famille générique, comme "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
 You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
@@ -191,7 +191,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande `LIST
 
 > Cette propriété peut également être définie à l'aide d'une [expression Meta Info](properties_Text.md#meta-info-expression).
 
-L'exemple suivant utilise un nom de variable : entrez _CompanyColor_ pour l'**expression couleur police** et, dans la méthode formulaire, entrez le code suivant :
+L'exemple suivant utilise un nom de variable : entrez *CompanyColor* pour l'**expression couleur police** et, dans la méthode formulaire, entrez le code suivant :
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
@@ -307,14 +307,14 @@ La propriété spéciale "cell" permet d'appliquer un ensemble de propriétés �
 | Nom de propriété |              |                | Type   | Description                                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cell             |              |                | object | Propriétés à appliquer individuellement aux colonnes                                                                                                                                                                                                                                                                                        |
-|                  | _columnName_ |                | object | _columnName_ est le nom d'objet de la colonne de listbox                                                                                                                                                                                                                                                                                    |
-|                  |              | _propertyName_ | string | Les propriétés "stroke", "fill", "fontStyle", "fontWeight" ou "textDecoration" (voir ci-dessus). **Note** : les propriétés "unselectable" et "disabled" ne peuvent être définies qu'au niveau de la ligne. Elles sont ignorées si elles sont passées dans l'objet "cell" |
+|                  | *columnName* |                | object | *columnName* est le nom d'objet de la colonne de listbox                                                                                                                                                                                                                                                                                    |
+|                  |              | *propertyName* | string | Les propriétés "stroke", "fill", "fontStyle", "fontWeight" ou "textDecoration" (voir ci-dessus). **Note** : les propriétés "unselectable" et "disabled" ne peuvent être définies qu'au niveau de la ligne. Elles sont ignorées si elles sont passées dans l'objet "cell" |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (_i.e._, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 **Examples**
 
-Dans une méthode projet _Color_, écrivez le code suivant :
+Dans une méthode projet *Color*, écrivez le code suivant :
 
 ```4d
 //Color method
@@ -343,7 +343,7 @@ End if
  End case
 ```
 
-La méthode _Color_ contiendrait alors :
+La méthode *Color* contiendrait alors :
 
 ```4d
   //Color method

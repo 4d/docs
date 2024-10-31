@@ -622,5 +622,8 @@
   "theme.unlistedContent.message": {
     "message": "このページはリストされていません。検索エンジンはインデックスを作成せず、直リンクを知っているユーザーのみがアクセスできます。",
     "description": "The unlisted content banner message"
+  },
+  "Language": {
+    "message": "ランゲージ"
   }
 }

@@ -58,7 +58,7 @@ Contexts handled in connections established through [`Open datastore`](../comman
  End for each
 ```
 
-最適化機構のおかげでこのリクエストは、ループの 2回目の繰り返しより、_$sel_ の中で実際に使用されている属性 (firstname, lastname, employer, employer.name) のデータのみを取得するようになります。
+最適化機構のおかげでこのリクエストは、ループの 2回目の繰り返しより、*$sel* の中で実際に使用されている属性 (firstname, lastname, employer, employer.name) のデータのみを取得するようになります。
 
 ### contextプロパティの使用
 

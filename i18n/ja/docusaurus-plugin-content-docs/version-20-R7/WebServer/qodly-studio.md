@@ -16,12 +16,6 @@ Qodly Studio はフル機能の Web UI を提供し、以下のことを可能�
 - イベントを設定して 4Dコードをトリガーする
 - さらに沢山のことが可能です
 
-:::info
-
-Qodly Studio for 4D を使って開発するには、シルバー以上の [4Dパートナーライセンス](https://jp.4d.com/4d-partner-program) が必要です。 ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
-
-:::
-
 ## 設定
 
 ### 要件
@@ -118,7 +112,7 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 ## Qodly Studio を開発する
 
-### ドキュメント
+### Documentation
 
 Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
@@ -138,10 +132,10 @@ Qodlyページを利用した Webアプリケーションを開発するには�
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                                                                                                        | Qodly Studio Model Editor                                                                       |
 | Qodlyページ                                                                      | Qodly Studio ページエディター                                                                                                                                                                       | Qodly Studio ページエディター                                                                           |
-| デスクトップフォーム                                                                    | 4D IDE                                                                                                                                                                                      | _サポートされていません_                                                                                   |
+| デスクトップフォーム                                                                    | 4D IDE                                                                                                                                                                                      | *サポートされていません*                                                                                   |
 | プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                                                                                                       | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
-| コーディング IDE                                                                    | 4D IDE コードエディター _または_ VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode)<br/>_4D Server のみ_: Qodly Studio コードエディター ((2) 参照) | Qodly Studio コードエディター                                                                           |
-| デバッガー                                                                         | 4D IDE デバッガー<br/>_4D Serverのみ_: Qodly Studio デバッガー ([この段落](#4d-server-で-qodlyデバッガーを使用する) を参照ください)                                                        | Qodly Studio デバッガー                                                                              |
+| コーディング IDE                                                                    | 4D IDE コードエディター *または* VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode)<br/>*4D Server のみ*: Qodly Studio コードエディター ((2) 参照) | Qodly Studio コードエディター                                                                           |
+| デバッガー                                                                         | 4D IDE デバッガー<br/>*4D Serverのみ*: Qodly Studio デバッガー ([この段落](#4d-server-で-qodlyデバッガーを使用する) を参照ください)                                                        | Qodly Studio デバッガー                                                                              |
 | REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                                                                                              | Qodly Studio ロールとアクセス権エディター                                                                     |
 
 (1) Qodly Studioで **Model** ボタンをクリックしても何も起こりません。<br/>
@@ -211,7 +205,7 @@ Qodlyページは以下の URL からダウンロードできます:
 IP:port/$lib/renderer/?w=QodlyPageName
 ```
 
-_IP:port_ は Webサーバーのアドレスを表し、_QodlyPageName_ は Qodlyページの名前です。
+*IP:port* は Webサーバーのアドレスを表し、*QodlyPageName* は Qodlyページの名前です。
 
 例:
 

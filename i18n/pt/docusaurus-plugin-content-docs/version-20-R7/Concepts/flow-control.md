@@ -48,7 +48,7 @@ Note que a expressão booleana é sempre avaliada completamente. Considere parti
  End if
 ```
 
-A expressão é TRUE apenas se ambos os métodos forem TRUE. No entanto, mesmo se _MethodA_ retorna FALSE, 4D ainda avaliará _MethodB_, que é uma perda de tempo inútil. Nesse caso, é mais interessante usar uma estrutra como:
+A expressão é TRUE apenas se ambos os métodos forem TRUE. No entanto, mesmo se *MethodA* retorna FALSE, 4D ainda avaliará *MethodB*, que é uma perda de tempo inútil. Nesse caso, é mais interessante usar uma estrutra como:
 
 ```4d
  If(MethodA)
@@ -58,7 +58,7 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. No entanto, mesmo s
  End if
 ```
 
-O resultado é semelhante e _MethodB_ é avaliado apenas se necessário.
+O resultado é semelhante e *MethodB* é avaliado apenas se necessário.
 
 > **Nota:** O [operador ternário](operators.md#ternary-operator) permite escrever expressões condicionais de uma linha e pode substituir uma sequência completa de instruções If..Else.
 
@@ -260,7 +260,7 @@ As instruções `break` e `continue` são [descritas abaixo](#break-and-continue
 
 É comum inicializar o valor testado na expressão booleana imediatamente antes de entrar no loop `Enquanto...Fim enquanto`. Inicializar o valor significa definí-lo como algo apropriado, geralmente para que a expressão booleana seja VERDADEIRA e `While... End while` executa o laço.
 
-O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O seguinte loop continua para sempre porque _NeverStop_ sempre é TRUE:
+O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O seguinte loop continua para sempre porque *NeverStop* sempre é TRUE:
 
 ```4d
  NeverStop:=True
@@ -323,17 +323,17 @@ End for
 
 O loop `For...End for` é um ciclo controlado por uma variável de contador:
 
-- A variável contador _Counter_Variable_ é uma variável numérica (real ou  Inteiro longo) que o loop `for...End for` inicializa para o valor especificado por _Start_Expression_.
-- Cada vez que o loop é executado, a variável do contador é incrementada pelo valor especificado no valor opcional _Increment_Expression_. Se você não especificar _Increment_Expression_, a variável contadora é incrementada por um (1), que é o padrão.
-- Quando a variável contador passa o valor _End_Expression_, o loop para.
+- A variável contador *Counter_Variable* é uma variável numérica (real ou  Inteiro longo) que o loop `for...End for` inicializa para o valor especificado por *Start_Expression*.
+- Cada vez que o loop é executado, a variável do contador é incrementada pelo valor especificado no valor opcional *Increment_Expression*. Se você não especificar *Increment_Expression*, a variável contadora é incrementada por um (1), que é o padrão.
+- Quando a variável contador passa o valor *End_Expression*, o loop para.
 
-**Importante:** As expressões numéricas _Start_Expression_, _End_Expression_ e _Increment_Expression_ são avaliadas apenas uma vez no começo do loop. Se essas expressões forem variáveis, mudar uma deles dentro do loop não vai afetar o loop.
+**Importante:** As expressões numéricas *Start_Expression*, *End_Expression* e *Increment_Expression* são avaliadas apenas uma vez no começo do loop. Se essas expressões forem variáveis, mudar uma deles dentro do loop não vai afetar o loop.
 
-**Dica:** No entanto, para fins especiais, você pode alterar o valor da variável de contador _Counter_Variable_ dentro do loop; isso afetará o loop.
+**Dica:** No entanto, para fins especiais, você pode alterar o valor da variável de contador *Counter_Variable* dentro do loop; isso afetará o loop.
 
-- Normalmente _Start_Expression_ es menor que _End_Expression_.
-- Se _Start_Expression_ e _End_Expression_ forem iguais, o loop será executado apenas uma vez.
-- Se a _Start_Expression_ for maior que _End_Expression_, o loop não será executado de todo a menos que você especifique um _Increment_Expression_ negativo. Ver os exemplos.
+- Normalmente *Start_Expression* es menor que *End_Expression*.
+- Se *Start_Expression* e *End_Expression* forem iguais, o loop será executado apenas uma vez.
+- Se a *Start_Expression* for maior que *End_Expression*, o loop não será executado de todo a menos que você especifique um *Increment_Expression* negativo. Ver os exemplos.
 
 As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
@@ -386,7 +386,7 @@ A maioria dos loops `For...End for` que você irá escrever em seus projetos ter
 
 #### Variável contador decrescente
 
-Em alguns casos, pode querer ter um loop cuja variável de contador seja decrescente ao invés de crescente. Para fazer isso, você precisa especificar _Start_Expression_ maior que _End_Expression_ e uma _Increment_Expression_ negativa. Os exemplos abaixo fazem a mesma coisa que nos exemplos acima, mas na ordem inversa:
+Em alguns casos, pode querer ter um loop cuja variável de contador seja decrescente ao invés de crescente. Para fazer isso, você precisa especificar *Start_Expression* maior que *End_Expression* e uma *Increment_Expression* negativa. Os exemplos abaixo fazem a mesma coisa que nos exemplos acima, mas na ordem inversa:
 
 5. O seguinte exemplo executa 100 iterações:
 
@@ -544,7 +544,7 @@ A sintaxe formal da estrutura de controle de fluxo para `For each...End for each
  End for each
 ```
 
-La estructura `For each... End for each` ejecuta un _Current_item_ especificado sobre todos los valores de _Expression_. El tipo _Current_item_ depende del tipo _Expression_. El bucle `For each... End for each` puede iterar a través de tres tipos de _Expression_:
+La estructura `For each... End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. El bucle `For each... End for each` puede iterar a través de tres tipos de *Expression*:
 
 - collections: loop por cada elemento da coleção,
 - seleções de entidades: loop em cada entidade,
@@ -561,7 +561,7 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 - Por padrão, as  instruções anexas são executadas para cada valor de Expressão\*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (While) ou ao final do loop (Until).
-- Os parâmetros opcionais _begin_ e _end_ podem ser usados com coleções e seleções de entidades para definir os limites do loop.
+- Os parâmetros opcionais *begin* e *end* podem ser usados com coleções e seleções de entidades para definir os limites do loop.
 - O laço `Para cada... Fim para cada` pode ser usado em uma **coleção compartilhada** ou um **objeto compartilhado**. Se seu código precisar modificar um ou mais elemento(s) das propriedades de coleção ou objeto, você precisa usar as palavras-chave `Use...End use`. Dependendo de suas necessidades, você pode chamar as palavras-chave `Use...End use`:
   - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
   - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
@@ -570,15 +570,15 @@ As instruções `break` e `continue` são [descritas abaixo](#break-and-continue
 
 ### Loop através da coleção
 
-Quando \`For each... End for each' é usado com uma _Expressão_ do tipo _Coleção_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
+Quando \`For each... End for each' é usado com uma *Expressão* do tipo *Coleção*, o parâmetro *Current_Item* é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
 
-A coleção deve conter apenas elementos do mesmo tipo, caso contrário, um erro será retornado assim que a variável _Current_Item_ for atribuída ao primeiro tipo de valor incompatível.
+A coleção deve conter apenas elementos do mesmo tipo, caso contrário, um erro será retornado assim que a variável *Current_Item* for atribuída ao primeiro tipo de valor incompatível.
 
-Em cada iteração do loop, a variável _Current_Item_ é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
+Em cada iteração do loop, a variável *Current_Item* é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
-- Se a variável _Current_Item_ é do tipo de objeto ou tipo de coleção (por exemplo, se _Expressão_ for uma coleção de objetos ou de coleções), Modificar esta variável irá automaticamente modificar o elemento correspondente à coleção (porque os objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
-- A variável _Current_Item_ deve ser do mesmo tipo que os elementos da coleção. Se algum elemento da coleção não for do mesmo tipo que a variável, um erro é gerado e o loop para.
-- Se a coleção contiver elementos com um valor **Null**, será gerado um erro se o tipo de variável _Current_Item_ não suportar valores **Null** (como variáveis longint).
+- Se a variável *Current_Item* é do tipo de objeto ou tipo de coleção (por exemplo, se *Expressão* for uma coleção de objetos ou de coleções), Modificar esta variável irá automaticamente modificar o elemento correspondente à coleção (porque os objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
+- A variável *Current_Item* deve ser do mesmo tipo que os elementos da coleção. Se algum elemento da coleção não for do mesmo tipo que a variável, um erro é gerado e o loop para.
+- Se a coleção contiver elementos com um valor **Null**, será gerado um erro se o tipo de variável *Current_Item* não suportar valores **Null** (como variáveis longint).
 
 #### Exemplo
 
@@ -607,9 +607,9 @@ Se quiser computar algumas estatísticas para uma coleção de números:
 
 ### Loop nas seleções de entidades
 
-Quando `For each...End for each` for usado com uma _Expressão_ do tipo _Seleção de Entidade_, o parâmetro _Current_Item_ é a entidade que está sendo processada no momento.
+Quando `For each...End for each` for usado com uma *Expressão* do tipo *Seleção de Entidade*, o parâmetro *Current_Item* é a entidade que está sendo processada no momento.
 
-O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração de loop, o parâmetro _Current_Item_ é automaticamente preenchido com a entidade da seleção da entidade que estiver sendo processada no momento.
+O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração de loop, o parâmetro *Current_Item* é automaticamente preenchido com a entidade da seleção da entidade que estiver sendo processada no momento.
 
 **Nota:** si la selección de entidades contiene una entidad que fue eliminada mientras tanto por otro proceso, se salta automáticamente durante el bucle.
 
@@ -629,7 +629,7 @@ Se quiser aumentar o salário de todos os empregados britânicos em uma seleçã
 
 ### Loops nas propriedades de objetos
 
-Quando `for each...end for each` for usado com uma _Expressão_ do tipo Objeto, o parâmetro _Current_Item_ é uma variável de texto preenchida automaticamente com o nome da propriedade atualmente processada.
+Quando `for each...end for each` for usado com uma *Expressão* do tipo Objeto, o parâmetro *Current_Item* é uma variável de texto preenchida automaticamente com o nome da propriedade atualmente processada.
 
 As propriedades do objeto são processadas de acordo com sua ordem de criação. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.
 
@@ -667,16 +667,16 @@ Você pode escrever:
 
 Pode definir limites para a iteração usando os parâmetros opcionais inicio e fim.
 
-**Nota:** Os parâmetros _inicio_ e _fim_ só podem ser utilizados em iterações através de coleções e seleções de entidades (são ignoradas nas propriedades de objetos).
+**Nota:** Os parâmetros *inicio* e *fim* só podem ser utilizados em iterações através de coleções e seleções de entidades (são ignoradas nas propriedades de objetos).
 
-- No parâmetro _início_, passe a posição dos elementos na _Expressão_ na qual se inicia a iteração (_começo_ está incluída).
-- No parâmetro _final_, você também pode passar a posição do elemento na _Expressão_ em que para parar a iteração (_fim_ é excluída).
+- No parâmetro *início*, passe a posição dos elementos na *Expressão* na qual se inicia a iteração (*começo* está incluída).
+- No parâmetro *final*, você também pode passar a posição do elemento na *Expressão* em que para parar a iteração (*fim* é excluída).
 
-Se _end_ for omitido ou se _end_ for maior que o número de elementos em _Expression_, os elementos são iterados de _begin_ até o último (incluído).
-Se os parâmetros _begin_ e _end_ forem valores positivos, eles representam posições reais de elementos em _Expression_.
-Se _begin_ for um valor negativo, é recalculado como `begin:=begin+Expression size` (é considerado como o deslocamento desde o final de _Expression_). Se o valor calculado for negativo, _begin_ é definido como 0.
+Se *end* for omitido ou se *end* for maior que o número de elementos em *Expression*, os elementos são iterados de *begin* até o último (incluído).
+Se os parâmetros *begin* e *end* forem valores positivos, eles representam posições reais de elementos em *Expression*.
+Se *begin* for um valor negativo, é recalculado como `begin:=begin+Expression size` (é considerado como o deslocamento desde o final de *Expression*). Se o valor calculado for negativo, *begin* é definido como 0.
 **Nota:** Mesmo se begin for negativo, a iteração continua sendo realizada na ordem normal.
-Se _end_ for um valor negativo, ele é recalculado como `end:=end+tamanho da expressão`
+Se *end* for um valor negativo, ele é recalculado como `end:=end+tamanho da expressão`
 
 Por exemplo:
 
@@ -707,7 +707,7 @@ Você pode controlar a execução do `Para cada...Fim para cada` adicionando uma
 
 Pode passar qualquer uma das duas palavras chave em função das suas necessidades:
 
-- A condição `até` é testada no final de cada iteração, portanto, se o _Expressão_ não estiver vazio ou nulo, o loop será executado pelo menos uma vez.
+- A condição `até` é testada no final de cada iteração, portanto, se o *Expressão* não estiver vazio ou nulo, o loop será executado pelo menos uma vez.
 - A condição `While` é testada no início de cada iteração, então de acordo com o resultado da condição, o loop pode não ser executado de forma alguma.
 
 #### Exemplo

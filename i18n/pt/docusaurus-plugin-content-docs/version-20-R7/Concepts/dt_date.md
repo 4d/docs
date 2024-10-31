@@ -19,7 +19,7 @@ Uma constante literal de tipo data está cercada de sinais de exclamação (!...
 !2015-12-31!
 ```
 
-Uma data nula é especificada por _!00-00-00!_.
+Uma data nula é especificada por *!00-00-00!*.
 
 \*\*Dica: o Editor de métodos inclui um acesso direto para introduzir uma hora nula. Para digitar uma data nula, digite a exclamação (!) e pressione Enter.
 

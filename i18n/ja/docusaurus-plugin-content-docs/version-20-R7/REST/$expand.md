@@ -3,11 +3,11 @@ id: expand
 title: $expand
 ---
 
-画像属性に保存されているピクチャーを展開します (_例_: `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
+画像属性に保存されているピクチャーを展開します (*例*: `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
 または <br/>
 保存するために BLOB属性を展開します。
 
-> **互換性に関する注記**: 互換性のため、$expand はリレーション属性を展開するのに使用できます (_例_: `Company(1)?$expand=staff` または `Employee/?$filter="firstName BEGIN a"&$expand=employer`)。 しかしながら、これらの場合には [`$attributes`]($attributes.md) を使用するのが推奨されます。
+> **互換性に関する注記**: 互換性のため、$expand はリレーション属性を展開するのに使用できます (*例*: `Company(1)?$expand=staff` または `Employee/?$filter="firstName BEGIN a"&$expand=employer`)。 しかしながら、これらの場合には [`$attributes`]($attributes.md) を使用するのが推奨されます。
 
 ## 画像属性の表示
 

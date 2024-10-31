@@ -40,19 +40,19 @@ A continuación, introduzca el número de licencia del producto que desea activa
 Si no puede utilizar la [activación inmediata](#instant-activation) porque su ordenador no tiene acceso a Internet, proceda a la activación diferida siguiendo los siguientes pasos.
 
 1. En la ventana del Administrador de licencias, seleccione la pestaña **Activación diferida**.
-2. Ingrese el número de licencia y su dirección de correo electrónico, luego haga clic en **Generar archivo** para crear el archivo de ID (_reg.txt_).
+2. Ingrese el número de licencia y su dirección de correo electrónico, luego haga clic en **Generar archivo** para crear el archivo de ID (*reg.txt*).
 
 ![](../assets/en/getStart/activ3.png)
 
-3. Guarde el archivo _reg.txt_ en una unidad USB y llévelo a un ordenador que tenga acceso a Internet.
+3. Guarde el archivo *reg.txt* en una unidad USB y llévelo a un ordenador que tenga acceso a Internet.
 4. En la máquina con acceso a Internet, inicie sesión en [https://activation.4d.com](https://activation.4d.com).
-5. En la página Web, haz clic en el botón **Elegir archivo...** y seleccione el archivo _reg.txt_ de los pasos 3 y 4; luego haga clic en el botón **Activate**.
+5. En la página Web, haz clic en el botón **Elegir archivo...** y seleccione el archivo *reg.txt* de los pasos 3 y 4; luego haga clic en el botón **Activate**.
 6. Descargue los archivos seriales.
 
 ![](../assets/en/getStart/activ4.png)
 
-7. Guarde el(los) archivo(s) _license4d_ en un medio compartido y transfiéralo(s) de nuevo a la máquina 4D del paso 1.
-8. Ahora, de vuelta en la máquina con 4D, aún en la página de **Activación Diferida**, haga clic en **Siguiente**; luego clic en el botón **Cargar...** y seleccione un archivo _license4d_ de los medios compartidos del paso 7.
+7. Guarde el(los) archivo(s) *license4d* en un medio compartido y transfiéralo(s) de nuevo a la máquina 4D del paso 1.
+8. Ahora, de vuelta en la máquina con 4D, aún en la página de **Activación Diferida**, haga clic en **Siguiente**; luego clic en el botón **Cargar...** y seleccione un archivo *license4d* de los medios compartidos del paso 7.
 
 ![](../assets/en/getStart/activ5.png)
 

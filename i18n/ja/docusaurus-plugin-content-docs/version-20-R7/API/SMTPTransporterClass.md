@@ -33,7 +33,7 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 
 | 引数     | 型                                  |                             | 説明                                                  |
 | ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
-| server | Object                             |              ->             | メールサーバー情報                                           |
+| server | オブジェクト                             |              ->             | メールサーバー情報                                           |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
 
 <!-- END REF -->
@@ -124,8 +124,8 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 | 引数   | 型      |                             | 説明                                           |
 | ---- | ------ | :-------------------------: | -------------------------------------------- |
-| mail | Object |              ->             | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
-| 戻り値  | Object | <- | SMTP ステータス                                   |
+| mail | オブジェクト |              ->             | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
+| 戻り値  | オブジェクト | <- | SMTP ステータス                                   |
 
 <!-- END REF -->
 
@@ -147,7 +147,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 | ---------- | ------- | ---------------------------------------------------------- |
 | success    | boolean | 送信に成功した場合は true、それ以外は false                                |
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |
-| statusText | text    | SMTPから返されるステータスメッセージ                                       |
+| statusText | テキスト    | SMTPから返されるステータスメッセージ                                       |
 
 SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。 Use the `Last errors` command for information about the error.
 

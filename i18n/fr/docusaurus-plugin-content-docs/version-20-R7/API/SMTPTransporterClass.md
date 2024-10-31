@@ -7,7 +7,7 @@ La classe `SMTPTransporter` vous permet de configurer des connexions SMTP et d'e
 
 ### Objet SMTP Transporter
 
-SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. Leurs propriétés et fonctions sont les suivantes :
+Les objets SMTP Transporter sont instanciés avec la commande [`SMTP New transporter`](../commands/smtp-new-transporter.md). Leurs propriétés et fonctions sont les suivantes :
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 
 #### Description
 
-La fonction `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crée et retourne un nouvel objet de type `4D.SMTPTransporter`<!-- END REF -->. It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
+La fonction `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crée et retourne un nouvel objet de type `4D.SMTPTransporter`<!-- END REF -->. Elle est identique à la commande [`SMTP New transporter`](../commands/smtp-new-transporter.md) (raccourci).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -149,7 +149,7 @@ La fonction retourne un objet décrivant le statut SMTP de l"opération. Cet obj
 | status     | number  | Code du statut retourné par le serveur SMTP (0 si problème non lié au traitement de l'email) |
 | statusText | text    | Message de statut retourné par le serveur SMTP                                                                  |
 
-En cas de problème non lié au traitement SMTP (par exemple une propriété obligatoire qui est manquante dans l'objet mail), 4D génère une erreur que vous pouvez intercepter à l'aide d'une méthode installée via la commande `ON ERR CALL`. Use the `Last errors` command for information about the error.
+En cas de problème non lié au traitement SMTP (par exemple une propriété obligatoire qui est manquante dans l'objet mail), 4D génère une erreur que vous pouvez intercepter à l'aide d'une méthode installée via la commande `ON ERR CALL`. Utilisez la commande `Last errors` pour obtenir des informations sur l'erreur.
 
 Dans ce cas, l'objet erreur qui en résulte contient les valeurs suivantes :
 

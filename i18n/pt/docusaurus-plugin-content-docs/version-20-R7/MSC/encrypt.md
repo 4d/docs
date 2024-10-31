@@ -4,15 +4,15 @@ title: Página de criptografia
 sidebar_label: Página de criptografia
 ---
 
-Puede utilizar esta página para cifrar o _descifrar_ (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.
+Puede utilizar esta página para cifrar o *descifrar* (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.
 
 :::info
 
-Para obtener información detallada sobre la encriptación de datos en 4D, consulte la sección [Encriptación de datos](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) del manual de _Diseño_. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
+Para obtener información detallada sobre la encriptación de datos en 4D, consulte la sección [Encriptación de datos](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) del manual de *Diseño*. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
 
 :::
 
-É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Se denomina "Replaced Files (Encrypting) _yyyy-mm-dd hh-mm-ss_> o "Replaced Files (Decrypting) _yyyy-mm-dd hh-mm-ss_".
+É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Se denomina "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> o "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 
 > El cifrado sólo está disponible en [modo mantenimiento](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
 
@@ -127,7 +127,7 @@ Almacenar el archivo de llave de cifrado de datos en el primer nivel del disposi
 
 ## Arquivo histórico
 
-Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. Se crea en formato XML y se llama "_ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml_" o "_ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml_".
+Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. Se crea en formato XML y se llama "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" o "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 É apresentado um botão Open log file na página MSC sempre que é gerado um novo arquivo de registo.
 

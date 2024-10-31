@@ -289,7 +289,7 @@ O formato **Scaled to fit** faz com que o 4D redimensione a imagem para se ajust
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D corta igualmente de cada borda e da parte superior e inferior.
+El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D crops equally from each edge and from the top and bottom.
 
 O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
 
@@ -313,7 +313,7 @@ Si ha aplicado el formato **Escalado para ajustar centrado (proporcional)**, la 
 
 `Gramática JSON: "tiled"`
 
-Cuando se amplía el área que contiene una imagen con el formato **Replicada**, la imagen no se deforma sino que se replica tantas veces como sea necesario para llenar el área por completo.
+When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 

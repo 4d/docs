@@ -18,7 +18,7 @@ Estão disponíveis dois modos de arrastamento:
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
   Nesse modo, o evento de formulário `On Begin Drag` NÃO é gerado. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opção não está disponível para as imagens.
 
-Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual _Lenguaje 4D_.
+Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual *Lenguaje 4D*.
 
 #### Gramática JSON
 
@@ -32,7 +32,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Veja também
 
-[Droppable](#droppable)
+[Soltável](#droppable)
 
 ---
 
@@ -46,7 +46,7 @@ Há dois modos de soltar em 4D:
   In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. Esse modo é baseado em uma combinação de propriedades, eventos e comandos específicos do tema `Pasteboard`.
 - **Automático**: en este modo, 4D gestiona automáticamente, si es posible, la inserción de los datos arrastrados de tipo texto o imagen que se sueltan sobre el objeto (los datos se pegan en el objeto). Los eventos `On Drag Over` y `On Drop` NO se generan. Por otra parte, se generan los eventos `On After Edit` (durante el soltar) y `On Data Change` (cuando el objeto pierde el foco).
 
-Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual _Lenguaje 4D_.
+Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual *Lenguaje 4D*.
 
 #### Gramática JSON
 
@@ -60,13 +60,13 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Veja também
 
-[Draggable](#draggable)
+[Arrastável](#draggable)
 
 ---
 
 ## Executar método objecto
 
-Cuando esta opción está activada, el método objeto se ejecuta con el evento `On Data Change` _en el mismo momento_ en que el usuario cambia el valor del indicador. Cuando la opción está desactivada, el método se ejecuta _tras_ la modificación.
+Quando essa opção está ativada, o método objeto é executado com o evento `On Data Change` *no mesmo momento* em que o usuário altera o valor do indicador. Cuando la opción está desactivada, el método se ejecuta *tras* la modificación.
 
 #### Gramática JSON
 
@@ -88,7 +88,7 @@ São suportados vários tipos de referências de métodos:
 
 - um caminho de arquivo de método objeto padrão, ou seja, que usa o seguinte padrão:\
   `ObjectMethods/objectName.4dm`\
-  ... onde `objectName` é o [nome do objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/_formName_/ObjectMethods/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+  ... onde `objectName` é o [nome do objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/*formName*/ObjectMethods/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
 
 - um nome de método projeto: nome de um método projeto existente sem extensão de arquivo, ou seja:
   `myMethod`
@@ -152,7 +152,7 @@ Permite ordenar dados de coluna clicando em um cabeçalho [listbox](listbox_over
 
 In list boxes based on a selection of records, the standard sort function is available only:
 
-- Quando a fonte de dados é _Seleção atual_,
+- Quando a fonte de dados é *Seleção atual*,
 - With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
 
 In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
@@ -171,7 +171,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 ## Ação padrão
 
-Atividades típicas a serem executadas por objetos ativos (\*e.g., permitindo que o usuário aceite, cancele ou exclua registros, mova entre registros ou de página para página em um formulário multi-páginas, etc.) foi predefinido por 4D como ações padrão. Eles são descritos em detalhes na seção [Ações padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) do _manual de Desenho_.
+Atividades típicas a serem executadas por objetos ativos (\*e.g., permitindo que o usuário aceite, cancele ou exclua registros, mova entre registros ou de página para página em um formulário multi-páginas, etc.) foi predefinido por 4D como ações padrão. Eles são descritos em detalhes na seção [Ações padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) do *manual de Desenho*.
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed.
 

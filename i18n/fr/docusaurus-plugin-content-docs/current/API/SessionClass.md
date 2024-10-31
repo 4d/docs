@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](../commands/session.md) command. Ces objets fournissent au développeur une interface permettant de gérer la session utilisateur courante et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de la session, le lancement de process préemptifs liés à la session ou (uniquement pour le web) la gestion des [privilèges](../ORDA/privileges.md).
+Les objets de session sont retournés par la commande [`Session`](../commands/session.md). Ces objets fournissent au développeur une interface permettant de gérer la session utilisateur courante et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de la session, le lancement de process préemptifs liés à la session ou (uniquement pour le web) la gestion des [privilèges](../ORDA/privileges.md).
 
 ### Types de sessions
 
@@ -15,7 +15,7 @@ Trois types de sessions sont pris en charge par cette classe :
 
 :::note
 
-The availability of properties and functions in the `Session` object depends on the session type.
+La disponibilité des propriétés et des fonctions de l'objet `Session` dépend du type de session.
 
 :::
 
@@ -274,7 +274,7 @@ La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -532,7 +532,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](https://doc.4d.com/4dv20R6/help/command/en/page1839.html) command.
+You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
 
 :::
 
@@ -580,7 +580,7 @@ End use
 La propriété `.userName` contient <!-- REF #SessionClass.userName.Summary -->le nom d'utilisateur associé à la session<!-- END REF -->. Vous pouvez vous en servir pour identifier l'utilisateur dans votre code.
 
 - Avec les sessions web, cette propriété est une chaîne vide par défaut. Elle peut être définie via la propriété `privileges` de la fonction [`setPrivileges()`](#setprivileges).
-- Avec les sessions distantes et des procédures stockées, cette propriété renvoie le même nom d'utilisateur que la [commande `Current user`](https://doc.4d.com/4dv20/help/command/fr/page182.html).
+- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
 
 Cette propriété est en **lecture seule**.
 

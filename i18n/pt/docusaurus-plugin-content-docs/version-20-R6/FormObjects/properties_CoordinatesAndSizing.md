@@ -24,7 +24,7 @@ Quando essa propriedade está ativada, a altura de cada linha é calculada autom
   - any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
   - quaisquer tipos de controlo (entradas, caixas de verificação, listas, listas suspensas),
   - tipos, estilos e tamanhos de letra,
-  - la opción [Wordwrap](properties_Display.md#wordwrap): si está desactivada, la altura se basa en el número de párrafos (las líneas se truncan); si está activada, la altura se basa en el número de líneas (no se trunca).
+  - a opção [Embalagem de palavras](properties_Display.md#wordwrap): se desativada, a altura é baseada no número de parágrafos (as linhas são truncadas); se ativada, a altura é baseada no número de linhas (não truncadas).
 
 - O cálculo da altura da linha ignora:
   - conteúdo da coluna oculta
@@ -150,7 +150,7 @@ Você também pode definir essa propriedade usando os comandos [OBJECT Get corne
 
 #### Objectos suportados
 
-[Entrada](input_overview.md) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+[Entrada](input_overview.md) - [Retângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 ---
 
@@ -178,7 +178,7 @@ Esta propriedade designa o tamanho horizontal de um objeto.
 
 > - Alguns objetos podem ter uma altura predefinida que não pode ser alterada.
 > - Si la propiedad [Redimensionable](properties_ResizingOptions.md#resizable) se utiliza para una [columna de list box](listbox_overview.md#list-box-columns), el usuario también puede cambiar manualmente el tamaño de la columna.
-> - When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> - Ao redimensionar a forma, se a propriedade de [dimensionamento horizontal "Crescer"](properties_ResizingOptions.md#horizontal-sizing) foi atribuída o list box, a coluna mais direita será aumentada além da largura máxima se necessário.
 
 #### Gramática JSON
 
@@ -196,7 +196,7 @@ Esta propriedade designa o tamanho horizontal de um objeto.
 
 A largura máxima da coluna (em píxeis). The width of the column cannot be increased beyond this value when resizing the column or form.
 
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> Ao redimensionar a forma, se a propriedade de [dimensionamento horizontal "Crescer"](properties_ResizingOptions.md#horizontal-sizing) foi atribuída o list box, a coluna mais direita será aumentada além da largura máxima se necessário.
 
 #### Gramática JSON
 
@@ -214,7 +214,7 @@ A largura máxima da coluna (em píxeis). The width of the column cannot be incr
 
 A largura mínima da coluna (em píxeis). A largura da coluna não pode ser reduzida abaixo deste valor quando se redimensiona a coluna ou o formulário.
 
-> When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+> Ao redimensionar a forma, se a propriedade de [dimensionamento horizontal "Crescer"](properties_ResizingOptions.md#horizontal-sizing) foi atribuída o list box, a coluna mais direita será aumentada além da largura máxima se necessário.
 
 #### Gramática JSON
 

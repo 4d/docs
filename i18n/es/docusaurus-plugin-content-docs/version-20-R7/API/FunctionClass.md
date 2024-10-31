@@ -9,7 +9,7 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 - **funciones usuario**, creadas en [clases usuario](Concepts/classes.md) utilizando la [palabra clave Function](Concepts/classes.md#function).
 - **funciones de fórmula**, es decir, funciones que pueden ejecutar cualquier fórmula 4D.
 
-### Objetos Fórmula
+### Objetos fórmula
 
 The [Formula](../commands/formula.md) and [Formula from string](../commands/formula-from-string.md) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
@@ -176,7 +176,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | ---------- | ------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | thisObj    | Object | ->                          | Objeto a devolver por el comando This en la fórmula                                                                                                      |
 | params     | any    | ->                          | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
-| Resultado  | any    | <- | Valor obtenido de la ejecución de la fórmula                                                                                                             |
+| Result     | any    | <- | Valor obtenido de la ejecución de la fórmula                                                                                                             |
 
 <!-- END REF -->
 

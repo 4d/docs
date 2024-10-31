@@ -216,10 +216,9 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 <details><summary>Historique</summary>
 
-|Release|Changes|
-
-\|---|---|
-|20|Ajouté|
+| Release | Modifications |
+| ------- | ------------- |
+| 20      | Ajout         |
 
 </details>
 
@@ -241,7 +240,7 @@ La fonction `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary --
 
 Cette fonction ne peut être appelée que :
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- sur le datastore local ([`ds`](../commands/ds.md)).
 - dans un environnement client/serveur, sur la machine serveur.
 
 :::
@@ -396,7 +395,7 @@ La fonction `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summar
 
 Cette fonction ne peut être appelée que :
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- sur le datastore local ([`ds`](../commands/ds.md)).
 - dans un environnement client/serveur, sur la machine serveur.
 
 :::
@@ -843,7 +842,7 @@ La fonction `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summar
 
 Cette fonction ne peut être appelée que :
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- sur le datastore local ([`ds`](../commands/ds.md)).
 - dans un environnement client/serveur, sur la machine serveur.
 
 :::

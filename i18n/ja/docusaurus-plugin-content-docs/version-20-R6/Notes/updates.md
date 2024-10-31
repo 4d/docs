@@ -132,7 +132,7 @@ title: リリースノート
 
 ## 4D 20.x LTS
 
-See [**Release Notes for 4D 20.x LTS**](../../version-20/Notes/updates.md).
+[**4D 20.x LTS のリリースノート**](../../version-20/Notes/updates.md) 参照。
 
 ## ライブラリの一覧
 

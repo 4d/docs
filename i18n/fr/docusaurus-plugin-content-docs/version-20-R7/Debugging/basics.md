@@ -33,8 +33,8 @@ Il peut arriver que la mémoire soit insuffisante pour créer une BLOB. Ou, lors
 
 Ce sont généralement les types d'erreurs les plus difficiles à trouver. À l'exception des erreurs de frappe, tous les types d'erreurs énumérés ci-dessus sont, dans une certaine mesure, couverts par l'expression "erreur de conception ou de logique". Utilisez le [débogueur](debugger.md) pour les détecter. Par exemple :
 
-- Une _erreur de syntaxe_ peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
-- Une _erreur au niveau de l'Environnement_ peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
+- Une *erreur de syntaxe* peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
+- Une *erreur au niveau de l'Environnement* peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
 
 Les erreurs de conception ou de logique comprennent également des situations telles que :
 
