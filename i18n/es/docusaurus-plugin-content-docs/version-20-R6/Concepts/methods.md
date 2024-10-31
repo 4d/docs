@@ -108,7 +108,7 @@ También se admite la sintaxis con paréntesis:
 $o["custom_Alert"]() //muestra "Hello world!"
 ```
 
-También puede [pasar parámetros](Concepts/parameters.md) a su fórmula cuando la llame utilizando $1, $2… al igual que con los métodos de proyecto 4D:
+También puede [pasar parámetros](Concepts/parameters.md) a su fórmula cuando la llame utilizando $1, $2… así como con los métodos proyecto 4D:
 
 ```4d
 //método fullName 
