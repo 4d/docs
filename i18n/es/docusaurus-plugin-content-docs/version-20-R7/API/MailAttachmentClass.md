@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Los objetos Attachment permiten referenciar archivos en un objeto [`Email`](EmailObjectClass.md). Attachment objects are created using the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+Los objetos Attachment permiten referenciar archivos en un objeto [`Email`](EmailObjectClass.md). Los objetos Attachment son creados utilizando el comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ### Objetos adjuntos
 
@@ -50,7 +50,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 #### Descripción
 
-La función `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.MailAttachment`<!-- END REF -->. It is identical to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command (shortcut).
+La función `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.MailAttachment`<!-- END REF -->. Es idéntico al comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (acceso directo).
 
 ## .cid<!-- REF #MailAttachmentClass.cid.Syntax --><strong x-id="1">.cid</strong> : Text<!-- END REF -->#### Descripción
 
@@ -93,7 +93,7 @@ La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -
 
 #### Descripción
 
-La propiedad `.name` contiene <!-- REF #MailAttachmentClass.name.Summary -->el nombre y la extensión del adjuntot<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+La propiedad `.name` contiene <!-- REF #MailAttachmentClass.name.Summary -->el nombre y la extensión del adjunto<!-- END REF -->.  Por defecto, es el nombre del archivo, a menos que se haya indicado otro nombre en el comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ## .path
 
@@ -133,4 +133,4 @@ La propiedad `.size` contiene <!-- REF #MailAttachmentClass.size.Summary -->el v
 
 #### Descripción
 
-La propiedad `.type` contiene <!-- REF #MailAttachmentClass.type.Summary -->el `content-type` del archivo adjunto<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.
+La propiedad `.type` contiene <!-- REF #MailAttachmentClass.type.Summary -->el `content-type` del archivo adjunto<!-- END REF -->. Si este tipo no se pasa explícitamente al comando [`MAIL New attachment`](../commands/mail-new-attachment.md), el `content-type` se basa en su extensión de archivo.
