@@ -67,7 +67,7 @@ The availability of properties and functions in the `Session` object depends on 
 
 :::note
 
-This function does nothing and always returns **False** with remote client and stored procedure sessions.
+This function does nothing and always returns **True** with remote client and stored procedure sessions.
 
 :::
 
