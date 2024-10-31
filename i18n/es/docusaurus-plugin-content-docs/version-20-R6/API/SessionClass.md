@@ -153,7 +153,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-Esta función no hace nada y siempre devuelve **False** con las sesiones de clientes remotos y de los procedimientos almacenados.
+This function does nothing and always returns **True** with remote client and stored procedure sessions.
 
 :::
 
