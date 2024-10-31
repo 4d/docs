@@ -7,11 +7,11 @@ title: Área Web
 
 ## Acesso a métodos 4D
 
-You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
+Você pode chamar métodos 4D a partir do código JavaScript executado em uma área Web e obter valores em retorno. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
 
-> Esta propiedad sólo está disponible si el área web [utiliza el motor de renderizado web integrado](#use-embedded-web-rendering-engine).
+> Esta propriedade só está disponível se a área Web [usar o mecanismo de renderização Web incorporado](#use-embedded-web-rendering-engine).
 
-Cuando esta propiedad está activada, se instancia un objeto JavaScript especial llamado `$4d`en el área web, que puede [utilizar para gestionar las llamadas a los métodos proyecto de 4D](webArea_overview.md#4d-object).
+Quando essa propriedade está ativada, um objeto JavaScript especial chamado `$4d` é instanciado na área Web, que você pode [usar para gerenciar chamadas para métodos projeto de 4D](webArea_overview.md#4d-object).
 
 #### Gramática JSON
 
@@ -27,9 +27,9 @@ Cuando esta propiedad está activada, se instancia un objeto JavaScript especial
 
 ## Progressão
 
-Nome de uma variável do tipo Longint. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Atualizado automaticamente por 4D, não pode ser modificado manualmente.
+Nome de uma variável do tipo Longint. Essa variável receberá um valor entre 0 e 100, representando a porcentagem de conclusão do carregamento da página na área Web. Atualizado automaticamente por 4D, não pode ser modificado manualmente.
 
-> As of 4D v19 R5, this variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> A partir de 4D v19 R5, esta variável só será atualizada no Windows se as áreas Web [usar o mecanismo de renderização Web embutido](#use-embedded-web-rendering-engine).
 
 #### Gramática JSON
 
@@ -45,21 +45,21 @@ Nome de uma variável do tipo Longint. This variable will receive a value betwee
 
 ## URL
 
-A String type variable that designates the URL loaded or being loading by the associated Web area. The association between the variable and the Web area works in both directions:
+Uma variável do tipo String que designa o URL carregado ou que está sendo carregado pela área Web associada. A associação entre a variável e a área Web funciona em ambas as direções:
 
-- If the user assigns a new URL to the variable, this URL is automatically loaded by the Web area.
-- Any browsing done within the Web area will automatically update the contents of the variable.
+- Se o usuário atribuir um novo URL à variável, esse URL será carregado automaticamente pela área Web.
+- Qualquer navegação feita na área Web atualizará automaticamente o conteúdo da variável.
 
-Schematically, this variable functions like the address area of a Web browser. Pode representá-lo através de uma área de texto por cima da área Web.
+Esquematicamente, essa variável funciona como a área de endereço de um navegador Web. Pode representá-lo através de uma área de texto por cima da área Web.
 
 ### Variável URL e comando WA OPEN URL
 
 La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html). No entanto, há que assinalar as seguintes diferenças:
 
-- For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) acepta ambas notaciones.
-- If the URL variable contains an empty string, the Web area does not attempt to load the URL. El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) genera un error en este caso.
-- Si la variable URL no contiene un protocolo (http, mailto, archivo, etc.), el área web añade "http://", lo que no ocurre con el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html).
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). O comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) aceita ambas as notações.
+- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. O comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) gera um erro nesse caso.
+- Se a variável URL não contiver um protocolo (http, mailto, arquivo, etc.), a área Web adicionará "http://", o que não é o caso do comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html).
+- Quando a área Web não é exibida no formulário (quando está localizada em outra página do formulário), a execução do comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) não tem efeito, ao passo que a atribuição de um valor à variável URL pode ser usada para atualizar o URL atual.
 
 #### Gramática JSON
 
@@ -75,9 +75,9 @@ La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://
 
 ## Utilizar o motor de renderização Web integrado
 
-This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
+Essa opção permite escolher entre dois mecanismos de renderização para a área Web, dependendo das especificidades de sua aplicação:
 
-- **no marcado** - `valor JSON: sistema` (por defecto): en este caso, 4D utiliza el "mejor" motor correspondiente al sistema. This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. No entanto, você poderá notar algumas diferenças de renderização entre as plataformas. No Windows, 4D usa Microsoft Edge WebView2. No macOS, 4D usa a versão atual do WebKit (Safari).
+- **desmarcada** - `valor JSON: system` (padrão): neste caso, 4D usa o mecanismo "melhor" correspondente ao sistema. This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. No entanto, você poderá notar algumas diferenças de renderização entre as plataformas. No Windows, 4D usa Microsoft Edge WebView2. No macOS, 4D usa a versão atual do WebKit (Safari).
 
 > On Windows, if Microsoft Edge WebView2 is not installed, 4D uses the embedded engine as system rendering engine. To know if it is installed in your system, look for "Microsoft Edge WebView2 Runtime" in your applications panel.
 
