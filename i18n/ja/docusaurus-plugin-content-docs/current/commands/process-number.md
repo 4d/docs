@@ -37,5 +37,5 @@ If the command is executed with the \* parameter from a process on the server ma
 #### 参照
 
 [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
-[Process state](./commands-legacy/process-state.md)\
+[Process state](../commands-legacy/process-state.md)\
 [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
