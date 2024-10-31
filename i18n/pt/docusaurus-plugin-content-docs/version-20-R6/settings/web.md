@@ -3,7 +3,7 @@ id: web
 title: Página da Web
 ---
 
-A través de las pestañas de la página **Web**, puede configurar varios aspectos del servidor web integrado de 4D (seguridad, inicio, conexiones, servicios web, etc.). Para más información sobre el funcionamiento del servidor web de 4D, consulte [Servidor web](../WebServer/webServer.md). Para más información sobre los servicios web de 4D, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
+Usando as guias na página **Web**, você pode configurar vários aspectos do servidor Web integrado de 4D (segurança, inicialização, conexões, serviços Web, etc.). Para mais informações sobre como o servidor Web 4D funciona, consulte [Servidor web](../WebServer/webServer.md). Para mais informações sobre os serviços web de 4D, consulte o capítulo [Publicação e uso de serviços web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
 
 ## Configuração
 
@@ -11,11 +11,11 @@ A través de las pestañas de la página **Web**, puede configurar varios aspect
 
 #### Iniciar o servidor Web no arranque
 
-Indica se o servidor Web será iniciado ao iniciar a aplicação 4D. Esta opción se describe en la sección [Administración del servidor web](../WebServer/webServerAdmin.md#starting-the-4d-web-server).
+Indica se o servidor Web será iniciado ao iniciar a aplicação 4D. Essa opção está descrita na seção [Administração do servidor Web](../WebServer/webServerAdmin.md#starting-the-4d-web-server).
 
 #### Ativar HTTP
 
-Indica se o servidor web vai ou não aceitar conexões não seguras. Ver [Activar HTTP](../WebServer/webServerConfig.md#enable-http).
+Indica se o servidor web vai ou não aceitar conexões não seguras. Ver [Ativar HTTP](../WebServer/webServerConfig.md#enable-http).
 
 #### Porta HTTP
 
@@ -27,7 +27,7 @@ Endereço IP em que o servidor web 4D vai receber solicitações HTTP (4D local 
 
 #### Ativar HTTPS
 
-Indica se o servidor web vai ou não aceitar conexões seguras. Ver [Activar HTTPS](../WebServer/webServerConfig.md#enable-https).
+Indica se o servidor web vai ou não aceitar conexões seguras. Ver [Ativar HTTPS](../WebServer/webServerConfig.md#enable-https).
 
 #### Porta HTTPS
 
@@ -35,13 +35,13 @@ Permite modificar o número da porta TCP/IP usada pelo servidor Web para as cone
 
 #### Allow database access through 4DSYNC URLs
 
-*Nota de compatibilidad:* esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
+*Nota de compatibilidade*: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
 
 ### Caminhos
 
 #### Raiz HTML predefinida
 
-Define a localização padrão dos arquivos do site e indicar o nível hierárquico no disco acima do qual os arquivos não serão acessíveis. Ver [Carpeta raíz](../WebServer/webServerConfig.md#root-folder).
+Define a localização padrão dos arquivos do site e indicar o nível hierárquico no disco acima do qual os arquivos não serão acessíveis. Ver [Pasta Raiz](../WebServer/webServerConfig.md#root-folder).
 
 #### Página inicial predefinida
 
@@ -53,72 +53,72 @@ Designar uma página inicial padrão para o servidor Web. Ver [Página de inicio
 
 #### Usar o cache Web 4D
 
-Ativar o cache da página Web. Ver [Caché](../WebServer/webServerConfig.md#cache).
+Ativar o cache da página Web. Consulte [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Tamanho da cache das Páginas
 
-Define o tamanho da cache. Ver [Caché](../WebServer/webServerConfig.md#cache).
+Define o tamanho da cache. Consulte [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Limpar cache
 
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). A cache é então imediatamente limpa.
+Para fazer isso, você só precisa clicar no botão **Limpar Cache**. A cache é então imediatamente limpa.
 
-> También puede utilizar la URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
+> Você também pode usar a URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
 ### Processo Web
 
 Essa área permite configurar como o servidor Web tratará as sessões de usuário e seus processos associados.
 
-> La opción **Sesiones heredadas** solo está disponible para la compatibilidad en las bases/proyectos creados con las versiones de 4D anteriores a 4D v18 R6.
+> A opção **Legacy sessions** só está disponível para compatibilidade em bancos de dados/projetos criados com versões do 4D anteriores ao 4D v18 R6.
 
 #### Sessões escaláveis (sessões multi-processo)
 
-Cuando selecciona esta opción (recomendado), una sesión usuario se gestiona a través de un objeto **Session**. Ver la [página Sesiones usuario](../WebServer/sessions.md#enabling-sessions).
+Quando selecionat esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. Veja a [página de sessões do usuário](../WebServer/sessions.md#enabling-sessions).
 
 #### Sem sessões
 
-Cuando se selecciona esta opción, el servidor web no ofrece ningún soporte específico para las [sesiones usuario](../WebServer/sessions.md). As solicitações sucessivas dos clientes Web são sempre independentes e nenhum contexto é mantido no servidor.
+Quando esta opção é selecionada, o servidor web não fornece nenhum suporte específico para [sessões de usuários](../WebServer/sessions.md). As solicitações sucessivas dos clientes Web são sempre independentes e nenhum contexto é mantido no servidor.
 
 Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
-- [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
-- [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
-- [Use preemptive processes](#use-preemptive-web-processes)
+- [Máximo de Processos Web Concorrentes](#maximum-concurrent-web-processes)
+- [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
+- [Usar processos preemptivos](#use-preemptive-web-processes)
 
 #### Sessões herdadas (sessões de processo único)
 
 *Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
-Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Ver [Mantener sesión](../WebServer/webServerConfig.md#keep-session).
+Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Esse mecanismo é descrito na seção [Web Sessions Management (Legacy)] (https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
 
-Cuando se selecciona, la opción [Reutilización de los contextos temporales (4D en modo remoto)](#reuse-temporary-contexts) es marcada automáticamente (y bloqueada).
+Quando selecionada, a opção [Reutilizar Contextos Temporários (4D em modo remoto)](#reuse-temporary-contexts) é marcada automaticamente (e bloqueada).
 
 #### Processos Web em simultâneo máximo
 
-No disponible con las [sesiones extensibles](../WebServer/sessions.md).
+Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
-Limite estritamente superior de processos Web em simultâneo. Ver [Procesos Web simultáneos máximos](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Limite estritamente superior de processos Web em simultâneo. Veja [Máximo Processos Web Concorrentes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 #### Reutilização de contextos temporários
 
-No disponible con las [sesiones extensibles](../WebServer/sessions.md).
+Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
-Permite otimizar a operação do servidor Web 4D no modo remoto. Ver [Reutilización de los contextos temporales en modo remoto)](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
+Permite otimizar a operação do servidor Web 4D no modo remoto. Veja [Reutilizar contextos temporários em modo remoto)](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
 
 #### Utilizar processos preemptivos
 
-No disponible con las [sesiones extensibles](../WebServer/sessions.md).
+Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
-Permite processos web preemptivos nas suas aplicações compiladas. Cuando se selecciona **Utilizar los procesos apropiativos**, la elegibilidad de su código relacionado con la web (incluyendo las etiquetas 4D y los métodos base Web) para la ejecución apropiativa será evaluada durante la compilación. Para más información, consulte [Utilizar los procesos web apropiativos](../WebServer/preemptiveWeb.md).
+Permite processos web preemptivos nas suas aplicações compiladas. Quando **usar processos preventivos** for selecionado, A elegibilidade de seu código relacionado à Web (incluindo tags 4D e métodos de banco de dados web) para a execução preventiva será avaliada durante a compilação. Para mais informações, consulte [Utilizando processos Web preemptivos](../WebServer/preemptiveWeb.md).
 
-> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  Ver [Activar el modo apropiativo para el servidor web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
+> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
 
 #### Tempo limite do processo inativo
 
-No disponible con las [sesiones extensibles](../WebServer/sessions.md).
+Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
-Permite que você defina o tempo limite máximo antes de fechar os processos inativos da Web no servidor. Ver [Duración de los procesos inactivos](../WebServer/webServerConfig.md#inactive-process-timeout).
+Permite que você defina o tempo limite máximo antes de fechar os processos inativos da Web no servidor. Veja [Tempo Limite do Processo Inativo](../WebServer/webServerConfig.md#inactive-process-timeout).
 
 ### Palavras-passe Web
 
@@ -126,7 +126,7 @@ Defina o sistema de autenticação que você deseja aplicar ao seu servidor Web.
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação *Desenvolvimento Web*.
+É recomendado usar a autenticação personalizada. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação *Desenvolvimento Web*.
 
 ## Opções (II)
 
@@ -160,15 +160,15 @@ Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parámetros CORS
 
 Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
-> La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
+> A ativação e desativação do arquivo de log de solicitações também pode ser realizada pela programação usando o comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
 O menu de formato do histórico oferece as seguintes opções:
 
-- **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
+- **Sem arquivo de registro**: Quando esta opção for selecionada, o 4D não irá gerar um arquivo de registro de requisições.
 
-- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. With the CLF format, each line of the file represents a request, such as:\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+- **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF Com o formato CLF, cada linha do arquivo representa uma solicitação, como:\
+  host rfc931 usuário [DD/MMM/AAAA:HH:MM:SS] "solicitação" estado tamanho\
+  Cada campo é separado por um espaço e cada linha termina com a sequência CR/LF (caractere 13, caractere 10).
 
   - host: endereço IP do cliente (ex. 192.100.100.10)
   - rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
@@ -181,8 +181,8 @@ O menu de formato do histórico oferece as seguintes opções:
 - estado: resposta dada pelo servidor.
 - length: tamanho dos dados devolvidos (exceto o cabeçalho HTTP) ou 0.
 
-> **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. As operações também são gravadas no disco se nenhuma solicitação tiver sido enviada a cada 5 segundos.
-> The possible values of state are as follows:
+> **Nota:** Por razões de desempenho, as operações são salvas em um buffer de memória em pacotes de 1Kb antes de serem escritas em disco. As operações também são gravadas no disco se nenhuma solicitação tiver sido enviada a cada 5 segundos.
+> Os valores possíveis de estado são os seguintes:
 > 200: OK
 > 204: No contents
 > 302: Redirection
@@ -191,22 +191,23 @@ O menu de formato do histórico oferece as seguintes opções:
 > 401: Authentication required
 > 404: Not found
 > 500: Internal error
-> The CLF format cannot be customized.
+> O formato CLF não pode ser personalizado.
 
-- **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. O formato DLF é semelhante ao formato CLF e usa a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
+- **DLF (Combined Log Format)**: Quando esta opção é selecionada, o registro de solicitações é gerado no formato DLF. O formato DLF é semelhante ao formato CLF e usa a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
 
   - Referer: contém o URL da página que aponta para o documento solicitado.
   - User-agent: contém o nome e a versão do navegador ou software cliente que origina a solicitação.
 
 > O formato DLF não pode ser personalizado.
 
-- **ELF (Extended Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+- **ELF (Extended Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
-- **WLF (WebStar Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
+- **WLF (WebStar Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
 
-**Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
+**Configuração dos campos**
+Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
 
-**Nota**: no puede seleccionar el mismo campo dos veces.
+**Nota**: Não é possível selecionar o mesmo campo duas vezes.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
@@ -256,15 +257,15 @@ Configure the automatic backup parameters for the request log. Configure the aut
 
 As opções dessa guia são usadas para ativar e configurar os serviços da Web para o projeto 4D, tanto para a publicação (lado do servidor) quanto para a assinatura (lado do cliente).
 
-Para más información sobre el soporte de los servicios web en 4D, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html).
+Para obter mais informações sobre o suporte de serviços da Web em 4D, consulte o capítulo [Publicação e uso de serviços da Web] (https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html).
 
 ### Servidor
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "servidor" de serviços da Web, ou seja, a publicação de métodos projeto na forma de serviços Web.
 
-- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
-- **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. Esse nome é usado para diferenciar os serviços no nível do servidor SOAP (quando o servidor publica vários serviços Web diferentes), bem como nos diretórios de serviços Web. Por padrão, 4D usa o nome A_WebService.
-- **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. A singularidade dos nomes dos Serviços Web é assegurada pelo uso de namespaces XML. Um namespace é uma cadeia de caracteres arbitrária usada para identificar um conjunto de tags XML de forma exclusiva. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). Nesse caso, não é indispensável ter algo em particular no URL indicado; o que importa é que a cadeia de caracteres usada seja exclusiva. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
+- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo *Published in WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
+- **Nome do Serviço Web**: Esta área permite que você altere o "nome genérico" do Serviço Web. Esse nome é usado para diferenciar os serviços no nível do servidor SOAP (quando o servidor publica vários serviços Web diferentes), bem como nos diretórios de serviços Web. Por padrão, 4D usa o nome A_WebService.
+- **Namespace de Serviços Web**: Essa área é usada para alterar o namespace dos serviços da Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. A singularidade dos nomes dos Serviços Web é assegurada pelo uso de namespaces XML. Um namespace é uma cadeia de caracteres arbitrária usada para identificar um conjunto de tags XML de forma exclusiva. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). Nesse caso, não é indispensável ter algo em particular no URL indicado; o que importa é que a cadeia de caracteres usada seja exclusiva. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
 > Em conformidade com o padrão XML para nomes de etiquetas, as cadeias de caracteres usadas não devem conter espaços nem começar com um número. Além disso, para evitar qualquer risco de incompatibilidade, recomendamos que você não use nenhum caractere estendido (como caracteres acentuados).
 
@@ -272,7 +273,7 @@ Essa área contém várias opções relacionadas ao uso de 4D como um "servidor"
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "cliente" de serviços Web, ou seja, a assinatura de serviços publicados na rede.
 
-- **Prefijo de los métodos creados por el asistente**: esta área le permite cambiar el prefijo que se añade automáticamente por 4D al nombre de los métodos proxy generados por el asistente de servicios web. Os métodos do projeto de proxy formam um link entre a aplicação 4D e o servidor de Serviços Web. Por padrão, 4D usa o prefixo "proxy_".
+- **Prefixo do Método do Wizard**: Esta área permite que você altere o prefixo que é adicionado automaticamente por 4D ao nome dos métodos proxy gerados pelo Assistente de Serviços Web. Os métodos do projeto de proxy formam um link entre a aplicação 4D e o servidor de Serviços Web. Por padrão, 4D usa o prefixo "proxy_".
 
 ## Funcionalidades Web
 
@@ -324,4 +325,4 @@ Essa opção só aparece se a licença do Qodly Studio estiver ativada.
 
 :::
 
-Essa opção permite o acesso do usuário ao [Qodly Studio](../WebServer/qodly-studio.md) para o projeto atual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
+Essa opção permite o acesso do usuário ao [Qodly Studio](../WebServer/qodly-studio.md) para o projeto atual. Note que o acesso global deve ser permitido no [nível da aplicação](../Admin/webAdmin.md).
