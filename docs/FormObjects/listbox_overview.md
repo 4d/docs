@@ -278,7 +278,7 @@ Form events on list box or list box column objects may return the following addi
 
 
 
-##  List box columns
+##  List box columns {#list-box-columns}
 
 A list box is made of one or more column object(s) which have specific properties. You can select a list box column in the Form editor by clicking on it when the list box object is selected:
 

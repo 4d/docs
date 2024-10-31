@@ -68,7 +68,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d
 
 ---
 
-## Border Line Style
+## Border Line Style {#border-line-style}
 
 Allows setting a standard style for the object border.
 
@@ -84,7 +84,7 @@ Allows setting a standard style for the object border.
 
 ---
 
-## Dotted Line Type
+## Dotted Line Type {#dotted-line-type}
 
 Describes dotted line type as a sequence of black and white points.
 
