@@ -226,7 +226,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.HTTPEnabled.Syntax -->**.HTTPEnabled** : Boolean<!-- END REF -->
 
-HTTPSプロトコル状態<!-- END REF -->。
+<!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTPプロトコル状態<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -236,7 +236,7 @@ HTTPSプロトコル状態<!-- END REF -->。
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
 
-HTTPプロトコルの状態<!-- END REF -->。
+<!-- REF #WebServerClass.HTTPPort.Summary -->HTTP のリッスンIPポート番号<!-- END REF -->。
 
 デフォルト = 80
 
