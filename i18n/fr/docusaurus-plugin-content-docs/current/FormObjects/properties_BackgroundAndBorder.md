@@ -67,7 +67,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d
 
 ---
 
-## Style de la bordure
+## Border Line Style {#border-line-style}
 
 Permet de définir un style standard pour la bordure de l'objet.
 
@@ -83,7 +83,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 ---
 
-## Type de ligne pointillée
+## Dotted Line Type {#dotted-line-type}
 
 Décrit le type de ligne en pointillé comme une séquence de points noirs et blancs.
 
