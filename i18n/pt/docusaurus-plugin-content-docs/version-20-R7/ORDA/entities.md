@@ -3,7 +3,7 @@ id: entities
 title: Trabalhar com dados
 ---
 
-En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [selecciones de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
+In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
 
 ## Criar uma entidade
 
@@ -90,7 +90,7 @@ Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referen
 
 :::info
 
-Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No entanto, no cliente/servidor, a entidade pode ser carregada automaticamente de forma direta, se necessário.
+Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. No entanto, no cliente/servidor, a entidade pode ser carregada automaticamente de forma direta, se necessário.
 
 :::
 
@@ -98,14 +98,14 @@ Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. 
 
 Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente.
 
-- los atributos de tipo **storage** pueden definirse u obtenerse como propiedades simples del objeto de la entidad,
-- los atributos del tipo **RelatedEntity** devolverán una entidad,
-- los atributos de tipo **relatedEntities** devolverán una selección de entidad,
-- los atributos de tipo **computed** y **alias** pueden devolver todo tipo de datos, dependiendo de cómo estén configurados.
+- attributes of the **storage** kind can be set or get as simple properties of the entity object,
+- attributes of the **relatedEntity** kind will return an entity,
+- attributes of the **relatedEntities** kind will return an entity selection,
+- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
 
 :::info
 
-Para más información sobre el tipo de atributo, consulte el párrafo [Atributos de almacenamiento y de relación](dsMapping.md#storage-and-relation-attributes).
+For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
 
 :::
 
