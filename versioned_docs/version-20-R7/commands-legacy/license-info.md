@@ -22,7 +22,36 @@ If the command is executed on a 4D application that does not use locally a licen
 The returned object contains the following properties:
 
 ```json
-{    "name": string    "licenseNumber": string    "version": string    "attributes": optional, array of strings    "userName": string    "userMail": string    "companyName": string    "platforms": array of strings    "expirationDate": optional, object    "renewalFailureCount": optional, number    "products":[ //for each registered expansion product        {            "id": number            "name": string            "usedCount": number            "allowedCount": number            "rights": [                 {                    "count": number                    "expirationDate" optional, object                 }            ]        }    ]}
+{
+    "name": "string",
+    "licenseNumber": "string",
+    "version": "string",
+    "attributes": ["string1", "string2"], // optional
+    "userName": "string",
+    "userMail": "string",
+    "companyName": "string",
+    "platforms": ["string1", "string2"],
+    "expirationDate": { 
+        // details here 
+    }, // optional
+    "renewalFailureCount": 0, // optional
+    "products": [
+        { // for each registered expansion product
+            "id": 0,
+            "name": "string",
+            "usedCount": 0,
+            "allowedCount": 0,
+            "rights": [
+                {
+                    "count": 0,
+                    "expirationDate": { 
+                        // details here 
+                    } // optional
+                }
+            ]
+        }
+    ]
+}
 ```
 
 | **Property**         | **Type**              | **Description**                                                                                       | **Example**                                                                           |
