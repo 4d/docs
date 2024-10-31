@@ -1,6 +1,6 @@
 ---
 id: create-entity-selection
-title: Crear una entity selection
+title: Create entity selection
 displayed_sidebar: docs
 ---
 
