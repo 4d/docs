@@ -35,7 +35,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 ### Objecto $4d
 
-O [motor de renderização web embebido de 4D](properties_WebArea.md#use-embedded-web-rendering-engine) fornece à área um objeto JavaScript chamado $4d que pode ser associado a qualquer método projeto 4D utilizando a notação objeto ".".
+The [4D embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
