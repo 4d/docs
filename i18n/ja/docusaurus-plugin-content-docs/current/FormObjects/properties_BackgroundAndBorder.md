@@ -21,7 +21,7 @@ title: 背景色と境界線
 
 ---
 
-## 背景色/塗りカラー
+## Background Color / Fill Color
 
 オブジェクトの背景色を設定します。
 
@@ -67,7 +67,7 @@ title: 背景色と境界線
 
 ---
 
-## 境界線スタイル
+## Border Line Style {#border-line-style}
 
 リストボックスの境界線のスタイルを設定します。
 
@@ -99,7 +99,7 @@ title: 背景色と境界線
 
 ---
 
-## 点線タイプ
+## Dotted Line Type {#dotted-line-type}
 
 点線のタイプを、点と白のパターンにより指定します。
 
