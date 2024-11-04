@@ -222,7 +222,7 @@ Affiche/masque la règle horizontale lorsque la vue du document est en mode [Pag
 
 ---
 
-## Montrer HTML WYSYWIG
+## Show HTML WYSIWYG
 
 Active/désactive la vue HTML WYSIWYG, dans laquelle tous les attributs avancés de 4D Write Pro qui ne sont pas compatibles avec tous les navigateurs sont supprimés.
 
