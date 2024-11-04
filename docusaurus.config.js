@@ -70,7 +70,36 @@ module.exports = {
     ],
   ],
   future: {
-    experimental_faster: true,
+    experimental_faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
+      rspackBundler: true,
+      mdxCrossCompilerCache: true,
+    },
+  },
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: 'builtin:swc-loader', // (only works with Rspack),
+      options: {
+        jsc: {
+          parser: {
+            syntax: "typescript",
+            tsx: true,
+          },
+          target: "es2019",
+          transform: {
+            react: {
+              runtime: "automatic",
+            },
+          },
+        },
+        module: {
+          type: isServer ? "commonjs" : "es6",
+        },
+      },
+    }),
   },
   i18n: {
     defaultLocale: "en",
