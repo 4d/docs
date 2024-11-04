@@ -344,11 +344,11 @@ Sous macOS et Windows, une case à cocher avec le style "Disclosure" apparaît c
 
 Le style de case à cocher personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des propriétés spécifiques :
 
-- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname)
+- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#background-pathname)
 - [Décalage icône](properties_TextAndPicture.md#icon-offset)
-- [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) et [Marge verticale](properties_TextAndPicture.md#verticalMargin)
+- [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) et [Marge verticale](properties_TextAndPicture.md#vertical-margin)
 
-Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée conjointement avec une [image d'arrière-plan](properties_TextAndPicture.md#backgroundPathname) [à 4 états](properties_TextAndPicture.md#number-of-states).
+Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée conjointement avec une [image d'arrière-plan](properties_TextAndPicture.md#background-pathname) [à 4 états](properties_TextAndPicture.md#number-of-states).
 
 #### Exemple JSON
 
@@ -378,6 +378,6 @@ Toutes les cases à cocher partagent une même série de propriétés de base :
 
 Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
 
-- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#backgroundPathname) - [Marge horizontale](properties_TextAndPicture.md#horizontalMargin) - [Décalage icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#verticalMargin) (Personnalisé)
+- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#background-pathname) - [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) - [Décalage icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#vertical-margin) (Personnalisé)
 - [Trois états](properties_Display.md#three-states) (A plat, Classique)
-- [Nombre d'états](properties_TextAndPicture.md#number-of-states) - [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname) - [Position Titre/Image](properties_TextAndPicture.md#title-picture-position) (Bouton barre outils, Bevel, Bevel arrondi, OS X Gradient, OS X Textured, Office XP, Personnalisé)
+- [Nombre d'états](properties_TextAndPicture.md#number-of-states) - [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname) - [Position Titre/Image](properties_TextAndPicture.md#titlepicture-position) (Bouton barre outils, Bevel, Bevel arrondi, OS X Gradient, OS X Textured, Office XP, Personnalisé)

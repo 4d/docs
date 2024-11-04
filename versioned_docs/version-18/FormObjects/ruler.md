@@ -10,7 +10,7 @@ The ruler is a standard interface object used to set or get values using a curso
 
 You can assign its [associated variable or expression](properties_Object.md#expression-type) to an enterable area (field or variable) to store or modify the current value of the object.
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicatire) in the "Progress Indicator" page.
+For more information, please refer to [Using indicators](progressIndicator.md#using-indicatores) in the "Progress Indicator" page.
 
 ### Supported Properties
 

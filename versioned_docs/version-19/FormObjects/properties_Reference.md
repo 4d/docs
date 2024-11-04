@@ -36,11 +36,11 @@ You will find in this page a comprehensive list of all object properties sorted 
 |---|---|---|
 |<a name="a">**a**</a>|||
 |[`action`](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
-|[`allowFontColorPicker`](properties_Text.md#allow-font-color-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
+|[`allowFontColorPicker`](properties_Text.md#allow-fontcolor-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
 |[`alternateFill`](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"; "automaticAlternate"|
 |[`automaticInsertion`](properties_DataSource.md#automatic-insertion)|Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.|true, false<a name="b"></a>|
 |**b**|||
-|[`booleanFormat`](properties_Display.md#text-when-false-text-when-true)|Specifies only two possible values.|true, false|
+|[`booleanFormat`](properties_Display.md#text-when-falsetext-when-true)|Specifies only two possible values.|true, false|
 |[`borderRadius`](properties_CoordinatesAndSizing.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
 |[`borderStyle`](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
 |[`bottom`](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0<a name="c"></a>|
@@ -80,7 +80,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`events`](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |[`excludedList`](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.<a name="f"></a>|
 |**f**|||
-|[`fill`](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
+|[`fill`](properties_BackgroundAndBorder.md#background-color--fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[`focusable`](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[`fontFamily`](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
 |[`fontSize`](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0| 
@@ -200,7 +200,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`textAngle`](properties_Text.md#orientation)|Modifies the orientation (rotation) of the text area. |0, 90, 180, 270|
 |[`textDecoration`](properties_Text.md#underline)|Sets the selected text to have a line running beneath it.|"normal", "underline"|
 |[`textFormat`](properties_Display.md#alpha-format)|Controls the way the alphanumeric fields and variables appear when displayed or printed.|"### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats|
-|[`textPlacement`](properties_TextAndPicture.md#title-picture-position)|Relative location of the button title in relation to the associated icon.|"left", "top", "right", "bottom", "center"|
+|[`textPlacement`](properties_TextAndPicture.md#titlepicture-position)|Relative location of the button title in relation to the associated icon.|"left", "top", "right", "bottom", "center"|
 |[`threeState`](properties_Display.md#three-states)|Allows a check box object to accept a third state.|true, false|
 |[`timeFormat`](properties_Display.md#time-format)|Controls the way times appear when displayed or printed. Must only be selected among the 4D built-in formats. |"systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values)|
 |[`truncateMode`](properties_Display.md#truncate-with-ellipsis) | Controls the display of values when list box columns are too narrow to show their full contents.|"withEllipsis", "none" |
@@ -212,7 +212,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`useLastFrameAsDisabled`](properties_Animation.md#use-last-frame-as-disabled)|Enables setting the last thumbnail as the one to display when the button is disabled.|true, false|
 |[`userInterface`](properties_Appearance.md#user-interface)|4D View Pro area interface.|"none" (default), "ribbon", "toolbar"<a name="v"></a>|
 |**v**|||
-|[`values`](properties_DataSource.md#default-list-values)|List of default values for an array listbox column|ex: "A","B","42"...|
+|[`values`](properties_DataSource.md#default-list-of-values)|List of default values for an array listbox column|ex: "A","B","42"...|
 |[`variableCalculation`](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
 |[`verticalAlign`](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
 |[`verticalLineStroke`](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "'transparent", "automatic"|

@@ -127,7 +127,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 ### Personalizado
 
-O estilo de botão radio Personalizado aceita uma imagem de fundo personalizada e permite gerir parâmetros adicionais, como o [deslocamento do ícone](properties_TextAndPicture.md#icon-offset) e as [margens](properties_TextAndPicture.md#horizontalMargin).
+O estilo de botão radio Personalizado aceita uma imagem de fundo personalizada e permite gerir parâmetros adicionais, como o [deslocamento do ícone](properties_TextAndPicture.md#icon-offset) e as [margens](properties_TextAndPicture.md#horizontal-margin).
 
 ## Propriedades compatíveis
 
@@ -137,5 +137,5 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
 Propriedades específicas adicionais estão disponíveis dependendo do [estilo botão](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
-- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
+- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
+- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

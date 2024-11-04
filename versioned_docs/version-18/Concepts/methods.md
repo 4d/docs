@@ -32,7 +32,7 @@ A project method can have one of the following roles, depending on how it is exe
 ### Subroutines and functions
 A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
 
-When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#predefined-methods) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
+When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#specialized-methods) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
 
 You use subroutines to:
 
@@ -235,7 +235,7 @@ Some typical uses of recursion in 4D are:
 **Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
 
 
-## Specialized Methods
+## Specialized Methods {#specialized-methods}
 
 In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
 

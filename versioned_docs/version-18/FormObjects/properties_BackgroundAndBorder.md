@@ -20,7 +20,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 ---
 
-## Background Color / Fill Color
+## Background Color / Fill Color {#background-color--fill-color}
 
 Defines the background color of an object.
 

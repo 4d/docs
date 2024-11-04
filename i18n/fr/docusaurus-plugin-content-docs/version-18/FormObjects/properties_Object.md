@@ -237,7 +237,7 @@ You can force a carriage return in the label by using the \ character (backslash
 
 To insert a \ in the label, enter "&#92;&#92;".
 
-By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
+By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
 
 À des fins de traduction de base de données, vous pouvez saisir une référence XLIFF dans la zone de titre d'un bouton (voir [Annexe B: architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 

@@ -357,11 +357,11 @@ O estilo Disclosure é denominado "roundedDisclosure" na [gramática JSON do est
 
 O estilo de botão Personalizado aceita uma imagem de fundo personalizada e permite gerir propriedades específicas:
 
-- [Nome do caminho do plano de fundo](properties_TextAndPicture.md#backgroundPathname)
+- [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname)
 - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset)
-- [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) e [Margem vertical](properties_TextAndPicture.md#verticalMargin)
+- [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) e [Margem vertical](properties_TextAndPicture.md#vertical-margin)
 
-Geralmente el é associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo de 4 estados](properties_TextAndPicture.md#backgroundPathname).
+Geralmente el é associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo de 4 estados](properties_TextAndPicture.md#background-pathname).
 
 #### JSON Exemplo
 
@@ -387,12 +387,12 @@ Geralmente el é associado a uma [imagem de 4 estados](properties_TextAndPicture
 
 Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas:
 
-[Negrito](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botão](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Entrável](properties_Entry.md#enterable) - [Tipo de expressão](properties_Object.md#expression-type) - [Focalizável](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Tamanho da fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment)(1) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Título abraça imagem](properties_TextAndPicture.md#image-hugs-title)(2) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Número de estados](properties_TextAndPicture.md#number-of-states)(2) - [Nome do objeto](properties_Object.md#object-name) - [Caminho da imagem](properties_TextAndPicture.md#picture-pathname)(2) - [Direita](properties_CoordinatesAndSizing.md#right) - [Salvar valor](properties_Object.md#save-value) - [Atalho](properties_Entry.md#shortcut) - [Ação padrão](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Posição título/imagem](properties_TextAndPicture.md#title-picture-position)(2) - [Topo](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
+[Negrito](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botão](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Entrável](properties_Entry.md#enterable) - [Tipo de expressão](properties_Object.md#expression-type) - [Focalizável](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Tamanho da fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment)(1) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Título abraça imagem](properties_TextAndPicture.md#image-hugs-title)(2) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Número de estados](properties_TextAndPicture.md#number-of-states)(2) - [Nome do objeto](properties_Object.md#object-name) - [Caminho da imagem](properties_TextAndPicture.md#picture-pathname)(2) - [Direita](properties_CoordinatesAndSizing.md#right) - [Salvar valor](properties_Object.md#save-value) - [Atalho](properties_Entry.md#shortcut) - [Ação padrão](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Posição título/imagem](properties_TextAndPicture.md#titlepicture-position)(2) - [Topo](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 > (1) Não compatível com os estilos [Regular](#regular) e [Flat](#flat).<br/>
 > (2) Não é compatível com os estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) e [Collapse/Expand](#collapseexpand).
 
 Outras propriedades específicas estão disponíveis, dependendo do [estilo do botão](#estilos-de-botão):
 
-- Personalizado: [Caminho segundo plano](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Offset](properties_TextAndPicture.md#icon-offset) - [Margem Vertica](properties_TextAndPicture.md#verticalMargin)
+- Personalizado: [Caminho segundo plano](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Offset](properties_TextAndPicture.md#icon-offset) - [Margem Vertica](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Três estados](properties_Display.md#three-states)

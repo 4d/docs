@@ -125,7 +125,7 @@ El estilo de botón radio de divulgación muestra el botón radio como un botón
 
 ### Personalizado
 
-El estilo de botón radio Personalizado acepta una imagen de fondo personalizada y permite gestionar parámetros adicionales como [desplazamiento del icono](properties_TextAndPicture.md#icon-offset) y las [márgenes](properties_TextAndPicture.md#horizontalMargin).
+El estilo de botón radio Personalizado acepta una imagen de fondo personalizada y permite gestionar parámetros adicionales como [desplazamiento del icono](properties_TextAndPicture.md#icon-offset) y las [márgenes](properties_TextAndPicture.md#horizontal-margin).
 
 ## Propiedades soportadas
 
@@ -135,5 +135,5 @@ Todos los botones radio comparten el mismo conjunto de propiedades básicas:
 
 Propiedades específicas adicionales están disponibles en función del [estilo de botón](#button-styles):
 
-- [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
-- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) - [Posición Título/Imagen](properties_TextAndPicture.md#title-picture-position) (Botón barra de herramientas, Bevel Redondeado, OS X Gradient, OS X Textured, Office XP, Personalizado)
+- [Ruta de acceso fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin) (Personalizado)
+- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) - [Posición Título/Imagen](properties_TextAndPicture.md#titlepicture-position) (Botón barra de herramientas, Bevel Redondeado, OS X Gradient, OS X Textured, Office XP, Personalizado)

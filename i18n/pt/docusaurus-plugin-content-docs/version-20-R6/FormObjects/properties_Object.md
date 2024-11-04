@@ -269,7 +269,7 @@ Pode forçar um retorno de carro na etiqueta utilizando o carácter \ (barra inv
 
 Para inserir um \ na etiqueta, introduzir "\\".
 
-Por padrão, a etiqueta é colocada no centro do objeto. Cuando el objeto también contiene un icono, puede modificar la ubicación relativa de estos dos elementos utilizando la propiedad [Posición Título/imagen](properties_TextAndPicture.md#title-picture-position).
+Por padrão, a etiqueta é colocada no centro do objeto. Cuando el objeto también contiene un icono, puede modificar la ubicación relativa de estos dos elementos utilizando la propiedad [Posición Título/imagen](properties_TextAndPicture.md#titlepicture-position).
 
 Para la traducción de la aplicación, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 

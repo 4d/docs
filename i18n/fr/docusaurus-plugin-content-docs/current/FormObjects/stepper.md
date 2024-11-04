@@ -14,7 +14,7 @@ La variable associée à l’objet peut être affectée à une zone saisissable 
 Un stepper peut être directement associé à une variable numérique, heure ou date.
 
 - Pour les valeurs de type heure, les propriétés Minimum, Maximum et Pas représentent des secondes. Par exemple, pour définir un stepper de 8h00 à 18h00 avec des pas de 10 minutes :
-  - [minimum](properties_Scale.md#minium) = 28 800 (8\*60\*60)
+  - [minimum](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
   - [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
   - [step](properties_Scale.md#step) = 600 (10\*60)
 - For values of the date type, the value entered in the [step](properties_Scale.md#step) property represents days. Les propriétés Minimum et Maximum sont ignorées.

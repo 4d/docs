@@ -7,7 +7,7 @@ title: Zones Web
 
 Les zones Web (Web Areas) peuvent afficher tout type de contenu Web(*) à l’intérieur de vos formulaires : pages HTML au contenu statique ou dynamique, fichiers, images, JavaScript, etc. Le moteur de rendu de la zone Web dépend de la plate-forme d’exécution de l’application et de [l'option de moteur de rendu](properties_WebArea.md#use-embedded-web-rendering-engine) sélectionnée.
 
-Il est possible de créer plusieurs zones Web dans un même formulaire. A noter cependant que l'insertion de zones Web est soumis à [quelques limitations](#web-areas-rules).
+Il est possible de créer plusieurs zones Web dans un même formulaire. A noter cependant que l'insertion de zones Web est soumis à [quelques limitations](#web-area-rules).
 
 Plusieurs [actions standard](#standard-actions), de nombreuses [commandes de langage](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) et [événements formulaires](#form-events) génériques et dédiés permettent au développeur de contrôler le fonctionnement des zones Web. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
 > L'usage de plugins Web et d'applets Java dans les zones Web est déconseillé car ils peuvent entraîner des instabilités dans le fonctionnement de 4D, notamment au niveau de la gestion des événements.
@@ -31,11 +31,11 @@ Le moteur de rendu Web vous permet d'appeler des méthodes 4D à partir de la zo
 
 Lorsque la propriété [Accès méthodes 4D](properties_WebArea.md#access-4d-methods) est cochée, vous pouvez appeler des méthodes 4D à partir d'une zone Web.
 
-> Cette option n’apparaît que si l’option [Utiliser le moteur de rendu Web intégré](#use-embedded-web-rendering-engine) est cochée.
+> Cette option n’apparaît que si l’option [Utiliser le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine) est cochée.
 
 ### Objet $4d
 
-Le [moteur de rendu Web intégré 4D](#use-embedded-web-rendering-engine) fournit à la zone un objet JavaScript nommé $4d que vous pouvez associer à n'importe quelle méthode projet 4D à l'aide de la notation objet ".".
+Le [moteur de rendu Web intégré 4D](properties_WebArea.md#use-embedded-web-rendering-engine) fournit à la zone un objet JavaScript nommé $4d que vous pouvez associer à n'importe quelle méthode projet 4D à l'aide de la notation objet ".".
 
 Par exemple, pour appeler la méthode 4D `HelloWorld`, vous devez simplement exécuter la déclaration suivante :
 

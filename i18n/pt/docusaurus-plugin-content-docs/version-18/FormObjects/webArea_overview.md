@@ -7,7 +7,7 @@ title: Área Web
 
 The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. The rendering engine of the Web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-É possível criar várias áreas Web no mesmo formulário. Note, however, that the use of Web areas must follow [several rules](#web-areas-rules).
+É possível criar várias áreas Web no mesmo formulário. Note, however, that the use of Web areas must follow [several rules](#web-area-rules).
 
 Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 > The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
@@ -31,11 +31,11 @@ Selecting the embedded web rendering engine allows you to call 4D methods from t
 
 When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a Web area.
 
-> This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+> This property is only available if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### Objecto $4d
 
-O [motor de renderização web embebido de 4D](#use-embedded-web-rendering-engine) fornece à área um objeto JavaScript chamado $4d que pode ser associado a qualquer método projeto 4D utilizando a notação objeto ".".
+O [motor de renderização web embebido de 4D](properties_WebArea.md#use-embedded-web-rendering-engine) fornece à área um objeto JavaScript chamado $4d que pode ser associado a qualquer método projeto 4D utilizando a notação objeto ".".
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 

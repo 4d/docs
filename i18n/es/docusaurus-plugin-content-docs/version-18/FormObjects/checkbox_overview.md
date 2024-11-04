@@ -346,11 +346,11 @@ En macOS y Windows, una casilla de selección con el estilo "Disclosure" aparece
 
 El estilo de casilla de selección personalizado acepta una imagen de fondo personalizada y permite gestionar propiedades específicas:
 
-- [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname)
+- [Ruta de acceso fondo](properties_TextAndPicture.md#background-pathname)
 - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) and [Margen vertical](properties_TextAndPicture.md#verticalMargin)
+- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Margen vertical](properties_TextAndPicture.md#vertical-margin)
 
-Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede utilizarse junto con una [imagen de fondo](properties_TextAndPicture.md#backgroundPathname) [de 4 estados](properties_TextAndPicture.md#number-of-states).
+Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede utilizarse junto con una [imagen de fondo](properties_TextAndPicture.md#background-pathname) [de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 #### Ejemplo JSON
 
@@ -380,6 +380,6 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 
 Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
-- [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
+- [Ruta de acceso fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin) (Personalizado)
 - [Tres estados](properties_Display.md#three-states) (Plano, Clásico)
-- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) - [Posición Título/Imagen](properties_TextAndPicture.md#title-picture-position) (Botón barra de herramientas, Bevel Redondeado, OS X Gradient, OS X Textured, Office XP, Personalizado)
+- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) - [Posición Título/Imagen](properties_TextAndPicture.md#titlepicture-position) (Botón barra de herramientas, Bevel Redondeado, OS X Gradient, OS X Textured, Office XP, Personalizado)

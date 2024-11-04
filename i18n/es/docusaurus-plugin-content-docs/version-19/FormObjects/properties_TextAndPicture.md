@@ -223,4 +223,4 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Objetos soportados
 
-[Botón barra de herramientas](button_overview.md#toolbar) - [Botón bisel](button_overview.md#bevel) - [Botón de bisel redondeado](button_overview.md#Rounded-bevel) - [Botón OS X Gradient](button_overview.md#os-x-gradient) - [Botón OS X Textured ](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-XP) - [Botón círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+[Botón barra de herramientas](button_overview.md#toolbar) - [Botón bisel](button_overview.md#bevel) - [Botón de bisel redondeado](button_overview.md#rounded-bevel) - [Botón OS X Gradient](button_overview.md#os-x-gradient) - [Botón OS X Textured ](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Botón círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)

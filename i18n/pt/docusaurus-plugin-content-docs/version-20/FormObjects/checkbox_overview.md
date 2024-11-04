@@ -386,11 +386,11 @@ O estilo Disclosure tem o nome "roundedDisclosure" na [gramática JSON do estilo
 
 O estilo de botão Personalizado aceita uma imagem de fundo personalizada e permite gerir propriedades específicas:
 
-- [Rota de acesso ao Fundo](properties_TextAndPicture.md#backgroundPathname)
+- [Rota de acesso ao Fundo](properties_TextAndPicture.md#background-pathname)
 - [Offset do ícone](properties_TextAndPicture.md#icon-offset)
-- [Margem Horizontal](properties_TextAndPicture.md#horizontalMargin) and [Margem Vertical](properties_TextAndPicture.md#verticalMargin)
+- [Margem Horizontal](properties_TextAndPicture.md#horizontal-margin) and [Margem Vertical](properties_TextAndPicture.md#vertical-margin)
 
-Geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunção com um  [quarto estado](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
+Geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunção com um  [quarto estado](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
 
 #### JSON Exemplo
 
@@ -426,5 +426,5 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
-- [Rota de acesso do fundo](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Deslocamento ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
+- [Rota de acesso do fundo](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Deslocamento ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#vertical-margin) (Personalizado)
 - [Três Estados](properties_Display.md#three-states) (Flat, Clássico)

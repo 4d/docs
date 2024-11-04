@@ -348,7 +348,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット)
 - [横方向マージン](properties_TextAndPicture.md#横方向マージン) と [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
 
-カスタムチェックボックスには通常、[4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられ、これは同じく [4つの状態を持つ](properties_TextAndPicture.md#状態の数) [背景ピクチャー](properties_TextAndPicture.md#backgroundPathname) と同時に使用することができます。
+カスタムチェックボックスには通常、[4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられ、これは同じく [4つの状態を持つ](properties_TextAndPicture.md#状態の数) [背景ピクチャー](properties_TextAndPicture.md#background-pathname) と同時に使用することができます。
 
 #### JSON 例
 

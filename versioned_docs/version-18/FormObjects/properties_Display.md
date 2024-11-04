@@ -375,7 +375,7 @@ Used to associate a display format with the column data. The formats provided de
 
 Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
 
-Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
 
 #### JSON Grammar
 

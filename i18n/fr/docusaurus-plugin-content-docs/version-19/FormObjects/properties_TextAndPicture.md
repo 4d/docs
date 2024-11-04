@@ -223,4 +223,4 @@ Il est important de noter que la propriété “Avec pop up menu” gère unique
 
 #### Objets pris en charge
 
-[Bouton barre outils](button_overview.md#toolbar) - [Bouton Bevel](button_overview.md#bevel) - [Bouton bevel circulaire](button_overview.md#Rounded-bevel) - [Bouton OS X Gradient](button_overview.md#os-x-gradient) - [Bouton OS X Textured](button_overview.md#os-x-textured) - [Bouton Office XP](button_overview.md#office-XP) - [Bouton cercle](button_overview.md#circle) - [Personnalisé](button_overview.md#custom)
+[Bouton barre outils](button_overview.md#toolbar) - [Bouton Bevel](button_overview.md#bevel) - [Bouton bevel circulaire](button_overview.md#rounded-bevel) - [Bouton OS X Gradient](button_overview.md#os-x-gradient) - [Bouton OS X Textured](button_overview.md#os-x-textured) - [Bouton Office XP](button_overview.md#office-xp) - [Bouton cercle](button_overview.md#circle) - [Personnalisé](button_overview.md#custom)
