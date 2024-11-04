@@ -4,7 +4,7 @@ title: テキスト、ピクチャー
 ---
 
 
-## 背景パス名
+## 背景パス名 {#background-pathname}
 
 オブジェクトの背景として使用するピクチャーのパスを指定します。 [複数の状態](#状態の数) を持つ [アイコン](#ピクチャーパス名) を持つオブジェクトの場合、背景ピクチャーにも同じ状態の数が適用されます。
 
@@ -38,7 +38,7 @@ title: テキスト、ピクチャー
 
 ---
 
-## 横方向マージン
+## Horizontal Margin {#horizontal-margin}
 
 ボタン内側の横方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
 
@@ -143,7 +143,7 @@ title: テキスト、ピクチャー
 
 ---
 
-## タイトル/ピクチャー位置
+## Title/Picture Position {#titlepicture-position}
 
 このプロパティはアイコンに対するボタンタイトルの相対的な位置を指定します。 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。 デフォルトでは、ピクチャーの下部にタイトルが置かれます。
 
@@ -169,7 +169,7 @@ title: テキスト、ピクチャー
 
 ---
 
-## 縦方向マージン
+## Vertical Margin {#vertical-margin}
 
 ボタン内側の縦方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
 
@@ -224,4 +224,4 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#os-x-グラデーション) - [OS X テクスチャーボタン](button_overview.md#os-x-テクスチャー) - [Office XP ボタン](button_overview.md#office-xp) - [サークルボタン](button_overview.md#サークル) - [カスタムボタン](button_overview.md#カスタム)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
