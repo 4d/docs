@@ -61,7 +61,7 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 :::note
 
-Esta función no hace nada y siempre devuelve **False** con las sesiones de clientes remotos y de los procedimientos almacenados.
+This function does nothing and always returns **True** with remote client and stored procedure sessions.
 
 :::
 
@@ -352,7 +352,7 @@ Esta propiedad sólo está disponible con sesiones de cliente remoto y procedimi
 
 La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión del cliente remoto o del procedimiento almacenado en el servidor<!-- END REF -->.
 
-El objeto `.info` es el mismo objeto que el devuelto por el comando [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) para sesiones cliente remotas y procedimientos almacenados.
+The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
 
 El objeto `.info` contiene las siguientes propiedades:
 
@@ -367,7 +367,7 @@ El objeto `.info` contiene las siguientes propiedades:
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión                                                                                                                           |
 | state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                          |
 | ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                             |
-| persistentID     | Text          | ID persistente de la sesión                                                                                                                                     |
+| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                        |
 
 :::note
 

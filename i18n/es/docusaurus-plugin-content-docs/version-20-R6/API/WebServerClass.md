@@ -332,7 +332,7 @@ El estado del protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!--
 
 El estado del protocolo<!-- REF #WebServerClass.HTTPnabled.Summary -->HTTPS<!-- END REF -->.
 
-El <!-- REF #WebServerClass.HTTPPort.Summary -->número de puerto IP de escucha para HTTP<!-- END REF -->.
+Por defecto = 80
 
 <!-- END REF -->
 
@@ -362,9 +362,9 @@ El <!-- REF #WebServerClass.isRunning.Summary -->estado de ejecución del servid
 
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Number<!-- END REF -->
 
-La disponibilidad de <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS en el servidor<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPSPort.Summary --> número de puerto IP de escucha para HTTPS<!-- END REF -->.
 
-El <!-- REF #WebServerClass.HTTPSPort.Summary -->número de puerto IP de escucha para HTTPS<!-- END REF -->.
+Por defecto = 443
 
 <!-- END REF -->
 
@@ -414,7 +414,7 @@ La <!-- REF #WebServerClass.IPAddressToListen.Summary -->dirección IP en la que
 
 *Propiedad de sólo lectura*
 
-La función <code>.stop()</code> <!-- REF #WebServerClass.stop().Summary -->detiene el servidor web sobre el que se aplica<!-- END REF -->.
+El servidor web <!-- REF #WebServerClass.isRunning.Summary -->que ejecuta el estado<!-- END REF -->.
 
 <!-- END REF -->
 

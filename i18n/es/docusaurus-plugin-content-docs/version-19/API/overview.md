@@ -176,7 +176,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`CREATE DATA FILE`](https://doc.4d.com/4dv19/help/command/en/page313.html)                        | 313    |
 | [`Create document`](https://doc.4d.com/4dv19/help/command/en/page266.html)                         | 266    |
 | [`CREATE EMPTY SET`](https://doc.4d.com/4dv19/help/command/en/page140.html)                        | 140    |
-| [`Crear una entity selection`](https://doc.4d.com/4dv19/help/command/en/page1512.html)             | 1512   |
+| [`Create entity selection`](https://doc.4d.com/4dv19/help/command/en/page1512.html)                | 1512   |
 | [`CREATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page475.html)                           | 475    |
 | [`CREATE INDEX`](https://doc.4d.com/4dv19/help/command/en/page966.html)                            | 966    |
 | [`Create menu`](https://doc.4d.com/4dv19/help/command/en/page408.html)                             | 408    |

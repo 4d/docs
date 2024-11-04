@@ -67,7 +67,7 @@ También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PRO
 
 ---
 
-## Estilo del borde
+## Border Line Style {#border-line-style}
 
 Permite definir un estilo estándar para el borde del objeto.
 
@@ -83,7 +83,7 @@ Permite definir un estilo estándar para el borde del objeto.
 
 ---
 
-## Tipo de línea punteada
+## Dotted Line Type {#dotted-line-type}
 
 Describe el tipo de línea punteada como una secuencia de puntos blancos y negros.
 
