@@ -303,7 +303,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 
-## Nome da seleção
+## Selection Name
 
 `List boxes de tipo seleção nomeada`
 
