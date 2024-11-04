@@ -125,7 +125,7 @@ El estilo de casilla de selección Plano tiene una apariencia minimalista. La na
    }
 ```
 
-### Botón barra de herramientas
+### Toolbar button {#toolbar-button}
 
 El estilo del botón barra de herramientas está pensado principalmente para su integración en una barra de herramientas.
 
@@ -153,7 +153,7 @@ Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
 ### Bevel
 
-El estilo de casilla de selección Bevel combina la apariencia del estilo [Clásico ](#regular) (*es decir*, un rectángulo con un título descriptivo) con el comportamiento del estilo [Barra de herramientas](#toolbar).
+The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar-button) style's behavior.
 
 El estilo Bevel tiene un fondo gris claro con un título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -348,9 +348,9 @@ El estilo de casilla de selección personalizado acepta una imagen de fondo pers
 
 - [Ruta de acceso fondo](properties_TextAndPicture.md#background-pathname)
 - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Margen vertical](properties_TextAndPicture.md#vertical-margin)
+- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 
-Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede utilizarse junto con una [imagen de fondo](properties_TextAndPicture.md#background-pathname) [de 4 estados](properties_TextAndPicture.md#number-of-states).
+It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
 
 #### Ejemplo JSON
 
@@ -378,8 +378,8 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
-- [Ruta de acceso fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin) (Personalizado)
+- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
 - [Tres estados](properties_Display.md#three-states) (Plano, Clásico)
-- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) - [Posición Título/Imagen](properties_TextAndPicture.md#titlepicture-position) (Botón barra de herramientas, Bevel Redondeado, OS X Gradient, OS X Textured, Office XP, Personalizado)
+- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
