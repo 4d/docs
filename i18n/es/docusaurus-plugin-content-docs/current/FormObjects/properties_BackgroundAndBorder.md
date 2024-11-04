@@ -21,7 +21,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 ---
 
-## Color de fondo / Color de relleno
+## Background Color / Fill Color
 
 Define el color de fondo de un objeto.
 
