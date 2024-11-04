@@ -48,7 +48,7 @@ Outre les paramètres de positionnement et d'apparence standard, vous pouvez dé
 * Par défaut ([aucune option cochée](properties_Animation.md)), affiche l’image suivante de la série lorsque l’utilisateur clique sur le bouton; affiche l’image précédente de la série lorsque l’utilisateur effectue **Majuscule**+clic sur le bouton. La séquence d’images s’arrête lorsqu’on atteint la dernière image de la série. En d’autres termes, le bouton ne retourne pas à la première image de la série.
 
 Les autres modes disponibles sont les suivants :
-* [Recommencer la séquence](properties_Animation.md#loopBackToFirstFrame)
+* [Recommencer la séquence](properties_Animation.md#loop-back-to-first-frame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 * [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
