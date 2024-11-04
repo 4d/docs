@@ -25,6 +25,7 @@ Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
+<!-- REF document.creationTime.Desc -->
 ## .creationTime
 
 <details><summary>Histórico</summary>
@@ -41,6 +42,9 @@ Essa propriedade é **apenas leitura**.
 A propriedade `.creationTime` devolve <!-- REF #document.creationTime.Summary -->a hora da criação do arquivo<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
 
 Essa propriedade é **apenas leitura**.
+
+<!-- END REF -->
+
 
 <!-- REF document.exists.Desc -->
 ## .exists
