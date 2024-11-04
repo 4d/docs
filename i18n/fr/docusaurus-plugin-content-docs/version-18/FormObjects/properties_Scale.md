@@ -31,7 +31,7 @@ Affiche/masque les graduations à côté des étiquettes.
 
 #### Objets pris en charge
 
-[Thermomètre](progressIndicator.md#default-thermometer) - [Règle](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -47,7 +47,7 @@ Mesure de l'affichage de l'échelle.
 
 #### Objets pris en charge
 
-[Thermomètre](progressIndicator.md#default-thermometer) - [Règle](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -67,7 +67,7 @@ Indique l'emplacement du texte d'un objet.
 
 #### Objets pris en charge
 
-[Thermomètre](progressIndicator.md#default-thermometer) - [Règle](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -86,7 +86,7 @@ Valeur maximale d'un indicateur.
 
 #### Objets pris en charge
 
-[Thermomètre](progressIndicator.md#default-thermometer) - [Règle](ruler.md#ruler) - [Stepper](stepper.md)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -102,7 +102,7 @@ Valeur minimale d'un indicateur. For numeric steppers, this property represent s
 
 #### Objets pris en charge
 
-[Thermomètre](progressIndicator.md#default-thermometer) - [Règle](ruler.md#ruler) - [Stepper](stepper.md)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -118,4 +118,4 @@ Intervalle minimum accepté entre les valeurs pendant l'utilisation. Pour les st
 
 #### Objets pris en charge
 
-[Thermomètre](progressIndicator.md#default-thermometer) - [Règle](ruler.md#ruler) - [Stepper](stepper.md)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
