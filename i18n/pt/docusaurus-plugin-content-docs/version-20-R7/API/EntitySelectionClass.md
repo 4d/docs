@@ -683,7 +683,7 @@ No parâmetro *attributePath*, passe o atributo de entidade cujos valores distin
 
 Você pode usar a notação `[]` para designar uma coleção quando *attributePath* é um caminho dentro de um objeto (ver exemplos).
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+No parâmetro *opções*, você pode passar uma ou uma combinação das seguintes constantes:
 
 | Parâmetros        | Valor | Comentário                                                                                                                                                                                                                                 |
 | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
