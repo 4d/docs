@@ -152,7 +152,7 @@ Permet de définir en points la taille de police de l'objet.
 
 Désigne la couleur de la police.
 
-> Cette propriété définit également la couleur de [bordure](#border-line-style-dotted-line-type) (le cas échéant) de l'objet lorsque le style "plein" ou "pointillé" est utilisé.
+> This property also sets the [color of object's border](properties_BackgroundAndBorder.md##background-color--fill-color) (if any) when "plain" or "dotted" style is used.
 
 La couleur peut être spécifiée par :
 
@@ -289,7 +289,7 @@ Indique une expression ou une variable qui sera évaluée pour chaque ligne affi
 | disabled                    | boolean | Désactive la ligne correspondante. Les zones saisissables ne sont plus saisissables si cette option est activée. Le texte et les contrôles (cases à cocher, listes, etc.) sont grisés. Valeur par défaut : False.                                                                                                                                                                                                                                           |
 | cell.`\<columnName>` | object  | Permet d'appliquer la propriété à une seule colonne. Pass in `\<columnName>` the object name of the list box column. **Note** : les propriétés "unselectable" et "disabled" ne peuvent être définies qu'au niveau de la ligne. Elles sont ignorées si elles sont passées dans l'objet "cell"                                                                                                                                                         |
 
-> Les paramètres de style définis avec cette propriété sont ignorés si d'autres paramètres de style sont déjà définis via des expressions (par exemple, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)).
 
 **Exemple**
 
