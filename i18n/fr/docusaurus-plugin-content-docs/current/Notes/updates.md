@@ -31,6 +31,7 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 - Les documentations du [Langage 4D](../commands/command-index.md) et du [Langage 4D Write Pro](../WritePro/commands/command-index.md) sont maintenant entièrement disponibles sur developer.4d.com. Découvrez toutes les nouvelles fonctionnalités et les modifications concernant ces documentations dans cette release note.
 - Les directives de compilation (`C_XXX`) sont désormais obsolètes et ont été renommées `_O_C_XXX` (par exemple, `C_TEXT` a été renommé `_O_C_TEXT`).
+- The [`File`](../commands/file.md) command (as well as [`4D.File.new()`](../API/FileClass.md#4dfilenew)) is stricter when it comes to checking the syntax of the _path_ supplied as a parameter.
 
 ## 4D 20 R6
 
