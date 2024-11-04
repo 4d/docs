@@ -7,7 +7,7 @@ title: Webエリア
 
 Webエリアは、静的および動的な HTMLページ、ファイル、ピクチャー、JavaScript などの様々な Webコンテンツをフォーム中で表示することのできるオブジェクトです。 Webエリアの描画エンジンは、アプリケーションの実行プラットフォームおよび [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) オプションの設定状態により異なります。
 
-同じフォーム内に複数の Webエリアを配置できます。 しかしながら、Webエリアの挿入には [いくつかの制約](#webエリアのルール) がつく事に注意して下さい。
+同じフォーム内に複数の Webエリアを配置できます。 Note, however, that the use of Web areas must follow [several rules](#web-area-rules).
 
 いくつかの専用の [標準アクション](#標準アクション)、多数の [ランゲージコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.ja.html)、そして汎用および専用の [フォームイベント](#フォームイベント) を使用して、Webエリアの動作を制御することができます。 特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
 > Webエリアにおける Webプラグインおよび Javaアプレットの使用は推奨されていません。これらは、とくにイベント管理レベルにおいて 4D の動作を不安定にさせる可能性があります。
@@ -31,11 +31,11 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 
 [4Dメソッドコールを許可](properties_WebArea.md#4dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
 
-> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みwebレンダリングエンジンを使用) している場合に限り、使用可能です。
+> This property is only available if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### $4dオブジェクトの使用
 
-[4Dの埋め込みWebレンダリングエンジン](#埋め込みwebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
+The [4D embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
