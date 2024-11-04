@@ -72,11 +72,11 @@ module.exports = {
   future: {
     experimental_faster: {
       swcJsLoader: true,
-      swcJsMinimizer: true,
-      swcHtmlMinimizer: true,
-      lightningCssMinimizer: true,
-      rspackBundler: true,
-      mdxCrossCompilerCache: true,
+      swcJsMinimizer: false,
+      swcHtmlMinimizer: false,
+      lightningCssMinimizer: false,
+      rspackBundler: false,
+      mdxCrossCompilerCache: false,
     },
   },
   webpack: {
