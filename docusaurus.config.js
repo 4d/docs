@@ -72,9 +72,9 @@ module.exports = {
   future: {
     experimental_faster: {
       swcJsLoader: true,
-      swcJsMinimizer: false,
-      swcHtmlMinimizer: false,
-      lightningCssMinimizer: false,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
       rspackBundler: false,
       mdxCrossCompilerCache: false,
     },
