@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-Os objetos `File` são criados com o comando [`File`](#file). Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+Os objetos `File` são criados com o comando [`File`](#file). Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando você executa o comando `File` para criar um arquivo, um objeto `File` válido é criado, mas nada é realmente armazenado no disco até que você chame a função [`file.create( )`](#create).
 
 ### Exemplo
 
@@ -16,7 +16,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ### Pathnames
 
-`File` objects support several pathnames, including `filesystems` or `posix` syntax. Os nomes de caminho compatíveis são detalhados na página [**Rotas de acesso**](../Concepts/paths.md).
+Os objetos `File` suportam vários pathnames, incluindo a sintaxe `filesystems` ou `posix`. Os nomes de caminho compatíveis são detalhados na página [**Rotas de acesso**](../Concepts/paths.md).
 
 ### Objeto File
 
@@ -147,7 +147,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 #### Descrição
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
+A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e retorna um novo objeto do tipo `4D.File`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
 
@@ -181,9 +181,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 #### Descrição
 
-The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+A função `.create()` <!-- REF #FileClass.create().Summary -->cria um arquivo no disco de acordo com as propriedades do objeto `File`<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. Se o arquivo já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
+Se necessário, a função cria a hierarquia de pastas conforme descrito nas propriedades [platformPath](#platformpath) ou [path](#path). Se o arquivo já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
 **Valor retornado**
 
@@ -228,9 +228,9 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 #### Descrição
 
-The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+A função `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->cria um alias (macOS) ou um atalho (Windows)<!-- END REF --> para o arquivo com o nome *aliasName* especificado na pasta designada pelo objeto *destinationFolder*.
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+Passar o nome do alias ou atalho para criar no parâmetro *aliasName*.
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType*. Estão disponíveis as seguintes constantes:
 
@@ -239,7 +239,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 | `fk alias link`    | 0     | Alias link (padrão)          |
 | `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
 **Objeto devolvido**
 
@@ -284,7 +284,7 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 #### Descrição
 
-The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+A função `.delete()` <!-- REF #FileClass.delete().Summary -->exclui o arquivo<!-- END REF -->.
 
 Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
 
@@ -368,19 +368,19 @@ Todos os valores de propriedades são Texto.
 
 **Objeto devolvido com um arquivo .split**
 
-O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
+O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é retornado como um objeto JSON e o `.plist array` é retornado como um array JSON.
 
 #### Exemplo
 
 ```4d
- // display copyright info of application .exe file (windows)
+ // exibir informações de direitos autorais do arquivo .exe do aplicativo (Windows)
 var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
 $info:=$exeFile.getAppInfo()
 ALERT($info.LegalCopyright)
 
-  // display copyright info of an info.plist (any platform)
+  // exibe informações de copyright de um info.plist (qualquer plataforma)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
@@ -440,11 +440,11 @@ ALERT($info.Copyright)
 
 #### Descrição
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` para a *destinationFolder* especificada<!-- END REF -->.
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Por padrão, o arquivo mantém o seu nome quando é movido. If you want to rename the moved file, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
@@ -488,9 +488,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Descrição
 
-The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
+A função `.open()` <!-- REF #FileClass.open().Summary -->cria e retorna um novo objeto [4D.FileHandle](FileHandleClass) no arquivo, no *mode* especificado ou com as *options* especificadas<!-- END REF -->. Pode utilizar funções e propriedades da classe [4D.FileHandle](FileHandleClass) para escrever, ler ou anexar conteúdo ao arquivo.
 
-If you use the *mode* (text) parameter, pass the opening mode for the file handle:
+Se utilizar o parâmetro *mode* (text), passe o modo de abertura para o file handle:
 
 | *mode*   | Descrição                                                                                                                                                                                                                                                                                         |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -500,7 +500,7 @@ If you use the *mode* (text) parameter, pass the opening mode for the file handl
 
 > O valor de *modo* diferencia maiúsculas de minúsculas.
 
-If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
+Se você usar o parâmetro *options* (objeto), poderá passar mais opções para o identificador de arquivo por meio das seguintes propriedades (essas propriedades podem ser lidas posteriormente a partir do [objeto de identificador de arquivo](FileHandleClass) aberto):
 
 | *opções*          | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
@@ -509,7 +509,7 @@ If you use the *options* (object) parameter, you can pass more options for the f
 | `.breakModeRead`  | Text ou Number | Modo de tratamento das quebras de linha utilizadas na leitura do arquivo (veja abaixo)                                                                     | "native" ou 1 |
 | `.breakModeWrite` | Text ou Number | Modo de processamento das quebras de linha utilizadas ao escrever no ficheiro (ver abaixo)                                                                 | "native" ou 1 |
 
-A função substitui todos os delimitadores de fim de linha originais. Por defeito, é utilizado o delimitador nativo, mas é possível definir outro delimitador. The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. Pode utilizar um dos seguintes valores (texto ou número):
+A função substitui todos os delimitadores de fim de linha originais. Por defeito, é utilizado o delimitador nativo, mas é possível definir outro delimitador. `.breakModeRead` e o `.breakModeWrite` indicam o processamento a ser aplicado aos caracteres de fim de linha no documento. Pode utilizar um dos seguintes valores (texto ou número):
 
 | Modo de interrupção no texto | Break mode em numérico (constante) | Descrição                                                                                                                                                                                                                                             |
 | ---------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -769,7 +769,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. Consulte a [página Compatibilidade](https://doc.4d.com/4dv19R/help/title/en/page3239.html) em doc.4d.com.
 
 #### Exemplo
 
