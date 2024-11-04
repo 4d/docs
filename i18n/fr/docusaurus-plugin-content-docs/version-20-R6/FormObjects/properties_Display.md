@@ -413,7 +413,7 @@ Utilisé pour associer un format d'affichage aux données de la colonne. Les for
 
 Les colonnes booléennes et numériques (réel ou entier) peuvent être affichées sous forme de cases à cocher. Dans ce cas, la propriété [Titre](#titre) peut être définie.
 
-Les colonnes booléennes peuvent également être affichées sous forme de pop up menus. Dans ce cas, les propriétés [Texte si Faux et Texte si Vrai](#texte-si-faux-texte-si-vrai) doivent être définies.
+Les colonnes booléennes peuvent également être affichées sous forme de pop up menus. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
 
 #### Grammaire JSON
 
