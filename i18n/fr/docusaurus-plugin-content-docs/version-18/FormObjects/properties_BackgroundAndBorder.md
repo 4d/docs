@@ -20,7 +20,7 @@ Permet de définir une couleur d'arrière-plan différente pour les lignes / col
 
 ---
 
-## Couleur de fond / Couleur de remplissage
+## Background Color / Fill Color {#background-color--fill-color}
 
 Définit la couleur de fond d'un objet.
 
@@ -215,4 +215,4 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est défi
 
 #### Voir également
 
-[Couleur de fond / Couleur de remplissage](#background-color-fill-color)
+[Background Color / Fill Color](#background-color-fill-color)
