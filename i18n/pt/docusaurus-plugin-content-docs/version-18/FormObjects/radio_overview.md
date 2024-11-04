@@ -127,7 +127,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 ### Personalizado
 
-O estilo de botão radio Personalizado aceita uma imagem de fundo personalizada e permite gerir parâmetros adicionais, como o [deslocamento do ícone](properties_TextAndPicture.md#icon-offset) e as [margens](properties_TextAndPicture.md#horizontal-margin).
+The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 ## Propriedades compatíveis
 
