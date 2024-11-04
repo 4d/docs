@@ -20,7 +20,7 @@ Permite definir un color de fondo diferente para las líneas o columnas impares 
 
 ---
 
-## Color de fondo / Color de relleno
+## Background Color / Fill Color {#background-color--fill-color}
 
 Define el color de fondo de un objeto.
 
@@ -215,4 +215,4 @@ Define el fondo del list box como "Transparent". Cuando se define, se ignora cua
 
 #### Ver también
 
-[Color de fondo / Color de relleno](#background-color-fill-color)
+[Background Color / Fill Color](#background-color-fill-color)
