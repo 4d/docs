@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Get disk space
         run: |
-          df -h /\
+          df -h /
           sudo rm -rf \
           "$AGENT_TOOLSDIRECTORY" \
           /opt/google/chrome \
