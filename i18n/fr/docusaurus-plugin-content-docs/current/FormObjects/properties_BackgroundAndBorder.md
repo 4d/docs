@@ -21,7 +21,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 ---
 
-## Couleur de fond / Couleur de remplissage
+## Background Color / Fill Color
 
 Définit la couleur de fond d'un objet.
 
