@@ -386,4 +386,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 *time* 引数が渡されると、関数は最長で、定義された秒数だけ待機します。
 
 サーバーのレスポンスがすでに到着している場合、関数は即座に返されます。
+
+During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other `CALL WORKER` calls. コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+
 <!-- END REF -->
