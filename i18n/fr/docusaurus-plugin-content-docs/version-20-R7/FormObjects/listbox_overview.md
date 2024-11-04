@@ -149,7 +149,7 @@ Les propriétés prises en charge dépendent du type de list box.
 | [Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)             | X                | X                   | X                                       |
 | [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle)                        | X                | X                   | X                                       |
 | [Hide selection highlight](properties_Appearance.md#hide-selection-highlight)                | X                | X                   | X                                       |
-| [Hierarchical List Box](properties_Object.md#array-list-box)                          | X                |                     |                                         |
+| [Hierarchical List Box](properties_Object.md#array-list-box)                                 | X                |                     |                                         |
 | [Highlight Set](properties_ListBox.md#highlight-set)                                         |                  | X                   |                                         |
 | [Horizontal Alignment](properties_Text.md#horizontal-alignment)                              | X                | X                   | X                                       |
 | [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)                       | X                | X                   | X                                       |
@@ -158,11 +158,11 @@ Les propriétés prises en charge dépendent du type de list box.
 | [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)                         | X                | X                   | X                                       |
 | [Italic](properties_Text.md#italic)                                                          | X                | X                   | X                                       |
 | [Left](properties_CoordinatesAndSizing.md#left)                                              | X                | X                   | X                                       |
-| [Master Table](properties_DataSource.md#master-table)                                               |                  | X                   |                                         |
+| [Master Table](properties_DataSource.md#master-table)                                        |                  | X                   |                                         |
 | [Meta info expression](properties_Text.md#meta-info-expression)                              |                  |                     | X                                       |
 | [Method](properties_Action.md#method)                                                        | X                | X                   | X                                       |
 | [Movable Rows](properties_Action.md#movable-rows)                                            | X                |                     |                                         |
-| [Named Selection](properties_DataSource.md#selection-name)                                    |                  | X                   |                                         |
+| [Named Selection](properties_DataSource.md#selection-name)                                   |                  | X                   |                                         |
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X                | X                   | X                                       |
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X                | X                   | X                                       |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X                | X                   | X                                       |
