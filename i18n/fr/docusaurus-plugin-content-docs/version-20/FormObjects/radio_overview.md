@@ -156,7 +156,7 @@ Le style Disclosure est nommé "roundedDisclosure" dans la [grammaire JSON du st
 
 ### Personnalisé
 
-Le style de bouton radio Personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des paramètres supplémentaires tels que le [décalage de l'icône](properties_TextAndPicture.md#icon-offset) et les [marges](properties_TextAndPicture.md#horizontal-margin).
+The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 
 ## Propriétés prises en charge
@@ -169,4 +169,4 @@ Tous les boutons radio partagent une même série de propriétés de base :
 
 Des propriétés spécifiques supplémentaires sont disponibles en fonction du [style de bouton](#button-styles) :
 
-- Personnalisé : [Chemin d'accès à l'arrière-plan](properties_TextAndPicture.md#background-pathname) - [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) - [Décalage de l'icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#vertical-margin)
+- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
