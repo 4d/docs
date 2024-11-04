@@ -125,7 +125,7 @@ Le style A plat a un design minimaliste. Le graphisme du style A plat est partic
    }
 ```
 
-### Bouton barre outils
+### Toolbar button {#toolbar-button}
 
 Le style du bouton Barre outils est initialement destiné à être intégré dans une barre d'outils.
 
@@ -153,7 +153,7 @@ Exemples avec les états coché / non coché / surligné :
 
 ### Bevel
 
-La case à cochre Bevel combine l'apparence du style [Classique](#regular) (c'est-à-dire un rectangle avec un libellé descriptif) et [Barre d'outils](#toolbar).
+The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar-button) style's behavior.
 
 Le style Bevel possède un fond gris clair et un titre. Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states).
 
@@ -348,9 +348,9 @@ Le style de case à cocher personnalisé accepte une image d'arrière-plan perso
 
 - [Chemin d'accès arrière-plan](properties_TextAndPicture.md#background-pathname)
 - [Décalage icône](properties_TextAndPicture.md#icon-offset)
-- [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) et [Marge verticale](properties_TextAndPicture.md#vertical-margin)
+- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 
-Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée conjointement avec une [image d'arrière-plan](properties_TextAndPicture.md#background-pathname) [à 4 états](properties_TextAndPicture.md#number-of-states).
+It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
 
 #### Exemple JSON
 
@@ -378,8 +378,8 @@ Toutes les cases à cocher partagent une même série de propriétés de base :
 
 [Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Style de bouton](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Focusable](properties_Entry.md#focusable) - [Police](properties_Text.md#font) - [Couleur de la police](properties_Text.md#font-color) - [Taille de la police](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nom](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Raccourci](properties_Entry.md#shortcut) - [Action standard](properties_Action.md#standard-action) - [Titre](properties_Object.md#title) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)
 
-Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
-- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#background-pathname) - [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) - [Décalage icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#vertical-margin) (Personnalisé)
+- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
 - [Trois états](properties_Display.md#three-states) (A plat, Classique)
-- [Nombre d'états](properties_TextAndPicture.md#number-of-states) - [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname) - [Position Titre/Image](properties_TextAndPicture.md#titlepicture-position) (Bouton barre outils, Bevel, Bevel arrondi, OS X Gradient, OS X Textured, Office XP, Personnalisé)
+- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
