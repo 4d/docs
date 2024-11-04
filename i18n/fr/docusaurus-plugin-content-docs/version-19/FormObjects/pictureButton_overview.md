@@ -47,7 +47,7 @@ Outre les paramètres de positionnement et d'apparence standard, vous pouvez dé
 
 Les autres modes disponibles sont les suivants :
 
-* [Recommencer la séquence](properties_Animation.md#loopBackToFirstFrame)
+* [Recommencer la séquence](properties_Animation.md#loop-back-to-first-frame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 * [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
