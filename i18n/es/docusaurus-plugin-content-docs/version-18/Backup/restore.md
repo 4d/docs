@@ -38,7 +38,7 @@ Puede restaurar manualmente un archivo de la base de datos actual utilizando la 
 
 ## Integración manual del historial
 
-Si no ha marcado la opción de integración automática del archivo de historial en la página Restaurar del CSM (ver [Integración sucesiva de varios archivos de historial](MSC/restore.md#successive-intergration-of-several-data-log-files)), aparece una caja de diálogo de advertencia durante la apertura de la base cuando 4D advierte que el archivo de historial contiene más operaciones de las que se han realizado en la base.
+If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-integration-of-several-data-log-files)), a warning dialog box appears during the opening of the database when 4D notices that the log file contains more operations than have been carried out in the database.
 
 ![](../assets/en/Backup/backup08.png)
 
