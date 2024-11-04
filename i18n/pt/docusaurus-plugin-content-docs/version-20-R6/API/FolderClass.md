@@ -166,7 +166,7 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna
 
 A função `.create()` <!-- REF #FolderClass.create().Summary -->cria uma pasta no disco de acordo com as propriedades do objeto `Folder`<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
+Se necessário, a função cria a hierarquia de pastas conforme descrito nas propriedades [platformPath](#platformpath) ou [path](#path). Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
 **Valor retornado**
 
@@ -226,7 +226,7 @@ End if
 
 A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um alias (macOS) ou um atalho (Windows)<!-- END REF --> para a pasta com o nome *aliasName* especificado na pasta designada pelo objeto *destinationFolder*.
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+Passar o nome do alias ou atalho para criar no parâmetro *aliasName*.
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType*. Estão disponíveis as seguintes constantes:
 
@@ -235,7 +235,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 | `fk alias link`    | 0     | Alias link (padrão)          |
 | `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
 **Objeto devolvido**
 
