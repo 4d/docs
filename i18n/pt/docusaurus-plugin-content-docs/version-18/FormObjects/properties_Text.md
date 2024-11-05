@@ -152,7 +152,7 @@ Permite definir o tamanho da fonte do objeto em pontos.
 
 Designa a cor do tipo de letra.
 
-> This property also sets the [color of object's border](properties_BackgroundAndBorder.md##background-color--fill-color) (if any) when "plain" or "dotted" style is used.
+> This property also sets the [color of object's border](properties_BackgroundAndBorder.md#background-color--fill-color) (if any) when "plain" or "dotted" style is used.
 
 A cor pode ser especificada por:
 
