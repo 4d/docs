@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Params-->
 
-| Parâmetro | Tipo     |   | Descrição                                                |
-| --------- | -------- | - | -------------------------------------------------------- |
-| name      | Text     | → | Name of process for which to retrieve the process number |
-| id        | Text     | → | ID of process for which to retrieve the process number   |
-| \*        | Operador | → | Return the process number from the server                |
-| Resultado | Longint  | ← | Process number                                           |
+| Parâmetro | Tipo     |   | Descrição                                                             |
+| --------- | -------- | - | --------------------------------------------------------------------- |
+| name      | Text     | → | Nome do processo para o qual se deseja recuperar o número do processo |
+| id        | Text     | → | ID do processo para o qual se deseja recuperar o número do processo   |
+| \*        | Operador | → | Retorna o número do processo do servidor                              |
+| Resultado | Longint  | ← | Process number                                                        |
 
 <!-- END REF-->
 
@@ -22,17 +22,17 @@ displayed_sidebar: docs
 
 | Release | Mudanças                |
 | ------- | ----------------------- |
-| 20 R7   | Support of id parameter |
+| 20 R7   | Suporte do parâmetro id |
 
 </details>
 
 #### Descrição
 
-<!--REF #_command_.Process number.Summary-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter. If no process is found, `Process number` returns 0.
+<!--REF #_command_.Process number.Summary-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->`Process number` retorna o número do processo cujo *name* ou *id* você passou no primeiro parâmetro. Se nenhum processo for encontrado, `Process number` retornará 0.
 
-The optional parameter \* allows you to retrieve, from a remote 4D, the number of a process that is executed on the server. In this case, the returned value is negative. This option is especially useful when using the [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md) and [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable.md) commands.
+O parâmetro opcional \* permite que você recupere, de um 4D remoto, o número de um processo executado no servidor. Nesse caso, o valor retornado é negativo. Essa opção é especialmente útil ao usar os comandos [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md) e [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable.md).
 
-If the command is executed with the \* parameter from a process on the server machine, the returned value is positive.
+Se o comando for executado com o parâmetro \* de um processo no computador do servidor, o valor retornado será positivo.
 
 #### Veja também
 
