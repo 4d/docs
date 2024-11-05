@@ -43,7 +43,7 @@ The **License Manager** dialog box is displayed (Instant Activation page is sele
 ### Activate 4D Server
 
 1. Launch the 4D Server application.
-The dialog box for choosing the [activation mode](#activation-mode) appears.
+The dialog box for choosing the activation mode appears.
 
 ![](../assets/en/getStart/helpMenu.png)
 

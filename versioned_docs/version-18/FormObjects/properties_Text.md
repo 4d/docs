@@ -158,7 +158,7 @@ Allows defining the object's font size in points.
 
 Designates the font color.
 
-> This property also sets the [color of object's border](properties_BackgroundAndBorder.md##background-color--fill-color) (if any) when "plain" or "dotted" style is used.
+> This property also sets the [color of object's border](properties_BackgroundAndBorder.md#background-color--fill-color) (if any) when "plain" or "dotted" style is used.
 
 The color can be specified by:
 

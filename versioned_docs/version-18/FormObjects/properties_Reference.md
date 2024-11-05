@@ -16,7 +16,6 @@ You will find in this page a comprehensive list of all object properties sorted 
 [g](#g) -
 [h](#h) -
 [i](#i) -
-[j](#j) -
 [k](#k) -
 [l](#l) -
 [m](#m) -
@@ -32,7 +31,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 
 |Property|Description|Possible Values|
 |---|---|---|
-|**a**|||
+<a id="a"></a>|**a**|||
 |[action](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
 |[allowFontColorPicker](properties_Text.md#allow-fontcolor-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
 |[alternateFill](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"|

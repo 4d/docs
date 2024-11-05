@@ -18,7 +18,7 @@ No activation is required for the following uses:
 
 ## First activation
 
-With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
+With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. The dialog box for choosing the activation mode appears.
 
 ![](../assets/en/getStart/server1.png)
 

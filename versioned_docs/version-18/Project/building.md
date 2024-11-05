@@ -19,7 +19,7 @@ The application builder allows you to:
 Building a project package can be carried out using:
 
 * either the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command,
-* or the [Build Application window](#application-builder).
+* or the Build Application window.
 
 To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
 
@@ -110,7 +110,7 @@ On Windows, this feature creates an executable file (.exe). On macOS, it handles
 
 The principle consists of merging a compiled structure file with 4D Volume Desktop. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
-You can define a default data file or allow users to create and use their own data file (see the [Data file management in final applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html) section).
+You can define a default data file or allow users to create and use their own data file (see the [Data file management](#management-of-data-files) section).
 
 It is possible to automate the update of merged single-user applications by means of a sequence of language commands (see [Automatic updating of server or single-user applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
 
@@ -147,15 +147,15 @@ If you have specified "MyProject" as the name of the application, you will find 
   * MyProject.exe  - Your executable and a MyProject.rsr (the application resources)
   * 4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
   * Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the database as well as the database Resources folder.
-**Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
-  * (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the database. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
+**Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management](#management-of-data-files).
+  * (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the database. For more information about this, refer to the [Plugins and components page](#plugins--components-page) section.
   * Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
   * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
 
  All these items must be kept in the same folder in order for the executable to operate.
 
 * *macOS*
-  * A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins-and-components) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
+  * A software package named MyProject.app containing your application and all the items necessary for its operation, including the plug-ins, components and licenses. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins--components-page) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses-and-certificate) section. **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
 #### Customizing 4D Volume Desktop folder
 
@@ -232,7 +232,7 @@ Checking this option generates the client part of your application during the bu
 #### 4D Volume Desktop
 
 You must designate the location on your disk of the 4D Volume Desktop application to be used. This 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application).
- If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform. This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism. For more information about this point, see [Customizing 4D Server and/or 4D Client folders](#customizing-4d-server-and-or-4d-client-folders).
+ If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform. This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism.
 
 > The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v18, you must select a 4D Volume Desktop v18.
 
@@ -321,7 +321,7 @@ Items must be installed:
   * **Server application** - next to the `\<ApplicationName>Server` software package.
   * **Client application** - next to the `\<ApplicationName>Client` software package.
 
-## Plugins & components page
+## Plugins & components page {#plugins--components-page}
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 
@@ -483,7 +483,7 @@ This mode allows you to duplicate your merged applications without breaking the 
 
 You can select the data linking mode during the build application process. You can either:
 
-* Use the [Application page](#application) or [Client/Server page](#client-server) of the Build Application dialog box.
+* Use the [Application page](#application-page) or [Client/Server page](#clientserver-page) of the Build Application dialog box.
 * Use the **LastDataPathLookup** XML key (single-user application or server application).
 
 ### Defining a default data folder

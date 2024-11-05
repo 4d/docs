@@ -11,7 +11,7 @@ Dataclass names can be used directly in the REST requests to work with entities,
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**\{dataClass\}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
+|[**\{dataClass\}**](#dataclass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
 |[**\{dataClass\}({key})**](#dataclasskey)|`/Employee(22)`|Returns the data for the specific entity defined by the dataclass's primary key|
 |[**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
 |[**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee/getHighSalaries`|Executes a project method and returns an object or a collection (the project method must be exposed)|
@@ -43,7 +43,7 @@ Each entity contains the following properties:
 |__TIMESTAMP|Date|Timestamp of the last modification of the entity|
 |__STAMP|Number|Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.|
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). For example:
 
  `GET  /rest/Company/name,address`
 
@@ -140,7 +140,6 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
-For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 

@@ -203,7 +203,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc
 
 ## Transparent
 
-Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
+Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
 
 #### JSON Grammar
 
@@ -217,4 +217,4 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### See also
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Background Color / Fill Color](#background-color--fill-color)
