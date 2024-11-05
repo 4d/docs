@@ -75,8 +75,8 @@ module.exports = {
       swcJsMinimizer: true,
       swcHtmlMinimizer: true,
       lightningCssMinimizer: true,
-      rspackBundler: true,
-      mdxCrossCompilerCache: false,
+      rspackBundler: false,
+      mdxCrossCompilerCache: true,
     },
   },
   i18n: {
