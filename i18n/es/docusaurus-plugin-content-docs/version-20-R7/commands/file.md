@@ -20,7 +20,7 @@ displayed_sidebar: docs
 | Parámetros   | Tipo                    |     | Descripción                                                           |
 | ------------ | ----------------------- | :-: | --------------------------------------------------------------------- |
 | path         | Text                    |  →  | Ruta del archivo                                                      |
-| fileConstant | →                       |  -> | Constante del archivo 4D                                              |
+| fileConstant | Integer                 |  →  | Constante del archivo 4D                                              |
 | pathType     | Integer                 |  →  | `fk posix path` (por defecto) o `fk platform path` |
 | \*           | operator                |  →  | \* para devolver el archivo de la base local                          |
 | Result       | 4D.File |  ←  | Nuevo objeto de archivo                                               |
