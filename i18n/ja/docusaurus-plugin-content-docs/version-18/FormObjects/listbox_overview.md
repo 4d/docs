@@ -111,7 +111,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | プロパティ                                                               | 配列リストボックス | セレクションリストボックス | コレクションまたはエンティティセレクションリストボックス |
 | ------------------------------------------------------------------- | --------- | ------------- | ---------------------------- |
 | [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色)          | ○         | ○             | ○                            |
-| [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー)                  | ○         | ○             | ○                            |
+| [背景色](properties_BackgroundAndBorder.md#背景色塗りカラー)                   | ○         | ○             | ○                            |
 | [太字](properties_Text.md#太字)                                         | ○         | ○             | ○                            |
 | [背景色式](properties_BackgroundAndBorder.md#背景色式)                      |           | ○             | ○                            |
 | [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル)                | ○         | ○             | ○                            |
