@@ -11,7 +11,7 @@ title: ルーラー
 
 [割り当てられた変数](properties_Object.md#変数あるいは式) の値を入力エリア (フィールドまたは変数) に代入して格納したり、逆にオブジェクトの現在値を設定することもできます。
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicatores) in the "Progress Indicator" page.
+詳細については [インジケーターの使用](progressIndicator.md#インジケーターの使用) を参照ください。
 
 ### プロパティ一覧
 
