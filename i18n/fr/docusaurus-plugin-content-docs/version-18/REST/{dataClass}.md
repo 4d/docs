@@ -11,7 +11,7 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 
 | Syntaxe                                                                            | Exemple                     | Description                                                                                             |
 | ---------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                  | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                       |
+| [**\{dataClass\}**](#dataclass)                                                  | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                       |
 | [**\{dataClass\}({key})**](#dataclasskey)                                        | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass                  |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                      |
 | [**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Exécute une méthode projet et retourne un objet ou une collection (la méthode projet doit être exposée) |
@@ -43,7 +43,7 @@ Chaque entité contient les propriétés suivantes :
 | __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
 | __STAMP     | Number | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
-Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company/name,address`
 
@@ -140,7 +140,6 @@ Renvoie les données de l'entité spécifique définie par la clé primaire de l
 
 En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
-Pour plus d'informations sur les données retournées, reportez-vous à [{datastoreClass}](#datastoreclass).
 
 Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
 
