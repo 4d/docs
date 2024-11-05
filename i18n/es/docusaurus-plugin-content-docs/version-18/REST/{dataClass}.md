@@ -11,7 +11,7 @@ Los nombres de las clases de datos pueden utilizarse directamente en las peticio
 
 | Sintaxis                                                                           | Ejemplo                     | Descripción                                                                                              |
 | ---------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                  | `/Employee`                 | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos                   |
+| [**\{dataClass\}**](#dataclass)                                                  | `/Employee`                 | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos                   |
 | [**\{dataClass\}({key})**](#dataclasskey)                                        | `/Employee(22)`             | Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos          |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Devuelve los datos de una entidad en la que está definido el valor del atributo                          |
 | [**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Ejecuta un método proyecto y devuelve un objeto o una colección (el método proyecto debe estar expuesto) |
@@ -43,7 +43,7 @@ Cada entidad contiene las siguientes propiedades:
 | __TIMESTAMP | Fecha  | Marca de tiempo de la última modificación de la entidad                                                            |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
-Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company/name,address`
 
@@ -140,7 +140,6 @@ Devuelve los datos de la entidad específica definida por la llave primaria de l
 
 Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
 
-Para más información sobre los datos devueltos, consulte [{datastoreClass}](#datastoreclass).
 
 Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
 
