@@ -29,9 +29,7 @@
 }
 
 details {
-  //--docusaurus-details-summary-arrow-size: 0.20rem !important;
   --docusaurus-details-decoration-color: grey !important;
-  //font-size: 11px;
   border: none !important;
   padding: 0 auto !important;
   margin: 10px auto !important;
