@@ -34,7 +34,7 @@ Ce mécanisme vous permet de mémoriser jusqu’à 32000 chemins d’accès. Sou
 
 Passez dans le paramètre *typeFichiers* le ou les type(s) de fichier(s) pouvant être sélectionnés dans la boîte de dialogue d’ouverture. Vous pouvez passer une liste de plusieurs types séparés par un *;* (point virgule). Pour chaque type défini, une ligne sera ajoutée dans le menu de choix de type de la boîte de dialogue. 
 
-* Sous Mac OS, vous pouvez passer soit un type Mac OS classique (TEXT, APPL, etc.), soit un type UTI (Uniform Type Identifier). Les types UTIs ont été définis par Apple afin de répondre aux besoins d'uniformisation des types de fichiers. Par exemple, "public.text" est le type UTI des fichiers de type texte. Pour plus d'informations sur les UTIs, reportez-vous à l'adresse *https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding\_utis/understand\_utis\_conc/understand\_utis\_conc.html* (documentation en anglais).
+* Sous Mac OS, vous pouvez passer soit un type Mac OS classique (TEXT, APPL, etc.), soit un type UTI (Uniform Type Identifier). Les types UTIs ont été définis par Apple afin de répondre aux besoins d'uniformisation des types de fichiers. Par exemple, "public.text" est le type UTI des fichiers de type texte. Pour plus d'informations sur les UTIs, reportez-vous à [cette page sur developer.apple.com](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html) (documentation en anglais).
 * Sous Windows, vous pouvez également passer un type de fichier classique Mac OS — 4D effectue la correspondance en interne — ou l’extension des fichiers (.txt, .exe, etc.). A noter que sous Windows, l’utilisateur aura la possibilité de “forcer” l’affichage de tous les types de fichiers en saisissant \*.\* dans la boîte de dialogue. Toutefois dans ce cas, 4D effectuera une vérification supplémentaire des types des fichiers sélectionnés : si l’utilisateur sélectionne un type de fichier non autorisé, la commande retourne une erreur.
 
 Si vous ne souhaitez pas restreindre les fichiers affichés à un ou plusieurs types, passez la chaîne "\*" (étoile) ou ".\*" dans *typeFichiers*. 
@@ -65,15 +65,15 @@ La commande retourne le nom (nom+extension sous Windows) du fichier sélectionn�
 Cet exemple permet de désigner un fichier de données 4D :
 
 ```4d
- var $platForm : Integer
- PLATFORM PROPERTIES($platForm)
- If($platForm=Windows)
-    $DocType:=".4DD"
- Else
-    $DocType:="com.4d.4d.data-file" //Type UTI
- End if
- $Options:=Alias selection+Package open+Use fenêtre feuille
- $Doc:=Select document("";$DocType;"Sélectionner le fichier de données";$Options)
+ var $platForm : Integer
+ PLATFORM PROPERTIES($platForm)
+ If($platForm=Windows)
+    $DocType:=".4DD"
+ Else
+    $DocType:="com.4d.4d.data-file" //Type UTI
+ End if
+ $Options:=Alias selection+Package open+Use fenêtre feuille
+ $Doc:=Select document("";$DocType;"Sélectionner le fichier de données";$Options)
 ```
 
 #### Exemple 2 
@@ -81,10 +81,10 @@ Cet exemple permet de désigner un fichier de données 4D :
 Création d’un document personnalisé par l’utilisateur : 
 
 ```4d
- $doc:=Select document(System folder(Documents folder)+"Report.pdf";"pdf";"Nom de l’état :";File name entry)
- If(OK=1)
-    BLOB TO DOCUMENT(Document;$blob) // $blob contient le document à enregistrer
- End if
+ $doc:=Select document(System folder(Documents folder)+"Report.pdf";"pdf";"Nom de l’état :";File name entry)
+ If(OK=1)
+    BLOB TO DOCUMENT(Document;$blob) // $blob contient le document à enregistrer
+ End if
 ```
 
 #### Variables et ensembles système 

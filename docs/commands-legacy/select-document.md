@@ -34,7 +34,7 @@ This mechanism lets you memorize up to 32,000 access paths. Under Windows, each 
 
 Pass the type(s) of file(s) that can be selected in the open file dialog box in the *fileTypes* parameter. You can pass a list of several types separated by a ; (semi-colon). For each type defined, a row will be added in the type choice menu of the dialog box.
 
-* Under Mac OS, you can pass either a standard Mac OS type (TEXT, APPL, etc.), or a UTI (Uniform Type Identifier) type. UTI types have been defined by Apple in order to meet requirements concerning the standardization of file types. For example, "public.text" is the UTI type of text type files. For more information about UTIs, please refer to the *Uniform Type Identifier Concepts page* on the *developer.apple.com* web site.
+* Under Mac OS, you can pass either a standard Mac OS type (TEXT, APPL, etc.), or a UTI (Uniform Type Identifier) type. UTI types have been defined by Apple in order to meet requirements concerning the standardization of file types. For example, "public.text" is the UTI type of text type files. For more information about UTIs, please refer to the [Uniform Type Identifier Concepts page](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html) on the *developer.apple.com* web site.
 * Under Windows, you can also pass a standard Mac OS type file — 4D performs the conversion internally — or the file extensions (.txt, .exe, etc.). Please note that under Windows, the user can “force” the display of all document types by entering \*.\* in the dialog box. However, in this case, 4D will perform an additional verification of the types of files selected: if the user selects an unauthorized file type, the command returns an error.
 
 If you do not want to restrict the files displayed to one or more types, pass the "\*" (star) or ".\*" string in *fileTypes*.
@@ -65,15 +65,15 @@ The command returns the name (name + extension under Windows) of the selected fi
 This example is used to specify a 4D data file: 
 
 ```4d
- var $platform : Integer
- PLATFORM PROPERTIES($platform)
- If($platform=Windows)
-    $DocType:=".4DD"
- Else
-    $DocType:="com.4d.4d.data-file" //UTI type
- End if
- $Options:=Allow alias files+Package open+Use sheet window
- $Doc:=Select document("";$DocType;"Select the data file";$Options)
+ var $platform : Integer
+ PLATFORM PROPERTIES($platform)
+ If($platform=Windows)
+    $DocType:=".4DD"
+ Else
+    $DocType:="com.4d.4d.data-file" //UTI type
+ End if
+ $Options:=Allow alias files+Package open+Use sheet window
+ $Doc:=Select document("";$DocType;"Select the data file";$Options)
 ```
 
 #### Example 2 
@@ -81,10 +81,10 @@ This example is used to specify a 4D data file:
 Creation of a custom document by user:
 
 ```4d
- $doc:=Select document(System folder(Documents folder)+"Report.pdf";"pdf";"Report name:";File name entry)
- If(OK=1)
-    BLOB TO DOCUMENT(Document;$blob) // $blob contains document to record
- End if
+ $doc:=Select document(System folder(Documents folder)+"Report.pdf";"pdf";"Report name:";File name entry)
+ If(OK=1)
+    BLOB TO DOCUMENT(Document;$blob) // $blob contains document to record
+ End if
 ```
 
 #### System variables and sets 
