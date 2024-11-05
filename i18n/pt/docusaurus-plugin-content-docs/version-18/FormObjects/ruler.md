@@ -11,7 +11,7 @@ A régua é um objeto de interface padrão utilizado para definir ou obter valor
 
 [A variável ou expressão associada](properties_Object.md#expression-type) ao objeto pode ser atribuída a uma área gravável (campo ou variável) para armazenar ou modificar o valor atual do objeto.
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicatores) in the "Progress Indicator" page.
+For more information, please refer to [Using indicators](progressIndicator.md#using-indicators) in the "Progress Indicator" page.
 
 ### Propriedades compatíveis
 
