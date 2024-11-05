@@ -42,7 +42,7 @@ title: インストールとアクティベーション
 
 ### 4D Server のアクティベーション
 
-1. 4D Server アプリケーションを起動します。 [アクティベーションモード](#アクティベーションモード) を選択するダイアログボックスが表示されます。
+1. 4D Server アプリケーションを起動します。 The dialog box for choosing the activation mode appears.
 
 ![](../assets/en/getStart/helpMenu.png)
 
