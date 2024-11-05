@@ -11,7 +11,7 @@ Os nomes das classes de dados podem ser usadas diretamente nas petições REST p
 
 | Sintaxe                                                                            | Exemplo                     | Descrição                                                                                          |
 | ---------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                  | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
+| [**\{dataClass\}**](#dataclass)                                                  | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
 | [**\{dataClass\}({key})**](#dataclasskey)                                        | `/Employee(22)`             | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados        |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Retorna os dados para uma entidade na qual os valores de atributo são definidas                    |
 | [**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executa um método projeto e devolve um objeto ou uma coleção (o método projeto deve estar exposto) |
@@ -43,7 +43,7 @@ Cada entidade contém as propriedades abaixo:
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                            |
 | __STAMP     | Number | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
 
-Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company/name,address`
 
@@ -140,7 +140,6 @@ Retorna os dados para a entidade específica definida pela chave primária da cl
 
 Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
-Para saber mais sobre os dados retornados, veja [{datastoreClass}](#datastoreclass).
 
 Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
