@@ -111,7 +111,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | Propiedad                                                                                 | List box array | List box selección | List box colección o entity selection |
 | ----------------------------------------------------------------------------------------- | -------------- | ------------------ | ------------------------------------- |
 | [Color de fondo alternado](properties_BackgroundAndBorder.md#alternate-background-color)  | X              | X                  | X                                     |
-| [Color de fondo](properties_BackgroundAndBorder.md#background-color)                      | X              | X                  | X                                     |
+| [Color de fondo](properties_BackgroundAndBorder.md#background-color--fill-color)          | X              | X                  | X                                     |
 | [Negrita](properties_Text.md#bold)                                                        | X              | X                  | X                                     |
 | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                     |
 | [Estilo del borde](properties_BackgroundAndBorder.md#border-line-style)                   | X              | X                  | X                                     |
@@ -538,7 +538,7 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 #### Propiedades del List Box jerárquico
 
-Esta propiedad especifica que el list box debe mostrarse en forma jerárquica. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#array-list-box), i.e. a collection.
+Esta propiedad especifica que el list box debe mostrarse en forma jerárquica. En el formulario JSON, esta función se activa [cuando el valor de la propiedad *dataSource* es un array](properties_Object.md#array-list-box), es decir, una colección.
 
 Las opciones adicionales (**Variable 1...10**) están disponibles cuando se selecciona la opción *List box jerárquico*, correspondiente a cada elemento del array *dataSource* a utilizar como columna de ruptura. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. Estas variables definen los niveles jerárquicos a mostrar en la primera columna.
 
