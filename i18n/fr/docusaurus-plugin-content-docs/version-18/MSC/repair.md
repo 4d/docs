@@ -14,7 +14,7 @@ Cette page permet de réparer le fichier de données ou le fichier de structure 
 
 ### Fichier de données à réparer
 
-Chemin d’accès du fichier de données courant. Le bouton **[...]** permet de désigner un autre fichier de données. Lorsque vous cliquez sur ce bouton, une boîte de dialogue standard d’ouverture de documents s’affiche, vous permettant de désigner le fichier de données à réparer. Pathname of the current data file. Si vous effectuez une réparation par [réparation par en-têtes d'enregistrements](#réparation-par-en-têtes-denregistrements), vous pouvez sélectionner tout fichier de données. Une fois cette boîte de dialogue validée, le chemin d’accès du fichier à réparer est indiqué dans la fenêtre.
+Chemin d’accès du fichier de données courant. Le bouton **[...]** permet de désigner un autre fichier de données. Lorsque vous cliquez sur ce bouton, une boîte de dialogue standard d’ouverture de documents s’affiche, vous permettant de désigner le fichier de données à réparer. Une fois cette boîte de dialogue validée, le chemin d’accès du fichier à réparer est indiqué dans la fenêtre. Si vous effectuez une réparation par [réparation par en-têtes d'enregistrements](#réparation-par-en-têtes-denregistrements), vous pouvez sélectionner tout fichier de données. Une fois cette boîte de dialogue validée, le chemin d’accès du fichier à réparer est indiqué dans la fenêtre.
 
 ### Dossier de sauvegarde
 
