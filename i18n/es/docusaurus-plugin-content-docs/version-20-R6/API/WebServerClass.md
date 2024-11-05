@@ -352,7 +352,7 @@ La <!-- REF #WebServerClass.HTTPTrace.Summary -->activación de `HTTP TRACE`<!--
 
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
-El <!-- REF #WebServerClass.isRunning.Summary -->estado de ejecución del servidor web<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPEnabled.Summary -->estado del protocolo HTTP<!-- END REF -->.
 
 <!-- END REF -->
 
