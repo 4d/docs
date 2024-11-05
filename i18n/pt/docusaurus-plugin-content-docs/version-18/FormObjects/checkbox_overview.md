@@ -179,7 +179,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel arredondado
 
-The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
+The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 O estilo Bevel arredondado tem um fundo cinza claro com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -207,7 +207,7 @@ Exemplo em macOS:
 
 ### OS X Gradient
 
-The OS X Gradient check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
+The OS X Gradient check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 The OS X Gradient style has a light gray background with a title and is displayed as a two-tone system button on macOS. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -233,7 +233,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
 ### OS X Texturizado
 
-The OS X Textured checkbox style is similar to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
+The OS X Textured checkbox style is similar to the [Bevel](#bevel) style except, depending on the OS, it may have a different appearance. As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 Como padrão, o estilo OS X Textured aparece como:
 
@@ -261,7 +261,7 @@ Como padrão, o estilo OS X Textured aparece como:
 
 ### Office XP
 
-The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
+The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
