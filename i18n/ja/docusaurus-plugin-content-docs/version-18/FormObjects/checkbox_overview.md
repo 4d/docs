@@ -179,7 +179,7 @@ The Bevel check box style combines the appearance of the [Regular](#regular) (*i
 
 ### 角の丸いベベル
 
-角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。 ベベルスタイルと同様に、角の丸いベベルスタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。 As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 角の丸いベベルスタイルは、明るいグレーの背景にラベルが付いています。 また、通常は [4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられます。
 
@@ -207,7 +207,7 @@ macOS の例:
 
 ### OS Xグラデーション
 
-OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 ベベルスタイルと同様に、OS Xグラデーションスタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 OS X グラデーションスタイルは明るいグレーの背景にラベルが付いています。macOS 上では2トーンのシステムボタンとして表示されます。 また、通常は [4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられます。
 
@@ -233,7 +233,7 @@ OS X グラデーションスタイルは明るいグレーの背景にラベル
 
 ### OS Xテクスチャー
 
-OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 ベベルスタイルと同様に、OS Xテクスチャースタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては異なる点があります。 As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
@@ -261,7 +261,7 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 ### Office XP
 
-Office XPスタイルはベベルボタンような外観に、チェックボックスの [ツールバーボタン](#ツールバーボタン) スタイルの機能を組み合わせたものです。
+The Office XP check box style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar-button) style's behavior.
 
 Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
