@@ -24,7 +24,7 @@
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.Settings": {
-    "message": "設定",
+    "message": "Settings",
     "description": "The label for category Settings in sidebar docs"
   },
   "sidebar.docs.category.Development Environment": {
@@ -52,7 +52,7 @@
     "description": "The label for category Data Types in sidebar docs"
   },
   "sidebar.docs.category.Classes": {
-    "message": "クラス",
+    "message": "Classes",
     "description": "The label for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Classes.link.generated-index.title": {
