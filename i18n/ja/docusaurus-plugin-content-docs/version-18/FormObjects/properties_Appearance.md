@@ -222,7 +222,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 ---
 
-## Show HTML WYSIWYG
+## HTML WYSIWYG 表示
 
 HTML WYSIWYG ビューを有効/無効にします。このビューでは、すべてのブラウザーに対応していない 4D Write Pro の属性が取り除かれます。
 
