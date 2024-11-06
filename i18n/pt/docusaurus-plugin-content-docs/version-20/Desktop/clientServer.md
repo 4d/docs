@@ -39,51 +39,51 @@ Se o 4D Server estiver conectado à mesma rede que o 4D remoto, selecione **Avai
 
 ![](../assets/en/getStart/serverConnect.png)
 
-To connect to a server from the list, double-click on its name or select it and click the **OK** button.
+Para se conectar a um servidor da lista, clique duas vezes em seu nome ou selecione-o e clique no botão **OK**.
 
-> A circumflex accent (^) is placed before the name of projects published with the encryption option enabled.
+> Um acento circunflexo (^) é colocado antes do nome dos projetos publicados com a opção de criptografia ativada.
 
-If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
+Se o projeto publicado não for exibido na lista **Disponível**, selecione **Personalizado**. A página Personalizado permite que você se conecte a um servidor publicado na rede usando seu endereço de rede e atribuindo a ele um nome personalizado.
 
 ![](../assets/en/Desktop/serverConnect2.png)
 
-- **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched.
-  - If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`.
+- **Project name (Nome do projeto**): Define o nome local do projeto 4D Server. Este nome será usado na página **Recente** quando referente ao projeto.
+- **Endereço de rede**: O endereço IP da máquina onde o 4D Server foi iniciado.
+  - Se dois servidores forem executados simultaneamente no mesmo computador, o endereço IP deverá ser seguido de dois pontos e do número da porta, por exemplo: `192.168.92.104:19814`.
   - Por padrão, a porta de publicação de um 4D Server é 19813. Este número pode ser modificado nas definições do Projecto.
 
-> The **Activate development mode** option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D (compatibility option).
+> A opção **Ativar modo de desenvolvimento** abre a conexão remota em um modo especial de leitura/gravação e requer o acesso à pasta do projeto a partir do 4D remoto (opção de compatibilidade).
 
-Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
+Quando essa página atribuir um servidor, clicar no botão **OK** permitirá que você se conecte ao servidor.
 
-Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
+Depois que a conexão com o servidor for estabelecida, o projeto remoto será listado na guia **Recent (Recente** ).
 
 ### Atualizar ficheiros de projeto no servidor
 
-4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the *.4DProject* project file (not compressed) in interpreted mode.
+O 4D Server cria e envia automaticamente para as máquinas remotas uma [ versão .4dz](building.md#build-compiled-structure) do arquivo de projeto *.4DProject* (não compactado) no modo interpretado.
 
-- An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. O projecto é recarregado:
-  - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
-  - quando o comando `RELOAD PROJECT` é executado. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
+- Uma versão .4dz atualizada do projeto é automaticamente produzida quando necessário, *i. .* quando o projeto for modificado e recarregado pelo Servidor 4D. O projecto é recarregado:
+  - automaticamente quando a janela de aplicação do Servidor 4D chegar à frente do sistema operacional ou quando o aplicativo 4D na mesma máquina salvar uma modificação (veja abaixo).
+  - quando o comando `RELOAD PROJECT` é executado. Chamar este comando é necessário, por exemplo, quando você puxou uma nova versão do projeto a partir da plataforma de controle de origem.
 
-### Atualizar ficheiros de projeto em máquinas remotas
+### Atualizando arquivos do projeto em máquinas remotas
 
-When an updated .4dz version of the project has been produced on 4D Server, connected remote 4D machines must log out and reconnect to 4D Server in order to benefit from the updated version.
+Quando uma versão atualizada .4dz do projeto for produzida no 4D Server, as máquinas 4D remotas conectadas devem se desconectar e se reconectar ao 4D Server para se beneficiar da versão atualizada.
 
 ## Utilização de 4D e 4D Server na mesma máquina
 
-When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. This feature allows you to develop a client/server application in the same context as the deployment context.
+Quando 4D se conecta a um 4D Server na mesma máquina, o aplicativo se comporta como 4D no modo de usuário único e o ambiente de design permite editar arquivos de projeto. Esse recurso permite que você desenvolva um aplicativo cliente/servidor no mesmo contexto que o contexto de implementação.
 
-> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [opening option](#opening-a-remote-project) status.
+> Quando o 4D se conectar a um 4D Server na mesma máquina, o **modo de desenvolvimento** será ativado automaticamente, independentemente do status [da opção de abertura](#opening-a-remote-project).
 
-Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
+Cada vez que o 4D executa uma ação **Salvar tudo** no ambiente de design (explicitamente no menu **Arquivo** ou implicitamente ao mudar para o modo de aplicação, por exemplo), o 4D Server recarrega sincronizadamente os arquivos de projeto. O 4D espera o servidor 4D terminar de recarregar os arquivos do projeto antes de continuar.
 
-However, you need to pay attention to the following behavior differences compared to [standard project architecture](Project/architecture.md):
+No entanto, você precisa prestar atenção às seguintes diferenças de comportamento em comparação com a [arquitetura de projeto padrão](Project/architecture.md):
 
-- the userPreferences.\{username\} folder used by 4D is not the same folder used by 4D Server in the project folder. Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
-- the folder used by 4D for derived data is not the folder named "DerivedData" in the project folder. Instead it is a dedicated folder named "DerivedDataRemote" located in the project system folder.
-- o ficheiro catalog.4DCatalog não é editado por 4D, mas pelo 4D Server. As informações do catálogo são sincronizadas através de pedidos cliente/servidor
-- o ficheiro directory.json não é editado por 4D, mas pelo 4D Server. As informações do diretório são sincronizadas através de pedidos cliente/servidor
+- a pasta userPreferences.\{username\} usada pelo 4D não é a mesma pasta usada pelo 4D Server na pasta do projeto. Em vez disso, é uma pasta dedicada, denominada "userPreferences", armazenada na pasta do sistema do projeto (ou seja, o mesmo local em que se abre um projeto .4dz).
+- a pasta usada pelo 4D para dados derivados não é a pasta chamada "DerivedData" na pasta do projeto. Em vez disso, é uma pasta dedicada chamada "DerivedDataRemote" localizada na pasta do sistema do projeto.
+- O arquivo catalog.4DCatalog não é editado pela 4D, mas sim pelo 4D Server. As informações do catálogo são sincronizadas através de pedidos cliente/servidor
+- o arquivo directory.json não é editado por 4D, mas pelo servidor 4D. As informações do diretório são sincronizadas através de pedidos cliente/servidor
 - 4D utiliza os seus próprios componentes internos e plug-ins em vez dos do 4D Server.
 
 > Não é recomendado instalar plug-ins ou componentes no nível da aplicação 4D, ou 4D Server.
