@@ -293,7 +293,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) basic properties.
+> ヘルプボタンは次の基本プロパティを持ちません: [状態の数](properties_TextAndPicture.md#状態の数)、[ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)、[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)。
 
 
 ### サークル
