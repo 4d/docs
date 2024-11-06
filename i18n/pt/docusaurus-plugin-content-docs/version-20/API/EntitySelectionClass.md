@@ -154,7 +154,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 *index* pode ser qualquer número entre 0 e `.length`-1.
 
 *   Se *index* está fora do intervalo, se devolve um erro.
-*   Os valores Null são avaliados como inferiores aos outros valores.
+*   Se *index* corresponder a uma entidade descartada, um valor Null será retornado.
 
 :::caution
 
@@ -209,7 +209,7 @@ Quaalquer atributo de dataclass pode ser usado como um apropriedade de uma sele�
 
 *   Se o "kind" de *attributeName* é `storage`: `.attributeName` devolve uma coleção de valores do mesmo tipo que *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
-*   If *attributeName* kind is `relatedEntities`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+*   Se *attributeName* type é `relatedEntities`: `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo como *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 
 
 Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.
@@ -466,10 +466,10 @@ A função devolve Null se o *index* estiver para além dos limites de selecçã
 ```4d
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection
-$emp2:=$employees.at(-3) //starting from the end, 3rd entity
-    //of the $employees entity selection
+$employees:=ds.Employee.query("lastName = :1"; "H@")
+$emp1:=$employees.at(2) //3ª entidade da seleção de entidades $employees
+$emp2:=$employees.at(-3) //começando do final, 3ª entidade
+    //da seleção de entidades $employees
 ```
 
 <!-- END REF -->
@@ -2200,7 +2200,7 @@ $sum:=$sel.sum("salary")
 
 </details>
 
-<!-- REF #EntitySelectionClass.toCollection().Syntax -->**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
+<!-- REF #EntitySelectionClass.toCollection().Syntax -->**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : Collection<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : Collection<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : Collection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
