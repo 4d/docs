@@ -122,7 +122,7 @@ title: データソース
 
 配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。 これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#変数あるいは式) に代入されます。 この配列を参照することで、ランゲージを使ってオブジェクトを管理することができます。
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
+> このプロパティと、新規レコードのフィールド値を定義するのに使える入力オブジェクトの [デフォルト値](properties_RangeOfValues.md#デフォルト値-のリスト) を混同しないようにしてください。
 
 デフォルト値のリストを入力します。 フォームエディター上で専用のダイアログが開き、改行で区切られた値を入力することができます。
 
@@ -259,7 +259,7 @@ title: データソース
 
 ---
 
-## Selection Name {#selection-name}
+## 命名セレクション {#selection-name}
 
 `命名セレクションリストボックス`
 
