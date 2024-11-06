@@ -206,7 +206,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc
 
 ## Transparent
 
-Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est définie, toute [autre couleur d'arrière-plan](#alternate-background-color) ou [couleur d'arrière-plan](#background-color-fill-color) définie pour la colonne est ignorée.
+Définit l'arrière-plan de la list box sur "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
 
 #### Grammaire JSON
 
@@ -220,4 +220,4 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est défi
 
 #### Voir également
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Background Color / Fill Color](#background-color--fill-color)
