@@ -22,7 +22,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 ---
 
-## Background Color / Fill Color
+## Color de fondo / Color de relleno
 
 Define el color de fondo de un objeto.
 
@@ -205,7 +205,7 @@ Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT 
 
 ## Transparente
 
-Define el fondo del list box como "Transparent". Cuando se define, se ignora cualquier [color de fondo alternativo](#alternate-background-color) o [color de fondo](#background-color-fill-color) definido para la columna.
+Define el fondo del list box como "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
 
 #### Gramática JSON
 
@@ -219,4 +219,4 @@ Define el fondo del list box como "Transparent". Cuando se define, se ignora cua
 
 #### Ver también
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Color de fondo / Color de relleno](#background-color--fill-color)
