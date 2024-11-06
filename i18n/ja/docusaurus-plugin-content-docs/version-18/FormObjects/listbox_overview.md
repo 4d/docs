@@ -190,11 +190,11 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 ![](../assets/en/FormObjects/listbox_column.png)
 
 リストボックスの各列毎に標準のプロパティ (テキスト、背景色など) を設定できます。設定すると、リストボックスに対する設定よりもこちらが優先されます。
-> 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式の型-式タイプ) (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。 The use of object arrays requires a 4D View Pro licence (see [Object arrays in columns (4D View Pro)](#object-arrays-in-columns-4d-view-pro)).
+> 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式の型-式タイプ) (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。 オブジェクト配列を使用するためには、4D View Pro ライセンスが必要になります ([カラム内でのオブジェクト配列の使用 (4D View Pro)](#カラム内でのオブジェクト配列の使用-4d-view-pro)参照)。
 
 ### 列特有のプロパティ
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-list-of-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Footer](#list-box-footers) - [Header](#list-box-headers) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-falsetext-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[ヘッダー](#リストボックスヘッダー) - [フッター](#リストボックスフッター) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [デフォルト値](properties_DataSource.md#デフォルト値-のリスト) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時テキスト-false時) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
 
 ## リストボックスヘッダー
 
@@ -210,15 +210,15 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the [list box column object method](properties_Action.md#method).
+ランタイムにおいてヘッダーで発生したイベントは、[その列のオブジェクトメソッド](properties_Action.md#メソッド) が受け取ります。
 
 ヘッダーに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
 
 #### JSON 文法
 
-| 名称     | データタイプ | とりうる値                        |
-| ------ | ------ | ---------------------------- |
-| header | object | header properties and values |
+| 名称     | データタイプ | とりうる値        |
+| ------ | ------ | ------------ |
+| header | object | ヘッダーのプロパティと値 |
 
 
 ### ヘッダー特有のプロパティ
@@ -236,20 +236,20 @@ At runtime, events that occur in a header are generated in the [list box column 
 
 リストボックスの各列フッター毎に標準のテキストプロパティを設定できます。設定すると、リストボックスや列に対する設定よりもこちらが優先されます。 さらに、フッター特有のプロパティを設定することができます。 [カスタムまたは自動計算](properties_Object.md#変数の計算) をフッターに挿入することができます。
 
-At runtime, events that occur in a footer are generated in the [list box column object method](properties_Action.md#method).
+ランタイムにおいてフッターで発生したイベントは、[その列のオブジェクトメソッド](properties_Action.md#メソッド) が受け取ります。
 
 フッターに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
 
 #### JSON 文法
 
-| 名称     | データタイプ | とりうる値                        |
-| ------ | ------ | ---------------------------- |
-| footer | object | Footer properties and values |
+| 名称     | データタイプ | とりうる値        |
+| ------ | ------ | ------------ |
+| footer | object | フッターのプロパティと値 |
 
 
 ### フッター特有のプロパティ
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [変数の計算](properties_Object.md#変数の計算) - [CSSクラス](properties_Object.md#cssクラス) - [幅](properties_CoordinatesAndSizing.md#幅) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色塗りカラー) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプtips)
 
 ## 入力の管理
 
@@ -538,7 +538,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 #### "階層リストボックス" プロパティによる階層化
 
-このプロパティを使用してリストボックスの階層表示を設定します。 In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#array-list-box), i.e. a collection.
+このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#配列リストボックス) に階層化します。
 
 *階層リストボックス* プロパティが選択されると、追加プロパティである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース配列を指定します。これが *dataSource* の値である配列名のコレクションとなります。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
@@ -697,7 +697,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 * ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、 `LISTBOX DELETE ROWS` コマンドを使用してリストボックスから必要なだけ行を削除します。
 
-## オブジェクト配列の使用 (4D View Pro)
+## カラム内でのオブジェクト配列の使用 (4D View Pro)
 
 リストボックスのカラムはオブジェクト配列を扱えます。 オブジェクト配列は異なる種類のデータを格納できるので、この強力な機能を使用すれば、単一のカラム内の行ごとに異なる入力タイプを混ぜたり、様々なウィジェットを表示したりといったことができるようになります。 たとえば、最初の行にテキスト入力を挿入し、二行目にチェックボックスを、そして産業目にドロップダウンを挿入する、と言ったことが可能になります。 また、オブジェクト配列は、ボタンやカラーピッカーと言った新しいウィジェットへのアクセスも可能にします。
 
