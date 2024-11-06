@@ -205,7 +205,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 
 ## Transparente
 
-Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de fundo alternativa](#alternate-background-color) ou [cor de fundo](#background-color-fill-color) definida para a coluna é ignorada.
+Define o fundo do list box como "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
 
 #### Gramática JSON
 
@@ -219,4 +219,4 @@ Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de
 
 #### Veja também
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Background Color / Fill Color](#background-color--fill-color)
