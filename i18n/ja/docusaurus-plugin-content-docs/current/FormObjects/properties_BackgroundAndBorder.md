@@ -21,7 +21,7 @@ title: 背景色と境界線
 
 ---
 
-## Background Color / Fill Color
+## 背景色/塗りカラー
 
 オブジェクトの背景色を設定します。
 
