@@ -3,7 +3,7 @@ id: overview
 title: Extensões
 ---
 
-A [arquitetura dos projetos](../Project/architecture.md) 4D é modular. Você pode fornecer funcionalidades adicionais aos seus projetos 4D instalando [**componentes**](Concepts/components.md) e [**plug-ins**](Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be built using any language.
+A [arquitetura dos projetos](../Project/architecture.md) 4D é modular. Você pode fornecer funcionalidades adicionais aos seus projetos 4D instalando [**componentes**](Concepts/components.md) e [**plug-ins**](Concepts/plug-ins.md). Os componentes são feitos de código 4D, enquanto os plug-ins podem ser criados usando qualquer linguagem.
 
 ## Componentes 4D pré-instalados
 
@@ -23,12 +23,12 @@ A [arquitetura dos projetos](../Project/architecture.md) 4D é modular. Você po
 
 Pode desenvolver e instalar os seus próprios componentes 4D. Ver [esta página](develop-components.md) para mayor información.
 
-Many developers from the 4D community have shared 4D components that you can install and use in you projects.
+Muitos desenvolvedores da comunidade 4D compartilharam componentes 4D que você pode instalar e usar em seus projetos.
 
 Navegue no Github para obter uma lista de componentes 4D públicos reunidos no tópico [`4d-component`](https://github.com/topics/4d-component).
 
 ## Plugins
 
-Plugins do things that 4D does not natively (e.g., specific platform technology), or would be very hard to write just using 4D. Como se describe en [esta página](develop-plug-ins.md), puede desarrollar sus propios plug-ins.
+Plugins fazem coisas que 4D não faz nativamente (por exemplo, tecnologia específica da plataforma), ou seria muito difícil escrever apenas usando 4D. Como se describe en [esta página](develop-plug-ins.md), puede desarrollar sus propios plug-ins.
 
 Muitas funcionalidades são cobertas pelos plug-ins 4D existentes. Navegue pelo Github para ter uma lista de plugins 4D públicos reunidos com o tópico [`4d-plugin`](https://github.com/topics/4d-plugin).
