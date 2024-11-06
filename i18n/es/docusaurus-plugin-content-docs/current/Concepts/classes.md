@@ -703,7 +703,7 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 Una **clase singleton** es una clase usuario que sólo produce una única instancia. For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-### Singletons types
+### Tipos de Singletons
 
 4D soporta tres tipos de singletons:
 
@@ -729,7 +729,7 @@ The following table indicates the scope of a singleton instance depending on whe
 
 Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
 
-### Creating and using singletons
+### Crear y utilizar singletons
 
 You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
 
@@ -783,7 +783,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-#### Shared singleton
+#### Singleton compartido
 
 ```4d
 //Class VehicleFactory
