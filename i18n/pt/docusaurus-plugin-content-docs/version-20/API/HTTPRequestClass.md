@@ -380,4 +380,7 @@ A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->aguarda a respo
 Se for passado um parâmetro *tempo* , a função esperará no máximo o número definido de segundos.
 
 Se a resposta do servidor já tiver chegado, a função regressa imediatamente.
+
+During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other `CALL WORKER` calls. Pode sair de um `.wait()` ligando para [`terminate()`](#terminate) a partir de uma chamada de retorno.
+
 <!-- END REF -->

@@ -512,7 +512,7 @@
     "description": "The generated-index page title for category Language in sidebar docs"
   },
   "sidebar.docs.category.4D Environment": {
-    "message": "4D Environment",
+    "message": "4D環境",
     "description": "The label for category 4D Environment in sidebar docs"
   },
   "sidebar.docs.category.Arrays": {
@@ -532,51 +532,51 @@
     "description": "The label for category Boolean in sidebar docs"
   },
   "sidebar.docs.category.Cache Management": {
-    "message": "Cache Management",
+    "message": "キャッシュ管理",
     "description": "The label for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections": {
-    "message": "Collections",
+    "message": "コレクション",
     "description": "The label for category Collections in sidebar docs"
   },
   "sidebar.docs.category.Communications": {
-    "message": "Communications",
+    "message": "通信",
     "description": "The label for category Communications in sidebar docs"
   },
   "sidebar.docs.category.Compiler": {
-    "message": "Compiler",
+    "message": "コンパイラー",
     "description": "The label for category Compiler in sidebar docs"
   },
   "sidebar.docs.category.Data Entry": {
-    "message": "Data Entry",
+    "message": "データ入力",
     "description": "The label for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security": {
-    "message": "Data Security",
+    "message": "データセキュリティ",
     "description": "The label for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Database Methods": {
-    "message": "Database Methods",
+    "message": "データベースメソッド",
     "description": "The label for category Database Methods in sidebar docs"
   },
   "sidebar.docs.category.Date and Time": {
-    "message": "Date and Time",
+    "message": "日付と時間",
     "description": "The label for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access": {
-    "message": "Design Object Access",
+    "message": "デザインオブジェクトアクセス",
     "description": "The label for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop": {
-    "message": "Drag and Drop",
+    "message": "ドラッグ＆ドロップ",
     "description": "The label for category Drag and Drop in sidebar docs"
   },
   "sidebar.docs.category.Entry Control": {
-    "message": "Entry Control",
+    "message": "入力制御",
     "description": "The label for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.File and Folder": {
-    "message": "File and Folder",
+    "message": "ファイルとフォルダ",
     "description": "The label for category File and Folder in sidebar docs"
   },
   "sidebar.docs.category.Formulas": {
@@ -584,23 +584,23 @@
     "description": "The label for category Formulas in sidebar docs"
   },
   "sidebar.docs.category.Graphs": {
-    "message": "Graphs",
+    "message": "グラフ",
     "description": "The label for category Graphs in sidebar docs"
   },
   "sidebar.docs.category.HTTP": {
-    "message": "HTTP",
+    "message": "HTTPクライアント",
     "description": "The label for category HTTP in sidebar docs"
   },
   "sidebar.docs.category.Hierarchical Lists": {
-    "message": "Hierarchical Lists",
+    "message": "階層リスト",
     "description": "The label for category Hierarchical Lists in sidebar docs"
   },
   "sidebar.docs.category.Import and Export": {
-    "message": "Import and Export",
+    "message": "インポート＆エクスポート",
     "description": "The label for category Import and Export in sidebar docs"
   },
   "sidebar.docs.category.Interruptions": {
-    "message": "Interruptions",
+    "message": "割り込み",
     "description": "The label for category Interruptions in sidebar docs"
   },
   "sidebar.docs.category.JSON": {
@@ -620,15 +620,15 @@
     "description": "The label for category List Box in sidebar docs"
   },
   "sidebar.docs.category.Mail": {
-    "message": "Mail",
+    "message": "メール",
     "description": "The label for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math": {
-    "message": "Math",
+    "message": "算術関数",
     "description": "The label for category Math in sidebar docs"
   },
   "sidebar.docs.category.Messages": {
-    "message": "Messages",
+    "message": "メッセージ",
     "description": "The label for category Messages in sidebar docs"
   },
   "sidebar.docs.category.Named Selections": {
@@ -636,15 +636,15 @@
     "description": "The label for category Named Selections in sidebar docs"
   },
   "sidebar.docs.category.Objects (Forms)": {
-    "message": "Objects (Forms)",
+    "message": "オブジェクト (フォーム)",
     "description": "The label for category Objects (Forms) in sidebar docs"
   },
   "sidebar.docs.category.Objects (Language)": {
-    "message": "Objects (Language)",
+    "message": "オブジェクト (ランゲージ)",
     "description": "The label for category Objects (Language) in sidebar docs"
   },
   "sidebar.docs.category.On a Series": {
-    "message": "On a Series",
+    "message": "統計関数",
     "description": "The label for category On a Series in sidebar docs"
   },
   "sidebar.docs.category.PHP": {
@@ -652,7 +652,7 @@
     "description": "The label for category PHP in sidebar docs"
   },
   "sidebar.docs.category.Pasteboard": {
-    "message": "Pasteboard",
+    "message": "ペーストボード",
     "description": "The label for category Pasteboard in sidebar docs"
   },
   "sidebar.docs.category.Pictures": {
@@ -660,35 +660,35 @@
     "description": "The label for category Pictures in sidebar docs"
   },
   "sidebar.docs.category.Printing": {
-    "message": "Printing",
+    "message": "印刷",
     "description": "The label for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications)": {
-    "message": "Process (Communications)",
+    "message": "プロセス (通信)",
     "description": "The label for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface)": {
-    "message": "Process (User Interface)",
+    "message": "プロセス (ユーザーインターフェース)",
     "description": "The label for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Queries": {
-    "message": "Queries",
+    "message": "クエリ",
     "description": "The label for category Queries in sidebar docs"
   },
   "sidebar.docs.category.Quick Report": {
-    "message": "Quick Report",
+    "message": "クイックレポート",
     "description": "The label for category Quick Report in sidebar docs"
   },
   "sidebar.docs.category.Record Locking": {
-    "message": "Record Locking",
+    "message": "レコードロック",
     "description": "The label for category Record Locking in sidebar docs"
   },
   "sidebar.docs.category.Records": {
-    "message": "Records",
+    "message": "レコード",
     "description": "The label for category Records in sidebar docs"
   },
   "sidebar.docs.category.Relations": {
-    "message": "Relations",
+    "message": "リレーション",
     "description": "The label for category Relations in sidebar docs"
   },
   "sidebar.docs.category.Resources": {
@@ -704,11 +704,11 @@
     "description": "The label for category SVG in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol": {
-    "message": "Secured Protocol",
+    "message": "暗号化プロトコル",
     "description": "The label for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection": {
-    "message": "Selection",
+    "message": "セレクション",
     "description": "The label for category Selection in sidebar docs"
   },
   "sidebar.docs.category.Sets": {
@@ -716,7 +716,7 @@
     "description": "The label for category Sets in sidebar docs"
   },
   "sidebar.docs.category.Spell Checker": {
-    "message": "Spell Checker",
+    "message": "スペルチェッカー",
     "description": "The label for category Spell Checker in sidebar docs"
   },
   "sidebar.docs.category.String": {
@@ -724,23 +724,23 @@
     "description": "The label for category String in sidebar docs"
   },
   "sidebar.docs.category.Structure Access": {
-    "message": "Structure Access",
+    "message": "ストラクチャーアクセス",
     "description": "The label for category Structure Access in sidebar docs"
   },
   "sidebar.docs.category.Styled Text": {
-    "message": "Styled Text",
+    "message": "スタイル付きテキスト",
     "description": "The label for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords": {
-    "message": "Subrecords",
+    "message": "サブレコード",
     "description": "The label for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents": {
-    "message": "System Documents",
+    "message": "システムドキュメント",
     "description": "The label for category System Documents in sidebar docs"
   },
   "sidebar.docs.category.System Environment": {
-    "message": "System Environment",
+    "message": "システム環境",
     "description": "The label for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table": {
@@ -748,11 +748,11 @@
     "description": "The label for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools": {
-    "message": "Tools",
+    "message": "ツール",
     "description": "The label for category Tools in sidebar docs"
   },
   "sidebar.docs.category.Transactions": {
-    "message": "Transactions",
+    "message": "トランザクション",
     "description": "The label for category Transactions in sidebar docs"
   },
   "sidebar.docs.category.Triggers": {
@@ -776,11 +776,11 @@
     "description": "The label for category Web Area in sidebar docs"
   },
   "sidebar.docs.category.Web Services (Client)": {
-    "message": "Web Services (Client)",
+    "message": "Webサービス (クライアント)",
     "description": "The label for category Web Services (Client) in sidebar docs"
   },
   "sidebar.docs.category.Web Services (Server)": {
-    "message": "Web Services (Server)",
+    "message": "Webサービス (サーバー)",
     "description": "The label for category Web Services (Server) in sidebar docs"
   },
   "sidebar.docs.category.Windows": {

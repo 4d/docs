@@ -111,7 +111,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | プロパティ                                                               | 配列リストボックス | セレクションリストボックス | コレクションまたはエンティティセレクションリストボックス |
 | ------------------------------------------------------------------- | --------- | ------------- | ---------------------------- |
 | [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色)          | ○         | ○             | ○                            |
-| [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー)                  | ○         | ○             | ○                            |
+| [背景色](properties_BackgroundAndBorder.md#背景色塗りカラー)                   | ○         | ○             | ○                            |
 | [太字](properties_Text.md#太字)                                         | ○         | ○             | ○                            |
 | [背景色式](properties_BackgroundAndBorder.md#背景色式)                      |           | ○             | ○                            |
 | [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル)                | ○         | ○             | ○                            |
@@ -130,7 +130,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [ドロップ有効](properties_Action.md#ドロップ有効)                               | ○         | ○             | ○                            |
 | [フォーカス可](properties_Entry.md#フォーカス可)                                | ○         | ○             | ○                            |
 | [フォント](properties_Text.md#フォント)                                     | ○         | ○             | ○                            |
-| [フォントカラー](properties_Text.md#フォントカラー)                               | ○         | ○             | ○                            |
+| [フォントカラー](properties_Text.md#font-color)                            | ○         | ○             | ○                            |
 | [フォントカラー式](properties_Text.md#フォントカラー式)                             |           | ○             | ○                            |
 | [フォントサイズ](properties_Text.md#フォントサイズ)                               | ○         | ○             | ○                            |
 | [高さ (リストボックス)](properties_CoordinatesAndSizing.md#高さ)               | ○         | ○             | ○                            |
@@ -139,7 +139,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [追加の空白の行を非表示](properties_BackgroundAndBorder.md#追加の空白の行を非表示)        | ○         | ○             | ○                            |
 | [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す)                 | ○         | ○             | ○                            |
 | [セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示)         | ○         | ○             | ○                            |
-| [階層リストボックス](properties_Object.md#階層リストボックス)                         | ○         |               |                              |
+| [階層リストボックス](properties_Object.md#array-list-box)                    | ○         |               |                              |
 | [ハイライトセット](properties_ListBox.md#ハイライトセット)                          |           | ○             |                              |
 | [横揃え](properties_Text.md#横揃え)                                       | ○         | ○             | ○                            |
 | [横線カラー](properties_Gridlines.md#横線カラー)                              | ○         | ○             | ○                            |
@@ -147,11 +147,11 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更)                  | ○         | ○             | ○                            |
 | [イタリック](properties_Text.md#イタリック)                                   | ○         | ○             | ○                            |
 | [左](properties_CoordinatesAndSizing.md#左)                           | ○         | ○             | ○                            |
-| [マスターテーブル](properties_DataSource.md#マスターテーブル)                       |           | ○             |                              |
+| [マスターテーブル](properties_DataSource.md#master-table)                   |           | ○             |                              |
 | [メタ情報式](properties_Text.md#メタ情報式)                                   |           |               | ○                            |
 | [メソッド](properties_Action.md#メソッド)                                   | ○         | ○             | ○                            |
 | [行の移動可](properties_Action.md#行の移動可)                                 | ○         |               |                              |
-| [命名セレクション](properties_DataSource.md#命名セレクション)                       |           | ○             |                              |
+| [命名セレクション](properties_DataSource.md#selection-name)                 |           | ○             |                              |
 | [列数](properties_ListBox.md#列数)                                      | ○         | ○             | ○                            |
 | [スクロールしない列数](properties_ListBox.md#スクロールしない列数)                      | ○         | ○             | ○                            |
 | [ドラッグしない列数](properties_ListBox.md#ドラッグしない列数)                        | ○         | ○             | ○                            |
@@ -194,7 +194,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ### 列特有のプロパティ
 
-[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式の型-式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_Text.md#背景色) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [行フォントカラー式](properties_Text.md#行フォントカラー式) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
+[ヘッダー](#リストボックスヘッダー) - [フッター](#リストボックスフッター) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [デフォルト値](properties_DataSource.md#デフォルト値-のリスト) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時テキスト-false時) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
 
 ## リストボックスヘッダー
 
@@ -210,9 +210,16 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-ランタイムにおいてヘッダーで発生したイベントは、[その列のオブジェクトメソッド](#オブジェクトメソッド) が受け取ります。
+ランタイムにおいてヘッダーで発生したイベントは、[その列のオブジェクトメソッド](properties_Action.md#メソッド) が受け取ります。
 
 ヘッダーに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
+
+#### JSON 文法
+
+| 名称     | データタイプ | とりうる値        |
+| ------ | ------ | ------------ |
+| header | object | ヘッダーのプロパティと値 |
+
 
 ### ヘッダー特有のプロパティ
 
@@ -229,13 +236,20 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 リストボックスの各列フッター毎に標準のテキストプロパティを設定できます。設定すると、リストボックスや列に対する設定よりもこちらが優先されます。 さらに、フッター特有のプロパティを設定することができます。 [カスタムまたは自動計算](properties_Object.md#変数の計算) をフッターに挿入することができます。
 
-ランタイムにおいてフッターで発生したイベントは、[その列のオブジェクトメソッド](#オブジェクトメソッド) が受け取ります。
+ランタイムにおいてフッターで発生したイベントは、[その列のオブジェクトメソッド](properties_Action.md#メソッド) が受け取ります。
 
 フッターに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
 
+#### JSON 文法
+
+| 名称     | データタイプ | とりうる値        |
+| ------ | ------ | ------------ |
+| footer | object | フッターのプロパティと値 |
+
+
 ### フッター特有のプロパティ
 
-[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [変数の計算](properties_Object.md#変数の計算) - [CSSクラス](properties_Object.md#cssクラス) - [幅](properties_CoordinatesAndSizing.md#幅) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプtips)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [変数の計算](properties_Object.md#変数の計算) - [CSSクラス](properties_Object.md#cssクラス) - [幅](properties_CoordinatesAndSizing.md#幅) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色塗りカラー) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプtips)
 
 ## 入力の管理
 
@@ -524,7 +538,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 #### "階層リストボックス" プロパティによる階層化
 
-このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#階層リストボックス) に階層化します。
+このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#配列リストボックス) に階層化します。
 
 *階層リストボックス* プロパティが選択されると、追加プロパティである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース配列を指定します。これが *dataSource* の値である配列名のコレクションとなります。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
@@ -683,7 +697,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 * ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、 `LISTBOX DELETE ROWS` コマンドを使用してリストボックスから必要なだけ行を削除します。
 
-## オブジェクト配列の使用 (4D View Pro)
+## カラム内でのオブジェクト配列の使用 (4D View Pro)
 
 リストボックスのカラムはオブジェクト配列を扱えます。 オブジェクト配列は異なる種類のデータを格納できるので、この強力な機能を使用すれば、単一のカラム内の行ごとに異なる入力タイプを混ぜたり、様々なウィジェットを表示したりといったことができるようになります。 たとえば、最初の行にテキスト入力を挿入し、二行目にチェックボックスを、そして産業目にドロップダウンを挿入する、と言ったことが可能になります。 また、オブジェクト配列は、ボタンやカラーピッカーと言った新しいウィジェットへのアクセスも可能にします。
 
@@ -730,11 +744,11 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 | valueType | デフォルトのウィジェット            | 他に選択可能なウィジェット                                             |
 | --------- | ----------------------- | --------------------------------------------------------- |
-| text      | テキスト入力                  | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
+| テキスト      | テキスト入力                  | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
 | real      | 管理されたテキスト入力 (数字とセパレーター) | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
 | integer   | 管理されたテキスト入力 (数字のみ)      | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト) またはスリーステートチェックボックス |
 | boolean   | チェックボックス                | ドロップダウンメニュー (指定リスト)                                       |
-| color     | 背景色                     | テキスト                                                      |
+| color     | 背景色                     | text                                                      |
 | event     | ラベル付ボタン                 |                                                           |
 |           |                         | すべてのウィジェットには、単位切り替えボタン または 省略ボタン を追加でセルに付属させることができます      |
 

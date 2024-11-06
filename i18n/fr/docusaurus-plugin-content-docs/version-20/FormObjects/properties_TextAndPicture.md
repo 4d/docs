@@ -38,7 +38,7 @@ Aspect général du bouton. Le style du bouton joue également un rôle dans la 
 
 ---
 
-## Marge horizontale
+## Horizontal Margin
 
 Cette propriété permet de définir la taille (en pixels) des marges horizontales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
@@ -153,7 +153,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 ---
 
-## Position Titre/Image
+## Title/Picture Position
 
 Cette propriété permet de modifier l’emplacement relatif du titre par rapport à l’icône associée. Cette propriété n’a pas d’effet lorsque le bouton contient uniquement un titre (pas d’image associée) ou une image (pas de titre). Par défaut, lorsqu’un bouton 3D contient un titre et une image, le texte est placé en-dessous de l’image.
 
@@ -202,7 +202,7 @@ By default, when a button contains a title and a picture, the elements are joine
 
 ---
 
-## Marge verticale
+## Vertical Margin
 
 Cette propriété permet de définir la taille (en pixels) des marges verticales du bouton. Cette marge délimite la zone que l'icône et le titre du bouton ne doivent pas dépasser.
 
@@ -262,4 +262,4 @@ Il est important de noter que la propriété “Avec pop up menu” gère unique
 
 #### Objets pris en charge
 
-[Bouton barre outils](button_overview.md#toolbar) - [Bouton Bevel](button_overview.md#bevel) - [Bouton bevel circulaire](button_overview.md#rounded-bevel) - [Bouton OS X Gradient](button_overview.md#os-x-gradient) - [Bouton OS X Textured](button_overview.md#os-x-textured) - [Bouton Office XP](button_overview.md#office-xp) - [Bouton cercle](button_overview.md#circle) - [Personnalisé](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

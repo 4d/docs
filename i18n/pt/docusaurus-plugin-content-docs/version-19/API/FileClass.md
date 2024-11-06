@@ -537,7 +537,7 @@ Cada propriedade válida definida no parâmetro objeto *info* está escrita no r
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-If you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente de texto, este é transformado em string.
+Se você passar um null ou um texto vazio como valor, uma string vazia será gravada na propriedade. Se passar um tipo de valor diferente de texto, este é transformado em string.
 
 **Parâmetro *info* com um arquivo .plist**
 
@@ -645,14 +645,14 @@ Em *text*, passe o texto a escrever no ficheiro. Pode ser um texto literal ("my 
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
-* in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+* em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou ""UTF-8"),
 * ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
 > Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
+Se existir um Byte Order Mark (BOM) para o conjunto de caracteres, 4D insere no arquivo. Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" e um BOM.
 
-Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no ficheiro. The following constants, found in the **System Documents** theme are available:
+Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no ficheiro. Estão disponíveis as seguintes constantes, encontradas no tema **Documentos sistema**:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                                                   |
 | ----------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

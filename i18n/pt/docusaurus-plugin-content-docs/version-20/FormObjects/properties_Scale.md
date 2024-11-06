@@ -31,7 +31,7 @@ Apresenta/oculta as graduações junto às etiquetas.
 
 #### Objectos suportados
 
-[Termômetro](progressIndicator.md#default-thermometer) - [Régua](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -47,7 +47,7 @@ Medição do visor da escala.
 
 #### Objectos suportados
 
-[Termômetro](progressIndicator.md#default-thermometer) - [Régua](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -67,7 +67,7 @@ Especifica a localização do texto de um objeto.
 
 #### Objectos suportados
 
-[Termômetro](progressIndicator.md#default-thermometer) - [Régua](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 

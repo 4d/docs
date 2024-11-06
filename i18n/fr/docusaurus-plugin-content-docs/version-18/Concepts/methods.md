@@ -31,7 +31,7 @@ Une méthode projet peut tenir les rôles suivants, en fonction de la manière d
 ### Sous-routines et fonctions
 Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
-Lorsque vous avez écrit une méthode projet, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes projets, ou à partir des [méthodes prédéfinies](#predefined-methods) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
+Lorsque vous avez écrit une méthode projet, elle devient partie intégrante du langage de la base dans laquelle elle a été créée. You can then call the project method from other project methods, or from [predefined methods](#specialized-methods) in the same way that you call 4D’s built-in commands. Une méthode projet utilisée de cette manière est appelée une sous-routine.
 
 L'utilisation de sous-routines procure les avantages suivants :
 
@@ -234,7 +234,7 @@ Dans 4D, la récursivité est typiquement utilisée pour :
 **Important :** Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
 
 
-## Méthodes spécialisées
+## Specialized Methods {#specialized-methods}
 
 Outre les **méthodes projets**, 4D prend en charge plusieurs types de méthodes spécifiques, appelées automatiquement en fonction des événements :
 

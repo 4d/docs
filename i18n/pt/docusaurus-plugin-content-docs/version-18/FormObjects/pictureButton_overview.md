@@ -48,7 +48,7 @@ In addition to the standard positioning and appearance settings, you can set som
 * By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. Por outras palavras, não regressa à primeira imagem da série.
 
 Estão disponíveis os seguintes outros modos:
-* [Repetir a sequência](properties_Animation.md#loopBackToFirstFrame)
+* [Repetir a sequência](properties_Animation.md#loop-back-to-first-frame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 * [Alternar continuamente em cliques](properties_Animation.md#switch-continuously-on-clicks)

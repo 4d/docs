@@ -61,7 +61,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::note
 
-この関数は、リモートクライアントとストアドプロシージャーのセッションでは何もせず、常に **false** を返します。
+This function does nothing and always returns **True** with remote client and stored procedure sessions.
 
 :::
 
@@ -351,7 +351,7 @@ End if
 
 `.info` プロパティは、<!-- REF #SessionClass.info.Summary -->サーバー上のリモートクライアントまたはストアドプロシージャーセッションの情報を格納します<!-- END REF -->。
 
-`.info` オブジェクトは、リモートクライアントおよびストアドプロシージャーセッションに対して [`Get process activity`](https://doc.4d.com/4dv20/help/command/ja/page1495.html) コマンドによって返されるオブジェクトと同じです。
+The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
@@ -366,7 +366,7 @@ End if
 | creationDateTime | 日付 (ISO 8601) | セッション作成の日時                                                                          |
 | state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                         |
 | ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                   |
-| persistentID     | Text                             | セッションの永続的な ID                                                                       |
+| persistentID     | Text                             | Remote sessions: Session's persistent ID                            |
 
 :::note
 

@@ -61,7 +61,7 @@ The availability of properties and functions in the `Session` object depends on 
 
 :::note
 
-This function does nothing and always returns **False** with remote client and stored procedure sessions.
+This function does nothing and always returns **True** with remote client and stored procedure sessions.
 
 :::
 
@@ -352,7 +352,7 @@ Essa propriedade só está disponível com sessões de procedimento armazenado e
 
 The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) command for remote client and stored procedure sessions.
+The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
 
 The `.info` object contains the following properties:
 
@@ -367,7 +367,7 @@ The `.info` object contains the following properties:
 | creationDateTime | Date ISO 8601 | Data e hora de criação da sessão                                                                                                                          |
 | state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                          |
 | ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                          |
-| persistentID     | Text          | ID persistente da sessão                                                                                                                                  |
+| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                  |
 
 :::note
 

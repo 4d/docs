@@ -140,7 +140,7 @@ Les propriétés prises en charge dépendent du type de list box.
 | [Masquer lignes vides finales](properties_BackgroundAndBorder.md#hide-extra-blank-rows)     | X                | X                   | X                                       |
 | [Cacher rectangle de focus](properties_Appearance.md#hide-focus-rectangle)                  | X                | X                   | X                                       |
 | [Cacher surlignage sélection](properties_Appearance.md#hide-selection-highlight)            | X                | X                   | X                                       |
-| [List box hiérarchique](properties_Object.md#array-list-box)                         | X                |                     |                                         |
+| [List box hiérarchique](properties_Object.md#array-list-box)                                | X                |                     |                                         |
 | [Ensemble surlignage](properties_ListBox.md#highlight-set)                                  |                  | X                   |                                         |
 | [Alignement horizontal](properties_Text.md#horizontal-alignment)                            | X                | X                   | X                                       |
 | [Couleur lignes horizontales](properties_Gridlines.md#horizontal-line-color)                | X                | X                   | X                                       |
@@ -148,11 +148,11 @@ Les propriétés prises en charge dépendent du type de list box.
 | [Dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing)               | X                | X                   | X                                       |
 | [Italique](properties_Text.md#italic)                                                       | X                | X                   | X                                       |
 | [Gauche](properties_CoordinatesAndSizing.md#left)                                           | X                | X                   | X                                       |
-| [Table principale](properties_DataSource.md#master-table)                                          |                  | X                   |                                         |
+| [Table principale](properties_DataSource.md#master-table)                                   |                  | X                   |                                         |
 | [Meta info expression](properties_Text.md#meta-info-expression)                             |                  |                     | X                                       |
 | [Méthode](properties_Action.md#method)                                                      | X                | X                   | X                                       |
 | [Lignes déplaçables](properties_Action.md#movable-rows)                                     | X                |                     |                                         |
-| [Sélection temporaire](properties_DataSource.md#selection-name)                              |                  | X                   |                                         |
+| [Sélection temporaire](properties_DataSource.md#selection-name)                             |                  | X                   |                                         |
 | [Nombre de colonnes](properties_ListBox.md#number-of-columns)                               | X                | X                   | X                                       |
 | [Nombre de colonnes verrouillées](properties_ListBox.md#number-of-locked-columns)           | X                | X                   | X                                       |
 | [Nombre de colonnes statiques](properties_ListBox.md#number-of-static-columns)              | X                | X                   | X                                       |
@@ -655,7 +655,7 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 #### Propriété List box hiérarchique
 
-Cette propriété permet de définir que la list box doit être affichée sous forme hiérarchique. Dans le formulaire JSON, cette fonctionnalité est déclenchée [lorsque la valeur de la propriété *dataSource* de la colonne est un tableau](properties_Object.md#array-list-box), c'est-à-dire une collection.
+Cette propriété permet de définir que la list box doit être affichée sous forme hiérarchique. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#array-list-box), i.e. a collection.
 
 Des options supplémentaires (**Variable 1...10**) sont disponibles lorsqu'une *List box hiérarchique* est définie, correspondant à chaque élément du tableau *dataSource* à utiliser comme colonne de rupture. A chaque saisie d’une valeur dans un champ, une nouvelle ligne est ajoutée. Jusqu’à 10 variables peuvent être définies. Ces variables définissent les niveaux hiérarchiques à afficher dans la première colonne.
 

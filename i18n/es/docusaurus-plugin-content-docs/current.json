@@ -512,7 +512,7 @@
     "description": "The generated-index page title for category Language in sidebar docs"
   },
   "sidebar.docs.category.4D Environment": {
-    "message": "4D Environment",
+    "message": "Entorno 4D",
     "description": "The label for category 4D Environment in sidebar docs"
   },
   "sidebar.docs.category.Arrays": {
@@ -532,7 +532,7 @@
     "description": "The label for category Boolean in sidebar docs"
   },
   "sidebar.docs.category.Cache Management": {
-    "message": "Cache Management",
+    "message": "Gestión de caché",
     "description": "The label for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections": {
@@ -592,7 +592,7 @@
     "description": "The label for category HTTP in sidebar docs"
   },
   "sidebar.docs.category.Hierarchical Lists": {
-    "message": "Hierarchical Lists",
+    "message": "Listas jerárquicas",
     "description": "The label for category Hierarchical Lists in sidebar docs"
   },
   "sidebar.docs.category.Import and Export": {

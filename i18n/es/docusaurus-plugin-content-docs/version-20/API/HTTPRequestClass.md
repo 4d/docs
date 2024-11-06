@@ -386,4 +386,7 @@ The `4D.HTTPRequest.wait()` function <!-- REF #HTTPRequestClass.wait().Summary -
 Si se pasa un parámetro *time*, la función esperará como máximo el número de segundos definido.
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
+
+During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other `CALL WORKER` calls. Se puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde una retrollamada.
+
 <!-- END REF -->

@@ -11,7 +11,7 @@ La règle est un objet d'interface standard permettant de définir ou de lire un
 
 [La variable ou expression associée](properties_Object.md#expression-type) à l’objet peut être affectée à une zone saisissable (champ ou variable) afin de stocker ou modifier la valeur courante de l’objet.
 
-Pour plus d'informations, veuillez vous reporter à la section [Utiliser des indicateurs](progressIndicator.md#using-indicators) de la page "Indicateurs de progression".
+For more information, please refer to [Using indicators](progressIndicator.md#using-indicators) in the "Progress Indicator" page.
 
 ### Propriétés prises en charge
 

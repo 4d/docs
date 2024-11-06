@@ -31,7 +31,7 @@ Apresenta/oculta as graduações junto às etiquetas.
 
 #### Objectos suportados
 
-[Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -47,7 +47,7 @@ Medição do visor da escala.
 
 #### Objectos suportados
 
-[Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -67,7 +67,7 @@ Especifica a localização do texto de um objeto.
 
 #### Objectos suportados
 
-[Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md#ruler)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
 ---
 
@@ -86,7 +86,7 @@ Valor máximo de um indicador.
 
 #### Objectos suportados
 
-[Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -102,7 +102,7 @@ Valor mínimo de um indicador. For numeric steppers, this property represent sec
 
 #### Objectos suportados
 
-[Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -118,4 +118,4 @@ Intervalo mínimo aceite entre valores durante a utilização. For numeric stepp
 
 #### Objectos suportados
 
-[Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md)
+[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)

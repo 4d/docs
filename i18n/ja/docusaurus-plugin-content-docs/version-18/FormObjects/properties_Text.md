@@ -152,7 +152,7 @@ title: テキスト
 
 文字の色を指定します。
 
-> オブジェクトの [境界線スタイル](properties_backgrounandborder.md#境界線スタイル) に "標準" または "ドット" を選択している場合、このプロパティはその境界線の色も指定します。
+> This property also sets the [color of object's border](properties_BackgroundAndBorder.md#background-color--fill-color) (if any) when "plain" or "dotted" style is used.
 
 カラーは次の方法で指定できます:
 
@@ -289,7 +289,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 | disabled                  | boolean | 対応する行を無効化します。 このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。 テキストや、(チェックボックス、リストなどの) コントロール類は暗くなっているかグレーアウトされます。 デフォルト値: false。                                                                                                |
 | cell.`<columnName>` | object  | プロパティを単一のカラムに適用するときに使用します。 `<columnName>` には、リストボックスカラムのオブジェクト名を渡します。 **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。                                                  |
 
-> このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
+> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)).
 
 **例題**
 

@@ -47,7 +47,7 @@ In addition to the standard positioning and appearance settings, you can set som
 
 Estão disponíveis os seguintes outros modos:
 
-* [Repetir a sequência](properties_Animation.md#loopBackToFirstFrame)
+* [Repetir a sequência](properties_Animation.md#loop-back-to-first-frame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 * [Alternar continuamente em cliques](properties_Animation.md#switch-continuously-on-clicks)

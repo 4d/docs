@@ -42,7 +42,7 @@ Se muestra la caja de diálogo **Gestión de licencias** (la página de Activaci
 
 ### Activación de 4D Server
 
-1. Lance la aplicación 4D Server. Aparece la caja de diálogo para elegir el [modo de activación](#activation-mode).
+1. Lance la aplicación 4D Server. The dialog box for choosing the activation mode appears.
 
 ![](../assets/en/getStart/helpMenu.png)
 

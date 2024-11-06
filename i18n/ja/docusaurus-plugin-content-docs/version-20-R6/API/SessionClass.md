@@ -153,7 +153,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-この関数は、リモートクライアントとストアドプロシージャーのセッションでは何もせず、常に **false** を返します。
+This function does nothing and always returns **True** with remote client and stored procedure sessions.
 
 :::
 
