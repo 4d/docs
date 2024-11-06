@@ -137,5 +137,5 @@ The Custom radio button style accepts a personalized background picture and allo
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
-- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
+- [背景パス名](properties_TextAndPicture.md#背景パス名) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタム)
+- [ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名) - [状態の数](properties_TextAndPicture.md#状態の数) - [タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置) (ツールバーボタン、ベベル、角の丸いベベル、OS X グラデーション、OS X テクスチャー、Office XP、カスタム)
