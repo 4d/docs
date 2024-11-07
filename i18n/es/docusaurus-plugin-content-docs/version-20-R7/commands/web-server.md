@@ -38,7 +38,7 @@ Por defecto, si se omite el parámetro *option*, el comando devuelve una referen
 | `Web server host database`     | 2     | Servidor web de la base local de un componente                                       |
 | `Web server receiving request` | 3     | Servidor web que ha recibido la solicitud (servidor web objetivo) |
 
-The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
+El **objeto servidor web devuelto** contiene los valores actuales de las [propiedades del servidor web](../API/WebServerClass.md).
 
 #### Ejemplo
 
@@ -55,5 +55,5 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 #### Ver también
 
-[WEB Server list](web-server-list.md)\
+[Lista servidor WEB](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
