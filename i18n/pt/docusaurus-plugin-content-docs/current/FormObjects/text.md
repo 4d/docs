@@ -23,7 +23,7 @@ Um objeto texto permite exibir conteúdo escrito estático (_e.g._, instruções
 
 ## Rotação
 
-4D permite que você gire áreas de texto em seus formulários usando a propriedade [Orientação](propriedades_Text.md#orientação).
+4D permite que você gire áreas de texto em seus formulários usando a propriedade [Orientação](properties_Text.md#orientation).
 
 ![](../assets/en/FormObjects/staticText.png)
 
@@ -33,9 +33,9 @@ Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, 
 
 ![](../assets/en/FormObjects/staticText2.png)
 
-- Se o objeto for redimensionado na direção A, seu [largura](propriedades_CoordinatesAndSizing.md#width) será modificada;
-- Se o objeto for redimensionado em direção C, seu [altura](propriedades_CoordinatesAndSizing.md#height) será modificada;
-- Se o objeto for redimensionado na direção B, ambos seus [largura](propriedades_CoordinatesAndSizing.md#width) e [altura](properties_CoordinatesAndSizing.md#height) serão modificados.
+- Se o objeto for redimensionado na direção A, seu [largura](properties_CoordinatesAndSizing.md#width) será modificada;
+- Se o objeto for redimensionado em direção C, seu [altura](properties_CoordinatesAndSizing.md#height) será modificada;
+- Se o objeto for redimensionado na direção B, ambos seus [largura](properties_CoordinatesAndSizing.md#width) e [altura](properties_CoordinatesAndSizing.md#height) serão modificados.
 
 ## Propriedades compatíveis
 
