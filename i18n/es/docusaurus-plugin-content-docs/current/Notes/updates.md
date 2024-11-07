@@ -20,9 +20,9 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 - New Build Application keys for remote 4D applications to validate the server certificate authority [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.en.html) and/or [domain](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.en.html).
 - 4D Language:
   - New commands: [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
-  - Modified commands: [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
+  - Comandos modificados: [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
 - 4D Write Pro:
-  - New command: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
+  - Nuevo comando: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - Modified commands: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) and [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
   - [What's new page](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.en.html) in 4D Write Pro Reference.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R7): list of all bugs that have been fixed in 4D 20 R7.
@@ -162,7 +162,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 ## 4D 20.x LTS
 
-See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/updates.md).
+Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/Notes/updates.md).
 
 ## Tabla de la librería
 
