@@ -125,7 +125,7 @@ O estilo de caixa de verificação Plano tem um aspeto minimalista. A natureza g
    }
 ```
 
-### Toolbar button {#toolbar-button}
+### Botão barra de ferramentas {#toolbar-button}
 
 O estilo da caixa de verificação do botão da barra de ferramentas destina-se principalmente à integração numa barra de ferramentas.
 
