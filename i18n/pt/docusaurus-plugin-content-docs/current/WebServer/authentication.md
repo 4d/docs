@@ -142,7 +142,7 @@ If your application uses this information, it is up to you to parse the header a
 
 #### $IPClient - Endereço IP do cliente Web
 
-The `$IPClient` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+O parâmetro `$IPClient` recebe o endereço IP da máquina do navegador. This information can allow you to distinguish between intranet and internet connections.
 
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
