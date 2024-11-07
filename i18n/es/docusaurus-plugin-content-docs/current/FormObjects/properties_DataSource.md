@@ -308,7 +308,7 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 ---
 
-## Selection Name
+## Nombre de selección
 
 `List boxes de tipo selección nombrada`
 
