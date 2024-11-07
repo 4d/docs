@@ -141,7 +141,7 @@ Quiere crear una nueva llave en la clase `CryptoKey`:
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-You want to list 4D built-in classes:
+Quiere listar las clases integradas en 4D:
 
 ```4d
  var $keys : collection
@@ -731,7 +731,7 @@ Una vez instanciado, existe una clase singleton (y su singleton) siempre que exi
 
 ### Crear y utilizar singletons
 
-You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) antes del [`Class constructor`](#class-constructor):
 
 - To declare a (process) singleton class, write `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
