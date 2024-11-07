@@ -259,7 +259,7 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 ---
 
-## Selection Name {#selection-name}
+## Nombre de selección {#selection-name}
 
 `List boxes de tipo selección nombrada`
 
