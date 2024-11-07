@@ -389,9 +389,9 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
+comentários  
     /*
-    other comments
+    outros comentários
     */
 */
 ...
