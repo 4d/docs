@@ -140,13 +140,13 @@ Si su aplicación utiliza esta información, deberá analizar el encabezado y el
 
 > For performance reasons, the size of data passing through the $content parameter must not exceed 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
 
-#### $IPClient - Web client IP address
+#### $IPClient - Dirección IP del cliente web
 
 The `$IPClient` parameter receives the IP address of the browser’s machine. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
 
 > 4D devuelve las direcciones IPv4 en un formato híbrido IPv6/IPv4 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
-#### $IPServer - Server IP address
+#### $IPServer - Dirección IP del servidor
 
 The `$IPServer` parameter receives the IP address used to call the web server. 4D permite el multi-homing, que permite explotar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
@@ -156,7 +156,7 @@ The `$user` and `$password` parameters receive the user name and password entere
 
 > If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
 
-#### $accept - Function return
+#### $accept - Retorno de función
 
 The `On Web Authentication` database method returns a boolean:
 
