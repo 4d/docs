@@ -21,7 +21,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 ---
 
-## Background Color / Fill Color
+## Cor de fundo / Cor de preenchimento
 
 Define a cor de fundo de um objeto.
 
@@ -67,7 +67,7 @@ Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPE
 
 ---
 
-## Border Line Style {#border-line-style}
+## Estilo de linha de borda {#border-line-style}
 
 Permite definir um estilo padrão para o contorno do objeto.
 
@@ -83,7 +83,7 @@ Permite definir um estilo padrão para o contorno do objeto.
 
 ---
 
-## Dotted Line Type {#dotted-line-type}
+## Tipo de linha pontilhada {#dotted-line-type}
 
 Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e brancos.
 
