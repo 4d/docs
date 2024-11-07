@@ -16,11 +16,11 @@ title: On Window Opening Denied
 
 ## Descrição
 
-This event is generated when the opening of a pop-up window is blocked by the Web area. As áreas Web de 4D não permitem a abertura de janelas pop-up.
+Esse evento é gerado quando a abertura de uma janela pop-up é bloqueada pela área Web. As áreas Web de 4D não permitem a abertura de janelas pop-up.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Você pode descobrir o URL bloqueado usando o comando `WA Get last filtered URL (Obter o último URL filtrado` ).
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Pode aceitar a entrega chamando:
+Esse evento também é acionado quando uma operação de soltar é feita na área da Web (com \[mecanismos] do sistema incorporado e do Windows(../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) se a opção [Drag and drop\](../FormObjects/webArea_overview.md#user-interface) também estiver ativada para a área. Pode aceitar a entrega chamando:
 
 ```4d
 //web area object method If (FORM Event.code=On Window Opening Denied)
