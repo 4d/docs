@@ -131,7 +131,7 @@ A sintaxe do ficheiro `roles.json` é a seguinte:
 |                     | \[].privileges |               | Coleção de strings               |             | Lista de nomes de privilégios incluídos                                      |
 | permissions         |                 |               | Object                           | X           | Lista de acções permitidas                                                   |
 |                     | allowed         |               | Coleção de objectos `permission` |             | Lista de permissões permitidas                                               |
-|                     |                 | \[].applyTo  | String                           | X           | Targeted [resource](#resources) name                                         |
+|                     |                 | \[].applyTo  | String                           | X           | Nome do [recurso](#resources) alvo                                           |
 |                     |                 | \[].type     | String                           | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
 |                     |                 | \[].read     | Coleção de strings               |             | Lista de privilégios                                                         |
 |                     |                 | \[].create   | Coleção de strings               |             | Lista de privilégios                                                         |
