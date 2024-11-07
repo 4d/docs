@@ -22,7 +22,7 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 ---
 
-## Background Color / Fill Color
+## Cor de fundo / Cor de preenchimento
 
 Define a cor de fundo de um objeto.
 
@@ -219,4 +219,4 @@ Define o fundo do list box como "Transparent". When set, any [alternate backgrou
 
 #### Veja também
 
-[Background Color / Fill Color](#background-color--fill-color)
+[Cor de fundo / Cor de preenchimento](#background-color--fill-color)

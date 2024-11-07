@@ -47,7 +47,7 @@ Arquivo de desenvolvimento do projeto, utilizado para designar e lançar o proje
 
 **Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server pode abrir arquivos .4DProject para fins de teste.
 
-### Sources folder {#sources-folder}
+### Pasta Sources {#sources-folder}
 
 | Conteúdos               | Descrição                                                                                                                                                                                                                                                                                                                                                                                                         | Formato |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |

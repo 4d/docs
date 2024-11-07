@@ -21,7 +21,7 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 
 | Puede ajustarse con           | Nombre                                                                                                          | Comentarios |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)             |             |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Utilizar la caché 4D Web](../settings/web.md#use-the-4d-web-cache)      |             |
 | Caja de diálogo de parámetros | [Página Opciones (I) /Tamaño de la caché de las páginas](../settings/web.md#page-cache-size) |             |
 
 Activa y configura la caché de las páginas web.

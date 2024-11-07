@@ -244,7 +244,7 @@ Define la altura de las líneas del list box (excluyendo los encabezados y pies 
 
 #### Ver también
 
-[Row Height Array](#row-height-array)
+[Array altura de línea](#row-height-array)
 
 ---
 

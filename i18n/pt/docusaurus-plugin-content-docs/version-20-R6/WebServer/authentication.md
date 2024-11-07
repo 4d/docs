@@ -102,12 +102,12 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 Estes parâmetros devem ser declarados da seguinte forma:
 
 ```4d
-//On Web Authentication database method
- 
+//Método base On Web Authentication
+
  C_TEXT($1;$2;$3;$4;$5;$6)
  C_BOOLEAN($0)
- 
-//Code for the method
+
+//Código do método
 ```
 
 Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):

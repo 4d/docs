@@ -114,7 +114,7 @@ O arquivo `roles.json` descreve todas as configurações de segurança do projet
 
 ### Arquivo padrão
 
-Quando você cria um projeto, um arquivo `roles.json` padrão é criado no seguinte local: `<pasta do projeto>/Projeto/Fontes/` (consulte a seção [Arquitetura](../Projeto/arquitetura.md#fontes)).
+Quando você cria um projeto, um arquivo `roles.json` padrão é criado no seguinte local: `<project folder>/Project/Sources/` (consulte a seção [Arquitetura](../Project/architecture.md#sources)).
 
 O arquivo padrão tem o seguinte conteúdo:
 

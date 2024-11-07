@@ -64,28 +64,28 @@ Los comandos de 4D View Pro no son hilo seguro.
 [VP Get formula](commands/vp-get-formula.md)</b>
 [VP Get formula by name](commands/vp-get-formula-by-name.md)</b>
 [VP Get formulas](commands/vp-get-formulas.md)</b>
-[VP Get frozen panes](commands/vp-get-frozen-panes.md)</b>
-[VP Get names](commands/vp-get-names.md)</b>
-[VP Get print info](commands/vp-get-print-info.md)</b>
-[VP Get row attributes](commands/vp-get-row-attributes.md)</b>
-[VP Get row count](commands/vp-get-row-count.md)</b>
-[VP Get selection](commands/vp-get-selection.md)</b>
-[VP Get sheet count](commands/vp-get-sheet-count.md)</b>
-[VP Get sheet index](commands/vp-get-sheet-index.md)</b>
-[VP Get sheet name](commands/vp-get-sheet-name.md)</b>
-[VP Get sheet options](commands/vp-get-sheet-options.md)</b>
-[VP Get show print lines](commands/vp-get-show-print-lines.md)</b>
-[VP Get spans](commands/vp-get-spans.md)</b>
-[VP Get stylesheet](commands/vp-get-stylesheet.md)</b>
-[VP Get stylesheets](commands/vp-get-stylesheets.md)</b>
-[VP Get table column attributes](commands/vp-get-table-column-attributes.md)</b>
-[VP Get table column index](commands/vp-get-table-column-index.md)</b>
-[VP Get table dirty rows](commands/vp-get-table-dirty-rows.md)</b>
-[VP Get table range](commands/vp-get-table-range.md)</b>
-[VP Get table theme](commands/vp-get-table-theme.md)</b>
-[VP Get tables](commands/vp-get-tables.md)</b>
-[VP Get value](commands/vp-get-value.md)</b>
-[VP Get values](commands/vp-get-values.md)</b>
+[VP Get frozen panes](commands/vp-get-frozen-panes.md)</11>
+[VP Get names](commands/vp-get-names.md)</12>
+[VP Get print info](commands/vp-get-print-info.md)</13>
+[VP Get row attributes](commands/vp-get-row-attributes.md)</14>
+[VP Get row count](commands/vp-get-row-count.md)</15>
+[VP Get selection](commands/vp-get-selection.md)</16>
+[VP Get sheet count](commands/vp-get-sheet-count.md)</17>
+[VP Get sheet index](commands/vp-get-sheet-index.md)</18>
+[VP Get sheet name](commands/vp-get-sheet-name.md)</19>
+[VP Get sheet options](commands/vp-get-sheet-options.md)</20>
+[VP Get show print lines](commands/vp-get-show-print-lines.md)</21>
+[VP Get spans](commands/vp-get-spans.md)</22>
+[VP Get stylesheet](commands/vp-get-stylesheet.md)</23>
+[VP Get stylesheets](commands/vp-get-stylesheets.md)</24>
+[VP Get table column attributes](commands/vp-get-table-column-attributes.md)</25>
+[VP Get table column index](commands/vp-get-table-column-index.md)</26>
+[VP Get table dirty rows](commands/vp-get-table-dirty-rows.md)</27>
+[VP Get table range](commands/vp-get-table-range.md)</28>
+[VP Get table theme](commands/vp-get-table-theme.md)</29>
+[VP Get tables](commands/vp-get-tables.md)</30>
+[VP Get value](commands/vp-get-value.md)</31>
+[VP Get values](commands/vp-get-values.md)</32>
 [VP Get workbook options](commands/vp-get-workbook-options.md)
 
 <a id="I"><b>I</b></a>
@@ -129,8 +129,8 @@ Los comandos de 4D View Pro no son hilo seguro.
 [VP RESET SELECTION](commands/vp-reset-selection.md)</b>
 [VP RESIZE TABLE](commands/vp-resize-table.md)</b>
 [VP RESUME COMPUTING](commands/vp-resume-computing.md)</b>
-[VP Row](commands/vp-row.md)</b>
-[VP ROW AUTOFIT](commands/vp-row-autofit.md)</b>
+[VP Row](commands/vp-row.md)</11>
+[VP ROW AUTOFIT](commands/vp-row-autofit.md)</12>
 [VP Run offscreen area](commands/vp-run-offscreen-area.md)
 
 <a id="S"><b>S</b></a>
@@ -146,28 +146,28 @@ Los comandos de 4D View Pro no son hilo seguro.
 [VP SET CURRENT SHEET](commands/vp-set-current-sheet.md)</b>
 [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md)</b>
 [VP SET DATA CONTEXT](commands/vp-set-data-context.md)</b>
-[VP SET DATE TIME VALUE](commands/vp-set-date-time-value.md)</b>
-[VP SET DATE VALUE](commands/vp-set-date-value.md)</b>
-[VP SET DEFAULT STYLE](commands/vp-set-default-style.md)</b>
-[VP SET FIELD](commands/vp-set-field.md)</b>
-[VP SET FORMULA](commands/vp-set-formula.md)</b>
-[VP SET FORMULAS](commands/vp-set-formulas.md)</b>
-[VP SET FROZEN PANES](commands/vp-set-frozen-panes.md)</b>
-[VP SET NUM VALUE](commands/vp-set-num-value.md)</b>
-[VP SET PRINT INFO](commands/vp-set-print-info.md)</b>
-[VP SET ROW ATTRIBUTES](commands/vp-set-row-attributes.md)</b>
-[VP SET ROW COUNT](commands/vp-set-row-count.md)</b>
-[VP SET SELECTION](commands/vp-set-selection.md)</b>
-[VP SET SHEET COUNT](commands/vp-set-sheet-count.md)</b>
-[VP SET SHEET NAME](commands/vp-set-sheet-name.md)</b>
-[VP SET SHEET OPTIONS](commands/vp-set-sheet-options.md)</b>
-[VP SET SHOW PRINT LINES](commands/vp-set-show-print-lines.md)</b>
-[VP SET TABLE COLUMN ATTRIBUTES](commands/vp-set-table-column-attributes.md)</b>
-[VP SET TABLE THEME](commands/vp-set-table-theme.md)</b>
-[VP SET TEXT VALUE](commands/vp-set-text-value.md)</b>
-[VP SET TIME VALUE](commands/vp-set-time-value.md)</b>
-[VP SET VALUE](commands/vp-set-value.md)</b>
-[VP SET VALUES](commands/vp-set-values.md)</b>
-[VP SET WORKBOOK OPTIONS](commands/vp-set-workbook-options.md)</b>
-[VP SHOW CELL](commands/vp-show-cell.md)</b>
-[VP SUSPEND COMPUTING](commands/vp-suspend-computing.md)</b>
+[VP SET DATE TIME VALUE](commands/vp-set-date-time-value.md)</11>
+[VP SET DATE VALUE](commands/vp-set-date-value.md)</12>
+[VP SET DEFAULT STYLE](commands/vp-set-default-style.md)</13>
+[VP SET FIELD](commands/vp-set-field.md)</14>
+[VP SET FORMULA](commands/vp-set-formula.md)</15>
+[VP SET FORMULAS](commands/vp-set-formulas.md)</16>
+[VP SET FROZEN PANES](commands/vp-set-frozen-panes.md)</17>
+[VP SET NUM VALUE](commands/vp-set-num-value.md)</18>
+[VP SET PRINT INFO](commands/vp-set-print-info.md)</19>
+[VP SET ROW ATTRIBUTES](commands/vp-set-row-attributes.md)</20>
+[VP SET ROW COUNT](commands/vp-set-row-count.md)</21>
+[VP SET SELECTION](commands/vp-set-selection.md)</22>
+[VP SET SHEET COUNT](commands/vp-set-sheet-count.md)</23>
+[VP SET SHEET NAME](commands/vp-set-sheet-name.md)</24>
+[VP SET SHEET OPTIONS](commands/vp-set-sheet-options.md)</25>
+[VP SET SHOW PRINT LINES](commands/vp-set-show-print-lines.md)</26>
+[VP SET TABLE COLUMN ATTRIBUTES](commands/vp-set-table-column-attributes.md)</27>
+[VP SET TABLE THEME](commands/vp-set-table-theme.md)</28>
+[VP SET TEXT VALUE](commands/vp-set-text-value.md)</29>
+[VP SET TIME VALUE](commands/vp-set-time-value.md)</30>
+[VP SET VALUE](commands/vp-set-value.md)</31>
+[VP SET VALUES](commands/vp-set-values.md)</32>
+[VP SET WORKBOOK OPTIONS](commands/vp-set-workbook-options.md)</33>
+[VP SHOW CELL](commands/vp-show-cell.md)</34>
+[VP SUSPEND COMPUTING](commands/vp-suspend-computing.md)</35>

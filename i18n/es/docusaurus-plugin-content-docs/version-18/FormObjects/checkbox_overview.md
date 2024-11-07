@@ -125,7 +125,7 @@ El estilo de casilla de selección Plano tiene una apariencia minimalista. La na
    }
 ```
 
-### Toolbar button {#toolbar-button}
+### Botón barra de herramientas {#toolbar-button}
 
 El estilo del botón barra de herramientas está pensado principalmente para su integración en una barra de herramientas.
 

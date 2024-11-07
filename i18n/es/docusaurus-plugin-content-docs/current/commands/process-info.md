@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
+El comando `Process info` <!-- REF #_command_.Process info.Summary -->devuelve un objeto que da información detallada sobre el proceso cuyo número se pasa en *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
 
 El objeto devuelto contiene las siguientes propiedades:
 

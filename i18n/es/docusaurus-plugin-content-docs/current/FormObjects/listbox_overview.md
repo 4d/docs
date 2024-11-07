@@ -149,7 +149,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Ocultar líneas en blanco adicionales](properties_BackgroundAndBorder.md#hide-extra-blank-rows)   | X              | X                  | X                                     |
 | [Ocultar rectángulo de enfoque](properties_Appearance.md#hide-focus-rectangle)                    | X              | X                  | X                                     |
 | [Ocultar resaltado de selección](properties_Appearance.md#hide-selection-highlight)               | X              | X                  | X                                     |
-| [Hierarchical List Box](properties_Object.md#array-list-box)                                      | X              |                    |                                       |
+| [List Box jerárquico](properties_Object.md#array-list-box)                                        | X              |                    |                                       |
 | [Conjunto de resaltado](properties_ListBox.md#highlight-set)                                      |                | X                  |                                       |
 | [Alineación horizontal](properties_Text.md#alineación-horizontal)                                 | X              | X                  | X                                     |
 | [Color de línea horizontal](properties_Gridlines.md#horizontal-line-color)                        | X              | X                  | X                                     |
@@ -158,7 +158,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing)                              | X              | X                  | X                                     |
 | [Itálica](properties_Text.md#italic)                                                              | X              | X                  | X                                     |
 | [Izquierda](properties_CoordinatesAndSizing.md#izquierda)                                         | X              | X                  | X                                     |
-| [Master Table](properties_DataSource.md#master-table)                                             |                | X                  |                                       |
+| [Tabla maestra](properties_DataSource.md#master-table)                                            |                | X                  |                                       |
 | [Meta info expression](properties_Text.md#meta-info-expression)                                   |                |                    | X                                     |
 | [Método](properties_Action.md#method)                                                             | X              | X                  | X                                     |
 | [Líneas móviles](properties_Action.md#movable-rows)                                               | X              |                    |                                       |
@@ -255,7 +255,7 @@ Los eventos formulario de los objetos list box o columnas de list box pueden dev
 
 > Si un evento se produce en una columna o línea "fake" que no existe, se suele devolver una cadena vacía.
 
-## List box columns {#list-box-columns}
+## Columnas list box {#list-box-columns}
 
 Un list box está formado por uno o varios objetos columna que tienen propiedades específicas. Puede seleccionar una columna de list box en el editor de formularios haciendo clic en ella cuando el objeto list box está seleccionado:
 

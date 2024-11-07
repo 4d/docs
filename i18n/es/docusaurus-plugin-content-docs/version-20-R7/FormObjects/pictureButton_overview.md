@@ -50,11 +50,11 @@ Además de los parámetros de posicionamiento y de apariencia estándar, puede d
 Hay otros modos disponibles:
 
 - [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame)
-- [Switch back when Released](properties_Animation.md#switch-back-when-released)
-- [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
+- [Retroceder al soltar](properties_Animation.md#switch-back-when-released)
+- [Alternar al pasar el ratón por encima](properties_Animation.md#switch-when-roll-over)
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
-- [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
-- [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
+- [Usar el último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
+- [Usar último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
 
 > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displa La numeración de las imágenes en la tabla empieza por 0.
 

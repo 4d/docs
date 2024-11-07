@@ -110,7 +110,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 
 #### Veja também
 
-[Enable CORS Service](#enable-cors-service)
+[Ativar o serviço CORS](#enable-cors-service)
 
 ## Registro de depuração
 

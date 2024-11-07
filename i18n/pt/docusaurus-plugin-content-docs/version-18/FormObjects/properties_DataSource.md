@@ -233,7 +233,7 @@ A utilização deste bem exige o cumprimento dos seguintes princípios:
 
 #### Objectos suportados
 
-[Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Lista suspensa](dropdownList_Overview.md) - [Entrada](input_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -259,7 +259,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 
-## Selection Name {#selection-name}
+## Nome da seleção {#selection-name}
 
 `List boxes de tipo seleção nomeada`
 

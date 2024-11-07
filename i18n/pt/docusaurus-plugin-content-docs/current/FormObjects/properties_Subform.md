@@ -63,7 +63,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Veja também
 
-[Double click on row](#double-click-on-row)
+[Clique duas vezes na linha](#double-click-on-row)
 
 ---
 

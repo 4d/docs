@@ -142,7 +142,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Ordenável
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opção é selecionada por defeito. Os arrays de tipo imagem (colunas) não podem ser ordenadas com esta funcionalidade.
+Permite classificar os dados da coluna clicando no cabeçalho de uma [listbox](listbox_overview.md). Esta opção é selecionada por defeito. Os arrays de tipo imagem (colunas) não podem ser ordenadas com esta funcionalidade.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 

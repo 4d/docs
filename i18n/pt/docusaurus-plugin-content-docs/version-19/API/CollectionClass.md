@@ -1125,7 +1125,7 @@ O código do método ***FindCity*** é:
 ```4d
  var $1 : Object
  var $2 : Text
- $1.result:=$1.value.name=$2 //name is a property name of objects in the collection
+ $1.result:=$1.value.name=$2 //name é um nome de propriedade de objetos na coleção
 ```
 
 <!-- END REF -->

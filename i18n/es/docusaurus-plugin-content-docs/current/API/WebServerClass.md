@@ -258,7 +258,7 @@ La <!-- REF #WebServerClass.HTTPTrace.Summary -->activación de `HTTP TRACE`<!--
 
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
-El <!-- REF #WebServerClass.isRunning.Summary -->estado de ejecución del servidor web<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPSEnabled.Summary -->estado del protocolo HTTPS<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -320,7 +320,7 @@ La <!-- REF #WebServerClass.IPAddressToListen.Summary -->dirección IP en la que
 
 *Propiedad de sólo lectura*
 
-El servidor web <!-- REF #WebServerClass.isRunning.Summary -->que ejecuta el estado<!-- END REF -->.
+El <!-- REF #WebServerClass.isRunning.Summary -->estado de ejecución del servidor web<!-- END REF -->.
 
 <!-- END REF -->
 

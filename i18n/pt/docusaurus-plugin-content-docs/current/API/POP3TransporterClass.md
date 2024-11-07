@@ -33,10 +33,10 @@ POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../c
 
 <!-- REF #4D.POP3Transporter.new().Params -->
 
-| Parâmetro  | Tipo                               |                             | Descrição                                           |
-| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
-| server     | Object                             |              ->             | Informação de servidor de correio                   |
-| Resultados | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
+| Parâmetro  | Tipo                               |                             | Descrição                                          |
+| ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
+| server     | Object                             |              ->             | Informação de servidor de correio                  |
+| Resultados | 4D.POP3Transporter | <- | [Objeto POP3 Transporter](#objet-pop3-transporter) |
 
 <!-- END REF -->
 

@@ -78,7 +78,7 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 | ------------------------------------------------- | ---------------------------- | :-------------------------: | --------------------------------------------------- |
 | url                                               | Text                         |              ->             | URL a que se deve ligar                             |
 | [connectionHandler](#connectionHandler-parameter) | Object                       |              ->             | Objeto que declara as chamadas de retorno WebSocket |
-| Resultados                                        | 4D.WebSocket | <- | New [WebSocket object](#websocket-object)           |
+| Resultados                                        | 4D.WebSocket | <- | Novo [objeto WebSocket](#websocket-object)          |
 
 <!-- END REF -->
 
