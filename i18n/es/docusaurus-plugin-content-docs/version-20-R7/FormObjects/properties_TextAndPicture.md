@@ -37,7 +37,7 @@ Aspecto general del botón. El estilo del botón también influye en la disponib
 
 ---
 
-## Horizontal Margin
+## Margen horizontal
 
 Esta propiedad permite definir el tamaño (en píxeles) de los márgenes horizontales del botón. Este margen delimita el área que el icono del botón y el título no deben sobrepasar.
 
@@ -151,7 +151,7 @@ El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso
 
 ---
 
-## Title/Picture Position
+## Posición título/imagen
 
 Esta propiedad permite modificar la ubicación relativa del título del botón en relación con el icono asociado. Esta propiedad no tiene efecto cuando el botón sólo contiene un título (sin imagen asociada) o una imagen (sin título). Por defecto, cuando un botón contiene un título y una imagen, el texto se coloca debajo de la imagen.
 
@@ -199,7 +199,7 @@ Por defecto, cuando un botón contiene un título y una imagen, los elementos se
 
 ---
 
-## Vertical Margin
+## Margen vertical
 
 Esta propiedad permite definir el tamaño (en píxeles) de los márgenes verticales del botón. Este margen delimita el área que el icono del botón y el título no deben sobrepasar.
 
