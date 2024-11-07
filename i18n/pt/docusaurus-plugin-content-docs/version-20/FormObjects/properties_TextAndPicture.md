@@ -38,7 +38,7 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 ---
 
-## Horizontal Margin
+## Margem horizontal
 
 Esta propriedade permite definir o tamanho (em píxeis) das margens horizontais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
@@ -153,7 +153,7 @@ O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para ima
 
 ---
 
-## Title/Picture Position
+## Posição título/Imagem
 
 Esta propriedade permite modificar a localização relativa do título do botão em relação ao ícone associado. Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título). Por predefinição, quando um botão contém um título e uma imagem, o texto é colocado por baixo da imagem.
 
@@ -202,7 +202,7 @@ By default, when a button contains a title and a picture, the elements are joine
 
 ---
 
-## Vertical Margin
+## Margem vertical
 
 This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
