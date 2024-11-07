@@ -67,7 +67,7 @@ También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PRO
 
 ---
 
-## Border Line Style {#border-line-style}
+## Estilo de línea de borde {#border-line-style}
 
 Permite definir un estilo estándar para el borde del objeto.
 
@@ -83,7 +83,7 @@ Permite definir un estilo estándar para el borde del objeto.
 
 ---
 
-## Dotted Line Type {#dotted-line-type}
+## Tipo de línea punteada {#dotted-line-type}
 
 Describe el tipo de línea punteada como una secuencia de puntos blancos y negros.
 
@@ -220,4 +220,4 @@ Define el fondo del list box como "Transparent". When set, any [alternate backgr
 
 #### Ver también
 
-[Background Color / Fill Color](#background-color--fill-color)
+[Color de fondo / Color de relleno](#background-color--fill-color)
