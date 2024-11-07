@@ -235,7 +235,7 @@ Alguns usos típicos da recursividade em 4D são:
 **Importante:** As chamadas recursivas devem sempre terminar em algum momento. No exemplo, o método `Genealogia de` deixa de se chamar a si próprio quando a consulta não devolve registos. Sem este teste de condição, o método chamar-se-ia indefinidamente; eventualmente, 4D retornaria um erro "Stack Full" porque deixaria de ter espaço para "empilhar" as chamadas (bem como os parâmetros e variáveis locais utilizados no método).
 
 
-## Specialized Methods {#specialized-methods}
+## Métodos especializados {#specialized-methods}
 
 In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
 
