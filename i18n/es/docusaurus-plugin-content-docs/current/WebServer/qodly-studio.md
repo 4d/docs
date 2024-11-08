@@ -108,7 +108,7 @@ Hay dos formas de acceder a Qodly Studio:
 
   `localhost:7080/studio`
 
-  A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#clave-de-acceso) para acceder a Qodly Studio.
+  A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
 
 ## Developing with Qodly Studio
 
