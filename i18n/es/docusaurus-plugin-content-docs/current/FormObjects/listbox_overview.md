@@ -166,7 +166,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Número de columnas](properties_ListBox.md#number-of-columns)                                     | X              | X                  | X                                     |
 | [Número de columnas bloqueadas](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                     |
 | [Número de columnas estáticas](properties_ListBox.md#number-of-static-columns)                    | X              | X                  | X                                     |
-| [Nombre del objeto](properties_Object.md#nombre-del-objeto)                                       | X              | X                  | X                                     |
+| [Nombre del objeto](properties_Object.md#object-name)                                             | X              | X                  | X                                     |
 | [Derecha](properties_CoordinatesAndSizing.md#right)                                               | X              | X                  | X                                     |
 | [Array de colores de fondo de fila](properties_BackgroundAndBorder.md#row-background-color-array) | X              |                    |                                       |
 | [Array de control de filas](properties_ListBox.md#row-control-array)                              | X              |                    |                                       |
