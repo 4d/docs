@@ -9,7 +9,7 @@ Devolve um ID do ficheiro carregado para o servidor
 ## Descrição
 Publique essa petição quando quiser fazer upload de um ficheiro para o servidor. Se tiver uma imagem, passe `$rawPict=true`. Para todos os outros ficheiros, deve passar `$binary=true`.
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
+Você pode modificar o tempo limite, que por padrão é de 120 segundos, passando um valor para o `parâmetro$timeout`.
 
 ## Exemplo de carregamento de imagens
 To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. 4D uses the MIME type attribute of the file object so it can handle it appropriately.
