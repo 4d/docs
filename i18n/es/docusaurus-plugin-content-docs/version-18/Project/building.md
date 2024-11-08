@@ -278,7 +278,7 @@ Hay muchas causas posibles para este error. Cuando reciba este mensaje, es acons
 ### Archivos generados
 
 Una vez creada la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Client Server executable**. Esta carpeta contiene dos subcarpetas, `\&#060;ApplicationName&#062;Client` y `\&#060;ApplicationName&#062;Server`.
-> Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#archivo-registro) para conocer la causa del error.
+> Estas carpetas no se generan si ocurre un error. In this case, open the [log file](#log-file) in order to find out the cause of the error.
 
 La carpeta `&#060;ApplicationName&#062;Client` contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de aplicaciones. Esta carpeta debe instalarse en cada máquina cliente. La carpeta `\&#060;ApplicationName&#062;Server` contiene la parte del servidor de la aplicación.
 
@@ -472,7 +472,7 @@ Este modo le permite duplicar sus aplicaciones fusionadas sin romper el vínculo
 
 Puede seleccionar el modo de vinculación de datos durante el proceso de generación de la aplicación. Puede:
 
-* Use the [Application page](#application-page) or [Client/Server page](#clientserver-page) of the Build Application dialog box.
+* Utilice la [Página Aplicación](#application-page) o la [Página Cliente/Servidor](#clientserver-page) de la caja de diálogo del Generador de aplicaciones.
 * Utilice la llave XML **LastDataPathLookup** (aplicación monopuesto o aplicación servidor).
 
 ### Definir una carpeta de datos por defecto
