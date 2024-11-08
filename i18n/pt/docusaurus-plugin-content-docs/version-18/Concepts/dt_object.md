@@ -36,8 +36,8 @@ Objects must have been initialized, for example using the `New object` command, 
 
 Exemplo:
 ```4d
- C_OBJECT($obVar) //creation of an object type 4D variable
- $obVar:=New object //initialization of the object and assignment to the 4D variable
+ C_OBJECT($obVar) //criação de uma variável 4D do tipo objeto
+ $obVar:=New object //inicialização do objeto e atribuição à variável 4D
 ```
 
 ### Objeto regular ou compartilhado
@@ -155,14 +155,14 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
      C_OBJECT($o)
      C_LONGINT($val)
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o.a //$o.a é indefinido (sem erro) e a atribuição desse valor limpa a variável
       //$val=0
 ```
 
 - Lendo a propriedade de **comprimento** de uma coleção indefinida produz 0:
 
 ```4d
-     C_COLLECTION($c) //variable created but no collection is defined
+     C_COLLECTION($c) //variável criada, mas nenhuma coleção está definida
      $size:=$c.length //$size = 0
 ```
 
@@ -170,11 +170,11 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
 
 ```4d
      C_OBJECT($o)
-     mymethod($o.a) //pass an undefined parameter
+     mymethod($o.a) //passa um parâmetro indefinido
 
-      //In mymethod method
-     C_TEXT($1) //parameter type is text
-      // $1 contains ""
+      //No método mymethod
+     C_TEXT($1) //o tipo de parâmetro é texto
+      // $1 contém ""
 ```
 
 - Uma expressão de condição é automaticamente convertida em falsa quando se avalia para indefinida com as palavras-chave If e Case:
@@ -217,7 +217,7 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
 
 Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. Devem estar em conformidade com a gramática de identificadores JavaScript (consulte [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
-- the first character must be a letter, an underscore (_), or a dollar sign ($),
+- o primeiro caractere deve ser uma letra, um sublinhado (_) ou um cifrão ($),
 - subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
 - eles são sensíveis às maiúsculas e minúsculas.
 
@@ -255,10 +255,10 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
 ```4d
  C_OBJECT($Emp)
  $Emp:=New object
- $Emp.city:="London" //creates the city property and sets its value to "London"
- $Emp.city:="Paris" //modifies the city property
- $Emp.phone:=New object("office";"123456789";"home";"0011223344")
-  //creates the phone property and sets its value to an object
+ $Emp.city:="London" //cria a propriedade da cidade e define o seu valor para "London"
+ $Emp.city:="Paris" //modifica a propriedade da cidade
+ $Emp.phone:=Novo objecto("office"; "123456789"; "home"; "0011223344")
+  //cria a propriedade do telefone e define o seu valor para um objecto
 ```
 
 - Obter um valor em um subobjeto é bem simples usando a notação de objeto:
