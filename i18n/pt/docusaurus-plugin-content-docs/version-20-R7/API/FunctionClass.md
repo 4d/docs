@@ -186,7 +186,7 @@ The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `f
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
-You can also pass values to be used as *$1...$n* parameters in the formula using the optional *params* parameter(s).
+Você também pode passar valores para serem usados como parâmetros *$1...$n* na fórmula usando os parâmetros *params* opcionais.
 
 Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de que os parâmetros são passados diretamente.
 
