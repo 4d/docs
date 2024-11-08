@@ -984,7 +984,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* define o(s) seguinte(s) parâmetro(s):
 
-* *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
+* *$1.result* (boolean): **true** se o valor do elemento corresponder à condição do filtro e deve ser mantido.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo 1
