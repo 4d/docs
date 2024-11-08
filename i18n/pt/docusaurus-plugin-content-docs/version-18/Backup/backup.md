@@ -88,7 +88,7 @@ All information regarding the latest backup and restore operations are stored in
 O arquivo **backupHistory.json** é criado na pasta de destino do backup atual. Pode obter a rota para esse arquivo usando a declaração abaixo:
 
 ```4d
-$backupHistory:=Get 4D file(arquivo histórico Backup)
+$backupHistory:=Get 4D file(Backup history file)
 ```
 > **AVISO**  
 > Apagar ou mover o arquivo **backupHistory.json** faz com que o próximo número de backup seja resetado.
