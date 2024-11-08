@@ -322,7 +322,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 ```4d
 // Class: MyClass
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
-// code
+// código
 ```
 
 Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
