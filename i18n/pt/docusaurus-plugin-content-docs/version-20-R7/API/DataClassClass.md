@@ -1486,7 +1486,7 @@ A text formula in *queryString* receives a parameter:
 ```
 
 ```4d
-  //checkName method
+  //método checkName
  #DECLARE($exclude : Text) -> $result : Boolean
  $result:=(Position($exclude;This.lastname)=0)
 ```
