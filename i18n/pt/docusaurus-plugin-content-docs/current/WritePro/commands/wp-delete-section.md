@@ -78,9 +78,9 @@ To retrieve and remove section 5:
 ```4d
  
 wpDoc:=WP Import document("test.wp")
-// get section 5
+// obter a seção 5
 $section:=WP Get section(wpDoc, 5)
-// remove $section
+// remover $section
 WP DELETE SECTION($section)
 
 ```
