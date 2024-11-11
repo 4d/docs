@@ -346,7 +346,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 #### 説明
 
-`.headers` プロパティは、[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します<!-- END REF -->。 (省略された場合は空のオブジェクト)
+`.headers` プロパティは、<!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します<!-- END REF -->。 (省略された場合は空のオブジェクト)
 
 <!-- END REF -->
 
@@ -499,6 +499,6 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 サーバーのレスポンスがすでに到着している場合、関数は即座に返されます。
 
-During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls. コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+`.wait()` の実行中、他の `HTTPRequest` や [`SystemWorker`](SystemWorkerClass.md) インスタンス、または他の [`CALL WORKER`](../commands-legacy/call-worker.md) の呼び出しによるコールバック関数は実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 <!-- END REF -->
