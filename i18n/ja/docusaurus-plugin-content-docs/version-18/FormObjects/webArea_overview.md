@@ -31,7 +31,7 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 
 [4Dメソッドコールを許可](properties_WebArea.md#4dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
 
-> This property is only available if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
 ### $4dオブジェクトの使用
 
