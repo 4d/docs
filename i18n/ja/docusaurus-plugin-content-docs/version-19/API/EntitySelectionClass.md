@@ -148,7 +148,7 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-データクラス属性はすべてエンティティセレクションのプロパティとして利用可能で、 <!-- REF EntitySelectionClass.attributeName.Summary -->エンティティセレクション内の属性値の "投影" を返します<!-- END REF -->. 戻り値は、属性の種類 ([kind](DataClassClass.md#attributename) が `storage` あるいは `relation`) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。
+データクラス属性はすべてエンティティセレクションのプロパティとして利用可能で、 <!-- REF EntitySelectionClass.attributeName.Summary -->エンティティセレクション内の属性値の "投影" を返します<!-- END REF -->。 戻り値は、属性の種類 ([kind](DataClassClass.md#attributename) が `storage` あるいは `relation`) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。
 
 * *attributeName* で指定した属性がストレージ型の場合: `.attributeName`は *attributeName* と同じ型の値のコレクションを返します。
 * *attributeName* で指定した属性がリレートエンティティ型の場合: `.attributeName` は *attributeName* と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
@@ -228,7 +228,7 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-`.add()` 関数は、 <!-- REF #EntitySelectionClass.add().Summary -->*entity* に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->.
+`.add()` 関数は、 <!-- REF #EntitySelectionClass.add().Summary -->*entity* に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->。
 > このコマンドは、元のエンティティセレクションを変更します。
 
 **警告:** エンティティセレクションは *追加可能* のものでなければなりません。つまり [`.newSelection()`](DataClassClass.md#newselection) あるいは `Create entity selection` などで作成されたものでなければならないということです。そうでない場合、`.add()` はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
@@ -360,7 +360,7 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-`.average()` 関数は、 <!-- REF #EntitySelectionClass.average().Summary -->*attributePath* に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します<!-- END REF -->.
+`.average()` 関数は、 <!-- REF #EntitySelectionClass.average().Summary -->*attributePath* に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します<!-- END REF -->。
 
 *attributePath* 引数として、評価する属性パスを渡します。
 
@@ -459,7 +459,7 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-`.count()` 関数は、 <!-- REF #EntitySelectionClass.count().Summary -->エンティティセレクション内で *attributePath* に指定したパスの値が null でないエンティティの数を返します<!-- END REF -->.
+`.count()` 関数は、 <!-- REF #EntitySelectionClass.count().Summary -->エンティティセレクション内で *attributePath* に指定したパスの値が null でないエンティティの数を返します<!-- END REF -->。
 > 対象となるのはスカラー値のみです。 オブジェクトあるいはコレクション型の値は Null値とみなされます。
 
 以下の場合には、エラーが返されます:
@@ -505,7 +505,7 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-`.copy()` 関数は、 <!-- REF #EntitySelectionClass.copy().Summary -->元のエンティティセレクションのコピーを返します<!-- END REF -->.
+`.copy()` 関数は、 <!-- REF #EntitySelectionClass.copy().Summary -->元のエンティティセレクションのコピーを返します<!-- END REF -->。
 
 > この関数は、元のエンティティセレクションを変更しません。
 
@@ -570,7 +570,7 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-`.distinct()` 関数は、 <!-- REF #EntitySelectionClass.distinct().Summary -->*attributePath* に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します<!-- END REF -->.
+`.distinct()` 関数は、 <!-- REF #EntitySelectionClass.distinct().Summary -->*attributePath* に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します<!-- END REF -->。
 
 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
@@ -632,7 +632,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 #### 説明
 
-`.drop()` 関数は、 <!-- REF #EntitySelectionClass.drop().Summary -->データストアのデータクラスに対応するテーブルから、エンティティセレクションに所属しているエンティティを削除します<!-- END REF -->. エンティティセレクションはメモリ内に残ります。
+`.drop()` 関数は、 <!-- REF #EntitySelectionClass.drop().Summary -->データストアのデータクラスに対応するテーブルから、エンティティセレクションに所属しているエンティティを削除します<!-- END REF -->。 エンティティセレクションはメモリ内に残ります。
 > エンティティの削除は恒久的なものであり、取り消しはできません。 ロールバックで戻すことができるように、この関数はトランザクション内で呼び出すことが推奨されています。
 
 `.drop()` の実行中にロックされたエンティティに遭遇した場合、そのエンティティは削除されません。 デフォルトでは、メソッドはエンティティセレクション内のすべてのエンティティを処理し、ドロップ不可なエンティティはエンティティセレクション内に返します。 最初のドロップ不可なエンティティに遭遇した時点でメソッドの実行を止めたい場合は、*mode* パラメーターに `dk stop dropping on first error` 定数を渡します。
@@ -694,7 +694,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 #### 説明
 
-`.extract()` 関数は、 <!-- REF #EntitySelectionClass.extract().Summary -->*attributePath* で指定した値をエンティティセレクションから抽出し、コレクションに格納して返します<!-- END REF -->.
+`.extract()` 関数は、 <!-- REF #EntitySelectionClass.extract().Summary -->*attributePath* で指定した値をエンティティセレクションから抽出し、コレクションに格納して返します<!-- END REF -->。
 
 *attributePath* には、以下のものを指定することができます:
 
@@ -791,7 +791,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 #### 説明
 
-`.first()` 関数は、 <!-- REF #EntitySelectionClass.first().Summary -->エンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->.
+`.first()` 関数は、 <!-- REF #EntitySelectionClass.first().Summary -->エンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->。
 
 この関数の結果は以下のコードに似ています:
 
@@ -846,7 +846,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 #### 説明
 
-`.getDataClass()` 関数は、 <!-- REF #EntitySelectionClass.getDataClass().Summary -->エンティティセレクションのデータクラスを返します<!-- END REF -->.
+`.getDataClass()` 関数は、 <!-- REF #EntitySelectionClass.getDataClass().Summary -->エンティティセレクションのデータクラスを返します<!-- END REF -->。
 
 このメソッドはおもに汎用的なコードのコンテキストで有用です。
 
@@ -987,7 +987,7 @@ Form.products.add(Form.product)
 
 #### 説明
 
-`.last()` 関数は、 <!-- REF #EntitySelectionClass.last().Summary -->エンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->.
+`.last()` 関数は、 <!-- REF #EntitySelectionClass.last().Summary -->エンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->。
 
 この関数の結果は以下のコードに似ています:
 
@@ -1025,7 +1025,7 @@ Form.products.add(Form.product)
 
 #### 説明
 
-`.length` プロパティは、 <!-- REF #EntitySelectionClass.length.Summary -->エンティティセレクション内のエンティティの数を返します<!-- END REF -->. エンティティセレクションが空の場合、関数は 0 を返します。
+`.length` プロパティは、 <!-- REF #EntitySelectionClass.length.Summary -->エンティティセレクション内のエンティティの数を返します<!-- END REF -->。 エンティティセレクションが空の場合、関数は 0 を返します。
 
 エンティティセレクションは、常に `.length` プロパティを持っています。
 
@@ -1064,7 +1064,7 @@ Form.products.add(Form.product)
 
 #### 説明
 
-`.max()` 関数は、 <!-- REF #EntitySelectionClass.max().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します<!-- END REF -->. 実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。
+`.max()` 関数は、 <!-- REF #EntitySelectionClass.max().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します<!-- END REF -->。 実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。
 
 *attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.max()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します ([`.sort()`](CollectionClass.md#sort) の詳細を参照してください)。
 
@@ -1113,7 +1113,7 @@ Form.products.add(Form.product)
 
 #### 説明
 
-`.min()` 関数は、 <!-- REF #EntitySelectionClass.min().Summary --> *attributePath* に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します<!-- END REF -->.  実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (**null**値は除く)。
+`.min()` 関数は、 <!-- REF #EntitySelectionClass.min().Summary --> *attributePath* に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します<!-- END REF -->。  実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (**null**値は除く)。
 
 *attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.min()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します([`.sort()`](CollectionClass.md#sort) の詳細を参照してください)。
 
@@ -1162,7 +1162,7 @@ Form.products.add(Form.product)
 
 #### 説明
 
-`.minus()` 関数は、 <!-- REF #EntitySelectionClass.minus().Summary -->元のエンティティセレクションから、*entity* 引数のエンティティ、あるいは *entitySelection* 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します<!-- END REF -->.
+`.minus()` 関数は、 <!-- REF #EntitySelectionClass.minus().Summary -->元のエンティティセレクションから、*entity* 引数のエンティティ、あるいは *entitySelection* 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します<!-- END REF -->。
 
 * *entity* を引数として渡した場合、メソッドは (*entity* が元のエンティティセレクションに所属していた場合) *entity* を除外した新しいエンティティセレクションを作成します。 *entity* が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
 * *entitySelection* を引数として渡した場合、メソッドは *entitySelection* に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。
@@ -1287,7 +1287,7 @@ Form.products.add(Form.product)
 
 #### 説明
 
-.orderBy() 関数は、 <!-- REF #EntitySelectionClass.orderBy().Summary -->エンティティセレクションの全エンティティが *pathString* または *pathObjects* が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します<!-- END REF -->.
+.orderBy() 関数は、 <!-- REF #EntitySelectionClass.orderBy().Summary -->エンティティセレクションの全エンティティが *pathString* または *pathObjects* が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します<!-- END REF -->。
 > * この関数は、元のエンティティセレクションを変更しません。
 * 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
@@ -1529,7 +1529,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 #### 説明
 
-`.queryPath` プロパティは、 <!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4D で実行されたクエリの詳細な情報を格納します<!-- END REF -->. このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
+`.queryPath` プロパティは、 <!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4D で実行されたクエリの詳細な情報を格納します<!-- END REF -->。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
 詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
@@ -1550,7 +1550,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 #### 説明
 
-`.queryPlan` プロパティは、 <!-- REF #EntitySelectionClass.queryPlan.Summary --> 実行前のクエリの詳細な情報 (クエリプラン) を格納します<!-- END REF -->. このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPlan":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
+`.queryPlan` プロパティは、 <!-- REF #EntitySelectionClass.queryPlan.Summary --> 実行前のクエリの詳細な情報 (クエリプラン) を格納します<!-- END REF -->。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPlan":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
 詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
@@ -1718,7 +1718,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 #### 説明
 
-`.sum()` 関数は、 <!-- REF #EntitySelectionClass.sum().Summary -->*attributePath* に指定したエンティティセレクションの属性値の総和を返します<!-- END REF -->.
+`.sum()` 関数は、 <!-- REF #EntitySelectionClass.sum().Summary -->*attributePath* に指定したエンティティセレクションの属性値の総和を返します<!-- END REF -->。
 
 エンティティセレクションが空の場合、`.sum()` は 0 を返します。
 
