@@ -125,7 +125,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.size` プロパティは、<!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
+`.size` プロパティは、<!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します<!-- END REF -->。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
 
 ## .type
 
