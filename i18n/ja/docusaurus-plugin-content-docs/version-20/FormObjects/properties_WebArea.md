@@ -30,7 +30,7 @@ Webエリアで実行される JavaScript コードから 4Dメソッドを呼�
 
 倍長整数型変数の名前です。 この変数には 0 から 100 までの値が格納され、この数値は Webエリアに表示されるページのロードされたパーセンテージを表します。 この変数は 4D が自動で更新します。手動で変更することはできません。
 
-> As of 4D v19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> 4D v19 R5 以降、Windows上では、Web エリアが [ 埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用している場合にのみ、この変数が更新されます。
 
 #### JSON 文法
 
