@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-| 引数        | 型      |     | 説明                            |
-| --------- | ------ | :-: | ----------------------------- |
-| sessionID | 整数     |  →  | Session ID                    |
-| 戻り値       | オブジェクト |  ←  | Information about the session |
+| 引数        | 型       |     | 説明                            |
+| --------- | ------- | :-: | ----------------------------- |
+| sessionID | Integer |  →  | Session ID                    |
+| 戻り値       | Object  |  ←  | Information about the session |
 
 <!-- END REF -->
 
@@ -32,15 +32,15 @@ The `Session info` command <!-- REF #_command_.Session info.Summary -->returns a
 | プロパティ名           | 型                                       | 説明                                                                                                 |
 | ---------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | type             | Text (enum)          | Session type. Possible values: "remote", "storedProcedure", "rest" |
-| userName         | テキスト                                    | ユーザー名                                                                                              |
-| machineName      | テキスト                                    | Name of the remote machine                                                                         |
-| systemUserName   | テキスト                                    | Name of the system session opened on the remote machine                                            |
-| IPAddress        | テキスト                                    | リモートマシンの IPアドレス。                                                                                   |
+| userName         | Text                                    | ユーザー名                                                                                              |
+| machineName      | Text                                    | Name of the remote machine                                                                         |
+| systemUserName   | Text                                    | Name of the system session opened on the remote machine                                            |
+| IPAddress        | Text                                    | リモートマシンの IPアドレス。                                                                                   |
 | hostType         | Text (enum)          | Host type. Possible values: "windows", "mac", "browser"            |
 | creationDateTime | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                  |
 | state            | Text (enum)          | Session state. Possible values: "active", "postponed", "sleeping"  |
-| ID               | テキスト                                    | Session UUID                                                                                       |
-| persistentID     | テキスト                                    | セッションの永続的な ID                                                                                      |
+| ID               | Text                                    | Session UUID                                                                                       |
+| persistentID     | Text                                    | セッションの永続的な ID                                                                                      |
 
 :::note
 
