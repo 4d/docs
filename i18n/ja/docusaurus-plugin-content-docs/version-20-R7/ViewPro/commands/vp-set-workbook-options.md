@@ -11,8 +11,8 @@ title: VP SET WORKBOOK OPTIONS
 
 | 引数         | 型      |    | 説明                         |                  |
 | ---------- | ------ | -- | -------------------------- | ---------------- |
-| vpAreaName | テキスト   | -> | 4D View Pro フォームオブジェクト名    |                  |
-| optionObj  | オブジェクト | -> | 設定するワークブックオプションを格納したオブジェクト | <!-- END REF --> |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名    |                  |
+| optionObj  | Object | -> | 設定するワークブックオプションを格納したオブジェクト | <!-- END REF --> |
 
 #### 説明
 
