@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-`Folder` objects are created with the [`Folder`](../commands/folder.md) command. これらのオブジェクトには、(実在しているか否かに関わらず) フォルダーへの参照が格納されます。 たとえば、新規フォルダーを作成するために `Folder` コマンドを実行した場合、有効な `Folder` オブジェクトが作成されますが、[`folder.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
+`Folder` オブジェクトは [`Folder`](../commands/folder.md) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) フォルダーへの参照が格納されます。 たとえば、新規フォルダーを作成するために `Folder` コマンドを実行した場合、有効な `Folder` オブジェクトが作成されますが、[`folder.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
 
 ### 例題
 
@@ -67,9 +67,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`4D.Folder.new()` 関数は、<!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`Folder`](../commands/folder.md) command (shortcut).
+`4D.Folder.new()` 関数は、<!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`Folder`](../commands/folder.md) コマンドと同一です。
 
-> It is recommended to use the [`Folder`](../commands/folder.md) shortcut command instead of `4D.Folder.new()`.
+> `4D.Folder.new()` よりも、短い [`Folder`](../commands/folder.md) コマンドの使用が推奨されます。
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
@@ -232,7 +232,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 - フォルダーと、その中身がすべて削除されます。
   **警告**: フォルダーまたはその中身がロックされている、あるいは読み取り専用に設定されていたとしても、カレントユーザーが適切なアクセス権を持っていた場合には、フォルダーはその中身ごと削除されます。
-- このフォルダー、またはその中のフォルダーのどいずれかが削除できなかった場合、削除できない要素が検知された時点で削除は中止され、エラー(\*) が返されます。 このとき、フォルダーは途中までしか削除されていない可能性があります。 When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
+- このフォルダー、またはその中のフォルダーのどいずれかが削除できなかった場合、削除できない要素が検知された時点で削除は中止され、エラー(\*) が返されます。 このとき、フォルダーは途中までしか削除されていない可能性があります。 削除が中止された場合、`Last errors` コマンドを使用して原因となったファイルの名前とパスを取得することができます。
 - フォルダーが存在しない場合、コマンドは何もせず、エラーは返されません。 <br /><br /> (\*) Windowsの場合: -54 (ロックされたファイルを書き込みのために開こうとした)<br />
   macOSの場合: -45 (ファイルはロックされていたか不正なパス名)
 
