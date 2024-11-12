@@ -7,7 +7,7 @@ title: IMAPTransporter
 
 ### IMAP Transporter オブジェクト
 
-IMAP Transporter objects are instantiated with the [IMAP New transporter](../commands/imap-new-transporter.md) command. これらは、次のプロパティや関数を持ちます:
+IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-new-transporter.md) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 
 #### 説明
 
-`4D.IMAPTransporter.new()` 関数は、<!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`IMAP New transporter`](../commands/imap-new-transporter.md) command (shortcut).
+`4D.IMAPTransporter.new()` 関数は、<!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`IMAP New transporter`](../commands/imap-new-transporter.md) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
