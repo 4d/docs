@@ -46,18 +46,18 @@ collectionRef[expression]
 
 コレクションのインスタンス化は、以下のいずれかの方法でおこなうことができます:
 
-- using the [`New collection`](../commands/new-collection.md) command,
+- [`New collection`](../commands/new-collection.md) コマンドを使用する。
 - `[]` 演算子を使用する。
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はコレクションを返します。たとえば、 [`Monitored Activity`](../commands-legacy/monitored-activity.md) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
 ### `New collection` コマンド
 
-The [`New collection`](../commands/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
+[`New collection`](../commands/new-collection.md) コマンドは、空の、あるいは値の入った新規コレクションを作成し、その参照を返します。
 
 例:
 
@@ -105,8 +105,8 @@ $users:=[{name: "Alice"; \
 
 二種類のコレクションを作成することができます:
 
-- regular (non-shared) collections, using the [`New collection`](commands/new-collection.md) command or collection literal syntax (`[]`). 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- shared collections, using the [`New shared collection`](commands/new-shared-collection.md) command. 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
+- [`New collection`](../commands/new-collection.md) コマンド、またはコレクションリテラルのシンタックス `[]` を使用して作成する通常 (非共有) コレクション。 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New shared collection`](../commands/new-shared-collection.md) コマンドを使用して作成する共有コレクション。 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
 
 詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
