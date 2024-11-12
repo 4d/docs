@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 | 引数           | 型                       |     | 説明                                                                |
 | ------------ | ----------------------- | :-: | ----------------------------------------------------------------- |
-| path         | テキスト                    |  →  | ファイルパス                                                            |
-| fileConstant | 整数                      |  →  | 4Dファイル定数                                                          |
-| pathType     | 整数                      |  →  | `fk posix path` (デフォルト) または `fk platform path` |
+| path         | Text                    |  →  | ファイルパス                                                            |
+| fileConstant | Integer                 |  →  | 4Dファイル定数                                                          |
+| pathType     | Integer                 |  →  | `fk posix path` (デフォルト) または `fk platform path` |
 | \*           | operator                |  →  | ホストデータベースのファイルを返すには \* を渡します                                      |
 | 戻り値          | 4D.File |  ←  | 新規ファイルオブジェクト                                                      |
 
