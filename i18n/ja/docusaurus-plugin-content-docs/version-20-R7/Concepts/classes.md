@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: クラス
 ---
 
 ## 概要
@@ -109,7 +109,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 | 引数         | 型      |                                | 説明                          |                  |
 | ---------- | ------ | ------------------------------ | --------------------------- | ---------------- |
-| classStore | オブジェクト | &amp;larr; | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
+| classStore | Object | &amp;larr; | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
 
 `cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
@@ -129,7 +129,7 @@ $instance:=cs.myClass.new()
 
 | 引数         | 型      |                                | 説明       |                  |
 | ---------- | ------ | ------------------------------ | -------- | ---------------- |
-| classStore | オブジェクト | &amp;larr; | 4Dクラスストア | <!-- END REF --> |
+| classStore | Object | &amp;larr; | 4Dクラスストア | <!-- END REF --> |
 
 `4D` コマンドは、<!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
