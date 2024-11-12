@@ -7,7 +7,7 @@ title: SMTPTransporter
 
 ### SMTP Transporter オブジェクト
 
-SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. これらは、次のプロパティや関数を持ちます:
+SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-new-transporter.md) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 
 #### 説明
 
-`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](../commands/smtp-new-transporter.md) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -149,7 +149,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |
 | statusText | テキスト    | SMTPから返されるステータスメッセージ                                       |
 
-SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。 Use the `Last errors` command for information about the error.
+SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。 エラー情報を取得するには、`Last errors` コマンドを使用します。
 
 この場合、結果のステータスオブジェクトには以下の値が含まれます:
 
