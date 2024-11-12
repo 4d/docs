@@ -32,7 +32,7 @@ Specifies the form to use for modifying or displaying individual records of the 
 O formulário especificado é apresentado:
 
 * when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
-* when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
+* quando uma linha é duplamente clicada e a propriedade [Duplo clique na linha](#double-click-on-row) está definida como "Editar Registro" ou "Exibir Registro".
 
 #### Gramática JSON
 
