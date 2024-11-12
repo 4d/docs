@@ -140,7 +140,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Soltable](properties_Action.md#droppable)                                                        | X              | X                  | X                                     |
 | [Enfocable](properties_Entry.md#focusable)                                                        | X              | X                  | X                                     |
 | [Fuente](properties_Text.md#fuente)                                                               | X              | X                  | X                                     |
-| [Font Color](properties_Text.md#font-color)                                                       | X              | X                  | X                                     |
+| [Color de fuente](properties_Text.md#font-color)                                                  | X              | X                  | X                                     |
 | [Expresión de color de fuente](properties_Text.md#expresión-de-color-de-fuente)                   |                | X                  | X                                     |
 | [Tamaño de fuente](properties_Text.md#font-size)                                                  | X              | X                  | X                                     |
 | [Altura (list box)](properties_CoordinatesAndSizing.md#height)                 | X              | X                  | X                                     |
