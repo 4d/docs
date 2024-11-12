@@ -288,7 +288,7 @@ Especifica uma expressão ou uma variável que será avaliada para cada linha ex
 | disabled                  | boolean | Desactiva a linha correspondente. As áreas acessíveis deixam de ser acessíveis se esta opção estiver activada. O texto e os controlos (caixas de verificação, listas, etc.) aparecem esbatidos ou a cinzento. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                             |
 | cell.`<columnName>` | object  | Permite aplicar a propriedade a uma única coluna. Pass in `\<columnName>` the object name of the list box column. **Nota**: as propriedades "unselectable" e "disabled" só podem ser definidas ao nível da linha. São ignorados se forem passados no objeto "célula"                                                                                                                                                                                 |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)).
+> Os parâmetros de estilo definidos com esta propriedade são ignorados se outros parâmetros de estilo já estiverem definidoas através de expressões (*ou seja*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)).
 
 **Exemplo**
 
