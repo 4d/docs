@@ -84,7 +84,7 @@
     "description": "The label for category BLOB in sidebar docs"
   },
   "sidebar.docs.category.Boolean": {
-    "message": "ブール",
+    "message": "Boolean",
     "description": "The label for category Boolean in sidebar docs"
   },
   "sidebar.docs.category.Cache Management": {
