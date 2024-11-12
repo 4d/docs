@@ -61,7 +61,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::note
 
-This function does nothing and always returns **True** with remote client and stored procedure sessions.
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは何もせず、常に **true** を返します。
 
 :::
 
@@ -351,7 +351,7 @@ End if
 
 `.info` プロパティは、<!-- REF #SessionClass.info.Summary -->サーバー上のリモートクライアントまたはストアドプロシージャーセッションの情報を格納します<!-- END REF -->。
 
-The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+`.info` オブジェクトは、リモートクライアントおよびストアドプロシージャーセッションに対して [`Process activity`](../commands/process-activity.md) コマンドによって返されるオブジェクトと同じです。
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
@@ -366,7 +366,7 @@ The `.info` object is the same object as the one returned by the [`Process activ
 | creationDateTime | 日付 (ISO 8601) | セッション作成の日時                                                                          |
 | state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                         |
 | ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                   |
-| persistentID     | Text                             | Remote sessions: Session's persistent ID                            |
+| persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                            |
 
 :::note
 
