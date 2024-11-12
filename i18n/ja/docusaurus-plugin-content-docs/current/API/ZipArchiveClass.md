@@ -5,8 +5,8 @@ title: ZIPArchive
 
 4D ZIP アーカイブは、一つ以上のファイルまたはフォルダーを格納している `File` または `Folder` オブジェクトで、元のサイズより小さくなるように圧縮されているものをいいます。 これらのアーカイブは ".zip" 拡張子を持つように作成され、ディスクスペースの確保や、サイズ制限があるメディア (例: メールまたはネットワークなど) 経由のファイル転送を容易にする用途に使用できます。
 
-- You create a 4D ZIP archive with the [`ZIP Create archive`](../commands/zip-create-archive.md) command.
-- 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [`ZIP Read archive`](../commands/zip-read-archive.md) command.
+- 4D ZIPアーカイブは [`ZIP Create archive`](../commands/zip-create-archive.md) コマンドで作成します。
+- 4D [`ZIPFile`](ZipFileClass.md) および [`ZIPFolder`](ZipFolderClass.md) インスタンスは、[`ZIP Read archive`](../commands/zip-read-archive.md) コマンドによって返されるオブジェクトの [`root`](#root) プロパティ (`ZIPFolder`) を通して利用可能です。
 
 ### 例題
 
