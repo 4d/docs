@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Params-->
 
-| 引数   | 型    |   | 説明                                                       |
-| ---- | ---- | - | -------------------------------------------------------- |
-| name | テキスト | → | Name of process for which to retrieve the process number |
-| id   | テキスト | → | ID of process for which to retrieve the process number   |
-| \*   | 演算子  | → | Return the process number from the server                |
-| 戻り値  | 倍長整数 | ← | Process number                                           |
+| 引数   | 型       |   | 説明                                                       |
+| ---- | ------- | - | -------------------------------------------------------- |
+| name | Text    | → | Name of process for which to retrieve the process number |
+| id   | Text    | → | ID of process for which to retrieve the process number   |
+| \*   | 演算子     | → | Return the process number from the server                |
+| 戻り値  | Longint | ← | Process number                                           |
 
 <!-- END REF-->
 
