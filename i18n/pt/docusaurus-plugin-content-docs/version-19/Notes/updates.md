@@ -59,7 +59,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
 - [Native compilation](../Project/compiler.md#compiler-methods-for) for Silicon processors.
-- [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
+- [Cálculo de variável](../FormObjects/properties_Object.md#variable-calculation) agora é suportado pelas colunas list box da entity selection selecionada.
 - New, comprehensive [CLI](../Admin/cli.md) page.
 
 
