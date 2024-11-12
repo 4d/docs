@@ -404,7 +404,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 | 引数      | 型                                                |                             | 説明                                               |
 | ------- | ------------------------------------------------ | --------------------------- | ------------------------------------------------ |
-| mode    | テキスト                                             | ->                          | 開くモード: "read", "write", "append" |
+| mode    | Text                                             | ->                          | 開くモード: "read", "write", "append" |
 | options | Object                                           | ->                          | 開くオプション                                          |
 | 戻り値     | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト                            |
 
@@ -485,7 +485,7 @@ $fhandle:=$f.open("read")
 
 | 引数      | 型                       |                             | 説明            |
 | ------- | ----------------------- | --------------------------- | ------------- |
-| newName | テキスト                    | ->                          | ファイルの新しい完全な名称 |
+| newName | Text                    | ->                          | ファイルの新しい完全な名称 |
 | 戻り値     | 4D.File | <- | 名称変更されたファイル   |
 
 <!-- END REF -->
@@ -559,7 +559,7 @@ $fhandle:=$f.open("read")
 | ProductVersion   | Text |                                                                      |
 | FileDescription  | Text |                                                                      |
 | FileVersion      | Text |                                                                      |
-| OriginalFilename | テキスト |                                                                      |
+| OriginalFilename | Text |                                                                      |
 | WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
 `WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
