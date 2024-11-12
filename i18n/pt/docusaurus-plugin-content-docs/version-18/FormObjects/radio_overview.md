@@ -7,7 +7,7 @@ title: Botão rádio
 
 Radio buttons are objects that allow the user to select one of a group of buttons.
 
-Um botão radio aparece na forma de um texto seguido de um círculo. However, radio buttons can have [various appearances](#button-styles).
+Um botão radio aparece na forma de um texto seguido de um círculo. Entretanto, os botões de rádio podem ter <a href=“#button-styles”>aparências diferentes</a>.
 
 ![](../assets/en/FormObjects/radio1.png)
 
@@ -138,4 +138,4 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 Propriedades específicas adicionais estão disponíveis dependendo do [estilo botão](#button-styles):
 
 - [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
-- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
+- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Caminho da imagem](properties_TextAndPicture.md#picture-pathname) - [Título/posição da imagem](properties_TextAndPicture.md#titlepicture-position) (Botão da barra de ferramentas, Bevel, Rounded Bevel, Gradiente X, OS X Textured, Office XP, Personalizado)
