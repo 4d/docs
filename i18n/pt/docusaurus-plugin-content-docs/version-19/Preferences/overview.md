@@ -3,7 +3,7 @@ id: overview
 title: Visão Geral
 ---
 
-User preferences specify various settings affecting your working environment, e.g. default options, display themes, method editor features, shortcuts, etc. Eles são aplicados a todos os projetos abertos com sua aplicação 4D ou 4D Server.
+As preferências usuário especificam vários parâmetros que afetam seu ambiente de trabalho, por exemplo, opções padrão, temas de exibição, recursos de edição de métodos, atalhos, etc. Eles são aplicados a todos os projetos abertos com sua aplicação 4D ou 4D Server.
 
 **4D Server**: o bloqueio de objetos ocorre quando dois ou mais usuários tentam modificar as definições na caixa de diálogo Preferências em simultâneo. Apenas um usuário pode utilizar a caixa de diálogo Preferências.
 > 4D oferece um conjunto diferente de parâmetros específicos para o projeto aberto: **Parâmetros** (disponível no menu **Desenho**). Para mais informações, consulte o capítulo Parâmetros.
