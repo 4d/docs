@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Attachment オブジェクトによって、[`Email`](EmailObjectClass.md) オブジェクト内のファイルを参照することができます。 Attachment objects are created using the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+Attachment オブジェクトによって、[`Email`](EmailObjectClass.md) オブジェクト内のファイルを参照することができます。 MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドによって作成されます。
 
 ### Attachment オブジェクト
 
@@ -50,7 +50,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`4D.MailAttachment.new()` 関数は、<!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 It is identical to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command (shortcut).
+`4D.MailAttachment.new()` 関数は、<!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 この関数の機能は、[`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドと同一です。
 
 ## .cid
 
@@ -93,7 +93,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.name` プロパティは、<!-- REF #MailAttachmentClass.name.Summary -->添付ファイルの名前と拡張子<!-- END REF -->を格納します。  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+`.name` プロパティは、<!-- REF #MailAttachmentClass.name.Summary -->添付ファイルの名前と拡張子<!-- END REF -->を格納します。  [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドで別の名称を指定しなかった場合のデフォルトは、ファイルの名称です。
 
 ## .path
 
@@ -133,4 +133,4 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.type` プロパティは、<!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type`<!-- END REF --> を格納します。 If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.
+`.type` プロパティは、<!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type`<!-- END REF --> を格納します。 [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドにて、このタイプが明示的に渡されていない場合、`content-type` はファイルの拡張子に基づきます。
