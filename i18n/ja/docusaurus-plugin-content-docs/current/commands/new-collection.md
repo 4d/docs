@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | 引数    | 型                                                                       |   | 説明             |
 | ----- | ----------------------------------------------------------------------- | - | -------------- |
 | value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | → | コレクションの値       |
-| 戻り値   | コレクション                                                                  | ← | New collection |
+| 戻り値   | Collection                                                              | ← | New collection |
 
 <!-- END REF-->
 
