@@ -36,12 +36,12 @@ The **QR GET TOTALS DATA** command retrieves the details of a specific break.<!-
 
 | Constant              | Type    | Value |
 | --------------------- | ------- | ----- |
-| qr average            | Longint | 2     |
-| qr count              | Longint | 16    |
-| qr max                | Longint | 8     |
-| qr min                | Longint | 4     |
-| qr standard deviation | Longint | 32    |
-| qr sum                | Longint | 1     |
+| qr average            | Integer | 2     |
+| qr count              | Integer | 16    |
+| qr max                | Integer | 8     |
+| qr min                | Integer | 4     |
+| qr standard deviation | Integer | 32    |
+| qr sum                | Integer | 1     |
 
 If the value returned is 0, there is no operator. 
 

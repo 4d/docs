@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| styleSheetType | Longint | &#8594;  | Type of style sheet |
-| styleSheetName | String | &#8594;  | Name of style sheet |
+| styleSheetType | Integer | &#8594;  | Type of style sheet |
+| styleSheetName | Text | &#8594;  | Name of style sheet |
 | Function result | Object | &#8592; | Style sheet object |
 
 <!-- END REF-->

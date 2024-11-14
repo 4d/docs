@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger event.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | 0 Outside any trigger execution cycle 1 Saving a new record 2 Saving an existing record 3 Deleting a record |
+| Function result | Integer | &#8592; | 0 Outside any trigger execution cycle 1 Saving a new record 2 Saving an existing record 3 Deleting a record |
 
 <!-- END REF-->
 
@@ -21,9 +21,9 @@ The following predefined constants are provided in the *Trigger Events* theme:
 
 | Constant                        | Type    | Value |
 | ------------------------------- | ------- | ----- |
-| On Deleting Record Event        | Longint | 3     |
-| On Saving Existing Record Event | Longint | 2     |
-| On Saving New Record Event      | Longint | 1     |
+| On Deleting Record Event        | Integer | 3     |
+| On Saving Existing Record Event | Integer | 2     |
+| On Saving New Record Event      | Integer | 1     |
 
 Within a trigger, if you perform database operations on multiple records, you may encounter conditions (usually locked records) that will make the trigger unable to perform correctly. An example of this situation is updating multiple records in a \[Products\] table when a record is being added to an \[Invoices\] table. At this point, you must stop attempting database operations, and return a database error so the invoking process will know that its database request cannot be performed. Then the invoking process must be able to cancel, during the transaction, the incomplete database operations performed by the trigger. When this type of situation occurs, you need to know from within the trigger if you are in transaction even before attempting anything. To do so, use the command [In transaction](in-transaction.md).
 

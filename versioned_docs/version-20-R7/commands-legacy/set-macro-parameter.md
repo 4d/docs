@@ -25,8 +25,8 @@ If text has been selected in the method, the *selector* parameter can be used to
 
 | Constant                | Type    | Value |
 | ----------------------- | ------- | ----- |
-| Full method text        | Longint | 1     |
-| Highlighted method text | Longint | 2     |
+| Full method text        | Integer | 1     |
+| Highlighted method text | Integer | 2     |
 
 If no text has been selected, *paramText* is inserted into the method.
 

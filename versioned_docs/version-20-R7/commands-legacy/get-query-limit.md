@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get query limit.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Limit number of records,0 = unlimited number |
+| Function result | Integer | &#8592; | Limit number of records,0 = unlimited number |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number |
-| Function result | Longint | &#8592; | Process reference number |
+| Function result | Integer | &#8592; | Process reference number |
 
 <!-- END REF-->
 

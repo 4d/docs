@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aText | Text | &#8594;  | String to convert to uppercase |
 | * | Operator | &#8594;  | If passed: keep accents |
-| Function result | String | &#8592; | String in uppercase |
+| Function result | Text | &#8592; | String in uppercase |
 
 <!-- END REF-->
 

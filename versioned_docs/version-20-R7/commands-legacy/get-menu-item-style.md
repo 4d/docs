@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | Longint | &#8592; | Current menu item style |
+| Function result | Integer | &#8592; | Current menu item style |
 
 <!-- END REF-->
 
@@ -31,10 +31,10 @@ If you omit the *process* parameter, **Get menu item style** applies to the menu
 
 | Constant  | Type    | Value |
 | --------- | ------- | ----- |
-| Bold      | Longint | 1     |
-| Italic    | Longint | 2     |
-| Plain     | Longint | 0     |
-| Underline | Longint | 4     |
+| Bold      | Integer | 1     |
+| Italic    | Integer | 2     |
+| Plain     | Integer | 0     |
+| Underline | Integer | 4     |
 
   
 #### Example 

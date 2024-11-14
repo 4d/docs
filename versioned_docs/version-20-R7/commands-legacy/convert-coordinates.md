@@ -31,10 +31,10 @@ In the *from* parameter, pass the initial coordinate system the input point is u
 
 | Constant          | Type    | Value | Comment                                                                                                     |
 | ----------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------- |
-| XY Current form   | Longint | 1     | Origin is top left corner of current form                                                                   |
-| XY Current window | Longint | 2     | Origin is top left corner of current window                                                                 |
-| XY Main window    | Longint | 4     | On Windows: origin is top left corner of main window; on OS X: same as XY Screen                            |
-| XY Screen         | Longint | 3     | Origin is top left corner of main screen (same as for [SCREEN COORDINATES](screen-coordinates.md) command). |
+| XY Current form   | Integer | 1     | Origin is top left corner of current form                                                                   |
+| XY Current window | Integer | 2     | Origin is top left corner of current window                                                                 |
+| XY Main window    | Integer | 4     | On Windows: origin is top left corner of main window; on OS X: same as XY Screen                            |
+| XY Screen         | Integer | 3     | Origin is top left corner of main screen (same as for [SCREEN COORDINATES](screen-coordinates.md) command). |
 
 When this command is called from the method of a subform or a subform's object, and if one of the selectors is XY Current form, then the coordinates are relative to the subform itself, not to its parent form.
 

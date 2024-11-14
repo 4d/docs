@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | array | Array | &#8594;  | Array to search |
 | value | Expression | &#8594;  | Value of same type to search in the array |
 | start | Integer | &#8594;  | Element at which to start searching |
-| Function result | Longint | &#8592; | Number of the first element in array that matches value |
+| Function result | Integer | &#8592; | Number of the first element in array that matches value |
 
 <!-- END REF-->
 

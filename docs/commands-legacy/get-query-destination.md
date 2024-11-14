@@ -23,10 +23,10 @@ In the *destinationType* parameter, 4D returns a value indicating the current de
 
 | Constant               | Type    | Value |
 | ---------------------- | ------- | ----- |
-| Into current selection | Longint | 0     |
-| Into named selection   | Longint | 2     |
-| Into set               | Longint | 1     |
-| Into variable          | Longint | 3     |
+| Into current selection | Integer | 0     |
+| Into named selection   | Integer | 2     |
+| Into set               | Integer | 1     |
+| Into variable          | Integer | 3     |
 
 The value returned in the *destinationObject* parameter depends on the value of the *destinationType* parameter:
 

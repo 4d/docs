@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | elementRef | Text | &#8594;  | XML element reference |
 | siblingElemName | Text | &#8592; | Name of sibling XML element |
 | siblingElemValue | Text | &#8592; | Value of sibling XML element |
-| Function result | String | &#8592; | Sibling XML element reference |
+| Function result | Text | &#8592; | Sibling XML element reference |
 
 <!-- END REF-->
 

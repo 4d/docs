@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | pictureObject | Picture | &#8594;  | Object name (if * specified) or Field or Variable (if * omitted) |
 | x | Integer | &#8594;  | X coordinate in pixels |
 | y | Integer | &#8594;  | Y coordinate in pixels |
-| Function result | String | &#8592; | ID of element found at the location X, Y |
+| Function result | Text | &#8592; | ID of element found at the location X, Y |
 
 <!-- END REF-->
 

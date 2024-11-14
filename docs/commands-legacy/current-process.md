@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Process number |
+| Function result | Integer | &#8592; | Process number |
 
 <!-- END REF-->
 

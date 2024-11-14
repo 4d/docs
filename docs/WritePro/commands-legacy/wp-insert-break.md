@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| breakType | Longint | &#8594;  | Type of break to insert |
-| mode | Longint | &#8594;  | Insertion mode |
-| rangeUpdate | Longint | &#8594;  | Range update mode |
+| breakType | Integer | &#8594;  | Type of break to insert |
+| mode | Integer | &#8594;  | Insertion mode |
+| rangeUpdate | Integer | &#8594;  | Range update mode |
 
 <!-- END REF-->
 
@@ -30,27 +30,27 @@ In *breakType*, pass one of the following constants from the *4D Write Pro Const
 
 | Constant                    | Type    | Value | Comment                                                                                                      |
 | --------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------ |
-| wk column break             | Longint | 3     | Column break: inserts a column break                                                                         |
-| wk continuous section break | Longint | 5     | Defines a continuous section break (often used to change the number of columns without starting a new page). |
-| wk line break               | Longint | 0     | Line break (in the same paragraph)                                                                           |
-| wk page break               | Longint | 2     | Page break: defines a new page                                                                               |
-| wk paragraph break          | Longint | 4     | Paragraph break: defines a new paragraph                                                                     |
-| wk section break            | Longint | 1     | Section break: defines a new section                                                                         |
+| wk column break             | Integer | 3     | Column break: inserts a column break                                                                         |
+| wk continuous section break | Integer | 5     | Defines a continuous section break (often used to change the number of columns without starting a new page). |
+| wk line break               | Integer | 0     | Line break (in the same paragraph)                                                                           |
+| wk page break               | Integer | 2     | Page break: defines a new page                                                                               |
+| wk paragraph break          | Integer | 4     | Paragraph break: defines a new paragraph                                                                     |
+| wk section break            | Integer | 1     | Section break: defines a new section                                                                         |
 
 In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
 
 | Constant   | Type    | Value | Comment                                |
 | ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Longint | 2     | Insert contents at end of target       |
-| wk prepend | Longint | 1     | Insert contents at beginning of target |
-| wk replace | Longint | 0     | Replace target contents                |
+| wk append  | Integer | 2     | Insert contents at end of target       |
+| wk prepend | Integer | 1     | Insert contents at beginning of target |
+| wk replace | Integer | 0     | Replace target contents                |
 
 * If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:  
     
 | Constant              | Type    | Value | Comment                                               |  
 | --------------------- | ------- | ----- | ----------------------------------------------------- |  
-| wk exclude from range | Longint | 1     | Inserted contents not included in updated range       |  
-| wk include in range   | Longint | 0     | Inserted contents included in updated range (default) |  
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range       |  
+| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |  
     
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.

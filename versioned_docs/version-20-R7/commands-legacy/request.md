@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | defaultResponse | Text | &#8594;  | Default data for the enterable text area |
 | OKButtonTitle | Text | &#8594;  | OK button title |
 | CancelButtonTitle | Text | &#8594;  | Cancel button title |
-| Function result | String | &#8592; | Value entered by user |
+| Function result | Text | &#8592; | Value entered by user |
 
 <!-- END REF-->
 

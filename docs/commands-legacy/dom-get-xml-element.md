@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | elementName | Text | &#8594;  | Name of element to get |
 | index | Integer | &#8594;  | Index number of element to get |
 | elementValue | Variable | &#8592; | Value of the element |
-| Function result | String | &#8592; | XML reference (16 characters) |
+| Function result | Text | &#8592; | XML reference (16 characters) |
 
 <!-- END REF-->
 

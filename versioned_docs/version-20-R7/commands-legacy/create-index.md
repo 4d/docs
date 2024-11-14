@@ -30,10 +30,10 @@ The *indexType* parameter sets the type of index to be created. You can pass one
 
 | Constant             | Type    | Value | Comment                                                                                                                                                                             |
 | -------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cluster BTree index  | Longint | 3     | B-Tree type index using clusters. This type of index is optimized when the index contains few keywords, i.e. when the same values occur frequently in the data.                     |
-| Default index type   | Longint | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.                                                         |
-| Keywords index       | Longint | \-1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text, Alpha or Picture type. Warning: Keywords indexes cannot be composite. |
-| Standard BTree index | Longint | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D                                                                                        |
+| Cluster BTree index  | Integer | 3     | B-Tree type index using clusters. This type of index is optimized when the index contains few keywords, i.e. when the same values occur frequently in the data.                     |
+| Default index type   | Integer | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.                                                         |
+| Keywords index       | Integer | \-1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text, Alpha or Picture type. Warning: Keywords indexes cannot be composite. |
+| Standard BTree index | Integer | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D                                                                                        |
 
 **Note:** A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail. 
 

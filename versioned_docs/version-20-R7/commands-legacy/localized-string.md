@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resName | Text | &#8594;  | Name of resname attribute |
-| Function result | String | &#8592; | Value of string designated by resName in current language |
+| Function result | Text | &#8592; | Value of string designated by resName in current language |
 
 <!-- END REF-->
 

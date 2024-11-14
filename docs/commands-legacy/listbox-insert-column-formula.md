@@ -56,12 +56,12 @@ The *dataType* parameter can be used to designate the type of data resulting fro
 
 | Constant   | Type    | Value |
 | ---------- | ------- | ----- |
-| Is Boolean | Longint | 6     |
-| Is date    | Longint | 4     |
-| Is picture | Longint | 3     |
-| Is real    | Longint | 1     |
-| Is text    | Longint | 2     |
-| Is time    | Longint | 11    |
+| Is Boolean | Integer | 6     |
+| Is date    | Integer | 4     |
+| Is picture | Integer | 3     |
+| Is real    | Integer | 1     |
+| Is text    | Integer | 2     |
+| Is time    | Integer | 11    |
 
 If the result of the *formula* does not correspond to the expected data type, an error is generated.
 

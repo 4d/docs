@@ -29,9 +29,9 @@ The optional *exportType* parameter specifies the way the XML data source is to 
 
 | Constant             | Type    | Value | Comment                                                                                                                                                                                                                                                    |
 | -------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy XML data source | Longint | 1     | 4D keeps a copy of the DOM tree with the picture, which means the picture can be saved in a picture field of the database and then redisplayed or exported at any time. This is the default mode for exporting when the *exportType* parameter is omitted. |
-| Get XML data source  | Longint | 0     | 4D only reads the XML data source; it is not kept with the picture. This noticeably increases command execution speed; however, because the DOM tree is not kept, it is not possible to store or export the picture.                                       |
-| Own XML data source  | Longint | 2     | 4D exports the DOM tree with the picture. The picture can be stored or exported and command execution is fast. However, the *elementRef* XML reference can then no longer be used by other 4D commands.                                                    |
+| Copy XML data source | Integer | 1     | 4D keeps a copy of the DOM tree with the picture, which means the picture can be saved in a picture field of the database and then redisplayed or exported at any time. This is the default mode for exporting when the *exportType* parameter is omitted. |
+| Get XML data source  | Integer | 0     | 4D only reads the XML data source; it is not kept with the picture. This noticeably increases command execution speed; however, because the DOM tree is not kept, it is not possible to store or export the picture.                                       |
+| Own XML data source  | Integer | 2     | 4D exports the DOM tree with the picture. The picture can be stored or exported and command execution is fast. However, the *elementRef* XML reference can then no longer be used by other 4D commands.                                                    |
 
 #### Example 
 

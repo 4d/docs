@@ -268,7 +268,7 @@ The same symbols are often used for different operations, depending on the data 
 |Data Type	|Operation|	Example  
 |---|---|---|
 |Number|	Addition	|1 + 2 adds the numbers and results in 3
-|String	|Concatenation	|“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”
+|Text	|Concatenation	|“Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”
 |Date and Number	|Date addition	|!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989|
 
 
@@ -292,10 +292,10 @@ You refer to an expression by the data type it returns. There are several expres
 
 |Expression|Type|Description|
 |---|---|---|
-|“Hello”|String	|The word Hello is a string constant, indicated by the double quotation marks.|
-|“Hello ” + “there”|	String|	Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.|
-|“Mr. ” + [People]Name|	String|	Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”.|
-|Uppercase("smith")	|String	|This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.|
+|“Hello”|Text	|The word Hello is a string constant, indicated by the double quotation marks.|
+|“Hello ” + “there”|	Text|	Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.|
+|“Mr. ” + [People]Name|	Text|	Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”.|
+|Uppercase("smith")	|Text	|This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.|
 |4	|Number |	This is a number constant, 4.|
 |4 * 2|	Number|	Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.|
 |myButton	|Number|	This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.|

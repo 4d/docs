@@ -278,8 +278,8 @@ If the formula is created in a component, you might consider using the *context*
 
 |Constant|Type|Description|
 |---|---|----
-|`sk execute in current database`|Longint|(default) The formula will be executed in the context it was created|
-|`sk execute in host database`|Longint|The formula will be executed in the host database context|
+|`sk execute in current database`|Integer|(default) The formula will be executed in the context it was created|
+|`sk execute in host database`|Integer|The formula will be executed in the host database context|
 
 
 #### Example

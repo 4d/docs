@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
-| Function result | String | &#8592; | Reference of root element or "" in case of error |
+| Function result | Text | &#8592; | Reference of root element or "" in case of error |
 
 <!-- END REF-->
 

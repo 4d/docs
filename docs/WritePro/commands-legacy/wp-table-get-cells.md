@@ -11,10 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| startCol | Longint | &#8594;  | Position of first cell column |
-| startRow | Longint | &#8594;  | Position of first column row |
-| numCols | Longint | &#8594;  | Number of columns to get |
-| numRows | Longint | &#8594;  | Number of rows to get |
+| startCol | Integer | &#8594;  | Position of first cell column |
+| startRow | Integer | &#8594;  | Position of first column row |
+| numCols | Integer | &#8594;  | Number of columns to get |
+| numRows | Integer | &#8594;  | Number of rows to get |
 | Function result | Object | &#8592; | New range containing cells |
 
 <!-- END REF-->

@@ -37,8 +37,8 @@ In *mode*, you pass the integration mode you want to activate. You can use one o
 
 | Constant         | Type    | Value | Comment                                                                                |
 | ---------------- | ------- | ----- | -------------------------------------------------------------------------------------- |
-| Auto repair mode | Longint | 1     | Use flexible mode with auto-repair actions and fill the *errObject* parameter (if any) |
-| Strict mode      | Longint | 0     | Use strict integration mode (default)                                                  |
+| Auto repair mode | Integer | 1     | Use flexible mode with auto-repair actions and fill the *errObject* parameter (if any) |
+| Strict mode      | Integer | 0     | Use strict integration mode (default)                                                  |
 
 * Strict mode: In this mode, as soon as an error occurs during integration, it stops and you have to use the MSC in order to trace the error. This secure mode is used by default and is recommended in most cases.
 * Auto repair mode: In this mode, when a non-critical error occurs, it is bypassed and integration continues. If you passed the *errObject* parameter, each error is logged and can be analyzed afterwards.  

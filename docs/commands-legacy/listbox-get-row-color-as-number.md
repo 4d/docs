@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
 | row | Integer | &#8594;  | Row number |
 | colorType | Integer | &#8594;  | List box font color (default) or list box background color |
-| Function result | Longint | &#8592; | Color value |
+| Function result | Integer | &#8592; | Color value |
 
 <!-- END REF-->
 

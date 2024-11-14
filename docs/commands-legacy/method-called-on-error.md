@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | scope | Integer | &#8594;  | Scope of the error method |
-| Function result | String | &#8592; | Name of method called on error |
+| Function result | Text | &#8592; | Name of method called on error |
 
 <!-- END REF-->
 

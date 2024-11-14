@@ -31,17 +31,17 @@ The *horizontal* parameter returns a value indicating the horizontal resizing op
 
 | Constant               | Type    | Value | Comment                                                                                       |
 | ---------------------- | ------- | ----- | --------------------------------------------------------------------------------------------- |
-| Resize horizontal grow | Longint | 1     | If the window grows by 50% in width, the object is expanded by 50% to the right.              |
-| Resize horizontal move | Longint | 2     | If the window grows by 100 pixels in width, the object is moved 100 pixels to the right.      |
-| Resize horizontal none | Longint | 0     | If the window is expanded in width, neither the width nor the position of the object changes. |
+| Resize horizontal grow | Integer | 1     | If the window grows by 50% in width, the object is expanded by 50% to the right.              |
+| Resize horizontal move | Integer | 2     | If the window grows by 100 pixels in width, the object is moved 100 pixels to the right.      |
+| Resize horizontal none | Integer | 0     | If the window is expanded in width, neither the width nor the position of the object changes. |
 
 The *vertical* parameter returns a value indicating the vertical resizing option that is set for the object. You can compare the value received with the following constants, found in the *Form Objects (Properties)* theme:
 
 | Constant             | Type    | Value | Comment                                                                                         |
 | -------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
-| Resize vertical grow | Longint | 1     | If the window grows by 50% in height, the object is lengthened by 50% towards the bottom.       |
-| Resize vertical move | Longint | 2     | If the window grows by 100 pixels in height, the object is moved 100 pixels towards the bottom. |
-| Resize vertical none | Longint | 0     | If the window is expanded in height, neither the height nor the position of the object changes. |
+| Resize vertical grow | Integer | 1     | If the window grows by 50% in height, the object is lengthened by 50% towards the bottom.       |
+| Resize vertical move | Integer | 2     | If the window grows by 100 pixels in height, the object is moved 100 pixels towards the bottom. |
+| Resize vertical none | Integer | 0     | If the window is expanded in height, neither the height nor the position of the object changes. |
 
 #### See also 
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | source | Text | &#8594;  | String from which to delete characters |
 | where | Integer | &#8594;  | First character to delete |
 | numChars | Integer | &#8594;  | Number of characters to delete |
-| Function result | String | &#8592; | Resulting string |
+| Function result | Text | &#8592; | Resulting string |
 
 <!-- END REF-->
 

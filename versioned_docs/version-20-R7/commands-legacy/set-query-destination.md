@@ -23,10 +23,10 @@ You specify the type of the destination in the parameter *destinationType*. 4D p
 
 | Constant               | Type    | Value |
 | ---------------------- | ------- | ----- |
-| Into current selection | Longint | 0     |
-| Into named selection   | Longint | 2     |
-| Into set               | Longint | 1     |
-| Into variable          | Longint | 3     |
+| Into current selection | Integer | 0     |
+| Into named selection   | Integer | 2     |
+| Into set               | Integer | 1     |
+| Into variable          | Integer | 3     |
 
 You specify the destination of the query itself in the optional *destinationObject* parameter according to the following table:
 

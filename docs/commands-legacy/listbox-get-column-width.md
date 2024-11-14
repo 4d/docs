@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | minWidth | Integer | &#8592; | Minimum column width (in pixels) |
 | maxWidth | Integer | &#8592; | Maximum column width (in pixels) |
-| Function result | Longint | &#8592; | Column width (in pixels) |
+| Function result | Integer | &#8592; | Column width (in pixels) |
 
 <!-- END REF-->
 

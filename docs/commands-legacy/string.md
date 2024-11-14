@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | expression | Expression | &#8594;  | Expression for which to return the string form (can be Real, Integer, Long Integer, Date, Time, String, Text, Boolean, Undefined, or Null) |
 | format | Integer, Text | &#8594;  | Display format |
 | addTime | Time | &#8594;  | Time to add on if expression is a date |
-| Function result | String | &#8592; | String form of the expression |
+| Function result | Text | &#8592; | String form of the expression |
 
 <!-- END REF-->
 

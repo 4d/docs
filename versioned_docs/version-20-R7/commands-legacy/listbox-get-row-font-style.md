@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
 | row | Integer | &#8594;  | Row number |
-| Function result | Longint | &#8592; | Style value |
+| Function result | Integer | &#8592; | Style value |
 
 <!-- END REF-->
 

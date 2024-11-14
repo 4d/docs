@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | xIndex | Integer | &#8594;  | Xth file included in drag action |
-| Function result | String | &#8592; | Pathname of file extracted from pasteboard |
+| Function result | Text | &#8592; | Pathname of file extracted from pasteboard |
 
 <!-- END REF-->
 

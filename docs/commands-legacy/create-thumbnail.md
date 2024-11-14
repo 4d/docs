@@ -30,9 +30,9 @@ The optional parameter *mode* defines the thumbnail creation mode, i.e. the resi
 
 | Constant                    | Type    | Value |
 | --------------------------- | ------- | ----- |
-| Scaled to fit               | Longint | 2     |
-| Scaled to fit prop centered | Longint | 6     |
-| Scaled to fit proportional  | Longint | 5     |
+| Scaled to fit               | Integer | 2     |
+| Scaled to fit prop centered | Integer | 6     |
+| Scaled to fit proportional  | Integer | 5     |
 
 **Note:** Only these constants can be used with **CREATE THUMBNAIL**. The other constants in this theme cannot be applied to this command. 
 

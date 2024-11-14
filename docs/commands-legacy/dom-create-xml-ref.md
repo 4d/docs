@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | nameSpace | Text | &#8594;  | Value of namespace |
 | nameSpaceName | Text | &#8594;  | Namespace name |
 | nameSpaceValue | Text | &#8594;  | Namespace value |
-| Function result | String | &#8592; | Root XML element reference |
+| Function result | Text | &#8592; | Root XML element reference |
 
 <!-- END REF-->
 

@@ -28,10 +28,10 @@ You pass in *styles* a sum of the constants describing your font style selection
 
 | Constant  | Type    | Value |
 | --------- | ------- | ----- |
-| Bold      | Longint | 1     |
-| Italic    | Longint | 2     |
-| Plain     | Longint | 0     |
-| Underline | Longint | 4     |
+| Bold      | Integer | 1     |
+| Italic    | Integer | 2     |
+| Plain     | Integer | 0     |
+| Underline | Integer | 4     |
 
   
 #### Example 1 

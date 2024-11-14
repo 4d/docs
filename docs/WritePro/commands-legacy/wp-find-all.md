@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| searchValue | String | &#8594;  | Search value |
-| searchCondition | Longint | &#8594;  | Search rule(s) |
-| replaceValue | String | &#8594;  | Replacement string |
+| searchValue | Text | &#8594;  | Search value |
+| searchCondition | Integer | &#8594;  | Search rule(s) |
+| replaceValue | Text | &#8594;  | Replacement string |
 | Function result | Collection | &#8592; | Collection of range objects |
 
 <!-- END REF-->

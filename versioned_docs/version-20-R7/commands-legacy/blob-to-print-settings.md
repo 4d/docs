@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | printSettings | Blob | &#8594;  | BLOB containing print settings |
 | params | Integer | &#8594;  | 0=Restore saved values for number of copies and page range, 1=Reset to default values |
-| Function result | Longint | &#8592; | Status code: 1=Operation successful, 0=No current printer, -1=Incorrect parameters, 2=Printer changed |
+| Function result | Integer | &#8592; | Status code: 1=Operation successful, 0=No current printer, -1=Incorrect parameters, 2=Printer changed |
 
 <!-- END REF-->
 

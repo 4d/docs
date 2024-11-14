@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | defaultColor | Integer | &#8594;  | Preselected RGB color |
 | message | Text | &#8594;  | Title of selection window |
-| Function result | Longint | &#8592; | RGB color |
+| Function result | Integer | &#8592; | RGB color |
 
 <!-- END REF-->
 

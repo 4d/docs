@@ -31,8 +31,8 @@ Pass the height to set in the *height* parameter. By default, if you omit the *u
 
 | Constant  | Type    | Value | Comment                                                                                             |
 | --------- | ------- | ----- | --------------------------------------------------------------------------------------------------- |
-| lk lines  | Longint | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
-| lk pixels | Longint | 0     | Height is expressed as a number of pixels (default).                                                |
+| lk lines  | Integer | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
+| lk pixels | Integer | 0     | Height is expressed as a number of pixels (default).                                                |
 
 Headers must respect the minimum height set by the system. This height is 24 pixels under Windows and 17 pixels under Mac OS. If you pass a lower value in the *height* parameter, the minimum height is applied. 
 

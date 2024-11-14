@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | String | &#8592; | Current menu item mark |
+| Function result | Text | &#8592; | Current menu item mark |
 
 <!-- END REF-->
 

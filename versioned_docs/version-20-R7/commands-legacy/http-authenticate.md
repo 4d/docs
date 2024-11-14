@@ -33,8 +33,8 @@ The optional *authMethod* parameter indicates the authentication method to use. 
 
 | Constant    | Type    | Value | Comment                          |
 | ----------- | ------- | ----- | -------------------------------- |
-| HTTP basic  | Longint | 1     | Use BASIC authentication method  |
-| HTTP digest | Longint | 2     | Use DIGEST authentication method |
+| HTTP basic  | Integer | 1     | Use BASIC authentication method  |
+| HTTP digest | Integer | 2     | Use DIGEST authentication method |
 
 If you omit the *authMethod* parameter (or pass 0), you let the program choose the appropriate method to use. In this case, 4D sends an additional request in order to negotiate the authentication method.
 

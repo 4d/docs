@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which the scalar priority value has to be retrieved |
-| Function result | Longint | &#8592; | Current priority value for scalar fields |
+| Function result | Integer | &#8592; | Current priority value for scalar fields |
 
 <!-- END REF-->
 

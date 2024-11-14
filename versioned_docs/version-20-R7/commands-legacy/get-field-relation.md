@@ -36,10 +36,10 @@ You can compare the values returned in the *one* and *many* parameters with the 
 
 | Constant                | Type    | Value |
 | ----------------------- | ------- | ----- |
-| Automatic               | Longint | 3     |
-| Manual                  | Longint | 2     |
-| No relation             | Longint | 0     |
-| Structure configuration | Longint | 1     |
+| Automatic               | Integer | 3     |
+| Manual                  | Integer | 2     |
+| No relation             | Integer | 0     |
+| Structure configuration | Integer | 1     |
 
 * The optional *\** parameter lets you “force” the reading of the current status of the relation, even if it has not been modified by programming. In other words, when you pass the \* parameter, only the values 2 or 3 can be returned in the *one* and *many* parameters.
 

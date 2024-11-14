@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | selector | Integer | &#8594;  | Height value to get: lk row min height or lk row max height |
 | unit | Integer | &#8594;  | Unit of height value: 0 = pixels, 1 = lines |
-| Function result | Longint | &#8592; | Selected row height value |
+| Function result | Integer | &#8592; | Selected row height value |
 
 <!-- END REF-->
 
@@ -34,15 +34,15 @@ In *selector*, pass the type of value to get. You can use one of the following c
 
 | Constant          | Type    | Value |
 | ----------------- | ------- | ----- |
-| lk row max height | Longint | 33    |
-| lk row min height | Longint | 32    |
+| lk row max height | Integer | 33    |
+| lk row min height | Integer | 32    |
 
 By default, the command returns the value in pixels. You can pass one of the following constants from the *List Box* theme in the *unit* parameter to define the unit to use:
 
 | Constant  | Type    | Value | Comment                                                                                             |
 | --------- | ------- | ----- | --------------------------------------------------------------------------------------------------- |
-| lk lines  | Longint | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
-| lk pixels | Longint | 0     | Height is expressed as a number of pixels (default).                                                |
+| lk lines  | Integer | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
+| lk pixels | Integer | 0     | Height is expressed as a number of pixels (default).                                                |
 
 #### Example 
 

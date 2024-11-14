@@ -44,10 +44,10 @@ The *startSel* and *endSel* values do not take any style tags already present in
 
 | Constant           | Type    | Value  | Comment                                                             |
 | ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Longint | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Longint | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Longint | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Longint | 1      | Designates first character of text contained in object              |
+| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
+| ST End text        | Integer | 0      | Designates last character of text contained in object               |
+| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
+| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
 
 (\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
 
@@ -55,14 +55,14 @@ In *attribName* and *attribValue*, pass the name and the value, respectively, of
 
 | Constant                      | Type    | Value | Comment                                                                                                                                  |
 | ----------------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Attribute background color    | Longint | 8     | *attribValue*\=Hexadecimal values or HTML color names (Windows only)                                                                     |
-| Attribute bold style          | Longint | 1     | *attribValue*\=0: remove bold attribute from selection<br/>*attribValue*\=1: apply bold attribute to selection                   |
-| Attribute font name           | Longint | 5     | *attribValue*\=Font family name (string)                                                                                                 |
-| Attribute italic style        | Longint | 2     | *attribValue*\=0: remove italic attribute from selection<br/> *attribValue*\=1: apply italic attribute to selection              |
-| Attribute strikethrough style | Longint | 3     | *attribValue*\=0: remove strikethrough attribute from selection<br/>*attribValue*\=1: apply strikethrough attribute to selection |
-| Attribute text color          | Longint | 7     | *attribValue*\=Hexadecimal values or HTML color names                                                                                    |
-| Attribute text size           | Longint | 6     | *attribValue*\=Number of points (number)                                                                                                 |
-| Attribute underline style     | Longint | 4     | *attribValue*\=0: remove underline attribute from selection<br/> *attribValue*\=1: apply underline attribute to selection        |
+| Attribute background color    | Integer | 8     | *attribValue*\=Hexadecimal values or HTML color names (Windows only)                                                                     |
+| Attribute bold style          | Integer | 1     | *attribValue*\=0: remove bold attribute from selection<br/>*attribValue*\=1: apply bold attribute to selection                   |
+| Attribute font name           | Integer | 5     | *attribValue*\=Font family name (string)                                                                                                 |
+| Attribute italic style        | Integer | 2     | *attribValue*\=0: remove italic attribute from selection<br/> *attribValue*\=1: apply italic attribute to selection              |
+| Attribute strikethrough style | Integer | 3     | *attribValue*\=0: remove strikethrough attribute from selection<br/>*attribValue*\=1: apply strikethrough attribute to selection |
+| Attribute text color          | Integer | 7     | *attribValue*\=Hexadecimal values or HTML color names                                                                                    |
+| Attribute text size           | Integer | 6     | *attribValue*\=Number of points (number)                                                                                                 |
+| Attribute underline style     | Integer | 4     | *attribValue*\=0: remove underline attribute from selection<br/> *attribValue*\=1: apply underline attribute to selection        |
 
 **Colors**  
 If you pass the Attribute text color or Attribute background color constants in *attribName*, you must pass a string containing either an HTML color name or a hexadecimal color value in *attribValue*:  

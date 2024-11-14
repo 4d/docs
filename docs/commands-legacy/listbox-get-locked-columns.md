@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
-| Function result | Longint | &#8592; | Number of locked columns |
+| Function result | Integer | &#8592; | Number of locked columns |
 
 <!-- END REF-->
 

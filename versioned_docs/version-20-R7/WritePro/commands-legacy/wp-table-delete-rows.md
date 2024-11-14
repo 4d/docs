@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| rowNumber | Longint | &#8594;  | Row index number |
-| numRows | Longint | &#8594;  | Number of rows to delete (default value = 1) |
+| rowNumber | Integer | &#8594;  | Row index number |
+| numRows | Integer | &#8594;  | Number of rows to delete (default value = 1) |
 
 <!-- END REF-->
 

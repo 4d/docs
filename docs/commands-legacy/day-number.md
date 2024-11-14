@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aDate | Date | &#8594;  | Date for which to return the number |
-| Function result | Longint | &#8592; | Number representing the weekday on which date falls |
+| Function result | Integer | &#8592; | Number representing the weekday on which date falls |
 
 <!-- END REF-->
 
@@ -24,13 +24,13 @@ displayed_sidebar: docs
 
 | Constant  | Type    | Value |
 | --------- | ------- | ----- |
-| Sunday    | Longint | 1     |
-| Monday    | Longint | 2     |
-| Tuesday   | Longint | 3     |
-| Wednesday | Longint | 4     |
-| Thursday  | Longint | 5     |
-| Friday    | Longint | 6     |
-| Saturday  | Longint | 7     |
+| Sunday    | Integer | 1     |
+| Monday    | Integer | 2     |
+| Tuesday   | Integer | 3     |
+| Wednesday | Integer | 4     |
+| Thursday  | Integer | 5     |
+| Friday    | Integer | 6     |
+| Saturday  | Integer | 7     |
 
 **Note:** **Day number** returns a value between 1 and 7\. To get the day number within the month for a date, use the command [Day of](day-of.md).
 

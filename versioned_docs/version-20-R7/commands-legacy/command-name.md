@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | command | Integer | &#8594;  | Command number |
 | info | Integer | &#8592; | Thread-safety property of command |
 | theme | Text | &#8592; | Language theme of command |
-| Function result | String | &#8592; | Localized command name |
+| Function result | Text | &#8592; | Localized command name |
 
 <!-- END REF-->
 

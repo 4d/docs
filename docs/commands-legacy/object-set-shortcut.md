@@ -31,45 +31,45 @@ In the *key* parameter, pass a string indicating the key to associate with the o
 * or a constant (or its value) from the *Shortcut and Associated Keys* theme:  
 | Constant                      | Type   | Value           | Comment       |  
 | ----------------------------- | ------ | --------------- | ------------- |  
-| Shortcut with Backspace       | String | \[backspace\]   |               |  
-| Shortcut with Carriage Return | String | \[return\]      |               |  
-| Shortcut with Delete          | String | \[del\]         |               |  
-| Shortcut with Down arrow      | String | \[down arrow\]  |               |  
-| Shortcut with End             | String | \[end\]         |               |  
-| Shortcut with Enter           | String | \[enter\]       |               |  
-| Shortcut with Escape          | String | \[esc\]         |               |  
-| Shortcut with F1              | String | \[F1\]          |               |  
-| Shortcut with F10             | String | \[F10\]         |               |  
-| Shortcut with F11             | String | \[F11\]         |               |  
-| Shortcut with F12             | String | \[F12\]         | <br/> |  
-| Shortcut with F13             | String | \[F13\]         |               |  
-| Shortcut with F14             | String | \[F14\]         |               |  
-| Shortcut with F15             | String | \[F15\]         |               |  
-| Shortcut with F2              | String | \[F2\]          |               |  
-| Shortcut with F3              | String | \[F3\]          |               |  
-| Shortcut with F4              | String | \[F4\]          |               |  
-| Shortcut with F5              | String | \[F5\]          |               |  
-| Shortcut with F6              | String | \[F6\]          |               |  
-| Shortcut with F7              | String | \[F7\]          |               |  
-| Shortcut with F8              | String | \[F8\]          |               |  
-| Shortcut with F9              | String | \[F9\]          |               |  
-| Shortcut with Help            | String | \[help\]        |               |  
-| Shortcut with Home            | String | \[home\]        |               |  
-| Shortcut with Left arrow      | String | \[left arrow\]  |               |  
-| Shortcut with Page down       | String | \[page down\]   |               |  
-| Shortcut with Page up         | String | \[page up\]     |               |  
-| Shortcut with Right arrow     | String | \[right arrow\] |               |  
-| Shortcut with Tabulation      | String | \[tab\]         |               |  
-| Shortcut with Up arrow        | String | \[up arrow\]    |               |
+| Shortcut with Backspace       | Text | \[backspace\]   |               |  
+| Shortcut with Carriage Return | Text | \[return\]      |               |  
+| Shortcut with Delete          | Text | \[del\]         |               |  
+| Shortcut with Down arrow      | Text | \[down arrow\]  |               |  
+| Shortcut with End             | Text | \[end\]         |               |  
+| Shortcut with Enter           | Text | \[enter\]       |               |  
+| Shortcut with Escape          | Text | \[esc\]         |               |  
+| Shortcut with F1              | Text | \[F1\]          |               |  
+| Shortcut with F10             | Text | \[F10\]         |               |  
+| Shortcut with F11             | Text | \[F11\]         |               |  
+| Shortcut with F12             | Text | \[F12\]         | <br/> |  
+| Shortcut with F13             | Text | \[F13\]         |               |  
+| Shortcut with F14             | Text | \[F14\]         |               |  
+| Shortcut with F15             | Text | \[F15\]         |               |  
+| Shortcut with F2              | Text | \[F2\]          |               |  
+| Shortcut with F3              | Text | \[F3\]          |               |  
+| Shortcut with F4              | Text | \[F4\]          |               |  
+| Shortcut with F5              | Text | \[F5\]          |               |  
+| Shortcut with F6              | Text | \[F6\]          |               |  
+| Shortcut with F7              | Text | \[F7\]          |               |  
+| Shortcut with F8              | Text | \[F8\]          |               |  
+| Shortcut with F9              | Text | \[F9\]          |               |  
+| Shortcut with Help            | Text | \[help\]        |               |  
+| Shortcut with Home            | Text | \[home\]        |               |  
+| Shortcut with Left arrow      | Text | \[left arrow\]  |               |  
+| Shortcut with Page down       | Text | \[page down\]   |               |  
+| Shortcut with Page up         | Text | \[page up\]     |               |  
+| Shortcut with Right arrow     | Text | \[right arrow\] |               |  
+| Shortcut with Tabulation      | Text | \[tab\]         |               |  
+| Shortcut with Up arrow        | Text | \[up arrow\]    |               |
 
 In the *modifiers* parameter, you can pass one or more modifier keys to associate with the shortcut. To set the *modifiers* parameter, pass one or more of the following "Mask" type constants found in the *Events (Modifiers)* theme:
 
 | Constant         | Type    | Value | Comment                                                    |
 | ---------------- | ------- | ----- | ---------------------------------------------------------- |
-| Command key mask | Longint | 256   | Ctrl key under Windows, Command key under OS X             |
-| Control key mask | Longint | 4096  | Ctrl key under OS X, or right click under Windows and OS X |
-| Option key mask  | Longint | 2048  | Alt key (also called Option under OS X)                    |
-| Shift key mask   | Longint | 512   | Windows and OS X                                           |
+| Command key mask | Integer | 256   | Ctrl key under Windows, Command key under OS X             |
+| Control key mask | Integer | 4096  | Ctrl key under OS X, or right click under Windows and OS X |
+| Option key mask  | Integer | 2048  | Alt key (also called Option under OS X)                    |
+| Shift key mask   | Integer | 512   | Windows and OS X                                           |
 
 **Note:** When you omit the *modifiers* parameter, the object is enabled as soon as you press the key that was set. For example, if you associate the "H" key with a button, this button is enabled whenever you press the H key. This kind of functioning is to be reserved for specific interfaces.
 

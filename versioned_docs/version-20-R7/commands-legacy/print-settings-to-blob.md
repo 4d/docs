@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | printSettings | Blob | &#8592; | Current print settings |
-| Function result | Longint | &#8592; | Status code: 1=Operation successful, 0=No current printer |
+| Function result | Integer | &#8592; | Status code: 1=Operation successful, 0=No current printer |
 
 <!-- END REF-->
 

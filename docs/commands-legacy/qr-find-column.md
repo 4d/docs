@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | expression | Text, Pointer | &#8594;  | Column object |
-| Function result | Longint | &#8592; | Number of the column |
+| Function result | Integer | &#8592; | Number of the column |
 
 <!-- END REF-->
 

@@ -23,8 +23,8 @@ For each entity selection currently stored in 4D Server's cache, the following i
 
 |Property|	Type|	Description|
 |---|---|---|
-|id|String|	A UUID that references the entity set.|
-|dataClass|String	|Name of the dataclass.|
+|id|Text|	A UUID that references the entity set.|
+|dataClass|Text	|Name of the dataclass.|
 |selectionSize|	Number|	Number of entities in the entity selection.|
 |sorted|Boolean|Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.|
 |refreshed|Date|When the entity set was created or the last time it was used.|
@@ -43,8 +43,8 @@ For each user session, the following information is returned in the *sessionInfo
 
 |Property|	Type|	Description|
 |---|---|---|
-|sessionID|String|A UUID that references the session.|
-|userName|String|The name of the user who runs the session.
+|sessionID|Text|A UUID that references the session.|
+|userName|Text|The name of the user who runs the session.
 |lifeTime|Number|The lifetime of a user session in seconds (3600 by default).|
 |expiration	|Date|The current expiration date and time of the user session.|
 

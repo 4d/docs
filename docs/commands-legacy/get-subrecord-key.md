@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | idField | Field | &#8594;  | "Subtable Relation" or "Longint" type field of a former subtable relation |
-| Function result | Longint | &#8592; | Internal key of relation |
+| Function result | Integer | &#8592; | Internal key of relation |
 
 <!-- END REF-->
 

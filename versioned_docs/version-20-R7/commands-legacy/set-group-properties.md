@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name | Text | &#8594;  | New group name |
 | owner | Integer | &#8594;  | User ID number of new group owner (Binary databases only) |
 | members | Array integer | &#8594;  | New group members |
-| Function result | Longint | &#8592; | Unique ID number of new group |
+| Function result | Integer | &#8592; | Unique ID number of new group |
 
 <!-- END REF-->
 

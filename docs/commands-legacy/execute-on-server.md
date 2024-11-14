@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name | Text | &#8594;  | Name of the process created |
 | param | Expression | &#8594;  | Parameter(s) to the procedure |
 | * | Operator | &#8594;  | Unique process |
-| Function result | Longint | &#8592; | Process number for newly created process or already executing process |
+| Function result | Integer | &#8592; | Process number for newly created process or already executing process |
 
 <!-- END REF-->
 

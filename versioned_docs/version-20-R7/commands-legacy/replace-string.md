@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | newText | Text | &#8594;  | Replacement string (if empty string, occurrences are deleted) |
 | howMany | Integer | &#8594;  | How many times to replace If omitted, all occurrences are replaced |
 | * | Operator | &#8594;  | If passed: evaluation based on character codes |
-| Function result | String | &#8592; | Resulting string |
+| Function result | Text | &#8592; | Resulting string |
 
 <!-- END REF-->
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | xPath | Text | &#8594;  | XPath path of the XML element to create |
 | attribName | Text | &#8594;  | Attribute to set |
 | attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
-| Function result | String | &#8592; | Reference of the created XML element |
+| Function result | Text | &#8592; | Reference of the created XML element |
 
 <!-- END REF-->
 

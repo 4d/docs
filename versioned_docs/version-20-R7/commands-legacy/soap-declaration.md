@@ -49,34 +49,34 @@ In *type*, pass the corresponding 4D type. Most types of 4D variables and arrays
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Boolean array | Longint | 22    |
-| Date array    | Longint | 17    |
-| Integer array | Longint | 15    |
-| Is BLOB       | Longint | 30    |
-| Is Boolean    | Longint | 6     |
-| Is date       | Longint | 4     |
-| Is integer    | Longint | 8     |
-| Is longint    | Longint | 9     |
-| Is real       | Longint | 1     |
-| Is string var | Longint | 24    |
-| Is text       | Longint | 2     |
-| Is time       | Longint | 11    |
-| LongInt array | Longint | 16    |
-| Real array    | Longint | 14    |
-| String array  | Longint | 21    |
-| Text array    | Longint | 18    |
+| Boolean array | Integer | 22    |
+| Date array    | Integer | 17    |
+| Integer array | Integer | 15    |
+| Is BLOB       | Integer | 30    |
+| Is Boolean    | Integer | 6     |
+| Is date       | Integer | 4     |
+| Is integer    | Integer | 8     |
+| Is longint    | Integer | 9     |
+| Is real       | Integer | 1     |
+| Is string var | Integer | 24    |
+| Is text       | Integer | 2     |
+| Is time       | Integer | 11    |
+| LongInt array | Integer | 16    |
+| Real array    | Integer | 14    |
+| String array  | Integer | 21    |
+| Text array    | Integer | 18    |
 
 | Constant         | Type    | Value |
 | ---------------- | ------- | ----- |
-| Is DOM reference | Longint | 37    |
-| Is XML           | Longint | 36    |
+| Is DOM reference | Integer | 37    |
+| Is XML           | Integer | 36    |
 
 In *input\_output*, pass a value indicating whether the processed parameter is “incoming” (i.e. corresponding to a value received by the method) or “outgoing” (i.e. corresponding to a value returned by the method). You can use the following predefined constants, located in the *Web Services (Server)* theme:
 
 | Constant    | Type    | Value |
 | ----------- | ------- | ----- |
-| SOAP input  | Longint | 1     |
-| SOAP output | Longint | 2     |
+| SOAP input  | Integer | 1     |
+| SOAP output | Integer | 2     |
 
 ##### Use of XML types 
 

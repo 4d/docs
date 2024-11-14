@@ -82,7 +82,7 @@ You can also pass values for any attributes of the entity. These values will aut
 |Properties|Type|Description|
 |---|---|---|
 |Attributes of the entity|mixed|Optional - Values to modify|
-|__DATACLASS|String|Mandatory - Indicates the Dataclass of the entity|
+|__DATACLASS|Text|Mandatory - Indicates the Dataclass of the entity|
 |__ENTITY|Boolean|Mandatory - True to indicate to the server that the parameter is an entity|
 |__KEY|mixed (same type as the primary key)|Optional - Primary key of the entity|
 
@@ -108,7 +108,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 |Properties|Type|Description|
 |---|---|---|
 |Attributes of the entity|mixed|Optional - Values to modify|
-|__DATASET|String|Mandatory - entitySetID (UUID) of the entity selection|
+|__DATASET|Text|Mandatory - entitySetID (UUID) of the entity selection|
 |__ENTITIES|Boolean|Mandatory - True to indicate to the server that the parameter is an entity selection|
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
-| Function result | Longint | &#8592; | Number of columns in area |
+| Function result | Integer | &#8592; | Number of columns in area |
 
 <!-- END REF-->
 

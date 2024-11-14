@@ -11,9 +11,9 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | searchAfter | Object | &#8594;  | Range after which to begin searching |
-| searchValue | String | &#8594;  | Search value |
-| searchCondition | Longint | &#8594;  | Search rule(s) |
-| replaceValue | String | &#8594;  | Replacement string |
+| searchValue | Text | &#8594;  | Search value |
+| searchCondition | Integer | &#8594;  | Search rule(s) |
+| replaceValue | Text | &#8594;  | Replacement string |
 | Function result | Object | &#8592; | Range of the found/replaced value |
 
 <!-- END REF-->

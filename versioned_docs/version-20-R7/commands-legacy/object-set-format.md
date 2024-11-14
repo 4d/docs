@@ -96,13 +96,13 @@ To format Picture fields or variables, pass Char(n) in *displayFormat*, where *n
 
 | Constant                    | Type    | Value |
 | --------------------------- | ------- | ----- |
-| On background               | Longint | 3     |
-| Replicated                  | Longint | 7     |
-| Scaled to fit               | Longint | 2     |
-| Scaled to fit prop centered | Longint | 6     |
-| Scaled to fit proportional  | Longint | 5     |
-| Truncated centered          | Longint | 1     |
-| Truncated non centered      | Longint | 4     |
+| On background               | Integer | 3     |
+| Replicated                  | Integer | 7     |
+| Scaled to fit               | Integer | 2     |
+| Scaled to fit prop centered | Integer | 6     |
+| Scaled to fit proportional  | Integer | 5     |
+| Truncated centered          | Integer | 1     |
+| Truncated non centered      | Integer | 4     |
 
 ##### Alpha and Number 
 

@@ -29,9 +29,9 @@ You can use the optional *listType* parameter to designate the type of list that
 
 | Constant      | Type    | Value | Comment                                                                                    |
 | ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Longint | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Longint | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Longint | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
+| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
+| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
 
 If there is no list of the type defined associated with the *object*, the command returns an empty string ("").
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
-| bkName | String | &#8594;  | Name of bookmark to create |
+| bkName | Text | &#8594;  | Name of bookmark to create |
 
 <!-- END REF-->
 

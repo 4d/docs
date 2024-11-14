@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| Function result | Longint | &#8592; | Angle of text rotation |
+| Function result | Integer | &#8592; | Angle of text rotation |
 
 <!-- END REF-->
 
@@ -30,10 +30,10 @@ The value returns corresponds to one of the following constants, found in the "*
 
 | Constant              | Type    | Value | Comment                                      |
 | --------------------- | ------- | ----- | -------------------------------------------- |
-| Orientation 0°        | Longint | 0     | No rotation (default value)                  |
-| Orientation 180°      | Longint | 180   | Orientation of text to 180° clockwise        |
-| Orientation 90° left  | Longint | 270   | Orientation of text to 90° counter-clockwise |
-| Orientation 90° right | Longint | 90    | Orientation of text to 90° clockwise         |
+| Orientation 0°        | Integer | 0     | No rotation (default value)                  |
+| Orientation 180°      | Integer | 180   | Orientation of text to 180° clockwise        |
+| Orientation 90° left  | Integer | 270   | Orientation of text to 90° counter-clockwise |
+| Orientation 90° right | Integer | 90    | Orientation of text to 90° clockwise         |
 
 #### Example 
 

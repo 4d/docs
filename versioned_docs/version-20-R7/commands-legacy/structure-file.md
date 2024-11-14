@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns structure file of host database |
-| Function result | String | &#8592; | Long name of the database structure file |
+| Function result | Text | &#8592; | Long name of the database structure file |
 
 <!-- END REF-->
 

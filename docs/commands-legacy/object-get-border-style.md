@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| Function result | Longint | &#8592; | Border line style |
+| Function result | Integer | &#8592; | Border line style |
 
 <!-- END REF-->
 
@@ -30,13 +30,13 @@ The command returns a value corresponding to the border line style. You can comp
 
 | Constant      | Type    | Value | Comment                                                                                         |
 | ------------- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
-| Border Dotted | Longint | 2     | Objects appear framed with a dotted 1-pt. border line                                           |
-| Border Double | Longint | 5     | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel |
-| Border None   | Longint | 0     | Objects appear with no border                                                                   |
-| Border Plain  | Longint | 1     | Objects appear framed with a continuous 1-pt. border line                                       |
-| Border Raised | Longint | 3     | Objects appear framed with a 3D effect (raised)                                                 |
-| Border Sunken | Longint | 4     | Objects appear framed with a sunken 3D effect                                                   |
-| Border System | Longint | 6     | The border line is drawn based on the graphic specifications of the system                      |
+| Border Dotted | Integer | 2     | Objects appear framed with a dotted 1-pt. border line                                           |
+| Border Double | Integer | 5     | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel |
+| Border None   | Integer | 0     | Objects appear with no border                                                                   |
+| Border Plain  | Integer | 1     | Objects appear framed with a continuous 1-pt. border line                                       |
+| Border Raised | Integer | 3     | Objects appear framed with a 3D effect (raised)                                                 |
+| Border Sunken | Integer | 4     | Objects appear framed with a sunken 3D effect                                                   |
+| Border System | Integer | 6     | The border line is drawn based on the graphic specifications of the system                      |
 
 #### See also 
 

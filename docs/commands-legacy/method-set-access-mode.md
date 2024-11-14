@@ -24,6 +24,6 @@ In *mode*, you pass one of the following constants of the *Design Object Access*
 
 | Constant                 | Type    | Value | Comment                                                                                                                                     |
 | ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| On object locked abort   | Longint | 0     | Loading of object is aborted (default functioning)                                                                                          |
-| On object locked confirm | Longint | 2     | 4D displays a dialog box so that you can choose to try again or to abort. In remote mode, this option is not supported (loading is aborted) |
-| On object locked retry   | Longint | 1     | 4D keeps attempting to load the object until it has been released                                                                           |
+| On object locked abort   | Integer | 0     | Loading of object is aborted (default functioning)                                                                                          |
+| On object locked confirm | Integer | 2     | 4D displays a dialog box so that you can choose to try again or to abort. In remote mode, this option is not supported (loading is aborted) |
+| On object locked retry   | Integer | 1     | 4D keeps attempting to load the object until it has been released                                                                           |

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return the sequence number, or Default table, if omitted |
-| Function result | Longint | &#8592; | Sequence number |
+| Function result | Integer | &#8592; | Sequence number |
 
 <!-- END REF-->
 

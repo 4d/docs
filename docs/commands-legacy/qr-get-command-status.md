@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | area | Integer | &#8594;  | Reference of the area |
 | command | Integer | &#8594;  | Command number |
 | value | Integer, Text | &#8592; | Value for the selected sub-item |
-| Function result | Longint | &#8592; | Command status |
+| Function result | Integer | &#8592; | Command status |
 
 <!-- END REF-->
 

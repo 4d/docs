@@ -34,8 +34,8 @@ Pass a value indicating the list to recover in *direction*. You can use one of t
 
 | Constant         | Type    | Value |
 | ---------------- | ------- | ----- |
-| WA next URLs     | Longint | 1     |
-| WA previous URLs | Longint | 0     |
+| WA next URLs     | Integer | 1     |
+| WA previous URLs | Integer | 0     |
 
 If you omit the *direction* parameter, the value 0 is used.
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableNum &#124; tablePtr | Longint, Pointer | &#8594;  | Table number or Pointer to table |
-| Function result | Longint | &#8592; | Highest field number in table |
+| Function result | Integer | &#8592; | Highest field number in table |
 
 <!-- END REF-->
 

@@ -30,9 +30,9 @@ In the *indicator* parameter, pass the type of indicator you want to display. Yo
 
 | Constant                  | Type    | Value | Comment                                            |
 | ------------------------- | ------- | ----- | -------------------------------------------------- |
-| Asynchronous progress bar | Longint | 3     | Circular indicator displaying continuous animation |
-| Barber shop               | Longint | 2     | Bar displaying continuous animation                |
-| Progress bar              | Longint | 1     | Standard progress bar                              |
+| Asynchronous progress bar | Integer | 3     | Circular indicator displaying continuous animation |
+| Barber shop               | Integer | 2     | Bar displaying continuous animation                |
+| Progress bar              | Integer | 1     | Standard progress bar                              |
 
 #### See also 
 

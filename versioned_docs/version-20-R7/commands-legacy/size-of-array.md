@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array whose size is returned |
-| Function result | Longint | &#8592; | Returns the number of elements in array |
+| Function result | Integer | &#8592; | Returns the number of elements in array |
 
 <!-- END REF-->
 

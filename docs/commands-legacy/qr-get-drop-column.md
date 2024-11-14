@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
-| Function result | Longint | &#8592; | Drop value |
+| Function result | Integer | &#8592; | Drop value |
 
 <!-- END REF-->
 

@@ -22,8 +22,8 @@ By default, for security reasons, if you omit the *deleteOption* parameter, **DE
 
 | Constant             | Type    | Value | Comment                                          |
 | -------------------- | ------- | ----- | ------------------------------------------------ |
-| Delete only if empty | Longint | 0     | Deletes folder only when it is empty             |
-| Delete with contents | Longint | 1     | Deletes folder along with everything it contains |
+| Delete only if empty | Integer | 0     | Deletes folder only when it is empty             |
+| Delete with contents | Integer | 1     | Deletes folder along with everything it contains |
 
 * When Delete only if empty (0) is passed or if you omit the *deleteOption* parameter:  
    * The folder specified in the *folder* parameter is only deleted if it is empty; otherwise, the command does nothing and an error -47 (The file is already open, or the folder is not empty) is generated.  

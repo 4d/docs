@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | variable | Blob, Text | &#8594;  | Name of the variable |
 | validation | Boolean | &#8594;  | True = Validation by the DTD, False = No validation |
-| dtd &#124; schema | String | &#8594;  | Location of the DTD or XML schema |
-| Function result | String | &#8592; | Reference of XML element |
+| dtd &#124; schema | Text | &#8594;  | Location of the DTD or XML schema |
+| Function result | Text | &#8592; | Reference of XML element |
 
 <!-- END REF-->
 

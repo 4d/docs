@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | message | Text | &#8594;  | Title of the window |
 | defaultPath | Text, Integer | &#8594;  | • Default pathname or • Empty string to display the default user folder (“My documents” under Windows, “Documents” under Mac OS), or • Number of memorized pathname |
 | options | Integer | &#8594;  | Selection option(s)under Mac OS |
-| Function result | String | &#8592; | Access path to the selected folder |
+| Function result | Text | &#8592; | Access path to the selected folder |
 
 <!-- END REF-->
 
@@ -44,8 +44,8 @@ The *options* parameter lets you benefit from additional functions under macOS. 
 
 | Constant         | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Package open     | Longint | 2     | (Mac OS only): Authorizes the opening of packages as folders and thus the viewing /selection of their contents. By default, if this constant is not used, the command will not allow the opening of packages.                                                                                                                                                                                           |
-| Use sheet window | Longint | 16    | (Mac OS only): Displays the selection dialog box in the form of a sheet window (this option is ignored under Windows). <br/>Sheet windows are specific to the Mac OS X interface which have graphic animation (for more information, refer to the [DISPLAY SELECTION](display-selection.md) section). By default, if this constant is not used, the command will display a standard dialog box. |
+| Package open     | Integer | 2     | (Mac OS only): Authorizes the opening of packages as folders and thus the viewing /selection of their contents. By default, if this constant is not used, the command will not allow the opening of packages.                                                                                                                                                                                           |
+| Use sheet window | Integer | 16    | (Mac OS only): Displays the selection dialog box in the form of a sheet window (this option is ignored under Windows). <br/>Sheet windows are specific to the Mac OS X interface which have graphic animation (for more information, refer to the [DISPLAY SELECTION](display-selection.md) section). By default, if this constant is not used, the command will display a standard dialog box. |
 
 You can pass a single constant or a combination of both. These options are only taken into account under macOS. Under Windows, the *options* parameter is ignored if it is passed. 
 

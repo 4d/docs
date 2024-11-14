@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
-| Function result | Longint | &#8592; | Number of attributes |
+| Function result | Integer | &#8592; | Number of attributes |
 
 <!-- END REF-->
 

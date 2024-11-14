@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | Picture for which to return the size in bytes |
-| Function result | Longint | &#8592; | Size in bytes of the picture |
+| Function result | Integer | &#8592; | Size in bytes of the picture |
 
 <!-- END REF-->
 

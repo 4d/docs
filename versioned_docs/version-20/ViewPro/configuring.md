@@ -490,7 +490,7 @@ It contains the following properties:
 
 |Property| Value type| Description|
 |---|---|---|
-|version|Longint|Internal component version|
+|version|Integer|Internal component version|
 |dateCreation|Timestamp|Creation date|
 |dateModified|Timestamp|Last modification date|
 |meta|Object|Free contents, reserved for the 4D developer|

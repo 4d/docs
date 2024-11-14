@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set | Text | &#8594;  | Name of the set to test |
-| Function result | Longint | &#8592; | Number of records in set |
+| Function result | Integer | &#8592; | Number of records in set |
 
 <!-- END REF-->
 

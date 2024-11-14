@@ -28,8 +28,8 @@ In *sourceType*, pass the type of data source that you want to retrieve. You can
 
 | Constant           | Type    | Value |
 | ------------------ | ------- | ----- |
-| System data source | Longint | 2     |
-| User data source   | Longint | 1     |
+| System data source | Integer | 2     |
+| User data source   | Integer | 1     |
 
 **Note:** This command does not take file type data sources into account. 
 

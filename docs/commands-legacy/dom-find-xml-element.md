@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | elementRef | Text | &#8594;  | XML element reference |
 | xPath | Text | &#8594;  | XPath path of the element to look for |
 | arrElementRefs | Text array | &#8592; | List of element references found (if applicable) |
-| Function result | String | &#8592; | Reference of the element found (if applicable) |
+| Function result | Text | &#8592; | Reference of the element found (if applicable) |
 
 <!-- END REF-->
 

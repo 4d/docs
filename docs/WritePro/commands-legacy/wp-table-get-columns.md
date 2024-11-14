@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| startCol | Longint | &#8594;  | Position of first column |
-| numCols | Longint | &#8594;  | Number of columns to get |
+| startCol | Integer | &#8594;  | Position of first column |
+| numCols | Integer | &#8594;  | Number of columns to get |
 | Function result | Object | &#8592; | New table range containing selected columns |
 
 <!-- END REF-->
