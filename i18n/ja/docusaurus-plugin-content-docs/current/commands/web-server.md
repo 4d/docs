@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | 引数     | 型                            |   | 説明                                                                  |
 | ------ | ---------------------------- | - | ------------------------------------------------------------------- |
-| option | 整数                           | → | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
+| option | Integer                      | → | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
 | 戻り値    | 4D.WebServer | ← | WebServer オブジェクト                                                    |
 
 <!-- END REF-->
