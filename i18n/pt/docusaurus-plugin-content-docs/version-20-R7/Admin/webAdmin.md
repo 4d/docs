@@ -91,7 +91,7 @@ Número de porta a utilizar para as conexôes ao servidor web `WebAdmin` atravé
 
 Rota da pasta onde o certificado TLS está localizado. Como padrão, a rota da pasta de certificados está vazia e 4D ou Servidor 4D usa os arquivos de certificados contidos na apicação 4D (certificados personalizados devem ser armazenados do lado da pasta projeto).
 
-#### Modo de registro de depuração/debug
+#### Modo de registro de depuração
 
 O estado ou formato do arquivo de registro da petição HTTP (HTTPDebugLog_*nn*.txt, armazenada na pasta "Logs" da aplicação -- *nn* é o número do arquivo). As opções abaixo estão disponíveis:
 
