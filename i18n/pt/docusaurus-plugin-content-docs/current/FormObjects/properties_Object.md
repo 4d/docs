@@ -298,7 +298,7 @@ Existem vários tipos de cálculos disponíveis. The following table shows which
 | Mínimo                                    | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |
 | Máximo                                    | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |
 | Soma                                      | X   |      |      | X    | X    |      | Igual ao tipo de coluna |
-| Contagem                                  | X   | X    | X    | X    | X    | X    | Longint                 |
+| Contagem                                  | X   | X    | X    | X    | X    | X    | Integer                 |
 | Média                                     | X   |      |      | X    |      |      | Real                    |
 | Desvio padrão(\*)      | X   |      |      | X    |      |      | Real                    |
 | Variância(\*)          | X   |      |      | X    |      |      | Real                    |
@@ -334,4 +334,4 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 
 #### Objectos suportados
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[Rodapé de Listbox](listbox_overview.md#list-box-footers)
