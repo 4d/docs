@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | 引数    | 型                                                                   |   | 説明                    |
 | ----- | ------------------------------------------------------------------- | - | --------------------- |
 | value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | → | 共有コレクションの値            |
-| 戻り値   | コレクション                                                              | ← | New shared collection |
+| 戻り値   | Collection                                                          | ← | New shared collection |
 
 <!-- END REF-->
 
@@ -40,7 +40,7 @@ For more information on shared collections, please refer to the [Shared objects 
 以下のサポートされる型であれば、いくつでも値を渡すことができます:
 
 - 数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
-- テキスト
+- text
 - boolean
 - date
 - 時間 (ミリ秒の数 (実数) として保存されます)。
