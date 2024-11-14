@@ -43,7 +43,7 @@ Cada proceso contiene elementos específicos que puede manejar independientement
 
 ### Elementos del lenguaje
 
-- Variables: cada proceso tiene sus propias [variables de proceso](../Concepts/variables#variables-de-proceso). Las variables proceso solo se reconocen dentro del dominio de su proceso nativo.
+- Variables: cada proceso tiene sus propias [variables de proceso](../Concepts/variables#process-variables). Las variables proceso solo se reconocen dentro del dominio de su proceso nativo.
 - Conjuntos de proceso: cada proceso tiene sus propios conjuntos de proceso. `LockedSet` es un conjunto de procesos. Los conjuntos proceso se borran en cuanto termina el método proceso.
 - [Método de gestión de errores](../Concepts/error-handling#installing-an-error-handling-method): cada proceso puede tener su propio método de gestión de errores.
 - [Ventana del depurador](../Debugging/debugger#calling-the-debugger): cada proceso puede tener su propia ventana Depurador.
