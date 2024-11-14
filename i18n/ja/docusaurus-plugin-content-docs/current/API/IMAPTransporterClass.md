@@ -7,7 +7,7 @@ title: IMAPTransporter
 
 ### IMAP Transporter オブジェクト
 
-IMAP Transporter objects are instantiated with the [IMAP New transporter](../commands/imap-new-transporter.md) command. これらは、次のプロパティや関数を持ちます:
+IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-new-transporter.md) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 
 #### 説明
 
-`4D.IMAPTransporter.new()` 関数は、<!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`IMAP New transporter`](../commands/imap-new-transporter.md) command (shortcut).
+`4D.IMAPTransporter.new()` 関数は、<!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`IMAP New transporter`](../commands/imap-new-transporter.md) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -192,7 +192,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 | プロパティ         | 型    | 説明                                                                                                                |
 | ------------- | ---- | ----------------------------------------------------------------------------------------------------------------- |
-| headerCharset | テキスト | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。 |
+| headerCharset | Text | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。 |
 | bodyCharset   | Text | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取り得る値: 以下の可能な文字セットテーブルを参照ください。                      |
 
 使用可能な文字セット:
@@ -409,14 +409,14 @@ $status:=$imap.append($msg; "Drafts")
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                                                                                             | 型      | 説明                                                           |
-| ---------- | ------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------ |
-| success    |                                                                                             | ブール    | 処理が正常に終わった場合には true、それ以外は false                              |
-| statusText |                                                                                             | テキスト   | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー           |
-| errors     |                                                                                             | コレクション | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません) |
-|            | \[].errcode            | Number | 4Dエラーコード                                                     |
-|            | \[].message            | テキスト   | 4Dエラーの詳細                                                     |
-|            | \[].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名                                          |
+| プロパティ      |                                                                                             | 型          | 説明                                                           |
+| ---------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------ |
+| success    |                                                                                             | Boolean    | 処理が正常に終わった場合には true、それ以外は false                              |
+| statusText |                                                                                             | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー           |
+| errors     |                                                                                             | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません) |
+|            | \[].errcode            | Number     | 4Dエラーコード                                                     |
+|            | \[].message            | Text       | 4Dエラーの詳細                                                     |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                          |
 
 #### 例題
 
@@ -568,7 +568,7 @@ End if
 | 引数   | 型      |                             | 説明                |
 | ---- | ------ | :-------------------------: | ----------------- |
 | name | Text   |              ->             | 削除するメールボックスの名称    |
-| 戻り値  | オブジェクト | <- | deleteBox処理のステータス |
+| 戻り値  | Object | <- | deleteBox処理のステータス |
 
 <!-- END REF -->
 
@@ -981,7 +981,7 @@ ID = 1のメッセージを取得します:
 | ids      | Collection |              ->             | メッセージID のコレクション                                                                                                                                            |
 | startMsg | Integer    |              ->             | 先頭メッセージのシーケンス番号                                                                                                                                            |
 | endMsg   | Integer    |              ->             | 最後のメッセージのシーケンス番号                                                                                                                                           |
-| options  | オブジェクト     |              ->             | メッセージ管理オプション                                                                                                                                               |
+| options  | Object     |              ->             | メッセージ管理オプション                                                                                                                                               |
 | 戻り値      | Object     | <- | 次のコレクションを格納したオブジェクト:<br/><ul><li>[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) のコレクション</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul> |
 
 <!-- END REF -->
@@ -1442,7 +1442,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 | errors     |                                                                                             | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません) |
 |            | \[].errcode            | Number     | 4Dエラーコード                                                     |
 |            | \[].message            | Text       | 4Dエラーの詳細                                                     |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                          |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                          |
 
 #### 例題
 

@@ -129,9 +129,9 @@ En Windows, esta función crea un archivo ejecutable (.exe). En macOS, se encarg
 
 El principio consiste en fusionar un archivo de estructura compilado con 4D Volume Desktop. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito.
 
-Puede definir un archivo de datos predeterminado o permitir a los usuarios [crear y utilizar su propio archivo de datos](#gestion-de-archivos-de-datos).
+Puede definir un archivo de datos predeterminado o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
 
-Es posible [automatizar la actualización de aplicaciones fusionadas de un solo usuario](#actualización-automatica-de-aplicaciones-de-servidor-o-un-solo-usuario) mediante una secuencia de comandos de lenguaje.
+Es posible [automatizar la actualización de aplicaciones fusionadas de un solo usuario](#automatic-updating-of-server-or-single-user-applications) mediante una secuencia de comandos de lenguaje.
 
 #### Ubicación de 4D Volume Desktop
 
@@ -287,8 +287,8 @@ Marque esta opción para generar la parte cliente de su aplicación durante la f
 
 Puede marcar esta opción:
 
-- junto con la opción [**Crear aplicación servidor**](#crear-aplicacion-servidor) para crear las partes servidor y cliente correspondientes para la plataforma actual y (opcionalmente) incluir los archivos de actualización automática,
-- sin seleccionar la opción de [**Crear aplicación servidor**](#crear-aplicacion-servidor), generalmente para construir el archivo de actualización que se seleccionará de la plataforma "concurrente" al crear la parte del servidor.
+- junto con la opción [**Crear aplicación servidor**](#build-server-application) para crear las partes servidor y cliente correspondientes para la plataforma actual y (opcionalmente) incluir los archivos de actualización automática,
+- sin seleccionar la opción de [**Crear aplicación servidor**](#build-server-application), generalmente para construir el archivo de actualización que se seleccionará de la plataforma "concurrente" al crear la parte del servidor.
 
 #### Ubicación de 4D Volume Desktop
 
@@ -327,7 +327,7 @@ Esta funcionalidad requiere que haga clic en el botón **[...]** y designe la ub
 | macOS                          | Windows 4D Volume Desktop *o* Windows client update archive | Por defecto, se selecciona la aplicación `4D Volume Desktop` para Windows. Para seleccionar un archivo `.4darchive` previamente construido en Windows, presione **Shift** mientras hace clic en [...] |
 | Windows                        | macOS client update archive                                 | Seleccione un archivo `.4darchive` firmado previamente creado en macOS                                                                                                                                                                                                                                                    |
 
-Puede crear un archivo `.4darchive` específico en la plataforma concurrente seleccionando únicamente la opción [**Crear aplicación cliente**](#crear-aplicación-cliente) y la opción apropiada [**Permitir actualización automática...**](#copy-of-client-applications-inside-the-server-application).
+Puede crear un archivo `.4darchive` específico en la plataforma concurrente seleccionando únicamente la opción [**Crear aplicación cliente**](#build-client-application) y la opción apropiada [**Permitir actualización automática...**](#copy-of-client-applications-inside-the-server-application).
 
 #### Visualización de la notificación de actualización
 
@@ -363,7 +363,7 @@ Hay muchas causas posibles para este error. Cuando reciba este mensaje, es acons
 
 Una vez creada la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Client Server executable**. Esta carpeta contiene dos subcarpetas, `<ApplicationName>Client` y `<ApplicationName>Server`.
 
-> Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#archivo-registro) para conocer la causa del error.
+> Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#log-file) para conocer la causa del error.
 
 La carpeta `<ApplicationName>Client` contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de aplicaciones. Esta carpeta debe instalarse en cada máquina cliente. La carpeta `<ApplicationName>Server` contiene la parte del servidor de la aplicación.
 
@@ -418,7 +418,7 @@ El escenario básico es:
 - la llave `PublishName` no se copia en el *info.plist* del cliente fusionado
 - si la aplicación monopuesto no tiene una carpeta "Data" por defecto, el cliente fusionado se ejecutará sin datos.
 
-Actualización automática de las funciones del 4D Server (Número de [versión actual](#version-actual), comando `SET UPDATE FOLDER`...) trabaja con una aplicación de un solo usuario como con una aplicación remota estándar. Al conectarse, la aplicación monopuesto compara su llave `CurrentVers` con el rango de versión 4D Server. Si está fuera del rango, la aplicación cliente actualizada se descarga del servidor y el Updater lanza el proceso de actualización local.
+Actualización automática de las funciones del 4D Server (Número de [versión actual](#current-version), comando `SET UPDATE FOLDER`...) trabaja con una aplicación de un solo usuario como con una aplicación remota estándar. Al conectarse, la aplicación monopuesto compara su llave `CurrentVers` con el rango de versión 4D Server. Si está fuera del rango, la aplicación cliente actualizada se descarga del servidor y el Updater lanza el proceso de actualización local.
 
 ### Personalizar nombres de carpeta de caché cliente y/o servidor
 
@@ -485,7 +485,7 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 - **CEF**: Librería integrada Chromium. Es necesario ejecutar [áreas Web](../FormObjects/webArea_overview.md) que utilizan el motor de renderizado integrado y [áreas 4D View Pro](../FormObjects/viewProArea_overview.md). La llamada a estas áreas cuando el CEF está deseleccionado mostrará áreas en blanco y/o generará errores.
 - **MeCab**: librería utilizada para la indexación de textos en lengua japonesa (ver este [párrafo de propiedades](../settings/database.md#support-of-mecab-japanese-version)). Si se deselecciona este módulo, los índices de texto se reconstruirán en japonés.
 
-> Si deseleccionas MeCab para una aplicación en lenguaje japonés utilizada en plataformas heterogéneas, asegúrese de deseleccionarlo tanto en la compilación cliente/servidor como en la [compilación de la aplicación cliente](#crear-aplicacion-cliente) (para la plataforma concurrente), de lo contrario se producirán fallos importantes en la aplicación.
+> Si deselecciona MeCab para una aplicación en lenguaje japonés utilizada en plataformas heterogéneas, asegúrese de deseleccionarlo tanto en la compilación cliente/servidor como en la [compilación de la aplicación cliente](#build-client-application) (para la plataforma concurrente), de lo contrario se producirán fallos importantes en la aplicación.
 
 - **SpellChecker**: se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
 - **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single

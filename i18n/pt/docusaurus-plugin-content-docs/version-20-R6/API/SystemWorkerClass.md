@@ -192,7 +192,7 @@ End if
 
 var $sw : 4D.SystemWorker
 $sw:=4D.SystemWorker.new("/bin/cat /folder/myfile.txt")
-$sw.wait() //synchronous execution
+$sw.wait() //execução síncrona
 
 ```
 

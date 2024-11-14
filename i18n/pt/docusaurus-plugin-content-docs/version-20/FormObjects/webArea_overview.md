@@ -163,7 +163,7 @@ Quando o formulário for executado, as funções da interface de navegador padr�
 - **O menu contextual**: é possível utilizar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
 - **Arrastar e soltar**: o usuário pode arrastar e soltar texto, imagens e documentos dentro da área web ou entre uma área web e os objetos dos formulários 4D, segundo as propriedades dos objetos 4D. Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. In this case, the mouse cursor displays a "forbidden" icon ![](../assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. Neste caso, pode chamar o comando [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) ou definir a [variável URL](properties_WebArea.md#url) em resposta a uma queda do usuário.
 
-> Drag and drop features described above are not supported in web areas using the [macOS system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> Os recursos de arrastar e soltar descritos acima não são suportados em áreas web usando o mecanismo de renderização do sistema [macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 
 ### Subformulários
@@ -200,7 +200,7 @@ To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
         WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
     ```
 
-> With [Windows system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine), a change in this preference requires a navigation action in the area (for example, a page refresh) to be taken into account.
+> Com o mecanismo de renderização [do sistema Windows](properties_WebArea.md#use-embedded-web-rendering-engine), uma alteração nesta preferência requer uma ação de navegação na área (por exemplo, uma atualização de página) para ser tida em conta.
 
 Para mais informações, consultar a descrição do comando `WA SET PREFERENCE`.
 

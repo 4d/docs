@@ -103,9 +103,9 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 Dentro do componente, o código do método `methCreateRec`:
 
 ```4d
-C_POINTER($1) //Pointer on a table in host database
-C_POINTER($2) //Pointer on a field in host database
-C_TEXT($3) // Value to insert
+C_POINTER($1) //Pointer em uma tabela no banco de dados host
+C_POINTER($2) //Pointer em um campo no banco de dados host
+C_TEXT($3) // Valor a ser inserido
 
 $tablepointer:=$1
 $fieldpointer:=$2
@@ -205,7 +205,7 @@ Cria o banco externo:
 Escrita no banco de dados externa:
 
 ```4d
- $Ptr_1:=$2 // retrieves data from the host database through pointers
+ $Ptr_1:=$2 // recupera dados do banco de dados host por meio de ponteiros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -221,13 +221,14 @@ Escrita no banco de dados externa:
 
         USE DATABASE SQL_INTERNAL;
 
+
  End SQL
 ```
 
 Lendo de um banco externo:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host database through pointers
+ $Ptr_1:=$2 // acessa dados do banco de dados host por meio de ponteiros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5

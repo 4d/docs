@@ -5,7 +5,7 @@ title: Operadores
 
 Un operador es un símbolo o un grupo de símbolos que utiliza para verificar, modificar o combinar los valores. Usted ya conoce a la mayoría de los operadores. Por ejemplo, `1 + 2` utiliza el operador de adición (o signo más) para sumar dos números, y el resultado es 3. Los operadores de comparación, como = o >, le permiten comparar dos o más valores.
 
-El lenguaje 4D es compatible con los operadores que ya conoce de otros lenguajes como C o JavaScript. Sin embargo, el operador de asignación es `:=` para evitar que se utilice de forma errónea cuando el operador "igual a" (`=`) está planeado. Los [operadores básicos](#operadores-basicos) tales como los operadores aritméticos (+, -, \*, /, %...) y los operadores de comparación (=, >, >=...) puede utilizarse con datos de tipo numérico, pero también booleanos, texto, fecha, hora, puntero o imagen. Al igual que JavaScript, el lenguaje 4D soporta el concepto de valores [truthy y falsy](#truthy-and-falsy), que se utilizan en [los operadores de corto-cicrcuit](#short-circuit-operators).
+El lenguaje 4D es compatible con los operadores que ya conoce de otros lenguajes como C o JavaScript. Sin embargo, el operador de asignación es `:=` para evitar que se utilice de forma errónea cuando el operador "igual a" (`=`) está planeado. Los [operadores básicos](#basic-operators) tales como los operadores aritméticos (+, -, \*, /, %...) y los operadores de comparación (=, >, >=...) puede utilizarse con datos de tipo numérico, pero también booleanos, texto, fecha, hora, puntero o imagen. Al igual que JavaScript, el lenguaje 4D soporta el concepto de valores [truthy y falsy](#truthy-and-falsy), que se utilizan en [los operadores de corto-cicrcuit](#short-circuit-operators).
 
 ## Terminología
 
@@ -33,15 +33,15 @@ $col:=New collection //$col se inicializa con una colección vacía
 
 Los resultados del operador dependen de los **tipos de datos** a los que se aplican. 4D soporta diferentes operadores en tipos de datos escalares. Se describen con los tipos de datos, en las siguientes secciones:
 
-- [**Operadores lógicos**](dt_boolean.md#operadores-logicos) (en expresiones **booleanas**)
+- [**Operadores lógicos**](dt_boolean.md#logical-operators) (en expresiones **booleanas**)
 - [**Operadores de fechas**](dt_date.md#operadores-de-fechas)
-- [**Operadores de tiempo**](dt_time.md#operadores-de-tiempo)
-- [**Operadores de números**](dt_number.md#operadores-numericos)
-- [**Operadores de bits**](dt_number.md#operadores--de-bits) (en expresiones de tipo **entero largo**)
-- [**Operadores de imágenes**](dt_picture.md#operadores-de-imagenes)
-- [**Operadores de punteros**](dt_pointer.md#operadores-de-punteros)
+- [**Operadores de tiempo**](dt_time.md#time-operators)
+- [**Operadores de números**](dt_number.md#number-operators)
+- [**Operadores de bits**](dt_number.md#bitwise-operators) (en expresiones de tipo **entero largo**)
+- [**Operadores de imágenes**](dt_picture.md#picture-operators)
+- [**Operadores de punteros**](dt_pointer.md#pointer-operators)
 - [**Operadores de cadenas**](dt_string.md#operadores-de-cadenas)
-- [**Operadores en las referencias de objetos**](dt_object.md#operadores-en-los-objetos)
+- [**Operadores en las referencias de objetos**](dt_object.md#object-operators)
 - [**Operadores de referencia de colección**](dt_collection.md#collection-operators)
 - [**Operadores null**](dt_null_undefined.md#operadores-null)
 - [**Operadores Undefined**](dt_null_undefined.md#operadores-undefined)
@@ -99,29 +99,29 @@ La operación "source `operator` value" no es estrictamente equivalente a "sourc
 #### Ejemplos
 
 ```4d
-// Addition
+// Adición
 $x:=2
 $x+=5 //$x=7
 
-$t:="Hello" 
-$t+=" World" //$t="Hello World" 
+$t:="Hola" 
+$t+=" World" //$t="Hola Mundo" 
 
-$d:=!2000-11-10!
+$d:=! ¡000-11-10!
 $d+=10 //$d=!2000-11-20!
 
-// Subtraction
+// Restar
 $x1:=10
 $x1-=5 //$x1=5
 
-$d1:=!2000-11-10!
+$d1:=!
 $d1-=10 // $d1=!2000-10-31!
 
-// Division
+// División
 $x3:=10
 $x3/=2 // $x3=5
 
 
-// Multiplication
+// Multiplicación
 $x2:=10
 $x2*=5 // $x2=50
 
@@ -134,7 +134,7 @@ $t2*=2 // $t2="HelloHello"
 
 Los operadores **&&** y **||** son los **operadores en cortocircuito**. Un operador en cortocircuito es aquel que no necesariamente evalúa todos sus operandos.
 
-La diferencia con los [operadores booleanos simples **&** y **|**](dt_boolean.md#operadores-logicos) es que los operadores en cortocircuito **&&** y **||** no devuelven un valor booleano. Evalúan las expresiones como [truthy o falsy](#truthy-and-falsy), y luego devuelven una de las expresiones.
+La diferencia con los [operadores booleanos simples **&** y **|**](dt_boolean.md#logical-operators) es que los operadores en cortocircuito **&&** y **||** no devuelven un valor booleano. Evalúan las expresiones como [truthy o falsy](#truthy-and-falsy), y luego devuelven una de las expresiones.
 
 ### Operador en corto-circuito AND (&&)
 

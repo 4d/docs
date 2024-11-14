@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| 引数            | 型      |     | 説明                            |
-| ------------- | ------ | :-: | ----------------------------- |
-| processNumber | 整数     |  →  | Process number                |
-| 戻り値           | オブジェクト |  ←  | Information about the process |
+| 引数            | 型       |     | 説明                            |
+| ------------- | ------- | :-: | ----------------------------- |
+| processNumber | Integer |  →  | Process number                |
+| 戻り値           | Object  |  ←  | Information about the process |
 
 <!-- END REF -->
 
@@ -31,18 +31,18 @@ The `Process info` command <!-- REF #_command_.Process info.Summary -->returns a
 
 | プロパティ            | 型                                       | 説明                                                                               |
 | ---------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
-| cpuTime          | 実数                                      | Running time (seconds)                                        |
-| cpuUsage         | 実数                                      | Percentage of time devoted to this process (between 0 and 1)  |
+| cpuTime          | Real                                    | Running time (seconds)                                        |
+| cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
 | creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | 倍長整数                                    | Process unique ID                                                                |
-| name             | テキスト                                    | プロセス名                                                                            |
-| number           | 倍長整数                                    | Process number                                                                   |
-| プリエンプティブ         | ブール                                     | True if run preemptive, false otherwise                                          |
-| sessionID        | テキスト                                    | Session UUID                                                                     |
-| state            | 倍長整数                                    | Current status. Possible values: see below       |
-| systemID         | テキスト                                    | ID for the user process, 4D process or spare process                             |
-| type             | 倍長整数                                    | Running process type. Possible values: see below |
-| visible          | ブール                                     | True if visible, false otherwise                                                 |
+| ID               | Longint                                 | Process unique ID                                                                |
+| name             | Text                                    | プロセス名                                                                            |
+| number           | Longint                                 | Process number                                                                   |
+| プリエンプティブ         | Boolean                                 | True if run preemptive, false otherwise                                          |
+| sessionID        | Text                                    | Session UUID                                                                     |
+| state            | Longint                                 | Current status. Possible values: see below       |
+| systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
+| type             | Longint                                 | Running process type. Possible values: see below |
+| visible          | Boolean                                 | True if visible, false otherwise                                                 |
 
 - Possible values for "state":
 

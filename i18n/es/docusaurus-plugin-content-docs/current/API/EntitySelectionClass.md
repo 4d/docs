@@ -457,7 +457,7 @@ La función `.clean()` <!-- REF #EntitySelectionClass.clean().Summary -->devuelv
 
 Por defecto, cuando una entidad es [eliminada](EntitySelectionClass.md#drop), su(s) referencia(s) en la(s) selección(es) de entidades existente(s) se vuelve(n) *undefined* pero no se elimina(n) del objeto(s) de selección de entidades. Las entidades eliminadas se siguen incluyendo en la propiedad [`.length`](#length) y se muestran como líneas en blanco si la selección de entidades está vinculada a un objeto de interfaz como una lista. En este caso, llamar a la función `.clean()` en la selección de entidades permite obtener una nueva selección de entidades actualizada, que no contiene referencias de entidades *undefined*.
 
-La selección de entidad resultante mantiene los mismos [criterios de orden](../ORDA/dsMapping.md#selección-de-entidad-ordenada-o-no-ordenada) y la misma propiedad [modificable/compartible](../ORDA/entities.md#selecciones-de-entidad-compartibles-o-alterables) que la selección de entidad original.
+La selección de entidad resultante mantiene los mismos [criterios de orden](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) y la misma propiedad [modificable/compartible](../ORDA/entities.md#shareable-or-alterable-entity-selections) que la selección de entidad original.
 
 #### Ejemplo
 

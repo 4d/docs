@@ -273,7 +273,7 @@ The Help button style can be used to display a standard system help button. By d
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) basic properties.
+> O estilo da Ajuda não é compatível com as propriedades básicas [Número de estados](properties_TextAndPicture.md#number-of-states), [Caminho da imagem](properties_TextAndPicture.md#picture-pathname) e [Posição Título/Imagem](properties_TextAndPicture.md#titlepicture-position) basic properties.
 
 ### Círculo
 
@@ -330,7 +330,7 @@ Todos os botões partilham o mesmo conjunto de propriedades básicas:
 > (1) Não é compatível com o estilo [Help](#help).<br/>
 > (2) Não é compatível com os estilos [Help](#help), [Flat](#flat) e [Regular](#regular).
 
-Outras propriedades específicas estão disponíveis, dependendo do [estilo do botão](#estilos-de-botão):
+Outras propriedades específicas estão disponíveis, dependendo do [estilo do botão](#button-styles):
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Plano, Regular: [Botão padrão](properties_Appearance.md#default-button)

@@ -130,7 +130,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 #### $1 - URL
 
-The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
+O primeiro parâmetro (`$1`) é o URL recebido pelo servidor, do qual o endereço do host foi removido.
 
 Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
 

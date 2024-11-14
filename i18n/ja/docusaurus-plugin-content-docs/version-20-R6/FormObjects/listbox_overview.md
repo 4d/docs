@@ -140,7 +140,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [ドロップ有効](properties_Action.md#ドロップ有効)                                    | ○         | ○             | ○                            |
 | [フォーカス可](properties_Entry.md#フォーカス可)                                     | ○         | ○             | ○                            |
 | [フォント](properties_Text.md#フォント)                                          | ○         | ○             | ○                            |
-| [Font Color](properties_Text.md#font-color)                              | ○         | ○             | ○                            |
+| [フォントカラー](properties_Text.md#フォントカラー)                                    | ○         | ○             | ○                            |
 | [フォントカラー式](properties_Text.md#フォントカラー式)                                  |           | ○             | ○                            |
 | [フォントサイズ](properties_Text.md#フォントサイズ)                                    | ○         | ○             | ○                            |
 | [高さ (リストボックス)](properties_CoordinatesAndSizing.md#高さ) | ○         | ○             | ○                            |
@@ -149,7 +149,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [追加の空白の行を非表示](properties_BackgroundAndBorder.md#追加の空白の行を非表示)             | ○         | ○             | ○                            |
 | [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す)                      | ○         | ○             | ○                            |
 | [セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示)              | ○         | ○             | ○                            |
-| [Hierarchical List Box](properties_Object.md#array-list-box)             | ○         |               |                              |
+| [階層リストボックス](properties_Object.md#配列リストボックス)                              | ○         |               |                              |
 | [ハイライトセット](properties_ListBox.md#ハイライトセット)                               |           | ○             |                              |
 | [横揃え](properties_Text.md#横揃え)                                            | ○         | ○             | ○                            |
 | [横線カラー](properties_Gridlines.md#横線カラー)                                   | ○         | ○             | ○                            |
@@ -158,11 +158,11 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更)                       | ○         | ○             | ○                            |
 | [イタリック](properties_Text.md#イタリック)                                        | ○         | ○             | ○                            |
 | [左](properties_CoordinatesAndSizing.md#左)                                | ○         | ○             | ○                            |
-| [Master Table](properties_DataSource.md#master-table)                    |           | ○             |                              |
+| [マスターテーブル](properties_DataSource.md#マスターテーブル)                            |           | ○             |                              |
 | [メタ情報式](properties_Text.md#メタ情報式)                                        |           |               | ○                            |
 | [メソッド](properties_Action.md#メソッド)                                        | ○         | ○             | ○                            |
 | [行の移動可](properties_Action.md#行の移動可)                                      | ○         |               |                              |
-| [Named Selection](properties_DataSource.md#selection-name)               |           | ○             |                              |
+| [命名セレクション](properties_DataSource.md#命名セレクション)                            |           | ○             |                              |
 | [列数](properties_ListBox.md#列数)                                           | ○         | ○             | ○                            |
 | [スクロールしない列数](properties_ListBox.md#スクロールしない列数)                           | ○         | ○             | ○                            |
 | [ドラッグしない列数](properties_ListBox.md#ドラッグしない列数)                             | ○         | ○             | ○                            |

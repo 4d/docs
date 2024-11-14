@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Attachment オブジェクトによって、[`Email`](EmailObjectClass.md) オブジェクト内のファイルを参照することができます。 Attachment objects are created using the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+Attachment オブジェクトによって、[`Email`](EmailObjectClass.md) オブジェクト内のファイルを参照することができます。 MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドによって作成されます。
 
 ### Attachment オブジェクト
 
@@ -39,18 +39,18 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | file        | 4D.File           |              ->             | 添付ファイル                                                                                 |
 | zipFile     | 4D.ZipFile        |              ->             | 添付 Zipファイル                                                                             |
 | blob        | 4D.Blob           |              ->             | 添付を格納した BLOB                                                                           |
-| path        | テキスト                              |              ->             | 添付ファイルのパス                                                                              |
-| name        | テキスト                              |              ->             | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
-| cid         | テキスト                              |              ->             | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
-| type        | テキスト                              |              ->             | content-type ヘッダーの値                                                                    |
-| disposition | テキスト                              |              ->             | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
+| path        | Text                              |              ->             | 添付ファイルのパス                                                                              |
+| name        | Text                              |              ->             | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
+| cid         | Text                              |              ->             | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
+| type        | Text                              |              ->             | content-type ヘッダーの値                                                                    |
+| disposition | Text                              |              ->             | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
 | 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                                                      |
 
 <!-- END REF -->
 
 #### 説明
 
-`4D.MailAttachment.new()` 関数は、<!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 It is identical to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command (shortcut).
+`4D.MailAttachment.new()` 関数は、<!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 この関数の機能は、[`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドと同一です。
 
 ## .cid
 
@@ -93,7 +93,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.name` プロパティは、<!-- REF #MailAttachmentClass.name.Summary -->添付ファイルの名前と拡張子<!-- END REF -->を格納します。  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+`.name` プロパティは、<!-- REF #MailAttachmentClass.name.Summary -->添付ファイルの名前と拡張子<!-- END REF -->を格納します。  [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドで別の名称を指定しなかった場合のデフォルトは、ファイルの名称です。
 
 ## .path
 
@@ -125,7 +125,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.size` プロパティは、<!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
+`.size` プロパティは、<!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します<!-- END REF -->。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
 
 ## .type
 
@@ -133,4 +133,4 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.type` プロパティは、<!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type`<!-- END REF --> を格納します。 If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.
+`.type` プロパティは、<!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type`<!-- END REF --> を格納します。 [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドにて、このタイプが明示的に渡されていない場合、`content-type` はファイルの拡張子に基づきます。

@@ -107,21 +107,21 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Create as many rows (empty and without columns) as there are tables
+  // テーブルと同じ数の空行 (つまり、列なし) を持つ配列作成します
  $vlLastTable:=Last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
-  // For each table
+ ARRAY POINTER(<>apFields;$vlLastTable;0) // X行 0列の 2D配列
+  // テーブル毎に
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Last field number($vlTable)
-  // Give value of elements
+  // 全フィールドをチェックします
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  //Insert a column in a row of the table underway
+  // 当該テーブルの行にフィールドに対応する列を挿入していきます
              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  //Assign the "cell" with the pointer
+  // 作成した "セル" にポインターを割り当てます
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
@@ -175,7 +175,7 @@ atNames{$vlElem} というシンタックスに注目してください。 atNam
 | ポインター  | (1+要素数) \* 8 + 全ポインターの合計サイズ                           |
 | 実数     | (1+要素数) \* 8                                          |
 | テキスト   | (1+要素数) \* 20 + (全テキストの合計サイズ) \* 2 |
-| 時間     | (1+要素数) \* 4                                          |
+| Time   | (1+要素数) \* 4                                          |
 | 2次元    | (1+要素数) \* 16 + 配列サイズの合計                              |
 
 **注:**

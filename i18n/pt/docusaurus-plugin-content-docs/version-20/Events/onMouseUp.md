@@ -3,9 +3,9 @@ id: onMouseUp
 title: On Mouse Up
 ---
 
-| Code | Pode ser chamado por                                                                                  | Definição                                                                |
-| ---- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 2    | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) | O usuário acabou de soltar o botão esquerdo do mouse em um objeto Imagem |
+| Code | Pode ser chamado por                                                                                       | Definição                                                                |
+| ---- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| 2    | [Área de entrada](FormObjects/input_overview.md) de [tipo](FormObjects/properties_Object.md#type) `imagem` | O usuário acabou de soltar o botão esquerdo do mouse em um objeto Imagem |
 
 
 ## Descrição

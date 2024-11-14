@@ -105,7 +105,7 @@ Uma área 4D View Pro lida com vários objetos e elementos.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property.
+Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Este nome é a propriedade do [nome do objeto](FormObjects/properties_Object.md#object-name).
 
 Por exemplo, se quiser definir o número total de colunas de uma área chamada "myVpArea", escreva:
 

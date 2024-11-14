@@ -21,7 +21,7 @@ Los usuarios pueden introducir y mostrar el texto en varias líneas dentro de un
 
 En las celdas se pueden mostrar booleanos e imágenes, así como fechas, horas o números. Es posible ordenar los valores de las columnas haciendo clic en un encabezado ([ordenación estándar](#managing-sorts)). Todas las columnas se sincronizan automáticamente.
 
-También es posible cambiar el tamaño de cada columna, y el usuario puede modificar el orden de las [columnas](properties_ListBox.md#locked-columns-and-static-columns) y [líneas](properties_Action.md#movable-rows) moviéndolas con el ratón, si esta acción e Tenga en cuenta que los list box se pueden utilizar en [modo jerárquico](#caja-de-lista-jerárquica).
+También es posible cambiar el tamaño de cada columna, y el usuario puede modificar el orden de las [columnas](properties_ListBox.md#locked-columns-and-static-columns) y [líneas](properties_Action.md#movable-rows) moviéndolas con el ratón, si esta acción e Tenga en cuenta que los list box se pueden utilizar en [modo jerárquico](#hierarchical-list-boxes).
 
 El usuario puede seleccionar una o varias líneas utilizando los atajos estándar: **Mayúsculas+clic** para una selección adyacente y **Ctrl+clic** (Windows) o **Comando+clic** (macOS) para una selección no adyacente.
 
@@ -140,7 +140,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Soltable](properties_Action.md#droppable)                                                        | X              | X                  | X                                     |
 | [Enfocable](properties_Entry.md#focusable)                                                        | X              | X                  | X                                     |
 | [Fuente](properties_Text.md#fuente)                                                               | X              | X                  | X                                     |
-| [Font Color](properties_Text.md#font-color)                                                       | X              | X                  | X                                     |
+| [Color de fuente](properties_Text.md#font-color)                                                  | X              | X                  | X                                     |
 | [Expresión de color de fuente](properties_Text.md#expresión-de-color-de-fuente)                   |                | X                  | X                                     |
 | [Tamaño de fuente](properties_Text.md#font-size)                                                  | X              | X                  | X                                     |
 | [Altura (list box)](properties_CoordinatesAndSizing.md#height)                 | X              | X                  | X                                     |
@@ -166,7 +166,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Número de columnas](properties_ListBox.md#number-of-columns)                                     | X              | X                  | X                                     |
 | [Número de columnas bloqueadas](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                     |
 | [Número de columnas estáticas](properties_ListBox.md#number-of-static-columns)                    | X              | X                  | X                                     |
-| [Nombre del objeto](properties_Object.md#nombre-del-objeto)                                       | X              | X                  | X                                     |
+| [Nombre del objeto](properties_Object.md#object-name)                                             | X              | X                  | X                                     |
 | [Derecha](properties_CoordinatesAndSizing.md#right)                                               | X              | X                  | X                                     |
 | [Array de colores de fondo de fila](properties_BackgroundAndBorder.md#row-background-color-array) | X              |                    |                                       |
 | [Array de control de filas](properties_ListBox.md#row-control-array)                              | X              |                    |                                       |

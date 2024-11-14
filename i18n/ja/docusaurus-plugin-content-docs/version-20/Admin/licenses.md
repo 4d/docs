@@ -18,7 +18,7 @@ title: 4D ライセンスの管理
 
 ## 初回のアクティベーション
 
-4D でおこなう場合は、**ヘルプ** メニューから **ライセンスマネージャー...** を選択します。 4D Server でおこなう場合は、4D Server アプリケーションを起動します。 The dialog box for choosing the activation mode appears.
+4D でおこなう場合は、**ヘルプ** メニューから **ライセンスマネージャー...** を選択します。 4D Server でおこなう場合は、4D Server アプリケーションを起動します。 アクティベーションモードを選択するダイアログボックスが表示されます。
 
 ![](../assets/en/getStart/server1.png)
 

@@ -14,12 +14,12 @@ title: On Header Click
 
 This event is generated when a click occurs on the header of a column in the list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
+Se a propriedade [Ordenável](FormObjects/properties_Action.md#sortable) foi selecionada no list box, você pode decidir se autoriza ou não um tipo padrão de coluna passando o valor 0, ou -1 na variável `$0`:
 
 - Se `$0` é igual a 0, é efetuada uma ordenação padrão.
 - If `$0` equals -1, a standard sort is not performed and the header does not display the sort arrow. The developer can still generate a column sort based on customized sort criteria using the 4D language.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property is not selected for the list box, the `$0` variable is not used.
+Se a propriedade [Ordenável](FormObjects/properties_Action.md#sortable) não está selecionada no list box, a variável `$0` não é usada.
 
 ### 4D View Pro
 

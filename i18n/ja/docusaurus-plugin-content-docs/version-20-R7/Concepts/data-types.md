@@ -42,7 +42,7 @@ title: データタイプの概要
 | ブール    | false                                    |
 | 日付     | 00-00-00                                 |
 | 倍長整数   | 0                                        |
-| 時間     | 00:00:00 |
+| Time   | 00:00:00 |
 | ピクチャー  | ピクチャーサイズ=0                               |
 | 実数     | 0                                        |
 | ポインター  | Nil=true                                 |
@@ -67,7 +67,7 @@ Object型、Collection型、Pointer型、Picture型の変数は、デフォル�
 | 文字列 (1) |          | `Num` | `Date` | `Time` | `Bool` |
 | 数値 (2)  | `String` |       |        |        | `Bool` |
 | 日付                         | `String` |       |        |        | `Bool` |
-| 時間                         | `String` |       |        |        | `Bool` |
+| Time                       | `String` |       |        |        | `Bool` |
 | ブール                        |          | `Num` |        |        |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。

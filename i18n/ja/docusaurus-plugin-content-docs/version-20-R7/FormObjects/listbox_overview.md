@@ -140,7 +140,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [ドロップ有効](properties_Action.md#ドロップ有効)                                    | ○         | ○             | ○                            |
 | [フォーカス可](properties_Entry.md#フォーカス可)                                     | ○         | ○             | ○                            |
 | [フォント](properties_Text.md#フォント)                                          | ○         | ○             | ○                            |
-| [Font Color](properties_Text.md#font-color)                              | ○         | ○             | ○                            |
+| [フォントカラー](properties_Text.md#フォントカラー)                                    | ○         | ○             | ○                            |
 | [フォントカラー式](properties_Text.md#フォントカラー式)                                  |           | ○             | ○                            |
 | [フォントサイズ](properties_Text.md#フォントサイズ)                                    | ○         | ○             | ○                            |
 | [高さ (リストボックス)](properties_CoordinatesAndSizing.md#高さ) | ○         | ○             | ○                            |
@@ -149,7 +149,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [追加の空白の行を非表示](properties_BackgroundAndBorder.md#追加の空白の行を非表示)             | ○         | ○             | ○                            |
 | [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す)                      | ○         | ○             | ○                            |
 | [セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示)              | ○         | ○             | ○                            |
-| [Hierarchical List Box](properties_Object.md#array-list-box)             | ○         |               |                              |
+| [階層リストボックス](properties_Object.md#配列リストボックス)                              | ○         |               |                              |
 | [ハイライトセット](properties_ListBox.md#ハイライトセット)                               |           | ○             |                              |
 | [横揃え](properties_Text.md#横揃え)                                            | ○         | ○             | ○                            |
 | [横線カラー](properties_Gridlines.md#横線カラー)                                   | ○         | ○             | ○                            |
@@ -158,11 +158,11 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更)                       | ○         | ○             | ○                            |
 | [イタリック](properties_Text.md#イタリック)                                        | ○         | ○             | ○                            |
 | [左](properties_CoordinatesAndSizing.md#左)                                | ○         | ○             | ○                            |
-| [Master Table](properties_DataSource.md#master-table)                    |           | ○             |                              |
+| [マスターテーブル](properties_DataSource.md#マスターテーブル)                            |           | ○             |                              |
 | [メタ情報式](properties_Text.md#メタ情報式)                                        |           |               | ○                            |
 | [メソッド](properties_Action.md#メソッド)                                        | ○         | ○             | ○                            |
 | [行の移動可](properties_Action.md#行の移動可)                                      | ○         |               |                              |
-| [Named Selection](properties_DataSource.md#selection-name)               |           | ○             |                              |
+| [命名セレクション](properties_DataSource.md#命名セレクション)                            |           | ○             |                              |
 | [列数](properties_ListBox.md#列数)                                           | ○         | ○             | ○                            |
 | [スクロールしない列数](properties_ListBox.md#スクロールしない列数)                           | ○         | ○             | ○                            |
 | [ドラッグしない列数](properties_ListBox.md#ドラッグしない列数)                             | ○         | ○             | ○                            |
@@ -238,20 +238,20 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 | プロパティ            | 型       | 説明                                                               |
 | ---------------- | ------- | ---------------------------------------------------------------- |
-| area             | テキスト    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
-| areaName         | テキスト    | エリアの名称                                                           |
-| column           | 倍長整数    | 列番号                                                              |
-| columnName       | テキスト    | 列の名称                                                             |
-| footerName       | テキスト    | フッターの名称                                                          |
-| headerName       | テキスト    | ヘッダーの名称                                                          |
-| horizontalScroll | 倍長整数    | 右方向スクロールの場合は正の数値、左方向の場合は負の数値                                     |
+| area             | text    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
+| areaName         | text    | エリアの名称                                                           |
+| column           | longint | 列番号                                                              |
+| columnName       | text    | 列の名称                                                             |
+| footerName       | text    | フッターの名称                                                          |
+| headerName       | text    | ヘッダーの名称                                                          |
+| horizontalScroll | longint | 右方向スクロールの場合は正の数値、左方向の場合は負の数値                                     |
 | isRowSelected    | boolean | 行が選択されていれば true、でなければ false                                      |
-| newPosition      | 倍長整数    | 列あるいは行の変更後の位置                                                    |
-| newSize          | 倍長整数    | 列または行の変更後のサイズ (ピクセル単位)                        |
-| oldPosition      | 倍長整数    | 列あるいは行の変更前の位置                                                    |
-| oldSize          | 倍長整数    | 列または行の変更前のサイズ (ピクセル単位)                        |
-| row              | 倍長整数    | 行番号                                                              |
-| verticalScroll   | 倍長整数    | 下方向スクロールの場合は正の数値、上方向の場合は負の数値                                     |
+| newPosition      | longint | 列あるいは行の変更後の位置                                                    |
+| newSize          | longint | 列または行の変更後のサイズ (ピクセル単位)                        |
+| oldPosition      | longint | 列あるいは行の変更前の位置                                                    |
+| oldSize          | longint | 列または行の変更前のサイズ (ピクセル単位)                        |
+| row              | longint | 行番号                                                              |
+| verticalScroll   | longint | 下方向スクロールの場合は正の数値、上方向の場合は負の数値                                     |
 
 > "偽" カラムや存在しないカラムにてイベントが発生した場合には、主に空の文字列が返されます。
 
@@ -947,8 +947,8 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 | valueType | デフォルトのウィジェット                               | 他に選択可能なウィジェット                                                                                   |
 | --------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| テキスト      | テキスト入力                                     | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
-| 実数        | 管理されたテキスト入力 (数字とセパレーター) | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
+| text      | テキスト入力                                     | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
+| real      | 管理されたテキスト入力 (数字とセパレーター) | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
 | integer   | 管理されたテキスト入力 (数字のみ)      | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト) またはスリーステートチェックボックス |
 | boolean   | チェックボックス                                   | ドロップダウンメニュー (指定リスト)                                                          |
 | color     | 背景色                                        | テキスト                                                                                            |
@@ -963,12 +963,12 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 | 値の型     | デフォルトのフォーマット                                                | 入力コントロール                               |
 | ------- | ----------------------------------------------------------- | -------------------------------------- |
-| テキスト    | オブジェクト内で定義されているものと同じ                                        | 制限なし                                   |
-| 実数      | オブジェクト内で定義されているものと同じ (システムの小数点セパレーターを使用) | "0-9" と "." と "-"      |
+| text    | オブジェクト内で定義されているものと同じ                                        | 制限なし                                   |
+| real    | オブジェクト内で定義されているものと同じ (システムの小数点セパレーターを使用) | "0-9" と "." と "-"      |
 |         |                                                             | min>=0 の場合、"0-9" と "." |
 | integer | オブジェクト内で定義されているものと同じ                                        | "0-9" と "-"                            |
 |         |                                                             | min>=0 の場合、"0-9"                       |
-| ブール     | チェックボックス                                                    | N/A                                    |
+| Boolean | チェックボックス                                                    | N/A                                    |
 | color   | N/A                                                         | N/A                                    |
 | event   | N/A                                                         | N/A                                    |
 
@@ -978,25 +978,25 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 唯一必須の属性は "valueType" であり、サポートされる値は "text"、"real"、"integer"、"boolean"、"color" そして "event"です。 以下の表には、リストボックスオブジェクト配列において "valueType"の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。 表示フォーマットに関しては、その更に下に詳細な説明と例があります。
 
-|                       | valueType                                   | テキスト | 実数 | integer | boolean | color | event |
-| --------------------- | ------------------------------------------- | ---- | -- | ------- | ------- | ----- | ----- |
-| *属性*                  | *説明*                                        |      |    |         |         |       |       |
-| value                 | セルの値 (入力または出力)           | ○    | ○  | ○       |         |       |       |
-| min                   | 最小値                                         |      | ○  | ○       |         |       |       |
-| max                   | 最大値                                         |      | ○  | ○       |         |       |       |
-| behavior              | "スリーステート" の値                                |      |    | ○       |         |       |       |
-| requiredList          | オブジェクト内で定義されたドロップダウンリスト                     | ○    | ○  | ○       |         |       |       |
-| choiceList            | オブジェクト内で定義されたコンボボックス                        | ○    | ○  | ○       |         |       |       |
-| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○  | ○       |         |       |       |
-| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○  | ○       |         |       |       |
-| saveAs                | "reference" または "value"                     | ○    | ○  | ○       |         |       |       |
-| choiceListReference   | 4D リスト参照、コンボボックスを表示                         | ○    | ○  | ○       |         |       |       |
-| choiceListName        | 4D リスト名、コンボボックスを表示                          | ○    | ○  | ○       |         |       |       |
-| unitList              | X要素の配列                                      | ○    | ○  | ○       |         |       |       |
-| unitReference         | 選択された要素のインデックス                              | ○    | ○  | ○       |         |       |       |
-| unitsListReference    | 単位の4D リスト参照                                 | ○    | ○  | ○       |         |       |       |
-| unitsListName         | 単位の4D リスト名                                  | ○    | ○  | ○       |         |       |       |
-| alternateButton       | 切り替えボタンを追加                                  | ○    | ○  | ○       | ○       | ○     |       |
+|                       | valueType                                   | text | real | integer | boolean | color | event |
+| --------------------- | ------------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
+| *属性*                  | *説明*                                        |      |      |         |         |       |       |
+| value                 | セルの値 (入力または出力)           | ○    | ○    | ○       |         |       |       |
+| min                   | 最小値                                         |      | ○    | ○       |         |       |       |
+| max                   | 最大値                                         |      | ○    | ○       |         |       |       |
+| behavior              | "スリーステート" の値                                |      |      | ○       |         |       |       |
+| requiredList          | オブジェクト内で定義されたドロップダウンリスト                     | ○    | ○    | ○       |         |       |       |
+| choiceList            | オブジェクト内で定義されたコンボボックス                        | ○    | ○    | ○       |         |       |       |
+| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○    | ○       |         |       |       |
+| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○    | ○       |         |       |       |
+| saveAs                | "reference" または "value"                     | ○    | ○    | ○       |         |       |       |
+| choiceListReference   | 4D リスト参照、コンボボックスを表示                         | ○    | ○    | ○       |         |       |       |
+| choiceListName        | 4D リスト名、コンボボックスを表示                          | ○    | ○    | ○       |         |       |       |
+| unitList              | X要素の配列                                      | ○    | ○    | ○       |         |       |       |
+| unitReference         | 選択された要素のインデックス                              | ○    | ○    | ○       |         |       |       |
+| unitsListReference    | 単位の4D リスト参照                                 | ○    | ○    | ○       |         |       |       |
+| unitsListName         | 単位の4D リスト名                                  | ○    | ○    | ○       |         |       |       |
+| alternateButton       | 切り替えボタンを追加                                  | ○    | ○    | ○       | ○       | ○     |       |
 
 #### value
 

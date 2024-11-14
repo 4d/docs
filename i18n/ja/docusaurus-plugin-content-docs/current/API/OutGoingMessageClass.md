@@ -63,7 +63,7 @@ A 4D.OutGoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 The `.body` property contains <!-- REF #OutGoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body` property:
 
-- テキスト
+- text
 - blob
 - object
 - image
@@ -108,9 +108,9 @@ The `.setBody()` function <!-- REF #OutGoingMessageClass.setBody().Summary -->se
 
 The following data types are supported in the *body*:
 
-- テキスト
+- Text
 - BLOB
-- オブジェクト
+- Object
 - ピクチャー
 
 When this function is used, the content-type header is automatically set depending on the *body* type:
@@ -134,8 +134,8 @@ If *body* is not of a supported value type, an error is returned.
 
 | 引数    | 型    |    | 説明                           |
 | ----- | ---- | -- | ---------------------------- |
-| key   | テキスト | -> | Header property to set       |
-| value | テキスト | -> | Value of the header property |
+| key   | Text | -> | Header property to set       |
+| value | Text | -> | Value of the header property |
 
 <!-- END REF -->
 
@@ -161,9 +161,9 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 <!-- REF #OutGoingMessageClass.setStatus().Params -->
 
-| 引数     | 型  |    | 説明            |
-| ------ | -- | -- | ------------- |
-| status | 整数 | -> | Status to set |
+| 引数     | 型       |    | 説明            |
+| ------ | ------- | -- | ------------- |
+| status | Integer | -> | Status to set |
 
 <!-- END REF -->
 

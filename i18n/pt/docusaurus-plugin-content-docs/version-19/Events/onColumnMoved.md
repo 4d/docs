@@ -10,6 +10,6 @@ title: On Column Moved
 
 ## Descrição
 
-This event is generated when a column of the list box is moved by the user using drag and drop ([if allowed](FormObjects/propertiesListBox.html#locked-columns-and-static-columns)). Não é gerado se a coluna for arrastada e depois largada na sua localização inicial.
+Este evento é gerado quando uma coluna de list box é movida pelo usuário usando arrastar e soltar ([se permitido](FormObjects/propertiesListBox.html#locked-columns-and-static-columns)). Não é gerado se a coluna for arrastada e depois largada na sua localização inicial.
 
 O comando `LISTBOX MOVED COLUMN NUMBER` devolve a nova posição da coluna. 

@@ -57,12 +57,12 @@ La barra de herramientas contiene los siguientes elementos:
 | ------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | Ejecutar el formulario                                      | Se utiliza para probar la ejecución del formulario. Al presionar este botón, 4D abre una nueva ventana y muestra el formulario en su contexto (lista de registros para un formulario lista y página de registro actual para un formulario detallado). El formulario se ejecuta en el proceso principal.                                                |
 | ![](../assets/en/FormEditor/selection.png)       | [Herramienta de selección](#selecting-objects)              | Permite seleccionar, desplazar y cambiar el tamaño de los objetos del formulario<p>.**Nota**: cuando se selecciona un objeto de tipo Texto o Cuadro de Grupo, presionando la tecla **Enter** se pasa al modo edición.</p>                                                                                                                                                 |
-| ![](../assets/en/FormEditor/zOrder.png)          | [Orden de entrada](#orden-de-entrada)                       | Pasa al modo "Orden de entrada", donde es posible ver y cambiar el orden de entrada actual del formulario. Tenga en cuenta que las marcas permiten ver el orden de entrada actual, sin dejar de trabajar en el formulario.                                                                                                                                                                |
+| ![](../assets/en/FormEditor/zOrder.png)          | [Orden de entrada](#data-entry-order)                       | Pasa al modo "Orden de entrada", donde es posible ver y cambiar el orden de entrada actual del formulario. Tenga en cuenta que las marcas permiten ver el orden de entrada actual, sin dejar de trabajar en el formulario.                                                                                                                                                                |
 | ![](../assets/en/FormEditor/moving.png)          | [Mover](#mover-objetos)                                     | Pasa al modo " Desplazamiento ", en el que es posible llegar rápidamente a cualquier parte del formulario utilizando la función de arrastrar y soltar en la ventana. El cursor toma la forma de una mano. Este modo de navegación es especialmente útil cuando se hace zoom en el formulario.                                                                             |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                               | Permite modificar la escala de visualización del formulario (100% por defecto). Puede pasar al modo "Zoom" haciendo clic en la lupa o pulsando directamente en la barra correspondiente a la escala deseada. Esta función se detalla en la sección anterior.                                                                                           |
 | ![](../assets/en/FormEditor/alignment.png)       | [Alineación](#alineación-objetos)                           | Este botón está asociado a un menú que permite alinear los objetos en el formulario. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                |
 | ![](../assets/en/FormEditor/distribution.png)    | [Distribución](#distribución-objetos)                       | Este botón está asociado a un menú que permite repartir los objetos en el formulario. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                               |
-| ![](../assets/en/FormEditor/level.png)           | [Nivel](#gestionar-los-planos-de-los-objetos)               | Este botón está asociado a un menú que permite cambiar el nivel de los objetos en el formulario. Se activa (o no) en función de los objetos seleccionados.                                                                                                                                                                                                             |
+| ![](../assets/en/FormEditor/level.png)           | [Nivel](#layering-objects)                                  | Este botón está asociado a un menú que permite cambiar el nivel de los objetos en el formulario. Se activa (o no) en función de los objetos seleccionados.                                                                                                                                                                                                             |
 | ![](../assets/en/FormEditor/group.png)           | [Agrupar/Desagrupar](#grouping-objects)                     | Este botón está asociado a un menú que permite agrupar y desagrupar la selección de objetos del formulario. Se activa (o no) en función de los objetos seleccionados.                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Visualización y gestión de páginas](forms.html#form-pages) | Esta área permite pasar de una página de formulario a otra y añadir páginas. Para navegar entre las páginas del formulario, haga clic en los botones de flecha o en el área central y elija la página que desea visualizar en el menú que aparece. Si pulsa el botón flecha derecha mientras se muestra la última página del formulario, 4D le permite añadir una página. |
 | ![](../assets/en/FormEditor/cssPreviewicon.png)  | [Vista previa CSS](#css-preview)                            | Este botón se utiliza para seleccionar el modo CSS a utilizar.                                                                                                                                                                                                                                                                                                                                            |
@@ -211,7 +211,7 @@ Puede mover todo gráfico u objeto activo del formulario, incluidos los campos y
 
 Al comenzar a arrastrar el objeto seleccionado, sus controles desaparecen. 4D muestra marcadores que indican la ubicación de los límites del objeto en las reglas para que pueda colocar el objeto exactamente donde lo quiere. Tenga cuidado de no arrastrar un mango. Al arrastrar un mango se cambia el tamaño del objeto. Puede presionar la tecla **Mayúsculas** para realizar el movimiento con una restricción.
 
-Cuando la [rejilla magnética](#usando-la-rejilla-magnética) está activada, los objetos se mueven por etapas indicando ubicaciones perceptibles.
+Cuando la [rejilla magnética](#using-the-magnetic-grid) está activada, los objetos se mueven por etapas indicando ubicaciones perceptibles.
 
 Para mover un objeto un píxel por píxel:
 
@@ -279,7 +279,7 @@ Para mostrar esta caja de diálogo, seleccione los objetos que desee alinear y, 
 
 Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. Los objetos se alinean entonces en el editor de formularios, pero como la caja de diálogo permanece en el primer plano, aún puede cancelar o aplicar la alineación.
 
-> Esta caja de diálogo le permite alinear y distribuir objetos en una sola operación. Para más información sobre cómo distribuir objetos, consulte [Repartir objetos](#distribuir-objetos).
+> Esta caja de diálogo le permite alinear y distribuir objetos en una sola operación. Para más información sobre cómo distribuir objetos, consulte [Repartir objetos](#distributing-objects).
 
 #### Utilizar la rejilla magnética
 
@@ -709,7 +709,7 @@ También puede mover un objeto a otra vista a través del menú contextual del o
 
 ![](../assets/en/FormEditor/moveObject2.png)
 
-> La [vista actual](#antes-del-comienzo) se muestra en negrita.
+> La [vista actual](#before-you-begin) se muestra en negrita.
 
 #### Seleccionar todos los objetos de una vista
 
@@ -735,7 +735,7 @@ Para ocultar una vista, haga clic en el icono _Mostrar/Ocultar_. Entonces se ate
 
 ![](../assets/en/FormEditor/hidden.png)
 
-> La [vista actual](#antes-del-comienzo) no se puede ocultar.
+> La [vista actual](#before-you-begin) no se puede ocultar.
 
 Para mostrar una vista que está oculta, simplemente selecciónela o haga clic en el icono _Mostrar/Ocultar_ de esa vista.
 
@@ -751,7 +751,7 @@ Para bloquear los objetos de una vista, haga clic en el icono _Bloquear/Desbloqu
 
 ![](../assets/en/FormEditor/locked.png)
 
-> La [vista actual](#antes-del-comienzo) no se puede bloquear.
+> La [vista actual](#before-you-begin) no se puede bloquear.
 
 Para desbloquear una vista que está bloqueada, basta con seleccionarla o hacer clic en el icono _Bloquear/Desbloquear_ de esa vista.
 

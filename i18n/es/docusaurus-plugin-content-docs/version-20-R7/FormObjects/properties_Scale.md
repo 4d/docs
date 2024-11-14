@@ -15,7 +15,7 @@ Activa la variante "barber shop" para el termómetro.
 
 #### Objetos soportados
 
-[Barber shop](progressIndicator.md#barber-shop)
+[Barbería](progressIndicator.md#barber-shop)
 
 ---
 

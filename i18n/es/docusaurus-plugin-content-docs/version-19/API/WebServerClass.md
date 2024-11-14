@@ -139,7 +139,7 @@ El comando `WEB Server list` devuelve todos los servidores web disponibles, est�
 
 #### Ejemplo
 
-Puede utilizar la propiedad [.name](#nombre) del objeto servidor web para identificar el proyecto o componente al que está unido cada objeto servidor web de la lista.
+Queremos saber cuántos servidores web en funcionamiento hay disponibles:
 
 ```4d
  var $wSList : Collection

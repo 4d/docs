@@ -33,7 +33,7 @@ Clicar no objeto altera a imagem.
 
 You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).
 
-2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
+2. Em seguida, certifique-se de que a imagem esteja nos recursos do seu projeto e insira o caminho na propriedade [Nome do caminho](properties_TextAndPicture.md#picture-pathname).
 
 3. Definir as propriedades de [linhas e colunas](properties_Crop.md) do gráfico.
 

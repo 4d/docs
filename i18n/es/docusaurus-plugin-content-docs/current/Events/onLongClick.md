@@ -20,7 +20,7 @@ Este evento se puede generar para los siguientes estilos de botones:
 - [OS X Texturizado](FormObjects/button_overview.md#os-x-textured)
 - [Office XP](FormObjects/button_overview.md#office-xp)
 - [Ayuda](FormObjects/button_overview.md#help)
-- [Círculo](FormObjects/button_overview.md#circulo)
+- [Círculo](FormObjects/button_overview.md#circle)
 - [Personalizado](FormObjects/button_overview.md#personalizado)
 
 Este evento se utiliza generalmente para mostrar menús emergentes en caso de presiones prolongadas en los botones. El evento [`On Clicked`](onClicked.md) si está activado, se genera si el usuario libera el botón del ratón antes del límite de tiempo de "clic largo".

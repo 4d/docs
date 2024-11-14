@@ -150,7 +150,7 @@ O parâmetro `$IPClient` recebe o endereço IP da máquina do navegador. This in
 
 The `$IPServer` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
-#### $user and $password - User Name and Password
+#### $user e $password - Nome de usuário e senha
 
 The `$user` and `$password` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 

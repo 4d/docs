@@ -9,7 +9,7 @@ title: Página de Backup
 
 Uma cópia de segurança pode ser iniciada de três maneiras:
 
-- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
+- Manualmente, utilizando o elemento **Backup...** do menu 4D **Arquivo** ou o botão **Backup** de [Centro de segurança e manutenção](MSC/backup.md).
 - Automaticamente, usando o agendador que pode ser definido nas Configurações do banco de dados,
 - Por programação, utilizando o comando `BACKUP`.
 
@@ -17,7 +17,7 @@ Uma cópia de segurança pode ser iniciada de três maneiras:
 
 ### You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
 
-1. Seleccione o comando **Backup...** no menu 4D **File** . A janela de backup aparece: ![](../assets/en/Backup/backup01.png) Você pode ver a localização da pasta de backup usando o menu pop-up ao lado da área de "Destino de backup". Também se registra no banco de dados **Backup journal.txt**.
+1. Seleccione o comando **Backup...** no menu 4D **File**. A janela de backup aparece: ![](../assets/en/Backup/backup01.png) Você pode ver a localização da pasta de backup usando o menu pop-up ao lado da área de "Destino de backup". Também se registra no banco de dados **Backup journal.txt**.
 
 - Também pode abrir o [Centro de manutenção e segurança](MSC/overview.md) de 4D e mostrar a [página de cópias de segurança](MSC/backup.md).
 
@@ -88,7 +88,7 @@ All information regarding the latest backup and restore operations are stored in
 O arquivo **backupHistory.json** é criado na pasta de destino do backup atual. Pode obter a rota para esse arquivo usando a declaração abaixo:
 
 ```4d
-$backupHistory:=Get 4D file(arquivo histórico Backup)
+$backupHistory:=Get 4D file(Backup history file)
 ```
 > **AVISO**  
 > Apagar ou mover o arquivo **backupHistory.json** faz com que o próximo número de backup seja resetado.

@@ -11,8 +11,8 @@ title: VP IMPORT FROM OBJECT
 
 | 引数         | 型      |    | 説明                      |                  |
 | ---------- | ------ | -- | ----------------------- | ---------------- |
-| vpAreaName | テキスト   | -> | 4D View Pro フォームオブジェクト名 |                  |
-| viewPro    | オブジェクト | -> | 4D View Pro オブジェクト      | <!-- END REF --> |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
+| viewPro    | Object | -> | 4D View Pro オブジェクト      | <!-- END REF --> |
 
 #### 説明
 

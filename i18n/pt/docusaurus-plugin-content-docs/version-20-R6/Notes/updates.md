@@ -28,7 +28,7 @@ Leia [**O que há de novo no 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Mudanças de comportamento
 
-- Support of scroll chaining in forms: parent subforms now scroll automatically when embedded scrollable objects ([vertically](../FormObjects/properties_Appearance.md#vertical-scroll-bar) or [horizontally](../FormObjects/properties_Appearance.md#horizontal-scroll-bar)) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
+- Suporte para perseguir a rolagem nos formulários: subformas pai agora rolam automaticamente quando objetos roláveis incorporados ([verticalmente](../FormObjects/properties_Appearance.md#vertical-scroll-bar) ou [horizontalmente](. /FormObjects/properties_Appearance.md#horizontal-scroll-bar)) atingiram os limites e o usuário continua rolando usando o mouse ou rastreador (overscrolling).
 - A API REST [`$catalog`](../REST/$catalog.md) agora retorna singletons (se houver).
 
 ## 4D 20 R5
@@ -132,7 +132,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 
 ## 4D 20.x LTS
 
-See [**Release Notes for 4D 20.x LTS**](../../version-20/Notes/updates.md).
+Veja [**Notas de lançamento 4D 20.x LTS**](../../version-20/Notes/updates.md).
 
 ## Tabela da biblioteca
 

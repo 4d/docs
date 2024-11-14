@@ -3,7 +3,7 @@ id: HTTPAgentClass
 title: HTTPAgent
 ---
 
-La clase `HTTPAgent` permite manejar [`HTTPAgent objects`](#httpagent-object) que pueden ser utilizados para gestionar la persistencia y reutilización de conexiones a servidores utilizando la [clase HTTPRequest](HTTPRequestClass.md).
+La clase `HTTPAgent` permite manejar [objetos`HTTPAgent`](#httpagent-object) que pueden ser utilizados para gestionar la persistencia y reutilización de conexiones a servidores utilizando la [clase HTTPRequest](HTTPRequestClass.md).
 
 La clase `HTTPAgent` está disponible en el class store `4D`. Puede crear un nuevo [`objeto HTTPAgent`](#httpagent-object) utilizando la función [4D.HTTPAgent.new()](#4dhttpagentnew).
 
