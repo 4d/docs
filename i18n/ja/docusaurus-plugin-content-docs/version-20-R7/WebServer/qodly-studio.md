@@ -112,7 +112,7 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 ## Qodly Studio を開発する
 
-### Documentation
+### ドキュメント
 
 Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
