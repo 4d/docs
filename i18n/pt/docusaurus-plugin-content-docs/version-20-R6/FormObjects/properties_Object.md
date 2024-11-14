@@ -334,4 +334,4 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 
 #### Objectos suportados
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[Rodapé de Listbox](listbox_overview.md#list-box-footers)
