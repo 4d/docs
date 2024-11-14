@@ -39,8 +39,8 @@ title: 文字列
 
 | 演算                         | シンタックス                                    | 戻り値     | 式                                       | 値        |
 | -------------------------- | ----------------------------------------- | ------- | --------------------------------------- | -------- |
-| 連結 (結合) | String + String                           | String  | "abc" + "def"                           | "abcdef" |
-| 繰り返し                       | String \* Number                          | String  | "ab" \* 3                               | "ababab" |
+| 連結 (結合) | String + String                           | Text    | "abc" + "def"                           | "abcdef" |
+| 繰り返し                       | String \* Number                          | Text    | "ab" \* 3                               | "ababab" |
 | 等しい                        | String = String                           | Boolean | "abc" = "abc"                           | true     |
 |                            |                                           |         | "abc" = "abd"                           | false    |
 | 異なる                        | String # String                           | Boolean | "abc" # "abd"                           | true     |
