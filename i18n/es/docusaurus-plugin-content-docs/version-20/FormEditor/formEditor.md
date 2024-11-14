@@ -209,7 +209,7 @@ Puede mover todo gráfico u objeto activo del formulario, incluidos los campos y
 
 Al comenzar a arrastrar el objeto seleccionado, sus controles desaparecen. 4D muestra marcadores que indican la ubicación de los límites del objeto en las reglas para que pueda colocar el objeto exactamente donde lo quiere. Tenga cuidado de no arrastrar un mango. Al arrastrar un mango se cambia el tamaño del objeto. Puede presionar la tecla **Mayúsculas** para realizar el movimiento con una restricción.
 
-Cuando la [rejilla magnética](#usando-la-rejilla-magnética) está activada, los objetos se mueven por etapas indicando ubicaciones perceptibles.
+Cuando la [rejilla magnética](#using-the-magnetic-grid) está activada, los objetos se mueven por etapas indicando ubicaciones perceptibles.
 
 Para mover un objeto un píxel por píxel:
 
