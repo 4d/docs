@@ -113,7 +113,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 #### 説明
 
-`4D.POP3Transporter.new()` 関数は、 <!-- REF #4D.POP3Transporter.new().Summary -->`4D.POP3Transporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->. この関数の機能は、[`POP3 New transporter`](#pop3-new-transporter) コマンドと同一です。
+`4D.POP3Transporter.new()` 関数は、 <!-- REF #4D.POP3Transporter.new().Summary -->`4D.POP3Transporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`POP3 New transporter`](#pop3-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -170,7 +170,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.delete()` 関数は、 <!-- REF #POP3TransporterClass.delete().Summary -->*msgNumber* で指定したメールメッセージに対して、POP3サーバーから削除するためのフラグを立てます<!-- END REF -->.
+`.delete()` 関数は、 <!-- REF #POP3TransporterClass.delete().Summary -->*msgNumber* で指定したメールメッセージに対して、POP3サーバーから削除するためのフラグを立てます<!-- END REF -->。
 
 *msgNumber* には、削除するメールの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -216,7 +216,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.getBoxInfo()` 関数は、 <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->対象の [`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->. この関数を使用するとメールボックスに関する情報を取得することができます。
+`.getBoxInfo()` 関数は、 <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->対象の [`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
@@ -268,7 +268,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.getMail()` 関数は、 <!-- REF #POP3TransporterClass.getMail().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->. この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
+`.getMail()` 関数は、 <!-- REF #POP3TransporterClass.getMail().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって `number` プロパティに返されます。
 
@@ -335,7 +335,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.getMailInfo()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfo().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールの `mailInfo` オブジェクトを返します<!-- END REF -->. この関数を使用するとメールに関する情報を取得することができます。
+`.getMailInfo()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfo().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールの `mailInfo` オブジェクトを返します<!-- END REF -->。 この関数を使用するとメールに関する情報を取得することができます。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -394,7 +394,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.getMailInfoList()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の全メッセージについて記述した `mailInfo` オブジェクトのコレクションを返します<!-- END REF -->. この関数を使用すると、POP3メールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
+`.getMailInfoList()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の全メッセージについて記述した `mailInfo` オブジェクトのコレクションを返します<!-- END REF -->。 この関数を使用すると、POP3メールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
 返されるコレクションの各 `mailInfo` オブジェクトには、以下のプロパティが格納されています:
 
@@ -460,7 +460,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.getMIMEAsBlob()` 関数は、 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->.
+`.getMIMEAsBlob()` 関数は、 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -524,7 +524,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.undeleteAll()` 関数は、 <!-- REF #POP3TransporterClass.undeleteAll().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) 内のメールに設定された削除フラグをすべて除去します<!-- END REF -->.
+`.undeleteAll()` 関数は、 <!-- REF #POP3TransporterClass.undeleteAll().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) 内のメールに設定された削除フラグをすべて除去します<!-- END REF -->。
 
 <!-- END REF -->
 
