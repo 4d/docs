@@ -19,7 +19,7 @@ displayed_sidebar: docs
 | 引数   | 型          |     | 説明           |
 | ---- | ---------- | :-: | ------------ |
 | mime | Blob, Text |  →  | MIME形式のメール   |
-| 戻り値  | オブジェクト     |  ←  | Email オブジェクト |
+| 戻り値  | Object     |  ←  | Email オブジェクト |
 
 <!-- END REF -->
 
