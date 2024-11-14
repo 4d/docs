@@ -11,8 +11,8 @@ title: データタイプの概要
 | ------------------------------------- | ------- | ------- | --------------------------------------- | ----------------------------------------------- |
 | [文字列](dt_string.md)                   | ◯       | テキストに変換 | -                                       | -                                               |
 | [テキスト](Concepts/dt_string.md)         | ◯       | ◯       | Text                                    | `C_TEXT`, `ARRAY TEXT`                          |
-| [日付](Concepts/dt_date.md)             | ◯       | ◯       | Date                                    | `C_DATE`, `ARRAY DATE`                          |
-| [時間](Concepts/dt_time.md)             | ◯       | ◯       | Time                                    | `C_TIME`, `ARRAY TIME`                          |
+| [Date](Concepts/dt_date.md)           | ◯       | ◯       | Date                                    | `C_DATE`, `ARRAY DATE`                          |
+| [Time](Concepts/dt_time.md)           | ◯       | ◯       | Time                                    | `C_TIME`, `ARRAY TIME`                          |
 | [ブール](Concepts/dt_boolean.md)         | ◯       | ◯       | Boolean                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                    |
 | [整数](Concepts/dt_number.md)           | ◯       | 倍長整数に変換 | Integer                                 | `ARRAY INTEGER`                                 |
 | [倍長整数](Concepts/dt_number.md)         | ◯       | ◯       | Integer                                 | `C_LONGINT`, `ARRAY LONGINT`                    |
@@ -20,7 +20,7 @@ title: データタイプの概要
 | [実数](Concepts/dt_number.md)           | ◯       | ◯       | Real                                    | `C_REAL`, `ARRAY REAL`                          |
 | [未定義](Concepts/dt_null_undefined.md)  | -       | ◯       | -                                       | -                                               |
 | [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                                       | -                                               |
-| [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | Pointer                                 | `C_POINTER`, `ARRAY POINTER`                    |
+| [Pointer](Concepts/dt_pointer.md)     | -       | ◯       | Pointer                                 | `C_POINTER`, `ARRAY POINTER`                    |
 | [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | Picture                                 | `C_PICTURE`, `ARRAY PICTURE`                    |
 | [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | BLOB                                    | `C_BLOB`, `ARRAY BLOB`                          |
 | [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | Object                                  | `C_OBJECT`, `ARRAY OBJECT`                      |
@@ -37,20 +37,20 @@ title: データタイプの概要
 
 デフォルト値は変数の型に依存します:
 
-| 型      | デフォルト値     |
-| ------ | ---------- |
-| ブール    | false      |
-| 日付     | 00-00-00   |
-| 倍長整数   | 0          |
-| 時間     | 00:00:00   |
-| ピクチャー  | ピクチャーサイズ=0 |
-| 実数     | 0          |
-| ポインター  | Nil=true   |
-| テキスト   | ""         |
-| BLOB   | BLOB サイズ=0 |
-| オブジェクト | null       |
-| コレクション | null       |
-| バリアント  | undefined  |
+| 型       | デフォルト値     |
+| ------- | ---------- |
+| ブール     | false      |
+| Date    | 00-00-00   |
+| 倍長整数    | 0          |
+| Time    | 00:00:00   |
+| ピクチャー   | ピクチャーサイズ=0 |
+| 実数      | 0          |
+| Pointer | Nil=true   |
+| テキスト    | ""         |
+| BLOB    | BLOB サイズ=0 |
+| オブジェクト  | null       |
+| コレクション  | null       |
+| バリアント   | undefined  |
 
 
 ## データタイプの変換
@@ -63,8 +63,8 @@ title: データタイプの概要
 | ------- | ------ | ----- | ----- | ----- | ------ |
 | 文字列 (1) |        | Num   | Date  | Time  | Bool   |
 | 数値 (2)  | String |       |       |       | Bool   |
-| 日付      | String |       |       |       | Bool   |
-| 時間      | String |       |       |       | Bool   |
+| Date    | String |       |       |       | Bool   |
+| Time    | String |       |       |       | Bool   |
 | ブール     |        | Num   |       |       |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
