@@ -1562,7 +1562,7 @@ End if
 
 La función `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->busca los mensajes que coincidan con los criterios de búsqueda *searchCriteria* dados en el buzón actual<!-- END REF -->. *searchCriteria* consiste en una o más llaves de búsqueda.
 
-*searchCriteria* es un parámetro texto que enumera una o varias llaves de búsqueda (ver [llaves de búsqueda autorizadas](#Llaves-de-búsqueda-autorizadas) más abajo) asociadas o no a valores a buscar. Una llave de búsqueda puede ser uno o varios elementos. Por ejemplo:
+*searchCriteria* es un parámetro texto que enumera una o varias llaves de búsqueda (ver [llaves de búsqueda autorizadas](#authorized-search-keys) abajo) asociadas o no a valores a buscar. Una llave de búsqueda puede ser uno o varios elementos. Por ejemplo:
 
 ```
 SearchKey1 = FLAGGED
