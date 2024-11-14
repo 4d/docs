@@ -27,9 +27,9 @@ displayed_sidebar: docs
 * In the *paramType* parameter, pass the SQL type of the parameter. You can pass a value or use one of the following constants, located in the “*SQL*” theme:  
 | Constant         | Type    | Value | Comment                                                                                                  |  
 | ---------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------- |  
-| SQL param in     | Longint | 1     |                                                                                                          |  
-| SQL param in out | Longint | 2     | Usable only in the context of an SQL stored procedure (in-out parameter defined in the stored procedure) |  
-| SQL param out    | Longint | 4     | Usable only in the context of an SQL stored procedure (out parameter defined in the stored procedure)    |
+| SQL param in     | Integer | 1     |                                                                                                          |  
+| SQL param in out | Integer | 2     | Usable only in the context of an SQL stored procedure (in-out parameter defined in the stored procedure) |  
+| SQL param out    | Integer | 4     | Usable only in the context of an SQL stored procedure (out parameter defined in the stored procedure)    |
 
 The value of the 4D object replaces the *?* character in the SQL request (standard syntax). If the request contains more than one *?* character, several calls to SQL SET PARAMETER will be necessary. The values of the 4D objects will be assigned sequentially in the request, in accordance with the execution order of the commands. 
 

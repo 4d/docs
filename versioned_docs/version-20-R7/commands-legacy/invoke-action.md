@@ -33,8 +33,8 @@ In *target*, you can pass the form context where the *action* must be executed. 
 
 | Constant        | Type    | Value | Comment                                                                                                                                                        |
 | --------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ak current form | Longint | 1     | The current form is the form where the action was called. It could be either the main form or a palette form in front of the main form of the current process. |
-| ak main form    | Longint | 2     | The main form is the frontmost document or dialog form of the process, excluding any floating or pop-up window.                                                |
+| ak current form | Integer | 1     | The current form is the form where the action was called. It could be either the main form or a palette form in front of the main form of the current process. |
+| ak main form    | Integer | 2     | The main form is the frontmost document or dialog form of the process, excluding any floating or pop-up window.                                                |
 
 **Note:** If *target* is omitted, by default the ak current form context is used. 
 

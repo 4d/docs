@@ -1683,8 +1683,8 @@ You can also pass a criteria parameter to define how the collection elements mus
 
  |Constant| Type|Value|Comment|
  |---|---|---|---|
- |ck ascending|Longint|0|Elements are ordered in ascending order (default)|
- |ck descending|Longint|1|Elements are ordered in descending order
+ |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+ |ck descending|Integer|1|Elements are ordered in descending order
 
  This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
 

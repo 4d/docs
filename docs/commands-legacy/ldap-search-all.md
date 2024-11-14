@@ -37,9 +37,9 @@ In *scope*, pass one of the following constants from the "*LDAP*" theme:
 
 | Constant           | Type   | Value | Comment                                                                                                     |
 | ------------------ | ------ | ----- | ----------------------------------------------------------------------------------------------------------- |
-| LDAP all levels    | String | sub   | Search in the root entry level defined by *dnRootEntry* and in all subsequent entries                       |
-| LDAP root and next | String | one   | Search in the root entry level defined by *dnRootEntry* and in the directly subsequent entries on one level |
-| LDAP root only     | String | base  | Search only in the root entry level defined by *dnRootEntry* (default if omitted)                           |
+| LDAP all levels    | Text | sub   | Search in the root entry level defined by *dnRootEntry* and in all subsequent entries                       |
+| LDAP root and next | Text | one   | Search in the root entry level defined by *dnRootEntry* and in the directly subsequent entries on one level |
+| LDAP root only     | Text | base  | Search only in the root entry level defined by *dnRootEntry* (default if omitted)                           |
 
 In *attributes*, pass a text array which contains the list of all LDAP attributes to fetch from the matched entries. By default, if this parameter is omitted, all attributes are fetched.
 

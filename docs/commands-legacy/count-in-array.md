@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array where count should occur |
 | value | Expression | &#8594;  | Value to count |
-| Function result | Longint | &#8592; | Number of instances found |
+| Function result | Integer | &#8592; | Number of instances found |
 
 <!-- END REF-->
 

@@ -27,9 +27,9 @@ In *styleSheetName*, you pass the name of the style sheet as defined in the Desi
 
 | Constant                          | Type   | Value                               | Comment                                                                                        |
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Automatic style sheet             | String | \_\_automatic\_\_                   | Used by default for all objects                                                                |
-| Automatic style sheet\_additional | String | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |
-| Automatic style sheet\_main       | String | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
+| Automatic style sheet             | Text | \_\_automatic\_\_                   | Used by default for all objects                                                                |
+| Automatic style sheet\_additional | Text | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |
+| Automatic style sheet\_main       | Text | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
 
 In *font*, the command returns the name of the font associated with the style sheet for the current platform. 
 
@@ -39,13 +39,13 @@ In *styles*, the command returns a value corresponding to the style(s) associate
 
 | Constant             | Type    | Value |
 | -------------------- | ------- | ----- |
-| Bold                 | Longint | 1     |
-| Bold and Italic      | Longint | 3     |
-| Bold and Underline   | Longint | 5     |
-| Italic               | Longint | 2     |
-| Italic and Underline | Longint | 6     |
-| Plain                | Longint | 0     |
-| Underline            | Longint | 4     |
+| Bold                 | Integer | 1     |
+| Bold and Italic      | Integer | 3     |
+| Bold and Underline   | Integer | 5     |
+| Italic               | Integer | 2     |
+| Italic and Underline | Integer | 6     |
+| Plain                | Integer | 0     |
+| Underline            | Integer | 4     |
 
 If the command is executed correctly, the *OK* system variable is set to 1\. Otherwise (for example, if the *styleSheetName* does not exist), it is set to 0.
 

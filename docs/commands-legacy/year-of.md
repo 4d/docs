@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | date | Date | &#8594;  | Date for which to return the year |
-| Function result | Longint | &#8592; | Number indicating the year of date |
+| Function result | Integer | &#8592; | Number indicating the year of date |
 
 <!-- END REF-->
 

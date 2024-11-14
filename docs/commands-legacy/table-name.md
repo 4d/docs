@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableNum &#124; tablePtr | Longint, Pointer | &#8594;  | Table number or Table pointer |
-| Function result | String | &#8592; | Name of the table |
+| Function result | Text | &#8592; | Name of the table |
 
 <!-- END REF-->
 

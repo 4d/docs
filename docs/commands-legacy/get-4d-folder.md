@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | folder | Integer | &#8594;  | Folder type (if omitted = active 4D folder) |
 | options | Object | &#8594;  | 4D Client database folder path configuration |
 | * | Operator | &#8594;  | Return folder of host database |
-| Function result | String | &#8592; | Pathname to 4D Folder |
+| Function result | Text | &#8592; | Pathname to 4D Folder |
 
 <!-- END REF-->
 
@@ -24,16 +24,16 @@ In *folder*, you can pass one of the following constants, which are located in t
 
 | Constant                    | Type    | Value |
 | --------------------------- | ------- | ----- |
-| 4D Client database folder   | Longint | 3     |
-| Active 4D Folder            | Longint | 0     |
-| Current resources folder    | Longint | 6     |
-| Data folder                 | Longint | 9     |
-| Database folder             | Longint | 4     |
-| Database folder Unix syntax | Longint | 5     |
-| HTML Root folder            | Longint | 8     |
-| Licenses folder             | Longint | 1     |
-| Logs folder                 | Longint | 7     |
-| MobileApps folder           | Longint | 10    |
+| 4D Client database folder   | Integer | 3     |
+| Active 4D Folder            | Integer | 0     |
+| Current resources folder    | Integer | 6     |
+| Data folder                 | Integer | 9     |
+| Database folder             | Integer | 4     |
+| Database folder Unix syntax | Integer | 5     |
+| HTML Root folder            | Integer | 8     |
+| Licenses folder             | Integer | 1     |
+| Logs folder                 | Integer | 7     |
+| MobileApps folder           | Integer | 10    |
 
 The *options* parameter allows you to customize the local resources folder path. It is only taken into account when using the 4D Client database folder constant (see below). 
 

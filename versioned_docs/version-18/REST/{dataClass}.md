@@ -29,7 +29,7 @@ Here is a description of the data returned:
 
 |Property| Type| Description|
 |---|---|---|
-|__entityModel| String| Name of the dataclass.|
+|__entityModel| Text| Name of the dataclass.|
 |__COUNT| Number |Number of entities in the dataclass.|
 |__SENT| Number| Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.|
 |__FIRST| Number| Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.|
@@ -39,7 +39,7 @@ Each entity contains the following properties:
 
 |Property| Type| Description|
 |---|---|---|
-|__KEY|String|Value of the primary key defined for the dataclass.|
+|__KEY|Text|Value of the primary key defined for the dataclass.|
 |__TIMESTAMP|Date|Timestamp of the last modification of the entity|
 |__STAMP|Number|Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.|
 

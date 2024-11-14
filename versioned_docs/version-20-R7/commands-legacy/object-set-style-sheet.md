@@ -31,9 +31,9 @@ In the *styleSheetName* parameter, you pass the name of the style sheet to be ap
 * one of the following constants found in the "*Font Styles*" theme in order to apply an automatic style sheet:  
 | Constant                          | Type   | Value                               | Comment                                                                                        |  
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------- |  
-| Automatic style sheet             | String | \_\_automatic\_\_                   | Used by default for all objects                                                                |  
-| Automatic style sheet\_additional | String | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |  
-| Automatic style sheet\_main       | String | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
+| Automatic style sheet             | Text | \_\_automatic\_\_                   | Used by default for all objects                                                                |  
+| Automatic style sheet\_additional | Text | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |  
+| Automatic style sheet\_main       | Text | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
 
 If a style sheet was already associated with the object in Design mode, calling this command replaces it for the current process. 
 

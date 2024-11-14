@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | formData | Object | &#8594;  | Data to associate to the form |
 | areaStart | Integer | &#8594;  | Print marker, or Beginning area (if areaEnd is specified) |
 | areaEnd | Integer | &#8594;  | Ending area (if areaStart specified) |
-| Function result | Longint | &#8592; | Height of printed section |
+| Function result | Integer | &#8592; | Height of printed section |
 
 <!-- END REF-->
 
@@ -57,29 +57,29 @@ In this case, the command will print the section designated by the *marker*. Pas
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Form break0   | Longint | 300   |
-| Form break1   | Longint | 301   |
-| Form break2   | Longint | 302   |
-| Form break3   | Longint | 303   |
-| Form break4   | Longint | 304   |
-| Form break5   | Longint | 305   |
-| Form break6   | Longint | 306   |
-| Form break7   | Longint | 307   |
-| Form break8   | Longint | 308   |
-| Form break9   | Longint | 309   |
-| Form detail   | Longint | 0     |
-| Form footer   | Longint | 100   |
-| Form header   | Longint | 200   |
-| Form header1  | Longint | 201   |
-| Form header10 | Longint | 210   |
-| Form header2  | Longint | 202   |
-| Form header3  | Longint | 203   |
-| Form header4  | Longint | 204   |
-| Form header5  | Longint | 205   |
-| Form header6  | Longint | 206   |
-| Form header7  | Longint | 207   |
-| Form header8  | Longint | 208   |
-| Form header9  | Longint | 209   |
+| Form break0   | Integer | 300   |
+| Form break1   | Integer | 301   |
+| Form break2   | Integer | 302   |
+| Form break3   | Integer | 303   |
+| Form break4   | Integer | 304   |
+| Form break5   | Integer | 305   |
+| Form break6   | Integer | 306   |
+| Form break7   | Integer | 307   |
+| Form break8   | Integer | 308   |
+| Form break9   | Integer | 309   |
+| Form detail   | Integer | 0     |
+| Form footer   | Integer | 100   |
+| Form header   | Integer | 200   |
+| Form header1  | Integer | 201   |
+| Form header10 | Integer | 210   |
+| Form header2  | Integer | 202   |
+| Form header3  | Integer | 203   |
+| Form header4  | Integer | 204   |
+| Form header5  | Integer | 205   |
+| Form header6  | Integer | 206   |
+| Form header7  | Integer | 207   |
+| Form header8  | Integer | 208   |
+| Form header9  | Integer | 209   |
 
 * **Section printing**
 

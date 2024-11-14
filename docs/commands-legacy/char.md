@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | charCode | Integer | &#8594;  | Character code |
-| Function result | String | &#8592; | Character represented by the charCode |
+| Function result | Text | &#8592; | Character represented by the charCode |
 
 <!-- END REF-->
 

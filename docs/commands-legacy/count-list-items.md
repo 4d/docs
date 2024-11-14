@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
 | * | Operator | &#8594;  | If omitted (default): Return visible list items (expanded) If specified: Return all list items |
-| Function result | Longint | &#8592; | Number of visible (expanded) list items (if 2nd * omitted) or Total number of list items (if 2nd * present) |
+| Function result | Integer | &#8592; | Number of visible (expanded) list items (if 2nd * omitted) or Total number of list items (if 2nd * present) |
 
 <!-- END REF-->
 

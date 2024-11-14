@@ -41,9 +41,9 @@ The optional *formPageOption* parameter allows you to specify the form part(s) f
 
 | Constant          | Type    | Value | Comment                                                                                   |
 | ----------------- | ------- | ----- | ----------------------------------------------------------------------------------------- |
-| Form all pages    | Longint | 2     | Returns all objects of all the pages, excluding inherited objects                         |
-| Form current page | Longint | 1     | Returns all objects of the current page, including page 0 but excluding inherited objects |
-| Form inherited    | Longint | 4     | Returns inherited objects only                                                            |
+| Form all pages    | Integer | 2     | Returns all objects of all the pages, excluding inherited objects                         |
+| Form current page | Integer | 1     | Returns all objects of the current page, including page 0 but excluding inherited objects |
+| Form inherited    | Integer | 4     | Returns inherited objects only                                                            |
 
 **Compatibility note:** Passing the *\** parameter is equivalent to passing Form current page+Form inherited. The syntax using the *\** parameter is now deprecated and should no longer be used.
 

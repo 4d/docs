@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aText | Text | &#8594;  | String to convert to lowercase |
 | * | Operator | &#8594;  | If passed: keep accents |
-| Function result | String | &#8592; | String in lowercase |
+| Function result | Text | &#8592; | String in lowercase |
 
 <!-- END REF-->
 

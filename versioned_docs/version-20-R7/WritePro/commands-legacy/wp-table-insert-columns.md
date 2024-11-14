@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| colNumber | Longint | &#8594;  | Column number |
-| numColumns | Longint | &#8594;  | Number of columns to insert (default value = 1) |
+| colNumber | Integer | &#8594;  | Column number |
+| numColumns | Integer | &#8594;  | Number of columns to insert (default value = 1) |
 | Function result | Object | &#8592; | Range of table columns |
 
 <!-- END REF-->

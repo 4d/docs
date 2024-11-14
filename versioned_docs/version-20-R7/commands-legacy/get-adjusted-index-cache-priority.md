@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field for which the priority of the index(es) has to be retrieved |
-| Function result | Longint | &#8592; | Current priority value for index(es) |
+| Function result | Integer | &#8592; | Current priority value for index(es) |
 
 <!-- END REF-->
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | buildNum | Integer | &#8592; | Build number |
 | * | Operator | &#8594;  | Long version number if passed, otherwise Short version number |
-| Function result | String | &#8592; | Version number encoded string |
+| Function result | Text | &#8592; | Version number encoded string |
 
 <!-- END REF-->
 

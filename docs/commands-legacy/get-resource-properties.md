@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | resType | Text | &#8594;  | 4-character resource type |
 | resID | Integer | &#8594;  | Resource ID number |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | Longint | &#8592; | Resource attributes |
+| Function result | Integer | &#8592; | Resource attributes |
 
 <!-- END REF-->
 

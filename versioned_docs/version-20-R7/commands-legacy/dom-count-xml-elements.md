@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | elementName | Text | &#8594;  | Name of XML elements to count |
-| Function result | Longint | &#8592; | Number of elements |
+| Function result | Integer | &#8592; | Number of elements |
 
 <!-- END REF-->
 

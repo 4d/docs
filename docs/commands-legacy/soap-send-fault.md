@@ -26,8 +26,8 @@ Pass the origin of the error in *faultType*. You can use the following predefine
 
 | Constant          | Type    | Value |
 | ----------------- | ------- | ----- |
-| SOAP client fault | Longint | 1     |
-| SOAP server fault | Longint | 2     |
+| SOAP client fault | Integer | 1     |
+| SOAP server fault | Integer | 2     |
 
 Pass a description of the error in *description*. If the client implementation is in conformity, the error can be processed. 
 

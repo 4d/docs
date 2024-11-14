@@ -25,8 +25,8 @@ The *selector* parameter can be used to set the type of information to be return
 
 | Constant                | Type    | Value |
 | ----------------------- | ------- | ----- |
-| Full method text        | Longint | 1     |
-| Highlighted method text | Longint | 2     |
+| Full method text        | Integer | 1     |
+| Highlighted method text | Integer | 2     |
 
 If you pass Full method text in *selector*, all of the text of the method will be returned in *paramText*. If you pass Highlighted method text in *selector*, only the text selected in the method will be returned in *paramText*.
 

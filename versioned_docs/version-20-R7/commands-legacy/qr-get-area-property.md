@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | property | Integer | &#8594;  | Interface element designated |
-| Function result | Longint | &#8592; | 1 = displayed, 0 = hidden |
+| Function result | Integer | &#8592; | 1 = displayed, 0 = hidden |
 
 <!-- END REF-->
 

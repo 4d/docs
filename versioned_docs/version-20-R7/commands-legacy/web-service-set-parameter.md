@@ -31,8 +31,8 @@ However, you may want to “force” the definition of the SOAP type of a parame
 
 | **soapType**                | **Description**                                                       |
 | --------------------------- | --------------------------------------------------------------------- |
-| string                      | String                                                                |
-| int                         | Longint                                                               |
+| string                      | Text                                                                |
+| int                         | Integer                                                               |
 | boolean                     | Boolean                                                               |
 | float                       | 32-bit real                                                           |
 | decimal                     | Real with decimal                                                     |

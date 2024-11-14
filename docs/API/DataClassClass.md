@@ -726,9 +726,9 @@ The `data` object in each entry contains the following properties:
 
 |Property|Type|Description|
 |---|---|---|
-|__KEY|String|Primary key of the entity|
-|__STAMP|Longint|Timestamp of the entity in the database|
-|__TIMESTAMP|String|Stamp of the entity in the database (format is YYYY-MM-DDTHH:MM:SS:ms:Z)|
+|__KEY|Text|Primary key of the entity|
+|__STAMP|Integer|Timestamp of the entity in the database|
+|__TIMESTAMP|Text|Stamp of the entity in the database (format is YYYY-MM-DDTHH:MM:SS:ms:Z)|
 |dataClassAttributeName|Variant|If there is data in the cache for a dataclass attribute, it is returned in a property with the same type as in the database.|
 
 Data concerning related entities is stored in the cache of the data object.

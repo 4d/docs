@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | infoNum | Integer | &#8594;  | Number of type of SOAP info to get |
-| Function result | String | &#8592; | SOAP Information |
+| Function result | Text | &#8592; | SOAP Information |
 
 <!-- END REF-->
 
@@ -24,8 +24,8 @@ Pass the number of the type of SOAP information you want to get in the *infoNum*
 
 | Constant          | Type    | Value | Comment                                             |
 | ----------------- | ------- | ----- | --------------------------------------------------- |
-| SOAP method name  | Longint | 1     | Name of the Web Service method about to be executed |
-| SOAP service name | Longint | 2     | Name of the Web Service to which the method belongs |
+| SOAP method name  | Integer | 1     | Name of the Web Service method about to be executed |
+| SOAP service name | Integer | 2     | Name of the Web Service to which the method belongs |
 
 **Note:** Also for security reasons, it is possible to set the maximum size for Web Services requests sent to 4D. This configuration is carried out using the [SET DATABASE PARAMETER](set-database-parameter.md) command.
 

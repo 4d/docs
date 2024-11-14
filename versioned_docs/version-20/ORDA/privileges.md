@@ -124,15 +124,15 @@ The `roles.json` file syntax is the following:
 |Property name|||Type|Mandatory|Description|
 |---|---|---|---|---|---|
 |privileges|||Collection of `privilege` objects|X|List of defined privileges|
-||\[].privilege||String||Privilege name|
+||\[].privilege||Text||Privilege name|
 ||\[].includes||Collection of strings||List of included privilege names|
 |roles|||Collection of `role` objects||List of defined roles|
-||\[].role||String||Role name|
+||\[].role||Text||Role name|
 ||\[].privileges||Collection of strings||List of included privilege names|
 |permissions|||Object|X|List of allowed actions|
 ||allowed||Collection of `permission` objects||List of allowed permissions|
-|||\[].applyTo|String|X|Targeted [resource](#resources) name|
-|||\[].type|String|X|[Resource](#resources) type: "datastore", "dataclass", "attribute", "method"|
+|||\[].applyTo|Text|X|Targeted [resource](#resources) name|
+|||\[].type|Text|X|[Resource](#resources) type: "datastore", "dataclass", "attribute", "method"|
 |||\[].read|Collection of strings||List of privileges|
 |||\[].create|Collection of strings||List of privileges|
 |||\[].update|Collection of strings||List of privileges|

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
 | unit | Integer | &#8594;  | Unit of height value: 0 or omitted = pixels, 1 = lines |
-| Function result | Longint | &#8592; | Row height |
+| Function result | Integer | &#8592; | Row height |
 
 <!-- END REF-->
 
@@ -29,8 +29,8 @@ By default, if you omit the *unit* parameter, the height of the row returned is 
 
 | Constant  | Type    | Value | Comment                                                                                             |
 | --------- | ------- | ----- | --------------------------------------------------------------------------------------------------- |
-| lk lines  | Longint | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
-| lk pixels | Longint | 0     | Height is expressed as a number of pixels (default).                                                |
+| lk lines  | Integer | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
+| lk pixels | Integer | 0     | Height is expressed as a number of pixels (default).                                                |
 
 **Note:** For more information about calculating the height of rows, refer to the *Design Reference* manual.
 

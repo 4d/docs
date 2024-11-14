@@ -31,14 +31,14 @@ The *option* parameter supports the following constant found in the "*Multistyle
 
 | Constant                    | Type    | Value | Comment                                                      |
 | --------------------------- | ------- | ----- | ------------------------------------------------------------ |
-| ST Expressions display mode | Longint | 1     | The *value* parameter can contain ST Values or ST References |
+| ST Expressions display mode | Integer | 1     | The *value* parameter can contain ST Values or ST References |
 
 In the *value* parameter, you can pass one of the following constants:
 
 | Constant      | Type    | Value | Comment                                |
 | ------------- | ------- | ----- | -------------------------------------- |
-| ST References | Longint | 1     | Display source strings of expressions  |
-| ST Values     | Longint | 0     | Display computed values of expressions |
+| ST References | Integer | 1     | Display source strings of expressions  |
+| ST Values     | Integer | 0     | Display computed values of expressions |
 
 Display of values:
 

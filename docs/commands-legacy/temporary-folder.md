@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Temporary folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Pathname to temporary folder |
+| Function result | Text | &#8592; | Pathname to temporary folder |
 
 <!-- END REF-->
 

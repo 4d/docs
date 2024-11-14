@@ -26,9 +26,9 @@ The nature of the database event for the trigger execution level is returned in 
 
 | Constant                        | Type    | Value |
 | ------------------------------- | ------- | ----- |
-| On Deleting Record Event        | Longint | 3     |
-| On Saving Existing Record Event | Longint | 2     |
-| On Saving New Record Event      | Longint | 1     |
+| On Deleting Record Event        | Integer | 3     |
+| On Saving Existing Record Event | Integer | 2     |
+| On Saving New Record Event      | Integer | 1     |
 
 The table number and record number for the record involved by the database event for the trigger execution level are returned in *tableNum* and *recordNum*.
 

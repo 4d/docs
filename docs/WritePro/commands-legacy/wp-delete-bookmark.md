@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| bkName | String | &#8594;  | Name of bookmark to delete |
+| bkName | Text | &#8594;  | Name of bookmark to delete |
 
 <!-- END REF-->
 

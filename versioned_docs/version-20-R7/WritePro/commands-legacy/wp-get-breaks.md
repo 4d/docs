@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| breakType | Longint | &#8594;  | Type of breaks to return |
+| breakType | Integer | &#8594;  | Type of breaks to return |
 | Function result | Collection | &#8592; | Collection of ranges |
 
 <!-- END REF-->

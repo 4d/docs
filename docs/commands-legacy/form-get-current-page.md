@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns number of current subform page |
-| Function result | Longint | &#8592; | Number of currently displayed form page |
+| Function result | Integer | &#8592; | Number of currently displayed form page |
 
 <!-- END REF-->
 

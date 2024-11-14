@@ -28,9 +28,9 @@ displayed_sidebar: docs
 * one of the following constants from the *QR Rows for Properties* theme:  
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
-| qr detail      | Longint | \-2   | Detail area of report |  
-| qr grand total | Longint | \-3   | Grand total area      |  
-| qr title       | Longint | \-1   | Title of report       |
+| qr detail      | Integer | \-2   | Detail area of report |  
+| qr grand total | Integer | \-3   | Grand total area      |  
+| qr title       | Integer | \-1   | Title of report       |
 
 *hide* specifies whether the line is shown or hidden:
 

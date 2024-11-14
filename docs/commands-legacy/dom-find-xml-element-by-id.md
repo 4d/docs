@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | id | Text | &#8594;  | Value of ID attribute of element to look for |
-| Function result | String | &#8592; | Reference of the element found (if applicable) |
+| Function result | Text | &#8592; | Reference of the element found (if applicable) |
 
 <!-- END REF-->
 

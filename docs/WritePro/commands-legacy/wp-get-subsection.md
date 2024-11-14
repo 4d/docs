@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
 | wpSection | Object | &#8594;  | 4D Write Pro section |
-| subSectionType | Longint | &#8594;  | Subsection type (wk first page, wk left page, or wk right page) |
+| subSectionType | Integer | &#8594;  | Subsection type (wk first page, wk left page, or wk right page) |
 | Function result | Object | &#8592; | Subsection |
 
 <!-- END REF-->
@@ -29,9 +29,9 @@ If the range or element belongs to an anchored picture, an error is returned.
     
 | Constant      | Type    | Value |  
 | ------------- | ------- | ----- |  
-| wk first page | Longint | 1     |  
-| wk left page  | Longint | 2     |  
-| wk right page | Longint | 3     |  
+| wk first page | Integer | 1     |  
+| wk left page  | Integer | 2     |  
+| wk right page | Integer | 3     |  
     
     
 If no *subSectionType* subsection is defined for the specified *wpSection*, the command returns an undefined object (no error is returned).

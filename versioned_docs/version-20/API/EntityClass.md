@@ -146,7 +146,7 @@ The differences are returned as a collection of objects whose properties are:
 
 |Property name| Type| Description|
 |---|---|---|
-|attributeName| String| Name of the attribute
+|attributeName| Text| Name of the attribute
 |value|any - Depends on attribute type |Value of the attribute in the entity|
 |otherValue|any - Depends on attribute type|Value of the attribute in *entityToCompare*|
 

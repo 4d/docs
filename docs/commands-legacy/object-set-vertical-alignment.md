@@ -28,10 +28,10 @@ In *alignment*, you pass one of the following constants found in the *Form Objec
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Align bottom  | Longint | 4     |
-| Align center  | Longint | 3     |
-| Align default | Longint | 1     |
-| Align top     | Longint | 2     |
+| Align bottom  | Integer | 4     |
+| Align center  | Integer | 3     |
+| Align default | Integer | 1     |
+| Align top     | Integer | 2     |
 
 Vertical alignment can be applied to the following form objects:
 

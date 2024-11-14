@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | default | Text | &#8594;  | Parameter of item selected by default |
 | xCoord | Integer | &#8594;  | X coordinate of top left corner |
 | yCoord | Integer | &#8594;  | Y coordinate of top left corner |
-| Function result | String | &#8592; | Parameter of selected menu item |
+| Function result | Text | &#8592; | Parameter of selected menu item |
 
 <!-- END REF-->
 

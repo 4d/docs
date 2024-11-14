@@ -33,20 +33,20 @@ After the call:
 * *fieldType* returns the type of the field. The *fieldType* variable parameter can take a value provided by the following predefined constants (*Field and Variable Types* theme):  
 | Constant           | Type    | Value |  
 | ------------------ | ------- | ----- |  
-| Is alpha field     | Longint | 0     |  
-| Is BLOB            | Longint | 30    |  
-| Is Boolean         | Longint | 6     |  
-| Is date            | Longint | 4     |  
-| Is float           | Longint | 35    |  
-| Is integer         | Longint | 8     |  
-| Is integer 64 bits | Longint | 25    |  
-| Is longint         | Longint | 9     |  
-| Is object          | Longint | 38    |  
-| Is picture         | Longint | 3     |  
-| Is real            | Longint | 1     |  
-| Is subtable        | Longint | 7     |  
-| Is text            | Longint | 2     |  
-| Is time            | Longint | 11    |
+| Is alpha field     | Integer | 0     |  
+| Is BLOB            | Integer | 30    |  
+| Is Boolean         | Integer | 6     |  
+| Is date            | Integer | 4     |  
+| Is float           | Integer | 35    |  
+| Is integer         | Integer | 8     |  
+| Is integer 64 bits | Integer | 25    |  
+| Is longint         | Integer | 9     |  
+| Is object          | Integer | 38    |  
+| Is picture         | Integer | 3     |  
+| Is real            | Integer | 1     |  
+| Is subtable        | Integer | 7     |  
+| Is text            | Integer | 2     |  
+| Is time            | Integer | 11    |
 * The *fieldLen* parameter returns the length of the field, if the field is Alphanumeric (i.e., *fieldType*\=Is alpha field). The value of *fieldLen* is meaningless for the other field types.
 * The *indexed* parameter returns True is the field is indexed, and False if not. The value of *indexed* is meaningful only for Alphanumeric, Integer, Long Integer, Real, Date, Time, and Boolean fields.
 * The *unique* parameter returns True if the field is set to “Unique”, else False.

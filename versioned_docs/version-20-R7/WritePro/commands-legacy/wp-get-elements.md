@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| elementType | Longint | &#8594;  | Desired type of element to retrieve |
+| elementType | Integer | &#8594;  | Desired type of element to retrieve |
 | Function result | Collection | &#8592; | Collection containing element references |
 
 <!-- END REF-->

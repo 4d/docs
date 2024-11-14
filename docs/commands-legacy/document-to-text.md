@@ -39,11 +39,11 @@ In *breakMode*, you can pass a longint indicating the processing to apply to end
 
 | Constant                    | Type    | Value | Comment                                                                                                                                                        |
 | --------------------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Document unchanged          | Longint | 0     | No processing                                                                                                                                                  |
-| Document with CR            | Longint | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format.                                                                          |
-| Document with CRLF          | Longint | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format.                                                                   |
-| Document with LF            | Longint | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format.                                                                                |
-| Document with native format | Longint | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
+| Document unchanged          | Integer | 0     | No processing                                                                                                                                                  |
+| Document with CR            | Integer | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format.                                                                          |
+| Document with CRLF          | Integer | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format.                                                                   |
+| Document with LF            | Integer | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format.                                                                                |
+| Document with native format | Integer | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Windows: height of application window, or height of screen if * is specified Macintosh: height of main screen |
-| Function result | Longint | &#8592; | Height expressed in pixels |
+| Function result | Integer | &#8592; | Height expressed in pixels |
 
 <!-- END REF-->
 

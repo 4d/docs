@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | resID | Integer | &#8594;  | Resource ID number |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | String | &#8592; | Contents of the STR  resource |
+| Function result | Text | &#8592; | Contents of the STR  resource |
 
 <!-- END REF-->
 

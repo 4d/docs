@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | segment | Integer | &#8594;  | Obsolete, do not use |
-| Function result | String | &#8592; | Long name of the data file for the database |
+| Function result | Text | &#8592; | Long name of the data file for the database |
 
 <!-- END REF-->
 

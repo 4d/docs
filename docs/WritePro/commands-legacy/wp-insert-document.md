@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| mode | Longint | &#8594;  | Insertion mode |
-| rangeUpdate | Longint | &#8594;  | Range update mode |
+| mode | Integer | &#8594;  | Insertion mode |
+| rangeUpdate | Integer | &#8594;  | Range update mode |
 
 <!-- END REF-->
 
@@ -32,23 +32,23 @@ In the *mode* parameter, pass one or a combination of the following constants fr
 
 | Constant   | Type    | Value | Comment                                |
 | ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Longint | 2     | Insert contents at end of target       |
-| wk prepend | Longint | 1     | Insert contents at beginning of target |
-| wk replace | Longint | 0     | Replace target contents                |
+| wk append  | Integer | 2     | Insert contents at end of target       |
+| wk prepend | Integer | 1     | Insert contents at beginning of target |
+| wk replace | Integer | 0     | Replace target contents                |
 
 You can combine one of the previous constants with the following insertion options:
 
 | Constant                 | Type    | Value | Comment                                                                                                              |
 | ------------------------ | ------- | ----- | -------------------------------------------------------------------------------------------------------------------- |
-| wk freeze expressions    | Longint | 64    | Freeze expressions at the moment of the insertion                                                                    |
-| wk keep paragraph styles | Longint | 128   | Apply destination paragraph styles. In case of wk append operation, insert contents without initial paragraph break. |
+| wk freeze expressions    | Integer | 64    | Freeze expressions at the moment of the insertion                                                                    |
+| wk keep paragraph styles | Integer | 128   | Apply destination paragraph styles. In case of wk append operation, insert contents without initial paragraph break. |
 
 * If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:  
     
 | Constant              | Type    | Value | Comment                                               |  
 | --------------------- | ------- | ----- | ----------------------------------------------------- |  
-| wk exclude from range | Longint | 1     | Inserted contents not included in updated range       |  
-| wk include in range   | Longint | 0     | Inserted contents included in updated range (default) |  
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range       |  
+| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |  
     
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.

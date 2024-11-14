@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | Longint | &#8592; | Number of menus in the current menu bar |
+| Function result | Integer | &#8592; | Number of menus in the current menu bar |
 
 <!-- END REF-->
 

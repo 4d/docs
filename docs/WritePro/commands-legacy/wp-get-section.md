@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| sectionIndex | Longint | &#8594;  | Section index |
+| sectionIndex | Integer | &#8594;  | Section index |
 | Function result | Object | &#8592; | 4D Write Pro section |
 
 <!-- END REF-->

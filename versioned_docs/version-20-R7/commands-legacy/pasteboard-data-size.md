@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dataType | Text | &#8594;  | Data type |
-| Function result | Longint | &#8592; | Size (in bytes) of data located in the pasteboard or error code |
+| Function result | Integer | &#8592; | Size (in bytes) of data located in the pasteboard or error code |
 
 <!-- END REF-->
 

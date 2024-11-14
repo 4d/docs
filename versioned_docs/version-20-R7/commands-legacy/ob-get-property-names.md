@@ -27,13 +27,13 @@ Optionally, you can also pass a longint array in *arrTypes*. For each element of
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Is Boolean    | Longint | 6     |
-| Is collection | Longint | 42    |
-| Is null       | Longint | 255   |
-| Is object     | Longint | 38    |
-| Is real       | Longint | 1     |
-| Is text       | Longint | 2     |
-| Object array  | Longint | 39    |
+| Is Boolean    | Integer | 6     |
+| Is collection | Integer | 42    |
+| Is null       | Integer | 255   |
+| Is object     | Integer | 38    |
+| Is real       | Integer | 1     |
+| Is text       | Integer | 2     |
+| Object array  | Integer | 39    |
 
 **Note:** For array attributes, the command returns Is collection. 
 

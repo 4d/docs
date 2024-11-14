@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | Longint | &#8592; | Number of menu items in the menu |
+| Function result | Integer | &#8592; | Number of menu items in the menu |
 
 <!-- END REF-->
 

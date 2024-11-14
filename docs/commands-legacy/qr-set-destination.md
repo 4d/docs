@@ -26,9 +26,9 @@ In the *type* parameter, you can pass one of the constants of the *QR Output Des
 
 | Constant     | Type    | Value | Comment                                            |
 | ------------ | ------- | ----- | -------------------------------------------------- |
-| qr HTML file | Longint | 5     | *specifics*: Pathname to the file.                 |
-| qr printer   | Longint | 1     | *specifics*: "\*" to remove the print dialog boxes |
-| qr text file | Longint | 2     | *specifics*: Pathname to the file.                 |
+| qr HTML file | Integer | 5     | *specifics*: Pathname to the file.                 |
+| qr printer   | Integer | 1     | *specifics*: "\*" to remove the print dialog boxes |
+| qr text file | Integer | 2     | *specifics*: Pathname to the file.                 |
 
 *qr printer* (1): If you pass a string containing a star ("\*") in the *specifics* parameter, no dialog box will be displayed during printing and the current print settings will be used automatically. This setting is necessary when you want to print the report on the server.
 

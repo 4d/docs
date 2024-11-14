@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | name | Text | &#8594;  | Name of process for which to retrieve the process number |
 | id | Text | &#8594;  | ID of process for which to retrieve the process number |
 | * | Operator |  &#8594;  | Return the process number from the server |
-| Function result | Longint | &#8592; | Process number |
+| Function result | Integer | &#8592; | Process number |
 
 <!-- END REF-->
 

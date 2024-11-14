@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | styleSheetObj | Object | &#8594;  | Style sheet object |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| styleSheetName | String | &#8594;  | Name of style sheet |
+| styleSheetName | Text | &#8594;  | Name of style sheet |
 
 <!-- END REF-->
 

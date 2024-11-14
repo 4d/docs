@@ -26,8 +26,8 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 | Constant                | Type    | Value | Comment                                                               |
 | ----------------------- | ------- | ----- | --------------------------------------------------------------------- |
-| sk ignore empty strings | Longint | 1     | Remove empty strings from the resulting collection (they are ignored) |
-| sk trim spaces          | Longint | 2     | Trim space characters at the beginning and end of substrings          |
+| sk ignore empty strings | Integer | 1     | Remove empty strings from the resulting collection (they are ignored) |
+| sk trim spaces          | Integer | 2     | Trim space characters at the beginning and end of substrings          |
 
 #### Example 1 
 

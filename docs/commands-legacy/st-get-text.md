@@ -42,10 +42,10 @@ The optional *startSel* and *endSel* parameters let you designate a selection of
 
 | Constant           | Type    | Value  | Comment                                                             |
 | ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Longint | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Longint | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Longint | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Longint | 1      | Designates first character of text contained in object              |
+| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
+| ST End text        | Integer | 0      | Designates last character of text contained in object               |
+| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
+| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
 
 (\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
 

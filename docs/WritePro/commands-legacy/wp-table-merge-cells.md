@@ -11,10 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| startColumn | Longint | &#8594;  | Position of first cell column |
-| startRow | Longint | &#8594;  | Position of first column row |
-| columnCount | Longint | &#8594;  | Number of columns to merge |
-| rowCount | Longint | &#8594;  | Number of rows to merge |
+| startColumn | Integer | &#8594;  | Position of first cell column |
+| startRow | Integer | &#8594;  | Position of first column row |
+| columnCount | Integer | &#8594;  | Number of columns to merge |
+| rowCount | Integer | &#8594;  | Number of rows to merge |
 
 <!-- END REF-->
 

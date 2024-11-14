@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | targetField | Field | &#8594;  | Field on which to execute the search |
 | value | Field, Variable | &#8594;  | Value to search |
 | &#8592; | Value found |
-| Function result | Longint | &#8592; | Number of the record found or -1 if no record was found |
+| Function result | Integer | &#8592; | Number of the record found or -1 if no record was found |
 
 <!-- END REF-->
 

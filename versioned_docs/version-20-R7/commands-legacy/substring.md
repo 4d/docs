@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | source | Text | &#8594;  | String from which to get substring |
 | firstChar | Integer | &#8594;  | Position of first character |
 | numChars | Integer | &#8594;  | Number of characters to get |
-| Function result | String | &#8592; | Substring of source |
+| Function result | Text | &#8592; | Substring of source |
 
 <!-- END REF-->
 

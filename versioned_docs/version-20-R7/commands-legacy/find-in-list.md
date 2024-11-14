@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | scope | Integer | &#8594;  | 0=Main list, 1=Sublist |
 | itemsArray | Array integer | &#8592; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
 | * | Operator | &#8594;  | - If omitted: use position of items - If passed: use reference number of items |
-| Function result | Longint | &#8592; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
+| Function result | Integer | &#8592; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldVar | Field, Variable | &#8594;  | field or variable to be tested |
-| Function result | Longint | &#8592; | Data type number |
+| Function result | Integer | &#8592; | Data type number |
 
 <!-- END REF-->
 
@@ -22,38 +22,38 @@ displayed_sidebar: docs
 
 | Constant           | Type    | Value |
 | ------------------ | ------- | ----- |
-| Array 2D           | Longint | 13    |
-| Blob array         | Longint | 31    |
-| Boolean array      | Longint | 22    |
-| Date array         | Longint | 17    |
-| Integer array      | Longint | 15    |
-| Is alpha field     | Longint | 0     |
-| Is BLOB            | Longint | 30    |
-| Is Boolean         | Longint | 6     |
-| Is collection      | Longint | 42    |
-| Is date            | Longint | 4     |
-| Is integer         | Longint | 8     |
-| Is integer 64 bits | Longint | 25    |
-| Is longint         | Longint | 9     |
-| Is null            | Longint | 255   |
-| Is object          | Longint | 38    |
-| Is picture         | Longint | 3     |
-| Is pointer         | Longint | 23    |
-| Is real            | Longint | 1     |
-| Is string var      | Longint | 24    |
-| Is subtable        | Longint | 7     |
-| Is text            | Longint | 2     |
-| Is time            | Longint | 11    |
-| Is undefined       | Longint | 5     |
-| Is variant         | Longint | 12    |
-| LongInt array      | Longint | 16    |
-| Object array       | Longint | 39    |
-| Picture array      | Longint | 19    |
-| Pointer array      | Longint | 20    |
-| Real array         | Longint | 14    |
-| String array       | Longint | 21    |
-| Text array         | Longint | 18    |
-| Time array         | Longint | 32    |
+| Array 2D           | Integer | 13    |
+| Blob array         | Integer | 31    |
+| Boolean array      | Integer | 22    |
+| Date array         | Integer | 17    |
+| Integer array      | Integer | 15    |
+| Is alpha field     | Integer | 0     |
+| Is BLOB            | Integer | 30    |
+| Is Boolean         | Integer | 6     |
+| Is collection      | Integer | 42    |
+| Is date            | Integer | 4     |
+| Is integer         | Integer | 8     |
+| Is integer 64 bits | Integer | 25    |
+| Is longint         | Integer | 9     |
+| Is null            | Integer | 255   |
+| Is object          | Integer | 38    |
+| Is picture         | Integer | 3     |
+| Is pointer         | Integer | 23    |
+| Is real            | Integer | 1     |
+| Is string var      | Integer | 24    |
+| Is subtable        | Integer | 7     |
+| Is text            | Integer | 2     |
+| Is time            | Integer | 11    |
+| Is undefined       | Integer | 5     |
+| Is variant         | Integer | 12    |
+| LongInt array      | Integer | 16    |
+| Object array       | Integer | 39    |
+| Picture array      | Integer | 19    |
+| Pointer array      | Integer | 20    |
+| Real array         | Integer | 14    |
+| String array       | Integer | 21    |
+| Text array         | Integer | 18    |
+| Time array         | Integer | 32    |
 
 You can apply the Type function to fields, interprocess variables, process variables, local variables, and dereferenced pointers for these types of objects. You can apply **Type** to the parameters *($1, $2 ... ${...})* of a project method or to the result of a function *($0)*.
 

@@ -11,10 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| startColumn | Longint | &#8594;  | Position of first cell column |
-| startRow | Longint | &#8594;  | Position of first column row |
-| columnCount | Longint | &#8594;  | Number of columns to split |
-| rowCount | Longint | &#8594;  | Number of rows to split |
+| startColumn | Integer | &#8594;  | Position of first cell column |
+| startRow | Integer | &#8594;  | Position of first column row |
+| columnCount | Integer | &#8594;  | Number of columns to split |
+| rowCount | Integer | &#8594;  | Number of rows to split |
 
 <!-- END REF-->
 

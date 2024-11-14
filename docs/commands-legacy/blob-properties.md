@@ -24,11 +24,11 @@ The *compressed* parameter returns a value indicating if and how the BLOB is com
 
 | Constant                   | Type    | Value | Comment                                                                                                                                                      |
 | -------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Compact compression mode   | Longint | 1     | Compressed as much as possible (at the expense of the speed of compression and decompression operations). Default method.                                    |
-| Fast compression mode      | Longint | 2     | Compressed as fast as possible (and will be decompressed as fast as possible), at the expense of the compression ratio (the compressed BLOB will be bigger). |
-| GZIP best compression mode | Longint | \-1   | Most compact GZIP compression                                                                                                                                |
-| GZIP fast compression mode | Longint | \-2   | Fastest GZIP compression                                                                                                                                     |
-| Is not compressed          | Longint | 0     | No compression                                                                                                                                               |
+| Compact compression mode   | Integer | 1     | Compressed as much as possible (at the expense of the speed of compression and decompression operations). Default method.                                    |
+| Fast compression mode      | Integer | 2     | Compressed as fast as possible (and will be decompressed as fast as possible), at the expense of the compression ratio (the compressed BLOB will be bigger). |
+| GZIP best compression mode | Integer | \-1   | Most compact GZIP compression                                                                                                                                |
+| GZIP fast compression mode | Integer | \-2   | Fastest GZIP compression                                                                                                                                     |
+| Is not compressed          | Integer | 0     | No compression                                                                                                                                               |
 
 Whatever the compression status of the BLOB, the *expandedSize* parameter returns the size of the BLOB when it is not compressed.
 

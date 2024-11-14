@@ -11,8 +11,8 @@ title: VP Cell
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|column|Longint|->|Column index|
-|row|Longint|->|Row index|
+|column|Integer|->|Column index|
+|row|Integer|->|Row index|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
 |Result|Object|<-|Range object of a single cell|
 <!-- END REF -->

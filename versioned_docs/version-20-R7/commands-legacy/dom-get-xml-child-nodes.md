@@ -23,12 +23,12 @@ The types of child nodes are returned in the *childTypesArr* array. You can comp
 
 | Constant                   | Type    | Value |
 | -------------------------- | ------- | ----- |
-| XML comment                | Longint | 2     |
-| XML processing instruction | Longint | 3     |
-| XML DATA                   | Longint | 6     |
-| XML CDATA                  | Longint | 7     |
-| XML DOCTYPE                | Longint | 10    |
-| XML ELEMENT                | Longint | 11    |
+| XML comment                | Integer | 2     |
+| XML processing instruction | Integer | 3     |
+| XML DATA                   | Integer | 6     |
+| XML CDATA                  | Integer | 7     |
+| XML DOCTYPE                | Integer | 10    |
+| XML ELEMENT                | Integer | 11    |
 
 For more information, please refer to the description of the [DOM Append XML child node](dom-append-xml-child-node.md) command.
 

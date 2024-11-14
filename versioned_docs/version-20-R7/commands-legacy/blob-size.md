@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB field or variable |
-| Function result | Longint | &#8592; | Size in bytes of the BLOB |
+| Function result | Integer | &#8592; | Size in bytes of the BLOB |
 
 <!-- END REF-->
 

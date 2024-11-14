@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
-| Function result | Longint | &#8592; | Type of window |
+| Function result | Integer | &#8592; | Type of window |
 
 <!-- END REF-->
 
@@ -25,10 +25,10 @@ Otherwise, **Window kind** may return one of the following predefined constants 
 
 | Constant        | Type    | Value |
 | --------------- | ------- | ----- |
-| External window | Longint | 5     |
-| Floating window | Longint | 14    |
-| Modal dialog    | Longint | 9     |
-| Regular window  | Longint | 8     |
+| External window | Integer | 5     |
+| Floating window | Integer | 14    |
+| Modal dialog    | Integer | 9     |
+| Regular window  | Integer | 8     |
 
 If you omit the *window* parameter, **Window kind** returns the type of the frontmost window for the current process.
 

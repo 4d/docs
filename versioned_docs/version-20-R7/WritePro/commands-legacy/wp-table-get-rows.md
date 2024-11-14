@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
 | startRow &#124; wk header rows | Longint, String | &#8594;  | Position of first row OR wk header rows |
-| numRows | Longint | &#8594;  | Number of rows to get |
+| numRows | Integer | &#8594;  | Number of rows to get |
 | Function result | Object | &#8592; | New row range containing selected rows |
 
 <!-- END REF-->

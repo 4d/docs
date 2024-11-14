@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro document or section |
-| Function result | Longint | &#8592; | Number of pages in document |
+| Function result | Integer | &#8592; | Number of pages in document |
 
 <!-- END REF-->
 

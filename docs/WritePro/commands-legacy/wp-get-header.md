@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro range or section/sub-section element |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| sectionIndex | Longint | &#8594;  | Section index |
-| subSectionType | Longint | &#8594;  | Sub-section type (wk first page, wk left page, or wk right page) |
+| sectionIndex | Integer | &#8594;  | Section index |
+| subSectionType | Integer | &#8594;  | Sub-section type (wk first page, wk left page, or wk right page) |
 | Function result | Object | &#8592; | 4D Write Pro header |
 
 <!-- END REF-->
@@ -26,9 +26,9 @@ displayed_sidebar: docs
 If the *subSectionType* parameter is passed, the command returns the header associated to the specified sub-section type. You can pass one of the following constants in the *subSectionType* parameter:  
 | Constant      | Type    | Value |  
 | ------------- | ------- | ----- |  
-| wk first page | Longint | 1     |  
-| wk left page  | Longint | 2     |  
-| wk right page | Longint | 3     |  
+| wk first page | Integer | 1     |  
+| wk left page  | Integer | 2     |  
+| wk right page | Integer | 3     |  
     
 If the *subSectionType* is not specified, the main section header will be returned. In this case, if a sub-section is active, the main section header object is *undefined* (the main section header is available only if there is no active wk first page or wk left page sub-section).
 

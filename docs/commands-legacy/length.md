@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | string | Text | &#8594;  | String for which to return length |
-| Function result | Longint | &#8592; | Length of string |
+| Function result | Integer | &#8592; | Length of string |
 
 <!-- END REF-->
 

@@ -44,8 +44,8 @@ The *digest* parameter allows you to modify the way the password is transmitted 
 
 | Constant                 | Type    | Value | Comment                                                       |
 | ------------------------ | ------- | ----- | ------------------------------------------------------------- |
-| LDAP password MD5        | Longint | 0     | (Default) Send password encrypted in MD5                      |
-| LDAP password plain text | Longint | 1     | Send password with no encryption (TLS connection recommended) |
+| LDAP password MD5        | Integer | 0     | (Default) Send password encrypted in MD5                      |
+| LDAP password plain text | Integer | 1     | Send password with no encryption (TLS connection recommended) |
 
 By default, the *password* is transmitted in digest MD5\. Pass LDAP password plain text if necessary, for example if you want to use different login type values with the LDAP server. In a production environment, it is recommended to use a TLS connection for the *url*. 
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
-| Function result | String | &#8592; | Window title |
+| Function result | Text | &#8592; | Window title |
 
 <!-- END REF-->
 

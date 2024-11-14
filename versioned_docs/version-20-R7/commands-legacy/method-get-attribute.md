@@ -27,13 +27,13 @@ In the *attribType* parameter, pass a value indicating the type of attribute to 
 
 | Constant                     | Type    | Value | Comment                                                                           |
 | ---------------------------- | ------- | ----- | --------------------------------------------------------------------------------- |
-| Attribute executed on server | Longint | 8     | Corresponds to the "Execute on server" option                                     |
-| Attribute invisible          | Longint | 1     | Corresponds to the "Invisible" option                                             |
-| Attribute published SOAP     | Longint | 3     | Corresponds to the "Offered as a Web Service" option                              |
-| Attribute published SQL      | Longint | 7     | Corresponds to the "Available through SQL" option                                 |
-| Attribute published Web      | Longint | 2     | Corresponds to the "Available through 4D HTML tags and URLs (4DACTION...)" option |
-| Attribute published WSDL     | Longint | 4     | Corresponds to the "Published in WSDL" option                                     |
-| Attribute shared             | Longint | 5     | Corresponds to the "Shared by components and host database" option                |
+| Attribute executed on server | Integer | 8     | Corresponds to the "Execute on server" option                                     |
+| Attribute invisible          | Integer | 1     | Corresponds to the "Invisible" option                                             |
+| Attribute published SOAP     | Integer | 3     | Corresponds to the "Offered as a Web Service" option                              |
+| Attribute published SQL      | Integer | 7     | Corresponds to the "Available through SQL" option                                 |
+| Attribute published Web      | Integer | 2     | Corresponds to the "Available through 4D HTML tags and URLs (4DACTION...)" option |
+| Attribute published WSDL     | Integer | 4     | Corresponds to the "Published in WSDL" option                                     |
+| Attribute shared             | Integer | 5     | Corresponds to the "Shared by components and host database" option                |
 
 If the command is executed from a component, it applies by default to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
 

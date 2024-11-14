@@ -23,8 +23,8 @@ By default, if you omit the *pathType* parameter, it will be assumed that you pa
 
 | Constant       | Type    | Value | Comment                                                                            |
 | -------------- | ------- | ----- | ---------------------------------------------------------------------------------- |
-| Path is POSIX  | Longint | 1     | The path is expressed using the Posix syntax                                       |
-| Path is system | Longint | 0     | (Default) The path is expressed using the current system syntax (Windows or macOS) |
+| Path is POSIX  | Integer | 1     | The path is expressed using the Posix syntax                                       |
+| Path is system | Integer | 0     | (Default) The path is expressed using the current system syntax (Windows or macOS) |
 
 The command returns an object resulting from parsing the *path*. The following properties are available:
 

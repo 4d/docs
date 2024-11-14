@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | user | Integer | &#8594;  | User alias or 4D user account |
-| Function result | String | &#8592; | User name of the current user |
+| Function result | Text | &#8592; | User name of the current user |
 
 <!-- END REF-->
 

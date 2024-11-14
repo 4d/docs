@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable. |
-| wpArea | String | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
-| textBoxID | String | &#x1F858; | ID of the text box (only filled if a text box has the focus) |
-| Function result | Longint | &#8592; | Frame where the cursor is currently set |
+| wpArea | Text | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| textBoxID | Text | &#x1F858; | ID of the text box (only filled if a text box has the focus) |
+| Function result | Integer | &#8592; | Frame where the cursor is currently set |
 
 <!-- END REF-->
 
@@ -31,16 +31,16 @@ The returned value can be compared to one of the following constants from the *4
 
 | Constant                          | Type    | Value | Comment                                                                                |
 | --------------------------------- | ------- | ----- | -------------------------------------------------------------------------------------- |
-| wk body                           | Longint | 0     | Body frame of the section                                                              |
-| wk current section default footer | Longint | 10    | Default footer of the section (available only if there is no active subsection footer) |
-| wk current section default header | Longint | 9     | Default header of the section (available only if there is no active subsection header) |
-| wk current section first footer   | Longint | 4     | Footer of the first page of the section                                                |
-| wk current section first header   | Longint | 3     | Header of the first page of the section                                                |
-| wk current section left footer    | Longint | 6     | Footer of the left page(s) of the section                                              |
-| wk current section left header    | Longint | 5     | Header of the left page(s) of the section                                              |
-| wk current section right footer   | Longint | 8     | Footer of the right page(s) of the section                                             |
-| wk current section right header   | Longint | 7     | Header of the right page(s) of the section                                             |
-| wk text box                       | Longint | 11    | Text box                                                                               |
+| wk body                           | Integer | 0     | Body frame of the section                                                              |
+| wk current section default footer | Integer | 10    | Default footer of the section (available only if there is no active subsection footer) |
+| wk current section default header | Integer | 9     | Default header of the section (available only if there is no active subsection header) |
+| wk current section first footer   | Integer | 4     | Footer of the first page of the section                                                |
+| wk current section first header   | Integer | 3     | Header of the first page of the section                                                |
+| wk current section left footer    | Integer | 6     | Footer of the left page(s) of the section                                              |
+| wk current section left header    | Integer | 5     | Header of the left page(s) of the section                                              |
+| wk current section right footer   | Integer | 8     | Footer of the right page(s) of the section                                             |
+| wk current section right header   | Integer | 7     | Header of the right page(s) of the section                                             |
+| wk text box                       | Integer | 11    | Text box                                                                               |
 
 If the cursor is currently set in a text box element, the element **id** of the text box is returned in the *textBoxID* parameter. In all other cases, this parameter is returned empty.
 

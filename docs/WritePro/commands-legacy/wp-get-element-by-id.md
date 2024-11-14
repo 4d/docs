@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| ID | String | &#8594;  | Identifier of the element to retrieve |
+| ID | Text | &#8594;  | Identifier of the element to retrieve |
 | Function result | Object | &#8592; | 4D Write Pro element |
 
 <!-- END REF-->

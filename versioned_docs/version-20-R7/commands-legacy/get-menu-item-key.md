@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Menu item number or -1 for the last item added |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | Longint | &#8592; | Character code of standard shortcut key associated with the menu item |
+| Function result | Integer | &#8592; | Character code of standard shortcut key associated with the menu item |
 
 <!-- END REF-->
 

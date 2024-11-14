@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Windows: width of application window, or width of screen if * is specified Macintosh: width of main screen |
-| Function result | Longint | &#8592; | Width expressed in pixels |
+| Function result | Integer | &#8592; | Width expressed in pixels |
 
 <!-- END REF-->
 

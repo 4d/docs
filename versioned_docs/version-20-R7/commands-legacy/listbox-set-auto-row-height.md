@@ -32,8 +32,8 @@ In *selector*, pass the type of value to set. You can use one of the following c
 
 | Constant          | Type    | Value |
 | ----------------- | ------- | ----- |
-| lk row max height | Longint | 33    |
-| lk row min height | Longint | 32    |
+| lk row max height | Integer | 33    |
+| lk row min height | Integer | 32    |
 
 In *value*, pass the corresponding value in the appropriate *unit*.
 
@@ -41,8 +41,8 @@ The *unit* parameter can be set using one of the following constants from the *L
 
 | Constant  | Type    | Value | Comment                                                                                             |
 | --------- | ------- | ----- | --------------------------------------------------------------------------------------------------- |
-| lk lines  | Longint | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
-| lk pixels | Longint | 0     | Height is expressed as a number of pixels (default).                                                |
+| lk lines  | Integer | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
+| lk pixels | Integer | 0     | Height is expressed as a number of pixels (default).                                                |
 
 **Note:** The command does not check the consistency of the values. However, at runtime, the minimum value will be applied to both values in case of conflict. For example, if the minimum value is 5 lines and the maximum value is 3 lines (which is inconsistent), the maximum height applied to the list box rows will be 5 lines.
 
