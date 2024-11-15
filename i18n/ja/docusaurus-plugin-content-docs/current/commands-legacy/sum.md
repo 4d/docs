@@ -5,7 +5,7 @@ slug: /commands/sum
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* {; *attributePath*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* {; *attributePath*} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

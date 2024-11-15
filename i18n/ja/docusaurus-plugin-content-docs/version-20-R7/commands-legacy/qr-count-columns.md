@@ -5,7 +5,7 @@ slug: /commands/qr-count-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Count columns.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

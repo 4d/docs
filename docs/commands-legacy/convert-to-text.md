@@ -5,7 +5,7 @@ slug: /commands/convert-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *blob* ; *charSet* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *blob* ; *charSet* ) : Text<!-- END REF-->
 <!--REF #_command_.Convert to text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licença* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licença* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

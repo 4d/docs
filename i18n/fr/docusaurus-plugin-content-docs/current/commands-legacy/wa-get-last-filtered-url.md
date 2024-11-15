@@ -5,7 +5,7 @@ slug: /commands/wa-get-last-filtered-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( {* ;} *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get last filtered URL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

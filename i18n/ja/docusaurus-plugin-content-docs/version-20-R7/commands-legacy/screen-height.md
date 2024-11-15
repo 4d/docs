@@ -5,7 +5,7 @@ slug: /commands/screen-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Screen height.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

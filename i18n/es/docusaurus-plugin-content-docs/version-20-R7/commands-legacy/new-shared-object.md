@@ -5,7 +5,7 @@ slug: /commands/new-shared-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New shared object.Syntax-->**New shared object** {( *propiedad* ; *valor* {; *propiedad2* ; *valor2* ; ... ; *propiedadN* ; *valorN*} )} -> Resultado<!-- END REF-->
+<!--REF #_command_.New shared object.Syntax-->**New shared object** {( *propiedad* ; *valor* {; *propiedad2* ; *valor2* ; ... ; *propiedadN* ; *valorN*} )} : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *list* {; *itemsArray* {; *}} )  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *list* {; *itemsArray* {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

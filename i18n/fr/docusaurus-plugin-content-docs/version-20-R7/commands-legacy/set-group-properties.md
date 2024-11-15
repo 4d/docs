@@ -5,7 +5,7 @@ slug: /commands/set-group-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *réfGroupe* ; *nom* ; *propriétaire* {; *membres*} )  -> Résultat<!-- END REF-->
+<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *réfGroupe* ; *nom* ; *propriétaire* {; *membres*} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

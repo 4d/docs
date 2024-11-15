@@ -5,7 +5,7 @@ slug: /commands/trigger-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trigger level.Syntax-->**Trigger level**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Trigger level.Syntax-->**Trigger level**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger level.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

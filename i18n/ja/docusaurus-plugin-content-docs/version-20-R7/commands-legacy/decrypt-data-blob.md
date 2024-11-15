@@ -5,7 +5,7 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* ; keyObject | passPhrase ; *salt* ; *decryptedBLOB* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* ; keyObject | passPhrase ; *salt* ; *decryptedBLOB* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

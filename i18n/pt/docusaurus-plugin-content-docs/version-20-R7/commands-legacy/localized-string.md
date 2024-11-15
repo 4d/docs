@@ -5,7 +5,7 @@ slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resNome* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resNome* ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

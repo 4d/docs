@@ -5,7 +5,7 @@ slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *leChamp* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *leChamp* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

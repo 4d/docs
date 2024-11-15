@@ -5,7 +5,7 @@ slug: /commands/right-click
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Right click.Syntax-->**Right click**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Right click.Syntax-->**Right click**  : Boolean<!-- END REF-->
 <!--REF #_command_.Right click.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

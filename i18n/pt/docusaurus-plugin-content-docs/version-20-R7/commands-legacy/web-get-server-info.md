@@ -5,7 +5,7 @@ slug: /commands/web-get-server-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *comCache* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *comCache* )} : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -29,20 +29,20 @@ O objeto devolvido contém as propriedades abaixo (os nomes de propriedade são 
 | started                     | Booleano          | true se for iniciado o servidor http, do contrário false                                                                                                                     |
 | uptime                      | Número            | Tempo transcorrido desde o último início de servidor http                                                                                                                    |
 | httpRequestCount            | Número            | Número de visitas HTTP recebidas pelo servidor desde que foi iniciado                                                                                                        |
-| startMode                   | String            | "automático" se estiver ativada a opção "Iniciar servidor web no início", do contrário "manual".                                                                             |
+| startMode                   | Text            | "automático" se estiver ativada a opção "Iniciar servidor web no início", do contrário "manual".                                                                             |
 | SOAPServerStarted           | Booleano          | true se for iniciado o servidor SOAP, no caso contrário false                                                                                                                |
 | cache                       | Objeto            | *Esta propriedade só é incluída se o valor da propriedade do parâmetro cacheInfo for True*. Descreve o conteúdo da caché de servidor web (ver *Propriedade de cache* abaixo) |
 | security                    | Objeto            | Estado atual das diferentes opções de segurança                                                                                                                              |
-| cipherSuite                 | String            | Lista Cipher usada por 4D para o protocolo de segurança (corresponde ao parâmetro de banco de dados SSL cipher list)                                                         |
+| cipherSuite                 | Text            | Lista Cipher usada por 4D para o protocolo de segurança (corresponde ao parâmetro de banco de dados SSL cipher list)                                                         |
 | HTTPEnabled                 | Boolean           | True se HTTP ativo                                                                                                                                                           |
 | HTTPSEnabled                | Boolean           | True se HTTPS ativo                                                                                                                                                          |
 | HSTSEnabled                 | Boolean           | True se HSTS for ativo no servidor                                                                                                                                           |
 | HSTSMaxAge                  | Number            | Idade máxima (em segundos) para HSTS. O padrão é 2 anos (63.072,000 segundos).                                                                                               |
-| minTLSVersion               | String            | Versão TLS mínima aceita para as conexôes (corresponde ao parâmetro de banco de dados Min TLS version)                                                                       |
+| minTLSVersion               | Text            | Versão TLS mínima aceita para as conexôes (corresponde ao parâmetro de banco de dados Min TLS version)                                                                       |
 | options                     | Objeto            | Estado atual de várias opções de servidor web padrão                                                                                                                         |
 | CORSEnabled                 | Boolean           | True se o serviço CORS for ativo no servidor, False senão (normal)                                                                                                           |
 | CORSSettings                | Collection        | Colelçai de objetos CORS definindo a lista de hosts e métodos permitidos (ver Web CORS settings web option)                                                                  |
-| webCharacterSet             | String            | Nome de conjunto de caracteres (corresponde a opção web Web character set)                                                                                                   |
+| webCharacterSet             | Text            | Nome de conjunto de caracteres (corresponde a opção web Web character set)                                                                                                   |
 | webHTTPCompressionLevel     | Número            | Nivel de compressão para os intercâmbios HTTP comprimidos (corresponde à opção web Web HTTP compression level)                                                               |
 | webHTTPCompressionThreshold | Number            | Valor de compressão (corresponde à opção web Web HTTP compression threshold)                                                                                                 |
 | webHTTPSPortID              | Number            | Número de porto TCP utilizado pelo servidor Web para conexôes seguras (corresponde à opção web Web HTTPS port ID)                                                            |

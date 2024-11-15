@@ -5,7 +5,7 @@ slug: /commands/active-transaction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Active transaction.Syntax-->**Active transaction** -> Resultado<!-- END REF-->
+<!--REF #_command_.Active transaction.Syntax-->**Active transaction** : Boolean<!-- END REF-->
 <!--REF #_command_.Active transaction.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/screen-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen width.Syntax-->**Screen width** {( * )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Screen width.Syntax-->**Screen width** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Screen width.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/lowercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *aString* {; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *aString* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

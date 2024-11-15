@@ -5,7 +5,7 @@ slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : MenuRef<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

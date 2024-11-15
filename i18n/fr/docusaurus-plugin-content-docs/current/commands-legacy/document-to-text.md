@@ -5,7 +5,7 @@ slug: /commands/document-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomFichier* {; *jeuCaractères* {; *modeRetour*}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomFichier* {; *jeuCaractères* {; *modeRetour*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Document to text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

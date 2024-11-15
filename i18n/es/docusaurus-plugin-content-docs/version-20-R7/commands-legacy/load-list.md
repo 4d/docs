@@ -5,7 +5,7 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *nomLista* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *nomLista* ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

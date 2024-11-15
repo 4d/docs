@@ -5,7 +5,7 @@ slug: /commands/displayed-line-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  : Integer<!-- END REF-->
 <!--REF #_command_.Displayed line number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

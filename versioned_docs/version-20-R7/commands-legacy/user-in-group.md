@@ -5,7 +5,7 @@ slug: /commands/user-in-group
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.User in group.Syntax-->**User in group** ( *user* ; *group* ) -> Function result<!-- END REF-->
+<!--REF #_command_.User in group.Syntax-->**User in group** ( *user* ; *group* ) : Boolean<!-- END REF-->
 <!--REF #_command_.User in group.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

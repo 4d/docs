@@ -5,7 +5,7 @@ slug: /commands/form-event-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Form event code.Syntax-->**Form event code**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Form event code.Syntax-->**Form event code**  : Integer<!-- END REF-->
 <!--REF #_command_.Form event code.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

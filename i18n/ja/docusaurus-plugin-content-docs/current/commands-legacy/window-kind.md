@@ -5,7 +5,7 @@ slug: /commands/window-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window kind.Syntax-->**Window kind** {( *window* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Window kind.Syntax-->**Window kind** {( *window* )} : Integer<!-- END REF-->
 <!--REF #_command_.Window kind.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

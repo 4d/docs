@@ -5,7 +5,7 @@ slug: /commands/metodo-base-on-web-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Web Authentication.Syntax-->$1, $2, $3, $4, $5, $6 -> Método base On Web Authentication -> Resultado<!-- END REF-->
+<!--REF #_command_.Metodo base On Web Authentication.Syntax-->$1, $2, $3, $4, $5, $6 -> Método base On Web Authentication : Boolean<!-- END REF-->
 <!--REF #_command_.Metodo base On Web Authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

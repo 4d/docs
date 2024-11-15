@@ -5,7 +5,7 @@ slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

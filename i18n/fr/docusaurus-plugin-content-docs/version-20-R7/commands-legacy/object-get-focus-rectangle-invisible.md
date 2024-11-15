@@ -5,7 +5,7 @@ slug: /commands/object-get-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( {* ;} *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

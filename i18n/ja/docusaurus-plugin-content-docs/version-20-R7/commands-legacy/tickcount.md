@@ -5,7 +5,7 @@ slug: /commands/tickcount
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Tickcount.Syntax-->**Tickcount**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Tickcount.Syntax-->**Tickcount**  : Integer<!-- END REF-->
 <!--REF #_command_.Tickcount.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

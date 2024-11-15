@@ -5,7 +5,7 @@ slug: /commands/generate-uuid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** -> Résultat<!-- END REF-->
+<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<!-- END REF-->
 <!--REF #_command_.Generate UUID.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

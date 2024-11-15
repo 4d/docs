@@ -5,7 +5,7 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) : Expression<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* ; *menuItem* {; *process*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item style.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

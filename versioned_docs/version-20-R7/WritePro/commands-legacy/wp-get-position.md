@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get position.Syntax-->**WP Get position** ( *targetObj* {; *layout*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get position.Syntax-->**WP Get position** ( *targetObj* {; *layout*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

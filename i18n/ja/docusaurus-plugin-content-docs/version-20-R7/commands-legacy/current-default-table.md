@@ -5,7 +5,7 @@ slug: /commands/current-default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current default table.Syntax-->**Current default table**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Current default table.Syntax-->**Current default table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current default table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/print-settings-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

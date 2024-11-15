@@ -5,7 +5,7 @@ slug: /commands/last-table-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last table number.Syntax-->**Last table number**  -> Function result<!-- END REF-->
+<!--REF #_command_.Last table number.Syntax-->**Last table number**  : Integer<!-- END REF-->
 <!--REF #_command_.Last table number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expresion* {; *formato* {; *agregarHora*}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expresion* {; *formato* {; *agregarHora*}} ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

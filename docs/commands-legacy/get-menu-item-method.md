@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item method.Syntax-->**Get menu item method** ( *menu* ; *menuItem* {; *process*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get menu item method.Syntax-->**Get menu item method** ( *menu* ; *menuItem* {; *process*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

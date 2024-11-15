@@ -5,7 +5,7 @@ slug: /commands/method-called-on-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on event.Syntax-->**Method called on event**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Method called on event.Syntax-->**Method called on event**  : Text<!-- END REF-->
 <!--REF #_command_.Method called on event.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

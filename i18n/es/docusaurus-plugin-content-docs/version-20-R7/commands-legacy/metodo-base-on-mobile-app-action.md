@@ -5,7 +5,7 @@ slug: /commands/metodo-base-on-mobile-app-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Mobile App Action.Syntax-->**mobileInfo** -> Método base On Mobile App Action -> Resultado<!-- END REF-->
+<!--REF #_command_.Metodo base On Mobile App Action.Syntax-->**mobileInfo** -> Método base On Mobile App Action : Object<!-- END REF-->
 <!--REF #_command_.Metodo base On Mobile App Action.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

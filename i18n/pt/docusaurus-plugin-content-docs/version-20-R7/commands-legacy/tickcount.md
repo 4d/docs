@@ -5,7 +5,7 @@ slug: /commands/tickcount
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Tickcount.Syntax-->**Tickcount**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Tickcount.Syntax-->**Tickcount**  : Integer<!-- END REF-->
 <!--REF #_command_.Tickcount.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

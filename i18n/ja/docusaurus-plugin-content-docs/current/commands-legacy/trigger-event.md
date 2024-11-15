@@ -5,7 +5,7 @@ slug: /commands/trigger-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trigger event.Syntax-->**Trigger event**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Trigger event.Syntax-->**Trigger event**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger event.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

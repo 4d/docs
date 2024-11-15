@@ -5,7 +5,7 @@ slug: /commands/on-backup-startup-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Backup Startup database method.Syntax-->On Backup Startupデータベースメソッド -> 戻り値<!-- END REF-->
+<!--REF #_command_.On Backup Startup database method.Syntax-->On Backup Startupデータベースメソッド : Integer<!-- END REF-->
 <!--REF #_command_.On Backup Startup database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

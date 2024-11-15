@@ -5,7 +5,7 @@ slug: /commands/get-adjusted-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *tabla* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *tabla* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

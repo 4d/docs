@@ -5,7 +5,7 @@ slug: /commands/call-chain
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Call chain.Syntax-->**Call chain** -> Résultat<!-- END REF-->
+<!--REF #_command_.Call chain.Syntax-->**Call chain** : Collection<!-- END REF-->
 <!--REF #_command_.Call chain.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

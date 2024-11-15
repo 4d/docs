@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-text-range
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *targetObj* ; *startRange* ; *endRange* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *targetObj* ; *startRange* ; *endRange* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Text range.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/records-in-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in selection.Syntax-->**Records in selection** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Records in selection.Syntax-->**Records in selection** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

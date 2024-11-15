@@ -5,7 +5,7 @@ slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* ; *ordreOctet* {; *offset*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* ; *ordreOctet* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

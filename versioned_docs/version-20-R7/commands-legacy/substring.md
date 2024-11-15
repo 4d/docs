@@ -5,7 +5,7 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; *firstChar* {; *numChars*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; *firstChar* {; *numChars*} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

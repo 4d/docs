@@ -5,7 +5,7 @@ slug: /commands/object-get-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get text orientation.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

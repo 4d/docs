@@ -5,7 +5,7 @@ slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *elCampo* ) -> resultado<!-- END REF-->
+<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *elCampo* ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

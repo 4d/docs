@@ -5,7 +5,7 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *dominio* ; *protocolo* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *dominio* ; *protocolo* )} : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

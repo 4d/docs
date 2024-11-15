@@ -5,7 +5,7 @@ slug: /commands/method-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *path* ; *attribType* {; *} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *path* ; *attribType* {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.METHOD Get attribute.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

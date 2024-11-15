@@ -5,7 +5,7 @@ slug: /commands/trunc
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *numero* ; *decimais* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *numero* ; *decimais* ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

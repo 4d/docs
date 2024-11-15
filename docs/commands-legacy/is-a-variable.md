@@ -5,7 +5,7 @@ slug: /commands/is-a-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *aPointer* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *aPointer* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a variable.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

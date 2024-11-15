@@ -5,7 +5,7 @@ slug: /commands/generate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* ; *algorithme* {; *} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* ; *algorithme* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate digest.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

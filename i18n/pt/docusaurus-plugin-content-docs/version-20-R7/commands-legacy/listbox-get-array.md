@@ -5,7 +5,7 @@ slug: /commands/listbox-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( {* ;} *objeto* ; *tipoArray* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( {* ;} *objeto* ; *tipoArray* ) : Pointer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get array.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

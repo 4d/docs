@@ -5,7 +5,7 @@ slug: /commands/type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Type.Syntax-->**Type** ( *campoVar* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Type.Syntax-->**Type** ( *campoVar* ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *objeto* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

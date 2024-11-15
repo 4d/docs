@@ -5,7 +5,7 @@ slug: /commands/printing-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Printing page.Syntax-->**Printing page**  -> Function result<!-- END REF-->
+<!--REF #_command_.Printing page.Syntax-->**Printing page**  : Integer<!-- END REF-->
 <!--REF #_command_.Printing page.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

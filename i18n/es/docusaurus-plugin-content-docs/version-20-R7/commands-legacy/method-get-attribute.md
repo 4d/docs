@@ -5,7 +5,7 @@ slug: /commands/method-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *ruta* ; *tipoAtributo* {; *} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *ruta* ; *tipoAtributo* {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

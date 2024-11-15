@@ -5,7 +5,7 @@ slug: /commands/sin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sin.Syntax-->**Sin** ( *number* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Sin.Syntax-->**Sin** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Sin.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

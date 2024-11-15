@@ -5,7 +5,7 @@ slug: /commands/web-is-secured-connection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Is secured connection.Syntax-->**WEB Is secured connection**  -> Resultado<!-- END REF-->
+<!--REF #_command_.WEB Is secured connection.Syntax-->**WEB Is secured connection**  : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Is secured connection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

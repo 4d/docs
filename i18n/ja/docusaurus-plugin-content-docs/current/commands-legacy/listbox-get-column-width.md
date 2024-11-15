@@ -5,7 +5,7 @@ slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *object* {; *minWidth* {; *maxWidth*}} )  -> 戻り値<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *object* {; *minWidth* {; *maxWidth*}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

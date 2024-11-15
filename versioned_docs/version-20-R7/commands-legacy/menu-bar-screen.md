@@ -5,7 +5,7 @@ slug: /commands/menu-bar-screen
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu bar screen.Syntax-->**Menu bar screen**  -> Function result<!-- END REF-->
+<!--REF #_command_.Menu bar screen.Syntax-->**Menu bar screen**  : Integer<!-- END REF-->
 <!--REF #_command_.Menu bar screen.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

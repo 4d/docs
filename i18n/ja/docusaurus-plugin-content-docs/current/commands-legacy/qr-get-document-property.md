@@ -5,7 +5,7 @@ slug: /commands/qr-get-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* ; *property* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* ; *property* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

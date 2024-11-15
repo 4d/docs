@@ -5,7 +5,7 @@ slug: /commands/object-get-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *objeto* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get horizontal alignment.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

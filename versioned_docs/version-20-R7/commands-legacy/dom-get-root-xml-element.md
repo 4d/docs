@@ -5,7 +5,7 @@ slug: /commands/dom-get-root-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get Root XML element.Syntax-->**DOM Get Root XML element** ( *elementRef* ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Get Root XML element.Syntax-->**DOM Get Root XML element** ( *elementRef* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get Root XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

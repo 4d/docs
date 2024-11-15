@@ -5,7 +5,7 @@ slug: /commands/dom-get-parent-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *refElément* {; *nomElémentPar* {; *valeurElémentPar*}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *refElément* {; *nomElémentPar* {; *valeurElémentPar*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get parent XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

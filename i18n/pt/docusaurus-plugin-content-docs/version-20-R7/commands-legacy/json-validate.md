@@ -5,7 +5,7 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -41,11 +41,11 @@ Cada objeto de erro da coleção *errors* contém as propriedades abaixo:
 | **Nome de propriedade** | **Tipo** | **Descrição**                                                                                                                                                                                            |
 | ----------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *code*                  | Número   | Código de erro                                                                                                                                                                                           |
-| *jsonPath*              | String   | Rota JSON que não pode ser validada em *vJson*                                                                                                                                                           |
+| *jsonPath*              | Text   | Rota JSON que não pode ser validada em *vJson*                                                                                                                                                           |
 | *line*                  | Número   | Número de linha de erro no arquivo JSON. Esta propriedade é preenchida se o JSON tiver sido analisado por [JSON Parse](json-parse.md) com o parâmetro *\**. Do contrario, a propriedad é omitida.        |
-| *message*               | String   | Mensagem de erro                                                                                                                                                                                         |
+| *message*               | Text   | Mensagem de erro                                                                                                                                                                                         |
 | *offset*                | Número   | Deslocamento de linha de erro no arquivo JSON. Esta propriedade é preenchida se o JSON tiver sido analisado por [JSON Parse](json-parse.md) com o parâmetro *\**. Do contrário, a propriedade é omitida. |
-| *schemaPaths*           | String   | Rota JSON no esquema que causa o erro de validação                                                                                                                                                       |
+| *schemaPaths*           | Text   | Rota JSON no esquema que causa o erro de validação                                                                                                                                                       |
 
 ##### Gestão de erros 
 

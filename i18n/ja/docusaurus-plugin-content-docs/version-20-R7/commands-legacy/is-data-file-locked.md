@@ -5,7 +5,7 @@ slug: /commands/is-data-file-locked
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is data file locked.Syntax-->**Is data file locked**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Is data file locked.Syntax-->**Is data file locked**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is data file locked.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

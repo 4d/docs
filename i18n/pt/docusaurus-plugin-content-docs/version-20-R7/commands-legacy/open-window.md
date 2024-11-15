@@ -5,7 +5,7 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *esquerda* ; *superior* ; *direita* ; *inferior* {; *tipo* {; *titulo* {; *caixaFechar*}}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *esquerda* ; *superior* ; *direita* ; *inferior* {; *tipo* {; *titulo* {; *caixaFechar*}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

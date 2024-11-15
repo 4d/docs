@@ -5,7 +5,7 @@ slug: /commands/null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Null.Syntax-->**Null**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Null.Syntax-->**Null**  : Null<!-- END REF-->
 <!--REF #_command_.Null.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

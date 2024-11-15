@@ -5,7 +5,7 @@ slug: /commands/php-execute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PHP Execute.Syntax-->**PHP Execute** ( *scriptPath* {; *functionName* {; *phpResult* {; *param*} {; *param2* ; ... ; *paramN*}}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.PHP Execute.Syntax-->**PHP Execute** ( *scriptPath* {; *functionName* {; *phpResult* {; *param*} {; *param2* ; ... ; *paramN*}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.PHP Execute.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

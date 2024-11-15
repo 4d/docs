@@ -5,7 +5,7 @@ slug: /commands/command-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Command name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

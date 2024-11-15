@@ -5,7 +5,7 @@ slug: /commands/font-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* {; *fontStyle*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* {; *fontStyle*} ) : any<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -25,9 +25,9 @@ The optional *fontStyle* parameter allows to define a style variation to get. Yo
 
 | Constant | Type    | Value |
 | -------- | ------- | ----- |
-| Bold     | Longint | 1     |
-| Italic   | Longint | 2     |
-| Plain    | Longint | 0     |
+| Bold     | Integer | 1     |
+| Italic   | Integer | 2     |
+| Plain    | Integer | 0     |
 
 #### Exemplo 
 

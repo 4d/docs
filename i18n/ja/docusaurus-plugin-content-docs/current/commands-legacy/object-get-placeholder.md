@@ -5,7 +5,7 @@ slug: /commands/object-get-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get placeholder.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

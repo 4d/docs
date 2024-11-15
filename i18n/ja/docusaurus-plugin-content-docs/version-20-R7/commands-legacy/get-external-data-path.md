@@ -5,7 +5,7 @@ slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *aField* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *aField* ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

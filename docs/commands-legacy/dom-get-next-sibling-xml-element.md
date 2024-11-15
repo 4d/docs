@@ -5,7 +5,7 @@ slug: /commands/dom-get-next-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* {; *siblingElemName* {; *siblingElemValue*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* {; *siblingElemName* {; *siblingElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get next sibling XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

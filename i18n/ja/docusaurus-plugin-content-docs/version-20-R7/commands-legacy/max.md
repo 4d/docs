@@ -5,7 +5,7 @@ slug: /commands/max
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Max.Syntax-->**Max** ( *series* {; *attributePath*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Max.Syntax-->**Max** ( *series* {; *attributePath*} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

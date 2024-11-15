@@ -5,7 +5,7 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *leChamp* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *leChamp* ) : Expression<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

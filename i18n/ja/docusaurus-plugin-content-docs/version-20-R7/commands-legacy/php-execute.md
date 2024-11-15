@@ -5,7 +5,7 @@ slug: /commands/php-execute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PHP Execute.Syntax-->**PHP Execute** ( *scriptPath* {; *functionName* {; *phpResult* {; *param*} {; *param2* ; ... ; *paramN*}}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.PHP Execute.Syntax-->**PHP Execute** ( *scriptPath* {; *functionName* {; *phpResult* {; *param*} {; *param2* ; ... ; *paramN*}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.PHP Execute.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

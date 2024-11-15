@@ -5,7 +5,7 @@ slug: /commands/monitored-activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Monitored activity.Syntax-->**Monitored activity**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Monitored activity.Syntax-->**Monitored activity**  : Collection<!-- END REF-->
 <!--REF #_command_.Monitored activity.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

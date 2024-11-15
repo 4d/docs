@@ -5,7 +5,7 @@ slug: /commands/version-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Version type.Syntax-->**Version type**  -> Function result<!-- END REF-->
+<!--REF #_command_.Version type.Syntax-->**Version type**  : Integer<!-- END REF-->
 <!--REF #_command_.Version type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

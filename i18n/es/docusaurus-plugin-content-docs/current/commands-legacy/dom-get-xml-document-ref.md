@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-document-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *refElement* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *refElement* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML document ref.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/blob-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to list.Syntax-->**BLOB to list** ( *BLOB* {; *offset*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.BLOB to list.Syntax-->**BLOB to list** ( *BLOB* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

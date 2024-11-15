@@ -5,7 +5,7 @@ slug: /commands/soap-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP Request.Syntax-->**SOAP request**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.SOAP Request.Syntax-->**SOAP request**  : Boolean<!-- END REF-->
 <!--REF #_command_.SOAP Request.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

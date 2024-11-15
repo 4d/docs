@@ -5,7 +5,7 @@ slug: /commands/records-in-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *aTable* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

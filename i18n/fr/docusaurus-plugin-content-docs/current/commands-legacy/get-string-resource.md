@@ -5,7 +5,7 @@ slug: /commands/get-string-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resNum* {; *resFichier*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resNum* {; *resFichier*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get string resource.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/application-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application info.Syntax-->**Application info** -> Resultado<!-- END REF-->
+<!--REF #_command_.Application info.Syntax-->**Application info** : Object<!-- END REF-->
 <!--REF #_command_.Application info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

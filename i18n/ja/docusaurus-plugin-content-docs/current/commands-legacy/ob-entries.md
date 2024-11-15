@@ -5,7 +5,7 @@ slug: /commands/ob-entries
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *object* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Entries.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log File.Syntax-->**Log File**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Log File.Syntax-->**Log File**  : Text<!-- END REF-->
 <!--REF #_command_.Log File.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

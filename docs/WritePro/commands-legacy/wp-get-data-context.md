@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-data-context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get data context.Syntax-->**WP Get data context** ( *wpDoc* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get data context.Syntax-->**WP Get data context** ( *wpDoc* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get data context.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

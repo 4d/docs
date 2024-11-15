@@ -5,7 +5,7 @@ slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

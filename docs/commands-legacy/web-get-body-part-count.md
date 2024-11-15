@@ -5,7 +5,7 @@ slug: /commands/web-get-body-part-count
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get body part count.Syntax-->**WEB Get body part count** -> Function result<!-- END REF-->
+<!--REF #_command_.WEB Get body part count.Syntax-->**WEB Get body part count** : Integer<!-- END REF-->
 <!--REF #_command_.WEB Get body part count.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) : DocRef<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

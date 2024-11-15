@@ -5,7 +5,7 @@ slug: /commands/is-soap-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is SOAP request.Syntax-->**Is SOAP request**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Is SOAP request.Syntax-->**Is SOAP request**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is SOAP request.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

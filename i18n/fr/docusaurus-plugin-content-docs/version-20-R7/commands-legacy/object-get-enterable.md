@@ -5,7 +5,7 @@ slug: /commands/object-get-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get enterable.Syntax-->**OBJECT Get enterable** ( {* ;} *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OBJECT Get enterable.Syntax-->**OBJECT Get enterable** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enterable.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

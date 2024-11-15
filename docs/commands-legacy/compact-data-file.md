@@ -5,7 +5,7 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* ; *dataPath* {; *archiveFolder* {; *option* {; *method*}}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* ; *dataPath* {; *archiveFolder* {; *option* {; *method*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

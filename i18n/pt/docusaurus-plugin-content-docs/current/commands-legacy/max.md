@@ -5,7 +5,7 @@ slug: /commands/max
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Max.Syntax-->**Max** ( *séries* {; *atributoRota*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Max.Syntax-->**Max** ( *séries* {; *atributoRota*} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

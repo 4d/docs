@@ -5,7 +5,7 @@ slug: /commands/get-text-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resNum* {; *resArquivo*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resNum* {; *resArquivo*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get text resource.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

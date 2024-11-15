@@ -5,7 +5,7 @@ slug: /commands/dom-get-previous-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *elementRef* {; *siblingElemName* {; *siblingElemValue*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *elementRef* {; *siblingElemName* {; *siblingElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get previous sibling XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

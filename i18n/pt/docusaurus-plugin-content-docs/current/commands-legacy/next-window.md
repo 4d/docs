@@ -5,7 +5,7 @@ slug: /commands/next-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Next window.Syntax-->**Next window** ( *janela* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Next window.Syntax-->**Next window** ( *janela* ) : Integer<!-- END REF-->
 <!--REF #_command_.Next window.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

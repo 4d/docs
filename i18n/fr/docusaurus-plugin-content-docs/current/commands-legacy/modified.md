@@ -5,7 +5,7 @@ slug: /commands/modified
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified.Syntax-->**Modified** ( *leChamp* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Modified.Syntax-->**Modified** ( *leChamp* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

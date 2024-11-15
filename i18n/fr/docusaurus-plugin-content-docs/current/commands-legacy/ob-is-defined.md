@@ -5,7 +5,7 @@ slug: /commands/ob-is-defined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *objet* {; *propriété*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *objet* {; *propriété*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/convert-path-system-to-posix
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *systemPath* {; *} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *systemPath* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

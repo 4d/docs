@@ -5,7 +5,7 @@ slug: /commands/object-get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *sélecteur* {; *nomObjet* {; *nomSousFormulaire*}})} -> Résultat<!-- END REF-->
+<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *sélecteur* {; *nomObjet* {; *nomSousFormulaire*}})} : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

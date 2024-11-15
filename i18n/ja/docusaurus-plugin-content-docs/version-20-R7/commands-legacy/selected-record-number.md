@@ -5,7 +5,7 @@ slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *aTable* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

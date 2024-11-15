@@ -5,7 +5,7 @@ slug: /commands/dom-count-xml-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* ; *elementName* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* ; *elementName* ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML elements.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

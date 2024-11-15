@@ -5,7 +5,7 @@ slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( {* ;} *object* {; *refMode*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( {* ;} *object* {; *refMode*} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

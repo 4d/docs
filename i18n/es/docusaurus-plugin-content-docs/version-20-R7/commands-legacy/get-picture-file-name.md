@@ -5,7 +5,7 @@ slug: /commands/get-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *imagen* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *imagen* ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

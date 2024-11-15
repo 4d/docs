@@ -5,7 +5,7 @@ slug: /commands/table-fragmentation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *laTabla* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *laTabla* ) : Real<!-- END REF-->
 <!--REF #_command_.Table fragmentation.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/read-only-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Read only state.Syntax-->**Read only state** {( *tabla* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Read only state.Syntax-->**Read only state** {( *tabla* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Read only state.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

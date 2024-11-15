@@ -5,7 +5,7 @@ slug: /commands/get-subrecord-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *idField* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *idField* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get subrecord key.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

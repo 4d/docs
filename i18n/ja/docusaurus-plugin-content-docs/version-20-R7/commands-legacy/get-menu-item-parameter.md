@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *menuItem* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *menuItem* ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item parameter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *nombreRuta* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *nombreRuta* ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

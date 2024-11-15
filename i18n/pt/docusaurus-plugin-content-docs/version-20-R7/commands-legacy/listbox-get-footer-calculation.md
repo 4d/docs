@@ -5,7 +5,7 @@ slug: /commands/listbox-get-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( {* ;} *objeto* ) -> resultado<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( {* ;} *objeto* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

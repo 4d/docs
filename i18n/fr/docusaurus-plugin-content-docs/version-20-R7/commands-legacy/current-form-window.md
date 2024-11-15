@@ -5,7 +5,7 @@ slug: /commands/current-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current form window.Syntax-->**Current form window**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Current form window.Syntax-->**Current form window**  : Integer<!-- END REF-->
 <!--REF #_command_.Current form window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

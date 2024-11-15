@@ -5,7 +5,7 @@ slug: /commands/get-4d-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *dossier* {; *options*} {; *})} -> Résultat<!-- END REF-->
+<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *dossier* {; *options*} {; *})} : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

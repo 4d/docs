@@ -5,7 +5,7 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) : WinRef<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/print-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*laTable* ;} *formulaire* {; *formData*} {; *zone1*{; *zone2*}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*laTable* ;} *formulaire* {; *formData*} {; *zone1*{; *zone2*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Print form.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

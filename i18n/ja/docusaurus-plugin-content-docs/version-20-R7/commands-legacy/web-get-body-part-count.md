@@ -5,7 +5,7 @@ slug: /commands/web-get-body-part-count
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get body part count.Syntax-->**WEB Get body part count** -> 戻り値<!-- END REF-->
+<!--REF #_command_.WEB Get body part count.Syntax-->**WEB Get body part count** : Integer<!-- END REF-->
 <!--REF #_command_.WEB Get body part count.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

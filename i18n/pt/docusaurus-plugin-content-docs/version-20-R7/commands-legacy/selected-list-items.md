@@ -5,7 +5,7 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *lista* {; *arrayElem* {; *}} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *lista* {; *arrayElem* {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

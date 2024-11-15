@@ -5,7 +5,7 @@ slug: /commands/get-default-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get default user.Syntax-->**Get default user**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get default user.Syntax-->**Get default user**  : Integer<!-- END REF-->
 <!--REF #_command_.Get default user.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

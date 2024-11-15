@@ -5,7 +5,7 @@ slug: /commands/blob-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to list.Syntax-->**BLOB to list** ( *blob* {; *offset*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.BLOB to list.Syntax-->**BLOB to list** ( *blob* {; *offset*} ) : ListRef<!-- END REF-->
 <!--REF #_command_.BLOB to list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

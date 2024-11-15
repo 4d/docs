@@ -5,7 +5,7 @@ slug: /commands/storage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Storage.Syntax-->**Storage**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Storage.Syntax-->**Storage**  : Object<!-- END REF-->
 <!--REF #_command_.Storage.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

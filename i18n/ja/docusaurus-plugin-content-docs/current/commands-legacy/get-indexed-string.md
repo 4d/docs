@@ -5,7 +5,7 @@ slug: /commands/get-indexed-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resID* ; *strID* {; *resFile*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resID* ; *strID* {; *resFile*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get indexed string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

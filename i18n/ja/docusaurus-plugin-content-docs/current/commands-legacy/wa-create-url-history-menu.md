@@ -5,7 +5,7 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *object* {; *direction*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *object* {; *direction*} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

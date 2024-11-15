@@ -5,7 +5,7 @@ slug: /commands/application-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application file.Syntax-->**Application file**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Application file.Syntax-->**Application file**  : Text<!-- END REF-->
 <!--REF #_command_.Application file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

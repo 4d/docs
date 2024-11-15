@@ -5,7 +5,7 @@ slug: /commands/count-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *process*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menu items.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

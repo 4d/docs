@@ -5,7 +5,7 @@ slug: /commands/load-4d-view-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *document4DView* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *document4DView* ) : Object<!-- END REF-->
 <!--REF #_command_.Load 4D View document.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/is-a-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *liste* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *liste* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

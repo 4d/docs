@@ -5,7 +5,7 @@ slug: /commands/get-current-printer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get current printer.Syntax-->**Get current printer**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get current printer.Syntax-->**Get current printer**  : Text<!-- END REF-->
 <!--REF #_command_.Get current printer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

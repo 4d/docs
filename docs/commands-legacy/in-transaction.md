@@ -5,7 +5,7 @@ slug: /commands/in-transaction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.In transaction.Syntax-->**In transaction**  -> Function result<!-- END REF-->
+<!--REF #_command_.In transaction.Syntax-->**In transaction**  : Boolean<!-- END REF-->
 <!--REF #_command_.In transaction.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

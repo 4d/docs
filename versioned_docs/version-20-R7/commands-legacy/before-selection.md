@@ -5,7 +5,7 @@ slug: /commands/before-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Before selection.Syntax-->**Before selection** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Before selection.Syntax-->**Before selection** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

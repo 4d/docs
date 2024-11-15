@@ -5,7 +5,7 @@ slug: /commands/count-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count parameters.Syntax-->**Count parameters**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Count parameters.Syntax-->**Count parameters**  : Integer<!-- END REF-->
 <!--REF #_command_.Count parameters.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

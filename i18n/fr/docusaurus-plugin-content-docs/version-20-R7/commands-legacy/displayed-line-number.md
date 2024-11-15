@@ -5,7 +5,7 @@ slug: /commands/displayed-line-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  : Integer<!-- END REF-->
 <!--REF #_command_.Displayed line number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

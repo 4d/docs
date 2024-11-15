@@ -5,7 +5,7 @@ slug: /commands/dom-append-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *targetElementRef* ; *sourceElementRef* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *targetElementRef* ; *sourceElementRef* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

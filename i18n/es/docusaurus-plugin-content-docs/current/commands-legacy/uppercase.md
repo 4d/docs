@@ -5,7 +5,7 @@ slug: /commands/uppercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *laCadena* {; *} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *laCadena* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
