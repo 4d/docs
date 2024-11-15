@@ -127,6 +127,6 @@ After you execute the following code:
 
 #### See also 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  

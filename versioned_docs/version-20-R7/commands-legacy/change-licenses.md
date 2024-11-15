@@ -40,5 +40,5 @@ This way a user can activate licenses without having to modify the database.
 
 #### See also 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
