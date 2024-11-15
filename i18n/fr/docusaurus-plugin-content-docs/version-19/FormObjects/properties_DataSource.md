@@ -3,7 +3,6 @@ id: propertiesDataSource
 title: Source de données
 ---
 
-
 ## Insertion automatique
 
 Lorsque cette option est sélectionnée, si un utilisateur saisit une valeur introuvable dans la liste associée à l'objet, cette valeur est automatiquement ajoutée à la liste stockée en mémoire.
@@ -294,9 +293,9 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 #### Grammaire JSON
 
-| Nom                 | Type de données | Valeurs possibles     |
-| ------------------- | --------------- | --------------------- |
-| selectedItemsSource | string          | Expression collection |
+| Nom                 | Type de données | Valeurs possibles                          |
+| ------------------- | --------------- | ------------------------------------------ |
+| selectedItemsSource | string          | Assignable collection or object expression |
 
 #### Objets pris en charge
 
