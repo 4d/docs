@@ -151,7 +151,7 @@ Las listas jerárquicas desplegables se gestionan utilizando los comandos **List
 
 ### Utilizar una acción estándar
 
-Puede crear automáticamente una lista desplegable utilizando una acción estándar [](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
+Puede crear automáticamente una lista desplegable utilizando una [acción estándar](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
 
 * Uso de la acción estándar `gotoPage`. En este caso, 4D mostrará automáticamente la [página del formulario](FormEditor/forms.md#form-pages) que corresponda al número del elemento seleccionado. Por ejemplo, si el usuario selecciona el tercer elemento, 4D mostrará la tercera página del formulario actual (si existe). En tiempo de ejecución, la lista desplegable muestra por defecto los números de página (1, 2...).
 
