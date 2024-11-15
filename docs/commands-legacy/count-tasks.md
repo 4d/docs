@@ -5,7 +5,7 @@ slug: /commands/count-tasks
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count tasks.Syntax-->**Count tasks**  -> Function result<!-- END REF-->
+<!--REF #_command_.Count tasks.Syntax-->**Count tasks**  : Integer<!-- END REF-->
 <!--REF #_command_.Count tasks.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

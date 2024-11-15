@@ -5,7 +5,7 @@ slug: /commands/get-adjusted-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *aTable* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *aTable* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

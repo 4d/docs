@@ -5,7 +5,7 @@ slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* {; *type*}{; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* {; *type*}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

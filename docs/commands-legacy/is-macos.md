@@ -5,7 +5,7 @@ slug: /commands/is-macos
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is macOS.Syntax-->**Is macOS** -> Function result<!-- END REF-->
+<!--REF #_command_.Is macOS.Syntax-->**Is macOS** : Boolean<!-- END REF-->
 <!--REF #_command_.Is macOS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

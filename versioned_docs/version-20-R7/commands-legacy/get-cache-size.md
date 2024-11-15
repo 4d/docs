@@ -5,7 +5,7 @@ slug: /commands/get-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get cache size.Syntax-->**Get cache size**  -> Function result<!-- END REF-->
+<!--REF #_command_.Get cache size.Syntax-->**Get cache size**  : Real<!-- END REF-->
 <!--REF #_command_.Get cache size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

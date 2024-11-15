@@ -5,7 +5,7 @@ slug: /commands/object-get-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get indicator type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

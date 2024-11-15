@@ -5,7 +5,7 @@ slug: /commands/after
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.After.Syntax-->**After**  -> Function result<!-- END REF-->
+<!--REF #_command_.After.Syntax-->**After**  : Boolean<!-- END REF-->
 <!--REF #_command_.After.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

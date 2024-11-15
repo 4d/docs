@@ -5,7 +5,7 @@ slug: /commands/append-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Append document.Syntax-->**Append document** ( *document* {; *fileType*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *document* {; *fileType*} ) : DocRef<!-- END REF-->
 <!--REF #_command_.Append document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

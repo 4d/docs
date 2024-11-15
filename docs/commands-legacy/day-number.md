@@ -5,7 +5,7 @@ slug: /commands/day-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/dom-count-xml-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *elementRef* ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *elementRef* ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML attributes.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

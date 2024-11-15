@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* {; *nameSpace*} {; *nameSpaceName* ; *nameSpaceValue*} {; *nameSpaceName2* ; *nameSpaceValue2* ; ... ; *nameSpaceNameN* ; *nameSpaceValueN*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* {; *nameSpace*} {; *nameSpaceName* ; *nameSpaceValue*} {; *nameSpaceName2* ; *nameSpaceValue2* ; ... ; *nameSpaceNameN* ; *nameSpaceValueN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

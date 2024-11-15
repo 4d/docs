@@ -5,7 +5,7 @@ slug: /commands/current-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current process.Syntax-->**Current process**  -> Function result<!-- END REF-->
+<!--REF #_command_.Current process.Syntax-->**Current process**  : Integer<!-- END REF-->
 <!--REF #_command_.Current process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

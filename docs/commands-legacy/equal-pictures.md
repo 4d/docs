@@ -5,7 +5,7 @@ slug: /commands/equal-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* ; *picture2* ; *mask* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* ; *picture2* ; *mask* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Equal pictures.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

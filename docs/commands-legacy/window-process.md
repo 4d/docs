@@ -5,7 +5,7 @@ slug: /commands/window-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window process.Syntax-->**Window process** {( *window* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Window process.Syntax-->**Window process** {( *window* )} : Integer<!-- END REF-->
 <!--REF #_command_.Window process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

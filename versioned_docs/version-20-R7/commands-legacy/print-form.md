@@ -5,7 +5,7 @@ slug: /commands/print-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Print form.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

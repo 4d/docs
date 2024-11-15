@@ -4,7 +4,7 @@ title: This
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.This.Syntax-->**This** -> Object<!-- END REF-->
+<!--REF #_command_.This.Syntax-->**This** : &#8592;<!-- END REF-->
 <!--REF #_command_.This.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

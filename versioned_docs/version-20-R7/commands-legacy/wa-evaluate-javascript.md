@@ -5,7 +5,7 @@ slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *object* ; *jsCode* {; *type*} )  -> Function result<!-- END REF-->
+<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *object* ; *jsCode* {; *type*} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

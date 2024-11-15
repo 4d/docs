@@ -5,7 +5,7 @@ slug: /commands/is-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* {; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

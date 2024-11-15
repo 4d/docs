@@ -5,7 +5,7 @@ slug: /commands/is-user-deleted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *userNumber* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *userNumber* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is user deleted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

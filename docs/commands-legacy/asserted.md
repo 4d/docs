@@ -5,7 +5,7 @@ slug: /commands/asserted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* {; *messageText*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* {; *messageText*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

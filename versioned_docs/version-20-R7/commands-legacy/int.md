@@ -5,7 +5,7 @@ slug: /commands/int
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Int.Syntax-->**Int** ( *number* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Int.Syntax-->**Int** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Int.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

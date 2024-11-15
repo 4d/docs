@@ -5,7 +5,7 @@ slug: /commands/find-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* ; *value* {; *start*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* ; *value* {; *start*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

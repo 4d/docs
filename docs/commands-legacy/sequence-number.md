@@ -5,7 +5,7 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

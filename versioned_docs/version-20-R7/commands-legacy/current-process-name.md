@@ -5,7 +5,7 @@ slug: /commands/current-process-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current process name.Syntax-->**Current process name**  -> Function result<!-- END REF-->
+<!--REF #_command_.Current process name.Syntax-->**Current process name**  : Text<!-- END REF-->
 <!--REF #_command_.Current process name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

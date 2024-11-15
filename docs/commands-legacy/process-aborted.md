@@ -5,7 +5,7 @@ slug: /commands/process-aborted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process aborted.Syntax-->**Process aborted**  -> Function result<!-- END REF-->
+<!--REF #_command_.Process aborted.Syntax-->**Process aborted**  : Boolean<!-- END REF-->
 <!--REF #_command_.Process aborted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

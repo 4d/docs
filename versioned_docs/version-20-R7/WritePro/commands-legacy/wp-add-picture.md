@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-add-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Add picture.Syntax-->**WP Add picture** ( *wpDoc* {; *picture*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Add picture.Syntax-->**WP Add picture** ( *wpDoc* {; *picture*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Add picture.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

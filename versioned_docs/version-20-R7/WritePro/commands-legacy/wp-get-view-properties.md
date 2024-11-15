@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-view-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get view properties.Syntax-->**WP Get view properties** ( * ; *wpArea* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get view properties.Syntax-->**WP Get view properties** ( * ; *wpArea* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get view properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

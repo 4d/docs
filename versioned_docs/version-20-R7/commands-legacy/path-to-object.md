@@ -5,7 +5,7 @@ slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *path* {; *pathType*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *path* {; *pathType*} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

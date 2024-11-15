@@ -5,7 +5,7 @@ slug: /commands/last-errors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last errors.Syntax-->**Last errors**  -> Function result<!-- END REF-->
+<!--REF #_command_.Last errors.Syntax-->**Last errors**  : Collection<!-- END REF-->
 <!--REF #_command_.Last errors.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
