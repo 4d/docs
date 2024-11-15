@@ -46,7 +46,7 @@ Asocia una lista de selección a un objeto. Puede ser un nombre de lista de elec
 
 #### Objetos soportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -249,9 +249,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles          |
-| ------------------- | -------------- | ------------------------- |
-| selectedItemsSource | string         | Expresión de la colección |
+| Nombre              | Tipos de datos | Valores posibles                           |
+| ------------------- | -------------- | ------------------------------------------ |
+| selectedItemsSource | string         | Assignable collection or object expression |
 
 #### Objetos soportados
 
