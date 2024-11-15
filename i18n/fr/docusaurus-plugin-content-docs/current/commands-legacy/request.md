@@ -5,7 +5,7 @@ slug: /commands/request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Request.Syntax-->**Request** ( *message* {; *réponseDéfaut* {; *titreBoutonOK* {; *titreBoutonAnn*}}} )  -> Résultat<!-- END REF-->
+<!--REF #_command_.Request.Syntax-->**Request** ( *message* {; *réponseDéfaut* {; *titreBoutonOK* {; *titreBoutonAnn*}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

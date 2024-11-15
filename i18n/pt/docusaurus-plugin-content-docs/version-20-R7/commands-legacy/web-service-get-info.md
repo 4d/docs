@@ -5,7 +5,7 @@ slug: /commands/web-service-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *tipoInfo* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *tipoInfo* ) : Text<!-- END REF-->
 <!--REF #_command_.WEB SERVICE Get info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

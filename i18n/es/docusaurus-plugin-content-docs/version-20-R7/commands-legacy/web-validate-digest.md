@@ -5,7 +5,7 @@ slug: /commands/web-validate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUsuario* ; *contraseña* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUsuario* ; *contraseña* ) : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Validate digest.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

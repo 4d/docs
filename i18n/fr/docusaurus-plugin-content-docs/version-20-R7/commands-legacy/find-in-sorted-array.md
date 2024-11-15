@@ -5,7 +5,7 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *tableau* ; *valeur* ; > ou < {; *posDébut* {; *posFin*}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *tableau* ; *valeur* ; > ou < {; *posDébut* {; *posFin*}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

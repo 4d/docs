@@ -5,7 +5,7 @@ slug: /commands/before
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Before.Syntax-->**Before**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Before.Syntax-->**Before**  : Boolean<!-- END REF-->
 <!--REF #_command_.Before.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

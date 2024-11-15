@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* ; *nomElement* ; *indice* ; *valorElement* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* ; *nomElement* ; *indice* ; *valorElement* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

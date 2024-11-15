@@ -5,7 +5,7 @@ slug: /commands/is-waiting-mouse-up
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is waiting mouse up.Syntax-->**Is waiting mouse up**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Is waiting mouse up.Syntax-->**Is waiting mouse up**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is waiting mouse up.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/form-get-current-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** {( * )} -> Function result<!-- END REF-->
+<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.FORM Get current page.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

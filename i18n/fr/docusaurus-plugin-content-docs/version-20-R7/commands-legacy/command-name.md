@@ -5,7 +5,7 @@ slug: /commands/command-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Command name.Syntax-->**Command name** ( *commande* {; *info* {; *thème*}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Command name.Syntax-->**Command name** ( *commande* {; *info* {; *thème*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Command name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

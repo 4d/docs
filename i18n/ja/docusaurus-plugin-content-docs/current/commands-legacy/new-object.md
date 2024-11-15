@@ -5,7 +5,7 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** {( *property* ; *value* {; *property2* ; *value2* ; ... ; *propertyN* ; *valueN*} )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** {( *property* ; *value* {; *property2* ; *value2* ; ... ; *propertyN* ; *valueN*} )} : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

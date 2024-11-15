@@ -5,7 +5,7 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *metodo* ; *pilha* {; *nome* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *metodo* ; *pilha* {; *nome* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/ldap-search
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filter* {; *scope* {; *attributes* {; *attributesAsArray*}}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filter* {; *scope* {; *attributes* {; *attributesAsArray*}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

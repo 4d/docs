@@ -5,7 +5,7 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomArchivo* {; *tipo*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomArchivo* {; *tipo*} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

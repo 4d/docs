@@ -5,7 +5,7 @@ slug: /commands/on-4d-mobile-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On 4D Mobile Authentication database method.Syntax-->$1, $2, $3, $4 -> On 4D Mobile Authentication database method -> Resultado<!-- END REF-->
+<!--REF #_command_.On 4D Mobile Authentication database method.Syntax-->$1, $2, $3, $4 -> On 4D Mobile Authentication database method : Boolean<!-- END REF-->
 <!--REF #_command_.On 4D Mobile Authentication database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

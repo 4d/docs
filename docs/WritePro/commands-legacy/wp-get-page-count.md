@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-page-count
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get page count.Syntax-->**WP Get page count** ( *targetObj* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get page count.Syntax-->**WP Get page count** ( *targetObj* ) : Integer<!-- END REF-->
 <!--REF #_command_.WP Get page count.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

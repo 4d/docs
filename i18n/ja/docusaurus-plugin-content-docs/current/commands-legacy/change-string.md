@@ -5,7 +5,7 @@ slug: /commands/change-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* ; *newChars* ; *where* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* ; *newChars* ; *where* ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

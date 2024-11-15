@@ -5,7 +5,7 @@ slug: /commands/current-method-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current method path.Syntax-->**Current method path**  -> Function result<!-- END REF-->
+<!--REF #_command_.Current method path.Syntax-->**Current method path**  : Text<!-- END REF-->
 <!--REF #_command_.Current method path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

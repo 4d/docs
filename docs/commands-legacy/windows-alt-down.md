@@ -5,7 +5,7 @@ slug: /commands/windows-alt-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Windows Alt down.Syntax-->**Windows Alt down**  -> Function result<!-- END REF-->
+<!--REF #_command_.Windows Alt down.Syntax-->**Windows Alt down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Windows Alt down.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

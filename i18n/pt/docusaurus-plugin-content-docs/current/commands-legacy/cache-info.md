@@ -5,7 +5,7 @@ slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *bdFiltro* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *bdFiltro* )} : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

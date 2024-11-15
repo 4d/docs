@@ -5,7 +5,7 @@ slug: /commands/pasteboard-data-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *tipoDados* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *tipoDados* ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

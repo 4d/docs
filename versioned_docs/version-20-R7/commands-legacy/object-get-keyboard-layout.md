@@ -5,7 +5,7 @@ slug: /commands/object-get-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

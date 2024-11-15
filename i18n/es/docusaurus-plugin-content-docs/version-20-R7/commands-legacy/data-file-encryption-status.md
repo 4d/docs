@@ -5,7 +5,7 @@ slug: /commands/data-file-encryption-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( rutaEstruct , rutaDatos ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( rutaEstruct , rutaDatos ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

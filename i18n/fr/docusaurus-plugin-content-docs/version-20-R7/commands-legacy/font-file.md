@@ -5,7 +5,7 @@ slug: /commands/font-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Font file.Syntax-->**Font file** ( *famillePolice* {; *stylePolice*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Font file.Syntax-->**Font file** ( *famillePolice* {; *stylePolice*} ) : any<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

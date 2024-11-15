@@ -5,7 +5,7 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; àPartirDe {; *nbCars*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; àPartirDe {; *nbCars*} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

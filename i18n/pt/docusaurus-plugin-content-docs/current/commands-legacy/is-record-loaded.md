@@ -5,7 +5,7 @@ slug: /commands/is-record-loaded
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *tabela* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *tabela* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is record loaded.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

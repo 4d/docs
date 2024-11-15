@@ -5,7 +5,7 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* {; *fileType*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* {; *fileType*} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

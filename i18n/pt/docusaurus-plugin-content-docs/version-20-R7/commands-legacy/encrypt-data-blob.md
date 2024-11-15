@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobAcriptografar* ; objetoChave / passefrase ; *salt* ; blobCriptografado' ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobAcriptografar* ; objetoChave / passefrase ; *salt* ; blobCriptografado' ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

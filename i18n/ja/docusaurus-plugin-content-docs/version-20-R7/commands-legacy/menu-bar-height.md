@@ -5,7 +5,7 @@ slug: /commands/menu-bar-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu bar height.Syntax-->**Menu bar height**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Menu bar height.Syntax-->**Menu bar height**  : Integer<!-- END REF-->
 <!--REF #_command_.Menu bar height.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/on-mobile-app-action-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Mobile App Action database method.Syntax-->**mobileInfo** -> On Mobile App Action database method -> status<!-- END REF-->
+<!--REF #_command_.On Mobile App Action database method.Syntax-->**mobileInfo** -> On Mobile App Action database method : Object<!-- END REF-->
 <!--REF #_command_.On Mobile App Action database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

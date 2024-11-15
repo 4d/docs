@@ -5,7 +5,7 @@ slug: /commands/get-assert-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get assert enabled.Syntax-->**Get assert enabled** -> Resultado<!-- END REF-->
+<!--REF #_command_.Get assert enabled.Syntax-->**Get assert enabled** : Boolean<!-- END REF-->
 <!--REF #_command_.Get assert enabled.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/execute-on-server
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procedure* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procedure* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Execute on server.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

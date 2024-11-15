@@ -5,7 +5,7 @@ slug: /commands/in-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.In break.Syntax-->**In break**  -> Function result<!-- END REF-->
+<!--REF #_command_.In break.Syntax-->**In break**  : Boolean<!-- END REF-->
 <!--REF #_command_.In break.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/get-adjusted-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *leChamp* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *leChamp* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

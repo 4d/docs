@@ -5,7 +5,7 @@ slug: /commands/structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

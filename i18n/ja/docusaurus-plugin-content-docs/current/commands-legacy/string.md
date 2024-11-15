@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

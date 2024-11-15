@@ -29,7 +29,7 @@ Como padrão, 4D determina automaticamente o tipo SOAP mais apropriado para o pa
   
 Entretanto, poderia “forçar” a definição do tipo SOAP de um parâmetro. Neste caso, pode passar o parâmetro opcional tipoSOAP utilizando uma das seguintes cadeias de caracteres (tipos de dados primários):
 
-| **tipoSOAP**                | **Descrição** string                                                 | String |
+| **tipoSOAP**                | **Descrição** string                                                 | Text |
 | --------------------------- | -------------------------------------------------------------------- | ------ |
 | int                         | Inteiro longo                                                        |        |
 | booleam                     | Booleano                                                             |        |

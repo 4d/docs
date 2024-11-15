@@ -5,7 +5,7 @@ slug: /commands/trigger-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trigger level.Syntax-->**Trigger level**  -> Function result<!-- END REF-->
+<!--REF #_command_.Trigger level.Syntax-->**Trigger level**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger level.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

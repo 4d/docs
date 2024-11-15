@@ -5,7 +5,7 @@ slug: /commands/is-window-reduced
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window reduced.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

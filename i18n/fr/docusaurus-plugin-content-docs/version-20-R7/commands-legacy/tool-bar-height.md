@@ -5,7 +5,7 @@ slug: /commands/tool-bar-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Tool bar height.Syntax-->**Tool bar height**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Tool bar height.Syntax-->**Tool bar height**  : Integer<!-- END REF-->
 <!--REF #_command_.Tool bar height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

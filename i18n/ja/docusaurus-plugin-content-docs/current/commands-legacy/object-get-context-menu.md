@@ -5,7 +5,7 @@ slug: /commands/object-get-context-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( {* ;} *object* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get context menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

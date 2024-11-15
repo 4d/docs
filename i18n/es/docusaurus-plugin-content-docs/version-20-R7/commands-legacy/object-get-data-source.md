@@ -5,7 +5,7 @@ slug: /commands/object-get-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( {* ;} *objeto* ) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

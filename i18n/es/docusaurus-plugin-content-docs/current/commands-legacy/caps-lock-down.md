@@ -5,7 +5,7 @@ slug: /commands/caps-lock-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Caps lock down.Syntax-->**Caps lock down**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Caps lock down.Syntax-->**Caps lock down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Caps lock down.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

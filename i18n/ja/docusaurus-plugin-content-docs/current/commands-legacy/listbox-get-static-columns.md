@@ -5,7 +5,7 @@ slug: /commands/listbox-get-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get static columns.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

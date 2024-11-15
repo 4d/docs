@@ -5,7 +5,7 @@ slug: /commands/exp
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Exp.Syntax-->**Exp** ( *number* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Exp.Syntax-->**Exp** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

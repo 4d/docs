@@ -5,7 +5,7 @@ slug: /commands/sql-end-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL End selection.Syntax-->**SQL End selection**  -> Function result<!-- END REF-->
+<!--REF #_command_.SQL End selection.Syntax-->**SQL End selection**  : Boolean<!-- END REF-->
 <!--REF #_command_.SQL End selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

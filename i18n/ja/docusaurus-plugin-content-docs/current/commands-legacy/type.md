@@ -5,7 +5,7 @@ slug: /commands/type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Type.Syntax-->**Type** ( *fieldVar* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Type.Syntax-->**Type** ( *fieldVar* ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

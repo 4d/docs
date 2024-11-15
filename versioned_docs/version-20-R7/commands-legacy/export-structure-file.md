@@ -5,7 +5,7 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *folderPath* {; *options*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *folderPath* {; *options*} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/open-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) : WinRef<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

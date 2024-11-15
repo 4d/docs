@@ -5,7 +5,7 @@ slug: /commands/undefined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expresion* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expresion* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

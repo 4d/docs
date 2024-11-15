@@ -5,7 +5,7 @@ slug: /commands/select-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select document.Syntax-->**Select document** ( *répertoire* ; *typesFichiers* ; *titre* ; *options* {; *sélectionnés*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Select document.Syntax-->**Select document** ( *répertoire* ; *typesFichiers* ; *titre* ; *options* {; *sélectionnés*} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

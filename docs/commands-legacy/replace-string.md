@@ -5,7 +5,7 @@ slug: /commands/replace-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* ; *oldString* ; *newString* {; *howMany*}{; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* ; *oldString* ; *newString* {; *howMany*}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

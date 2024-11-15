@@ -5,7 +5,7 @@ slug: /commands/count-screens
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count screens.Syntax-->**Count screens**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Count screens.Syntax-->**Count screens**  : Integer<!-- END REF-->
 <!--REF #_command_.Count screens.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/choose
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterion* ; *value* {; *value2* ; ... ; *valueN*} )  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterion* ; *value* {; *value2* ; ... ; *valueN*} )  : Expression<!-- END REF-->
 <!--REF #_command_.Choose.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

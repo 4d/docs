@@ -5,7 +5,7 @@ slug: /commands/is-new-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is new record.Syntax-->**Is new record** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Is new record.Syntax-->**Is new record** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is new record.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

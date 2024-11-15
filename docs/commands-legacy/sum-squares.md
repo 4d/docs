@@ -5,7 +5,7 @@ slug: /commands/sum-squares
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* ) : Real<!-- END REF-->
 <!--REF #_command_.Sum squares.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

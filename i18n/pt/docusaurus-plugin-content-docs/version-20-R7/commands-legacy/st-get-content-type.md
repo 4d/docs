@@ -5,7 +5,7 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *objeto* {; *inicioSel* {; *fimSel* {; *inicioBloq* {; *fimBloq*}}}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *objeto* {; *inicioSel* {; *fimSel* {; *inicioBloq* {; *fimBloq*}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

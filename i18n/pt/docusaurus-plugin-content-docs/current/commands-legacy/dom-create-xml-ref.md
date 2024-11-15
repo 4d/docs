@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *raiz* {; *nomeEspaço*} {; *nSNome* ; *nSValor*} {; *nSNome2* ; *nSValor2* ; ... ; *nSNomeN* ; *nSValorN*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *raiz* {; *nomeEspaço*} {; *nSNome* ; *nSValor*} {; *nSNome2* ; *nSValor2* ; ... ; *nSNomeN* ; *nSValorN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

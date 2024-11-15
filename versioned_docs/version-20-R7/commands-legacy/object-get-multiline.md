@@ -5,7 +5,7 @@ slug: /commands/object-get-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get multiline.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

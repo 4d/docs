@@ -5,7 +5,7 @@ slug: /commands/windows-alt-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Windows Alt down.Syntax-->**Windows Alt down**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Windows Alt down.Syntax-->**Windows Alt down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Windows Alt down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

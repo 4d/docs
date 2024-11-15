@@ -5,7 +5,7 @@ slug: /commands/new-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New list.Syntax-->**New list**  -> Function result<!-- END REF-->
+<!--REF #_command_.New list.Syntax-->**New list**  : ListRef<!-- END REF-->
 <!--REF #_command_.New list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

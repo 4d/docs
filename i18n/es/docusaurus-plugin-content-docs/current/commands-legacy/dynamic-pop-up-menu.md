@@ -5,7 +5,7 @@ slug: /commands/dynamic-pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *pordefecto* {; *CoordX* ; *CoordY*}} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *pordefecto* {; *CoordX* ; *CoordY*}} )  : Text<!-- END REF-->
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

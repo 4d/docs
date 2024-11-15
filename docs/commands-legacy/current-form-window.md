@@ -5,7 +5,7 @@ slug: /commands/current-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current form window.Syntax-->**Current form window**  -> Function result<!-- END REF-->
+<!--REF #_command_.Current form window.Syntax-->**Current form window**  : WinRef<!-- END REF-->
 <!--REF #_command_.Current form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

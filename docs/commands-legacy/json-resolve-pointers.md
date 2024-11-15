@@ -5,7 +5,7 @@ slug: /commands/json-resolve-pointers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *object* {; *options*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *object* {; *options*} ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

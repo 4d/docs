@@ -5,7 +5,7 @@ slug: /commands/listbox-get-footers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footers height.Syntax-->**LISTBOX Get footers height** ( {* ;} *objeto* {; *unidad*} ) -> resultado<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footers height.Syntax-->**LISTBOX Get footers height** ( {* ;} *objeto* {; *unidad*} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footers height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

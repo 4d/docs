@@ -5,7 +5,7 @@ slug: /commands/records-in-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *laTable* )} -> Résultat<!-- END REF-->
+<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

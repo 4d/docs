@@ -5,7 +5,7 @@ slug: /commands/list-item-parent
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *liste* ; refElément | * ) -> Résultat<!-- END REF-->
+<!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *liste* ; refElément | * ) : Integer<!-- END REF-->
 <!--REF #_command_.List item parent.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

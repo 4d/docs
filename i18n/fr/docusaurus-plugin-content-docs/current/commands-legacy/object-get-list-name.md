@@ -5,7 +5,7 @@ slug: /commands/object-get-list-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( {* ;} *objet* {; *typeListe*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( {* ;} *objet* {; *typeListe*} ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get list name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

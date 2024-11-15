@@ -5,7 +5,7 @@ slug: /commands/blob-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *BLOB* ; *textFormat* {; *offset* {; *textLength*}} )  -> 戻り値<!-- END REF-->
+<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *BLOB* ; *textFormat* {; *offset* {; *textLength*}} )  : Text<!-- END REF-->
 <!--REF #_command_.BLOB to text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( {* ;} *object* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Is styled text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

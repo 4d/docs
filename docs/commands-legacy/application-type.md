@@ -5,7 +5,7 @@ slug: /commands/application-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application type.Syntax-->**Application type**  -> Function result<!-- END REF-->
+<!--REF #_command_.Application type.Syntax-->**Application type**  : Integer<!-- END REF-->
 <!--REF #_command_.Application type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

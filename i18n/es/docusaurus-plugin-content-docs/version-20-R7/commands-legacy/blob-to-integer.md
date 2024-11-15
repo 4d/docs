@@ -5,7 +5,7 @@ slug: /commands/blob-to-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* ; *byteOrden* {; *offset*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* ; *byteOrden* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; nouvellePhraseSecrète | nouvelleCléDonnées {; *dossierArchive* {; phraseSecrèteCour | cléDonnéesCour {; *nomMéthode*}}}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; nouvellePhraseSecrète | nouvelleCléDonnées {; *dossierArchive* {; phraseSecrèteCour | cléDonnéesCour {; *nomMéthode*}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

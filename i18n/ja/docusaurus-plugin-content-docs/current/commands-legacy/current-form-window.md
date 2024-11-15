@@ -5,7 +5,7 @@ slug: /commands/current-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current form window.Syntax-->**Current form window**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Current form window.Syntax-->**Current form window**  : Integer<!-- END REF-->
 <!--REF #_command_.Current form window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

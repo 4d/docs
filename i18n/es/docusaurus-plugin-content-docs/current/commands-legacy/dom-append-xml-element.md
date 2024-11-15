@@ -5,7 +5,7 @@ slug: /commands/dom-append-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *refElementTarget* ; *refElementFuente* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *refElementTarget* ; *refElementFuente* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

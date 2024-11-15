@@ -5,7 +5,7 @@ slug: /commands/macintosh-command-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Macintosh command down.Syntax-->**Macintosh command down**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Macintosh command down.Syntax-->**Macintosh command down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Macintosh command down.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/listbox-get-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( {* ;} *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get locked columns.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

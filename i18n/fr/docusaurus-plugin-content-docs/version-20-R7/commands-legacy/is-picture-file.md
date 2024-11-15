@@ -5,7 +5,7 @@ slug: /commands/is-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *cheminFichier* {; *} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *cheminFichier* {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

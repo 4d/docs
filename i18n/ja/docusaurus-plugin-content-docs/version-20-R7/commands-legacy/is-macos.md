@@ -5,7 +5,7 @@ slug: /commands/is-macos
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is macOS.Syntax-->**Is macOS** -> 戻り値<!-- END REF-->
+<!--REF #_command_.Is macOS.Syntax-->**Is macOS** : Boolean<!-- END REF-->
 <!--REF #_command_.Is macOS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

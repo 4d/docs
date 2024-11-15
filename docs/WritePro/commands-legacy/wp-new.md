@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New.Syntax-->**WP New** {( *source* {; *option*} )} -> Function result<!-- END REF-->
+<!--REF #_command_.WP New.Syntax-->**WP New** {( *source* {; *option*} )} : Object<!-- END REF-->
 <!--REF #_command_.WP New.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

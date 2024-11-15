@@ -5,7 +5,7 @@ slug: /commands/selection-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *laTable* {; *leChamp*}{; *leChamp2* ; ... ; *leChampN*}{; *template*})  -> Résultat<!-- END REF-->
+<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *laTable* {; *leChamp*}{; *leChamp2* ; ... ; *leChampN*}{; *template*})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

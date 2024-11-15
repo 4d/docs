@@ -5,7 +5,7 @@ slug: /commands/current-system-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current system user.Syntax-->**Current system user**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Current system user.Syntax-->**Current system user**  : Text<!-- END REF-->
 <!--REF #_command_.Current system user.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

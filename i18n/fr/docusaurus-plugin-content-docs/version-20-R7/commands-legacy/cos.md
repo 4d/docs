@@ -5,7 +5,7 @@ slug: /commands/cos
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cos.Syntax-->**Cos** ( *nombre* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Cos.Syntax-->**Cos** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Cos.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

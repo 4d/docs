@@ -5,7 +5,7 @@ slug: /commands/form-get-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Get color scheme.Syntax-->**FORM Get color scheme**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.FORM Get color scheme.Syntax-->**FORM Get color scheme**  : Text<!-- END REF-->
 <!--REF #_command_.FORM Get color scheme.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

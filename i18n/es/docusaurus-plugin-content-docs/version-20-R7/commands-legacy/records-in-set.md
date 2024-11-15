@@ -5,7 +5,7 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

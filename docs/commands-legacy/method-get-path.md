@@ -5,7 +5,7 @@ slug: /commands/method-get-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *methodType* {; *aTable*}{; *objectName*{; *formObjectName*}}{; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *methodType* {; *aTable*}{; *objectName*{; *formObjectName*}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

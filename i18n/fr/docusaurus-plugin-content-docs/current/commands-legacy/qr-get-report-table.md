@@ -5,7 +5,7 @@ slug: /commands/qr-get-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *zone* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *zone* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/locked
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked.Syntax-->**Locked** {( *tabla* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Locked.Syntax-->**Locked** {( *tabla* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

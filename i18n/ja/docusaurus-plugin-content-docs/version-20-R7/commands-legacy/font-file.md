@@ -5,7 +5,7 @@ slug: /commands/font-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* {; *fontStyle*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* {; *fontStyle*} ) : any<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

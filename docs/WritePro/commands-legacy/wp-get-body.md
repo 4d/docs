@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get body.Syntax-->**WP Get body** ( *wpDoc* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get body.Syntax-->**WP Get body** ( *wpDoc* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get body.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

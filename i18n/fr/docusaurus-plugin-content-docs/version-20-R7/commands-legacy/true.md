@@ -5,7 +5,7 @@ slug: /commands/true
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.True.Syntax-->**True**  -> Résultat<!-- END REF-->
+<!--REF #_command_.True.Syntax-->**True**  : Boolean<!-- END REF-->
 <!--REF #_command_.True.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

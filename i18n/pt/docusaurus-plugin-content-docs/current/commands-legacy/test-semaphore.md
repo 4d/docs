@@ -5,7 +5,7 @@ slug: /commands/test-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaforo* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaforo* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Test semaphore.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

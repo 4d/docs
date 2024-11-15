@@ -5,7 +5,7 @@ slug: /commands/qr-get-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* ) : Text<!-- END REF-->
 <!--REF #_command_.QR Get HTML template.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

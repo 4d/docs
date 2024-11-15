@@ -5,7 +5,7 @@ slug: /commands/level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Level.Syntax-->**Level**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Level.Syntax-->**Level**  : Integer<!-- END REF-->
 <!--REF #_command_.Level.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

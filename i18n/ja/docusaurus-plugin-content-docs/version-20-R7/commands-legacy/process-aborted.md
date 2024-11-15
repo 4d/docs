@@ -5,7 +5,7 @@ slug: /commands/process-aborted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process aborted.Syntax-->**Process aborted**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Process aborted.Syntax-->**Process aborted**  : Boolean<!-- END REF-->
 <!--REF #_command_.Process aborted.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

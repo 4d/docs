@@ -5,7 +5,7 @@ slug: /commands/qr-find-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* ; *expression* ) -> Function result<!-- END REF-->
+<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* ; *expression* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Find column.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

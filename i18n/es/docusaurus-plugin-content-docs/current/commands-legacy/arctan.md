@@ -5,7 +5,7 @@ slug: /commands/arctan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *Numero* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *Numero* ) : Real<!-- END REF-->
 <!--REF #_command_.Arctan.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

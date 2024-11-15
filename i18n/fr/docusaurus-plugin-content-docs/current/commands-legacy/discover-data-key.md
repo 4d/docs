@@ -5,7 +5,7 @@ slug: /commands/discover-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Discover data key.Syntax-->**Discover data key**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Discover data key.Syntax-->**Discover data key**  : Boolean<!-- END REF-->
 <!--REF #_command_.Discover data key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

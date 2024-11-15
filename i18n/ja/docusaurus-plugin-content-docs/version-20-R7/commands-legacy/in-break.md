@@ -5,7 +5,7 @@ slug: /commands/in-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.In break.Syntax-->**In break**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.In break.Syntax-->**In break**  : Boolean<!-- END REF-->
 <!--REF #_command_.In break.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

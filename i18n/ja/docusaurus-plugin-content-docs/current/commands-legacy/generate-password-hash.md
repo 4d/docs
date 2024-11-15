@@ -5,7 +5,7 @@ slug: /commands/generate-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *password* {; *options*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *password* {; *options*} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate password hash.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

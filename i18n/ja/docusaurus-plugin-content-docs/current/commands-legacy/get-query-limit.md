@@ -5,7 +5,7 @@ slug: /commands/get-query-limit
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get query limit.Syntax-->**Get query limit** -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get query limit.Syntax-->**Get query limit** : Integer<!-- END REF-->
 <!--REF #_command_.Get query limit.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

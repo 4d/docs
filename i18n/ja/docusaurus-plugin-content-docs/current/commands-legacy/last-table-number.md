@@ -5,7 +5,7 @@ slug: /commands/last-table-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last table number.Syntax-->**Last table number**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Last table number.Syntax-->**Last table number**  : Integer<!-- END REF-->
 <!--REF #_command_.Last table number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/object-get-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

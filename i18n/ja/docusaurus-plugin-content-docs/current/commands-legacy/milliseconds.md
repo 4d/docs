@@ -5,7 +5,7 @@ slug: /commands/milliseconds
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Milliseconds.Syntax-->**Milliseconds**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Milliseconds.Syntax-->**Milliseconds**  : Integer<!-- END REF-->
 <!--REF #_command_.Milliseconds.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

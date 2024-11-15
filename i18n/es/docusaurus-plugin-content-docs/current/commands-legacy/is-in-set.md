@@ -5,7 +5,7 @@ slug: /commands/is-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is in set.Syntax-->**Is in set** ( *conjunto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Is in set.Syntax-->**Is in set** ( *conjunto* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is in set.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

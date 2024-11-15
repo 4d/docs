@@ -5,7 +5,7 @@ slug: /commands/focus-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Focus object.Syntax-->**Focus object**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Focus object.Syntax-->**Focus object**  : Pointer<!-- END REF-->
 <!--REF #_command_.Focus object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

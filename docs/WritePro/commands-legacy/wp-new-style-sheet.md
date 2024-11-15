@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New style sheet.Syntax-->**WP New style sheet** ( *wpDoc* ; *styleSheetType* ; *styleSheetName* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP New style sheet.Syntax-->**WP New style sheet** ( *wpDoc* ; *styleSheetType* ; *styleSheetName* ) : Object<!-- END REF-->
 <!--REF #_command_.WP New style sheet.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

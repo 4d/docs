@@ -5,7 +5,7 @@ slug: /commands/object-get-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( {* ;} *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font size.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

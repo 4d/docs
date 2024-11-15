@@ -5,7 +5,7 @@ slug: /commands/dom-get-first-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* {; *childElemName* {; *childElemValue*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* {; *childElemName* {; *childElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get first child XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

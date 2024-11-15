@@ -5,7 +5,7 @@ slug: /commands/system-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System info.Syntax-->**System info**  -> Function result<!-- END REF-->
+<!--REF #_command_.System info.Syntax-->**System info**  : Object<!-- END REF-->
 <!--REF #_command_.System info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

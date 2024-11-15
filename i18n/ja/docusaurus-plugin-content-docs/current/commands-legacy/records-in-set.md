@@ -5,7 +5,7 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

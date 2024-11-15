@@ -5,7 +5,7 @@ slug: /commands/is-windows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is Windows.Syntax-->**Is Windows** -> Résultat<!-- END REF-->
+<!--REF #_command_.Is Windows.Syntax-->**Is Windows** : Boolean<!-- END REF-->
 <!--REF #_command_.Is Windows.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

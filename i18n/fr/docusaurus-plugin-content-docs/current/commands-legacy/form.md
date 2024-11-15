@@ -5,7 +5,7 @@ slug: /commands/form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Form.Syntax-->**Form**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Form.Syntax-->**Form**  : Object<!-- END REF-->
 <!--REF #_command_.Form.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

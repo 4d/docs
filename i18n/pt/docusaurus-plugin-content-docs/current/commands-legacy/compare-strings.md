@@ -5,7 +5,7 @@ slug: /commands/compare-strings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *string* ; *stringB* {; *opções*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *string* ; *stringB* {; *opções*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Compare strings.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

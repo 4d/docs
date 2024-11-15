@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expressao* {; *formato* {; *horaComb*}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expressao* {; *formato* {; *horaComb*}} ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( colNum|posYimagem )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** {( colNum|posYimagem )} : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

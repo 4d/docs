@@ -5,7 +5,7 @@ slug: /commands/get-database-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*tabla* ;} *selector* {; *valor*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*tabla* ;} *selector* {; *valor*} ) : Real<!-- END REF-->
 <!--REF #_command_.Get database parameter.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

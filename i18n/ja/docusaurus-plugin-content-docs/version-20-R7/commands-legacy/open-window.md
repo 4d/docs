@@ -5,7 +5,7 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/object-get-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( {* ;} *objeto* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get border style.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

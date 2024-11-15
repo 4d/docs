@@ -5,7 +5,7 @@ slug: /commands/set-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

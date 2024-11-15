@@ -5,7 +5,7 @@ slug: /commands/date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Date.Syntax-->**Date** ( *dataCadeia* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Date.Syntax-->**Date** ( *dataCadeia* ) : Date<!-- END REF-->
 <!--REF #_command_.Date.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/object-get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *selector* {; *objectName* {; *subformName*}})} -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *selector* {; *objectName* {; *subformName*}})} : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

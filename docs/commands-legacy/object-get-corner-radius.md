@@ -5,7 +5,7 @@ slug: /commands/object-get-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get corner radius.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

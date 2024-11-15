@@ -5,7 +5,7 @@ slug: /commands/get-resource-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource name.Syntax-->**Get resource name** ( *resType* ; *resID* {; *resFile*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get resource name.Syntax-->**Get resource name** ( *resType* ; *resID* {; *resFile*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get resource name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

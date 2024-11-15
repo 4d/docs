@@ -5,7 +5,7 @@ slug: /commands/not
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Not.Syntax-->**Not** ( *boolean* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Not.Syntax-->**Not** ( *boolean* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

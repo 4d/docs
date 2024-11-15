@@ -5,7 +5,7 @@ slug: /commands/contextual-click
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Contextual click.Syntax-->**Contextual click**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Contextual click.Syntax-->**Contextual click**  : Boolean<!-- END REF-->
 <!--REF #_command_.Contextual click.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

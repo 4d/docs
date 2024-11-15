@@ -5,7 +5,7 @@ slug: /commands/st-get-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( {* ;} *objeto* {; *inicioSel* {; *finSel*}} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( {* ;} *objeto* {; *inicioSel* {; *finSel*}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

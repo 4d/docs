@@ -5,7 +5,7 @@ slug: /commands/wa-run-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parameters* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parameters* ) : any<!-- END REF-->
 <!--REF #_command_.WA Run offscreen area.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

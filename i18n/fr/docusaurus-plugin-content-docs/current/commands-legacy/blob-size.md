@@ -5,7 +5,7 @@ slug: /commands/blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *blob* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *blob* ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB size.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

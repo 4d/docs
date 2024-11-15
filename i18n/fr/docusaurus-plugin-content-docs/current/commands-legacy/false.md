@@ -5,7 +5,7 @@ slug: /commands/false
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.False.Syntax-->**False**  -> Résultat<!-- END REF-->
+<!--REF #_command_.False.Syntax-->**False**  : Boolean<!-- END REF-->
 <!--REF #_command_.False.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

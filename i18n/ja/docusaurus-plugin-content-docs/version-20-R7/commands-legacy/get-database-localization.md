@@ -5,7 +5,7 @@ slug: /commands/get-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database localization.Syntax-->**Get database localization** {( {*languageType*}{;}{*} )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get database localization.Syntax-->**Get database localization** {( {*languageType*}{;}{*} )} : Text<!-- END REF-->
 <!--REF #_command_.Get database localization.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

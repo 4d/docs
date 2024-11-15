@@ -5,7 +5,7 @@ slug: /commands/listbox-get-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( {* ;} *objeto* ; *fila* {; *tipoCor*} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( {* ;} *objeto* ; *fila* {; *tipoCor*} )  : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

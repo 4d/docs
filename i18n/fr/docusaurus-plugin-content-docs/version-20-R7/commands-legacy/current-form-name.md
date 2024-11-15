@@ -5,7 +5,7 @@ slug: /commands/current-form-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current form name.Syntax-->**Current form name**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Current form name.Syntax-->**Current form name**  : Text<!-- END REF-->
 <!--REF #_command_.Current form name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

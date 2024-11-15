@@ -5,7 +5,7 @@ slug: /commands/ob-is-shared
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *aVerificar* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *aVerificar* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is shared.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

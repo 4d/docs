@@ -5,7 +5,7 @@ slug: /commands/ob-instance-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* ; *class* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* ; *class* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

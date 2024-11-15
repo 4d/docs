@@ -5,7 +5,7 @@ slug: /commands/level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Level.Syntax-->**Level**  -> Function result<!-- END REF-->
+<!--REF #_command_.Level.Syntax-->**Level**  : Integer<!-- END REF-->
 <!--REF #_command_.Level.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

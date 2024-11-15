@@ -5,7 +5,7 @@ slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTabla* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTabla* ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

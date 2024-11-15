@@ -5,7 +5,7 @@ slug: /commands/object-get-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( {* ;} *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get three states checkbox.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

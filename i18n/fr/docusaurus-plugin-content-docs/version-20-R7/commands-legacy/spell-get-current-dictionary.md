@@ -5,7 +5,7 @@ slug: /commands/spell-get-current-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL Get current dictionary.Syntax-->**SPELL Get current dictionary**  -> Résultat<!-- END REF-->
+<!--REF #_command_.SPELL Get current dictionary.Syntax-->**SPELL Get current dictionary**  : Integer<!-- END REF-->
 <!--REF #_command_.SPELL Get current dictionary.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

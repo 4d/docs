@@ -5,7 +5,7 @@ slug: /commands/parse-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* {; *options*}{; *errorMessage*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* {; *options*}{; *errorMessage*} ) : Text<!-- END REF-->
 <!--REF #_command_.Parse formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

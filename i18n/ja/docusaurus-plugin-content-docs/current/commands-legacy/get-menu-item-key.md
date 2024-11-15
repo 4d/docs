@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *menuItem* {; *process*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

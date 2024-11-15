@@ -5,7 +5,7 @@ slug: /commands/create-deployment-license
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* ; *buildLicense* {; *oemLicense*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* ; *buildLicense* {; *oemLicense*} ) : Object<!-- END REF-->
 <!--REF #_command_.Create deployment license.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

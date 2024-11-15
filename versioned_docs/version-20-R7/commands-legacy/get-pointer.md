@@ -5,7 +5,7 @@ slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

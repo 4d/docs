@@ -5,7 +5,7 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** {( *propriété* ; *valeur* {; *propriété2* ; *valeur2* ; ... ; *propriétéN* ; *valeurN*} )} -> Résultat<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** {( *propriété* ; *valeur* {; *propriété2* ; *valeur2* ; ... ; *propriétéN* ; *valeurN*} )} : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

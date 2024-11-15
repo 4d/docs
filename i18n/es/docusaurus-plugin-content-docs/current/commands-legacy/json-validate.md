@@ -5,7 +5,7 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

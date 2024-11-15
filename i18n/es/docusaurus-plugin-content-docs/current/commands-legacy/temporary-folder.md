@@ -5,7 +5,7 @@ slug: /commands/temporary-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Temporary folder.Syntax-->**Temporary folder**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Temporary folder.Syntax-->**Temporary folder**  : Text<!-- END REF-->
 <!--REF #_command_.Temporary folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

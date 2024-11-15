@@ -5,7 +5,7 @@ slug: /commands/get-4d-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *file* {; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *file* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

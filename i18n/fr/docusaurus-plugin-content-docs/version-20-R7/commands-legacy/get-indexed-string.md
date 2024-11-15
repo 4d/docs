@@ -5,7 +5,7 @@ slug: /commands/get-indexed-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resNum* ; *strNum* {; *resFichier*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resNum* ; *strNum* {; *resFichier*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get indexed string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

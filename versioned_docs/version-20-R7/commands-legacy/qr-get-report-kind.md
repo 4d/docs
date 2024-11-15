@@ -5,7 +5,7 @@ slug: /commands/qr-get-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* ) -> Function result<!-- END REF-->
+<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report kind.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

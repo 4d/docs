@@ -5,7 +5,7 @@ slug: /commands/modified-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified record.Syntax-->**Modified record** {( *tabela* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Modified record.Syntax-->**Modified record** {( *tabela* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

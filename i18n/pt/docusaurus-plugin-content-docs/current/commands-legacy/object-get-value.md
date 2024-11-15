@@ -5,7 +5,7 @@ slug: /commands/object-get-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjeto* ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

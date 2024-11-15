@@ -5,7 +5,7 @@ slug: /commands/get-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* ) : Text<!-- END REF-->
 <!--REF #_command_.Get plugin access.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

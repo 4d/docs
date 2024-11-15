@@ -5,7 +5,7 @@ slug: /commands/form-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Event.Syntax-->**FORM Event** -> Résultat<!-- END REF-->
+<!--REF #_command_.FORM Event.Syntax-->**FORM Event** : Object<!-- END REF-->
 <!--REF #_command_.FORM Event.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
