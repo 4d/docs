@@ -5,7 +5,7 @@ slug: /commands/json-resolve-pointers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *objeto* {; *opções*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *objeto* {; *opções*} ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ Opcionalmente, pode passar em *opções* um objeto que contenha propriedades esp
 
 | **Propriedade** | **Tipo de valor** | **Descrição**                                                                                                                                                                     |
 | --------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| rootFolder      | String            | Rota absoluta (utilizando a sintaxe 4D padrão) a pasta que se utilizará para resolver ponteiros relativos no objeto. O valor predeterminado é a pasta Recursos do banco de dados. |
+| rootFolder      | Text            | Rota absoluta (utilizando a sintaxe 4D padrão) a pasta que se utilizará para resolver ponteiros relativos no objeto. O valor predeterminado é a pasta Recursos do banco de dados. |
 | merge           | Booleano          | Fusiona objetos com objetos ponteiro (true) ao invés de substituí-los (false). O valor predeterminado é false ![](../assets/en/commands/pict3516702.pt.png)                       |
 
 Depois de executar o comando:
@@ -50,9 +50,9 @@ Em todos os casos, o comando devolve um objeto que contém as seguintes propried
 | success                 | Booleano          | true se todos os ponteiros tiverem sido resolvidos corretamente                                                |
 | errors                  | Coleção           | Coleção de erros se os houver                                                                                  |
 | errors\[\].code         | Número            | código do erro                                                                                                 |
-| errors\[\].message      | String            | mensagem de erro                                                                                               |
-| errors\[\].pointerURI   | String            | valor do ponteiro                                                                                              |
-| errors\[\].referredPath | String            | rota completa de documento                                                                                     |
+| errors\[\].message      | Text            | mensagem de erro                                                                                               |
+| errors\[\].pointerURI   | Text            | valor do ponteiro                                                                                              |
+| errors\[\].referredPath | Text            | rota completa de documento                                                                                     |
 
 #### Definir Ponteiros JSON 
 

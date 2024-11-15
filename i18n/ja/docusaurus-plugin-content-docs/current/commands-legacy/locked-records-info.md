@@ -5,7 +5,7 @@ slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

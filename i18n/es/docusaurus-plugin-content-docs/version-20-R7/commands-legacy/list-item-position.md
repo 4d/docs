@@ -5,7 +5,7 @@ slug: /commands/list-item-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *lista* ; *refElem* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *lista* ; *refElem* ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

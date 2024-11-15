@@ -5,7 +5,7 @@ slug: /commands/wa-get-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page content.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

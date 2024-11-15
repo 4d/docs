@@ -5,7 +5,7 @@ slug: /commands/qr-new-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR New offscreen area.Syntax-->**QR New offscreen area**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.QR New offscreen area.Syntax-->**QR New offscreen area**  : Integer<!-- END REF-->
 <!--REF #_command_.QR New offscreen area.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

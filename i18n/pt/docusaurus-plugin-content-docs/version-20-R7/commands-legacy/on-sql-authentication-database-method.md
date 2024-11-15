@@ -5,7 +5,7 @@ slug: /commands/on-sql-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On SQL Authentication database method.Syntax-->$1, $2, $3 -> On SQL Authentication database method -> Resultado<!-- END REF-->
+<!--REF #_command_.On SQL Authentication database method.Syntax-->$1, $2, $3 -> On SQL Authentication database method : Boolean<!-- END REF-->
 <!--REF #_command_.On SQL Authentication database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

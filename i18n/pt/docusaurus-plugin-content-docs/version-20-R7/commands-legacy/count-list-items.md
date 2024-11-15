@@ -5,7 +5,7 @@ slug: /commands/count-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *lista* {; *} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *lista* {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count list items.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

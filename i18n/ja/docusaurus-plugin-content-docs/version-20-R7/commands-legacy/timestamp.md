@@ -5,7 +5,7 @@ slug: /commands/timestamp
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Timestamp.Syntax-->**Timestamp** -> 戻り値<!-- END REF-->
+<!--REF #_command_.Timestamp.Syntax-->**Timestamp** : Text<!-- END REF-->
 <!--REF #_command_.Timestamp.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

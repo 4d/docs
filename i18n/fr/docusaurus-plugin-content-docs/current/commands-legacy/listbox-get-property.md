@@ -5,7 +5,7 @@ slug: /commands/listbox-get-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *objet* ; *propriété* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *objet* ; *propriété* ) : any<!-- END REF-->
 <!--REF #_command_.LISTBOX Get property.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

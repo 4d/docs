@@ -5,7 +5,7 @@ slug: /commands/sum
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* {; *atributoRota*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* {; *atributoRota*} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/outside-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Outside call.Syntax-->**Outside call**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Outside call.Syntax-->**Outside call**  : Boolean<!-- END REF-->
 <!--REF #_command_.Outside call.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

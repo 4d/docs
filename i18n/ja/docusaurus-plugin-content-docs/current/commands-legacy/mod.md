@@ -5,7 +5,7 @@ slug: /commands/mod
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Mod.Syntax-->**Mod** ( *number1* ; *number2* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Mod.Syntax-->**Mod** ( *number1* ; *number2* ) : Real<!-- END REF-->
 <!--REF #_command_.Mod.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

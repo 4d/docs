@@ -5,7 +5,7 @@ slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

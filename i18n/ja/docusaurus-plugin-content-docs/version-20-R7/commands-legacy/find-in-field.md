@@ -5,7 +5,7 @@ slug: /commands/find-in-field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *targetField* ; *value* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *targetField* ; *value* ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in field.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

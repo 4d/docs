@@ -5,7 +5,7 @@ slug: /commands/random
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Random.Syntax-->**Random**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Random.Syntax-->**Random**  : Integer<!-- END REF-->
 <!--REF #_command_.Random.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

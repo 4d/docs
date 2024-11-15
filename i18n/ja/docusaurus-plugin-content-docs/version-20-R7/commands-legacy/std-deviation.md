@@ -5,7 +5,7 @@ slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

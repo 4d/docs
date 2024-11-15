@@ -5,7 +5,7 @@ slug: /commands/get-printed-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get printed height.Syntax-->**Get printed height**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Get printed height.Syntax-->**Get printed height**  : Integer<!-- END REF-->
 <!--REF #_command_.Get printed height.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

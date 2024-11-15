@@ -5,7 +5,7 @@ slug: /commands/trigger-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trigger event.Syntax-->**Trigger event**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Trigger event.Syntax-->**Trigger event**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger event.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

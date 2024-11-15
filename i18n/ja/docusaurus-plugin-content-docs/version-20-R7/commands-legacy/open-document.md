@@ -5,7 +5,7 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) : Time<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

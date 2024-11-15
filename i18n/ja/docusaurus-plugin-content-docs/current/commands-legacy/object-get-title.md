@@ -5,7 +5,7 @@ slug: /commands/object-get-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get title.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

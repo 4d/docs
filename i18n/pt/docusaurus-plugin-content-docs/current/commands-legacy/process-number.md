@@ -5,7 +5,7 @@ slug: /commands/process-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process number.Syntax-->**Process number** ( *nome* {; *} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Process number.Syntax-->**Process number** ( *nome* {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Process number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *startFrom* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *startFrom* )} : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

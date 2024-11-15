@@ -5,7 +5,7 @@ slug: /commands/wa-forward-url-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Forward URL available.Syntax-->**WA Forward URL available** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WA Forward URL available.Syntax-->**WA Forward URL available** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
 <!--REF #_command_.WA Forward URL available.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

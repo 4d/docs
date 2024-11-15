@@ -5,7 +5,7 @@ slug: /commands/record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Record number.Syntax-->**Record number** {( *tabela* )} -> Resultado de função<!-- END REF-->
+<!--REF #_command_.Record number.Syntax-->**Record number** {( *tabela* )} : Inteiro longo<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

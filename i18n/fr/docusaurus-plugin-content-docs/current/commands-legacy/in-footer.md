@@ -5,7 +5,7 @@ slug: /commands/in-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.In footer.Syntax-->**In footer**  -> Résultat<!-- END REF-->
+<!--REF #_command_.In footer.Syntax-->**In footer**  : Boolean<!-- END REF-->
 <!--REF #_command_.In footer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

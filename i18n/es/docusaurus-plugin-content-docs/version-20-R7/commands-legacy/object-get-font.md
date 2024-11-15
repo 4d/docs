@@ -5,7 +5,7 @@ slug: /commands/object-get-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font.Syntax-->**OBJECT Get font** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get font.Syntax-->**OBJECT Get font** ( {* ;} *objeto* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get font.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

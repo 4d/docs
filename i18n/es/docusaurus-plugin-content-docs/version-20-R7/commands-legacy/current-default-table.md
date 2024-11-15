@@ -5,7 +5,7 @@ slug: /commands/current-default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current default table.Syntax-->**Current default table**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Current default table.Syntax-->**Current default table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current default table.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

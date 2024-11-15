@@ -5,7 +5,7 @@ slug: /commands/picture-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *imagen* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *imagen* ) : Integer<!-- END REF-->
 <!--REF #_command_.Picture size.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

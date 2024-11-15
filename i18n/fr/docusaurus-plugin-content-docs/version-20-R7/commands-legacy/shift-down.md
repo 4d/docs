@@ -5,7 +5,7 @@ slug: /commands/shift-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Shift down.Syntax-->**Shift down**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Shift down.Syntax-->**Shift down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Shift down.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

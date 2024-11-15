@@ -5,7 +5,7 @@ slug: /commands/metodo-base-on-4d-mobile-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On 4D Mobile Authentication.Syntax-->$1, $2, $3, $4 -> Método base On 4D Mobile Authentication -> Resultado<!-- END REF-->
+<!--REF #_command_.Metodo base On 4D Mobile Authentication.Syntax-->$1, $2, $3, $4 -> Método base On 4D Mobile Authentication : Boolean<!-- END REF-->
 <!--REF #_command_.Metodo base On 4D Mobile Authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

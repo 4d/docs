@@ -5,7 +5,7 @@ slug: /commands/is-record-loaded
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *aTable* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is record loaded.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

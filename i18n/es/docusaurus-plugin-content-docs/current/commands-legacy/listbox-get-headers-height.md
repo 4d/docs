@@ -5,7 +5,7 @@ slug: /commands/listbox-get-headers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get headers height.Syntax-->**LISTBOX Get headers height** ( {* ;} *objeto* {; *unidad*} ) -> resultado<!-- END REF-->
+<!--REF #_command_.LISTBOX Get headers height.Syntax-->**LISTBOX Get headers height** ( {* ;} *objeto* {; *unidad*} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get headers height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

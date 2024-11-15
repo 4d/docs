@@ -5,7 +5,7 @@ slug: /commands/keystroke
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Keystroke.Syntax-->**Keystroke**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Keystroke.Syntax-->**Keystroke**  : Text<!-- END REF-->
 <!--REF #_command_.Keystroke.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

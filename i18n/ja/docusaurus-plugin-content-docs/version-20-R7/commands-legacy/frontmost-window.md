@@ -5,7 +5,7 @@ slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

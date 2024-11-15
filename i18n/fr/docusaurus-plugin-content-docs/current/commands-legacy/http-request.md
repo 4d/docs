@@ -5,7 +5,7 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* ; *url* ; *contenu* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* ; *url* ; *contenu* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

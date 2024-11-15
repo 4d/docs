@@ -5,7 +5,7 @@ slug: /commands/round
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Round.Syntax-->**Round** ( *round* ; *decimais* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Round.Syntax-->**Round** ( *round* ; *decimais* ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

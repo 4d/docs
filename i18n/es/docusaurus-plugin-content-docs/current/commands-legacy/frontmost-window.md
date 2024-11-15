@@ -5,7 +5,7 @@ slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

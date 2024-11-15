@@ -5,7 +5,7 @@ slug: /commands/month-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Month of.Syntax-->**Month of** ( *data* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Month of.Syntax-->**Month of** ( *data* ) : Integer<!-- END REF-->
 <!--REF #_command_.Month of.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

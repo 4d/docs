@@ -5,7 +5,7 @@ slug: /commands/st-get-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )  -> Résultat<!-- END REF-->
+<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get expression.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

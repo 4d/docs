@@ -5,7 +5,7 @@ slug: /commands/new-log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New log file.Syntax-->**New log file**  -> Résultat<!-- END REF-->
+<!--REF #_command_.New log file.Syntax-->**New log file**  : Text<!-- END REF-->
 <!--REF #_command_.New log file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

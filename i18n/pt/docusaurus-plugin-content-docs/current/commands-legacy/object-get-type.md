@@ -5,7 +5,7 @@ slug: /commands/object-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *object* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -31,49 +31,49 @@ The value returned corresponds to one of the following constants, available in t
 
 | Constant                            | Type    | Value |
 | ----------------------------------- | ------- | ----- |
-| Object type 3D button               | Longint | 16    |
-| Object type 3D checkbox             | Longint | 26    |
-| Object type 3D radio button         | Longint | 23    |
-| Object type button grid             | Longint | 20    |
-| Object type checkbox                | Longint | 25    |
-| Object type combobox                | Longint | 11    |
-| Object type dial                    | Longint | 28    |
-| Object type group                   | Longint | 21    |
-| Object type groupbox                | Longint | 30    |
-| Object type hierarchical list       | Longint | 6     |
-| Object type hierarchical popup menu | Longint | 13    |
-| Object type highlight button        | Longint | 17    |
-| Object type invisible button        | Longint | 18    |
-| Object type line                    | Longint | 32    |
-| Object type listbox                 | Longint | 7     |
-| Object type listbox column          | Longint | 9     |
-| Object type listbox footer          | Longint | 10    |
-| Object type listbox header          | Longint | 8     |
-| Object type matrix                  | Longint | 35    |
-| Object type oval                    | Longint | 34    |
-| Object type picture button          | Longint | 19    |
-| Object type picture input           | Longint | 4     |
-| Object type picture popup menu      | Longint | 14    |
-| Object type picture radio button    | Longint | 24    |
-| Object type plugin area             | Longint | 38    |
-| Object type popup dropdown list     | Longint | 12    |
-| Object type progress indicator      | Longint | 27    |
-| Object type push button             | Longint | 15    |
-| Object type radio button            | Longint | 22    |
-| Object type radio button field      | Longint | 5     |
-| Object type rectangle               | Longint | 31    |
-| Object type rounded rectangle       | Longint | 33    |
-| Object type ruler                   | Longint | 29    |
-| Object type splitter                | Longint | 36    |
-| Object type static picture          | Longint | 2     |
-| Object type static text             | Longint | 1     |
-| Object type subform                 | Longint | 39    |
-| Object type tab control             | Longint | 37    |
-| Object type text input              | Longint | 3     |
-| Object type unknown                 | Longint | 0     |
-| Object type view pro area           | Longint | 42    |
-| Object type web area                | Longint | 40    |
-| Object type write pro area          | Longint | 41    |
+| Object type 3D button               | Integer | 16    |
+| Object type 3D checkbox             | Integer | 26    |
+| Object type 3D radio button         | Integer | 23    |
+| Object type button grid             | Integer | 20    |
+| Object type checkbox                | Integer | 25    |
+| Object type combobox                | Integer | 11    |
+| Object type dial                    | Integer | 28    |
+| Object type group                   | Integer | 21    |
+| Object type groupbox                | Integer | 30    |
+| Object type hierarchical list       | Integer | 6     |
+| Object type hierarchical popup menu | Integer | 13    |
+| Object type highlight button        | Integer | 17    |
+| Object type invisible button        | Integer | 18    |
+| Object type line                    | Integer | 32    |
+| Object type listbox                 | Integer | 7     |
+| Object type listbox column          | Integer | 9     |
+| Object type listbox footer          | Integer | 10    |
+| Object type listbox header          | Integer | 8     |
+| Object type matrix                  | Integer | 35    |
+| Object type oval                    | Integer | 34    |
+| Object type picture button          | Integer | 19    |
+| Object type picture input           | Integer | 4     |
+| Object type picture popup menu      | Integer | 14    |
+| Object type picture radio button    | Integer | 24    |
+| Object type plugin area             | Integer | 38    |
+| Object type popup dropdown list     | Integer | 12    |
+| Object type progress indicator      | Integer | 27    |
+| Object type push button             | Integer | 15    |
+| Object type radio button            | Integer | 22    |
+| Object type radio button field      | Integer | 5     |
+| Object type rectangle               | Integer | 31    |
+| Object type rounded rectangle       | Integer | 33    |
+| Object type ruler                   | Integer | 29    |
+| Object type splitter                | Integer | 36    |
+| Object type static picture          | Integer | 2     |
+| Object type static text             | Integer | 1     |
+| Object type subform                 | Integer | 39    |
+| Object type tab control             | Integer | 37    |
+| Object type text input              | Integer | 3     |
+| Object type unknown                 | Integer | 0     |
+| Object type view pro area           | Integer | 42    |
+| Object type web area                | Integer | 40    |
+| Object type write pro area          | Integer | 41    |
 
 #### Exemplo 
 

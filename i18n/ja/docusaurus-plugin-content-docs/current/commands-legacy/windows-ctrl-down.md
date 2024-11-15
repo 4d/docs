@@ -5,7 +5,7 @@ slug: /commands/windows-ctrl-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Windows Ctrl down.Syntax-->**Windows Ctrl down**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Windows Ctrl down.Syntax-->**Windows Ctrl down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Windows Ctrl down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/append-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Append document.Syntax-->**Append document** ( *doc* {; *tipo*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *doc* {; *tipo*} ) : Time<!-- END REF-->
 <!--REF #_command_.Append document.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

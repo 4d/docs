@@ -5,7 +5,7 @@ slug: /commands/semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *sémaphore* {; *nbTicks*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *sémaphore* {; *nbTicks*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Semaphore.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

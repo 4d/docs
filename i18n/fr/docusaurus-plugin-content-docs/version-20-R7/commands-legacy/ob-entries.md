@@ -5,7 +5,7 @@ slug: /commands/ob-entries
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objet* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Entries.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/current-machine
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current machine.Syntax-->**Current machine**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Current machine.Syntax-->**Current machine**  : Text<!-- END REF-->
 <!--REF #_command_.Current machine.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

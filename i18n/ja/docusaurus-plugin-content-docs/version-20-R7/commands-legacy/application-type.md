@@ -5,7 +5,7 @@ slug: /commands/application-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application type.Syntax-->**Application type**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Application type.Syntax-->**Application type**  : Integer<!-- END REF-->
 <!--REF #_command_.Application type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

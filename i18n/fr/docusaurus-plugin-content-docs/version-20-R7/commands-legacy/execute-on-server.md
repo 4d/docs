@@ -5,7 +5,7 @@ slug: /commands/execute-on-server
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procédure* ; *pile* {; *nom* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procédure* ; *pile* {; *nom* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Execute on server.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

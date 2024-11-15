@@ -5,7 +5,7 @@ slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* {; resolvePtrs | {; *option* {; *groupWith*}}} )  -> 戻り値<!-- END REF-->
+<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* {; resolvePtrs | {; *option* {; *groupWith*}}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

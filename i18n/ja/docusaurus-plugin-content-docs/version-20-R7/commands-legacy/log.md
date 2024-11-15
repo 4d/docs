@@ -5,7 +5,7 @@ slug: /commands/log
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log.Syntax-->**Log** ( *number* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Log.Syntax-->**Log** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

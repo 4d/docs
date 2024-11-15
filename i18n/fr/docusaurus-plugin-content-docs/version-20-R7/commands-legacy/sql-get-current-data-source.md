@@ -5,7 +5,7 @@ slug: /commands/sql-get-current-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL Get current data source.Syntax-->**SQL Get current data source**  -> Résultat<!-- END REF-->
+<!--REF #_command_.SQL Get current data source.Syntax-->**SQL Get current data source**  : Text<!-- END REF-->
 <!--REF #_command_.SQL Get current data source.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

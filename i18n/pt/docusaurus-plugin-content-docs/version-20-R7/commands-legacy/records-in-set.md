@@ -5,7 +5,7 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* ) -> Resultado Função<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* ) : Inteiro longo<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

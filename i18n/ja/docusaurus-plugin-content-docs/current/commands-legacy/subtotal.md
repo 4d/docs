@@ -5,7 +5,7 @@ slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* {; *pageBreak*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* {; *pageBreak*} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

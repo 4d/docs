@@ -5,7 +5,7 @@ slug: /commands/method-called-on-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on event.Syntax-->**Method called on event**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Method called on event.Syntax-->**Method called on event**  : Text<!-- END REF-->
 <!--REF #_command_.Method called on event.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

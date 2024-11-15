@@ -5,7 +5,7 @@ slug: /commands/http-get-certificates-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get certificates folder.Syntax-->**HTTP Get certificates folder**  -> Résultat<!-- END REF-->
+<!--REF #_command_.HTTP Get certificates folder.Syntax-->**HTTP Get certificates folder**  : Text<!-- END REF-->
 <!--REF #_command_.HTTP Get certificates folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

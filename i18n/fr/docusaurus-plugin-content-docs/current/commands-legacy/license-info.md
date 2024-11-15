@@ -5,7 +5,7 @@ slug: /commands/license-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.License info.Syntax-->**License info** -> Résultat<!-- END REF-->
+<!--REF #_command_.License info.Syntax-->**License info** : Object<!-- END REF-->
 <!--REF #_command_.License info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

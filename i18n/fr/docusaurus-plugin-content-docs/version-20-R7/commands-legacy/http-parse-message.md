@@ -5,7 +5,7 @@ slug: /commands/http-parse-message
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Parse message.Syntax-->**HTTP Parse message** ( *data* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.HTTP Parse message.Syntax-->**HTTP Parse message** ( *data* ) : Object<!-- END REF-->
 <!--REF #_command_.HTTP Parse message.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *aField* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *aField* ) : Expression<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

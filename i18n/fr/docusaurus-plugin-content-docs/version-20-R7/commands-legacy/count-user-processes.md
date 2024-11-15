@@ -5,7 +5,7 @@ slug: /commands/count-user-processes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count user processes.Syntax-->**Count user processes**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Count user processes.Syntax-->**Count user processes**  : Integer<!-- END REF-->
 <!--REF #_command_.Count user processes.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

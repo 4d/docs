@@ -5,7 +5,7 @@ slug: /commands/validate-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *refUsuario* ; *contraseña* {; *digest*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *refUsuario* ; *contraseña* {; *digest*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

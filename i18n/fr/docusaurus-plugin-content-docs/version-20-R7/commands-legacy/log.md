@@ -5,7 +5,7 @@ slug: /commands/log
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log.Syntax-->**Log** ( *nombre* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Log.Syntax-->**Log** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

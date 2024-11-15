@@ -5,7 +5,7 @@ slug: /commands/day-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

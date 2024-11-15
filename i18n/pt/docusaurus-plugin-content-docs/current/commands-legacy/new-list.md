@@ -5,7 +5,7 @@ slug: /commands/new-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New list.Syntax-->**New list**  -> Resultado<!-- END REF-->
+<!--REF #_command_.New list.Syntax-->**New list**  : Integer<!-- END REF-->
 <!--REF #_command_.New list.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

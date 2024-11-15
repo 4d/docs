@@ -5,7 +5,7 @@ slug: /commands/uppercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *aString* {; *} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *aString* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/square-root
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Square root.Syntax-->**Square root** ( *number* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Square root.Syntax-->**Square root** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Square root.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

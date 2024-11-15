@@ -5,7 +5,7 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *cadena* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *cadena* ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

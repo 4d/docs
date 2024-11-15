@@ -5,7 +5,7 @@ slug: /commands/insert-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *fonte* ; *inserir* ; *posiçao* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *fonte* ; *inserir* ; *posiçao* ) : Text<!-- END REF-->
 <!--REF #_command_.Insert string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

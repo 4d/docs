@@ -5,7 +5,7 @@ slug: /commands/in-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.In header.Syntax-->**In header**  -> Résultat<!-- END REF-->
+<!--REF #_command_.In header.Syntax-->**In header**  : Boolean<!-- END REF-->
 <!--REF #_command_.In header.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

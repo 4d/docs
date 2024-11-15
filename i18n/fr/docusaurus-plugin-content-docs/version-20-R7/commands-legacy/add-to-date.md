@@ -5,7 +5,7 @@ slug: /commands/add-to-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* ; *années* ; *mois* ; *jours* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* ; *années* ; *mois* ; *jours* ) : Date<!-- END REF-->
 <!--REF #_command_.Add to date.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

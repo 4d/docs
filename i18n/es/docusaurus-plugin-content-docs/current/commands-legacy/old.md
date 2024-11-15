@@ -5,7 +5,7 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *unCampo* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *unCampo* ) : Expression<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

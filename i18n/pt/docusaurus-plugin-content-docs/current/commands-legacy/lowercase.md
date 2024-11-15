@@ -5,7 +5,7 @@ slug: /commands/lowercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *cadeia* {; *} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *cadeia* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

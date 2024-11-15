@@ -5,7 +5,7 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *objet* {; *posX* {; *posY* {; *largeur* {; *hauteur*}}}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *objet* {; *posX* {; *posY* {; *largeur* {; *hauteur*}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

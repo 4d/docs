@@ -5,7 +5,7 @@ slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

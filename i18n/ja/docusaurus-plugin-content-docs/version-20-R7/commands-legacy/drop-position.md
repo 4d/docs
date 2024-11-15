@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( columnNumber | pictPosY )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** {( columnNumber | pictPosY )} : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

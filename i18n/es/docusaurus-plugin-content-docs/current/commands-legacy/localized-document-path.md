@@ -5,7 +5,7 @@ slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *rutaRelativa* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *rutaRelativa* ) : Text<!-- END REF-->
 <!--REF #_command_.Localized document path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/storage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Storage.Syntax-->**Storage**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Storage.Syntax-->**Storage**  : Object<!-- END REF-->
 <!--REF #_command_.Storage.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

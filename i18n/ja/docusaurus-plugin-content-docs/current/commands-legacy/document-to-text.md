@@ -5,7 +5,7 @@ slug: /commands/document-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *fileName* {; *charSet* {; *breakMode*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *fileName* {; *charSet* {; *breakMode*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Document to text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

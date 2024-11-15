@@ -5,7 +5,7 @@ slug: /commands/find-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find window.Syntax-->**Find window** ( *gauche* ; *haut* {; *partieFenêtre*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Find window.Syntax-->**Find window** ( *gauche* ; *haut* {; *partieFenêtre*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

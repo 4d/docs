@@ -5,7 +5,7 @@ slug: /commands/verify-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash**  ( *senha* ; *hash* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash**  ( *senha* ; *hash* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Verify password hash.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

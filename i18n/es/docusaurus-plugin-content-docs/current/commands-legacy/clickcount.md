@@ -5,7 +5,7 @@ slug: /commands/clickcount
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Clickcount.Syntax-->**Clickcount**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Clickcount.Syntax-->**Clickcount**  : Integer<!-- END REF-->
 <!--REF #_command_.Clickcount.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

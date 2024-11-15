@@ -5,7 +5,7 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *rutaCarpeta* {; *opciones*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *rutaCarpeta* {; *opciones*} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *documento* {; *tipoArquivo*}{; *modo*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *documento* {; *tipoArquivo*}{; *modo*} ) : Time<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

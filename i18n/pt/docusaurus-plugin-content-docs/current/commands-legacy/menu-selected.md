@@ -5,7 +5,7 @@ slug: /commands/menu-selected
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

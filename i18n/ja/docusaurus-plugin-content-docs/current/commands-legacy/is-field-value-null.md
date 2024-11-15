@@ -5,7 +5,7 @@ slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

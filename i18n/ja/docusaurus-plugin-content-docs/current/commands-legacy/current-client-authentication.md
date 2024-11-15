@@ -5,7 +5,7 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domain* ; *protocol* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domain* ; *protocol* )} : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

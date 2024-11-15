@@ -5,7 +5,7 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *cheminStructure* ; *cheminDonnées* {; *dossierArchive* {; *options* {; *méthode*}}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *cheminStructure* ; *cheminDonnées* {; *dossierArchive* {; *options* {; *méthode*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

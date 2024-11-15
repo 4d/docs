@@ -5,7 +5,7 @@ slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *chemin* {; *typeChemin*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *chemin* {; *typeChemin*} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/current-form-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current form table.Syntax-->**Current form table**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Current form table.Syntax-->**Current form table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current form table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

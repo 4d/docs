@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *rutaEstruct* ; *rutaDatos* {; newPassPhrase | newDataKey {; *carpetaArchivo* {; curPassPhrase | curDataKey {; *nomMetod*}}}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *rutaEstruct* ; *rutaDatos* {; newPassPhrase | newDataKey {; *carpetaArchivo* {; curPassPhrase | curDataKey {; *nomMetod*}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/compile-project
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compile project.Syntax-->**Compile project**  {( {*archivoProyecto*}{;}{*opciones*} )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Compile project.Syntax-->**Compile project**  {( {*archivoProyecto*}{;}{*opciones*} )} : Object<!-- END REF-->
 <!--REF #_command_.Compile project.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

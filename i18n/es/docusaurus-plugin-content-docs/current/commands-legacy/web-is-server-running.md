@@ -5,7 +5,7 @@ slug: /commands/web-is-server-running
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Is server running.Syntax-->**WEB Is server running** -> Resultado<!-- END REF-->
+<!--REF #_command_.WEB Is server running.Syntax-->**WEB Is server running** : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Is server running.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

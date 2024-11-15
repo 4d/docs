@@ -5,7 +5,7 @@ slug: /commands/get-text-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get text from pasteboard.Syntax-->**Get text from pasteboard**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get text from pasteboard.Syntax-->**Get text from pasteboard**  : Text<!-- END REF-->
 <!--REF #_command_.Get text from pasteboard.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

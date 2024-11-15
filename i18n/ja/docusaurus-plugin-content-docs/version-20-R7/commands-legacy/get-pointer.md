@@ -5,7 +5,7 @@ slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/transaction-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Transaction level.Syntax-->**Transaction level**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Transaction level.Syntax-->**Transaction level**  : Integer<!-- END REF-->
 <!--REF #_command_.Transaction level.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

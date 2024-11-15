@@ -5,7 +5,7 @@ slug: /commands/dom-find-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *elementRef* ; *xRuta* {; *arrRefElement*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *elementRef* ; *xRuta* {; *arrRefElement*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

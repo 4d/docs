@@ -5,7 +5,7 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} -> Résultat<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

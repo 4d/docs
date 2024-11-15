@@ -5,7 +5,7 @@ slug: /commands/get-file-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/object-get-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** {( *seletor* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** {( *seletor* )} : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

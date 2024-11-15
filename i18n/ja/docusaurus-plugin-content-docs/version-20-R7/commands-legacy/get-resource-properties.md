@@ -5,7 +5,7 @@ slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resID* {; *resFile*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resID* {; *resFile*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

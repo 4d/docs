@@ -5,7 +5,7 @@ slug: /commands/frontmost-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** {( * )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost process.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

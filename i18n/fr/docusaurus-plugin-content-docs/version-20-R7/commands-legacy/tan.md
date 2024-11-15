@@ -5,7 +5,7 @@ slug: /commands/tan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Tan.Syntax-->**Tan** ( *nombre* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Tan.Syntax-->**Tan** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Tan.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/session-storage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) : Object<!-- END REF-->
 <!--REF #_command_.Session storage.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
