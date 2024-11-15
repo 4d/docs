@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: ポインター
+title: Pointer
 ---
 
 ポインターの変数や式は、別の変数 (配列、配列要素を含む) 、テーブル、またはフィールドへの参照です。 ポインタータイプのフィールドは、存在しません。
@@ -20,7 +20,7 @@ title: ポインター
 | 変数     | vpVar:=->Variable                                                           | ALERT(vpVar->)           | vpVar->:="John"             |
 | 配列     | vpArr:=->Array                                                              | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}                                                          | ALERT (vpElem->)         | vpElem->:="John"            |
-| オブジェクト | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
+| Object | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
 
 ## ポインターの基本
 

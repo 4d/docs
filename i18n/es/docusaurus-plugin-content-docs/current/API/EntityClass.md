@@ -153,7 +153,7 @@ Las diferencias se devuelven como una colección de objetos cuyas propiedades so
 
 | Nombre de propiedad | Tipo                                      | Descripción                             |
 | ------------------- | ----------------------------------------- | --------------------------------------- |
-| attributeName       | String                                    | Nombre del atributo                     |
+| attributeName       | Text                                      | Nombre del atributo                     |
 | value               | cualquiera - Depende del tipo de atributo | Valor del atributo en la entidad        |
 | otherValue          | cualquiera - Depende del tipo de atributo | Valor del atributo en *entityToCompare* |
 

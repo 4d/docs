@@ -111,7 +111,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 |
 
-`cs` コマンドは、 <!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->. これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
+`cs` コマンドは、 <!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
 
 #### 例題
@@ -133,7 +133,7 @@ $instance:=cs.myClass.new()
 
 |
 
-`4D` コマンドは、 <!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->. [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
+`4D` コマンドは、 <!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
 #### 例題
 
@@ -523,7 +523,7 @@ Class constructor ($side : Integer)
 
 |
 
-`Super` キーワードによって、 <!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->.
+`Super` キーワードによって、 <!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->。
 
 `Super` は次の 2つの目的のために使います:
 
@@ -632,7 +632,7 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 
 |
 
-`This` キーワードは、 <!-- REF #_command_.This.Summary -->現在処理中のオブジェクトへの参照を返します<!-- END REF -->.
+`This` キーワードは、 <!-- REF #_command_.This.Summary -->現在処理中のオブジェクトへの参照を返します<!-- END REF -->。
 
 `This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 

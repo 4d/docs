@@ -82,19 +82,19 @@ JSON形式のテンプレートファイルには、以下の属性が含まれ�
 | columns                              | Collection | ○  | 表の列のコレクション                                                                  |
 | columns.check        | Text       | ○  | 表ウィザードであらかじめチェックされている場合は true。 列のチェックをあらかじめ外しておく場合は false。                  |
 | columns.header       | Text       | ○  | ユーザーに提示する表示名                                                                |
-| columns.source       | Text       | ○  | Formula                                                                     |
+| columns.source       | Text       | ○  | フォーミュラ                                                                      |
 | breaks                               | Collection |    | ブレークオブジェクトのコレクション。 ブレークの順番は重要です。 この順番は、ドキュメント内でブレーク行が繰り返し行の上にある場合の順番に対応します。 |
 | breaks.label         | Text       | ○  | ユーザーに提示する表示名                                                                |
-| breaks.source        | Text       | ○  | Formula                                                                     |
+| breaks.source        | Text       | ○  | フォーミュラ                                                                      |
 | breakFormulas                        | Collection |    | ブレーク行に適用可能なフォーミュラオブジェクトのコレクション                                              |
 | breakFormulas.label  | Text       | ○  | ユーザーに提示する表示名                                                                |
-| breakFormulas.source | Text       | ○  | Formula                                                                     |
+| breakFormulas.source | Text       | ○  | フォーミュラ                                                                      |
 | bcorFormulas                         | Collection |    | 下部キャリーオーバー行に適用可能なフォーミュラオブジェクトのコレクション                                        |
 | bcorFormulas.label   | Text       | ○  | ユーザーに提示する表示名                                                                |
-| bcorFormulas.source  | Text       | ○  | Formula                                                                     |
+| bcorFormulas.source  | Text       | ○  | フォーミュラ                                                                      |
 | extraFormulas                        | Collection |    | 追加の行に適用可能なフォーミュラオブジェクトのコレクション                                               |
 | extraFormulas.label  | Text       | ○  | ユーザーに提示する表示名                                                                |
-| extraFormulas.source | Text       | ○  | Formula                                                                     |
+| extraFormulas.source | Text       | ○  | フォーミュラ                                                                      |
 | placeholderFormulas                  | Collection |    | プレースホルダー行に挿入されるフォーミュラオブジェクトのコレクション                                          |
 
 :::note フランス語のランゲージについて

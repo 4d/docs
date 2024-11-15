@@ -30,7 +30,7 @@ title: テキスト、ピクチャー
 
 |  名称   | データタイプ | とりうる値                                                                                                                                                              |
 |:-----:|:------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |  テキスト  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |  text  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 #### 対象オブジェクト
 

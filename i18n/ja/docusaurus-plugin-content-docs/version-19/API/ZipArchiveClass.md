@@ -62,7 +62,7 @@ End if
 
 #### 説明
 
-`ZIP Create archive` コマンドは、 <!-- REF #_command_.ZIP Create archive.Summary -->圧縮された ZIPArchive オブジェクトを作成し、その処理のステータスを返します<!-- END REF -->.
+`ZIP Create archive` コマンドは、 <!-- REF #_command_.ZIP Create archive.Summary -->圧縮された ZIPArchive オブジェクトを作成し、その処理のステータスを返します<!-- END REF -->。
 
 第1引数として、4D.File、4D.Folder、あるいは zipStructure オブジェクトを渡すことができます。
 
@@ -196,7 +196,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 
 #### 説明
 
-`ZIP Read archive` コマンドは、 <!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->.
+`ZIP Read archive` コマンドは、 <!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->。
 
 > このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
 
@@ -254,7 +254,7 @@ root フォルダーから取り出します:
 
 #### 説明
 
-`.root` プロパティは、 <!-- REF #ZipArchiveClass.root.Summary -->ZIPアーカイブのコンテンツにアクセスするためのバーチャルフォルダーを格納します<!-- END REF -->.
+`.root` プロパティは、 <!-- REF #ZipArchiveClass.root.Summary -->ZIPアーカイブのコンテンツにアクセスするためのバーチャルフォルダーを格納します<!-- END REF -->。
 
 `root` フォルダーとそのコンテンツは、[ZipFile](ZipFileClass.md) および [ZipFolder](ZipFolderClass.md) の関数とプロパティを使用することで操作可能です。
 

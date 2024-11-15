@@ -290,10 +290,10 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 - フィールド
 - 変数
-- pointer
+- ポインター
 - 演算
 - 4Dコマンド
-- method
+- メソッド
 - ほか値を返すものなら何でも
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)

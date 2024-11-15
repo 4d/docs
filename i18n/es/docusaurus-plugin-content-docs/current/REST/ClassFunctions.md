@@ -130,7 +130,7 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | Propiedades                                           | Tipo                                                        | Descripción                                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Atributos de la entidad                               | mixto                                                       | Opcional - Valores a modificar                                              |
-| __DATACLASS | String                                                      | Obligatorio - Indica la Dataclass de la entidad                             |
+| __DATACLASS | Text                                                        | Obligatorio - Indica la Dataclass de la entidad                             |
 | __ENTITY    | Boolean                                                     | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
@@ -155,7 +155,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | Propiedades                                          | Tipo    | Descripción                                                                                |
 | ---------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------ |
 | Atributos de la entidad                              | mixto   | Opcional - Valores a modificar                                                             |
-| __DATASET  | String  | Obligatorio - entitySetID (UUID) de la selección de entidades           |
+| __DATASET  | Text    | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.

@@ -3,7 +3,7 @@ id: formSize
 title: Tamanho formulário
 ---
 
-4D permite que você defina o tamanho tanto do formulário e da [janela](propriedades_WindowSize.md). Estas propriedades são interdependentes e a interface da aplicação resulta da sua interação.
+4D permite que você defina o tamanho tanto do formulário e da [janela](properties_WindowSize.md). Estas propriedades são interdependentes e a interface da aplicação resulta da sua interação.
 
 As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 

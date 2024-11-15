@@ -47,7 +47,7 @@ title: Entity
 
 #### 説明
 
-データクラス属性はすべて、エンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->.
+データクラス属性はすべて、エンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
 この属性値タイプは属性の種類 ([](DataClassClass.md#attributename).kind; リレーションまたはストレージ) によります。
@@ -92,7 +92,7 @@ title: Entity
 
 #### 説明
 
-`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->. このメソッドを使用するとエンティティを個別に更新することができます。
+`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
 > エンティティに対して何らかの変更をおこなった場合、それらは [`.save( )`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
@@ -135,7 +135,7 @@ title: Entity
 
 #### 説明
 
-`.diff()` 関数は、 <!-- REF #EntityClass.diff().Summary -->2つのエンティティの中身を比較し、その差異を返します<!-- END REF -->.
+`.diff()` 関数は、 <!-- REF #EntityClass.diff().Summary -->2つのエンティティの中身を比較し、その差異を返します<!-- END REF -->。
 
 *entityToCompare* には、オリジナルのエンティティと比較をするエンティティを渡します。
 
@@ -440,7 +440,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.first()` 関数は、 <!-- REF #EntityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->.
+`.first()` 関数は、 <!-- REF #EntityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -479,7 +479,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.fromObject()` 関数は、 <!-- REF #EntityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->.
+`.fromObject()` 関数は、 <!-- REF #EntityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->。
 > このコマンドは、元のエンティティを変更します。
 
 オブジェクトとエンティティ間のマッピングは属性名でおこなわれます:
@@ -564,7 +564,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.getDataClass()` 関数は、 <!-- REF #EntityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->. この関数は汎用的なコードを書くのに有用です。
+`.getDataClass()` 関数は、 <!-- REF #EntityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->。 この関数は汎用的なコードを書くのに有用です。
 
 #### 例題
 
@@ -611,7 +611,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.getKey()` 関数は、 <!-- REF #EntityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->.
+`.getKey()` 関数は、 <!-- REF #EntityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->。
 
 プライマリーキーは数値 (倍長整数) あるいは文字列です。 *mode* 引数として `dk key as string` オプションを渡すことで、実際のプライマリーキーの型に関係なく、返されるプライマリーキー値の型を文字列に "強制" することができます。
 
@@ -650,7 +650,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.getSelection()` 関数は、 <!-- REF #EntityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->.
+`.getSelection()` 関数は、 <!-- REF #EntityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->。
 
 対象エンティティがエンティティセレクションに所属していない場合、関数は Null値を返します。
 
@@ -693,7 +693,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->.
+`.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->。
 
 内部スタンプは、エンティティが保存されるたびに 4D によって自動的にインクリメントされます。 これは同じエンティティに対する複数のユーザーの同時アクセス・編集を管理します。この機構の詳細については、[**エンティティロッキング**](ORDA/entities.md#エンティティロッキング) を参照ください。
 > (一度も保存されていない) 新規エンティティに対しては、このメソッドは 0 を返します。 しかしながら、エンティティがまだ作成されたばかりかどうかを調べるには、[isNew()](#isnew) の使用が推奨されます。
@@ -740,7 +740,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.indexOf()` 関数は、 <!-- REF #EntityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->.
+`.indexOf()` 関数は、 <!-- REF #EntityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->。
 
 *entitySelection* 引数が渡されなかった場合はデフォルトで、所属エンティティセレクション内でのエンティティの位置が返されます。 *entitySelection* 引数を渡した場合は、指定されたエンティティセレクション内でのエンティティの位置を返します。
 
@@ -787,7 +787,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.isNew()` 関数は、 <!-- REF #EntityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->. そうでない場合には、false を返します。
+`.isNew()` 関数は、 <!-- REF #EntityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->。 そうでない場合には、false を返します。
 
 #### 例題
 
@@ -826,7 +826,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.last()` 関数は、 <!-- REF #EntityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->.
+`.last()` 関数は、 <!-- REF #EntityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -866,7 +866,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.lock()` 関数は、 <!-- REF #EntityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->. [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
+`.lock()` 関数は、 <!-- REF #EntityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->。 [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
 
 他のプロセスからはこのレコードがロックされて見えます (この関数を使って同エンティティをロックしようとした場合、`result.success` プロパティには false が返されます)。 ロックをおこなったセッション内で実行される関数のみが、当該エンティティの属性を編集・保存できます。 他のセッションは同エンティティを読み取り専用にロードできますが、値の入力・保存はできません。
 
@@ -975,7 +975,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.next()` 関数は、 <!-- REF #EntityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->.
+`.next()` 関数は、 <!-- REF #EntityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1017,7 +1017,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.previous()` 関数は、 <!-- REF #EntityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->.
+`.previous()` 関数は、 <!-- REF #EntityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1258,7 +1258,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルドされたオブジェクトを返します<!-- END REF -->. オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
+`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルドされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
 
 *filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
@@ -1537,7 +1537,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->.
+`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
 
 属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
 
@@ -1582,7 +1582,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->.
+`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
 この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性に適用されます。
 

@@ -5,9 +5,9 @@ title: Gama de valores
 
 ## Valor padrão
 
-É possível atribuir um valor proposto a ser introduzido num objeto de entrada. Esta propiedad es útil, por ejemplo, cuando la entrada [fuente de datos](properties_Object.md#variable-or-expression) es un campo: el valor por defecto se introduce cuando se muestra un nuevo registro por primera vez. Puede cambiar el valor a menos que el área de entrada se haya definido como [no editable](properties_Entry.md#enterable).
+É possível atribuir um valor proposto a ser introduzido num objeto de entrada. Esta propriedade é útil, por exemplo, quando a entrada [data source](properties_Object.md#variable-or-expression) é um campo: o valor padrão é inserido quando um novo registro é exibido pela primeira vez. Você pode alterar o valor, a menos que a área de entrada tenha sido definida como [não entrável](properties_Entry.md#enterable).
 
-El valor por defecto sólo puede utilizarse si el [tipo de fuente de datos](properties_Object.md#expression-type) es:
+O valor padrão só poderá ser usado se o [tipo de fonte de dados](properties_Object.md#expression-type) for:
 
 - text/string
 - number/integer
@@ -23,9 +23,9 @@ El valor por defecto sólo puede utilizarse si el [tipo de fuente de datos](prop
 | #H    | Hora actual         |
 | #N    | Número de sequência |
 
-You can use a sequence number to create a unique number for each record in the table for the current data file. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Cada tabela tem o seu próprio contador interno de números de sequência. Para más información, consulte el párrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
+You can use a sequence number to create a unique number for each record in the table for the current data file. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
 
-> No hay que confundir esta propiedad con la propiedad "valores por defecto" que permite llenar una columna list box con valores estáticos.
+> Não faça confusão entre esta propriedade e a propriedade "[valores padrão](properties_DataSource.md#default-list-of-values)" que permite preencher uma coluna list box com valores estáticos.
 
 #### Gramática JSON
 
@@ -61,8 +61,8 @@ Permite definir uma lista cujos valores não podem ser introduzidos no objeto. S
 
 Restringe as entradas válidas aos itens da lista. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 
-Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. Si desea mostrar la lista requerida, asigne la misma lista a la propiedad [Lista de opciones](properties_DataSource.md#choice-list).
-Sin embargo, a diferencia de la propiedad [Lista de selección](properties_DataSource.md#choice-list), cuando se define una lista requerida, ya no es posible la introducción mediante el teclado, sólo se permite la selección de un valor de la lista mediante Si se definen diferentes listas utilizando las propiedades [Lista de selección](properties_DataSource.md#choice-list) y Lista requerida, la propiedad Lista requerida tiene prioridad.
+Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. Se você deseja exibir a lista obrigatória, atribua a mesma lista à propriedade [Lista de opções](properties_DataSource.md#choice-list).
+No entanto, ao contrário da propriedade [Lista de opções](properties_DataSource.md#choice-list) quando uma lista é definida, a entrada de teclado não é mais possível, apenas a seleção de um valor da lista usando o menu pop-up é permitida. Se listas diferentes forem definidas usando as propriedades da [Lista de Opções](properties_DataSource.md#choice-list) e da Lista exigida, a propriedade da Lista obrigatória tem prioridade.
 
 > Se uma lista especificada for hierárquica, apenas os itens do primeiro nível são tidos em conta.
 

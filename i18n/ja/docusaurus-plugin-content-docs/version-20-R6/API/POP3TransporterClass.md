@@ -334,7 +334,8 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.getMailInfoList()` 関数は、<!-- REF #POP3TransporterClass.getMailInfoList().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の全メッセージについて記述した `mailInfo` オブジェクトのコレクションを返します<!-- END REF -->。 この関数を使用するとメールに関する情報を取得することができます。
+`.getMailInfo()` 関数は、<!-- REF #pop3TransporterClass.getMailInfo().Summary -->
+[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールの `mailInfo` オブジェクトを返します<!-- END REF -->。 この関数を使用するとメールに関する情報を取得することができます。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 

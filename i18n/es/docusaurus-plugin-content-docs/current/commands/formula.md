@@ -47,7 +47,7 @@ La fórmula devuelta puede ser llamada con:
  $o.myFormula() //devuelve 3
 ```
 
-Puede pasar [parámetros](#pasando-parámetros) a `Formula`, como se muestra a continuación en el [ejemplo 4](#ejemplo-4).
+Puede pasar [parámetros](#passing-parameters) a `Formula`, como se muestra a continuación en el [ejemplo 4](#example-4).
 
 Se puede especificar el objeto sobre el que se ejecuta la fórmula, como se ve en [ejemplo 5](#ejemplo-5). Se puede acceder a las propiedades del objeto mediante el comando `This`.
 

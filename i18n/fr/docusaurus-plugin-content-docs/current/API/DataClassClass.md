@@ -729,9 +729,9 @@ L'objet `data` de chaque entrée contient les propriétés suivantes :
 
 | Propriété                                             | Type    | Description                                                                                                                                                               |
 | ----------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY       | String  | Clé primaire de l'entité                                                                                                                                                  |
-| __STAMP     | Longint | Stamp de l'entité dans la base de données                                                                                                                                 |
-| __TIMESTAMP | String  | Timestamp de l'entité dans la base de données (le format est YYYY-MM-DDTHH:MM:SS:ms:Z) |
+| __KEY       | Text    | Clé primaire de l'entité                                                                                                                                                  |
+| __STAMP     | Integer | Stamp de l'entité dans la base de données                                                                                                                                 |
+| __TIMESTAMP | Text    | Timestamp de l'entité dans la base de données (le format est YYYY-MM-DDTHH:MM:SS:ms:Z) |
 | dataClassAttributeName                                | Variant | S'il y a des données dans le cache pour un attribut de dataclass, il est retourné dans une propriété du même type que dans la base de données.            |
 
 Les données concernant les entités liées sont stockées dans le cache de l'objet data.
