@@ -45,11 +45,11 @@ title: 文字列
 |                            |                                           |         | "abc" = "abd"                           | false    |
 | 異なる                        | String # String                           | Boolean | "abc" # "abd"                           | true     |
 |                            |                                           |         | "abc" # "abc"                           | false    |
-| 大きい                        | 文字列 > 文字列                                 | Boolean | "abd" > "abc"                           | true     |
+| 大きい                        | String > String                           | Boolean | "abd" > "abc"                           | true     |
 |                            |                                           |         | "abc" > "abc"                           | false    |
-| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"  | true     |
+| 小さい                        | String < String  | Boolean | "abc" < "abd"  | true     |
 |                            |                                           |         | "abc" < "abc"  | false    |
-| 以上                         | 文字列 >= 文字列                                | Boolean | "abd" >= "abc"                          | true     |
+| 以上                         | String >= String                          | Boolean | "abd" >= "abc"                          | true     |
 |                            |                                           |         | "abc" >= "abd"                          | false    |
 | 以下                         | String <= String | Boolean | "abc" <= "abd" | true     |
 |                            |                                           |         | "abd" <= "abc" | false    |

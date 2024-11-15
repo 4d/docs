@@ -58,11 +58,11 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Página Base de datos/Almacenamiento de datos](../settings/database.md#data-storage) | N/a                                                | N/a                                                     |
 | [Página Base de datos/Memoria](../settings/database.md#memory)                       | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Backup/Periocidad](../settings/backup.md#scheduler)                          | N/a                                                | Idéntica a las Propiedades estándar                     |
-| [Página Backup/Configuración](../settings/backup.md#configuración)                   | N/a                                                | Idéntica a las Propiedades estándar                     |
+| [Página Backup/Configuración](../settings/backup.md#configuration)                   | N/a                                                | Idéntica a las Propiedades estándar                     |
 | [Página Backup/Backup y Restauración](../settings/backup.md#backup-restore)          | N/a                                                | Idéntica a las Propiedades estándar                     |
 | [Página Cliente-servidor/red](../settings/client-server.md#network-options)          | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Cliente-servidor/IP](../settings/client-server.md#configuración-ip)          | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [Página Web/Configuración](../settings/web.md#configuración)                         | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Cliente-servidor/IP](../settings/client-server.md#ip-configuration)          | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Web/Configuración](../settings/web.md#configuration)                         | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Web/Opciones (I)](../settings/web.md#opciones)            | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Web/Opciones (III)](../settings/web.md#options-ii)        | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Web/Historial(formato)](../settings/web.md#log)           | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |

@@ -131,7 +131,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 | ----------------------------------------------------- | ------------------------------------ | ------------------------------------ |
 | エンティティの属性                                             | mixed                                | 任意 - 変更する値                           |
 | __DATACLASS | String                               | 必須 - エンティティのデータクラスを指定します             |
-| __ENTITY    | ブール                                  | 必須 - true は引数がエンティティであることをサーバーに通知します |
+| __ENTITY    | Boolean                              | 必須 - true は引数がエンティティであることをサーバーに通知します |
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
 - If `__KEY` is not provided, a new entity is created on the server with the given attributes.
@@ -152,11 +152,11 @@ See an example of [contents downloading using an entity](#using-an-entity-to-dow
 
 > 変更されたエンティティセレクションをリクエストがサーバーに送信した場合、呼び出した ORDAデータモデル関数は自動的に変更後のエンティティセレクションで実行されます。
 
-| プロパティ                                                | 型      | 説明                                                      |
-| ---------------------------------------------------- | ------ | ------------------------------------------------------- |
-| エンティティの属性                                            | mixed  | 任意 - 変更する値                                              |
-| __DATASET  | String | 必須 - エンティティセレクションのエンティティセットID (UUID) |
-| __ENTITIES | ブール    | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
+| プロパティ                                                | 型       | 説明                                                      |
+| ---------------------------------------------------- | ------- | ------------------------------------------------------- |
+| エンティティの属性                                            | mixed   | 任意 - 変更する値                                              |
+| __DATASET  | String  | 必須 - エンティティセレクションのエンティティセットID (UUID) |
+| __ENTITIES | Boolean | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
 See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.

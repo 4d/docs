@@ -127,7 +127,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 #### 説明
 
-`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->`4D.SMTPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->. この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->`4D.SMTPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -218,7 +218,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 #### 説明
 
-`.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->.
+`.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
 この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。それ以外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。

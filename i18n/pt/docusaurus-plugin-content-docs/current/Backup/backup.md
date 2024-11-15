@@ -90,7 +90,7 @@ Todas as informações sobre as últimas operações de backup e restauração s
 O arquivo **backupHistory.json** foi criado na pasta de destino atual. Pode obter a rota para esse arquivo usando a declaração abaixo:
 
 ```4d
-$backupHistory:=Get 4D file(arquivo histórico Backup)
+$backupHistory:=Get 4D file(Backup history file)
 ```
 
 > **AVISO**\

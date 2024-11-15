@@ -25,7 +25,7 @@ La creación e instalación de los componentes 4D se realiza directamente desde 
 
 ## Alcance de los comandos del lenguaje
 
-A excepción de los [comandos no utilizables](#comandos-inutilizables), un componente puede utilizar cualquier comando del lenguaje 4D.
+A excepción de los [comandos no utilizables](#unusable-commands), un componente puede utilizar cualquier comando del lenguaje 4D.
 
 Cuando los comandos son llamados desde un componente, se ejecutan en el contexto del componente, excepto por el comando [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) o el comando [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) que utilizan el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
 

@@ -373,9 +373,9 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
-| 引数      | 型  |     | 説明                                                 |
-| ------- | -- | :-: | -------------------------------------------------- |
-| timeout | 整数 |  -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
+| 引数      | 型       |     | 説明                                                 |
+| ------- | ------- | :-: | -------------------------------------------------- |
+| timeout | Integer |  -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
 
 <!-- END REF -->
 

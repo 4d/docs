@@ -44,7 +44,7 @@ title: CryptoKey
 <!-- REF #4D.CryptoKey.new().Params -->
 | 引数       | 型            |    | 説明                    |
 | -------- | ------------ | -- | --------------------- |
-| settings | オブジェクト       | -> | キーペアを生成・ロードするための設定    |
+| settings | Object       | -> | キーペアを生成・ロードするための設定    |
 | 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
 <!-- END REF -->
 
@@ -141,7 +141,7 @@ ASSERT($status.success)
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 
-ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線名<!-- END REF -->. 通常、ES256 (デフォルト) の場合は "prime256v1"、ES384 の場合は "secp384r1"、ES512 の場合は "secp521r1"。
+ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線名<!-- END REF -->。 通常、ES256 (デフォルト) の場合は "prime256v1"、ES384 の場合は "secp384r1"、ES512 の場合は "secp521r1"。
 <!-- END REF -->
 
 <!-- REF CryptoKey.decrypt().Desc -->
@@ -165,7 +165,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | 戻り値     | Object | <- | ステータス                                             |
 <!-- END REF -->
 
-`.decrypt()` 関数は、 <!-- REF #CryptoKey.decrypt().Summary -->**秘密** 鍵を使って *message* を復号します<!-- END REF -->. 使用されるアルゴリズムはキーの種類に依存します。
+`.decrypt()` 関数は、 <!-- REF #CryptoKey.decrypt().Summary -->**秘密** 鍵を使って *message* を復号します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
@@ -211,7 +211,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | 戻り値     | Text   | <- | `options.encodingEncrypted` を使って暗号化およびエンコードされたメッセージ |
 <!-- END REF -->
 
-`.encrypt()` 関数は、 <!-- REF #CryptoKey.encrypt().Summary -->**公開** 鍵を使って *message* を暗号化します<!-- END REF -->. 使用されるアルゴリズムはキーの種類に依存します。
+`.encrypt()` 関数は、 <!-- REF #CryptoKey.encrypt().Summary -->**公開** 鍵を使って *message* を暗号化します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
@@ -350,7 +350,7 @@ utf8 形式の *message* 文字列。
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビット単位)<!-- END REF -->. 通常は 2048 (デフォルト)。
+RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビット単位)<!-- END REF -->。 通常は 2048 (デフォルト)。
 
 <!-- REF CryptoKey.type -->
 ## .type
@@ -366,7 +366,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
- <!-- REF #CryptoKey.type.Summary -->キーのタイプ: "RSA", "ECDSA", "PEM" <!-- END REF -->.
+ <!-- REF #CryptoKey.type.Summary -->キーのタイプ: "RSA", "ECDSA", "PEM" <!-- END REF -->。
 
 
 - "RSA": `settings.size` に指定されたサイズを [.size](#size) として使った、RSA キーペア

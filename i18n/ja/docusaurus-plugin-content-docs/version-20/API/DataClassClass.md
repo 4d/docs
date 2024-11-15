@@ -145,7 +145,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.all()` 関数は <!-- REF #DataClassClass.all().Summary -->データストアをクエリして、データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->.
+`.all()` 関数は <!-- REF #DataClassClass.all().Summary -->データストアをクエリして、データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
 
 エンティティはデフォルトの順番で返され、通常は作成順になっています。 ただし、エンティティ削除後に新規追加した場合には、デフォルトの順番は作成順を反映しない点に留意が必要です。
 
@@ -193,7 +193,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.clearRemoteCache()` 関数は、 <!-- REF #DataClassClass.clearRemoteCache().Summary -->データクラスの ORDAキャッシュを空にします<!-- END REF -->.
+`.clearRemoteCache()` 関数は、 <!-- REF #DataClassClass.clearRemoteCache().Summary -->データクラスの ORDAキャッシュを空にします<!-- END REF -->。
 
 > この関数は `timeout` および `maxEntries` の値をリセットしません。
 
@@ -249,7 +249,7 @@ $ds.Persons.clearRemoteCache()
 
 #### 説明
 
-`.fromCollection()` 関数は、 <!-- REF #DataClassClass.fromCollection().Summary -->*objectCol* 引数のオブジェクトのコレクションに基づいてデータクラスのエンティティを更新あるいは作成し、対応するエンティティセレクションを返します<!-- END REF -->.
+`.fromCollection()` 関数は、 <!-- REF #DataClassClass.fromCollection().Summary -->*objectCol* 引数のオブジェクトのコレクションに基づいてデータクラスのエンティティを更新あるいは作成し、対応するエンティティセレクションを返します<!-- END REF -->。
 
 *objectCol* パラメーターには、データクラスの既存エンティティを更新、または新規エンティティを作成するためのオブジェクトのコレクションを渡します。 プロパティ名は、データクラスの属性名と同一である必要があります。 プロパティ名がデータクラスに存在しない場合、それは無視されます。 コレクション内で属性値が定義されていない場合、その値は null になります。
 
@@ -447,7 +447,7 @@ $ds.Persons.clearRemoteCache()
 
 #### 説明
 
-`.get()` 関数は <!-- REF #DataClassClass.get().Summary -->データクラスをクエリして、*primaryKey* に渡したプライマリーキーに合致するエンティティを返します<!-- END REF -->.
+`.get()` 関数は <!-- REF #DataClassClass.get().Summary -->データクラスをクエリして、*primaryKey* に渡したプライマリーキーに合致するエンティティを返します<!-- END REF -->。
 
 *primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 [`.getKey()`](EntityClass.md#getkey) 関数に `dk key as string` 引数を渡すと、プライマリーキーの値が常にテキスト型で返されるように指定することができます。
 
@@ -528,7 +528,7 @@ $ds.Persons.clearRemoteCache()
 
 #### 説明
 
-`.getCount()` 関数は、 <!-- REF #DataClassClass.getCount().Summary --> データクラスに含まれる総エンティティ数を返します<!-- END REF -->.
+`.getCount()` 関数は、 <!-- REF #DataClassClass.getCount().Summary --> データクラスに含まれる総エンティティ数を返します<!-- END REF -->。
 
 トランザクション内でこの関数を使用した場合、トランザクション中に作成されたエンティティは考慮されます。
 
@@ -568,7 +568,7 @@ $number:=$ds.Persons.getCount()
 
 #### 説明
 
-`.getDataStore()` 関数は、 <!-- REF #DataClassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->.
+`.getDataStore()` 関数は、 <!-- REF #DataClassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
 
 返されるデータストアは次のいずれかです:
 
@@ -622,7 +622,7 @@ $number:=$ds.Persons.getCount()
 
 #### 説明
 
-`.getInfo()` 関数は、 <!-- REF #DataClassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->. このメソッドは汎用的なコードを書くのに有用です。
+`.getInfo()` 関数は、 <!-- REF #DataClassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
@@ -700,7 +700,7 @@ $number:=$ds.Persons.getCount()
 
 #### 説明
 
-`.getRemoteCache()` 関数は、 <!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->.
+`.getRemoteCache()` 関数は、 <!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->。
 
 4D のシングルユーザーアプリケーションからこの関数を呼び出した場合、`Null` が返されます。
 
@@ -728,7 +728,7 @@ $number:=$ds.Persons.getCount()
 | __KEY                  | String  | エンティティのプライマリーキー                                          |
 | __STAMP                | Longint | データベース内のエンティティのタイムスタンプ                                   |
 | __TIMESTAMP            | String  | データベース内のエンティティのスタンプ (形式: YYYY-MM-DDTHH:MM:SS:ms:Z)       |
-| dataClassAttributeName | バリアント   | データクラス属性に対応するデータがキャッシュに存在する場合、それはデータベースと同じ型のプロパティに返されます。 |
+| dataClassAttributeName | Variant | データクラス属性に対応するデータがキャッシュに存在する場合、それはデータベースと同じ型のプロパティに返されます。 |
 
 リレートエンティティに関するデータは、data オブジェクトのキャッシュに保存されます。
 
@@ -787,7 +787,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 #### 説明
 
-`.new()` 関数は、 <!-- REF #DataClassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->.
+`.new()` 関数は、 <!-- REF #DataClassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
 
 エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](EntityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
 
@@ -834,7 +834,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 #### 説明
 
-`.newSelection()` 関数は、 <!-- REF #DataClassClass.newSelection().Summary -->データクラスに紐づいた 追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->.
+`.newSelection()` 関数は、 <!-- REF #DataClassClass.newSelection().Summary -->データクラスに紐づいた 追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
 
 > 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
@@ -1542,7 +1542,7 @@ softwares:{
 
 #### 説明
 
-`.setRemoteCacheSettings()` 関数は、 <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定します<!-- END REF -->.
+`.setRemoteCacheSettings()` 関数は、 <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定します<!-- END REF -->。
 
 *settings* には、以下のプロパティを持つオブジェクトを渡します:
 

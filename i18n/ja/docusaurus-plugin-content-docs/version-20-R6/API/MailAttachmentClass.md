@@ -270,7 +270,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.size` プロパティは、<!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
+`.size` プロパティは、<!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します<!-- END REF -->。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
 
 ## .type
 

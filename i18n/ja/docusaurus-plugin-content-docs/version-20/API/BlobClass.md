@@ -37,7 +37,7 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 #### 説明
 
-`4D.Blob.new` は、 <!-- REF #4D.Blob.new().Summary -->新規の `4D.Blob` オブジェクトを作成し、(任意で) 別の BLOBデータ (スカラーBLOB または `4D.Blob`) のコピーを格納します<!-- END REF -->.
+`4D.Blob.new` は、 <!-- REF #4D.Blob.new().Summary -->新規の `4D.Blob` オブジェクトを作成し、(任意で) 別の BLOBデータ (スカラーBLOB または `4D.Blob`) のコピーを格納します<!-- END REF -->。
 
 `blob` 引数が渡されなかった場合、関数は空の 4D.Blob を返します。
 

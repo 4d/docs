@@ -103,7 +103,7 @@ Por ejemplo, después de iniciar un servidor web local en el puerto 7080, escrib
 
 `localhost:7080/studio`
 
-A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#clave-de-acceso) para acceder a Qodly Studio.
+A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
 
 ## Utilizar Qodly Studio
 

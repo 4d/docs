@@ -5,7 +5,7 @@ title: Botão rádio
 
 Radio buttons are objects that allow the user to select one of a group of buttons.
 
-Um botão radio aparece na forma de um texto seguido de um círculo. Sin embargo, los botones radio pueden tener [diferentes apariencias](#estilos-de-botón).
+Um botão radio aparece na forma de um texto seguido de um círculo. Sin embargo, los botones radio pueden tener [diferentes apariencias](#button-styles).
 
 ![](../assets/en/FormObjects/radio1.png)
 
