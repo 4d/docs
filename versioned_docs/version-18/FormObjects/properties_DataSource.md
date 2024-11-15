@@ -260,7 +260,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|selectedItemsSource| string|Collection expression |
+|selectedItemsSource| string|Assignable collection or object expression |
 
 #### Objects Supported
 
