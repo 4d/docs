@@ -30,7 +30,7 @@ Aqui está uma descrição dos dados retornados:
 
 | Propriedade                                             | Tipo       | Descrição                                                                                                                                                                                                                              |
 | ------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Nome da dataclass.                                                                                                                                                                                                     |
+| __entityModel | Text       | Nome da dataclass.                                                                                                                                                                                                     |
 | __COUNT       | Number     | Número de entidades na classe de dados.                                                                                                                                                                                |
 | __SENT        | Number     | Número de entidades enviadas pela petição REST. Este número puede ser el número total de entidades si es menor que el valor definido por `$top/$limit`.                                                |
 | __FIRST       | Number     | Número de entidade em que a seleção vai começar. O bien 0 por defecto o el valor definido por `$skip`.                                                                                                 |
@@ -40,7 +40,7 @@ Cada entidade contém as propriedades abaixo:
 
 | Propriedade                                           | Tipo   | Descrição                                                                                                                          |
 | ----------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Valor da chave primária definida para a classe de dados.                                                           |
+| __KEY       | Text   | Valor da chave primária definida para a classe de dados.                                                           |
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                                                 |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
