@@ -321,7 +321,7 @@ Selections are managed differently depending on whether the list box is based on
 
 * **Collection/Entity selection list box**: Selections are managed through dedicated list box properties:
   * [Current item](properties_DataSource.md#current-item) is an object that will receive the selected element/entity
-  * [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
+  * [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
   * [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
 
 * **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming.
