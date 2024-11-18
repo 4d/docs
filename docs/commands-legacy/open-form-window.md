@@ -5,7 +5,7 @@ slug: /commands/open-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) : WinRef<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | hPos | Integer | &#8594;  | Horizontal position of the window |
 | vPos | Integer | &#8594;  | Vertical position of the window |
 | * | Operator | &#8594;  | Save current position and size of the window |
-| Function result | WinRef | &#8592; | Window reference number |
+| Function result | Integer | &#8592; | Window reference number |
 
 <!-- END REF-->
 

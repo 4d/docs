@@ -5,14 +5,14 @@ slug: /commands/find-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find window.Syntax-->**Find window** ( *left* ; *top* {; *windowPart*} ) : WinRef<!-- END REF-->
+<!--REF #_command_.Find window.Syntax-->**Find window** ( *left* ; *top* {; *windowPart*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | left | Integer | &#8594;  | Global left coordinate |
 | top | Integer | &#8594;  | Global top coordinate |
 | windowPart | Integer | &#8592; | 3 if window is "touched", 0 otherwise |
-| Function result | WinRef | &#8592; | Window reference number |
+| Function result | Integer | &#8592; | Window reference number |
 
 <!-- END REF-->
 

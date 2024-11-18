@@ -385,7 +385,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.verify().Params -->

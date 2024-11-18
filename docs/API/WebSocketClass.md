@@ -174,7 +174,7 @@ This property is read-only.
 <!-- REF #WebSocketClass.id.Desc -->
 ## .id
 
-<!-- REF #WebSocketClass.id.Syntax -->**.id** : Longint<!-- END REF -->
+<!-- REF #WebSocketClass.id.Syntax -->**.id** : Integer<!-- END REF -->
 
 #### Description
 

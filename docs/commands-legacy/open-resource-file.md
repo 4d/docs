@@ -5,13 +5,13 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* {; *fileType*} ) : DocRef<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* {; *fileType*} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resFilename | Text | &#8594;  | Short or long name of resource file, or Empty string for standard Open File dialog box |
 | fileType | Text | &#8594;  | Mac OS file type (4-character string), or Windows file extension (1- to 3-character string), or All files, if omitted |
-| Function result | DocRef | &#8592; | Resource file reference number |
+| Function result | Time | &#8592; | Resource file reference number |
 
 <!-- END REF-->
 

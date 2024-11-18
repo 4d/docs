@@ -5,12 +5,12 @@ slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : MenuRef<!-- END REF-->
+<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : Text<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Text, Integer, Text | &#8594;  | Menu reference or Number or Name of menu bar |
-| Function result | MenuRef | &#8592; | Menu reference |
+| Function result | Text | &#8592; | Menu reference |
 
 <!-- END REF-->
 

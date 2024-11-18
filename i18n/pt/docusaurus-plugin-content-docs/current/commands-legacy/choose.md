@@ -5,13 +5,13 @@ slug: /commands/choose
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterio* ; *valor* {; *valor2* ; ... ; *valorN*} )  : Expression<!-- END REF-->
+<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterio* ; *valor* {; *valor2* ; ... ; *valorN*} )  : any<!-- END REF-->
 <!--REF #_command_.Choose.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | criterio | Boolean, Integer | &#8594;  | Valor a testar |
 | valor | Expression | &#8594;  | Valores possíveis |
-| Resultado | Expression | &#8592; | Valor do critério |
+| Resultado | any | &#8592; | Valor do critério |
 
 <!-- END REF-->
 
