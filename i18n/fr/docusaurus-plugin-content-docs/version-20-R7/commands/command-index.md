@@ -543,7 +543,7 @@ title: Index
 [`LDAP SEARCH ALL`](../commands-legacy/ldap-search-all.md)<br/>
 [`Length`](../commands-legacy/length.md)<br/>
 [`Level`](../commands-legacy/level.md)<br/>
-[`License info`](../commands-legacy/license-info.md)<br/>
+[`License info`](license-info.md)<br/>
 [`License usage`](../commands-legacy/license-usage.md)<br/>
 [`List item parent`](../commands-legacy/list-item-parent.md)<br/>
 [`List item position`](../commands-legacy/list-item-position.md)<br/>

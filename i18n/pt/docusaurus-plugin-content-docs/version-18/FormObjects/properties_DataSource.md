@@ -249,9 +249,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### Gramática JSON
 
-| Nome                | Tipo de dados | Valores possíveis     |
-| ------------------- | ------------- | --------------------- |
-| selectedItemsSource | string        | Expressão da colecção |
+| Nome                | Tipo de dados | Valores possíveis                          |
+| ------------------- | ------------- | ------------------------------------------ |
+| selectedItemsSource | string        | Assignable collection or object expression |
 
 #### Objectos suportados
 

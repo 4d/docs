@@ -300,9 +300,9 @@ title: データソース
 
 #### JSON 文法
 
-| 名称                  | データタイプ | とりうる値   |
-| ------------------- | ------ | ------- |
-| selectedItemsSource | string | コレクション式 |
+| 名称                  | データタイプ | とりうる値                                      |
+| ------------------- | ------ | ------------------------------------------ |
+| selectedItemsSource | string | Assignable collection or object expression |
 
 #### 対象オブジェクト
 
