@@ -5,12 +5,12 @@ slug: /commands/object-get-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *objectName* ) : Mixed<!-- END REF-->
+<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *objectName* ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectName | Text | &#8594;  | Object name |
-| Function result | Mixed | &#8592; | Current value of the form object's data source |
+| Function result | any | &#8592; | Current value of the form object's data source |
 
 <!-- END REF-->
 

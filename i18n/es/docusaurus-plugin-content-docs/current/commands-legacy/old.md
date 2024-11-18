@@ -5,12 +5,12 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *unCampo* ) : Expression<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *unCampo* ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594;  | Campo del cual devolver el valor anterior |
-| Resultado | Expression | &#8592; | Valor original del campo |
+| Resultado | any | &#8592; | Valor original del campo |
 
 <!-- END REF-->
 

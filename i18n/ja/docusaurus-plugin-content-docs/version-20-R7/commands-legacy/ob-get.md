@@ -5,14 +5,14 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) : Expression<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594;  | 構造化されたオブジェクト |
 | property | Text | &#8594;  | 情報を取得したいプロパティ名 |
 | type | Integer | &#8594;  | 値を変換したい型 |
-| 戻り値 | Expression | &#8592; | プロパティのカレントの値 |
+| 戻り値 | any | &#8592; | プロパティのカレントの値 |
 
 <!-- END REF-->
 

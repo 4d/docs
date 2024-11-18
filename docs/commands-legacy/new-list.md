@@ -5,11 +5,11 @@ slug: /commands/new-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New list.Syntax-->**New list**  : ListRef<!-- END REF-->
+<!--REF #_command_.New list.Syntax-->**New list**  : Integer<!-- END REF-->
 <!--REF #_command_.New list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | ListRef | &#8592; | List reference number |
+| Function result | Integer | &#8592; | List reference number |
 
 <!-- END REF-->
 

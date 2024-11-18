@@ -5,12 +5,12 @@ slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} : WinRef<!-- END REF-->
+<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, take floating windows into account If omitted, ignore floating windows |
-| Function result | WinRef | &#8592; | Window reference number |
+| Function result | Integer | &#8592; | Window reference number |
 
 <!-- END REF-->
 

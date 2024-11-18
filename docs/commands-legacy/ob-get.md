@@ -5,14 +5,14 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) : Expression<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to read |
 | type | Integer | &#8594;  | Type to which to convert the value |
-| Function result | Expression | &#8592; | Current value of property |
+| Function result | any | &#8592; | Current value of property |
 
 <!-- END REF-->
 

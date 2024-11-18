@@ -5,11 +5,11 @@ slug: /commands/last-table-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last table number.Syntax-->**Last table number**  : Inteiro longo<!-- END REF-->
+<!--REF #_command_.Last table number.Syntax-->**Last table number**  : Integer<!-- END REF-->
 <!--REF #_command_.Last table number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado de função | Inteiro longo | &#8592; | Número de tabela mais alto no banco de dados |
+| Resultado de função | Integer | &#8592; | Número de tabela mais alto no banco de dados |
 
 <!-- END REF-->
 
