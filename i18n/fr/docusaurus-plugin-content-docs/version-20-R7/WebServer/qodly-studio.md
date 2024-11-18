@@ -264,7 +264,7 @@ You just need then to implemented the [`authentify()`](../REST/authUsers.md#func
 
 :::note Compatibilité
 
-When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)) is enabled, any REST request, including the rendering of an authentication Qodly page, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Pour plus d'informations, veuillez vous référer à [cet article de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) qui détaille ce principe.
+When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth)) is enabled, any REST request, including the rendering of an authentication Qodly page, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Pour plus d'informations, veuillez vous référer à [cet article de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) qui détaille ce principe.
 
 :::
 
