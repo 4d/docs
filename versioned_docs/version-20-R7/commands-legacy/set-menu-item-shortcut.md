@@ -32,15 +32,15 @@ In *itemKey*, pass a string that indicates the shortcut key. The new shortcut wi
 
 In *modifiers*, you can pass additional modifiers to the shortcut, such as the **Shift** key. This way, you can define shortcuts like **Ctrl+Alt+Shift+Z** (Windows) or **Cmd+Option+Shift+Z** (macOS). Pass 0 if you don't want to add any modifiers. The following constants are available:
 
-* Command key mask for the **Command** (macOS) or **Ctrl** (Windows) key
-* Shift key mask for the **Shift** key
-* Option key mask for the **Option** (macOS) or **Alt** (Windows) key
+* `Command key mask` for the **Command** (macOS) or **Ctrl** (Windows) key
+* `Shift key mask` for the **Shift** key
+* `Option key mask` for the **Option** (macOS) or **Alt** (Windows) key
 
 To set a shortcut with several modifiers, just combine the above constants.
 
 If you omit the *process* parameter, **SET MENU ITEM SHORTCUT** applies to the menu bar for the current process. Otherwise, the command applies to the menu bar for the process whose reference number is passed in *process*.
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note:** If you pass a Menu reference (16-character alphanumeric) in *menu*, the *process* parameter serves no purpose and will be ignored.
 
 ##### Compatibility 
 
