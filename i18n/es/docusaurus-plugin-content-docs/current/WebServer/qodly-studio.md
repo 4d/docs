@@ -138,7 +138,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Debugger                                                                         | 4D IDE debugger<br/>_4D Server only_: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                    | Qodly Studio debugger                                                         |
 | Roles y privilegios REST/Web                                                     | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                                                                                                                        | Editor de roles y privilegios de Qodly Studio                                 |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
+(1) The **Model** item is disabled in Qodly Studio.<br/>
 (2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). Note that in 4D single-user, if you open some 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 ### Lenguaje
@@ -264,7 +264,7 @@ Entonces basta con implementar la función [`authentify()`](../REST/authUsers.md
 
 :::note Compatibilidad
 
-Cuando el modo de inicio de sesión ([obsoleto a partir de 4D 20 R6](https://blog.4d. om/force-login-now-is-the-default-mode-for-all-rest-authentications)) está habilitado, cualquier petición REST, incluyendo la representación de una página de autenticación Qodly, crea una sesión web en el servidor y obtiene una licencia de cliente 4D, cualquiera que sea el resultado real de la autenticación. Para más información, consulte [esta entrada de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) que cuenta la historia completa.
+When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth)) is enabled, any REST request, including the rendering of an authentication Qodly page, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Para más información, consulte [esta entrada de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) que cuenta la historia completa.
 
 :::
 
