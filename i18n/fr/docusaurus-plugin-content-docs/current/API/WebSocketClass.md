@@ -163,7 +163,7 @@ Cette propriété est en lecture seule.
 
 ## .id
 
-<!-- REF #WebSocketClass.id.Syntax -->**.id** : Longint<!-- END REF -->
+<!-- REF #WebSocketClass.id.Syntax -->**.id** : Integer<!-- END REF -->
 
 #### Description
 
