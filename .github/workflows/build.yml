@@ -13,4 +13,4 @@ jobs:
     uses: ./.github/workflows/workflow-build.yml
     concurrency:
       group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-      cancel-in-progress:  ${{ contains(github.ref, 'refs/heads/gk/concurrency') }}
+      cancel-in-progress:  ${{ contains(github.ref, 'l10n_main') }}
