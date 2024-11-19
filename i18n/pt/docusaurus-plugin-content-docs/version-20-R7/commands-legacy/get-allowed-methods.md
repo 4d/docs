@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->O comando GET ALLOWED METHODS retorna, em *arrMetodos*, os nomes dos métodos que possam ser utilizados para escrever fórmulas.<!-- END REF--> Estes métodos estão listados ao final da lista de comandos no editor.
 
-Automaticamente, os métodos não podem ser utilizados no editor de fórmulas. Os métodos devem ser autorizados explicitamente utilizando o comando [SET ALLOWED METHODS](set-allowed-methods.md "SET ALLOWED METHODS"). Se este comando não tiver sido executado, GET ALLOWED METHODS retorna um array vazio.  
+Automaticamente, os métodos não podem ser utilizados no editor de fórmulas. Os métodos devem ser autorizados explicitamente utilizando o comando [SET ALLOWED METHODS](../commands/set-allowed-methods.md "SET ALLOWED METHODS"). Se este comando não tiver sido executado, GET ALLOWED METHODS retorna um array vazio.  
   
-GET ALLOWED METHODS retorna exatamente o que se lhe passou a [SET ALLOWED METHODS](set-allowed-methods.md "SET ALLOWED METHODS"), ou seja um array alfa (o comando cria e dimensiona o array). Igualmente, se o caractere arroba (@) é utilizado para definir um grupo de métodos, é retornada a cadeia que contenha o caractere @ (e não os nomes dos métodos do grupo). 
+GET ALLOWED METHODS retorna exatamente o que se lhe passou a [SET ALLOWED METHODS](../commands/set-allowed-methods.md "SET ALLOWED METHODS"), ou seja um array alfa (o comando cria e dimensiona o array). Igualmente, se o caractere arroba (@) é utilizado para definir um grupo de métodos, é retornada a cadeia que contenha o caractere @ (e não os nomes dos métodos do grupo). 
 
 Este comando é útil para conservar os parâmetros do conjunto atual de métodos autorizados antes da execução de uma fórmula em um contexto específico (por exemplo, um relatório rápido). 
 
@@ -45,4 +45,4 @@ Este exemplo autoriza um conjunto de métodos específicos para criar um relató
 
 #### Ver também 
 
-[SET ALLOWED METHODS](set-allowed-methods.md)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  

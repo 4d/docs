@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->The **GET ALLOWED METHODS** command returns, in *methodsArray*, the names of methods that can be used to write formulas.<!-- END REF--> These methods are listed at the end of the list of commands in the editor. 
 
-By default, methods cannot be used in the Formula editor. Methods must be explicitly authorized using the [SET ALLOWED METHODS](set-allowed-methods.md) command. If this command has not been executed, **GET ALLOWED METHODS** returns an empty array.  
+By default, methods cannot be used in the Formula editor. Methods must be explicitly authorized using the [SET ALLOWED METHODS](../commands/set-allowed-methods.md) command. If this command has not been executed, **GET ALLOWED METHODS** returns an empty array.  
   
-**GET ALLOWED METHODS** returns exactly what was passed to the [SET ALLOWED METHODS](set-allowed-methods.md) command, i.e. a string array (the command creates and sizes the array). Also, if the wildcard (@) character is used to set a group of methods, the string containing the @ character is returned (and not the names of the methods of the group). 
+**GET ALLOWED METHODS** returns exactly what was passed to the [SET ALLOWED METHODS](../commands/set-allowed-methods.md) command, i.e. a string array (the command creates and sizes the array). Also, if the wildcard (@) character is used to set a group of methods, the string containing the @ character is returned (and not the names of the methods of the group). 
 
 This command is useful for storing the settings of the current set of authorized methods before the execution of a formula in a specific context (for instance, a quick report). 
 
@@ -45,4 +45,4 @@ This example authorizes a set of specific methods to create a report:
 
 #### See also 
 
-[SET ALLOWED METHODS](set-allowed-methods.md)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  

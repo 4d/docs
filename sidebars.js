@@ -732,7 +732,7 @@ module.exports =
 						"commands/formula-from-string",
 						"commands-legacy/get-allowed-methods",
 						"commands-legacy/parse-formula",
-						"commands-legacy/set-allowed-methods"
+						"commands/set-allowed-methods"
 					]
 					},
 					{

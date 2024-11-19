@@ -136,4 +136,4 @@ O método myCallbackMeth converte o relatório quando é gerado:
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-[SET ALLOWED METHODS](set-allowed-methods.md)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
