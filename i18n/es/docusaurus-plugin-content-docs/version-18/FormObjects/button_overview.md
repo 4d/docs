@@ -331,4 +331,4 @@ Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón]
 
 - [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
 - [Botón por defecto](properties_Appearance.md#default-button) (Plano, Clásico)
-- [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+- [Posición Título/Imagen](properties_TextAndPicture.md#titlepicture-position) - [Con menú emergente](properties_TextAndPicture.md#with-pop-up-menu) (Barra de herramientas, Bisel, Bisel redondeado, OS X Degradado, OS X Texturizado, Office XP, Círculo, Personalizado)
