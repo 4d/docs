@@ -120,7 +120,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|rangeObj| Text|->|Range object |<!-- END REF -->
+|rangeObj| Object|->|Range object |<!-- END REF -->
 
 #### Description
 
@@ -1602,7 +1602,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Object|->|4D View Pro area form object name|
+|vpAreaName |Text|->|4D View Pro area form object name|
 |sheet|Integer|->|Index of the sheet to get the data context from|
 |Result |Object &#124; Collection |<-|Data context|<!-- END REF -->
 
@@ -4771,7 +4771,7 @@ End case
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Object|->|4D View Pro area form object name|
+|vpAreaName |Text|->|4D View Pro area form object name|
 |dataObj|Object|->|Data object to load in the data context|
 |dataColl|Collection|->|Data collection to load in the data context|
 |options |Object|->|Additional options|
@@ -5555,7 +5555,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Object|->|4D View Pro area name|
+|vpAreaName |Text|->|4D View Pro area name|
 |sheetOptions |Object|->|Sheet option(s) to set|
 |sheet |Object|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 

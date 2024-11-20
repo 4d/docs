@@ -10,7 +10,7 @@ title: VP SET SHEET OPTIONS
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Object|->|4D View Pro area name|
+|vpAreaName |Text|->|4D View Pro area name|
 |sheetOptions |Object|->|Sheet option(s) to set|
 |sheet |Object|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 

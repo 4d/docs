@@ -11,7 +11,7 @@ title: VP ADD SELECTION
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|rangeObj| Text|->|Range object |<!-- END REF -->
+|rangeObj| Object|->|Range object |<!-- END REF -->
 
 #### Description
 
