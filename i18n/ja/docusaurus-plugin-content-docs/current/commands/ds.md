@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 *localID* を省略した (または空の文字列 "" を渡した) 場合には、ローカル4Dデータベース (4D Server でリモートデータベースを開いている場合にはそのデータベース) に合致するデータストアの参照を返します。 データストアは自動的に開かれ、`ds` を介して直接利用することができます。
 
-開かれているリモートデータストアのローカルIDを *localID* パラメーターに渡すと、その参照を取得できます。 The datastore must have been previously opened with the [`Open datastore`](open-datastore.md) command by the current database (host or component). このコマンドを使用したときにローカルIDが定義されます。
+開かれているリモートデータストアのローカルIDを *localID* パラメーターに渡すと、その参照を取得できます。 このデータストアは、あらかじめカレントデータベース (ホストまたはコンポーネント) によって [`Open datastore`](open-datastore.md) コマンドで開かれている必要があります。 このコマンドを使用したときにローカルIDが定義されます。
 
 > ローカルIDのスコープは、当該データストアを開いたデータベースです。
 
 *localID* に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](../ORDA/dsMapping.md#general-rules).
+`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](../ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
 
 #### 例題 1
 
@@ -57,11 +57,6 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
 ```4d
-  //getFirst method
-  //getFirst(localID;dataclass) -> entity
- #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
-
- $entity:=ds($localId)[$dataClassName].all().first()
 ```
 
 #### 参照
