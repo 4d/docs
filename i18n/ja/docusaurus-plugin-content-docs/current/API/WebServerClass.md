@@ -147,7 +147,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 ## .debugLog
 
-<!-- REF #WebServerClass.debugLog.Syntax -->**.debugLog** : Number<!-- END REF -->
+<!-- REF #WebServerClass.debugLog.Syntax -->**.debugLog** : Integer<!-- END REF -->
 
 The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファイルの状態<!-- END REF --> (アプリケーションの"Logs" フォルダーに格納されている HTTPDebugLog_nn.txt ファイル (nn はファイル番号))。
 
@@ -183,7 +183,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .HSTSMaxAge
 
-<!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.HSTSMaxAge.Summary -->新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位)<!-- END REF -->。 この情報はクライアント側で指定された時間のあいだ保存されます。
 
@@ -195,7 +195,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .HTTPCompressionLevel
 
-<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->4D HTTPサーバーの HTTP圧縮通信 (クライアントリクエストまたはサーバーレスポンス) における圧縮レベル<!-- END REF -->。 このセレクターを使って、実行速度を優先するか (圧縮少)、それとも圧縮レベルを優先するか (速度減) を指定し、通信を最適化することができます。
 
@@ -212,7 +212,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .HTTPCompressionThreshold
 
-<!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->HTTP圧縮のしきい値 (バイト単位)。このサイズ未満のリクエストについては、通信が圧縮されません<!-- END REF -->。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
 
@@ -234,7 +234,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .HTTPPort
 
-<!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.HTTPPort.Summary -->HTTP のリッスンIPポート番号<!-- END REF -->。
 
@@ -266,7 +266,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .HTTPSPort
 
-<!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.HTTPSPort.Summary -->HTTPS のリッスンIPポート番号<!-- END REF -->。
 
@@ -278,7 +278,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .inactiveProcessTimeout
 
-<!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->**.inactiveProcessTimeout** : Number<!-- END REF -->
+<!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->**.inactiveProcessTimeout** : Integer<!-- END REF -->
 
 > [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。
 
@@ -292,7 +292,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .inactiveSessionTimeout
 
-<!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->**.inactiveSessionTimeout** : Number<!-- END REF -->
+<!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->**.inactiveSessionTimeout** : Integer<!-- END REF -->
 
 > [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。
 
@@ -342,7 +342,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .logRecording
 
-<!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Number<!-- END REF -->
+<!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.logRecording.Summary -->リクエストログ (logweb.txt) の記録オプション値<!-- END REF -->。
 
@@ -358,7 +358,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .maxConcurrentProcesses
 
-<!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Number<!-- END REF -->
+<!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->Webサーバーにてサポートする最大同時Webプロセス数<!-- END REF -->。 この数値 (マイナス1) に達すると、4D はプロセスを作成しなくなり、新規リクエストに対して HTTPステータス 503 - Service Unavailable を返します。
 
@@ -372,7 +372,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .maxRequestSize
 
-<!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
+<!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.maxRequestSize.Summary -->Webサーバーが処理してよい HTTPリクエスト (POST) の最大サイズ (バイト単位)<!-- END REF -->。 最大値 (2147483647) に設定した場合、実際には制限無しということになります。 制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 リクエストのサイズが制限に達していると、Webサーバーによって拒否されます。
 
@@ -384,7 +384,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .maxSessions
 
-<!-- REF #WebServerClass.maxSessions.Syntax -->**.maxSessions** : Number<!-- END REF -->
+<!-- REF #WebServerClass.maxSessions.Syntax -->**.maxSessions** : Integer<!-- END REF -->
 
 > [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。
 
@@ -396,7 +396,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 ## .minTLSVersion
 
-<!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Number<!-- END REF -->
+<!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Integer<!-- END REF -->
 
 <!-- REF #WebServerClass.minTLSVersion.Summary -->接続に必要な最低TLSバージョン<!-- END REF -->。 これよりも低いバージョンのみをサポートするクライアントからの接続は拒否されます。
 
