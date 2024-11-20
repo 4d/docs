@@ -163,7 +163,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 ## .id
 
-<!-- REF #WebSocketClass.id.Syntax -->**.id** : Longint<!-- END REF -->
+<!-- REF #WebSocketClass.id.Syntax -->**.id** : Integer<!-- END REF -->
 
 #### 説明
 
