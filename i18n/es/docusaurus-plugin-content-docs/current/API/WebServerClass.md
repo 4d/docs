@@ -147,7 +147,7 @@ Contiene la <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts y de
 
 ## .debugLog
 
-<!-- REF #WebServerClass.debugLog.Syntax -->**.debugLog** : Number<!-- END REF -->
+<!-- REF #WebServerClass.debugLog.Syntax -->**.debugLog** : Integer<!-- END REF -->
 
 El <!-- REF #WebServerClass.debugLog.Summary -->estado del archivo de registro de peticiones HTTP<!-- END REF --> (HTTPDebugLog_nn.txt, almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo).
 
@@ -183,7 +183,7 @@ El estado <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport 
 
 ## .HSTSMaxAge
 
-<!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Integer<!-- END REF -->
 
 El <!-- REF #WebServerClass.HSTSMaxAge.Summary -->máximo de tiempo (en segundos) que HSTS está activo para cada nueva conexión cliente<!-- END REF -->. Esta información se almacena del lado del cliente durante el tiempo especificado.
 
@@ -195,7 +195,7 @@ Valor por defecto: 63072000 (2 años).
 
 ## .HTTPCompressionLevel
 
-<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Integer<!-- END REF -->
 
 El <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->nivel de compresión para todos los intercambios HTTP comprimidos para el servidor HTTP 4D (peticiones del cliente o respuestas del servidor)<!-- END REF -->. Este selector permite optimizar los intercambios priorizando la velocidad de ejecución (menos compresión) o la cantidad de compresión (menos velocidad).
 
@@ -212,7 +212,7 @@ Valores posibles:
 
 ## .HTTPCompressionThreshold
 
-<!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Integer<!-- END REF -->
 
 El <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->umbral de tamaño (bytes) para las solicitudes por debajo del cual los intercambios no deben ser comprimidos<!-- END REF -->. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.
 
@@ -234,7 +234,7 @@ El estado del protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!--
 
 ## .HTTPPort
 
-<!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Integer<!-- END REF -->
 
 El estado del protocolo<!-- REF #WebServerClass.HTTPnabled.Summary -->HTTPS<!-- END REF -->.
 
@@ -266,7 +266,7 @@ El <!-- REF #WebServerClass.HTTPSEnabled.Summary -->estado del protocolo HTTPS<!
 
 ## .HTTPSPort
 
-<!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Number<!-- END REF -->
+<!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Integer<!-- END REF -->
 
 El <!-- REF #WebServerClass.HTTPSPort.Summary --> número de puerto IP de escucha para HTTPS<!-- END REF -->.
 
@@ -278,7 +278,7 @@ Por defecto = 443
 
 ## .inactiveProcessTimeout
 
-<!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->**.inactiveProcessTimeout** : Number<!-- END REF -->
+<!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->**.inactiveProcessTimeout** : Integer<!-- END REF -->
 
 > Esta propiedad no se devuelve en [modo sesiones escalables](#scalablesession).
 
@@ -292,7 +292,7 @@ Por defecto = 480 minutos
 
 ## .inactiveSessionTimeout
 
-<!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->**.inactiveSessionTimeout** : Number<!-- END REF -->
+<!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->**.inactiveSessionTimeout** : Integer<!-- END REF -->
 
 > Esta propiedad no se devuelve en [modo sesiones escalables](#scalablesession).
 
@@ -342,7 +342,7 @@ Contiene <!-- REF #WebServerClass.keepSession.Summary -->`True` si las sesiones 
 
 ## .logRecording
 
-<!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Number<!-- END REF -->
+<!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Integer<!-- END REF -->
 
 El valor de registro <!-- REF #WebServerClass.logRecording.Summary -->log (logweb.txt)<!-- END REF -->.
 
@@ -358,7 +358,7 @@ El valor de registro <!-- REF #WebServerClass.logRecording.Summary -->log (logwe
 
 ## .maxConcurrentProcesses
 
-<!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Number<!-- END REF -->
+<!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Integer<!-- END REF -->
 
 El <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->número máximo de procesos web concurrentes que soporta el servidor web<!-- END REF -->. Cuando se alcance este número (menos uno), 4D no creará ningún otro proceso y devolverá el estado HTTP 503 - Servicio no disponible a todas las nuevas peticiones.
 
@@ -372,7 +372,7 @@ Valores posibles: 500000 - 2147483648
 
 ## .maxRequestSize
 
-<!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
+<!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Integer<!-- END REF -->
 
 Contiene el <!-- REF #WebServerClass.maxRequestSize.Summary -->tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar<!-- END REF -->. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Si una petición alcanza este límite, el servidor web la rechaza.
 
@@ -384,7 +384,7 @@ Valores posibles: 500000 - 2147483647
 
 ## .maxSessions
 
-<!-- REF #WebServerClass.maxSessions.Syntax -->**.maxSessions** : Number<!-- END REF -->
+<!-- REF #WebServerClass.maxSessions.Syntax -->**.maxSessions** : Integer<!-- END REF -->
 
 > Esta propiedad no se devuelve en [modo sesiones escalables](#scalablesession).
 
@@ -396,7 +396,7 @@ Contiene el <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de s
 
 ## .minTLSVersion
 
-<!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Number<!-- END REF -->
+<!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Integer<!-- END REF -->
 
 La <!-- REF #WebServerClass.minTLSVersion.Summary -->versión TLS mínima aceptada para las conexiones<!-- END REF -->. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.
 

@@ -8,4 +8,4 @@ displayed_sidebar: docs
 | ---------- | ------ | - | --------------------------- |
 | classStore | Object | ← | プロジェクトまたはコンポーネントのユーザークラスストア |
 
-The **cs** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#cs).
+**cs** キーワードは、[**クラスのコンセプト**](../Concepts/classes.md#cs) で説明されています。

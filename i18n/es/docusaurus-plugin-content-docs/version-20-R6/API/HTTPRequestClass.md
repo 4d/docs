@@ -159,7 +159,7 @@ Todas las funciones de retrollamada reciben dos parámetros objeto:
 | Parámetros | Tipo                                        |
 | ---------- | ------------------------------------------- |
 | $param1    | [`Objeto HTTPRequest`](#httprequest-object) |
-| $param2    | [`Objeto Event`](#event-object)             |
+| $param2    | [Objeto `Event`](#event-object)             |
 
 Esta es la secuencia de llamadas de retorno:
 
