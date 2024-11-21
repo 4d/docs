@@ -9,9 +9,9 @@ title: VP ADD SELECTION
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
-| Parámetros | Tipo |    | Descripción  |                  |
-| ---------- | ---- | -- | ------------ | ---------------- |
-| rangeObj   | Text | -> | Objeto rango | <!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción  |                  |
+| ---------- | ------ | -- | ------------ | ---------------- |
+| rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
 
 #### Descripción
 
