@@ -273,7 +273,7 @@ El estilo del botón Ayuda puede utilizarse para mostrar un botón de ayuda est�
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) basic properties.
+> El estilo Ayuda no admite las propiedades básicas [Número de estados](properties_TextAndPicture.md#number-of-states), [Ruta de acceso a la imagen](properties_TextAndPicture.md#picture-pathname) y [Posición Título/Imagen](properties_TextAndPicture.md#titlepicture-position).
 
 ### Círculo
 
