@@ -19,7 +19,7 @@ title: VP SET DATA CONTEXT
 
 | 引数         | 型          |    | 説明                       |                  |
 | ---------- | ---------- | -- | ------------------------ | ---------------- |
-| vpAreaName | Object     | -> | 4D View Pro フォームオブジェクト名  |                  |
+| vpAreaName | Text       | -> | 4D View Pro フォームオブジェクト名  |                  |
 | dataObj    | Object     | -> | データコンテキストに読み込むデータオブジェクト  |                  |
 | dataColl   | Collection | -> | データコンテキストに読み込むデータのコレクション |                  |
 | options    | Object     | -> | 追加のオプション                 |                  |
