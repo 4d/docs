@@ -91,7 +91,7 @@ Para ser usado pelo servidor da aplicação 4D, os arquivos **key.pem** e **cert
 
 #### Com o servidor SQL
 
-Para serem utilizados pelo servidor SQL 4D, os ficheiros **key.pem** e **cert.pem** devem ser colocados ao lado da pasta do projecto [](Project/architecture.md#project-folder).
+Para serem utilizados pelo servidor SQL 4D, os ficheiros **key.pem** e **cert.pem** devem ser colocados ao lado da pasta do projecto[](Project/architecture.md#project-folder).
 
 ### Ativar TLS
 
