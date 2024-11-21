@@ -59,7 +59,9 @@ If *expression* is a Date expression and if you omit the *format* parameter, the
 
 Otherwise, in the *format* parameter, you can pass:
 
-* either a predefined format available though the following constants of the *Date Display Formats* theme (longint value):  
+* either a predefined format available though the following constants of the *Date Display Formats* theme (longint value): 
+
+
 | Constant                    | Value | Comment                                                                                                                         |  
 | --------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null date          | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros |  
@@ -133,6 +135,7 @@ If *expression* is a Time expression and if you omit the *format* parameter, the
 Otherwise, in the *format* parameter, you can pass:
 
 * either a predefined format available though the following constants of the *Time Display Formats* theme (longint value):  
+
 | Constant                     | Value | Comment                                                                                                                                                                                                                               |  
 | ---------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null time           | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros                                                                                                       |  
@@ -154,6 +157,7 @@ Examples:
  $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
+
 * or a [customized format built upon a pattern](https://developer.4d.com/docs/Project/date-time-formats) (string value)  
 Examples:  
     

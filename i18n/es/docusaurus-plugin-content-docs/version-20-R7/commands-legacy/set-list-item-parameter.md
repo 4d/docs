@@ -32,8 +32,9 @@ Finalmente, puede pasar *\** en *refElem: e*n este caso, el comando será aplica
   
 En *selector*, puede pasar:
 
-* una de las siguientes constantes (del tema “*Listas jerárquicas*”):  
-| Constante                  | Tipo   | Valor                      | Comentario                                                                                                                                                                                                                                                                                                    |  
+* una de las siguientes constantes (del tema “*Listas jerárquicas*”): 
+ 
+|Constante                  | Tipo   | Valor                      | Comentario                                                                                                                                                                                                                                                                                                    |  
 | -------------------------- | ------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Cadena | 4D\_additional\_text       | Esta constante se utiliza para agregar texto a la derecha del elemento *refElem*. Este título adicional siempre se mostrará en la parte derecha de la lista, incluso cuando el usuario mueva el cursor de desplazamiento horizontal. Cuando utilice esta constante, pase el texto que se mostrará en *valor*. |  
 | Associated standard action | Cadena | 4D\_standard\_action\_name | Asociar una acción estándar con el *refElem*. En este caso, debe pasar en el parámetro *valor* un nombre de acción estándar con un parámetro, por ejemplo "fontSize?value=10pt". Para más información, consulte la sección *Acciones estándar* del manual de *Diseño*.                                        |

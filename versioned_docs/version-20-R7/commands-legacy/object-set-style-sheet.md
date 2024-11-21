@@ -28,7 +28,8 @@ In the *styleSheetName* parameter, you pass the name of the style sheet to be ap
 
 * the name of an existing style sheet (if the style sheet does not exist, an error is returned, that you can intercept using a method installed by the [ON ERR CALL](on-err-call.md) command),
 * an empty string ("") so as to not apply the style sheet to the *object*, or
-* one of the following constants found in the "*Font Styles*" theme in order to apply an automatic style sheet:  
+* one of the following constants found in the "*Font Styles*" theme in order to apply an automatic style shee:  
+
 | Constant                          | Type   | Value                               | Comment                                                                                        |  
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Text | \_\_automatic\_\_                   | Used by default for all objects                                                                |  

@@ -30,8 +30,9 @@ Puede pasar:
 
 Después de la llamada:
 
-* *campTipo* devuelve el tipo del campo. El parámetro variable *campTipo* recibe uno de los valores predefinidos por las constantes de 4D (tema *Tipos de campos y variables*):  
-| Constante          | Tipo         | Valor |  
+* *campTipo* devuelve el tipo del campo. El parámetro variable *campTipo* recibe uno de los valores predefinidos por las constantes de 4D (tema *Tipos de campos y variables*): 
+ 
+|Constante          | Tipo         | Valor |  
 | ------------------ | ------------ | ----- |  
 | Is alpha field     | Entero largo | 0     |  
 | Is BLOB            | Entero largo | 30    |  
