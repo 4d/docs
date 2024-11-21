@@ -133,7 +133,7 @@ O 4D View Pro permite que você defina e chame **funções personalizadas 4D**, 
 - Comandos de linguagem 4D,
 - ou qualquer expressão 4D válida.
 
-4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
+As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
 You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. Exemplos:
 
@@ -280,7 +280,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 ### Referência a campos utilizando a estrutura virtual
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
+4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. Essa solução alternativa pode ser útil se o seu aplicativo já depender de uma estrutura virtual (caso contrário, recomenda-se [usar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATENÇÃO:** Você não pode usar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
