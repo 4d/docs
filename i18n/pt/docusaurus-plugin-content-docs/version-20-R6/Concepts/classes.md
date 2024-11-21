@@ -727,7 +727,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave Super , esteja atento que This não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Veja [este exemplo](#exemplo-1).
+> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave Super , esteja atento que This não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Veja [este exemplo](#example-1).
 
 Em qualquer caso, `This` refere-se ao objeto em que o método foi chamado, como se o método estivesse no objeto.
 
