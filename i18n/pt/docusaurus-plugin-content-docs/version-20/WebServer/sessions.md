@@ -34,7 +34,7 @@ In any cases, the setting is local to the machine; so it can be different on the
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
+Quando [as sessões são ativadas](#enabling-sessions), mecanismos automáticos são implementados, com base em um cookie privado definido pelo próprio 4D: "*4DSID_AppName*", onde *AppName* é o nome do projeto da aplicação. Este cookie faz referência à sessão web atual da aplicação.
 
 > The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
 
