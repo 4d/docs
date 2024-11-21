@@ -107,9 +107,9 @@ VP ADD RANGE NAME($range;"Total1")
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
-| Paramètres | Type |    | Description                             |
-| ---------- | ---- | -- | --------------------------------------- |
-| rangeObj   | Text | -> | Objet plage |<!-- END REF -->
+| Paramètres | Type   |    | Description                             |
+| ---------- | ------ | -- | --------------------------------------- |
+| rangeObj   | Object | -> | Objet plage |<!-- END REF -->
 
 |
 
@@ -354,8 +354,8 @@ $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
 | Paramètres | Type    |    | Description                                              |
 | ---------- | ------- | -- | -------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
-| column     | Longint | -> | Indice de la colonne                                     |
-| row        | Longint | -> | Indice de la ligne                                       |
+| column     | Integer | -> | Indice de la colonne                                     |
+| row        | Integer | -> | Indice de la ligne                                       |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
 | Résultat   | Object  | <- | Objet plage d'une seule cellule                          |
 <!-- END REF -->
@@ -699,7 +699,7 @@ Vous pouvez passer un paramètre facultatif *options* contenant les propriétés
 | Propriété   | Type    | Description                                                                                                                       |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | copy        | Boolean | *Vrai* (par défaut) pour conserver les valeurs, formatages et formules après exécution de la commande. *Faux* pour les supprimer. |
-| copyOptions | Longint | Spécifie ce qui est copié ou déplacé. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Copie tous les objets de données, y compris les valeurs, formats et formules.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copie uniquement les formats.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copie uniquement les formules.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copie les formules et les formats.</td></tr><tr><td>`vk clipboard options values`</td><td>Copie uniquement les valeurs.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copie les valeurs et les formats.</td></tr></table></p>                                                |
+| copyOptions | Integer | Spécifie ce qui est copié ou déplacé. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Copie tous les objets de données, y compris les valeurs, formats et formules.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copie uniquement les formats.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copie uniquement les formules.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copie les formules et les formats.</td></tr><tr><td>`vk clipboard options values`</td><td>Copie uniquement les valeurs.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copie les valeurs et les formats.</td></tr></table></p>                                                |
 
 Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
@@ -1636,7 +1636,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 | Paramètres | Type                     |    | Description                                              |
 | ---------- | ------------------------ | -- | -------------------------------------------------------- |
-| vpAreaName | Object                   | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| vpAreaName | Text                     | -> | Nom d'objet formulaire zone 4D View Pro                  |
 | sheet      | Integer                  | -> | Indice de la feuille de laquelle obtenir le data context |
 | Résultat   | Object &#124; Collection | <- | Data context|<!-- END REF -->
 
@@ -3379,7 +3379,7 @@ The *options* parameter has several properties:
 | Propriété    | Type    | Description                                                                                                                                       |
 | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | copy         | Boolean | Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (default) to remove them</li><li>*True* to keep them</li></ul> |
-| pasteOptions | Longint | Specifies what is pasted. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                           |
+| pasteOptions | Integer | Specifies what is pasted. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                           |
 
 
 Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
@@ -3558,7 +3558,7 @@ $cellStyle.font:=VP Object to font($font)
 | ---------- | ------- | -- | --------------------------------------------------- |
 | rangeObj   | Object  | -> | Objet plage de cellules                             |
 | dataObject | Object  | -> | Object containing the data to be pasted             |
-| options    | Longint | -> | Specifies what is pasted|<!-- END REF -->
+| options    | Integer | -> | Specifies what is pasted|<!-- END REF -->
 
 |
 
@@ -4911,7 +4911,7 @@ End case
 
 | Paramètres | Type       |    | Description                                                 |
 | ---------- | ---------- | -- | ----------------------------------------------------------- |
-| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                     |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                     |
 | dataObj    | Object     | -> | Objet de données à charger dans le contexte de données      |
 | dataColl   | Collection | -> | Collection de données à charger dans le contexte de données |
 | options    | Object     | -> | Options supplémentaires                                     |
@@ -5717,7 +5717,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 | Paramètres   | Type   |    | Description                                                                |
 | ------------ | ------ | -- | -------------------------------------------------------------------------- |
-| vpAreaName   | Object | -> | Nom de la zone 4D View Pro                                                 |
+| vpAreaName   | Text   | -> | Nom de la zone 4D View Pro                                                 |
 | sheetOptions | Object | -> | Option(s) de la feuille à définir                                          |
 | sheet        | Object | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
 
