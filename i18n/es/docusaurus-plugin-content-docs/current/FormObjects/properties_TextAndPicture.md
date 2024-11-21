@@ -7,7 +7,7 @@ title: Texto e Imagen
 
 Define la ruta de la imagen que se dibujará en el fondo del objeto. Si el objeto utiliza un [icono](#picture-pathname) con [diferentes estados](#number-of-states), la imagen de fondo soportará automáticamente el mismo número de estados.
 
-El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
 #### Gramática JSON
 
@@ -135,7 +135,7 @@ Cada estado está representado por una imagen diferente. En la imagen fuente, lo
 
 Define la ruta de la imagen que se utilizará como icono del objeto.
 
-El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
 > Cuando se utiliza como icono de objetos activos, la imagen debe estar diseñada para soportar un [número de estados](#number-of-states) variable.
 
