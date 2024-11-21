@@ -5,7 +5,7 @@ title: Usuários e sessões
 
 ## Sessões
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
+Quando [sessões escalonáveis estão ativadas](WebServer/sessions.md#enabling-sessions) (recomendado), as solicitações REST podem criar e usar [sessões de usuário Web](WebServer/sessions.md), fornecendo recursos adicionais, como manipulação de várias solicitações, compartilhamento de dados entre processos de clientes da Web e controle de privilégios de usuário.
 
 Cuando se abre una sesión de usuario web, puede manejarla a través del objeto `Session` y la [Session API](API/SessionClass.md). Subsequent REST requests reuse the same session cookie.
 
@@ -68,7 +68,7 @@ The `authentify()` function can always be executed by a REST guest session, what
 
 :::
 
-The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
+A função pode receber qualquer autenticação ou informação contextual como [parâmetro(s)](ClassFunctions.md#parameters) e pode retornar qualquer valor. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
 
 Esta função deve conter duas partes:
 
