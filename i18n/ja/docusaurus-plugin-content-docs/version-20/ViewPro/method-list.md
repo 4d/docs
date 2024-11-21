@@ -107,9 +107,9 @@ VP ADD RANGE NAME($range;"Total1")
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
-| 引数       | 型    |    | 説明                                    |
-| -------- | ---- | -- | ------------------------------------- |
-| rangeObj | Text | -> | レンジオブジェクト |<!-- END REF -->
+| 引数       | 型      |    | 説明                                    |
+| -------- | ------ | -- | ------------------------------------- |
+| rangeObj | Object | -> | レンジオブジェクト |<!-- END REF -->
 
 |
 
@@ -354,8 +354,8 @@ $all:=VP All("ViewProArea") // カレントシートの全セル
 | 引数         | 型       |    | 説明                          |
 | ---------- | ------- | -- | --------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名     |
-| column     | Longint | -> | カラムのインデックス                  |
-| row        | Longint | -> | 行のインデックス                    |
+| column     | Integer | -> | カラムのインデックス                  |
+| row        | Integer | -> | 行のインデックス                    |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
 | 戻り値        | Object  | <- | 単一セルのレンジオブジェクト              |
 <!-- END REF -->
@@ -699,7 +699,7 @@ $vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出しま�
 | プロパティ       | 型       | 説明                                                           |
 | ----------- | ------- | ------------------------------------------------------------ |
 | copy        | Boolean | コマンド実行後もコピーされた値、書式、数式が保持するには *true* (デフォルト)。 削除するには *false*。 |
-| copyOptions | Longint | コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをコピーします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをコピーします。</td></tr></table></p>          |
+| copyOptions | Integer | コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをコピーします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをコピーします。</td></tr></table></p>          |
 
 [ワークブックオプション](#vp-set-workbook-options) で定義されている貼り付けオプションが考慮されます。
 
@@ -1636,7 +1636,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 | 引数         | 型                        |    | 説明                                   |
 | ---------- | ------------------------ | -- | ------------------------------------ |
-| vpAreaName | Object                   | -> | 4D View Pro フォームオブジェクト名              |
+| vpAreaName | Text                     | -> | 4D View Pro フォームオブジェクト名              |
 | sheet      | Integer                  | -> | データコンテキストを取得するシートのインデックス             |
 | 戻り値        | Object &#124; Collection | <- | データコンテキスト|<!-- END REF -->
 
@@ -3381,7 +3381,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 | プロパティ        | 型       | 説明                                                                              |
 | ------------ | ------- | ------------------------------------------------------------------------------- |
 | copy         | Boolean | *originRange* のセルの値・書式・フォーミュラをコマンド実行後に削除するかどうかを指定します:<ul><li>削除するには false (デフォルト)。</li><li>保持するには true。</li></ul> |
-| pasteOptions | Longint | ペーストする内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値・フォーマット・フォーミュラを含むすべてのデータオブジェクトをペーストします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをペーストします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをペーストします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをペーストします。</td></tr></table></p>                                |
+| pasteOptions | Integer | ペーストする内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値・フォーマット・フォーミュラを含むすべてのデータオブジェクトをペーストします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをペーストします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをペーストします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをペーストします。</td></tr></table></p>                                |
 
 
 [ワークブックオプション](#vp-set-workbook-options) で定義されている貼り付けオプションが考慮されます。
@@ -3560,7 +3560,7 @@ $cellStyle.font:=VP Object to font($font)
 | ---------- | ------- | -- | ----------------------------------------- |
 | rangeObj   | Object  | -> | セルレンジオブジェクト                               |
 | dataObject | Object  | -> | ペーストするデータを格納したオブジェクト                      |
-| options    | Longint | -> | ペーストする内容を指定します|<!-- END REF -->
+| options    | Integer | -> | ペーストする内容を指定します|<!-- END REF -->
 
 |
 
@@ -4914,7 +4914,7 @@ End case
 
 | 引数         | 型          |    | 説明                                    |
 | ---------- | ---------- | -- | ------------------------------------- |
-| vpAreaName | Object     | -> | 4D View Pro フォームオブジェクト名               |
+| vpAreaName | Text       | -> | 4D View Pro フォームオブジェクト名               |
 | dataObj    | Object     | -> | データコンテキストに読み込むデータオブジェクト               |
 | dataColl   | Collection | -> | データコンテキストに読み込むデータのコレクション              |
 | options    | Object     | -> | 追加のオプション                              |
@@ -5720,7 +5720,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 | 引数           | 型      |    | 説明                                                     |
 | ------------ | ------ | -- | ------------------------------------------------------ |
-| vpAreaName   | Object | -> | 4D View Pro エリア名                                       |
+| vpAreaName   | Text   | -> | 4D View Pro エリア名                                       |
 | sheetOptions | Object | -> | 設定するシートオプション                                           |
 | sheet        | Object | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
 
