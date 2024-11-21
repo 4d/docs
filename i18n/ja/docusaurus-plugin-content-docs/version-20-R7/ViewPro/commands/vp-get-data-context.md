@@ -19,7 +19,7 @@ title: VP Get data context
 
 | 引数         | 型                    |                             | 説明                       |                  |
 | ---------- | -------------------- | --------------------------- | ------------------------ | ---------------- |
-| vpAreaName | Object               | ->                          | 4D View Pro フォームオブジェクト名  |                  |
+| vpAreaName | Text                 | ->                          | 4D View Pro フォームオブジェクト名  |                  |
 | sheet      | Integer              | ->                          | データコンテキストを取得するシートのインデックス |                  |
 | 戻り値        | Object \| Collection | <- | データコンテキスト                | <!-- END REF --> |
 
