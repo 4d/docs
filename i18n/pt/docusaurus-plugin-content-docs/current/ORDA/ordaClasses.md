@@ -855,11 +855,11 @@ In the HTTP GET request, parameters must be passed directly in the URL and decla
 IP:port/rest/<dataclass>/functionName?$params='[<params>]'
 ```
 
-See the [Parameters](../REST/classFunctions#parameters) section in the REST server documentation.
+Consulte a seção [Parâmetros](../REST/classFunctions#parameters) na documentação do servidor REST.
 
 ### resultado
 
-A function with `onHttpGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+Uma função com a palavra-chave `onHttpGet` pode retornar qualquer valor de um tipo compatível (o mesmo que para [parâmetros](../REST/classFunctions#parameters) REST).
 
 :::info
 
