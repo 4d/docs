@@ -3,11 +3,11 @@ id: OutGoingMessageClass
 title: OutGoingMessage
 ---
 
-The `4D.OutGoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutGoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
+`4D.OutGoingMessage` クラスを使うと、アプリケーションの関数が[REST リクエスト](../REST/REST_requests.md) に応答して返すメッセージを作成することができます。 レスポンスが`4D.OutGoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。
 
-Typically, this class can be used in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser.
+一般的に、このクラスは、[`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言され、HTTP GET リクエストを処理するように設計された関数の中で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
 
-An instance of this class is built on 4D Server and can be sent to the browser by the [4D REST Server](../REST/gettingStarted.md) only. This class allows to use other technologies than HTTP (e.g. mobile).
+このクラアスのインスタンスは4D Server 上にビルドされ、[4D REST サーバー](../REST/gettingStarted.md) によってのみブラウザに送信することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。
 
 <details><summary>履歴</summary>
 
@@ -19,7 +19,7 @@ An instance of this class is built on 4D Server and can be sent to the browser b
 
 ### 例題
 
-In this example, a `getFile()` function is implemented in the [Datastore class](../ORDA/ordaClasses.md#datastore-class) and [can be called](../ORDA/ordaClasses.md#onhttpget-keyword) by a REST request. The purpose is to return a **testFile.pdf** file as a response to the request:
+この例題では、`getFile()` 関数は[Datastore クラス](../ORDA/ordaClasses.md#datastore-class) に実装されており、REST リクエストによって[呼び出すことができます](../ORDA/ordaClasses.md#onhttpget-keyword)。 ここでの目的は、**testFile.pdf** ファイルをリクエストへのレスポンスとして返すことです:
 
 ```4d
 Class extends DataStoreImplementation
@@ -29,7 +29,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	var $result:=4D.OutgoingMessage.new()
 	var $file:=File("/RESOURCES/testFile.pdf")
 	
-	$result.setBody($file.getContent())  // This is binary content
+	$result.setBody($file.getContent())  // これはバイナリーのコンテンツ
 	$result.setHeader("Content-Type"; "application/pdf")
 	return $result
 ```
