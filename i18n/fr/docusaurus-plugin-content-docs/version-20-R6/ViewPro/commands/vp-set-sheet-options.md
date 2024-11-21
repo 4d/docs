@@ -11,7 +11,7 @@ title: VP SET SHEET OPTIONS
 
 | Paramètres   | Type   |    | Description                                                                 |                  |
 | ------------ | ------ | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName   | Object | -> | Nom de la zone 4D View Pro                                                  |                  |
+| vpAreaName   | Text   | -> | Nom de la zone 4D View Pro                                                  |                  |
 | sheetOptions | Object | -> | Option(s) de la feuille à définir                        |                  |
 | sheet        | Object | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
