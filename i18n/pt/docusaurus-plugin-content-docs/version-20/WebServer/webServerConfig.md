@@ -425,7 +425,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 | objeto webServer      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
-Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. O número de sessões legadas simultâneas não pode exceder o [número máximo de processos Web](#maximum-concurrent-web-processes) (100 por padrão).
 
 Valor padrão: 100 (passe 0 para restaurar o valor padrão).
 
