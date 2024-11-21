@@ -11,7 +11,7 @@ title: VP SET SHEET OPTIONS
 
 | 引数           | 型      |    | 説明                                             |                  |
 | ------------ | ------ | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName   | Object | -> | 4D View Pro エリア名                               |                  |
+| vpAreaName   | Text   | -> | 4D View Pro エリア名                               |                  |
 | sheetOptions | Object | -> | 設定するシートオプション                                   |                  |
 | sheet        | Object | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
