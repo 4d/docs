@@ -22,7 +22,7 @@ title: VP INSERT TABLE ROWS
 | vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | tableName   | Text    | -> | Nom de table                                                                |                  |
 | row         | Integer | -> | Index in the table of the starting row to insert                            |                  |
-| count       | Text    | -> | Number of rows to add (must be >0)                       |                  |
+| count       | Integer | -> | Number of rows to add (must be >0)                       |                  |
 | insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row*                   |                  |
 | sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
