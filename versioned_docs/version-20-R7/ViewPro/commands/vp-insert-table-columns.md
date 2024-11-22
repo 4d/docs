@@ -21,7 +21,7 @@ title: VP INSERT TABLE COLUMNS
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
 |column|Integer|->|Index in the table of the starting column to insert|
-|count|Text|->|Number of columns to add (must be >0) |
+|count|Integer|->|Number of columns to add (must be >0) |
 |insertAfter|Integer|->|`vk table insert before` or `vk table insert after` *column*|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 

@@ -21,7 +21,7 @@ title: VP INSERT TABLE ROWS
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
 |row|Integer|->|Index in the table of the starting row to insert|
-|count|Text|->|Number of rows to add (must be >0) |
+|count|Integer|->|Number of rows to add (must be >0) |
 |insertAfter|Integer|->|`vk table insert before` or `vk table insert after` *row*|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
