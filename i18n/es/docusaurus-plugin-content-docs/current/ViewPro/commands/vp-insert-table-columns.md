@@ -22,7 +22,7 @@ title: VP INSERT TABLE COLUMNS
 | vpAreaName  | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
 | tableName   | Text    | -> | Nombre de la tabla                                             |                  |
 | column      | Integer | -> | Índice en la tabla de la columna inicial a insertar            |                  |
-| count       | Text    | -> | Número de columnas a añadir (debe ser >0)   |                  |
+| count       | Integer | -> | Número de columnas a añadir (debe ser >0)   |                  |
 | insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` *columna*   |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
