@@ -13,7 +13,7 @@ Para informação detalhada sobre encriptação de dados em 4D, por favor consul
 :::
 
 É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Tem o nome "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> ou "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
-> A encriptação só está disponível no [modo de manutenção](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
+> A encriptação só está disponível no [modo manutenção](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
 
 **Aviso:**
 - A criptografia de um banco de dados é uma operação demorada. Apresenta um indicador de progresso (que pode ser interrompido pelo usuário). Note também que a operação de criptografia de um banco de dados sempre inclui um passo de compactação.
