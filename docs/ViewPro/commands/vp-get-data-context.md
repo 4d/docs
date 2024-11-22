@@ -20,7 +20,7 @@ title: VP Get data context
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |sheet|Integer|->|Index of the sheet to get the data context from|
-|Result |Object &#124; Collection |<-|Data context|<!-- END REF -->
+|Result |Variant|<-|Data context. Object or Collection|<!-- END REF -->
 
 #### Description
 
