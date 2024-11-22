@@ -22,7 +22,7 @@ title: VP REMOVE TABLE COLUMNS
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                     |                  |
 | tableName  | Text    | -> | Nome da tabela                                                 |                  |
 | column     | Integer | -> | Índice na tabela da coluna inicial a remover                   |                  |
-| count      | Text    | -> | Número de colunas a remover (tem de ser >0) |                  |
+| count      | Integer | -> | Número de colunas a remover (tem de ser >0) |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)    | <!-- END REF --> |
 
 #### Descrição
