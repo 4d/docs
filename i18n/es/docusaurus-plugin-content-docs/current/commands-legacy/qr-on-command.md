@@ -27,6 +27,7 @@ Si *area* es igual a cero, *nomMetodo* se aplicará a todas las áreas del edito
 
 * *$1* es la referencia del área (Entero largo).
 * *$2* es el número del comando seleccionado (Entero largo). Puede comparar este valor con las constantes del tema *QR Comandos*:  
+
 | Constante            | Tipo         | Valor | Comentario                                                                  |  
 | -------------------- | ------------ | ----- | --------------------------------------------------------------------------- |  
 | qr cmd generate      | Entero largo | 2008  | Compatible editor 64 bits (uso del comando [QR RUN](qr-run.md) recomendado) |  

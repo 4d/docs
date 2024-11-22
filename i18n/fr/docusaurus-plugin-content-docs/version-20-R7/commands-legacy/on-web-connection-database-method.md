@@ -56,6 +56,7 @@ Vous devez déclarer ces six paramètres de la manière suivante :
 * **Données supplémentaires de l’URL**  
 Le premier paramètre (*$1*) est l’URL saisi par l'utilisateur dans la zone 'Adresse' de son navigateur Web, moins l’adresse hôte.  
 Prenons l’exemple d’une connexion Intranet. Supposons que l’adresse IP de votre machine serveur Web 4D est *123.45.67.89*. Le tableau suivant liste les valeurs de *$1* selon l’URLsaisi dans le navigateur Web :  
+
 | **URL saisi dans le navigateur**            | **Valeur du paramètre $1**      |  
 | ------------------------------------------- | ------------------------------- |  
 | 123.45.67.89                                | /                               |  

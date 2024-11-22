@@ -81,8 +81,8 @@ const Sections = [
          <Link to="ORDA/overview" >
           <Translate>Object Relational Data Access (ORDA)</Translate>
         </Link>
-       <Link to="category/language">
-          <Translate>Language</Translate>
+       <Link to="category/4d-language">
+          <Translate>4D Language</Translate>
         </Link>
         <Link to="Develop/processes" >
           <Translate>Processes</Translate>

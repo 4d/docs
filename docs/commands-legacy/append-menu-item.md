@@ -36,7 +36,8 @@ You define the items to be appended with the parameter *itemText* as follows:
 *"ItemText1;ItemText2;ItemText3".*
 * To disable an item: Place an opening parenthesis (*(*) in the item text.
 * To specify a separation line: Pass "-" or "(-" as item text.
-* To specify a font style for a line: In the item text, place a less than sign (*<*) followed by one of these characters:  
+* To specify a font style for a line: In the item text, place a less than sign (*<*) followed by one of these characters:
+  
 | <B | Bold      |  
 | -- | --------- |  
 | <I | Italic    |  

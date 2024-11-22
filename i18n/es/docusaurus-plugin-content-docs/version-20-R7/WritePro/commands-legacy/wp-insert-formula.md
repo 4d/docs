@@ -30,6 +30,7 @@ En el parámetro *formula*, pase la fórmula 4D a evaluar. Puede pasar:
 
 * o bien un [objeto fórmula](https://developer.4d.com/docs/API/FunctionClass#formula-objects) creado por el comando [**Formula**](https://developer.4d.com/docs/API/FunctionClass#formula) o [**Formula from string**](https://developer.4d.com/docs/API/FunctionClass#formula-from-string),
 * o un objeto que contenga dos propiedades:  
+
 | **Propiedad** | **Tipo** | **Descripción**                                                                                                                                                                                                                                                                    |  
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | nombre        | Cadena   | Nombre a mostrar para la fórmula en el documento                                                                                                                                                                                                                                   |  

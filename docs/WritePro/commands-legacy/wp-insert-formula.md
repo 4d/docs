@@ -29,7 +29,8 @@ In the *targetObj* parameter, you can pass:
 In the *formula* parameter, pass the 4D formula to evaluate. You can pass:
 
 * either a [formula object](https://developer.4d.com/docs/API/FunctionClass#formula-objects) created by the [**Formula**](https://developer.4d.com/docs/API/FunctionClass#formula) or [**Formula from string**](https://developer.4d.com/docs/API/FunctionClass#formula-from-string) command,
-* or an object containing two properties:  
+* or an object containing two properties:
+  
 | **Property** | **Type** | **Description**                                                                                                                                                                                                                                                                       |  
 | ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | name         | Text   | Name to display for the formula in the document                                                                                                                                                                                                                                       |  

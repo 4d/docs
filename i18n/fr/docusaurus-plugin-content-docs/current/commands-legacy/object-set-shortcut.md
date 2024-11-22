@@ -29,6 +29,7 @@ Passez dans le paramètre *touche* une chaîne indiquant la touche du clavier à
 
 * un nom de touche standard, par exemple "B"
 * une constante du thème *Touches équivalents clavier* (ou sa valeur) :  
+
 | Constante                     | Type   | Valeur          | Comment       |  
 | ----------------------------- | ------ | --------------- | ------------- |  
 | Shortcut with Backspace       | Chaîne | \[backspace\]   | <br/> |  

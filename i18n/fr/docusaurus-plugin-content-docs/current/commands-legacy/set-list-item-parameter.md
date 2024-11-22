@@ -32,6 +32,7 @@ Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s�
 Dans le paramètre *sélecteur*, vous pouvez passer :
 
 * une des constantes suivantes du thème "*Listes hiérarchiques*" :  
+
 | Constante                  | Type   | Valeur                     | Comment                                                                                                                                                                                                                                                                                                               |  
 | -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Chaîne | 4D\_additional\_text       | Cette constante permet d’ajouter un texte à droite de l’élément *réfElément*. Ce libellé supplémentaire reste toujours affiché dans la partie droite de la liste, même si l’utilisateur déplace le curseur de défilement horizontal. Lorsque vous utilisez cette constante, passez dans *valeur* le texte à afficher. |  

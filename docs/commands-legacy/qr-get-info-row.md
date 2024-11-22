@@ -25,7 +25,8 @@ displayed_sidebar: docs
 *row* designates which row is affected by the command. You can pass either: 
 
 * a positive integer value to designate the corresponding subtotal (break) level,
-* one of the following constants from the *QR Rows for Properties* theme:  
+* one of the following constants from the *QR Rows for Properties* theme:
+  
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
 | qr detail      | Integer | \-2   | Detail area of report |  

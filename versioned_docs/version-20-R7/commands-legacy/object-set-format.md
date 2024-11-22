@@ -42,6 +42,7 @@ To format Date or Time fields or variables, you can use:
 * either a **predefined format** available though constants of the *Date Display Formats* or *Time Display Formats* theme (longint value). In this case, you must pass [Char](char.md)(n) in *displayFormat*, where *n* is the constant:  
     
 Dates:  
+
 | Constant                    | Value | Comment                                                                                                                         |  
 | --------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null date          | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros |  
@@ -57,6 +58,7 @@ Dates:
 | System date short           | 1     | 12/29/2006                                                                                                                      |  
     
 Times:  
+
 | Constant                     | Value | Comment                                                                                                                                                                                                                               |  
 | ---------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null time           | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros                                                                                                       |  

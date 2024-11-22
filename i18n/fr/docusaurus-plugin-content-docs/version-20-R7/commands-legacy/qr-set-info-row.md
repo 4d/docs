@@ -26,6 +26,7 @@ Le paramètre *ligne* désigne la ligne à modifier. Vous pouvez passer soit :
 
 * une valeur entière positive pour désigner la ligne de sous-total correspondante,
 * une des constantes suivantes du thème *QR Lignes pour Propriétés* :  
+
 | Constante      | Type        | Valeur | Comment               |  
 | -------------- | ----------- | ------ | --------------------- |  
 | qr detail      | Entier long | \-2    | Zone Détail de l'état |  

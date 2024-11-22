@@ -33,6 +33,7 @@ displayed_sidebar: docs
 
 * pass a positive integer value to designate the corresponding subtotal (break) level that is affected.
 * pass one of the following constants of the *QR Rows for Properties* theme:  
+
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
 | qr detail      | Integer | \-2   | Detail area of report |  

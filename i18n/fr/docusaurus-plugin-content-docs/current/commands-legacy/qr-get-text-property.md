@@ -32,6 +32,7 @@ Passez dans *numLigne* la référence de la ligne de la cellule. Vous pouvez pas
 
 * une valeur positive désignant la ligne de sous-total correspondante,
 * une des constantes du thème *QR Lignes pour Propriétés* :  
+
 | Constante      | Type        | Valeur | Comment               |  
 | -------------- | ----------- | ------ | --------------------- |  
 | qr detail      | Entier long | \-2    | Zone Détail de l'état |  

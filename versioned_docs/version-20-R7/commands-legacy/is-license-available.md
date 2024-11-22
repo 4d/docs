@@ -25,6 +25,7 @@ The Is license available command can be used in three different ways:
 
 * The *license* parameter is omitted: in this case, the command returns [False](false.md "False") if the 4D application is in demonstration mode.
 * You pass one of the constants of the “*Is License Available*” theme in the *license* parameter:  
+
 | Constant               | Type    | Value     |  
 | ---------------------- | ------- | --------- |  
 | 4D Client SOAP license | Integer | 808465465 |  

@@ -73,6 +73,7 @@ Le paramètre *critère* utilise la syntaxe suivante :
 *{opérateur ; } champ comparateur valeur*
 
 * L'opérateur est utilisé pour lier deux appels à **QUERY** lors d'une définition de recherche complexe. Les opérateurs disponibles sont les mêmes que ceux proposés dans l'Editeur de recherches :  
+
 | **Opérateur** | **Symbole** |  
 | ------------- | ----------- |  
 | ET            | &           |  
@@ -82,6 +83,7 @@ Le paramètre *critère* utilise la syntaxe suivante :
 L'opérateur est optionnel et n'est pas nécessaire pour le premier appel à **QUERY** lors d'une recherche complexe. Il est également inutile si votre recherche s'écrit sur une seule ligne. Si vous l'omettez à l'intérieur d'une recherche complexe, le **ET** (&) est utilisé par défaut.
 * Le *champ* est le champ sur lequel va porter la recherche. Il peut provenir d'une autre table si celle-ci est la table 1 d'une table liée à *table* par un lien automatique ou manuel.
 * Le *comparateur* est l'élément qui va permettre de confronter *champ* et *critèreRecherche*. Voici la liste des comparateurs possibles :  
+
 | **Comparateur**     | **Symbole à utiliser avec** **QUERY** |  
 | ------------------- | ------------------------------------- |  
 | Egal à              | \=                                    |  

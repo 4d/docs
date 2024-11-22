@@ -51,6 +51,7 @@ You must declare these parameters as follows:
 * **URL**  
 The first parameter (*$1*) is the URL entered by the user in the location area of his or her Web browser, from which the host address has been removed.  
 Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is *123.45.67.89*. The following table shows the values of *$1* depending on the URL entered in the Web browser:  
+
 | **URL entered in Web browser Location area** | **Value of parameter $1** |  
 | -------------------------------------------- | ------------------------- |  
 | 123.45.67.89                                 | /                         |  

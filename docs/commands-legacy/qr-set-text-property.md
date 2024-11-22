@@ -31,7 +31,8 @@ displayed_sidebar: docs
 *rowNum* is the reference of the cell row. You can pass either:
 
 * a positive value designating the corresponding subtotal (break) level,
-* one of the constants from the *QR Rows for Properties* theme:  
+* one of the constants from the *QR Rows for Properties* theme:
+  
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
 | qr detail      | Integer | \-2   | Detail area of report |  

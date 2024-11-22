@@ -32,6 +32,7 @@ displayed_sidebar: docs
 
 * un valor positivo designando el nivel de ruptura del subtotal correspondiente.
 * una de las constantes del tema :  
+
 | Constante      | Tipo         | Valor | Comentario                  |  
 | -------------- | ------------ | ----- | --------------------------- |  
 | qr detail      | Entero largo | \-2   | Área de detalle del informe |  

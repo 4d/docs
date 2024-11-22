@@ -29,6 +29,7 @@ En el parámetro *tecla*, pase una cadena indicando la tecla a asociar al objeto
 
 * un nombre de tecla estándar, por ejemplo "B"
 * o una constante del tema *Atajos de teclado* (o su valor) :  
+
 | Constante                     | Tipo   | Valor           |  
 | ----------------------------- | ------ | --------------- |  
 | Shortcut with Backspace       | Cadena | \[backspace\]   |  

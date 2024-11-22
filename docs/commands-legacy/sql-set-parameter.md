@@ -24,7 +24,8 @@ displayed_sidebar: docs
 **Note:** It is also possible to directly insert the name of a 4D object to be used (variable, array or field) between the *<<* and *\>>* characters in the text of the request (see example 1). For more information about this, please refer to the *Overview of SQL Commands* section.
 
 * In the *object* parameter, pass the 4D object (variable, array or field) to be used in the request.
-* In the *paramType* parameter, pass the SQL type of the parameter. You can pass a value or use one of the following constants, located in the “*SQL*” theme:  
+* In the *paramType* parameter, pass the SQL type of the parameter. You can pass a value or use one of the following constants, located in the “*SQL*” theme:
+  
 | Constant         | Type    | Value | Comment                                                                                                  |  
 | ---------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------- |  
 | SQL param in     | Integer | 1     |                                                                                                          |  

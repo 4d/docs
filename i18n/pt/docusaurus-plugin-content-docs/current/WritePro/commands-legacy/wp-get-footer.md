@@ -24,6 +24,7 @@ displayed_sidebar: docs
 * Com a primeira sintaxe (utilizando o parâmetro *objfaixa*), o comando devolve o rodapé da primeira página da faixa. Se uma subseção estiver ativa na página, o comando devolve o rodapé da subseção ativa, portanto sempre devolve o rodapé de página visível.
 * Com a segunda sintaxe (utilizando o parâmetro *wpDoc*), o comando devolve o rodapé da seção *indiceSeção* especificada (o valor *indiceSecao* deve ser >=1).  
 Se for passado o parâmetro *tipoSubSecao*, o comando devolve o rodapé de página associado ao tipo de subseção especificado. Pode passar uma das constantes abaixo no parâmetro *tipoSubSecao*:  
+
 | Constante     | Tipo          | Valor |  
 | ------------- | ------------- | ----- |  
 | wk first page | Inteiro longo | 1     |  

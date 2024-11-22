@@ -29,6 +29,7 @@ Pase en el parámetro *nomHojaEstilo*, el nombre de la hoja de estilo a aplicar 
 * el nombre de una hoja de estilos existente (si la hoja de estilo no existe, se devuelve un error, que puede interceptar utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md)).
 * una cadena vacía ("") para no aplicar la hoja de estilo al *objeto*, o
 * una de las siguiente constantes del tema "*Estilos de fuente*" para aplicar una hoja de estilo automática:  
+
 | Constante                         | Tipo   | Valor                               | Comentario                                                                                                                 |  
 | --------------------------------- | ------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Cadena | \_\_automatic\_\_                   | Se utiliza de forma predeterminada para todos los objetos                                                                  |  

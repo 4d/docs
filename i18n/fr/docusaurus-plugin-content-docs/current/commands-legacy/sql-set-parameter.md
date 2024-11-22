@@ -25,6 +25,7 @@ displayed_sidebar: docs
 
 * Passez dans le paramètre *objet* l’objet 4D (variable, tableau ou champ) à utiliser dans la requête.
 * Passez dans le paramètre *typeParam* le type SQL du paramètre. Vous pouvez passer une valeur ou utiliser l’une des constantes suivantes, placées dans le thème "*SQL*" :  
+
 | Constante        | Type        | Valeur | Comment                                                                                                                       |  
 | ---------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |  
 | SQL param in     | Entier long | 1      |                                                                                                                               |  

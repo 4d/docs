@@ -28,7 +28,8 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 In the *key* parameter, pass a string indicating the key to associate with the object. You can either pass:
 
 * a standard key name, for example "B"
-* or a constant (or its value) from the *Shortcut and Associated Keys* theme:  
+* or a constant (or its value) from the *Shortcut and Associated Keys* theme:
+  
 | Constant                      | Type   | Value           | Comment       |  
 | ----------------------------- | ------ | --------------- | ------------- |  
 | Shortcut with Backspace       | Text | \[backspace\]   |               |  

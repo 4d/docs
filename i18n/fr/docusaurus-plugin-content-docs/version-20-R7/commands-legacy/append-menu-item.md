@@ -34,6 +34,7 @@ Si vous ne passez pas le paramètre *\**, **APPEND MENU ITEM** vous permet d'ajo
 * Pour inactiver une ligne, placez une parenthèse ouvrante "*(*" dans son libellé.
 * Pour définir une ligne de séparation, passez la valeur "-" ou *"*(-*"* en tant que libellé.
 * Pour définir le style de caractères d'une ligne, placez dans son libellé le symbole inférieur à "*<*" suivi d'une lettre. Voici les différents codes :  
+
 | <B | Gras     |  
 | -- | -------- |  
 | <I | Italique |  

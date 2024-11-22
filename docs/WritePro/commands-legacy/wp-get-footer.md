@@ -23,7 +23,8 @@ displayed_sidebar: docs
 
 * With the first syntax (using the *targetObj* parameter), the command returns the footer of the first page in the range or the section/sub-section passed in parameter. If a sub-section is active on the page, the command returns the footer of the active sub-section, so it always returns the visible footer.
 * With the second syntax (using the *wpDoc* parameter), the command returns the footer of the specified *sectionIndex* section (*sectionIndex* value must be >=1).  
-If the *subSectionType* parameter is passed, the command returns the footer associated to the specified sub-section type. You can pass one of the following constants in the *subSectionType* parameter:  
+If the *subSectionType* parameter is passed, the command returns the footer associated to the specified sub-section type. You can pass one of the following constants in the *subSectionType* parameter:
+  
 | Constant      | Type    | Value |  
 | ------------- | ------- | ----- |  
 | wk first page | Integer | 1     |  

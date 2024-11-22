@@ -33,6 +33,7 @@ Lorsque saisissable est Faux :
    * dans les bases de données binaires, l'utilisateur ne peut pas saisir de données et l'attribut focusable dépend de l'option **Focusable** définie dans la liste des propriétés.  
    * dans les projets, l'utilisateur ne peut pas saisir de données et l'objet est focusable.
 * Entier long - le passage d'une valeur entier long dans saisissable vous permet de contrôler également la propriété *focusable* pour les **zones de saisie** et les **zones 4D Write Pro**. Vous pouvez utiliser l'une des constantes suivantes :  
+
 | Constante                       | Valeur | Comment                                                                                                                                                                                                               |  
 | ------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | obk enterable                   | 1      | Les utilisateurs peuvent saisir des valeurs dans l'objet et l'objet est focusable.                                                                                                                                    |  

@@ -27,6 +27,7 @@ Si vous passez une chaîne vide dans *nomImpr*, l’imprimante courante définie
 
 * **Windows 8 et versions précédentes :**  
 4D s’appuie sur le pilote PDFCreator pour l’impression de documents PDF sous Windows (cf. section [SET PRINTABLE MARGIN](set-printable-margin.md)). Pour imprimer un document PDF, passez dans le paramètre *nomImpr* le nom de l’imprimante virtuelle installée par PDFCreator. Par défaut, le nom de l’imprimante virtuelle est "PDFCreator". Toutefois, ce nom peut avoir été modifié au moment de l’installation du pilote. Pour que 4D recherche et utilise automatiquement le nom de l’imprimante virtuelle, même s’il a été personnalisé, vous pouvez passer dans *nomImpr* la constante suivante (thème *Options d'impression*) :  
+
 | Constante               | Type   | Valeur     |  
 | ----------------------- | ------ | ---------- |  
 | PDFCreator Printer name | Chaîne | PDFCreator |

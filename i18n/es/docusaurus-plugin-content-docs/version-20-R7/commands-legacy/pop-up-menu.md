@@ -32,6 +32,7 @@ Los elementos del menú pop up se definen con el parámetro *contenido*, de la s
 * Para desactivar un elemento, coloque un paréntesis abierto (*(*) en el texto del elemento.
 * Para definir una línea de separación, pase "-" o "(-" como texto del elemento.
 * Para definir el estilo de fuente para una línea, coloque en el texto del elemento un signo menor que (*<*) seguido por uno de estos caracteres:  
+
 | <B | Negrita                         |  
 | -- | ------------------------------- |  
 | <I | Itálica                         |  

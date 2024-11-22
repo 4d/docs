@@ -32,7 +32,8 @@ Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to 
 
 In *selector*, you can pass either:
 
-* one of the following constants (found in the “*Hierarchical Lists*” theme):  
+* one of the following constants (found in the “*Hierarchical Lists*” theme):
+  
 | Constant                   | Type   | Value                      | Comment                                                                                                                                                                                                                                                                                 |  
 | -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Text | 4D\_additional\_text       | This constant is used to add text to the right of the *itemRef* item. This additional title will always be displayed in the right part of the list, even when the user moves the horizontal scrolling cursor. When you use this constant, pass the text to be displayed in *value*.     |  

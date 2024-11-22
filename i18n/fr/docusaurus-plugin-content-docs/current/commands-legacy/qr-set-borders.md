@@ -33,6 +33,7 @@ Le paramètre *ligne* contient le numéro de ligne de la cellule à encadrer. Vo
 
 * une valeur entière positive pour désigner la ligne de sous-total correspondante,
 * l'une des constantes suivantes, placées dans le thème *QR Lignes pour Propriétés* :  
+
 | Constante      | Type        | Valeur | Comment               |  
 | -------------- | ----------- | ------ | --------------------- |  
 | qr detail      | Entier long | \-2    | Zone Détail de l'état |  

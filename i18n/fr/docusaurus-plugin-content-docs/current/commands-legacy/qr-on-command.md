@@ -27,6 +27,7 @@ La méthode *nomMéthode* reçoit deux paramètres :
 
 * *$1* contient la référence de la zone (Entier long).
 * *$2* contient le numéro de la commande sélectionnée (Entier long). Vous pouvez comparer cette valeur aux constantes suivantes du thème *QR Commandes* :  
+
 | Constante            | Type        | Valeur | Comment                                                   |  
 | -------------------- | ----------- | ------ | --------------------------------------------------------- |  
 | qr cmd generate      | Entier long | 2008   | Utilisation de la commande [QR RUN](qr-run.md) conseillée |  

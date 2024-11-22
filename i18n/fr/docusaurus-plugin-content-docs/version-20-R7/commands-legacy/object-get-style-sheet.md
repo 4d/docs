@@ -31,6 +31,7 @@ La commande peut retourner soit :
 * un nom de feuille de style,
 * une chaîne vide ("") si aucune feuille de style n’est affectée,
 * une des valeurs de constantes suivantes du thème "*Styles de caractères*" si une feuille de style automatique est affectée :  
+
 | Constante                         | Type   | Valeur                              | Comment                                                                                                                                   |  
 | --------------------------------- | ------ | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Chaîne | \_\_automatic\_\_                   | Utilisée par défaut pour tous les objets                                                                                                  |  

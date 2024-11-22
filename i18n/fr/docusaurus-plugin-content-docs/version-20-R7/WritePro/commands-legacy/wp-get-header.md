@@ -24,6 +24,7 @@ displayed_sidebar: docs
 * Avec la première syntaxe (utilisation du paramètre *objCible*), la commande retourne l'en-tête de la première page de la plage ou de la section/sous-section passée dans le paramètre. Si une sous-section est active sur la page, la commande retourne l'en-tête de la sous-section active, elle retourne ainsi toujours l'en-tête visible.
 * Avec la seconde syntaxe (utilisation du paramètre *docWP*), la commande retourne l'en-tête de la section *indexSection* spécifiée (la valeur de *indexSection* doit être >=1).  
 Si le paramètre *typeSousSection* est passé, la commande retourne l'en-tête associé au type de sous-section spécifié. Vous pouvez utiliser une des constantes suivantes dans le paramètre *typeSousSection* :  
+
 | Constante     | Type        | Valeur |  
 | ------------- | ----------- | ------ |  
 | wk first page | Entier long | 1      |  

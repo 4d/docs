@@ -38,6 +38,7 @@ In the event-handling method, you can read the following system variables—Mous
 * The MouseDown system variable is set to 1 if the event is a mouse click, and to 0 if it is not.
 * The KeyCode system variable is set to the code for a keystroke. This variable may return an character code or a function key code. These codes are listed in the sections *Unicode Codes* and [EXPORT TEXT](export-text.md) (and its subsections) as well as in the section *Function Key Codes*. 4D provides predefined constants for the major ASCII Codes and for Function Keys. In the Explorer window, look for the themes of these constants.
 * The Modifiers system variable contains the modifier value. It indicates whether a modifier key was down when the event occurred. The following keys can be detected:  
+
 | **Platform** | **Modifiers**                                                    |  
 | ------------ | ---------------------------------------------------------------- |  
 | Windows      | Shift key, Caps Lock, Alt key, Ctrl key                          |  
@@ -54,6 +55,7 @@ or:
 ```  
     
 You can use one of the following constants, depending on the modifier key to be tested and the platform, which are found in the *Events (Modifiers)* theme:  
+
 | **Modifier**                        | **Constant**                           |  
 | ----------------------------------- | -------------------------------------- |  
 | Shift                               | Shift key bit / Shift key mask         |  

@@ -31,6 +31,7 @@ The command can return either:
 * a style sheet name,
 * an empty string ("") if no style sheet is assigned, or
 * if an automatic style sheet is assigned, one of the following constants found in the "*Font Styles*" theme:  
+
 | Constant                          | Type   | Value                               | Comment                                                                                        |  
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Text | \_\_automatic\_\_                   | Used by default for all objects                                                                |  

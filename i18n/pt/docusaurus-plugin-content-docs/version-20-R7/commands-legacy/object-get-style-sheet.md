@@ -31,6 +31,7 @@ O comando pode devolver:
 * um nome de folha de estilos,
 * uma cadeia vazia ("") se não se atribui nenhuma folha de estilos.
 * se uma folha de estilo automática for atribuida, uma das seguintes constantes encontradas no tema "*Estilos de fonte*":  
+
 | Constante                         | Tipo   | Valor                               | Comentário                                                                                                 |  
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Cadeia | \_\_automatic\_\_                   | Usado como padrão para todos os objetos                                                                    |  

@@ -32,6 +32,7 @@ displayed_sidebar: docs
 
 * a positive value designating the corresponding subtotal (break) level,
 * one of the constants of the *QR Rows for Properties* theme:  
+
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
 | qr detail      | Integer | \-2   | Detail area of report |  

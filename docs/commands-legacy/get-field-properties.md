@@ -30,7 +30,8 @@ You either pass:
 
 After the call:
 
-* *fieldType* returns the type of the field. The *fieldType* variable parameter can take a value provided by the following predefined constants (*Field and Variable Types* theme):  
+* *fieldType* returns the type of the field. The *fieldType* variable parameter can take a value provided by the following predefined constants (*Field and Variable Types* theme):
+  
 | Constant           | Type    | Value |  
 | ------------------ | ------- | ----- |  
 | Is alpha field     | Integer | 0     |  

@@ -39,6 +39,7 @@ En el parámetro *modo*, pase una de las siguientes constantes para indicar el m
 | wk replace | Entero largo | 0     | Remplazar el contenido de la página        |
 
 * Si *objRango* es un rango, puede utilizar el parámetro opcional *actRango*, para pasar una de las siguientes constantes para especificar si la tabla insertada se incluye o no en el rango resultante:  
+
 | Constante             | Tipo         | Valor | Comentario                                                            |  
 | --------------------- | ------------ | ----- | --------------------------------------------------------------------- |  
 | wk exclude from range | Entero largo | 1     | Contenidos insertados no incluidos en el rango actualizado            |  

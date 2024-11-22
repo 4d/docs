@@ -31,7 +31,8 @@ You define the items of the pop-up menu with the parameter *contents* as follows
 * Separate each item from the next one with a semi-colon (*;*). For example, *"ItemText1;ItemText2;ItemText3".*
 * To disable an item, place an opening parenthesis (*(*) in the item text.
 * To specify a separation line, pass "-" or "(-" as item text.
-* To specify a font style for a line, place in the item text a less than sign (*<*) followed by one of these characters:  
+* To specify a font style for a line, place in the item text a less than sign (*<*) followed by one of these characters:
+  
 | <B | Bold                     |  
 | -- | ------------------------ |  
 | <I | Italic                   |  

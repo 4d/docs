@@ -24,6 +24,7 @@ displayed_sidebar: docs
 * With the first syntax (using the *targetObj* parameter), the command returns the header of the first page in the range or section/sub-section passed in parameter. If a sub-section is active on the page, the command returns the header of the active sub-section, so it always returns the visible header.
 * With the second syntax (using the *wpDoc* parameter), the command returns the header of the specified *sectionIndex* section (*sectionIndex* value must be >=1).  
 If the *subSectionType* parameter is passed, the command returns the header associated to the specified sub-section type. You can pass one of the following constants in the *subSectionType* parameter:  
+
 | Constant      | Type    | Value |  
 | ------------- | ------- | ----- |  
 | wk first page | Integer | 1     |  

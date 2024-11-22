@@ -32,7 +32,8 @@ displayed_sidebar: docs
 *row* designates the row number of the cell. You can either:
 
 * pass a positive integer value to designate the corresponding subtotal (break) level that is affected.
-* pass one of the following constants of the *QR Rows for Properties* theme:  
+* pass one of the following constants of the *QR Rows for Properties* theme:
+  
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
 | qr detail      | Integer | \-2   | Detail area of report |  

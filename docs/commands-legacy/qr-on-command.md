@@ -26,7 +26,8 @@ If *area* equals zero, *methodName* will apply to each Quick Report area until t
 *methodName* receives two parameters:
 
 * *$1* is the reference of the area (Longint).
-* *$2* is the command number of the command that was selected (Longint). You can compare this value with the following constants of the *QR Commands* theme:  
+* *$2* is the command number of the command that was selected (Longint). You can compare this value with the following constants of the *QR Commands* theme:
+  
 | Constant             | Type    | Value | Comment                                        |  
 | -------------------- | ------- | ----- | ---------------------------------------------- |  
 | qr cmd generate      | Integer | 2008  | Use of command [QR RUN](qr-run.md) recommended |  
