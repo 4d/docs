@@ -9,13 +9,13 @@ title: VP Row
 
 <!-- REF #_method_.VP Row.Params -->
 
-| 引数         | 型       |    | 説明                      |
-| ---------- | ------- | -- | ----------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |
-| row        | Integer | -> | 行のインデックス                |
-| rowCount   | Integer | -> | 行数                      |
-
-__
+| 引数         | 型       |                             | 説明                                             |                  |
+| ---------- | ------- | --------------------------- | ---------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                        |                  |
+| row        | Integer | ->                          | 行のインデックス                                       |                  |
+| rowCount   | Integer | ->                          | 行数                                             |                  |
+| sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
+| 戻り値        | Object  | <- | Range object of row(s)      | <!-- END REF --> |
 
 #### 説明
 
