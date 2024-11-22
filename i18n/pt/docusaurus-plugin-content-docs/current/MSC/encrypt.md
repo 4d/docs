@@ -14,7 +14,7 @@ Para obtener información detallada sobre la encriptación de datos en 4D, consu
 
 É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Se denomina "Replaced Files (Encrypting) _yyyy-mm-dd hh-mm-ss_> o "Replaced Files (Decrypting) _yyyy-mm-dd hh-mm-ss_".
 
-> El cifrado sólo está disponible en [modo mantenimiento](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
+> A encriptação só está disponível no [modo de manutenção](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
 
 **Warning:**
 

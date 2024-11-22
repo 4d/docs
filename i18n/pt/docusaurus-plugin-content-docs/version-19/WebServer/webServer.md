@@ -10,7 +10,7 @@ title: Visão Geral
 
 Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. To do so, you just need to select a menu command or execute a single line of code.
 
-Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
+Monitorar o servidor 4D é fácil e pode ser feito usando a janela de administração do Servidor 4D ou através de [URLs especiais](webServerAdmin.md#administration-urls).
 
 ## Pronto a usar
 
@@ -22,16 +22,16 @@ A segurança dos dados está presente em todos os estágios das implementações
 
 * Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
 
-* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+* **Autenticação**: recursos de autenticação [flexíveis e personalizáveis](authentication.md) com base em configurações built-it bem como métodos de banco de dados ([`On Web Authentication`](authentication.md#on-web-authentication) para o servidor web e [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) para o servidor REST),
 
 * **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. É necessário declarar:
   * [Métodos projeto](templates.md#allowing-project-methods) expostos por meio de solicitações HTTP
   * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
   * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
 
-* **Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
+* **Sandboxing** através da definição de uma pasta [HTML raiz](webServerConfig.md#root-folder) por padrão
 
-* **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
+* **Controle do uso de recursos do servidor** (por exemplo, opção de [processos da Web simultâneos máximos](webServerConfig.md#maximum-concurrent-web-processes)).
 > Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
 
 ## Sessões Usuário

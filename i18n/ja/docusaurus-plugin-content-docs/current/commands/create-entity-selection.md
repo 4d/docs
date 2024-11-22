@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-`Create entity selection` コマンド<!--REF #_command_.Create entity selection.Summary-->は、*dsTable* で指定したテーブルに対応するデータクラスの[追加可能な](../ORDA/entities.md#shareable-or-alterable-entity-selections)新規エンティティセレくションを、同テーブルのカレントセレクションに基づいてビルドして返します。<!-- END REF-->
+`Create entity selection` コマンドは、<!--REF #_command_.Create entity selection.Summary-->*dsTable* で指定したテーブルに対応するデータクラスの[追加可能な](../ORDA/entities.md#shareable-or-alterable-entity-selections)新規エンティティセレくションを、同テーブルのカレントセレクションに基づいてビルドして返します。<!-- END REF-->
 
 ソートされたカレントセレクションの場合、[順列のある](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) エンティティセレクションが作成されます (カレントセレクションの並び順が受け継がれます)。 カレントセレクションがソートされていない場合、順列のないエンティティセレクションが作成されます。
 

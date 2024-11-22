@@ -17,11 +17,11 @@ O modo SDI está disponível apenas nos seguintes ambientes de execução:
 
 - Windows
 - Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
-- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
+- [Funcionalidade **Teste aplicação**](bars.md#previewing-menu-bars) disponível no menu **Executar**.
 
 ## Activação do modo SDI
 
-Para activar el modo SDI en su aplicación, sólo tiene que marcar la opción **Utilizar el modo SDI en Windows** en la página ["Interfaz" de la caja de diálogo Configuración](../settings/interface.md#display-windows).
+Para ativar o modo SDI em sua aplicação, basta marcar a opção **Usar modo SDI no Windows** na página ["Interface" da caixa de diálogo Configurações](../settings/interface.md#display-windows).
 
 Uma vez ativada, para executar efetivamente a sua aplicação no modo SDI, pode:
 
@@ -50,7 +50,7 @@ Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necess�
 
 #### Tela inicial
 
-- Si se seleccionó la opción de interfaz **Pantalla de bienvenida** en los [Parámetros](../settings/interface.md#display-windows), la ventana de bienvenida contendrá los menús que se habrían mostrado en la ventana MDI. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
+- Se a opção de interface **Splash screen** tiver sido [selecionada nas Configurações](../settings/interface.md#display-windows), a janela inicial conterá todos os menus que teriam sido exibidos na janela MDI. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
 - Se a opção Splash screen não tiver sido selecionada, os menus serão apresentados apenas nas janelas abertas, dependendo das escolhas do programador.
 
 ### Depurador

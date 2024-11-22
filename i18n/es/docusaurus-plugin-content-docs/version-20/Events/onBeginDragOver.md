@@ -10,7 +10,7 @@ title: On Begin Drag Over
 
 ## Descripción
 
-El evento de formulario `On Begin Drag Over` puede ser seleccionado para todos los objetos formulario que puedan ser arrastrados. Se genera en todos los casos en que el objeto tiene la propiedad [Draggable](FormObjects/properties_Action.md#draggable). Se puede llamar desde el método del objeto fuente o desde el método formulario del objeto fuente.
+El evento de formulario `On Begin Drag Over` puede ser seleccionado para todos los objetos formulario que puedan ser arrastrados. Se genera en cada caso donde el objeto tiene la propiedad [Arrastrable](FormObjects/properties_Action.md#draggable). Se puede llamar desde el método del objeto fuente o desde el método formulario del objeto fuente.
 
 > A diferencia del evento de formulario [`On Drag Over`](onDragOver.md), `On Begin Drag Over` se llama dentro del contexto del **objeto fuente** de la acción de arrastrar.
 

@@ -268,7 +268,7 @@ $area:=$rect.getArea() //5000
 // código
 ```
 
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
+Uma função class constructor, que pode aceitar [parâmetros](#parameters), pode ser usada para definir uma classe usuário.
 
 In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 

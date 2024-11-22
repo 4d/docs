@@ -12,7 +12,7 @@ Uma cópia de segurança pode ser iniciada de três maneiras:
 
 > 4D Server: Um backup pode ser iniciado manualmente a partir de uma máquina remota usando um método que chama o comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
 
-## You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
+## Cópia de segurança manual
 
 1. Selecione o comando **Backup...** no menu 4D **File**.
    A janela de backup é exibida:
@@ -49,7 +49,7 @@ O estado da última cópia de segurança (correta ou com erro) é armazenado na 
 
 ### Acesso do banco de dados durante o backup
 
-Durante a cópia de segurança, acesso ao banco de dados é restrito por 4D dependendo do contexto. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura mas sim aos dados.
+Durante a cópia de segurança, acesso ao banco de dados é restrito por 4D dependendo do contexto. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura, mas sim aos dados.
 
 Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o acesso à estrutura continua sendo permitido. Nesse caso, as possibilidades de acesso ao banco de dados  são as seguintes:
 
@@ -64,7 +64,7 @@ Pode acontecer que uma cópia de segurança não seja executada corretamente. Po
 
 Em todos os casos tenha em mente que o status do último backup (bem sucedido ou falhado) é armazenado na última área de Informações de Backup da página de [Backup na MSC](MSC/backup. d) ou na **página de manutenção** do servidor 4D, bem como no **Backup do journal.txt**.
 
-- \*\*Interrupção de Usuário: The Botão Parar na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para e é gerado o erro 1406. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
+- \*\*Interrupção de Usuário: The Botão Parar na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para sendo gerado o erro 1406. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
 - **Arquivo anexado não encontrado**: Quando um arquivo anexado não pode ser encontrado, 4D realiza um backup parcial (backup de arquivos de aplicação e arquivos anexados acessíveis) e retorna um erro.
 - **Backup impossível** (o disco está cheio ou protegido contra gravação, falta de disco, falha de disco, transação incompleta, aplicativo não iniciado no momento do backup automático programado, etc.):
   Se esse for um erro de primeira vez, 4D fará uma segunda tentativa de realizar o backup. A espera entre as duas tentativas é definida na página **Backup/Backup & Restore** nas Configurações.

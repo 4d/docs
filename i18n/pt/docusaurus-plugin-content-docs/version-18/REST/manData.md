@@ -3,7 +3,7 @@ id: manData
 title: Manipulação de dados
 ---
 
-All [exposed datastore classes, attributes](configuration.md#exposing-tables-and-fields) and methods can be accessed through REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
+Todas as [classes, atributos](configuration.md#exposing-tables-and-fields) e métodos expostos do datastore podem ser acessados por REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
 
 ## Pesquisas de dados
 

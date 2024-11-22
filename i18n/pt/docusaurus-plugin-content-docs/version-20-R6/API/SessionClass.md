@@ -9,7 +9,7 @@ Os objetos de sessão são retornados pelo comando [`Session`](#session). These 
 
 Três tipos de sessões são suportados por essa classe:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
+- [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
 - [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
 - [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): All stored procedures executed on the server share the same virtual user session.
 
@@ -62,7 +62,7 @@ The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Sessio
 
 Dependendo do processo a partir do qual o comando é chamado, a sessão atual do usuário pode ser:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions)),
+- uma sessão web (quando [sessões escaláveis são ativadas](WebServer/sessions.md#enabling-sessions)),
 - uma sessão de cliente remoto,
 - a sessão de procedimentos armazenados.
 

@@ -36,7 +36,7 @@ Todas as fórmulas têm operandos e operadores:
     *   Os [valores](#values-and-operators) (5 tipos de dados são suportados)
     *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
     *   [funções standard de folha de cálculo](#using-functions)
-    *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
+    *   [funções 4D](#4d-functions) baseadas em fórmulas 4D e que fornecem acesso a variáveis, campos, métodos, comandos ou expressões 4D.
 
 ## Valores e operadores
 
@@ -143,7 +143,7 @@ Consulte a [**lista ampliada de funções de SpreadJS**](https://www.grapecity.c
 - Comandos de linguagem 4D,
 - ou qualquer expressão 4D válida.
 
-4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
+As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
 You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
 
@@ -279,7 +279,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 ### Referência a campos utilizando a estrutura virtual
 
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
+4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. Essa solução alternativa pode ser útil se o sua aplicação já depender de uma estrutura virtual (caso contrário, recomenda-se [usar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATENÇÃO:** não pode utilizar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
