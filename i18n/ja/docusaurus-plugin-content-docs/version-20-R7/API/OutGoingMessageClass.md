@@ -34,9 +34,9 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	return $result
 ```
 
-### OutGoingMessage Object
+### OutGoingMessage オブジェクト
 
-4D.OutGoingMessage objects provide the following properties and functions:
+4D.OutGoingMessage オブジェクトは以下のプロパティと関数を提供します:
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |
