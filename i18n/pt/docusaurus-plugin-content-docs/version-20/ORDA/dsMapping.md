@@ -25,7 +25,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 *   Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
     *   Tabelas sem chave primária
     *   Tabelas com chaves primárias compostas.
-*   [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore.
+*   Os campos BLOB estão automaticamente disponíveis como atributos do tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
