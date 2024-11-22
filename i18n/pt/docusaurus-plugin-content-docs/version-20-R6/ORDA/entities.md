@@ -65,9 +65,9 @@ Este facto é ilustrado pelo gráfico seguinte:
 
 ![](../assets/en/ORDA/entityRef2.png)
 
-Note-se, no entanto, que as entidades se referem ao mesmo registo. En todos los casos, si se llama al método `entity.save( )`, el registro se actualizará (excepto en caso de conflicto, ver [Entity locking](#entity-locking)).
+Note-se, no entanto, que as entidades se referem ao mesmo registo. Em todos os casos, se você chamar o método `entity.save( )`, o registro será atualizado (exceto em caso de conflito, consulte [Entity locking](#entity-locking)).
 
-De hecho, `$e1` y `$e2` no son la entidad misma, sino referencias a la entidad. Isso significa que você pode passá-los diretamente para qualquer função ou método, e ele funcionará como um ponteiro, e mais rápido do que um ponteiro 4D. Por exemplo:
+Na verdade, `$e1` e `$e2` não são a entidade em si, mas uma referência à entidade. Isso significa que você pode passá-los diretamente para qualquer função ou método, e ele funcionará como um ponteiro, e mais rápido do que um ponteiro 4D. Por exemplo:
 
 ```4d
  For each($entity;$selection)
@@ -235,18 +235,18 @@ Você pode atribuir ou modificar o valor de um "1" atributo da entidade relacion
 
 ## Criar uma selecção de entidade
 
-Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) de la siguiente manera:
+Você pode criar um objeto do tipo [entity selection] (dsMapping.md#entity-selection) da seguinte forma:
 
-- Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
-- Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
-- Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Consultar as entidades [em uma classe de dados] (API/DataClassClass.md#query) ou em uma [seleção de entidade existente] (API/EntitySelectionClass.md#query);
+- Usando a função de dataclass [`.all()`](API/DataClassClassClass.md#all), para selecionar todas as entidades em um dataclass;
+- Usando a função [`Criar seleção de entidade`](../API/EntitySelectionClass.md#create-entity-selection) ou o [`.newSelection()`](API/DataClassClassClass.md#newselection) de dataclass para criar uma entidade em branco;
 - Usando a [`.copy()`](API/EntitySelectionClass.md#copy) função para duplicar uma seleção de entidade existente;
-- Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
+- Usando uma das várias funções da [classe de seleção de Entidades](API/EntitySelectionClass.md) que retorna uma nova seleção de entidade, como [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
 :::note
 
-Puede filtrar qué entidades deben incluirse en las selecciones de entidades para una clase de datos en función de toda regla de negocio, gracias a la funcionalidad [selección de entidad restringida](#restricting-entity-selections).
+Você pode filtrar quais entidades devem ser incluídas nas seleções de entidades para uma classe de dados, dependendo de quaisquer regras de negócios, graças ao recurso [restricted entity selection] (#restricting-entity-selections).
 
 :::
 
@@ -254,67 +254,67 @@ Você pode criar e usar simultaneamente tantas seleções de entidades diferente
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+Quando as entidades são excluídas, suas referências permanecem na seleção de entidades com um valor *indefinido*. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
 
 :::
 
 ### Entity selections partilháveis ou alteráveis
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
+Uma seleção de entidade pode ser **compartilhável** (legível por vários processos, mas não pode ser alterável após a criação) ou **alternável** (suporta o [`. dd()`](API/EntitySelectionClass.md#add) função, mas utilizável apenas pelo processo atual).
 
 #### Propriedades
 
-Una entity selection **compartible** tiene las siguientes características:
+Uma seleção de entidade **compartilhável** tem as seguintes características:
 
 - ele pode ser armazenado em um objeto compartilhado ou em uma coleção compartilhada e pode ser passado como parâmetro entre vários processos ou trabalhadores;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
-- não permite a adição de novas entidades. A tentativa de adicionar uma entidade a uma seleção de entidade compartilhável acionará um erro (1637 - Esta seleção de entidade não pode ser alterada). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
+- ele pode ser armazenado em vários objetos ou coleções compartilhados, ou em um objeto ou coleção compartilhado que já pertença a um grupo;
+- não permite a adição de novas entidades. A tentativa de adicionar uma entidade a uma seleção de entidade compartilhável acionará um erro (1637 - Esta seleção de entidade não pode ser alterada). Para adicionar uma entidade a uma seleção de entidade compartilhável, você deve primeiro transformá-la em uma seleção de entidade não compartilhável utilizando a função [`.copy()`](API/EntitySelectionClass.md#copy), antes de chamar [`.add()`](API/EntitySelectionClass.md#add).
 
-> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+> A maioria das funções de seleção de entidades (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) suportam seleções de entidades compartilháveis, pois não precisam alterar a seleção de entidades original (eles retornam uma nova).
 
-Una entity selection **modificable** tiene las siguientes características:
+Uma seleção de entidade **alterável** tem as seguintes características:
 
 - não pode ser compartilhado entre processos, nem armazenado em um objeto ou coleção compartilhada. A tentativa de armazenar uma seleção de entidade não compartilhável em um objeto ou coleção compartilhada acionará um erro (-10721 - Tipo de valor não suportado em um objeto compartilhado ou coleção compartilhada);
-- it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
+- ele aceita a adição de novas entidades, ou seja, suporta a função [`.add()`](API/EntitySelectionClass.md#add).
 
 #### Como é que são definidos?
 
-La naturaleza **compartible** o **modificable** de una entity selection se define cuando se crea (no puede modificarse posteriormente). Puede conocer la naturaleza de una entity selection utilizando la función [.isAlterable()](API/EntitySelectionClass.md#isalterable) o el comando `OB Is shared`.
+A natureza **compartilhável** ou **alterável** de uma seleção de entidade é definida quando a seleção de entidade é criada (ela não pode ser modificada posteriormente). Você pode conhecer a natureza de uma seleção de entidade usando a função [.isAlterable()](API/EntitySelectionClass.md#isalterable) ou o comando `OB Is shared`.
 
-Una nueva entity selection es **compartible** en los siguientes casos:
+Uma nova seleção de entidade é **compartilhável** nos seguintes casos:
 
-- la nueva entity selection resulta de una función de clase ORDA aplicada a una dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-- the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
-- la nueva entity selection se copia explícitamente como compartible con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, con la opción `ck shared`).
+- a nova seleção de entidade resulta de uma função de classe ORDA aplicada a uma dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
+- a nova seleção de entidade é baseada em uma relação [entity.*attributeName*](API/EntityClass.md#attributename) (por exemplo, "company.employees") quando *attributeName* é um atributo relacionado um-para-muitos, mas a entidade não pertence a uma seleção de entidade.
+- a nova seleção de entidade é explicitamente copiada como compartilhável com [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (ou seja, com a opção `ck shared`).
 
 Exemplo:
 
 ```4d
 var $myComp : cs.CompanyEntity
 var $employees : cs.EmployeeSelection
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
+$myComp:=ds.Company.get(2) //$myComp não pertence a uma seleção de entidade
+$employees:=$myComp.employees //$employees é compartilhável
 ```
 
-Una nueva entity selection es **compartible** en los siguientes casos:
+Uma nova seleção de entidade é **alterável** nos seguintes casos:
 
-- la nueva entity selection creada en un espacio vacío utilizando la función [dataClass.newSelection()](API/DataClassClass.md#newselection) o el comando `Create entity selection`,
-- la nueva entity selection se copia explícitamente como modificable con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, sin la opción `ck shared`).
+- a nova seleção de entidade criada em branco usando a função [dataClass.newSelection()](API/DataClassClass.md#newselection) ou o comando `Create entity selection`,
+- a nova seleção da entidade é explicitamente copiada como alterável com [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (ou seja, sem a opção `ck shared`).
 
 Exemplo:
 
 ```4d
 var $toModify : cs.CompanySelection
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify é alternável
 ```
 
-Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
+Uma nova seleção de entidade **herda** da natureza da seleção de entidade original nos seguintes casos:
 
-- la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+- a nova seleção de entidade resulta de uma das várias funções de classe ORDA aplicadas a uma seleção de entidade existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - a nova entity selection é baseada numa relação:
-  - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
-  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
-  - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
+  - [entity.*attributeName*](API/EntityClass.md#attributename) (por exemplo, "company.employees") quando *attributeName* é um atributo de um para muitos e a entidade pertence a uma seleção de entidade (mesma natureza que [.getSelection()](API/EntityClass.md#getselecation)),
+  - [entitySeletion.*attributeName*](API/EntitySelectionClass.md#attributename) (por exemplo, "employees es.employer") quando *attributeName* é um atributo relacionado (mesma natureza que a seleção da entidade),
+  - [.extract()](API/EntitySelectionClass.md#extract) quando a coleção resultante contém seleções de entidade (mesma natureza da seleção de entidade).
 
 Exemplos:
 
@@ -324,30 +324,30 @@ var $comp; $comp2 : cs.Company
 
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 
-	//$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+	//$highSal é compartilhável por causa da consulta em dataClass
+$comp:=$highSal.employer //$comp é compartilhável porque $highSal é compartilhável
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
-	//$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+	//$lowSal é alterável por causa da copy()
+$comp2:=$lowSal.employer //$comp2 é alterável porque $lowSal é alterável
 ```
 
 :::note Entity selections devolvidas pelo servidor
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Exemplo:
+Na arquitetura cliente/servidor, as seleções de entidades retornadas do servidor são sempre compartilháveis no cliente, mesmo que [`copy()`](API/EntitySelectionClass.md#copy) tenha sido chamada no servidor. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`] (API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo:
 
 ```4d
-	//a function is always executed on the server
+	//uma função é sempre executada no servidor
 exposed Function getSome() : cs.MembersSelection
     return This.query("ID >= :1"; 15).orderBy("ID ASC")
 
-	//in a method, executes on the remote side
+	//em um método, é executado no lado remoto
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result is shareable
+$result:=ds.Members.getSome() //$result é compartilhável
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result is now alterable
+$result:=ds.Members.getSome().copy() // $result agora é alterável
 $alterable:=$result.isAlterable() // True
 ```
 
@@ -355,26 +355,25 @@ $alterable:=$result.isAlterable() // True
 
 #### Partilhar uma seleção de entidade entre processos (exemplo)
 
-You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
+Você trabalha com duas seleções de entidades que deseja passar para um processo de trabalho para que ele possa enviar e-mails para as pessoas apropriadas:
 
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Obtemos seleções de entidades para faturas pagas e não pagas
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
+//Passamos referências de seleção de entidades como parâmetros para o trabalhador
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
 
-El método `sendMails`:
+O método `sendMails`:
 
 ```4d
-
- #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
- var $invoice : cs.InvoicesEntity
+#DECLARE ($paid : cs. InvoicesSelection; $unpaid : cs. InvoicesSelection)
+ var $invoice : cs. InvoicesEntity
 
  var $server; $transporter; $email; $status : Object
 
@@ -391,7 +390,6 @@ El método `sendMails`:
  For each($invoice;$paid)
     $email.to:=$invoice.customer.address // email address of the customer
     $email.subject:="Payment OK for invoice # "+String($invoice.number)
-
     $status:=$transporter.send($email)
  End for each
 
@@ -404,42 +402,42 @@ El método `sendMails`:
 
 ### Selecções de entidades e atributos de armazenamento
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Por exemplo:
+Todos os atributos de armazenamento (texto, número, booleano, data) estão disponíveis como propriedades de seleções de entidades, bem como de entidades. Quando usado em conjunto com uma seleção de entidade, um atributo escalar retorna uma coleção de valores escalares. Por exemplo:
 
 ```4d
 var $locals : cs.PersonSelection
 var $localEmails : Collection
-$locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
-$localEmails:=$locals.emailAddress //collection of email addresses (strings)
+$locals:=ds.Person.query("city = :1"; "San Jose") //seleção de identidade de pessoas
+$localEmails:=$locals.emailAddress //coleção de endereços de e-mail (cadeias de caracteres)
 ```
 
-Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
+Esse código retorna em *$localEmails* uma coleção de endereços de e-mail como strings.
 
 ### Selecções de entidades e atributos de relações
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Por exemplo, considere a seguinte estrutura:
+Além da variedade de maneiras que você pode consultar, você também pode usar atributos de relação como propriedades das seleções das entidades para retornar as novas seleções da entidade. Por exemplo, considere a seguinte estrutura:
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
 var $myParts : cs.PartSelection
 var $myInvoices : cs.InvoiceSelection
-$myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+$myParts:=ds.Part.query("ID < 100") //Retornar peças com ID menor que 100
 $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  /Todas as faturas com pelo menos um item de linha relacionado a uma peça em $myParts
 ```
 
-La última línea devolverá en *$myInvoices* una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
+A última linha retornará em *$myInvoices* uma seleção de entidade de todas as faturas que tenham pelo menos um item de fatura relacionado a uma peça na seleção de entidade myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
 
 ## Restrição de seleções de entidades
 
-In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Once implemented, a filter is automatically applied whenever the entities of the dataclass are accessed either by **ORDA class functions** such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by the [**REST API**](../category/api-dataclass) (which involves the [Data Explorer](../Admin/dataExplorer.md) and [remote datastores](remoteDatastores.md)).
+Na ORDA, você pode criar filtros para restringir o acesso a entidades de qualquer uma das suas caixas de dados. Uma vez implementado, um filtro é aplicado automaticamente sempre que as entidades da classe de dados são acessadas por **funções de classe ORDA**, como [`all()`](../API/DataClassClass.md#all) ou [`query()`](../API/EntitySelectionClass.md#query), ou pela [**REST API**](../category/api-dataclass) (que envolve o [Data Explorer](../Admin/dataExplorer.md) e [remote datastores](remoteDatastores.md)).
 
-A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson.
+Um filtro cria uma visão restrita dos dados, construída sobre quaisquer regras de negócios, como o usuário de sessão atual. Por exemplo, numa aplicação usada pelos vendedores para fazer negócios com os seus clientes, você pode restringir os clientes de leitura àqueles gerenciados pelo vendedor autenticado.
 
 :::info
 
-Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una **clase de datos** o a uno o varios de sus **atributos**, puede utilizar los [privilegios de sesión](privileges.md), que son más apropiados en este caso.
+Os filtros se aplicam a **entidades**. Se quiser restringir o acesso a uma **classe de dados** em si ou a um ou mais de seus **atributos**, considere o uso de [privilégios de sessão] (privileges.md), que são mais apropriados nesse caso.
 
 :::
 
@@ -458,23 +456,23 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. O filtro é executado uma vez, quando a entity selection é criada.
 
-O filtro deve retornar uma seleção de entidade da dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
+O filtro deve retornar uma seleção de entidade da dataclass. Pode ser uma seleção de entidade criada com base em uma consulta, armazenada no [`Storage`], etc.
 
 :::note
 
-Por razones de rendimiento, recomendamos utilizar **atributos indexados** en la definición del filtro.
+Por motivos de desempenho, recomendamos o uso de **atributos indexados** na definição do filtro.
 
 :::
 
-A função deve retornar uma seleção de entidade válida da classe de dados. No filter is applied (all entities corresponding of the initial request are returned) if:
+A função deve retornar uma seleção de entidade válida da classe de dados. Nenhum filtro é aplicado (todas as entidades correspondentes à solicitação inicial são retornadas) se:
 
-- la función devuelve **null**,
-- la función devuelve **indefinido**,
+- a função retorna **nulo**,
+- a função retorna **indefinido**,
 - a função não retorna uma seleção de entidade válida.
 
 #### Exemplo
 
-When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. Durante la fase de autenticación, el vendedor se almacena en el objeto `Session`. Outros tipos de solicitações também são tratados.
+Quando acessado a partir de uma solicitação da web ou REST, queremos que o dataclass de clientes explique apenas os clientes que pertencem à pessoa de venda identificada. Durante a fase de autenticação, o vendedor é armazenado no objeto `Session`. Outros tipos de solicitações também são tratados.
 
 ```4d
 Class extends DataClass
@@ -483,64 +481,64 @@ Class extends DataClass
 Function event restrict() : cs.CustomersSelection
 
 
-    	//We work in a web or REST context
+    	//Trabalhamos em um contexto da Web ou REST
     If (Session#Null)
 
         Case of
-                // Only return the customers of the authenticated sales person stored in the session
+                // Retorna apenas os clientes do vendedor autenticado armazenados na sessão
             : (Session.storage.salesInfo#Null)
                 return This.query("sales.internalId = :1"; Session.storage.salesInfo.internalId)
 
-                //Data explorer - No filter is applied
+                //Data explorer - Nenhum filtro é aplicado
             : (Session.hasPrivilege("WebAdmin"))
                 return Null
             Else
-                //No customers can be read
+                //Nenhum cliente pode ser lido
                 return This.newSelection()
 
         End case
 
-    Else // We work in client server
+    Else // Trabalhamos no servidor do cliente
         return This.query("sales.userName = :1"; Current user)
     End if
 ```
 
 ### Detalhes de ativação do filtro
 
-Filters apply to all ORDA or REST requests executed in your 4D projects (standalone and client/server architectures). Un filtro se activa en cuanto se abre el proyecto, es decir, puede activarse en el método de base de datos `On Startup`.
+Os filtros se aplicam a todas as solicitações ORDA ou REST executadas em seus projetos 4D (arquiteturas autônomas e cliente/servidor). Um filtro é ativado assim que o projeto é aberto, ou seja, pode ser acionado no método de banco de dados `On Startup`.
 
 :::info
 
-Los filtros no se aplican a las selecciones heredadas de registros manejadas a través de la interfaz 4D o el lenguaje 4D (por ejemplo cuando se llama a `ALL RECORDS`).
+Os filtros não se aplicam a seleções legadas de registros manipulados por meio da interface 4D ou da linguagem 4D (por exemplo, ao chamar `ALL RECORDS`).
 
 :::
 
-| Funções                                                                                                  | Comentário                                                                                                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [dataclass.get()](../API/DataClassClass.md#get)                       | Si la entidad no coincide con el filtro, se devuelve `null`                                                                                                                                                                                                                                                           |
-| [entity.reload()](../API/EntityClass.md#reload)                       | Somente em datastores cliente/servidor e remotos                                                                                                                                                                                                                                                                      |
-| [dataclass.all()](../API/DataClassClass.md#all)                       |                                                                                                                                                                                                                                                                                                                       |
-| [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection) | <li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li> |
-| [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                        |
-| [entitySelection.or()](../API/EntitySelectionClass.md#or)             | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                        |
-| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                        |
-| [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                                                                                                                                                                       |
-| [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                       |
-| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtro aplicado si *attributeName* es una entidad relacionada o entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                      |
-| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtro aplicado si *attributeName* corresponde a entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                     |
-| [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)                        |                                                                                                                                                                                                                                                                                                                       |
+| Funções                                                                                                  | Comentário                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [dataclass.get()](../API/DataClassClass.md#get)                       | Si la entidad no coincide con el filtro, se devuelve `null`                                                                                                                                                                                                                                                                                                                 |
+| [entity.reload()](../API/EntityClass.md#reload)                       | Somente em datastores cliente/servidor e remotos                                                                                                                                                                                                                                                                                                                            |
+| [dataclass.all()](../API/DataClassClass.md#all)                       |                                                                                                                                                                                                                                                                                                                                                                             |
+| [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection) | <li>Em caso de atualização, apenas entidades correspondentes ao filtro podem ser atualizadas. Se a coleção se referir a entidades que não correspondem ao filtro, elas serão criadas como novas entidades (se não houver erro de PK duplicado)</li><li>No caso de criação, as entidades que não correspondem ao filtro são criadas, mas não serão lidas após a criação</li> |
+| [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                                                                              |
+| [entitySelection.or()](../API/EntitySelectionClass.md#or)             | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                                                                              |
+| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Somente as entidades que correspondem ao filtro são retornadas                                                                                                                                                                                                                                                                                                              |
+| [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                                                                                                                                                                                                                             |
+| [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                                                                             |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | O filtro é aplicado se *atributoNome* é uma entidade relacionada ou entidades relacionadas a um dataclass filtrado (incluindo alias ou atributo calculado)                                                                                                                                                                                               |
+| [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtro aplicado si *attributeName* corresponde a entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                                                                           |
+| [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)                        |                                                                                                                                                                                                                                                                                                                                                                             |
 
-Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities.
+Outras funções ORDA que acessam dados não acionam diretamente o filtro, mas se beneficiam dele. Por exemplo, a função [`entity.next()`](../API/EntityClass.md#next) retornará a próxima entidade na seleção de entidade já filtrada. Por outro lado, se a seleção de entidade não estiver filtrada, [`entity.next()`](../API/EntityClass.md#next) funcionará em entidades não filtradas.
 
 :::note
 
-If there is an error in the filter at runtime, it is thrown as if the error came from the ORDA function itself.
+Se houver um erro no filtro no tempo de execução, ele é lançado como se o erro viesse da própria função ORDA.
 
 :::
 
 ## Bloqueio de entidades
 
-You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. El primero se denomina **bloqueo de registro pesimista** y garantiza que un registro modificado pueda escribirse a expensas de bloquear los registros a otros usuarios. Este último se conoce como **bloqueo de registro optimista** y cambia la garantía de los privilegios de escritura en el registro por la flexibilidad de decidir privilegios de escritura sólo si el registro necesita ser actualizado. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
+Você frequentemente precisa gerenciar possíveis conflitos que podem surgir quando vários usuários ou processos carregam e tentam modificar as mesmas entidades ao mesmo tempo. Bloqueio de registros é uma metodologia usada em bancos de dados relacionais, para evitar atualizações inconsistentes de dados. O conceito é bloquear um registro após a leitura para que nenhum outro processo possa atualizá-lo, ou alternativamente. para verificar ao salvar um registro para verificar se algum outro processo não modificou desde que foi lido. O primeiro é chamado de **bloqueio de registro pessimista** e garante que um registro modificado possa ser gravado às custas do bloqueio de registros para outros usuários. Esse último é chamado de **bloqueio otimista de registro** e troca a garantia de privilégios de gravação no registro pela flexibilidade de decidir privilégios de gravação somente se o registro precisar ser atualizado. No bloqueio do recorde pessimista, o registro está bloqueado, mesmo que não haja necessidade de o actualizar. Em bloqueio de registro otimista, a validade da modificação de um registro é decidida no momento de atualização.
 
 ORDA fornece-lhe dois modos de bloqueio de entidades:
 
@@ -549,22 +547,22 @@ ORDA fornece-lhe dois modos de bloqueio de entidades:
 
 ### Bloqueio optimista automático
 
-This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. Este conceito é caracterizado pelos seguintes princípios de funcionamento:
+Esse mecanismo automático baseia-se no conceito de "bloqueio otimista", que é particularmente adequado aos problemas dos aplicativos da Web. Este conceito é caracterizado pelos seguintes princípios de funcionamento:
 
-- Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
+- Todas as entidades sempre podem ser carregadas em leitura e gravação; não há "bloqueio" *a priori* de entidades.
 - Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
-- Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
+- Quando um usuário ou processo tenta salvar uma entidade usando o método `entity.save( )`, 4D compara o valor do carimbo da entidade a ser salva com o da entidade encontrada nos dados (no caso de uma modificação):
   - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
 
-  - When the values do not match, it means that another user has modified this entity in the meantime. A gravação não é efetuada e é devolvido um erro.
+  - Quando os valores não correspondem, significa que outro usuário modificou esta entidade nesse meio tempo. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
 
 1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. O primeiro processo modifica a entidade e valida a alteração. Se llama al método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. O primeiro processo modifica a entidade e valida a alteração. Se llama al método `entity.save( )`. O mecanismo 4D compara automaticamente o valor do carimbo interno da entidade modificada com o da entidade armazenada nos dados. Como eles coincidem, a entidade é salva e seu valor de selo é incrementado.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. O segundo processo também modifica a entidade carregada e valida as suas alterações. Se llama al método `entity.save( )`. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. O segundo processo também modifica a entidade carregada e valida as suas alterações. O método `entity.save( )` é chamado. Como o valor do carimbo da entidade modificada não corresponde ao da entidade armazenada nos dados, o salvamento não é realizado e um erro é retornado.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 Isto também pode ser ilustrado pelo seguinte código:
 
@@ -577,37 +575,37 @@ Isto também pode ser ilustrado pelo seguinte código:
  $result:=$person2.save() //$result.success=false, alteração não salva
 ```
 
-Neste exemplo, atribuímos a $person1 uma referência à entidade pessoa com uma chave de 1. De seguida, atribuímos outra referência da mesma entidade à variável $person2. Utilizando $person1, alteramos o primeiro nome da pessoa e guardamos a entidade. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+Neste exemplo, atribuímos a $person1 uma referência à entidade pessoa com uma chave de 1. De seguida, atribuímos outra referência da mesma entidade à variável $person2. Utilizando $person1, alteramos o primeiro nome da pessoa e guardamos a entidade. Quando tentamos fazer a mesma coisa com $person2, 4D verifica se a entidade no disco é a mesma de quando a referência em $person1 foi atribuída pela primeira vez. Como não é a mesma coisa, ele retorna false na propriedade success e não salva a segunda modificação.
 
-Cuando se produce esta situación, puede, por ejemplo, volver a cargar la entidad desde el disco utilizando el método `entity.reload()` para poder intentar realizar de nuevo la modificación. El método `entity.save()` también propone una opción "automerge" para guardar la entidad en caso de que los procesos modificaran atributos que no fueran los mismos.
+Cuando se produce esta situación, puede, por ejemplo, volver a cargar la entidad desde el disco utilizando el método `entity.reload()` para poder intentar realizar de nuevo la modificación. O método `entity.save()` também propõe uma opção "automerge" para salvar a entidade caso os processos modifiquem atributos que não sejam os mesmos.
 
-> Los mardadores de registro no se utilizan en las de **transacciones** porque en este contexto sólo existe una única copia de un registro. Sea cual sea el número de entidades que hacen referencia a un registro, se modifica la misma copia, por lo que las operaciones `entity.save()` nunca generarán errores de marcador.
+> Os carimbos de registro não são usados em **transações** porque, nesse contexto, existe apenas uma única cópia de um registro. Seja qual for o número de entidades que referenciam um registro, a mesma cópia é modificada, portanto, as operações `entity.save()` nunca gerarão erros de carimbo.
 
 ### Bloqueio pessimista
 
-É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. A entidade só pode ser carregada no modo somente leitura nesses processos; seus valores não podem ser editados ou salvos.
+É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. Quando uma entidade está sendo bloqueada por um processo, ela é carregada em leitura/gravação nesse processo, mas é bloqueada para todos os outros processos. A entidade só pode ser carregada no modo somente leitura nesses processos; seus valores não podem ser editados ou salvos.
 
-Esta funcionalidad se basa en dos funciones de la clase `Entity`:
+Esse recurso é baseado em duas funções da classe `Entity`:
 
 - [`entity.lock()`](../API/EntityClass.md#lock)
 - [`entity.unlock()`](../API/EntityClass.md#unlock)
 
 Para mais informações, consulte as descrições destas funções.
 
-> Los bloqueos pesimistas también pueden gestionarse a través de la [REST API](../REST/$lock.md).
+> Travas de pessimismo também podem ser tratadas através da [API REST](../REST/$lock.md).
 
 ### Utilização simultânea de bloqueios clássicos 4D e bloqueios pessimistas ORDA
 
-Using both classic and ORDA commands to lock records is based upon the following principles:
+Usando comandos clássicos e da ORDA para bloquear os registros é baseado nos seguintes princípios:
 
-- A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
-- A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
+- Um bloqueio definido com um comando clássico 4D em um registro impede a ORDA de bloquear a entidade correspondente ao registro.
+- Um bloqueio com ORDA em uma entidade impede comandos 4D clássicos para bloquear o registro correspondente à entidade.
 
 Estes princípios são apresentados no diagrama seguinte:
 
 ![](../assets/en/ORDA/concurrent1.png)
 
-Los **bloqueos de transacciones** también se aplican tanto a los comandos clásicos como a los comandos ORDA. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
+**Os bloqueios de transação** também se aplicam aos comandos clássicos e ORDA. Em um processo multiusuário ou um aplicativo multiusuário, um bloqueio definido dentro de uma transação em um registro por um comando clássico resultará na prevenção de quaisquer outros processos para bloquear entidades relacionadas a este registro (ou inversamente), até que a transação seja validada ou cancelada.
 
-- Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-- Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+- Exemplo com um conjunto de bloqueio por um comando clássico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
+- Exemplo com um bloqueio definido por uma função ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
