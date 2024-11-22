@@ -20,7 +20,7 @@ title: VP REMOVE TABLE COLUMNS
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
 |column|Integer|->|Index in the table of the starting column to remove|
-|count|Text|->|Number of columns to remove (must be >0) |
+|count|Integer|->|Number of columns to remove (must be >0) |
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description

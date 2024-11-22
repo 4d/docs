@@ -12,7 +12,7 @@ title: VP SET SHEET OPTIONS
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area name|
 |sheetOptions |Object|->|Sheet option(s) to set|
-|sheet |Object|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|sheet |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 

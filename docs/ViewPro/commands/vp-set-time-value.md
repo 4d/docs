@@ -12,7 +12,7 @@ title: VP SET TIME VALUE
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-|timeValue |Text|->|Time value to set|
+|timeValue |Time|->|Time value to set|
 |formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Description
