@@ -3,7 +3,7 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
+The ORDA technology is based upon an automatic mapping of an underlying 4D structure. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). As a result, ORDA exposes the whole database as a set of data model objects.
 
 
 ## Mapeamento da estrutura
@@ -25,7 +25,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 *   Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
     *   Tabelas sem chave primária
     *   Tabelas com chaves primárias compostas.
-*   [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore.
+*   Os campos BLOB estão automaticamente disponíveis como atributos do tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.

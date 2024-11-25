@@ -5,12 +5,12 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* ) -> Resultado Função<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | conjunto | Text | &#8594;  | Nome do conjunto a testar |
-| Resultado Função | Inteiro longo | &#8592; | Número de registros em conjunto |
+| Resultado Função | Integer | &#8592; | Número de registros em conjunto |
 
 <!-- END REF-->
 

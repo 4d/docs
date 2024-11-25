@@ -9,7 +9,7 @@ La regla es un objeto de interfaz estándar que se utiliza para definir u obtene
 
 Puede asignar su [variable o expresión asociada](properties_Object.md#expression-type) a un área editable (campo o variable) para almacenar o modificar el valor actual del objeto.
 
-Para más información, consulte [Uso de indicadores](progressIndicator.md#using-indicatire) en la página "Indicadores de progreso".
+Para más información, consulte [Uso de indicadores](progressIndicator.md#using-indicators) en la página "Indicador de progreso".
 
 ### Propiedades soportadas
 

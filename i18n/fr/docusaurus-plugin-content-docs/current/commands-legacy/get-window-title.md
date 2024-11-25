@@ -5,7 +5,7 @@ slug: /commands/get-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get window title.Syntax-->**Get window title** {( *fenêtre* )} -> Résultat<!-- END REF-->
+<!--REF #_command_.Get window title.Syntax-->**Get window title** {( *fenêtre* )} : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

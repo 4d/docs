@@ -4,13 +4,13 @@ title: This
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.This.Syntax-->**This** -> Object<!-- END REF-->
+<!--REF #_command_.This.Syntax-->**This** : Object<!-- END REF-->
 
 <!--REF #_command_.This.Params-->
 
-| Parámetros | Tipo   |   | Descripción               |
-| ---------- | ------ | - | ------------------------- |
-| Resultado  | Object | ← | Current element or object |
+| Parámetros | Tipo   |   | Descripción              |
+| ---------- | ------ | - | ------------------------ |
+| Resultado  | Object | ← | Elemento u objeto actual |
 
 <!-- END REF-->
 
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Al llamar a la superclase del constructor en un constructor utilizando la palabra clave [Super](#super), tenga en cuenta que `This` no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. See [this example](super.md#example-1).
+> Al llamar a la superclase del constructor en un constructor utilizando la palabra clave [Super](#super), tenga en cuenta que `This` no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. Ver [este ejemplo](super.md#example-1).
 
 En todos los casos, `This` se refiere al objeto sobre el que se ha llamado el método, como si el método fuera una función del objeto.
 

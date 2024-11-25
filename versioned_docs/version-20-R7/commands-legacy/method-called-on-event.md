@@ -5,11 +5,11 @@ slug: /commands/method-called-on-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on event.Syntax-->**Method called on event**  -> Function result<!-- END REF-->
+<!--REF #_command_.Method called on event.Syntax-->**Method called on event**  : Text<!-- END REF-->
 <!--REF #_command_.Method called on event.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Name of method called on event |
+| Function result | Text | &#8592; | Name of method called on event |
 
 <!-- END REF-->
 

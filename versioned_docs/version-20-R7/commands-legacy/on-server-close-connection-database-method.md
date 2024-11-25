@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.On Server Close Connection database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Longint | &#8592; | User ID number used internally by 4D Server to identify users |
-| $2 | Longint | &#8592; | Connection ID number used internally by 4D Server to identify a connection |
-| $3 | Longint | &#8592; | Obsolete: Always returns 0 but must be declared |
+| $1 | Integer | &#8592; | User ID number used internally by 4D Server to identify users |
+| $2 | Integer | &#8592; | Connection ID number used internally by 4D Server to identify a connection |
+| $3 | Integer | &#8592; | Obsolete: Always returns 0 but must be declared |
 
 <!-- END REF-->
 

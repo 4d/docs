@@ -5,7 +5,7 @@ slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *object* ; *jsCode* {; *type*} )  -> Function result<!-- END REF-->
+<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *object* ; *jsCode* {; *type*} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,14 +28,14 @@ By default, the command returns values as strings. You can use the optional *typ
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Is Boolean    | Longint | 6     |
-| Is collection | Longint | 42    |
-| Is date       | Longint | 4     |
-| Is longint    | Longint | 9     |
-| Is object     | Longint | 38    |
-| Is real       | Longint | 1     |
-| Is text       | Longint | 2     |
-| Is time       | Longint | 11    |
+| Is Boolean    | Integer | 6     |
+| Is collection | Integer | 42    |
+| Is date       | Integer | 4     |
+| Is longint    | Integer | 9     |
+| Is object     | Integer | 38    |
+| Is real       | Integer | 1     |
+| Is text       | Integer | 2     |
+| Is time       | Integer | 11    |
 
 **Warning**: Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print()**...) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
 

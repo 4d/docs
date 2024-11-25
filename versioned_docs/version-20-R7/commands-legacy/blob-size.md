@@ -5,12 +5,12 @@ slug: /commands/blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *blob* ) -> Function result<!-- END REF-->
+<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *blob* ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB field or variable |
-| Function result | Longint | &#8592; | Size in bytes of the BLOB |
+| Function result | Integer | &#8592; | Size in bytes of the BLOB |
 
 <!-- END REF-->
 

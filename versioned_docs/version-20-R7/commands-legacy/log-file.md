@@ -5,11 +5,11 @@ slug: /commands/log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log File.Syntax-->**Log File**  -> Function result<!-- END REF-->
+<!--REF #_command_.Log File.Syntax-->**Log File**  : Text<!-- END REF-->
 <!--REF #_command_.Log File.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Long name of the database log file |
+| Function result | Text | &#8592; | Long name of the database log file |
 
 <!-- END REF-->
 

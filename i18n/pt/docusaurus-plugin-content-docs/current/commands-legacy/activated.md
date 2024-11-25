@@ -5,7 +5,7 @@ slug: /commands/activated
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Activated.Syntax-->**Activated**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Activated.Syntax-->**Activated**  : Boolean<!-- END REF-->
 <!--REF #_command_.Activated.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

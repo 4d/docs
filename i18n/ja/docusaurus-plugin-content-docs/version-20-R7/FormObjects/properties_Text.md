@@ -34,7 +34,7 @@ title: テキスト
 
 | プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
-| fontWeight | テキスト   | "normal", "bold" |
+| fontWeight | text   | "normal", "bold" |
 
 #### 対象オブジェクト
 

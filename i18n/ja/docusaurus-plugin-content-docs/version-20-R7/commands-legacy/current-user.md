@@ -5,7 +5,7 @@ slug: /commands/current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current user.Syntax-->**Current user** {( *user* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Current user.Syntax-->**Current user** {( *user* )} : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/license-usage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.License usage.Syntax-->**License usage** -> Function result<!-- END REF-->
+<!--REF #_command_.License usage.Syntax-->**License usage** : Collection<!-- END REF-->
 <!--REF #_command_.License usage.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

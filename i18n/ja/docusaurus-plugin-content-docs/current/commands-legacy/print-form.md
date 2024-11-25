@@ -5,7 +5,7 @@ slug: /commands/print-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *area1*{; *area2*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *area1*{; *area2*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Print form.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

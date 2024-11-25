@@ -5,14 +5,14 @@ slug: /commands/dom-get-next-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* {; *siblingElemName* {; *siblingElemValue*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* {; *siblingElemName* {; *siblingElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get next sibling XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | siblingElemName | Text | &#8592; | Name of sibling XML element |
 | siblingElemValue | Text | &#8592; | Value of sibling XML element |
-| Function result | String | &#8592; | Sibling XML element reference |
+| Function result | Text | &#8592; | Sibling XML element reference |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobDecriptografar* ; objetoChave / passefrase ; *salt* ; *BLOBdecriptografado* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobDecriptografar* ; objetoChave / passefrase ; *salt* ; *BLOBdecriptografado* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

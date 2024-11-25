@@ -51,7 +51,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 |hostname|Text|Name or IP address of the remote database + ":" + port number (port number is mandatory)|API Endpoint of the Qodly cloud instance|
 |user|Text|User name|- (ignored)|
 |password|Text|User password|- (ignored)|
-|idleTimeout|Longint|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|- (ignored)|
+|idleTimeout|Integer|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|- (ignored)|
 |tls|Boolean|True to use secured connection(1). If omitted, false by default. Using a secured connection is recommended whenever possible.|True to use secured connection. If omitted, false by default|
 |type |Text |must be "4D Server"|- (ignored)|
 |api-key|Text|- (ignored)|Api key of the Qodly cloud instance|

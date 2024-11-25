@@ -5,7 +5,7 @@ slug: /commands/window-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window kind.Syntax-->**Window kind** {( *ventana* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Window kind.Syntax-->**Window kind** {( *ventana* )} : Integer<!-- END REF-->
 <!--REF #_command_.Window kind.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

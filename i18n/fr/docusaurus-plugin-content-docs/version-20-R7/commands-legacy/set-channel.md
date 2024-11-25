@@ -36,6 +36,7 @@ La première syntaxe de **SET CHANNEL** ouvre un port série et définit le prot
 
 * Le premier paramètre, *port*, définit le port et le protocole utilisés. Vous pouvez adresser jusqu'à 99 ports série (un par un).  
 Le tableau suivant liste les valeurs possibles du paramètre *port* :  
+
 | **Valeurs port** | **Description**                                                                  |  
 | ---------------- | -------------------------------------------------------------------------------- |  
 | 0                | Port imprimante (Mac) ou COM2 (Windows) sans protocole                           |  

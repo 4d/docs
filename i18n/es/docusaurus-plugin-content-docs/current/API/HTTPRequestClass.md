@@ -159,7 +159,7 @@ Todas las funciones de retrollamada reciben dos parámetros objeto:
 | Parámetros | Tipo                                        |
 | ---------- | ------------------------------------------- |
 | $param1    | [`Objeto HTTPRequest`](#httprequest-object) |
-| $param2    | [`Objeto Event`](#event-object)             |
+| $param2    | [Objeto `Event`](#event-object)             |
 
 Esta es la secuencia de llamadas de retorno:
 
@@ -498,5 +498,7 @@ La función `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->espera la resp
 Si se pasa un parámetro *time*, la función esperará como máximo el número de segundos definido.
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
+
+During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
 
 <!-- END REF -->

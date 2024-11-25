@@ -5,13 +5,13 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
-| Function result | String | &#8592; | Title of current page |
+| Function result | Text | &#8592; | Title of current page |
 
 <!-- END REF-->
 

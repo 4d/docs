@@ -5,13 +5,13 @@ slug: /commands/object-get-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font style.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Longint | &#8592; | Font style |
+| Function result | Integer | &#8592; | Font style |
 
 <!-- END REF-->
 
@@ -28,10 +28,10 @@ You can compare the value returned with the value of one or more of the followin
 
 | Constant  | Type    | Value |
 | --------- | ------- | ----- |
-| Plain     | Longint | 0     |
-| Bold      | Longint | 1     |
-| Italic    | Longint | 2     |
-| Underline | Longint | 4     |
+| Plain     | Integer | 0     |
+| Bold      | Integer | 1     |
+| Italic    | Integer | 2     |
+| Underline | Integer | 4     |
 
 #### See also 
 

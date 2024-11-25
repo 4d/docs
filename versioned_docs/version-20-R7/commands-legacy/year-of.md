@@ -5,12 +5,12 @@ slug: /commands/year-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* ) : Integer<!-- END REF-->
 <!--REF #_command_.Year of.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | date | Date | &#8594;  | Date for which to return the year |
-| Function result | Longint | &#8592; | Number indicating the year of date |
+| Function result | Integer | &#8592; | Number indicating the year of date |
 
 <!-- END REF-->
 

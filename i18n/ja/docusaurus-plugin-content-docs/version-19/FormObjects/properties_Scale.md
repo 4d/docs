@@ -31,7 +31,7 @@ title: スケール
 
 #### 対象オブジェクト
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
+[サーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 ---
 
@@ -47,7 +47,7 @@ title: スケール
 
 #### 対象オブジェクト
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
+[サーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 ---
 
@@ -67,7 +67,7 @@ title: スケール
 
 #### 対象オブジェクト
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
+[サーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md)
 
 ---
 
@@ -86,7 +86,7 @@ title: スケール
 
 #### 対象オブジェクト
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+[サーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 
 ---
@@ -103,7 +103,7 @@ title: スケール
 
 #### 対象オブジェクト
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+[サーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 ---
 
@@ -119,4 +119,4 @@ title: スケール
 
 #### 対象オブジェクト
 
-[デフォルトサーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+[サーモメーター](progressIndicator.md#デフォルトサーモメーター) - [ルーラー](ruler.md) - [ステッパー](stepper.md)

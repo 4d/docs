@@ -5,7 +5,7 @@ slug: /commands/value-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

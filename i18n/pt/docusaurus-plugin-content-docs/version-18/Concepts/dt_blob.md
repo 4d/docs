@@ -18,16 +18,16 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 **Exemplos:**
 ```4d
-  ` Declare a variable of type BLOB
+  Declarar uma variável do tipo BLOB
  C_BLOB(anyBlobVar)
-  ` The BLOB is passed as parameter to a 4D command
+  ` O BLOB é passado como parâmetro para um comando 4D
  SET BLOB SIZE(anyBlobVar;1024*1024)
-  ` The BLOB is passed as parameter to an external routine
+  ` O BLOB é passado como parâmetro para uma rotina externa
  $errCode:=Do Something With This BLOB(anyBlobVar)
-  ` The BLOB is passed as a parameter to a method that returns a BLOB
+  ` O BLOB é passado como parâmetro para um método que retorna um BLOB
  C_BLOB(retrieveBlob)
  retrieveBlob:=Fill_Blob(anyBlobVar)
-  ` A pointer to the BLOB is passed as parameter to a user method
+  ` Um ponteiro para o BLOB é passado como parâmetro para um método usuário
  COMPUTE BLOB(->anyBlobVar)
 ```
 **Nota para  desenvolvedores de plugins:** um parâmetro BLOB se declara como "&O" (a letra "O", não o número "0").

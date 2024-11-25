@@ -31,6 +31,7 @@ displayed_sidebar: docs
 
 * pase un valor entero positivo para designar el nivel (ruptura) subtotal correspondiente que está afectado.
 * pase una de las siguientes constantes del tema *QR Filas para propiedades*:  
+
 | Constante      | Tipo         | Valor | Comentario                  |  
 | -------------- | ------------ | ----- | --------------------------- |  
 | qr detail      | Entero largo | \-2   | Área de detalle del informe |  

@@ -5,12 +5,12 @@ slug: /commands/menu-selected
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | subMenu | Text | &#8592; | Reference of menu containing item selected |
-| Function result | Longint | &#8592; | Menu command selected Menu number in high word Menu item number in low word |
+| Function result | Integer | &#8592; | Menu command selected Menu number in high word Menu item number in low word |
 
 <!-- END REF-->
 

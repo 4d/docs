@@ -5,7 +5,7 @@ slug: /commands/get-document-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get document position.Syntax-->**Get document position** ( *DocRef* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get document position.Syntax-->**Get document position** ( *DocRef* ) : Real<!-- END REF-->
 <!--REF #_command_.Get document position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

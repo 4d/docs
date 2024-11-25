@@ -5,7 +5,7 @@ slug: /commands/self
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Self.Syntax-->**Self**  -> Function result<!-- END REF-->
+<!--REF #_command_.Self.Syntax-->**Self**  : Pointer<!-- END REF-->
 <!--REF #_command_.Self.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

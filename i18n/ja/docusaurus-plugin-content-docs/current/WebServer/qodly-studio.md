@@ -138,8 +138,8 @@ Qodlyページを利用した Webアプリケーションを開発するには�
 | デバッガー                                                                         | 4D IDE デバッガー<br/>_4D Serverのみ_: Qodly Studio デバッガー ([この段落](#4d-server-で-qodlyデバッガーを使用する) を参照ください)                                                        | Qodly Studio デバッガー                                                                              |
 | REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                                                                                              | Qodly Studio ロールとアクセス権エディター                                                                     |
 
-(1) Qodly Studioで **Model** ボタンをクリックしても何も起こりません。<br/>
-(2) 4D Serverでは、Qodly Studio のコードエディターで 4Dコードを開くことができます (**テストおよびデバッグ目的のみ**。[この段落](#開発と運用) を参照ください) 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
+(1) The **Model** item is disabled in Qodly Studio.<br/>
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 ### ランゲージ
 
@@ -264,7 +264,7 @@ Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is ena
 
 :::note 互換性
 
-従来のログインモード ([4D 20 R6 で非推奨](https://blog.4d.com/ja/force-login-now-is-the-default-mode-for-all-rest-authentications)) が有効になっている場合、認証用の Qodlyページのレンダリングを含むすべての RESTリクエストは、サーバー上で Webセッションを作成し、認証の結果に関係なく 4Dクライアントライセンスを消費します。 詳細については、[このブログ記事](https://blog.4d.com/ja/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) を参照ください。
+When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth)) is enabled, any REST request, including the rendering of an authentication Qodly page, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. 詳細については、[このブログ記事](https://blog.4d.com/ja/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) を参照ください。
 
 :::
 

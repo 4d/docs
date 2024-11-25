@@ -5,7 +5,7 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *endEstrutura* ; *endDados* {; *pastaArquivo* {; *opçao* {; *metodo*}}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *endEstrutura* ; *endDados* {; *pastaArquivo* {; *opçao* {; *metodo*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -36,6 +36,7 @@ O comando retorna o caminho completo da pasta criada.
 \- Se você passar uma string vazia, uma caixa de diálogo padrão de Abrir pasta irá aparecer para que o usuário possa especificar a localização da pasta a ser criada.  
 \- Se você passar um endereço (expresso na sintaxe do sistema operacional), o comando vai criar uma pasta "Replaced files (compacting) DateTime" neste local.
 * O parâmetro opcional *opções* é usado para definir várias opções de compactação. Para fazer isso, use as seguintes constantes, encontradas no tema *Manutenção do arquivo de dados*. Você pode passar várias opções, combinando-as:  
+
 | Constante               | Tipo          | Valor  | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |  
 | ----------------------- | ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Compact address table   | Inteiro longo | 131072 | Forçar a reescrever os registros de endereço tabela (compactação lenta). Se você apenas passar esta opção, 4D ativa automaticamente a opção "Atualizar Registros '. Note que neste caso, os números de registro são reescritos.                                                                                                                                                                                                                                                          |  

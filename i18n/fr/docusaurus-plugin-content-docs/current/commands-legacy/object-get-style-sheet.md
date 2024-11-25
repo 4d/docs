@@ -5,7 +5,7 @@ slug: /commands/object-get-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *objet* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get style sheet.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,6 +31,7 @@ La commande peut retourner soit :
 * un nom de feuille de style,
 * une chaîne vide ("") si aucune feuille de style n’est affectée,
 * une des valeurs de constantes suivantes du thème "*Styles de caractères*" si une feuille de style automatique est affectée :  
+
 | Constante                         | Type   | Valeur                              | Comment                                                                                                                                   |  
 | --------------------------------- | ------ | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Chaîne | \_\_automatic\_\_                   | Utilisée par défaut pour tous les objets                                                                                                  |  

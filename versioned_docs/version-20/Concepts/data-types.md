@@ -41,7 +41,7 @@ The default value depends on the variable type:
 |---|---|
 |Booleen	|False	|
 |Date	|00-00-00	|
-|Longint|0	|
+|Integer|0	|
 |Time|00:00:00	|
 |Picture|picture size=0	|
 |Real|0	|

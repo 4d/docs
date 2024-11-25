@@ -5,12 +5,12 @@ slug: /commands/data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file.Syntax-->**Data file** {( *segment* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Data file.Syntax-->**Data file** {( *segment* )} : Text<!-- END REF-->
 <!--REF #_command_.Data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | segment | Integer | &#8594;  | Obsolete, do not use |
-| Function result | String | &#8592; | Long name of the data file for the database |
+| Function result | Text | &#8592; | Long name of the data file for the database |
 
 <!-- END REF-->
 

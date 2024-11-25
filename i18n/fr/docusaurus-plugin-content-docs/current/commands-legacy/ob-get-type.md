@@ -5,7 +5,7 @@ slug: /commands/ob-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objet* ; *propriété* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objet* ; *propriété* ) : Integer<!-- END REF-->
 <!--REF #_command_.OB Get type.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

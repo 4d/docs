@@ -5,13 +5,13 @@ slug: /commands/count-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *array* ; *value* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *array* ; *value* ) : Integer<!-- END REF-->
 <!--REF #_command_.Count in array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array where count should occur |
 | value | Expression | &#8594;  | Value to count |
-| Function result | Longint | &#8592; | Number of instances found |
+| Function result | Integer | &#8592; | Number of instances found |
 
 <!-- END REF-->
 

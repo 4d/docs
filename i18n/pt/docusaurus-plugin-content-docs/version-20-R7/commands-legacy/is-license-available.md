@@ -5,7 +5,7 @@ slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licença* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licença* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -25,6 +25,7 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 
 * O parâmetro *licença* se omite: neste caso, o comando retorna [False](false.md "False") se a aplicação 4D estiver em modo demonstração.
 * Passe no parâmetro *licença* uma da constantes do tema “*Licença disponível*”:  
+
 | Constante              | Tipo          | Valor     |  
 | ---------------------- | ------------- | --------- |  
 | 4D Client SOAP license | Inteiro longo | 808465465 |  

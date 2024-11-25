@@ -48,7 +48,7 @@ You can manually restore an archive of the current database using the [Restore p
 
 ## Manually integrating the log
 
-If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-intergration-of-several-data-log-files)), a warning dialog box appears during the opening of the database when 4D notices that the log file contains more operations than have been carried out in the database.
+If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-integration-of-several-data-log-files)), a warning dialog box appears during the opening of the database when 4D notices that the log file contains more operations than have been carried out in the database.
 
 ![](../assets/en/Backup/backup08.png)
 

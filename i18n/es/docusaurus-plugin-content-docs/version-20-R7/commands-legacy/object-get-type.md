@@ -5,7 +5,7 @@ slug: /commands/object-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *objeto* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

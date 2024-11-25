@@ -5,7 +5,7 @@ slug: /commands/refresh-license
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Refresh license.Syntax-->**Refresh license** -> Résultat<!-- END REF-->
+<!--REF #_command_.Refresh license.Syntax-->**Refresh license** : Object<!-- END REF-->
 <!--REF #_command_.Refresh license.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

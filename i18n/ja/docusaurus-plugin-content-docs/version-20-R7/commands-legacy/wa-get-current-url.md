@@ -5,7 +5,7 @@ slug: /commands/wa-get-current-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get current URL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -87,7 +87,7 @@ Esta propiedad es de **solo lectura**.
 
 #### Descripción
 
-La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad <code>.extension</code> devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->.
+La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. Una extensión siempre comienza por ".". The property returns an empty string if the file name does not have an extension.
 
 Esta propiedad es de **solo lectura**.
 

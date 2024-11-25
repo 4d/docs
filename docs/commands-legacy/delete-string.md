@@ -5,14 +5,14 @@ slug: /commands/delete-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* ; *where* ; *numChars* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* ; *where* ; *numChars* ) : Text<!-- END REF-->
 <!--REF #_command_.Delete string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594;  | String from which to delete characters |
 | where | Integer | &#8594;  | First character to delete |
 | numChars | Integer | &#8594;  | Number of characters to delete |
-| Function result | String | &#8592; | Resulting string |
+| Function result | Text | &#8592; | Resulting string |
 
 <!-- END REF-->
 

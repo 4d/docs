@@ -5,11 +5,11 @@ slug: /commands/count-user-processes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count user processes.Syntax-->**Count user processes**  -> Function result<!-- END REF-->
+<!--REF #_command_.Count user processes.Syntax-->**Count user processes**  : Integer<!-- END REF-->
 <!--REF #_command_.Count user processes.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Number of live processes (excluding internal processes) |
+| Function result | Integer | &#8592; | Number of live processes (excluding internal processes) |
 
 <!-- END REF-->
 

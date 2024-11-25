@@ -5,7 +5,7 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name | Text | &#8594;  | Name of the process created |
 | param | Expression | &#8594;  | Parameter(s) to the method |
 | * | Operator | &#8594;  | Unique process |
-| Function result | Longint | &#8592; | Process number for newly created process or already executing process |
+| Function result | Integer | &#8592; | Process number for newly created process or already executing process |
 
 <!-- END REF-->
 

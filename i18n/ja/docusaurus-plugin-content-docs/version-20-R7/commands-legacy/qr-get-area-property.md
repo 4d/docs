@@ -5,7 +5,7 @@ slug: /commands/qr-get-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *area* ; *property* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *area* ; *property* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get area property.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/asserted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* {; *messageText*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* {; *messageText*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

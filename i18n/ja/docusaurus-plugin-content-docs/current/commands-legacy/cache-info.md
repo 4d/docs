@@ -5,7 +5,7 @@ slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *dbFilter* )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *dbFilter* )} : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

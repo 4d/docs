@@ -5,14 +5,14 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; *firstChar* {; *numChars*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; *firstChar* {; *numChars*} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594;  | String from which to get substring |
 | firstChar | Integer | &#8594;  | Position of first character |
 | numChars | Integer | &#8594;  | Number of characters to get |
-| Function result | String | &#8592; | Substring of source |
+| Function result | Text | &#8592; | Substring of source |
 
 <!-- END REF-->
 

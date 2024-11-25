@@ -5,13 +5,13 @@ slug: /commands/object-get-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get horizontal alignment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an Object name (String) If omitted, object is a field or a variable |
 | object | any | &#8594;  | Object name (if * specified), or Field or variable (if * omitted) |
-| Function result | Longint | &#8592; | Alignment code |
+| Function result | Integer | &#8592; | Alignment code |
 
 <!-- END REF-->
 
@@ -30,11 +30,11 @@ The returned code corresponds to one of the following constants located in the *
 
 | Constant      | Type    | Value | Comment                               |
 | ------------- | ------- | ----- | ------------------------------------- |
-| Align center  | Longint | 3     |                                       |
-| Align default | Longint | 1     |                                       |
-| Align left    | Longint | 2     |                                       |
-| Align right   | Longint | 4     |                                       |
-| wk justify    | Longint | 5     | Available for 4D Write Pro areas only |
+| Align center  | Integer | 3     |                                       |
+| Align default | Integer | 1     |                                       |
+| Align left    | Integer | 2     |                                       |
+| Align right   | Integer | 4     |                                       |
+| wk justify    | Integer | 5     | Available for 4D Write Pro areas only |
 
   
 The form objects to which alignment can be applied are as follows:

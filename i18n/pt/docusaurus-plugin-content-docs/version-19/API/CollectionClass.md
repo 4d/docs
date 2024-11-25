@@ -984,7 +984,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* define o(s) seguinte(s) parâmetro(s):
 
-* *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
+* *$1.result* (boolean): **true** se o valor do elemento corresponder à condição do filtro e deve ser mantido.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo 1
@@ -1125,7 +1125,7 @@ O código do método ***FindCity*** é:
 ```4d
  var $1 : Object
  var $2 : Text
- $1.result:=$1.value.name=$2 //name is a property name of objects in the collection
+ $1.result:=$1.value.name=$2 //name é um nome de propriedade de objetos na coleção
 ```
 
 <!-- END REF -->

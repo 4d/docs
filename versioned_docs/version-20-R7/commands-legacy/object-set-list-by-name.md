@@ -33,9 +33,9 @@ The **OBJECT SET LIST BY NAME** command now allows you to set or replace all the
 
 | Constant      | Type    | Value | Comment                                                                                    |
 | ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Longint | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Longint | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Longint | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
+| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
+| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
 
 If you omit this parameter, value 0 (Choice list) is used by default. 
 

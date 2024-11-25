@@ -5,7 +5,7 @@ slug: /commands/true
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.True.Syntax-->**True**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.True.Syntax-->**True**  : Boolean<!-- END REF-->
 <!--REF #_command_.True.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

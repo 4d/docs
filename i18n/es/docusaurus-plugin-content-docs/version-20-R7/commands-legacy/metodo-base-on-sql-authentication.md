@@ -5,7 +5,7 @@ slug: /commands/metodo-base-on-sql-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On SQL Authentication.Syntax-->$1, $2, $3 -> Método base On SQL Authentication -> Resultado<!-- END REF-->
+<!--REF #_command_.Metodo base On SQL Authentication.Syntax-->$1, $2, $3 -> Método base On SQL Authentication : Boolean<!-- END REF-->
 <!--REF #_command_.Metodo base On SQL Authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

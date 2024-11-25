@@ -5,11 +5,11 @@ slug: /commands/application-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application type.Syntax-->**Application type**  -> Function result<!-- END REF-->
+<!--REF #_command_.Application type.Syntax-->**Application type**  : Integer<!-- END REF-->
 <!--REF #_command_.Application type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Numeric value denoting the type of the application |
+| Function result | Integer | &#8592; | Numeric value denoting the type of the application |
 
 <!-- END REF-->
 

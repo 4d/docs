@@ -46,8 +46,8 @@ Collections must have been initialized, for example using the `New collection` c
 
 Exemplo:
 ```4d
- C_COLLECTION($colVar) //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ C_COLLECTION($colVar) //criação de uma variável 4D do tipo coleção
+ $colVar:=New collection //inicialização da coleção e atribuição à variável 4D
 ```
 
 ### Coleção regular ou partilhada

@@ -5,12 +5,12 @@ slug: /commands/pasteboard-data-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *dataType* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *dataType* ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dataType | Text | &#8594;  | Data type |
-| Function result | Longint | &#8592; | Size (in bytes) of data located in the pasteboard or error code |
+| Function result | Integer | &#8592; | Size (in bytes) of data located in the pasteboard or error code |
 
 <!-- END REF-->
 

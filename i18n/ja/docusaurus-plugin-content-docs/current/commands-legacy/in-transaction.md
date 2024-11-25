@@ -5,7 +5,7 @@ slug: /commands/in-transaction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.In transaction.Syntax-->**In transaction**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.In transaction.Syntax-->**In transaction**  : Boolean<!-- END REF-->
 <!--REF #_command_.In transaction.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

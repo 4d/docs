@@ -132,4 +132,4 @@ La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-[SET ALLOWED METHODS](set-allowed-methods.md)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  

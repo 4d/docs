@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *arrayNomesAtrib* ; *xRota* {; *atribNomesArray* ; *atribValoresArray*} {; *atribNomesArray2* ; *atribValoresArray2* ; ... ; *atribNomesArrayN* ; *atribValoresArrayN*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *arrayNomesAtrib* ; *xRota* {; *atribNomesArray* ; *atribValoresArray*} {; *atribNomesArray2* ; *atribValoresArray2* ; ... ; *atribNomesArrayN* ; *atribValoresArrayN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

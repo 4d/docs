@@ -107,9 +107,9 @@ VP ADD RANGE NAME($range;"Total1")
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
-| Parâmetro | Tipo |    | Descrição                                    |
-| --------- | ---- | -- | -------------------------------------------- |
-| rangeObj  | Text | -> | Objeto intervalo |<!-- END REF -->
+| Parâmetro | Tipo   |    | Descrição                                    |
+| --------- | ------ | -- | -------------------------------------------- |
+| rangeObj  | Object | -> | Objeto intervalo |<!-- END REF -->
 
 |
 
@@ -351,8 +351,8 @@ $all:=VP All("ViewProArea") // todas as células da folha atual
 | Parâmetro  | Tipo    |    | Descrição                                  |
 | ---------- | ------- | -- | ------------------------------------------ |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
-| column     | Longint | -> | Índice de coluna                           |
-| row        | Longint | -> | Índice de linha                            |
+| column     | Integer | -> | Índice de coluna                           |
+| row        | Integer | -> | Índice de linha                            |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)   |
 | Resultados | Object  | <- | Objeto intervalo de uma única célula       |
 <!-- END REF -->
@@ -696,7 +696,7 @@ Você pode passar um parâmetro opcional *options* com as seguintes propriedades
 | Propriedade | Tipo       | Descrição                                                                                                                        |
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | copy        | Parâmetros | *True* (padrão) para manter os valores copiados, a formatação e as fórmulas após a execução do comando. *False* para os remover. |
-| copyOptions | Longint    | Especifica o que é copiado ou movido. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copia todos os objetos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copia apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                                |
+| copyOptions | Integer    | Especifica o que é copiado ou movido. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copia todos os objetos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copia apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                                |
 
 As opções de colagem definidas nas opções da pasta de trabalho [](#vp-set-workbook-options) são levadas em consideração.
 
@@ -1624,7 +1624,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 | Parâmetro  | Tipo                     |    | Descrição                                                     |
 | ---------- | ------------------------ | -- | ------------------------------------------------------------- |
-| vpAreaName | Object                   | -> | Nome de objeto formulário área 4D View Pro                    |
+| vpAreaName | Text                     | -> | Nome de objeto formulário área 4D View Pro                    |
 | sheet      | Integer                  | -> | Índice da folha a partir da qual se obtém o contexto de dados |
 | Resultados | Object &#124; Collection | <- | Contexto de dados|<!-- END REF -->
 
@@ -3358,7 +3358,7 @@ O parâmetro *options* tem várias propriedades:
 | Propriedade  | Tipo       | Descrição                                                                                                                                              |
 | ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | copy         | Parâmetros | Determina se os valores, formatação e fórmulas das células no intervalo *originRange* são removidos após o comando executar:<ul><li>*False* (padrão) para os remover</li><li>*True* para os manter</li></ul> |
-| pasteOptions | Longint    | Especifica o que é colado. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Cola todos os objectos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Cola apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Cola apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Cola as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Cola os valores e a formatação.</td></tr></table></p>                                                                                |
+| pasteOptions | Integer    | Especifica o que é colado. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Cola todos os objectos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Cola apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Cola apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Cola as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Cola os valores e a formatação.</td></tr></table></p>                                                                                |
 
 
 As opções de colagem definidas nas opções da pasta de trabalho [](#vp-set-workbook-options) são levadas em consideração.
@@ -3537,7 +3537,7 @@ $cellStyle.font:=VP Object to font($font)
 | ---------- | ------- | -- | ---------------------------------------------------- |
 | rangeObj   | Object  | -> | Objeto intervalo de células                          |
 | dataObject | Object  | -> | Objeto que contém os dados a colar                   |
-| options    | Longint | -> | Especifica o que é colado|<!-- END REF -->
+| options    | Integer | -> | Especifica o que é colado|<!-- END REF -->
 
 |
 
@@ -4870,7 +4870,7 @@ Case of
 
 | Parâmetro  | Tipo       |    | Descrição                                        |
 | ---------- | ---------- | -- | ------------------------------------------------ |
-| vpAreaName | Object     | -> | Nome de objeto formulário área 4D View Pro       |
+| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro       |
 | dataObj    | Object     | -> | Objeto dados a carregar no contexto de dados     |
 | dataColl   | Collection | -> | Recolha de dados a carregar no contexto de dados |
 | options    | Object     | -> | Opções adicionais                                |
@@ -4886,7 +4886,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. As imagens são convertidas em esquemas URI de dados.
 
-To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
+Para passar um valor de tempo em *dataObj* ou *dataColl*, encapsule-o em um objeto com as seguintes propriedades (veja [o exemplo 4](#example-4---date-and-time-syntax)):
 
 | Propriedade | Tipo                                     | Descrição                                            |
 | ----------- | ---------------------------------------- | ---------------------------------------------------- |
@@ -5014,7 +5014,7 @@ The *dateValue* parameter specifies a date value to be assigned to the *rangeObj
 
 The *timeValue* parameter specifies a time value (expressed in seconds) to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a pattern for the *dateValue* and *timeValue* parameters. For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
+The optional *formatPattern* defines a pattern for the *dateValue* and *timeValue* parameters. Para obter informações sobre padrões e caracteres de formatação, consulte a seção [Formatos de data e hora](configuring.md#date-and-time-formats).
 
 #### Exemplo
 
@@ -5061,7 +5061,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pa
 | `vk pattern short date` | Formato ISO 8601 abreviado para a data | "MM/dd/yyyy"               |
 | `vk pattern year month` | Formato ISO 8601 para o mês e o ano    | "yyyy MMMM"                |
 
-For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
+Para obter informações sobre padrões e caracteres de formatação, consulte a seção [Formatos de data e hora](configuring.md#date-and-time-formats).
 
 #### Exemplo
 
@@ -5652,7 +5652,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 | Parâmetro    | Tipo   |    | Descrição                                                           |
 | ------------ | ------ | -- | ------------------------------------------------------------------- |
-| vpAreaName   | Object | -> | Nome da área 4D View Pro                                            |
+| vpAreaName   | Text   | -> | Nome da área 4D View Pro                                            |
 | sheetOptions | Object | -> | Opção(ões) de folha a definir                                       |
 | sheet        | Object | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 

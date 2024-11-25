@@ -26,14 +26,14 @@ displayed_sidebar: docs
 
 Passez dans le paramètre *touche* la lettre désignant la touche de raccourci, par exemple “U” pour définir le raccourci **Ctrl+U** (Windows) ou **Commande+U** (Mac OS). 
 
-Le paramètre *modificateurs* vous permet d’associer un ou plusieurs modificateur(s) additionnel(s) au raccourci standard. Vous pouvez ainsi définir des raccourcis du type **Ctrl+Alt+Maj+Z** (Windows) ou **Cmd+Option+Maj+Z** (Mac OS). Vous pouvez passer dans *modificateurs* les valeurs suivantes :
+Le paramètre *modificateurs* vous permet d’associer un ou plusieurs modificateur(s) additionnel(s) au raccourci standard. Vous pouvez ainsi définir des raccourcis du type **Ctrl+Alt+Maj+Z** (Windows) ou **Cmd+Option+Maj+Z** (macOS). Vous pouvez passer dans *modificateurs* les valeurs suivantes :
 
-* 256 pour la touche **Commande** (Mac OS) ou **Ctrl** (Windows)
-* 512 pour la touche **Majuscule**
-* 2048 pour la touche **Option** (Mac OS) ou **Alt** (Windows)
+* `Command key mask` pour la touche **Commande** (Mac OS) ou **Ctrl** (Windows)
+* `Shift key mask` pour la touche **Majuscule**
+* `Option key mask` pour la touche **Option** (Mac OS) ou **Alt** (Windows)
 * Pour associer plusieurs touches, cumulez leurs valeurs.
 
-**Note :** Vous pouvez définir les valeurs à passer à l’aide des constantes Command key mask, Shift key mask et Option key mask du thème *Evénements (Modifiers)*.
+Passez 0 si vous ne souhaitez pas ajouter de modificateurs.
 
 La touche **Ctrl** (Windows) ou **Commande** (Mac OS) est automatiquement ajoutée par 4D au raccourci clavier, que vous l'ayez explicitement indiquée ou non dans *modificateurs*. Il n'est donc pas nécessaire d'ajouter la valeur 256 à ce paramètre, sauf si cette touche est le seul modificateur, auquel cas vous devez passer la valeur 256 ou la constante correspondante dans *modificateurs*. 
 
@@ -41,7 +41,7 @@ La touche **Ctrl** (Windows) ou **Commande** (Mac OS) est automatiquement ajout�
 
 Si vous ne passez pas le paramètre *process*, **SET MENU ITEM SHORTCUT** est appliquée à la barre de menus du process courant. Sinon, **SET MENU ITEM SHORTCUT** est appliquée à la barre de menus du process dont la référence est passée dans *process*. 
 
-**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
+**Note :** Si vous passez une référence de menu (16 caractères alphanumériques) dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
 Si vous passez *0* (zéro) dans *touche*, l'équivalent clavier de la commande de menu est supprimé.
 

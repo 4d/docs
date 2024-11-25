@@ -29,9 +29,9 @@ By default, if you omit the *listType* parameter, the command defines a source c
 
 | Constant      | Type    | Value | Comment                                                                                    |
 | ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Longint | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Longint | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Longint | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
+| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
+| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
 
 In *list*, pass the reference number of the hierarchical list that you want to associated with the object. This list must have been generated using the [Copy list](copy-list.md), [Load list](load-list.md) or [New list](new-list.md) command.
 

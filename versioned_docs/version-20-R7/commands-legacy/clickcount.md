@@ -5,11 +5,11 @@ slug: /commands/clickcount
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Clickcount.Syntax-->**Clickcount**  -> Function result<!-- END REF-->
+<!--REF #_command_.Clickcount.Syntax-->**Clickcount**  : Integer<!-- END REF-->
 <!--REF #_command_.Clickcount.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Number of consecutive clicks |
+| Function result | Integer | &#8592; | Number of consecutive clicks |
 
 <!-- END REF-->
 

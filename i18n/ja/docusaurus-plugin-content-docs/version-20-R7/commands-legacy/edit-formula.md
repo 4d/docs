@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 **Note:**
 
-* デフォルトで、すべてのユーザーに対してメソッドとコマンドの使用は制限されます。（4D2004.4以降のバージョンにて作成されたデータベースで、DesignerとAdministratorを除く）。このメカニズムが有効であるとき、開発者は[SET ALLOWED METHODS](set-allowed-methods.md)コマンドを使用して、ユーザが利用可能な要素を明示的に指定する必要があります。もし*formula*が、[SET ALLOWED METHODS](set-allowed-methods.md) コマンドを使用してフォーミュラエディターで許可されていないメソッドを呼び出すと、シンタックスエラーが生成され、ダイアログボックスを受け入れることはできません。
+* デフォルトで、すべてのユーザーに対してメソッドとコマンドの使用は制限されます。（4D2004.4以降のバージョンにて作成されたデータベースで、DesignerとAdministratorを除く）。このメカニズムが有効であるとき、開発者は[SET ALLOWED METHODS](../commands/set-allowed-methods.md)コマンドを使用して、ユーザが利用可能な要素を明示的に指定する必要があります。もし*formula*が、[SET ALLOWED METHODS](../commands/set-allowed-methods.md) コマンドを使用してフォーミュラエディターで許可されていないメソッドを呼び出すと、シンタックスエラーが生成され、ダイアログボックスを受け入れることはできません。
 * デフォルトでは、フォーミュラーエディターはメニューバーと関連付いていません。フォーミュラーエディター内でカット・コピー・ペースト等のショートカットを使うには、呼び出しプロセスにおいて標準の**編集**メニューを設定しておく必要があります。
 * [SET TABLE TITLES](set-table-titles.md) および[SET FIELD TITLES](set-field-titles.md) コマンドによって定義されたバーチャルストラクチャーは(あった場合)、*formula* 変数内で使用してはいけません。また返される値においても4D はバーチャルストラクチャーを使用しません。バーチャルストラクチャーはフォーミュラエディターのダイアログボックス内においてのみ使用されます。
 
@@ -55,4 +55,4 @@ displayed_sidebar: docs
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
-[SET ALLOWED METHODS](set-allowed-methods.md)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  

@@ -5,7 +5,7 @@ slug: /commands/ob-is-shared
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is shared.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

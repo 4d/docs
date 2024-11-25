@@ -5,7 +5,7 @@ slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

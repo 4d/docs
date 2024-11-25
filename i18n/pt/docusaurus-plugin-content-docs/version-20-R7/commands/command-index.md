@@ -1,6 +1,6 @@
 ---
 id: command-index
-title: Index
+title: Índice
 ---
 
 [4D](#4D) - [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
@@ -543,7 +543,7 @@ title: Index
 [`LDAP SEARCH ALL`](../commands-legacy/ldap-search-all.md)<br/>
 [`Length`](../commands-legacy/length.md)<br/>
 [`Level`](../commands-legacy/level.md)<br/>
-[`License info`](../commands-legacy/license-info.md)<br/>
+[`License info`](license-info.md)<br/>
 [`License usage`](../commands-legacy/license-usage.md)<br/>
 [`List item parent`](../commands-legacy/list-item-parent.md)<br/>
 [`List item position`](../commands-legacy/list-item-position.md)<br/>
@@ -1063,7 +1063,7 @@ title: Index
 [`Session info`](session-info.md) - **new 4D 20 R7**<br/>
 [`Session storage`](../commands-legacy/session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
-[`SET ALLOWED METHODS`](../commands-legacy/set-allowed-methods.md)<br/>
+[`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)<br/>
 [`SET APPLICATION COLOR SCHEME`](../commands-legacy/set-application-color-scheme.md)<br/>
 [`SET ASSERT ENABLED`](../commands-legacy/set-assert-enabled.md)<br/>
 [`SET AUTOMATIC RELATIONS`](../commands-legacy/set-automatic-relations.md)<br/>

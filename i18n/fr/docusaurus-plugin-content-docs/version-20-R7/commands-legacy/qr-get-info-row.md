@@ -5,7 +5,7 @@ slug: /commands/qr-get-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *zone* ; *ligne* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *zone* ; *ligne* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -26,6 +26,7 @@ Le paramètre *ligne* désigne la ligne à vérifier. Vous pouvez passer soit :
 
 * une valeur entière positive pour désigner la ligne de sous-total correspondante,
 * une des constantes suivantes du thème *QR Lignes pour Propriétés* :  
+
 | Constante      | Type        | Valeur | Comment               |  
 | -------------- | ----------- | ------ | --------------------- |  
 | qr detail      | Entier long | \-2    | Zone Détail de l'état |  

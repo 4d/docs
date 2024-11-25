@@ -5,7 +5,7 @@ slug: /commands/form-event-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Form event code.Syntax-->**Form event code**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Form event code.Syntax-->**Form event code**  : Integer<!-- END REF-->
 <!--REF #_command_.Form event code.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -117,6 +117,7 @@ El número de objetos involucrados en un evento depende de la naturaleza del eve
 * Si los eventos On Mouse Enter, On Mouse Move y On Mouse Leave han sido seleccionados para el formulario, se generan para cada objeto del formulario. Si están seleccionados para un objeto, son generados sólo para el objeto. En caso de superposición de objetos, el evento se genera por el primer objeto capaz de administrarlo que se encuentre del nivel superior al inferior. Los objetos que se hicieron invisibles utilizando el comando [OBJECT SET VISIBLE](object-set-visible.md) no generan estos eventos. Durante la entrada de datos, otros objetos pueden recibir este tipo de eventos dependiendo de la posición del ratón.  
 Note que el evento On Mouse Move se genera cuando el cursor del ratón se mueve pero también cuando el usuario presiona una tecla de modificación como **Mayús**, **Bloq Mayús**, **Ctrl** u **Opción** (esto permite manejar las operaciones de arrastrar y soltar de tipo copia o desplazamiento).
 * Registros en lista: la secuencia de llamadas a métodos y eventos de formularios en formularios listados visualizados a través de [DISPLAY SELECTION](display-selection.md) / [MODIFY SELECTION](modify-selection.md) y los subformularios es la siguiente:  
+
 | Para cada objeto del área de encabezado:                                                                                                                                                                                               |  
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Método objeto con evento On Header Método formulario con evento On Header  Para cada registro: Para cada objeto en el área de detalle: Método de objeto con evento On Display Detail Método de formulario con evento On Display Detail |

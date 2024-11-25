@@ -29,7 +29,7 @@ The user can modify the *formula* displayed and save it. It is also possible to 
 
 **Notes:** 
 
-* By default, access to methods and commands is restricted for all users (except for the Designer and Administrator). When this mechanism is enabled, you must explicitly designate the elements that can be accessed by the users using the [SET ALLOWED METHODS](set-allowed-methods.md) command. If *formula* calls methods that were not first “authorized” in the Formula editor using the [SET ALLOWED METHODS](set-allowed-methods.md) command, a syntax error is generated and you will not be able to validate the dialog box.
+* By default, access to methods and commands is restricted for all users (except for the Designer and Administrator). When this mechanism is enabled, you must explicitly designate the elements that can be accessed by the users using the [SET ALLOWED METHODS](../commands/set-allowed-methods.md) command. If *formula* calls methods that were not first “authorized” in the Formula editor using the [SET ALLOWED METHODS](../commands/set-allowed-methods.md) command, a syntax error is generated and you will not be able to validate the dialog box.
 * The formula editor is not associated with any menu bar by default. You need to install a standard **Edit** menu in the calling process if you want users to be able to benefit from cut/copy/paste shortcuts in the formula editor.
 * The virtual structure defined by the [`SET TABLE TITLES`](set-table-titles.md) and [`SET FIELD TITLES`](set-field-titles.md) commands (if any) must not be used in the *formula* variable - nor will it be used by 4D in the returned variable. The virtual structure is only used in the Formula editor dialog box. 
 
@@ -56,4 +56,4 @@ If the user validates the dialog box, the system variable OK is set to 1\. If th
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
-[SET ALLOWED METHODS](set-allowed-methods.md)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  

@@ -38,6 +38,7 @@ En el método de gestión de eventos, puede leer las siguientes variables sistem
 * La variable sistema MouseDown toma el valor 1 si el evento es un clic del ratón y 0 si no.
 * La variable sistema KeyCode contiene el código del carácter digitado en el teclado o el código de una tecla de función. Consulte las secciones *Códigos Unicode* y [EXPORT TEXT](export-text.md) que listan los códigos de caracteres utilizados por 4D, así como también la sección *Códigos de teclas de función*.4D ofrece constantes predefinidas para los principales y teclas de funciones. En la ventana del explorador, busque los temas de estas constantes.
 * La variable sistema Modifiers contiene el valor modificador. Indica si una tecla de modificación ha sido presionada cuando el evento ocurrió. Las siguientes teclas pueden ser detectadas:  
+
 | **Plataforma** | **Modificadores**                                            |  
 | -------------- | ------------------------------------------------------------ |  
 | Windows        | Mayús, Bloqueo de mayúsculas, Alt, Ctrl,                     |  
@@ -54,6 +55,7 @@ o:
 ```  
     
 Puede utilizar una de las siguientes constantes, dependiendo de la tecla del modificador a probar en la plataforma, que se encuentra en el tema *Eventos (Modificadores)*:  
+
 | **Modificador**                      | **Constante**                          |  
 | ------------------------------------ | -------------------------------------- |  
 | Mayúscula                            | Shift key bit / Shift key mask         |  

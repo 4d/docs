@@ -5,11 +5,11 @@ slug: /commands/version-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Version type.Syntax-->**Version type**  -> Function result<!-- END REF-->
+<!--REF #_command_.Version type.Syntax-->**Version type**  : Integer<!-- END REF-->
 <!--REF #_command_.Version type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Information about the version type (bitfield) |
+| Function result | Integer | &#8592; | Information about the version type (bitfield) |
 
 <!-- END REF-->
 
@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 | Constant           | Type    | Value | Comment                                                 |
 | ------------------ | ------- | ----- | ------------------------------------------------------- |
-| 64 bit version     | Longint | 1     |                                                         |
-| Demo version       | Longint | 0     |                                                         |
-| Merged application | Longint | 2     | Version is an application merged with 4D Volume Desktop |
+| 64 bit version     | Integer | 1     |                                                         |
+| Demo version       | Integer | 0     |                                                         |
+| Merged application | Integer | 2     | Version is an application merged with 4D Volume Desktop |
 
 **Note:** In current versions of 4D, the demo mode is not available.
 

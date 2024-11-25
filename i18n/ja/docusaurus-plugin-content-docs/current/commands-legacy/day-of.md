@@ -5,7 +5,7 @@ slug: /commands/day-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

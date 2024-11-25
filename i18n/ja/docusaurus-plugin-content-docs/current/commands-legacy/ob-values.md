@@ -5,7 +5,7 @@ slug: /commands/ob-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Values.Syntax-->**OB Values** ( *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OB Values.Syntax-->**OB Values** ( *object* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Values.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

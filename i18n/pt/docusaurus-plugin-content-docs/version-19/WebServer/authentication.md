@@ -123,7 +123,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 #### $1 - URL
 
-The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
+O primeiro parâmetro (`$1`) é o URL recebido pelo servidor, do qual o endereço do host foi removido.
 
 Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
 
@@ -149,7 +149,7 @@ The `$3` parameter receives the IP address of the browser’s machine. This info
 
 #### $4 - Endereço IP do servidor
 
-The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
+O parâmetro `$4` recebe o endereço IP usado para chamar o servidor web. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
 
 #### $5 e $6 - Nome de usuário e palavra-passe
 

@@ -7,7 +7,7 @@ title: Texto e Imagen
 
 Define la ruta de la imagen que se dibujará en el fondo del objeto. Si el objeto utiliza un [icono](#picture-pathname) con [diferentes estados](#number-of-states), la imagen de fondo soportará automáticamente el mismo número de estados.
 
-El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
 #### Gramática JSON
 
@@ -135,7 +135,7 @@ Cada estado está representado por una imagen diferente. En la imagen fuente, lo
 
 Define la ruta de la imagen que se utilizará como icono del objeto.
 
-El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
 > Cuando se utiliza como icono de objetos activos, la imagen debe estar diseñada para soportar un [número de estados](#number-of-states) variable.
 
@@ -260,4 +260,4 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Objetos soportados
 
-[Botón de barra de herramientas](button_overview.md#toolbar) - [Botón biselado](button_overview.md#bevel) - [Botón biselado redondeado](button_overview.md#Rounded-bevel) - [Botón de degradado OS X](button_overview.md#os-x-gradient) - [Botón con textura OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-XP) - [Botón circular](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

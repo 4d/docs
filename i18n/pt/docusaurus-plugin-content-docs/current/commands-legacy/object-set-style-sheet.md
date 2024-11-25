@@ -29,6 +29,7 @@ Passe no parâmetro *nomFolhaEstilo*, o nome da folha de estilo a aplicar ao *ob
 * O nome de uma folha de estilos existente (se a folha de estilo não existe, se devolve um erro, que pode interceptar utilizando um método instalado pelo comando [ON ERR CALL](on-err-call.md)).
 * Uma cadeia vazia ("") para não aplicar a folha destilo e ao *objeto.*
 * uma das constantes a seguir encontradas no tema "*Estilos de fonte*" para aplicar a folha de estilos automática:  
+
 | Constante                         | Tipo   | Valor                               | Comentário                                                                                                 |  
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Cadeia | \_\_automatic\_\_                   | Usado como padrão para todos os objetos                                                                    |  

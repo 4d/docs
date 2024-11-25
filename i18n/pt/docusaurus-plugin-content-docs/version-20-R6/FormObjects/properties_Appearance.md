@@ -5,7 +5,7 @@ title: Aparência
 
 ## Botão predefinido
 
-A propriedade do botão padrão designa o botão que fica o foco inicial em tempo de execução quando nenhum botão do formulário tem a propriedade [Focusable](propriedades_Entry.md#focusable).
+A propriedade do botão padrão designa o botão que fica o foco inicial em tempo de execução quando nenhum botão do formulário tem a propriedade [Focusable](properties_Entry.md#focusable).
 
 Só pode haver um botão predefinido por página de formulário.
 

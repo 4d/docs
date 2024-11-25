@@ -5,12 +5,12 @@ slug: /commands/screen-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} -> Function result<!-- END REF-->
+<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Screen height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Windows: height of application window, or height of screen if * is specified Macintosh: height of main screen |
-| Function result | Longint | &#8592; | Height expressed in pixels |
+| Function result | Integer | &#8592; | Height expressed in pixels |
 
 <!-- END REF-->
 

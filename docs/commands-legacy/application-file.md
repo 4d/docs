@@ -5,11 +5,11 @@ slug: /commands/application-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application file.Syntax-->**Application file**  -> Function result<!-- END REF-->
+<!--REF #_command_.Application file.Syntax-->**Application file**  : Text<!-- END REF-->
 <!--REF #_command_.Application file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Long name of the 4D executable file or application |
+| Function result | Text | &#8592; | Long name of the 4D executable file or application |
 
 <!-- END REF-->
 

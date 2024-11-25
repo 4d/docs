@@ -17,7 +17,7 @@ You can select the interface to use with your 4D View Pro form areas in the **Pr
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
-> You can also use the [`userInterface`](FormObjects/properties_Appearance.md#user-interface) and [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(only with the "toolbar" interface) JSON properties.
+> Você também pode usar a [`userInterface`](FormObjects/properties_Appearance.md#user-interface) e [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(apenas com a interface "toolbar") em JSON.
 
 As interfaces permitem modificações básicas e a manipulação de dados. User-defined modifications are saved in the 4D View Pro object when the user saves the document.
 
@@ -27,7 +27,7 @@ As interfaces permitem modificações básicas e a manipulação de dados. User-
 
 #### Barra de ferramentas
 
-Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/properties_Appearance.md#show-formula-bar) option. Quando selecionada, a barra de fórmula fica visível abaixo da interface da barra de ferramentas.
+Ativar a interface da barra de ferramentas exibe a opção [**Mostrar barra de fórmula**](FormObjects/properties_Appearance.md#show-formula-bar). Quando selecionada, a barra de fórmula fica visível abaixo da interface da barra de ferramentas.
 
 Com barra de fórmula visível:
 

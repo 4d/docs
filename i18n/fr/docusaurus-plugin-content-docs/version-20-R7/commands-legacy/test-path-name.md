@@ -5,7 +5,7 @@ slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *cheminAccès* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *cheminAccès* ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/web-get-current-session-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get Current Session ID.Syntax-->**WEB Get Current Session ID**  -> Function result<!-- END REF-->
+<!--REF #_command_.WEB Get Current Session ID.Syntax-->**WEB Get Current Session ID**  : Text<!-- END REF-->
 <!--REF #_command_.WEB Get Current Session ID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

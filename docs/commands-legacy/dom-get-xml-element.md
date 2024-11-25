@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* ; *elementName* ; *index* ; *elementValue* ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* ; *elementName* ; *index* ; *elementValue* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | elementName | Text | &#8594;  | Name of element to get |
 | index | Integer | &#8594;  | Index number of element to get |
 | elementValue | Variable | &#8592; | Value of the element |
-| Function result | String | &#8592; | XML reference (16 characters) |
+| Function result | Text | &#8592; | XML reference (16 characters) |
 
 <!-- END REF-->
 

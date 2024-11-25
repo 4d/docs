@@ -5,7 +5,7 @@ slug: /commands/select-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* ; *fileTypes* ; *title* ; *options* {; *selected*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* ; *fileTypes* ; *title* ; *options* {; *selected*} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 引数*fileType*には、開くダイアログボックスで選択するファイルのタイプを渡し、; (セミコロン) で区切られた幾つかのタイプのリストを渡します。それぞれの指定されたタイプに対して、ダイアログボックスの選択メニューに行が追加されます。
 
-* Mac OSでは、標準的なMac OSタイプ(TEXT、APPLなど) またはUTI (Uniformタイプ識別子) タイプのどちらかを渡します。ファイルタイプの標準化のニーズを満たすために 、UTIはAppleによって指定されます。例えば、"public.text" は、テキストタイプのファイルのUTIタイプとなります。UTIに関する詳細については、*developer.apple.com* Webサイトの、 *Uniform Type Identifier Concepts page* を参照してください。
+* Mac OSでは、標準的なMac OSタイプ(TEXT、APPLなど) またはUTI (Uniformタイプ識別子) タイプのどちらかを渡します。ファイルタイプの標準化のニーズを満たすために 、UTIはAppleによって指定されます。例えば、"public.text" は、テキストタイプのファイルのUTIタイプとなります。UTIに関する詳細については、*developer.apple.com* Webサイトの、 *[Uniform Type Identifier Concepts page](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html)* を参照してください。
 * Windowsでは、標準的なMac OSのファイルタイプ (4Dが内部的に対応させます) またはファイル拡張子 (.txt、.exe など) を渡します。Windowsでは、ダイアログボックスに"\*.\*"を入力することによって、全てのファイルタイプを表示させることができます。しかしこの場合、4Dは選択されたファイルタイプのチェックを追加して実行します。認識されていないファイルタイプが選択された場合、コマンドはエラーを返します。
 
 表示されているファイルを1つ以上のタイプに限定したくない場合は、文字列"\*" (アスタリスク) または".\*" を*fileType*に渡します。

@@ -120,7 +120,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|rangeObj| Text|->|Range object |<!-- END REF -->
+|rangeObj| Object|->|Range object |<!-- END REF -->
 
 #### Description
 
@@ -357,8 +357,8 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|column|Longint|->|Column index|
-|row|Longint|->|Row index|
+|column|Integer|->|Column index|
+|row|Integer|->|Row index|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
 |Result|Object|<-|Range object of a single cell|
 <!-- END REF -->
@@ -691,7 +691,7 @@ You can pass an optional *options* parameter with the following properties:
 |Property|Type|Description|
 |---|---|---|
 |copy|Boolean|*True* (default) to keep the copied values, formatting and formulas after the command executes. *False* to remove them.|
-|copyOptions|Longint|Specifies what is copied or moved. Possible values: <p><table><tr><th>Value</th><th>Description</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copies only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copies only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>|
+|copyOptions|Integer|Specifies what is copied or moved. Possible values: <p><table><tr><th>Value</th><th>Description</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copies only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copies only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>|
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -1602,7 +1602,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Object|->|4D View Pro area form object name|
+|vpAreaName |Text|->|4D View Pro area form object name|
 |sheet|Integer|->|Index of the sheet to get the data context from|
 |Result |Object &#124; Collection |<-|Data context|<!-- END REF -->
 
@@ -3284,7 +3284,7 @@ The *options* parameter has several properties:
 |Property|Type|Description|
 |---|---|---|
 |copy|Boolean|Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (default) to remove them</li><li>*True* to keep them</li></ul>|
-|pasteOptions|Longint|Specifies what is pasted. Possible values: <p><table><tr><th>Value</th><th>Description</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>|
+|pasteOptions|Integer|Specifies what is pasted. Possible values: <p><table><tr><th>Value</th><th>Description</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>|
 
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
@@ -3457,7 +3457,7 @@ $cellStyle.font:=VP Object to font($font)
 |---|---|---|---|
 |rangeObj|Object|->|Cell range object|
 |dataObject|Object|->|Object containing the data to be pasted|
-|options|Longint|->|Specifies what is pasted|<!-- END REF -->
+|options|Integer|->|Specifies what is pasted|<!-- END REF -->
 
 #### Description
 
@@ -4771,7 +4771,7 @@ End case
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Object|->|4D View Pro area form object name|
+|vpAreaName |Text|->|4D View Pro area form object name|
 |dataObj|Object|->|Data object to load in the data context|
 |dataColl|Collection|->|Data collection to load in the data context|
 |options |Object|->|Additional options|
@@ -5555,7 +5555,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Object|->|4D View Pro area name|
+|vpAreaName |Text|->|4D View Pro area name|
 |sheetOptions |Object|->|Sheet option(s) to set|
 |sheet |Object|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 

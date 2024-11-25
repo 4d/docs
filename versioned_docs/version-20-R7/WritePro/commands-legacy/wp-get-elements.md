@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-get-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *targetObj* {; *elementType*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *targetObj* {; *elementType*} ) : Collection<!-- END REF-->
 <!--REF #_command_.WP Get elements.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| elementType | Longint | &#8594;  | Desired type of element to retrieve |
+| elementType | Integer | &#8594;  | Desired type of element to retrieve |
 | Function result | Collection | &#8592; | Collection containing element references |
 
 <!-- END REF-->

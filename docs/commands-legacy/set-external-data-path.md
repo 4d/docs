@@ -35,11 +35,12 @@ If you save the external file in the same folder as the data file or one of its 
     
 Note that this means it is possible to "share" the same external file between several records. Any changes made to this external file are available in all the records. In this case, if several processes can write the same fields simultaneously, you must be careful to prevent concurrent accesses through semaphores, so as not to risk damaging the external files.
 * **automatic location**  
-You can designate two automatic locations using the following constants, found in the *Data File Maintenance* theme:  
+You can designate two automatic locations using the following constants, found in the *Data File Maintenance* theme:
+  
 | Constant                 | Type    | Value | Comment                                                                                                                                                                                                                            |  
 | ------------------------ | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| Use default folder       | Longint | 1     | The data of the field passed as parameter are saved in the default folder, named *databaseName*.ExternalData and placed next to the data file. In this mode, external data are managed by 4D as if they were inside the data file. |  
-| Use structure definition | Longint | 0     | 4D uses the parameters set in the structure for field storage (see the *Design Reference* manual). If you change from external storage to internal storage, the external file is not deleted.                                      |
+| Use default folder       | Integer | 1     | The data of the field passed as parameter are saved in the default folder, named *databaseName*.ExternalData and placed next to the data file. In this mode, external data are managed by 4D as if they were inside the data file. |  
+| Use structure definition | Integer | 0     | 4D uses the parameters set in the structure for field storage (see the *Design Reference* manual). If you change from external storage to internal storage, the external file is not deleted.                                      |
 
 Once this command is executed, 4D automatically maintains the link between the field of the record and the file on disk. You do not need to execute the command again (except if you need to change the *path*). If 4D can no longer access the data of the field (storage file renamed or deleted, path modified, etc.), the field is empty but no error is generated. 
 

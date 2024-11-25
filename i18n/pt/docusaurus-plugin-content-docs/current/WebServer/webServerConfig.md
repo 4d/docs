@@ -19,10 +19,10 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 ## Cache
 
-| Pode ser definido com              | Nome                                                                                                | Comentários |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |             |
-| Caixa de diálogos de configurações | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |             |
+| Pode ser definido com              | Nome                                                                                                     | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Usar o cache 4D Web](../settings/web.md#use-the-4d-web-cache)      |             |
+| Caixa de diálogos de configurações | [Página opções (I) /Tamanho de cache das páginas](../settings/web.md#page-cache-size) |             |
 
 Ativa e configura a cache da página Web.
 
@@ -110,7 +110,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 
 #### Veja também
 
-[Enable CORS Service](#enable-cors-service)
+[Ativar o serviço CORS](#enable-cors-service)
 
 ## Registro de depuração
 
@@ -373,11 +373,11 @@ Esta configuração permite que você selecione o formato deste arquivo. Os valo
 
 ## Processos Web em simultâneo máximo
 
-| Pode ser definido com              | Nome                                                                                                                        | Comentários |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)                                                    |             |
-| `WEB SET OPTION`                   | `Web max concurrent processes`                                                                                              |             |
-| Caixa de diálogos de configurações | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#maximum-concurrent-web-processes) |             |
+| Pode ser definido com              | Nome                                                                                                                              | Comentários |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)                                                          |             |
+| `WEB SET OPTION`                   | `Web max concurrent processes`                                                                                                    |             |
+| Caixa de diálogos de configurações | Página [Options (I)/Máximo de Processos Web Concorrentes](../settings/web.md#maximum-concurrent-web-processes) |             |
 
 Límite estrictamente superior de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor cuando **no sessions** o **legacy sessions** están siendo utilizados (**scalable sessions** soporta un [número ilimitado](sessions.md) de p Esse parâmetro permite evitar a saturação do servidor como resultado de um grande número de solicitações. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
 
@@ -403,7 +403,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 | objeto webServer      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
-Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. O número de sessões legadas simultâneas não pode exceder o [número máximo de processos da Web](#maximum-concurrent-web-processes) (100 por padrão).
 
 Valor padrão: 100 (passe 0 para restaurar o valor padrão).
 

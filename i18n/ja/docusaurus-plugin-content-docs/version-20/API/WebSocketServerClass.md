@@ -119,7 +119,7 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 <!-- END REF -->
 
 
-`4D.WebSocketServer.new()` 関数は、 <!-- REF #4D.WebSocketServer.new().Summary -->指定した *WSSHandler* コールバックと、*options* の設定 (任意) を使用して WebSocketサーバーを作成および起動し、`4D.WebSocketServer` オブジェクトを返します<!-- END REF -->.
+`4D.WebSocketServer.new()` 関数は、 <!-- REF #4D.WebSocketServer.new().Summary -->指定した *WSSHandler* コールバックと、*options* の設定 (任意) を使用して WebSocketサーバーを作成および起動し、`4D.WebSocketServer` オブジェクトを返します<!-- END REF -->。
 
 この関数を呼び出すには、[4D Webサーバー](WebServerClass.md) が起動されている必要があります。 WebSocketサーバーの **ホスト** と **ポート** は、4D Webサーバーのホストとポートと同じです。
 
@@ -338,7 +338,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.connections` プロパティは、 <!-- REF #WebSocketServerClass.connections.Summary -->WebSocketサーバーが処理しているカレントの接続をすべて格納します<!-- END REF -->. コレクションの各要素が [`WebSocketConnection` オブジェクト](WebSocketConnectionClass.md) です。
+`.connections` プロパティは、 <!-- REF #WebSocketServerClass.connections.Summary -->WebSocketサーバーが処理しているカレントの接続をすべて格納します<!-- END REF -->。 コレクションの各要素が [`WebSocketConnection` オブジェクト](WebSocketConnectionClass.md) です。
 
 接続が終了すると、このオブジェクトの [`status`](WebSocketConnectionClass.md#status) は "Closed" に変わり、コレクションから削除されます。
 
@@ -353,7 +353,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.dataType` プロパティは、 <!-- REF #WebSocketServerClass.dataType.Summary -->受信または送信されるデータの型<!-- END REF -->.
+`.dataType` プロパティは、 <!-- REF #WebSocketServerClass.dataType.Summary -->受信または送信されるデータの型<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->
@@ -366,7 +366,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.handler` プロパティは、 <!-- REF #WebSocketServerClass.handler.Summary -->WebSocketサーバーの開始に使用された `WSSHandler` オブジェクトを取得するアクセサーです<!-- END REF -->.
+`.handler` プロパティは、 <!-- REF #WebSocketServerClass.handler.Summary -->WebSocketサーバーの開始に使用された `WSSHandler` オブジェクトを取得するアクセサーです<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -378,7 +378,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #WebSocketServerClass.path.Summary -->WebSocketサーバーにアクセスするためのパスのパターンです<!-- END REF -->. パスが定義されなかった場合、WebSocketサーバーはすべての接続を管理します。
+`.path` プロパティは、 <!-- REF #WebSocketServerClass.path.Summary -->WebSocketサーバーにアクセスするためのパスのパターンです<!-- END REF -->。 パスが定義されなかった場合、WebSocketサーバーはすべての接続を管理します。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->
@@ -391,15 +391,15 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| 引数      | 型  |    | 説明                              |
-| ------- | -- |:--:| ------------------------------- |
-| timeout | 整数 | -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
+| 引数      | 型       |    | 説明                              |
+| ------- | ------- |:--:| ------------------------------- |
+| timeout | Integer | -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
 <!-- END REF -->
 
 
 #### 説明
 
-`.terminate()` 関数は、 <!-- REF #WebSocketServerClass.terminate().Summary -->WebSocketサーバーを終了します<!-- END REF -->.
+`.terminate()` 関数は、 <!-- REF #WebSocketServerClass.terminate().Summary -->WebSocketサーバーを終了します<!-- END REF -->。
 
 *timeout* 値が設定されていない場合のデフォルトでは、関数はクローズハンドシェイクを初期化し、相手からクローズフレームを受信するのを待ちます。 その後、FINパケットを送信し、クリーンにソケットを閉じます。 応答を受け取ると、ソケットは破棄されます。
 
@@ -419,7 +419,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.terminated` プロパティは、 <!-- REF #WebSocketServerClass.terminated.Summary -->WebSocketサーバーが終了している場合には true です<!-- END REF -->.
+`.terminated` プロパティは、 <!-- REF #WebSocketServerClass.terminated.Summary -->WebSocketサーバーが終了している場合には true です<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->

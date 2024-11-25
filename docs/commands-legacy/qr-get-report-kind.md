@@ -5,12 +5,12 @@ slug: /commands/qr-get-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* ) -> Function result<!-- END REF-->
+<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report kind.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
-| Function result | Longint | &#8592; | Type of the report |
+| Function result | Integer | &#8592; | Type of the report |
 
 <!-- END REF-->
 
@@ -28,8 +28,8 @@ You can also compare the function result with the constants of the *QR Report Ty
 
 | Constant        | Type    | Value |
 | --------------- | ------- | ----- |
-| qr cross report | Longint | 2     |
-| qr list report  | Longint | 1     |
+| qr cross report | Integer | 2     |
+| qr list report  | Integer | 1     |
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 

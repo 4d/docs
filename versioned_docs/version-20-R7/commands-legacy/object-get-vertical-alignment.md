@@ -5,13 +5,13 @@ slug: /commands/object-get-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
-| Function result | Longint | &#8592; | Type of alignment |
+| Function result | Integer | &#8592; | Type of alignment |
 
 <!-- END REF-->
 
@@ -30,9 +30,9 @@ The value returned corresponds to one of the following constants, found in the *
 
 | Constant     | Type    | Value |
 | ------------ | ------- | ----- |
-| Align bottom | Longint | 4     |
-| Align center | Longint | 3     |
-| Align top    | Longint | 2     |
+| Align bottom | Integer | 4     |
+| Align center | Integer | 3     |
+| Align top    | Integer | 2     |
 
 Vertical alignment can be applied to the following types of form objects:
 

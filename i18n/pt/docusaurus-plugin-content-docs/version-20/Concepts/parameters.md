@@ -269,7 +269,7 @@ When using the `#DECLARE` keyword, parameters are automatically declared. Por ex
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all parameters are declared with their type
+    // todos os parâmetros são declarados com seu tipo
 ```
 
 However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:

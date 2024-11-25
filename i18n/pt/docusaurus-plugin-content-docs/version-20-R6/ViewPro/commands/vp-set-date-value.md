@@ -32,7 +32,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pa
 | `vk pattern short date` | Formato ISO 8601 abreviado para a data | "MM/dd/yyyy"               |
 | `vk pattern year month` | Formato ISO 8601 para o mês e o ano    | "yyyy MMMM"                |
 
-For information on patterns and formatting characters, please refer to the [Date and time formats](../configuring.md#date-and-time-formats) section.
+Para informações sobre padrões e caracteres de formatação, por favor, consulte a seção [Formato de Data e Hora](../configuring.md#date-and-time).
 
 #### Exemplo
 

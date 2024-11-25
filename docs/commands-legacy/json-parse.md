@@ -5,7 +5,7 @@ slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* {; *type*}{; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* {; *type*}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,14 +28,14 @@ By default, if you omit the *type* parameter, 4D attempts to convert the value o
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Is Boolean    | Longint | 6     |
-| Is collection | Longint | 42    |
-| Is date       | Longint | 4     |
-| Is longint    | Longint | 9     |
-| Is object     | Longint | 38    |
-| Is real       | Longint | 1     |
-| Is text       | Longint | 2     |
-| Is time       | Longint | 11    |
+| Is Boolean    | Integer | 6     |
+| Is collection | Integer | 42    |
+| Is date       | Integer | 4     |
+| Is longint    | Integer | 9     |
+| Is object     | Integer | 38    |
+| Is real       | Integer | 1     |
+| Is text       | Integer | 2     |
+| Is time       | Integer | 11    |
 
 **Notes:** 
 

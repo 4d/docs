@@ -89,7 +89,7 @@ Arquivos com a extensão `.4DLink` são arquivos XML que contêm parâmetros des
 
 Arquivos`.4DLink` podem salvar o endereço de um projeto 4D assim como seus identificadores de conexão e modo de abertura, poupando tempo quando abrir projetos.
 
-4D gera automaticamente um `. DLink` arquivo quando um projeto local é aberto pela primeira vez ou quando se conecta a um servidor pela primeira vez. O arquivo é armazenado na pasta de preferências locais no seguinte local:
+4D gera automaticamente um `.4DLink` arquivo quando um projeto local é aberto pela primeira vez ou quando se conecta a um servidor pela primeira vez. O arquivo é armazenado na pasta de preferências locais no seguinte local:
 
 * Windows 7 e superior: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
 * OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/

@@ -5,14 +5,14 @@ slug: /commands/command-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Command name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | command | Integer | &#8594;  | Command number |
 | info | Integer | &#8592; | Thread-safety property of command |
 | theme | Text | &#8592; | Language theme of command |
-| Function result | String | &#8592; | Localized command name |
+| Function result | Text | &#8592; | Localized command name |
 
 <!-- END REF-->
 

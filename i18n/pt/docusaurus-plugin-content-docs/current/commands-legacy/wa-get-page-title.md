@@ -5,7 +5,7 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *objeto* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

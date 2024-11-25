@@ -5,11 +5,11 @@ slug: /commands/count-screens
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count screens.Syntax-->**Count screens**  -> Function result<!-- END REF-->
+<!--REF #_command_.Count screens.Syntax-->**Count screens**  : Integer<!-- END REF-->
 <!--REF #_command_.Count screens.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Number of monitors |
+| Function result | Integer | &#8592; | Number of monitors |
 
 <!-- END REF-->
 

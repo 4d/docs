@@ -35,11 +35,11 @@ Todos los servidores Web disponibles son devueltos por el comando `WEB Server li
 
 > El objeto servidor web por defecto es cargado automáticamente por 4D al inicio. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](web-server.md) command.
 
-You can use the [.name](../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
+Puede utilizar la propiedad [.name](../API/WebServerClass.md#name) del objeto servidor Web para identificar el proyecto o el componente al que está adjunto cada objeto servidor Web de la lista.
 
 #### Ejemplo
 
-Puede utilizar la propiedad <a href="#nombre">.name</a> del objeto servidor web para identificar el proyecto o componente al que está unido cada objeto servidor web de la lista.
+Queremos saber cuántos servidores web en funcionamiento hay disponibles:
 
 ```4d
  var $wSList : Collection
@@ -52,5 +52,5 @@ Puede utilizar la propiedad <a href="#nombre">.name</a> del objeto servidor web 
 
 #### Ver también
 
-[WEB Server](web-server.md)\
+[Servidor WEB](web-server.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)

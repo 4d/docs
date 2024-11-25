@@ -25,13 +25,13 @@ The *textFormat* parameter can be used to set the internal format and the charac
 
 | Constant                 | Type    | Value |
 | ------------------------ | ------- | ----- |
-| Mac C string             | Longint | 0     |
-| Mac Pascal string        | Longint | 1     |
-| Mac text with length     | Longint | 2     |
-| Mac text without length  | Longint | 3     |
-| UTF8 C string            | Longint | 4     |
-| UTF8 text with length    | Longint | 5     |
-| UTF8 text without length | Longint | 6     |
+| Mac C string             | Integer | 0     |
+| Mac Pascal string        | Integer | 1     |
+| Mac text with length     | Integer | 2     |
+| Mac text without length  | Integer | 3     |
+| UTF8 C string            | Integer | 4     |
+| UTF8 text with length    | Integer | 5     |
+| UTF8 text without length | Integer | 6     |
 
 If you omit the *textFormat* parameter, by default 4D uses the Mac C string format. In databases created beginning with version 11, 4D works by default with the Unicode character set (UTF8) for managing text, so it is recommended to use this character set. 
 

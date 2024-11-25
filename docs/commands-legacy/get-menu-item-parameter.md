@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *menuItem* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *menuItem* ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item parameter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu reference or Menu number |
 | menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| Function result | String | &#8592; | Custom parameter of the menu item |
+| Function result | Text | &#8592; | Custom parameter of the menu item |
 
 <!-- END REF-->
 

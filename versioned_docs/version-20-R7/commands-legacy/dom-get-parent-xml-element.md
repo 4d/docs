@@ -5,14 +5,14 @@ slug: /commands/dom-get-parent-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* {; *parentElemName* {; *parentElemValue*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* {; *parentElemName* {; *parentElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get parent XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | parentElemName | Text | &#8592; | Name of parent XML element |
 | parentElemValue | Text | &#8592; | Value of parent XML element |
-| Function result | String | &#8592; | Parent XML element reference |
+| Function result | Text | &#8592; | Parent XML element reference |
 
 <!-- END REF-->
 

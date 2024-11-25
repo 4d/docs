@@ -5,7 +5,7 @@ slug: /commands/set-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 | lastLogin | Date | &#8594;  | New date of last login to the database (Binary databases only) |
 | memberships | Array integer | &#8594;  | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &#8594;  | Reference number of user group owner (Binary databases only) |
-| Function result | Longint | &#8592; | Unique ID number of new user |
+| Function result | Integer | &#8592; | Unique ID number of new user |
 
 <!-- END REF-->
 

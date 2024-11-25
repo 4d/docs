@@ -5,12 +5,12 @@ slug: /commands/method-called-on-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on error.Syntax-->**Method called on error** {( *scope* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Method called on error.Syntax-->**Method called on error** {( *scope* )} : Text<!-- END REF-->
 <!--REF #_command_.Method called on error.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | scope | Integer | &#8594;  | Scope of the error method |
-| Function result | String | &#8592; | Name of method called on error |
+| Function result | Text | &#8592; | Name of method called on error |
 
 <!-- END REF-->
 

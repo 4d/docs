@@ -11,24 +11,24 @@ displayed_sidebar: docs
 | 引数       | 型                                  |   | 説明                                            |
 | -------- | ---------------------------------- | - | --------------------------------------------- |
 | dsTable  | テーブル                               | → | エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル |
-| settings | オブジェクト                             | → | ビルドオプション: context             |
+| settings | Object                             | → | ビルドオプション: context             |
 | 戻り値      | 4D.EntitySelection | ← | 指定したテーブルに対応するデータクラスのエンティティセレクション              |
 
 <!-- END REF-->
 
 #### 説明
 
-The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
+`Create entity selection` コマンドは、<!--REF #_command_.Create entity selection.Summary-->*dsTable* で指定したテーブルに対応するデータクラスの[追加可能な](../ORDA/entities.md#shareable-or-alterable-entity-selections)新規エンティティセレくションを、同テーブルのカレントセレクションに基づいてビルドして返します。<!-- END REF-->
 
-If the current selection is sorted, an [ordered](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). カレントセレクションがソートされていない場合、順列のないエンティティセレクションが作成されます。
+ソートされたカレントセレクションの場合、[順列のある](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) エンティティセレクションが作成されます (カレントセレクションの並び順が受け継がれます)。 カレントセレクションがソートされていない場合、順列のないエンティティセレクションが作成されます。
 
-If the *dsTable* is not exposed in [`ds`](ds.md), an error is returned. リモートデータストアの場合は、このコマンドは使用できません。
+[`ds`](ds.md) において *dsTable* が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。
 
 任意の *settings* には、以下のプロパティを持つオブジェクトを渡せます:
 
 | プロパティ   | 型    | 説明                                                                            |
 | ------- | ---- | ----------------------------------------------------------------------------- |
-| context | テキスト | エンティティセレクションに適用されている [最適化コンテキスト](../ORDA/client-server-optimization.md) のラベル。 |
+| context | Text | エンティティセレクションに適用されている [最適化コンテキスト](../ORDA/client-server-optimization.md) のラベル。 |
 
 #### 例題
 

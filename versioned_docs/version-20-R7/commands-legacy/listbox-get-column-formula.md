@@ -5,13 +5,13 @@ slug: /commands/listbox-get-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
-| Function result | String | &#8592; | Formula associated with column |
+| Function result | Text | &#8592; | Formula associated with column |
 
 <!-- END REF-->
 

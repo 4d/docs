@@ -5,7 +5,7 @@ slug: /commands/json-stringify
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *value* {; *} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *value* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -61,7 +61,7 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 
 同じユーザー関数内で複数の state を [有効化](#enablestate) または無効化した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
+Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states) を参照ください。
 
 ### .enableState()
 
@@ -87,7 +87,7 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 同じユーザー関数内で複数の state を有効化または [無効化](#disablestate)した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
+Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states) を参照ください。
 
 #### 例題
 
@@ -174,7 +174,7 @@ Function authenticationError()
 
 ## Web Event
 
-<!-- REF #_command_.Web Event.Syntax -->**Web Event** : object<!-- END REF -->
+<!-- REF #_command_.Web Event.Syntax -->**Web Event** : Object<!-- END REF -->
 
 <!-- REF #_command_.Web Event.Params -->
 

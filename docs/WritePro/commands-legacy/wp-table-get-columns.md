@@ -5,14 +5,14 @@ slug: /WritePro/commands/wp-table-get-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table get columns.Syntax-->**WP Table get columns** ( *targetObj* ) | ( *tableRef* ; *startCol* {; *numCols*} )  -> Function result<!-- END REF-->
+<!--REF #_command_.WP Table get columns.Syntax-->**WP Table get columns** ( *targetObj* ) | ( *tableRef* ; *startCol* {; *numCols*} )  : Object<!-- END REF-->
 <!--REF #_command_.WP Table get columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| startCol | Longint | &#8594;  | Position of first column |
-| numCols | Longint | &#8594;  | Number of columns to get |
+| startCol | Integer | &#8594;  | Position of first column |
+| numCols | Integer | &#8594;  | Number of columns to get |
 | Function result | Object | &#8592; | New table range containing selected columns |
 
 <!-- END REF-->

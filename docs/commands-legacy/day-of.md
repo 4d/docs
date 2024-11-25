@@ -5,12 +5,12 @@ slug: /commands/day-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day of.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | date | Date | &#8594;  | Date for which to return the day |
-| Function result | Longint | &#8592; | Day of the month of date |
+| Function result | Integer | &#8592; | Day of the month of date |
 
 <!-- END REF-->
 

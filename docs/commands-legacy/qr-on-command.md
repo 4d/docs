@@ -26,12 +26,13 @@ If *area* equals zero, *methodName* will apply to each Quick Report area until t
 *methodName* receives two parameters:
 
 * *$1* is the reference of the area (Longint).
-* *$2* is the command number of the command that was selected (Longint). You can compare this value with the following constants of the *QR Commands* theme:  
+* *$2* is the command number of the command that was selected (Longint). You can compare this value with the following constants of the *QR Commands* theme:
+  
 | Constant             | Type    | Value | Comment                                        |  
 | -------------------- | ------- | ----- | ---------------------------------------------- |  
-| qr cmd generate      | Longint | 2008  | Use of command [QR RUN](qr-run.md) recommended |  
-| qr cmd page setup    | Longint | 2006  |                                                |  
-| qr cmd print preview | Longint | 2007  |                                                |
+| qr cmd generate      | Integer | 2008  | Use of command [QR RUN](qr-run.md) recommended |  
+| qr cmd page setup    | Integer | 2006  |                                                |  
+| qr cmd print preview | Integer | 2007  |                                                |
 
 **Note:** When planning on compiling the database, it is necessary to declare both *$1* and *$2* as Longints, even if you do not use them.
 

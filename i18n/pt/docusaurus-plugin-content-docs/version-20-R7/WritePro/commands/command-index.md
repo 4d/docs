@@ -93,7 +93,7 @@ title: 4D Write Pro Commands
 
 <a id="R"><b>R</b></a>
 
-[`WP RESET ATTRIBUTES`](wp-reset-attributes.md) ***Modified 4D 20 R7***
+[`WP RESET ATTRIBUTES`](wp-reset-attributes.md) ***Modificado 4D 20 R7***
 
 <a id="S"><b>S</b></a>
 

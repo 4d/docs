@@ -10,7 +10,7 @@ title: Servidor Web
 
 Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. To do so, you just need to select a menu command or execute a single line of code.
 
-Supervisar el servidor web 4D es fácil y se puede hacer utilizando la ventana de administración de 4D Server o a través de [ URLs especiales](webServerAdmin.md#administration-urls).
+Monitorar o servidor 4D é fácil e pode ser feito usando a janela de administração do Servidor 4D ou através de [URLs especiais](webServerAdmin.md#administration-urls).
 
 ## Pronto a usar
 
@@ -22,7 +22,7 @@ A segurança dos dados está presente em todos os estágios das implementações
 
 - Suporte estendido do [**Protocolo TLS (HTTPS)**](../Admin/tls.md),
 
-- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+- **Autenticação**: [recursos de autenticação](authentication.md) flexíveis e personalizáveis com base em configurações integradas, bem como métodos de banco de dados fallback ([`On Web Authentication`](authentication.md#on-web-authentication) para o servidor da Web e [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) para o servidor REST),
 
 - **Control de los contenidos expuestos**: sólo los elementos que exponga explícitamente pueden estar disponibles desde peticiones web directaso peticiones REST. É necessário declarar:
   - [Los métodos proyecto](templates.md#allowing-project-methods) expuestos a través de peticiones HTTP

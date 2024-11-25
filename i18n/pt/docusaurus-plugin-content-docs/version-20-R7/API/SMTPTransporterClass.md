@@ -31,10 +31,10 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
-| Parâmetro  | Tipo                               |                             | Descrição                                           |
-| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
-| server     | Object                             |              ->             | Informação de servidor de correio                   |
-| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Parâmetro  | Tipo                               |                             | Descrição                                          |
+| ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
+| server     | Object                             |              ->             | Informação de servidor de correio                  |
+| Resultados | 4D.SMTPTransporter | <- | [Objeto SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->
 
@@ -122,10 +122,10 @@ A coleção SMTP é automaticamente fechada:
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                                         |
-| ---------- | ------ | :-------------------------: | ------------------------------------------------- |
-| mail       | Object |              ->             | [Email](EmailObjectClass.md#email-object) to send |
-| Resultados | Object | <- | Status SMTP                                       |
+| Parâmetro  | Tipo   |                             | Descrição                                             |
+| ---------- | ------ | :-------------------------: | ----------------------------------------------------- |
+| mail       | Object |              ->             | [Email](EmailObjectClass.md#email-object) para enviar |
+| Resultados | Object | <- | Status SMTP                                           |
 
 <!-- END REF -->
 

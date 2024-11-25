@@ -33,15 +33,15 @@ In the *calculation* parameter, pass one of the following constants, found in th
 
 | Constant                     | Type    | Value | Comment                                                                                                                                             |
 | ---------------------------- | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Listbox footer std deviation | Longint | 7     | Used with number or time type columns (only for array type list boxes)<br/>Default type of the result: Real                                 |
-| lk footer average            | Longint | 6     | Used with number or time type columns<br/>Default type of the result: Real                                                                  |
-| lk footer count              | Longint | 5     | Used with number, text, date, time, Boolean or picture type columns<br/>Default type of the result: Longint                                 |
-| lk footer custom             | Longint | 1     | No calculation performed by 4D. The footer variable must be calculated by programming.<br/>Default type of the result: Footer variable type |
-| lk footer max                | Longint | 3     | Used with number, date, time or Boolean type columns<br/>Default type of the result: Column array or field type                             |
-| lk footer min                | Longint | 2     | Used with number, date, time or Boolean type columns<br/>Default type of the result: Column array or field type                             |
-| lk footer sum                | Longint | 4     | Used with number, time or Boolean type columns<br/>Default type of the result: Column array or field type                                   |
-| lk footer sum squares        | Longint | 9     | Used with number or time type columns (only for array type list boxes)<br/>Default type of the result: Real                                 |
-| lk footer variance           | Longint | 8     | Used with number or time type columns (only for array type list boxes)<br/>Default type of the result: Real                                 |
+| Listbox footer std deviation | Integer | 7     | Used with number or time type columns (only for array type list boxes)<br/>Default type of the result: Real                                 |
+| lk footer average            | Integer | 6     | Used with number or time type columns<br/>Default type of the result: Real                                                                  |
+| lk footer count              | Integer | 5     | Used with number, text, date, time, Boolean or picture type columns<br/>Default type of the result: Longint                                 |
+| lk footer custom             | Integer | 1     | No calculation performed by 4D. The footer variable must be calculated by programming.<br/>Default type of the result: Footer variable type |
+| lk footer max                | Integer | 3     | Used with number, date, time or Boolean type columns<br/>Default type of the result: Column array or field type                             |
+| lk footer min                | Integer | 2     | Used with number, date, time or Boolean type columns<br/>Default type of the result: Column array or field type                             |
+| lk footer sum                | Integer | 4     | Used with number, time or Boolean type columns<br/>Default type of the result: Column array or field type                                   |
+| lk footer sum squares        | Integer | 9     | Used with number or time type columns (only for array type list boxes)<br/>Default type of the result: Real                                 |
+| lk footer variance           | Integer | 8     | Used with number or time type columns (only for array type list boxes)<br/>Default type of the result: Real                                 |
 
 Note that predefined calculations take all the values of the column into account, including those of any hidden rows. If you want to restrict a calculation to only visible rows, you must use the lk footer custom constant and perform a customized calculation. 
 

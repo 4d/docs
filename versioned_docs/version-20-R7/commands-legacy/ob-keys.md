@@ -5,7 +5,7 @@ slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *object* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Keys.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

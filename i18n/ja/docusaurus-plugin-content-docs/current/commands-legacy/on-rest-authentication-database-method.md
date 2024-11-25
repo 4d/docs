@@ -5,7 +5,7 @@ slug: /commands/on-rest-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On REST Authentication database method.Syntax-->$1, $2, $3, $4 -> On REST Authentication データベースメソッド -> 戻り値<!-- END REF-->
+<!--REF #_command_.On REST Authentication database method.Syntax-->$1, $2, $3, $4 -> On REST Authentication データベースメソッド : Boolean<!-- END REF-->
 <!--REF #_command_.On REST Authentication database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

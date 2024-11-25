@@ -57,7 +57,7 @@ Ativar o cache da página Web. Consulte [Cache](../WebServer/webServerConfig.md#
 
 #### Tamanho da cache das Páginas
 
-Define o tamanho da cache. Ver [Caché](../WebServer/webServerConfig.md#cache).
+Define o tamanho da cache. Consulte [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Limpar cache
 
@@ -150,7 +150,7 @@ Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#keep-alive-connectio
 
 #### Ativar CORS
 
-Ativa o serviço Cross-origin resource sharing (CORS). Ver [Activar Cors](../WebServer/webServerConfig.md#activer-cors).
+Ativa o serviço Cross-origin resource sharing (CORS). Ver [Ativar CORS](../WebServer/webServerConfig.md#enable-cors-service).
 
 #### Nomes de domínio/Métodos HTTP permitidos
 

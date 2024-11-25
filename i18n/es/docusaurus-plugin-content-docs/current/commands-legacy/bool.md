@@ -5,7 +5,7 @@ slug: /commands/bool
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Bool.Syntax-->**Bool** ( *expresion* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Bool.Syntax-->**Bool** ( *expresion* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Bool.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

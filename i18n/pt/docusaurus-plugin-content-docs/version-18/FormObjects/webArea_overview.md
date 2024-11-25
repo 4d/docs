@@ -5,9 +5,9 @@ title: Área Web
 
 ## Visão Geral
 
-The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. The rendering engine of the Web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
+The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. As áreas Web podem mostrar vários tipos de conteúdo web dentro de seus formulários: páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. O motor de renderizado da área web depende da plataforma de execução da aplicação e de [a opção motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) selecionada.
 
-É possível criar várias áreas Web no mesmo formulário. Note, however, that the use of Web areas must follow [several rules](#web-areas-rules).
+É possível criar várias áreas Web no mesmo formulário. Note, however, that the use of Web areas must follow [several rules](#web-area-rules).
 
 Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 > The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
@@ -23,7 +23,7 @@ Duas variáveis específicas podem ser associadas a cada área da Web:
 
 ### Motor de renderização Web
 
-You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the Web area, depending on the specifics of your application.
+Você pode escolher entre [dois motores de renderização](properties_WebArea.md#use-embedded-web-rendering-engine) para a área Web, dependendo das especificidades da sua aplicação.
 
 Selecting the embedded web rendering engine allows you to call 4D methods from the Web area.
 
@@ -31,18 +31,18 @@ Selecting the embedded web rendering engine allows you to call 4D methods from t
 
 When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property is selected, you can call 4D methods from a Web area.
 
-> This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+> Esta propriedade só está disponível se a área Web [utilizar o mecanismo de renderização Web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### Objecto $4d
 
-O [motor de renderização web embebido de 4D](#use-embedded-web-rendering-engine) fornece à área um objeto JavaScript chamado $4d que pode ser associado a qualquer método projeto 4D utilizando a notação objeto ".".
+O [motor de renderização web embebido de 4D](properties_WebArea.md#use-embedded-web-rendering-engine) fornece à área um objeto JavaScript chamado $4d que pode ser associado a qualquer método projeto 4D utilizando a notação objeto ".".
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
 ```codeJS
 $4d. HelloWorld();
 ```
-> JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+> JavaScript é sensível a maiúsculas e minúsculas, portanto é importante notar que o objeto tem o nome $4d (com uma letra minúscula "d").
 
 A sintaxe das chamadas aos métodos 4D é a seguinte:
 
@@ -183,7 +183,7 @@ Você pode visualizar e usar um inspetor Web nas áreas Web dos seus formulário
 
 The following conditions must be met in order to view the Web inspector in a Web area:
 
-- You must [select the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the Web inspector is only available with this configuration).
+- Você deve [selecionar o mecanismo de renderização Web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine) para a área (o inspetor Web só está disponível com esta configuração).
 - You must enable the [context menu](properties_Entry.md#context-menu) for the area (this menu is used to call the inspector)
 - You must expressly enable the use of the inspector in the area by means of the following statement:
 

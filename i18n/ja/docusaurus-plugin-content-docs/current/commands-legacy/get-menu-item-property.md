@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | menu | Integer | &#8594;  | メニュー参照またはメニュー番号 |
 | menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
 | property | Text | &#8594;  | プロパティタイプ |
-| value | Expression | &#8592; | プロパティ値 |
+| value | any | &#8592; | プロパティ値 |
 | process | Integer | &#8594;  | プロセス番号 |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *aField* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *aField* ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field for which to return old value |
-| Function result | Expression | &#8592; | Original field value |
+| Function result | any | &#8592; | Original field value |
 
 <!-- END REF-->
 

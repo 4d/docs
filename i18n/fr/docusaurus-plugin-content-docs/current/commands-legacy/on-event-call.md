@@ -38,6 +38,7 @@ Dans la méthode de gestion d'événement, vous pouvez lire les variables systè
 * La variable système MouseDown contient 1 s'il y a eu un clic souris, 0 sinon.
 * La variable système KeyCode contient le code du caractère tapé au clavier, ou le code d'une touche de fonction. Référez-vous aux sections *Codes Unicode* and [EXPORT TEXT](export-text.md) qui listent les codes de caractères utilisés par 4D, ainsi qu'à la section *Codes des touches de fonction*. 4D fournit des constantes prédéfinies pour les principaux codes ASCII et touches de fonctions. Vous pouvez les visualiser à l'aide la fenêtre de l'Explorateur, dans les thèmes correspondants.
 * La variable système Modifiers permet de savoir si une touche de modification (*modifier*) était enfoncée au moment où l'événement s'est produit. Les touches suivantes peuvent être détectées :  
+
 | **Plate-forme** | **Modifiers**                                                     |  
 | --------------- | ----------------------------------------------------------------- |  
 | Windows         | Maj, Verrouillage des majuscules, Alt, Ctrl                       |  
@@ -54,6 +55,7 @@ ou :
 ```  
     
 Les constantes à utiliser en fonction du *modifier* à tester et de la plate-forme sont les suivantes, placées dans le thème *Evénements (Modifiers)* :  
+
 | **Modifier**                         | **Constante**                                                |  
 | ------------------------------------ | ------------------------------------------------------------ |  
 | Majuscule                            | Bit touche majuscule / Masque touche majuscule               |  

@@ -5,7 +5,7 @@ title: EntitySelection
 
 Una entity selection es un objeto que contiene una o más referencias a [entidades](ORDA/dsMapping.md#entity) pertenecientes a la misma [Dataclass](ORDA/dsMapping.md#dataclass). Una entity selection puede contener 0, 1 o X entidades de la dataclass -- donde X puede representar el número total de entidades contenidas en la dataclass.
 
-Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](../commands/create-entity-selection.md) command.
+Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). También puede crear entity selections vacías utilizando la función [`dataClass.newSelection()`](DataClassClass.md#newselection) o el comando [`Create new selection`](../commands/create-entity-selection.md).
 
 ### Resumen
 
@@ -457,7 +457,7 @@ La función `.clean()` <!-- REF #EntitySelectionClass.clean().Summary -->devuelv
 
 Por defecto, cuando una entidad es [eliminada](EntitySelectionClass.md#drop), su(s) referencia(s) en la(s) selección(es) de entidades existente(s) se vuelve(n) *undefined* pero no se elimina(n) del objeto(s) de selección de entidades. Las entidades eliminadas se siguen incluyendo en la propiedad [`.length`](#length) y se muestran como líneas en blanco si la selección de entidades está vinculada a un objeto de interfaz como una lista. En este caso, llamar a la función `.clean()` en la selección de entidades permite obtener una nueva selección de entidades actualizada, que no contiene referencias de entidades *undefined*.
 
-La selección de entidad resultante mantiene los mismos [criterios de orden](../ORDA/dsMapping.md#selección-de-entidad-ordenada-o-no-ordenada) y la misma propiedad [modificable/compartible](../ORDA/entities.md#selecciones-de-entidad-compartibles-o-alterables) que la selección de entidad original.
+La selección de entidad resultante mantiene los mismos [criterios de orden](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) y la misma propiedad [modificable/compartible](../ORDA/entities.md#shareable-or-alterable-entity-selections) que la selección de entidad original.
 
 #### Ejemplo
 
@@ -2109,7 +2109,7 @@ $sum:=$sel.sum("salary")
 
 </details>
 
-<!-- REF #EntitySelectionClass.toCollection().Syntax -->**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
+<!-- REF #EntitySelectionClass.toCollection().Syntax -->**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : Collection<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : Collection<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 

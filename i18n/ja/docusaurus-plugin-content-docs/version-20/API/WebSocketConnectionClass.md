@@ -44,7 +44,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.handler` プロパティは、 <!-- REF #WebSocketConnectionClass.handler.Summary -->接続を開始するのに使用された `connectionHandler` オブジェクトを取得するアクセサーを格納します<!-- END REF -->.
+`.handler` プロパティは、 <!-- REF #WebSocketConnectionClass.handler.Summary -->接続を開始するのに使用された `connectionHandler` オブジェクトを取得するアクセサーを格納します<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -58,7 +58,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.id` プロパティは、 <!-- REF #WebSocketConnectionClass.id.Summary -->接続の一意な識別子を格納します<!-- END REF -->.
+`.id` プロパティは、 <!-- REF #WebSocketConnectionClass.id.Summary -->接続の一意な識別子を格納します<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->
@@ -79,7 +79,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.send()` 関数は、 <!-- REF #WebSocketConnectionClass.send().Summary -->クライアントに *メッセージ* を送信します<!-- END REF -->.
+`.send()` 関数は、 <!-- REF #WebSocketConnectionClass.send().Summary -->クライアントに *メッセージ* を送信します<!-- END REF -->。
 
 *メッセージ* の型によって、以下の内容が送信されます:
 
@@ -101,7 +101,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.status` プロパティは、 <!-- REF #WebSocketConnectionClass.status.Summary -->接続ステータスを格納します ("Closing"、"Closed"、"Connected" のいずれか)。<!-- END REF -->.
+`.status` プロパティは、 <!-- REF #WebSocketConnectionClass.status.Summary -->接続ステータスを格納します ("Closing"、"Closed"、"Connected" のいずれか)。<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->
@@ -126,7 +126,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.terminate()` 関数は、 <!-- REF #WebSocketConnectionClass.terminate().Summary -->接続を強制終了します<!-- END REF -->.
+`.terminate()` 関数は、 <!-- REF #WebSocketConnectionClass.terminate().Summary -->接続を強制終了します<!-- END REF -->。
 
 終了時に、*code* と *message* をクライアントに送信し、終了の理由を示すことができます。
 
@@ -139,7 +139,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.wss` プロパティは、 <!-- REF #WebSocketConnectionClass.wss.Summary -->接続の [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) 親オブジェクトを格納します<!-- END REF -->.
+`.wss` プロパティは、 <!-- REF #WebSocketConnectionClass.wss.Summary -->接続の [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) 親オブジェクトを格納します<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->

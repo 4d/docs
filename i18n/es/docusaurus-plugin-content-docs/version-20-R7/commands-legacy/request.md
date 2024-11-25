@@ -5,7 +5,7 @@ slug: /commands/request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Request.Syntax-->**Request** ( *mensaje* {; *respuestaDefecto* {; *titulobotonOK* {; *titulobotoncancel*}}} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.Request.Syntax-->**Request** ( *mensaje* {; *respuestaDefecto* {; *titulobotonOK* {; *titulobotoncancel*}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

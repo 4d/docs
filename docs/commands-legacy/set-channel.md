@@ -139,7 +139,7 @@ For example, to display an Open File dialog box to open a text file, you would u
 
 | **Operation**                                                      | **Document**      | **Result**                                                                            |
 | ------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------------------------------- |
-| 10                                                                 | String            | Opens the document specified by String. If the document doesn’t exist, the document is opened and created. |                   |                                                                                       |
+| 10                                                                 | Text            | Opens the document specified by String. If the document doesn’t exist, the document is opened and created. |                   |                                                                                       |
 | 10                                                                 | "" (empty string) | Displays the Open File dialog box to open a file. All file types are displayed.                                      |                   |                                                                                       |
 | 11                                                                 | none              | Closes an open file.                                                                  |
 | 12                                                                 | "" (empty string) | Displays the Save File dialog box to create a new file.                               |

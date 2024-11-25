@@ -5,7 +5,7 @@ slug: /commands/object-get-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get style sheet.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,12 +30,13 @@ The command can return either:
 
 * a style sheet name,
 * an empty string ("") if no style sheet is assigned, or
-* if an automatic style sheet is assigned, one of the following constants found in the "*Font Styles*" theme:  
+* if an automatic style sheet is assigned, one of the following constants found in the "*Font Styles*" theme:
+  
 | Constant                          | Type   | Value                               | Comment                                                                                        |  
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------- |  
-| Automatic style sheet             | String | \_\_automatic\_\_                   | Used by default for all objects                                                                |  
-| Automatic style sheet\_additional | String | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |  
-| Automatic style sheet\_main       | String | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
+| Automatic style sheet             | Text | \_\_automatic\_\_                   | Used by default for all objects                                                                |  
+| Automatic style sheet\_additional | Text | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |  
+| Automatic style sheet\_main       | Text | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
 
 If the command designates several objects, the style sheet returned is only meaningful if the style sheet is assigned to all of the objects. 
 

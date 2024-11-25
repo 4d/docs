@@ -19,13 +19,13 @@ title: On Double Clicked
 
 このイベントは、4D View Pro ドキュメント上でダブルクリックが発生したときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ       | 型      | 説明                  |
-| ----------- | ------ | ------------------- |
-| code        | 倍長整数   | 13                  |
-| description | テキスト   | "On Double Clicked" |
-| objectName  | テキスト   | 4D View Pro エリア名    |
-| sheetName   | テキスト   | イベントが発生したシート名       |
-| range       | object | セルのレンジ              |
+| プロパティ       | 型       | 説明                  |
+| ----------- | ------- | ------------------- |
+| code        | longint | 13                  |
+| description | text    | "On Double Clicked" |
+| objectName  | text    | 4D View Pro エリア名    |
+| sheetName   | text    | イベントが発生したシート名       |
+| range       | object  | セルのレンジ              |
 
 #### 例題
 

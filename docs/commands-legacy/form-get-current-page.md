@@ -5,12 +5,12 @@ slug: /commands/form-get-current-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** {( * )} -> Function result<!-- END REF-->
+<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.FORM Get current page.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns number of current subform page |
-| Function result | Longint | &#8592; | Number of currently displayed form page |
+| Function result | Integer | &#8592; | Number of currently displayed form page |
 
 <!-- END REF-->
 

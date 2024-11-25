@@ -5,7 +5,7 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) : Expression<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,17 +30,17 @@ By default, 4D returns the value of the property in its original type. You can "
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Is Boolean    | Longint | 6     |
-| Is collection | Longint | 42    |
-| Is date       | Longint | 4     |
-| Is longint    | Longint | 9     |
-| Is null       | Longint | 255   |
-| Is object     | Longint | 38    |
-| Is picture    | Longint | 3     |
-| Is pointer    | Longint | 23    |
-| Is real       | Longint | 1     |
-| Is text       | Longint | 2     |
-| Is time       | Longint | 11    |
+| Is Boolean    | Integer | 6     |
+| Is collection | Integer | 42    |
+| Is date       | Integer | 4     |
+| Is longint    | Integer | 9     |
+| Is null       | Integer | 255   |
+| Is object     | Integer | 38    |
+| Is picture    | Integer | 3     |
+| Is pointer    | Integer | 23    |
+| Is real       | Integer | 1     |
+| Is text       | Integer | 2     |
+| Is time       | Integer | 11    |
 
 The command returns the value of the *property*. Several types of data are supported. Note that:
 

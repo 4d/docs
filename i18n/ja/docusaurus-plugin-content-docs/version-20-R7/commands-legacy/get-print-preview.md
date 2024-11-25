@@ -5,7 +5,7 @@ slug: /commands/get-print-preview
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get print preview.Syntax-->**Get print preview**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get print preview.Syntax-->**Get print preview**  : Boolean<!-- END REF-->
 <!--REF #_command_.Get print preview.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

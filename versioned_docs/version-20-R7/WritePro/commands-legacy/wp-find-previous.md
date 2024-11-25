@@ -5,15 +5,15 @@ slug: /WritePro/commands/wp-find-previous
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Find previous.Syntax-->**WP Find previous** ( *targetObj* ; *searchBefore* ; *searchValue* ; *searchCondition* {; *replaceValue*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Find previous.Syntax-->**WP Find previous** ( *targetObj* ; *searchBefore* ; *searchValue* ; *searchCondition* {; *replaceValue*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Find previous.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | searchBefore | Object | &#8594;  | Range before which to begin searching |
-| searchValue | String | &#8594;  | Search value |
-| searchCondition | Longint | &#8594;  | Search rule(s) |
-| replaceValue | String | &#8594;  | Replacement string |
+| searchValue | Text | &#8594;  | Search value |
+| searchCondition | Integer | &#8594;  | Search rule(s) |
+| replaceValue | Text | &#8594;  | Replacement string |
 | Function result | Object | &#8592; | Range of the found/replaced value |
 
 <!-- END REF-->

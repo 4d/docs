@@ -5,7 +5,7 @@ slug: /commands/json-resolve-pointers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *object* {; *options*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *object* {; *options*} ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ Optionally, you can pass in *options* an object containing specific properties t
 
 | **Property** | **Value type** | **Description**                                                                                                                                       |
 | ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| rootFolder   | String         | Absolute path (using standard 4D syntax) to the folder to be used to resolve relative pointers in *object*. Default is the database Resources folder. |
+| rootFolder   | Text         | Absolute path (using standard 4D syntax) to the folder to be used to resolve relative pointers in *object*. Default is the database Resources folder. |
 | merge        | Boolean        | Merge objects with pointer objects (true) instead of replacing them (false). Default is false ![](../assets/en/commands/pict3516702.en.png)           |
 
 After the command is executed: 
@@ -50,9 +50,9 @@ In any cases, the command returns an object containing the following properties:
 | success                 | Boolean        | true if all pointers have been resolved successfully                                                      |
 | errors                  | Collection     | Collection of errors if any                                                                               |
 | errors\[\].code         | Number         | error code                                                                                                |
-| errors\[\].message      | String         | error message                                                                                             |
-| errors\[\].pointerURI   | String         | pointer value                                                                                             |
-| errors\[\].referredPath | String         | document fullpath                                                                                         |
+| errors\[\].message      | Text         | error message                                                                                             |
+| errors\[\].pointerURI   | Text         | pointer value                                                                                             |
+| errors\[\].referredPath | Text         | document fullpath                                                                                         |
 
   
 #### Defining JSON Pointers 

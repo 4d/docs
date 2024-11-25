@@ -5,7 +5,7 @@ slug: /commands/get-group-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get group access.Syntax-->**Get group access** -> Resultado<!-- END REF-->
+<!--REF #_command_.Get group access.Syntax-->**Get group access** : Collection<!-- END REF-->
 <!--REF #_command_.Get group access.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

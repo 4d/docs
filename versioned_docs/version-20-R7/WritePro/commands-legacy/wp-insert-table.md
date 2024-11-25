@@ -5,15 +5,15 @@ slug: /WritePro/commands/wp-insert-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *targetObj* ; *mode* {; *rangeUpdate* {; *nbCols* {; *nbRows*}}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *targetObj* ; *mode* {; *rangeUpdate* {; *nbCols* {; *nbRows*}}} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| mode | Longint | &#8594;  | Insertion mode |
-| rangeUpdate | Longint | &#8594;  | Range update mode |
-| nbCols | Longint | &#8594;  | Number of columns to set in the table |
-| nbRows | Longint | &#8594;  | Number of rows to set in the table |
+| mode | Integer | &#8594;  | Insertion mode |
+| rangeUpdate | Integer | &#8594;  | Range update mode |
+| nbCols | Integer | &#8594;  | Number of columns to set in the table |
+| nbRows | Integer | &#8594;  | Number of rows to set in the table |
 | Function result | Object | &#8592; | Table object |
 
 <!-- END REF-->
@@ -34,16 +34,16 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 
 | Constant   | Type    | Value | Comment                                |
 | ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Longint | 2     | Insert contents at end of target       |
-| wk prepend | Longint | 1     | Insert contents at beginning of target |
-| wk replace | Longint | 0     | Replace target contents                |
+| wk append  | Integer | 2     | Insert contents at end of target       |
+| wk prepend | Integer | 1     | Insert contents at beginning of target |
+| wk replace | Integer | 0     | Replace target contents                |
 
 * If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted table is included in the resulting range:  
     
 | Constant              | Type    | Value | Comment                                               |  
 | --------------------- | ------- | ----- | ----------------------------------------------------- |  
-| wk exclude from range | Longint | 1     | Inserted contents not included in updated range       |  
-| wk include in range   | Longint | 0     | Inserted contents included in updated range (default) |  
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range       |  
+| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |  
     
 If you do not pass a *rangeUpdate* parameter, by default the inserted table is included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.

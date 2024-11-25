@@ -5,12 +5,12 @@ slug: /commands/last-field-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last field number.Syntax-->**Last field number** ( numTabela|pontTabela ) -> Resultado de função<!-- END REF-->
+<!--REF #_command_.Last field number.Syntax-->**Last field number** ( numTabela|pontTabela ) : Integer<!-- END REF-->
 <!--REF #_command_.Last field number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#8594;  | Número da tabela ou ponteiro a tabela |
-| Resultado de função | Inteiro longo | &#8592; | Maior número de campo na tabela |
+| Resultado de função | Integer | &#8592; | Maior número de campo na tabela |
 
 <!-- END REF-->
 

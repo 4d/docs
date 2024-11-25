@@ -5,12 +5,12 @@ slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return the selected record number or Default table, if omitted |
-| Function result | Longint | &#8592; | Selected record number of current record |
+| Function result | Integer | &#8592; | Selected record number of current record |
 
 <!-- END REF-->
 

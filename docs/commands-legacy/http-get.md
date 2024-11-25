@@ -5,7 +5,7 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *response* {; *headerNames* ; *headerValues*}{; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *response* {; *headerNames* ; *headerValues*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 | headerValues | Text array | &#8594;  | Header values of the request |
 | &#8592; | Returned header values |
 | * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
-| Function result | Longint | &#8592; | HTTP status code |
+| Function result | Integer | &#8592; | HTTP status code |
 
 <!-- END REF-->
 

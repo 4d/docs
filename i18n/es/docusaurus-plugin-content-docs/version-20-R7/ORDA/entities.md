@@ -270,7 +270,7 @@ Una entity selection **compartible** tiene las siguientes características:
 - puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo;
 - no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a unaentity selection compartible, primero debe transformarla en una entity selection no compartible utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 
-> La mayoría de las funciones entity selection (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportar selecciones de entidades compartibles ya que no es necesario modificar la selección de entidades original (devuelven una nueva).
+> La mayoría de las funciones de selección de entidades (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportar selecciones de entidades compartibles ya que no es necesario modificar la selección de entidades original (devuelven una nueva).
 
 Una entity selection **modificable** tiene las siguientes características:
 

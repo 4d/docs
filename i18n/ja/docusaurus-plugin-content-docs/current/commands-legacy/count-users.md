@@ -5,7 +5,7 @@ slug: /commands/count-users
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count users.Syntax-->**Count users**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Count users.Syntax-->**Count users**  : Integer<!-- END REF-->
 <!--REF #_command_.Count users.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

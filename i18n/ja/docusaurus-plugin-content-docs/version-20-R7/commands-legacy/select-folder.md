@@ -5,7 +5,7 @@ slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* }{;}{ *defaultPath* {; *options*}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* }{;}{ *defaultPath* {; *options*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

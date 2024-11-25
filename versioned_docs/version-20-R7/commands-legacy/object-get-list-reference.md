@@ -5,7 +5,7 @@ slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) : ListRef<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,9 +29,9 @@ By default, if you omit the *listType* parameter, the command returns the name o
 
 | Constant      | Type    | Value | Comment                                                                                    |
 | ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Longint | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Longint | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Longint | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
+| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
+| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
 
 If there is no hierarchical list associated with the object for the *listType* defined, the command returns 0\. 
 

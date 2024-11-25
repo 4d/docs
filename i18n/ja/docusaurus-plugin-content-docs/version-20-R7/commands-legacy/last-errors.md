@@ -5,7 +5,7 @@ slug: /commands/last-errors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last errors.Syntax-->**Last errors**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Last errors.Syntax-->**Last errors**  : Collection<!-- END REF-->
 <!--REF #_command_.Last errors.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

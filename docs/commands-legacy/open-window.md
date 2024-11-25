@@ -5,7 +5,7 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 | type | Integer | &#8594;  | Window type |
 | title | Text | &#8594;  | Title of window or "" for using default form title |
 | controlMenuBox | Text | &#8594;  | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
-| Function result | WinRef | &#8592; | Window reference number |
+| Function result | Integer | &#8592; | Window reference number |
 
 <!-- END REF-->
 

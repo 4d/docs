@@ -28,9 +28,9 @@ The following table describes the values that can be retrieved in both *type* an
 
 | Constant     | Type    | Value | Comment                                            |
 | ------------ | ------- | ----- | -------------------------------------------------- |
-| qr HTML file | Longint | 5     | *specifics*: Pathname to the file.                 |
-| qr printer   | Longint | 1     | *specifics*: "\*" to remove the print dialog boxes |
-| qr text file | Longint | 2     | *specifics*: Pathname to the file.                 |
+| qr HTML file | Integer | 5     | *specifics*: Pathname to the file.                 |
+| qr printer   | Integer | 1     | *specifics*: "\*" to remove the print dialog boxes |
+| qr text file | Integer | 2     | *specifics*: Pathname to the file.                 |
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 

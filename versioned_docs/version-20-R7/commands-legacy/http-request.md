@@ -5,7 +5,7 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *httpMethod* ; *url* ; *contents* ; *response* {; *headerNames* ; *headerValues*}{; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *httpMethod* ; *url* ; *contents* ; *response* {; *headerNames* ; *headerValues*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 | headerValues | Text array | &#8594;  | Header values of the request |
 | &#8592; | Returned header values |
 | * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
-| Function result | Longint | &#8592; | HTTP status code |
+| Function result | Integer | &#8592; | HTTP status code |
 
 <!-- END REF-->
 
@@ -36,13 +36,13 @@ Pass the HTTP method of the request in the *httpMethod* parameter. You can use o
 
 | Constant            | Type   | Value   | Comment                                                        |
 | ------------------- | ------ | ------- | -------------------------------------------------------------- |
-| HTTP DELETE method  | String | DELETE  | See *RFC 2616*                                                 |
-| HTTP GET method     | String | GET     | See *RFC 2616*. Same as using [HTTP Get](http-get.md) command. |
-| HTTP HEAD method    | String | HEAD    | See *RFC 2616*                                                 |
-| HTTP OPTIONS method | String | OPTIONS | See *RFC 2616*                                                 |
-| HTTP POST method    | String | POST    | See *RFC 2616*                                                 |
-| HTTP PUT method     | String | PUT     | See *RFC 2616*                                                 |
-| HTTP TRACE method   | String | TRACE   | See *RFC 2616*                                                 |
+| HTTP DELETE method  | Text | DELETE  | See *RFC 2616*                                                 |
+| HTTP GET method     | Text | GET     | See *RFC 2616*. Same as using [HTTP Get](http-get.md) command. |
+| HTTP HEAD method    | Text | HEAD    | See *RFC 2616*                                                 |
+| HTTP OPTIONS method | Text | OPTIONS | See *RFC 2616*                                                 |
+| HTTP POST method    | Text | POST    | See *RFC 2616*                                                 |
+| HTTP PUT method     | Text | PUT     | See *RFC 2616*                                                 |
+| HTTP TRACE method   | Text | TRACE   | See *RFC 2616*                                                 |
 
 Pass the URL where you want the request sent in the *url* parameter. The syntax to use is:  
 

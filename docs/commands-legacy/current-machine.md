@@ -5,11 +5,11 @@ slug: /commands/current-machine
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current machine.Syntax-->**Current machine**  -> Function result<!-- END REF-->
+<!--REF #_command_.Current machine.Syntax-->**Current machine**  : Text<!-- END REF-->
 <!--REF #_command_.Current machine.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Network name of the machine |
+| Function result | Text | &#8592; | Network name of the machine |
 
 <!-- END REF-->
 

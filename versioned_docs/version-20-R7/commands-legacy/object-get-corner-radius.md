@@ -5,13 +5,13 @@ slug: /commands/object-get-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get corner radius.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
 | object | any | &#8594;  | Object name (if * is specified) or Field or variable (if * is omitted) |
-| Function result | Longint | &#8592; | Radius of rounded corners (in pixels) |
+| Function result | Integer | &#8592; | Radius of rounded corners (in pixels) |
 
 <!-- END REF-->
 

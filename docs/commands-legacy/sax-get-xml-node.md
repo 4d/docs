@@ -5,12 +5,12 @@ slug: /commands/sax-get-xml-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* ) -> Function result<!-- END REF-->
+<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* ) : Integer<!-- END REF-->
 <!--REF #_command_.SAX Get XML node.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Reference of open document |
-| Function result | Longint | &#8592; | Event returned by function |
+| Function result | Integer | &#8592; | Event returned by function |
 
 <!-- END REF-->
 
@@ -22,15 +22,15 @@ Events that can be returned are available as “*XML*” theme constants:
 
 | Constant                   | Type    | Value |
 | -------------------------- | ------- | ----- |
-| XML CDATA                  | Longint | 7     |
-| XML Comment                | Longint | 2     |
-| XML DATA                   | Longint | 6     |
-| XML End Document           | Longint | 9     |
-| XML End Element            | Longint | 5     |
-| XML Entity                 | Longint | 8     |
-| XML Processing Instruction | Longint | 3     |
-| XML Start Document         | Longint | 1     |
-| XML Start Element          | Longint | 4     |
+| XML CDATA                  | Integer | 7     |
+| XML Comment                | Integer | 2     |
+| XML DATA                   | Integer | 6     |
+| XML End Document           | Integer | 9     |
+| XML End Element            | Integer | 5     |
+| XML Entity                 | Integer | 8     |
+| XML Processing Instruction | Integer | 3     |
+| XML Start Document         | Integer | 1     |
+| XML Start Element          | Integer | 4     |
 
 #### Example 
 

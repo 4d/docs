@@ -54,11 +54,11 @@ When you use the Web debug log *selector*, you can receive one of the following 
 
 | Constant                       | Type    | Value | Comment                                                                               |
 | ------------------------------ | ------- | ----- | ------------------------------------------------------------------------------------- |
-| wdl disable web log            | Longint | 0     | Web HTTP debug log is disabled                                                        |
-| wdl enable with all body parts | Longint | 7     | Web HTTP debug log is enabled with body parts in response and request                 |
-| wdl enable with request body   | Longint | 5     | Web HTTP debug log is enabled with body part in request only                          |
-| wdl enable with response body  | Longint | 3     | Web HTTP debug log is enabled with body part in response only                         |
-| wdl enable without body        | Longint | 1     | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
+| wdl disable web log            | Integer | 0     | Web HTTP debug log is disabled                                                        |
+| wdl enable with all body parts | Integer | 7     | Web HTTP debug log is enabled with body parts in response and request                 |
+| wdl enable with request body   | Integer | 5     | Web HTTP debug log is enabled with body part in request only                          |
+| wdl enable with response body  | Integer | 3     | Web HTTP debug log is enabled with body part in response only                         |
+| wdl enable without body        | Integer | 1     | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
 
 #### See also 
 

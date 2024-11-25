@@ -24,6 +24,7 @@ displayed_sidebar: docs
 * Con la primera sintaxis (utilizando el parámetro *objRango*), el comando devuelve el encabezado de la primera página en el rango o sección/subsección pasada en parámetro. Si una subsección está activa en la página, el comando devuelve el encabezado de la subsección activa, por lo que siempre devuelve el encabezado visible.
 * Con la segunda sintaxis (utilizando el parámetro *wpDoc*), el comando devuelve el encabezado de la sección *indiceSeccion* especificada (el valor *indiceSeccion* debe ser >=1).  
 Si se pasa el parámetro *tipoSubSeccion*, el comando devuelve el encabezado asociado al tipo de subsección especificado. Puede pasar una de las siguientes constantes en el parámetro *tipoSubSeccion*:  
+
 | Constante     | Tipo         | Valor |  
 | ------------- | ------------ | ----- |  
 | wk first page | Entero largo | 1     |  

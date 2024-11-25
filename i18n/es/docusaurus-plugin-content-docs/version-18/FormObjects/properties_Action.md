@@ -86,7 +86,7 @@ Se soportan varios tipos de referencias de métodos:
 
 - una ruta de archivo de método objeto estándar, es decir, que utilice el siguiente patrón:  
   `ObjectMethods/objectName.4dm`  
-  ... donde `objectName` es el [nombre del objeto](propiedades_Objeto.md#nombredelobjeto). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/*formName*/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
+  ... donde `objectName` es el [nombre del objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/*formName*/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
@@ -102,7 +102,7 @@ Se soportan varios tipos de referencias de métodos:
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - \[Botón\](button_overview. md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - \[Combo Box\](comboBox_overview. md) - [Lista desplegable](dropdownList_Overview.md) - \[Lista jerárquica\](list_overview. md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - \[Columna List Box\](listbox_overview. md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - \[Menú emergente de imagen\](picturePopupMenu_overview. md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - \[Botón radio\](radio_overview. md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - \[Stepper\](stepper. md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md#overview)
 
 ---
 

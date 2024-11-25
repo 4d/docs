@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | menu | Integer | &#8594;  | Référence de menu ou Numéro de menu |
 | ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
 | propriété | Text | &#8594;  | Type de propriété |
-| valeur | Expression | &#8592; | Valeur de la propriété |
+| valeur | any | &#8592; | Valeur de la propriété |
 | process | Integer | &#8594;  | Numéro de process |
 
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/is-field-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( numTabla | ptrTabla ; *numCamp* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( numTabla | ptrTabla ; *numCamp* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field number valid.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

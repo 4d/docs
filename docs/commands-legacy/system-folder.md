@@ -5,12 +5,12 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} -> Function result<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | type | Integer | &#8594;  | Type of system folder |
-| Function result | String | &#8592; | Pathname to a system folder |
+| Function result | Text | &#8592; | Pathname to a system folder |
 
 <!-- END REF-->
 
@@ -22,21 +22,21 @@ You pass in the optional *type* parameter a value indicating the type of system 
 
 | Constant                      | Type    | Value | Comment                                                        |
 | ----------------------------- | ------- | ----- | -------------------------------------------------------------- |
-| Applications or program files | Longint | 16    |                                                                |
-| Desktop                       | Longint | 15    |                                                                |
-| Documents folder              | Longint | 17    | "Documents" folder of user                                     |
-| Favorites Win                 | Longint | 14    |                                                                |
-| Fonts                         | Longint | 1     |                                                                |
-| Home folder                   | Longint | 18    | Current home folder of the user (usually "/Users/<username>/") |
-| Start menu Win\_all           | Longint | 8     |                                                                |
-| Start menu Win\_user          | Longint | 9     |                                                                |
-| Startup Win\_all              | Longint | 4     |                                                                |
-| Startup Win\_user             | Longint | 5     |                                                                |
-| System                        | Longint | 0     |                                                                |
-| System Win                    | Longint | 12    |                                                                |
-| System32 Win                  | Longint | 13    |                                                                |
-| User preferences\_all         | Longint | 2     |                                                                |
-| User preferences\_user        | Longint | 3     |                                                                |
+| Applications or program files | Integer | 16    |                                                                |
+| Desktop                       | Integer | 15    |                                                                |
+| Documents folder              | Integer | 17    | "Documents" folder of user                                     |
+| Favorites Win                 | Integer | 14    |                                                                |
+| Fonts                         | Integer | 1     |                                                                |
+| Home folder                   | Integer | 18    | Current home folder of the user (usually "/Users/<username>/") |
+| Start menu Win\_all           | Integer | 8     |                                                                |
+| Start menu Win\_user          | Integer | 9     |                                                                |
+| Startup Win\_all              | Integer | 4     |                                                                |
+| Startup Win\_user             | Integer | 5     |                                                                |
+| System                        | Integer | 0     |                                                                |
+| System Win                    | Integer | 12    |                                                                |
+| System32 Win                  | Integer | 13    |                                                                |
+| User preferences\_all         | Integer | 2     |                                                                |
+| User preferences\_user        | Integer | 3     |                                                                |
 
 **Notes:**
 

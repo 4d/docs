@@ -5,12 +5,12 @@ slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resName | Text | &#8594;  | Name of resname attribute |
-| Function result | String | &#8592; | Value of string designated by resName in current language |
+| Function result | Text | &#8592; | Value of string designated by resName in current language |
 
 <!-- END REF-->
 

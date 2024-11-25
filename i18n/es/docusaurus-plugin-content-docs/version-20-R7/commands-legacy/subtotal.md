@@ -5,7 +5,7 @@ slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *valores* {; *saltoPag*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *valores* {; *saltoPag*} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

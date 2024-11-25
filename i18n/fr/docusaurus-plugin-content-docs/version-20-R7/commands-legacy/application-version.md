@@ -5,7 +5,7 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** {( *numBuild* {; *} )} -> Résultat<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** {( *numBuild* {; *} )} : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/current-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current date.Syntax-->**Current date** {( * )} -> Function result<!-- END REF-->
+<!--REF #_command_.Current date.Syntax-->**Current date** {( * )} : Date<!-- END REF-->
 <!--REF #_command_.Current date.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

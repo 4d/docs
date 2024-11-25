@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *refElément* ; *infoXML* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *refElément* ; *infoXML* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

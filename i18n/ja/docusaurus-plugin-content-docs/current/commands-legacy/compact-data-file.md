@@ -5,7 +5,7 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* ; *dataPath* {; *archiveFolder* {; *option* {; *method*}}} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* ; *dataPath* {; *archiveFolder* {; *option* {; *method*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -35,6 +35,7 @@ displayed_sidebar: docs
 \- 空の文字列を渡すと、標準のフォルダーを開くダイアログが表示され、ユーザーは作成するフォルダーの場所を選択できます。  
 \- OSのシンタックスを使用してパス名を指定すると、コマンドは指定された場所に“Replaced files (compacting) DateTime”フォルダーを作成します。
 * オプションの*options* 引数を使用して、さまざまな圧縮オプションを指定できます。これを行うには*Data File Maintenance*テーマの以下の定数を使用してください。加算することで複数のオプションを指定できます:  
+
 | 定数                      | 型    | 値      | コメント                                                                                                                                                                                                |  
 | ----------------------- | ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Compact address table   | 倍長整数 | 131072 | 強制的にレコードのアドレステーブルを更新します (圧縮時間は長くなります)。このオプションのみを指定すると、4Dは自動でレコードの再保存オプションを有効にします。この場合、レコード番号が更新される点に留意してください。                                                                                       |  

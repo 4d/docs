@@ -5,13 +5,13 @@ slug: /commands/lowercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *aString* {; *} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *aString* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aText | Text | &#8594;  | String to convert to lowercase |
 | * | Operator | &#8594;  | If passed: keep accents |
-| Function result | String | &#8592; | String in lowercase |
+| Function result | Text | &#8592; | String in lowercase |
 
 <!-- END REF-->
 

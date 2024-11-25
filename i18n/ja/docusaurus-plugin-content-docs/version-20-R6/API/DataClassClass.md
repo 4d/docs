@@ -738,7 +738,7 @@ $number:=$ds.Persons.getCount()
 | __KEY       | String  | エンティティのプライマリーキー                                                                                                                                       |
 | __STAMP     | Longint | データベース内のエンティティのタイムスタンプ                                                                                                                                |
 | __TIMESTAMP | String  | データベース内のエンティティのスタンプ (形式: YYYY-MM-DDTHH:MM:SS:ms:Z) |
-| dataClassAttributeName                                | バリアント   | データクラス属性に対応するデータがキャッシュに存在する場合、それはデータベースと同じ型のプロパティに返されます。                                                                                              |
+| dataClassAttributeName                                | Variant | データクラス属性に対応するデータがキャッシュに存在する場合、それはデータベースと同じ型のプロパティに返されます。                                                                                              |
 
 リレートエンティティに関するデータは、data オブジェクトのキャッシュに保存されます。
 

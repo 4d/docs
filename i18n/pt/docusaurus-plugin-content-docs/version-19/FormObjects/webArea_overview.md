@@ -46,7 +46,7 @@ For example, to call the `HelloWorld` 4D method, you just execute the following 
 ```codeJS
 $4d. HelloWorld();
 ```
-> JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+> JavaScript é sensível a maiúsculas e minúsculas, portanto é importante notar que o objeto tem o nome $4d (com uma letra minúscula "d").
 
 A sintaxe das chamadas aos métodos 4D é a seguinte:
 
@@ -183,7 +183,7 @@ Pode ver e usar um inspetor web dentro das áreas web de seus formulários. O in
 
 To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area.
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br/> This command can be used directly with onscreen (form object) and offscreen web areas. In the case of an onscreen web area, you must have [selected the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the web inspector is only available with this configuration).
+- **Execute the `WA OPEN WEB INSPECTOR` command**<br/> This command can be used directly with onscreen (form object) and offscreen web areas. No caso de uma área web na tela você deve ter [selecionado o mecanismo de renderização web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine) para a área (o inspetor web só está disponível com esta configuração).
 
 - **Use the web area context menu**<br/> This feature can only be used with onscreen web areas and requires that the following conditions are met:
   - o motor de renderização Web incorporado é selecionado para a área

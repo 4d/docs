@@ -50,7 +50,7 @@ Básicamente, el código que se ejecuta en hilos apropiativos no puede llamar a 
 
 Por defecto, 4D ejecuta todos los métodos proyecto de su aplicación en modo cooperativo. Si desea beneficiarse de la función de modo apropiativo, el primer paso consiste en declarar explícitamente todos los métodos que desee que se inicien en modo apropiativo siempre que sea posible, es decir, los métodos que considere que pueden ejecutarse en un proceso apropiativo. El compilador [verificará que estos métodos sean realmente hilo seguro](#writing-a-thread-safe-method) durante el tiempo de compilación. También puede desactivar el modo apropiativo para algunos métodos, si es necesario.
 
-Tenga en cuenta que declarar un método "capable" de uso apropiativo lo hace elegible para la ejecución apropiativa, pero no garantiza que realmente se ejecute en modo apropiativo en tiempo de ejecución. Iniciar un proceso en modo apropiativo resulta de una [evaluación realizada por 4D](#cuando-se-inicia-un-proceso-de-forma-apropiativa) con respecto a las propiedades de todos los métodos en la cadena de llamadas del proceso.
+Tenga en cuenta que declarar un método "capable" de uso apropiativo lo hace elegible para la ejecución apropiativa, pero no garantiza que realmente se ejecute en modo apropiativo en tiempo de ejecución. Iniciar un proceso en modo apropiativo resulta de una [evaluación realizada por 4D](#when-is-a-process-started-preemptively) con respecto a las propiedades de todos los métodos en la cadena de llamadas del proceso.
 
 Para declarar su método como elegible para su uso en modo apropiativo, debe utilizar la opción de declaración "Modo de ejecución" en el diálogo Propiedades del Método:
 

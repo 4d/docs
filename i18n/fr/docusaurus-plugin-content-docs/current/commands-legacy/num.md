@@ -5,7 +5,7 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *séparateur*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *séparateur*} ) : Real<!-- END REF-->
 <!--REF #_command_.Num.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

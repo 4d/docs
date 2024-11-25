@@ -5,7 +5,7 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application color scheme.Syntax-->**Get application color scheme** {( * )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Get application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
 <!--REF #_command_.Get application color scheme.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

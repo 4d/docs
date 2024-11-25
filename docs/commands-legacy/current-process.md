@@ -5,11 +5,11 @@ slug: /commands/current-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current process.Syntax-->**Current process**  -> Function result<!-- END REF-->
+<!--REF #_command_.Current process.Syntax-->**Current process**  : Integer<!-- END REF-->
 <!--REF #_command_.Current process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Process number |
+| Function result | Integer | &#8592; | Process number |
 
 <!-- END REF-->
 

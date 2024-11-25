@@ -5,11 +5,11 @@ slug: /commands/displayed-line-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  -> Function result<!-- END REF-->
+<!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  : Integer<!-- END REF-->
 <!--REF #_command_.Displayed line number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Number of row being displayed |
+| Function result | Integer | &#8592; | Number of row being displayed |
 
 <!-- END REF-->
 

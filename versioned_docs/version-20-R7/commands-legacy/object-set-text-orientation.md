@@ -31,10 +31,10 @@ In the *orientation* parameter, you pass the absolute orientation that you want 
 
 | Constant              | Type    | Value | Comment                                      |
 | --------------------- | ------- | ----- | -------------------------------------------- |
-| Orientation 0°        | Longint | 0     | No rotation (default value)                  |
-| Orientation 180°      | Longint | 180   | Orientation of text to 180° clockwise        |
-| Orientation 90° left  | Longint | 270   | Orientation of text to 90° counter-clockwise |
-| Orientation 90° right | Longint | 90    | Orientation of text to 90° clockwise         |
+| Orientation 0°        | Integer | 0     | No rotation (default value)                  |
+| Orientation 180°      | Integer | 180   | Orientation of text to 180° clockwise        |
+| Orientation 90° left  | Integer | 270   | Orientation of text to 90° counter-clockwise |
+| Orientation 90° right | Integer | 90    | Orientation of text to 90° clockwise         |
 
 **Note:** Only angles corresponding to these values are supported. If you pass any other value, it will be ignored. 
 

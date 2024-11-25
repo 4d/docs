@@ -5,12 +5,12 @@ slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pathname | Text | &#8594;  | Pathname to directory, folder or document |
-| Function result | Longint | &#8592; | 1, pathname refers to an existing document 0, pathname refers to an existing directory or folder <0, invalid pathname, OS file manager error code |
+| Function result | Integer | &#8592; | 1, pathname refers to an existing document 0, pathname refers to an existing directory or folder <0, invalid pathname, OS file manager error code |
 
 <!-- END REF-->
 
@@ -24,8 +24,8 @@ The following predefined constants are provided by 4D:
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Is a document | Longint | 1     |
-| Is a folder   | Longint | 0     |
+| Is a document | Integer | 1     |
+| Is a folder   | Integer | 0     |
 
 If no document nor folder is found, **Test path name** returns a negative value (i.e. -43 for File not found).
 

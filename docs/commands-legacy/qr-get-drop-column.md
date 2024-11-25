@@ -5,12 +5,12 @@ slug: /commands/qr-get-drop-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* ) -> Function result<!-- END REF-->
+<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
-| Function result | Longint | &#8592; | Drop value |
+| Function result | Integer | &#8592; | Drop value |
 
 <!-- END REF-->
 

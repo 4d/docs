@@ -25,6 +25,7 @@ displayed_sidebar: docs
 
 * En el parámetro *objeto*, pase el objeto 4D (variable, array o campo) a utilizar en la petición.
 * En el parámetro *tipoParam*, pase el tipo SQL del parámetro. Puede pasar un valor o utilizar una de las siguientes constantes, ubicadas en el tema “*SQL*”:  
+
 | Constante        | Tipo         | Valor | Comentario                                                                                                                                 |  
 | ---------------- | ------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------ |  
 | SQL param in     | Entero largo | 1     |                                                                                                                                            |  

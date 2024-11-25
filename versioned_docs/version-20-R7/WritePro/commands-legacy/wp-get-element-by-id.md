@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-get-element-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get element by ID.Syntax-->**WP Get element by ID** ( *wpDoc* ; *ID* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get element by ID.Syntax-->**WP Get element by ID** ( *wpDoc* ; *ID* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get element by ID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| ID | String | &#8594;  | Identifier of the element to retrieve |
+| ID | Text | &#8594;  | Identifier of the element to retrieve |
 | Function result | Object | &#8592; | 4D Write Pro element |
 
 <!-- END REF-->

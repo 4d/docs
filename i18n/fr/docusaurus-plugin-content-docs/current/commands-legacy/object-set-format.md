@@ -40,6 +40,7 @@ Pour formater des champs ou des variables de type Date ou Heure, vous pouvez uti
 * soit un **format prédéfini** disponible via des constantes du thème *Formats d'affichage des dates* ou *Formats d'affichage des heures* (valeur longint). Dans ce cas, il faut passer [Char](char.md)(n) dans *formatAffich*, où *n* est la constante :  
     
 Dates :  
+
 | Constante                   | Valeur | Comment                                                                                                                          |  
 | --------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null date          | 100    | À ajouter à la constante format. Indique que dans le cas d'une valeur nulle, 4D doit retourner une chaîne vide au lieu de zéros. |  
@@ -55,6 +56,7 @@ Dates :
 | System date short           | 1      | 06/12/2006                                                                                                                       |  
     
 Heures :  
+
 | Constante                    | Valeur | Comment                                                                                                                                                                                                                                        |  
 | ---------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null time           | 100    | À ajouter à la constante format. Indique que dans le cas d'une valeur nulle, 4D doit retourner une chaîne vide au lieu de zéros.                                                                                                               |  

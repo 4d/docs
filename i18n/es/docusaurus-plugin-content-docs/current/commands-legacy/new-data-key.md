@@ -5,7 +5,7 @@ slug: /commands/new-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* ) : Object<!-- END REF-->
 <!--REF #_command_.New data key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

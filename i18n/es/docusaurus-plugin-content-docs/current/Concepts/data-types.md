@@ -7,7 +7,7 @@ En 4D, los datos se manejan según su tipo en dos lugares: los campos de la base
 
 Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no están disponibles directamente en el lenguaje y se convierten automáticamente. Por el contrario, algunos tipos de datos sólo pueden manejarse a través del lenguaje. La siguiente tabla lista todos los tipos de datos disponibles y cómo se soportan/declaran:
 
-| Tipos de datos                                          | Soporte para la base (1) | Soporte para el lenguaje   | [Declaración var\`](variables.md#using-the-var-keyword) | [`ARRAY` declaration](arrays.md) |
+| Tipos de datos                                          | Soporte para la base (1) | Soporte para el lenguaje   | [Declaración var\`](variables.md#using-the-var-keyword) | [Declaración ARRAY\`](arrays.md) |
 | ------------------------------------------------------- | ------------------------------------------- | -------------------------- | ------------------------------------------------------- | -------------------------------- |
 | [Alfanumérico](dt_string.md)                            | Sí                                          | Convertido en texto        | -                                                       | -                                |
 | [Text](Concepts/dt_string.md)                           | Sí                                          | Sí                         | `Text`                                                  | `ARRAY TEXT`                     |
@@ -41,7 +41,7 @@ El valor por defecto depende del tipo de variable:
 | ---------- | ---------------------------------------- |
 | Booleano   | False                                    |
 | Fecha      | 00-00-00                                 |
-| Longint    | 0                                        |
+| Integer    | 0                                        |
 | Hora       | 00:00:00 |
 | Picture    | picture size=0                           |
 | Real       | 0                                        |

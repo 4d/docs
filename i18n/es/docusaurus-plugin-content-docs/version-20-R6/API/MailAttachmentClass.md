@@ -205,7 +205,7 @@ La función `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary 
 
 La propiedad `.cid` contiene <!-- REF #MailAttachmentClass.cid.Summary -->el ID del archivo adjunto<!-- END REF -->. Esta propiedad se utiliza sólo en los mensajes HTML. Si falta esta propiedad, el archivo se maneja como un simple adjunto (enlace).
 
-## .disposition<!-- REF #MailAttachmentClass.disposition.Syntax --><strong x-id="1">.disposition</strong> : Text<!-- END REF -->#### Descripción
+## .disposition
 
 <!-- REF #MailAttachmentClass.disposition.Syntax -->**.disposition** : Text<!-- END REF -->
 
@@ -238,7 +238,7 @@ La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -
 
 #### Descripción
 
-La propiedad `.name` contiene <!-- REF #MailAttachmentClass.name.Summary -->el nombre y la extensión del adjuntot<!-- END REF -->.  Por defecto, es el nombre del archivo, a menos que se haya indicado otro nombre en el comando [`MAIL New attachment`](#mail-new-attachment).
+La propiedad `.name` contiene <!-- REF #MailAttachmentClass.name.Summary -->el nombre y la extensión del adjunto<!-- END REF -->.  Por defecto, es el nombre del archivo, a menos que se haya indicado otro nombre en el comando [`MAIL New attachment`](#mail-new-attachment).
 
 ## .path
 

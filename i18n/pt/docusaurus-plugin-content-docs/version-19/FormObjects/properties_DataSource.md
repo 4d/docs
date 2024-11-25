@@ -3,7 +3,6 @@ id: propertiesDataSource
 title: Fonte de dados
 ---
 
-
 ## Inserção automática
 
 When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
@@ -294,9 +293,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### Gramática JSON
 
-| Nome                | Tipo de dados | Valores possíveis     |
-| ------------------- | ------------- | --------------------- |
-| selectedItemsSource | string        | Expressão da colecção |
+| Nome                | Tipo de dados | Valores possíveis                          |
+| ------------------- | ------------- | ------------------------------------------ |
+| selectedItemsSource | string        | Assignable collection or object expression |
 
 #### Objectos suportados
 

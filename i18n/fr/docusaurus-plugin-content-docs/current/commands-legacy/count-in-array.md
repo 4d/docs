@@ -5,7 +5,7 @@ slug: /commands/count-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *tableau* ; *valeur* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *tableau* ; *valeur* ) : Integer<!-- END REF-->
 <!--REF #_command_.Count in array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

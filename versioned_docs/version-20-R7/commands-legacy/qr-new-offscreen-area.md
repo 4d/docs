@@ -5,11 +5,11 @@ slug: /commands/qr-new-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR New offscreen area.Syntax-->**QR New offscreen area**  -> Function result<!-- END REF-->
+<!--REF #_command_.QR New offscreen area.Syntax-->**QR New offscreen area**  : Integer<!-- END REF-->
 <!--REF #_command_.QR New offscreen area.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Reference of the area created |
+| Function result | Integer | &#8592; | Reference of the area created |
 
 <!-- END REF-->
 

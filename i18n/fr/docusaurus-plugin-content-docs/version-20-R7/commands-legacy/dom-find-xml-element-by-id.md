@@ -5,7 +5,7 @@ slug: /commands/dom-find-xml-element-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *refElément* ; *id* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *refElément* ; *id* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element by ID.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

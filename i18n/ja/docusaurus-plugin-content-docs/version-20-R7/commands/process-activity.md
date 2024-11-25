@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-| 引数        | 型      |   | 説明                                                                                     |
-| --------- | ------ | - | -------------------------------------------------------------------------------------- |
-| sessionID | テキスト   | → | Session ID                                                                             |
-| options   | 整数     | → | Return options                                                                         |
-| 戻り値       | オブジェクト | ← | Snapshot of running processes and/or (4D Server only) user sessions |
+| 引数        | 型       |   | 説明                                                                                     |
+| --------- | ------- | - | -------------------------------------------------------------------------------------- |
+| sessionID | Text    | → | Session ID                                                                             |
+| options   | Integer | → | Return options                                                                         |
+| 戻り値       | Object  | ← | Snapshot of running processes and/or (4D Server only) user sessions |
 
 <!-- END REF-->
 
@@ -69,7 +69,7 @@ On the server, the `Process activity` command returns an additional "session" pr
 
 | Additional property | 型      | 説明                                                                                                                                                                                         |   |
 | ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
-| session             | オブジェクト | The [`.info`](../API/SessionClass.md#info) property of the session in which the process is running. Undefined if the `Processes only` parameter is passed. |   |
+| session             | Object | The [`.info`](../API/SessionClass.md#info) property of the session in which the process is running. Undefined if the `Processes only` parameter is passed. |   |
 
 #### 例題 1
 

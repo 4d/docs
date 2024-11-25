@@ -5,15 +5,15 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Syntax -->
 
-**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
+**VP Cell** ( *vpAreaName* : Text ; *column* : Integer ; *row* : Integer { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |
-| column     | Longint | ->                          | Índice de la columna                                           |
-| row        | Longint | ->                          | Índice de la línea                                             |
+| column     | Integer | ->                          | Índice de la columna                                           |
+| row        | Integer | ->                          | Índice de la línea                                             |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |
 | Result     | Object  | <- | Objeto rango de una sola celda                                 |
 

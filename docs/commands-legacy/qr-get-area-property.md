@@ -5,13 +5,13 @@ slug: /commands/qr-get-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *area* ; *property* ) -> Function result<!-- END REF-->
+<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *area* ; *property* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get area property.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | property | Integer | &#8594;  | Interface element designated |
-| Function result | Longint | &#8592; | 1 = displayed, 0 = hidden |
+| Function result | Integer | &#8592; | 1 = displayed, 0 = hidden |
 
 <!-- END REF-->
 

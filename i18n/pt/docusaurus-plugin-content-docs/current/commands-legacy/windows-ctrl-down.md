@@ -5,7 +5,7 @@ slug: /commands/windows-ctrl-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Windows Ctrl down.Syntax-->**Windows Ctrl down**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Windows Ctrl down.Syntax-->**Windows Ctrl down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Windows Ctrl down.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

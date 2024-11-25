@@ -6,21 +6,21 @@ title: Página de Backup
 
 Uma cópia de segurança pode ser iniciada de três maneiras:
 
-- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
+- Manualmente, utilizando o elemento **Backup...** do menu 4D **Arquivo** ou o botão **Backup** de [Centro de segurança e manutenção](MSC/backup.md).
 - Automaticamente, usando o agendamento  que pode ser estabelecido em Configurações de Banco de Dados
 - Por programação, utilizando o comando `BACKUP`.
 
 > 4D Server: é possível iniciar uma cópia de segurança manualmente desde uma máquina remota mediante um método que chama ao comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
 
-## You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
+## Cópia de segurança manual
 
-1. Seleccione o comando **Backup...** no menu 4D **File** . A janela de backup aparece: ![](../assets/en/Backup/backup01.png) Você pode ver a localização da pasta de backup usando o menu pop-up ao lado da área de "Destino de backup". Também se registra no banco de dados **Backup journal.txt**.
+1. Selecione o comando **Backup...** no menu 4D **Arquivo**. A janela de backup aparece: ![](../assets/en/Backup/backup01.png) Você pode ver a localização da pasta de backup usando o menu pop-up ao lado da área de "Destino de backup". Essa localização é definida na página **Backup/Configuração** das Configurações do Banco de Dados.
 
 - Também pode abrir o [Centro de manutenção e segurança](MSC/overview.md) de 4D e mostrar a [página de cópias de segurança](MSC/backup.md).
 
 This page cannot be used to modify the backup parameters. To do this, you must click on the **Database properties...** button.
 
- 2. The **Backup** button is used to launch a manual backup.
+ 2. Clique em **Backup** para iniciar a cópia de segurança utilizando os parâmetros atuais.
 
 ## Backup automático periódico
 
@@ -40,20 +40,20 @@ Quando iniciar o backup, 4D exibe uma caixa de diálogo com um termômetro indic
 
 Esse termômetro também é mostrado na página [Backup de CSM](MSC/backup.md) se utilizou esta caixa de diálogo.
 
-This page consists of the following three areas:
+O botão **Parar** permite ao usuário interromper a cópia de segurança em qualquer momento (consulte [Manejar os problemas da cópia de segurança](backup.md#handling-backup-issues) mais adiante).
 
 O estado da última cópia de segurança (correta ou com erro) é armazenada na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server. Também se registra no banco de dados **Backup journal.txt**.
 
 ### Acesso do banco de dados durante o backup
 
-Durante a cópia de segurança, acesso ao banco de dados é restrito por 4D dependendo do contexto. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura mas sim aos dados.
+Durante a cópia de segurança, acesso ao banco de dados é restrito por 4D dependendo do contexto. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura, mas sim aos dados.
 
 Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o acesso à estrutura continua sendo permitido. Nesse caso, as possibilidades de acesso ao banco de dados  são as seguintes:
 
 - Com a versão 4D monousuário, o banco de dados é trancado tanto para leitura quanto escrita, todos os processos são congelados. Nenhuma ação é realizada.
 - Com 4D Server, o banco de dados está bloqueado só para escrita; as máquinas clientes podem ver os dados. Se uma máquina cliente enviar uma petição de adição, eliminação ou mudança ao servidor, uma janela aparece pedindo ao usuário que espere até o final da cópia de segurança. Quando a aplicação for salva, a janela desaparece a ação é realizada. Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Para cancelar a petição em processo e não esperar a que finalize a cópia de segurança, basta dar um clique no botão **Cancelar a operação**. Entretanto, se a ação que espera ser executada vem de um método lançado antes da cópia de segurança, não deve cancelar a ação porque só são canceladas as operações restantes. Além disso, um método parcialmente executado pode causar inconsistências lógicas no banco de dados.
 
-> Quando a ação que espera ser executada vir de um método e o usuário clicar no botão **Cancelar operação**, 4D Server devolve o erro -9976 (Este comando não pode ser executardo porque a copia de segurança está em progresso).
+> Quando a ação que espera ser executada vir de um método e o usuário clicar no botão **Cancelar operação**, 4D Server devolve o erro -9976 (Este comando não pode ser executado porque a copia de segurança está em progresso).
 
 ### Gestão dos problemas das cópias de segurança
 
@@ -61,7 +61,7 @@ Pode acontecer que uma cópia de segurança não seja executada corretamente. Po
 
 Em todos os casos,  lembre que o estado da última copia de segurança (correta ou com falha) se armazena na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server, assim como no banco de dados **Backup journal.txt**.
 
-- **Interrupção pelo usuário**: o **Botão Parar** na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para e é gerado o erro 1406. Pode interceptar esse erro no método database `On Backup Shutdown`.
+- **Interrupção pelo usuário**: o **Botão Parar** na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para sendo gerado o erro 1406. Pode interceptar esse erro no método database `On Backup Shutdown`.
 - **Contents of the backup file**: lists the files and folders included in the backup file.
 - **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. A espera entre duas tentativas é definida na página **Backup/Backup & Restore** nas Propriedades do banco de dados. Se a segunda tentativa falhar, um diálogo de alerta de sistema é exibido e um erro é gerado. Pode interceptar esse erro no método database `On Backup Shutdown`.
 
@@ -85,7 +85,7 @@ Em determinadas estratégias de copia de segurança (por exemplo, no caso de que
 O arquivo **backupHistory.json** é criado na pasta de destino do backup atual. Pode obter a rota para esse arquivo usando a declaração abaixo:
 
 ```4d
-$backupHistory:=Get 4D file(arquivo histórico Backup)
+$backupHistory:=Get 4D file(Backup history file)
 ```
 > **AVISO**  
 > Apagar ou mover o arquivo **backupHistory.json** faz com que o próximo número de backup seja resetado.

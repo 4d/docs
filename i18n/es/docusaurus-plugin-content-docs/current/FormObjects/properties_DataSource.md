@@ -298,9 +298,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles          |
-| ------------------- | -------------- | ------------------------- |
-| selectedItemsSource | string         | Expresión de la colección |
+| Nombre              | Tipos de datos | Valores posibles                           |
+| ------------------- | -------------- | ------------------------------------------ |
+| selectedItemsSource | string         | Assignable collection or object expression |
 
 #### Objetos soportados
 
@@ -308,7 +308,7 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 ---
 
-## Selección de nombres
+## Nombre de selección
 
 `List boxes de tipo selección nombrada`
 

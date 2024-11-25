@@ -5,7 +5,7 @@ slug: /commands/blob-to-real
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *BLOB* ; *formatoReal* {; *offset*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *BLOB* ; *formatoReal* {; *offset*} ) : Real<!-- END REF-->
 <!--REF #_command_.BLOB to real.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

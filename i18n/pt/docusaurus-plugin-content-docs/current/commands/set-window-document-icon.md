@@ -16,9 +16,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R7   | Adicionado |
+
+</details>
+
 #### Descrição
 
 The `SET WINDOW DOCUMENT ICON` command <!--REF #_command_.SET WINDOW DOCUMENT ICON.Summary-->allows you to define an icon for windows in multi-window applications using either an *image* and/or *file* with the window reference *winRef*<!-- END REF-->. The icon will be visible within the window itself and on the windows taskbar to help users identify and navigate different windows.
+
+In the case of an MDI application on Windows, you can pass `-1` in *winRef* to set the icon of the main window. In other contexts (macOS or [SDI application](../Menus/sdi.md) on Windows), using -1 does nothing.
 
 - If only *file* is passed, the window uses the icon corresponding to the file type and the file’s path is displayed in the window’s menu.
 - If only *image* is passed, 4D does not show the path and the passed image is used for the window icon.

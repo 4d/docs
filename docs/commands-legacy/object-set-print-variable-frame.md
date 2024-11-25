@@ -39,8 +39,8 @@ The optional *fixedSubform* parameter lets you set an additional option when you
 
 | Constant                                | Type    | Value | Comment                                                                                                                                             |
 | --------------------------------------- | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Print Frame fixed with multiple records | Longint | 2     | The frame remains the same size, but 4D prints the form several times to include all the records.<br/>                                      |
-| Print Frame fixed with truncation       | Longint | 1     | 4D prints only the records that fit into the area of the subform. The form is printed only once and those records that are not printed are ignored. |
+| Print Frame fixed with multiple records | Integer | 2     | The frame remains the same size, but 4D prints the form several times to include all the records.<br/>                                      |
+| Print Frame fixed with truncation       | Integer | 1     | 4D prints only the records that fit into the area of the subform. The form is printed only once and those records that are not printed are ignored. |
 
 #### See also 
 

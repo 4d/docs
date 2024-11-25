@@ -5,11 +5,11 @@ slug: /commands/transaction-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Transaction level.Syntax-->**Transaction level**  -> Function result<!-- END REF-->
+<!--REF #_command_.Transaction level.Syntax-->**Transaction level**  : Integer<!-- END REF-->
 <!--REF #_command_.Transaction level.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Current transaction level (0 if no transaction has been started) |
+| Function result | Integer | &#8592; | Current transaction level (0 if no transaction has been started) |
 
 <!-- END REF-->
 

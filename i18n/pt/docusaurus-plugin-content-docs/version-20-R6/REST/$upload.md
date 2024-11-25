@@ -27,7 +27,7 @@ Como resultado, o servidor devolve um ID que identifica o ficheiro:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity. O pedido tem o seguinte aspecto:
+Posteriormente, você usa essa ID para adicioná-la a um atributo usando [`$method=update`]($method.md#methodupdate) para adicionar a imagem a uma entidade. O pedido tem o seguinte aspecto:
 
 `POST  /rest/Employee/?$method=update`
 

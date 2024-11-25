@@ -15,7 +15,7 @@ As formas 4D suportam as seguintes formas básicas:
 
 Um retângulo estático é um objeto decorativo para os formulários. Os rectângulos são limitados a formas quadradas.
 
-O desenho dos retângulos é controlado através de muitas propriedades (cor, espessura da linha, padrão, etc.). Especificamente, o [roundness](propriedades_CoordinatesAndSizing.md#corner-radius) dos seus cantos pode ser definido.
+O desenho dos retângulos é controlado através de muitas propriedades (cor, espessura da linha, padrão, etc.). Especificamente, o [arredondamento](properties_CoordinatesAndSizing.md#corner-radius) dos seus cantos pode ser definido.
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 

@@ -5,12 +5,12 @@ slug: /commands/record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Record number.Syntax-->**Record number** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Record number.Syntax-->**Record number** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return the number of the current record, or Default table, if omitted |
-| Function result | Longint | &#8592; | Current record number |
+| Function result | Integer | &#8592; | Current record number |
 
 <!-- END REF-->
 

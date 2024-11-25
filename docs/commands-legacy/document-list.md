@@ -25,10 +25,10 @@ By default, if you omit the *options* parameter, only the names of documents are
 
 | Constant          | Type    | Value | Comment                                                                         |
 | ----------------- | ------- | ----- | ------------------------------------------------------------------------------- |
-| Absolute path     | Longint | 2     | The *documents* array contains absolute pathnames                               |
-| Ignore invisible  | Longint | 8     | Invisible documents are not listed                                              |
-| Posix path        | Longint | 4     | The *documents* array contains Posix format pathnames                           |
-| Recursive parsing | Longint | 1     | The *documents* array contains all files and subfolders of the specified folder |
+| Absolute path     | Integer | 2     | The *documents* array contains absolute pathnames                               |
+| Ignore invisible  | Integer | 8     | Invisible documents are not listed                                              |
+| Posix path        | Integer | 4     | The *documents* array contains Posix format pathnames                           |
+| Recursive parsing | Integer | 1     | The *documents* array contains all files and subfolders of the specified folder |
 
 **Notes:**
 

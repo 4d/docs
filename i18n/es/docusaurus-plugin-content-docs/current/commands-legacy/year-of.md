@@ -5,7 +5,7 @@ slug: /commands/year-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Year of.Syntax-->**Year of** ( *fecha* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Year of.Syntax-->**Year of** ( *fecha* ) : Integer<!-- END REF-->
 <!--REF #_command_.Year of.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

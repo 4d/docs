@@ -5,14 +5,14 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *object* {; *direction*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *object* {; *direction*} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | direction | Integer | &#8594;  | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| Function result | MenuRef | &#8592; | Menu reference |
+| Function result | Text | &#8592; | Menu reference |
 
 <!-- END REF-->
 
@@ -29,8 +29,8 @@ Pass a value indicating the list to recover in *direction*. You can use one of t
 
 | Constant         | Type    | Value |
 | ---------------- | ------- | ----- |
-| WA next URLs     | Longint | 1     |
-| WA previous URLs | Longint | 0     |
+| WA next URLs     | Integer | 1     |
+| WA previous URLs | Integer | 0     |
 
 If you omit the *direction* parameter, the value 0 is used.
 

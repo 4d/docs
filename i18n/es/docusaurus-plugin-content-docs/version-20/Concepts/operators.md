@@ -135,7 +135,7 @@ $x3/=2 // $x3=5
 
 // Multiplication
 $x2:=10
-$x2*=5 // $x2=50
+$x2*=5 // $x2=10
 
 $t2:="Hello" 
 $t2*=2 // $t2="HelloHello"
@@ -148,12 +148,12 @@ $x1-=5 //$x1=5
 $d1:=!2000-11-10!
 $d1-=10 // $d1=!2000-10-31!
 
-// Division
+// División
 $x3:=10
 $x3/=2 // $x3=5
 
 
-// Multiplication
+// Multiplicación
 $x2:=10
 $x2*=5 // $x2=50
 

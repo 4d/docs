@@ -5,7 +5,7 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

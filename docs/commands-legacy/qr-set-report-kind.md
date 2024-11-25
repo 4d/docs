@@ -28,8 +28,8 @@ You can also use the constants of the *QR Report Types* theme:
 
 | Constant        | Type    | Value |
 | --------------- | ------- | ----- |
-| qr cross report | Longint | 2     |
-| qr list report  | Longint | 1     |
+| qr cross report | Integer | 2     |
+| qr list report  | Integer | 1     |
 
   
 If you set a new type for an existing current report, it removes the previous settings and creates a new empty report, ready to be set. 

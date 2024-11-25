@@ -3,7 +3,6 @@ id: propertiesDataSource
 title: Data Source 
 ---
 
-
 ## Automatic Insertion
 
 When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
@@ -304,7 +303,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|selectedItemsSource| string|Collection expression |
+|selectedItemsSource| string|Assignable collection or object expression |
 
 #### Objects Supported
 

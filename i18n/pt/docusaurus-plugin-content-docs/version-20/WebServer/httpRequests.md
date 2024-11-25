@@ -20,7 +20,7 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
 
-For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
+Por exemplo, a URL "*a/b/c*" chamará o método do banco de dados, mas "*a/b/c. tml*" não chamará o método de banco de dados se a página "c.html" existir no subdiretório "a/b" do arquivo [WebFolder](webServerConfig.md#root-folder).
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 

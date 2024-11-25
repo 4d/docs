@@ -5,7 +5,7 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *colorDefecto* {; *mensaje*} )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *colorDefecto* {; *mensaje*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB Color.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

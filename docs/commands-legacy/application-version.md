@@ -5,13 +5,13 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** {( *buildNum* {; *} )} -> Function result<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** {( *buildNum* {; *} )} : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | buildNum | Integer | &#8592; | Build number |
 | * | Operator | &#8594;  | Long version number if passed, otherwise Short version number |
-| Function result | String | &#8592; | Version number encoded string |
+| Function result | Text | &#8592; | Version number encoded string |
 
 <!-- END REF-->
 

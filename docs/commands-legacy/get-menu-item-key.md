@@ -5,14 +5,14 @@ slug: /commands/get-menu-item-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *menuItem* {; *process*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Menu item number or -1 for the last item added |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | Longint | &#8592; | Character code of standard shortcut key associated with the menu item |
+| Function result | Integer | &#8592; | Character code of standard shortcut key associated with the menu item |
 
 <!-- END REF-->
 

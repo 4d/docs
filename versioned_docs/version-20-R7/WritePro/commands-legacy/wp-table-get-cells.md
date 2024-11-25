@@ -5,16 +5,16 @@ slug: /WritePro/commands/wp-table-get-cells
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table get cells.Syntax-->**WP Table get cells** ( *targetObj* ) | ( *tableRef* ; *startCol* ; *startRow* {; *numCols*{; *numRows*}} )  -> Function result<!-- END REF-->
+<!--REF #_command_.WP Table get cells.Syntax-->**WP Table get cells** ( *targetObj* ) | ( *tableRef* ; *startCol* ; *startRow* {; *numCols*{; *numRows*}} )  : Object<!-- END REF-->
 <!--REF #_command_.WP Table get cells.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| startCol | Longint | &#8594;  | Position of first cell column |
-| startRow | Longint | &#8594;  | Position of first column row |
-| numCols | Longint | &#8594;  | Number of columns to get |
-| numRows | Longint | &#8594;  | Number of rows to get |
+| startCol | Integer | &#8594;  | Position of first cell column |
+| startRow | Integer | &#8594;  | Position of first column row |
+| numCols | Integer | &#8594;  | Number of columns to get |
+| numRows | Integer | &#8594;  | Number of rows to get |
 | Function result | Object | &#8592; | New range containing cells |
 
 <!-- END REF-->

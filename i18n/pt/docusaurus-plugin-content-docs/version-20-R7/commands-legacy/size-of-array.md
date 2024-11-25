@@ -5,7 +5,7 @@ slug: /commands/size-of-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

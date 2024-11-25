@@ -5,7 +5,7 @@ slug: /commands/is-in-print-preview
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is in print preview.Syntax-->**Is in print preview**  -> resultado<!-- END REF-->
+<!--REF #_command_.Is in print preview.Syntax-->**Is in print preview**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is in print preview.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,13 +5,13 @@ slug: /commands/get-string-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resID* {; *resFile*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resID* {; *resFile*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get string resource.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resID | Integer | &#8594;  | Resource ID number |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | String | &#8592; | Contents of the STR  resource |
+| Function result | Text | &#8592; | Contents of the STR  resource |
 
 <!-- END REF-->
 

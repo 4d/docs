@@ -5,13 +5,13 @@ slug: /commands/get-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database localization.Syntax-->**Get database localization** {( {*languageType*}{;}{*} )} -> Function result<!-- END REF-->
+<!--REF #_command_.Get database localization.Syntax-->**Get database localization** {( {*languageType*}{;}{*} )} : Text<!-- END REF-->
 <!--REF #_command_.Get database localization.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | languageType | Integer | &#8594;  | Type of language |
 | * | Operator | &#8594;  | Return information about host database |
-| Function result | String | &#8592; | Current language of the database |
+| Function result | Text | &#8592; | Current language of the database |
 
 <!-- END REF-->
 
@@ -23,10 +23,10 @@ Several different language settings can be used simultaneously in the applicatio
 
 | Constant                 | Type    | Value | Comment                                                                                                                                          |
 | ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Current localization     | Longint | 1     | Current language of the application: default language or language set via the [SET DATABASE LOCALIZATION](set-database-localization.md) command. |
-| Default localization     | Longint | 0     | Language set automatically by 4D on startup according to the Resources folder and the system environment (not modifiable).                       |
-| Internal 4D localization | Longint | 3     | Language used by 4D for sorts and text comparisons (set in the Preferences of the application).                                                  |
-| User system localization | Longint | 2     | Language set by the current user of the system.                                                                                                  |
+| Current localization     | Integer | 1     | Current language of the application: default language or language set via the [SET DATABASE LOCALIZATION](set-database-localization.md) command. |
+| Default localization     | Integer | 0     | Language set automatically by 4D on startup according to the Resources folder and the system environment (not modifiable).                       |
+| Internal 4D localization | Integer | 3     | Language used by 4D for sorts and text comparisons (set in the Preferences of the application).                                                  |
+| User system localization | Integer | 2     | Language set by the current user of the system.                                                                                                  |
 
 By default, if you omit the *languageType* parameter, the command returns the default language (0). 
 

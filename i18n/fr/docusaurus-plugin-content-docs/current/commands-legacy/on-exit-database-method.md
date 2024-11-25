@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 
 
-<!--REF #_command_.On Exit database method.Summary-->La **On Exit database method** est appelée une fois lorsque vous quittez la base.<!-- END REF-->
+<!--REF #_command_.On Exit database method.Summary-->La méthode base **On Exit** est appelée une fois lorsque vous quittez la base.<!-- END REF-->
 
 Les environnements 4D suivants sont concernés :
 
@@ -60,140 +60,52 @@ Lorsqu'on quitte 4D Server et que l'on accorde un délai aux utilisateurs (par e
 
 Pour stopper proprement les process en cours dans le cas où l'application est forcée de quitter, vous devez tester la commande [Process aborted](process-aborted.md) dans chaque boucle (Boucle, Tant que, Repeter) qui peut potentiellement durer plus d'une seconde. [Process aborted](process-aborted.md) retourne **vrai** si 4D (mode local, distant ou 4D Server) est sur le point de quitter, signifiant que les traitements vont stopper immédiatement. Dans ce cas, annulez tous les traitements ([CANCEL TRANSACTION](cancel-transaction.md), etc.) et quittez le plus vite possible. Alors que vous avez du temps si l'utilisateur quitte manuellement, vous n'en avez pas lorsque l'application est forcée de quitter.
 
-#### Note 
+#### Exemple 
 
-L'exemple ci-dessous liste les méthodes utilisées dans une base qui note les événements significatifs se produisant lors d'une session de travail. Les étapes sont écrites dans un document texte appelé “Journal”.
+L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs process d'arrière-plan pour réaliser des tâches régulières, fonctionnant sans fin, dans la Méthode base On startup (ou dans le Méthode base On server startup). Un marqueur dans l'objet `Storage` de l'application est utilisé pour leur indiquer de terminer la tâche - et pour s'assurer qu'ils ont terminé.
 
-* La initialise la variable interprocess *◊vbQuit4D*, qui signale tous les process utilisés, qu'on sorte ou non de la base. Elle crée aussi le fichier journal, s'il n'existe pas déjà.
-
-```4d
-  // Méthode base Sur ouverture
- var ◊vtIPMessage : Text
- var ◊vbQuit4D : Boolean
- ◊vbQuit4D:=False
- 
- If(Test path name("Journal") # Is a document)
-    $vhDocRef:=Create document("Journal")
-    If(OK=1)
-       CLOSE DOCUMENT($vhDocRef)
-    End if
- End if
- ECRIRE JOURNAL("Ouverture Session")
-```
-
-* La méthode projet ECRIRE JOURNAL, utilisée comme sous-routine par les autres méthodes, écrit l'information qu'elle reçoit dans le fichier journal :
+- Dans la Méthode base On startup
 
 ```4d
-  // Méthode Projet ECRIRE JOURNAL
-  // ECRIRE JOURNAL ( Texte )
-  // ECRIRE JOURNAL ( Description Evenement )
- var $1 : Text
- var $vhDocRef : Time
- 
- While(Semaphore("$Journal"))
-    DELAY PROCESS(Current process;1)
- End while
- $vhDocRef:=Append document("Journal")
- If(OK=1)
-    PROCESS PROPERTIES(Current process;$vsProcessNom;$vlEtat;$vlTempsEcoule;$vbVisible)
-    SEND PACKET($vhDocRef;String(Date du jour)+Caractere(9)+Chaine(Heure courante)+Caractere(9)+Chaine(Numero du process courant)+Caractere(9)+$vsProcessNom+Caractere(9)+$1+Caractere(13))
-    CLOSE DOCUMENT($vhDocRef)
- End if
- CLEAR SEMAPHORE("$Journal")
+ Use(Storage)
+    Storage.global:=Nouvel objet partagé("ExitNow";False)
+ End use
+ $p:=New process("Serverjob";0;"Background job#1")
+ $p1:=New process("Check_Invoices";0;"Background job#2")
 ```
 
-Notez que le document est ouvert et refermé à chaque fois. Notez aussi l'emploi d'un sémaphore comme “protection d'accès” au document — nous ne voulons pas que deux process essaient d'accéder au fichier journal en même temps.
-
-* La méthode projet M\_AJOUT\_ENRG est exécutée lorsque la commande de menu **Ajouter enregistrement** est sélectionnée en mode Application :
+- Voici un exemple d'une méthode d'arrière-plan :
 
 ```4d
-  // Méthode Projet M_AJOUT_ENRG
- 
- CHANGER BARRE(1)
- Repeat
-    ADD RECORD([Table1];*)
-    If(OK=1)
-       ECRIRE JOURNAL("Ajout d'enregistrement #"+String(Numero enregistrement([Table1]))+" dans Table1")
-    End if
- Until((OK=0) | ◊vbQuit4D)
+  // effectuer des tâches régulières en arrière-plan sur le serveur
+ While(Not(Bool(Storage.global.ExitNow)))
+  //  Exécuter des tâches comptables, calculer des données, etc.
+  // ...
+    RETARDER PROCESS(Process courant;60*60) //sleep pendant une minute, puis répéter la boucle
+ End while
 ```
 
-Cette méthode effectue une boucle jusqu'à ce que l'utilisateur annule la saisie de données ou que la base soit refermée. 
-
-* Le formulaire entrée de la *\[Table1\]* inclut le traitement des événements On Outside Call. Ainsi, même si un process est en saisie de données, on en sort "en douceur", et l'utilisateur peut sauvegarder (ou non) la saisie en cours :
+- Dans la Méthode base On exit :
 
 ```4d
-  // Méthode formulaire [Table1];"Entrée"
- Case of
-    :(FORM Event=On Outside Call)
-       If(◊vtIPMessage="QUITTER")
-          CONFIRM("Voulez-vous sauvegarder les modifications dans cet enregistrement ?")
-          If(OK=1)
-             ACCEPT
-          Else
-             CANCEL
-          End if
-       End if
- End case
+ Use(Storage.global)
+    Storage.global.ExitNow:=True //demander à tous les workers en arrière-plan de s'arrêter
+ End use
+ 
+ $time:=Current time
+ $finished:=False
+ While((($time+10)>(Current time+0))&(Not($finished)))  // maximum 10 secondes
+    $list:=Get process activity(Processes only) // obtenir la liste de tous les process 
+    $sublist:=$list.processes.query("name='Background job@' and state >=0") 
+    //existe-t-il encore une tâche en arrière-plan en cours ?
+    $finished:=($sublist.length=0)
+    If($sublist.length>0)
+       For each($job;$sublist)
+          RESUME PROCESS($job.number) //s'assurer que tous les process sont actifs
+        End each
+       End if
+    End while
 ```
-
-* La méthode projet M\_QUIT est exécutée lorsque la commande **Quitter** du menu **Fichier** en mode Application est sélectionnée :
-
-```4d
-  // Méthode Projet M_QUIT
- $vlProcessID:=New process("ON_QUIT";32*1024;"$ON_QUIT")
-```
-
-Cette méthode utilise une astuce. Lorsque la commande [QUIT 4D](quit-4d.md) est appelée, elle a un effet immédiat. En conséquence, le process dans lequel elle est appelée est placé en “mode arrêt”, jusqu'à ce que la base ait été effectivement refermée. Comme ce process peut être un des process dans lequel est effectuée la saisie de données, l'appel à [QUIT 4D](quit-4d.md) est réalisé dans un process local qui n'est démarré que pour ce but. Voici la méthode ON\_QUIT:
-
-```4d
-  // Méthode projet ON_QUIT
- CONFIRM("Etes-vous certain de vouloir quitter ?")
- If(OK=1)
-    ECRIRE JOURNAL("Sortie de la base")
-    QUIT 4D
-  // QUITTER 4D a un effet immédiat. Aucune ligne de code n'est exécutée par la suite.
-  // ...
- End if
-```
-
-* Enfin, voici la **On Exit database method**, qui signale à tous les process utilisateur qu'“il est temps de partir !”. Elle met *◊vbQuit4D* à Vrai et envoie des messages interprocess aux process utilisateur qui gèrent la saisie de données :
-
-```4d
-  // Méthode base Sur fermeture
- ◊vbQuit4D:=True
- Repeat
-    $vbfini:=True
-    For($vlProcess;1;Count tasks)
-       PROCESS PROPERTIES($vlProcess;$vsProcessNom;$vlEtat;$vlTempsEcoule;$vbVisible)
-       If(((($vsProcessNom="ML_@") | ($vsProcessNom="M_@"))) & ($vlEtat>=0))
-          $vbfini:=False
-          ◊vtIPMessage:="QUITTER"
-          BRING TO FRONT($vlProcess)
-          CALL PROCESS($vlProcess)
-          $vhStart:=Current time
-          Repeat
-             DELAY PROCESS(Current process;60)
-          Until((Process state($vlProcess)<0) | ((Current time-$vhStart)>=?00:01:00?))
-       End if
-    End for
- Until($vbfini)
- ECRIRE JOURNAL("Fermeture de session")
-```
-
-**Note :** Les process dont les noms commencent par "ML\_..." ou "M\_..." sont démarrés par les commandes de menus pour lesquelles la propriété **Démarrer un process** a été sélectionnée. Dans cet exemple, ce sont les process démarrés suite à la sélection de la commande de menu **Ajouter enregistrement**.
-
-Le test *(Heure courante-$vhStart)>=?00:01:00?* permet à la méthode base de sortir de la boucle “en attente de l'autre process”, si l'autre process ne réagit pas pendant une minute.
-
-* Voici un exemple type de fichier Journal produit par la base :  
-| 2/6/03 | 15:47:25 | 1 | Process principal | Ouverture de Session                   |  
-| ------ | -------- | - | ----------------- | -------------------------------------- |  
-| 2/6/03 | 15:55:43 | 5 | ML\_1             | Ajout d'enregistrement #23 dans Table1 |  
-| 2/6/03 | 15:55:46 | 5 | ML\_1             | Ajout d'enregistrement #24 dans Table1 |  
-| 2/6/03 | 15:55:54 | 6 | $On\_QUIT         | Sortie de la base                      |  
-| 2/6/03 | 15:55:58 | 7 | $xx               | Fermeture de session                   |
-
-**Note** : *$xx* est le nom du process local démarré par 4D pour exécuter la **On Exit database method**.
 
 #### Voir aussi 
 

@@ -31,6 +31,7 @@ Si guarda el archivo externo en la misma carpeta que el archivo de datos o una d
 Tenga en cuenta que esto significa que es posible "compartir" el mismo archivo externo entre varios registros. Todo cambio realizado en este archivo externo está disponibles en todos los registros. En este caso, si varios procesos pueden escribir los mismos campos al mismo tiempo, hay que tener cuidado para evitar accesos concurrentes a través de semáforos, con el fin de no afectar los archivos externos.
 * **ubicación automática**  
 Puede designar dos lugares automáticamente con las siguientes constantes, que se encuentra en el tema *Mantenimiento archivo de datos*:  
+
 | Constante                | Tipo         | Valor | Comentario                                                                                                                                                                                                                                                |  
 | ------------------------ | ------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Use default folder       | Entero largo | 1     | Los datos pasado en parámetro se almacenarán en la carpeta por defecto, llamada *nomBase.ExternalData* y ubicada al lado del archivo de datos. En este modo, los datos externos son generados por 4D como si estuvieran al interior del archivo de datos. |  

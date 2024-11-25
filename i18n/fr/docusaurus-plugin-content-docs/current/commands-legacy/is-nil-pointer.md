@@ -5,7 +5,7 @@ slug: /commands/is-nil-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *pointeur* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *pointeur* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is nil pointer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

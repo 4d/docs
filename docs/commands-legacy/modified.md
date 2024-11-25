@@ -5,7 +5,7 @@ slug: /commands/modified
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified.Syntax-->**Modified** ( *aField* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Modified.Syntax-->**Modified** ( *aField* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

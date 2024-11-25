@@ -5,7 +5,7 @@ slug: /commands/is-window-maximized
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *ventana* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *ventana* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window maximized.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

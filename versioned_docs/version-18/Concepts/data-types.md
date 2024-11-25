@@ -52,7 +52,7 @@ The following table illustrates these default values:
 |---|---|---|---|
 |Booleen	|False	|True	|True (varies)|
 |Date	|00-00-00	|00-00-00	|00-00-00|
-|Longint|0	|1919382119	|909540880 (varies)|
+|Integer|0	|1919382119	|909540880 (varies)|
 |Time|00:00:00	|533161:41:59	|249345:34:24 (varies)|
 |Picture	|picture size=0	|picture size=0	|picture size=0|
 |Real|0	|1.250753659382e+243	|1.972748538022e-217 (varies)
@@ -73,9 +73,9 @@ The following table lists the basic data types, the data types to which they can
 |Data Type to Convert|to String|to Number|to Date|to Time|to Boolean |
 |---|---|---|---|---|---|
 |String (1)||Num|Date|Time|Bool|
-|Number (2)|String||||Bool|
-|Date|String||||Bool|
-|Time|String||||Bool|
+|Number (2)|Text||||Bool|
+|Date|Text||||Bool|
+|Time|Text||||Bool|
 |Boolean||Num||||
 
 (1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.

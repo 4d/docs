@@ -23,8 +23,8 @@ Pass the type of information to get in *selector*. You can use one of the follow
 
 | Constant            | Type    | Value |
 | ------------------- | ------- | ----- |
-| Last restore date   | Longint | 0     |
-| Last restore status | Longint | 2     |
+| Last restore date   | Integer | 0     |
+| Last restore status | Integer | 2     |
 
 The type and content of the *info1* and *info2* parameters depend on the value of *selector*.
 

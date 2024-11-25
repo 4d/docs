@@ -35,8 +35,8 @@ To identify the current user in a 4D single-user application, you can rely on th
 You can then allow or deny access within your application by using code such as:
 
 ```4d
-If(Current system user = $user) //you can store users in a database table
-	// give access to some features
+If(Current system user = $user) //você pode armazenar os usuários em uma tabela de banco de dados
+	//dar acesso a alguns recursos
 End if
 ```
 

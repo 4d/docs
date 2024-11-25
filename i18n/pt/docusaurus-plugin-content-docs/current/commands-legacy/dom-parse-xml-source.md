@@ -5,13 +5,13 @@ slug: /commands/dom-parse-xml-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *documento* {; *validaçao* {; dtd|schmea}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *documento* {; *validaçao* {; dtd|schmea}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML source.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Text | &#8594;  | Rota documentos |
 | validaçao | Boolean | &#8594;  | True = Validação; False = sem validação |
-| dtd&#124;schmea | String | &#8594;  | Localização do schema DTD ou XML |
+| dtd&#124;schmea | Text | &#8594;  | Localização do schema DTD ou XML |
 | Resultado | Text | &#8592; | Referência do elemento XML |
 
 <!-- END REF-->

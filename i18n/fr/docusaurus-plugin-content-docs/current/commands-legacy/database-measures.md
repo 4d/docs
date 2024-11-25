@@ -5,7 +5,7 @@ slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *options* )} -> Résultat<!-- END REF-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *options* )} : Object<!-- END REF-->
 <!--REF #_command_.Database measures.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

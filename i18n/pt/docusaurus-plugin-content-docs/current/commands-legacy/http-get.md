@@ -5,7 +5,7 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *resposta* {; *nomesCab* ; *valoresCab*}{; *} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *resposta* {; *nomesCab* ; *valoresCab*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

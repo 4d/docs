@@ -5,12 +5,12 @@ slug: /commands/picture-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *picture* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *picture* ) : Integer<!-- END REF-->
 <!--REF #_command_.Picture size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | Picture for which to return the size in bytes |
-| Function result | Longint | &#8592; | Size in bytes of the picture |
+| Function result | Integer | &#8592; | Size in bytes of the picture |
 
 <!-- END REF-->
 

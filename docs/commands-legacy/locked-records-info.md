@@ -5,7 +5,7 @@ slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,18 +34,18 @@ Each "description object" collection element identifies a locked record in the s
 | ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | contextID         | UUID (String) | UUID of the database context responsible for the lock                                                                                                                                                                                                                                   |
 | contextAttributes | Object        | Object containing information similar to the [LOCKED BY](locked-by.md) command but applied to the record, the difference being that **Locked records info** returns the user name defined in the system and not that of the 4D user, as well as additional information (see below). |
-| recordNumber      | Longint       | Record number of the locked record                                                                                                                                                                                                                                                      |
+| recordNumber      | Integer       | Record number of the locked record                                                                                                                                                                                                                                                      |
 
 The *contextAttributes* object is made up of the following properties:
 
 | **Property**                                                                               | **Type**      | **Description**                                                                                               |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------- |
 | task\_id                                                                                   | Number        | Process reference number                                                                                      |
-| user\_name                                                                                 | String        | User name defined by operating system                                                                         |
-| user4d\_alias                                                                              | String        | User alias defined with [SET USER ALIAS](set-user-alias.md), otherwise user name in the 4D database directory |
+| user\_name                                                                                 | Text        | User name defined by operating system                                                                         |
+| user4d\_alias                                                                              | Text        | User alias defined with [SET USER ALIAS](set-user-alias.md), otherwise user name in the 4D database directory |
 | user4d\_id                                                                                 | Number        | 4D user number(\*)                                                                                            |
-| host\_name                                                                                 | String        | Name of host machine                                                                                          |
-| task\_name                                                                                 | String        | Process name                                                                                                  |
+| host\_name                                                                                 | Text        | Name of host machine                                                                                          |
+| task\_name                                                                                 | Text        | Process name                                                                                                  |
 | client\_version                                                                            | Number        | Version of client application                                                                                 |
 | *Only when command is executed on 4D Server and if record locking comes from a remote 4D:* |               |                                                                                                               |
 | is\_remote\_context                                                                        | Boolean       | Indicates whether a remote 4D is the origin of the locking (always *true* since otherwise it is not present)  |
@@ -62,10 +62,10 @@ The *contextAttributes* object is made up of the following properties:
 
 | **Property** | **Type** | **Description**                                                                                                                                     |
 | ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host         | String   | URL with which the entity has been locked, e.g. "127.0.0.1:8044"                                                                                    |
-| IPAddr       | String   | IP address used in the URL with which the entity has been locked, e.g. "127.0.0.1"                                                                  |
+| host         | Text   | URL with which the entity has been locked, e.g. "127.0.0.1:8044"                                                                                    |
+| IPAddr       | Text   | IP address used in the URL with which the entity has been locked, e.g. "127.0.0.1"                                                                  |
 | recordNumber | Integer  | Record number of the locked record                                                                                                                  |
-| userAgent    | String   | User agent of the locker, e.g. "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
+| userAgent    | Text   | User agent of the locker, e.g. "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
 #### Example 
 

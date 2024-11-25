@@ -4,15 +4,15 @@ title: VP Cell
 ---
 
 <!-- REF #_method_.VP Cell.Syntax -->
-**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
+**VP Cell** ( *vpAreaName* : Text ; *column* : Integer ; *row* : Integer { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|column|Longint|->|Column index|
-|row|Longint|->|Row index|
+|column|Integer|->|Column index|
+|row|Integer|->|Row index|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
 |Result|Object|<-|Range object of a single cell|
 <!-- END REF -->

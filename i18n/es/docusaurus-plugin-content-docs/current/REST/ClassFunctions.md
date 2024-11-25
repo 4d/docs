@@ -80,7 +80,7 @@ Functions allowed to be called from HTTP `GET` requests must also be specificall
 exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-### Thread-safe
+### Hilo seguro
 
 Todo el código 4D llamado desde las peticiones REST **debe ser hilo-seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [_Utilizar proceso apropiativo_](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
 
@@ -130,7 +130,7 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | Propiedades                                           | Tipo                                                        | Descripción                                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Atributos de la entidad                               | mixto                                                       | Opcional - Valores a modificar                                              |
-| __DATACLASS | String                                                      | Obligatorio - Indica la Dataclass de la entidad                             |
+| __DATACLASS | Text                                                        | Obligatorio - Indica la Dataclass de la entidad                             |
 | __ENTITY    | Boolean                                                     | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
@@ -155,7 +155,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | Propiedades                                          | Tipo    | Descripción                                                                                |
 | ---------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------ |
 | Atributos de la entidad                              | mixto   | Opcional - Valores a modificar                                                             |
-| __DATASET  | String  | Obligatorio - entitySetID (UUID) de la selección de entidades           |
+| __DATASET  | Text    | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.

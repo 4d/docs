@@ -78,7 +78,7 @@ La página contiene varias áreas:
 
 - La parte central contiene el **área de búsqueda** y la **rejilla de datos** (lista de entidades de la clase de datos seleccionada). Cada columna de la cuadrícula representa un atributo del almacén de datos.
   - Por defecto, se muestran todas las entidades. Puede filtrar las entidades mostradas utilizando el área de búsqueda. Hay dos modos de consulta disponibles: [Consulta sobre atributos](#query-on-attributes) (seleccionada por defecto), y la [Consulta avanzada con expresión](#advanced-query-with-expression). Usted selecciona el modo de consulta haciendo clic en el botón correspondiente (el botón **X** le permite restablecer el área de consulta y así dejar de filtrar):
-    ![alt-text](. /assets/en/Admin/dataExplorer4b.png)
+    ![alt-text](../assets/en/Admin/dataExplorer4b.png)
   - El nombre de la clase de datos seleccionada se añade como una pestaña encima de la cuadrícula de datos. Utilizando estas pestañas, puede cambiar entre las clases de datos que ya han sido seleccionadas. Puede eliminar una clase de datos referenciada haciendo clic en el icono "eliminar" situado a la derecha del nombre de la clase de datos.
   - Puede reducir el número de columnas desmarcando los atributos en la parte izquierda. También puede cambiar las columnas de la cuadrícula de datos utilizando arrastrar y soltar. Puede hacer clic en el encabezado de una columna para [ordenar entidades](#ordering-entities) de acuerdo a sus valores (cuando sea posible).
   - Si una operación requiere mucho tiempo, se muestra una barra de progreso. Puedes detener la operación en curso en cualquier momento haciendo clic en el botón rojo:<br/>

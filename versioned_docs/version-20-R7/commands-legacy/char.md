@@ -5,12 +5,12 @@ slug: /commands/char
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Char.Syntax-->**Char** ( *charCode* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Char.Syntax-->**Char** ( *charCode* ) : Text<!-- END REF-->
 <!--REF #_command_.Char.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | charCode | Integer | &#8594;  | Character code |
-| Function result | String | &#8592; | Character represented by the charCode |
+| Function result | Text | &#8592; | Character represented by the charCode |
 
 <!-- END REF-->
 

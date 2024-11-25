@@ -46,7 +46,7 @@ Asocia una lista de selección a un objeto. Puede ser un nombre de lista de elec
 
 #### Objetos soportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -122,7 +122,7 @@ Consulte la sección [Tipo de expresión](properties_Object.md#expression-type).
 
 Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
-> No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
 
 Debe introducir una lista de valores. En el editor de formularios, un diálogo específico permite introducir valores separados por retornos de carro:
 
@@ -185,7 +185,7 @@ Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Pe
 
 ---
 
-## Tabla principal
+## Tabla principal {#master-table}
 
 `Current selection list boxes`
 
@@ -249,9 +249,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles          |
-| ------------------- | -------------- | ------------------------- |
-| selectedItemsSource | string         | Expresión de la colección |
+| Nombre              | Tipos de datos | Valores posibles                           |
+| ------------------- | -------------- | ------------------------------------------ |
+| selectedItemsSource | string         | Assignable collection or object expression |
 
 #### Objetos soportados
 
@@ -259,7 +259,7 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 ---
 
-## Selección de nombres
+## Nombre de selección {#selection-name}
 
 `List boxes de tipo selección nombrada`
 

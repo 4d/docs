@@ -359,7 +359,7 @@ Hay muchas causas posibles para este error. Cuando reciba este mensaje, es acons
 ### Archivos generados
 
 Una vez creada la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Client Server executable**. Esta carpeta contiene dos subcarpetas, `<ApplicationName>Client` y `<ApplicationName>Server`.
-> Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#archivo-registro) para conocer la causa del error.
+> Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#log-file) para averiguar la causa del error.
 
 La carpeta `<ApplicationName>Client` contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de aplicaciones. Esta carpeta debe instalarse en cada máquina cliente. La carpeta `<ApplicationName>Server` contiene la parte del servidor de la aplicación.
 

@@ -47,7 +47,7 @@ Project development file, used to designate and launch the project. This file ca
 
 **Note:** In 4D projects, development is done with 4D Developer and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
 
-### Sources folder
+### Sources folder {#sources-folder}
 
 Contents|Description|Format
 --------|-------|----
@@ -119,7 +119,7 @@ The Trash folder contains methods and forms that were deleted from the project (
 - Forms
 - TableForms
 
-Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
+Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources-folder) folder.
 
 ### DerivedData folder
 

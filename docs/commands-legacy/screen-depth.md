@@ -28,13 +28,13 @@ The following predefined constants are provided by 4D:
 
 | Constant                  | Type    | Value |
 | ------------------------- | ------- | ----- |
-| Black and white           | Longint | 0     |
-| Four colors               | Longint | 2     |
-| Millions of colors 24 bit | Longint | 24    |
-| Millions of colors 32 bit | Longint | 32    |
-| Sixteen colors            | Longint | 4     |
-| Thousands of colors       | Longint | 16    |
-| Two fifty six colors      | Longint | 8     |
+| Black and white           | Integer | 0     |
+| Four colors               | Integer | 2     |
+| Millions of colors 24 bit | Integer | 24    |
+| Millions of colors 32 bit | Integer | 32    |
+| Sixteen colors            | Integer | 4     |
+| Thousands of colors       | Integer | 16    |
+| Two fifty six colors      | Integer | 8     |
 
 If the monitor is set to display in color, *1* is returned in *color*. If the monitor is set to display in gray scale, *0* is returned in *color*. Note that this value is significant on the Macintosh platform.
 
@@ -42,8 +42,8 @@ The following predefined constants are provided by 4D:
 
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| Is color      | Longint | 1     |
-| Is gray scale | Longint | 0     |
+| Is color      | Integer | 1     |
+| Is gray scale | Integer | 0     |
 
 The optional parameter *screen* specifies the monitor for which you want to get information. If you omit the *screen* parameter, the command returns the depth of the main screen.
 

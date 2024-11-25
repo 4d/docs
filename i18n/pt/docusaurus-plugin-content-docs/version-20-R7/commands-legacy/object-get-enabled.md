@@ -5,7 +5,7 @@ slug: /commands/object-get-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enabled.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

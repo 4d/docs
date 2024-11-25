@@ -55,7 +55,7 @@ a.cp2:hover {
 
 
 
-@@media only screen and (max-width: 735px) {
+@media only screen and (max-width: 735px) {
   .showcase .link {
     height: 134px;
   }
@@ -100,9 +100,6 @@ a.cp2:hover {
   margin: 0;
 }
 
-.index-hero-project-keywords {
-  color: $primaryColor;
-}
 
 @keyframes jackInTheBox {
   from {
@@ -187,12 +184,12 @@ a.cp2:hover {
   }
 
 
-    {
-    .gridBlock .blockElement.imageAlignTop {
-      margin-bottom: 80px;
-    }
 
+  .gridBlock .blockElement.imageAlignTop {
+    margin-bottom: 80px;
   }
+
+
 
   .docImage {
     margin: 3rem auto;

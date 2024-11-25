@@ -5,7 +5,7 @@ slug: /commands/get-menu-bar-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *processo* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *processo* )} : Text<!-- END REF-->
 <!--REF #_command_.Get menu bar reference.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

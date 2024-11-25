@@ -34,7 +34,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	return $result
 ```
 
-### OutGoingMessage Object
+### Objeto OutGoingMessage
 
 4D.OutGoingMessage objects provide the following properties and functions:
 
@@ -49,7 +49,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::note
 
-A 4D.OutGoingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Un objeto 4D.OutGoingMessage es un objeto [no compartible](../Concepts/shared.md).
 
 :::
 
@@ -68,7 +68,7 @@ The `.body` property contains <!-- REF #OutGoingMessageClass.body.Summary -->the
 - object
 - image
 
-The `.body` property is read-write.
+La propiedad `.body` es de lectura-escritura.
 
 You can also set the `.body` property using the [`setBody()`](#setbody) function, in which case the `content-type` header is automatically set.
 
@@ -84,7 +84,7 @@ You can also set the `.body` property using the [`setBody()`](#setbody) function
 
 The `.headers` property contains <!-- REF #OutGoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
 
-The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function.
+La propiedad `.headers` es de sólo lectura. Para definir un encabezado, use la función [`setHeader()`](#setheader).
 
 <!-- END REF -->
 
@@ -132,10 +132,10 @@ If *body* is not of a supported value type, an error is returned.
 
 <!-- REF #OutGoingMessageClass.setHeader().Params -->
 
-| Parámetros | Tipo |    | Descripción                  |
-| ---------- | ---- | -- | ---------------------------- |
-| key        | Text | -> | Header property to set       |
-| value      | Text | -> | Value of the header property |
+| Parámetros | Tipo |    | Descripción                          |
+| ---------- | ---- | -- | ------------------------------------ |
+| key        | Text | -> | Propiedad de encabezado a definir    |
+| value      | Text | -> | Valor de la propiedad del encabezado |
 
 <!-- END REF -->
 
@@ -161,9 +161,9 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 <!-- REF #OutGoingMessageClass.setStatus().Params -->
 
-| Parámetros | Tipo    |    | Descripción   |
-| ---------- | ------- | -- | ------------- |
-| status     | Integer | -> | Status to set |
+| Parámetros | Tipo    |    | Descripción      |
+| ---------- | ------- | -- | ---------------- |
+| status     | Integer | -> | Estado a definir |
 
 <!-- END REF -->
 

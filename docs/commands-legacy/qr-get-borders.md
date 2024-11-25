@@ -32,23 +32,24 @@ displayed_sidebar: docs
 *row* designates the row number of the cell. You can either:
 
 * pass a positive integer value to designate the corresponding subtotal (break) level that is affected.
-* pass one of the following constants of the *QR Rows for Properties* theme:  
+* pass one of the following constants of the *QR Rows for Properties* theme:
+  
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
-| qr detail      | Longint | \-2   | Detail area of report |  
-| qr grand total | Longint | \-3   | Grand total area      |  
-| qr title       | Longint | \-1   | Title of report       |
+| qr detail      | Integer | \-2   | Detail area of report |  
+| qr grand total | Integer | \-3   | Grand total area      |  
+| qr title       | Integer | \-1   | Title of report       |
 
 *border* is the value that indicates which cell border is affected. Pass one of the constants from the *QR Borders* theme:  
 
 | Constant                    | Type    | Value | Comment                  |
 | --------------------------- | ------- | ----- | ------------------------ |
-| qr bottom border            | Longint | 8     | Bottom border            |
-| qr inside horizontal border | Longint | 32    | Inside horizontal border |
-| qr inside vertical border   | Longint | 16    | Inside vertical border   |
-| qr left border              | Longint | 1     | Left border              |
-| qr right border             | Longint | 4     | Right border             |
-| qr top border               | Longint | 2     | Top border               |
+| qr bottom border            | Integer | 8     | Bottom border            |
+| qr inside horizontal border | Integer | 32    | Inside horizontal border |
+| qr inside vertical border   | Integer | 16    | Inside vertical border   |
+| qr left border              | Integer | 1     | Left border              |
+| qr right border             | Integer | 4     | Right border             |
+| qr top border               | Integer | 2     | Top border               |
 
 **Note:** Unlike the command [QR SET BORDERS](qr-set-borders.md), **QR GET BORDERS** does not accept a cumulative value. You must test all the parameters separately to have an overall view of the cell border.
 

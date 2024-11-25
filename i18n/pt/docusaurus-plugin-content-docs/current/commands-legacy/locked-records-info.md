@@ -5,7 +5,7 @@ slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTabela* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTabela* ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ O objeto *contextAttributes* tem as propriedades abaixo:
 | --------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | task\_id                                                                                                  | Número        | Número de referência do processo                                                                                          |
 | user\_name                                                                                                | Cadeia        | Nome do usuário definido no sistema operativo                                                                             |
-| user4d\_alias                                                                                             | String        | Apelido/alias definido com [SET USER ALIAS](set-user-alias.md), senão o nome do usuário no diretório de banco de dados 4D |
+| user4d\_alias                                                                                             | Text        | Apelido/alias definido com [SET USER ALIAS](set-user-alias.md), senão o nome do usuário no diretório de banco de dados 4D |
 | user4d\_id                                                                                                | Número        | Número do usuário 4D(\*)                                                                                                  |
 | host\_name                                                                                                | Cadeia        | Nome da máquina local                                                                                                     |
 | task\_name                                                                                                | Cadeia        | Nome do processo                                                                                                          |
@@ -62,10 +62,10 @@ Se o registro foi bloqueado pela petição $lock REST (a nivel de sessão):
 
 | Propriedade  | Tipo    | Descrição                                                                                                                                                     |
 | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host         | String  | URL com a qual a entidade foi bloqueada, por exemplo. "127.0.0.1:8044"                                                                                        |
-| IPAddr       | String  | Endereço IP utilizado na URL com a qual a entidade foi boqueada, por exemplo. "127.0.0.1"                                                                     |
+| host         | Text  | URL com a qual a entidade foi bloqueada, por exemplo. "127.0.0.1:8044"                                                                                        |
+| IPAddr       | Text  | Endereço IP utilizado na URL com a qual a entidade foi boqueada, por exemplo. "127.0.0.1"                                                                     |
 | recordNumber | Inteiro | Número de registro do registro bloqueado                                                                                                                      |
-| userAgent    | String  | Agente de usuário do locker, por exemplo "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
+| userAgent    | Text  | Agente de usuário do locker, por exemplo "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
 #### Exemplo 
 

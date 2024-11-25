@@ -1,19 +1,25 @@
 ---
 id: number
-title: Number (Real, Longint, Integer)
+title: Number (Real, Integer)
 ---
 
 Number is a generic term that stands for:
 
 - Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits).
-- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1.
-- Integer field, array or expression. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
+- Integer variable or expression. The range for the Integer data type is -2^31..(2^31)-1 (4-byte Integer, aka *Long* or *Longint*).
 
-**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
+:::info Compatibility
 
-You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix Number data types in expressions.
+Usually when working with Integers, you handle *Long* values (4-byte Integer). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
+- Database fields with `Integer` type,
+- Elements of arrays declared with [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
 
-**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+These legacy data types are automatically converted in *Longs* when used in the 4D Language.
+
+:::
+
+You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix number data types in expressions.
+
 
 ## Number literals
 
@@ -69,7 +75,7 @@ The modulo operator % divides the first number by the second number and returns 
 
 :::warning
 
-The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
+The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the [`Mod`](../commands-legacy/mod.md) command.
 
 :::
 
@@ -79,11 +85,11 @@ The longint division operator \ returns significant values with integer numbers 
 
 ### Real comparison
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) command.
 
 :::note
 
-For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) setting into account.
 
 :::
 
@@ -109,15 +115,15 @@ Parentheses can be nested inside other sets of parentheses. Be sure that each le
 
 ## Bitwise operators
 
-The bitwise operators operates on **Long Integer** expressions or values.
+The bitwise operators operates on (Long) Integers expressions or values.
 
-> If you pass an Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long Integer value before calculating the expression that uses the bitwise operator.
+> If you pass a (Short) Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long value before calculating the expression that uses the bitwise operator.
 
-While using the bitwise operators, you must think about a Long Integer value as an array of 32 bits. The bits are numbered from 0 to 31, from right to left.
+While using the bitwise operators, you must think about a Long value as an array of 32 bits. The bits are numbered from 0 to 31, from right to left.
 
 Because each bit can equal 0 or 1, you can also think about a Long Integer value as a value where you can store 32 Boolean values. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
 
-An expression that uses a bitwise operator returns a Long Integer value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:
+An expression that uses a bitwise operator returns a Long value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:
 
 |Operation|Operator|Syntax|Returns|
 |---|---|---|---|

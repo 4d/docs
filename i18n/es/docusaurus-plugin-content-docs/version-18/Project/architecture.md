@@ -47,7 +47,7 @@ El archivo de desarrollo de proyecto, utilizado para designar y lanzar el proyec
 
 **Nota:** en los proyectos 4D, el desarrollo se realiza con 4D Developer y el desarrollo multiusuarios se gestiona a través de las herramientas de control de versión. 4D Server puede abrir archivos .4DProject para realizar pruebas.
 
-### Carpeta Sources
+### Carpeta Sources {#sources-folder}
 
 | Contenido               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Formato |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -118,7 +118,7 @@ La carpeta Trash contiene los métodos y formularios que se han eliminado del pr
 - Formularios
 - TableForms
 
-Dentro de estas carpetas, los nombres de los elementos eliminados van entre paréntesis, por ejemplo "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources).
+Dentro de estas carpetas, los nombres de los elementos eliminados van entre paréntesis, por ejemplo "(myMethod).4dm". The folder organization is identical to the [Sources](#sources-folder) folder.
 
 ### Carpeta DerivedData
 

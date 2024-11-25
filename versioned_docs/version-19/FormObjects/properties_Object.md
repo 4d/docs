@@ -269,7 +269,7 @@ You can force a carriage return in the label by using the \ character (backslash
 
 To insert a \ in the label, enter "&#92;&#92;".
 
-By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
+By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
 
 For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -298,7 +298,7 @@ There are several types of calculations available. The following table shows whi
 |Minimum|X|X|X|X|X||Same as column type|
 |Maximum|X|X|X|X|X||Same as column type|  
 |Sum|X|||X|X||Same as column type|  
-|Count|X|X|X|X|X|X|Longint|  
+|Count|X|X|X|X|X|X|Integer|  
 |Average|X|||X|||Real|
 |Standard deviation(*)|X|||X|||Real|
 |Variance(*)|X|||X|||Real|

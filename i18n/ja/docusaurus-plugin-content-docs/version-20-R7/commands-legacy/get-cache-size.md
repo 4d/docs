@@ -5,7 +5,7 @@ slug: /commands/get-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get cache size.Syntax-->**Get cache size**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Get cache size.Syntax-->**Get cache size**  : Real<!-- END REF-->
 <!--REF #_command_.Get cache size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

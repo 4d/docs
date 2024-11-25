@@ -5,11 +5,11 @@ slug: /commands/milliseconds
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Milliseconds.Syntax-->**Milliseconds**  -> Function result<!-- END REF-->
+<!--REF #_command_.Milliseconds.Syntax-->**Milliseconds**  : Integer<!-- END REF-->
 <!--REF #_command_.Milliseconds.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Number of milliseconds elasped since the machine was started |
+| Function result | Integer | &#8592; | Number of milliseconds elasped since the machine was started |
 
 <!-- END REF-->
 

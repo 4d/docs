@@ -5,7 +5,7 @@ slug: /commands/object-get-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *object* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get style sheet.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -31,6 +31,7 @@ displayed_sidebar: docs
 * スタイルシート名
 * スタイルシートが何も設定されていない場合は空の文字列 ("") が返されます。
 * 自動スタイルシートが設定されていた場合は"*Font Styles*" テーマの定数のいずれかが返されます:  
+
 | 定数                                | 型   | 値                                   | コメント                                                           |  
 | --------------------------------- | --- | ----------------------------------- | -------------------------------------------------------------- |  
 | Automatic style sheet             | 文字列 | \_\_automatic\_\_                   | デフォルトで全てのオブジェクトに使用されます                                         |  

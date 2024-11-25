@@ -5,7 +5,7 @@ slug: /commands/last-query-plan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *descFormat* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *descFormat* ) : Text<!-- END REF-->
 <!--REF #_command_.Last query plan.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

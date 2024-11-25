@@ -5,7 +5,7 @@ slug: /commands/form-event-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Form event code.Syntax-->**Form event code**  -> Résultat<!-- END REF-->
+<!--REF #_command_.Form event code.Syntax-->**Form event code**  : Integer<!-- END REF-->
 <!--REF #_command_.Form event code.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -117,6 +117,7 @@ Le nombre d'objets impliqués par un événement dépend de la nature de l'évé
 * Si les événements On Mouse Enter, On Mouse Move et On Mouse Leave sont cochés pour le formulaire, ils sont générés pour chaque objet du formulaire. S’ils sont cochés pour un objet, ils sont générés pour cet objet uniquement. En cas de superposition d’objets, l’événement est généré par le premier objet capable de le gérer dans l’ordre des plans du haut vers le bas. Les objets rendus invisibles par la commande [OBJECT SET VISIBLE](object-set-visible.md) ne génèrent pas ces événements. Pendant la saisie d’un objet, les autres objets peuvent recevoir les événements de survol en fonction de la position de la souris.  
 A noter que l'événement On Mouse Move est généré lorsque le curseur de la souris est déplacé mais également lorsque l'utilisateur appuie sur une touche de modification telle que **Maj**, **Verr. Maj**, **Ctrl** ou **Option** (ce principe permet notamment de gérer les glisser-déposer de type copie ou déplacement).
 * Enregistrements en liste : l’enchaînement d’appels des méthodes et des événements formulaires dans les formulaires liste affichés via [MODIFY SELECTION](modify-selection.md) / [DISPLAY SELECTION](display-selection.md) et les sous-formulaires est le suivant :  
+
 | Pour chaque objet de la zone d’en-tête :                                                                                                                                                                                                                    |  
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Méthode objet avec événement Sur entêteMéthode formulaire avec événement Sur entêtePour chaque enregistrement :Pour chaque objet de la zone de corps :Méthode objet avec événement Sur affichage corpsMéthode formulaire avec événement Sur affichage corps |

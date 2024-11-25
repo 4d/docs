@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New header.Syntax-->**WP New header** ( *wpSection* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP New header.Syntax-->**WP New header** ( *wpSection* ) : Object<!-- END REF-->
 <!--REF #_command_.WP New header.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

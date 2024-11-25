@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 | 引数             | 型                         |     | 説明                                                                |
 | -------------- | ------------------------- | :-: | ----------------------------------------------------------------- |
-| path           | テキスト                      |  →  | フォルダーパス                                                           |
-| folderConstant | 整数                        |  →  | 4Dフォルダー定数                                                         |
-| pathType       | 整数                        |  →  | `fk posix path` (デフォルト) または `fk platform path` |
+| path           | Text                      |  →  | フォルダーパス                                                           |
+| folderConstant | Integer                   |  →  | 4Dフォルダー定数                                                         |
+| pathType       | Integer                   |  →  | `fk posix path` (デフォルト) または `fk platform path` |
 | \*             | operator                  |  →  | ホストデータベースのフォルダーを返すには \* を渡します                                     |
 | 戻り値            | 4D.Folder |  ←  | 新規フォルダーオブジェクト                                                     |
 
@@ -67,7 +67,7 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから呼び出されている場合、`*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
 
-> Windows の場合、統合されたクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#buildapp4dsettings) を使用すると、ビルトインフォルダーの場所が変更されます。
+> Windows の場合、組み込みクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#buildapp4dsettings) を使用されていた場合、ビルトインフォルダーの場所が変更されています。
 
 #### 参照
 

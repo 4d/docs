@@ -5,7 +5,7 @@ slug: /commands/locked
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked.Syntax-->**Locked** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Locked.Syntax-->**Locked** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/activated
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Activated.Syntax-->**Activated**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Activated.Syntax-->**Activated**  : Boolean<!-- END REF-->
 <!--REF #_command_.Activated.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/dom-parse-xml-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *doc* {; *validacion* {; dtd | esquema}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *doc* {; *validacion* {; dtd | esquema}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML source.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

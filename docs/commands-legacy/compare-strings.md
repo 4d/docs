@@ -5,14 +5,14 @@ slug: /commands/compare-strings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *aString* ; *bString* {; *options*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *aString* ; *bString* {; *options*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Compare strings.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aText | Text | &#8594;  | String to compare |
 | bText | Text | &#8594;  | String to compare |
 | options | Integer | &#8594;  | Comparison rule(s) |
-| Function result | Longint | &#8592; | Result of string comparison |
+| Function result | Integer | &#8592; | Result of string comparison |
 
 <!-- END REF-->
 

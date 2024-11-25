@@ -5,7 +5,7 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

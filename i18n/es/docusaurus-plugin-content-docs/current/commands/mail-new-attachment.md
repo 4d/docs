@@ -91,7 +91,7 @@ Desea enviar un correo electrónico con un archivo seleccionado por el usuario c
 
 ```4d
 $doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
+If (OK=1) //Si se ha seleccionado un documento
 
 var $email;$server;$transporter : Object
 
@@ -106,9 +106,9 @@ $email.from:="test_user@mail.com"
 $email.to:="test_user@mail.com"
 $email.subject:="This is a test message with attachments"
 
-//add a link to download file
+//añadir un enlace para descargar el archivo
 $email.attachments:=New collection(MAIL New attachment(Document))
-//insert an inline picture (use a cid)
+//insertar una imagen en línea (utilice un cid)
 $email.attachments[1]:=MAIL New attachment("c:\\Pictures\\4D.jpg";"";"4D")
 
 $email.htmlBody:="<html>"+\

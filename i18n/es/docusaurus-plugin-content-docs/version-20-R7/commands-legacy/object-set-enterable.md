@@ -33,6 +33,7 @@ Cuando *editable* es False:
    * en las bases de datos binarias, el usuario no puede introducir datos y el atributo enfocable depende de la opción **Enfocable** definida en la lista de propiedades.  
    * en los proyectos, el usuario no puede introducir datos y el objeto es enfocable.
 * Entero largo: pasar un valor Entero largo en *editable* le permite controlar también la propiedad **enfocable** para **Entradas** y **áreas 4D Write Pro**. Puede utilizar una de las siguientes constantes:  
+
 | Constante                       | Valor | Comentario                                                                                                                                                                                                     |  
 | ------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | obk enterable                   | 1     | Los usuarios pueden ingresar valores en el objeto y el objeto es enfocable.                                                                                                                                    |  

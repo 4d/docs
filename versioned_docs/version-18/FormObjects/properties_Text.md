@@ -158,7 +158,7 @@ Allows defining the object's font size in points.
 
 Designates the font color.
 
-> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
+> This property also sets the [color of object's border](properties_BackgroundAndBorder.md#background-color--fill-color) (if any) when "plain" or "dotted" style is used.
 
 The color can be specified by:
 
@@ -297,7 +297,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 |disabled |boolean |Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.|
 |cell.`\<columnName>`| object| Allows applying the property to a single column. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object|
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)).
 
 **Example**
 

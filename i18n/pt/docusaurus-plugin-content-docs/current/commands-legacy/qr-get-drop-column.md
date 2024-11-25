@@ -5,7 +5,7 @@ slug: /commands/qr-get-drop-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

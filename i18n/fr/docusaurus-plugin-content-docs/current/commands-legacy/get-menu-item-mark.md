@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-mark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* ; *ligneMenu* {; *process*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* ; *ligneMenu* {; *process*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item mark.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

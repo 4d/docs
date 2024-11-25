@@ -23,18 +23,18 @@ displayed_sidebar: docs
 | file        | 4D.File           | →                                     | 添付ファイル                                                                                 |
 | zipFile     | 4D.ZipFile        | →                                     | 添付 Zipファイル                                                                             |
 | blob        | 4D.Blob           | →                                     | 添付を格納した BLOB                                                                           |
-| path        | テキスト                              | →                                     | 添付ファイルのパス                                                                              |
-| name        | テキスト                              | →                                     | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
-| cid         | テキスト                              | →                                     | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
-| type        | テキスト                              | →                                     | content-type ヘッダーの値                                                                    |
-| disposition | テキスト                              | →                                     | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
+| path        | Text                              | →                                     | 添付ファイルのパス                                                                              |
+| name        | Text                              | →                                     | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
+| cid         | Text                              | →                                     | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
+| type        | Text                              | →                                     | content-type ヘッダーの値                                                                    |
+| disposition | Text                              | →                                     | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
 | 戻り値         | 4D.MailAttachment | ←                                     | Attachment オブジェクト                                                                      |
 
 <!-- END REF-->
 
 #### 説明
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
+`MAIL New attachment` コマンドは、<!-- REF #_command_.MAIL New attachment.Summary -->[Email オブジェクト](../API/EmailObjectClass.md#email-オブジェクト) に追加することができる添付オブジェクトを作成します<!-- END REF -->。
 
 添付を定義するには、次のパラメーターが使えます:
 
@@ -90,8 +90,8 @@ The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summar
 ユーザーが選択したファイルを添付し、HTML 本文に画像を埋め込んだメールを送信します:
 
 ```4d
-$doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
+$doc:=Select document("";"*";"添付するファイルを選択したください";0)
+If (OK=1) // もしドキュメントが選択されていれば
 
 var $email;$server;$transporter : Object
 
@@ -104,11 +104,11 @@ $transporter:=SMTP New transporter($server)
 $email:=New object
 $email.from:="test_user@mail.com"
 $email.to:="test_user@mail.com"
-$email.subject:="This is a test message with attachments"
+$email.subject:="添付の付いたテストメッセージです"
 
-//add a link to download file
+// ファイルをダウンロードするリンクを追加します
 $email.attachments:=New collection(MAIL New attachment(Document))
-//insert an inline picture (use a cid)
+// インラインピクチャーを挿入します (cid を使用)
 $email.attachments[1]:=MAIL New attachment("c:\\Pictures\\4D.jpg";"";"4D")
 
 $email.htmlBody:="<html>"+\
@@ -118,7 +118,7 @@ $email.htmlBody:="<html>"+\
 "</head>"+\
 "</html>"
 
-$transporter.send($email) //send mail
+$transporter.send($email) // メールを送信します
 
 End if
 ```
@@ -142,8 +142,8 @@ $transporter:=SMTP New transporter($server)
 $email:=New object
 $email.from:="user@mail.com"
 $email.to:="customer@mail.com"
-$email.subject:="New annual report"
-$email.textBody:="Please find enclosed our latest annual report."
+$email.subject:="新規年次レポート"
+$email.textBody:="添付のとおり、新しい年次レポートをご連絡します。"
 $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx"))
 
 $transporter.send($email)

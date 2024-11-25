@@ -126,7 +126,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
 
 You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
@@ -193,7 +193,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 ---
 
-## Master Table
+## Master Table {#master-table}
 
 `Current selection list boxes`
 
@@ -260,7 +260,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|selectedItemsSource| string|Collection expression |
+|selectedItemsSource| string|Assignable collection or object expression |
 
 #### Objects Supported
 
@@ -268,7 +268,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 
-## Selection Name
+## Selection Name {#selection-name}
 
 `Named selection list boxes`
 

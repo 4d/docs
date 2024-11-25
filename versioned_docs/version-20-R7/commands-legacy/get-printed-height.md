@@ -5,11 +5,11 @@ slug: /commands/get-printed-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get printed height.Syntax-->**Get printed height**  -> Function result<!-- END REF-->
+<!--REF #_command_.Get printed height.Syntax-->**Get printed height**  : Integer<!-- END REF-->
 <!--REF #_command_.Get printed height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Position of the marker |
+| Function result | Integer | &#8592; | Position of the marker |
 
 <!-- END REF-->
 

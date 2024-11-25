@@ -5,7 +5,7 @@ slug: /commands/macintosh-option-down
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Macintosh option down.Syntax-->**Macintosh option down**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Macintosh option down.Syntax-->**Macintosh option down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Macintosh option down.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/change-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Change string.Syntax-->**Change string** ( *fuente* ; *nuevo* ; *posicion* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Change string.Syntax-->**Change string** ( *fuente* ; *nuevo* ; *posicion* ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

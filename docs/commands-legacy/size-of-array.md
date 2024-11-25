@@ -5,12 +5,12 @@ slug: /commands/size-of-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array whose size is returned |
-| Function result | Longint | &#8592; | Returns the number of elements in array |
+| Function result | Integer | &#8592; | Returns the number of elements in array |
 
 <!-- END REF-->
 

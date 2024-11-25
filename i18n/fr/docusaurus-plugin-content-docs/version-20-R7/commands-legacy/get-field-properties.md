@@ -31,6 +31,7 @@ Vous pouvez soit passer :
 Après l'appel :
 
 * Le paramètre *champType* retourne le type du champ. Le paramètre variable *champType* reçoit l'une des valeurs prédéfinies par les constantes de 4D (thème *Types champs et variables*) :  
+
 | Constante          | Type        | Valeur |  
 | ------------------ | ----------- | ------ |  
 | Is alpha field     | Entier long | 0      |  

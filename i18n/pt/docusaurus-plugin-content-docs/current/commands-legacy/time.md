@@ -5,7 +5,7 @@ slug: /commands/time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time.Syntax-->**Time** ( *horaString* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Time.Syntax-->**Time** ( *horaString* ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

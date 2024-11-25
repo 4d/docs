@@ -5,12 +5,12 @@ slug: /commands/get-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* ) : Text<!-- END REF-->
 <!--REF #_command_.Get plugin access.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | plugIn | Integer | &#8594;  | Plug-in number |
-| Function result | String | &#8592; | Group name associated with plug-in |
+| Function result | Text | &#8592; | Group name associated with plug-in |
 
 <!-- END REF-->
 
@@ -25,12 +25,12 @@ Pass the number of the plug-in for which you want to find out the associated gro
 
 | Constant               | Type    | Value     |
 | ---------------------- | ------- | --------- |
-| 4D Client SOAP license | Longint | 808465465 |
-| 4D Client Web license  | Longint | 808465209 |
-| 4D for OCI license     | Longint | 808465208 |
-| 4D ODBC Pro license    | Longint | 808464946 |
-| 4D View license        | Longint | 808465207 |
-| 4D Write license       | Longint | 808464697 |
+| 4D Client SOAP license | Integer | 808465465 |
+| 4D Client Web license  | Integer | 808465209 |
+| 4D for OCI license     | Integer | 808465208 |
+| 4D ODBC Pro license    | Integer | 808464946 |
+| 4D View license        | Integer | 808465207 |
+| 4D Write license       | Integer | 808464697 |
 
 #### See also 
 

@@ -32,6 +32,7 @@ title: リリースノート
 
 - [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
 - コンパイラー指示コマンド (`C_XXX`) は非推奨となり、`_O_C_XXX` という名前に変更されました (たとえば、`C_TEXT` は `_O_C_TEXT` という名前に変更されました)。
+- [`File`](../commands/file.md) コマンド (および [`4D.File.new()`](../API/FileClass.md#4dfilenew) コマンド) は、引数として与えられた *path* のシンタックスをより厳しくチェックする様になりました。
 
 ## 4D 20 R6
 
@@ -162,7 +163,7 @@ title: リリースノート
 
 ## 4D 20.x LTS
 
-See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/updates.md).
+[**4D 20.x LTS のリリースノート**](../../version-20/Notes/updates.md) 参照。
 
 ## ライブラリの一覧
 

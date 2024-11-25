@@ -22,11 +22,11 @@ title: Signal
 
 また、コードのブロックを避けるため、`.wait()` 呼び出しの際に定義したタイムアウト時間に達することでも待機状態を脱することができます。
 
-Signal objects are created with the [`New signal`](../commands/new-signal.md) command.
+Signal オブジェクトは、[`New signal`](../commands/new-signal.md) コマンドによって作成されます。
 
 ### シグナルの使い方
 
-In 4D, you create a new signal object by calling the [`New signal`](../commands/new-signal.md) command. 作成したシグナルは、`New process` あるいは `CALL WORKER` コマンドに引数として渡す必要があります。それにより、プロセスやワーカーはタスクを完了した際にシグナルを書き換えることができます。
+4D では、[`New signal`](../commands/new-signal.md) コマンドを呼び出すことで新規 Signal オブジェクトを作成します。 作成したシグナルは、`New process` あるいは `CALL WORKER` コマンドに引数として渡す必要があります。それにより、プロセスやワーカーはタスクを完了した際にシグナルを書き換えることができます。
 
 - `signal.wait()` は、他のワーカー/プロセスのタスクが完了するまで待機するワーカー/プロセスから呼び出す必要があります。
 - `signal.trigger()` は、他のワーカー/プロセスを待機状態から解放するために、タスク実行を終えたワーカー/プロセスが呼び出す必要があります。
@@ -178,10 +178,10 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 <!-- REF #SignalClass.wait().Params -->
 
-| 引数      | 型   |                             | 説明                                   |
-| ------- | --- | --------------------------- | ------------------------------------ |
-| timeout | 実数  | ->                          | シグナルの最大待機時間 (秒単位) |
-| 戻り値     | ブール | <- | `.signaled` プロパティの状態                 |
+| 引数      | 型       |                             | 説明                                   |
+| ------- | ------- | --------------------------- | ------------------------------------ |
+| timeout | Real    | ->                          | シグナルの最大待機時間 (秒単位) |
+| 戻り値     | Boolean | <- | `.signaled` プロパティの状態                 |
 
 <!-- END REF -->
 

@@ -5,12 +5,12 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | listName | Text | &#8594;  | Name of a list created in the Design environment List Editor |
-| Function result | ListRef | &#8592; | List reference number of newly created list |
+| Function result | Integer | &#8592; | List reference number of newly created list |
 
 <!-- END REF-->
 

@@ -19,8 +19,8 @@ title: VP SET BINDING PATH
 
 | 引数                   | 型      |    | 説明                      |                  |
 | -------------------- | ------ | -- | ----------------------- | ---------------- |
-| rangeObj             | オブジェクト | -> | レンジオブジェクト               |                  |
-| dataContextAttribute | テキスト   | -> | *rangeObj* にバインドする属性の名称 | <!-- END REF --> |
+| rangeObj             | Object | -> | レンジオブジェクト               |                  |
+| dataContextAttribute | Text   | -> | *rangeObj* にバインドする属性の名称 | <!-- END REF --> |
 
 #### 説明
 

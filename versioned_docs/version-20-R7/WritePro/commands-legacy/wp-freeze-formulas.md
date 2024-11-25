@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| recompute | Longint | &#8594;  | Option to control recomputing |
+| recompute | Integer | &#8594;  | Option to control recomputing |
 
 <!-- END REF-->
 
@@ -35,8 +35,8 @@ The *recompute* optional parameter allows you to define if the formulas in *targ
 
 | Constant                        | Type    | Value | Comment                                                                                                    |
 | ------------------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------- |
-| wk do not recompute expressions | Longint | 2     | Specifies that all expressions in the document are not recomputed before printing or freezing.             |
-| wk recompute expressions        | Longint | 0     | Specifies that all expressions in the document are recomputed before printing or freezing (default value). |
+| wk do not recompute expressions | Integer | 2     | Specifies that all expressions in the document are not recomputed before printing or freezing.             |
+| wk recompute expressions        | Integer | 0     | Specifies that all expressions in the document are recomputed before printing or freezing (default value). |
 
 By default, if *recompute* is omitted, expressions are recomputed. 
 

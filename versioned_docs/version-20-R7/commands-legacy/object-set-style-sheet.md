@@ -28,12 +28,13 @@ In the *styleSheetName* parameter, you pass the name of the style sheet to be ap
 
 * the name of an existing style sheet (if the style sheet does not exist, an error is returned, that you can intercept using a method installed by the [ON ERR CALL](on-err-call.md) command),
 * an empty string ("") so as to not apply the style sheet to the *object*, or
-* one of the following constants found in the "*Font Styles*" theme in order to apply an automatic style sheet:  
+* one of the following constants found in the "*Font Styles*" theme in order to apply an automatic style shee:  
+
 | Constant                          | Type   | Value                               | Comment                                                                                        |  
 | --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------- |  
-| Automatic style sheet             | String | \_\_automatic\_\_                   | Used by default for all objects                                                                |  
-| Automatic style sheet\_additional | String | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |  
-| Automatic style sheet\_main       | String | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
+| Automatic style sheet             | Text | \_\_automatic\_\_                   | Used by default for all objects                                                                |  
+| Automatic style sheet\_additional | Text | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |  
+| Automatic style sheet\_main       | Text | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
 
 If a style sheet was already associated with the object in Design mode, calling this command replaces it for the current process. 
 

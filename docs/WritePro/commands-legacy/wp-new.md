@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-new
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New.Syntax-->**WP New** {( *source* {; *option*} )} -> Function result<!-- END REF-->
+<!--REF #_command_.WP New.Syntax-->**WP New** {( *source* {; *option*} )} : Object<!-- END REF-->
 <!--REF #_command_.WP New.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | String, BLOB, Object | &#8594;  | String: HTML source,<br/>BLOB: 4D Write Pro document (.4wp) or legacy 4D Write Blob document (.4w7/.4wt)<br/>Object: range or element or 4D Write Pro document |
-| option | Longint | &#8594;  | Import option for HTML expressions |
+| option | Integer | &#8594;  | Import option for HTML expressions |
 | Function result | Object | &#8592; | 4D Write Pro object |
 
 <!-- END REF-->

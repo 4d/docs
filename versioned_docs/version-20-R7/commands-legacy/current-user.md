@@ -5,12 +5,12 @@ slug: /commands/current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current user.Syntax-->**Current user** {( *user* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Current user.Syntax-->**Current user** {( *user* )} : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | user | Integer | &#8594;  | User alias or 4D user account |
-| Function result | String | &#8592; | User name of the current user |
+| Function result | Text | &#8592; | User name of the current user |
 
 <!-- END REF-->
 

@@ -11,12 +11,12 @@ title: オブジェクト
   - 数値 (実数、整数、等)
   - テキスト
   - null
-  - boolean
+  - ブール
   - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
   - 日付 (日付型あるいは ISO日付フォーマット文字列)
   - オブジェクト(1) (オブジェクトは入れ子にすることができます)
   - ピクチャー(2)
-  - collection
+  - コレクション
 
 (1) **非ストリームオブジェクト** である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
@@ -47,7 +47,7 @@ title: オブジェクト
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](https://doc.4d.com/4dv20/help/command/ja/page1314.html) や [`File`](../commands/file.md) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
@@ -239,14 +239,14 @@ var $o3:=$o1 // 同じインスタンスへの参照
 
 上のコードに基づいて、比較表は次のようになります:
 
-| 演算  | シンタックス                | 戻り値 | 式         | 値     |
-| --- | --------------------- | --- | --------- | ----- |
-| 等しい | objectRef = objectRef | ブール | $o1 = $o3 | true  |
-|     |                       |     | $o1 = $o2 | false |
-| 異なる | objectRef # objectRef | ブール | $o1 # $o3 | false |
-|     |                       |     | $o1 # $o2 | true  |
+| 演算  | シンタックス                | 戻り値     | 式         | 値     |
+| --- | --------------------- | ------- | --------- | ----- |
+| 等しい | objectRef = objectRef | Boolean | $o1 = $o3 | true  |
+|     |                       |         | $o1 = $o2 | false |
+| 異なる | objectRef # objectRef | Boolean | $o1 # $o3 | false |
+|     |                       |         | $o1 # $o2 | true  |
 
-## Resources
+## リソース
 
 オブジェクトは、ドキュメント、エンティティロック、そしてメモリなどの *リソース* を使用します。 オブジェクトが必要とする限り、これらのリソースは保持されます。 変数や他のオブジェクトから参照されなくなったことを検知すると、4D はその参照されなくなったオブジェクトが使用していたリソースをすべて自動的に解放するため、通常はこの処理を意識することはありません。
 

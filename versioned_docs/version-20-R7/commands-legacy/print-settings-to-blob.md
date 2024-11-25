@@ -5,12 +5,12 @@ slug: /commands/print-settings-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | printSettings | Blob | &#8592; | Current print settings |
-| Function result | Longint | &#8592; | Status code: 1=Operation successful, 0=No current printer |
+| Function result | Integer | &#8592; | Status code: 1=Operation successful, 0=No current printer |
 
 <!-- END REF-->
 

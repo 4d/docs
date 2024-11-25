@@ -5,11 +5,11 @@ slug: /commands/level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Level.Syntax-->**Level**  -> Function result<!-- END REF-->
+<!--REF #_command_.Level.Syntax-->**Level**  : Integer<!-- END REF-->
 <!--REF #_command_.Level.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Current break or header level |
+| Function result | Integer | &#8592; | Current break or header level |
 
 <!-- END REF-->
 

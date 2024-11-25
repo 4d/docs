@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | ------------------- | ------ | - | ------------------------------------------------- |
 | targetObj           | Object | → | Range or element or 4D Write Pro document         |
 | sectionOrSubsection | Object | → | Section or subsection of a 4D Write Pro document  |
-| attribName          | String | → | Name of attribute(s) to remove |
+| attribName          | Text   | → | Name of attribute(s) to remove |
 
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summa
 
 In the *targetObj* parameter, you can pass either:
 
-- a range, or
+- un rango, o
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - a 4D Write Pro document
 
@@ -45,7 +45,7 @@ You want to remove several attributes from the following selection:
 
 ![](../../assets/en/WritePro/commands/pict2643861.en.png)
 
-You can execute:
+Puede ejecutar:
 
 ```4d
  $range:=WP Get selection(*;"WParea")

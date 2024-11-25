@@ -11,8 +11,8 @@ title: VP SET COLUMN ATTRIBUTES
 
 | 引数          | 型      |    | 説明                  |                  |
 | ----------- | ------ | -- | ------------------- | ---------------- |
-| rangeObj    | オブジェクト | -> | レンジオブジェクト           |                  |
-| propertyObj | オブジェクト | -> | カラムプロパティを格納したオブジェクト | <!-- END REF --> |
+| rangeObj    | Object | -> | レンジオブジェクト           |                  |
+| propertyObj | Object | -> | カラムプロパティを格納したオブジェクト | <!-- END REF --> |
 
 #### 説明
 
@@ -28,7 +28,7 @@ title: VP SET COLUMN ATTRIBUTES
 | pageBreak | boolean | レンジ内の先頭カラムの前に改ページを挿入する場合には true、それ以外は false |
 | visible   | boolean | カラムが表示状態であれば true、それ以外は false               |
 | resizable | boolean | カラムがリサイズ可能であれば true、それ以外は false             |
-| header    | テキスト    | カラムヘッダーのテキスト                                |
+| header    | text    | カラムヘッダーのテキスト                                |
 
 #### 例題
 

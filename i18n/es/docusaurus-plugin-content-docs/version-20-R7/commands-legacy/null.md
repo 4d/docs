@@ -5,7 +5,7 @@ slug: /commands/null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Null.Syntax-->**Null**  -> Resultado<!-- END REF-->
+<!--REF #_command_.Null.Syntax-->**Null**  : Null<!-- END REF-->
 <!--REF #_command_.Null.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

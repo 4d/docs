@@ -5,12 +5,12 @@ slug: /commands/last-query-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *descFormat* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *descFormat* ) : Text<!-- END REF-->
 <!--REF #_command_.Last query path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | descFormat | Integer | &#8594;  | Description format (Text or XML) |
-| Function result | String | &#8592; | Description of last executed query path |
+| Function result | Text | &#8592; | Description of last executed query path |
 
 <!-- END REF-->
 
@@ -22,8 +22,8 @@ This description is returned in Text or XML format depending on the value passed
 
 | Constant                   | Type    | Value |
 | -------------------------- | ------- | ----- |
-| Description in text format | Longint | 0     |
-| Description in XML format  | Longint | 1     |
+| Description in text format | Integer | 0     |
+| Description in XML format  | Integer | 1     |
 
 This command returns a significant value if the [DESCRIBE QUERY EXECUTION](describe-query-execution.md) command has been executed during the session. 
 

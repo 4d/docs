@@ -5,11 +5,11 @@ slug: /commands/get-text-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get text from pasteboard.Syntax-->**Get text from pasteboard**  -> Function result<!-- END REF-->
+<!--REF #_command_.Get text from pasteboard.Syntax-->**Get text from pasteboard**  : Text<!-- END REF-->
 <!--REF #_command_.Get text from pasteboard.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Returns the text (if any) present in the pasteboard |
+| Function result | Text | &#8592; | Returns the text (if any) present in the pasteboard |
 
 <!-- END REF-->
 

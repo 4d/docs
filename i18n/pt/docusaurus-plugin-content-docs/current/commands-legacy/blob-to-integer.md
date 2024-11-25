@@ -5,7 +5,7 @@ slug: /commands/blob-to-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* ; *byteOrdem* {; *offset*} ) -> Resultado da função<!-- END REF-->
+<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* ; *byteOrdem* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | byteOrdem | Integer | &#8594;  | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
 | offset | Variable | &#8596;  | Offset no BLOB (expressado em bytes) |
 | || | Novo offset depois da leitura |
-| Resultado da função | Inteiro | &#8592; | Valor inteiro (2 bytes) |
+| Resultado da função | Integer | &#8592; | Valor inteiro (2 bytes) |
 
 <!-- END REF-->
 

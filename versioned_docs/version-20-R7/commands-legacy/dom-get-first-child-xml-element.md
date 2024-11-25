@@ -5,14 +5,14 @@ slug: /commands/dom-get-first-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* {; *childElemName* {; *childElemValue*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* {; *childElemName* {; *childElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get first child XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | childElemName | Text | &#8592; | Name of child XML element |
 | childElemValue | Text | &#8592; | Value of child XML element |
-| Function result | String | &#8592; | Child XML element reference |
+| Function result | Text | &#8592; | Child XML element reference |
 
 <!-- END REF-->
 

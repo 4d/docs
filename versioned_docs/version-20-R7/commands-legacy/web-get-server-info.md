@@ -5,7 +5,7 @@ slug: /commands/web-get-server-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *withCache* )} -> Function result<!-- END REF-->
+<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *withCache* )} : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,22 +29,22 @@ The returned object contains the following properties (property names are case s
 | started                     | Boolean        | True if the http server is started, False otherwise                                                                                                                                                                |
 | uptime                      | Number         | Time elapsed since last startup of the http server                                                                                                                                                                 |
 | httpRequestCount            | Number         | Number of http hits received by the server since it was started                                                                                                                                                    |
-| startMode                   | String         | "automatic" if “Launch Web Server at Startup" is checked, otherwise "manual".                                                                                                                                      |
+| startMode                   | Text         | "automatic" if “Launch Web Server at Startup" is checked, otherwise "manual".                                                                                                                                      |
 | SOAPServerStarted           | Boolean        | True if the SOAP server is started, False otherwise                                                                                                                                                                |
 | cache                       | Object         | *This property is included only if the* withCache *parameter is True*. Describes the contents of the web server cache (see *cache property* below)                                                                 |
 | security                    | Object         | Current status of the various security options                                                                                                                                                                     |
-| cipherSuite                 | String         | Cipher list used by 4D for the secure protocol (corresponds to the SSL cipher list database parameter)                                                                                                             |
+| cipherSuite                 | Text         | Cipher list used by 4D for the secure protocol (corresponds to the SSL cipher list database parameter)                                                                                                             |
 | HTTPEnabled                 | Boolean        | True if HTTP is enabled                                                                                                                                                                                            |
 | HTTPSEnabled                | Boolean        | True if HTTPS is enabled                                                                                                                                                                                           |
 | HSTSEnabled                 | Boolean        | True if HSTS is activated on the server                                                                                                                                                                            |
 | HSTSMaxAge                  | Number         | Maximum age (in seconds) for HSTS. The default is 2 years (63,072,000 seconds).                                                                                                                                    |
-| minTLSVersion               | String         | Minimum TLS version accepted for connections (corresponds to the Min TLS version database parameter)                                                                                                               |
-| openSSLVersion              | String         | Version of the used OpenSSL library                                                                                                                                                                                |
+| minTLSVersion               | Text         | Minimum TLS version accepted for connections (corresponds to the Min TLS version database parameter)                                                                                                               |
+| openSSLVersion              | Text         | Version of the used OpenSSL library                                                                                                                                                                                |
 | perfectForwardSecrecy       | Boolean        | True if PFS is available on the server, False otherwise                                                                                                                                                            |
 | options                     | Object         | Current status of various standard web server options                                                                                                                                                              |
 | CORSEnabled                 | Boolean        | True if the CORS service is enabled on the server, False otherwise (default)                                                                                                                                       |
 | CORSSettings                | Collection     | Collection of CORS objects defining the list of allowed host(s) and method(s) (see Web CORS settings web option)                                                                                                   |
-| webCharacterSet             | String         | Character set name (corresponds to the Web character set web option)                                                                                                                                               |
+| webCharacterSet             | Text         | Character set name (corresponds to the Web character set web option)                                                                                                                                               |
 | webHTTPCompressionLevel     | Number         | Compression level for compressed HTTP exchanges (corresponds to the Web HTTP compression level web option)                                                                                                         |
 | webHTTPCompressionThreshold | Number         | Compression threshold (corresponds to the Web HTTP compression threshold web option)                                                                                                                               |
 | webHTTPSPortID              | Number         | TCP port number used by the Web server for secure connections (corresponds to the Web HTTPS port ID web option)                                                                                                    |
@@ -76,17 +76,57 @@ If you pass **true** in the *withCache* parameter, the command returns the "cach
 After you execute the following code:
 
 ```4d
- $webServerInfo:=WEB Get server info(True)
+ $webServerInfo:=WEB Get server info(True)
 ```
 
 ... $webServerInfo will contain for example:
 
 ```json
-{   "started": true,   "uptime": 40,   "SOAPServerStarted": true,   "startMode": "manual",   "httpRequestCount": 0,   "options": {      "CORSEnabled": false,      "CORSSettings": null,      "webCharacterSet": "UTF-8",      "webHTTPCompressionLevel": 1,      "webHTTPCompressionThreshold": 1024,      "webHTTPSPortID": 443,      "webIPAddressToListen": ["192.168.xxx.xxx"],      "webInactiveProcessTimeout": 28800,      "webInactiveSessionTimeout": 28800,      "webMaxConcurrentProcesses": 100,      "webPortID": 80   },   "security": {      "HTTPEnabled": true,      "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",      "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",      "perfectForwardSecrecy": true,      "minTLSVersion": "1.2"    },    "cache": {        "cacheUsage": 1,        "numOfLoads": 24,        "currentSize": 154219,        "maxSize": 10485760,        "objectMaxSize": 524288,        "enabled": true,        "nbCachedObjects": 23,        "cachedObjects": [            {...},{...}         ]   }}
+{
+    "started": true,
+    "uptime": 40,
+    "SOAPServerStarted": true,
+    "startMode": "manual",
+    "httpRequestCount": 0,
+    "options": {
+        "CORSEnabled": false,
+        "CORSSettings": null,
+        "webCharacterSet": "UTF-8",
+        "webHTTPCompressionLevel": 1,
+        "webHTTPCompressionThreshold": 1024,
+        "webHTTPSPortID": 443,
+        "webIPAddressToListen": ["192.168.xxx.xxx"],
+        "webInactiveProcessTimeout": 28800,
+        "webInactiveSessionTimeout": 28800,
+        "webMaxConcurrentProcesses": 100,
+        "webPortID": 80
+    },
+    "security": {
+        "HTTPEnabled": true,
+        "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",
+        "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",
+        "perfectForwardSecrecy": true,
+        "minTLSVersion": "1.2"
+    },
+    "cache": {
+        "cacheUsage": 1,
+        "numOfLoads": 24,
+        "currentSize": 154219,
+        "maxSize": 10485760,
+        "objectMaxSize": 524288,
+        "enabled": true,
+        "nbCachedObjects": 23,
+        "cachedObjects": [
+            { ... },
+            { ... }
+        ]
+    }
+}
+
 ```
 
 #### See also 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  

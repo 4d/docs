@@ -5,11 +5,11 @@ slug: /commands/random
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Random.Syntax-->**Random**  -> Function result<!-- END REF-->
+<!--REF #_command_.Random.Syntax-->**Random**  : Integer<!-- END REF-->
 <!--REF #_command_.Random.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | Random number |
+| Function result | Integer | &#8592; | Random number |
 
 <!-- END REF-->
 

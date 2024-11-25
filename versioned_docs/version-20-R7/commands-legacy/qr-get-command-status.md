@@ -5,14 +5,14 @@ slug: /commands/qr-get-command-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *area* ; *command* {; *value*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *area* ; *command* {; *value*} ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get command status.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | command | Integer | &#8594;  | Command number |
 | value | Integer, Text | &#8592; | Value for the selected sub-item |
-| Function result | Longint | &#8592; | Command status |
+| Function result | Integer | &#8592; | Command status |
 
 <!-- END REF-->
 

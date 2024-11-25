@@ -76,7 +76,7 @@ Cuando las macros están definidas en su proyecto 4D, puede llamar una macro uti
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-Este menú se crea sobre el [archivo de definición de macros](#location-of-macros) `formMacros.json`. Los elementos de la macro se clasifican en orden alfabético.
+Este menú se crea con base en `formMacros.json` [archivo(s) de definición de macros](#location-of-macros). Los elementos de la macro se clasifican en orden alfabético.
 
 Este menú puede ser llamado en un área vacía o en una selección en el formulario. El objeto seleccionado se pasa a `$editor.currentSelection` o `$editor.target` en la función [`onInvoke`](#oninvoke) de la macro.
 

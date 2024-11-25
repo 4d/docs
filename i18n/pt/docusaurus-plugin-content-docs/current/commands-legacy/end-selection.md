@@ -5,7 +5,7 @@ slug: /commands/end-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.End selection.Syntax-->**End selection** {( *tabela* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.End selection.Syntax-->**End selection** {( *tabela* )} : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

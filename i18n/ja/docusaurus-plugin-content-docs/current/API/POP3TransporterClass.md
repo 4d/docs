@@ -7,7 +7,7 @@ title: POP3Transporter
 
 ### POP3 Transporter オブジェクト
 
-POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command. これらは、次のプロパティや関数を持ちます:
+POP3 Transporter オブジェクトは [POP3 New transporter](../commands/pop3-new-transporter.md) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../c
 
 #### 説明
 
-`4D.POP3Transporter.new()` 関数は、<!-- REF #4D.POP3Transporter.new().Summary -->新規の `4D.POP3Transporter`型オブジェクトを作成して返します<!-- END REF -->。 It is identical to the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command (shortcut).
+`4D.POP3Transporter.new()` 関数は、<!-- REF #4D.POP3Transporter.new().Summary -->新規の `4D.POP3Transporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`POP3 New transporter`](../commands/pop3-new-transporter.md) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -265,7 +265,8 @@ POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../c
 
 ##### 説明
 
-`.getMailInfoList()` 関数は、<!-- REF #POP3TransporterClass.getMailInfoList().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の全メッセージについて記述した `mailInfo` オブジェクトのコレクションを返します<!-- END REF -->。 この関数を使用するとメールに関する情報を取得することができます。
+`.getMailInfo()` 関数は、<!-- REF #pop3TransporterClass.getMailInfo().Summary -->
+[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールの `mailInfo` オブジェクトを返します<!-- END REF -->。 この関数を使用するとメールに関する情報を取得することができます。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 

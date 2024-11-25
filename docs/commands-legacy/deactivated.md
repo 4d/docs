@@ -5,7 +5,7 @@ slug: /commands/deactivated
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Deactivated.Syntax-->**Deactivated**  -> Function result<!-- END REF-->
+<!--REF #_command_.Deactivated.Syntax-->**Deactivated**  : Boolean<!-- END REF-->
 <!--REF #_command_.Deactivated.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,11 +5,11 @@ slug: /commands/keystroke
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Keystroke.Syntax-->**Keystroke**  -> Function result<!-- END REF-->
+<!--REF #_command_.Keystroke.Syntax-->**Keystroke**  : Text<!-- END REF-->
 <!--REF #_command_.Keystroke.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Character entered by user |
+| Function result | Text | &#8592; | Character entered by user |
 
 <!-- END REF-->
 

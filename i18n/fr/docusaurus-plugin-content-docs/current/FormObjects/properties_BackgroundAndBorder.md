@@ -21,7 +21,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 ---
 
-## Couleur de fond / Couleur de remplissage
+## Background Color / Fill Color
 
 Définit la couleur de fond d'un objet.
 
@@ -67,7 +67,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d
 
 ---
 
-## Style de la bordure
+## Border Line Style {#border-line-style}
 
 Permet de définir un style standard pour la bordure de l'objet.
 
@@ -83,7 +83,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 ---
 
-## Type de ligne pointillée
+## Dotted Line Type {#dotted-line-type}
 
 Décrit le type de ligne en pointillé comme une séquence de points noirs et blancs.
 
@@ -206,7 +206,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc
 
 ## Transparent
 
-Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est définie, toute [autre couleur d'arrière-plan](#alternate-background-color) ou [couleur d'arrière-plan](#background-color-fill-color) définie pour la colonne est ignorée.
+Définit l'arrière-plan de la list box sur "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
 
 #### Grammaire JSON
 
@@ -220,4 +220,4 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est défi
 
 #### Voir également
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Background Color / Fill Color](#background-color--fill-color)

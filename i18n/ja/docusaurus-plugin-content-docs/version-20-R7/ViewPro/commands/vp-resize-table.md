@@ -19,8 +19,8 @@ title: VP RESIZE TABLE
 
 | 引数        | 型      |    | 説明         |                  |
 | --------- | ------ | -- | ---------- | ---------------- |
-| rangeObj  | オブジェクト | -> | 表組みの新しいレンジ |                  |
-| tableName | テキスト   | -> | テーブル名      | <!-- END REF --> |
+| rangeObj  | Object | -> | 表組みの新しいレンジ |                  |
+| tableName | Text   | -> | テーブル名      | <!-- END REF --> |
 
 #### 説明
 

@@ -226,7 +226,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.HTTPEnabled.Syntax -->**.HTTPEnabled** : Boolean<!-- END REF -->
 
-HTTPSプロトコル状態<!-- END REF -->。
+<!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTPプロトコル状態<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -236,7 +236,7 @@ HTTPSプロトコル状態<!-- END REF -->。
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
 
-HTTPプロトコルの状態<!-- END REF -->。
+<!-- REF #WebServerClass.HTTPPort.Summary -->HTTP のリッスンIPポート番号<!-- END REF -->。
 
 デフォルト = 80
 
@@ -559,8 +559,8 @@ HTTPプロトコルの状態<!-- END REF -->。
 
 | 引数       | 型      |                             | 説明              |
 | -------- | ------ | --------------------------- | --------------- |
-| settings | オブジェクト | ->                          | 開始時の Webサーバー設定  |
-| 戻り値      | オブジェクト | <- | Webサーバー開始のステータス |
+| settings | Object | ->                          | 開始時の Webサーバー設定  |
+| 戻り値      | Object | <- | Webサーバー開始のステータス |
 
 <!-- END REF -->
 
@@ -576,13 +576,13 @@ HTTPプロトコルの状態<!-- END REF -->。
 
 関数は Webサーバーの開始ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ   |                                                                                             | 型      | 説明                                                      |
-| ------- | ------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------- |
-| success |                                                                                             | ブール    | Webサーバーが正常に開始された場合には true、それ以外は false                   |
-| errors  |                                                                                             | コレクション | エラースタック (Webサーバーが正常に開始された場合には返されません) |
-|         | \[].errCode            | Number | 4Dエラーコード                                                |
-|         | \[].message            | テキスト   | 4Dエラーの詳細                                                |
-|         | \[].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名                                     |
+| プロパティ   |                                                                                             | 型          | 説明                                                      |
+| ------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------- |
+| success |                                                                                             | Boolean    | Webサーバーが正常に開始された場合には true、それ以外は false                   |
+| errors  |                                                                                             | Collection | エラースタック (Webサーバーが正常に開始された場合には返されません) |
+|         | \[].errCode            | Number     | 4Dエラーコード                                                |
+|         | \[].message            | Text       | 4Dエラーの詳細                                                |
+|         | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                     |
 
 > Webサーバーが既に起動していた場合、エラーが返されます。
 

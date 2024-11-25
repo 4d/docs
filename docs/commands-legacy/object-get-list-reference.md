@@ -5,14 +5,14 @@ slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
 | listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
-| Function result | ListRef | &#8592; | List reference number |
+| Function result | Integer | &#8592; | List reference number |
 
 <!-- END REF-->
 
@@ -29,9 +29,9 @@ By default, if you omit the *listType* parameter, the command returns the name o
 
 | Constant      | Type    | Value | Comment                                                                                    |
 | ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Longint | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Longint | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Longint | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
+| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
+| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
 
 If there is no hierarchical list associated with the object for the *listType* defined, the command returns 0\. 
 

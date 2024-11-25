@@ -5,11 +5,11 @@ slug: /commands/get-selected-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get selected menu item parameter.Syntax-->**Get selected menu item parameter**  -> Function result<!-- END REF-->
+<!--REF #_command_.Get selected menu item parameter.Syntax-->**Get selected menu item parameter**  : Text<!-- END REF-->
 <!--REF #_command_.Get selected menu item parameter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#8592; | Custom parameter of the menu item |
+| Function result | Text | &#8592; | Custom parameter of the menu item |
 
 <!-- END REF-->
 

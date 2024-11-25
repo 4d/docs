@@ -5,12 +5,12 @@ slug: /commands/get-adjusted-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *aTable* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *aTable* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which the scalar priority value has to be retrieved |
-| Function result | Longint | &#8592; | Current priority value for scalar fields |
+| Function result | Integer | &#8592; | Current priority value for scalar fields |
 
 <!-- END REF-->
 

@@ -27,17 +27,16 @@
   },
   "dependencies": {
     "@4dsas/doc_preprocessing": "1.1.5",
-    "@docusaurus/core": "3.4.0",
-    "@docusaurus/plugin-client-redirects": "3.4.0",
-    "@docusaurus/preset-classic": "3.4.0",
-    "@docusaurus/theme-mermaid": "3.4.0",
-    "@swc/core": "^1.6.5",
+    "@docusaurus/core": "3.6",
+    "@docusaurus/plugin-client-redirects": "3.6",
+    "@docusaurus/preset-classic": "3.6",
+    "@docusaurus/theme-mermaid": "3.6",
+    "@docusaurus/faster": "3.6",
     "clsx": "^2.1.1",
     "esbuild-loader": "^4.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "remark-gfm": "^4.0.0",
-    "swc-loader": "^0.2.6"
+    "remark-gfm": "^4.0.0"
   },
   "engines": {
     "node": ">=18.0"

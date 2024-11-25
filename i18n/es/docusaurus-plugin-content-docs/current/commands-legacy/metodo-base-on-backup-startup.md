@@ -5,7 +5,7 @@ slug: /commands/metodo-base-on-backup-startup
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Backup Startup.Syntax-->**Método base On Backup Startup** -> Resultado<!-- END REF-->
+<!--REF #_command_.Metodo base On Backup Startup.Syntax-->**Método base On Backup Startup** : Integer<!-- END REF-->
 <!--REF #_command_.Metodo base On Backup Startup.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -71,7 +71,7 @@ title: 背景色と境界線
 
 | 名称          | データタイプ | とりうる値                                                             |
 | ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### 対象オブジェクト
 
@@ -207,7 +207,7 @@ title: 背景色と境界線
 
 | 名称   | データタイプ | とりうる値         |
 | ---- | ------ | ------------- |
-| fill | テキスト   | "transparent" |
+| fill | text   | "transparent" |
 
 #### 対象オブジェクト
 
@@ -215,4 +215,4 @@ title: 背景色と境界線
 
 #### 参照
 
-[背景色/塗りカラー](#背景色塗りカラー)
+[背景色/塗りカラー](#background-color--fill-color)

@@ -5,7 +5,7 @@ slug: /commands/object-get-subform-container-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get subform container value.Syntax-->**OBJECT Get subform container value**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.OBJECT Get subform container value.Syntax-->**OBJECT Get subform container value**  : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get subform container value.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

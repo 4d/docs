@@ -5,7 +5,7 @@ slug: /commands/qr-get-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* ; *row* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* ; *row* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

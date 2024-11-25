@@ -14,13 +14,13 @@ La variable associée à l’objet peut être affectée à une zone saisissable 
 Un stepper peut être directement associé à une variable numérique, heure ou date.
 
 * Pour les valeurs de type heure, les propriétés Minimum, Maximum et Pas représentent des secondes. Par exemple, pour définir un stepper de 8h00 à 18h00 avec des pas de 10 minutes :
-  * [minimum](properties_Scale.md#minium) = 28 800 (8\*60\*60)
+  * [minimum](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
   * [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
   * [step](properties_Scale.md#step) = 600 (10\*60)
 * Pour les valeurs de type date, la valeur saisie dans la propriété [Pas](properties_Scale.md#step) représente des jours. Les propriétés Minimum et Maximum sont ignorées.
 > Pour que le stepper fonctionne avec une variable heure ou date, il est impératif de définir son type dans le formulaire ET de la déclarer explicitement via la commande [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) ou [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html).
 
-Pour plus d'informations, veuillez vous reporter à la section [Utiliser des indicateurs](progressIndicator.md#using-indicatire) de la page "Indicateurs de progression".
+For more information, please refer to [Using indicators](progressIndicator.md#using-indicators) in the "Progress Indicator" page.
 
 ## Propriétés prises en charge
 

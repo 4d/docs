@@ -29,6 +29,7 @@ Passez dans le paramètre *nomFeuilleStyle* le nom de la feuille de style à app
 * un nom de feuille de style existante (si la feuille de style n’existe pas, une erreur est retournée, que vous pouvez intercepter l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md)),
 * une chaîne vide ("") pour ne pas appliquer de feuille de style à l’*objet*.
 * une des constantes suivantes du thème "*Styles de caractères*" pour appliquer une feuille de style automatique :  
+
 | Constante                         | Type   | Valeur                              | Comment                                                                                                                                   |  
 | --------------------------------- | ------ | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Chaîne | \_\_automatic\_\_                   | Utilisée par défaut pour tous les objets                                                                                                  |  

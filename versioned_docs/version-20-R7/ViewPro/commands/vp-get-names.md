@@ -4,14 +4,14 @@ title: VP Get names
 ---
 
 <!-- REF #_method_.VP Get names.Syntax -->
-**VP Get names** ( vpAreaName : Text { ; scope : Number } ) : Collection<!-- END REF -->
+**VP Get names** ( vpAreaName : Text { ; scope : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get names.Params -->
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
-|scope  |Number|->|Target scope (default= current sheet)|
+|scope  |Integer|->|Target scope (default= current sheet)|
 |Result  |Collection|<-|Existing names in the defined scope|<!-- END REF -->
 
 #### Description

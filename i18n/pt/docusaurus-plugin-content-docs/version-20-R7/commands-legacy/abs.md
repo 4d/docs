@@ -5,7 +5,7 @@ slug: /commands/abs
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Abs.Syntax-->**Abs** ( *numero* ) -> Resultado da função<!-- END REF-->
+<!--REF #_command_.Abs.Syntax-->**Abs** ( *numero* ) : Real<!-- END REF-->
 <!--REF #_command_.Abs.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

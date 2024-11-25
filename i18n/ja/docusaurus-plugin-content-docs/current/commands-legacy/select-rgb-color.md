@@ -5,7 +5,7 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *defaultColor* {; *message*} )} -> 戻り値<!-- END REF-->
+<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB Color.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

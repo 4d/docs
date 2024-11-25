@@ -5,13 +5,13 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *defaultColor* {; *message*} )} -> Function result<!-- END REF-->
+<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB Color.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | defaultColor | Integer | &#8594;  | Preselected RGB color |
 | message | Text | &#8594;  | Title of selection window |
-| Function result | Longint | &#8592; | RGB color |
+| Function result | Integer | &#8592; | RGB color |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
-| 引数             | 型      |   | 説明                                                                                 |
-| -------------- | ------ | - | ---------------------------------------------------------------------------------- |
-| wpSection      | オブジェクト | → | 4D Write Pro section                                                               |
-| subSectionType | 倍長整数   | → | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | オブジェクト | → | 4D Write Pro subsection                                                            |
+| 引数             | 型       |   | 説明                                                                                 |
+| -------------- | ------- | - | ---------------------------------------------------------------------------------- |
+| wpSection      | Object  | → | 4D Write Pro section                                                               |
+| subSectionType | Integer | → | Subsection type (wk first page, wk left page, or wk right page) |
+| subSection     | Object  | → | 4D Write Pro subsection                                                            |
 
 <!-- END REF-->
 
@@ -25,11 +25,11 @@ In *wpSection*, pass the section from which you want to remove the subsection el
 
 The *subSectionType* parameter specifes the subsection to delete. You can pass one of the following constants:
 
-| 定数            | 型    | 値 |
-| ------------- | ---- | - |
-| wk first page | 倍長整数 | 1 |
-| wk left page  | 倍長整数 | 2 |
-| wk right page | 倍長整数 | 3 |
+| 定数            | 型       | 値 |
+| ------------- | ------- | - |
+| wk first page | Integer | 1 |
+| wk left page  | Integer | 2 |
+| wk right page | Integer | 3 |
 
 :::note
 

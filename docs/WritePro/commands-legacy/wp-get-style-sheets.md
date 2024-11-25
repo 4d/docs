@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-get-style-sheets
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get style sheets.Syntax-->**WP Get style sheets** ( *wpDoc* ; *type* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get style sheets.Syntax-->**WP Get style sheets** ( *wpDoc* ; *type* ) : Collection<!-- END REF-->
 <!--REF #_command_.WP Get style sheets.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| type | Longint | &#8594;  | Type of style sheet |
+| type | Integer | &#8594;  | Type of style sheet |
 | Function result | Collection | &#8592; | Collection of style sheet objects |
 
 <!-- END REF-->

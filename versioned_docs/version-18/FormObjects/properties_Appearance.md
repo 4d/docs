@@ -214,7 +214,7 @@ showHorizontalRuler|boolean|true (default), false|
 
 ---
 
-## Show HTML WYSYWIG
+## Show HTML WYSIWYG
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 

@@ -140,9 +140,9 @@ A fórmula retornada pode ser chamada com:
  $o.myFormula() //retorna 3
 ```
 
-You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+Você pode passar [parâmetros](#passing-parameters) para `Formula`, como visto abaixo no [exemplo 4](#exemplo-4).
 
-You can specify the object on which the formula is executed, as seen in [example 5](#example-5). As propriedades do objeto podem ser acessadas via o comando `This`.
+Você pode especificar o objeto no qual a fórmula é executada, como visto em [exemplo 5](#exemplo-5). As propriedades do objeto podem ser acessadas via o comando `This`.
 
 If *formulaExp* uses local variables, their values are copied and stored in the returned formula object when it is created. Quando executados, a fórmula usa esses valores copiados ao invés do valor atual da variável local. Note que usar arrays como variáveis locais não são compatíveis.
 
@@ -375,7 +375,7 @@ The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `f
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
-You can also pass values to be used as *$1...$n* parameters in the formula using the optional *params* parameter(s).
+Você também pode passar valores para serem usados como parâmetros *$1...$n* na fórmula usando os parâmetros *params* opcionais.
 
 Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de que os parâmetros são passados diretamente.
 

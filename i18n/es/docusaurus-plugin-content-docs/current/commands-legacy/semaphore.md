@@ -5,7 +5,7 @@ slug: /commands/semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *semaforo* {; *ticCont*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *semaforo* {; *ticCont*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Semaphore.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | coluna | Integer | &#8594;  | Número de coluna |
 | linha | Integer | &#8594;  | Número da Linha |
 | borda | Integer | &#8594;  | Border value |
-| linha &#124; nivel | Inteiro longo | &#8592; | Grossura da linha |
+| linha &#124; nivel | Integer | &#8592; | Grossura da linha |
 | cor | Integer | &#8592; | Cor da borda |
 
 <!-- END REF-->
@@ -31,6 +31,7 @@ displayed_sidebar: docs
 
 * passe um valor inteiro positivo para designar o nível (ruptura) subtotal correspondente que está afetado.
 * passe uma das seguintes constantes do tema *QR Filas para propriedades*:  
+
 | Constante      | Tipo          | Valor |  
 | -------------- | ------------- | ----- |  
 | qr detail      | Inteiro longo | \-2   |  

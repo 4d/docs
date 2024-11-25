@@ -41,7 +41,8 @@ To format Date or Time fields or variables, you can use:
 
 * either a **predefined format** available though constants of the *Date Display Formats* or *Time Display Formats* theme (longint value). In this case, you must pass [Char](char.md)(n) in *displayFormat*, where *n* is the constant:  
     
-Dates:  
+Dates:
+  
 | Constant                    | Value | Comment                                                                                                                         |  
 | --------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null date          | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros |  
@@ -56,7 +57,8 @@ Dates:
 | System date long            | 3     | Sunday, December 29, 2006                                                                                                       |  
 | System date short           | 1     | 12/29/2006                                                                                                                      |  
     
-Times:  
+Times:
+  
 | Constant                     | Value | Comment                                                                                                                                                                                                                               |  
 | ---------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null time           | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros                                                                                                       |  
@@ -96,13 +98,13 @@ To format Picture fields or variables, pass Char(n) in *displayFormat*, where *n
 
 | Constant                    | Type    | Value |
 | --------------------------- | ------- | ----- |
-| On background               | Longint | 3     |
-| Replicated                  | Longint | 7     |
-| Scaled to fit               | Longint | 2     |
-| Scaled to fit prop centered | Longint | 6     |
-| Scaled to fit proportional  | Longint | 5     |
-| Truncated centered          | Longint | 1     |
-| Truncated non centered      | Longint | 4     |
+| On background               | Integer | 3     |
+| Replicated                  | Integer | 7     |
+| Scaled to fit               | Integer | 2     |
+| Scaled to fit prop centered | Integer | 6     |
+| Scaled to fit proportional  | Integer | 5     |
+| Truncated centered          | Integer | 1     |
+| Truncated non centered      | Integer | 4     |
 
 ##### Alpha and Number 
 

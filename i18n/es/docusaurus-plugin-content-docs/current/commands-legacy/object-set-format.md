@@ -42,6 +42,7 @@ Para dar formato a los campos o variables de tipo Fecha u Hora, puede utilizar:
 * o bien un **formato predefinido** disponible a través de constantes del tema *Formatos de salida de fechas* o *Formatos de salida de hora* (valor longint). En este caso, debe pasar [Char](char.md)(n) en *displayFormat*, donde *n* es la constante:  
     
 Fechas:  
+
 | Constante                   | Valor | Comentario                                                                                                                 |  
 | --------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null date          | 100   | A añadir a la constante de formato. Indica que en caso de valor null, 4D debe devolver una cadena vacía en lugar de ceros. |  
@@ -57,6 +58,7 @@ Fechas:
 | System date short           | 1     |                                                                                                                            |  
     
 Horas:  
+
 | Constante                    | Valor | Comentario                                                                                                                                                                                                                          |  
 | ---------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null time           | 100   | "" en lugar de 0                                                                                                                                                                                                                    |  

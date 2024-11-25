@@ -18,7 +18,7 @@ title: スプリッター
 * フォーム上で移動されたオブジェクトが完全に表示されたままになるように、また別のスプリッターを超えないように、スプリッターの停止位置が計算されます。 [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) (プッシャー) プロパティをスプリッターに割り当てると、スプリッターを右方向または下方向へ動かしても停止することはありません。
 * スプリッターを使用するフォームのサイズを変更すると、フォームが表示されている間だけ、フォームの新しいサイズが保存されます。 フォームを閉じると、最初の大きさに戻ります。
 
-スプリッターは挿入されると線として表示されます。 その [線のスタイル](properties_BackgroundAndBorder.md#境界線スタイル) を変更してさらに細い線に設定したり、線の種類によっては [線の色](properties_BackgroundAndBorder.md#線カラー) を設定したりすることができます。
+スプリッターは挿入されると線として表示されます。 その [線のスタイル](properties_BackgroundAndBorder.md#点線タイプ) を変更してさらに細い線に設定したり、線の種類によっては [線の色](properties_BackgroundAndBorder.md#線カラー) を設定したりすることができます。
 
 #### JSON 例
 
@@ -35,7 +35,7 @@ title: スプリッター
 
 ### プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [線カラー](properties_BackgroundAndBorder.md#線カラー) - [ヘルプTips](properties_Help.md#ヘルプtips)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [線カラー](properties_BackgroundAndBorder.md#線カラー) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプtips)
 
 ## 隣接するオブジェクトのプロパティとの相互作用
 

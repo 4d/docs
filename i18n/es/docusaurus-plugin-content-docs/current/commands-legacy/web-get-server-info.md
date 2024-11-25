@@ -5,7 +5,7 @@ slug: /commands/web-get-server-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *conCaché* )} -> Resultado<!-- END REF-->
+<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *conCaché* )} : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

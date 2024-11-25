@@ -129,7 +129,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 | roles       |                 |               | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                       |
 |             | \[].role       |               | String                     |    | ロール名                                                               |
 |             | \[].privileges |               | String の Collection        |    | 内包する権限名のリスト                                                        |
-| permissions |                 |               | オブジェクト                     | ○  | 設定されたパーミッションのリスト                                                   |
+| permissions |                 |               | Object                     | ○  | 設定されたパーミッションのリスト                                                   |
 |             | allowed         |               | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                   |
 |             |                 | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                |
 |             |                 | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |

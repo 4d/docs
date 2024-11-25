@@ -5,7 +5,7 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) : DocRef<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,10 +39,10 @@ The optional *mode* parameter allows you to define how *document* is to be opene
 
 | Constant       | Type    | Value |
 | -------------- | ------- | ----- |
-| Get Pathname   | Longint | 3     |
-| Read and Write | Longint | 0     |
-| Read Mode      | Longint | 2     |
-| Write Mode     | Longint | 1     |
+| Get Pathname   | Integer | 3     |
+| Read and Write | Integer | 0     |
+| Read Mode      | Integer | 2     |
+| Write Mode     | Integer | 1     |
 
 If a document is open, **Open document** initially sets the file position at the beginning of the document while [Append document](append-document.md) sets it at the end of the document.
 

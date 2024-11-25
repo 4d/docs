@@ -5,12 +5,12 @@ slug: /commands/get-adjusted-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *aTable* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *aTable* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which the "blobs" priority value has to be retrieved |
-| Function result | Longint | &#8592; | Current priority value for "blobs" fields |
+| Function result | Integer | &#8592; | Current priority value for "blobs" fields |
 
 <!-- END REF-->
 

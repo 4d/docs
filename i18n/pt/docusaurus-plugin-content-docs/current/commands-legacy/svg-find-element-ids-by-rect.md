@@ -5,7 +5,7 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetoImagem* ; *x* ; *y* ; *largura* ; *alto* ; *arrIDs* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetoImagem* ; *x* ; *y* ; *largura* ; *alto* ; *arrIDs* ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

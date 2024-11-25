@@ -5,12 +5,12 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set | Text | &#8594;  | Name of the set to test |
-| Function result | Longint | &#8592; | Number of records in set |
+| Function result | Integer | &#8592; | Number of records in set |
 
 <!-- END REF-->
 

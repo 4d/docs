@@ -5,7 +5,7 @@ slug: /commands/select-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select document.Syntax-->**Select document** ( *directorio* ; *tiposArchivos* ; *titulo* ; *opciones* {; *seleccionados*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Select document.Syntax-->**Select document** ( *directorio* ; *tiposArchivos* ; *titulo* ; *opciones* {; *seleccionados*} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ Este mecanismo le permite memorizar hasta 32 000 rutas de acceso. Bajo Windows, 
 
 Pase en el parámetro *tiposArchivos* el o los tipo(s) de archivo(s) que pueden ser seleccionados en la caja de diálogo de apertura. Puede pasar una lista de varios tipos separados por un ; (punto y coma). Para cada tipo definido, una fila será añadida en el menú de selección del tipo de la caja de diálogo.
 
-* Bajo Mac OS, puede pasar un tipo Mac OS clásico (TEXT, APPL, etc.), o un tipo UTI (Uniform Tipo Identifier). Los tipos UTIs son definidos por Apple para cumplir con las necesidades de estandarización de tipos de archivos. Por ejemplo, "public.text" es el tipo UTI de los archivos de tipo texto. Para mayor información sobre UTIs, consulte *Uniform Type Identifier Concepts page* en el sitio web *developer.apple.com* (documentación en ingles).
+* Bajo Mac OS, puede pasar un tipo Mac OS clásico (TEXT, APPL, etc.), o un tipo UTI (Uniform Tipo Identifier). Los tipos UTIs son definidos por Apple para cumplir con las necesidades de estandarización de tipos de archivos. Por ejemplo, "public.text" es el tipo UTI de los archivos de tipo texto. Para mayor información sobre UTIs, consulte *[Uniform Type Identifier Concepts page](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html)* en el sitio web *developer.apple.com* (documentación en ingles).
 * Bajo Windows, puede pasar igualmente un tipo de archivo clásico Mac OS, 4D efectúa la correspondencia internamente o la extensión de archivos (.txt, .exe, etc.). Note que bajo Windows, el usuario puede “forzar” la visualización de todos los tipos de archivos introduciendo \*.\* en la caja de diálogo. Sin embargo, en este caso, 4D efectuará una verificación adicional de los tipos de archivos seleccionados: si el usuario selecciona un tipo de archivo no autorizado, el comando devuelve un error.
 
 Si no quiere restringir los archivos mostrados a uno o a más tipos, pase "\*" (asterisco) o ".\*" en *tiposArchivos*.

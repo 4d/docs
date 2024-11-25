@@ -21,7 +21,7 @@ title: VP REMOVE TABLE ROWS
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
 |row|Integer|->|Index in the table of the starting row to remove|
-|count|Text|->|Number of rows to remove (must be >0) |
+|count|Integer|->|Number of rows to remove (must be >0) |
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description

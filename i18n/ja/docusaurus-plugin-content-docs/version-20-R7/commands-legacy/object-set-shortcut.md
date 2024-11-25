@@ -29,6 +29,7 @@ displayed_sidebar: docs
 
 * "B"のような標準のキーの名前
 * *Shortcut and Associated Keys*テーマの定数やその値:  
+
 | 定数                            | 型   | 値               |  
 | ----------------------------- | --- | --------------- |  
 | Shortcut with Backspace       | 文字列 | \[backspace\]   |  

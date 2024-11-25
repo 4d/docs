@@ -5,14 +5,14 @@ slug: /WritePro/commands/wp-table-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( targetObj | {*tableRef* ; *rowNumber*} {; *numRows*} )  -> Function result<!-- END REF-->
+<!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( targetObj | {*tableRef* ; *rowNumber*} {; *numRows*} )  : Object<!-- END REF-->
 <!--REF #_command_.WP Table insert rows.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| rowNumber | Longint | &#8594;  | Row index number |
-| numRows | Longint | &#8594;  | Number of rows to insert (default value = 1) |
+| rowNumber | Integer | &#8594;  | Row index number |
+| numRows | Integer | &#8594;  | Number of rows to insert (default value = 1) |
 | Function result | Object | &#8592; | Range of table rows |
 
 <!-- END REF-->

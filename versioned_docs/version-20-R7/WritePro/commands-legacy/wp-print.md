@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| printOptions | Longint | &#8594;  | Printing options for the 4D Write Pro document |
+| printOptions | Integer | &#8594;  | Printing options for the 4D Write Pro document |
 
 <!-- END REF-->
 
@@ -25,10 +25,10 @@ The optional *printOptions* parameter can be used to set the HTML WYSIWYG view f
 
 | Constant                        | Type    | Value | Comment                                                                                                                                         |
 | ------------------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk 4D Write Pro layout          | Longint | 0     | Standard 4D Write Pro layout, which can include some specific style attributes                                                                  |
-| wk do not recompute expressions | Longint | 2     | Specifies that all expressions in the document are not recomputed before printing or freezing.                                                  |
-| wk html wysiwyg                 | Longint | 1     | In this layout, any 4D Write Pro advanced attributes which are not compliant with all browsers are removed (e.g. columns, double underlines...) |
-| wk recompute expressions        | Longint | 0     | Specifies that all expressions in the document are recomputed before printing or freezing (default value).                                      |
+| wk 4D Write Pro layout          | Integer | 0     | Standard 4D Write Pro layout, which can include some specific style attributes                                                                  |
+| wk do not recompute expressions | Integer | 2     | Specifies that all expressions in the document are not recomputed before printing or freezing.                                                  |
+| wk html wysiwyg                 | Integer | 1     | In this layout, any 4D Write Pro advanced attributes which are not compliant with all browsers are removed (e.g. columns, double underlines...) |
+| wk recompute expressions        | Integer | 0     | Specifies that all expressions in the document are recomputed before printing or freezing (default value).                                      |
 
 If *printOptions* is omitted, by default the 4D Write Pro layout is used and expressions are recomputed (if any).
 

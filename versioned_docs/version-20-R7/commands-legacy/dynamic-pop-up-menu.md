@@ -5,7 +5,7 @@ slug: /commands/dynamic-pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *default* {; *xCoord* ; *yCoord*}} )  -> Function result<!-- END REF-->
+<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *default* {; *xCoord* ; *yCoord*}} )  : Text<!-- END REF-->
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | default | Text | &#8594;  | Parameter of item selected by default |
 | xCoord | Integer | &#8594;  | X coordinate of top left corner |
 | yCoord | Integer | &#8594;  | Y coordinate of top left corner |
-| Function result | String | &#8592; | Parameter of selected menu item |
+| Function result | Text | &#8592; | Parameter of selected menu item |
 
 <!-- END REF-->
 

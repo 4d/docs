@@ -5,14 +5,14 @@ slug: /commands/get-menu-item-modifiers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* ; *menuItem* {; *process*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item modifiers.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu reference or Menu number |
 | menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
 | process | Integer | &#8594;  | Process number |
-| Function result | Longint | &#8592; | Modification key(s) associated with menu item |
+| Function result | Integer | &#8592; | Modification key(s) associated with menu item |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* ; *byteOrdem* {; *offset*} ) -> Resultado da função<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* ; *byteOrdem* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | byteOrdem | Integer | &#8594;  | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
 | offset | Variable |&#8596;  | Offset no BLOB (expressado em bytes) |
 | || | Novo offset depois da leitura |
-| Resultado da função | Inteiro longo | &#8592; | Valor inteiro longo (4 bytes) |
+| Resultado da função | Integer | &#8592; | Valor inteiro longo (4 bytes) |
 
 <!-- END REF-->
 

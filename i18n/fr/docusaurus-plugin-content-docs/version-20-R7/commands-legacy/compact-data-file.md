@@ -5,7 +5,7 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *cheminStructure* ; *cheminDonnées* {; *dossierArchive* {; *options* {; *méthode*}}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *cheminStructure* ; *cheminDonnées* {; *dossierArchive* {; *options* {; *méthode*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,7 @@ La commande retourne le chemin d’accès complet du dossier effectivement cré�
 \- Si vous passez une chaîne vide, une boîte de dialogue standard d’ouverture de dossier apparaît, permettant à l’utilisateur de désigner l’emplacement du dossier à créer.  
 \- Si vous passez un chemin d’accès (exprimé dans la syntaxe du système d’exploitation), la commande créera le dossier “Replaced files (compacting) Dateheure” à cet emplacement.
 * Le paramètre facultatif *options* permet de définir diverses options liées au compactage. Pour cela, utilisez les constantes suivantes, placées dans le thème *Maintenance fichier de données*. Vous pouvez passer plusieurs options en les cumulant :  
+
 | Constante               | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |  
 | ----------------------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Compact address table   | Entier long | 131072 | Forcer la réécriture de la table d’adresses des enregistrements (ralentit le compactage). A noter que dans ce cas, les numéros des enregistrements sont réécrits. Si vous passez uniquement cette option, 4D active automatiquement l’option ’Mettre à jour enregistrements’.                                                                                                                                                                                                                                    |  

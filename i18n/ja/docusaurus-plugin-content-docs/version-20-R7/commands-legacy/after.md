@@ -5,7 +5,7 @@ slug: /commands/after
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.After.Syntax-->**After**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.After.Syntax-->**After**  : Boolean<!-- END REF-->
 <!--REF #_command_.After.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

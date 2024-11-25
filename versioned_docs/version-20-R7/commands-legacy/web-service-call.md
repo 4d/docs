@@ -42,10 +42,10 @@ In *complexType*, you must pass one of the following constants, located in the t
 
 | Constant               | Type    | Value |
 | ---------------------- | ------- | ----- |
-| Web Service dynamic    | Longint | 0     |
-| Web Service manual     | Longint | 3     |
-| Web Service manual in  | Longint | 1     |
-| Web Service manual out | Longint | 2     |
+| Web Service dynamic    | Integer | 0     |
+| Web Service manual     | Integer | 3     |
+| Web Service manual in  | Integer | 1     |
+| Web Service manual out | Integer | 2     |
   
   
 Each constant corresponds to a Web Services “configuration”. A configuration represents the combination of a publication mode (RPC/DOC) and the types of parameters (input/output, simple or complex) implemented. 

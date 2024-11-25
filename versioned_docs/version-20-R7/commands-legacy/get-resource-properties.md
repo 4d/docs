@@ -5,14 +5,14 @@ slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resID* {; *resFile*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resID* {; *resFile*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resType | Text | &#8594;  | 4-character resource type |
 | resID | Integer | &#8594;  | Resource ID number |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | Longint | &#8592; | Resource attributes |
+| Function result | Integer | &#8592; | Resource attributes |
 
 <!-- END REF-->
 

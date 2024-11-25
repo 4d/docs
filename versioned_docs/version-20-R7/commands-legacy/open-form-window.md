@@ -5,7 +5,7 @@ slug: /commands/open-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) : WinRef<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,18 +40,18 @@ The optional *type* parameter allows you to specify a type for the window. You m
 
 | Constant                         | Type    | Value  |
 | -------------------------------- | ------- | ------ |
-| Controller form window           | Longint | 133056 |
-| Form has full screen mode Mac    | Longint | 65536  |
-| Form has no menu bar             | Longint | 2048   |
-| Modal form dialog box            | Longint | 1      |
-| Movable form dialog box          | Longint | 5      |
-| Movable form dialog box no title | Longint | 524293 |
-| Palette form window              | Longint | 1984   |
-| Plain form window                | Longint | 8      |
-| Plain form window no title       | Longint | 524296 |
-| Pop up form window               | Longint | 32     |
-| Sheet form window                | Longint | 33     |
-| Toolbar form window              | Longint | 35     |
+| Controller form window           | Integer | 133056 |
+| Form has full screen mode Mac    | Integer | 65536  |
+| Form has no menu bar             | Integer | 2048   |
+| Modal form dialog box            | Integer | 1      |
+| Movable form dialog box          | Integer | 5      |
+| Movable form dialog box no title | Integer | 524293 |
+| Palette form window              | Integer | 1984   |
+| Plain form window                | Integer | 8      |
+| Plain form window no title       | Integer | 524296 |
+| Pop up form window               | Integer | 32     |
+| Sheet form window                | Integer | 33     |
+| Toolbar form window              | Integer | 35     |
 
 Window types are detailed in the *Window Types* section.
 
@@ -71,17 +71,17 @@ The optional parameter *hPos* allows you to define the horizontal position of th
 
 | Constant              | Type    | Value  |
 | --------------------- | ------- | ------ |
-| Horizontally centered | Longint | 65536  |
-| On the left           | Longint | 131072 |
-| On the right          | Longint | 196608 |
+| Horizontally centered | Integer | 65536  |
+| On the left           | Integer | 131072 |
+| On the right          | Integer | 196608 |
 
 The optional parameter *vPos* allows you to define the vertical position of the window. You can pass a defined position in pixels or one of the following predefined constants placed in the *Open Form Window* theme:
 
 | Constant            | Type    | Value  |
 | ------------------- | ------- | ------ |
-| At the bottom       | Longint | 393216 |
-| At the top          | Longint | 327680 |
-| Vertically centered | Longint | 262144 |
+| At the bottom       | Integer | 393216 |
+| At the top          | Integer | 327680 |
+| Vertically centered | Integer | 262144 |
 
 These parameters are expressed relative to the top left corner of the contents area of the application window (Windows MDI mode) or to the main screen (macOS and Windows SDI mode). They take into account the presence of the tool bar and menu bar.
 

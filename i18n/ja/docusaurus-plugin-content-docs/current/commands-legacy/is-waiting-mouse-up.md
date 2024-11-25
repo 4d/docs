@@ -5,7 +5,7 @@ slug: /commands/is-waiting-mouse-up
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is waiting mouse up.Syntax-->**Is waiting mouse up**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Is waiting mouse up.Syntax-->**Is waiting mouse up**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is waiting mouse up.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

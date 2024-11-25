@@ -5,7 +5,7 @@ slug: /commands/form-convert-to-dynamic
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*tabla* ;} *nomFormulario* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*tabla* ;} *nomFormulario* ) : Object<!-- END REF-->
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

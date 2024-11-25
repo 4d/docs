@@ -5,13 +5,13 @@ slug: /commands/create-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create document.Syntax-->**Create document** ( *document* {; *fileType*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Create document.Syntax-->**Create document** ( *document* {; *fileType*} ) : Time<!-- END REF-->
 <!--REF #_command_.Create document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Text | &#8594;  | Document name or Full document pathname or Empty string for standard file dialog box |
 | fileType | Text | &#8594;  | List of types of documents to be screened, or "*" to not screen the documents |
-| Function result | DocRef | &#8592; | Document reference number |
+| Function result | Time | &#8592; | Document reference number |
 
 <!-- END REF-->
 

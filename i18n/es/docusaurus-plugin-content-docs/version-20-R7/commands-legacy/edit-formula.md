@@ -29,7 +29,7 @@ El usuario puede modificar y guardar la *formula* mostrada. También es posible 
 
 **Notas:**
 
-* Por defecto, el acceso a los métodos y a los comandos está restringido para todos los usuarios (excepto para el Diseñador y Administrador, en bases de datos creadas con 4D 2004.4 y posteriores). Cuando este mecanismo está activado, usted debe designar explícitamente los elementos accesibles a los usuarios utilizando el comando [SET ALLOWED METHODS](set-allowed-methods.md). Si la *formula* llama métodos que no han sido autorizados previamente en el editor de fórmulas utilizando el comando [SET ALLOWED METHODS](set-allowed-methods.md), se genera un error de sintaxis y no podrá validar la caja de diálogo.
+* Por defecto, el acceso a los métodos y a los comandos está restringido para todos los usuarios (excepto para el Diseñador y Administrador, en bases de datos creadas con 4D 2004.4 y posteriores). Cuando este mecanismo está activado, usted debe designar explícitamente los elementos accesibles a los usuarios utilizando el comando [SET ALLOWED METHODS](../commands/set-allowed-methods.md). Si la *formula* llama métodos que no han sido autorizados previamente en el editor de fórmulas utilizando el comando [SET ALLOWED METHODS](../commands/set-allowed-methods.md), se genera un error de sintaxis y no podrá validar la caja de diálogo.
 * El editor de fórmulas no está asociado a ninguna barra de menús de forma predeterminada. Debe instalar un menú **Editar** estándar en el proceso de llamada si desea que los usuarios puedan beneficiarse de los accesos directos cortar/copiar/pegar en el editor de fórmulas.
 * La estructura virtual definida por los comandos [SET TABLE TITLES](set-table-titles.md) y [SET FIELD TITLES](set-field-titles.md) (si existe) no debe ser utilizada en la variable *formula*, ni será utilizada por 4D en la variable devuelta. La estructura virtual sólo se utiliza en la caja de diálogo del editor de fórmulas.
 
@@ -55,4 +55,4 @@ Si el usuario valida la caja de diálogo, la variable sistema OK toma el valor 1
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
-[SET ALLOWED METHODS](set-allowed-methods.md)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  

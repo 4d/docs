@@ -4,7 +4,7 @@ title: VP Get formula by name
 ---
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
-**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
@@ -12,7 +12,7 @@ title: VP Get formula by name
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |name  |Text|->|Name of the named range|
-|scope  |Number|->|Target scope (default=current sheet)|
+|scope  |Integer|->|Target scope (default=current sheet)|
 |Result  |Object|<-|Named formula or named range definition|<!-- END REF -->
 
 #### Description

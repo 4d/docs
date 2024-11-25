@@ -5,14 +5,14 @@ slug: /commands/list-item-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *list* ; *itemRef* ) -> Function result<!-- END REF-->
+<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *list* ; *itemRef* ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
 | itemRef | Integer | &#8594;  | Item reference number |
-| Function result | Longint | &#8592; | Item position in expanded/collapsed lists |
+| Function result | Integer | &#8592; | Item position in expanded/collapsed lists |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/process-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process state.Syntax-->**Process state** ( *process* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Process state.Syntax-->**Process state** ( *process* ) : Integer<!-- END REF-->
 <!--REF #_command_.Process state.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/exp
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Exp.Syntax-->**Exp** ( *number* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Exp.Syntax-->**Exp** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

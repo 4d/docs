@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *heureComb*}} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *heureComb*}} ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -61,6 +61,7 @@ Dans ce cas, vous pouvez également passer une heure dans le paramètre *heureCo
 
 | Constante                   | Type        | Valeur | Comment                                                                                                                          |
 | --------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------- |
+
 | Blank if null date          | Entier long | 100    | À ajouter à la constante format. Indique que dans le cas d'une valeur nulle, 4D doit retourner une chaîne vide au lieu de zéros. |
 | Date RFC 1123               | Entier long | 10     | Fri, 10 Sep 2010 13:07:20 GMT                                                                                                    |
 | Internal date abbreviated   | Entier long | 6      | 29 déc 2006                                                                                                                      |

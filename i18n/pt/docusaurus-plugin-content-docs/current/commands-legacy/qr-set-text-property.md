@@ -32,6 +32,7 @@ displayed_sidebar: docs
 
 * um valor positivo, designando a linha do subtotal correspondente.
 * uma das constantes do tema *QR Filas para propriedades*:  
+
 | Constante      | Tipo          | Valor |  
 | -------------- | ------------- | ----- |  
 | qr detail      | Inteiro longo | \-2   |  

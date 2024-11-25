@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On System Event database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Longint | &#8592; | Event code |
+| $1 | Integer | &#8592; | Event code |
 
 <!-- END REF-->
 
@@ -24,8 +24,8 @@ To process an event, you must test the value of the $1 parameter within the meth
 
 | Constant                       | Type    | Value | Comment                                    |
 | ------------------------------ | ------- | ----- | ------------------------------------------ |
-| On application background move | Longint | 1     | The 4D application moves to the background |
-| On application foreground move | Longint | 2     | The 4D application moves to the foreground |
+| On application background move | Integer | 1     | The 4D application moves to the background |
+| On application foreground move | Integer | 2     | The 4D application moves to the foreground |
 
 These events are generated when a 4D application changes level, irrespective of the user action initiating this change. For example: 
 

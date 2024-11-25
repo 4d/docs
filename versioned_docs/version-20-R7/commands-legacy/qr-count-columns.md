@@ -5,12 +5,12 @@ slug: /commands/qr-count-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* ) -> Function result<!-- END REF-->
+<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Count columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
-| Function result | Longint | &#8592; | Number of columns in area |
+| Function result | Integer | &#8592; | Number of columns in area |
 
 <!-- END REF-->
 

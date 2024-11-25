@@ -122,7 +122,7 @@ Veuillez consulter la section [Type d'expression](properties_Object.md#expressio
 
 Liste des valeurs qui seront utilisées comme valeurs par défaut pour la colonne de la list box (type tableau uniquement). Ces valeurs seront automatiquement accessibles dans la [variable tableau](properties_Object.md#variable-or-expression) associée à la colonne lors de l’exécution du formulaire. En utilisant le langage, vous pouvez gérer l'objet en vous référant à ce tableau.
 
-> Ne pas confondre cette propriété avec la propriété["default value](properties_RangeOfValues.md#default-list-of-values)" qui permet de définir la valeur d'un champ dans les nouveaux enregistrements.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
 
 Vous devez saisir une liste de valeurs. Dans l'éditeur de formulaires, une boîte de dialogue spécifique vous permet de saisir des valeurs séparées par des retours à la ligne :
 
@@ -185,7 +185,7 @@ Si un champ, une variable ou une expression assignable*(par exemple Person.lastN
 
 ---
 
-## Table principale
+## Table principale {#master-table}
 
 `Listbox de type sélection courante`
 
@@ -249,9 +249,9 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 #### Grammaire JSON
 
-| Nom                 | Type de données | Valeurs possibles     |
-| ------------------- | --------------- | --------------------- |
-| selectedItemsSource | string          | Expression collection |
+| Nom                 | Type de données | Valeurs possibles                          |
+| ------------------- | --------------- | ------------------------------------------ |
+| selectedItemsSource | string          | Assignable collection or object expression |
 
 #### Objets pris en charge
 
@@ -259,7 +259,7 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 ---
 
-## Selection Name
+## Selection Name {#selection-name}
 
 `Listbox de type sélection nommée`
 

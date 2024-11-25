@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* ; *xmlInfo* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* ; *xmlInfo* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

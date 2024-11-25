@@ -4,7 +4,7 @@ title: Texto e Imagen
 ---
 
 
-## Ruta de acceso fondo
+## Ruta de acceso fondo {#background-pathname}
 
 Define la ruta de la imagen que se dibujará en el fondo del objeto. Si el objeto utiliza un [icono](#picture-pathname) con [diferentes estados](#number-of-states), la imagen de fondo soportará automáticamente el mismo número de estados.
 
@@ -38,7 +38,7 @@ Aspecto general del botón. El estilo del botón también influye en la disponib
 
 ---
 
-## Margen horizontal
+## Margen horizontal {#horizontal-margin}
 
 Esta propiedad permite definir el tamaño (en píxeles) de los márgenes horizontales del botón. Este margen delimita el área que el icono del botón y el título no deben sobrepasar.
 
@@ -143,7 +143,7 @@ El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso
 
 ---
 
-## Posición título/imagen
+## Posición título/imagen {#titlepicture-position}
 
 Esta propiedad permite modificar la ubicación relativa del título del botón en relación con el icono asociado. Esta propiedad no tiene efecto cuando el botón sólo contiene un título (sin imagen asociada) o una imagen (sin título). Por defecto, cuando un botón contiene un título y una imagen, el texto se coloca debajo de la imagen.
 
@@ -169,7 +169,7 @@ Aquí están los resultados utilizando las distintas opciones para esta propieda
 
 ---
 
-## Margen vertical
+## Margen vertical {#vertical-margin}
 
 Esta propiedad permite definir el tamaño (en píxeles) de los márgenes verticales del botón. Este margen delimita el área que el icono del botón y el título no deben sobrepasar.
 
@@ -224,4 +224,4 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Objetos soportados
 
-[Botón barra de herramientas](button_overview.md#toolbar) - [Botón bisel](button_overview.md#bevel) - [Botón de bisel redondeado](button_overview.md#Rounded-bevel) - [Botón OS X Gradient](button_overview.md#os-x-gradient) - [Botón OS X Textured ](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-XP) - [Botón círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

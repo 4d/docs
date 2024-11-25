@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get text.Syntax-->**WP Get text** ( *targetObj* {; *expressions*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get text.Syntax-->**WP Get text** ( *targetObj* {; *expressions*} ) : Text<!-- END REF-->
 <!--REF #_command_.WP Get text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

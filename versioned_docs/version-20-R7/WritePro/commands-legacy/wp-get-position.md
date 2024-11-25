@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-get-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get position.Syntax-->**WP Get position** ( *targetObj* {; *layout*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get position.Syntax-->**WP Get position** ( *targetObj* {; *layout*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| layout | Longint | &#8594;  | 4D Write Pro document layout used for evaluation: 0 (default)=4D Write Pro layout, 1=HTML WYSIWYG |
+| layout | Integer | &#8594;  | 4D Write Pro document layout used for evaluation: 0 (default)=4D Write Pro layout, 1=HTML WYSIWYG |
 | Function result | Object | &#8592; | Position information |
 
 <!-- END REF-->
@@ -50,8 +50,8 @@ The optional *layout* parameter can be used to set the HTML wysiwyg view for the
 
 | Constant               | Type    | Value | Comment                                                                                                                                         |
 | ---------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk 4D Write Pro layout | Longint | 0     | Standard 4D Write Pro layout, which can include some specific style attributes                                                                  |
-| wk html wysiwyg        | Longint | 1     | In this layout, any 4D Write Pro advanced attributes which are not compliant with all browsers are removed (e.g. columns, double underlines...) |
+| wk 4D Write Pro layout | Integer | 0     | Standard 4D Write Pro layout, which can include some specific style attributes                                                                  |
+| wk html wysiwyg        | Integer | 1     | In this layout, any 4D Write Pro advanced attributes which are not compliant with all browsers are removed (e.g. columns, double underlines...) |
 
 If *layout* is omitted, the 4D Write Pro layout is used by default.
 

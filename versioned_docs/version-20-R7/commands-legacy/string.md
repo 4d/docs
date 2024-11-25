@@ -5,14 +5,14 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) -> Function result<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Expression | &#8594;  | Expression for which to return the string form (can be Real, Integer, Long Integer, Date, Time, String, Text, Boolean, Undefined, or Null) |
 | format | Integer, Text | &#8594;  | Display format |
 | addTime | Time | &#8594;  | Time to add on if expression is a date |
-| Function result | String | &#8592; | String form of the expression |
+| Function result | Text | &#8592; | String form of the expression |
 
 <!-- END REF-->
 
@@ -59,7 +59,9 @@ If *expression* is a Date expression and if you omit the *format* parameter, the
 
 Otherwise, in the *format* parameter, you can pass:
 
-* either a predefined format available though the following constants of the *Date Display Formats* theme (longint value):  
+* either a predefined format available though the following constants of the *Date Display Formats* theme (longint value): 
+
+
 | Constant                    | Value | Comment                                                                                                                         |  
 | --------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null date          | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros |  
@@ -133,6 +135,7 @@ If *expression* is a Time expression and if you omit the *format* parameter, the
 Otherwise, in the *format* parameter, you can pass:
 
 * either a predefined format available though the following constants of the *Time Display Formats* theme (longint value):  
+
 | Constant                     | Value | Comment                                                                                                                                                                                                                               |  
 | ---------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null time           | 100   | To be added to the format constant. Indicates that in the case of a null value, 4D must return an empty string instead of zeros                                                                                                       |  
@@ -154,6 +157,7 @@ Examples:
  $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
+
 * or a [customized format built upon a pattern](https://developer.4d.com/docs/Project/date-time-formats) (string value)  
 Examples:  
     

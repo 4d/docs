@@ -5,7 +5,7 @@ slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *chaîneJSON* {; *type*}{; *} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *chaîneJSON* {; *type*}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -134,11 +134,11 @@ module.exports =
 		},
 {
 	type: "category",
-	label: "Language",
+	label: "4D Language",
 	link: {
 		type: 'generated-index',
-		title: 'Language',
-		slug: '/category/language',
+		title: '4D Language',
+		slug: '/category/4d-language',
 		keywords: ['language'],
 		image: '/img/docusaurus.png',
 		},
@@ -205,7 +205,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: '4D Environment',
-						slug: '/category/commands/4D Environment',
 						keywords: ['4D Environment'],
 						image: '/img/docusaurus.png',
 						},
@@ -262,7 +261,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Arrays',
-						slug: '/category/commands/Arrays',
 						keywords: ['Arrays'],
 						image: '/img/docusaurus.png',
 						},
@@ -307,7 +305,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Backup',
-						slug: '/category/commands/Backup',
 						keywords: ['Backup'],
 						image: '/img/docusaurus.png',
 						},
@@ -330,7 +327,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'BLOB',
-						slug: '/category/commands/BLOB',
 						keywords: ['BLOB'],
 						image: '/img/docusaurus.png',
 						},
@@ -367,7 +363,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Boolean',
-						slug: '/category/commands/Boolean',
 						keywords: ['Boolean'],
 						image: '/img/docusaurus.png',
 						},
@@ -384,7 +379,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Cache Management',
-						slug: '/category/commands/Cache Management',
 						keywords: ['Cache Management'],
 						image: '/img/docusaurus.png',
 						},
@@ -411,7 +405,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Collections',
-						slug: '/category/commands/Collections',
 						keywords: ['Collections'],
 						image: '/img/docusaurus.png',
 						},
@@ -428,7 +421,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Communications',
-						slug: '/category/commands/Communications',
 						keywords: ['Communications'],
 						image: '/img/docusaurus.png',
 						},
@@ -452,7 +444,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Compiler',
-						slug: '/category/commands/Compiler',
 						keywords: ['Compiler'],
 						image: '/img/docusaurus.png',
 						},
@@ -467,7 +458,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Data Entry',
-						slug: '/category/commands/Data Entry',
 						keywords: ['Data Entry'],
 						image: '/img/docusaurus.png',
 						},
@@ -488,7 +478,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Data Security',
-						slug: '/category/commands/Data Security',
 						keywords: ['Data Security'],
 						image: '/img/docusaurus.png',
 						},
@@ -508,7 +497,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Database Methods',
-						slug: '/category/commands/Database Methods',
 						keywords: ['Database Methods'],
 						image: '/img/docusaurus.png',
 						},
@@ -539,7 +527,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Date and Time',
-						slug: '/category/commands/Date and Time',
 						keywords: ['Date and Time'],
 						image: '/img/docusaurus.png',
 						},
@@ -566,7 +553,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Design Object Access',
-						slug: '/category/commands/Design Object Access',
 						keywords: ['Design Object Access'],
 						image: '/img/docusaurus.png',
 						},
@@ -599,7 +585,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Drag and Drop',
-						slug: '/category/commands/Drag and Drop',
 						keywords: ['Drag and Drop'],
 						image: '/img/docusaurus.png',
 						},
@@ -614,7 +599,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Entry Control',
-						slug: '/category/commands/Entry Control',
 						keywords: ['Entry Control'],
 						image: '/img/docusaurus.png',
 						},
@@ -635,7 +619,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'File and Folder',
-						slug: '/category/commands/File and Folder',
 						keywords: ['File and Folder'],
 						image: '/img/docusaurus.png',
 						},
@@ -652,7 +635,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Form Events',
-						slug: '/category/commands/Form Events',
 						keywords: ['Form Events'],
 						image: '/img/docusaurus.png',
 						},
@@ -684,7 +666,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Forms',
-						slug: '/category/commands/Forms',
 						keywords: ['Forms'],
 						image: '/img/docusaurus.png',
 						},
@@ -721,7 +702,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Formulas',
-						slug: '/category/commands/Formulas',
 						keywords: ['Formulas'],
 						image: '/img/docusaurus.png',
 						},
@@ -732,7 +712,7 @@ module.exports =
 						"commands/formula-from-string",
 						"commands-legacy/get-allowed-methods",
 						"commands-legacy/parse-formula",
-						"commands-legacy/set-allowed-methods"
+						"commands/set-allowed-methods"
 					]
 					},
 					{
@@ -741,7 +721,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Graphs',
-						slug: '/category/commands/Graphs',
 						keywords: ['Graphs'],
 						image: '/img/docusaurus.png',
 						},
@@ -756,7 +735,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'HTTP',
-						slug: '/category/commands/HTTP',
 						keywords: ['HTTP'],
 						image: '/img/docusaurus.png',
 						},
@@ -777,7 +755,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Hierarchical Lists',
-						slug: '/category/commands/Hierarchical Lists',
 						keywords: ['Hierarchical Lists'],
 						image: '/img/docusaurus.png',
 						},
@@ -821,7 +798,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Import and Export',
-						slug: '/category/commands/Import and Export',
 						keywords: ['Import and Export'],
 						image: '/img/docusaurus.png',
 						},
@@ -842,7 +818,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Interruptions',
-						slug: '/category/commands/Interruptions',
 						keywords: ['Interruptions'],
 						image: '/img/docusaurus.png',
 						},
@@ -867,7 +842,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'JSON',
-						slug: '/category/commands/JSON',
 						keywords: ['JSON'],
 						image: '/img/docusaurus.png',
 						},
@@ -888,7 +862,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'LDAP',
-						slug: '/category/commands/LDAP',
 						keywords: ['LDAP'],
 						image: '/img/docusaurus.png',
 						},
@@ -905,8 +878,8 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Language',
-						slug: '/category/commands/Language',
 						keywords: ['Language'],
+						slug: '/category/language',
 						image: '/img/docusaurus.png',
 						},
 					"items": [
@@ -940,7 +913,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Licenses',
-						slug: '/category/commands/Licenses',
 						keywords: ['Licenses'],
 						image: '/img/docusaurus.png',
 						},
@@ -948,7 +920,7 @@ module.exports =
 						"commands-legacy/change-licenses",
 						"commands-legacy/create-deployment-license",
 						"commands-legacy/is-license-available",
-						"commands-legacy/license-info",
+						"commands/license-info",
 						"commands-legacy/license-usage",
 						"commands-legacy/refresh-license"
 					]
@@ -959,7 +931,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'List Box',
-						slug: '/category/commands/List Box',
 						keywords: ['List Box'],
 						image: '/img/docusaurus.png',
 						},
@@ -1031,7 +1002,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Mail',
-						slug: '/category/commands/Mail',
 						keywords: ['Mail'],
 						image: '/img/docusaurus.png',
 						},
@@ -1050,7 +1020,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Math',
-						slug: '/category/commands/Math',
 						keywords: ['Math'],
 						image: '/img/docusaurus.png',
 						},
@@ -1079,7 +1048,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Menus',
-						slug: '/category/commands/Menus',
 						keywords: ['Menus'],
 						image: '/img/docusaurus.png',
 						},
@@ -1126,7 +1094,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Messages',
-						slug: '/category/commands/Messages',
 						keywords: ['Messages'],
 						image: '/img/docusaurus.png',
 						},
@@ -1147,7 +1114,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Named Selections',
-						slug: '/category/commands/Named Selections',
 						keywords: ['Named Selections'],
 						image: '/img/docusaurus.png',
 						},
@@ -1164,7 +1130,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Objects (Forms)',
-						slug: '/category/commands/Objects (Forms)',
 						keywords: ['Objects (Forms)'],
 						image: '/img/docusaurus.png',
 						},
@@ -1271,7 +1236,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Objects (Language)',
-						slug: '/category/commands/Objects (Language)',
 						keywords: ['Objects (Language)'],
 						image: '/img/docusaurus.png',
 						},
@@ -1304,7 +1268,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'On a Series',
-						slug: '/category/commands/On a Series',
 						keywords: ['On a Series'],
 						image: '/img/docusaurus.png',
 						},
@@ -1324,7 +1287,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'PHP',
-						slug: '/category/commands/PHP',
 						keywords: ['PHP'],
 						image: '/img/docusaurus.png',
 						},
@@ -1341,7 +1303,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Pasteboard',
-						slug: '/category/commands/Pasteboard',
 						keywords: ['Pasteboard'],
 						image: '/img/docusaurus.png',
 						},
@@ -1365,7 +1326,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Pictures',
-						slug: '/category/commands/Pictures',
 						keywords: ['Pictures'],
 						image: '/img/docusaurus.png',
 						},
@@ -1401,7 +1361,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Printing',
-						slug: '/category/commands/Printing',
 						keywords: ['Printing'],
 						image: '/img/docusaurus.png',
 						},
@@ -1446,7 +1405,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Process (Communications)',
-						slug: '/category/commands/Process (Communications)',
 						keywords: ['Process (Communications)'],
 						image: '/img/docusaurus.png',
 						},
@@ -1468,7 +1426,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Process (User Interface)',
-						slug: '/category/commands/Process (User Interface)',
 						keywords: ['Process (User Interface)'],
 						image: '/img/docusaurus.png',
 						},
@@ -1485,7 +1442,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Processes',
-						slug: '/category/commands/Processes',
 						keywords: ['Processes'],
 						image: '/img/docusaurus.png',
 						},
@@ -1511,7 +1467,7 @@ module.exports =
 						"commands-legacy/resume-process",
 						"commands/session",
 						"commands/session-info",
-						"commands-legacy/session-storage",
+						"commands/session-storage",
 						"commands-legacy/unregister-client"
 					]
 					},
@@ -1521,7 +1477,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Queries',
-						slug: '/category/commands/Queries',
 						keywords: ['Queries'],
 						image: '/img/docusaurus.png',
 						},
@@ -1555,7 +1510,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Quick Report',
-						slug: '/category/commands/Quick Report',
 						keywords: ['Quick Report'],
 						image: '/img/docusaurus.png',
 						},
@@ -1614,7 +1568,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Record Locking',
-						slug: '/category/commands/Record Locking',
 						keywords: ['Record Locking'],
 						image: '/img/docusaurus.png',
 						},
@@ -1635,7 +1588,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Records',
-						slug: '/category/commands/Records',
 						keywords: ['Records'],
 						image: '/img/docusaurus.png',
 						},
@@ -1662,7 +1614,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Relations',
-						slug: '/category/commands/Relations',
 						keywords: ['Relations'],
 						image: '/img/docusaurus.png',
 						},
@@ -1687,7 +1638,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Resources',
-						slug: '/category/commands/Resources',
 						keywords: ['Resources'],
 						image: '/img/docusaurus.png',
 						},
@@ -1712,7 +1662,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'SQL',
-						slug: '/category/commands/SQL',
 						keywords: ['SQL'],
 						image: '/img/docusaurus.png',
 						},
@@ -1747,7 +1696,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'SVG',
-						slug: '/category/commands/SVG',
 						keywords: ['SVG'],
 						image: '/img/docusaurus.png',
 						},
@@ -1766,7 +1714,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Secured Protocol',
-						slug: '/category/commands/Secured Protocol',
 						keywords: ['Secured Protocol'],
 						image: '/img/docusaurus.png',
 						},
@@ -1781,7 +1728,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Selection',
-						slug: '/category/commands/Selection',
 						keywords: ['Selection'],
 						image: '/img/docusaurus.png',
 						},
@@ -1816,7 +1762,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Sets',
-						slug: '/category/commands/Sets',
 						keywords: ['Sets'],
 						image: '/img/docusaurus.png',
 						},
@@ -1844,7 +1789,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Spell Checker',
-						slug: '/category/commands/Spell Checker',
 						keywords: ['Spell Checker'],
 						image: '/img/docusaurus.png',
 						},
@@ -1863,7 +1807,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'String',
-						slug: '/category/commands/String',
 						keywords: ['String'],
 						image: '/img/docusaurus.png',
 						},
@@ -1896,7 +1839,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Structure Access',
-						slug: '/category/commands/Structure Access',
 						keywords: ['Structure Access'],
 						image: '/img/docusaurus.png',
 						},
@@ -1933,7 +1875,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Styled Text',
-						slug: '/category/commands/Styled Text',
 						keywords: ['Styled Text'],
 						image: '/img/docusaurus.png',
 						},
@@ -1961,7 +1902,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Subrecords',
-						slug: '/category/commands/Subrecords',
 						keywords: ['Subrecords'],
 						image: '/img/docusaurus.png',
 						},
@@ -1975,7 +1915,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'System Documents',
-						slug: '/category/commands/System Documents',
 						keywords: ['System Documents'],
 						image: '/img/docusaurus.png',
 						},
@@ -2021,7 +1960,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'System Environment',
-						slug: '/category/commands/System Environment',
 						keywords: ['System Environment'],
 						image: '/img/docusaurus.png',
 						},
@@ -2058,7 +1996,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Table',
-						slug: '/category/commands/Table',
 						keywords: ['Table'],
 						image: '/img/docusaurus.png',
 						},
@@ -2075,7 +2012,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Tools',
-						slug: '/category/commands/Tools',
 						keywords: ['Tools'],
 						image: '/img/docusaurus.png',
 						},
@@ -2107,7 +2043,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Transactions',
-						slug: '/category/commands/Transactions',
 						keywords: ['Transactions'],
 						image: '/img/docusaurus.png',
 						},
@@ -2128,7 +2063,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Triggers',
-						slug: '/category/commands/Triggers',
 						keywords: ['Triggers'],
 						image: '/img/docusaurus.png',
 						},
@@ -2144,7 +2078,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'User Interface',
-						slug: '/category/commands/User Interface',
 						keywords: ['User Interface'],
 						image: '/img/docusaurus.png',
 						},
@@ -2183,7 +2116,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Users and Groups',
-						slug: '/category/commands/Users and Groups',
 						keywords: ['Users and Groups'],
 						image: '/img/docusaurus.png',
 						},
@@ -2218,7 +2150,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Variables',
-						slug: '/category/commands/Variables',
 						keywords: ['Variables'],
 						image: '/img/docusaurus.png',
 						},
@@ -2234,7 +2165,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Web Area',
-						slug: '/category/commands/Web Area',
 						keywords: ['Web Area'],
 						image: '/img/docusaurus.png',
 						},
@@ -2274,7 +2204,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Web Server',
-						slug: '/category/commands/Web Server',
 						keywords: ['Web Server'],
 						image: '/img/docusaurus.png',
 						},
@@ -2314,7 +2243,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Web Services (Client)',
-						slug: '/category/commands/Web Services (Client)',
 						keywords: ['Web Services (Client)'],
 						image: '/img/docusaurus.png',
 						},
@@ -2333,7 +2261,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Web Services (Server)',
-						slug: '/category/commands/Web Services (Server)',
 						keywords: ['Web Services (Server)'],
 						image: '/img/docusaurus.png',
 						},
@@ -2351,7 +2278,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Windows',
-						slug: '/category/commands/Windows',
 						keywords: ['Windows'],
 						image: '/img/docusaurus.png',
 						},
@@ -2394,7 +2320,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'XML DOM',
-						slug: '/category/commands/XML DOM',
 						keywords: ['XML DOM'],
 						image: '/img/docusaurus.png',
 						},
@@ -2442,7 +2367,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'XML SAX',
-						slug: '/category/commands/XML SAX',
 						keywords: ['XML SAX'],
 						image: '/img/docusaurus.png',
 						},
@@ -2472,7 +2396,6 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'XML',
-						slug: '/category/commands/XML',
 						keywords: ['XML'],
 						image: '/img/docusaurus.png',
 						},

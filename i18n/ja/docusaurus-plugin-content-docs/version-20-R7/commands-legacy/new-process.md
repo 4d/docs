@@ -5,7 +5,7 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

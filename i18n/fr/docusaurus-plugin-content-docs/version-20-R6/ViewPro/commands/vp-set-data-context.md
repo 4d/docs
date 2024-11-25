@@ -19,7 +19,7 @@ title: VP SET DATA CONTEXT
 
 | Paramètres | Type       |    | Description                                                 |                  |
 | ---------- | ---------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                     |                  |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                     |                  |
 | dataObj    | Object     | -> | Objet de données à charger dans le contexte de données      |                  |
 | dataColl   | Collection | -> | Collection de données à charger dans le contexte de données |                  |
 | options    | Object     | -> | Options supplémentaires                                     |                  |

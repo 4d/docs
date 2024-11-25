@@ -5,14 +5,14 @@ slug: /commands/get-menu-item-mark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* ; *menuItem* {; *process*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* ; *menuItem* {; *process*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item mark.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | String | &#8592; | Current menu item mark |
+| Function result | Text | &#8592; | Current menu item mark |
 
 <!-- END REF-->
 

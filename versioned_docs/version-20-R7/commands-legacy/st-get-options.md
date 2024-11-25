@@ -30,9 +30,9 @@ Pass the code of the option to get in the *option* parameter. The command return
 
 | Constant                    | Type    | Value | Comment                                                      |
 | --------------------------- | ------- | ----- | ------------------------------------------------------------ |
-| ST Expressions display mode | Longint | 1     | The *value* parameter can contain ST Values or ST References |
-| ST References               | Longint | 1     | Display source strings of expressions                        |
-| ST Values                   | Longint | 0     | Display computed values of expressions                       |
+| ST Expressions display mode | Integer | 1     | The *value* parameter can contain ST Values or ST References |
+| ST References               | Integer | 1     | Display source strings of expressions                        |
+| ST Values                   | Integer | 0     | Display computed values of expressions                       |
 
 #### See also 
 

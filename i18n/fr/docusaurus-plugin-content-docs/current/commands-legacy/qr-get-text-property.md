@@ -5,7 +5,7 @@ slug: /commands/qr-get-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *zone* ; *numColonne* ; *numLigne* ; *propriété* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *zone* ; *numColonne* ; *numLigne* ; *propriété* ) : any<!-- END REF-->
 <!--REF #_command_.QR Get text property.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,7 @@ Passez dans *numLigne* la référence de la ligne de la cellule. Vous pouvez pas
 
 * une valeur positive désignant la ligne de sous-total correspondante,
 * une des constantes du thème *QR Lignes pour Propriétés* :  
+
 | Constante      | Type        | Valeur | Comment               |  
 | -------------- | ----------- | ------ | --------------------- |  
 | qr detail      | Entier long | \-2    | Zone Détail de l'état |  

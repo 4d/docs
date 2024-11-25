@@ -153,7 +153,7 @@ Las diferencias se devuelven como una colección de objetos cuyas propiedades so
 
 | Nombre de propiedad | Tipo                                      | Descripción                             |
 | ------------------- | ----------------------------------------- | --------------------------------------- |
-| attributeName       | String                                    | Nombre del atributo                     |
+| attributeName       | Text                                      | Nombre del atributo                     |
 | value               | cualquiera - Depende del tipo de atributo | Valor del atributo en la entidad        |
 | otherValue          | cualquiera - Depende del tipo de atributo | Valor del atributo en *entityToCompare* |
 
@@ -906,7 +906,7 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 
 #### Descripción
 
-La función `.last()` <!-- REF #EntityClass.first().Summary --> devuelve una referencia a la entidad en la última posición de la selección de entidades a la que pertenece la entidad<!-- END REF -->.
+La función `.last()` <!-- REF #EntityClass.last().Summary --> devuelve una referencia a la entidad en la última posición de la selección de entidades a la que pertenece la entidad<!-- END REF -->.
 
 Si la entidad no pertenece a ninguna entity selection (es decir, [.getSelection( )](#getselection) devuelve Null), la función devuelve un valor Null.
 

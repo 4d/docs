@@ -5,7 +5,7 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) -> Function result<!-- END REF-->
+<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,11 +41,11 @@ Each error object of the *errors* collection contains the following properties:
 | **Property name** | **Type** | **Description**                                                                                                                                                                            |
 | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | *code*            | Number   | Error code                                                                                                                                                                                 |
-| *jsonPath*        | String   | JSON path that cannot be validated in *vJson*                                                                                                                                              |
+| *jsonPath*        | Text   | JSON path that cannot be validated in *vJson*                                                                                                                                              |
 | *line*            | Number   | Line number of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](json-parse.md) with the *\** parameter. Otherwise, the property is omitted. |
-| *message*         | String   | Error message                                                                                                                                                                              |
+| *message*         | Text   | Error message                                                                                                                                                                              |
 | *offset*          | Number   | Line offset of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](json-parse.md) with the *\** parameter. Otherwise, the property is omitted. |
-| *schemaPaths*     | String   | JSON path in the schema that causes the validation error                                                                                                                                   |
+| *schemaPaths*     | Text   | JSON path in the schema that causes the validation error                                                                                                                                   |
 
 ##### Error management 
 

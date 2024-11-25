@@ -5,7 +5,7 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *cheminDossier* {; *options*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *cheminDossier* {; *options*} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

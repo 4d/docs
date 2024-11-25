@@ -5,12 +5,12 @@ slug: /commands/get-adjusted-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field for which the priority of the index(es) has to be retrieved |
-| Function result | Longint | &#8592; | Current priority value for index(es) |
+| Function result | Integer | &#8592; | Current priority value for index(es) |
 
 <!-- END REF-->
 

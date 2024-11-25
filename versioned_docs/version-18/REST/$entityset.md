@@ -9,7 +9,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**$entityset/\{entitySetID\}**](#entitysetentitySetID)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
+|[**$entityset/\{entitySetID\}**](#entitysetentitysetid)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
 |[**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection)|`/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER`|Creates a new entity set from comparing existing entity sets|
 
 ## $entityset/\{entitySetID\}
@@ -36,8 +36,8 @@ Create another entity set based on previously created entity sets
 
 |Parameter|Type|Description |
 |---|---|---|
-|$operator |String |One of the logical operators to test with the other entity set| 
-|$otherCollection |  String | Entity set ID |
+|$operator |Text |One of the logical operators to test with the other entity set| 
+|$otherCollection |  Text | Entity set ID |
 
 ### Description
 

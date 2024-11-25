@@ -5,11 +5,11 @@ slug: /commands/spell-get-current-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL Get current dictionary.Syntax-->**SPELL Get current dictionary**  -> Function result<!-- END REF-->
+<!--REF #_command_.SPELL Get current dictionary.Syntax-->**SPELL Get current dictionary**  : Integer<!-- END REF-->
 <!--REF #_command_.SPELL Get current dictionary.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#8592; | ID of dictionary used for spell check |
+| Function result | Integer | &#8592; | ID of dictionary used for spell check |
 
 <!-- END REF-->
 

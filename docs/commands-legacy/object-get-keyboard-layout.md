@@ -5,13 +5,13 @@ slug: /commands/object-get-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable or field |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable or field (if * is omitted) |
-| Function result | String | &#8592; | Language code of layout, "" = no layout |
+| Function result | Text | &#8592; | Language code of layout, "" = no layout |
 
 <!-- END REF-->
 

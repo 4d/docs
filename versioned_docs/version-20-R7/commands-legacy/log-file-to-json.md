@@ -34,8 +34,8 @@ When you export the current log file, the *fieldAtt* parameter allows you to def
 
 | Constant                    | Type    | Value | Comment                                                                             |
 | --------------------------- | ------- | ----- | ----------------------------------------------------------------------------------- |
-| Field attribute with name   | Longint | 2     | Fields are identified by their name. Example: {"LastName":"Jones"}                  |
-| Field attribute with number | Longint | 1     | Fields are identified by their number (default if omitted). Example: {"5":"Jones"}. |
+| Field attribute with name   | Integer | 2     | Fields are identified by their name. Example: {"LastName":"Jones"}                  |
+| Field attribute with number | Integer | 1     | Fields are identified by their number (default if omitted). Example: {"5":"Jones"}. |
 
 **Note:** When you export an external log file, fields are always identified by their number.
 

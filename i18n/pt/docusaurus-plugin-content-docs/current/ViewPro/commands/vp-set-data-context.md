@@ -19,7 +19,7 @@ title: VP SET DATA CONTEXT
 
 | Parâmetro  | Tipo       |    | Descrição                                        |                  |
 | ---------- | ---------- | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Object     | -> | Nome de objeto formulário área 4D View Pro       |                  |
+| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro       |                  |
 | dataObj    | Object     | -> | Objeto dados a carregar no contexto de dados     |                  |
 | dataColl   | Collection | -> | Recolha de dados a carregar no contexto de dados |                  |
 | options    | Object     | -> | Opções adicionais                                |                  |
@@ -33,7 +33,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. As imagens são convertidas em esquemas URI de dados.
 
-To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
+Para passar um valor de tempo em *dataObj* ou *dataColl*, encapsule-o em um objeto com as seguintes propriedades (consulte [exemplo 4](#example-4---date-and-time-syntax)):
 
 | Propriedade | Tipo                                     | Descrição                                                               |
 | ----------- | ---------------------------------------- | ----------------------------------------------------------------------- |

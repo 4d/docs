@@ -5,12 +5,12 @@ slug: /commands/records-in-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *aTable* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return the number of records, or Default table, if omitted |
-| Function result | Longint | &#8592; | Total number of records in the table |
+| Function result | Integer | &#8592; | Total number of records in the table |
 
 <!-- END REF-->
 

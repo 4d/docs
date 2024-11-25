@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* ; *xPath* {; *attribName* ; *attrValue*} {; *attribName2* ; *attrValue2* ; ... ; *attribNameN* ; *attrValueN*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* ; *xPath* {; *attribName* ; *attrValue*} {; *attribName2* ; *attrValue2* ; ... ; *attribNameN* ; *attrValueN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | xPath | Text | &#8594;  | XPath path of the XML element to create |
 | attribName | Text | &#8594;  | Attribute to set |
 | attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
-| Function result | String | &#8592; | Reference of the created XML element |
+| Function result | Text | &#8592; | Reference of the created XML element |
 
 <!-- END REF-->
 

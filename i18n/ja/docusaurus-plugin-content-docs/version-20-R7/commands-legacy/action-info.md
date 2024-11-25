@@ -5,7 +5,7 @@ slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *target*} ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *target*} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

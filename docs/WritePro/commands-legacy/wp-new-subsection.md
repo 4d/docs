@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-new-subsection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New subsection.Syntax-->**WP New subsection** ( *wpSection* ; *subSectionType* ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP New subsection.Syntax-->**WP New subsection** ( *wpSection* ; *subSectionType* ) : Object<!-- END REF-->
 <!--REF #_command_.WP New subsection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpSection | Object | &#8594;  | 4D Write Pro section |
-| subSectionType | Longint | &#8594;  | Subsection type (wk first page, wk left page, or wk right page) |
+| subSectionType | Integer | &#8594;  | Subsection type (wk first page, wk left page, or wk right page) |
 | Function result | Object | &#8592; | New subsection |
 
 <!-- END REF-->
@@ -25,9 +25,9 @@ The *subSectionType* parameter specifies the subsection to create. You can pass 
   
 | Constant      | Type    | Value |
 | ------------- | ------- | ----- |
-| wk first page | Longint | 1     |
-| wk left page  | Longint | 2     |
-| wk right page | Longint | 3     |
+| wk first page | Integer | 1     |
+| wk left page  | Integer | 2     |
+| wk right page | Integer | 3     |
 
 **Note:** Creating a left page or right page subsection will automatically create the opposite subsection. For example, if you create a left page subsection, the right page subsection is automatically defined.
 

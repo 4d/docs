@@ -31,7 +31,7 @@ Um método de projecto pode ter uma das seguintes funções, dependendo de como 
 ### Sub-rotinas e funções
 Uma sub-rotina é um método de projecto que pode ser pensado como um servo. Executa as tarefas que outros métodos lhe pedem para executar. Uma função é uma sub-rotina que devolve um valor ao método que a chamou.
 
-When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#predefined-methods) in the same way that you call 4D’s built-in commands. Um método de projecto utilizado desta forma é chamado de sub-rotina.
+When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#specialized-methods) in the same way that you call 4D’s built-in commands. Um método de projecto utilizado desta forma é chamado de sub-rotina.
 
 Utiliza sub-rotinas para:
 
@@ -235,7 +235,7 @@ Alguns usos típicos da recursividade em 4D são:
 **Importante:** As chamadas recursivas devem sempre terminar em algum momento. No exemplo, o método `Genealogia de` deixa de se chamar a si próprio quando a consulta não devolve registos. Sem este teste de condição, o método chamar-se-ia indefinidamente; eventualmente, 4D retornaria um erro "Stack Full" porque deixaria de ter espaço para "empilhar" as chamadas (bem como os parâmetros e variáveis locais utilizados no método).
 
 
-## Métodos especializados
+## Métodos especializados {#specialized-methods}
 
 In addition to generic **project methods**, 4D supports several specific method types, that are automatically called depending on events:
 

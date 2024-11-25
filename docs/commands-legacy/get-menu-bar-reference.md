@@ -5,12 +5,12 @@ slug: /commands/get-menu-bar-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *process* )} -> Function result<!-- END REF-->
+<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *process* )} : Text<!-- END REF-->
 <!--REF #_command_.Get menu bar reference.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Reference number of process |
-| Function result | MenuRef | &#8592; | Menu bar ID |
+| Function result | Text | &#8592; | Menu bar ID |
 
 <!-- END REF-->
 

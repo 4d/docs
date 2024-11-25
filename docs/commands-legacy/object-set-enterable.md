@@ -32,7 +32,8 @@ You can pass either a boolean value or a Longint value in *enterable*:
 When *enterable* is False:  
    * in binary databases, the user cannot enter data and the *focusable* attribute depends on the **Focusable** option set in the Property list.  
    * in projects, the user cannot enter data and the object is focusable.
-* Longint - passing a longint value in *enterable* allows you to control also the *focusable* property for **Inputs** and **4D Write Pro areas**. You can use one of the following constants:  
+* Longint - passing a longint value in *enterable* allows you to control also the *focusable* property for **Inputs** and **4D Write Pro areas**. You can use one of the following constants:
+  
 | Constant                        | Value | Comment                                                                                                                                                                |  
 | ------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | obk enterable                   | 1     | Users can enter values in the object and the object is focusable.                                                                                                      |  

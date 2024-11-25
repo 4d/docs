@@ -39,6 +39,7 @@ No parâmetro *modo*, passe uma das seguintes constantes para indicar o modo de 
 | wk replace | Inteiro longo | 0     | Substituir e atualizar conteúdos da faixa; a nova faixa contèm os conteúdos inseridos.                               |
 
 * Se *objRange for* uma range, pode utilizar o parâmetro opcional *actRange*, para passar uma das constantes abaixo para especificar se a tabela inserida se inclui ou não na range resultante:  
+
 | Constante             | Tipo          | Valor | Comentário                                                                                     |  
 | --------------------- | ------------- | ----- | ---------------------------------------------------------------------------------------------- |  
 | wk exclude from range | Inteiro longo | 1     | Insere conteùdos ao fim da faixa e atualiza a faixa para menter apenas conteúdos anteriores.   |  

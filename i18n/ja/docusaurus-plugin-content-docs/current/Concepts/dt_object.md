@@ -1,6 +1,6 @@
 ---
 id: object
-title: オブジェクト
+title: Object
 ---
 
 オブジェクト型の変数・フィールド・式にはさまざまなデータを格納することができます。 4D のネイティブなオブジェクトの構造は、よくある "プロパティ/値" (または "属性/値") というペア (連想配列) に基づいています。 これらオブジェクトの記法は JSON をもとにしていますが、完全に同じというわけではありません。
@@ -9,7 +9,7 @@ title: オブジェクト
 
 - プロパティ値は以下のどれかの型で表現されます:
   - 数値 (実数、整数、等)
-  - テキスト
+  - text
   - null
   - ブール
   - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
@@ -47,7 +47,7 @@ title: オブジェクト
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](https://doc.4d.com/4dv20/help/command/ja/page1314.html) や [`File`](../commands/file.md) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 

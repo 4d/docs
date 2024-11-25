@@ -5,7 +5,7 @@ slug: /commands/euro-converter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *value* ; *fromCurrency* ; *toCurrency* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *value* ; *fromCurrency* ; *toCurrency* ) : Real<!-- END REF-->
 <!--REF #_command_.Euro converter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-get-breaks
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *targetObj* {; *breakType*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *targetObj* {; *breakType*} ) : Collection<!-- END REF-->
 <!--REF #_command_.WP Get breaks.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| breakType | Longint | &#8594;  | Type of breaks to return |
+| breakType | Integer | &#8594;  | Type of breaks to return |
 | Function result | Collection | &#8592; | Collection of ranges |
 
 <!-- END REF-->

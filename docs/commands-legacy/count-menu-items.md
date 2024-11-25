@@ -5,13 +5,13 @@ slug: /commands/count-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *process*} ) -> Function result<!-- END REF-->
+<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menu items.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | process | Integer | &#8594;  | Process reference number |
-| Function result | Longint | &#8592; | Number of menu items in the menu |
+| Function result | Integer | &#8592; | Number of menu items in the menu |
 
 <!-- END REF-->
 

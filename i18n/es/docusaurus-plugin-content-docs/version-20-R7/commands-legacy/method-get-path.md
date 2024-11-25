@@ -5,7 +5,7 @@ slug: /commands/method-get-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *tipoMetodo* {; *laTabla*}{; *nomObjeto*{; *nomObjetoForm*}}{; *} ) -> resultado<!-- END REF-->
+<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *tipoMetodo* {; *laTabla*}{; *nomObjeto*{; *nomObjetoForm*}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|20 R7|Support of sessionID parameter|
+|20 R7|Support of *sessionID* parameter|
 
 </details>
 
@@ -81,7 +81,7 @@ You want to get the collection of all user sessions:
  
  var $o : Object
  var $i : Integer
- vat $processName;$userName : Text
+ var $processName;$userName : Text
 
  
  $o:=Process activity //Get process & session info
@@ -108,5 +108,5 @@ You want to get all processes related to the current session:
 
 #### See also 
 
-[Session storage](../commands-legacy/session-storage.md)  
+[Session storage](session-storage.md)  
 [WEB Get server info](../commands-legacy/web-get-server-info.md)  

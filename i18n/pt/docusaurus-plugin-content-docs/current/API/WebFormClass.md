@@ -172,7 +172,7 @@ For more information, please refer to the [`webForm` command description in the 
 
 ## Web Event
 
-<!-- REF #_command_.Web Event.Syntax -->**Web Event** : object<!-- END REF -->
+<!-- REF #_command_.Web Event.Syntax -->**Web Event** : Object<!-- END REF -->
 
 <!-- REF #_command_.Web Event.Params -->
 

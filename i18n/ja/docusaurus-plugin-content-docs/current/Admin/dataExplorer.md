@@ -209,10 +209,10 @@ firstname = "Marie Sophie" AND manager.lastname = "@th"
 次のスカラー属性値が編集できます:
 
 - テキスト
-- boolean
-- numeric
-- date
-- time
+- ブール
+- 数値
+- 日付
+- 時間
 - ピクチャー (ピクチャーをアップロードまたはドラッグ＆ドロップできます)
 - オブジェクト (JSON 文字列)
 

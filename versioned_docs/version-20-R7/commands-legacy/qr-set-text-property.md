@@ -32,13 +32,14 @@ displayed_sidebar: docs
 
 * a positive value designating the corresponding subtotal (break) level,
 * one of the constants from the *QR Rows for Properties* theme:  
+
 | Constant       | Type    | Value | Comment               |  
 | -------------- | ------- | ----- | --------------------- |  
-| qr detail      | Longint | \-2   | Detail area of report |  
-| qr footer      | Longint | \-5   | Page footer           |  
-| qr grand total | Longint | \-3   | Grand total area      |  
-| qr header      | Longint | \-4   | Page header           |  
-| qr title       | Longint | \-1   | Title of report       |
+| qr detail      | Integer | \-2   | Detail area of report |  
+| qr footer      | Integer | \-5   | Page footer           |  
+| qr grand total | Integer | \-3   | Grand total area      |  
+| qr header      | Integer | \-4   | Page header           |  
+| qr title       | Integer | \-1   | Title of report       |
 
 **Note:** When passing -4 or -5 as *rowNum*, you still need to pass a column number in *colNum*, even if it is not used.
 
@@ -48,16 +49,16 @@ displayed_sidebar: docs
 
 | Constant                      | Type    | Value | Comment                                                                          |
 | ----------------------------- | ------- | ----- | -------------------------------------------------------------------------------- |
-| \_o\_qr font                  | Longint | 1     | Obsolete since 4D v14R3 (use qr font name)                                       |
-| qr alternate background color | Longint | 9     | Alternate background color number                                                |
-| qr background color           | Longint | 8     | Background color number                                                          |
-| qr bold                       | Longint | 3     | Bold style attribute (0 or 1)                                                    |
-| qr font name                  | Longint | 10    | Name of font as returned for example by the [FONT LIST](font-list.md) command    |
-| qr font size                  | Longint | 2     | Font size expressed in points (9 to 255)                                         |
-| qr italic                     | Longint | 4     | Italic style attribute (0 or 1)                                                  |
-| qr justification              | Longint | 7     | Justification attribute (0 for default, 1 for left, 2 for center or 3 for right) |
-| qr text color                 | Longint | 6     | Color number attribute (Longint)                                                 |
-| qr underline                  | Longint | 5     | Underline style attribute (0 or 1)                                               |
+| \_o\_qr font                  | Integer | 1     | Obsolete since 4D v14R3 (use qr font name)                                       |
+| qr alternate background color | Integer | 9     | Alternate background color number                                                |
+| qr background color           | Integer | 8     | Background color number                                                          |
+| qr bold                       | Integer | 3     | Bold style attribute (0 or 1)                                                    |
+| qr font name                  | Integer | 10    | Name of font as returned for example by the [FONT LIST](font-list.md) command    |
+| qr font size                  | Integer | 2     | Font size expressed in points (9 to 255)                                         |
+| qr italic                     | Integer | 4     | Italic style attribute (0 or 1)                                                  |
+| qr justification              | Integer | 7     | Justification attribute (0 for default, 1 for left, 2 for center or 3 for right) |
+| qr text color                 | Integer | 6     | Color number attribute (Longint)                                                 |
+| qr underline                  | Integer | 5     | Underline style attribute (0 or 1)                                               |
 
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *colNum* number, the error -9852 will be generated.  

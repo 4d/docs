@@ -5,12 +5,12 @@ slug: /commands/last-field-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last field number.Syntax-->**Last field number** ( tableNum | tablePtr ) -> Function result<!-- END REF-->
+<!--REF #_command_.Last field number.Syntax-->**Last field number** ( tableNum | tablePtr ) : Integer<!-- END REF-->
 <!--REF #_command_.Last field number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableNum &#124; tablePtr | Longint, Pointer | &#8594;  | Table number or Pointer to table |
-| Function result | Longint | &#8592; | Highest field number in table |
+| Function result | Integer | &#8592; | Highest field number in table |
 
 <!-- END REF-->
 

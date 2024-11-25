@@ -5,7 +5,7 @@ slug: /commands/object-get-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *objeto* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *objeto* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get style sheet.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -31,6 +31,7 @@ El comando puede devolver:
 * un nombre de hoja de estilos,
 * una cadena vacía ("") si no se asigna ninguna hoja de estilos o
 * si una hoja de estilo "Automático" está asignada, una de las siguientes constantes que se encuentran en el tema "*Estilos de fuente*":  
+
 | Constante                         | Tipo   | Valor                               | Comentario                                                                                                                 |  
 | --------------------------------- | ------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |  
 | Automatic style sheet             | Cadena | \_\_automatic\_\_                   | Se utiliza de forma predeterminada para todos los objetos                                                                  |  

@@ -30,9 +30,9 @@ The *settingsType* parameter is taken into account in databases configured in "U
 
 | Constant               | Type    | Value | Comment                                                                                                                                                                               |
 | ---------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Structure settings     | Longint | 0     | Access to "Structure settings" (default value if parameter omitted). In this mode, values used for *selector* are identical to those in standard mode.                                |
-| User settings          | Longint | 1     | Access to "User settings". In this mode, only certain keys can be used in the *selector* parameter                                                                                    |
-| User settings for data | Longint | 2     | Access to "User settings for data file", that is, user settings stored at the same level as the data file. In this mode, only certain keys can be used with the *selector* parameter. |
+| Structure settings     | Integer | 0     | Access to "Structure settings" (default value if parameter omitted). In this mode, values used for *selector* are identical to those in standard mode.                                |
+| User settings          | Integer | 1     | Access to "User settings". In this mode, only certain keys can be used in the *selector* parameter                                                                                    |
+| User settings for data | Integer | 2     | Access to "User settings for data file", that is, user settings stored at the same level as the data file. In this mode, only certain keys can be used with the *selector* parameter. |
 
 If you pass an invalid key, the first page of the Database Settings dialog box is displayed. 
 

@@ -5,11 +5,11 @@ slug: /commands/current-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current form window.Syntax-->**Current form window**  -> Function result<!-- END REF-->
+<!--REF #_command_.Current form window.Syntax-->**Current form window**  : Integer<!-- END REF-->
 <!--REF #_command_.Current form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | WinRef | &#8592; | Current form window reference number |
+| Function result | Integer | &#8592; | Current form window reference number |
 
 <!-- END REF-->
 

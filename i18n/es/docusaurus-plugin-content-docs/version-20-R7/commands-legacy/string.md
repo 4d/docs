@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expresion* {; *formato* {; *agregarHora*}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expresion* {; *formato* {; *agregarHora*}} ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -60,8 +60,9 @@ Si *expresion* es de tipo Fecha, la cadena se devuelve en el formato por defecto
 
 De lo contrario, en el parámetro *formato*, puede pasar:
 
-* o un formato predefinido disponible a través de las siguientes constantes del tema *Formatos de salida de fechas* (valor longint):  
-| Constante                   | Valor | Comentario                                                                                                                 |  
+* o un formato predefinido disponible a través de las siguientes constantes del tema *Formatos de salida de fechas* (valor longint): 
+ 
+|Constante                   | Valor | Comentario                                                                                                                 |  
 | --------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null date          | 100   | A añadir a la constante de formato. Indica que en caso de valor null, 4D debe devolver una cadena vacía en lugar de ceros. |  
 | Date RFC 1123               | 10    | Fri, 10 Sep 2010 13:07:20 GMT                                                                                              |  
@@ -132,8 +133,9 @@ La hora expresada tiene en cuenta la hora del huso horario (zona GMT). Si pasa u
 **Expresiones de tipo Hora**  
 Si *expresion* es de tipo Hora, la cadena se devuelve utilizando el formato por defecto HH:MM:SS. Si es de otra forma, en el parámetro *formato*, puede pasar:
 
-* o un formato predefinido disponible a través de las siguientes constantes del tema *Formatos de salida de hora* (valor longint):  
-| Constante                    | Valor | Comentario                                                                                                                                                                                                                          |  
+* o un formato predefinido disponible a través de las siguientes constantes del tema *Formatos de salida de hora* (valor longint): 
+ 
+|Constante                    | Valor | Comentario                                                                                                                                                                                                                          |  
 | ---------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Blank if null time           | 100   | "" en lugar de 0                                                                                                                                                                                                                    |  
 | HH MM                        | 2     |                                                                                                                                                                                                                                     |  

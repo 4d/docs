@@ -44,10 +44,10 @@ You specify the font style of the item in the *styles* parameter. You pass a com
 
 | Constant  | Type    | Value |
 | --------- | ------- | ----- |
-| Bold      | Longint | 1     |
-| Italic    | Longint | 2     |
-| Plain     | Longint | 0     |
-| Underline | Longint | 4     |
+| Bold      | Integer | 1     |
+| Italic    | Integer | 2     |
+| Plain     | Integer | 0     |
+| Underline | Integer | 4     |
 
 In the *icon* parameter, you can pass a picture to be used as the icon for the item. You can use a picture file reference or (binary databases only) a library picture.
 

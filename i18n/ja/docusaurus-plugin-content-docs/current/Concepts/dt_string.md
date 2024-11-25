@@ -39,17 +39,17 @@ title: 文字列
 
 | 演算                         | シンタックス                                    | 戻り値     | 式                                       | 値        |
 | -------------------------- | ----------------------------------------- | ------- | --------------------------------------- | -------- |
-| 連結 (結合) | String + String                           | String  | "abc" + "def"                           | "abcdef" |
-| 繰り返し                       | String \* Number                          | String  | "ab" \* 3                               | "ababab" |
+| 連結 (結合) | String + String                           | Text    | "abc" + "def"                           | "abcdef" |
+| 繰り返し                       | String \* Number                          | Text    | "ab" \* 3                               | "ababab" |
 | 等しい                        | String = String                           | Boolean | "abc" = "abc"                           | true     |
 |                            |                                           |         | "abc" = "abd"                           | false    |
 | 異なる                        | String # String                           | Boolean | "abc" # "abd"                           | true     |
 |                            |                                           |         | "abc" # "abc"                           | false    |
-| 大きい                        | 文字列 > 文字列                                 | Boolean | "abd" > "abc"                           | true     |
+| 大きい                        | String > String                           | Boolean | "abd" > "abc"                           | true     |
 |                            |                                           |         | "abc" > "abc"                           | false    |
-| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"  | true     |
+| 小さい                        | String < String  | Boolean | "abc" < "abd"  | true     |
 |                            |                                           |         | "abc" < "abc"  | false    |
-| 以上                         | 文字列 >= 文字列                                | Boolean | "abd" >= "abc"                          | true     |
+| 以上                         | String >= String                          | Boolean | "abd" >= "abc"                          | true     |
 |                            |                                           |         | "abc" >= "abd"                          | false    |
 | 以下                         | String <= String | Boolean | "abc" <= "abd" | true     |
 |                            |                                           |         | "abd" <= "abc" | false    |

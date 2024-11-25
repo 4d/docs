@@ -141,7 +141,7 @@ Quiere crear una nueva llave en la clase `CryptoKey`:
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-You want to list 4D built-in classes:
+Quiere listar las clases integradas en 4D:
 
 ```4d
  var $keys : collection
@@ -322,7 +322,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 ```4d
 // Class: MyClass
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
-// code
+// código
 ```
 
 Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
@@ -703,7 +703,7 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 Una **clase singleton** es una clase usuario que sólo produce una única instancia. For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-### Singletons types
+### Tipos de Singletons
 
 4D soporta tres tipos de singletons:
 
@@ -729,9 +729,9 @@ The following table indicates the scope of a singleton instance depending on whe
 
 Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
 
-### Creating and using singletons
+### Crear y utilizar singletons
 
-You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) antes del [`Class constructor`](#class-constructor):
 
 - To declare a (process) singleton class, write `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
@@ -783,7 +783,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-#### Shared singleton
+#### Singleton compartido
 
 ```4d
 //Class VehicleFactory

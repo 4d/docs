@@ -83,7 +83,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- quando o servidor da Web recebe um URL que começa com `rest/` e o servidor REST é iniciado (nesse caso, a autenticação é tratada por meio da função [`ds.authentify`](../REST/authUsers#force-login-mode) ou (obsoleto) o método de banco de dados [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou [Configurações de estrutura](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxe
 
@@ -102,12 +102,12 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 Estes parâmetros devem ser declarados da seguinte forma:
 
 ```4d
-//On Web Authentication database method
- 
+//Método base On Web Authentication
+
  C_TEXT($1;$2;$3;$4;$5;$6)
  C_BOOLEAN($0)
- 
-//Code for the method
+
+//Código do método
 ```
 
 Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):

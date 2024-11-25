@@ -5,7 +5,7 @@ slug: /commands/qr-get-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* ; *numColumna* ; *numLinea* ; *propiedad* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* ; *numColumna* ; *numLinea* ; *propiedad* ) : any<!-- END REF-->
 <!--REF #_command_.QR Get text property.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -32,6 +32,7 @@ displayed_sidebar: docs
 
 * un valor positivo designando el nivel de ruptura del subtotal correspondiente.
 * una de las constantes del tema :  
+
 | Constante      | Tipo         | Valor | Comentario                  |  
 | -------------- | ------------ | ----- | --------------------------- |  
 | qr detail      | Entero largo | \-2   | Área de detalle del informe |  

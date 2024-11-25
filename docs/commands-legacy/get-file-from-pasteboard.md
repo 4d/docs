@@ -5,12 +5,12 @@ slug: /commands/get-file-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | xIndex | Integer | &#8594;  | Xth file included in drag action |
-| Function result | String | &#8592; | Pathname of file extracted from pasteboard |
+| Function result | Text | &#8592; | Pathname of file extracted from pasteboard |
 
 <!-- END REF-->
 

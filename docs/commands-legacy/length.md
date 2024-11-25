@@ -5,12 +5,12 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *string* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *string* ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | string | Text | &#8594;  | String for which to return length |
-| Function result | Longint | &#8592; | Length of string |
+| Function result | Integer | &#8592; | Length of string |
 
 <!-- END REF-->
 

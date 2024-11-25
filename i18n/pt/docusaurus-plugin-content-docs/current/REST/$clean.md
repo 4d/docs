@@ -3,7 +3,7 @@ id: clean
 title: $clean
 ---
 
-Creates a new entity set from an existing entity set but without its deleted entities, if any (*e.g.* `$clean=true`)
+Cria um conjunto de entidades a partir de um conjunto de entidades existente, mas sem suas entidades excluídas, se houver (*e.g.* `$clean=true`)
 
 ## Descrição
 
@@ -73,7 +73,7 @@ Três entidades são recebidas e obtemos o conjunto de entidades `DF6903FB587940
 }
 ```
 
-2. We delete the entity with `KEY=2` (see [how to delete an entity]($method.md#methoddelete)), then this request is sent:
+2. Excluímos a entidade de `KEY=2` (consulte [how to delete an entity]($method.md#methoddelete)) e, em seguida, essa solicitação é enviada:
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A`
 

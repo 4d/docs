@@ -4,13 +4,13 @@ title: This
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.This.Syntax-->**This** -> Object<!-- END REF-->
+<!--REF #_command_.This.Syntax-->**This** : Object<!-- END REF-->
 
 <!--REF #_command_.This.Params-->
 
 | 引数  | 型      |   | 説明                        |
 | --- | ------ | - | ------------------------- |
-| 戻り値 | オブジェクト | ← | Current element or object |
+| 戻り値 | Object | ← | Current element or object |
 
 <!-- END REF-->
 
