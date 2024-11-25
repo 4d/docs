@@ -3,6 +3,15 @@ id: updates
 title: Notas del lanzamiento
 ---
 
+## 4D 20 R8
+
+Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R8/), the blog post that lists all new features and enhancements in 4D 20 R8.
+
+#### Lo más destacado
+
+- Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
+
 ## 4D 20 R7
 
 Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R7.
