@@ -5,16 +5,16 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 
-**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| Paramètres | Type   |                             | Description                                                    |                  |
-| ---------- | ------ | --------------------------- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text   | ->                          | Nom d'objet formulaire zone 4D View Pro                        |                  |
-| name       | Text   | ->                          | Nom de la plage nommée                                         |                  |
-| scope      | Number | ->                          | "Scope" cible (par défaut=feuille courante) |                  |
-| Résultat   | Object | <- | Définition de la formule nommée ou de la plage nommée          | <!-- END REF --> |
+| Paramètres | Type    |                             | Description                                                    |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                        |                  |
+| name       | Text    | ->                          | Nom de la plage nommée                                         |                  |
+| scope      | Integer | ->                          | "Scope" cible (par défaut=feuille courante) |                  |
+| Résultat   | Object  | <- | Définition de la formule nommée ou de la plage nommée          | <!-- END REF --> |
 
 #### Description
 
