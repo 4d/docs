@@ -1,7 +1,6 @@
 ---
 id: wp-get-attributes
 title: WP GET ATTRIBUTES
-slug: /WritePro/commands/wp-get-attributes
 displayed_sidebar: docs
 ---
 

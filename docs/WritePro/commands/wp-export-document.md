@@ -1,7 +1,6 @@
 ---
 id: wp-export-document
 title: WP EXPORT DOCUMENT
-slug: /WritePro/commands/wp-export-document
 displayed_sidebar: docs
 ---
 
@@ -131,29 +130,29 @@ To trigger a "Factur-X" PDF export, pass both the wk factur x and wk files prope
 You want to export the contents of the *myArea* 4D Write Pro object in both HTML and PDF format:
 
 ```4d
-  // export HTML
- var $option : Object
- $option:=New object
- 
- $option[wk recompute formulas]:=False
- $option[wk HTML pretty print]:=False
- $option[wk optimized for]:=wk print
- $option[wk max picture DPI]:=600 //override default value for print (300 DPI)
- 
- WP EXPORT DOCUMENT(myArea;$path;wk web page complete;$option)
- 
-  //export PDF
- var $option : Object
- $option:=New object
- 
- $option[wk visible headers]:=True
- $option[wk visible footers]:=True
- $option[wk visible background]:=True
- $option[wk max picture DPI]:=96 //override default value for screen (192 DPI) to limit doc size
- $option[wk optimized for]:=wk screen
- $option[wk recompute formulas]:=True
- 
- WP EXPORT DOCUMENT(myArea;$path;wk pdf;$option)
+  // export HTML
+ var $option : Object
+ $option:=New object
+ 
+ $option[wk recompute formulas]:=False
+ $option[wk HTML pretty print]:=False
+ $option[wk optimized for]:=wk print
+ $option[wk max picture DPI]:=600 //override default value for print (300 DPI)
+ 
+ WP EXPORT DOCUMENT(myArea;$path;wk web page complete;$option)
+ 
+  //export PDF
+ var $option : Object
+ $option:=New object
+ 
+ $option[wk visible headers]:=True
+ $option[wk visible footers]:=True
+ $option[wk visible background]:=True
+ $option[wk max picture DPI]:=96 //override default value for screen (192 DPI) to limit doc size
+ $option[wk optimized for]:=wk screen
+ $option[wk recompute formulas]:=True
+ 
+ WP EXPORT DOCUMENT(myArea;$path;wk pdf;$option)
 ```
 
 #### Example 2 
@@ -161,19 +160,19 @@ You want to export the contents of the *myArea* 4D Write Pro object in both HTML
 You want to export the contents of the *myArea* 4D Write Pro object in .4wp format:
 
 ```4d
- var $path : Text
- var $docRef : Integer
- 
- Case of
-    :(Form event code=On Clicked)
- 
-       $path:=Get 4D folder(Database folder)+"Export"+Folder separator
-       $path:=Select document($path;".4wp";" title";File name entry)
- 
-       If($path#"")
-          WP EXPORT DOCUMENT(myArea;document;wk 4wp)
-       End if
- End case
+ var $path : Text
+ var $docRef : Integer
+ 
+ Case of
+    :(Form event code=On Clicked)
+ 
+       $path:=Get 4D folder(Database folder)+"Export"+Folder separator
+       $path:=Select document($path;".4wp";" title";File name entry)
+ 
+       If($path#"")
+          WP EXPORT DOCUMENT(myArea;document;wk 4wp)
+       End if
+ End case
 ```
 
 #### Example 3 
@@ -181,13 +180,13 @@ You want to export the contents of the *myArea* 4D Write Pro object in .4wp form
 To export the second page of the document as SVG and export the pictures from the document:   
   
 ```4d
- var $options : Object
- 
- $options:=New object
- $options[wk embedded pictures]:=False
- $options[wk page index]:=2
- 
- WP EXPORT DOCUMENT(WPArea;"my exported document";wk svg;$options)
+ var $options : Object
+ 
+ $options:=New object
+ $options[wk embedded pictures]:=False
+ $options[wk page index]:=2
+ 
+ WP EXPORT DOCUMENT(WPArea;"my exported document";wk svg;$options)
 ```
 
 #### Example 4 
@@ -195,10 +194,10 @@ To export the second page of the document as SVG and export the pictures from th
 Exporting a PDF document with PDF/A-2 conformance:
 
 ```4d
- var $options: Object:={}
- $options[wk visible empty images] :=False
- $options[wk pdfa version]:=wk pdfa2 // conformance "PDF/A-2"
- WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
+ var $options: Object:={}
+ $options[wk visible empty images] :=False
+ $options[wk pdfa version]:=wk pdfa2 // conformance "PDF/A-2"
+ WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
 ```
 
 #### Example 5 
@@ -206,33 +205,33 @@ Exporting a PDF document with PDF/A-2 conformance:
 Examples of Factur-X PDF exports:
 
 ```4d
-  //BASIC (standard profile)
- var $options;$fileInfo : Object
- $options:={}
- $options[wk factur x]:={}
- $options[wk factur x].profile:="BASIC"
- $options[wk factur x].version:="1.0"
- 
- $fileInfo:={}
- $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
- $options[wk files]:=[$fileInfo]
- 
- WP EXPORT DOCUMENT(wpDoc;"facturX_basic.pdf";wk pdf;$options)
- 
-  //RECHNUNG profile (custom profile)
- $options:={}
- $options[wk factur x]:={}
- $options[wk factur x].profile:="RECHNUNG"
- $options[wk factur x].version:="2.1" //last version for RECHNUNG
- 
- $fileInfo:={}
- $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
- $fileInfo.name:="rechnung.xml" //mandatory file name in PDF for RECHNUNG
- $fileInfo.relationship:="Alternative" //mandatory for Germany
- $fileInfo.description:="ZUGFeRD Rechnung"
- $options[wk files]:=[$fileInfo]
- 
- WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
+  //BASIC (standard profile)
+ var $options;$fileInfo : Object
+ $options:={}
+ $options[wk factur x]:={}
+ $options[wk factur x].profile:="BASIC"
+ $options[wk factur x].version:="1.0"
+ 
+ $fileInfo:={}
+ $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
+ $options[wk files]:=[$fileInfo]
+ 
+ WP EXPORT DOCUMENT(wpDoc;"facturX_basic.pdf";wk pdf;$options)
+ 
+  //RECHNUNG profile (custom profile)
+ $options:={}
+ $options[wk factur x]:={}
+ $options[wk factur x].profile:="RECHNUNG"
+ $options[wk factur x].version:="2.1" //last version for RECHNUNG
+ 
+ $fileInfo:={}
+ $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
+ $fileInfo.name:="rechnung.xml" //mandatory file name in PDF for RECHNUNG
+ $fileInfo.relationship:="Alternative" //mandatory for Germany
+ $fileInfo.description:="ZUGFeRD Rechnung"
+ $options[wk files]:=[$fileInfo]
+ 
+ WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
 ```
 
 #### See also 

@@ -48,9 +48,9 @@ Dans le paramètre *mode*, passez l'une des constantes suivantes pour indiquer l
 Si vous ne passez pas le paramètre *miseAJourPlage*, par défaut, le tableau inséré est inclus dans la plage résultante.
 * Si *objCible* n'est pas une plage, miseAJourPlage est ignoré.
 
-Vous pouvez passer dans *nbCols* et *nbLignes* le nombre de colonnes et de lignes du tableau inséré. Par défaut, si *nbCols* et *nbLignes* sont omis, un nouveau tableau avec 0 colonne et 0 ligne est créé. Vous pouvez alors ajouter ces éléments en utilisant la commande [WP Table append row](wp-table-append-row.md).
+Vous pouvez passer dans *nbCols* et *nbLignes* le nombre de colonnes et de lignes du tableau inséré. Par défaut, si *nbCols* et *nbLignes* sont omis, un nouveau tableau avec 0 colonne et 0 ligne est créé. Vous pouvez alors ajouter ces éléments en utilisant la commande [WP Table append row](../commands/wp-table-append-row.md).
 
-La commande retourne le nouveau tableau en tant qu'objet, que vous pouvez passer ensuite à une autre commande tableau 4D Write Pro. Le tableau est créé avec police, bordure, et attributs couleur par défaut, que vous pouvez personnaliser en utilisant la commande [WP SET ATTRIBUTES](wp-set-attributes.md).
+La commande retourne le nouveau tableau en tant qu'objet, que vous pouvez passer ensuite à une autre commande tableau 4D Write Pro. Le tableau est créé avec police, bordure, et attributs couleur par défaut, que vous pouvez personnaliser en utilisant la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes.md).
 
 #### Exemple 
 
@@ -68,5 +68,5 @@ Résultat :
 
 #### Voir aussi 
 
-[WP Table append row](wp-table-append-row.md)  
+[WP Table append row](../commands/wp-table-append-row.md)  
 [WP Table get rows](wp-table-get-rows.md)  

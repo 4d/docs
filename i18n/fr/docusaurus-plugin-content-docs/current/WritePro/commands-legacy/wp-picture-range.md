@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-La commande **WP Picture range** retourne un objet plage qui référence uniquement les images contenues dans *objCible* que vous avez passé en paramètre. L'objet plage d'images retourné peut être utilisé avec [WP GET ATTRIBUTES](wp-get-attributes.md) et [WP SET ATTRIBUTES](wp-set-attributes.md) afin de manipuler les attributs d'images uniquement.
+La commande **WP Picture range** retourne un objet plage qui référence uniquement les images contenues dans *objCible* que vous avez passé en paramètre. L'objet plage d'images retourné peut être utilisé avec [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) afin de manipuler les attributs d'images uniquement.
 
 Dans *objCible*, vous pouvez passer :
 
@@ -40,8 +40,8 @@ Vous souhaitez modifier la couleur de bordure des images uniquement :
 
 *Manipuler des images*  
 *Utiliser les commandes du thème Texte multistyle*  
-[WP Add picture](wp-add-picture.md)  
-[WP INSERT PICTURE](wp-insert-picture.md)  
+[WP Add picture](../commands/wp-add-picture.md)  
+[WP INSERT PICTURE](../commands/wp-insert-picture.md)  
 [WP Paragraph range](wp-paragraph-range.md)  
 [WP Selection range](wp-selection-range.md)  
 [WP Text range](wp-text-range.md)  

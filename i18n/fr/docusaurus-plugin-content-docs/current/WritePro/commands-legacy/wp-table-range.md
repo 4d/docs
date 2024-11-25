@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-La commande **WP Table range** retourne un objet plage qui n'adresse que les tableaux qui intersectent l'*objCible* que vous avez passé en paramètre. Elle retournera une plage de wk type table, même si *objCible* passé en paramètre ne contient pas de tableau. L'objet plage tableaux retourné peut être utilisé par [WP GET ATTRIBUTES](wp-get-attributes.md) et [WP SET ATTRIBUTES](wp-set-attributes.md) pour gérer les attributs à appliquer aux tableaux et à leur contenu.
+La commande **WP Table range** retourne un objet plage qui n'adresse que les tableaux qui intersectent l'*objCible* que vous avez passé en paramètre. Elle retournera une plage de wk type table, même si *objCible* passé en paramètre ne contient pas de tableau. L'objet plage tableaux retourné peut être utilisé par [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) pour gérer les attributs à appliquer aux tableaux et à leur contenu.
 
 Dans le paramètre *objCible*, vous pouvez passer :
 

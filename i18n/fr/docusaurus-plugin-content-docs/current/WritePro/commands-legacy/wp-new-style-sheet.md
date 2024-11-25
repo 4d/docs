@@ -35,7 +35,7 @@ Passez un nom à la feuille de style dans le paramètre *nomFeuilleStyle*. Le no
 * il ne doit pas commencer par "section", qui est réservé
 * le "\_" est remplacé par un espace et les espaces de fin de ligne sont supprimés.
 
-Vous pouvez indiquer les attributs de la feuille de style à l'aide de la commande [WP SET ATTRIBUTES](wp-set-attributes.md) ou de la notation objet (voir *Attributs 4D Write Pro*). Pour consulter la liste des attributs disponibles, référez-vous à la section *Style sheet attributes*.
+Vous pouvez indiquer les attributs de la feuille de style à l'aide de la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) ou de la notation objet (voir *Attributs 4D Write Pro*). Pour consulter la liste des attributs disponibles, référez-vous à la section *Style sheet attributes*.
 
 **Notes** : 
 

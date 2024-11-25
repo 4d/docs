@@ -35,5 +35,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[WP Add picture](wp-add-picture.md)  
+[WP Add picture](../commands/wp-add-picture.md)  
 *ピクチャーを管理する*  

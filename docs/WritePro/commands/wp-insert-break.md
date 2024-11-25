@@ -1,7 +1,6 @@
 ---
 id: wp-insert-break
 title: WP INSERT BREAK
-slug: /WritePro/commands/wp-insert-break
 displayed_sidebar: docs
 ---
 
@@ -60,13 +59,13 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted contents a
 While building invoices, you want to insert page breaks except on the last page:  
 
 ```4d
- $nbInvoices:=Records in selection([INVOICE])
- For($j;1;$nbInvoices)
-    ... //processing invoices
-    If($j#$nbInvoices) //insert page break except for last page
-       WP INSERT BREAK($buildRange;wk page break;wk append;wk exclude from range)
-    End if
- End for
+ $nbInvoices:=Records in selection([INVOICE])
+ For($j;1;$nbInvoices)
+    ... //processing invoices
+    If($j#$nbInvoices) //insert page break except for last page
+       WP INSERT BREAK($buildRange;wk page break;wk append;wk exclude from range)
+    End if
+ End for
 ```
 
 #### Example 2 
@@ -76,8 +75,8 @@ You want to insert a continuous section break to have a single column section an
 1. Insert a continuous section break at the selection to create a new section:  
     
 ```4d  
- $range:=WP Selection range(*;"WParea")  
- WP INSERT BREAK($range;wk continuous section break;wk append)  
+ $range:=WP Selection range(*;"WParea")  
+ WP INSERT BREAK($range;wk continuous section break;wk append)  
 ```  
     
     
@@ -85,8 +84,8 @@ You want to insert a continuous section break to have a single column section an
 2. Set the column count to 2 for the first section:  
     
 ```4d  
- $section:=WP Get section(WParea;1)  
- WP SET ATTRIBUTES($section;wk column count;2)  
+ $section:=WP Get section(WParea;1)  
+ WP SET ATTRIBUTES($section;wk column count;2)  
 ```  
     
     

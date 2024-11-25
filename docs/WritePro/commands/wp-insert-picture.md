@@ -1,7 +1,6 @@
 ---
 id: wp-insert-picture
 title: WP INSERT PICTURE
-slug: /WritePro/commands/wp-insert-picture
 displayed_sidebar: docs
 ---
 
@@ -57,30 +56,30 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted picture is
 In the following example, a user selects the picture they want to insert into the range object and will be warned if this picture could not be inserted:  
 
 ```4d
- var $wpRange : Object
- $wpRange:=WP Get selection([EXAMPLES]wpDoc)
- 
- var $fail : Boolean
- $fail:=False
- 
-  //ask user to choose a picture on the disk that they want to insert
- $imgRef:=Open document("")
-  //if user does not cancel
- If(OK=1)
-  //if the file is a supported picture file
-    If(Is picture file(document))
-  // insert picture selected by user
-       WP INSERT PICTURE($wpRange;document;wk replace)
-    Else
-       $fail:=True
-    End if
- Else
-    $fail:=True
- End if
-  //if the insertion failed, alert the user
- If($fail)
-    ALERT("Picture insertion failed")
- End if
+ var $wpRange : Object
+ $wpRange:=WP Get selection([EXAMPLES]wpDoc)
+ 
+ var $fail : Boolean
+ $fail:=False
+ 
+  //ask user to choose a picture on the disk that they want to insert
+ $imgRef:=Open document("")
+  //if user does not cancel
+ If(OK=1)
+  //if the file is a supported picture file
+    If(Is picture file(document))
+  // insert picture selected by user
+       WP INSERT PICTURE($wpRange;document;wk replace)
+    Else
+       $fail:=True
+    End if
+ Else
+    $fail:=True
+ End if
+  //if the insertion failed, alert the user
+ If($fail)
+    ALERT("Picture insertion failed")
+ End if
 ```
 
 #### See also 

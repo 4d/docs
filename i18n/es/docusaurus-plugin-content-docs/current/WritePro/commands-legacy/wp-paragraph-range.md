@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-El nuevo comando **WP Paragraph range** devuelve un rango de objetos específico que se refiere únicamente a los párrafos contenidos en *rangoObj* que se pasó como parámetro. El objeto rango de párrafo devuelto puede ser utilizado por [WP GET ATTRIBUTES](wp-get-attributes.md) y [WP SET ATTRIBUTES](wp-set-attributes.md) para manejar los atributos del párrafo únicamente.
+El nuevo comando **WP Paragraph range** devuelve un rango de objetos específico que se refiere únicamente a los párrafos contenidos en *rangoObj* que se pasó como parámetro. El objeto rango de párrafo devuelto puede ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos del párrafo únicamente.
 
 En *rangoObj*, puede pasar:
 

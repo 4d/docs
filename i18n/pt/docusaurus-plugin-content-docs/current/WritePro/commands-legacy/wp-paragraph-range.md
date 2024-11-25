@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-O novo comando **WP Paragraph range** devolve uma faixa de objetos específica que se refere unicamente aos parágrafos contidos em *rfaixaObj* que foi passada como parâmetro. A faixa de objetos parágrafo devolvido deve ser utilizado por [WP GET ATTRIBUTES](wp-get-attributes.md) e [WP SET ATTRIBUTES](wp-set-attributes.md) para manejar os atributos do parágrafo unicamente.
+O novo comando **WP Paragraph range** devolve uma faixa de objetos específica que se refere unicamente aos parágrafos contidos em *rfaixaObj* que foi passada como parâmetro. A faixa de objetos parágrafo devolvido deve ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar os atributos do parágrafo unicamente.
 
 Em *faixaObj*, passe:
 

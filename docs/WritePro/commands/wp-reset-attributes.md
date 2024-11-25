@@ -1,7 +1,6 @@
 ---
 id: wp-reset-attributes
 title: WP RESET ATTRIBUTES
-slug: /WritePro/commands/wp-reset-attributes
 displayed_sidebar: docs
 ---
 
@@ -71,5 +70,5 @@ WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
 #### See also 
 
 *4D Write Pro Attributes*  
-[WP GET ATTRIBUTES](../commands-legacy/wp-get-attributes.md)  
-[WP SET ATTRIBUTES](../commands-legacy/wp-set-attributes.md)  
+[WP GET ATTRIBUTES](wp-get-attributes.md)  
+[WP SET ATTRIBUTES](wp-set-attributes.md)  

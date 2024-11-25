@@ -1,7 +1,6 @@
 ---
 id: wp-insert-document
 title: WP INSERT DOCUMENT
-slug: /WritePro/commands/wp-insert-document
 displayed_sidebar: docs
 ---
 
@@ -58,9 +57,9 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted contents a
 You want to replace the contents of a document by the text selected in another one:  
 
 ```4d
- $tempRange:=WP Get selection(WPTemplate) //we retrieve the user selection in the WPTemplate document
- $doctoCopy:=WP New($tempRange) //create a new document based on WPTemplate
- WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
+ $tempRange:=WP Get selection(WPTemplate) //we retrieve the user selection in the WPTemplate document
+ $doctoCopy:=WP New($tempRange) //create a new document based on WPTemplate
+ WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
 ```
 
 #### Example 2 
@@ -68,16 +67,16 @@ You want to replace the contents of a document by the text selected in another o
 You have defined a template document with different preformatted parts, each of them being stored as a bookmark. When producing a final document from the template, you can extract any bookmark as a new document and insert it in the final document.   
 
 ```4d
- ARRAY TEXT($_BookmarkNames;0)
- WP GET BOOKMARKS([TEMPLATES]WP;$_BookmarkNames) //get the bookmarks from the template
- $targetRange:=WP New //create an empty document (will be the final document)
- 
- $p:=Find in array($_BookmarkNames;"Main_Header") //handle the main header part
- If($p>0)
-    $Range:=WP Get bookmark range(WParea;$_BookmarkNames{$p}) //select the range
-    $RangeDoc:=WP New($Range) //create a new document from the range
-    WP INSERT DOCUMENT($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=after replacement, $targetRange is equal to end of replaced text
- End if
+ ARRAY TEXT($_BookmarkNames;0)
+ WP GET BOOKMARKS([TEMPLATES]WP;$_BookmarkNames) //get the bookmarks from the template
+ $targetRange:=WP New //create an empty document (will be the final document)
+ 
+ $p:=Find in array($_BookmarkNames;"Main_Header") //handle the main header part
+ If($p>0)
+    $Range:=WP Get bookmark range(WParea;$_BookmarkNames{$p}) //select the range
+    $RangeDoc:=WP New($Range) //create a new document from the range
+    WP INSERT DOCUMENT($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=after replacement, $targetRange is equal to end of replaced text
+ End if
 ```
 
 #### See also 

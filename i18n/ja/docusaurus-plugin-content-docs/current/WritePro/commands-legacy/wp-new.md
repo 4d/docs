@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.WP New.Summary-->**WP New** コマンドは4D Write Pro オブジェクトを作成して返します。<!-- END REF-->返されたオブジェクトは完全なドキュメントであり、例えば[WP INSERT DOCUMENT](wp-insert-document.md) コマンドなどに渡すことができます。
+<!--REF #_command_.WP New.Summary-->**WP New** コマンドは4D Write Pro オブジェクトを作成して返します。<!-- END REF-->返されたオブジェクトは完全なドキュメントであり、例えば[WP INSERT DOCUMENT](../commands/wp-insert-document.md) コマンドなどに渡すことができます。
 
 *source* 引数を省略した場合、コマンドはデフォルトで空の4D Write Proオブジェクトを返します。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
    4D Write Proドキュメントフォーマットの詳細については、*.4wp ドキュメントフォーマット* を参照して下さい。  
    * BLOBに読み込まれている以前の4D Writeエリア(.4w7 または .4wt を含んだBlobがサポートされます)。このコンテキストにおいては、オプションの*option* 引数を使用することで、HTML 式をテキストとして読み込まれたドキュメント内に含めることができます(以下参照)。  
    4D Write Proオブジェクト内で現在サポートされている4D Writeの機能の詳細な一覧については、*4D Write ドキュメントの読み込み* の章を参照して下さい。  
- ディスク上に保存されている4D Write ドキュメント(.4w7 or .4wt) を読み込みたい場合、[WP Import document](wp-import-document.md) コマンドの使用も検討してみて下さい。
+ ディスク上に保存されている4D Write ドキュメント(.4w7 or .4wt) を読み込みたい場合、[WP Import document](../commands/wp-import-document.md) コマンドの使用も検討してみて下さい。
 * 以下のいづれかであるobject 引数:  
    * レンジ。  
    この場合、**WP New** は指定したレンジから作成した新規ドキュメントを返します。指定レンジがドキュメントの全レンジでない場合、最初のセクションだけが書き出され、ブックマークなどが存在する場合には、これらは書き出されないという点に注意してください。  
@@ -118,5 +118,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[WP Import document](wp-import-document.md)  
-[WP INSERT DOCUMENT](wp-insert-document.md)  
+[WP Import document](../commands/wp-import-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document.md)  

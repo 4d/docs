@@ -1,7 +1,6 @@
 ---
 id: wp-import-document
 title: WP Import document
-slug: /WritePro/commands/wp-import-document
 displayed_sidebar: docs
 ---
 
@@ -64,8 +63,8 @@ You can pass an object to define how the following attributes are handled during
 #### Example 1 
 
 ```4d
- var WPDoc : Object
- WPDoc:=WP Import document("C:\\documents\\4DWriteDocs\\Letter.4w7")
+ var WPDoc : Object
+ WPDoc:=WP Import document("C:\\documents\\4DWriteDocs\\Letter.4w7")
 ```
 
 #### Example 2 
@@ -73,28 +72,28 @@ You can pass an object to define how the following attributes are handled during
 You want to import a .docx document and would like that paragraph borders are collapsed as they are in MS Word:
 
 ```4d
- $options:=New object
- $options.borderRules:="collapse" //collapse paragraph borders while converting
- 
- wpDoc:=WP Import document(«mydoc.docx»;$options)
+ $options:=New object
+ $options.borderRules:="collapse" //collapse paragraph borders while converting
+ 
+ wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
 You want to import original .docx fields as text (for fields not converted to 4D formulas):
 
 ```4d
- $options:=New object
- $options.fields:="label" //for unconverted fields, import field references as text between {{ and }}
- 
- wpDoc:=WP Import document(«mydoc.docx»;$options)
+ $options:=New object
+ $options.fields:="label" //for unconverted fields, import field references as text between {{ and }}
+ 
+ wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
 You want to import a .docx document whose text is mostly in Japanese:
 
 ```4d
- $options:=New object
- $options.preferredFontScriptType:="eastAsia" //force conversion to prefer eastAsia font scripts
- 
- wpDoc:=WP Import document(«mydoc.docx»;$options)
+ $options:=New object
+ $options.preferredFontScriptType:="eastAsia" //force conversion to prefer eastAsia font scripts
+ 
+ wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
 #### See also 

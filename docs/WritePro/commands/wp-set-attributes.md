@@ -1,7 +1,6 @@
 ---
 id: wp-set-attributes
 title: WP SET ATTRIBUTES
-slug: /WritePro/commands/wp-set-attributes
 displayed_sidebar: docs
 ---
 
@@ -140,5 +139,5 @@ The result is:
 #### See also 
 
 *4D Write Pro Attributes*  
-[WP GET ATTRIBUTES](wp-get-attributes.md)  
+[WP GET ATTRIBUTES](../commands/wp-get-attributes.md)  
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
