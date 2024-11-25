@@ -9,11 +9,11 @@ title: VP SET SHEET OPTIONS
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| Paramètres   | Type   |    | Description                                                                 |                  |
-| ------------ | ------ | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName   | Text   | -> | Nom de la zone 4D View Pro                                                  |                  |
-| sheetOptions | Object | -> | Option(s) de la feuille à définir                        |                  |
-| sheet        | Object | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
+| Paramètres   | Type    |    | Description                                                                 |                  |
+| ------------ | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName   | Text    | -> | Nom de la zone 4D View Pro                                                  |                  |
+| sheetOptions | Object  | -> | Option(s) de la feuille à définir                        |                  |
+| sheet        | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
 #### Description
 

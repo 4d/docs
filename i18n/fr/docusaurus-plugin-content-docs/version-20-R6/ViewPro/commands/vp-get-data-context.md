@@ -17,11 +17,11 @@ title: VP Get data context
 
 <!-- REF #_method_.VP Get data context.Params -->
 
-| Paramètres | Type                 |                             | Description                                              |                  |
-| ---------- | -------------------- | --------------------------- | -------------------------------------------------------- | ---------------- |
-| vpAreaName | Text                 | ->                          | Nom d'objet formulaire zone 4D View Pro                  |                  |
-| sheet      | Integer              | ->                          | Indice de la feuille de laquelle obtenir le data context |                  |
-| Résultat   | Object \| Collection | <- | Data context                                             | <!-- END REF --> |
+| Paramètres | Type    |                             | Description                                              |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                  |                  |
+| sheet      | Integer | ->                          | Indice de la feuille de laquelle obtenir le data context |                  |
+| Résultat   | Variant | <- | Data context. Object or Collection       | <!-- END REF --> |
 
 #### Description
 
