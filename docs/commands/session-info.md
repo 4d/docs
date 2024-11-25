@@ -4,13 +4,6 @@ title: Session info
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|20 R7|Added |
-
-</details>
 
 <!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
 
@@ -22,6 +15,15 @@ displayed_sidebar: docs
 |Result|Object|&#8592;|Information about the session|
 <!-- END REF -->
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R8|Support of standalone sessions |
+|20 R7|Added |
+
+</details>
+
 
 #### Description
 
@@ -29,19 +31,18 @@ The `Session info` command <!-- REF #_command_.Session info.Summary -->returns a
 
 The returned object contains the following properties:
 
-| Property name                	| Type                 	| Description                                                        	|
-|------------------------------	|----------------------	|--------------------------------------------------------------------	|
-| type                         	| Text (enum)          	| Session type. Possible values: "remote", "storedProcedure", "rest" 	|
-| userName                     	| Text                 	| User name                                                          	|
-| machineName                  	| Text                 	| Name of the remote machine                                         	|
-| systemUserName               	| Text                 	| Name of the system session opened on the remote machine            	|
-| IPAddress                    	| Text                 	| IP address of the remote machine                                   	|
-| hostType                     	| Text (enum)          	| Host type. Possible values: "windows", "mac", "browser"            	|
-| creationDateTime             	| Text (Date ISO 8601) 	| Date and time of connection of the remote machine                  	|
-| state                        	| Text (enum)          	| Session state. Possible values: "active", "postponed", "sleeping"  	|
-| ID                           	| Text                 	| Session UUID                                                       	|
-| persistentID                 	| Text                 	| Session's persistent ID                                            	|
-
+|Property|Type|Description|
+|---|---|---|
+|type|Text|Session type: "remote", "storedProcedure", "standalone"|
+|userName|Text|4D user name (same value as [`Session.userName`](../API/SessionClass.md#username))|
+|machineName|Text|Remote sessions: name of the remote machine. Stored procedures session: name of the server machine. Standalone session: name of the machine|
+|systemUserName|Text|Remote sessions: name of the system session opened on the remote machine.  |
+|IPAddress|Text|IP address of the remote machine|
+|hostType|Text|Host type: "windows" or "mac"|
+|creationDateTime|Date ISO 8601|Date and time of session creation. Standalone session: date and time of application startup|
+|state|Text|Session state: "active", "postponed", "sleeping"|
+|ID|Text|Session UUID (same value as [`Session.id`](../API/SessionClass.md#id))|
+|persistentID|Text|Remote sessions: Session's persistent ID|
 
 :::note
 
@@ -80,5 +81,7 @@ Here is an example of output object:
 
 #### See also 
 
-[Session](../API/SessionClass.md)
+[`Session` class](../API/SessionClass.md)
+[Session](session.md)
+[Session storage](session-storage.md)  
 [Process info](process-info.md)  

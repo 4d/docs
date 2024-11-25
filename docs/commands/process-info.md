@@ -4,13 +4,6 @@ title: Process info
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|20 R7|Added |
-
-</details>
 
 <!-- REF #_command_.Process info.Syntax -->**Process info** ( *processNumber* : Integer ) : Object<!-- END REF -->
 
@@ -22,6 +15,13 @@ displayed_sidebar: docs
 |Result|Object|&#8592;|Information about the process|
 <!-- END REF -->
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R7|Added |
+
+</details>
 
 #### Description
 

@@ -8,11 +8,13 @@ Session objects are returned by the [`Session`](../commands/session.md) command.
 
 ### Session types
 
-Three types of sessions are supported by this class:
+The following types of sessions are supported by this class:
 
 - [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges.
 - [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
 - [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): All stored procedures executed on the server share the same virtual user session.
+- [**Standalone session**](../Project/overview.md#development): Local session object returned in single-user application (useful in development and test phases of client/server applications). 
+
 
 :::note
 
@@ -67,7 +69,7 @@ The availability of properties and functions in the `Session` object depends on 
 
 :::note
 
-This function does nothing and always returns **True** with remote client and stored procedure sessions.
+This function does nothing and always returns **True** with remote client, stored procedure, and standalone sessions.
 
 :::
 
@@ -148,7 +150,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
 
-With remote client and stored procedure sessions, this function returns a collection only containing "WebAdmin".
+With remote client, stored procedure and standalone sessions, this function returns a collection only containing "WebAdmin".
 
 
 :::info
@@ -252,7 +254,7 @@ $privileges := Session.getPrivileges()
 
 The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the *privilege* is associated to the session, and False otherwise<!-- END REF -->.
 
-With remote client and stored procedure sessions, this function always returns True, whatever the *privilege*.
+With remote client, stored procedure and standalone sessions, this function always returns True, whatever the *privilege*.
 
 
 #### Example
@@ -286,12 +288,12 @@ End if
 
 #### Description
 
-The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. This unique string is automatically assigned by the server for each session and allows you to identify its processes.
+The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the user session<!-- END REF -->. With 4D Server, this unique string is automatically assigned by the server for each session and allows you to identify its processes.
 
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.  
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands/session-storage.md) command.  
 
 :::
 
@@ -366,25 +368,31 @@ End if
 
 :::note
 
-This property is only available with remote client and stored procedure sessions.
+This property is only available with remote client, stored procedure, and standalone sessions.
 
 :::
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->.
+The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server, or the standalone session<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+:::note
+
+- The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+- The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info.md) command for a standalone session.
+
+
+:::
 
 The `.info` object contains the following properties:
 
 |Property|Type|Description|
 |---|---|---|
-|type|Text|Session type: "remote" or "storedProcedure"|
+|type|Text|Session type: "remote", "storedProcedure", "standalone"|
 |userName|Text|4D user name (same value as [`.userName`](#username))|
-|machineName|Text|Remote sessions: name of the remote machine. Stored procedures session: name of the server machine|
+|machineName|Text|Remote sessions: name of the remote machine. Stored procedures session: name of the server machine. Standalone session: name of the machine|
 |systemUserName|Text|Remote sessions: name of the system session opened on the remote machine.  |
 |IPAddress|Text|IP address of the remote machine|
 |hostType|Text|Host type: "windows" or "mac"|
-|creationDateTime|Date ISO 8601|Date and time of session creation|
+|creationDateTime|Date ISO 8601|Date and time of session creation. Standalone session: date and time of application startup|
 |state|Text|Session state: "active", "postponed", "sleeping"|
 |ID|Text|Session UUID (same value as [`.id`](#id))|
 |persistentID|Text|Remote sessions: Session's persistent ID|
@@ -423,7 +431,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **False** with remote client and stored procedure sessions.
+This function always returns **False** with remote client, stored procedure, and standalone sessions.
 
 :::
 
@@ -472,7 +480,7 @@ End if
 
 :::note
 
-This function does nothing and always returns **False** with remote client and stored procedure sessions.
+This function does nothing and always returns **False** with remote client, stored procedure, and standalone sessions.
 
 :::
 
@@ -552,7 +560,7 @@ This property is **read only** itself but it returns a read-write object.
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.  
+You can get the `.storage` property of a session using the [`Session storage`](../commands/session-storage.md) command.  
 
 :::
 
@@ -608,6 +616,7 @@ The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the
 
 - With web sessions, this property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
+- With standalone sessions, this property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command. 
 
 This property is **read only**.
 
