@@ -45,7 +45,7 @@ The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-re
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
-```codeJS
+```js
 $4d.HelloWorld();
 ```
 
@@ -53,7 +53,7 @@ $4d.HelloWorld();
 
 The syntax of calls to 4D methods is as follows:
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 - `param1...paramN`: You can pass as many parameters as you need to the 4D method.
