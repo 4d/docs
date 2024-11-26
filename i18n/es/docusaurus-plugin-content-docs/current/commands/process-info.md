@@ -4,14 +4,6 @@ title: Process info
 displayed_sidebar: docs
 ---
 
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R7       | Añadidos       |
-
-</details>
-
 <!-- REF #_command_.Process info.Syntax -->**Process info** ( *processNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #_command_.Process info.Params -->
@@ -22,6 +14,14 @@ displayed_sidebar: docs
 | Result        | Object  |  ←  | Information about the process |
 
 <!-- END REF -->
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R7       | Añadidos       |
+
+</details>
 
 #### Descripción
 
@@ -34,14 +34,14 @@ El objeto devuelto contiene las siguientes propiedades:
 | cpuTime          | Real                                    | Tiempo en ejecución (segundos)                                         |
 | cpuUsage         | Real                                    | Porcentaje de tiempo dedicado a este proceso (entre 0 y 1)             |
 | creationDateTime | Text (Date ISO 8601) | Fecha y hora de creación del proceso                                                      |
-| ID               | Longint                                 | ID único del proceso                                                                      |
+| ID               | Integer                                 | ID único del proceso                                                                      |
 | name             | Text                                    | Nombre del proceso                                                                        |
-| number           | Longint                                 | Process number                                                                            |
+| number           | Integer                                 | Process number                                                                            |
 | apropiativo      | Boolean                                 | True si se ejecuta de forma apropiativa, false en caso contrario                          |
 | sessionID        | Text                                    | Session UUID                                                                              |
-| state            | Longint                                 | Estado actual. Valores posibles: ver abajo                |
+| state            | Integer                                 | Estado actual. Valores posibles: ver abajo                |
 | systemID         | Text                                    | ID del proceso de usuario, proceso 4D o proceso de reserva                                |
-| type             | Longint                                 | Tipo de proceso en ejecución. Valores posibles: ver abajo |
+| type             | Integer                                 | Tipo de proceso en ejecución. Valores posibles: ver abajo |
 | visible          | Boolean                                 | True si es visible, false en caso contrario                                               |
 
 - Valores posibles para "state":

@@ -5,14 +5,14 @@ title: VP Get names
 
 <!-- REF #_method_.VP Get names.Syntax -->
 
-**VP Get names** ( vpAreaName : Text { ; scope : Number } ) : Collection<!-- END REF -->
+**VP Get names** ( vpAreaName : Text { ; scope : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get names.Params -->
 
 | 引数         | 型          |                             | 説明                                              |                  |
 | ---------- | ---------- | --------------------------- | ----------------------------------------------- | ---------------- |
 | vpAreaName | Text       | ->                          | 4D View Pro フォームオブジェクト名                         |                  |
-| scope      | Number     | ->                          | ターゲットのスコープ (デフォルト = カレントシート) |                  |
+| scope      | Integer    | ->                          | ターゲットのスコープ (デフォルト = カレントシート) |                  |
 | 戻り値        | Collection | <- | 定義されたスコープ内に存在する名前                               | <!-- END REF --> |
 
 #### 説明

@@ -4,14 +4,6 @@ title: Session info
 displayed_sidebar: docs
 ---
 
-<details><summary>履歴</summary>
-
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R7 | 追加 |
-
-</details>
-
 <!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #_command_.Session info.Params -->
@@ -23,24 +15,33 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
+<details><summary>履歴</summary>
+
+| リリース  | 内容                             |
+| ----- | ------------------------------ |
+| 20 R8 | Support of standalone sessions |
+| 20 R7 | 追加                             |
+
+</details>
+
 #### 説明
 
 The `Session info` command <!-- REF #_command_.Session info.Summary -->returns an object describing the session whose ID you pass in the *sessionID* parameter.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ名           | 型                                       | 説明                                                                                                 |
-| ---------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| type             | Text (enum)          | Session type. Possible values: "remote", "storedProcedure", "rest" |
-| userName         | Text                                    | ユーザー名                                                                                              |
-| machineName      | Text                                    | Name of the remote machine                                                                         |
-| systemUserName   | Text                                    | Name of the system session opened on the remote machine                                            |
-| IPAddress        | Text                                    | リモートマシンの IPアドレス。                                                                                   |
-| hostType         | Text (enum)          | Host type. Possible values: "windows", "mac", "browser"            |
-| creationDateTime | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                  |
-| state            | Text (enum)          | Session state. Possible values: "active", "postponed", "sleeping"  |
-| ID               | Text                                    | Session UUID                                                                                       |
-| persistentID     | Text                                    | セッションの永続的な ID                                                                                      |
+| プロパティ            | 型                                | 説明                                                                                                                                                                                    |
+| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | Session type: "remote", "storedProcedure", "standalone"                                                                                                               |
+| userName         | Text                             | 4D user name (same value as [`Session.userName`](../API/SessionClass.md#username))                                                                                 |
+| machineName      | Text                             | リモートセッション: リモートマシンの名前。 Stored procedures session: name of the server machine. Standalone session: name of the machine |
+| systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                                                                                                                                 |
+| IPAddress        | Text                             | リモートマシンの IPアドレス。                                                                                                                                                                      |
+| hostType         | Text                             | ホストタイプ: "windows" または "mac"                                                                                                                                           |
+| creationDateTime | 日付 (ISO 8601) | Date and time of session creation. Standalone session: date and time of application startup                                                           |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                           |
+| ID               | Text                             | Session UUID (same value as [`Session.id`](../API/SessionClass.md#id))                                                                                             |
+| persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                                                                                                                              |
 
 :::note
 
@@ -79,5 +80,7 @@ Here is an example of output object:
 
 #### 参照
 
-[Session](../API/SessionClass.md)
+[`Session` class](../API/SessionClass.md)
+[Session](session.md)
+[Session storage](session-storage.md)\
 [Process info](process-info.md)
