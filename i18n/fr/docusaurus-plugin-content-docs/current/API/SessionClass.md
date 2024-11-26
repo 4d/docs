@@ -7,11 +7,12 @@ Les objets de session sont retournés par la commande [`Session`](../commands/se
 
 ### Types de sessions
 
-Trois types de sessions sont pris en charge par cette classe :
+The following types of sessions are supported by this class:
 
 - [**Session utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
 - [**Session utilisateur client distant**](../Desktop/clientServer.md#remote-user-sessions) : Dans les applications client/serveur, les utilisateurs distants ont leurs propres sessions gérées sur le serveur.
 - [**Session des procédures stockées**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) : Toutes les procédures stockées exécutées sur le serveur partagent la même session utilisateur virtuelle.
+- [**Standalone session**](../Project/overview.md#development): Local session object returned in single-user application (useful in development and test phases of client/server applications).
 
 :::note
 
@@ -61,7 +62,7 @@ La disponibilité des propriétés et des fonctions de l'objet `Session` dépend
 
 :::note
 
-This function does nothing and always returns **True** with remote client and stored procedure sessions.
+This function does nothing and always returns **True** with remote client, stored procedure, and standalone sessions.
 
 :::
 
@@ -141,7 +142,7 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 La fonction `.getPrivileges()` <!-- REF #SessionClass.getPrivileges().Summary -->renvoie une collection contenant tous les noms de privilèges associés à la session<!-- END REF -->.
 
-Avec une session de client distant ou de procédure stockée, cette fonction renvoie une collection ne contenant que "WebAdmin".
+With remote client, stored procedure and standalone sessions, this function returns a collection only containing "WebAdmin".
 
 :::info
 
@@ -237,7 +238,7 @@ $privileges := Session.getPrivileges()
 
 La fonction `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->renvoie True si le *privilege* est associé à la session, et False sinon<!-- END REF -->.
 
-Avec des sessions de client distant et de procédure stockée, cette fonction renvoie toujours True, quel que soit le *privilege*.
+With remote client, stored procedure and standalone sessions, this function always returns True, whatever the *privilege*.
 
 #### Exemple
 
@@ -270,11 +271,11 @@ End if
 
 #### Description
 
-La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant unique (UUID) de la session sur le serveur<!-- END REF -->. Cette chaîne unique est automatiquement attribuée par le serveur à chaque session et vous permet d'identifier ses process.
+The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the user session<!-- END REF -->. With 4D Server, this unique string is automatically assigned by the server for each session and allows you to identify its processes.
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
+You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands/session-storage.md) command.
 
 :::
 
@@ -346,28 +347,33 @@ End if
 
 :::note
 
-Cette propriété est uniquement disponible avec les sessions des procédures stockées et des client distants.
+This property is only available with remote client, stored procedure, and standalone sessions.
 
 :::
 
-La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session du client distant ou de la procédure stockée sur le serveur<!-- END REF -->.
+The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server, or the standalone session<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+:::note
+
+- The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+- The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info.md) command for a standalone session.
+
+:::
 
 L'objet `.info` contient les propriétés suivantes:
 
-| Propriété        | Type          | Description                                                                                                                                                  |
-| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type             | Text          | Type de session : "remote" ou "storedProcedure"                                                                                              |
-| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                           |
-| machineName      | Text          | Sessions distantes : nom de la machine distante. Session des procédures stockées : nom de la machine serveur |
-| systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                              |
-| IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                            |
-| hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                             |
-| creationDateTime | Date ISO 8601 | Date et heure de création de la session                                                                                                                      |
-| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                       |
-| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                            |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                     |
+| Propriété        | Type          | Description                                                                                                                                                                                                                     |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                         |
+| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                                                                                              |
+| machineName      | Text          | Sessions distantes : nom de la machine distante. Stored procedures session: name of the server machine. Standalone session: name of the machine |
+| systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                                                                                                 |
+| IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                                                                                               |
+| hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                                                                                                |
+| creationDateTime | Date ISO 8601 | Date and time of session creation. Standalone session: date and time of application startup                                                                                                     |
+| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                          |
+| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                                                                                               |
+| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                        |
 
 :::note
 
@@ -403,7 +409,7 @@ L'objet `.info` contient les propriétés suivantes:
 
 :::note
 
-Cette fonction retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
+This function always returns **False** with remote client, stored procedure, and standalone sessions.
 
 :::
 
@@ -451,7 +457,7 @@ End if
 
 :::note
 
-Cette fonction ne fait rien et retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
+This function does nothing and always returns **False** with remote client, stored procedure, and standalone sessions.
 
 :::
 
@@ -532,7 +538,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
+You can get the `.storage` property of a session using the [`Session storage`](../commands/session-storage.md) command.
 
 :::
 
@@ -581,6 +587,7 @@ La propriété `.userName` contient <!-- REF #SessionClass.userName.Summary -->l
 
 - Avec les sessions web, cette propriété est une chaîne vide par défaut. Elle peut être définie via la propriété `privileges` de la fonction [`setPrivileges()`](#setprivileges).
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
+- With standalone sessions, this property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command.
 
 Cette propriété est en **lecture seule**.
 
