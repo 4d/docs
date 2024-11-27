@@ -19,13 +19,13 @@ displayed_sidebar: docs
 | 引数     | 型                                  |     | 説明                                                                                |
 | ------ | ---------------------------------- | :-: | --------------------------------------------------------------------------------- |
 | server | Object                             |  →  | メールサーバー情報                                                                         |
-| 戻り値    | 4D.IMAPTransporter |  ←  | [IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object) |
+| 戻り値    | 4D.IMAPTransporter |  ←  | [IMAP transporter オブジェクト](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->
 
 #### 説明
 
-`IMAP New transporter` コマンドは、*server* 引数の指定に応じて<!-- REF #_command_.IMAP New transporter.Summary -->新規の IMAP接続を設定します<!-- END REF -->。戻り値は、新しい `IMAP transporter` オブジェクトです。 返される transporter オブジェクトは通常、メールの受信に使用されます。
+`IMAP New transporter` コマンドは、*server* 引数の指定に応じて<!-- REF #_command_.IMAP New transporter.Summary -->新規の IMAP接続を設定します<!-- END REF -->。戻り値は、新しい*transporter* オブジェクトです。 返される transporter オブジェクトは通常、メールの受信に使用されます。
 
 *server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 #### 戻り値
 
-The function returns an [**IMAP transporter object**](../API/IMAPTransporterClass.md#imap-transporter-object). 返されるプロパティはすべて **読み取り専用** です。
+このファンクション[**IMAP transporter オブジェクト**](../API/IMAPTransporterClass.md#imap-transporter-object). 返されるプロパティはすべて **読み取り専用** です。
 
 > IMAP接続は、transporter オブジェクトが消去された時点で自動的に閉じられます。
 

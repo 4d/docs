@@ -27,7 +27,7 @@ title: VP Get table column index
 
 #### Description
 
-La commande `VP Get table column index` <!-- REF #_method_.VP Get table column index. ummary -->retourne l'index du *columnName* dans la table *tableName*<!-- END REF -->.
+La commande `VP Get table column index` <!-- REF #_method_.VP Get table column index.Summary -->retourne l'index du *columnName* dans la table *tableName*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 

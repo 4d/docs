@@ -49,7 +49,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::note
 
-A 4D.OutGoingMessage object is a [non-sharable](../Concepts/shared.md) object.
+4D.OutGoingMessage オブジェクトは[non-sharable](../Concepts/shared.md) オブジェクトです。
 
 :::
 
@@ -61,16 +61,16 @@ A 4D.OutGoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 #### 説明
 
-The `.body` property contains <!-- REF #OutGoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body` property:
+`.body` プロパティには<!-- REF #OutGoingMessageClass.body.Summary -->送信されるメッセージ本文<!-- END REF -->が格納されています。 `.body` プロパティでは以下のデータ型がサポートされます:
 
 - text
 - blob
 - object
 - image
 
-The `.body` property is read-write.
+`.body` プロパティは読み書き可能です。
 
-You can also set the `.body` property using the [`setBody()`](#setbody) function, in which case the `content-type` header is automatically set.
+`.body` プロパティはまた、[`setBody()`](#setbody) 関数を使用しても設定することができます。この場合、`content-type` ヘッダーは自動的に設定されます。
 
 <!-- END REF -->
 
@@ -82,7 +82,7 @@ You can also set the `.body` property using the [`setBody()`](#setbody) function
 
 #### 説明
 
-The `.headers` property contains <!-- REF #OutGoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
+`.headers` プロパティには<!-- REF #OutGoingMessageClass.headers.Summary -->送信されるメッセージのカレントのヘッダーがキー/値のペアとして格納されてます。<!-- END REF -->
 
 The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function.
 
