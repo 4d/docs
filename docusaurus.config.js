@@ -15,6 +15,7 @@ module.exports = {
   organizationName: "4D",
   projectName: "docs",
   favicon: "img/favicon/4d.gif",
+  trailingSlash: false,
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   noIndex: isProduction ? false : true,
