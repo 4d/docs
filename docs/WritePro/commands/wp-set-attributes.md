@@ -4,11 +4,12 @@ title: WP SET ATTRIBUTES
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
+<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<br/>**WP SET ATTRIBUTES** ( *targetObj* ; *attribObj* )<!-- END REF-->
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
+| attribObj | Object | &#8594;  | Object containing attribute names and their corresponding values to set |
 | attribName | Text | &#8594;  | Name of attribute to set |
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594;  | New attribute value |
 
@@ -16,19 +17,24 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.WP SET ATTRIBUTES.Summary-->The **WP SET ATTRIBUTES** command allows you to set the value of any attribute in a range, element or document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
+<!--REF #_command_.WP SET ATTRIBUTES.Summary-->The **WP SET ATTRIBUTES** command allows you to set the value of any attribute in a range, element, documentt, or an object containing multiple attributes.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
 
-In the first parameter, you can pass :
+In *targetObj*, you can pass :
 
 * a range, or
 * an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
 * a 4D Write Pro document
 
+You can specify attributes to set for *targetObj* in one of two ways:
+
+* Use the *attribName* and *attribValue* parameters:
+
 In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. For a comprehensive list of attributes to pass in *attribName*, as well as their scope and respective values, please refer to the *4D Write Pro Attributes* section.
+You can pass as many attribName/attribValue pairs as you want in a single call.
 
-You can pass as many *attribName* / *attribValue* pairs as you want.
+* Use the *attribObj* parameter:
+Instead of specifying individual attribute/value pairs, you can pass a single object *attribObj* containing multiple attribute names as keys and their corresponding values.
 
-**Note:** If you need to set multiple attributes for the same target, it is more optimized to use a single call to **WP SET ATTRIBUTES** with all attribute/value pairs, rather than calling **WP SET ATTRIBUTES** several times. 
 
 #### Example 1 
 
@@ -97,9 +103,8 @@ You want to set a background image that covers the whole printable area:
  
  READ PICTURE FILE("C:\\Pictures\\boats.jpg";$picture)
  
- WP SET ATTRIBUTES(WParea;wk background image;$picture)
- WP SET ATTRIBUTES(WParea;wk background clip;wk paper box)
- WP SET ATTRIBUTES(WParea;wk background origin;wk paper box)
+ $attributes:={backgroundImage: $picture ; backgroundClip: wk paper box; backgroundOrigin: wk paper box}
+ WP SET ATTRIBUTES(WParea;$attributes)
 ```
 
 The result is:
@@ -135,6 +140,7 @@ You want to set tabs at varying intervals and designate a character as the leadi
 The result is:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
+
 
 #### See also 
 
