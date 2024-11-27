@@ -41,7 +41,7 @@ La valeur par défaut dépend du type de variable :
 | ---------- | -------------------- |
 | Booleen    | False                |
 | Date       | 00-00-00             |
-| Longint    | 0                    |
+| Integer    | 0                    |
 | Time       | 00:00:00             |
 | Picture    | picture size=0       |
 | Real       | 0                    |
@@ -62,9 +62,9 @@ Le tableau ci-dessous liste les types de données pouvant être convertis, le ty
 | Types à convertir | en Chaîne | en Numérique | en Date | en Heure | en Booléen |
 | ----------------- | --------- | ------------ | ------- | -------- | ---------- |
 | Chaîne (1)        |           | Num          | Date    | Time     | Bool       |
-| Numérique (2)     | String    |              |         |          | Bool       |
-| Date              | String    |              |         |          | Bool       |
-| Time              | String    |              |         |          | Bool       |
+| Numérique (2)     | Text      |              |         |          | Bool       |
+| Date              | Text      |              |         |          | Bool       |
+| Time              | Text      |              |         |          | Bool       |
 | Boolean           |           | Num          |         |          |            |
 
 (1) Les chaînes formatées en JSON peuvent être converties en données scalaires, objets ou collections à l'aide de la commande `JSON Parse`.

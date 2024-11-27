@@ -46,14 +46,14 @@ Le [moteur de rendu Web intégré 4D](properties_WebArea.md#use-embedded-web-ren
 
 Par exemple, pour appeler la méthode 4D `HelloWorld`, vous devez simplement exécuter la déclaration suivante :
 
-```codeJS
+```js
 $4d.HelloWorld();
 ```
 > JavaScript est sensible à la casse. Il est donc important de noter que l'objet est nommé $4d (avec un "d" minuscule).
 
 La syntaxe des appels aux méthodes 4D est la suivante :
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 - `param1...paramN` : Vous pouvez passer autant de paramètres que vous le souhaitez dans la méthode 4D. Ces paramètres peuvent être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).

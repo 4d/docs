@@ -38,8 +38,8 @@ If the formula is created in a component, you might consider using the *context*
 
 | Parâmetros                       | Tipo    | Descrição                                                                          |
 | -------------------------------- | ------- | ---------------------------------------------------------------------------------- |
-| `sk execute in current database` | Longint | (padrão) A fórmula será executada no contexto em que foi criada |
-| `sk execute in host database`    | Longint | A fórmula será executada no contexto do banco de dados do host                     |
+| `sk execute in current database` | Integer | (padrão) A fórmula será executada no contexto em que foi criada |
+| `sk execute in host database`    | Integer | A fórmula será executada no contexto do banco de dados do host                     |
 
 #### Exemplo
 

@@ -78,7 +78,7 @@ Vous pouvez également transmettre des valeurs pour tous les attributs de l'enti
 | Propriétés                                            | Type                                                                 | Description                                                                 |
 | ----------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Attributs de l'entité                                 | mixte                                                                | Optionnelle - Valeurs à modifier                                            |
-| __DATACLASS | String                                                               | Obligatoire - Indique la Dataclass de l'entité                              |
+| __DATACLASS | Text                                                                 | Obligatoire - Indique la Dataclass de l'entité                              |
 | __ENTITY    | Boolean                                                              | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
 | __KEY       | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
@@ -102,7 +102,7 @@ L'entity selection doit avoir été définie au préalable à l'aide de [$method
 | Propriétés                                           | Type    | Description                                                                             |
 | ---------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
 | Attributs de l'entité                                | mixte   | Optionnelle - Valeurs à modifier                                                        |
-| __DATASET  | String  | Obligatoire - entitySetID (UUID) de la sélection d'entité            |
+| __DATASET  | Text    | Obligatoire - entitySetID (UUID) de la sélection d'entité            |
 | __ENTITIES | Boolean | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité |
 
 Reportez-vous aux exemples de [réception d'une sélection d'entité](#receiving-an-entity-selection-as-parameter).

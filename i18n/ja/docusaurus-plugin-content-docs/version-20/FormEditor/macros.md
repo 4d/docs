@@ -217,7 +217,7 @@ Class constructor($macro : Object)
 | -------------------------------- | ---------- | -------------------------------- |
 | $editor.editor.form              | Object     | フォーム全体                           |
 | $editor.editor.file              | File       | フォームファイルの Fileオブジェクト             |
-| $editor.editor.name              | String     | フォームの名称                          |
+| $editor.editor.name              | Text       | フォームの名称                          |
 | $editor.editor.table             | number     | フォームのテーブル番号。プロジェクトフォームの場合は 0。    |
 | $editor.editor.currentPageNumber | number     | 現在のページの番号                        |
 | $editor.editor.currentPage       | Object     | 現在のページ (フォームオブジェクトおよび入力順序を格納)    |
@@ -234,7 +234,7 @@ Class constructor($macro : Object)
 | formProperties    | Object     | マクロによって変更された formProperties       |
 | editor.groups     | Object     | マクロによって変更されたグループ情報                |
 | editor.views      | Object     | マクロによって変更されたビュー情報                 |
-| editor.activeView | String     | 有効なビュー名                           |
+| editor.activeView | Text       | 有効なビュー名                           |
 
 
 たとえば、currentPage と editor.groups の内容が変わった場合には、戻り値を次のように設定します:
@@ -257,7 +257,7 @@ Class constructor($macro : Object)
 | プロパティ | 型 | 説明 |
 | ----- | - | -- |
 |       |   |    |
- source|文字列|メソッドコード|
+ source|Text|method code|
 
 後者の場合、4D は "objectMethods" フォルダー内に当該オブジェクト名を冠したファイルを作成し、`source` 属性に指定したメソッドコードを格納します。 この機能はマクロコードの場合にのみ有効です。
 

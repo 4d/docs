@@ -23,8 +23,8 @@ Para cada selección de entidad almacenada actualmente en la caché de 4D Server
 
 | Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                              |
 | ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String  | Un UUID que hace referencia al conjunto de entidades.                                                                                                                                                                                                                                                    |
-| dataClass     | String  | Nombre de la dataclass.                                                                                                                                                                                                                                                                                  |
+| id            | Text    | Un UUID que hace referencia al conjunto de entidades.                                                                                                                                                                                                                                                    |
+| dataClass     | Text    | Nombre de la dataclass.                                                                                                                                                                                                                                                                                  |
 | selectionSize | Number  | Número de entidades en la selección de entidades.                                                                                                                                                                                                                                                        |
 | sorted        | Boolean | Devuelve true si el conjunto fue ordenado ( utilizando `$orderby`) o false si no está ordenado.                                                                                                                                                                                                          |
 | refreshed     | Fecha   | Cuando se creó el conjunto de entidades o la última vez que se utilizó.                                                                                                                                                                                                                                  |
@@ -40,8 +40,8 @@ Para cada sesión de usuario, se devuelve la siguiente información en la colecc
 
 | Propiedad  | Tipo   | Descripción                                                       |
 | ---------- | ------ | ----------------------------------------------------------------- |
-| sessionID  | String | Un UUID que referencia la sesión.                                 |
-| userName   | String | El nombre del usuario que ejecuta la sesión.                      |
+| sessionID  | Text   | Un UUID que referencia la sesión.                                 |
+| userName   | Text   | El nombre del usuario que ejecuta la sesión.                      |
 | lifeTime   | Number | La duración de una sesión usuario en segundos (3600 por defecto). |
 | expiration | Fecha  | La fecha y la hora actuales de caducidad de la sesión de usuario. |
 

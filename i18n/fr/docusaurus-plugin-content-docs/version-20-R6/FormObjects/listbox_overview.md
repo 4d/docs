@@ -402,7 +402,7 @@ La gestion des sélections s'effectue différemment selon que la list box de typ
 
 - **List box de type collection/entity selection** : les sélections sont gérées via des propriétés de list box dédiées :
   - [Elément courant](properties_DataSource.md#current-item) est un objet qui reçoit l'élément/l'entité sélectionné(e),
-  - [Eléments sélectionnés](properties_DataSource.md#selected-items) retourne la collection des éléments sélectionnés,
+  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
   - [Position élément courant](properties_DataSource.md#current-item-position) retourne la position de l'élément ou de l'entité sélectionné(e).
 
 - **List box de type tableau :** la commande `LISTBOX SELECT ROW` permet de sélectionner par programmation une ou plusieurs lignes de list box.

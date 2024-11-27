@@ -255,7 +255,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 > "偽" カラムや存在しないカラムにてイベントが発生した場合には、主に空の文字列が返されます。
 
-## リストボックス列
+## List box columns {#list-box-columns}
 
 リストボックスは、それぞれ固有のプロパティを持つ 1つ以上の列オブジェクトから構成されています。 列を選択するには、フォームエディターでリストボックスオブジェクトが選択されているときに任意の列をクリックします:
 
@@ -442,7 +442,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 - **コレクション/エンティティセレクションリストボックス**: 選択項目は、専用のリストボックスプロパティを通して管理されます。
   - [カレントの項目](properties_DataSource.md#カレントの項目) は、選択された要素/エンティティを受け取るオブジェクトです。
-  - [選択された項目](properties_DataSource.md#選択された項目) は、選択された項目のコレクションです。
+  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
   - [カレントの項目の位置](properties_DataSource.md#カレントの項目の位置) は、選択された要素あるいはエンティティの位置を返します。
 
 - **配列リストボックス**: `LISTBOX SELECT ROW` コマンドを使用して、プログラムからリストボックスの行を選択できます。

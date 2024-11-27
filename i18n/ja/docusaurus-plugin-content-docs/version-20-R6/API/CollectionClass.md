@@ -2250,8 +2250,8 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
   | 定数            | 型       | 値 | 説明                                      |
   | ------------- | ------- | - | --------------------------------------- |
-  | ck ascending  | Longint | 0 | 要素は昇順に並べられます (デフォルト) |
-  | ck descending | Longint | 1 | 要素は降順に並べられます                            |
+  | ck ascending  | Integer | 0 | 要素は昇順に並べられます (デフォルト) |
+  | ck descending | Integer | 1 | 要素は降順に並べられます                            |
 
   このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。
 

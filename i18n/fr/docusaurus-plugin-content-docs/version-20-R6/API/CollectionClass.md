@@ -423,10 +423,10 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <!-- REF #collection.concat().Params -->
 
-| Paramètres | Type                                                           |                             | Description                                                                                                                                                         |
-| ---------- | -------------------------------------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | Valeur(s) à concaténer. Si *value* est une collection, tous les éléments de la collection sont ajoutés à la collection d'origine |
-| Résultat   | Collection                                                     | <- | Nouvelle collection contenant les valeurs d'origine et les valeurs ajoutées                                                                                         |
+| Paramètres | Type                                                           |                             | Description                                                                                                                                                                                              |
+| ---------- | -------------------------------------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | Valeur(s) à concaténer. Si *value* est une collection, tous ses éléments sont ajoutés comme de nouveaux éléments à la fin de la collection d'origine. |
+| Résultat   | Collection                                                     | <- | Nouvelle collection contenant les valeurs d'origine et les valeurs ajoutées                                                                                                                              |
 
 <!-- END REF -->
 
@@ -436,7 +436,7 @@ La fonction `.concat()` <!-- REF #collection.concat().Summary -->retourne une no
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-Si *value* est une collection, tous ses éléments sont ajoutés comme de nouveaux éléments à la fin de la collection d'origine. Si *value* n'est pas une collection, son contenu est ajouté comme nouvel élément.
+La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.
 
 #### Exemple
 
@@ -487,7 +487,7 @@ S'il est passé, le paramètre *option* peut contenir l'une des constantes suiva
 
 | option                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | Si la collection d'origine contient des valeurs de type pointeur, par défaut la copie contient également les pointeurs. Toutefois, vous pouvez résoudre les pointeurs au moment de la copie en passant la constante `ck resolve pointers`. Dans ce cas, chaque pointeur contenu dans la collection est évalué lors de la copie et sa valeur déréférencée est utilisée.                                     |
+| `ck resolve pointers` | Si la collection d'origine contient des valeurs de type pointeur, par défaut la copie contient également les pointeurs. Si la collection d'origine contient des valeurs de type pointeur, par défaut la copie contient également les pointeurs. Dans ce cas, chaque pointeur contenu dans la collection est évalué lors de la copie et sa valeur déréférencée est utilisée.                                |
 | `ck shared`           | Par défaut, `copy()` retourne une collection standard (non partagée), même si la commande est appliquée à une collection partagée. Passez la constante `ck shared` pour créer une collection partagée. Dans ce cas, vous pouvez utiliser le paramètre *groupWith* pour associer la collection partagée à une autre collection ou à un autre objet (voir ci-dessous). |
 
 Les paramètres *groupWithCol* ou *groupWithObj* vous permettent de désigner une collection ou un objet avec lequel la collection résultante doit être associée.
@@ -522,7 +522,7 @@ End use
 
 #### Exemple 2
 
-Nous voulons combiner *$sharedColl1* et *$sharedColl2*. Etant donné qu'ils appartiennent à différents groupes partagés, une combinaison directe pourrait générer une erreur. Par conséquent, nous devons faire une copie partagée de *$sharedColl1* et désigner *$sharedColl2* comme étant un groupe partagé pour la copie.
+Nous voulons combiner *$sharedColl1* et *$sharedColl2*. Etant donné qu'ils appartiennent à différents groupes partagés, une combinaison directe pourrait générer une erreur. Etant donné qu'ils appartiennent à différents groupes partagés, une combinaison directe pourrait générer une erreur.
 
 ```4d
 var $sharedColl1;$sharedColl2;$copyColl : Collection
@@ -796,7 +796,7 @@ La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare récursiv
 
 :::
 
-Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
+Par défaut, une évaluation non diacritique est effectuée. L'évaluation est sensible à la casse et différencie les caractères accentués.
 
 :::tip
 
@@ -1169,7 +1169,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit renvoyer **true** pour le premier élément qui satisfait la condition. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1257,7 +1257,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit renvoyer **true** pour le premier élément qui satisfait la condition. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1527,7 +1527,7 @@ Dans *toSearch*, passez l'expression à trouver dans la collection. Vous pouvez 
 Optionnellement, vous pouvez passer l'indice de la collection à partir duquel démarrer la recherche dans *startFrom*.
 
 - Si *startFrom* >= la longueur de la collection, False est retourné, ce qui signifie que la recherche n'est pas effectuée.
-- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). Notez que même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
+- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0.
 - Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -1740,7 +1740,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 #### Description
 
-La fonction `.join()` <!-- REF #collection.join().Summary -->convertit tous les éléments de la collection en chaînes et les concatène en utilisant la chaîne *delimiter* spécifiée comme séparateur<!-- END REF -->. La fonction renvoie la chaîne résultante.
+La fonction `.join()` <!-- REF #collection.join().Summary -->convertit tous les éléments de la collection en chaînes et les concatène en utilisant la chaîne *delimiter* spécifiée comme séparateur<!-- END REF -->.
 
 > Cette fonction ne modifie pas la collection d'origine.
 
@@ -2247,8 +2247,8 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
   | Constante     | Type    | Valeur | Commentaire                                                             |
   | ------------- | ------- | ------ | ----------------------------------------------------------------------- |
-  | ck ascending  | Longint | 0      | Les éléments sont triés par ordre croissant (défaut) |
-  | ck descending | Longint | 1      | Les éléments sont triés par ordre décroissant                           |
+  | ck ascending  | Integer | 0      | Les éléments sont triés par ordre croissant (défaut) |
+  | ck descending | Integer | 1      | Les éléments sont triés par ordre décroissant                           |
 
   Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
@@ -2637,7 +2637,7 @@ Vous pouvez utiliser des parenthèses dans la recherche afin de prioriser les ca
 
 Il existe deux types de placeholders : les **placeholders indexés** et les **placeholders nommés**.
 
-- **Placeholders indexés** : les paramètres sont insérés en tant que `:paramIndex` (par exemple ":1", ":2"...) dans *queryString* et leurs valeurs correspondantes sont fournies par la séquence de paramètres *value*. Vous pouvez utiliser jusqu'à 128 paramètres *value*.
+- **Placeholders indexés** : les paramètres sont insérés en tant que `:paramIndex` (par exemple ":1", ":2"...) dans *queryString* et leurs valeurs correspondantes sont fournies par la séquence de paramètres *value*. dans *queryString* et leurs valeurs correspondantes sont fournies par la séquence de paramètres *value*.
 
 Voici un exemple :
 
@@ -2655,7 +2655,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-Vous pouvez combiner tous les types d'arguments dans *queryString*. Une *queryString* peut contenir, pour les paramètres *propertyPath* et *value* :
+Vous pouvez combiner tous les types d'arguments dans *queryString*. Vous pouvez combiner tous les types d'arguments dans *queryString*.
 
 - des valeurs directes (pas de placeholders)
 - des placeholders indexés et/ou nommés.
@@ -2884,7 +2884,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 - *$1.accumulator*: valeur à modifier par la fonction et qui est initialisée par *initValue*.
-- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode. La valeur retournée est la dernière calculée.
 
 #### Exemple 1
 
@@ -2969,7 +2969,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 - *$1.accumulator*: valeur à modifier par la fonction et qui est initialisée par *initValue*.
-- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode. La valeur retournée est la dernière calculée.
 
 #### Exemple 1
 
@@ -3038,7 +3038,7 @@ La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou 
 
 Dans *index*, passez le numéro de l'élément à partir duquel la suppression doit débuter dans la collection.
 
-> **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0. Si *index* est supérieur à la taille de la collection, l'*index* de départ réel sera fixé à la longueur (length) de la collection.
+> **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0. Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*).
 
 - Si *index* < 0, il est recalculé comme *index:=index+length* (il est considéré comme décalage depuis la fin de la collection).
 - Si la valeur recalculée est négative, *index* prend la valeur 0.
@@ -3295,7 +3295,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 - (obligatoire si vous avez utilisé une méthode) *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est à vrai, **false** sinon.
-- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode. La valeur retournée est la dernière calculée.
 
 Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de la collection retournant true, elle arrête d'appeler la callback et retourne **true**.
 

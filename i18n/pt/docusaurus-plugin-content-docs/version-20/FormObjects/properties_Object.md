@@ -292,7 +292,7 @@ Existem vários tipos de cálculos disponíveis. The following table shows which
 | Mínimo                 | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |
 | Máximo                 | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |
 | Soma                   | X   |      |      | X    | X    |      | Igual ao tipo de coluna |
-| Contagem               | X   | X    | X    | X    | X    | X    | Longint                 |
+| Contagem               | X   | X    | X    | X    | X    | X    | Integer                 |
 | Média                  | X   |      |      | X    |      |      | Real                    |
 | Desvio padrão(*)       | X   |      |      | X    |      |      | Real                    |
 | Variância(*)           | X   |      |      | X    |      |      | Real                    |

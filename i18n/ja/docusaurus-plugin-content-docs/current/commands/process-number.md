@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name | Text    | → | Name of process for which to retrieve the process number |
 | id   | Text    | → | ID of process for which to retrieve the process number   |
 | \*   | 演算子     | → | Return the process number from the server                |
-| 戻り値  | Longint | ← | Process number                                           |
+| 戻り値  | Integer | ← | Process number                                           |
 
 <!-- END REF-->
 

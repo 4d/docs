@@ -291,7 +291,7 @@ Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálcu
 | Mínimo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Suma                    | X   |      |       | X    | X    |          | Igual que el tipo de columna        |
-| Conteo                  | X   | X    | X     | X    | X    | X        | Longint                             |
+| Conteo                  | X   | X    | X     | X    | X    | X        | Integer                             |
 | Promedio                | X   |      |       | X    |      |          | Real                                |
 | Desviación estándar(*)  | X   |      |       | X    |      |          | Real                                |
 | Varianza(*)             | X   |      |       | X    |      |          | Real                                |

@@ -46,14 +46,14 @@ El [motor de renderizado web integrado 4D](properties_WebArea.md#use-embedded-we
 
 Por ejemplo, para llamar al método `HelloWorld` de 4D, basta con ejecutar la siguiente declaración:
 
-```codeJS
+```js
 $4d.HelloWorld();
 ```
 > JavaScript es sensible a las mayúsculas y minúsculas, por lo que es importante tener en cuenta que el objeto se llama $4d (con "d" minúscula).
 
 La sintaxis de las llamadas a los métodos 4D es la siguiente:
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 - `param1...paramN`: Puede pasar tantos parámetros como necesite al método 4D. Estos parámetros pueden ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).

@@ -153,10 +153,10 @@ $txt:="Hello world!"
 - テーブルタグ:
 
 ```
-| 引数 | 型   | 説明  |
+| Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | 文字列 |Write pro エリア|
-| toolbar   | 文字列 |ツールバー名  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - リンクタグ:
@@ -190,21 +190,21 @@ $txt:="Hello world!"
 `WP SwitchToolbar.md` ファイルに、次のように書くことができます:
 
 ```4d
-<!-- size 引数に応じて、異なるロゴを返します -->
+<!-- This method returns a different logo depending on the size parameter -->
 
 
 GetLogo (size) -> logo
 
 
-| 引数 | 型   | in/out | 説明 |
+| Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | 倍長整数 | in | ロゴスタイルセレクター (1 から 5)  |
-| logo      | ピクチャー | out | 選択されたロゴ |
+| size      | Integer | in | Logo style selector (1 to 5)  |
+| logo      | Picture | out | Selected logo |
 
 
 ## Description
 
-このメソッドは、*size* 引数の値に応じて、特定サイズのロゴを返します。
+This method returns a logo of a specific size, depending on the value of the *size* parameter value.
 1 = 最小値, 5 = 最大値
 
 ## Example

@@ -161,8 +161,8 @@ _italic_
 ```md
 | Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - La etiqueta del enlace es soportada:
@@ -196,30 +196,30 @@ The [documentation](https://doc.4d.com) of the command ....
 En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ````md
-<!-- Este método devuelve un logo diferente dependiendo del parámetro size -->
+<!-- This method returns a different logo depending on the size parameter -->
 
 
 GetLogo (size) -> logo
 
 
-| Parámetro | Tipo   | Entrada/Salida | Descripción |
-| --------- | ------ | -------------- | ----------- |
-| size      | Longint | Entrada | Selector de estilo de logo (1 a 5)  |
-| logo      | Picture | Salida | Logo seleccionado |
+| Parameter | Type   | in/out | Description |
+| --------- | ------ | ------ | ----------- |
+| size      | Integer | in | Logo style selector (1 to 5)  |
+| logo      | Picture | out | Selected logo |
 
 
-## Descripción
+## Description
 
-Este método devuelve un logo de un tamaño específico, dependiendo del valor del parámetro *size*.
-1 = tamaño más pequeño, 5 = tamaño más grande.
+This method returns a logo of a specific size, depending on the value of the *size* parameter.
+1 = smallest size, 5 = largest size.
 
-## Ejemplo
+## Example
 
 ```4d
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Obtener el logo más grande
+//Get the largest logo
 $logo:=GetLogo(5)
 ```
 ````

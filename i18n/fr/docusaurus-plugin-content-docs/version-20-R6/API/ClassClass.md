@@ -76,7 +76,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La propriété `.me` <!-- REF #ClassClass.me.Summary -->renvoie l'instance unique de la classe singleton `cs.className`<!-- END REF -->. Si la classe singleton n'a jamais été instanciée au préalable, cette propriété appelle le constructeur de la classe sans paramètres et crée l'instance. Sinon, elle renvoie l'instance singleton existante.
+Sommaire Si la classe singleton n'a jamais été instanciée au préalable, cette propriété appelle le constructeur de la classe sans paramètres et crée l'instance. Sinon, elle renvoie l'instance singleton existante.
 
 Si `cs.className` n'est pas une [classe singleton](../Concepts/classes.md#singleton-classes), `.me` est **undefined** par défaut.
 

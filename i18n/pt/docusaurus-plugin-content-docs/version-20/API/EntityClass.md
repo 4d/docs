@@ -145,7 +145,7 @@ As diferenças são retornadas como uma coleção de objetos cujas propriedades 
 
 | Nome da propriedade | Tipo                              | Descrição                              |
 | ------------------- | --------------------------------- | -------------------------------------- |
-| attributeName       | String                            | Nome do atributo                       |
+| attributeName       | Text                              | Nome do atributo                       |
 | value               | any - Depende do tipo de atributo | Valor do atributo na entidade          |
 | otherValue          | any - Depende do tipo de atributo | Valor do atributo em *entityToCompare* |
 

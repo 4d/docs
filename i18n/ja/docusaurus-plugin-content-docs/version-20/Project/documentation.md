@@ -166,10 +166,10 @@ _イタリック_
 - テーブルタグ:
 
 ```md
-| 引数 | 型   | 説明  |
+| Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | 文字列 |Write pro エリア|
-| toolbar   | 文字列 |ツールバー名  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 
@@ -212,24 +212,15 @@ _イタリック_
 GetLogo (size) -> logo
 
 
-| 引数 | 型   | in/out | 説明 |
+| Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | 倍長整数 | in | ロゴスタイルセレクター (1 から 5)  |
-| logo      | ピクチャー | out | 選択されたロゴ |
+| size      | Integer | in | Logo style selector (1 to 5)  |
+| logo      | Picture | out | Selected logo |
 
 
 ## Description
 
-このメソッドは、*size* 引数に応じて、特定サイズのロゴを返します。
-1 = 最小値, 5 = 最大値
-
-## Example
-
-C_PICTURE($logo)
-C_LONGINT($size)
-
-// 最大ロゴを取得します
-$logo:=GetLogo(5)
+This method returns a logo of a specific size, depending on the value of the *size* parameter.
 1 = 最小値, 5 = 最大値
 
 ## Example

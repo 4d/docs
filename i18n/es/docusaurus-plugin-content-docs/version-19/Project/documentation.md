@@ -155,8 +155,8 @@ $txt:="Hello world!"
 ```
 | Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - La etiqueta del enlace es soportada:
@@ -190,7 +190,7 @@ La [documentation](https://doc.4d.com) del comando ....
 En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ```4d
-<!-- Este método devuelve un logotipo diferente en función del parámetro de tamaño -->
+<!-- This method returns a different logo depending on the size parameter -->
 
 
 GetLogo (size) -> logo
@@ -198,13 +198,13 @@ GetLogo (size) -> logo
 
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Longint | in | Logo style selector (1 to 5)  |
+| size      | Integer | in | Logo style selector (1 to 5)  |
 | logo      | Picture | out | Selected logo |
 
 
 ## Description
 
-Este método devuelve un logotipo diferente en función del parámetro *size*.
+This method returns a logo of a specific size, depending on the value of the *size* parameter value.
 1 = tamaño más pequeño, 5 = tamaño más grande.
 
 ## Ejemplo

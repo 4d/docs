@@ -41,7 +41,7 @@ El valor por defecto depende del tipo de variable:
 | ---------- | ----------------- |
 | Booleano   | False             |
 | Fecha      | 00-00-00          |
-| Longint    | 0                 |
+| Integer    | 0                 |
 | Hora       | 00:00:00          |
 | Picture    | picture size=0    |
 | Real       | 0                 |
@@ -62,9 +62,9 @@ La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los q
 | Tipos a convertir | en Cadena | en Número | en Fecha | en Hora | en Booleano |
 | ----------------- | --------- | --------- | -------- | ------- | ----------- |
 | String (1)        |           | Num       | Fecha    | Hora    | Bool        |
-| Número (2)        | String    |           |          |         | Bool        |
-| Fecha             | String    |           |          |         | Bool        |
-| Hora              | String    |           |          |         | Bool        |
+| Número (2)        | Text      |           |          |         | Bool        |
+| Fecha             | Text      |           |          |         | Bool        |
+| Hora              | Text      |           |          |         | Bool        |
 | Boolean           |           | Num       |          |         |             |
 
 (1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.

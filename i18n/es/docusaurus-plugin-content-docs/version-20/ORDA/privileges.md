@@ -124,15 +124,15 @@ La sintaxis del archivo `roles.json` es la siguiente:
 | Nombre de propiedad |                 |               | Tipo                              | Obligatorio | Descripción                                                                    |
 | ------------------- | --------------- | ------------- | --------------------------------- | ----------- | ------------------------------------------------------------------------------ |
 | privileges          |                 |               | Colección de objetos `privilege`  | X           | Lista de privilegios definidos                                                 |
-|                     | \[].privilege  |               | String                            |             | Nombre del privilegio                                                          |
+|                     | \[].privilege  |               | Text                              |             | Nombre del privilegio                                                          |
 |                     | \[].includes   |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                      |
 | roles               |                 |               | Colección de objetos `role`       |             | Lista de roles definidos                                                       |
-|                     | \[].role       |               | String                            |             | Nombre del rol                                                                 |
+|                     | \[].role       |               | Text                              |             | Nombre del rol                                                                 |
 |                     | \[].privileges |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                      |
 | permissions         |                 |               | Object                            | X           | Lista de acciones permitidas                                                   |
 |                     | allowed         |               | Colección de objetos `permission` |             | Lista de permisos permitidos                                                   |
-|                     |                 | \[].applyTo  | String                            | X           | Targeted [resource](#resources) name                                           |
-|                     |                 | \[].type     | String                            | X           | tipo de [Recurso](#resources): "datastore", "dataclass", "attribute", "method" |
+|                     |                 | \[].applyTo  | Text                              | X           | Targeted [resource](#resources) name                                           |
+|                     |                 | \[].type     | Text                              | X           | tipo de [Recurso](#resources): "datastore", "dataclass", "attribute", "method" |
 |                     |                 | \[].read     | Colección de cadenas              |             | Lista de privilegios                                                           |
 |                     |                 | \[].create   | Colección de cadenas              |             | Lista de privilegios                                                           |
 |                     |                 | \[].update   | Colección de cadenas              |             | Lista de privilegios                                                           |

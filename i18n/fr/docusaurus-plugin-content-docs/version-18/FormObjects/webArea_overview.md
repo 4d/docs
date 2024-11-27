@@ -39,14 +39,14 @@ The [4D embedded Web rendering engine](properties_WebArea.md#use-embedded-web-re
 
 Par exemple, pour appeler la méthode 4D `HelloWorld`, vous devez simplement exécuter la déclaration suivante :
 
-```codeJS
+```js
 $4d.HelloWorld();
 ```
 > JavaScript est sensible à la casse. Il est donc important de noter que l'objet est nommé $4d (avec un "d" minuscule).
 
 La syntaxe des appels aux méthodes 4D est la suivante :
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 

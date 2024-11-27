@@ -255,7 +255,7 @@ Los eventos formulario de los objetos list box o columnas de list box pueden dev
 
 > Si un evento se produce en una columna o línea "fake" que no existe, se suele devolver una cadena vacía.
 
-## Columnas de list box
+## Columnas list box {#list-box-columns}
 
 Un list box está formado por uno o varios objetos columna que tienen propiedades específicas. Puede seleccionar una columna de list box en el editor de formularios haciendo clic en ella cuando el objeto list box está seleccionado:
 
@@ -402,7 +402,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
 
 - **List box de tipo colección/selección de entidades**: las selecciones se gestionan a través de las propiedades del list box dedicado:
   - [Elemento actual](properties_DataSource.md#current-item) es un objeto que recibirá el elemento/la entidad seleccionado(a)
-  - [Elementos seleccionados](properties_DataSource.md#selected-items) es una colección de elementos seleccionados
+  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
   - [Posición del elemento actual](properties_DataSource.md#current-item-position) devuelve la posición del elemento o de la entidad seleccionada.
 
 - **List box de tipo array**: el comando `LISTBOX SELECT ROW` puede utilizarse para seleccionar una o más líneas del list box por programación.

@@ -442,7 +442,7 @@ _arrText_ 列のメソッドは以下の通りです:
 
 - **コレクション/エンティティセレクションリストボックス**: 選択項目は、専用のリストボックスプロパティを通して管理されます。
   - [カレントの項目](properties_DataSource.md#カレントの項目) は、選択された要素/エンティティを受け取るオブジェクトです。
-  - [選択された項目](properties_DataSource.md#選択された項目) は、選択された項目のコレクションです。
+  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
   - [カレントの項目の位置](properties_DataSource.md#カレントの項目の位置) は、選択された要素あるいはエンティティの位置を返します。
 
 - **配列リストボックス**: `LISTBOX SELECT ROW` コマンドを使用して、プログラムからリストボックスの行を選択できます。

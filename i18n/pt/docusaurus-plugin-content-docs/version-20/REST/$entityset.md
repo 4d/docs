@@ -40,10 +40,10 @@ Após criar um conjunto de entidades, o ID do conjunto de entidades é devolvido
 
 Criar outro conjunto de entidades com base em conjuntos de entidades criados anteriormente
 
-| Parâmetro        | Tipo   | Descrição                                                            |
-| ---------------- | ------ | -------------------------------------------------------------------- |
-| $operator        | String | Um dos operadores lógicos a testar com o outro conjunto de entidades |
-| $otherCollection | String | ID do conjunto de entidades                                          |
+| Parâmetro        | Tipo | Descrição                                                            |
+| ---------------- | ---- | -------------------------------------------------------------------- |
+| $operator        | Text | Um dos operadores lógicos a testar com o outro conjunto de entidades |
+| $otherCollection | Text | ID do conjunto de entidades                                          |
 
 
 

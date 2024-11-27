@@ -38,8 +38,8 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 
 | Operação             | Sintaxe                                   | Retorna    | Expression                              | Valor    |
 | -------------------- | ----------------------------------------- | ---------- | --------------------------------------- | -------- |
-| Concatenação         | String + String                           | String     | "abc" + "def"                           | "abcdef" |
-| Repetição            | String \* Number                          | String     | "ab" \* 3                               | "ababab" |
+| Concatenação         | String + String                           | Text       | "abc" + "def"                           | "abcdef" |
+| Repetição            | String \* Number                          | Text       | "ab" \* 3                               | "ababab" |
 | Igual                | String = String                           | Parâmetros | "abc" = "abc"                           | True     |
 |                      |                                           |            | "abc" = "abd"                           | False    |
 | Desigualdade         | String # String                           | Parâmetros | "abc" # "abd"                           | True     |

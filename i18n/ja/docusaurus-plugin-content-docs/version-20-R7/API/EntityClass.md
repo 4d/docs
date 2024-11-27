@@ -153,7 +153,7 @@ title: Entity
 
 | プロパティ名        | 型             | 説明                     |
 | ------------- | ------------- | ---------------------- |
-| attributeName | String        | 属性名                    |
+| attributeName | Text          | 属性名                    |
 | value         | any - 属性の型による | オリジナルエンティティの属性値        |
 | otherValue    | any - 属性の型による | *entityToCompare* の属性値 |
 

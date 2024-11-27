@@ -402,7 +402,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
 
 - **List box de tipo colección/selección de entidades**: las selecciones se gestionan a través de las propiedades del list box dedicado:
   - [Elemento actual](properties_DataSource.md#current-item) es un objeto que recibirá el elemento/la entidad seleccionado(a)
-  - [Elementos seleccionados](properties_DataSource.md#selected-items) es una colección de elementos seleccionados
+  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
   - [Posición del elemento actual](properties_DataSource.md#current-item-position) devuelve la posición del elemento o de la entidad seleccionada.
 
 - **List box de tipo array**: el comando `LISTBOX SELECT ROW` puede utilizarse para seleccionar una o más líneas del list box por programación.

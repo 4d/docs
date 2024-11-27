@@ -51,7 +51,7 @@ Le tableau suivant illustre ces valeurs par défaut :
 | ---------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------- |
 | Booleen    | False                                                                          | True                     | True (varie)                |
 | Date       | 00-00-00                                                                       | 00-00-00                 | 00-00-00                    |
-| Longint    | 0                                                                              | 1919382119               | 909540880 (varie)           |
+| Integer    | 0                                                                              | 1919382119               | 909540880 (varie)           |
 | Time       | 00:00:00                                                                       | 533161:41:59             | 249345:34:24 (varie)        |
 | Picture    | picture size=0                                                                 | picture size=0           | picture size=0              |
 | Real       | 0                                                                              | 1.250753659382e+243      | 1.972748538022e-217 (varie) |
@@ -72,9 +72,9 @@ Le tableau ci-dessous liste les types de données pouvant être convertis, le ty
 | Types à convertir | en Chaîne | en Numérique | en Date | en Heure | en Booléen |
 | ----------------- | --------- | ------------ | ------- | -------- | ---------- |
 | Chaîne (1)        |           | Num          | Date    | Time     | Bool       |
-| Numérique (2)     | String    |              |         |          | Bool       |
-| Date              | String    |              |         |          | Bool       |
-| Time              | String    |              |         |          | Bool       |
+| Numérique (2)     | Text      |              |         |          | Bool       |
+| Date              | Text      |              |         |          | Bool       |
+| Time              | Text      |              |         |          | Bool       |
 | Boolean           |           | Num          |         |          |            |
 
 (1) Les chaînes formatées en JSON peuvent être converties en données scalaires, objets ou collections à l'aide de la commande `JSON Parse`.

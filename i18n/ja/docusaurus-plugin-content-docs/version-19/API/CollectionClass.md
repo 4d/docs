@@ -1704,8 +1704,8 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
  | 定数            | 型       | 値 | 説明                   |
  | ------------- | ------- | - | -------------------- |
- | ck ascending  | Longint | 0 | 要素は昇順に並べられます (デフォルト) |
- | ck descending | Longint | 1 | 要素は降順に並べられます         |
+ | ck ascending  | Integer | 0 | 要素は昇順に並べられます (デフォルト) |
+ | ck descending | Integer | 1 | 要素は降順に並べられます         |
 
  このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は内部的な順序で返されます)。
 

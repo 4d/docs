@@ -5,7 +5,7 @@ title: EntitySelection
 
 Una entity selection es un objeto que contiene una o más referencias a [entidades](ORDA/dsMapping.md#entity) pertenecientes a la misma [Dataclass](ORDA/dsMapping.md#dataclass). Una entity selection puede contener 0, 1 o X entidades de la dataclass -- donde X puede representar el número total de entidades contenidas en la dataclass.
 
-Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). También puede crear entity selections vacías utilizando la función [`dataClass.newSelection()`](DataClassClass.md#newselection) o el comando [`Create new selection`](../commands/create-entity-selection.md).
+Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](../commands/create-entity-selection.md) command.
 
 ### Resumen
 
@@ -46,6 +46,10 @@ Las entity selections pueden crearse a partir de selecciones existentes utilizan
 | [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<br/><!-- INCLUDE #EntitySelectionClass.slice().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<br/><!-- INCLUDE #EntitySelectionClass.sum().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->                                  |
+
+#### Ver también
+
+[`USE ENTITY SELECTION`](../commands/use-entity-selection.md)
 
 <!-- REF EntitySelectionClass.index.Desc -->
 

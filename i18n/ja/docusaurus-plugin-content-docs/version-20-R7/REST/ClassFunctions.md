@@ -130,7 +130,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 | プロパティ                                                 | 型                                    | 説明                                   |
 | ----------------------------------------------------- | ------------------------------------ | ------------------------------------ |
 | エンティティの属性                                             | mixed                                | 任意 - 変更する値                           |
-| __DATACLASS | String                               | 必須 - エンティティのデータクラスを指定します             |
+| __DATACLASS | Text                                 | 必須 - エンティティのデータクラスを指定します             |
 | __ENTITY    | Boolean                              | 必須 - true は引数がエンティティであることをサーバーに通知します |
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
@@ -155,7 +155,7 @@ See an example of [contents downloading using an entity](#using-an-entity-to-dow
 | プロパティ                                                | 型       | 説明                                                      |
 | ---------------------------------------------------- | ------- | ------------------------------------------------------- |
 | エンティティの属性                                            | mixed   | 任意 - 変更する値                                              |
-| __DATASET  | String  | 必須 - エンティティセレクションのエンティティセットID (UUID) |
+| __DATASET  | Text    | 必須 - エンティティセレクションのエンティティセットID (UUID) |
 | __ENTITIES | Boolean | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.

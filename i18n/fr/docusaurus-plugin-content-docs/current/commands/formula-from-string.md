@@ -38,8 +38,8 @@ Si la formule est créée dans un composant, vous pouvez envisager d'utiliser le
 
 | Constante                        | Type    | Description                                                                                   |
 | -------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
-| `sk execute in current database` | Longint | (par défaut) La formule sera exécutée dans le contexte où elle a été créée |
-| `sk execute in host database`    | Longint | La formule sera exécutée dans le contexte de la base de données de hôte                       |
+| `sk execute in current database` | Integer | (par défaut) La formule sera exécutée dans le contexte où elle a été créée |
+| `sk execute in host database`    | Integer | La formule sera exécutée dans le contexte de la base de données de hôte                       |
 
 #### Exemple
 

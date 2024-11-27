@@ -483,7 +483,7 @@ Contém as seguintes propriedades:
 
 | Propriedade  | Tipo de valor | Descrição                                         |
 | ------------ | ------------- | ------------------------------------------------- |
-| version      | Longint       | Versão do componente interno                      |
+| version      | Integer       | Versão do componente interno                      |
 | dateCreation | Timestamp     | Data de criação                                   |
 | dateModified | Timestamp     | Data da última modificação                        |
 | meta         | Object        | Conteúdos gratuitos, reservados ao programador 4D |

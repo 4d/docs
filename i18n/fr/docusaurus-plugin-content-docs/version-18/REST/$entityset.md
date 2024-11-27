@@ -34,10 +34,10 @@ Après que vous ayez créé un entity set, l'ID de l'entity set est retourné av
 
 Crée un autre entity set basé sur des entity sets préalablement créés
 
-| Paramètres       | Type   | Description                                                   |
-| ---------------- | ------ | ------------------------------------------------------------- |
-| $operator        | String | L'un des opérateurs logiques à tester avec l'autre entity set |
-| $otherCollection | String | ID de l'entity set                                            |
+| Paramètres       | Type | Description                                                   |
+| ---------------- | ---- | ------------------------------------------------------------- |
+| $operator        | Text | L'un des opérateurs logiques à tester avec l'autre entity set |
+| $otherCollection | Text | ID de l'entity set                                            |
 
 ### Description
 
