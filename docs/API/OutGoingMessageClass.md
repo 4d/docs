@@ -1,10 +1,10 @@
 ---
 id: OutgoingMessageClass
-title: OutGoingMessage
+title: OutgoingMessage
 ---
 
 
-The `4D.OutGoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutGoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
+The `4D.OutgoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutgoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
 
 Typically, this class can be used in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser. 
 
@@ -38,10 +38,10 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	return $result
 ```
 
-### OutGoingMessage Object
+### OutgoingMessage Object
 
 
-4D.OutGoingMessage objects provide the following properties and functions:
+4D.OutgoingMessage objects provide the following properties and functions:
 
 ||
 |---|
@@ -54,7 +54,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::note
 
-A 4D.OutGoingMessage object is a [non-sharable](../Concepts/shared.md) object.
+A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 :::
 
@@ -149,7 +149,7 @@ If *body* is not of a supported value type, an error is returned.
 
 The `.setHeader()` function <!-- REF #OutgoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
 
-When returning a 4D.OutGoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`). 
+When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`). 
 
 :::note
 
