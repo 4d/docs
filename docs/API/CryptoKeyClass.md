@@ -45,7 +45,7 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Settings to generate or load a key pair|
-|result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
 <!-- END REF -->
 
 The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
