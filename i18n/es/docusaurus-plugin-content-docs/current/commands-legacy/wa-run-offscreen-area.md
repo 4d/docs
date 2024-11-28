@@ -96,6 +96,6 @@ La variable del sistema OK se define en 0 si se ha alcanzado el tiempo de espera
 
 #### Ver también 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 *Gestión programada de áreas web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  

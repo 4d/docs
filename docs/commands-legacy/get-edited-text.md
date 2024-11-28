@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get edited text.Summary-->The **Get edited text** command is mainly to be used with the On After Edit form event to retrieve the text as it is being entered.<!-- END REF--> It can also be used with the On Before Keystroke and On After Keystroke form events. For more information about those form events, please refer to the description of the command [Form event code](form-event-code.md).
+<!--REF #_command_.Get edited text.Summary-->The **Get edited text** command is mainly to be used with the On After Edit form event to retrieve the text as it is being entered.<!-- END REF--> It can also be used with the On Before Keystroke and On After Keystroke form events. For more information about those form events, please refer to the description of the command [Form event code](../commands/form-event-code.md).
 
 The combination of this command with On Before Keystroke and On After Keystroke form events works as follows:
 
@@ -66,5 +66,5 @@ Here is an example of how to process on the fly characters entered in a text fie
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  

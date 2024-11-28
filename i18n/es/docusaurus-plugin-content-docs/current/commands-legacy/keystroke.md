@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Keystroke.Summary-->Keystroke devuelve el carácter introducido por el usuario en un campo o en un área editable.<!-- END REF--> 
 
-Generalmente, Keystroke se llama en un método de formulario o de objeto durante la gestión del evento de formulario On Before Keystroke. Para detectar eventos de tecleo, utilice el comando [Form event](form-event.md "Form event"). 
+Generalmente, Keystroke se llama en un método de formulario o de objeto durante la gestión del evento de formulario On Before Keystroke. Para detectar eventos de tecleo, utilice el comando [Form event](../commands/form-event.md "Form event"). 
 
 Para reemplazar el carácter introducido por el usuario con otro carácter, utilice el comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROKE").
 
@@ -169,5 +169,5 @@ Utilizando las habilidades de la comunicación interproceso de 4D, puede constru
 #### Ver también 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  

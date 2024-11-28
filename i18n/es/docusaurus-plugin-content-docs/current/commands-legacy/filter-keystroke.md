@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Si pasa una cadena vacía, el filtrado se cancela y se ignora.
 
-Generalmente, FILTER KEYSTROKE se llama en un método de formulario o de objeto cuando se gestiona el evento de formulario On Before Keystroke. Para detectar los eventos de tecleo, utilice el comando [Form event](form-event.md "Form event"). Para obtener el carácter tecleado, utilice el comando [Keystroke](keystroke.md "Keystroke").
+Generalmente, FILTER KEYSTROKE se llama en un método de formulario o de objeto cuando se gestiona el evento de formulario On Before Keystroke. Para detectar los eventos de tecleo, utilice el comando [Form event](../commands/form-event.md "Form event"). Para obtener el carácter tecleado, utilice el comando [Keystroke](keystroke.md "Keystroke").
 
 **IMPORTANTE:** el comando FILTER KEYSTROKE le permite cancelar o reemplazar el carácter introducido por el usuario con otro carácter. Por otra parte, si quiere insertar más de un carácter para un keystroke especifico, recuerde que el texto que ve en la pantalla aún NO es el valor de la variable o campo fuente de datos para el área que está siendo editada. El valor del campo o de la variable fuente de datos se asigna después de que se valida la entrada de datos para el área. Por lo tanto depende de usted el colocar los datos introducidos en una variable y luego trabajar con el valor de la variable y reasignar el área de entrada (ver el ejemplo en esta sección).
 
@@ -246,7 +246,7 @@ El método ObtenerTextoSeleccionado es el siguiente:
 
 #### Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  

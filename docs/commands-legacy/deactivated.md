@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 In order for the **Deactivated** execution cycle to be generated, make sure that the On Deactivate event property of the form and/or the objects has been selected in Design environment. 
 
-**Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Deactivate event.
+**Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Deactivate event.
 
 #### See also 
 
 [Activated](activated.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

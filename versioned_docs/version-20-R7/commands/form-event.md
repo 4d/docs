@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 Each returned object includes the following main properties:
 
-| **Property** | **Type** | **Description**                                                                              |
-| ------------ | -------- | -------------------------------------------------------------------------------------------- |
+| **Property** | **Type** | **Description**     |
+| ------------ | -------- | --------------------------------- |
 | objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form |
-| code         | longint  | Numeric value of the form event. See [Form event code](form-event-code.md)                   |
-| description  | text     | Name of the form event (*e.g.* "On After Edit").                                             |
+| code         | integer  | Numeric value of the form event.                    |
+| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section.|
 
 For example, in the case of a click on a button, the object contains the following properties:
 
@@ -96,4 +96,5 @@ The resulting list box when rows are selected:
 
 #### See also 
 
+[Form Events](../Events/overview.md)
 [Form event code](form-event-code.md)  

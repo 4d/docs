@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 空の文字を渡すと、キーストロークはキャンセルされ無視されます。
 
-通常FILTER KEYSTROKEはOn Before Keystrokeフォームイベントを処理するフォームメソッドあるいはオブジェクトメソッドで呼び出します。キーストロークイベントを検知するには、[Form event](form-event.md "Form event")コマンドを使用します。実際のキーストロークを得るには[Keystroke](keystroke.md "Keystroke")コマンドを使用します。
+通常FILTER KEYSTROKEはOn Before Keystrokeフォームイベントを処理するフォームメソッドあるいはオブジェクトメソッドで呼び出します。キーストロークイベントを検知するには、[Form event](../commands/form-event.md "Form event")コマンドを使用します。実際のキーストロークを得るには[Keystroke](keystroke.md "Keystroke")コマンドを使用します。
 
 **重要**: FILTER KEYSTROKEコマンドはユーザが入 力した他の文字をキャンセルしたり置き換えたりすることを可能にします。他方特定のキーストロークに対し複数の文字を入力したい場合、スクリーン上に表示 されているテキストは、編集中のデータソースフィールドや変数の値にまだなっていないことに注意してください。データソースフィールドや変数にはデータ入 力が確定された後に値が代入されます。変数へのデータ入力を途中で取得し、この値を変更して、入力エリアに代入するのは開発者に任されています (この節の例題を参照)。
 
@@ -248,7 +248,7 @@ Get highlighted text メソッド:
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  

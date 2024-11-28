@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Si vous passez une chaîne vide, le filtrage clavier en cours est annulé.
 
-Vous appelez généralement **FILTER KEYSTROKE** dans une méthode formulaire ou objet lorsque vous gérez l'événement formulaire On Before Keystroke . Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](form-event-code.md). Pour récupérer les caractères saisis au clavier, utilisez les fonctions [Keystroke](keystroke.md) ou [Get edited text](get-edited-text.md). 
+Vous appelez généralement **FILTER KEYSTROKE** dans une méthode formulaire ou objet lorsque vous gérez l'événement formulaire On Before Keystroke . Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](../commands/form-event-code.md). Pour récupérer les caractères saisis au clavier, utilisez les fonctions [Keystroke](keystroke.md) ou [Get edited text](get-edited-text.md). 
 
 **IMPORTANT :** Si vous voulez effectuer des opérations “à la volée” en fonction de la valeur courante de la zone saisissable en cours de modification ainsi que du caractère à saisir, rappelez-vous que le texte affiché à l'écran n'est pas encore la valeur du champ ou de la variable. La valeur saisie dans une variable ou un champ ne lui est affectée que lorsque la zone est validée (lorsque l'utilisateur appuie sur la touche **Tabulation**, clique sur un bouton, etc.). En conséquence, pensez à placer les valeurs saisies dans une variable temporaire et à travailler avec celle-ci, puis à assigner cette variable à la zone de saisie (reportez-vous à l'exemple ci-dessous). Vous pouvez également utiliser la fonction [Get edited text](get-edited-text.md).
 
@@ -238,7 +238,7 @@ La méthode obtenirTexteSelectionne est la suivante :
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  

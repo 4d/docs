@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->La commande **WA SET EXTERNAL LINKS FILTERS** permet de mettre en place un ou plusieurs filtre(s) de liens externes pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Les filtres de liens externes déterminent si un URL associé à la page courante via un lien doit être ouvert dans la zone Web ou dans le navigateur Web par défaut de la machine.
 
-Lorsque l’utilisateur clique sur un lien dans la page courante, 4D consulte la liste des filtres de liens externes afin de vérifier si l’URL demandé doit être ouvert dans le navigateur de la machine. Si c’est le cas, la page correspondant à l’URL est affichée dans le navigateur Web et l’événement formulaire On Open External Link est généré (cf. commande [Form event code](form-event-code.md)). Sinon (fonctionnement par défaut), la page correspondant à l’URL est affichée dans la zone Web. L’évaluation de l’URL est basée sur le contenu des tableaux *tabFiltres* et t*abAutorisRefus*. 
+Lorsque l’utilisateur clique sur un lien dans la page courante, 4D consulte la liste des filtres de liens externes afin de vérifier si l’URL demandé doit être ouvert dans le navigateur de la machine. Si c’est le cas, la page correspondant à l’URL est affichée dans le navigateur Web et l’événement formulaire On Open External Link est généré (cf. commande [Form event code](../commands/form-event-code.md)). Sinon (fonctionnement par défaut), la page correspondant à l’URL est affichée dans la zone Web. L’évaluation de l’URL est basée sur le contenu des tableaux *tabFiltres* et t*abAutorisRefus*. 
 
 Les tableaux *tabFiltres* et *tabAutorisRefus* doivent être synchronisés. 
 

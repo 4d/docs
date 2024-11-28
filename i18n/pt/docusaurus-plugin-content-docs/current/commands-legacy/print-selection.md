@@ -33,7 +33,7 @@ Durante a impressão, o método de formulário de saída e os métodos de objeto
  \* Um evento On Printing Break é gerado logo antes que uma área de quebra se imprima.  
  \* Um evento On Printing Footer é gerado logo antes que um pé de página se imprima.  
   
-Pode saber se PRINT SELECTION está imprimindo o primeiro cabeçalho provando [Before selection](before-selection.md) durante um evento On Header. Igualmente pode verificar o último pé de página, provando End selection durante um evento On Printing Footer. Para maior informação, consulte a descrição destes comandos, como também dos comandos [Form event code](form-event-code.md) e [Level ](level.md).  
+Pode saber se PRINT SELECTION está imprimindo o primeiro cabeçalho provando [Before selection](before-selection.md) durante um evento On Header. Igualmente pode verificar o último pé de página, provando End selection durante um evento On Printing Footer. Para maior informação, consulte a descrição destes comandos, como também dos comandos [Form event code](../commands/form-event-code.md) e [Level ](level.md).  
   
 Para imprimir uma seleção ordenada com subtotais ou quebras utilizando PRINT SELECTION, deve primeiro ordenar a seleção. Depois, em cada área de quebra do relatório, incluir uma variável com um método de objeto que atribui o subtotal à variável . Igualmente pode utilizar funções estatísticas e aritméticas como [Sum](sum.md) e [Average](average.md) para atribuir valores às variáveis. Para maior informação, consulte as descrições de [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) e [ACCUMULATE](accumulate.md).  
   

@@ -30,5 +30,5 @@ displayed_sidebar: docs
 #### 参照 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 *セット*  

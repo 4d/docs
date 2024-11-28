@@ -316,8 +316,8 @@ title: Index
 [`Form`](form.md)<br/>
 [`FORM Convert to dynamic`](../commands-legacy/form-convert-to-dynamic.md)<br/>
 [`FORM EDIT`](form-edit.md)<br/>
-[`FORM Event`](../commands-legacy/form-event.md)<br/>
-[`Form event code`](../commands-legacy/form-event-code.md)<br/>
+[`FORM Event`](form-event.md)<br/>
+[`Form event code`](form-event-code.md)<br/>
 [`FORM FIRST PAGE`](../commands-legacy/form-first-page.md)<br/>
 [`FORM Get color scheme`](../commands-legacy/form-get-color-scheme.md)<br/>
 [`FORM Get current page`](../commands-legacy/form-get-current-page.md)<br/>

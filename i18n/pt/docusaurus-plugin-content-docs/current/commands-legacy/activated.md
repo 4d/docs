@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Activated.Summary-->O comando **Activated** retorna **True** em um método de formulário quando a janela que contém o formulário passa ao primeiro plano.<!-- END REF--> 
 
-**Nota:** este comando é equivalente a usar [Form event code](form-event-code.md) e provar se devolve o evento On Activate.
+**Nota:** este comando é equivalente a usar [Form event code](../commands/form-event-code.md) e provar se devolve o evento On Activate.
 
 **Advertência:** não coloque um comando como [TRACE](trace.md) ou [ALERT](alert.md) na fase **Activated** do formulário, isso provocará um ciclo infinito.
 
@@ -29,4 +29,4 @@ displayed_sidebar: docs
 #### Ver também 
 
 [Deactivated](deactivated.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

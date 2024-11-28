@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CURSOR.Summary-->SET CURSOR コマンド はマウスカーソルを、*cursor* 引数に渡したID番号のシステムカーソルへと変更します。<!-- END REF-->
 
-このコマンドはOn Mouse Move [Form event code](form-event-code.md)のコンテキスト内で呼び出されなければなりません。
+このコマンドはOn Mouse Move [Form event code](../commands/form-event-code.md)のコンテキスト内で呼び出されなければなりません。
 
 マウスカーソルは標準の矢印に戻すためには、引数を渡さずにコマンドを呼び出します。
 

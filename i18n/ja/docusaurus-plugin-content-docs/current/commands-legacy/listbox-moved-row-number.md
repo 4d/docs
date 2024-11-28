@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 オプションの引数 *\** を渡すことにより、*object*引数がオブジェクト名（文字列）であることを示します。この引数を渡さない場合、*object*引数が変数であることを示します。この場合、文字列ではなく変数参照を指定します。オブジェクト名についての詳細は *オブジェクトプロパティ* の節を参照してください。
 
-このコマンドはOn row movedフォームイベントで使用します ([Form event](form-event.md "Form event") コマンド参照)。
+このコマンドはOn row movedフォームイベントで使用します ([Form event](../commands/form-event.md "Form event") コマンド参照)。
 
 **注:** このコマンドは、非表示の行を考慮しません。
 
 #### 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  

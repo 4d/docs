@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 In order for the **In header** execution cycle to be generated, make sure that the On Header event property for the form and/or the objects has been selected in the Design environment.
 
-**Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Header event.
+**Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Header event.
 
 #### See also 
 

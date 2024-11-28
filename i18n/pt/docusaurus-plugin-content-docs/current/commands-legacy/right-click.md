@@ -25,4 +25,4 @@ Este comando deve ser utilizado unicamente no contexto do evento de formulário 
 #### Ver também 
 
 [Contextual click](contextual-click.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

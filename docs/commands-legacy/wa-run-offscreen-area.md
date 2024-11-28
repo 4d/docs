@@ -96,6 +96,6 @@ The OK system variable is set to 0 if the timeout has been reached or the [CANCE
 
 #### See also 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 *Programmed management of Web Areas*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  

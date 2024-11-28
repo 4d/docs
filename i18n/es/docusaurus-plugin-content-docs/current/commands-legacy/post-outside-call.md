@@ -44,6 +44,6 @@ Ver el ejemplo de [On Exit Database Method](metodo-base-on-exit.md "On Exit Data
 
 #### Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
