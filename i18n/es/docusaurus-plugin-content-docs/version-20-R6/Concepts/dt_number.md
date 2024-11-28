@@ -9,11 +9,11 @@ Número es un término genérico que significa:
 - Los campos, variables o expresiones de tipo Entero largo. El rango para el tipo de datos Entero largo (4 bytes) es -2^31..(2^31)-1.
 - Los campos, variables o expresiones de tipo Entero. El rango para el tipo de datos Entero (2 bytes) es -32.768..32.767 (2^15..(2^15)-1).
 
-**Nota:** los valores de los campos enteros se convierten automáticamente en enteros largos cuando se utilizan en el lenguaje 4D.
+**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
 
 Puede asignar cualquier tipo de dato numérico a otro; 4D realiza la conversión, truncando o redondeando si es necesario. Sin embargo, cuando los valores están fuera del rango, la conversión no devolverá un valor válido. Se pueden mezclar los tipos de datos numéricos en las expresiones.
 
-**Nota:** en el manual de referencia del lenguaje 4D, sin importar el tipo de datos real, los parámetros de tipo Real, Entero y Entero largo en las descripciones de los comandos se indican como número, salvo que se indique lo contrario.
+**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
 
 ## Constantes literales numéricas
 
@@ -37,27 +37,27 @@ Los números negativos se especifican con el signo menos (-). Por ejemplo:
 
 ## Operadores numéricos
 
-| Operación         | Sintaxis         | Devuelve | Expression | Valor |
-| ----------------- | ---------------- | -------- | ---------- | ----- |
-| Adición           | Número + Número  | Number   | 2 + 3      | 5     |
-| Resta             | Número - Número  | Number   | 3 – 2      | 1     |
-| Multiplicación    | Número * Número  | Number   | 5 * 2      | 10    |
-| División          | Número / Número  | Number   | 5 / 2      | 2.5   |
-| División entera   | Número \ Número | Number   | 5 \ 2     | 2     |
-| Módulo            | Número % Número  | Number   | 5 % 2      | 1     |
-| Exponenciación    | Número ^ Número  | Number   | 2 ^ 3      | 8     |
-| Igual             | Número = Número  | Boolean  | 10 = 10    | True  |
-|                   |                  |          | 10 = 11    | False |
-| Desigualdad       | Número # Número  | Boolean  | 10 #11     | True  |
-|                   |                  |          | 10 # 10    | False |
-| Mayor que         | Número > Número  | Boolean  | 11 > 10    | True  |
-|                   |                  |          | 10 > 11    | False |
-| Menor que         | Número < Número  | Boolean  | 10 < 11    | True  |
-|                   |                  |          | 11 < 10    | False |
-| Mayor o igual que | Número >= Número | Boolean  | 11 >= 10   | True  |
-|                   |                  |          | 10 >= 11   | False |
-| Menor o igual que | Número <= Número | Boolean  | 10 <= 11   | True  |
-|                   |                  |          | 11 <= 10   | False |
+| Operación         | Sintaxis                                  | Devuelve | Expression                        | Valor               |
+| ----------------- | ----------------------------------------- | -------- | --------------------------------- | ------------------- |
+| Adición           | Número + Número                           | Number   | 2 + 3                             | 5                   |
+| Resta             | Número - Número                           | Number   | 3 – 2                             | 1                   |
+| Multiplicación    | Número \* Número                          | Number   | 5 \* 2                            | 10                  |
+| División          | Número / Número                           | Number   | 5 / 2                             | 2.5 |
+| División entera   | Número \ Número                           | Number   | 5 \ 2                             | 2                   |
+| Módulo            | Número % Número                           | Number   | 5 % 2                             | 1                   |
+| Exponenciación    | Número ^ Número                           | Number   | 2 ^ 3                             | 8                   |
+| Igual             | Número = Número                           | Boolean  | 10 = 10                           | True                |
+|                   |                                           |          | 10 = 11                           | False               |
+| Desigualdad       | Número # Número                           | Boolean  | 10 #11                            | True                |
+|                   |                                           |          | 10 # 10                           | False               |
+| Mayor que         | Number > Number                           | Boolean  | 11 > 10                           | True                |
+|                   |                                           |          | 10 > 11                           | False               |
+| Menor que         | Number < Number  | Boolean  | 10 < 11  | True                |
+|                   |                                           |          | 11 < 10  | False               |
+| Mayor o igual que | Number >= Number                          | Boolean  | 11 >= 10                          | True                |
+|                   |                                           |          | 10 >= 11                          | False               |
+| Menor o igual que | Number <= Number | Boolean  | 10 <= 11 | True                |
+|                   |                                           |          | 11 <= 10 | False               |
 
 ### Módulo
 
@@ -69,7 +69,7 @@ El operador modulo % divide el primer número entre el segundo y devuelve un res
 
 :::warning
 
-El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). Para calcular el módulo con números fuera de este rango, utilice el comando [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)].
+El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
 
 :::
 
@@ -79,11 +79,11 @@ El operador de división entero largo \ devuelve valores significativos sólo co
 
 ### Comparación real
 
-Para comparar dos reales por igualdad, el lenguaje 4D realmente compara el valor absoluto de la diferencia con el *épsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
+To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
 
 :::note
 
-Por coherencia, el motor de base de datos 4D siempre compara los campos de base de datos de tipo real utilizando un valor de 10^-6 para *épsilon* y no tiene en cuenta el parámetro `SET REAL COMPARISON LEVEL`.
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
 
 :::
 
@@ -103,60 +103,60 @@ Para anular la precedencia de izquierda a derecha, DEBE utilizar paréntesis. Po
  3+(4*5)
 ```
 
-devuelve 23 porque la expresión (4 * 5) se evalúa primero, debido a los paréntesis. El resultado es 20, que se suma a 3 para el resultado final de 23.
+devuelve 23 porque la expresión (4 \* 5) se evalúa primero, debido a los paréntesis. El resultado es 20, que se suma a 3 para el resultado final de 23.
 
 Los paréntesis pueden anidarse dentro de otros conjuntos de paréntesis. Asegúrese de que cada paréntesis de la izquierda tenga un paréntesis de la derecha que coincida para garantizar la evaluación correcta de las expresiones. La falta o el uso incorrecto de los paréntesis puede provocar resultados inesperados o expresiones no válidas. Además, si pretende compilar sus aplicaciones, debe tener paréntesis coincidentes: el compilador detecta la falta de paréntesis como un error de sintaxis.
 
 ## Operadores de bits
 
-Los operadores de bits operan sobre expresiones o valores **Entero largo**.
+The bitwise operators operates on **Long Integer** expressions or values.
 
 > Si se pasa un valor de tipo Entero o Real a un operador de tipo bit, 4D evalúa el valor como un valor de tipo Entero Largo antes de calcular el resultado de la expresión.
 
 Cuando se utilizan los operadores de bits, hay que pensar en un valor de tipo Entero largo como un array de 32 bits. Los bits están numerados de 0 a 31, de derecha a izquierda.
 
-Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor Entero largo como un valor en el que se pueden almacenar 32 valores booleanos. Un bit igual a 1 significa **Verdadero** y un bit igual a 0 significa **Falso**.
+Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor Entero largo como un valor en el que se pueden almacenar 32 valores booleanos. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
 
 Una expresión que utiliza un operador bitwise devuelve un valor Entero largo, excepto para el operador Bit Test, donde la expresión devuelve un valor Booleano. La siguiente tabla lista los operadores a nivel de bits y su sintaxis:
 
-| Operación         | Operador      | Sintaxis                | Devuelve             |
-| ----------------- | ------------- | ----------------------- | -------------------- |
-| Y                 | &             | Long & Long             | Long                 |
-| O (inclusive)     | &#124;        | Long &#124; Long        | Long                 |
-| O (exclusivo)     | &#094; &#124; | Long &#094; &#124; Long | Long                 |
-| Left Bit Shift    | <<            | Long << Long            | Long (ver nota 1)    |
-| Right Bit Shift   | >>            | Long >> Long            | Long (ver nota 1)    |
-| Bit Set           | ?+            | Long ?+ Long            | Long (ver nota 2)    |
-| Poner el bit en 0 | ?-            | Long ?- Long            | Long (ver nota 2)    |
-| Probar bit        | ??            | Long ?? Long Long       | Boolean (ver nota 2) |
+| Operación                        | Operador                                             | Sintaxis                                                       | Devuelve                                |
+| -------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------- |
+| Y                                | &                                | Long & Long                                | Long                                    |
+| O (inclusive) | &#124                            | Long \| Long                                                   | Long                                    |
+| O (exclusivo) | ^ &#124                          | Long ^ \| Long                                                 | Long                                    |
+| Left Bit Shift                   | << | Long << Long | Long (ver nota 1)    |
+| Right Bit Shift                  | > >                                                  | Long >> Long                                                   | Long (ver nota 1)    |
+| Bit Set                          | ?+                                                   | Long ?+ Long                                                   | Long (ver nota 2)    |
+| Poner el bit en 0                | ?-                                                   | Long ?- Long                                                   | Long (ver nota 2)    |
+| Probar bit                       | ??                                                   | Long ?? Long Long                                              | Boolean (ver nota 2) |
 
 #### Notas
 
-1. Para las operaciones `Left Bit Shift` and `Right Bit Shift`, el segundo operando indica el número de posiciones en que se desplazarán los bits del primer operando en el valor resultante. Por lo tanto, este segundo operando debe estar entre 0 y 31. Tenga en cuenta, sin embargo, que el desplazamiento de 0 devuelve un valor sin cambios y el desplazamiento de más de 31 bits devuelve 0x00000000 porque todos los bits se pierden. Si se pasa otro valor como segundo operando, el resultado no es significativo.
-2. En las operaciones `Bit Set`, `Bit Clear` y `Bit Test` , el segundo operando indica el número del bit sobre el que hay que actuar. Por lo tanto, este segundo operando debe estar entre 0 y 31; de lo contrario, el resultado de la expresión no es significativo.
+1. For the `Left Bit Shift` and `Right Bit Shift` operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. Por lo tanto, este segundo operando debe estar entre 0 y 31. Tenga en cuenta, sin embargo, que el desplazamiento de 0 devuelve un valor sin cambios y el desplazamiento de más de 31 bits devuelve 0x00000000 porque todos los bits se pierden. Si se pasa otro valor como segundo operando, el resultado no es significativo.
+2. For the `Bit Set`, `Bit Clear` and `Bit Test` operations , the second operand indicates the number of the bit on which to act. Por lo tanto, este segundo operando debe estar entre 0 y 31; de lo contrario, el resultado de la expresión no es significativo.
 
 La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 
-| Operación         | Descripción                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Y                 | Cada bit resultante es el resultado de la operación AND lógica aplicada a los bits de los dos operandos. Aquí está la tabla del AND lógico:<li>1 & 1 --> 1</li><li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>Es decir, el bit resultante es 1 si los dos bits del operando son 1; en caso contrario, el bit resultante es 0.                     |
-| O (inclusive)     | Cada bit resultante es la OR lógica de los bits de los dos operandos. Aquí está la tabla OR lógica:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>Es decir, el bit resultante es 1 si al menos uno de los dos bits del operando es 1; en caso contrario, el bit resultante es 0.                                              |
-| O (exclusivo)     | Cada bit resultante es el XOR lógico de los bits de los dos operandos. Aquí está la tabla XOR lógica:<li>1 &#094; &#124; 1 --> 0</li><li>0 &#094; &#124; 1 --> 1</li><li>1 &#094; &#124; 0 --> 1</li><li>0 &#094; &#124; 0 --> 0</li>Es decir, el bit resultante es 1 si solo uno de los dos bits del operando es 1; en caso contrario, el bit resultante es 0.                                              |
-| Left Bit Shift    | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la izquierda el número de posiciones indicado por el segundo operando. Los bits de la izquierda se pierden y los nuevos bits de la derecha se ponen en 0. The bits on the left are lost and the new bits on the right are set to 0.                                          |
-| Right Bit Shift   | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la derecha el número de posición indicado por el segundo operando. Los bits de la derecha se pierden y los nuevos bits de la izquierda se ponen en 0.**Nota:** Teniendo en cuenta sólo los valores positivos, desplazar a la derecha N bits es lo mismo que dividir por 2^N. |
-| Bit Set           | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 1. Los demás bits no se modifican.                                                                                                                                                                                        |
-| Poner el bit en 0 | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 0. Los demás bits no se modifican.                                                                                                                                                                                        |
-| Probar bit        | Devuelve True si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 1. Devuelve False si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 0.                                                                                                                                                                         |
+| Operación                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Y                                | Cada bit resultante es el resultado de la operación AND lógica aplicada a los bits de los dos operandos. Here is the logical AND table:<li>1 & 1 --> 1</li><li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0. |
+| O (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 \| 1 --> 1</li><li>0 \| 1 --> 1</li><li>1 \| 0 --> 1</li><li>0 \| 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                                                   |
+| O (exclusivo) | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 ^ \| 1 --> 0</li><li>0 ^ \| 1 --> 1</li><li>1 ^ \| 0 --> 1</li><li>0 ^ \| 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                                             |
+| Left Bit Shift                   | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la izquierda el número de posiciones indicado por el segundo operando. Los bits de la izquierda se pierden y los nuevos bits de la derecha se ponen en 0. **Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.          |
+| Right Bit Shift                  | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la derecha el número de posición indicado por el segundo operando. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                          |
+| Bit Set                          | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 1. Los demás bits no se modifican.                                                                                                                                                                                                                                    |
+| Poner el bit en 0                | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 0. Los demás bits no se modifican.                                                                                                                                                                                                                                    |
+| Probar bit                       | Devuelve True si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 1. Devuelve False si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 0.                                                                                                                                                                                                                     |
 
 ### Ejemplos
 
-| Operación         | Ejemplo                             | Result     |
-| ----------------- | ----------------------------------- | ---------- |
-| Y                 | 0x0000FFFF & 0xFF00FF00             | 0x0000FF00 |
-| O (inclusive)     | 0x0000FFFF &#124; 0xFF00FF00        | 0xFF00FFFF |
-| O (exclusivo)     | 0x0000FFFF &#094; &#124; 0xFF00FF00 | 0xFF0000FF |
-| Left Bit Shift    | 0x0000FFFF << 8                     | 0x00FFFF00 |
-| Right Bit Shift   | 0x0000FFFF >> 8                     | 0x000000FF |
-| Bit Set           | 0x00000000 ?+ 16                    | 0x00010000 |
-| Poner el bit en 0 | 0x00010000 ?- 16                    | 0x00000000 |
-| Probar bit        | 0x00010000 ?? 16 16                 | True       |
+| Operación                        | Ejemplo                                                           | Result     |
+| -------------------------------- | ----------------------------------------------------------------- | ---------- |
+| Y                                | 0x0000FFFF & 0xFF00FF00                       | 0x0000FF00 |
+| O (inclusive) | 0x0000FFFF \| 0xFF00FF00                                          | 0xFF00FFFF |
+| O (exclusivo) | 0x0000FFFF ^ \| 0xFF00FF00                                        | 0xFF0000FF |
+| Left Bit Shift                   | 0x0000FFFF << 8 | 0x00FFFF00 |
+| Right Bit Shift                  | 0x0000FFFF >> 8                                                   | 0x000000FF |
+| Bit Set                          | 0x00000000 ?+ 16                                                  | 0x00010000 |
+| Poner el bit en 0                | 0x00010000 ?- 16                                                  | 0x00000000 |
+| Probar bit                       | 0x00010000 ?? 16 16                                               | True       |

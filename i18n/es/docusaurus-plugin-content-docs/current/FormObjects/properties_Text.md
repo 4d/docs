@@ -288,7 +288,7 @@ Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical
 
 ## Meta Info expression
 
-`Collection or entity selection type list boxes`
+`List boxes de tipo Collection o entity selection`
 
 Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. Se soportan las siguientes propiedades:
 
