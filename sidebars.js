@@ -2430,7 +2430,7 @@ module.exports =
 				"API/HTTPRequestClass",
 				"API/IMAPTransporterClass",
 				"API/MailAttachmentClass",
-				"API/OutGoingMessageClass",
+				"API/OutgoingMessageClass",
         "API/POP3TransporterClass",
 				"API/SessionClass",
 				"API/SignalClass",
