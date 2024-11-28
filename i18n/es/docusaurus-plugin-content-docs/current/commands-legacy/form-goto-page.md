@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** cambia la página actual de un formulario para mostrar la página especificada por *numPag*.<!-- END REF-->
 
-Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](form-load.md) o si *numPag* corresponde a la página actual del formulario, **FORM GOTO PAGE** no hace nada. Si *numPag* es superior que el número de páginas del formulario, se muestra la última página. Si *numPag* es menor que uno, se muestra la primera página.
+Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](../commands/form-load.md) o si *numPag* corresponde a la página actual del formulario, **FORM GOTO PAGE** no hace nada. Si *numPag* es superior que el número de páginas del formulario, se muestra la última página. Si *numPag* es menor que uno, se muestra la primera página.
 
 El parámetro *\** es útil cuando el comando se llama en el contexto de un subformulario en página que contiene varias páginas. En este caso, cuando pase este parámetro, el comando cambia la página del subformulario actual (el que llamó al comando). Por defecto, si se omite el parámetro *\**, el comando se aplica siempre al formulario padre.
 

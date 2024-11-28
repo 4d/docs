@@ -37,7 +37,7 @@ You can check whether **PRINT SELECTION** is printing the first header by testin
 
 To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. You can also use statistical and arithmetical functions like [Sum](sum.md) and [Average](average.md) to assign values to variables. For more information, see the descriptions of [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md).
 
-**Warning:** Do not use the [PAGE BREAK](page-break.md) command with the **PRINT SELECTION** command. [PAGE BREAK](page-break.md) is to be used with the [Print form](print-form.md) command.
+**Warning:** Do not use the [PAGE BREAK](page-break.md) command with the **PRINT SELECTION** command. [PAGE BREAK](page-break.md) is to be used with the [Print form](../commands/print-form.md) command.
 
 After a call to **PRINT SELECTION**, the OK variable is set to 1 if the printing has been completed. If the printing was interrupted, the OK variable is set to 0 (zero) (i.e., the user clicked Cancel in the printing dialog box).
 

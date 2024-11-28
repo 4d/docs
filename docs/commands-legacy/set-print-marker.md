@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) or [Print form](print-form.md) commands, this command allows you to adjust the size of the print areas. 
+<!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) or [Print form](../commands/print-form.md) commands, this command allows you to adjust the size of the print areas. 
 
 **SET PRINT MARKER** can be used in two contexts:
 
 * during the On Header form event, in the context of [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.
-* during the On Printing Detail form event, in the context of the [Print form](print-form.md) command. This operation facilitates the printing of customized reports (see example).
+* during the On Printing Detail form event, in the context of the [Print form](../commands/print-form.md) command. This operation facilitates the printing of customized reports (see example).
 The effect of the command is limited to printing; no modification appears on the screen. The modifications made to the forms are not saved. 
 
 Pass one of the constants of the *Form Area* theme in the *markNum* parameter:
@@ -75,7 +75,7 @@ The output form used for printing is as follows:
 
 ![](../assets/en/commands/pict28725.en.png)
 
-The On Printing Detail form event was selected for the form (keep in mind that no matter what area is printed, the [Print form](print-form.md) command only generates this type of form event).   
+The On Printing Detail form event was selected for the form (keep in mind that no matter what area is printed, the [Print form](../commands/print-form.md) command only generates this type of form event).   
 For each record, the row height must be adapted according to the contents of the "Actors" or "Summary" column (column having the most content). Here is the desired result:
 
 ![](../assets/en/commands/pict28726.en.png)
@@ -179,6 +179,6 @@ The Print\_List3 form method is as follows:
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  

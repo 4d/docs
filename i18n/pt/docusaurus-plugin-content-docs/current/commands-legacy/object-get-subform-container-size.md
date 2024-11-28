@@ -33,5 +33,5 @@ O evento On Resize é gerado no método formulario de subformulário se o objeto
 
 #### Ver também 
 
-[OBJECT GET SUBFORM](object-get-subform.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
+[OBJECT SET SUBFORM](../commands/object-set-subform.md)  

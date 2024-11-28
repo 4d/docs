@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE cambia la página actual del formulario para mostrar la página siguiente.<!-- END REF-->Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](form-load.md), o si ya se muestra la última página del formulario, FORM NEXT PAGE no hace nada.
+<!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE cambia la página actual del formulario para mostrar la página siguiente.<!-- END REF-->Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](../commands/form-load.md), o si ya se muestra la última página del formulario, FORM NEXT PAGE no hace nada.
 
 #### Ejemplo 
 

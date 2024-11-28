@@ -42,7 +42,7 @@ Une constante du thème *Options d'impression* vous permet de désigner automati
 
 La commande **SET CURRENT PRINTER** doit être appelée avant [SET PRINT OPTION](set-print-option.md) afin que les options disponibles correspondent à l'imprimante sélectionnée. En revanche, **SET CURRENT PRINTER** doit être appelée après *\_o\_PAGE SETUP* (le cas échéant), sinon le paramétrage d'imprimante n'est pas conservé.
 
-Cette commande peut être utilisée avec les commandes [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md), [QR REPORT](qr-report.md) et s’applique à toutes les impressions de 4D, y compris en mode Développement.  
+Cette commande peut être utilisée avec les commandes [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), [QR REPORT](qr-report.md) et s’applique à toutes les impressions de 4D, y compris en mode Développement.  
 Les commandes d'impression doivent impérativement être appelées avec le paramètre *\>* (le cas échéant) afin que le paramétrage défini soit conservé. 
 
 #### Variables et ensembles système 

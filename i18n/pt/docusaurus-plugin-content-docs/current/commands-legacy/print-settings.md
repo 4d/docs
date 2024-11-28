@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->O comando PRINT SETTINGS mostra una o dos caixas de diálogo de parâmetros de impressão.<!-- END REF--> Este comando deve ser chamado antes de uma série de comandos [Print form](print-form.md) ou o comando [OPEN PRINTING JOB](open-printing-job.md).
+<!--REF #_command_.PRINT SETTINGS.Summary-->O comando PRINT SETTINGS mostra una o dos caixas de diálogo de parâmetros de impressão.<!-- END REF--> Este comando deve ser chamado antes de uma série de comandos [Print form](../commands/print-form.md) ou o comando [OPEN PRINTING JOB](open-printing-job.md).
 
 O parâmetro opcional *dialType* pode ser utilizado para configurar a visualização das caixas de diálogo de impressão. Pode usar uma das constantes abaixo do tema *Opções de Impressão*. A caixa de diálogo exibida vai depender realmente de sua versão 4D como mostrada na tabela abaixo:
 
@@ -31,7 +31,7 @@ O parâmetro opcional *dialType* pode ser utilizado para configurar a visualiza�
 
 #### Exemplo 
 
-Ver exemplo para o comando [Print form](print-form.md)..
+Ver exemplo para o comando [Print form](../commands/print-form.md)..
 
 #### Variáveis e conjuntos do sistema 
 
@@ -41,5 +41,5 @@ Se o usuário clicar em OK em ambas caixas de diálogo, a variável sistema OK t
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  

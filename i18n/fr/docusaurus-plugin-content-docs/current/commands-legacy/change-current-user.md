@@ -47,7 +47,7 @@ Le principe est le suivant :
 
 **1.** L’entrée dans la base s’effectue directement en mode “Utilisateur par défaut”, sans boîte de dialogue. 
 
-**2.** Dans la , le développeur provoque l’affichage d’une boîte de dialogue personnalisée de saisie du nom d’utilisateur et du mot de passe (à l’aide de la commande [DIALOG](dialog.md) ou [ADD RECORD](add-record.md) par exemple). Tout type de traitement peut être envisagé dans la boîte de dialogue :   
+**2.** Dans la , le développeur provoque l’affichage d’une boîte de dialogue personnalisée de saisie du nom d’utilisateur et du mot de passe (à l’aide de la commande [DIALOG](../commands/dialog.md) ou [ADD RECORD](add-record.md) par exemple). Tout type de traitement peut être envisagé dans la boîte de dialogue :   
 \- Il est possible d’afficher la liste des utilisateurs de la base, comme dans la boîte de dialogue d’accès standard de 4D, à l’aide de la commande [GET USER LIST](get-user-list.md).   
 \- Le champ de saisie du mot de passe peut contenir divers contrôles afin de vérifier la validité des caractères saisis (nombre minimum de caractères, unicité...).   
 \- Pour les caractères du mot de passe saisi soient brouillés à l'écran, vous pouvez utiliser la commande [FILTER KEYSTROKE](filter-keystroke.md).   

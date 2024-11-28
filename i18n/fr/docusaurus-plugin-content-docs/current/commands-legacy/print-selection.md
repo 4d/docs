@@ -41,7 +41,7 @@ Si **PRINT SELECTION** est appelée au même moment par deux process différents
 
 Pour imprimer une sélection triée avec des sous-totaux ou des ruptures à l'aide de la commande **PRINT SELECTION**, vous devez d'abord trier la sélection. Puis vous devez inclure, dans chaque zone de rupture de l'état, une variable associée à une méthode objet assignant le sous-total à la variable. Vous pouvez aussi utiliser des fonctions statistiques ou arithmétiques telles que [Sum](sum.md) et [Average](average.md) pour assigner des valeurs aux variables. Pour plus d'informations, reportez-vous à la description des commandes [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md).
 
-**Attention :** N'utilisez pas la commande [PAGE BREAK](page-break.md) avec **PRINT SELECTION**. [PAGE BREAK](page-break.md) est exclusivement réservée à une utilisation combinée avec la commande [Print form](print-form.md).
+**Attention :** N'utilisez pas la commande [PAGE BREAK](page-break.md) avec **PRINT SELECTION**. [PAGE BREAK](page-break.md) est exclusivement réservée à une utilisation combinée avec la commande [Print form](../commands/print-form.md).
 
 Après un appel à **PRINT SELECTION**, la variable OK prend la valeur 1 si l'impression s'est déroulée correctement. Si l'impression a été interrompue (par exemple l'utilisateur a cliqué sur un bouton Annuler dans les boîtes de dialogue d'impression), la variable OK prend la valeur *0* (zéro).
 

@@ -41,4 +41,4 @@ S’il n’y a pas de formulaire liste, une chaîne vide est retournée dans le 
 #### Voir aussi 
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT SET SUBFORM](../commands/object-set-subform.md)  

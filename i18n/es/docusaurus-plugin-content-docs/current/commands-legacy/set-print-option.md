@@ -41,7 +41,7 @@ Pase en los parámetros *valor1* y *valor2* (opcionalmente) los nuevos valores d
 | Legacy printing layer option | 16    | (Windows únicamente) *valor1* únicamente: 1=seleccionar la antigua capa de impresión GDI para todos los trabajos de impresión subsiguientes. 0=seleccionar la capa de impresión D2D (por defecto). Este selector está destinado principalmente para permitir plug-ins de antigua generación imprimir dentro de tareas de impresión 4D en aplicaciones 4D en Windows.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Print preview option         | 18    | (sólo Windows) *valor1*: formato a utilizar para las vistas previas de impresión en Windows. Valores disponibles: kp preview automatic (por defecto): utiliza la impresora y el visor XPS si están disponibles, en caso contrario utiliza la impresora y el visor PDF si están disponibles, en caso contrario generar un error. kp preview XPS: utiliza la impresora y el visor XPS si están disponibles, en caso contrario generar un error. kp preview PDF: utiliza la impresora y el visor PDF si están disponibles; de lo contrario, se generará un error. *valor2* (sólo se puede utilizar con [GET PRINT OPTION](get-print-option.md)): formato de vista previa de impresión utilizado realmente en Windows (puede diferir del *valor1* dependiendo de la configuración). Valores disponibles: kp preview none: ningún formato disponible. kp preview XPS: impresora y visor XPS utilizados. kp preview PDF: impresora y visor PDF utilizados. |
 
-Una vez fijado utilizando este comando, una opción de impresión se conservará durante toda la sesión para toda la aplicación 4D. Será utilizada por los comandos [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) y [QR REPORT](qr-report.md) y [WP PRINT](../WritePro/commands-legacy/wp-print.md), así como también para todas las impresiones 4D, incluyendo en modo Diseño.
+Una vez fijado utilizando este comando, una opción de impresión se conservará durante toda la sesión para toda la aplicación 4D. Será utilizada por los comandos [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md) y [QR REPORT](qr-report.md) y [WP PRINT](../WritePro/commands-legacy/wp-print.md), así como también para todas las impresiones 4D, incluyendo en modo Diseño.
 
 **Notas:**
 
@@ -79,6 +79,6 @@ Si el valor pasado por una *opción* es incorrecto o si no está disponible en l
 
 [GET PRINT OPTION](get-print-option.md)  
 *Opciones de impresión*  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  

@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.SET PRINT MARKER.Summary-->SET PRINT MARKER コマンドを使用し、印刷時にマーカ位置を指定することができます。<!-- END REF-->このコマンドを[Get print marker](get-print-marker.md "Get print marker")、[OBJECT MOVE](object-move.md "OBJECT MOVE")、[Print form](print-form.md "Print form")コマンドと組み合わせて使用することにより、印刷エリアのサイズを調節することができます。
+<!--REF #_command_.SET PRINT MARKER.Summary-->SET PRINT MARKER コマンドを使用し、印刷時にマーカ位置を指定することができます。<!-- END REF-->このコマンドを[Get print marker](get-print-marker.md "Get print marker")、[OBJECT MOVE](object-move.md "OBJECT MOVE")、[Print form](../commands/print-form.md "Print form")コマンドと組み合わせて使用することにより、印刷エリアのサイズを調節することができます。
 
 SET PRINT MARKERは次の2つの状況において使用可能です:
 
 * [PRINT SELECTION](print-selection.md "PRINT SELECTION")および[PRINT RECORD](print-record.md "PRINT RECORD")コマンドのコンテキストでのOn headerフォームイベント中。
-* [Print form](print-form.md "Print form")コマンドのコンテキストでのOn Printing Detailフォームイベント中。この処理はカスタマイズされたレポートの印刷を容易にします (例を参照)。
+* [Print form](../commands/print-form.md "Print form")コマンドのコンテキストでのOn Printing Detailフォームイベント中。この処理はカスタマイズされたレポートの印刷を容易にします (例を参照)。
 
 コマンドの有効範囲は印刷に限定され、画面上には変更が表示されません。フォームに対して行った変更は保存されません。
 
@@ -78,7 +78,7 @@ SET PRINT MARKERは次の2つの状況において使用可能です:
 
 ![](../assets/en/commands/pict28725.ja.png)
 
-このフォームに対してOn Printing Detailフォームイベントが選択されています（印刷されるエリアに関係なく、[Print form](print-form.md "Print form") コマンドはこのタイプのフォームイベントだけを生成する点に留意してください）。  
+このフォームに対してOn Printing Detailフォームイベントが選択されています（印刷されるエリアに関係なく、[Print form](../commands/print-form.md "Print form") コマンドはこのタイプのフォームイベントだけを生成する点に留意してください）。  
 レコードごとに、(多くの内容を保持する) “Actors”または“Summary”カラムの内容に応じて行の高さを調整しなくてはなりません。目的とする結果を次に示します:
 
 ![](../assets/en/commands/pict28726.ja.png)
@@ -182,6 +182,6 @@ Print\_List3のフォームメソッド:
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  

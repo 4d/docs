@@ -51,4 +51,4 @@ Si la commande échoue, une erreur est générée, que vous pouvez intercepter �
 
 #### Voir aussi 
 
-[Compile project](compile-project.md)  
+[Compile project](../commands/compile-project.md)  

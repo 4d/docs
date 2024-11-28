@@ -32,5 +32,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Form](form.md)  
+[Form](../commands/form.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  

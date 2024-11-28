@@ -90,7 +90,7 @@ The [On Web Connection database method](on-web-connection-database-method.md) is
 
 **Notes :**
 
-* Do not call any interface elements in the **On Web Authentication database method** ([ALERT](alert.md), [DIALOG](dialog.md), etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
+* Do not call any interface elements in the **On Web Authentication database method** ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 * It is possible to prevent execution by *4DACTION* or *4DSCRIPT* for each project method via the “Available through 4D HTML tags and URLs (4DACTION...)” option in the Method properties dialog box. For more information about this point, please refer to the *Connection Security* section.
 
 #### On Web Authentication Database Method calls 

@@ -44,7 +44,7 @@ Por defecto, los valores *moveH*, *moveV*, *redimH* y *redimV* modifican las coo
 Este comando funciona en los siguientes contextos:
 
 * Formularios de entrada en modo entrada de datos,
-* Formularios mostrados utilizando el comando [DIALOG](dialog.md "DIALOG"),
+* Formularios mostrados utilizando el comando [DIALOG](../commands/dialog.md "DIALOG"),
 * Encabezados y pies de página de formularios de salida mostrados por los comandos [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION") o [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION"),
 * Formularios en curso de impresión.
 

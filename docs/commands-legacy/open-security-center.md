@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Notes:** 
 
-* This command works on the same principle as a call to [DIALOG](dialog.md) with the *\** parameter: the MSC is displayed in a window and the command immediately returns control to the 4D code. If the current process finishes, the window is automatically closed by simulating a [CANCEL](cancel.md). So you need to manage its display through the code of the process being executed.
+* This command works on the same principle as a call to [DIALOG](../commands/dialog.md) with the *\** parameter: the MSC is displayed in a window and the command immediately returns control to the 4D code. If the current process finishes, the window is automatically closed by simulating a [CANCEL](cancel.md). So you need to manage its display through the code of the process being executed.
 * This command cannot be executed on a remote 4D application.
 
 #### See also 

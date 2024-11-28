@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form name.Summary-->O comando **Current form name** retorna o nome do formulário atual definido para o processo.<!-- END REF--> O formulário atual pode ser um formulário de projeto ou formulário de tabela. 
 
-Como padrão, se não tiver chamado o comando [FORM LOAD](form-load.md) no processo chamado, o formulário atual é aquele sendo exibido ou impresso. Se q tiver chamado o comando [FORM LOAD](form-load.md) no processo, o formulário atual é aquele estabelecido pelo comando e continua sendo assim até chamar [FORM UNLOAD](form-unload.md) (ou [CLOSE PRINTING JOB](close-printing-job.md)).
+Como padrão, se não tiver chamado o comando [FORM LOAD](../commands/form-load.md) no processo chamado, o formulário atual é aquele sendo exibido ou impresso. Se q tiver chamado o comando [FORM LOAD](../commands/form-load.md) no processo, o formulário atual é aquele estabelecido pelo comando e continua sendo assim até chamar [FORM UNLOAD](form-unload.md) (ou [CLOSE PRINTING JOB](close-printing-job.md)).
 
 O comando retorna:
 
@@ -59,4 +59,4 @@ Se quiser obter o formulário atual se este for um formulário projeto:
 
 #### Ver também 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  

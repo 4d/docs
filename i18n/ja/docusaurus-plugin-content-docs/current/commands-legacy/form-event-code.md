@@ -121,7 +121,7 @@ On Mouse Move イベントはマウスカーソルが動いたときだけでは
 | ヘッダーエリアのそれぞれのオブジェクトごとに:                                                                                                                        |  
 | ---------------------------------------------------------------------------------------------------------------------------------------------- |  
 | オブジェクトメソッドのOn Header イベント フォームメソッドのOn Header イベント  レコードごとに: 詳細エリアのオブジェクトごとに: オブジェクトメソッドのOn Display Detail イベント フォームメソッドのOn Display Detail イベント |
-* On Display Detail や On Headerイ ベントでダイアログボックスを表示する4Dコマンドを呼び出すことはできません。これはシンタックスエラーを起こします。以下のコマンドが関連します: [ALERT](alert.md), [DIALOG](dialog.md), [CONFIRM](confirm.md), [Request](request.md), [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), [DISPLAY SELECTION](display-selection.md) そして [MODIFY SELECTION](modify-selection.md)。
+* On Display Detail や On Headerイ ベントでダイアログボックスを表示する4Dコマンドを呼び出すことはできません。これはシンタックスエラーを起こします。以下のコマンドが関連します: [ALERT](alert.md), [DIALOG](../commands/dialog.md), [CONFIRM](confirm.md), [Request](request.md), [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), [DISPLAY SELECTION](display-selection.md) そして [MODIFY SELECTION](modify-selection.md)。
 * On Page Change: このイベントはフォームレベルでのみ利用でき (フォームメソッド内でのみ使用します)、フォームのカレントページが変更されるたびに生成されます ([FORM GOTO PAGE](form-goto-page.md) コマンドの呼び出しや標準ナビゲーションアクションに伴い)。ページが完全にロードされた後に呼び出されることに留意してください。 例えば (Webエリアを含む) すべてのオブジェクトが初期化された後です。このイベントはすべてのオブジェクトが初期化済みの状態で実行する必要のあるコードがあるときに有用です。ま たフォームがロードされたときにすべてのコードを実行するのではなく、特定のページが開かれたときにのみコードを実行するようにして、アプリケーションを 最適化できます。ユーザーがそのページを開かなければ、コードは実行されません。
 
 以下の表はそれぞれのイベントごとにどのようにオブジェクトメソッドとフォームメソッドが呼ばれるかを概説します:

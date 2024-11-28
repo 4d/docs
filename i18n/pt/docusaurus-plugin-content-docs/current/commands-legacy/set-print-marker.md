@@ -20,11 +20,11 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.SET PRINT MARKER.Summary-->O comando SET PRINT MARKER permite definir a posição de um marcador durante a impressão.<!-- END REF--> Combinado com os comandos [Get print marker](get-print-marker.md "Get print marker"), OBJECT MOVE ou [Print form](print-form.md "Print form"), este comando lhe permite ajustar o tamanho das áreas de impressão.  
+<!--REF #_command_.SET PRINT MARKER.Summary-->O comando SET PRINT MARKER permite definir a posição de um marcador durante a impressão.<!-- END REF--> Combinado com os comandos [Get print marker](get-print-marker.md "Get print marker"), OBJECT MOVE ou [Print form](../commands/print-form.md "Print form"), este comando lhe permite ajustar o tamanho das áreas de impressão.  
   
 SET PRINT MARKER pode ser utilizado em dois contextos:  
 * durante o evento de formulário On header, no contexto de os comandos [PRINT SELECTION](print-selection.md "PRINT SELECTION") e [PRINT RECORD](print-record.md "PRINT RECORD").
-* durante o evento de formulário On Printing Detail, no contexto do comando [Print form](print-form.md "Print form").. Esta operação facilita a impressão de informes personalizados (ver exemplo).
+* durante o evento de formulário On Printing Detail, no contexto do comando [Print form](../commands/print-form.md "Print form").. Esta operação facilita a impressão de informes personalizados (ver exemplo).
 * O efeito do comando está limitado à impressão; nenhuma modificação aparece na tela. As modificações realizadas os formulários não são guardados.
 
  Passe no parâmetro *markNum* una das constantes do tema :  
@@ -77,7 +77,7 @@ O formulário de saída utilizado para a impressão é o seguinte:
   
 ![](../assets/en/commands/pict28725.en.png)  
   
-O evento de formulário On Printing Detail foi selecionado para o formulário (recorde que sem importar em que área se imprima, o comando [Print form](print-form.md "Print form") só gera este tipo de evento de formulário).  
+O evento de formulário On Printing Detail foi selecionado para o formulário (recorde que sem importar em que área se imprima, o comando [Print form](../commands/print-form.md "Print form") só gera este tipo de evento de formulário).  
 Para cada registro, a altura da linha deve estar adaptada de acordo aos conteúdos da coluna "Atores" ou "Resumo" (coluna tem a maioria do conteúdo). Este é o resultado desejado:  
   
 ![](../assets/en/commands/pict28726.en.png)  
@@ -186,6 +186,6 @@ El método de formulario List\_Imp3 es el siguiente:
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  

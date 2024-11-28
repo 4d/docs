@@ -31,7 +31,7 @@ O usuário pode introduzir texto na área de entrada de texto. Para especificar 
 
 **Nota:** não chame o comando **Request** desde um método de formulário ou de objeto que maneje os eventos de formulário On Activate ou On Deactivate; isto provocará um loop infinito.
 
-**Dica:** se necessita obter várias peças de informação do usuário, crie um formulário e apresente-o com [DIALOG](dialog.md), ao invés de apresentar uma sucessão de caixas de diálogo de tipo **Request**.
+**Dica:** se necessita obter várias peças de informação do usuário, crie um formulário e apresente-o com [DIALOG](../commands/dialog.md), ao invés de apresentar uma sucessão de caixas de diálogo de tipo **Request**.
 
 #### Exemplo 1 
 

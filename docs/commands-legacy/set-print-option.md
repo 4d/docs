@@ -40,7 +40,7 @@ The *option* parameter allows you to indicate the option to be modified. You can
 | Legacy printing layer option | 16    | (Windows only) *value1* only: 1=select the GDI-based legacy printing layer for the subsequent printing jobs. 0=select the D2D printing layer (default). This selector is mainly intended to allow legacy plug-ins to print inside 4D jobs in 4D applications on Windows.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Print preview option         | 18    | (Windows only) *value1*: Format to use for print previews on Windows. Available values: kp preview automatic (default): Use XPS printer and viewer if available, otherwise use PDF printer or viewer if available, otherwise generate an error. kp preview XPS: Use XPS printer and viewer if available, otherwise generate an error. kp preview PDF: Use PDF printer and viewer if available, otherwise generate an error. *value2* (can be used with [GET PRINT OPTION](get-print-option.md) only): Print preview format actually used on Windows (can differ from *value1* depending on the configuration). Available values: kp preview none: No format available. kp preview XPS: XPS printer and viewer used. kp preview PDF: PDF printer and viewer used.                                                                                                                               |
 
-Once set using this command, a print option is kept throughout the duration of the session for the entire 4D application. It will be used by the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md), [QR REPORT](qr-report.md) and [WP PRINT](../WritePro/commands-legacy/wp-print.md) commands, as well as for all 4D printing, including that in Design mode.
+Once set using this command, a print option is kept throughout the duration of the session for the entire 4D application. It will be used by the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), [QR REPORT](qr-report.md) and [WP PRINT](../WritePro/commands-legacy/wp-print.md) commands, as well as for all 4D printing, including that in Design mode.
 
 **Notes:** 
 
@@ -77,7 +77,7 @@ If the value passed for an *option* is invalid or if it is not available on the 
 #### See also 
 
 [GET PRINT OPTION](get-print-option.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT OPTION VALUES](print-option-values.md)  
 *Print Options*  
 [SET CURRENT PRINTER](set-current-printer.md)  

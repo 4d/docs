@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **SET CURRENT PRINTER** コマンドは、利用可能なオプションが選択したプリンタに対応するように、必ず [SET PRINT OPTION](set-print-option.md) コマンドよりも前に呼び出してください。それに対し、**SET CURRENT PRINTER** コマンドは、*\_o\_PAGE SETUP* コマンドの後で呼び出さなければなりません。これを行わないと、印刷設定が失われます。
 
-このコマンドは [PRINT SELECTION](print-selection.md)、[PRINT RECORD](print-record.md)、[Print form](print-form.md)、および [QR REPORT](qr-report.md) コマンドと一緒に使用することができ、デザインモードを含め、4Dにおけるすべての印刷に対して適用されます。  
+このコマンドは [PRINT SELECTION](print-selection.md)、[PRINT RECORD](print-record.md)、[Print form](../commands/print-form.md)、および [QR REPORT](qr-report.md) コマンドと一緒に使用することができ、デザインモードを含め、4Dにおけるすべての印刷に対して適用されます。  
 指定した設定が失われないようにするには、必要に応じて印刷コマンドは必ず引数 *\>* を用いて呼び出さなければなりません。
 
 #### システム変数およびセット 

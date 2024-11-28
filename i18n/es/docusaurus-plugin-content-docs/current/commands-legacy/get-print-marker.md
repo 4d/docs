@@ -24,7 +24,7 @@ displayed_sidebar: docs
 Este comando puede utilizarse en dos contextos:
 
 * Durante el evento de formulario On Header, en el contexto de los comandos [PRINT SELECTION](print-selection.md "PRINT SELECTION") y [PRINT RECORD](print-record.md "PRINT RECORD").
-* Durante el evento de formulario On Printing Detail, en el contexto del comando [Print form](print-form.md "Print form").
+* Durante el evento de formulario On Printing Detail, en el contexto del comando [Print form](../commands/print-form.md "Print form").
 
 Se devuelven las coordenadas en píxeles (1 píxel = 1/72 pulgadas). 
 

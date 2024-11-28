@@ -100,7 +100,7 @@ Se for pressionado a combinação Ctrl+ponto, o método de gestão de eventos da
  End if
 ```
 
-Note que este exemplo utiliza ON EVENT CALL porque realiza um relatório especial de impressão utilizando os comandos *PAGE SETUP*, [Print form](print-form.md "Print form") e [PAGE BREAK](page-break.md "PAGE BREAK") em uma estrutura de tipo loop .   
+Note que este exemplo utiliza ON EVENT CALL porque realiza um relatório especial de impressão utilizando os comandos *PAGE SETUP*, [Print form](../commands/print-form.md "Print form") e [PAGE BREAK](page-break.md "PAGE BREAK") em uma estrutura de tipo loop .   
 Se um relatório for impresso utilizando [PRINT SELECTION](print-selection.md "PRINT SELECTION"), NAO necessita administrar os eventos que permitem ao usuário interromper a impressão; [PRINT SELECTION](print-selection.md "PRINT SELECTION") faz isso por você.
 
 #### Ver também 

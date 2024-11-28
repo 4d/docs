@@ -53,4 +53,4 @@ If the command fails, an error is generated that you can intercept using the [ON
 
 #### See also 
 
-[Compile project](compile-project.md)  
+[Compile project](../commands/compile-project.md)  

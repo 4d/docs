@@ -20,9 +20,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CANCEL.Summary-->The **CANCEL** command is used in form or object methods (or in a subroutine) to:
 
 * cancel a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).<!-- END REF-->
-* cancel a form displayed with the [DIALOG](dialog.md) command.
+* cancel a form displayed with the [DIALOG](../commands/dialog.md) command.
 * exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
-* cancel the printing of a form that is about to be printed using the [Print form](print-form.md) command (see below).
+* cancel the printing of a form that is about to be printed using the [Print form](../commands/print-form.md) command (see below).
 
 In the context of data entry, **CANCEL** performs the same action as if the user had pressed the cancel key (**Esc**).
 
@@ -32,7 +32,7 @@ It is also often used in the optional close box method for the [Open window](ope
 
 **CANCEL** cannot be queued up. Executing two **CANCEL** commands in a row from within a method in response to an event would have the same effect as executing only one.
 
-Finally, this command can be used in the On Printing Detail form event, when using the [Print form](print-form.md) command. In this context, the **CANCEL** command suspends the printing of the form that is about to be printed, then resumes it on the next page. This mechanism can be used to manage form printing when there is a lack of space or if a page break is required.
+Finally, this command can be used in the On Printing Detail form event, when using the [Print form](../commands/print-form.md) command. In this context, the **CANCEL** command suspends the printing of the form that is about to be printed, then resumes it on the next page. This mechanism can be used to manage form printing when there is a lack of space or if a page break is required.
 
 **Note:** This operation differs from that of the [PAGE BREAK](page-break.md)(\*) command that cancels ALL the forms waiting to be printed.
 
@@ -52,4 +52,4 @@ When the [CANCEL](cancel.md) command is executed (form or printing cancelled), t
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

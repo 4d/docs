@@ -30,7 +30,7 @@ You can also designate the generic PDF printer automatically, regardless of the 
 
 The **SET CURRENT PRINTER** command must be called before [SET PRINT OPTION](set-print-option.md), so that the options available correspond to the selected printer. On the other hand, **SET CURRENT PRINTER** must be called after *\_o\_PAGE SETUP*, otherwise the print settings are lost.
 
-This command can be used with the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md), and [QR REPORT](qr-report.md) commands, and is applied to all 4D printing, including that in Design mode.  
+This command can be used with the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), and [QR REPORT](qr-report.md) commands, and is applied to all 4D printing, including that in Design mode.  
 It is imperative for print commands to be called with the *\>* parameter (where applicable) so that the specified settings are not lost.
 
 #### System variables and sets 

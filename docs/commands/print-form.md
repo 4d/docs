@@ -1,7 +1,6 @@
 ---
 id: print-form
 title: Print form
-slug: /commands/print-form
 displayed_sidebar: docs
 ---
 
@@ -31,7 +30,7 @@ In the *form* parameter, you can pass:
 * the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
 * an object containing a description of the form.
 
-Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](page-break.md) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](cancel.md) command before the [PAGE BREAK](page-break.md) command.
+Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](../commands-legacy/page-break.md) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](../commands-legacy/cancel.md) command before the [PAGE BREAK](../commands-legacy/page-break.md) command.
 
 Three different syntaxes may be used:
 
@@ -93,35 +92,29 @@ In this case, the command will print the section included between the *areaStart
 
 **formData**
 
-Optionally, you can pass parameters to the *form* using the *formData* object. Any properties of the *formData* object will then be available from within the form context through the [Form](form.md) command. For example, if you pass an object containing {"version","12"} in *formData*, you will be able to get or set the value of the "version" property in the form by calling:
+Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. The form data object is available in the [`On Printing Detail` form event](../Events/onPrintingDetail.md).
 
-```4d
- $v:=Form.version //"12"
- Form.version:=13
-```
+For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
 
-The *formData* object is available in the On Printing Detail form event. *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. 
-
-**Note:** If you do not pass the *formData* parameter or if you pass an undefined object, **Print form** automatically creates a new empty object bound to the *form*, available through the [Form](form.md) command.
 
 **Return value**
 
-The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](get-printed-height.md) command.
+The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
 
 The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
-* Call [PRINT SETTINGS](print-settings.md). In this case, you let the user choose the settings.
-* Call [SET PRINT OPTION](set-print-option.md) and [GET PRINT OPTION](get-print-option.md). In this case, print settings are specified programmatically.
+* Call [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
+* Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
 
-**Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](page-break.md) command (except in the context of an [OPEN PRINTING JOB](open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
+**Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
 
-**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](open-printing-job.md), you must NOT call [PAGE BREAK](page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](close-printing-job.md) command. If you call [PAGE BREAK](page-break.md) in this case, a blank page is printed.
+**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. If you call [PAGE BREAK](../commands-legacy/page-break.md) in this case, a blank page is printed.
 
 This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
 
-**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](print-record.md) instead.
+**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands-legacy/print-record.md) instead.
 
-**Print form** generates only one On Printing Detail event for the form method.
+**Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
 
 **4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
 
@@ -130,7 +123,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 #### Example 1 
 
-The following example performs as a [PRINT SELECTION](print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
+The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
  QUERY([Register]) // Select the records
@@ -155,7 +148,7 @@ The following example performs as a [PRINT SELECTION](print-selection.md) comman
 
 #### Example 2 
 
-Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command. 
+Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command. 
 
 #### Example 3 
 
@@ -187,7 +180,7 @@ The code that calls the dialog then prints its body:
 
 #### See also 
 
-[CANCEL](cancel.md)  
-[PAGE BREAK](page-break.md)  
-[PRINT SETTINGS](print-settings.md)  
-[SET PRINT OPTION](set-print-option.md)  
+[CANCEL](../commands-legacy/cancel.md)  
+[PAGE BREAK](../commands-legacy/page-break.md)  
+[PRINT SETTINGS](../commands-legacy/print-settings.md)  
+[SET PRINT OPTION](../commands-legacy/set-print-option.md)  

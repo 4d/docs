@@ -31,7 +31,7 @@ L'utilisateur peut taper des caractères dans la zone de saisie de texte. Pour d
 
 **Note :** N'appelez pas la fonction **Request** dans une méthode formulaire ou objet qui gère l'événement On Activate ou On Deactivate car cela provoquerait une boucle sans fin.
 
-**Conseil :** Si vous voulez récupérer plusieurs informations de l'utilisateur, construisez un formulaire approprié et appelez-le avec la commande [DIALOG](dialog.md), plutôt que d'afficher une succession de boîtes de dialogue du type **Request**.
+**Conseil :** Si vous voulez récupérer plusieurs informations de l'utilisateur, construisez un formulaire approprié et appelez-le avec la commande [DIALOG](../commands/dialog.md), plutôt que d'afficher une succession de boîtes de dialogue du type **Request**.
 
 #### Exemple 1 
 

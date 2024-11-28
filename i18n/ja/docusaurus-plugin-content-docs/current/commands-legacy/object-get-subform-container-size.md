@@ -32,5 +32,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[OBJECT GET SUBFORM](object-get-subform.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
+[OBJECT SET SUBFORM](../commands/object-set-subform.md)  

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE cambia la página actual del formulario por la primera página del formulario.<!-- END REF-->Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](form-load.md), o si la primera página del formulario ya se muestra, FORM FIRST PAGE no hace nada.
+<!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE cambia la página actual del formulario por la primera página del formulario.<!-- END REF-->Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](../commands/form-load.md), o si la primera página del formulario ya se muestra, FORM FIRST PAGE no hace nada.
 
 #### Ejemplo 
 

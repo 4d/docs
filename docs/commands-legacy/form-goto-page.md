@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** changes the currently displayed form page to the form page specified by *pageNumber*.<!-- END REF-->
 
-If no form is displayed or loaded by the [FORM LOAD](form-load.md) command, or if *pageNumber* corresponds to the current page of the form, **FORM GOTO PAGE** does nothing. If *pageNumber* is greater than the number of pages, the last page is displayed. If *pageNumber* is less than one, the first page is displayed.
+If no form is displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if *pageNumber* corresponds to the current page of the form, **FORM GOTO PAGE** does nothing. If *pageNumber* is greater than the number of pages, the last page is displayed. If *pageNumber* is less than one, the first page is displayed.
 
 The *\** parameter is useful when the command is called in the context of a page type subform containing several pages. In this case, when you pass this parameter, the command changes the page of the current subform (the one that called the command). By default, when the *\** parameter is omitted, the command is always applied to the parent form.
 

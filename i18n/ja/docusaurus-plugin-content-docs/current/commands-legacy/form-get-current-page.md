@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.FORM Get current page.Summary-->**FORM Get current page**コマンドは、現在表示されているフォームページ、または[FORM LOAD](form-load.md) コマンドによってロードされたカレントフォームの番号を返します。<!-- END REF-->
+<!--REF #_command_.FORM Get current page.Summary-->**FORM Get current page**コマンドは、現在表示されているフォームページ、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされたカレントフォームの番号を返します。<!-- END REF-->
 
 *\** 引数は、複数のページを含むサブフォームタイプのページのコンテキストでコマンドが呼び出される場合に使用します。この場合、この引数を渡すと、コマンドは (コマンドを呼び出した) カレントサブフォームのページを変更します。*\** が省略された場合、デフォルトでコマンドは常に親フォームに適用されます。
 

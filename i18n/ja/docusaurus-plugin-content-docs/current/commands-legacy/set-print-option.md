@@ -40,7 +40,7 @@ displayed_sidebar: docs
 | Legacy printing layer option | 16 | (Windows用4D 64-bit版のみ) *value1* のみ: 1=以降の印刷ジョブに対してはGDI-ベースの旧式の印刷レイヤーを選択。0=D2D印刷レイヤーを選択(デフォルト)。<br/>**64-bit 版:** このセレクターはWindows用64-bit版4Dのシングルユーザーアプリケーションでのみサポートされます。他のプラットフォームでは無視されます。これは主に64-bit版4Dアプリケーションの4Dジョブ内で旧式プラグインが印刷できるようにするためにものです。                                                                                                                                                                                                                                                                                                                    |
 | Print preview option         | 18 | (Windows のみ) *value1*: Windows 上で印刷プレビュー用に使用するフォーマット。取り得る値: kp preview automatic (デフォルト): XPS プリンターとビューアーがあればそれを利用し、なければPDF プリンターかビューアーを使用し、それもなければエラーを生成する kp preview XPS: XPS プリンターとビューアーがあればそれを使用し、なければエラーを生成する kp preview PDF: PDF プリンターとビューアーがあればそれを使用し、なければエラーを生成する *value2* ([GET PRINT OPTION](get-print-option.md) でのみ使用可能): Windows 上で実際に使用されている印刷プレビューフォーマット(設定によっては *value1* の値と異なることが有り得ます)。取り得る値: kp preview none: 利用可能なフォーマットはありません kp preview XPS: XPS プリンターとビューアーが使用されています kp preview PDF: PDF プリンターとビューアーが使用されています                                          |
 
-このコマンドを使用して設定を行うと、4Dアプリケーション全体に対しセッションの間中、その印刷オプションが保持されます。[PRINT SELECTION](print-selection.md)、[PRINT RECORD](print-record.md)、[Print form](print-form.md)、[QR REPORT](qr-report.md) と [WP PRINT](../WritePro/commands-legacy/wp-print.md) コマンドおよびデザインモードを含めた4Dの印刷全般に対して、この設定が使用されます。
+このコマンドを使用して設定を行うと、4Dアプリケーション全体に対しセッションの間中、その印刷オプションが保持されます。[PRINT SELECTION](print-selection.md)、[PRINT RECORD](print-record.md)、[Print form](../commands/print-form.md)、[QR REPORT](qr-report.md) と [WP PRINT](../WritePro/commands-legacy/wp-print.md) コマンドおよびデザインモードを含めた4Dの印刷全般に対して、この設定が使用されます。
 
 **注意:** 
 
@@ -77,7 +77,7 @@ Orientation option の値は同一印刷ジョブ内で変更することがで�
 #### 参照 
 
 [GET PRINT OPTION](get-print-option.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT OPTION VALUES](print-option-values.md)  
 *Print Options*  
 [SET CURRENT PRINTER](set-current-printer.md)  

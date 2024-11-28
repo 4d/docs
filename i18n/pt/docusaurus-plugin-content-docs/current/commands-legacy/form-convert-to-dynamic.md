@@ -26,7 +26,7 @@ Os *formulários clássicos* são formulários 4D armazenados dentro do arquivo 
 
 Se quiser converter um formulário de tabela, passe a tabela de formulário no parâmetro *tabela* e depois passe seu nome como uma string em *nomFormulario*. Para um formulário de projeto, passe o nome do formulário diretamente em *nomeFormulario*.
 
-Para poder executar o formulário diretamente passando o objeto resultante ao comando [DIALOG](dialog.md), **FORM Convert to dynamic** aplica regras específicas ao converter o formulário:
+Para poder executar o formulário diretamente passando o objeto resultante ao comando [DIALOG](../commands/dialog.md), **FORM Convert to dynamic** aplica regras específicas ao converter o formulário:
 
 * As referências ao método de formulário e aos métodos de objeto de formulário são ignoradas. Deve associar os nomes dos métodos de projeto para chamar a cada evento de formulário gerenciado.
 * As referências a listas são exportadas por nome ao invés de um ponteiro JSON que faz referência ao arquivo lists.json.
@@ -60,5 +60,5 @@ Se executar o código:
 
 #### Ver também 
 
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
 [Export structure file](export-structure-file.md)  

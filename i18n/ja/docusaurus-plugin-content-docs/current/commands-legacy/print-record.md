@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** は *aTable*のカレントレコードを、カレントセレクションを変更せずに印刷します。<!-- END REF-->カレント出力フォームが印刷に用いられます。*aTable*にカレントレコードが存在しない場合、**PRINT RECORD**は何も行いません。
 
-**PRINT RECORD** コマンドを使ってサブフォームを印刷することができます。これは [Print form](print-form.md) では実行できません。
+**PRINT RECORD** コマンドを使ってサブフォームを印刷することができます。これは [Print form](../commands/print-form.md) では実行できません。
 
 **Note:** 変更されたレコードが未保存の場合、ディスク上の変更前のフィールド値ではなく、変更後の値が印刷されます。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 * サーバーマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。そのためにはこのコマンドを *\** または *\>* 引数付きで呼び出さなければなりません。
 * プリンター関連の問題が発生しても (用紙切れ、プリンター接続切断等) 、エラーメッセージは生成されません。
 
-**警告:** **PRINT RECORD** と一緒に [PAGE BREAK](page-break.md) コマンドを使用してはいけません。[PAGE BREAK](page-break.md) コマンドは [Print form](print-form.md) で使用されるように設計されています。
+**警告:** **PRINT RECORD** と一緒に [PAGE BREAK](page-break.md) コマンドを使用してはいけません。[PAGE BREAK](page-break.md) コマンドは [Print form](../commands/print-form.md) で使用されるように設計されています。
 
 #### 例題 1 
 
@@ -65,4 +65,4 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

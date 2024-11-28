@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Compatibility 
 
-<!--REF #_command_.ADD RECORD.Summary-->*This command was implemented in 4D's early releases and is still useful for prototyping or basic developments.<!-- END REF--> However, to build customized and modern interfaces, it is now recommended to use generic forms based upon the [DIALOG](dialog.md) command which provide advanced features and better control over the data flow.*
+<!--REF #_command_.ADD RECORD.Summary-->*This command was implemented in 4D's early releases and is still useful for prototyping or basic developments.<!-- END REF--> However, to build customized and modern interfaces, it is now recommended to use generic forms based upon the [DIALOG](../commands/dialog.md) command which provide advanced features and better control over the data flow.*
 
 #### Description 
 

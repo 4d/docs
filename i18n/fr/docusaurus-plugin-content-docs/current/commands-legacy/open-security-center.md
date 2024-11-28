@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Notes :** 
 
-* Cette commande fonctionne sur le même principe qu'un appel à [DIALOG](dialog.md) avec le paramètre *\** : le CSM est affiché dans une fenêtre et la commande rend immédiatement la main au code 4D. Si le process courant se termine, la fenêtre est automatiquement fermée en simulant un [CANCEL](cancel.md). Vous devez donc gérer son affichage via le code du process en cours d'exécution.
+* Cette commande fonctionne sur le même principe qu'un appel à [DIALOG](../commands/dialog.md) avec le paramètre *\** : le CSM est affiché dans une fenêtre et la commande rend immédiatement la main au code 4D. Si le process courant se termine, la fenêtre est automatiquement fermée en simulant un [CANCEL](cancel.md). Vous devez donc gérer son affichage via le code du process en cours d'exécution.
 * Cette commande ne peut pas être exécutée sur une application 4D distante.
 
 #### Voir aussi 

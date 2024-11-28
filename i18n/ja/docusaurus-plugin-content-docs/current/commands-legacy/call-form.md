@@ -100,4 +100,4 @@ displayed_sidebar: docs
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  

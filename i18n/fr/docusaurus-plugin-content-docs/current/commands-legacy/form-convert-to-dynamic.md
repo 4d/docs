@@ -26,7 +26,7 @@ Les *formulaires classiques* sont des formulaires 4D stockés dans le fichier st
 
 Si vous souhaitez convertir un formulaire table, passez la table dans le paramètre *uneTable* puis passez son nom dans la chaîne *nomFormulaire*. Pour un formulaire projet, passez directement le nom du formulaire directement dans *nomFormulaire*.
 
-Pour pouvoir exécuter directement le formulaire en passant l'objet résultant à la commande [DIALOG](dialog.md), **FORM Convert to dynamic** applique des règles spécifiques lors de la conversion du formulaire :
+Pour pouvoir exécuter directement le formulaire en passant l'objet résultant à la commande [DIALOG](../commands/dialog.md), **FORM Convert to dynamic** applique des règles spécifiques lors de la conversion du formulaire :
 
 * Les références aux listes sont exportées par nom, au lieu d'un pointeur JSON référençant le fichier lists.json.
 * Les références aux filtres nommés et aux formats d'affichage nommés (préfixés par le caractère '|') sont exportées par valeur, au lieu d'un pointeur JSON référençant le fichier filters.json.
@@ -61,5 +61,5 @@ Si vous exécutez le code :
 
 #### Voir aussi 
 
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
 [Export structure file](export-structure-file.md)  

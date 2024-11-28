@@ -24,7 +24,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SCREENSHOT.Summary-->La commande **FORM SCREENSHOT** retourne un formulaire sous forme d'image.<!-- END REF--> Cette commande admet deux syntaxes différentes : en fonction de la syntaxe utilisée, vous pouvez obtenir soit l'image d'un formulaire exécuté, soit l'image du formulaire dans l'éditeur de formulaires.
 
 * FORM SCREENSHOT ( *imageForm* )  
-Cette syntaxe vous permet d'obtenir une capture écran de la page courante du formulaire en cours d'exécution ou chargé via la commande [FORM LOAD](form-load.md) : l'image retournée dans le paramètre *imageForm* contient la totalité des objets visibles du formulaire avec les valeurs courantes des champs et des variables du formulaire, les sous-formulaires, etc. Le formulaire est retourné intégralement, sans tenir compte de la taille de la fenêtre qui le contient.  
+Cette syntaxe vous permet d'obtenir une capture écran de la page courante du formulaire en cours d'exécution ou chargé via la commande [FORM LOAD](../commands/form-load.md) : l'image retournée dans le paramètre *imageForm* contient la totalité des objets visibles du formulaire avec les valeurs courantes des champs et des variables du formulaire, les sous-formulaires, etc. Le formulaire est retourné intégralement, sans tenir compte de la taille de la fenêtre qui le contient.  
 A noter que cette syntaxe ne fonctionne qu'avec les formulaires d'entrée.
 * FORM SCREENSHOT ( {*laTable* ;} *nomFormulaire* ; *imageForm* {; *pageNum*} )  
 Cette syntaxe vous permet d'obtenir une  capture écran d'un "modèle" de formulaire tel qu'affiché dans l'éditeur de formulaires. Tous les objets visibles sont dessinés comme dans l'éditeur ; la commande tient compte des formulaires hérités et des objets placés sur la page 0\.  
@@ -38,4 +38,4 @@ Par défaut, la commande capture la page 1 du formulaire. Si vous souhaitez capt
 
 #### Voir aussi 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  

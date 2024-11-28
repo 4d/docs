@@ -24,7 +24,7 @@ displayed_sidebar: docs
 このコマンドは次の2つの状況で使用することができます:
 
 * [PRINT SELECTION](print-selection.md "PRINT SELECTION")および[PRINT RECORD](print-record.md "PRINT RECORD")コマンドのコンテキストでのOn Headerフォームイベント中で。
-* [Print form](print-form.md "Print form")コマンドのコンテキストでのOn Printing Detailフォームイベント中で。
+* [Print form](../commands/print-form.md "Print form")コマンドのコンテキストでのOn Printing Detailフォームイベント中で。
 
 座標はピクセル単位で返されます (1ピクセル＝1/72インチ)。
 

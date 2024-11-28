@@ -448,7 +448,7 @@ module.exports =
 						image: '/img/docusaurus.png',
 						},
 					"items": [
-						"commands-legacy/compile-project",
+						"commands/compile-project",
 						"commands-legacy/idle"
 					]
 					},
@@ -465,7 +465,7 @@ module.exports =
 						"commands-legacy/accept",
 						"commands-legacy/add-record",
 						"commands-legacy/cancel",
-						"commands-legacy/dialog",
+						"commands/dialog",
 						"commands-legacy/modified",
 						"commands-legacy/modify-record",
 						"commands-legacy/old",
@@ -558,7 +558,7 @@ module.exports =
 						},
 					"items": [
 						"commands-legacy/current-method-path",
-						"commands-legacy/form-edit",
+						"commands/form-edit",
 						"commands-legacy/form-get-names",
 						"commands-legacy/method-get-attribute",
 						"commands-legacy/method-get-attributes",
@@ -671,7 +671,7 @@ module.exports =
 						},
 					"items": [
 						"commands-legacy/current-form-name",
-						"commands-legacy/form",
+						"commands/form",
 						"commands-legacy/form-convert-to-dynamic",
 						"commands-legacy/form-first-page",
 						"commands-legacy/form-get-color-scheme",
@@ -683,7 +683,7 @@ module.exports =
 						"commands-legacy/form-get-vertical-resizing",
 						"commands-legacy/form-goto-page",
 						"commands-legacy/form-last-page",
-						"commands-legacy/form-load",
+						"commands/form-load",
 						"commands-legacy/form-next-page",
 						"commands-legacy/form-previous-page",
 						"commands-legacy/form-screenshot",
@@ -1380,7 +1380,7 @@ module.exports =
 						"commands-legacy/level",
 						"commands-legacy/open-printing-job",
 						"commands-legacy/page-break",
-						"commands-legacy/print-form",
+						"commands/print-form",
 						"commands-legacy/print-label",
 						"commands-legacy/print-object",
 						"commands-legacy/print-option-values",

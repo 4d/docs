@@ -108,7 +108,7 @@ La méthode de gestion d'événement teste si la combinaison de touches **Ctrl**
  End if
 ```
 
-Notez que **ON EVENT CALL** est utilisé dans cet exemple car un état spécial est imprimé à l'aide des commandes *\_o\_PAGE SETUP*, [Print form](print-form.md) et [PAGE BREAK](page-break.md) dans une structure de type [ARRAY TO LIST](array-to-list.md).
+Notez que **ON EVENT CALL** est utilisé dans cet exemple car un état spécial est imprimé à l'aide des commandes *\_o\_PAGE SETUP*, [Print form](../commands/print-form.md) et [PAGE BREAK](page-break.md) dans une structure de type [ARRAY TO LIST](array-to-list.md).
 
 Lorsque vous imprimez un état à l'aide la commande [PRINT SELECTION](print-selection.md), vous n'avez pas besoin de gérer les événements permettant à l'utilisateur d'interrompre l'impression, [PRINT SELECTION](print-selection.md) le fait pour vous.
 

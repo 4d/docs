@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** aunque utilizar **DEFAULT TABLE** y omitir el nombre de la tabla pueden hacer el código más fácil de leer, muchos programadores consideran que la utilización de este comando en realidad trae más inconvenientes que ventajas.<!-- END REF--> En particular, note que [DEFAULT TABLE](default-table.md) es prioritario cuando utiliza por ejemplo el comando [DIALOG](dialog.md) con un formulario proyecto y hay un formulario de la tabla por defecto con el mismo nombre.
+<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** aunque utilizar **DEFAULT TABLE** y omitir el nombre de la tabla pueden hacer el código más fácil de leer, muchos programadores consideran que la utilización de este comando en realidad trae más inconvenientes que ventajas.<!-- END REF--> En particular, note que [DEFAULT TABLE](default-table.md) es prioritario cuando utiliza por ejemplo el comando [DIALOG](../commands/dialog.md) con un formulario proyecto y hay un formulario de la tabla por defecto con el mismo nombre.
 
 **DEFAULT TABLE** define *tabla* como la tabla por defecto para el proceso actual. 
 

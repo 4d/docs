@@ -73,6 +73,6 @@ Voici le code de *méthodeWorker* :
 #### Voir aussi 
 
 *A propos des workers*  
-[CALL FORM](call-form.md)  
+[CALL FORM](../commands/call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  

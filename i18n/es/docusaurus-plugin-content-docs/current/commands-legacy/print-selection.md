@@ -38,7 +38,7 @@ Puede saber si PRINT SELECTION está imprimiendo el primer encabezado probando [
 
 Para imprimir una selección ordenada con subtotales o rupturas utilizando PRINT SELECTION, debe primero ordenar la selección. Luego, en cada área de ruptura del informe, incluir una variable con un método de objeto que asigne el subtotal a la variable. Igualmente puede utilizar funciones estadísticas y aritméticas como [Sum](sum.md) y [Average](average.md) para asignar valores a las variables. Para mayor información, consulte las descripciones de [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) y [ACCUMULATE](accumulate.md).
 
-**Advertencia:** no utilice el comando [PAGE BREAK](page-break.md) con el comando PRINT SELECTION. [PAGE BREAK](page-break.md) está reservado para ser utilizado con el comando [Print form](print-form.md).
+**Advertencia:** no utilice el comando [PAGE BREAK](page-break.md) con el comando PRINT SELECTION. [PAGE BREAK](page-break.md) está reservado para ser utilizado con el comando [Print form](../commands/print-form.md).
 
 Después de un llamado a PRINT SELECTION, la variable OK toma el valor 1 si la impresión se ha completado. Si la impresión fue interrumpida, la variable OK toma el valor 0 (cero) (por ejemplo si el usuario hizo clic en Cancelar en la caja de diálogo de impresión).
 

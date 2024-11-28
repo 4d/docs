@@ -18,12 +18,12 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.PAGE BREAK.Summary-->La commande **PAGE BREAK** déclenche l'impression des données envoyées à l'imprimante et provoque un saut de page.<!-- END REF--> **PAGE BREAK** s'utilise conjointement avec [Print form](print-form.md) (dans le cadre de l'événement formulaire On Printing Detail) pour forcer des sauts de page et imprimer la dernière page créée en mémoire.   
+<!--REF #_command_.PAGE BREAK.Summary-->La commande **PAGE BREAK** déclenche l'impression des données envoyées à l'imprimante et provoque un saut de page.<!-- END REF--> **PAGE BREAK** s'utilise conjointement avec [Print form](../commands/print-form.md) (dans le cadre de l'événement formulaire On Printing Detail) pour forcer des sauts de page et imprimer la dernière page créée en mémoire.   
 N'appelez pas **PAGE BREAK** avec la commande [PRINT SELECTION](print-selection.md) : dans ce cas, il est préférable d'utiliser les routines [Subtotal](subtotal.md) ou [BREAK LEVEL](break-level.md) avec leur paramètre optionnel pour générer des sauts de pages.
 
 Les paramètres *\** et *\>* sont optionnels.
 
-Le paramètre \* vous permet d'annuler une impression lancée avec la commande [Print form](print-form.md). L'exécution de cette instruction stoppe immédiatement l'impression en cours. 
+Le paramètre \* vous permet d'annuler une impression lancée avec la commande [Print form](../commands/print-form.md). L'exécution de cette instruction stoppe immédiatement l'impression en cours. 
 
 **Note :** Sous Windows, ce mécanisme peut être perturbé par les propriétés de "spouling" du serveur d'impression. Si l'imprimante est paramétrée de manière à lancer les impressions directement, l'annulation ne sera pas effective. Pour que l'instruction **PAGE BREAK**(\*) fonctionne correctement, il est préférable d'affecter la propriété "Commencer l'impression une fois la dernière page spoulée" à l'imprimante. 
 
@@ -37,7 +37,7 @@ Cette seconde option est particulièrement intéressante lorsqu'elle est utilis�
 
 #### Exemple 1 
 
-Reportez-vous à l'exemple de la commande [Print form](print-form.md).
+Reportez-vous à l'exemple de la commande [Print form](../commands/print-form.md).
 
 #### Exemple 2 
 
@@ -46,4 +46,4 @@ Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md
 #### Voir aussi 
 
 [CANCEL](cancel.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

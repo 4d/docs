@@ -30,7 +30,7 @@ También puede designar la impresora PDF genérica automáticamente, independien
 
 El comando **SET CURRENT PRINTER** debe llamarse antes de [SET PRINT OPTION](set-print-option.md), de manera que las opciones disponibles correspondan a la impresora seleccionada. Por otra parte, **SET CURRENT PRINTER** debe llamarse después de *\_o\_PAGE SETUP*, de lo contrario los parámetros de la impresora se pierden.
 
-Este comando puede utilizarse con los comandos [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) y [QR REPORT](qr-report.md), y se aplica a todas las impresiones de 4D, incluyendo en el modo Diseño.  
+Este comando puede utilizarse con los comandos [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md) y [QR REPORT](qr-report.md), y se aplica a todas las impresiones de 4D, incluyendo en el modo Diseño.  
 Los comandos de impresión deben llamarse obligatoriamente con el parámetro *\>* (donde sea pertinente) de manera que los parámetros especificados no se pierdan.
 
 #### Variables y conjuntos del sistema 

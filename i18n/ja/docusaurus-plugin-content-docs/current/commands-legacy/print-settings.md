@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** は印刷設定ダイアログボックスを表示します。<!-- END REF-->このコマンドを使用する場合、[Print form](print-form.md) や [OPEN PRINTING JOB](open-printing-job.md) コマンドよりも前に呼び出されなければなりません。
+<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** は印刷設定ダイアログボックスを表示します。<!-- END REF-->このコマンドを使用する場合、[Print form](../commands/print-form.md) や [OPEN PRINTING JOB](open-printing-job.md) コマンドよりも前に呼び出されなければなりません。
 
 オプションの*dialType* パラメーターを使用して、表示する印刷設定ダイアログボックスを指定できます。次の *Print Options* テーマの定数を引数として受け渡すことができます:
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 #### 例題 
 
-[PRINT FORM](print-form.md "PRINT FORM")コマンドの例題参照
+[PRINT FORM](../commands/print-form.md "PRINT FORM")コマンドの例題参照
 
 #### システム変数およびセット 
 
@@ -41,5 +41,5 @@ displayed_sidebar: docs
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  

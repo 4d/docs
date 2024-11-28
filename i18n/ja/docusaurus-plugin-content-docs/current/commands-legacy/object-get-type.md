@@ -95,5 +95,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  

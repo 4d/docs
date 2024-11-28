@@ -17,7 +17,7 @@ displayed_sidebar: docs
 <!--REF #_command_.NO DEFAULT TABLE.Summary-->The **NO DEFAULT TABLE** command is used to cancel the effect of the [DEFAULT TABLE](default-table.md) command.<!-- END REF--> After this command is executed, there is no longer any default table defined for the process.   
 This command will have no effect if the [DEFAULT TABLE](default-table.md) command has not been called beforehand.
 
-This command concerns the use of project forms (forms not linked with tables): most of the commands related to forms (apart from user forms) accept an optional *aTable* parameter as their first parameter. For example, this is the case with the *\_o\_FORM GET PARAMETER*, [Open form window](open-form-window.md) or [DIALOG](dialog.md) commands. Since a project form and table form can have the same name, this parameter can be used to determine the form to be used: pass the *aTable* parameter when you want to target the table form and omit it in the case of a project form.
+This command concerns the use of project forms (forms not linked with tables): most of the commands related to forms (apart from user forms) accept an optional *aTable* parameter as their first parameter. For example, this is the case with the *\_o\_FORM GET PARAMETER*, [Open form window](open-form-window.md) or [DIALOG](../commands/dialog.md) commands. Since a project form and table form can have the same name, this parameter can be used to determine the form to be used: pass the *aTable* parameter when you want to target the table form and omit it in the case of a project form.
 
 In a database containing a project form named “TheForm” and a table form with the same name for the \[Table1\] table:
 
