@@ -526,7 +526,7 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 | Paramètres | Type    |                             | Description                        |
 | ---------- | ------- | --------------------------- | ---------------------------------- |
-| result     | Integer | <- | Nombre d'entités dans la dataclass |
+| Résultat   | Integer | <- | Nombre d'entités dans la dataclass |
 
 <!-- END REF -->
 
@@ -696,7 +696,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->renvoie u
 
 | Paramètres | Type   |                             | Description                                                                 |
 | ---------- | ------ | --------------------------- | --------------------------------------------------------------------------- |
-| result     | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass. |
+| Résultat   | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass. |
 
 <!-- END REF -->
 

@@ -50,13 +50,13 @@ Los números negativos se especifican con el signo menos (-). Por ejemplo:
 |                   |                                           |          | 10 = 11                           | False               |
 | Desigualdad       | Número # Número                           | Boolean  | 10 #11                            | True                |
 |                   |                                           |          | 10 # 10                           | False               |
-| Mayor que         | Number > Number                           | Boolean  | 11 > 10                           | True                |
+| Mayor que         | Número > Número                           | Boolean  | 11 > 10                           | True                |
 |                   |                                           |          | 10 > 11                           | False               |
-| Menor que         | Number < Number  | Boolean  | 10 < 11  | True                |
+| Menor que         | Número < Número  | Boolean  | 10 < 11  | True                |
 |                   |                                           |          | 11 < 10  | False               |
-| Mayor o igual que | Number >= Number                          | Boolean  | 11 >= 10                          | True                |
+| Mayor o igual que | Número >= Número                          | Boolean  | 11 >= 10                          | True                |
 |                   |                                           |          | 10 >= 11                          | False               |
-| Menor o igual que | Number <= Number | Boolean  | 10 <= 11 | True                |
+| Menor o igual que | Número <= Número | Boolean  | 10 <= 11 | True                |
 |                   |                                           |          | 11 <= 10 | False               |
 
 ### Módulo
@@ -79,7 +79,7 @@ El operador de división entero largo \ devuelve valores significativos sólo co
 
 ### Comparación real
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+Para comparar dos reales por igualdad, el lenguaje 4D realmente compara el valor absoluto de la diferencia con el *épsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
 
 :::note
 

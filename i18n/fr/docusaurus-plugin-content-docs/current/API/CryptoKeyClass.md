@@ -42,14 +42,14 @@ Pour une vue d'ensemble complète de cette classe, veuillez vous reporter au blo
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Paramètres | Type                         |                             | Description                                      |
-| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------ |
-| settings   | Object                       | ->                          | Settings to generate or load a key pair          |
-| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement |
+| Paramètres | Type                         |                             | Description                                          |
+| ---------- | ---------------------------- | --------------------------- | ---------------------------------------------------- |
+| settings   | Object                       | ->                          | Paramètres pour générer ou charger une paire de clés |
+| Résultat   | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement     |
 
 <!-- END REF -->
 
-La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet `4D.CryptoKey` encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet `4D.CryptoKey` encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre *settings*. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
 
 #### *settings*
 
@@ -62,7 +62,7 @@ La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée u
 
 #### *CryptoKey*
 
-L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est un objet partagé qui peut donc être utilisé simultanément par plusieurs process 4D.
 
 #### Exemple 1
 
@@ -185,7 +185,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 | Propriété | Type       | Description                                                         |
 | --------- | ---------- | ------------------------------------------------------------------- |
 | success   | boolean    | True si le message a été déchiffré avec succès                      |
-| result    | text       | Message déchiffré et décodé à l'aide de `options.encodingDecrypted` |
+| Résultat  | text       | Message déchiffré et décodé à l'aide de `options.encodingDecrypted` |
 | errors    | collection | Si `success` est `false`, peut contenir une collection d'erreurs    |
 
 Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` renvoyé contient une collection d'erreurs dans `status.errors`.

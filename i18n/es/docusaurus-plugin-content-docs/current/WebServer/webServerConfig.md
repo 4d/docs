@@ -379,7 +379,7 @@ Este parámetro permite seleccionar el formato de este archivo. Valores disponib
 | `WEB SET OPTION`              | `Web max concurrent processes`                                                                                                   |             |
 | Caja de diálogo de parámetros | Página [Opciones (I)/Máximo de procesos web simultáneos](../settings/web.md#maximum-concurrent-web-processes) |             |
 
-Límite estrictamente superior de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor cuando **no sessions** o **legacy sessions** están siendo utilizados (**scalable sessions** soporta un [número ilimitado](sessions.md) de p Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
+Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
 
 Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
@@ -392,7 +392,7 @@ Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
 Tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web está autorizado a procesar. Por defecto, el valor es de 2 000 000, es decir, algo menos de 2 MB. Pasar el valor máximo (2 147 483 648) significa que, en la práctica, no se define ningún límite.
 
-Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. This limit is used to avoid web server saturation due to incoming requests that are too large.
+Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. When a request reaches this limit, the 4D web server rejects it.
 
 Valores posibles: 500 000 a 2 147 483 648.
 

@@ -42,10 +42,10 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parâmetro | Tipo         |    | Descrição                                         |
-| --------- | ------------ | -- | ------------------------------------------------- |
-| settings  | Object       | -> | Settings to generate or load a key pair           |
-| resultado | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
+| Parâmetro  | Tipo         |    | Descrição                                         |
+| ---------- | ------------ | -- | ------------------------------------------------- |
+| settings   | Object       | -> | Settings to generate or load a key pair           |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 <!-- END REF -->
 
 The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
@@ -385,7 +385,7 @@ Contém <!-- REF #CryptoKey.type.Summary -->nome do tipo da chave - "RSA", "ECDS
 | 18 R4   | Adicionado |
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.verify().Params -->

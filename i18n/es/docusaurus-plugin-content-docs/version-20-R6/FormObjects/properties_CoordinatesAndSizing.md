@@ -300,7 +300,7 @@ Establece un relleno horizontal para las celdas. El valor se establece en píxel
 
 #### Ver también
 
-[Vertical Padding](#vertical-padding)
+[Relleno vertical](#vertical-padding)
 
 ---
 
@@ -320,4 +320,4 @@ Establece un relleno vertical para las celdas. El valor se establece en píxeles
 
 #### Ver también
 
-[Horizontal Padding](#horizontal-padding)
+[Relleno horizontal](#horizontal-padding)

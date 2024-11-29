@@ -65,7 +65,7 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 - Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
 - Puede asignar una acción de permiso a una clase singleton (tipo `singleton`), en cuyo caso se aplicará a todas sus funciones expuestas, o a una función singleton (tipo `singletonMethod`).
 - Valores por defecto: en la implementación actual, solo *Null* está disponible como valor por defecto.
-- En REST [modo force login](../REST/authUsers.md/#force-login-mode), la [función `Systfy()`](../REST/authUsers.md#function-ěfy) es siempre ejecutable por usuarios invitados, cualquiera que sea la configuración de permisos.
+- En modo REST [force login](../REST/authUsers.md/#force-login-mode), la función [`authentify()`](../REST/authUsers.md#function-authentify) es siempre ejecutable por usuarios invitados, cualquiera que sea la configuración de permisos.
 
 La definición de permisos requiere ser coherente, en particular:
 

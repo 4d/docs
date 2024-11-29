@@ -645,7 +645,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 | Paramètres | Type |    | Description                                                                                   |
 | ---------- | ---- | -- | --------------------------------------------------------------------------------------------- |
-| result     | Text | <- | Attributs de contexte associés à l'entity, séparés par une virgule|<!-- END REF -->
+| Résultat   | Text | <- | Attributs de contexte associés à l'entity, séparés par une virgule|<!-- END REF -->
 
 |
 

@@ -42,10 +42,10 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Parâmetro | Tipo                         |                             | Descrição                                         |
-| --------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
-| settings  | Object                       | ->                          | Settings to generate or load a key pair           |
-| resultado | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
+| Parâmetro  | Tipo                         |                             | Descrição                                         |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
+| settings   | Object                       | ->                          | Settings to generate or load a key pair           |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 
 <!-- END REF -->
 

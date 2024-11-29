@@ -53,7 +53,7 @@ Além do botão [**Compilar**](#compilar), a janela Compilador oferece recursos 
 
 ### Verificar sintaxe
 
-El botón **Verificar la sintaxis** lanza la ejecución de la fase de verificación de la sintaxis. At the end of the checking process, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method.
+El botón **Verificar la sintaxis** lanza la ejecución de la fase de verificación de la sintaxis. At the end of the checking process, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method or form object.
 
 El control sintáctico también puede lanzarse directamente con el comando **Verificar sintaxis** asociado al botón de la barra de herramientas **Compilador**. This option is the only one available if you do not have a suitable license to allow the compilation of applications.
 

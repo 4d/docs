@@ -5,7 +5,7 @@ title: フォームイベント
 
 フォームイベントとは、フォームメソッドやフォームオブジェクトメソッドの実行につながるイベントのことです。 フォームイベントにより、アプリケーションの流れをコントロールしたり、特定のイベントが発生したときにのみ実行されるコードを書くことができます。
 
-コードの中では、トリガーされたイベントを返す `FORM Event` コマンドを使ってイベントを制御します。 例:
+In your code, you control the events using the [`FORM Event`](../commands/form-event.md) command, that returns the triggered event. 例:
 
 ```4d
 // ボタンのコード
@@ -18,7 +18,7 @@ End if
 
 ## イベントオブジェクト
 
-各イベントは、`FORM Event` コマンドによってオブジェクトとして返されます。 デフォルトで、以下のプロパティが含まれています:
+Each event is returned as an object by the [`FORM Event`](../commands/form-event.md) command. デフォルトで、以下のプロパティが含まれています:
 
 | プロパティ       | 型       | 説明                                                                |
 | ----------- | ------- | ----------------------------------------------------------------- |

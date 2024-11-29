@@ -9,7 +9,7 @@ title: Propriétés des formulaires
 
 > La propriété de schéma de couleurs n'est appliquée que sur macOS.
 
-Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](https://doc.4d.com/4dv19/help/command/en/page1762.html)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
@@ -38,20 +38,33 @@ A CSS file defined at the form level will override default style sheet(s). For m
 
 ---
 
-## Pages
+## Form Class
 
-Chaque formulaire est composé d'au moins deux pages :
+Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
 
-- une page 0 (page de fond)
-- une page 1 (page principale)
+Associating a class to the form provides the following benefits:
 
-Pour plus d'informations, veuillez consulter le thème [Pages formulaire](forms.md#form-pages).
+- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+
+![](../assets/en/FormObjects/warning-proplist.png)
+
+- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
+
+- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+
+- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+
+:::note
+
+See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+
+:::
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles                                                                                   |
-| ----- | --------------- | --------------------------------------------------------------------------------------------------- |
-| pages | collection      | Collection de pages (chaque page est un objet, la page 0 est le premier élément) |
+| Nom       | Type de données | Valeurs possibles                                                                                                       |
+| --------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| formClass | string          | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
 
 ---
 
@@ -122,6 +135,23 @@ Set to `\<None>` in the Property List (or " " in JSON) to inherited from a proje
 | Nom                | Type de données  | Valeurs possibles          |
 | ------------------ | ---------------- | -------------------------- |
 | inheritedFormTable | string or number | table name or table number |
+
+---
+
+## Pages
+
+Chaque formulaire est composé d'au moins deux pages :
+
+- une page 0 (page de fond)
+- une page 1 (page principale)
+
+Pour plus d'informations, veuillez consulter le thème [Pages formulaire](forms.md#form-pages).
+
+#### Grammaire JSON
+
+| Nom   | Type de données | Valeurs possibles                                                                                   |
+| ----- | --------------- | --------------------------------------------------------------------------------------------------- |
+| pages | collection      | Collection de pages (chaque page est un objet, la page 0 est le premier élément) |
 
 ---
 

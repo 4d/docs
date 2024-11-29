@@ -42,10 +42,10 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Parâmetro | Tipo                         |                             | Descrição                                         |
-| --------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
-| settings  | Object                       | ->                          | Settings to generate or load a key pair           |
-| resultado | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
+| Parâmetro  | Tipo                         |                             | Descrição                                         |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
+| settings   | Object                       | ->                          | Settings to generate or load a key pair           |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 
 <!-- END REF -->
 
@@ -409,7 +409,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 

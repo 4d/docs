@@ -100,6 +100,8 @@ Vous pouvez cliquer deux fois sur le bouton pour qu'il reste sélectionné même
 
 ### Liste de propriétés
 
+![](../assets/en/FormEditor/property-list.png)
+
 Les formulaires et les objets de formulaire ont des propriétés qui contrôlent l'accès, l'apparence et le comportement du formulaire ou de l'objet lorsqu'il est utilisé. Les propriétés du formulaire comprennent, par exemple, le nom du formulaire, sa barre de menu et sa taille. Les propriétés de l'objet comprennent, par exemple, le nom de l'objet, ses dimensions, sa couleur de fond et sa police.
 
 Vous pouvez afficher et modifier les propriétés du formulaire et des objets en utilisant la liste des propriétés. Elle affiche les propriétés du formulaire ou des objets en fonction de ce que vous sélectionnez dans la fenêtre de l'éditeur.

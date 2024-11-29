@@ -23,7 +23,7 @@ El mensaje de advertencia "Atención, verifique los privilegios de acceso" apare
 
 Por defecto, los accesos REST están abiertos a todos los usuarios, lo que obviamente no es recomendable por razones de seguridad, y también para controlar el uso de las licencias de los clientes.
 
-As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session.
+A partir de 4D 20 R6, los accesos REST se configuran activando el modo [**force login**](authUsers.md#force-login-mode) y creando una función de clase datastore [`authentify()`](authUsers.md#authentify) para autenticar usuarios y asignar privilegios a su sesión web.
 
 :::note Compatibilidad
 

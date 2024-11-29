@@ -9,7 +9,7 @@ title: フォームプロパティ
 
 > 配色プロパティは、macOS でのみ適用されます。
 
-このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](https://doc.4d.com/4dv19/help/command/ja/page1762.html) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
+このプロパティは、フォームのカラースキームを定義します。 By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
 - dark - 暗い背景に明るいテキスト
 - light - 明るい背景に暗いテキスト
@@ -38,20 +38,33 @@ title: フォームプロパティ
 
 ---
 
-## Pages
+## Form Class
 
-各フォームは、少なくとも 2つのページで構成されています:
+Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
 
-- ページ0 (背景ページ)
-- ページ1 (メインページ)
+Associating a class to the form provides the following benefits:
 
-詳細については [フォームのページ](forms.md#フォームのページ) を参照ください。
+- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+
+![](../assets/en/FormObjects/warning-proplist.png)
+
+- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
+
+- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+
+- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+
+:::note
+
+See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+
+:::
 
 #### JSON 文法
 
-| 名称    | データタイプ     | とりうる値                                                      |
-| ----- | ---------- | ---------------------------------------------------------- |
-| pages | collection | ページのコレクション (各ページはオブジェクトで、ページ0 は最初の要素です) |
+| 名称        | データタイプ | とりうる値                                                                                                                   |
+| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| formClass | string | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
 
 ---
 
@@ -122,6 +135,23 @@ title: フォームプロパティ
 | 名称                 | データタイプ            | とりうる値          |
 | ------------------ | ----------------- | -------------- |
 | inheritedFormTable | string または number | テーブル名またはテーブル番号 |
+
+---
+
+## Pages
+
+各フォームは、少なくとも 2つのページで構成されています:
+
+- ページ0 (背景ページ)
+- ページ1 (メインページ)
+
+詳細については [フォームのページ](forms.md#フォームのページ) を参照ください。
+
+#### JSON 文法
+
+| 名称    | データタイプ     | とりうる値                                                      |
+| ----- | ---------- | ---------------------------------------------------------- |
+| pages | collection | ページのコレクション (各ページはオブジェクトで、ページ0 は最初の要素です) |
 
 ---
 

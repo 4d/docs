@@ -354,7 +354,7 @@ Les propriétés du paramètre *$event* sont les suivantes :
 | attributeName | Text    | Nom de l'attribut calculé                                                                                     |
 | dataClassName | Text    | Nom de la dataclass                                                                                           |
 | kind          | Text    | "get"                                                                                                         |
-| result        | Variant | Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null |
+| Résultat      | Variant | Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null |
 
 
 #### Exemples
@@ -467,7 +467,7 @@ Les propriétés du paramètre *$event* sont les suivantes :
 | kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Variant | Valeur à gérer par l'attribut calculé                                                                                                                                                                                                                                                                                                                                              |
 | operator      | Text    | Opérateur de requête (voir également la fonction de classe [`query`](API/DataClassClass.md#query)). Valeurs possibles :<li>== (égal à, @ est un joker)</li><li>=== (égal à, @ n'est pas un joker)</li><li>!= (non égal à, @ est un joker)</li><li>!== (non égal à, @ n'est pas un joker)</li><li>< (inférieur à)</li><li><= (less than or equal to)</li><li>> (supérieur à)</li><li>>= (supérieur ou égal à)</li><li>IN (inclus dans)</li><li>% (contient un mot-clé)</li> |
-| result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` dans cette propriété si vous voulez laisser 4D exécuter la requête par défaut (toujours séquentielle pour les champs calculés).                                                                                                                                                                                       |
+| Résultat      | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` dans cette propriété si vous voulez laisser 4D exécuter la requête par défaut (toujours séquentielle pour les champs calculés).                                                                                                                                                                                       |
 
 > Si la fonction retourne une valeur dans *$result* et qu'une autre valeur est attribuée à la propriété `$event.result`, la priorité est donnée à `$event.result`.
 
@@ -601,7 +601,7 @@ Les propriétés du paramètre *$event* sont les suivantes :
 | value         | Variant | Valeur à gérer par l'attribut calculé                                                                              |
 | operator      | Text    | "desc" or "asc" (default)                                                                                          |
 | descending    | Boolean | `true` pour l'ordre décroissant, `false` pour l'ordre croissant                                                    |
-| result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
+| Résultat      | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
 
 > Vous pouvez utiliser soit `l'opérateur`, soit la propriété `descending`. C'est essentiellement une question de style de programmation (voir les exemples).
 

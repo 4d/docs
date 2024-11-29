@@ -58,7 +58,7 @@ Esta es la lista de objetos cuyo valor se puede guardar:
 | [Casilla de verificación](checkbox_overview.md) | Valor de la variable asociada (0, 1, 2)                                                  |
 | [Lista desplegable](dropdownList_Overview.md)   | Número de línea seleccionada                                                                                |
 | [Botón de radio](radio_overview.md)             | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
-| [Tab control](tabControl.md)                    | Número de pestaña seleccionada                                                                              |
+| [Control de pestañas](tabControl.md)            | Número de pestaña seleccionada                                                                              |
 
 #### Gramática JSON
 

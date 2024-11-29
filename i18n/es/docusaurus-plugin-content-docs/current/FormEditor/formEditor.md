@@ -100,6 +100,8 @@ Puede presionar dos veces el botón para que permanezca seleccionado incluso des
 
 ### Lista de propiedades
 
+![](../assets/en/FormEditor/property-list.png)
+
 Tanto los formularios como los objetos de formulario tienen propiedades que controlan el acceso al formulario, la apariencia del mismo y el comportamiento del formulario cuando se utiliza. Las propiedades del formulario incluyen, por ejemplo, el nombre del formulario, su barra de menú y su tamaño. Las propiedades de los objetos incluyen, por ejemplo, su nombre, sus dimensiones, su color de fondo y su fuente.
 
 Puede visualizar y modificar las propiedades de los objetos y formularios utilizando la lista de propiedades. Muestra las propiedades del formulario o de los objetos en función de lo que se seleccione en la ventana del editor.

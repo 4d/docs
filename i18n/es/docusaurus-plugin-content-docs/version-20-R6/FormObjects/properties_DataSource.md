@@ -185,7 +185,7 @@ Debe introducir una lista de valores. En el editor de formularios, un diálogo e
 
 #### Objetos soportados
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[Columna List Box (sólo tipo array)](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -298,9 +298,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                           |
-| ------------------- | -------------- | ------------------------------------------ |
-| selectedItemsSource | string         | Assignable collection or object expression |
+| Nombre              | Tipos de datos | Valores posibles                          |
+| ------------------- | -------------- | ----------------------------------------- |
+| selectedItemsSource | string         | Colección asignable o expresión de objeto |
 
 #### Objetos soportados
 

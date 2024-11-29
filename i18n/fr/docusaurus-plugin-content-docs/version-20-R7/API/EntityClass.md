@@ -657,7 +657,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 | Paramètres | Type |                             | Description                                                        |
 | ---------- | ---- | --------------------------- | ------------------------------------------------------------------ |
-| result     | Text | <- | Attirbuts de contexte associés à l'entity, séparés par une virgule |
+| Résultat   | Text | <- | Attirbuts de contexte associés à l'entity, séparés par une virgule |
 
 <!-- END REF -->
 

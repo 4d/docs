@@ -1152,7 +1152,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 | Paramètres | Type |    | Description                                                                                             |
 | ---------- | ---- | -- | ------------------------------------------------------------------------------------------------------- |
-| result     | Text | <- | Attributs de contexte associés à l'entity selection, séparés par une virgule|<!-- END REF -->
+| Résultat   | Text | <- | Attributs de contexte associés à l'entity selection, séparés par une virgule|<!-- END REF -->
 
 |
 
