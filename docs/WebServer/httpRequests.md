@@ -3,7 +3,7 @@ id: httpRequests
 title: Processing HTTP requests
 ---
 
-The 4D web server provides several features to handle HTTP requests:
+The 4D web server provides several built-in features to handle HTTP requests:
 
 - the `On Web Connection` database method, a router for your web application,
 - the `/4DACTION` URL to call server-side code
@@ -11,6 +11,11 @@ The 4D web server provides several features to handle HTTP requests:
 - other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
 - the *COMPILER_WEB* project method, to declare your variables.
 
+:::info
+
+You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. See [**HTTP Request Handler**](http-request-handler.md) section.
+
+:::
 
 ## On Web Connection
 
@@ -18,7 +23,7 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 ### Database method calls
 
-The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. The database method is called with the URL.
+The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server. The database method is called with the URL.
 
 For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
 
@@ -26,29 +31,19 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 ### Syntax
 
-**On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
+**On Web Connection**( *$url* : Text; *$header* : Text; *$BrowserIP* : Text; *$ServerIP* : Text; *$user* : Text; *$password* : Text )
 
 |Parameters|Type||Description|
 |---|---|:---:|---|
-|$1|Text|<-|URL |
-|$2|Text|<-|HTTP headers + HTTP body (up to 32 kb limit) |
-|$3|Text|<-|IP address of the web client (browser) |
-|$4|Text|<-|IP address of the server |
-|$5|Text|<-|User name |
-|$6|Text|<-|Password |
+|$url|Text|<-|URL |
+|$header|Text|<-|HTTP headers + HTTP body (up to 32 kb limit) |
+|$BrowserIP|Text|<-|IP address of the web client (browser) |
+|$ServerIP|Text|<-|IP address of the server |
+|$user|Text|<-|User name |
+|$password|Text|<-|Password |
 
 
-You must declare these parameters as shown below:
-
-```4d
-//On Web Connection database method
-
- C_TEXT($1;$2;$3;$4;$5;$6)
-
-//Code for the method
-```
-
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+You must declare these parameters:
 
 ```4d
 // On Web Connection database method
@@ -62,13 +57,13 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 > Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
 
 
-### $1 - URL extra data
+### $url - URL extra data
 
-The first parameter ($1) is the URL entered by users in the address area of their web browser, without the host address.
+The first parameter ($url) is the URL entered by users in the address area of their web browser, without the host address.
 
-Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
+Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
 
-|URL entered in web browser|Value of parameter $1|
+|URL entered in web browser|Value of parameter $url|
 |---|---|
 |123.4.567.89|/ |
 |http://123.45.67.89|/ |
@@ -79,30 +74,30 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 
-### $2 - Header and Body of the HTTP request
+### $header - Header and Body of the HTTP request
 
-The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
+The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
 
 If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
 
->For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+>For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
 
 
-### $3 - Web client IP address
+### $BrowserIP - Web client IP address
 
-The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+The $BrowserIP parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
 
 >4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
 
-### $4 - Server IP address
+### $ServerIP - Server IP address
 
-The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
+The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
 
-### $5 and $6 - User Name and Password
+### $user and $password - User Name and Password
 
-The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
+The $user and $password parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
 
->If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+>If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
 
 
 
@@ -119,7 +114,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 **Usage:** URL or Form action.
 
-This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter in *$1*.
+This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter.
 
 - The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
 - When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
@@ -145,13 +140,13 @@ This example describes the association of the `/4DACTION` URL with an HTML pictu
 The `getPhoto` method is as follows:
 
 ```4d
-C_TEXT($1) // This parameter must always be declared
+#DECLARE ($url : Text) // This parameter must always be declared
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
  //find the picture in the Images folder within the Resources folder
-$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
+$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$url+".psd"
 
 READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
 PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
@@ -201,9 +196,9 @@ OK="Search"
 4D calls the `On Web Authentication` database method (if it exists), then the `processForm` project method is called, which is as follows:
 
 ```4d
- C_TEXT($1) //mandatory for compiled mode
- C_LONGINT($vName)
- C_TEXT(vName;vLIST)
+ #DECLARE ($url : Text) //mandatory for compiled mode
+ var $vName : Integer
+ var vName;vLIST : Text
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrVals;0)
  WEB GET VARIABLES($arrNames;$arrVals) //we retrieve all the variables of the form
@@ -233,9 +228,9 @@ End if
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
 
-When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using `WEB SEND FILE` or `WEB SEND BLOB`, where the user enters or modifies values, then clicks on the validation button.
+When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
 
-In this case, 4D can retrieve the values of the HTML objects found in the request using the `WEB GET VARIABLES` command. The `WEB GET VARIABLES` command retrieves the values as text.
+In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md) command. The `WEB GET VARIABLES` command retrieves the values as text.
 
 Consider the following HTML page source code:
 
@@ -300,7 +295,7 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_LONGINT($user)
+ var $user : Integer
 
  Case of
 
@@ -340,15 +335,15 @@ Keep in main that with HTML, all objects are text objects. If you use a SELECT o
 
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 
-- the `WEB GET HTTP BODY` command returns the body as raw text, allowing any parsing you may need
-- the `WEB GET HTTP HEADER` command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
-- the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
+- the [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) command returns the body as raw text, allowing any parsing you may need
+- the [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
+- the [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) and [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 These commands are summarized in the following graphic:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using `WEB SEND RAW DATA`).
+The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
 
 ## COMPILER_WEB Project Method  
 
