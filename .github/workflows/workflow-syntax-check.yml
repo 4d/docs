@@ -17,8 +17,14 @@ jobs:
         with:
           node-version: '20.x'
       - name: Diff images
+        env:
+          CLICOLOR_FORCE: 1
+          COLORTERM: truecolor
         run: |
           diff_images -f --paths "docs/" "i18n/*/docusaurus-plugin-content-docs/*"
       - name: Syntax check
+        env:
+          CLICOLOR_FORCE: 1
+          COLORTERM: truecolor
         run: |
           syntax_checker --paths "docs/**/*.md"
