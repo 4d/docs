@@ -9,15 +9,15 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| attribObj | Object | &#8594;  | Object containing attribute names and their corresponding values to set |
 | attribName | Text | &#8594;  | Name of attribute to set |
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594;  | New attribute value |
+| attribObj | Object | &#8594;  | Object containing attribute names and their corresponding values to set |
 
 <!-- END REF-->
 
 #### Description 
 
-<!--REF #_command_.WP SET ATTRIBUTES.Summary-->The **WP SET ATTRIBUTES** command allows you to set the value of any attribute in a range, element, documentt, or an object containing multiple attributes.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
+The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary-->allows you to set the value of any attribute in a range, element, document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
 
 In *targetObj*, you can pass :
 
@@ -27,14 +27,11 @@ In *targetObj*, you can pass :
 
 You can specify attributes to set for *targetObj* in one of two ways:
 
-* Use the *attribName* and *attribValue* parameters:
+* Use the *attribName* and *attribValue* parameters. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many attribName/attribValue pairs as you want in a single call.
 
-In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. For a comprehensive list of attributes to pass in *attribName*, as well as their scope and respective values, please refer to the *4D Write Pro Attributes* section.
-You can pass as many attribName/attribValue pairs as you want in a single call.
+* Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
 
-* Use the *attribObj* parameter:
-Instead of specifying individual attribute/value pairs, you can pass a single object *attribObj* containing multiple attribute names as keys and their corresponding values.
-
+For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the *4D Write Pro Attributes* section.
 
 #### Example 1 
 
@@ -95,7 +92,7 @@ The result is:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
-You want to set a background image that covers the whole printable area:
+You want to set a background image that covers the whole printable area. All attributes are passed using a single object:
 
 ```4d
  var WParea : Object
@@ -103,8 +100,12 @@ You want to set a background image that covers the whole printable area:
  
  READ PICTURE FILE("C:\\Pictures\\boats.jpg";$picture)
  
- $attributes:={backgroundImage: $picture ; backgroundClip: wk paper box; backgroundOrigin: wk paper box}
- WP SET ATTRIBUTES(WParea;$attributes)
+ $myAttributes:=New object()
+ $myAttributes[wk background image]:=$picture
+ $myAttributes[wk background clip]:=wk paper box
+ $myAttributes[wk background origin]:=wk paper box
+
+ WP SET ATTRIBUTES(WParea;$myAttributes)
 ```
 
 The result is:

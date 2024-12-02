@@ -35,7 +35,7 @@ Dans le paramètre *objCible*, vous pouvez passer :
 | \[ \].formula    | Objet    | Le texte de la formule est disponible via **\[ \].formula.source**. La formule est une **copie** de la formule trouvée dans la cible. Si vous souhaitez modifier la formule, elle doit être ré-insérée dans le document pour être prise en charge |
 | \[ \].range      | Objet    | Plage de la formule (non retournée pour les formules d'images ancrées)                                                                                                                                                                            |
 | \[ \].anchoredID | Texte    | ID de l'image ancrée (retournée uniquement pour les formules d'images ancrées)                                                                                                                                                                    |
-| \[ \].name       | Texte    | Nom de la formule, si un nom a été défini ( non retourné dans le cas contraire). Les noms peuvent être définis à l'aide de [WP INSERT FORMULA](wp-insert-formula.md).                                                                             |
+| \[ \].name       | Texte    | Nom de la formule, si un nom a été défini ( non retourné dans le cas contraire). Les noms peuvent être définis à l'aide de [WP INSERT FORMULA](../commands/wp-insert-formula.md).                                                                             |
 | \[ \].owner      | Objet    | Document 4D Write Pro                                                                                                                                                                                                                             |
 
 **Notes :**
@@ -72,4 +72,4 @@ Pour obtenir les formules de toutes les images ancrées d'un document :
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  
 [WP Get links](wp-get-links.md)  
-[WP INSERT FORMULA](wp-insert-formula.md)  
+[WP INSERT FORMULA](../commands/wp-insert-formula.md)  

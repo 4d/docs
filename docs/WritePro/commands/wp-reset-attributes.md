@@ -4,19 +4,20 @@ title: WP RESET ATTRIBUTES
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP RESET ATTRIBUTES.Syntax-->**WP RESET ATTRIBUTES** ( *targetObj* ; *attribName* {; *attribName2* ; ... ; *attribNameN*} )<br/> **WP RESET ATTRIBUTES** ( *section* {; *attribName* }{; *attribName2* ; ... ; *attribNameN*} )<!-- END REF-->
+<!--REF #_command_.WP RESET ATTRIBUTES.Syntax-->**WP RESET ATTRIBUTES** ( *targetObj* ; *attribName* {; *attribName2* ; ... ; *attribNameN*} )<br/> **WP RESET ATTRIBUTES** ( *sectionOrSubsection* {; *attribName* }{; *attribName2* ; ... ; *attribNameN*} )<br/>**WP RESET ATTRIBUTES** ( *targetObj* ; *attribColl* )<br/> **WP RESET ATTRIBUTES** ( *sectionOrSubsection* {; *attribColl*})<!-- END REF-->
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | sectionOrSubsection | Object | &#8594;  | Section or subsection of a 4D Write Pro document |
-| attribName | Text | &#8594;  | Name of attribute(s) to remove  |
+| attribName | Text | &#8594;  | Name of attribute(s) to remove |
+| attribColl | Collection | &#8594;  | Collection of attributes to remove |
 
 <!-- END REF-->
 
 #### Description 
 
-The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> This command can remove any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image. You can pass the attribute name to be reset in *attribName* or, in the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
+The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> This command can remove any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image. You can pass the attribute name to be reset in *attribName* or you can pass a collection of attributes in *attribColl* to reset multiple attributes at once. In the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once. 
 
 In the *targetObj* parameter, you can pass either:
 
@@ -65,6 +66,17 @@ $section:=WP Get section($document; 3)
 WP RESET ATTRIBUTES($section)  // All attributes of the section are removed
 $subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
 WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
+```
+
+#### Example 3
+
+You want to remove several attributes using a collection:
+
+```4d
+$myRange:=WP Get selection(*;"WParea")
+$myCollection:=New collection(wk font size; wk background color; wk border style)
+WP RESET ATTRIBUTES($myRange; $myCollection)
+ 
 ```
 
 #### See also 

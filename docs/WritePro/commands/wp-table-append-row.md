@@ -4,29 +4,40 @@ title: WP Table append row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* ; *value* {; *value2* ; ... ; *valueN*} )  : Object<!-- END REF-->
+<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* ; *value* {; *value2* ; ... ; *valueN*} )  : Object<br/>**WP Table append row** ( *tableRef* ; *valueColl* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Table append row.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableRef | Object | &#8594;  | Table reference |
 | value | Text, Number, Time, Date, Picture | &#8594;  | Value(s) to set in the row |
+| valueColl | Collection | &#8594;  | Collection of values to set in the row |
 | Function result | Object | &#8592; | Row range object |
 
 <!-- END REF-->
 
 #### Description 
 
-<!--REF #_command_.WP Table append row.Summary-->The **WP Table append row** command appends one row to the *tableRef* table, fills it with *value*(s) and returns the corresponding row range object.<!-- END REF-->
+he **WP Table append row** command<!--REF #_command_.WP Table append row.Summary-->T appends one row to the *tableRef* table, fills it with *value*(s) or a *valueColl* collection, and returns the corresponding row range object.<!-- END REF-->
 
-The command adds as many cells in the row as there are values in the *value* parameter. You can pass any number of values of different types; the default cell alignment will depend on the value type:
+The command supports two syntaxes:
 
-* text: left aligned
-* pictures: centered
-* other type (numbers, date, and time): right aligned
+* **Using values as parameters:**
+   Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types (Text, Number, Time, Date, Picture). 
 
-**Note:** Array type values are not supported. 
+* **Using a collection of values (*valueColl)*:**
+   Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row. 
+   You can pass the same value types as above as well as formulas or named formulas returning a row element.
 
-The command returns the new row as a row range object. 
+The default cell alignment will depend on the value type:
+   - text: left aligned
+   - pictures: centered
+   - other types (numbers, date, and time): right aligned
+
+**Notes:**
+- Array type values are not supported. 
+- Ensure the number of values or the size of the collection matches the number of cells in the table to avoid unexpected results.
+
+The command returns the new row as a row range object.
 
 #### Example 1 
 
@@ -44,6 +55,22 @@ You want to create an empty table and append several rows of different sizes. Yo
 ![](../../assets/en/WritePro/commands/pict3306976.en.png)
 
 #### Example 2 
+
+You want to create an empty table and append a row using a collection :
+
+```4d
+ var $wpTable;$wpRange;$wpRowColl : Object
+ $wpRange:=WP Text range(WParea;wk start text;wk end text)
+ $wpTable:=WP Insert table($wpRange;wk append)
+ 
+ $wpRowColl:=New collection("Jad"; "Lina"; "Karam" ;Formula(Current date))
+ WP Table append row($wpTable; $wpRowColl)
+```
+
+![](../../assets/en/WritePro/commands/pict3306976.en.png)
+
+
+#### Example 3 
 
 In a billing application, you want to create a table automatically filled with related invoice lines:
 

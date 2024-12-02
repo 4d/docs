@@ -4,7 +4,7 @@ title: WP INSERT BREAK
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP INSERT BREAK.Syntax-->**WP INSERT BREAK** ( *targetObj* ; *breakType* ; *mode* {; *rangeUpdate*} )<!-- END REF-->
+<!--REF #_command_.WP INSERT BREAK.Syntax-->**WP INSERT BREAK** ( *targetObj* ; *breakType* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP INSERT BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -12,12 +12,13 @@ displayed_sidebar: docs
 | breakType | Integer | &#8594;  | Type of break to insert |
 | mode | Integer | &#8594;  | Insertion mode |
 | rangeUpdate | Integer | &#8594;  | Range update mode |
+| Function result | Object | &#8592; | Text range of the break character |
 
 <!-- END REF-->
 
 #### Description 
 
-<!--REF #_command_.WP INSERT BREAK.Summary-->The **WP INSERT BREAK** command inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters.<!-- END REF-->
+The **WP INSERT BREAK** command <!--REF #_command_.WP INSERT BREAK.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
 
 In *targetObj*, pass:
 

@@ -55,11 +55,14 @@ You can insert special expressions related to document attributes or page attrib
 | This.notes | Text | Notes defined in wk notes attribute |
 | This.dateCreation | Date | Date creation defined in wk date creation attribute |
 | This.dateModified | Date | Date modified defined in wk date modified attribute |
-| This.pageNumber (*) | Longint | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the WP FREEZE FORMULAS command.|
-| This.pageCount (*)| Longint | Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the WP FREEZE FORMULAS command.|
+| This.pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the WP FREEZE FORMULAS command.|
+| This.pageCount (\*)| Number | Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the WP FREEZE FORMULAS command.|
 |This.document| Object | 4D Write Pro document|
+|This.sectionIndex| Number | The Index of the section in the 4D Write Pro document starting from 1|
+|This.pageIndex| Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section configuration)|
+|This.sectionName| String | The name that the user gives to the section|
 
-(*) Important: This.pageNumber and This.pageCount must be used only directly in a 4D Write Pro formula (they must be present in the formula.source string). They will return incorrect values if they are used by the 4D language within a method called by the formula. However, they can be passed as parameters to a method called directly by the formula:
+(\*) Important: This.pageNumber [thispageindex?] and This.pageCount must be used only directly in a 4D Write Pro formula (they must be present in the formula.source string). They will return incorrect values if they are used by the 4D language within a method called by the formula. However, they can be passed as parameters to a method called directly by the formula:
 
 This will work: « formatNumber(This.pageNumber) »
 This will NOT work: « formatNumber » with formatNumber method processing This.pageNumber.

@@ -72,7 +72,7 @@ title: 4D Write Pro Commands
 [`WP IMPORT STYLE SHEETS`](../commands-legacy/wp-import-style-sheets.md)<br/>
 [`WP INSERT BREAK`](wp-insert-break.md)<br/>
 [`WP INSERT DOCUMENT`](wp-insert-document.md)<br/>
-[`WP INSERT FORMULA`](../commands-legacy/wp-insert-formula.md)<br/>
+[`WP INSERT FORMULA`](wp-insert-formula.md)<br/>
 [`WP INSERT PICTURE`](wp-insert-picture.md)<br/>
 [`WP Insert table`](../commands-legacy/wp-insert-table.md)<br/>
 [`WP Is font style supported`](../commands-legacy/wp-is-font-style-supported.md)

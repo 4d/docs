@@ -3000,7 +3000,7 @@ module.exports =
 											"WritePro/commands-legacy/wp-import-style-sheets",
 											"WritePro/commands/wp-insert-break",
 											"WritePro/commands/wp-insert-document",
-											"WritePro/commands-legacy/wp-insert-formula",
+											"WritePro/commands/wp-insert-formula",
 											"WritePro/commands/wp-insert-picture",
 											"WritePro/commands-legacy/wp-insert-table",
 											"WritePro/commands-legacy/wp-is-font-style-supported",

@@ -1,29 +1,30 @@
 ---
-id: wp-insert-document
-title: WP INSERT DOCUMENT
+id: wp-insert-document-body
+title: WP Insert document body 
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP INSERT DOCUMENT.Syntax-->**WP INSERT DOCUMENT** ( *targetObj* ; *wpDoc* ; *mode* {; *rangeUpdate*} )<!-- END REF-->
-<!--REF #_command_.WP INSERT DOCUMENT.Params-->
+<!--REF #_command_.WP Insert document body.Syntax-->**WP Insert document body** ( *targetObj* ; *wpDoc* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert document body.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | mode | Integer | &#8594;  | Insertion mode |
 | rangeUpdate | Integer | &#8594;  | Range update mode |
+| Function result | Object | &#8592; | Text range object referencing the resulting document body |
 
 <!-- END REF-->
 
 #### Description 
 
-<!--REF #_command_.WP INSERT DOCUMENT.Summary-->The **WP INSERT DOCUMENT** command inserts the *wpDoc* document in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters.<!-- END REF-->
+The **WP Insert document body** command<!--REF #_command_.WP Insert document body.Summary--> inserts the body of the *wpDoc* document into the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and it returns the resulting document body in its entirety.<!-- END REF-->
 
 In *targetObj*, pass:
 
-* a range, or
-* an element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
-* a 4D Write Pro document.
+- A range, or
+- An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
+- a 4D Write Pro document.
 
 The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
 
@@ -42,13 +43,13 @@ You can combine one of the previous constants with the following insertion optio
 | wk freeze expressions    | Integer | 64    | Freeze expressions at the moment of the insertion                                                                    |
 | wk keep paragraph styles | Integer | 128   | Apply destination paragraph styles. In case of wk append operation, insert contents without initial paragraph break. |
 
-* If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:  
-    
+In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range: 
+
 | Constant              | Type    | Value | Comment                                               |  
 | --------------------- | ------- | ----- | ----------------------------------------------------- |  
 | wk exclude from range | Integer | 1     | Inserted contents not included in updated range       |  
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |  
-    
+| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) | 
+
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
@@ -59,7 +60,7 @@ You want to replace the contents of a document by the text selected in another o
 ```4d
  $tempRange:=WP Get selection(WPTemplate) //we retrieve the user selection in the WPTemplate document
  $doctoCopy:=WP New($tempRange) //create a new document based on WPTemplate
- WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
+ WP Insert document body(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
 ```
 
 #### Example 2 
@@ -75,8 +76,20 @@ You have defined a template document with different preformatted parts, each of 
  If($p>0)
     $Range:=WP Get bookmark range(WParea;$_BookmarkNames{$p}) //select the range
     $RangeDoc:=WP New($Range) //create a new document from the range
-    WP INSERT DOCUMENT($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=after replacement, $targetRange is equal to end of replaced text
+    WP Insert document body($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=after replacement, $targetRange is equal to end of replaced text
  End if
+```
+
+#### Example 3 
+
+You want to unify the font style for the whole document body:
+
+```4d
+WPdoc:=WP Import document("myFile.4wp")
+$range1:=WP Insert document body(WParea; WPdoc; wk replace)
+
+WP SET ATTRIBUTES($range1; wk font size; "12pt")
+WP SET ATTRIBUTES($range1; wk font family; "Times New Roman")
 ```
 
 #### See also 
