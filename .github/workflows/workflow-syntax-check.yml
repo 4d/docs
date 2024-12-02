@@ -1,0 +1,24 @@
+name: Check documentation
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - name: Install optimizer
+        run: |
+          cargo install --git https://github.com/doc4d/doc_tools.git diff_images
+          cargo install --git https://github.com/doc4d/doc_tools.git syntax_checker
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Diff images
+        run: |
+          diff_images -f --paths "docs/" "i18n/*/"
+      - name: Syntax check
+        run: |
+          syntax_checker --paths "docs/**/*.md"
