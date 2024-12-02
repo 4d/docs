@@ -4,11 +4,11 @@ on:
   workflow_call:
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions-rust-lang/setup-rust-toolchain@v1
-      - name: Install optimizer
+      - name: Install tools
         run: |
           cargo install --git https://github.com/doc4d/doc_tools.git diff_images
           cargo install --git https://github.com/doc4d/doc_tools.git syntax_checker
