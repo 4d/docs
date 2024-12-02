@@ -80,6 +80,6 @@ Para eliminar la exposición REST de un campo:
 
 En 4D Server, las peticiones REST se gestionan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que su código es [compatible con una ejecución apropiativa](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> Para depurar el código web interpretado en la máquina del servidor, asegúrese de que el depurador está [adjuntado al servidor](../Debugging/debugging-remote.md) o [a una máquina remota](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4 Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
+> Para depurar el código web interpretado en la máquina del servidor, asegúrese de que el depurador está [adjuntado al servidor](../Debugging/debugging-remote.md) o [a una máquina remota](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4 Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web. Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
 
 Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.

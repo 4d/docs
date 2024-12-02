@@ -3,7 +3,7 @@ id: webAreaOverview
 title: Área Web
 ---
 
-The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. The rendering engine of the Web area depends on the execution platform of the application and the selected <a href="properties_WebArea.md#use-embedded-web-rendering-engine">rendering engine option</a>. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
+Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 É possível criar várias áreas web no mesmo formulário. Note, however, that the use of web areas must follow [several rules](#web-area-rules).
 

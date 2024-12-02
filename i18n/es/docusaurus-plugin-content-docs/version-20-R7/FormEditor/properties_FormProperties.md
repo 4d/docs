@@ -33,9 +33,9 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                |
-| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \| "win"} objects </li> |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                  |
+| ------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\| "win"} objects </li> |
 
 ---
 
@@ -58,7 +58,7 @@ Para más información, consulte [Páginas formulario](forms.md#form-pages).
 
 ## Nombre del formulario
 
-Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D. El nombre del formulario debe cumplir con las [reglas especificadas para los identificadores](Concepts/identifiers.md) en 4D.
+Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D. Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D.
 
 #### Gramática JSON
 

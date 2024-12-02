@@ -141,7 +141,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Enfocable](properties_Entry.md#focusable)                                                        | X              | X                  | X                                     |
 | [Fuente](properties_Text.md#fuente)                                                               | X              | X                  | X                                     |
 | [Color de fuente](properties_Text.md#font-color)                                                  | X              | X                  | X                                     |
-| [Expresión de color de fuente](properties_Text.md#expresión-de-color-de-fuente)                   |                | X                  | X                                     |
+| [Expresión de color de fuente](properties_Text.md#font-color-expression)                          |                | X                  | X                                     |
 | [Tamaño de fuente](properties_Text.md#font-size)                                                  | X              | X                  | X                                     |
 | [Altura (list box)](properties_CoordinatesAndSizing.md#height)                 | X              | X                  | X                                     |
 | [Altura (encabezados)](properties_Headers.md#height)                           | X              | X                  | X                                     |
@@ -179,13 +179,13 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Edición con un solo clic](properties_Entry.md#single-click-edit)                                 | X              | X                  | X                                     |
 | [Ordenable](properties_Action.md#sortable)                                                        | X              | X                  | X                                     |
 | [Acción estándar](properties_Action.md#standard-action)                                           | X              |                    |                                       |
-| [Expresión de estilo](properties_Text.md#expresión-de-estilo)                                     |                | X                  | X                                     |
+| [Expresión de estilo](properties_Text.md#style-expression)                                        |                | X                  | X                                     |
 | [Superior](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                     |
 | [Transparente](properties_BackgroundAndBorder.md#transparent)                                     | X              | X                  | X                                     |
 | [Tipo](properties_Object.md#type)                                                                 | X              | X                  | X                                     |
 | [Subrayado](properties_Text.md#underline)                                                         | X              | X                  | X                                     |
 | [Variable o Expresión](properties_Object.md#variable-or-expression)                               | X              | X                  |                                       |
-| [Alineación vertical](properties_Text.md#alineación-vertical)                                     | X              | X                  | X                                     |
+| [Alineación vertical](properties_Text.md#vertical-alignment)                                      | X              | X                  | X                                     |
 | [Color de línea vertical](properties_Gridlines.md#vertical-line-color)                            | X              | X                  | X                                     |
 | [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding)                           | X              | X                  | X                                     |
 | [Barra de desplazamiento vertical](properties_Appearance.md#vertical-scroll-bar)                  | X              | X                  | X                                     |
@@ -425,7 +425,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
 
 ### Personalizar la apariencia de las líneas seleccionadas
 
-Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.md#cacher-surlignage-selection) está seleccionada, debe gestionar la representación visual de las selecciones en el list box utilizando las opciones de interfaz disponibles. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
+Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.md#hide-selection-highlight) está seleccionada, debe gestionar la representación visual de las selecciones en el list box utilizando las opciones de interfaz disponibles. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
 
 - En el caso de los list box de tipo array, debe analizar la variable array booleana asociada al list box para determinar qué líneas están seleccionadas o no.
 - Para los list box de tipo selección, hay que comprobar si el registro actual (línea) pertenece al conjunto especificado en la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set) del list box.

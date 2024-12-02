@@ -9,7 +9,7 @@ title: Propiedades de los formularios
 
 > La propiedad de esquema de color sólo se aplica en macOS.
 
-Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. Esta propiedad define el esquema de colores para el formulario. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background
@@ -33,9 +33,9 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                |
-| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \| "win"} objects </li> |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                  |
+| ------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\| "win"} objects </li> |
 
 ---
 
@@ -71,7 +71,7 @@ See [this blog post](http://blog.4d.com/empower-your-development-process-with-yo
 
 ## Nombre del formulario
 
-Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D. El nombre del formulario debe cumplir con las [reglas especificadas para los identificadores](Concepts/identifiers.md) en 4D.
+Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D. Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D.
 
 #### Gramática JSON
 
