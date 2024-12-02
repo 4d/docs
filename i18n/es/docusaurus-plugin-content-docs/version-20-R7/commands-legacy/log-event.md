@@ -44,6 +44,10 @@ Si ha definido un *tipoSalida* de tipo Into Windows Log Events, puede atribuir a
 
 Si no pasa nada en el el parámetro *importancia* o si pasa un valor invalido, se utiliza el valor por defecto (0).
 
+:::note
+El parámetro *importancia* sólo se utiliza con *tipoSalida* `Into Windows log events`, `Into 4D diagnostic log`, y `Into system standard outputs`.
+:::
+
 #### Ejemplo 
 
 Si quiere realizar un seguimiento de las aperturas de su base bajo Windows, puede escribir la siguiente línea de código en el [Método base On Startup](metodo-base-on-startup.md):
