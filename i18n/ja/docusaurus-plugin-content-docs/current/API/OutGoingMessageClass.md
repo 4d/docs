@@ -1,9 +1,9 @@
 ---
-id: OutGoingMessageClass
-title: OutGoingMessage
+id: OutgoingMessageClass
+title: OutgoingMessage
 ---
 
-`4D.OutGoingMessage` クラスを使うと、アプリケーションの関数が[REST リクエスト](../REST/REST_requests.md) に応答して返すメッセージを作成することができます。 レスポンスが`4D.OutGoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。
+The `4D.OutgoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutgoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
 
 一般的に、このクラスは、[`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言され、HTTP GET リクエストを処理するように設計された関数の中で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
 
@@ -34,34 +34,34 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	return $result
 ```
 
-### OutGoingMessage オブジェクト
+### OutgoingMessage Object
 
-4D.OutGoingMessage オブジェクトは以下のプロパティと関数を提供します:
+4D.OutgoingMessage objects provide the following properties and functions:
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #OutGoingMessageClass.body.Syntax -->](#body)<br/><!-- INCLUDE #OutGoingMessageClass.body.Summary -->                    |
-| [<!-- INCLUDE #OutGoingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #OutGoingMessageClass.headers.Summary -->           |
-| [<!-- INCLUDE #OutGoingMessageClass.setBody().Syntax -->](#setbody)<br/><!-- INCLUDE #OutGoingMessageClass.setBody().Summary -->       |
-| [<!-- INCLUDE #OutGoingMessageClass.setHeader().Syntax -->](#setheader)<br/><!-- INCLUDE #OutGoingMessageClass.setHeader().Summary --> |
-| [<!-- INCLUDE #OutGoingMessageClass.setStatus().Syntax -->](#setstatus)<br/><!-- INCLUDE #OutGoingMessageClass.setStatus().Summary --> |
-| [<!-- INCLUDE #OutGoingMessageClass.status.Syntax -->](#status)<br/><!-- INCLUDE #OutGoingMessageClass.status.Summary -->              |
+| [<!-- INCLUDE #OutgoingMessageClass.body.Syntax -->](#body)<br/><!-- INCLUDE #OutgoingMessageClass.body.Summary -->                    |
+| [<!-- INCLUDE #OutgoingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #OutgoingMessageClass.headers.Summary -->           |
+| [<!-- INCLUDE #OutgoingMessageClass.setBody().Syntax -->](#setbody)<br/><!-- INCLUDE #OutgoingMessageClass.setBody().Summary -->       |
+| [<!-- INCLUDE #OutgoingMessageClass.setHeader().Syntax -->](#setheader)<br/><!-- INCLUDE #OutgoingMessageClass.setHeader().Summary --> |
+| [<!-- INCLUDE #OutgoingMessageClass.setStatus().Syntax -->](#setstatus)<br/><!-- INCLUDE #OutgoingMessageClass.setStatus().Summary --> |
+| [<!-- INCLUDE #OutgoingMessageClass.status.Syntax -->](#status)<br/><!-- INCLUDE #OutgoingMessageClass.status.Summary -->              |
 
 :::note
 
-4D.OutGoingMessage オブジェクトは[non-sharable](../Concepts/shared.md) オブジェクトです。
+A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 :::
 
-<!-- REF #OutGoingMessageClass.body.Desc -->
+<!-- REF #OutgoingMessageClass.body.Desc -->
 
 ## .body
 
-<!-- REF #OutGoingMessageClass.body.Syntax -->**body** : any<!-- END REF -->
+<!-- REF #OutgoingMessageClass.body.Syntax -->**body** : any<!-- END REF -->
 
 #### 説明
 
-`.body` プロパティには<!-- REF #OutGoingMessageClass.body.Summary -->送信されるメッセージ本文<!-- END REF -->が格納されています。 `.body` プロパティでは以下のデータ型がサポートされます:
+The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. `.body` プロパティでは以下のデータ型がサポートされます:
 
 - text
 - blob
@@ -74,27 +74,27 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.headers.Desc -->
+<!-- REF #OutgoingMessageClass.headers.Desc -->
 
 ## .headers
 
-<!-- REF #OutGoingMessageClass.headers.Syntax -->**headers** : Object<!-- END REF -->
+<!-- REF #OutgoingMessageClass.headers.Syntax -->**headers** : Object<!-- END REF -->
 
 #### 説明
 
-`.headers` プロパティには<!-- REF #OutGoingMessageClass.headers.Summary -->送信されるメッセージのカレントのヘッダーがキー/値のペアとして格納されてます。<!-- END REF -->
+The `.headers` property contains <!-- REF #OutgoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
 
 The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function.
 
 <!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.setBody().Desc -->
+<!-- REF #OutgoingMessageClass.setBody().Desc -->
 
 ## .setBody()
 
-<!-- REF #OutGoingMessageClass.setBody().Syntax -->**.setBody**( *body* : any )<!-- END REF -->
+<!-- REF #OutgoingMessageClass.setBody().Syntax -->**.setBody**( *body* : any )<!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.setBody().Params -->
+<!-- REF #OutgoingMessageClass.setBody().Params -->
 
 | 引数   | 型   |    | 説明                           |
 | ---- | --- | -- | ---------------------------- |
@@ -104,7 +104,7 @@ The `.headers` property is read-only. To set a header, use the [`setHeader()`](#
 
 #### 説明
 
-The `.setBody()` function <!-- REF #OutGoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
+The `.setBody()` function <!-- REF #OutgoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
 
 The following data types are supported in the *body*:
 
@@ -124,13 +124,13 @@ If *body* is not of a supported value type, an error is returned.
 
 <!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.setHeader().Desc -->
+<!-- REF #OutgoingMessageClass.setHeader().Desc -->
 
 ## .setHeader()
 
-<!-- REF #OutGoingMessageClass.setHeader().Syntax -->**.setHeader**( *key* : Text ; *value* : Text )<!-- END REF -->
+<!-- REF #OutgoingMessageClass.setHeader().Syntax -->**.setHeader**( *key* : Text ; *value* : Text )<!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.setHeader().Params -->
+<!-- REF #OutgoingMessageClass.setHeader().Params -->
 
 | 引数    | 型    |    | 説明                           |
 | ----- | ---- | -- | ---------------------------- |
@@ -141,9 +141,9 @@ If *body* is not of a supported value type, an error is returned.
 
 #### 説明
 
-The `.setHeader()` function <!-- REF #OutGoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
+The `.setHeader()` function <!-- REF #OutgoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
 
-When returning a 4D.OutGoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`).
+When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`).
 
 :::note
 
@@ -153,13 +153,13 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 <!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.setStatus().Desc -->
+<!-- REF #OutgoingMessageClass.setStatus().Desc -->
 
 ## .setStatus()
 
-<!-- REF #OutGoingMessageClass.setStatus().Syntax -->**.setStatus**( *status* : Integer )<!-- END REF -->
+<!-- REF #OutgoingMessageClass.setStatus().Syntax -->**.setStatus**( *status* : Integer )<!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.setStatus().Params -->
+<!-- REF #OutgoingMessageClass.setStatus().Params -->
 
 | 引数     | 型       |    | 説明            |
 | ------ | ------- | -- | ------------- |
@@ -169,7 +169,7 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 #### 説明
 
-The `.setStatus()` function <!-- REF #OutGoingMessageClass.setStatus().Summary -->sets the `status` property with the given *status*<!-- END REF -->.
+The `.setStatus()` function <!-- REF #OutgoingMessageClass.setStatus().Summary -->sets the `status` property with the given *status*<!-- END REF -->.
 
 If *status* is not an integer value, an error is raised.
 
@@ -177,14 +177,14 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 <!-- END REF -->
 
-<!-- REF #OutGoingMessageClass.status.Desc -->
+<!-- REF #OutgoingMessageClass.status.Desc -->
 
 ## .status
 
-<!-- REF #OutGoingMessageClass.status.Syntax -->**status** : Integer<!-- END REF -->
+<!-- REF #OutgoingMessageClass.status.Syntax -->**status** : Integer<!-- END REF -->
 
 #### 説明
 
-The `.status` property contains <!-- REF #OutGoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
+The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
 
 <!-- END REF -->
