@@ -18,7 +18,7 @@ jobs:
           node-version: '20.x'
       - name: Diff images
         run: |
-          diff_images -f --paths "docs/" "i18n/*/"
+          diff_images -f --paths "docs/" "i18n/*/docusaurus-plugin-content-docs/*"
       - name: Syntax check
         run: |
           syntax_checker --paths "docs/**/*.md"
