@@ -67,7 +67,7 @@ You want to create an empty table and append a row using a collection :
  WP Table append row($wpTable; $wpRowColl)
 ```
 
-![](../WPpic2.en.png)
+![](../WPpic2.png)
 
 
 #### Example 3 
