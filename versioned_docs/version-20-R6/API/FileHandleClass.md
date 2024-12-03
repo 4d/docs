@@ -312,7 +312,7 @@ $s:=$fh.readText()
 |19 R7|Added
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : 4D.Blob <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
