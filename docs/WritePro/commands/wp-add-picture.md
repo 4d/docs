@@ -66,10 +66,10 @@ You want to add a resized picture, centered and anchored to the header:
 
 ```4d
  var $obImage : Object
- var $myPicture : 4D.File
+ var $myPictureFile : 4D.File
 
- $myPicture:=File("/PACKAGE/Pictures/Saved Pictures/Sunrise.jpg")
- $obImage:=WP Add picture(myDoc;$myPicture)
+ $myPictureFile:=File("/PACKAGE/Pictures/Saved Pictures/Sunrise.jpg")
+ $obImage:=WP Add picture(myDoc;$myPictureFile)
  WP SET ATTRIBUTES($obImage;wk anchor origin;wk header box)
  WP SET ATTRIBUTES($obImage;wk anchor horizontal align;wk center)
  WP SET ATTRIBUTES($obImage;wk anchor vertical align;wk center)

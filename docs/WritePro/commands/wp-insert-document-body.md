@@ -12,13 +12,13 @@ displayed_sidebar: docs
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | mode | Integer | &#8594;  | Insertion mode |
 | rangeUpdate | Integer | &#8594;  | Range update mode |
-| Function result | Object | &#8592; | Text range object referencing the resulting document body |
+| Function result | Object | &#8592; | Text range object referencing the inserted document body |
 
 <!-- END REF-->
 
 #### Description 
 
-The **WP Insert document body** command<!--REF #_command_.WP Insert document body.Summary--> inserts the body of the *wpDoc* document into the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and it returns the resulting document body in its entirety.<!-- END REF-->
+The **WP Insert document body** command<!--REF #_command_.WP Insert document body.Summary--> inserts the body of the *wpDoc* document into the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and it returns the range of the inserted document body.<!-- END REF-->
 
 In *targetObj*, pass:
 
@@ -82,14 +82,15 @@ You have defined a template document with different preformatted parts, each of 
 
 #### Example 3 
 
-You want to unify the font style for the whole document body:
+You want to set the font style and size for the inserted document body:
 
 ```4d
 WPdoc:=WP Import document("myFile.4wp")
-$range1:=WP Insert document body(WParea; WPdoc; wk replace)
+$range1:=WP Insert document body(WParea; WPdoc; wk append)
 
 WP SET ATTRIBUTES($range1; wk font size; "12pt")
 WP SET ATTRIBUTES($range1; wk font family; "Times New Roman")
+WP SET ATTRIBUTES($range1; wk font italic; wk true)
 ```
 
 #### See also 

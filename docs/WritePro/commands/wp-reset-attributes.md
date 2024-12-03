@@ -63,15 +63,6 @@ The resulting document is:
 
 #### Example 2
 
-```4d
-$section:=WP Get section($document; 3)
-WP RESET ATTRIBUTES($section)  // All attributes of the section are removed
-$subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
-WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
-```
-
-#### Example 3
-
 You want to remove several attributes using a collection:
 
 ```4d
@@ -79,6 +70,16 @@ $myRange:=WP Get selection(*;"WParea")
 $myCollection:=New collection(wk font size; wk background color; wk border style)
 WP RESET ATTRIBUTES($myRange; $myCollection)
  
+```
+
+
+#### Example 3
+
+```4d
+$section:=WP Get section($document; 3)
+WP RESET ATTRIBUTES($section)  // All attributes of the section are removed
+$subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
+WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
 ```
 
 #### See also 

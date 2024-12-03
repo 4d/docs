@@ -246,7 +246,7 @@ Exporting a docx document using a File object:
 ```4d
 var $file : 4D.File
 
-$file:=File("/RESOURCES/test-export")
+$file:=File("/DATA/test-export")
 
 $options:=New object(wk visible background and anchored elements; False)
 
@@ -259,7 +259,4 @@ WP EXPORT DOCUMENT(WParea; $file; wk docx; $options)
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)  
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)  
 [Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)  
-*Exporting to HTML and MIME HTML formats*  
-*Exporting to SVG format*  
-*Importing and Exporting in .docx format*  
 [WP EXPORT VARIABLE](wp-export-variable.md)  

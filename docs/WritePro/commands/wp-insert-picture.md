@@ -93,12 +93,12 @@ You want to insert a picture in the body of the documment:
 
 ```4d
 var $file : 4D.File
-var $pict : Picture
+var $pictRef : Object
 
 $file:=File("/RESOURCES/NovelCover1.jpg")
 
 WParea:=WP New
-$pict:=WP Insert picture(WParea; $file; wk replace)
+$pictRef:=WP Insert picture(WParea; $file; wk replace)
 
 ```
 
