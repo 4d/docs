@@ -2999,7 +2999,7 @@ module.exports =
 											"WritePro/commands/wp-import-document",
 											"WritePro/commands-legacy/wp-import-style-sheets",
 											"WritePro/commands/wp-insert-break",
-											"WritePro/commands/wp-insert-document",
+											"WritePro/commands/wp-insert-document-body",
 											"WritePro/commands/wp-insert-formula",
 											"WritePro/commands/wp-insert-picture",
 											"WritePro/commands-legacy/wp-insert-table",
