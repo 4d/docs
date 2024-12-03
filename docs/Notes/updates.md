@@ -18,6 +18,10 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 	- Modified commands: [`FORM EDIT`](../commands/form-edit.md)
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
 
+#### Behavior changes
+
+- The [`New log file`](../commands/new-log-file.md) command now executes immediately, without waiting for a backup. 
+
 
 ## 4D 20 R7
 

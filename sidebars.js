@@ -315,10 +315,10 @@ module.exports =
 						"commands-legacy/integrate-mirror-log-file",
 						"commands-legacy/log-file",
 						"commands-legacy/log-file-to-json",
-						"commands-legacy/new-log-file",
+						"commands/new-log-file",
 						"commands-legacy/restore",
 						"commands-legacy/restore-info",
-						"commands-legacy/select-log-file"
+						"commands/select-log-file"
 						]
 					},
 					{
