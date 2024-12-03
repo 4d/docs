@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-| 引数     | 型    |   | 説明                                                                                        |
-| ------ | ---- | - | ----------------------------------------------------------------------------------------- |
-| aTable | テーブル | → | Table owning the form or If omitted: default table or use of project form |
-| form   | Text | → | Form name                                                                                 |
-| object | Text | → | Form object name or group name                                                            |
+| 引数     | 型    |   | 説明                                                |
+| ------ | ---- | - | ------------------------------------------------- |
+| aTable | テーブル | → | フォームの属するテーブルまたは 省略した場合はデフォルトテーブルまたは プロジェクトフォームを使用 |
+| form   | Text | → | Form name                                         |
+| object | Text | → | Form object name or group name                    |
 
 <!-- END REF-->
 

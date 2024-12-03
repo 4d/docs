@@ -65,37 +65,37 @@ For more information, please refer to the *Page subforms* section.
 
 #### 例題
 
-In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
+人物のレコードを表示しているフォームにおいて、"Check children" ボタンを押すとその人物の子供の名前と年齢を検証あるいは変更するダイアログが開く場合を考えます:
 
 ![](../assets/en/commands/pict3542015.en.png)
 
-**Note:** The "Children" object field is represented only to show its structure for this example.
+**注:** "Children" オブジェクトフィールドはこの例題においての構造を示すために表示されているだけです。
 
 In the verification form, you have assigned some Form object properties to inputs:
 
 ![](../assets/en/commands/pict3541682.en.png)
 
-Here is the code for the "Check children" button:
+"Check children" ボタンの中身のコードは以下のようになります:
 
 ```4d
  var $win;$n;$i : Integer
  var $save : Boolean
  ARRAY OBJECT($children;0)
- OB GET ARRAY([Person]Children;"children";$children) //get the children collection
- $save:=False //initialize the save variable
+ OB GET ARRAY([Person]Children;"children";$children) //children コレクションを取得
+ $save:=False //save 変数を初期化
  
  $n:=Size of array($children)
  If($n>0)
     $win:=Open form window("Edit_Children";Movable form dialog box)
     SET WINDOW TITLE("Check children for "+[Person]Name)
-    For($i;1;$n) //for each child
-       DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-       If(OK=1) //the user clicked OK
+    For($i;1;$n) // それぞれの子供に対して
+       DIALOG("Edit_Children";$children{$i}) //値が入ったダイアログを表示
+       If(OK=1) // ユーザーがOK をクリックした
           $save:=True
        End if
     End for
     If($save=True)
-       [Person]Children:=[Person]Children //forces object field update
+       [Person]Children:=[Person]Children // 強制的にオブジェクトフィールドを更新
     End if
     CLOSE WINDOW($win)
  Else
@@ -103,11 +103,11 @@ Here is the code for the "Check children" button:
  End if
 ```
 
-The form displays information for each child:
+フォームはそれぞれの子供についての情報を表示します:
 
 ![](../assets/en/commands/pict3515152.en.png)
 
-If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards).
+値が変更されてOKボタンがクリックされた場合、フィールドは更新されます(その後、親のレコードも保存される必要があります)。
 
 #### 参照
 

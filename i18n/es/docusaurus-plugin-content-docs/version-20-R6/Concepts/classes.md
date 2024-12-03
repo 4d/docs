@@ -355,7 +355,7 @@ La palabra clave`property` se puede utilizar para declarar una propiedad dentro 
 
 La declaración de propiedades de clase mejora las sugerencias del editor de código, las funciones de tecleo predictivo y la detección de errores.
 
-Las propiedades se declaran para nuevos objetos cuando llama a [`new()`](API/ClassClass. d#new), sin embargo, no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
+Las propiedades se declaran para nuevos objetos cuando llama a [`new()`](API/ClassClass.md#new), sin embargo, no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
 
 :::note
 

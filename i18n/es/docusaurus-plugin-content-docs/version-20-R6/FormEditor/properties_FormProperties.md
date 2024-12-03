@@ -33,9 +33,9 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                  |
-| ------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\| "win"} objects </li> |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                             |
+| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\ |
 
 ---
 

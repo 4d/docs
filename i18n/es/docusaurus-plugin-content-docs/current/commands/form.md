@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
 
 - the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
 - the current form is a subform,
@@ -44,8 +44,8 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 
 If the current form is a subform, the returned object depends on the parent container variable:
 
-- If the variable associated to the parent container has been typed as an object, **Form** returns the value of this variable.\
-  In this case, the object returned by **Form** is the same as the one returned by the following expression:
+- **Form** returns the object associated with the table form displayed on screen.\
+  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  

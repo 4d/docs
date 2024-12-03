@@ -56,7 +56,7 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 - **Arrays**: cada columna está ligada a un array 4D. Los list boxes basados en arrays pueden mostrarse como [cajas de lista jerárquicas](listbox_overview.md#hierarchical-list-boxes).
 - **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
 - **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
-> No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
+> > No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
 
 
 ### Gestión de list boxes
@@ -109,7 +109,7 @@ Cada elemento de la colección o cada entidad está disponible como un objeto al
 
 Cuando la fuente de datos es una entity selection, cualquier modificación realizada del lado del list box se guarda automáticamente en la base de datos. Por otro lado, las modificaciones realizadas en la base de datos son visibles en el list box después de que se hayan recargado las entidades modificadas.
 
-Cuando la fuente de datos es una colección, toda modificación realizada en los valores del list box se refleja en la colección. Por otra parte, si se realizan las modificaciones en la colección utilizando, por ejemplo, las diferentes funciones de la clase [Collection](../API/CollectionClass.md), será necesario notificar explícitamente a 4D reasignando la variable de la colección a sí misma, para que se actualice el contenido del list box. Por ejemplo:
+Cuando la fuente de datos es una colección, toda modificación realizada en los valores del list box se refleja en la colección. Cuando la fuente de datos es una colección, toda modificación realizada en los valores del list box se refleja en la colección. Por ejemplo:
 
 ```4d
 myCol:=myCol.push("new value") //mostrar el nuevo valor en el list box
@@ -311,7 +311,7 @@ Puede definir para cada columna de list box de las propiedades estándar (texto,
 
 ## Encabezados de list box
 
-> Para poder acceder a las propiedades de los pies de un list box, debe activar la opción [Mostrar pies](properties_Footers.md#display-footers).
+> Para poder acceder a las propiedades de los encabezados de un list box, debe activar la opción [Mostrar encabezados](properties_Headers.md#display-headers) del list box.
 
 Cuando se muestran los encabezados, puede seleccionar un encabezado en el editor de formularios haciendo clic en él cuando el objeto List box esté seleccionado:
 
@@ -337,7 +337,7 @@ Cuando el comando `OBJECT SET VISIBLE` se utiliza con un encabezado, se aplica a
 
 
 ## Pies de list box
-> Para poder acceder a las propiedades de los encabezados de un list box, debe activar la opción [Mostrar encabezados](properties_Headers.md#display-headers) del list box.
+> Para poder acceder a las propiedades de los pies de un list box, debe activar la opción [Mostrar pies](properties_Footers.md#display-footers).
 
 Los List box pueden contener "pies de página" no editables, que muestren información adicional. En el caso de los datos mostrados en forma de tabla, los pies de página suelen utilizarse para mostrar cálculos como los totales o los promedios.
 
@@ -441,7 +441,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
 
 ### Personalizar la apariencia de las líneas seleccionadas
 
-Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.md#cacher-surlignage-selection) está seleccionada, debe gestionar la representación visual de las selecciones en el list box utilizando las opciones de interfaz disponibles. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
+Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.md#hide-selection-highlight) está seleccionada, debe gestionar la representación visual de las selecciones en el list box utilizando las opciones de interfaz disponibles. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
 
 - En el caso de los list box de tipo array, debe analizar la variable array booleana asociada al list box para determinar qué líneas están seleccionadas o no.
 - Para los list box de tipo selección, hay que comprobar si el registro actual (línea) pertenece al conjunto especificado en la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set) del list box.
@@ -754,7 +754,7 @@ Si este list box se muestra en forma jerárquica (los tres primeros arrays está
 
 Los arrays no se ordenan antes de construir la jerarquía. Si, por ejemplo, un array contiene los datos AAABBAACC, la jerarquía obtenida será:
 
-    > &gt; A B A C
+    > &gt; > A B A C
 
 Para desplegar o contraer un "nodo" jerárquico, basta con hacer clic en él. Si hace **Alt+clic** (Windows) o **Opción+clic** (macOS) en el nodo, todos sus subelementos se desplegarán o contraerán también. Estas operaciones también pueden realizarse por programación utilizando los comandos `LISTBOX EXPAND` y `LISTBOX COLLAPSE`.
 
@@ -897,6 +897,7 @@ ARRAY OBJECT(obColumn;0) //column array
  OB SET($ob;"valueType";"text") //defines the value type (mandatory)
  OB SET($ob;"value";"Hello World!") //defines the value
  APPEND TO ARRAY(obColumn;$ob) //define el valor
+ APPEND TO ARRAY(obColumn;$ob) //define el valor
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -974,6 +975,27 @@ El único atributo obligatorio es "valueType" y sus valores soportados son "text
 Los valores de las celdas se almacenan en el atributo "value". Este atributo se utiliza tanto para la entrada como para la salida. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ````4d
+ ARRAY OBJECT(obColumn;0) //array columna 
+ C_OBJECT($ob1)
+ $entry:="Hello world!"
+ ARRAY OBJECT(obColumn;0) //array columna 
+ C_OBJECT($ob1)
+ $entry:="Hello world!"
+ ARRAY OBJECT(obColumn;0) //array columna 
+ C_OBJECT($ob1)
+ $entry:="Hello world!"
+ OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // si el usuario introduce un nuevo valor, $entry contendrá el valor editado
+ C_OBJECT($ob2)
+ OB SET($ob2;"valueType";"real")
+ OB SET($ob2;"value";2/3)
+ C_OBJECT($ob3)
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
+
+ APPEND TO ARRAY(obColumn;$ob1)
+ APPEND TO ARRAY(obColumn;$ob2)
+ APPEND TO ARRAY(obColumn;$ob3)
  ARRAY OBJECT(obColumn;0) //array columna 
  C_OBJECT($ob1)
  $entry:="Hello world!"
@@ -1203,6 +1225,11 @@ Ejemplo:
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
+C_OBJECT($ob1)
+$entry:="Hello world!"
+OB SET($ob;"valueType";"text")
+OB SET($ob;"alternateButton";True)
+OB SET($ob;"value";$entry)
 C_OBJECT($ob1)
 $entry:="Hello world!"
 OB SET($ob;"valueType";"text")

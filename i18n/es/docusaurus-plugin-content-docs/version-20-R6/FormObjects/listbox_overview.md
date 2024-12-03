@@ -53,7 +53,7 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 - **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
 - **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
 
-> No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
+> \> No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
 
 ### Gestión de list boxes
 
@@ -179,13 +179,13 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Edición con un solo clic](properties_Entry.md#single-click-edit)                                 | X              | X                  | X                                     |
 | [Ordenable](properties_Action.md#sortable)                                                        | X              | X                  | X                                     |
 | [Acción estándar](properties_Action.md#standard-action)                                           | X              |                    |                                       |
-| [Expresión de estilo](properties_Text.md#expresión-de-estilo)                                     |                | X                  | X                                     |
+| [Expresión de estilo](properties_Text.md#style-expression)                                        |                | X                  | X                                     |
 | [Superior](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                     |
 | [Transparente](properties_BackgroundAndBorder.md#transparent)                                     | X              | X                  | X                                     |
 | [Tipo](properties_Object.md#type)                                                                 | X              | X                  | X                                     |
 | [Subrayado](properties_Text.md#underline)                                                         | X              | X                  | X                                     |
 | [Variable o Expresión](properties_Object.md#variable-or-expression)                               | X              | X                  |                                       |
-| [Alineación vertical](properties_Text.md#alineación-vertical)                                     | X              | X                  | X                                     |
+| [Alineación vertical](properties_Text.md#vertical-alignment)                                      | X              | X                  | X                                     |
 | [Color de línea vertical](properties_Gridlines.md#vertical-line-color)                            | X              | X                  | X                                     |
 | [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding)                           | X              | X                  | X                                     |
 | [Barra de desplazamiento vertical](properties_Appearance.md#vertical-scroll-bar)                  | X              | X                  | X                                     |
@@ -425,7 +425,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
 
 ### Personalizar la apariencia de las líneas seleccionadas
 
-Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.md#cacher-surlignage-selection) está seleccionada, debe gestionar la representación visual de las selecciones en el list box utilizando las opciones de interfaz disponibles. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
+Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.md#hide-selection-highlight) está seleccionada, debe gestionar la representación visual de las selecciones en el list box utilizando las opciones de interfaz disponibles. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
 
 - En el caso de los list box de tipo array, debe analizar la variable array booleana asociada al list box para determinar qué líneas están seleccionadas o no.
 - Para los list box de tipo selección, hay que comprobar si el registro actual (línea) pertenece al conjunto especificado en la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set) del list box.
@@ -637,7 +637,7 @@ Según el tipo de list box, puede utilizar diferentes propiedades para personali
 | ---------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Color de fondo   | [Array de colores de fondo de fila](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión del color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) o [Meta info expresión](properties_Text.md#meta-info-expression) |
 | Color de fuente  | [Array color de fuente de fila](properties_Text.md#row-font-color-array)                          | [Expresión de color de fuente](properties_Text.md#font-color-expression)                      | [Expresión color de fuente](properties_Text.md#font-color-expression) o [Meta info expression](properties_Text.md#meta-info-expression)                    |
-| Estilo de fuente | [Array de estilo de línea](properties_Text.md#row-style-array)                                    | [Expresión de estilo](properties_Text.md#expresión-de-estilo)                                 | [Expresión de estilo](properties_Text.md#style-expression) o [Expresión meta info](properties_Text.md#meta-info-expression)                                |
+| Estilo de fuente | [Array de estilo de línea](properties_Text.md#row-style-array)                                    | [Expresión de estilo](properties_Text.md#style-expression)                                    | [Expresión de estilo](properties_Text.md#style-expression) o [Expresión meta info](properties_Text.md#meta-info-expression)                                |
 | Visualización    | [Array de control de filas](properties_ListBox.md#row-control-array)                              | -                                                                                             | -                                                                                                                                                          |
 
 ## Imprimir list boxes

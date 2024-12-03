@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | --------- | ------------ | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable    | テーブル         | → | Table owning the form, or Default table, if omitted                                                                                                                                      |
 | form      | Text, Object | → | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData  | Object       | → | Data to associate to the form                                                                                                                                                            |
+| formData  | Object       | → | フォームに関連づけるデータ                                                                                                                                                                            |
 | areaStart | Integer      | → | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
 | areaEnd   | Integer      | → | Ending area (if areaStart specified)                                                                                                                                  |
 | 戻り値       | Integer      | ← | Height of printed section                                                                                                                                                                |
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
-In the *form* parameter, you can pass:
+*form* 引数には、以下のいづれかを渡すことができます:
 
 - the name of a form, or
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
@@ -93,7 +93,7 @@ In this case, the command will print the section included between the *areaStart
 
 **formData**
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. The form data object is available in the [`On Printing Detail` form event](../Events/onPrintingDetail.md).
+Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 The form data object is available in the [`On Printing Detail` form event](../Events/onPrintingDetail.md).
 
 For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
 

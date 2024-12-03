@@ -216,6 +216,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
 
 Para los list boxes colección/entity selection, Null o tipos no soportados se muestran como cadenas vacías.\
 Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
+Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
 Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
 Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
 

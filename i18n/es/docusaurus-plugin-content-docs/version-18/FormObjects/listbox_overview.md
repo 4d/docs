@@ -52,7 +52,7 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 * **Arrays**: cada columna está ligada a un array 4D. Los list boxes basados en arrays pueden mostrarse como [cajas de lista jerárquicas](listbox_overview.md#hierarchical-list-boxes).
 * **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
 * **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
-> No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
+> > No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
 
 ### Gestión de list boxes
 
@@ -198,7 +198,7 @@ Puede definir para cada columna de list box de las propiedades estándar (texto,
 
 ## Encabezados de list box
 
-> Para poder acceder a las propiedades de los pies de un list box, debe activar la opción [Mostrar pies](properties_Footers.md#display-footers).
+> Para poder acceder a las propiedades de los encabezados de un list box, debe activar la opción [Mostrar encabezados](properties_Headers.md#display-headers) del list box.
 
 Cuando se muestran los encabezados, puede seleccionar un encabezado en el editor de formularios haciendo clic en él cuando el objeto List box esté seleccionado:
 
@@ -226,7 +226,7 @@ Cuando el comando `OBJECT SET VISIBLE` se utiliza con un encabezado, se aplica a
 [Negrita](properties_Text.md#bold) - [Clase Css](properties_Object.md#css-class) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Alineación horizontal](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Itálica](properties_Text.md#italic) - [Nombre de objeto](properties_Object.md#object-name) - [Ruta de acceso](properties_TextAndPicture.md#picture-pathname) - [Título](properties_Object.md#title) - [Subrayado](properties_Text.md#underline) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Alineación vertical](properties_Text.md#vertical-alignment) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
 ## Pies de list box
-> Para poder acceder a las propiedades de los encabezados de un list box, debe activar la opción [Mostrar encabezados](properties_Headers.md#display-headers) del list box.
+> Para poder acceder a las propiedades de los pies de un list box, debe activar la opción [Mostrar pies](properties_Footers.md#display-footers).
 
 Los List box pueden contener "pies de página" no editables, que muestren información adicional. En el caso de los datos mostrados en forma de tabla, los pies de página suelen utilizarse para mostrar cálculos como los totales o los promedios.
 
@@ -588,7 +588,7 @@ Si este list box se muestra en forma jerárquica (los tres primeros arrays está
 
 Los arrays no se ordenan antes de construir la jerarquía. Si, por ejemplo, un array contiene los datos AAABBAACC, la jerarquía obtenida será:
 
-    > &gt; A B A C
+    > &gt; > A B A C
 
 Para desplegar o contraer un "nodo" jerárquico, basta con hacer clic en él. Si hace **Alt+clic** (Windows) o **Opción+clic** (macOS) en el nodo, todos sus subelementos se desplegarán o contraerán también. Estas operaciones también pueden realizarse por programación utilizando los comandos `LISTBOX EXPAND` y `LISTBOX COLLAPSE`.
 
@@ -724,6 +724,7 @@ ARRAY OBJECT(obColumn;0) //column array
  OB SET($ob;"valueType";"text") //defines the value type (mandatory)
  OB SET($ob;"value";"Hello World!") //defines the value
  APPEND TO ARRAY(obColumn;$ob) //define el valor
+ APPEND TO ARRAY(obColumn;$ob) //define el valor
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -801,6 +802,27 @@ El único atributo obligatorio es "valueType" y sus valores soportados son "text
 Los valores de las celdas se almacenan en el atributo "value". Este atributo se utiliza tanto para la entrada como para la salida. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ````4d
+ ARRAY OBJECT(obColumn;0) //array columna 
+ C_OBJECT($ob1)
+ $entry:="Hello world!"
+ ARRAY OBJECT(obColumn;0) //array columna 
+ C_OBJECT($ob1)
+ $entry:="Hello world!"
+ ARRAY OBJECT(obColumn;0) //array columna 
+ C_OBJECT($ob1)
+ $entry:="Hello world!"
+ OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // si el usuario introduce un nuevo valor, $entry contendrá el valor editado
+ C_OBJECT($ob2)
+ OB SET($ob2;"valueType";"real")
+ OB SET($ob2;"value";2/3)
+ C_OBJECT($ob3)
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
+
+ APPEND TO ARRAY(obColumn;$ob1)
+ APPEND TO ARRAY(obColumn;$ob2)
+ APPEND TO ARRAY(obColumn;$ob3)
  ARRAY OBJECT(obColumn;0) //array columna 
  C_OBJECT($ob1)
  $entry:="Hello world!"
@@ -1028,6 +1050,11 @@ Ejemplo:
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
+C_OBJECT($ob1)
+$entry:="Hello world!"
+OB SET($ob;"valueType";"text")
+OB SET($ob;"alternateButton";True)
+OB SET($ob;"value";$entry)
 C_OBJECT($ob1)
 $entry:="Hello world!"
 OB SET($ob;"valueType";"text")

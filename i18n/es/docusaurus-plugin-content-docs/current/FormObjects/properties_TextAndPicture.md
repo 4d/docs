@@ -250,7 +250,7 @@ Consulte la descripción del evento [`On Alternative Click`](../Events/onAlterna
 
 ### Gestión del menú emergente
 
-Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, más particularmente utilizando los comandos`form events` y [`Dynamic pop menu`](https://doc. d.com/4dv19R7/help/command/en/page1006.html) y [`Menú emergente`](https://doc.4d.com/4dv19R7/help/command/en/page542.html).
+Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, más particularmente utilizando los comandos`form events` y [`Dynamic pop menu`](https://doc.md.com/4dv19R7/help/command/en/page1006.html) y [`Menú emergente`](https://doc.4d.com/4dv19R7/help/command/en/page542.html).
 
 #### Gramática JSON
 

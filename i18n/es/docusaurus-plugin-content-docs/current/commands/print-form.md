@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
 In the *form* parameter, you can pass:
 
@@ -93,7 +93,7 @@ In this case, the command will print the section included between the *areaStart
 
 **formData**
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. The form data object is available in the [`On Printing Detail` form event](../Events/onPrintingDetail.md).
+Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class).
 
 For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
 

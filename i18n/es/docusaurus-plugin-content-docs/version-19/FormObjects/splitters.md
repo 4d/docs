@@ -18,7 +18,7 @@ Algunas de las características generales del separador:
 * Los topes de los separadores se calculan para que los objetos desplazados permanezcan totalmente visibles en el formulario o no pasen por debajo/al lado de otro separador. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
 * Si se redimensiona un formulario mediante un separador, las nuevas dimensiones del formulario se guardan sólo mientras se muestra el formulario. Una vez que se cierra un formulario, se restablecen las dimensiones iniciales.
 
-Una vez insertado, el separador aparece como una línea. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
+Una vez insertado, el separador aparece como una línea. Puede modificar su [estilo de borde](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) para obtener una línea más fina o [cambiar su color](properties_BackgroundAndBorder.md#line-color).
 
 #### Ejemplo JSON
 
