@@ -27,7 +27,7 @@ In *targetObj*, you can pass:
 
 In *attribName*, pass the name of the attribute you want to retrieve. 
 
-You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names along with their corresponding values.
+You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
 
 For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the *4D Write Pro Attributes* section.
 
