@@ -24,11 +24,10 @@ if the document is only offscreen,
 if the document is displayed onscreen but the form object only shows references.
 Formulas become static values if you call the WP FREEZE FORMULAS command (except for page number and page count, see below).
 
-Compatibility Note: Handling expressions using the ST INSERT EXPRESSION, ST Get expression, ST COMPUTE EXPRESSIONS, and ST FREEZE EXPRESSIONS commands is deprecated, however it is still supported in 4D Write Pro for compatibility.  
+**Compatibility Note**: Handling expressions using the ST INSERT EXPRESSION, ST Get expression, ST COMPUTE EXPRESSIONS, and ST FREEZE EXPRESSIONS commands is deprecated, however it is still supported in 4D Write Pro for compatibility.  
 
 ##### Example
 
-OutlineEditDeleteOrganizeSee the differencesAnchor
 You want to replace the selection in a 4D Write Pro area with the contents of a variable:
 
 ```4d
