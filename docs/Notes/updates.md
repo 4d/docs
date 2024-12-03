@@ -20,7 +20,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 #### Behavior changes
 
-- The [`New log file`](../commands/new-log-file.md) command now executes immediately, without waiting for a backup. 
+- The [`New log file`](../commands/new-log-file.md) command now executes immediately, without waiting for a backup. The error -4447 (backup required) is no longer raised when using [`SELECT LOG FILE`](../commands/select-log-file.md). 
 
 
 ## 4D 20 R7
