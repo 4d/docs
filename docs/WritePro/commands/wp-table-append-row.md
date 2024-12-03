@@ -22,11 +22,11 @@ he **WP Table append row** command<!--REF #_command_.WP Table append row.Summary
 The command supports two syntaxes:
 
 * **Using values as parameters:**
-   Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types (Text, Number, Time, Date, Picture). 
+   Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types: Text, Number, Time, Date, Picture as well as formulas or named formulas returning a row element.
 
 * **Using a collection of values (*valueColl)*:**
    Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row. 
-   You can pass the same value types as above as well as formulas or named formulas returning a row element.
+   You can pass the same value types as above.
 
 The default cell alignment will depend on the value type:
    - text: left aligned
@@ -67,7 +67,7 @@ You want to create an empty table and append a row using a collection :
  WP Table append row($wpTable; $wpRowColl)
 ```
 
-![](../../assets/en/WritePro/commands/pict3306976.en.png)
+![](../WPpic2.en.png)
 
 
 #### Example 3 

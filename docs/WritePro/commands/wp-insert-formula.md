@@ -124,7 +124,7 @@ WP SET ATTRIBUTES($range1; wk background color; "yellow")
 
 Result:
 
-![](../../assets/en/WritePro/commands/pict6433508.en.png)
+![](../WPpic1.en.png)
 
 #### See also 
 
