@@ -199,6 +199,12 @@ Specific 4D keywords can be used in class definitions:
 // code
 ```
 
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
+
 Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
 
 If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
@@ -286,6 +292,8 @@ Function add($x : Variant; $y : Integer): Integer
  return $x+$y
 ```
 
+
+
 #### Example 1
 
 ```4d
@@ -335,6 +343,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // code
 ```
+
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
 
 A class constructor function accepts optional [parameters](#parameters) and can be used to create and initialize objects of the user class.  
 
