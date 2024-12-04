@@ -23,7 +23,9 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 ### Database method calls
 
-The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server. The database method is called with the URL.
+The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
+
+The database method is called with the URL.
 
 For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
 

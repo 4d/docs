@@ -5,7 +5,9 @@ title: HTTP Request handler
 
 By default, HTTP requests received by the 4D web server are handled through [built-in processing features](httpRequests.md) or the [REST server](../REST/REST_requests.md). 
 
-In addition, 4D supports the implementation of **custom HTTP Request handlers**, allowing you to intercept specific incoming HTTP requests and process them using your own code. When a custom HTTP request handler intercepts a request, it is processed directly and no other processing features (e.g. the [On Web authentication](./authentication.md#on-web-authentication) database method) is called. 
+In addition, 4D supports the implementation of **custom HTTP Request handlers**, allowing you to intercept specific incoming HTTP requests and process them using your own code. 
+
+When a custom HTTP request handler intercepts a request, it is processed directly and no other processing features (e.g. [On Web authentication](./authentication.md#on-web-authentication) or [On Web connection](./httpRequests.md#on-web-connection) database methods) are called. 
 
 Custom HTTP request handlers meet various needs, including:
 
@@ -19,7 +21,7 @@ Custom HTTP request handlers meet various needs, including:
 Custom HTTP Request handlers are supported:
 
 - when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
-- with the main Web Server. HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored. 
+- with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored). 
 
 
 
@@ -50,7 +52,7 @@ This handler declaration can be read as: when any request starting by `/start/` 
 
 :::note
 
-You must restart the server so that modifications made in this file are taken into account.
+You must restart the Web server so that modifications made in this file are taken into account.
 
 :::
 
