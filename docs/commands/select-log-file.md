@@ -28,15 +28,11 @@ If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save F
 
 If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file for the database. The OK variable is set to 1 when the log file is closed.
 
-If you use **SELECT LOG FILE** to create a log file when a full backup has not yet been performed and the data file already contains records, 4D then generates an error *\-4447,* which you can intercept with an [ON ERR CALL](../commands-legacy/on-err-call.md) method.
 
 #### System variables and sets 
 
 OK is set to 1 if the log file is correctly created, or closed.
 
-#### Error management 
-
-An error -4447 is generated if the operation cannot be performed because the database needs to be backed up. You can intercept the error with an [ON ERR CALL](../commands-legacy/on-err-call.md) method. 
 
 #### See also 
 
