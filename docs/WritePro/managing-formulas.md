@@ -31,8 +31,8 @@ Formulas become static values if you call the WP FREEZE FORMULAS command (except
 You want to replace the selection in a 4D Write Pro area with the contents of a variable:
 
 ```4d
- C_TEXT(fullName)
- C_OBJECT($sel)
+ var fullName: Text
+ var $sel: Object
  fullName:="John Smith"
  $sel:=WP Selection range(4DWPArea)
  Case of
@@ -41,11 +41,11 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
  End case
 ```
 
-#### Inserting document and page formulas 
+#### Formula context object
 
-You can insert special expressions related to document attributes or page attributes in any document area (body, header, footer) using the WP INSERT FORMULA command.
+You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through **This**:
 
-| Formula syntax     | Type    | Description |
+| Properties    | Type    | Description |
 |----------|---------|---------------------------------------|
 | This.title | Text | Title defined in wk title attribute |
 | This.author | Text | Author defined in wk author attribute |
@@ -57,9 +57,16 @@ You can insert special expressions related to document attributes or page attrib
 | This.pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the WP FREEZE FORMULAS command.|
 | This.pageCount (\*)| Number | Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the WP FREEZE FORMULAS command.|
 |This.document| Object | 4D Write Pro document|
+|This.data| Object | Data context of the 4D Write Pro document set by [WP SET DATA CONTEXT](commands-legacy/wp-set-data-context.md)|
 |This.sectionIndex| Number | The Index of the section in the 4D Write Pro document starting from 1|
 |This.pageIndex| Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)|
 |This.sectionName| String | The name that the user gives to the section|
+
+:::note
+
+Additional context properties are available when you work with tables. See *Handling tables* for more information.
+
+:::
 
 (\*) Important: This.pageNumber, This.pageIndex and This.pageCount must be used only directly in a 4D Write Pro formula (they must be present in the formula.source string). They will return incorrect values if they are used by the 4D language within a method called by the formula. However, they can be passed as parameters to a method called directly by the formula:
 
@@ -74,15 +81,13 @@ For example, to insert the page number in the footer area:
   //would not work correctly
 ```
 
-Compatibility Note: Existing $wp_ variables in documents from versions prior to 4D v18 R2 are still supported and evaluated. 
-
 #### Inserting date and time formulas
 
-Date
+**Date**
 
 When the Current date command, a date variable, or a method returning a date is inserted in a formula, it will automatically be transformed into text using system date short format. 
 
-Time
+**Time**
 
 When the Current time command, a time variable, or a method returning a time is inserted in a formula, it must be enclosed within a String command because time type is not supported in JSON. Consider the following examples of formulas:
 

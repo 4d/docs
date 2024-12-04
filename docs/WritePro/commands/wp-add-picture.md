@@ -4,31 +4,29 @@ title: WP Add picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Add picture.Syntax-->**WP Add picture** ( *wpDoc* {; *picture*} ) : Object<br/>**WP Add picture** ( *wpDoc* {; *pictureFileObj*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Add picture.Syntax-->**WP Add picture** ( *wpDoc* {; *picture*} ) : Object<br/>**WP Add picture** ( *wpDoc* {; *picturePath*} ) : Object<br/>**WP Add picture** ( *wpDoc* {; *pictureFileObj*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Add picture.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| picture | Picture, Text | &#8594;  | Picture or Picture path |
-| pictureFileObj | 4D.File | &#8594;  | A File object representing a picture file. |
+| picture | Picture | &#8594;  | 4D picture |
+| picturePath | Text | &#8594;  | Picture path |
+| pictureFileObj | 4D.File | &#8594;  | 4D.File object representing a picture file |
 | Function result | Object | &#8592; | Object referencing the picture |
 
 <!-- END REF-->
 
 #### Description 
 
-The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors *picture* or *pictureFileObj* at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
+The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
 
 In *wpDoc*, pass the name of a 4D Write Pro document object.
 
 For the optional second parameter, you can pass either:
 
-- In *picture*: 
-	-  A 4D picture 
-	-  A string containing a path to a picture file stored on disk (system syntax) 
-	You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
-	
-- In *PictureFileObj* : a `File` object representing a picture file.
+- In *picture*:  A 4D picture 
+- In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
+- In *PictureFileObj*: a `4D.File` object representing a picture file.
 
 > **Note**: Any picture format [supported by 4D](../../FormEditor/pictures.md#native-formats-supported) can be used. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
@@ -96,7 +94,5 @@ You want to use a field expression to add an anchored image to a document displa
 
 #### See also 
 
-  
-*Handling pictures*  
-[WP DELETE PICTURE](wp-delete-picture.md)  
-[WP Picture range](wp-picture-range.md)  
+[WP DELETE PICTURE](wp-delete-picture.md)
+[WP Picture range](wp-picture-range.md)

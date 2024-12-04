@@ -27,7 +27,7 @@ In *targetObj*, you can pass :
 
 You can specify attributes to set for *targetObj* in one of two ways:
 
-* Use the *attribName* and *attribValue* parameters. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many attribName/attribValue pairs as you want in a single call.
+* Use the *attribName* and *attribValue* parameters. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many *attribName*/*attribValue* pairs as you want in a single call.
 
 * Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
 

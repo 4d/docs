@@ -1,11 +1,11 @@
 ---
 id: wp-insert-break
-title: WP INSERT BREAK
+title: WP Insert break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP INSERT BREAK.Syntax-->**WP INSERT BREAK** ( *targetObj* ; *breakType* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
-<!--REF #_command_.WP INSERT BREAK.Params-->
+<!--REF #_command_.WP Insert break.Syntax-->**WP Insert break** ( *targetObj* ; *breakType* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert break.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-The **WP INSERT BREAK** command <!--REF #_command_.WP INSERT BREAK.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
+The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
 
 In *targetObj*, pass:
 
@@ -64,7 +64,7 @@ While building invoices, you want to insert page breaks except on the last page:
  For($j;1;$nbInvoices)
     ... //processing invoices
     If($j#$nbInvoices) //insert page break except for last page
-       WP INSERT BREAK($buildRange;wk page break;wk append;wk exclude from range)
+       WP Insert break($buildRange;wk page break;wk append;wk exclude from range)
     End if
  End for
 ```
@@ -77,7 +77,7 @@ You want to insert a continuous section break to have a single column section an
     
 ```4d  
  $range:=WP Selection range(*;"WParea")  
- WP INSERT BREAK($range;wk continuous section break;wk append)  
+ WP Insert break($range;wk continuous section break;wk append)  
 ```  
     
     
