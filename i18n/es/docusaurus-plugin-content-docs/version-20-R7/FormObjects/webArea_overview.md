@@ -193,7 +193,7 @@ To display the Web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 
 - **Use the web area context menu**<br/>
   This feature can only be used with onscreen web areas and requires that the following conditions are met:
-  - the [context menu](properties_Entry.md#context-menu) for the web area is enabled
+  - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
   - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
   ```4d
   	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  

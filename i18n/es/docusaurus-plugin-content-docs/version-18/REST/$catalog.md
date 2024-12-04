@@ -68,7 +68,7 @@ Devuelve información sobre todas las clases de datos del proyecto y sus atribut
 
 Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataclass).
+Para más información sobre lo que se devuelve para cada clase de datos y sus atributos, utilice [`$catalog/\{dataClass\}`](#catalogdataclass).
 
 
 ### Ejemplo
@@ -224,7 +224,7 @@ Aquí están las propiedades de cada atributo expuesto que se devuelven:
 | type        | Text    | Tipo de atributo (booleano, blob, byte, fecha, duración, imagen, long, long64, número, cadena, uuid o palabra) o la clase de datos para un atributo de relación N->1. |
 | identifying | Boolean | Esta propiedad devuelve True si el atributo es la llave primaria. En caso contrario, esta propiedad no aparece.                                                       |
 | path        | Text    | Nombre de la relación de un atributo relatedEntity o relateEntities.                                                                                                  |
- foreignKey|Text |For a relatedEntity attribute, name of the related attribute.| inverseName |Text   |Name of the opposite relation for a relatedEntity or relateEntities attribute.|
+ foreignKey|Text |Para un atributo relatedEntity, nombre del atributo relacionado.| inverseName |Text |Nombre de la relación opuesta para un atributo relatedEntity o relateEntities.|
 
 ### Método(s)
 

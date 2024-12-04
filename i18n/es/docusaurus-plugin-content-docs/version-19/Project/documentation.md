@@ -190,7 +190,7 @@ La [documentation](https://doc.4d.com) del comando ....
 En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ```4d
-<!-- This method returns a different logo depending on the size parameter -->
+<!-- Este método devuelve un logotipo diferente en función del parámetro de tamaño -->
 
 
 GetLogo (size) -> logo
@@ -198,13 +198,13 @@ GetLogo (size) -> logo
 
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Integer | in | Logo style selector (1 to 5)  |
+| size      | Integer  | in | Logo style selector (1 to 5)  |
 | logo      | Picture | out | Selected logo |
 
 
 ## Description
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter value.
+Este método devuelve un logotipo diferente en función del parámetro *size*.
 1 = tamaño más pequeño, 5 = tamaño más grande.
 
 ## Ejemplo

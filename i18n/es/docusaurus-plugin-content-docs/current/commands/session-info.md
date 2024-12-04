@@ -32,7 +32,7 @@ El objeto devuelto contiene las siguientes propiedades:
 
 | Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                   |
 | ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                       |
+| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone"                                                                                                                                                     |
 | userName         | Text          | 4D user name (same value as [`Session.userName`](../API/SessionClass.md#username))                                                                                                                         |
 | machineName      | Text          | Sesiones remotas: nombre de la máquina remota. Stored procedures session: name of the server machine. Standalone session: name of the machine |
 | systemUserName   | Text          | Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.                                                                                                               |

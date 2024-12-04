@@ -112,7 +112,7 @@
     "description": "The label for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Database Methods": {
-    "message": "Database Methods",
+    "message": "Métodos base",
     "description": "The label for category Database Methods in sidebar docs"
   },
   "sidebar.docs.category.Date and Time": {
@@ -252,7 +252,7 @@
     "description": "The label for category Record Locking in sidebar docs"
   },
   "sidebar.docs.category.Records": {
-    "message": "Records",
+    "message": "Registros",
     "description": "The label for category Records in sidebar docs"
   },
   "sidebar.docs.category.Relations": {

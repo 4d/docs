@@ -386,7 +386,7 @@ Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
 Tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web está autorizado a procesar. Por defecto, el valor es de 2 000 000, es decir, algo menos de 2 MB. Pasar el valor máximo (2 147 483 648) significa que, en la práctica, no se define ningún límite.
 
-Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. When a request reaches this limit, the 4D web server rejects it.
+Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Cuando una petición alcanza este límite, el servidor web 4D la rechaza.
 
 Valores posibles: 500 000 a 2 147 483 648.
 

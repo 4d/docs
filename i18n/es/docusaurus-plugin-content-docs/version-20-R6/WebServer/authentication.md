@@ -28,7 +28,7 @@ Básicamente, en este modo, depende del desarrollador definir cómo autenticar a
 Este modo de autenticación es el más flexible porque permite:
 
 - o bien, delegar la autenticación del usuario a una aplicación de terceros (por ejemplo, una red social, SSO);
-- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código:
+- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código:
 
 ```4d
 //... creación de cuenta de usuario
@@ -157,7 +157,7 @@ El parámetro `$4` recibe la dirección IP utilizada para llamar al servidor web
 
 #### $5 y $6 - Nombre de usuario y contraseña
 
-Los parámetros `$5` y `$6` reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo de identificación estándar que muestra el navegador. Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
+Los parámetros `$5` y `$6` reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo de identificación estándar que muestra el navegador. Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
 > Si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $6 (la contraseña del usuario) no se devuelve por razones de seguridad.
 

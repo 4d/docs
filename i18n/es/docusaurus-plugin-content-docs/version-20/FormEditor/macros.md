@@ -258,7 +258,7 @@ Cuando se maneja el atributo `method` de los objetos de formulario, se puede def
 | Propiedad | Tipo | Descripción |
 | --------- | ---- | ----------- |
 |           |      |             |
- source|Text|method code|
+ fuente|Texto|código del método|
 
 4D creará un archivo con el nombre del objeto en la carpeta "objectMethods" con el contenido del atributo `source`. Esta función solo está disponible para el código macro.
 

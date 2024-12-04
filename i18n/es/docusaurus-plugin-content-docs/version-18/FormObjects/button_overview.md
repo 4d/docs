@@ -329,6 +329,6 @@ Todos los botones comparten el mismo conjunto de propiedades básicas:
 
 Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
+- [Nombre de la ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin) (personalizado)
 - [Botón por defecto](properties_Appearance.md#default-button) (Plano, Clásico)
 - [Posición Título/Imagen](properties_TextAndPicture.md#titlepicture-position) - [Con menú emergente](properties_TextAndPicture.md#with-pop-up-menu) (Barra de herramientas, Bisel, Bisel redondeado, OS X Degradado, OS X Texturizado, Office XP, Círculo, Personalizado)
