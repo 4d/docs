@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 If you pass an empty string, the keystroke is cancelled and ignored.
 
-Usually, you will call **FILTER KEYSTROKE** within a form or object method while handling an On Before Keystroke form event. To detect keystroke events, use the command [Form event code](form-event-code.md). To obtain the actual keystroke, use the commands [Keystroke](keystroke.md) or [Get edited text](get-edited-text.md).
+Usually, you will call **FILTER KEYSTROKE** within a form or object method while handling an On Before Keystroke form event. To detect keystroke events, use the command [Form event code](../commands/form-event-code.md). To obtain the actual keystroke, use the commands [Keystroke](keystroke.md) or [Get edited text](get-edited-text.md).
 
 **IMPORTANT NOTE:** The command **FILTER KEYSTROKE** allows you to cancel or replace the character entered by the user with another character. On the other hand, if you want to insert more than one character for a specific keystroke, remember that the text you see on the screen is NOT YET the value of the data source field or variable for the area being edited. The data source field or variable is assigned the entered value after the data entry for the area is validated. It is therefore up to you to “shadow” the data entry into a variable and then to work with this shadow value and reassign the enterable area (see the example in this section). You can also use the [Get edited text](get-edited-text.md) command.
 
@@ -86,39 +86,37 @@ As explained above, during the editing of the text area, the data source for thi
   // Shadow keystroke project method
   // Shadow keystroke ( Pointer ; Pointer ; String ) -> String
   // Shadow keystroke ( -> srcArea ; -> curValue ; Filter ) -> Old keystroke
- C_STRING(1;$0)
- var $1;$2 : Pointer
+#DECLARE ($srcArea : Pointer ; $curVal : Pointer ; $filter : Text) -> $old : Text
  var $vtNewValue : Text
- C_STRING(255;$3)
   // Return the original keystroke
- $0:=Keystroke
+ $old:=Keystroke
   // Get the text selection range within the enterable area
- GET HIGHLIGHT($1->;$vlStart;$vlEnd)
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
   // Start working with the current value
- $vtNewValue:=$2->
+ $vtNewValue:=$curVal->
   // Depending on the key pressed or the character entered,
   // Perform the appropriate actions
  Case of
   // The Backspace (Delete) key has been pressed
-    :(Character code($0)=Backspace)
+    :(Character code($old)=Backspace)
   // Delete the selected characters or the character at the left of the text cursor
        $vtNewValue:=Delete text($vtNewValue;$vlStart;$vlEnd)
   // An Arrow key has been pressed
   // Do nothing, but accept the keystroke
-    :(Character code($0)=Left arrow key)
-    :(Character code($0)=Right arrow key)
-    :(Character code($0)=Up arrow key)
-    :(Character code($0)=Down arrow key)
+    :(Character code($old)=Left arrow key)
+    :(Character code($old)=Right arrow key)
+    :(Character code($old)=Up arrow key)
+    :(Character code($old)=Down arrow key)
  
   // An acceptable character has been entered
-    :(Position($0;$3)=0)
+    :(Position($old;$filter)=0)
        $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$0)
     Else
   // The character is not accepted
        FILTER KEYSTROKE("")
  End case
   // Return the value for the next keystroke handling
- $2->:=$vtNewValue
+ $curVal->:=$vtNewValue
 ```
 
 This method uses the two following submethods:
@@ -127,26 +125,25 @@ This method uses the two following submethods:
   // Delete text project method
   // Delete text ( String ; Long ; Long ) -> String
   // Delete text ( -> Text ; SelStart ; SelEnd ) -> New text
- var $0;$1 : Text
- var $2;$3 : Integer
- $0:=Substring($1;1;$2-1-Num($2=$3))+Substring($1;$3)
- 
+#DECLARE ($src : Text ; $start : Integer ; $end : Integer) -> $new : Text 
+ $new:=Substring($src;1;$start-1-Num($start=$end))+Substring($src;$end)
+```
+```4d 
   // Insert text project method
   // Insert text ( String ; Long ; Long ; String ) -> String
   // Insert text ( -> srcText ; SelStart ; SelEnd ; Text to insert ) -> New text
- var $0;$1;$4 : Text
- var $2;$3 : Integer
- $0:=$1
- If($2#$3)
-    $0:=Substring($0;1;$2-1)+$4+Substring($0;$3)
+#DECLARE ($src : Text ; $start : Integer ; $end : Integer ; $toInsert : Text) -> $new : Text 
+ $new:=$src
+ If($start # $end)
+    $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$end)
  Else
     Case of
-       :($2<=1)
-          $0:=$4+$0
-       :($2>Length($0))
-          $0:=$0+$4
+       :($start<=1)
+          $new:=$toInsert+$new
+       :($start>Length($new))
+          $new:=$new+$toInsert
        Else
-          $0:=Substring($0;1;$2-1)+$4+Substring($0;$2)
+          $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$start)
     End case
  End if
 ```
@@ -180,13 +177,13 @@ The LOOKUP DICTIONARY project method is listed below. Its purpose is to use the 
   // LOOKUP DICTIONARY ( Pointer ; Pointer )
   // LOOKUP DICTIONARY ( -> Enterable Area ; ->ShadowVariable )
  
- var $1;$2 : Pointer
+#DECLARE ($area : Pointer ; $shadow : Pointer)
  var $vlStart;$vlEnd : Integer
  
   // Get the text selection range within the enterable area
- GET HIGHLIGHT($1->;$vlStart;$vlEnd)
+ GET HIGHLIGHT($area->;$vlStart;$vlEnd)
   // Get the selected text or the word on the left of the text cursor
- $vtHighlightedText:=Get highlighted text($2->;$vlStart;$vlEnd)
+ $vtHighlightedText:=Get highlighted text($shadow->;$vlStart;$vlEnd)
   // Is there something to look for?
  If($vtHighlightedText#"")
   // If the text selection was the text cursor,
@@ -194,14 +191,14 @@ The LOOKUP DICTIONARY project method is listed below. Its purpose is to use the 
     If($vlStart=$vlEnd)
        $vlStart:=$vlStart-Length($vtHighlightedText)
     End if
-  // Look for the first avaliable dictionary entry
+  // Look for the first available dictionary entry
     QUERY([Dictionary];[Dictionary]Entry=$vtHighlightedText+"@")
   // Is there one?
     If(Records in selection([Dictionary])>0)
   // If so, insert it in the shadow text
-       $2->:=Insert text($2->;$vlStart;$vlEnd;[Dictionary]Entry)
+       $shadow->:=Insert text($shadow->;$vlStart;$vlEnd;[Dictionary]Entry)
   // Copy the shadow text to the enterable being edited
-       $1->:=$2->
+       $area->:=$shadow->
   // Set the selection just after the insert dictionary entry
        $vlEnd:=$vlStart+Length([Dictionary]Entry)
        HIGHLIGHT TEXT(vsComments;$vlEnd;$vlEnd)
@@ -221,29 +218,28 @@ The Get highlighted text method is listed here:
   // Get highlighted text project method
   // Get highlighted text ( String ; Long ; Long ) -> String
   // Get highlighted text ( Text ; SelStart ; SelEnd ) -> highlighted text
- var $0;$1 : Text
- var $2;$3 : Integer
- If($2<$3)
-    $0:=Substring($1;$2;$3-$2)
+#DECLARE ($text : Text ; $start : Integer ; $end : Integer) -> $highlight : Text
+ If($start<$end)
+    $highlight:=Substring($text;$start;$end-$start)
  Else
-    $0:=""
-    $2:=$2-1
+    $highlight:=""
+    $start:=$start-1
     Repeat
-       If($2>0)
-          If(Position($1[[$2]];"  ,.!?:;()-_–—")=0)
-             $0:=$1[[$2]]+$0
-             $2:=$2-1
+       If($start>0)
+          If(Position($text[[$start]];"  ,.!?:;()-_–—")=0)
+             $highlight:=$text[[$start]]+$highlight
+             $start:=$start-1
           Else
-             $2:=0
+             $start:=0
           End if
        End if
-    Until($2=0)
+    Until($start=0)
  End if
 ```
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
