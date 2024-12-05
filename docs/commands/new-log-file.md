@@ -28,7 +28,7 @@ The file is renamed with the current backup numbers of the database and of the l
 
 :::warning
 
-You must not call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](../commands-legacy/select-log-file.md) or the Settings dialog, in which case the log file could not be related to any parent backup. A log file segment must always be related to an initial backup, otherwise it could not be integrated. 
+You must not call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](select-log-file.md) or the Settings dialog, in which case the log file could not be related to any parent backup. A log file segment must always be related to an initial backup, otherwise it could not be integrated. 
 
 :::
 
@@ -38,4 +38,4 @@ In the event of an error, the command generates a code that can be intercepted u
 
 #### See also 
 
-[SELECT LOG FILE](../commands-legacy/select-log-file.md) 
+[SELECT LOG FILE](select-log-file.md) 

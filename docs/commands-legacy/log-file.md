@@ -30,4 +30,4 @@ If the database operates with a log file, the system variable OK is set to 1\. T
 
 #### See also 
 
-[SELECT LOG FILE](select-log-file.md)  
+[SELECT LOG FILE](../commands/select-log-file.md)  
