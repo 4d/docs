@@ -172,7 +172,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+There is no ending keyword for function code. There is no ending keyword for function code.
 
 :::
 
@@ -279,11 +279,12 @@ $area:=$rect.getArea() //5000
 Class Constructor({$parameterName : type; ...})
 // code
 // code
+// Class:
 ```
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+There is no ending keyword for class constructor function code. There is no ending keyword for function code.
 
 :::
 
@@ -401,23 +402,24 @@ Super.doSomething(42) //llama a la función "doSomething"
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
+//Class: Square
 
+Class extends Rectangle
 
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
+Class constructor ($side : Integer)
 
-// Function definition
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
+ Super($side;$side)
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
+ This.
+
+ame:="Square"
+
 Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
-
-// Class:
+ C_LONGINT($0)
+ $0:=This.height*This.width
 ```
 
 ```4d

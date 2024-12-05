@@ -268,13 +268,7 @@ La función devuelve Undefined si el *index* sobrepasa los límites de la colecc
 #### Ejemplo
 
 ```4d
-var $col : Collection
-$col:=New collection(10; 20; 30; 40; 50)
-$element:=$col.at(0) // 10
-$element:=$col.at(1) // 20
-$element:=$col.at(-1) // 50
-$element:=$col.at(-2) // 40
-$element:=$col.at(10) // indefinido
+Lanzamiento
 ```
 
 <!-- END REF -->

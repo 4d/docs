@@ -900,7 +900,7 @@ Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` va
 
 #### parámetro queryString
 
-El parámetro *queryString* utiliza la siguiente sintaxis:
+Ejemplo 1
 
 ```4d
 attributePath|formula comparator value   
@@ -943,7 +943,7 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |
 
-- **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos.
+- **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20.
   Al utilizar un valor constante, deben respetarse las siguientes reglas:
   - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).

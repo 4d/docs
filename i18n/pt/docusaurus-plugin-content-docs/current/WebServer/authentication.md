@@ -77,13 +77,14 @@ Por tanto, se llama al método base `On Web Authentication`:
 
 - quando o servidor da Web recebe um URL solicitando um recurso que não existe
 - cuando el servidor web recibe una URL que empieza por `4DACTION/`, `4DCGI/`...
-- cuando el servidor web recibe una URL de acceso a la raíz y no se ha definido ninguna página de inicio en la Configuración o mediante el comando `WEB SET HOME PAGE`
+- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md) command
 - cuando el servidor web procesa una etiqueta que ejecuta código (por ejemplo, `4DSCRIPT`) en una página semidinámica.
 
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
 - quando o servidor da Web recebe um URL que começa com `rest/` e o servidor REST é iniciado (nesse caso, a autenticação é tratada por meio da função [`ds.authentify`](../REST/authUsers#force-login-mode) ou (obsoleto) o método de banco de dados [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou [Configurações de estrutura](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md).
 
 ### Sintaxe
 

@@ -107,9 +107,9 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 
 <!-- REF #_command_.cs.Params -->
 
-| Parámetros | Tipo   |                                        | Descripción                                       |                  |
-| ---------- | ------ | -------------------------------------- | ------------------------------------------------- | ---------------- |
-| classStore | Object | &amp;amp;amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
+| Parámetros | Tipo   |                                            | Descripción                                       |                  |
+| ---------- | ------ | ------------------------------------------ | ------------------------------------------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
 
 El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parámetros | Tipo   |                                        | Descripción    |                  |
-| ---------- | ------ | -------------------------------------- | -------------- | ---------------- |
-| classStore | Object | &amp;amp;amp;larr; | Class store 4D | <!-- END REF --> |
+| Parámetros | Tipo   |                                            | Descripción    |                  |
+| ---------- | ------ | ------------------------------------------ | -------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;amp;larr; | Class store 4D | <!-- END REF --> |
 
 El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases 4D integradas<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 

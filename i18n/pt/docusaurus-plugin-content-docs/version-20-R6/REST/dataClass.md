@@ -139,7 +139,7 @@ Devuelve los datos de la entidad específica definida por la llave primaria de l
 
 ### Descrição
 
-Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
+Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade.
 
 Para más información sobre los datos devueltos, consulte [\{dataClass\}](#dataclass).
 

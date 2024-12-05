@@ -88,8 +88,8 @@ $hello:=$person.sayHello() //"Hello John Doe"
 - コードエディター:
   - クラスは実行できません
   - クラスメソッドはコードのブロックです
-  - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
-  - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
+  - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。 例: "$o.f()" の場合、"Function f" を見つけます。
+  - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。 例: "Function f" の場合 "$o.f()" を見つけます。
 - ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## クラスストア
@@ -145,13 +145,13 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です (任意)。
 
-Class オブジェクトは [共有オブジェクト](shared.md) です。したがって、異なる 4Dプロセスから同時にアクセスすることができます。
+Class オブジェクトは [共有オブジェクト](shared.md) です。 したがって、異なる 4Dプロセスから同時にアクセスすることができます。
 
 ### 継承
 
 クラス宣言において [Class extends](classes.md#class-extends-classname) キーワードを使うと、そのクラスは親クラス (つまり [`スーパークラス`](API/ClassClass.md#superclass)) を継承します。
 
-関数やプロパティがクラス内で見つからない場合、4D はそのクラスの [`スーパークラス`](API/ClassClass.md#superclass) 内を検索します。見つからない場合、4D はさらに、そのスーパークラスのスーパークラス内を探します。これは、スーパークラスが存在しなくなるまで続きます (すべてのオブジェクトは "Object" スーパークラスを継承しています)。
+関数やプロパティがクラス内で見つからない場合、4D はそのクラスの [`スーパークラス`](API/ClassClass.md#superclass) 内を検索します。 見つからない場合、4D はさらに、そのスーパークラスのスーパークラス内を探します。 これは、スーパークラスが存在しなくなるまで続きます (すべてのオブジェクトは "Object" スーパークラスを継承しています)。
 
 ## クラスキーワード
 
@@ -172,7 +172,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+There is no ending keyword for function code. There is no ending keyword for function code.
 
 :::
 
@@ -181,7 +181,7 @@ There is no ending keyword for function code. The 4D language automatically dete
 
 クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
-> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、候補として提示されません。
+> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、候補として提示されません。 "</code> とタイプしても、候補として提示されません。
 
 関数名のすぐ後に、名前とデータ型を指定して [引数](#引数) を宣言します (戻り値の宣言も可)。 例:
 
@@ -229,7 +229,7 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-戻り値は、コロン (:) 記号の後に戻り値のデータ型だけを指定して宣言することもできます。その場合は、自動的に $0 が使用されます。 例:
+オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 例:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -282,14 +282,14 @@ Class Constructor({$parameterName : type; ...})
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+There is no ending keyword for class constructor function code. There is no ending keyword for function code.
 
 :::
 
 
-クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。
+クラスコンストラクター関数を使って、ユーザークラスを定義することができます。 このコンストラクターは [引数](#引数) を受け取ることができます。
 
-クラスコンストラクターが定義されていると、[` new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
+クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
 クラスコンストラクター関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>:constructor` (例: "MyClass:constructor")。
 
@@ -328,7 +328,7 @@ Class extends <ParentClass>
 - ユーザークラスは、自身を継承することはできません。
 - 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。
 
-コードエディターやインタープリターは、これらのルールが破られていても検知することはできません。コンパイラーおよび "シンタックスチェック" のみがエラーを生成します。
+コードエディターやインタープリターは、これらのルールが破られていても検知することはできません。 コンパイラーおよび "シンタックスチェック" のみがエラーを生成します。
 
 派生クラスは、[`Super`](#super) コマンドを使って親クラスのコンストラクターを呼び出すことができます。
 
@@ -509,7 +509,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。
+> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。 こちらの [例題](#例題-1) を参照ください。
 
 基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
 
@@ -545,4 +545,4 @@ $val:=$o.f() //8
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`object` が `class`、またはその子クラスに属していれば、`OB Instance of` は `true` を返します。それ以外の場合は `false` を返します。
+`object` が `class`、またはその子クラスに属していれば、`OB Instance of` は `true` を返します。

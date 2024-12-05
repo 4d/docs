@@ -182,11 +182,11 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+There is no ending keyword for function code. There is no ending keyword for function code.
 
 :::
 
-Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md).
+Les fonctions de classe sont des propriétés spécifiques de la classe. Les fonctions de classe sont des propriétés spécifiques de la classe.
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -303,11 +303,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
+// code
 ```
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+There is no ending keyword for class constructor function code. There is no ending keyword for function code.
 
 :::
 
@@ -575,6 +576,11 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

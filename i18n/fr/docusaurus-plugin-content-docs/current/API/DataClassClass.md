@@ -275,7 +275,7 @@ Pour chaque objet de *objectCol* :
   - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
   - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 
-> La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\*\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
+> La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
 
 **Entités liées**
 
@@ -937,7 +937,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
 | Contient mot-clé                        | %                             | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                                                                     |
 
-- Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection.
+- Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20.
   Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).

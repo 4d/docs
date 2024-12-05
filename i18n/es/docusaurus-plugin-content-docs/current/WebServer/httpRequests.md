@@ -337,6 +337,6 @@ El servidor web de 4D ahora soporta archivos cargados con codificación chunked 
 
 ## Método proyecto COMPILER_WEB
 
-El método COMPILER\WEB, si existe, es llamado sistemáticamente cuando el servidor HTTP recibe una petición dinámica y llama al motor 4D. Este es el caso, por ejemplo, cuando el servidor web de 4D recibe un formulario publicado o una URL para procesar en [`On Web Connection`](#on-web-connection). Este método está destinado a contener directivas de digitación y/o inicialización de variables utilizadas durante los intercambios web. Es utilizado por el compilador cuando se compila la aplicación. El método COMPILER\WEB es común a todos los formularios web. Por defecto, el método COMPILER_WEB no existe. Debe crearlo explícitamente.
+El método COMPILER\WEB, si existe, es llamado sistemáticamente cuando el servidor HTTP recibe una petición dinámica y llama al motor 4D. El método COMPILER\WEB, si existe, es llamado sistemáticamente cuando el servidor HTTP recibe una petición dinámica y llama al motor 4D. Este método está destinado a contener directivas de digitación y/o inicialización de variables utilizadas durante los intercambios web. Es utilizado por el compilador cuando se compila la aplicación. El método COMPILER\WEB es común a todos los formularios web. Por defecto, el método COMPILER_WEB no existe. Debe crearlo explícitamente.
 
 > También se llama al método proyecto COMPILER_WEB, si existe, para cada solicitud SOAP aceptada.

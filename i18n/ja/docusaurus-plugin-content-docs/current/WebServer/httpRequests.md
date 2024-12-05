@@ -55,13 +55,13 @@ You must declare these parameters:
 
 ```
 
-> インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など)  の呼び出しは許可されず、メソッドの処理を終了します。
+> インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など)  の呼び出しは許可されず、メソッドの処理を終了します。  の呼び出しは許可されず、メソッドの処理を終了します。
 
 ### $url - URL extra data
 
 The first parameter ($url) is the URL entered by users in the address area of their web browser, without the host address.
 
-イントラネット接続の場合を見てみましょう。 4D Webサーバーマシンの IPアドレスを 123.4.567.89 とします。 The following table shows the values of $url depending on the URL entered in the web browser:
+イントラネット接続の場合を見てみましょう。 4D Webサーバーマシンの IPアドレスを 123.4.567.89 とします。 イントラネット接続の場合を見てみましょう。 4D Webサーバーマシンの IPアドレスを 123.4.567.89 とします。 The following table shows the values of $url depending on the URL entered in the web browser:
 
 | Webブラウザーに入力された値                                                                                                                                   | Value of parameter $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -75,7 +75,7 @@ The first parameter ($url) is the URL entered by users in the address area of th
 
 ### $header - Header and Body of the HTTP request
 
-The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. この情報は `On Web Connection` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
+The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. この情報は `On Web Connection` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
 
 アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
 
@@ -109,9 +109,9 @@ The $user and $password parameters receive the user name and password entered by
 
 **利用法**: URL またはフォームアクション
 
-この URL を使用して、任意の _Param_ テキスト引数とともに _MethodName_ に指定した 4Dプロジェクトメソッドを呼び出すことができます。 The method will receive this parameter.
+この URL を使用して、任意の _Param_ テキスト引数とともに _MethodName_ に指定した 4Dプロジェクトメソッドを呼び出すことができます。 The method will receive this parameter. The method will receive this parameter.
 
-- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
+- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされていない場合、Webリクエストは拒否されます。
 - `/4DACTION/MyMethod/Param` リクエストを受け取ると、4D は `On Web Authentication` データベースメソッド (あれば) を呼び出します。
 
 `4DACTION/` は、スタティックな Webページの URL に割り当てることもできます:
@@ -120,13 +120,13 @@ The $user and $password parameters receive the user name and password entered by
 <A HREF="/4DACTION/MyMethod/hello">Do Something</A>
 ```
 
-`MyMethod` プロジェクトメソッドは通常レスポンスを返すべきです (`WEB SEND FILE` や `WEB SEND BLOB` で HTMLページを送信するなど)。 ブラウザーをブロックしないように、処理は可能な限り短時間でおこなわれるようにします。
+`MyMethod` プロジェクトメソッドは通常レスポンスを返すべきです (`WEB SEND FILE` や `WEB SEND BLOB` で HTMLページを送信するなど)。 ブラウザーをブロックしないように、処理は可能な限り短時間でおこなわれるようにします。 ブラウザーをブロックしないように、処理は可能な限り短時間でおこなわれるようにします。
 
 > `4DACTION/` から呼び出されるメソッドは、インタフェース要素 (`DIALOG`, `ALERT` など) を呼び出してはいけません。
 
 #### 例題
 
-この例題は、HTMLピクチャーオブジェクトに `/4DACTION/` URL を割り当て、ページ上でピクチャーを動的に表示する方法を説明しています。 スタティック HTMLページに以下のコードを記述します:
+この例題は、HTMLピクチャーオブジェクトに `/4DACTION/` URL を割り当て、ページ上でピクチャーを動的に表示する方法を説明しています。 スタティック HTMLページに以下のコードを記述します: スタティック HTMLページに以下のコードを記述します:
 
 ```html
 <IMG SRC="/4DACTION/getPhoto/smith">
@@ -181,7 +181,7 @@ Webアプリケーションにおいて、スタティックなHTMLページを�
 </FORM>
 ```
 
-データ入力エリアに "ABCD" とタイプし、"Whole word (句として検索)" オプションをチェックして **Search** (検索) ボタンをクリックします。 Webサーバーに送信されるリクエスト内部は以下の通りです:
+データ入力エリアに "ABCD" とタイプし、"Whole word (句として検索)" オプションをチェックして **Search** (検索) ボタンをクリックします。 Webサーバーに送信されるリクエスト内部は以下の通りです: Webサーバーに送信されるリクエスト内部は以下の通りです:
 
 ```
 vName="ABCD"
@@ -276,8 +276,9 @@ return false
 このページの主な特徴は:
 
 - 送信のための **Submit** ボタンが 3つあります: `vsbLogOn`, `vsbRegister` そして `vsbInformation`。
-- **Log On** をクリックすると、フォームからの送信はまず初めに JavaScript関数 `LogOn` によって処理されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。
+- **Log On** をクリックすると、フォームからの送信はまず初めに JavaScript関数 `LogOn` によって処理されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。
 - フォームは POST 4Dメソッドに加えて、ブラウザープロパティを _vtNav_App_ から始まる名称の 4つの隠しオブジェクトへとコピーする投稿スクリプト (_GetBrowserInformation_) を持っています。
+  また、このページには `vtUserName` オブジェクトも含まれます。
   また、このページには `vtUserName` オブジェクトも含まれます。
 
 ユーザーが HTMLフォーム上のボタンのどれかをクリックした際に呼び出される `WWW_STD_FORM_POST` という 4Dメソッドを検証してみましょう。
@@ -320,7 +321,7 @@ return false
 - 変数 _vtNav_appName_, _vtNav_appVersion_, _vtNav_appCodeName_, そして _vtNav_userAgent_ の値 (同じ名前を持つ HTMLオブジェクトにそれぞれバインドされています) は 、`WEB GET VARIABLES` コマンドを使用することによって JavaScript のスクリプト _GetBrowserInformation_ で作成された HTMLオブジェクトから取得することができます。
 - 3つの投稿ボタンにバインドされている変数 _vsbLogOn_, _vsbRegister_ と _vsbInformation_ のうち、クリックされたボタンに対応するもののみが `WEB GET VARIABLES` コマンドによって取得されます。 この 3つのうちいずれかのボタンによって投稿がおこなわれたとき、ブラウザーはクリックされたボタンの値を 4D に返します。 これにより、どのボタンがクリックされたのかが分かります。
 
-HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
+HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
 
 ## その他の Webサーバーコマンド
 

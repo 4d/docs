@@ -687,7 +687,7 @@ En el parámetro *attributePath*, pase el atributo de entidad cuyos valores dist
 
 Puede utilizar la notación `[]` para designar una colección cuando *attributePath* es una ruta en un objeto (ver los ejemplos).
 
-En el parámetro *options*, puede pasar una o una combinación de las siguientes constantes:
+Ejemplos
 
 | Constante         | Valor | Comentario                                                                                                                                                                                                                                      |
 | ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

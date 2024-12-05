@@ -488,7 +488,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Description
 
-La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode* spécifié ou avec les *options* spécifiées<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
+Chemins d'accès Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
 
 Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 

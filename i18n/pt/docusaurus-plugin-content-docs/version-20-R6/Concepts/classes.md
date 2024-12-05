@@ -189,7 +189,7 @@ There is no ending keyword for function code. The 4D language automatically dete
 
 As funções de classe são propriedades específicas da classe. Eles são objetos da classe [4D.Function](API/FunctionClass.md). No arquivo de definição de classe, as declarações de funções usam a palavra-chave `Function` seguida pelo nome da função.
 
-Se a função for declarada em uma [classe compartilhada](#shared-classes), você pode usar a palavra-chave `shared` para que a função possa ser chamada sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
 O nome da função deve estar em conformidade com as [regras de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
@@ -329,7 +329,7 @@ Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e
 
 Quando você chama a função [`new()`](API/ClassClass.md#new), o construtor da classe é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). Um construtor pode utilizar a palavra-chave [`Super`](#super) para chamar o construtor da superclasse.
+Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
 
 É possível criar e digitar propriedades de instância dentro do construtor (ver exemplo). Em alternativa, se os valores das propriedades de instância não dependem dos parâmetros passados ao construtor, você pode defini-los usando a palavra-chave [`property`](#property).
 
@@ -495,7 +495,7 @@ No arquivo de definição de classe, as declarações de propriedade computadas 
 
 `A função get` devolve um valor do tipo de propriedade e `A função set` recebe um parâmetro do tipo de propriedade. Ambos os argumentos devem estar em conformidade com os [parâmetros de função] padrão (#parâmetros).
 
-Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Se apenas um `Function set` estiver definido, 4D devolve *undefined* quando a propriedade é lida.
+Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Neste caso, é devolvido um erro se o código tentar modificar a propriedade.
 
 Se as funções forem declaradas em uma [classe compartilhada](#shared-class-constructor), você pode usar a palavra-chave `shared` com elas para que elas possam ser chamadas sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
