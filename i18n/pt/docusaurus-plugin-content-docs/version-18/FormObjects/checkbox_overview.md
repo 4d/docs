@@ -213,7 +213,7 @@ The OS X Gradient style has a light gray background with a title and is displaye
 
   ![](../assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> On Windows, this style is identical to the [Bevel](#bevel) style.
+> No Windows, esse estilo é idêntico ao estilo [Bevel](#bevel).
 
 #### JSON Exemplo
 

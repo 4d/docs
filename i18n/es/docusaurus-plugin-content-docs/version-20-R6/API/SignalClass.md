@@ -18,7 +18,7 @@ Un objeto `4D.Signal` contiene los siguientes métodos y propiedades integrados:
 - [`.signaled`](#signaled)
 - [`.description`](#description).
 
-Todo worker/proceso que llame al método `.wait()` suspenderá su ejecución hasta que la propiedad `.signaled` sea true. Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. La propiedad `.signaled` se convierte en true cuando cualquier worker/proceso llama al método `.trigger()`.
+Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
 
 Tenga en cuenta que para evitar situaciones de bloqueo, el método `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
 
@@ -198,7 +198,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el estado actual del objeto `Signal`<!-- END REF -->. Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
+Lanzamiento Cuando se crea la señal, `.signaled` es **False**. La propiedad `.signaled` se convierte en true cuando cualquier worker/proceso llama al método `.trigger()`.
 
 Esta propiedad es de **solo lectura**.
 
@@ -230,7 +230,7 @@ Esta propiedad es de **solo lectura**.
 
 La función `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->define la propiedad `signaled` del objeto signal como **true**<!-- END REF --> y despierta a todos los workers o procesos que esperan esta signal.
 
-Si la señal ya está en el estado de señalización (es decir, la propiedad signaled\` ya es **true**), la función no hace nada.
+Si la señal ya está en el estado de señalización (es decir, la propiedad signaled\\` ya es **true**), la función no hace nada.
 
 <!-- END REF -->
 

@@ -93,7 +93,7 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 
 #### Veja também
 
-[Double click on empty row](#double-click-on-empty-row)
+[Clique duas vezes na linha vazia](#double-click-on-empty-row)
 
 ---
 

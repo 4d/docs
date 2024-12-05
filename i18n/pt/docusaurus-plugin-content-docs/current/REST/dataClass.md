@@ -141,7 +141,7 @@ Devuelve los datos de la entidad específica definida por la llave primaria de l
 
 Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
 
-For more information about the data returned, refer to [\{dataClass\}](#dataclass).
+Para más información sobre los datos devueltos, consulte [\{dataClass\}](#dataclass).
 
 Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 

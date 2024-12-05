@@ -107,9 +107,9 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 
 <!-- REF #_command_.cs.Params -->
 
-| Parámetros | Tipo   |                                    | Descripción                                       |                  |
-| ---------- | ------ | ---------------------------------- | ------------------------------------------------- | ---------------- |
-| classStore | Object | &amp;amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
+| Parámetros | Tipo   |                                        | Descripción                                       |                  |
+| ---------- | ------ | -------------------------------------- | ------------------------------------------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
 
 El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parámetros | Tipo   |                                    | Descripción    |                  |
-| ---------- | ------ | ---------------------------------- | -------------- | ---------------- |
-| classStore | Object | &amp;amp;larr; | Class store 4D | <!-- END REF --> |
+| Parámetros | Tipo   |                                        | Descripción    |                  |
+| ---------- | ------ | -------------------------------------- | -------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;larr; | Class store 4D | <!-- END REF --> |
 
 El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases 4D integradas<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
@@ -190,6 +190,12 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 {shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
+
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
 
 Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md). En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function` seguida del nombre de la función.
 
@@ -324,6 +330,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // código
 ```
+
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
 
 Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
 

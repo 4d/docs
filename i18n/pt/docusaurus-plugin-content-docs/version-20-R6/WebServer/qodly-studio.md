@@ -140,7 +140,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 The following commands and classes are dedicated to the server-side management of Qodly pages:
 
-- [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly page as an object.
+- Comando [`Web Form`](../API/WebFormClass.md#web-form): retorna a página Qodly como um objeto.
 - [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly page components.
 - [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly page.
 - [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly page components.

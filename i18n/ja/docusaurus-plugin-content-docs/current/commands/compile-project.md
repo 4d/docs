@@ -9,149 +9,150 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
-| 引数          | 型                       |   | 説明                                                      |
-| ----------- | ----------------------- | - | ------------------------------------------------------- |
-| projectFile | 4D.File | → | .4DProject file to compile              |
-| options     | Object                  | → | Object that specifies compilation options               |
-| 戻り値         | Object                  | ← | Object containing information on the compilation status |
+| 引数          | 型                       |   | 説明                                     |
+| ----------- | ----------------------- | - | -------------------------------------- |
+| projectFile | 4D.File | → | コンパイルする.4DProject ファイル |
+| options     | Object                  | → | コンパイルオプションを指定するオブジェクト                  |
+| 戻り値         | Object                  | ← | コンパイルのステータスの情報を格納したオブジェクト              |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                       |
-| ----- | ---------------------------------------- |
-| 20 R8 | Support of `type` "formObjectExpression" |
+| リリース  | 内容                               |
+| ----- | -------------------------------- |
+| 20 R8 | "formObjectExpression" `型` のサポート |
 
 </details>
 
 #### 説明
 
-**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../Project/compiler.md).
+**Compile project** は、<!--REF #_command_.Compile project.Summary-->
+カレントのホストプロジェクト、または*projectFile* 引数で指定したプロジェクトをコンパイルします。<!-- END REF-->コンパイルについてのより詳細な情報については、[コンパイルページ](../Project/compiler.md) を参照してください。
 
-By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. 以下のシンタックスがサポートされています:
+デフォルトでは、このコマンドはストラクチャー設定で定義されているコンパイラオプションを使用します。 任意の*options* 引数を渡すことで、それらを上書きすることができます。 以下のシンタックスがサポートされています:
 
-- **Compile project**(): compiles the opened project using the options defined in the Structure Settings
-- **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
-- **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
-- **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
+- **Compile project**(): 現在開かれているプロジェクトを、ストラクチャー設定で定義されているオプションを使用してコンパイルします。
+- **Compile project**(*options*): 現在開かれているプロジェクトをコンパイルします。 *options* 引数で定義されたオプションでストラクチャー設定を上書きします。
+- **Compile project**(*projectFile*): *projectFile* 引数で指定された4DProject ファイルを、ストラクチャー設定で定義されているオプションを使用してコンパイルします。
+- **Compile project**(*projectFile*; *options*): *projectFile* 引数で指定された4DProject ファイルを、*options* 引数で定義されたオプションでストラクチャー設定を上書きしてコンパイルします。
 
-**Note:** Binary databases cannot be compiled using this command.
+**注:** このコマンドを使用してバイナリーデータベースをコンパイルすることはできません。
 
-Unlike the Compiler window, this command requires that you explicitly designate the component(s) to compile. When compiling a project with **Compile project**, you need to declare its components using the *components* property of the *options* parameter. Keep in mind that the components must already be compiled (binary components are supported).
+コンパイラウィンドウとは異なり、このコマンドではコンパイルするコンポーネントを明示的に指定する必要があります。 **Compile project** でプロジェクトをコンパイルする場合、*options* 引数の*components* プロパティを使用してそのコンポーネントを宣言する必要があります。 なお、そのコンポーネントは既にコンパイルされている必要があるという点に注意してください(バイナリーコンポーネントはサポートされます)。
 
-The resulting compiled code will be stored in the DerivedData or Libraries folder of the project, depending on the *targets* property of the *options* parameter. If you want to create .4dz files, you still need to manually zip the compiled project or use the [build application](../Desktop/building.md) feature.
+コンパイルされたコードは、*options* 引数の*targets* プロパティでの指定によって、DerivedData または Libraries フォルダに格納されています。 .4dz ファイルを作成したい場合でも、コンパイルされたプロジェクトを手動でZIP圧縮するか、[ビルドアプリケーション](../Desktop/building.md) 機能を使用する必要があります。
 
-If you pass an empty collection in *targets*, **Compile project** will execute a syntax check without compiling.
+*targets* プロパティに空のコレクションを渡した場合、**Compile project** コマンドはコンパイルせずにシンタックスチェックを実行します。
 
-Compilation errors, if any, are returned as objects in the *errors* collection.
+コンパイルエラーがもしあれば、*errors* コレクション内にオブジェクトとして返されます。
 
-**Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
+**注:** 他のコンパイルの実行中に、このコマンドを呼び出すことはできません(例えば、コンパイルウィンドウからローンチしたコンパイルが実行中である場合など)。
 
-##### options Parameter
+##### options 引数
 
-The *options* parameter is an object. Here are the available compilation options:
+*options* 引数はオブジェクト型です。 利用可能なコンパイルオプションは次のとおりです:
 
-| **プロパティ**                                                                          | **型**                            | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| components                                                                         | Collection                       | Collection of 4D.File objects to dependent components (must be already compiled)                                                                                                                                                                                                                                                                                                                                                                                       |
-| defaultTypeForButtons                                                              | Integer                          | Possible value: Is real or Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| defaultTypeForNumerics                                                             | Integer                          | Possible value: Is real or Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| generateSymbols                                                                    | Boolean                          | True to generate symbol information in the .symbols returned object                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| generateSyntaxFile                                                                 | Boolean                          | True to generate a [syntax file for code completion](../settings/general.md).md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project                                                                                                                                                                                                                                                                              |
-| generateTypingMethods                                                              | Text                             | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand.                                                                                                                                                                                                          |
-| plugins                                                                            | 4D.Folder object | Plug-ins folder to be used instead of the [Plugins folder of the current project](../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax.                                                                                                                                                                                                                                                                                     |
-| targets                                                                            | String の Collection              | Possible values: "x86_64_generic", "arm64_macOS_lib". Pass an empty collection to execute syntax check only                                                                                                                                                                                                                                                                           |
-| typeInference                                                                      | Text                             | "all": The compiler deduces the types of all variables not explicitly declared, "locals": The compiler deduces the types of local variables not explicitly declared, "none": All variables must be explicitly declared in the code (legacy mode), "direct": All variables must be explicitly declared in the code ([direct typing](../Project/compiler.md#enabling-direct-typing)). |
-| warnings                                                                           | Object の Collection              | Defines the warnings state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| \[\].major   | Number                           | Warning main number, before the dot                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| \[\].minor   | Number                           | Warning second number, after the dot                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| \[\].enabled | Boolean                          | Warning activation state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **プロパティ**                                                                          | **型**                            | **説明**                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| components                                                                         | Collection                       | 依存したコンポーネントへの4D.File オブジェクトのコレクション(コンポーネントは既にコンパイルされている必要があります)。                                                                                                                                                                                                                                                                                  |
+| defaultTypeForButtons                                                              | Integer                          | 取り得る値: Is real または Is longint                                                                                                                                                                                                                                                                                                                                        |
+| defaultTypeForNumerics                                                             | Integer                          | 取り得る値: Is real または Is longint                                                                                                                                                                                                                                                                                                                                        |
+| generateSymbols                                                                    | Boolean                          | 返された.symbol オブジェクト内にsymbol 情報を生成するためにはTrue                                                                                                                                                                                                                                                                                                                           |
+| generateSyntaxFile                                                                 | Boolean                          | プロジェクトの\\Resources\\en.lproj フォルダに [コード補完用のシンタックスファイルを生成する](../settings/general.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E6%99%82%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%89%E8%A3%9C%E5%AE%8C%E7%94%A8%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B) ためにはTrue |
+| generateTypingMethods                                                              | Text                             | 型指定メソッドを生成する際にリセット("reset") するか追加("append") するかを選択します。 値が"append" だった場合、既存の変数宣言は変更されません(コンパイラウィンドウの振る舞い)。 値が"reset" だった場合、既存の変数宣言は事前に削除されます。                                                                                                                                                                                |
+| plugins                                                                            | 4D.Folder object | [Plugins folder of the current project](../Project/architecture.md#plugins) ではなく、独自に使用したいプラグインのフォルダ。 このプロパティは、*projectFile* シンタックスを使用した場合にのみ利用可能です。                                                                                                                                                                                                                                  |
+| targets                                                                            | String の Collection              | 取り得る値: "x86_64_generic"、"arm64_macOS_lib"。 また空のコレクションを渡すことでシンタックスチェックのみを実行させることもできます。                                                                                                                                                                                            |
+| typeInference                                                                      | Text                             | "all": コンパイラは、明示的に宣言されていない全ての変数の型を類推します。 "locals": コンパイラは、明示的に宣言されていないローカル変数の型を類推します。 "none": 自動変数定義は行いません。全ての変数はコード内で明示的に宣言されている必要があります(旧式モード)。"direct": 全ての変数はコード内で明示的に宣言されている必要があります([直接型指定](../Project/compiler.md#enabling-direct-typing))。                               |
+| warnings                                                                           | Object の Collection              | 警告の有効化状態を定義します                                                                                                                                                                                                                                                                                                                                                                       |
+| \[\].major   | Number                           | 指定する警告のメインの番号、ドットの前                                                                                                                                                                                                                                                                                                                                                                  |
+| \[\].minor   | Number                           | 指定する警告の2つ目の番号、ドットの後                                                                                                                                                                                                                                                                                                                                                                  |
+| \[\].enabled | Boolean                          | 警告の有効化状態                                                                                                                                                                                                                                                                                                                                                                             |
 
-**Note:** When the *warnings* attribute is not defined in the *options* object, the **Compile project** command uses the default warning generation statuses defined in the settings.
+**Note:** *options* オブジェクト内において*warnings* 属性が定義されていない場合、**Compile project** コマンドはストラクチャー設定内で定義されているデフォルトの警告生成ステータスを使用します。
 
 ##### 戻り値
 
-The object returned by **Compile project** has up to three properties:
+**Compile project** によって返されるオブジェクトには、以下のプロパティが格納されています(最大で3つ):
 
-| **プロパティ**                                                                                                              | **型**               | **Description**                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| success                                                                                                                | Boolean             | 保存に成功した場合には true、それ以外は false                                                                                                             |
-| errors                                                                                                                 | Object の Collection | **Available only in case of error or warning**. Collection of objects describing compilation errors or warnings          |
-| \[\].isError                                     | Boolean             | Error if True, warning otherwise                                                                                                         |
-| \[\].message                                     | Text                | エラーメッセージ                                                                                                                                 |
-| \[\].code                                        | Object              | [code object](#code-object)                                                                                                              |
-| \[\].line                                        | Number              | Line number of error in the code. For class methods, line number in the function                                         |
-| \[\].lineInFile                                  | Number              | Line number in the file (different from "line" for class methods, and takes into account the %attributes prefix line) |
-| symbols                                                                                                                | Object              | **Available only if generateSymbols option is set to True:**                                                             |
-| symbols.interprocessVariables                                                                          | Object              | List of all interprocess variables                                                                                                       |
-| symbols.interprocessVariables.variables                                                | Collection          | Collection of [variable objects](#variable-objects)                                                                                      |
-| symbols.interprocessVariables.size                                                     | Number              |                                                                                                                                          |
-| symbols.processVariables                                                                               | Object              | List of all process variables                                                                                                            |
-| symbols.processVariables.variables                                                     | Collection          | Collection of [variable objects](#variable-objects)                                                                                      |
-| symbols.processVariables.size                                                          | Number              |                                                                                                                                          |
-| symbols.localVariables                                                                                 | Object の Collection | List of local variables per method                                                                                                       |
-| symbols.localVariables[].code      | Object              | [code object](#code-object)                                                                                                              |
-| symbols.localVariables[].variables | Collection          | Collection of [variable objects](#variable-objects)                                                                                      |
-| symbols.methods                                                                                        | Object の Collection | List of methods                                                                                                                          |
-| symbols.methods\[\].code         | Object              | [code object](#code-object)                                                                                                              |
-| symbols.methods\[\].callCount    | Number              | Number of times this method has been called                                                                                              |
-| symbols.methods\[\].params       | Collection          | Collection of parameter types (Value type numerical codes)                                                            |
-| symbols.methods\[\]. threadSafe  | Boolean             | Indicates if this method is thread safe                                                                                                  |
+| **プロパティ**                                                                                                              | **型**               | **説明**                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------- |
+| success                                                                                                                | Boolean             | 保存に成功した場合には true、それ以外は false                                                                    |
+| errors                                                                                                                 | Object の Collection | **以下はerror または warningの場合にのみ返されます**。 コンパイルのエラーまたは警告の詳細を格納したオブジェクトのコレクションです。                     |
+| \[\].isError                                     | Boolean             | エラーならTrue、それ以外の場合は警告                                                                            |
+| \[\].message                                     | Text                | エラーメッセージ                                                                                        |
+| \[\].code                                        | Object              | [コードオブジェクト](#code-object)                                                                       |
+| \[\].line                                        | Number              | コード内でのエラーが発生した行番号。 クラスメソッドに対しては、ファンクション内の行番号                                                    |
+| \[\].lineInFile                                  | Number              | ファイル内での行番号(クラスメソッドの"line"とは異なります、また%attributes プリフィックス行を考慮に入れます)             |
+| symbols                                                                                                                | Object              | **generateSymbols オプションがTrue に設定されている場合にのみ返されます:**                              |
+| symbols.interprocessVariables                                                                          | Object              | 全てのインタープロセス変数の一覧                                                                                |
+| symbols.interprocessVariables.variables                                                | Collection          | [変数オブジェクト](#%E5%A4%89%E6%95%B0%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88) のコレクション   |
+| symbols.interprocessVariables.size                                                     | Number              |                                                                                                 |
+| symbols.processVariables                                                                               | Object              | 全てのプロセス変数の一覧                                                                                    |
+| symbols.processVariables.variables                                                     | Collection          | [変数オブジェクト](#%E5%A4%89%E6%95%B0%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88) のコレクション   |
+| symbols.processVariables.size                                                          | Number              |                                                                                                 |
+| symbols.localVariables                                                                                 | Object の Collection | メソッドごとのローカル変数の一覧                                                                                |
+| symbols.localVariables[].code      | Object              | [コードオブジェクト](#code-object)                                                                       |
+| symbols.localVariables[].variables | Collection          | [変数オブジェクト](#%E5%A4%89%E6%95%B0%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88) のコレクション   |
+| symbols.methods                                                                                        | Object の Collection | メソッドの一覧                                                                                         |
+| symbols.methods\[\].code         | Object              | [コードオブジェクト](#%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88) |
+| symbols.methods\[\].callCount    | Number              | このメソッドが呼び出された回数                                                                                 |
+| symbols.methods\[\].params       | Collection          | 引数タイプのコレクション(Value Type の数値コード)                                              |
+| symbols.methods\[\]. threadSafe  | Boolean             | このメソッドがスレッドセーフであるかを示します。                                                                        |
 
-For more information, see [Compilation tools](../Project/compiler.md#compilation-tools).
+より詳細な情報については、[コンパイルツール](../Project/compiler.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E3%83%84%E3%83%BC%E3%83%AB) を参照してください。
 
-###### variable objects
+###### 変数オブジェクト
 
-`interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
+`interprocessVariables.variables` および `processVariables.variables` には以下の構造を持ったオブジェクトが格納されます:
 
-| **プロパティ**      | **型**  | **Description**                                                                                           |
-| -------------- | ------ | --------------------------------------------------------------------------------------------------------- |
-| name           | Text   | Name of the variable                                                                                      |
-| type           | number | Type of the variable (like Value type command)                                         |
-| arrayDimension | number | For arrays only: 1 for mono dimension arrays, 2 for two-dimension arrays                  |
-| code           | Object | For process and interprocess variables: descriptor of where the variable has been defined |
+| **プロパティ**      | **型**  | **説明**                                               |
+| -------------- | ------ | ---------------------------------------------------- |
+| name           | Text   | 変数名                                                  |
+| type           | number | 変数の型(Value type コマンドで返される値)       |
+| arrayDimension | number | 配列のみ: 1 は1次元配列を、2 は2次元配列を意味します       |
+| code           | Object | プロセス変数とインタープロセス変数のみ: 変数がどこで定義されたかの詳細 |
 
-###### code object
+###### コードオブジェクト
 
-The `code` property in `methods.code` and `errors.code` is an object with the following properties:
+`methods.code` および `errors.code` 内の`code` プロパティは、以下のプロパティを持ったオブジェクトです:
 
-| **プロパティ**      | **型**                   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| -------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type           | Text                    | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](process-4d-tags.md) or evaluation of a formula in a 4D Write Pro document), "class", "classFunction", "formObjectExpression" (for errors occuring in expressions associated to form objects) |
-| path           | Text                    | Method path (same format as [METHOD OPEN PATH](method-open-path.md))                                                                                                                                                                                                                                                                                                                                                                                                                |
-| file           | 4D.File | Method file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|                |                         | **Returned depending on the value of the `type` property:**                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| methodName     | Text                    | プロジェクトメソッド                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| table          | Number                  | Number of the table (returned for a trigger, a table form method or a table form object method)                                                                                                                                                                                                                                                                                                                                                                                     |
-| formName       | Text                    | Form name (returned for a form method)                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| objectName     | Text                    | Form object name (returned for an object method)                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| propertyName   | Text                    | Form object property name (returned for a form object expression)                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| className      | Text                    | Class name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| functionName   | Text                    | クラス関数名                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| databaseMethod | Number                  | Database method index                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **プロパティ**      | **型**                   | **説明**                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| -------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type           | Text                    | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *サーバー上で実行属性* をつけてプロジェクトメソッドを呼び出した場合), "executeFormula" (フォーミュラを[PROCESS 4D TAGS](process-4d-tags.md) 経由で実行した、または4D Write Pro ドキュメント内でフォーミュラを評価した), "class", "classFunction", "formObjectExpression" (フォームオブジェクトに割り当てられた式において発生したエラー) |
+| path           | Text                    | メソッドパス([METHOD OPEN PATH](method-open-path.md) と同じフォーマット)                                                                                                                                                                                                                                                                                                                                                                  |
+| file           | 4D.File | メソッドファイル                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                |                         | **以下は`type` プロパティの値に応じて返されます:**                                                                                                                                                                                                                                                                                                                                                                                               |
+| methodName     | Text                    | プロジェクトメソッド                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| table          | Number                  | テーブル番号(トリガ、テーブルフォームメソッドまたはテーブルフォームオブジェクトメソッドに対して返されます)                                                                                                                                                                                                                                                                                                                                                                     |
+| formName       | Text                    | フォーム名(フォームメソッドに対して返されます)                                                                                                                                                                                                                                                                                                                                                                                                   |
+| objectName     | Text                    | フォームオブジェクト名(オブジェクトメソッドに対して返されます)                                                                                                                                                                                                                                                                                                                                                                                           |
+| propertyName   | Text                    | フォームオブジェクトプロパティ名(フォームオブジェクトの式に対して返されます)                                                                                                                                                                                                                                                                                                                                                                                    |
+| className      | Text                    | クラス名                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| functionName   | Text                    | クラス関数名                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| databaseMethod | Number                  | データベースメソッドのインデックス                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 #### 例題
 
-To perform a syntax check only, pass an empty collection to the targets parameter:
+シンタックスチェックのみを実行したいので、空のコレクションをtargets 引数に渡す場合を考えます:
 
 ```4d
  var $status : Object
  var $options:={}
- $options.targets:=New collection //Empty collection for syntax checking
+ $options.targets:=New collection // 空のコレクションを渡してシンタックスチェックを行う
  $status:=Compile project($options)
 ```
 
-Compile the current project using the compiler options of the Structure Settings only:
+ストラクチャー設定のコンパイラオプションのみを使用してカレントのプロジェクトをコンパイルする:
 
 ```4d
  var $status : Object
  $status:=Compile project
 ```
 
-On a Silicon Mac, compile the current project to ARM only:
+Silicon Mac 上にて、カレントのプロジェクトをARM 用にのみコンパイルする:
 
 ```4d
  var $status : Object
@@ -160,7 +161,7 @@ On a Silicon Mac, compile the current project to ARM only:
  $status:=Compile project($options)
 ```
 
-Compile a project other than the current project:
+カレントのプロジェクト以外のプロジェクトをコンパイルする:
 
 ```4d
  var $status : Object
@@ -169,7 +170,7 @@ Compile a project other than the current project:
  $status:=Compile project($projectFile)
 ```
 
-Compile a project and declare its component:
+プロジェクトをコンパイルし、そのコンポーネントを宣言する:
 
 ```4d
  var $status : Object
@@ -180,7 +181,7 @@ Compile a project and declare its component:
  $status:=Compile project($options)
 ```
 
-Disable warnings 518.1 and 518.2 when compiling your project:
+プロジェクトのコンパイル時に、518.1 および 518.2 の警告を無効化する:
 
 ```4d
 var $options:={}

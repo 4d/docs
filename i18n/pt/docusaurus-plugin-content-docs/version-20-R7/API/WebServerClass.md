@@ -570,7 +570,7 @@ The web server starts with default settings defined in the settings file of the 
 
 All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
-Customized session settings will be reset when the [`.stop()`](#stop) function is called.
+As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada.
 
 #### Objeto devolvido
 

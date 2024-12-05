@@ -152,7 +152,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
 
-Relative paths are relative to the [`environment4d.json`](#environment4djson) file. Absolute paths are linked to the user's machine.
+Os caminhos relativos são relativos ao arquivo [`environment4d.json`](#environment4djson). Absolute paths are linked to the user's machine.
 
 Using relative paths is **recommended** in most cases, since they provide flexibility and portability of the components architecture, especially if the project is hosted in a source control tool.
 

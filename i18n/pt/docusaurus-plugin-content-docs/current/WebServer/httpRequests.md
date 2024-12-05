@@ -3,7 +3,7 @@ id: httpRequests
 title: Processamento de pedidos HTTP
 ---
 
-O servidor web 4D oferece várias funcionalidades para lidar com solicitações HTTP:
+The 4D web server provides several built-in features to handle HTTP requests:
 
 - el método base `On Web Connection`, un enrutador para su aplicación web,
 - la URL `/4DACTION` para llamar al código del lado del servidor
@@ -11,13 +11,21 @@ O servidor web 4D oferece várias funcionalidades para lidar com solicitações 
 - otros comandos como `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, o `WEB GET BODY PART` permiten personalizar el tratamiento de las solicitudes, incluidas las cookies.
 - el método proyecto _COMPILER_WEB_, para declarar sus variables.
 
+:::info
+
+You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. See [**HTTP Request Handler**](http-request-handler.md) section.
+
+:::
+
 ## On Web Connection
 
 El método base `On Web Connection` puede utilizarse como punto de entrada al servidor web de 4D.
 
 ### Chamadas métodos de base
 
-The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
+The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
+
+O método da base de dados é chamado com o URL.
 
 Por ejemplo, la URL "_a/b/c_" llamará al método base, pero "_a/b/c.html_" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
 
@@ -25,28 +33,18 @@ Por ejemplo, la URL "_a/b/c_" llamará al método base, pero "_a/b/c.html_" no l
 
 ### Sintaxe
 
-**On Web Connection**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text )
+**On Web Connection**( _$url_ : Text; _$header_ : Text; _$BrowserIP_ : Text; _$ServerIP_ : Text; _$user_ : Text; _$password_ : Text )
 
 | Parâmetros | Tipo |                             | Descrição                                                                |
 | ---------- | ---- | :-------------------------: | ------------------------------------------------------------------------ |
-| $1         | Text | <- | URL                                                                      |
-| $2         | Text | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
-| $3         | Text | <- | Endereço IP do cliente Web (browser)                  |
-| $4         | Text | <- | Endereço IP do servidor                                                  |
-| $5         | Text | <- | Nome de usuario                                                          |
-| $6         | Text | <- | Senha                                                                    |
+| $url       | Text | <- | URL                                                                      |
+| $header    | Text | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $BrowserIP | Text | <- | Endereço IP do cliente Web (browser)                  |
+| $ServerIP  | Text | <- | Endereço IP do servidor                                                  |
+| $user      | Text | <- | Nome de usuario                                                          |
+| $password  | Text | <- | Senha                                                                    |
 
-Estes parâmetros devem ser declarados como se indica a seguir:
-
-```4d
-//Método base On Web Authentication
-
- C_TEXT($1;$2;$3;$4;$5;$6)
-
-//Código do método
-```
-
-Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):
+You must declare these parameters:
 
 ```4d
 // On Web Connection database method
@@ -58,13 +56,13 @@ Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/pa
 
 > Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) não é permitido e encerra o processamento do método.
 
-### $1 - Dados extra do URL
+### $url - URL extra data
 
-The first parameter ($1) is the URL entered by users in the address area of their web browser, without the host address.
+The first parameter ($url) is the URL entered by users in the address area of their web browser, without the host address.
 
-Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
+Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
 
-| URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $1                                                                 |
+| URL introduzido no navegador Web                                                                                                                  | Value of parameter $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.4.567.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -74,29 +72,29 @@ Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP d
 
 Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. Por ejemplo, puede establecer una convención en la que el valor "_/Customers/Add_" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
-### $2 - Cabeçalho e corpo do pedido HTTP
+### $header - Header and Body of the HTTP request
 
-O segundo parâmetro ($2) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Its contents will vary depending on the nature of the web browser attempting the connection.
+The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Its contents will vary depending on the nature of the web browser attempting the connection.
 
 If your application uses this information, it is up to you to parse the header and the body. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
+> For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
-### $3 - Endereço IP do cliente Web
+### $BrowserIP - Web client IP address
 
-O parâmetro $3 recebe o endereço IP do computador do navegador. This information can allow you to distinguish between intranet and internet connections.
+The $BrowserIP parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
 
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
-### $4 - Endereço IP do servidor
+### $ServerIP - Server IP address
 
-The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
+The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
-### $5 e $6 - Nome de usuário e palavra-passe
+### $user e $password - Nome de usuário e senha
 
-Los parámetros $5 y $6 reciben el nombre de usuario y la contraseña introducidos por el usuario en el cuadro de diálogo de identificación estándar que muestra el navegador, si procede (ver la página [autenticación](authentication.md)).
+The $user and $password parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
 
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
 
 ## /4DACTION
 
@@ -109,7 +107,7 @@ Los parámetros $5 y $6 reciben el nombre de usuario y la contraseña introducid
 
 **Uso:** URL o acción del formulario.
 
-Esta URL permite llamar al método proyecto 4D _MethodName_ con un parámetro texto opcional _Param_. El método recibirá este parámetro en _$1_.
+Esta URL permite llamar al método proyecto 4D _MethodName_ con un parámetro texto opcional _Param_. The method will receive this parameter.
 
 - El método proyecto 4D debe haber sido [permitido para peticiones web](allowProject.md): el valor del atributo "Disponible a través de etiquetas y URLs 4D (4DACTION...)" debe haber sido marcado en las propiedades del método. Se o atributo não for verificado, o pedido Web é rejeitado.
 - Cuando 4D recibes una petición `/4DACTION/MethodName/Param`, se llama el método base `On Web Authentication` (si existe).
@@ -135,13 +133,13 @@ Este ejemplo describe la asociación de la URL `/4DACTION` con un objeto imagen 
 El método `getPhoto` es el siguiente:
 
 ```4d
-C_TEXT($1) // This parameter must always be declared
+#DECLARE ($url : Text) // This parameter must always be declared
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
  //find the picture in the Images folder within the Resources folder
-$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
+$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$url+".psd"
 
 READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
 PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
@@ -191,9 +189,9 @@ vExact="Word" OK="Search"
 4D llama al método base `<On Web Authentication>` (si existe), luego se llama al método proyecto `processForm`, que es el siguiente:
 
 ```4d
- C_TEXT($1) //mandatory for compiled mode
- C_LONGINT($vName)
- C_TEXT(vName;vLIST)
+ #DECLARE ($url : Text) //mandatory for compiled mode
+ var $vName : Integer
+ var vName;vLIST : Text
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrVals;0)
  WEB GET VARIABLES($arrNames;$arrVals) //we retrieve all the variables of the form
@@ -219,9 +217,9 @@ End if
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
 
-When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. Este principio puede implementarse en el caso de un formulario web, enviado por ejemplo utilizando `WEB SEND FILE` o `WEB SEND BLOB`, en el que el usuario introduce o modifica valores y luego hace clic en el botón de validación.
+When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
 
-En este caso, 4D puede recuperar los valores de los objetos HTML encontrados en la petición utilizando el comando `WEB GET VARIABLES`. El comando `WEB GET VARIABLES` recupera los valores como texto.
+In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md) command. El comando `WEB GET VARIABLES` recupera los valores como texto.
 
 Considere o seguinte código fonte da página HTML:
 
@@ -286,7 +284,7 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_LONGINT($user)
+ var $user : Integer
 
  Case of
 
@@ -325,15 +323,15 @@ Tenha em atenção que, com HTML, todos os objetos são objetos texto. Si se uti
 
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 
-- el comando `WEB GET HTTP BODY` devuelve el cuerpo como texto sin procesar, permitiendo cualquier análisis que pueda necesitar
-- el comando `WEB GET HTTP HEADER` devuelve los encabezados de la petición. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
-- los comandos `WEB GET BODY PART` y `WEB Get body part count` para analizar la parte del cuerpo de una petición de varias partes y recuperar los valores de texto, pero también los archivos publicados, utilizando BLOBs.
+- the [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) command returns the body as raw text, allowing any parsing you may need
+- the [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) command return the headers of the request. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
+- the [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) and [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-The 4D web server supports files uploaded in chunked transfer encoding from any Web client. A codificação de transferência em pedaços é um mecanismo de transferência de dados especificado no HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. El servidor web de 4D también soporta la codificación de transferencia en trozos desde el servidor a los clientes web (utilizando `WEB SEND RAW DATA`).
+The 4D web server supports files uploaded in chunked transfer encoding from any Web client. A codificação de transferência em pedaços é um mecanismo de transferência de dados especificado no HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
 
 ## Método projeto COMPILER_WEB
 

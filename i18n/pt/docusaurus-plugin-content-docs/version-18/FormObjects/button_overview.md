@@ -330,5 +330,5 @@ Todos os botões partilham o mesmo conjunto de propriedades básicas:
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
 - [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
-- [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
+- [Botão padrão](properties_Appearance.md#default-button) (plano, regular)
 - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)

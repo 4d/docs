@@ -451,7 +451,7 @@ The `.info` object contains the following properties:
 | Propriedade      | Tipo          | Descrição                                                                                                                                                 |
 | ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type             | Text          | Tipo de sessão: "remote" ou "storedProcedure"                                                                                             |
-| userName         | Text          | 4D user name (same value as [`.userName`](#username))                                                                                  |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                        |
 | machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor |
 | systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                      |
 | IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                             |

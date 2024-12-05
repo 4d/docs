@@ -94,7 +94,7 @@ When a web session is closed, if the [`Session`](commands/session.md) command is
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.
+Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout**](qodly-studio.md#logout).
 
 :::
 
