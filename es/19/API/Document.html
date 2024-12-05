@@ -1,0 +1,682 @@
+<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-API/Document" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.6.3"><title data-rh=true>Document Class | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width,initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/19/API/Document><meta data-rh=true property=og:locale content=es><meta data-rh=true property=og:locale:alternate content=en><meta data-rh=true property=og:locale:alternate content=fr><meta data-rh=true property=og:locale:alternate content=ja><meta data-rh=true property=og:locale:alternate content=pt><meta data-rh=true name=docusaurus_locale content=es><meta data-rh=true name=docsearch:language content=es><meta data-rh=true name=docusaurus_version content=19><meta data-rh=true name=docusaurus_tag content=docs-default-19><meta data-rh=true name=docsearch:version content=19><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19><meta data-rh=true property=og:title content="Document Class | 4D Docs"><meta data-rh=true name=description content=Descripción><meta data-rh=true property=og:description content=Descripción><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/19/API/Document><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/API/Document hreflang=en><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/API/Document hreflang=fr><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/API/Document hreflang=es><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/API/Document hreflang=ja><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/API/Document hreflang=pt><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/API/Document hreflang=x-default><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><link rel=stylesheet href=/docs/es/assets/css/styles.4aaeeab1.css><script src=/docs/es/assets/js/main.5c9b85c5.js defer></script><script src=/docs/es/assets/js/runtime~main.40a5f7ce.js defer></script><body class=navigation-with-keyboard><script>!function(){var t,e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t=null!==e?e:"light",document.documentElement.setAttribute("data-theme",t)}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div role=region aria-label="Saltar al contenido principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar al contenido principal</a></div><nav aria-label=Main class="navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class=navbar__items><button aria-label="Alternar la barra de navegación" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/es/><div class=navbar__logo><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Documentación 4D</b></a></div><div class="navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/es/19/API/Document>19</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/es/API/Document>20 R7 BETA</a><li><a class=dropdown__link href=/docs/es/20-R6/API/Document>20 R6</a><li><a class=dropdown__link href=/docs/es/20/API/Document>20</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/es/19/API/Document>19</a><li><a class=dropdown__link href=/docs/es/18/GettingStarted/installation>18</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_nlXk><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>Español</a><ul class=dropdown__menu><li><a href=/docs/19/API/Document rel="noopener noreferrer" class=dropdown__link lang=en>English</a><li><a href=/docs/fr/19/API/Document rel="noopener noreferrer" class=dropdown__link lang=fr>Français</a><li><a href=/docs/es/19/API/Document rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=es>Español</a><li><a href=/docs/ja/19/API/Document rel="noopener noreferrer" class=dropdown__link lang=ja>日本語</a><li><a href=/docs/pt/19/API/Document rel="noopener noreferrer" class=dropdown__link lang=pt>Português</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="Cambia entre el modo oscuro y el claro (actualmente modo Claro)" aria-label="Cambia entre el modo oscuro y el claro (actualmente modo Claro)" aria-live=polite aria-pressed=false><svg viewBox="0 0 24 24" width=24 height=24 class=lightToggleIcon_pyhR><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 class=darkToggleIcon_wfgR><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Buscar (Command+K)"><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 20 20" aria-hidden=true><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke=currentColor fill=none fill-rule=evenodd stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Buscar</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Volver arriba" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><span class="theme-doc-version-badge badge badge--secondary">Versión: 19</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">En esta página</button></div><div class="theme-doc-markdown markdown"><header><h1>Document Class</h1></header><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción>Descripción<a href=#descripción class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=creationdate>.creationDate<a href=#creationdate class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.creationDate</strong> : Date</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-1>Descripción<a href=#descripción-1 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.creationDate</code> devuelve The <code>.creationDate</code> property returns.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=creationtime>.creationTime<a href=#creationtime class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.creationTime</strong> : Time</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-2>Descripción<a href=#descripción-2 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.creationTime</code> devuelve la hora de creación del archivo (expresado como un número de segundos que comienza en 00:00).</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=exists>.exists<a href=#exists class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.exists</strong> : Boolean</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-3>Descripción<a href=#descripción-3 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.exists</code> devuelve true si el archivo existe en el disco, y false en caso contrario.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=extension>.extension<a href=#extension class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.extension</strong> : Text</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-4>Descripción<a href=#descripción-4 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.extension</code> devuelve la extensión del nombre del archivo (si la hay). Una extensión siempre comienza por ".". La propiedad devuelve una cadena vacía si el nombre del archivo no tiene extensión.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=fullname>.fullName<a href=#fullname class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.fullName</strong> : Text</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-5>Descripción<a href=#descripción-5 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.fullName</code> devuelve el nombre completo del archivo, incluida su extensión (si la hay).</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=hidden>.hidden<a href=#hidden class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.hidden</strong> : Boolean</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-6>Descripción<a href=#descripción-6 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.hidden</code> devuelve true si el archivo está definido como "oculto" a nivel del sistema, y false en caso contrario.</p>
+<p>Esta propiedad es <strong>lectura/escritura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=isalias>.isAlias<a href=#isalias class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.isAlias</strong> : Boolean</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-7>Descripción<a href=#descripción-7 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.isAlias</code> devuelve true si el archivo es un alias, un acceso directo o un enlace simbólico, y false en caso contrario.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=isfile>.isFile<a href=#isfile class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.isFile</strong> : Boolean</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-8>Descripción<a href=#descripción-8 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.isFile</code> devuelve The <code>.copyTo()</code> function.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=isfolder>.isFolder<a href=#isfolder class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.isFolder</strong> : Boolean</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-9>Descripción<a href=#descripción-9 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.isFolder</code> devuelve always true for a file.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=iswritable>.isWritable<a href=#iswritable class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.isWritable</strong> : Boolean</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-10>Descripción<a href=#descripción-10 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.isWritable</code> devuelve true si el archivo existe en el disco y es escribible.</p>
+<blockquote>
+<p>La propiedad verifica la capacidad de la aplicación 4D a escribir en el disco (derechos de acceso), no se basa únicamente en el atributo <em>writable</em> del archivo.</p>
+</blockquote>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<p><strong>Ejemplo</strong></p>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_biex><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain"> $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)</span><br></span><span class=token-line style=color:#393A34><span class="token plain"> If($myFile.isWritable)</span><br></span><span class=token-line style=color:#393A34><span class="token plain">    $myNewFile:=$myFile.setText("Added text")</span><br></span><span class=token-line style=color:#393A34><span class="token plain"> End if</span><br></span></code></pre><div class=buttonGroup__atx><button type=button aria-label="Copiar código al portapaples" title=Copiar class=clean-btn><span class=copyButtonIcons_eSgA aria-hidden=true><svg viewBox="0 0 24 24" class=copyButtonIcon_y97N><path fill=currentColor d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg><svg viewBox="0 0 24 24" class=copyButtonSuccessIcon_LjdS><path fill=currentColor d=M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z /></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=modificationdate>.modificationDate<a href=#modificationdate class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.modificationDate</strong> : Date</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-11>Descripción<a href=#descripción-11 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.modificationDate</code> devuelve The <code>.modificationDate</code> property returns.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=modificationtime>.modificationTime<a href=#modificationtime class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.modificationTime</strong> : Time</p>
+<h5 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-12>Descripción<a href=#descripción-12 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h5>
+<p>La propiedad <code>.modificationTime</code> devuelve The <code>.modificationTime</code> property returns (expresado como un número de segundos que comienza en 00:00).</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=name>.name<a href=#name class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.name</strong> : Text</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-13>Descripción<a href=#descripción-13 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.name</code> devuelve el nombre del archivo sin extensión (si lo hay).</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=original>.original<a href=#original class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-14>Descripción<a href=#descripción-14 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.original</code> devuelve el elemento destino para un alias, un acceso directo o un archivo de enlace simbólico. El elemento objetivo puede ser:</p>
+<ul>
+<li>un objeto File</li>
+<li>un objeto de la carpeta</li>
+</ul>
+<p>Para los archivos sin alias, la propiedad devuelve el mismo objeto File que el archivo.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=parent>.parent<a href=#parent class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.parent</strong> : 4D.Folder</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-15>Descripción<a href=#descripción-15 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.parent</code> devuelve The <code>.parent</code> property returns. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=path>.path<a href=#path class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.path</strong> : Text</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-16>Descripción<a href=#descripción-16 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.path</code> devuelve The <code>.path</code> property returns. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=platformpath>.platformPath<a href=#platformpath class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.platformPath</strong> : Text</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-17>Descripción<a href=#descripción-17 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.platformPath</code> devuelve The <code>.platformPath</code> property returns.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=size>.size<a href=#size class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.size</strong> : Real</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-18>Descripción<a href=#descripción-18 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La propiedad <code>.size</code> devuelve el tamaño del archivo expresado en bytes. Si el archivo no existe en el disco, el tamaño es 0.</p>
+<p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=copyto>.copyTo()<a href=#copyto class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td>destinationFolder<td>4D.Folder<td style=text-align:center>-><td>Carpeta de destino<tr><td>newName<td>Text<td style=text-align:center>-><td>Nombre para la copia<tr><td>overwrite<td>Integer<td style=text-align:center>-><td><code>fk overwrite</code> para sustituir los elementos existentes<tr><td>Result<td>4D.File<td style=text-align:center>&lt;-<td>Archivo copiado</table>
+<p>|</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-19>Descripción<a href=#descripción-19 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La función <code>.copyTo()</code> The <code>.isFolder</code> property returns .</p>
+<p>La <em>destinationFolder</em> debe existir en el disco, de lo contrario se genera un error.</p>
+<p>Por defecto, el archivo se copia con el nombre del archivo original. Si desea cambiar el nombre de la copia, pase el nuevo nombre en el parámetro <em>newName</em>. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.</p>
+<p>Si ya existe un archivo con el mismo nombre en la <em>destinationFolder</em>, por defecto 4D genera un error. Puede pasar la constante <code>fk overwrite</code> en el parámetro <em>overwrite</em> para ignorar y sobrescribir el archivo existente</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td><code>fk overwrite</code><td>4<td>Sobrescribir los elementos existentes, si los hay</table>
+<p><strong>Valor devuelto</strong></p>
+<p>El objeto <code>File</code> copiado.</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=ejemplo>Ejemplo<a href=#ejemplo class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>Desea copiar un <em>archivo</em> imagen de la carpeta de documentos del usuario a la carpeta de la aplicación:</p>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_biex><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain">var $source; $copy : Object</span><br></span><span class=token-line style=color:#393A34><span class="token plain">$source:=Folder(fk documents folder).file("Pictures/photo.png")</span><br></span><span class=token-line style=color:#393A34><span class="token plain">$copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)</span><br></span></code></pre><div class=buttonGroup__atx><button type=button aria-label="Copiar código al portapaples" title=Copiar class=clean-btn><span class=copyButtonIcons_eSgA aria-hidden=true><svg viewBox="0 0 24 24" class=copyButtonIcon_y97N><path fill=currentColor d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg><svg viewBox="0 0 24 24" class=copyButtonSuccessIcon_LjdS><path fill=currentColor d=M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z /></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=getcontent>.getContent()<a href=#getcontent class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.getContent( )</strong> : Blob</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>Result<td>Blob<td>&lt;-<td>Contenido del archivo</table>
+<p>|</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-20>Descripción<a href=#descripción-20 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La función <code>.getContent()</code>  devuelve un <code>BLOB</code> que contiene todo el contenido de un archivo. .</p>
+<p><strong>Valor devuelto</strong></p>
+<p>Un <code>Blob</code>.</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=ejemplo-1>Ejemplo<a href=#ejemplo-1 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>Para guardar el contenido de un documento en un campo <code>BLOB</code>:</p>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_biex><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain"> var $vPath : Text</span><br></span><span class=token-line style=color:#393A34><span class="token plain"> $vPath:=Select document("";"*";"Select a document";0)</span><br></span><span class=token-line style=color:#393A34><span class="token plain"> If(OK=1) //Si se ha seleccionado un documento</span><br></span><span class=token-line style=color:#393A34><span class="token plain">    [aTable]aBlobField:=File($vPath;fk platform path).getContent()</span><br></span><span class=token-line style=color:#393A34><span class="token plain"> End if</span><br></span></code></pre><div class=buttonGroup__atx><button type=button aria-label="Copiar código al portapaples" title=Copiar class=clean-btn><span class=copyButtonIcons_eSgA aria-hidden=true><svg viewBox="0 0 24 24" class=copyButtonIcon_y97N><path fill=currentColor d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg><svg viewBox="0 0 24 24" class=copyButtonSuccessIcon_LjdS><path fill=currentColor d=M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z /></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=geticon>.getIcon()<a href=#geticon class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>size<td>Integer<td>-><td>Longitud del lado de la imagen devuelta (píxeles)<tr><td>Result<td>Picture<td>&lt;-<td>Icono</table>
+<p>|</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-21>Descripción<a href=#descripción-21 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La función <code>.getIcon()</code> devuelve el icono del archivo.</p>
+<p>El parámetro opcional <em>size</em> especifica las dimensiones en píxeles del icono devuelto. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".</p>
+<p>Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.</p>
+<p><strong>Valor devuelto</strong></p>
+<p>Icono de archivo <a href=/docs/es/19/Concepts/picture.html>picture</a>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gettext>.getText()<a href=#gettext class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
+</div></div></details>
+<p><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>charSetName<td>Text<td>-><td>Nombre del juego de caracteres<tr><td>charSetNum<td>Integer<td>-><td>Número del conjunto de caracteres<tr><td>breakMode<td>Integer<td>-><td>Modo de tratamiento de los saltos de línea<tr><td>Result<td>Text<td>&lt;-<td>Texto del documento</table>
+<p>|</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=descripción-22>Descripción<a href=#descripción-22 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>La función <code>.getText()</code> devuelve el contenido del archivo como texto .</p>
+<p>Opcionalmente, puede designar el conjunto de caracteres que se utilizará para leer el contenido. Puede pasar:</p>
+<ul>
+<li>en <em>charSetName</em>, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o "UTF-8"),</li>
+<li>o en <em>charSetNum</em>, el ID MIBEnum (número) del nombre del conjunto estándar.</li>
+</ul>
+<blockquote>
+<p>Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando <code>CONVERT FROM TEXT</code>.</p>
+</blockquote>
+<p>Si el documento contiene una marca de orden de bytes (BOM), 4D utiliza el conjunto de caracteres que ha establecido en lugar del especificado en <em>charSetName</em> o <em>charSetNum</em> (este parámetro se ignora entonces). Si el documento no contiene una BOM y si <em>charSetName</em> o <em>charSetNum</em> se omite, por defecto 4D utiliza el conjunto de caracteres "UTF-8".</p>
+<p>En <em>breakMode</em>, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea en el documento. Las siguientes constantes del tema "Documentos del sistema" están disponibles:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td><code>Document unchanged</code><td>0<td>Sin procesar<tr><td><code>Document with native format</code><td>1<td>(Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: CR (retorno de carro) en OS X, CRLF (retorno de carro + salto de línea) en Windows<tr><td><code>Document with CRLF</code><td>2<td>Los saltos de línea se convierten al formato de Windows: CRLF (retorno de carro + salto de línea)<tr><td><code>Document with CR</code><td>3<td>Los saltos de línea se convierten al formato OS X: CR (retorno de carro)<tr><td><code>Document with LF</code><td>4<td>Los saltos de línea se convierten al formato Unix: LF (salto de línea)</table>
+<p>Por defecto, cuando se omite el parámetro <em>breakMode</em>, los saltos de línea se procesan en modo nativo (1).</p>
+<p><strong>Valor devuelto</strong></p>
+<p>Texto del archivo.</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=ejemplo-2>Ejemplo<a href=#ejemplo-2 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado">​</a></h4>
+<p>Dado el siguiente documento de texto (los campos están separados por tabulaciones):</p>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_biex><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain">id name price vat</span><br></span><span class=token-line style=color:#393A34><span class="token plain">3 thé 1.06€ 19.6</span><br></span><span class=token-line style=color:#393A34><span class="token plain">2 café 1.05€ 19.6</span><br></span></code></pre><div class=buttonGroup__atx><button type=button aria-label="Copiar código al portapaples" title=Copiar class=clean-btn><span class=copyButtonIcons_eSgA aria-hidden=true><svg viewBox="0 0 24 24" class=copyButtonIcon_y97N><path fill=currentColor d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg><svg viewBox="0 0 24 24" class=copyButtonSuccessIcon_LjdS><path fill=currentColor d=M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z /></svg></span></button></div></div></div>
+<p>Cuando se ejecuta este código:</p>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_biex><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain"> $myFile:=Folder(fk documents folder).file("Billing.txt") //UTF-8 por defecto</span><br></span><span class=token-line style=color:#393A34><span class="token plain"> $txt:=$myFile.getText()</span><br></span></code></pre><div class=buttonGroup__atx><button type=button aria-label="Copiar código al portapaples" title=Copiar class=clean-btn><span class=copyButtonIcons_eSgA aria-hidden=true><svg viewBox="0 0 24 24" class=copyButtonIcon_y97N><path fill=currentColor d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg><svg viewBox="0 0 24 24" class=copyButtonSuccessIcon_LjdS><path fill=currentColor d=M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z /></svg></span></button></div></div></div>
+<p>... obtiene para <code>$txt</code>:</p>
+<p>"id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"</p>
+<p>con <code>\t</code> (tab) como separador y <code>\r\n</code> (CRLF) como delimitador de línea.</p>
+<p>Aquí hay otro ejemplo con el mismo archivo, pero con un delimitador de línea diferente:</p>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_biex><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain"> $txt:=$myFile.getText("UTF-8"; Document with LF)</span><br></span></code></pre><div class=buttonGroup__atx><button type=button aria-label="Copiar código al portapaples" title=Copiar class=clean-btn><span class=copyButtonIcons_eSgA aria-hidden=true><svg viewBox="0 0 24 24" class=copyButtonIcon_y97N><path fill=currentColor d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg><svg viewBox="0 0 24 24" class=copyButtonSuccessIcon_LjdS><path fill=currentColor d=M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z /></svg></span></button></div></div></div>
+<p>En este caso, el contenido de <code>$txt</code> es el siguiente:</p>
+<p>"id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"</p>
+<p>Esta vez se utiliza <code>\n</code> (LF) como delimitador de línea.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href="https://github.com/4d/docs/issues/new?title=Comment%20on%20API%2FDocument.md%20(19)&body=Please%20enter%20your%20comment%3A" target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Comente esta página</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Navegación de páginas de documentos"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#descripción class="table-of-contents__link toc-highlight">Descripción</a><li><a href=#creationdate class="table-of-contents__link toc-highlight">.creationDate</a><li><a href=#creationtime class="table-of-contents__link toc-highlight">.creationTime</a><li><a href=#exists class="table-of-contents__link toc-highlight">.exists</a><li><a href=#extension class="table-of-contents__link toc-highlight">.extension</a><li><a href=#fullname class="table-of-contents__link toc-highlight">.fullName</a><li><a href=#hidden class="table-of-contents__link toc-highlight">.hidden</a><li><a href=#isalias class="table-of-contents__link toc-highlight">.isAlias</a><li><a href=#isfile class="table-of-contents__link toc-highlight">.isFile</a><li><a href=#isfolder class="table-of-contents__link toc-highlight">.isFolder</a><li><a href=#iswritable class="table-of-contents__link toc-highlight">.isWritable</a><li><a href=#modificationdate class="table-of-contents__link toc-highlight">.modificationDate</a><li><a href=#modificationtime class="table-of-contents__link toc-highlight">.modificationTime</a><li><a href=#name class="table-of-contents__link toc-highlight">.name</a><li><a href=#original class="table-of-contents__link toc-highlight">.original</a><li><a href=#parent class="table-of-contents__link toc-highlight">.parent</a><li><a href=#path class="table-of-contents__link toc-highlight">.path</a><li><a href=#platformpath class="table-of-contents__link toc-highlight">.platformPath</a><li><a href=#size class="table-of-contents__link toc-highlight">.size</a><li><a href=#copyto class="table-of-contents__link toc-highlight">.copyTo()</a><li><a href=#getcontent class="table-of-contents__link toc-highlight">.getContent()</a><li><a href=#geticon class="table-of-contents__link toc-highlight">.getIcon()</a><li><a href=#gettext class="table-of-contents__link toc-highlight">.getText()</a></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class=footer__title>Comunidad</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://developer.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Centro de desarrollo 4D</a><li class=footer__item><a href=https://blog.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Blog</a><li class=footer__item><a href=https://discuss.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Forum</a><li class=footer__item><a href=https://facebook.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook</a><li class=footer__item><a href=https://twitter.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Twitter</a><li class=footer__item><a href=https://youtube.com/user/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Youtube</a><li class=footer__item><a href=https://github.com/4D target=_blank rel="noopener noreferrer" class=footer__link-item>Github</a></ul></div><div class="col footer__col"><div class=footer__title>Soporte</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://doc.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Doc Center (Donde todo empezó)</a><li class=footer__item><a href=https://kb.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Base de conocimientos</a><li class=footer__item><a href=https://us.4d.com/product-download/Feature-Release target=_blank rel="noopener noreferrer" class=footer__link-item>Descargas<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/resources target=_blank rel="noopener noreferrer" class=footer__link-item>Resources<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/4d-technical-support target=_blank rel="noopener noreferrer" class=footer__link-item>Obtener soporte<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a></ul></div><div class="col footer__col"><div class=footer__title>Empresa</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://us.4d.com/about-us target=_blank rel="noopener noreferrer" class=footer__link-item>Acerca de 4D<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/contact-us target=_blank rel="noopener noreferrer" class=footer__link-item>Contáctenos<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/4d-around-the-world target=_blank rel="noopener noreferrer" class=footer__link-item>4D en el mundo<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/Careers target=_blank rel="noopener noreferrer" class=footer__link-item>Careers<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>2024 4D SAS - Todos los derechos reservados</div></div></div></footer></div>

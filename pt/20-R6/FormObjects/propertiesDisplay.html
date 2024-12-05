@@ -1,0 +1,773 @@
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20-R6 docs-doc-page docs-doc-id-FormObjects/propertiesDisplay" data-has-hydrated=false><meta charset=UTF-8><meta name=generator content="Docusaurus v3.6.3"><title data-rh=true>Visualização | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width,initial-scale=1.0"><meta data-rh=true name=twitter:card content=summary_large_image><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/20-R6/FormObjects/propertiesDisplay><meta data-rh=true property=og:locale content=pt><meta data-rh=true property=og:locale:alternate content=en><meta data-rh=true property=og:locale:alternate content=fr><meta data-rh=true property=og:locale:alternate content=es><meta data-rh=true property=og:locale:alternate content=ja><meta data-rh=true name=docusaurus_locale content=pt><meta data-rh=true name=docsearch:language content=pt><meta data-rh=true name=docusaurus_version content=20-R6><meta data-rh=true name=docusaurus_tag content=docs-default-20-R6><meta data-rh=true name=docsearch:version content=20-R6><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20-R6><meta data-rh=true property=og:title content="Visualização | 4D Docs"><meta data-rh=true name=description content=---><meta data-rh=true property=og:description content=---><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/20-R6/FormObjects/propertiesDisplay><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20-R6/FormObjects/propertiesDisplay hreflang=en><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20-R6/FormObjects/propertiesDisplay hreflang=fr><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20-R6/FormObjects/propertiesDisplay hreflang=es><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20-R6/FormObjects/propertiesDisplay hreflang=ja><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20-R6/FormObjects/propertiesDisplay hreflang=pt><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20-R6/FormObjects/propertiesDisplay hreflang=x-default><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><link rel=stylesheet href=/docs/pt/assets/css/styles.4aaeeab1.css><script src=/docs/pt/assets/js/main.e2eede8d.js defer></script><script src=/docs/pt/assets/js/runtime~main.c43a4b4f.js defer></script><body class=navigation-with-keyboard><script>!function(){var t,e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t=null!==e?e:"light",document.documentElement.setAttribute("data-theme",t)}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class=navbar__items><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/20-R6/FormObjects/propertiesDisplay>20 R6</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/FormObjects/propertiesDisplay>20 R7 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/20-R6/FormObjects/propertiesDisplay>20 R6</a><li><a class=dropdown__link href=/docs/pt/20/FormObjects/propertiesDisplay>20</a><li><a class=dropdown__link href=/docs/pt/19/FormObjects/propertiesDisplay>19</a><li><a class=dropdown__link href=/docs/pt/18/FormObjects/propertiesDisplay>18</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_nlXk><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>Português</a><ul class=dropdown__menu><li><a href=/docs/20-R6/FormObjects/propertiesDisplay rel="noopener noreferrer" class=dropdown__link lang=en>English</a><li><a href=/docs/fr/20-R6/FormObjects/propertiesDisplay rel="noopener noreferrer" class=dropdown__link lang=fr>Français</a><li><a href=/docs/es/20-R6/FormObjects/propertiesDisplay rel="noopener noreferrer" class=dropdown__link lang=es>Español</a><li><a href=/docs/ja/20-R6/FormObjects/propertiesDisplay rel="noopener noreferrer" class=dropdown__link lang=ja>日本語</a><li><a href=/docs/pt/20-R6/FormObjects/propertiesDisplay rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=pt>Português</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="Alternar entre os modos escuro e claro (atualmente modo Claro)" aria-label="Alternar entre os modos escuro e claro (atualmente modo Claro)" aria-live=polite aria-pressed=false><svg viewBox="0 0 24 24" width=24 height=24 class=lightToggleIcon_pyhR><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 class=darkToggleIcon_wfgR><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Pesquisa (Command+K)"><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 20 20" aria-hidden=true><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke=currentColor fill=none fill-rule=evenodd stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Pesquisa</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Voltar ao topo" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/docs/pt/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"><b>Documentação 4D</b></a><nav aria-label="Barra lateral de documentos" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/docs/pt/20-R6/category/getting-started>Começando</a><button aria-label="Expandir a categoria 'Começando' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/docs/pt/20-R6/category/core-development>Desenvolvimento</a><button aria-label="Expandir a categoria 'Desenvolvimento' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/docs/pt/20-R6/category/administration>Administração</a><button aria-label="Expandir a categoria 'Administração' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/docs/pt/20-R6/Extensions/overview>Extensões</a><button aria-label="Expandir a categoria 'Extensões' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" href=/docs/pt/20-R6/category/web-applications>Aplicações Web</a><button aria-label="Expandir a categoria 'Aplicações Web' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--active" href=/docs/pt/20-R6/category/desktop-applications>Aplicações Desktop</a><button aria-label="Fechar categoria da barra lateral 'Aplicações Desktop'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul style=display:block;overflow:visible;height:auto class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/Desktop/clientServer>Cliente/Servidor</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" tabindex=0 href=/docs/pt/20-R6/category/access-rights>Direitos de acesso</a><button aria-label="Expandir a categoria 'Direitos de acesso' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--active" tabindex=0 href=/docs/pt/20-R6/FormEditor/forms>Formulários</a><button aria-label="Fechar categoria da barra lateral 'Formulários'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul style=display:block;overflow:visible;height:auto class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormEditor/stylesheets>Folhas de estilo</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormEditor/pictures>Imagens</a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" tabindex=0 href=/docs/pt/20-R6/FormEditor/overview>Editor de formulários</a><button aria-label="Expandir a categoria 'Editor de formulários' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" tabindex=0 href=/docs/pt/20-R6/FormEditor/jsonReference>Propriedades do formulário</a><button aria-label="Expandir a categoria 'Propriedades do formulário' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" tabindex=0 href=/docs/pt/20-R6/FormObjects/formObjectsOverview>Objectos formulário</a><button aria-label="Expandir a categoria 'Objectos formulário' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist menu__link--active" tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesReference>Propriedades dos objectos formulário</a><button aria-label="Fechar categoria da barra lateral 'Propriedades dos objectos formulário'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul style=display:block;overflow:visible;height:auto class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesAction>Ação</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesAnimation>Animação</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesAppearance>Aparência</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesBackgroundAndBorder>Fundo e margem</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesCoordinatesAndSizing>Coordenadas e dimensões</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesCrop>Crop</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesDataSource>Fonte de dados</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesDisplay>Visualização</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesEntry>Entrada</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesFooters>Rodapés</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesGridlines>Linhas de grelha</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesHeaders>Cabeçalhos</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesHelp>Ajuda</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesHierarchy>Hierarquia</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesListBox>List Box</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesObject>Objetos</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesPicture>Imagem</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesPlugIns>Plug-ins</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesPrint>Imprimir</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesRangeOfValues>Gama de valores</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesResizingOptions>Opções de redimensionamento</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesScale>Escala</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesSubform>Subformulário</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesText>Text</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesTextAndPicture>Texto e imagem</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/FormObjects/propertiesWebArea>Área Web</a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" tabindex=0 href=/docs/pt/20-R6/Events/overview>Eventos formulário</a><button aria-label="Expandir a categoria 'Eventos formulário' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="menu__link menu__link--sublist" tabindex=0 href=/docs/pt/20-R6/Menus/overview>Menus</a><button aria-label="Expandir a categoria 'Menus' da barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/Desktop/user-settings>Propriedades usuário</a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/20-R6/Desktop/building>Build application overview</a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a href=https://developer.4d.com/go-mobile/ target=_blank rel="noopener noreferrer" class="menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false>Aplicações móveis</a></div></ul></nav><button type=button title="Recolher a barra lateral" aria-label="Recolher a barra lateral" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Trilha de navegação"><ul class=breadcrumbs itemscope itemtype=https://schema.org/BreadcrumbList><li class=breadcrumbs__item><a aria-label="Página inicial" class=breadcrumbs__link href=/docs/pt/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li itemscope itemprop=itemListElement itemtype=https://schema.org/ListItem class=breadcrumbs__item><a class=breadcrumbs__link itemprop=item href=/docs/pt/20-R6/category/desktop-applications><span itemprop=name>Aplicações Desktop</span></a><meta itemprop=position content=1><li itemscope itemprop=itemListElement itemtype=https://schema.org/ListItem class=breadcrumbs__item><a class=breadcrumbs__link itemprop=item href=/docs/pt/20-R6/FormEditor/forms><span itemprop=name>Formulários</span></a><meta itemprop=position content=2><li itemscope itemprop=itemListElement itemtype=https://schema.org/ListItem class=breadcrumbs__item><a class=breadcrumbs__link itemprop=item href=/docs/pt/20-R6/FormObjects/propertiesReference><span itemprop=name>Propriedades dos objectos formulário</span></a><meta itemprop=position content=3><li itemscope itemprop=itemListElement itemtype=https://schema.org/ListItem class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link itemprop=name>Visualização</span><meta itemprop=position content=4></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Versão: 20 R6</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">Nesta página</button></div><div class="theme-doc-markdown markdown"><header><h1>Visualização</h1></header><hr>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formato-alfa>Formato Alfa<a href=#formato-alfa class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2>
+<p>Os formatos alfa controlam a forma como os campos alfanuméricos e variáveis aparecem quando exibidos ou impressos. Segue uma lista de formatos fornecidos para campos alfanuméricos:</p>
+<p><img decoding=async loading=lazy src=data:image/png;base64,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 width=155 height=98 class=img_ev3q></p>
+<p>Pode escolher um formato desta lista ou utilizar qualquer formato personalizado. A lista padrão contém formatos para alguns dos campos alfa mais comuns que requerem formatos: números de telefone dos EUA (distância local e interurbano), Números de segurança social e cep americano. Você também pode inserir um nome de formato personalizado definido no editor Filtros e formatos da caixa de ferramentas. Neste caso, o formato não pode ser modificado nas propriedades do objeto.
+Todos os formatos ou filtros personalizados que você tiver criado estarão automaticamente disponíveis, precedidos por uma barra vertical (|).</p>
+<p>O sinal de número (#) é o espaço reservado para um formato de exibição alfanumérico. Você pode incluir os traços, hífens, espaços e quaisquer outros sinais de pontuação apropriados que deseja exibir. Você usa os sinais de pontuação desejados e o sinal de número para cada caractere que quiser exibir.</p>
+<p>Por exemplo, considere um número de peça com um formato como "RB-1762-1".</p>
+<p>O formato alfa seria:</p>
+<p>##-####-#</p>
+<p>Quando o usuário introduz "RB17621", o campo é apresentado:</p>
+<p>RB-1762-1</p>
+<p>O campo contém efetivamente "RB17621".</p>
+<p>Se o usuário inserir mais caracteres do que o formato permitir, 4D exibe os últimos caracteres. Por exemplo, se o formato for:</p>
+<p>(#######)</p>
+<p>e o usuário introduzir "proportion", o campo é apresentado:</p>
+<p>(portion)</p>
+<p>O campo contém efetivamente "proportion". 4D aceita e armazena a entrada inteira, independentemente do formato de exibição. Não se perde nenhuma informação.</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json>Gramática JSON<a href=#gramática-json class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>textFormat<td>string<td>"####", "(#####) ### ####", "### ### ### ####", "#### ## ####", "00000", formatos personalizados</table>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados>Objectos suportados<a href=#objectos-suportados class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+<p><a href=/docs/pt/20-R6/FormObjects/dropdownListOverview>Lista desplegable</a> - <a href=/docs/pt/20-R6/FormObjects/comboBoxOverview>Combo Box</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>Columna List Box</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>Pie List Box</a></p>
+<hr>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formato-de-data>Formato de Data<a href=#formato-de-data class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2>
+<p>Os formatos de data controlam como as datas aparecem quando são apresentadas ou impressas. Para a entrada de dados, as datas são inseridas no formato MM/DD/AAAA, independentemente do formato de exibição escolhido.</p>
+<p>Os formatos de exibição de datas podem ser definidos:</p>
+<ul>
+<li>usando um formato 4D incorporado,</li>
+<li>usando um padrão personalizado.</li>
+</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formatos-incorporados>Formatos incorporados<a href=#formatos-incorporados class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>A tabela seguinte apresenta as opções disponíveis:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome do formato<th>Cadeia JSON<th>Exemplo (sistema americano)<tbody><tr><td>System date short<td>systemShort (padrão)<td>03/25/20<tr><td>System date abbreviated <em>(1)</em><td>systemMedium<td>Wed, Mar 25, 2020<tr><td>System date long<td>systemLong<td>Quarta-feira, 25 de março de 2020<tr><td>RFC 822<td>rfc822<td>Tue, 25 Mar 2020 22:00:00 GMT<tr><td>Short Century<td>shortCentury<td>03/25/20 pero 04/25/2032 <em>(2)</em><tr><td>Internal date long<td>long<td>March 25, 2020<tr><td>Fecha interna abreviada <em>(1)</em><td>abbreviated<td>Mar 25, 2020<tr><td>Internal date short<td>short<td>03/25/2020<tr><td>ISO Date Time <em>(3)</em><td>iso8601<td>2020-03-25T00:00:00</table>
+<p><em>(1)</em> Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidade só se aplica às versões francesas de 4D.</p>
+<p><em>(2)</em> El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando <a href=https://doc.4d.com/4dv20/help/command/en/page392.html target=_blank rel="noopener noreferrer">SET DEFAULT CENTURY</a>.</p>
+<p><em>(3)</em> El formato <code>ISO Date Time</code> corresponde a la norma XML de representación de fecha y hora (ISO8601). Seu principal objetivo é ser usado na importação/exportação de dados em formato XML e em serviços da Web.</p>
+<blockquote>
+<p>Independentemente do formato de exibição, se o ano for inserido com dois dígitos, o 4D assume que o século é o 21º se o ano pertencer ao intervalo (00;29) e o 20º se pertencer ao intervalo (30;99). Esta es la configuración por defecto, pero puede modificarse utilizando el comando <a href=https://doc.4d.com/4dv20/help/command/en/page392.html target=_blank rel="noopener noreferrer">SET DEFAULT CENTURY</a>.</p>
+</blockquote>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formato-personalizado>Formato personalizado<a href=#formato-personalizado class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Customized date formats can be built using several patterns described in the <a href=/docs/pt/20-R6/Project/date-time-formats><strong>Date and Time Formats</strong></a> page. Por exemplo:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Padrão<th>Exemplo (sistema americano)<tbody><tr><td>"eeee, dd"<td>Wednesday, 29<tr><td>"'Dia' #D 'do ano'"<td>Dia #333 do ano</table>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-1>Gramática JSON<a href=#gramática-json-1 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>dateFormat<td>string<td><li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Custom formats: any format built using a <a href=/docs/pt/20-R6/Project/date-time-formats>supported pattern</a> + " blankIfNull"</li></table>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>blankIfNull</div><div class=admonitionContent_BuS1><p>Por padrão, uma data nula é exibida com zeros, por exemplo, 00/00/00. Com a opção "blankIfNull", uma data nula é exibida como uma área vazia. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado. Por exemplo: "systemShort blankIfNull" ou "ee dd LL blankIfNull".</div></div>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-1>Objectos suportados<a href=#objectos-suportados-1 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+<p><a href=/docs/pt/20-R6/FormObjects/comboBoxOverview>Combo Box</a> - <a href=/docs/pt/20-R6/FormObjects/dropdownListOverview>Drop-down List</a> - <a href=/docs/pt/20-R6/FormObjects/inputOverview>Input</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>List Box Column</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>List Box Footer</a></p>
+<hr>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formato-do-número>Formato do número<a href=#formato-do-número class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2>
+<blockquote>
+<p>Os campos de número incluem os tipos Integer, Long integer, Integer 64 bits, Real e Float.</p>
+</blockquote>
+<p>Os formatos de números controlam a forma como os números aparecem quando exibidos ou impressos. Para a entrada de dados, você insere apenas os números (incluindo um ponto decimal ou sinal de menos, se necessário), independentemente do formato de exibição escolhido.</p>
+<p>4D fornece vários formatos de números padrão.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=marcadores>Marcadores<a href=#marcadores class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Em cada um dos formatos de exibição de números, o sinal de número (#), o zero (0), o acento circunflexo (^) e o asterisco (*) são usados como espaços reservados. Você cria seus próprios formatos de números usando um espaço reservado para cada dígito que espera exibir.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Placeholder (valores provisórios)<th>Efeito do zero à esquerda ou à direita<tbody><tr><td>#<td>Não apresenta nada<tr><td>0<td>Mostra 0<tr><td>^<td>Apresenta um espaço (1)<tr><td>*<td>Apresenta um asterisco</table>
+<p>(1) O acento circunflexo (^) gera um caractere de espaço que ocupa a mesma largura de um dígito na maioria das fontes.</p>
+<p>Por exemplo, se quiser exibir números de três dígitos, pode usar o formato ####. Si el usuario introduce más dígitos de los que permite el formato, 4D muestra &lt;&lt;&lt; en el campo para indicar que se han introducido más dígitos de los especificados en el formato de visualización.</p>
+<p>Se o usuário digitar um número negativo, o caractere mais à esquerda será exibido como um sinal de menos (a menos que um formato de exibição negativo tenha sido especificado). Si ##0 es el formato, menos 26 se muestra como -26 y menos 260 se muestra como &lt;&lt;&lt; porque el signo menos ocupa un marcador de posición y sólo hay tres marcadores de posición.</p>
+<blockquote>
+<p>Independentemente do formato de exibição, 4D aceita e armazena o número inserido no campo. Não se perde nenhuma informação.</p>
+</blockquote>
+<p>Cada caractere de espaço reservado tem um efeito diferente na exibição de zeros à esquerda ou à direita. Um zero à esquerda é um zero que começa um número antes do ponto decimal; um zero à direita é um zero que termina um número após o ponto decimal.</p>
+<p>Suponha que utiliza o formato ##0 para mostrar três dígitos. Se o utilizador não introduzir nada no campo, o campo apresenta 0. Se o usuário introduzir 26, o campo apresenta 26.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=caracteres-separadores>Caracteres separadores<a href=#caracteres-separadores class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Os formatos de exibição numérica (exceto para notações científicas) são automaticamente baseados nos parâmetros do sistema regional. 4D substitui os caracteres "." e ",", respectivamente, pelo separador decimal e pelo separador de milhar definido no sistema operacional. O ponto e a vírgula são, portanto, considerados caracteres de espaço reservado, seguindo o exemplo de 0 ou #.</p>
+<blockquote>
+<p>No Windows, ao usar a tecla de separação decimal do teclado numérico, 4D faz uma distinção dependendo do tipo de campo onde o cursor está localizado:</p>
+<ul>
+<li>em um campo do tipo Real, o uso dessa chave inserirá o separador decimal definido no sistema,</li>
+<li>em qualquer outro tipo de campo, essa chave insere o caractere associado à chave, geralmente um ponto (.) ou vírgula (,).</li>
+</ul>
+</blockquote>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=pontos-decimais-e-outros-caracteres-de-visualização>Pontos decimais e outros caracteres de visualização<a href=#pontos-decimais-e-outros-caracteres-de-visualização class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>É possível utilizar um ponto decimal num formato de apresentação de números. Se quiser que o decimal seja exibido independentemente de o usuário digitá-lo, ele deverá ser colocado entre zeros.</p>
+<p>Pode utilizar quaisquer outros caracteres no formato. Quando usados isoladamente, ou colocados antes ou depois de espaços reservados, os caracteres sempre aparecem. Por exemplo, se utilizar o seguinte formato:</p>
+<p>$##0</p>
+<p>um cifrão sempre aparece porque é colocado antes dos espaços reservados.</p>
+<p>Se os caracteres forem colocados entre espaços reservados, eles aparecerão somente se os dígitos forem exibidos em ambos os lados. Por exemplo, se definir o formato:</p>
+<p>###.##0</p>
+<p>o ponto só aparece se o usuário introduzir pelo menos quatro dígitos.</p>
+<p>Os espaços são tratados como caracteres nos formatos de apresentação de números.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formatos-para-positivo-negativo-e-zero>Formatos para positivo, negativo e zero<a href=#formatos-para-positivo-negativo-e-zero class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Um formato de exibição de número pode ter até três partes, o que permite especificar formatos de exibição para valores positivos, negativos e zero. Você especifica as três partes separando-as com ponto e vírgula, conforme mostrado abaixo:</p>
+<p>Positivo;Negativo;Zero</p>
+<p>Não é necessário especificar as três partes do formato. Se você usar apenas uma parte, o 4D a usará para todos os números, colocando um sinal de menos na frente dos números negativos.</p>
+<p>Se você usar duas partes, 4D usará a primeira parte para números positivos e zero e a segunda parte para números negativos. Se você usar três partes, a primeira será para números positivos, a segunda para números negativos e a terceira para zero.</p>
+<blockquote>
+<p>A terceira parte (zero) não é interpretada e não aceita caracteres de substituição. Si introduce <code>###;###;#</code>, el valor cero se mostrará "#". Por outras palavras, o que é realmente introduzido é o que será apresentado para o valor zero.</p>
+</blockquote>
+<p>Aqui está um exemplo de um formato de exibição de números que mostra cifrões e vírgulas, coloca valores negativos entre parênteses e não exibe zeros:</p>
+<p>$###,##0.00;($###,##0.00);</p>
+<p>Observe que a presença do segundo ponto e vírgula instrui o 4D a usar nothing para exibir zero. O formato a seguir é semelhante, exceto pelo fato de que a ausência do segundo ponto e vírgula instrui o 4D a usar o formato de número positivo para zero:</p>
+<p>$###,##0.00;($###,##0.00)</p>
+<p>Neste caso, a indicação de zero seria $0,00.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=notação-científica>Notação científica<a href=#notação-científica class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Si desea mostrar números en notación científica, utilice el <strong>ampersand</strong> (&) seguido de un número para especificar el número de dígitos que desea mostrar. Por exemplo, se o formato for:</p>
+<p>&3</p>
+<p>apresentaria 759,62 como:</p>
+<p>7.60e+2</p>
+<p>O formato de notação científica é o único formato que arredonda automaticamente o número exibido. Observe no exemplo acima que o número é arredondado para 7,60e+2 em vez de ser truncado para 7,59e+2.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formatos-hexadecimais>Formatos hexadecimais<a href=#formatos-hexadecimais class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Você pode exibir um número em hexadecimal usando os seguintes formatos de exibição:</p>
+<ul>
+<li><code>&x</code>: This format displays hexadecimal numbers using the “0xFFFF” format.</li>
+<li><code>&$</code>: This format displays hexadecimal numbers using the “$FFFF” format.</li>
+</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=notação-xml>Notação XML<a href=#notação-xml class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>The <code>&xml</code> format will make a number compliant with XML standard rules. Em particular, o caractere separador decimal será um ponto "." em todos os casos, independentemente das configurações do sistema.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=mostrar-um-número-como-hora>Mostrar um número como hora<a href=#mostrar-um-número-como-hora class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Puede visualizar un número como una hora (con un formato de hora) utilizando <code>&/</code> seguido de un dígito. Hora é determinada calculando-se o número de segundos desde a meia-noite que o valor representa. O dígito no formato corresponde à ordem em que o formato da hora aparece no menu pendente Formato.</p>
+<p>Por exemplo, se o formato for:</p>
+<p>&/5</p>
+<p>corresponde ao 5.º formato de hora no menu pop-up, especificamente a hora AM/PM. Um campo numérico com este formato apresentaria 25000 como:</p>
+<p>6:56 AM</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=exemplos>Exemplos<a href=#exemplos class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>A tabela a seguir mostra como os diferentes formatos afetam a exibição dos números. As três colunas - Positivo, Negativo e Zero - mostram como 1.234,50, -1.234,50 e 0 seriam exibidos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Formato Introduzido<th>Positivo<th>Negativo<th>Zero<tbody><tr><td>###<td>&lt;&lt;&lt;<td>&lt;&lt;&lt;<td><tr><td>####<td>1234<td>&lt;&lt;&lt;&lt;<td><tr><td>#######<td>1234<td>-1234<td><tr><td>#####.##<td>1234.5<td>-1234.5<td><tr><td>####0.00<td>1234.50<td>-1234.50<td>0.00<tr><td>#####0<td>1234<td>-1234<td>0<tr><td>+#####0;–#####0;0<td>+1234<td>-1234<td>0<tr><td>#####0DB;#####0CR;0<td>1234DB<td>1234CR<td>0<tr><td>#####0;(#####0)<td>1234<td>(1234)<td>0<tr><td>###,##0<td>1,234<td>-1,234<td>0<tr><td>##,##0.00<td>1,234.50<td>-1,234.50<td>0.00<tr><td>^^^^^^^<td>1234<td>-1234<td><tr><td>^^^^^^0<td>1234<td>-1234<td>0<tr><td>^^^,^^0<td>1,234<td>-1,234<td>0<tr><td>^^,^^0.00<td>1,234.50<td>-1,234.50<td>0.00<tr><td>*******<td>***1234<td>**-1234<td>*******<tr><td>******0<td>***1234<td>**-1234<td>******0<tr><td>***,**0<td>**1,234<td>*-1,234<td>******0<tr><td>**,**0.00<td>*1,234.50<td>-1,234.50<td>*****0.00<tr><td>$*,**0.00;–$*,**0.00<td>$1,234.50<td>-$1,234.50<td>$****0.00<tr><td>$^^^^0<td>$ 1234<td>$–1234<td>$    0<tr><td>$^^^0;–$^^^0<td>$1234<td>–$1234<td>$   0<tr><td>$^^^0 ;($^^^0)<td>$1234<td>($1234)<td>$   0<tr><td>$^,^^0.00 ;($^,^^0.00)<td>$1,234.50<td>($1,234.50)<td>$    0.00<tr><td>&2<td>1.2e+3<td>-1.2e+3<td>0.0e+0<tr><td>&5<td>1.23450e+3<td>-1.23450e+3<td>0.00000<tr><td>&xml<td>1234.5<td>-1234.5<td>0</table>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-2>Gramática JSON<a href=#gramática-json-2 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>numberFormat<td>string<td>Números (incluindo um ponto decimal ou sinal de menos, se necessário)</table>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-2>Objectos suportados<a href=#objectos-suportados-2 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+<p><a href=/docs/pt/20-R6/FormObjects/comboBoxOverview>Combo Box</a> - <a href=/docs/pt/20-R6/FormObjects/dropdownListOverview>Drop-down List</a> - <a href=/docs/pt/20-R6/FormObjects/inputOverview>Input</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>List Box Column</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>List Box Footer</a> - <a href=/docs/pt/20-R6/FormObjects/progressIndicator>Progress Indicators</a></p>
+<hr>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formato-imagem>Formato imagem<a href=#formato-imagem class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2>
+<p>Os formatos imagem controlam a aparência das imagens quando exibidas ou impressas. Para a entrada de dados, o usuário sempre insere imagens colando-as da área de transferência ou arrastando e soltando, independentemente do formato de exibição.</p>
+<p>As opções de truncagem e escala não afetam a imagem em si. O conteúdo de um campo Imagem é sempre guardado. Somente a exibição no formulário específico é afetada pelo formato de exibição de imagem.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=escalado-para-caber>Escalado para caber<a href=#escalado-para-caber class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p><code>Gramática JSON: "scaled"</code></p>
+<p>O formato <strong>Scaled to fit</strong> faz com que o 4D redimensione a imagem para se ajustar às dimensões da área.</p>
+<p><img decoding=async loading=lazy src=data:image/png;base64,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 width=212 height=198 class=img_ev3q></p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=truncado-centrado-e-não-centrado>Truncado (centrado e não centrado)<a href=#truncado-centrado-e-não-centrado class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p><code>Gramática JSON: "truncatedCenter" / "truncatedTopLeft"</code></p>
+<p>El formato <strong>Truncado (centrado)</strong> hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D crops equally from each edge and from the top and bottom.</p>
+<p>O formato <strong>Truncado (não centrado)</strong> faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.</p>
+<blockquote>
+<p>Quando o formato da imagem for <strong>Truncado (não centrado)</strong>, é possível adicionar barras de deslocamento à área de entrada.</p>
+</blockquote>
+<p><img decoding=async loading=lazy src=/docs/pt/assets/images/property_pictureFormat_Truncated-aebc828eb036b3aa77fc5edb90070ac5.png width=429 height=221 class=img_ev3q></p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=escalado-para-caber-proporcional-e-escalado-para-caber-centrado-proporcional>Escalado para caber (proporcional) e Escalado para caber centrado (proporcional)<a href=#escalado-para-caber-proporcional-e-escalado-para-caber-centrado-proporcional class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p><code>Gramática JSON: "proportionalTopLeft" / "proportionalCenter"</code></p>
+<p>Si utiliza <strong>Escala de ajuste (proporcional)</strong>, la imagen se reduce proporcionalmente en todos sus lados para ajustarse al área creada para la imagen. La opción <strong>Escalado para ajustar centrado (proporcional)</strong> hace lo mismo, pero centra la imagen en el área imagen.</p>
+<p>Se a imagem for menor do que a área definida no formulário, ela não será modificada. Se a imagem for maior do que a área definida no formulário, ela será reduzida proporcionalmente. Uma vez que é proporcionalmente reduzida, a imagem não aparece distorcida.</p>
+<p>Si ha aplicado el formato <strong>Escalado para ajustar centrado (proporcional)</strong>, la imagen también se centra en el área:</p>
+<p><img decoding=async loading=lazy src=/docs/pt/assets/images/property_pictureFormat_ScaledProportional-63a1c37e7cf9fe2375b256fcf21a4d74.png width=447 height=214 class=img_ev3q></p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=replicado>Replicado<a href=#replicado class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p><code>Gramática JSON: "tiled"</code></p>
+<p>When the area that contains a picture with the <strong>Replicated</strong> format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.</p>
+<p><img decoding=async loading=lazy src=/docs/pt/assets/images/property_pictureFormat_Replicated-8497c171f9ede501e533a75837b762e5.png width=663 height=273 class=img_ev3q></p>
+<p>Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem é truncada (não centrada).</p>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-3>Gramática JSON<a href=#gramática-json-3 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>pictureFormat<td>string<td>"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter"</table>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-3>Objectos suportados<a href=#objectos-suportados-3 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+<p><a href=/docs/pt/20-R6/FormObjects/inputOverview>Entrada</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>Columna List Box</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>Pie List Box</a></p>
+<hr>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formato-hora>Formato Hora<a href=#formato-hora class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2>
+<p>Os formatos de hora controlam a forma como as horas aparecem quando são apresentadas ou impressas. Para a entrada de dados, você insere as horas no formato HH:MM:SS de 24 horas ou no formato AM/PM de 12 horas HH:MM:SS, independentemente do formato de exibição escolhido.</p>
+<p>Os formatos de exibição de horas podem ser definidos:</p>
+<ul>
+<li>usando um formato 4D incorporado,</li>
+<li>usando um padrão personalizado.</li>
+</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formatos-incorporados-1>Formatos incorporados<a href=#formatos-incorporados-1 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>A tabela abaixo mostra os formatos de exibição do campo Hora e dá exemplos:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome do formato<th>Cadeia JSON<th>Comentários<th>Exemplo para 04:30:25<tbody><tr><td>HH:MM:SS<td>hh_mm_ss<td><td>04:30:25<tr><td>HH:MM<td>hh_mm<td><td>04:30<tr><td>Hour Min Sec<td>HH_MM_SS<td><td>4 horas 30 minutos 25 segundos<tr><td>Hour Min<td>HH_MM<td><td>4 horas 30 minutos<tr><td>HH:MM AM/PM<td>hh_mm_am<td><td>4:30 a.m.<tr><td>MM SS<td>mm_ss<td>Hora expressa como uma duração de 00:00:00<td>270:25<tr><td>Min Sec<td>MM_SS<td>Hora expressa como uma duração de 00:00:00<td>270 minutos 25 segundos<tr><td>ISO Date Time<td>iso8601<td>Corresponde ao padrão XML para representar dados relacionados ao tempo. Ele destina-se principalmente a ser usado ao importar/exportar dados em formato XML<td>0000-00-00T04:30:25<tr><td>System time short<td>- (o padrão)<td>Formato de hora standard definido no sistema<td>04:30:25<tr><td>System time long abbreviated<td>systemMedium<td>apenas macOS: formato de hora abreviado definido no sistema. <br>Windows: esse formato é o mesmo que o formato curto da hora do sistema<td>4•30•25 AM<tr><td>System time long<td>systemLong<td>apenas macOS: formato de hora longa definido no sistema. <br>Windows: esse formato é o mesmo que o formato curto da hora do sistema<td>4:30:25 AM HNEC</table>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=formato-personalizado-1>Formato personalizado<a href=#formato-personalizado-1 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h3>
+<p>Formatos de hora personalizados podem ser construídos usando vários padrões descritos na página <a href=/docs/pt/20-R6/Project/date-time-formats><strong>Formatos de Data e Hora</strong></a>. Por exemplo:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Padrão<th>Exemplo (sistema americano)<tbody><tr><td>"HH 'horas' mm 'minutos' ss 'segundos'"<td>13 horas 25 minutos 12 segundos<tr><td>hh:mm a<td>01:25: PM</table>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-4>Gramática JSON<a href=#gramática-json-4 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>timeFormat<td>string<td><li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS" + " blankIfNull"</li><li>Custom formats: any format built using <a href=/docs/pt/20-R6/Project/date-time-formats>a supported pattern</a> + "blankIfNull"</li></table>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>blankIfNull</div><div class=admonitionContent_BuS1><p>Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a opção "blankIfNull", uma hora nula é exibida como uma área vazia. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado. Ex: "MM_SS blankIfNull" ou "hh:mm aa blankIfNull"<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-4>Objectos suportados<a href=#objectos-suportados-4 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/comboBoxOverview>Combo Box</a> - <a href=/docs/pt/20-R6/FormObjects/dropdownListOverview>Drop-down List</a> - <a href=/docs/pt/20-R6/FormObjects/inputOverview>Input</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>List Box Column</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>List Box Footer</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=texto-quando-falsetexto-quando-true>Texto quando False/Texto quando True<a href=#texto-quando-falsetexto-quando-true class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><p>Cuando una <a href=/docs/pt/20-R6/FormObjects/propertiesObject#expression-type>expresión booleana</a> se muestra como:<ul>
+<li>un texto en un <a href=/docs/pt/20-R6/FormObjects/inputOverview>objeto de entrada</a></li>
+<li>un "popup"  en una <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>columna del list box</a>,</li>
+</ul><p>... pode selecionar o texto a apresentar para cada valor:<ul>
+<li><strong>Text cuando True</strong> - el texto que se mostrará cuando el valor sea "true"</li>
+<li><strong>Text cuando False</strong> - el texto que se mostrará cuando el valor sea "false"</li>
+</ul><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-5>Gramática JSON<a href=#gramática-json-5 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>booleanFormat<td>string<td>"&lt;<em>textWhenTrue</em>>;&lt;<em>textWhenFalse</em>>", por ejemplo "Assigned;Unassigned"</table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-5>Objectos suportados<a href=#objectos-suportados-5 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>Columna List Box</a> - <a href=/docs/pt/20-R6/FormObjects/inputOverview>Entrada</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=tipo-de-exibição>Tipo de exibição<a href=#tipo-de-exibição class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><p>Utilizado para associar um formato de visualização aos dados da coluna. Os formatos fornecidos dependem do tipo de variável (caixa de listagem do tipo matriz) ou do tipo de dados/campo (caixas de listagem do tipo seleção e coleção).<p>As colunas booleanas e numéricas (numéricas ou inteiras) podem ser exibidas como caixas de seleção. En este caso, se puede definir la propiedad <a href=#title>Título</a>.<p>As colunas booleanas também podem ser apresentadas como menus pop-up. In this case, the <a href=#text-when-falsetext-when-true>Text when False and Text when True</a> properties must be defined.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-6>Gramática JSON<a href=#gramática-json-6 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>controlType<td>string<td><li><strong>colunas de números</strong>: "automatic" (padrão) ou "checkbox"</li><li><strong>colunas booleanas</strong>: "checkbox" (padrão) ou "popup"</li></table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-6>Objectos suportados<a href=#objectos-suportados-6 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>Coluna de list box</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=não-renderizado>Não renderizado<a href=#não-renderizado class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><p>Quando essa propriedade está ativada, o objeto não é desenhado no formulário, mas ainda pode ser ativado.<p>Em particular, esta propriedade permite implementar botões "invisíveis".  Os botões não renderizados podem ser colocados em cima de objetos gráficos. Eles permanecem invisíveis e não são realçados quando clicados, mas sua ação é acionada quando são clicados.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-7>Gramática JSON<a href=#gramática-json-7 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>display<td>boolean<td>true, false</table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-7>Objectos suportados<a href=#objectos-suportados-7 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/buttonOverview>Botón</a> - <a href=/docs/pt/20-R6/FormObjects/dropdownListOverview>Lista desplegable</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=três-estados>Três Estados<a href=#três-estados class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><p>Permite que um objeto de caixa de verificação aceite um terceiro estado. A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=caixas-de-verificação-de-três-estados-em-colunas-list-box>Caixas de verificação de três estados em colunas list box<a href=#caixas-de-verificação-de-três-estados-em-colunas-list-box class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p>Las columnas de list box con un <a href=/docs/pt/20-R6/FormObjects/propertiesObject#expression-type>tipo de datos</a> numérico pueden mostrarse como casillas de verificación de tres estados. Se for selecionado, são apresentados os seguintes valores:<ul>
+<li>0 = caixa não assinalada,</li>
+<li>1 = caixa marcada,</li>
+<li>2 (o cualquier valor >0) = caja semi-marcada (tercer estado). Para a introdução de dados, este estado devolve o valor 2.</li>
+<li>-1 = caixa de seleção invisível,</li>
+<li>-2 = caixa desmarcada, não editável,</li>
+<li>-3 = caixa marcada, não pode ser introduzida,</li>
+<li>-4 = caixa semi-marcada, não editável</li>
+</ul><p>También en este caso, la propiedad <a href=#title>Título</a> está disponible para que se pueda introducir el título de la casilla de verificación.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-8>Gramática JSON<a href=#gramática-json-8 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>threeState<td>boolean<td>true, false</table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-8>Objectos suportados<a href=#objectos-suportados-8 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/checkboxOverview>Casilla de selección</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>Columna List Box</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=título>Título<a href=#título class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><p>Esta propriedade está disponível para uma coluna list box se:<ul>
+<li>el <a href=/docs/pt/20-R6/FormObjects/propertiesObject#expression-type>tipo de columna</a> es <strong>boolean</strong> y su <a href=/docs/pt/20-R6/FormObjects/propertiesDisplay#display-type>tipo de visualización</a> es "Casilla de selección"</li>
+<li>el <a href=/docs/pt/20-R6/FormObjects/propertiesObject#expression-type>tipo de columna</a> es <strong>número</strong> (numérico o entero) y su <a href=/docs/pt/20-R6/FormObjects/propertiesDisplay#display-type>tipo de visualización</a> es "Casilla de verificación de tres estados".</li>
+</ul><p>Nesse caso, o título da caixa de seleção pode ser inserido usando essa propriedade.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-9>Gramática JSON<a href=#gramática-json-9 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>controlTitle<td>string<td>Qualquer etiqueta personalizada para a caixa de verificação</table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-9>Objectos suportados<a href=#objectos-suportados-9 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>Coluna de list box</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=truncar-com-reticências>Truncar com reticências<a href=#truncar-com-reticências class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><p>Controla a exibição de valores quando as colunas da caixa de listagem são muito estreitas para mostrar todo o seu conteúdo.<p>Essa opção está disponível para colunas com qualquer tipo de conteúdo, exceto imagens e objetos.<ul>
+<li>Quando a propriedade está ativada (padrão), se o conteúdo de uma célula da caixa de listagem exceder a largura da coluna, ele será truncado e uma elipse será exibida:</li>
+</ul><p><img decoding=async loading=lazy src=/docs/pt/assets/images/property_truncate1-dbf59d677bb3844e714c62e1601b36bb.png width=137 height=144 class=img_ev3q><blockquote>
+<p>A posição das elipses depende do sistema operativo. No exemplo acima (Windows), ele é adicionado no lado direito do texto. No macOS, as reticências são adicionadas no meio do texto.</p>
+</blockquote><ul>
+<li>Quando a propriedade estiver desativada, se o conteúdo de uma célula exceder a largura da coluna, ele será simplesmente recortado, sem adição de reticências:</li>
+</ul><p><img decoding=async loading=lazy src=/docs/pt/assets/images/property_truncate2-94cc7275b3ba437584c83894df03c84f.png width=135 height=143 class=img_ev3q><p>A opção Truncar com reticências é ativada por padrão e pode ser especificada com caixas de listagem do tipo Matriz, Seleção ou Coleção.<blockquote>
+<p>Cuando se aplica a columnas de tipo Texto, la opción Truncar con elipsis sólo está disponible si la opción <a href=#wordwrap>Ajustar texto</a> no está seleccionada. Quando a propriedade Wordwrap é selecionada, o conteúdo extra nas células é tratado por meio dos recursos de quebra de palavras, de modo que a propriedade Truncar com reticências não está disponível.</p>
+</blockquote><p>La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; sin embargo, el resultado difiere en función del <a href=#display-type>formato de celda</a>:<ul>
+<li>Para formatos booleanos do tipo pop-up, as etiquetas são truncadas com uma elipse,</li>
+<li>Para formatos booleanos do tipo caixa de verificação, as etiquetas são sempre cortadas.</li>
+</ul><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-10>Gramática JSON<a href=#gramática-json-10 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>truncateMode<td>string<td>"withEllipsis", "none"</table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-10>Objectos suportados<a href=#objectos-suportados-10 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>List Box Column</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>List Box Footer</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=visibilidade>Visibilidade<a href=#visibilidade class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><p>Esta propriedade permite ocultar o objeto no ambiente Aplicação.<p>É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. Nesse contexto, muitas vezes é necessário ocultar objetos programaticamente durante o evento <code>On load</code> do formulário e, depois, exibir determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. The developer can then program their display using the <a href=https://doc.4d.com/4dv19/help/command/en/page603.html target=_blank rel="noopener noreferrer"><code>OBJECT SET VISIBLE</code></a> command when needed.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=visibilidade-automática-em-formulários-lista>Visibilidade automática em formulários lista<a href=#visibilidade-automática-em-formulários-lista class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p>En el contexto de los <a href=/docs/pt/20-R6/FormEditor/propertiesForm#form-type>formularios "lista"</a>, la propiedad Visibilidad soporta dos valores específicos:<ul>
+<li><strong>Si registro seleccionado</strong> (nombre JSON: "selectedRows")</li>
+<li><strong>Si el registro no está seleccionado</strong> (nombre JSON: "unselectedRows")</li>
+</ul><p>Essa propriedade é usada somente ao desenhar objetos localizados no corpo de um formulário de lista. Ele informa ao 4D se deve ou não desenhar o objeto, dependendo se o registro que está sendo processado está selecionado/não está selecionado. Ele permite representar uma seleção de registros usando atributos visuais que não sejam cores de destaque:<p><img decoding=async loading=lazy src=/docs/pt/assets/images/select-row-93f2d57bba913598655fc95176637c0d.png width=446 height=319 class=img_ev3q><p>4D does not take this property into account if the object was hidden using the <a href=https://doc.4d.com/4dv20/help/command/en/page603.html target=_blank rel="noopener noreferrer"><code>OBJECT SET VISIBLE</code></a> command; in this case, the object remains invisible regardless of whether or not the record is selected.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-11>Gramática JSON<a href=#gramática-json-11 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>visibilidade<td>string<td>"visible", "hidden", "selectedRows" (somente formulário de lista), "unselectedRows" (somente formulário de lista)</table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-11>Objectos suportados<a href=#objectos-suportados-11 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/viewProAreaOverview>4D View Pro area</a> - <a href=/docs/pt/20-R6/FormObjects/writeProAreaOverview>4D Write Pro area</a> - <a href=/docs/pt/20-R6/FormObjects/buttonOverview>Button</a> - <a href=/docs/pt/20-R6/FormObjects/buttonGridOverview>Button Grid</a> - <a href=/docs/pt/20-R6/FormObjects/checkboxOverview>Check Box</a> - <a href=/docs/pt/20-R6/FormObjects/comboBoxOverview>Combo Box</a> - <a href=/docs/pt/20-R6/FormObjects/dropdownListOverview>Drop-down List</a> - <a href=/docs/pt/20-R6/FormObjects/groupBox>Group Box</a> - <a href=/docs/pt/20-R6/FormObjects/listOverview>Hierarchical List</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview>List Box</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>List Box Column</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>List Box Footer</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-headers>List Box Header</a> - <a href=/docs/pt/20-R6/FormObjects/pictureButtonOverview>Picture Button</a> - <a href=/docs/pt/20-R6/FormObjects/picturePopupMenuOverview>Picture Pop-up Menu</a> - <a href=/docs/pt/20-R6/FormObjects/pluginAreaOverview>Plug-in Area</a> - <a href=/docs/pt/20-R6/FormObjects/progressIndicator>Progress indicator</a> - <a href=/docs/pt/20-R6/FormObjects/radiobuttonOverview>Radio Button</a> - <a href=/docs/pt/20-R6/FormObjects/spinner>Spinner</a> - <a href=/docs/pt/20-R6/FormObjects/splitters>Splitter</a> - <a href=/docs/pt/20-R6/FormObjects/staticPicture>Static Picture</a> - <a href=/docs/pt/20-R6/FormObjects/stepper>Stepper</a> - <a href=/docs/pt/20-R6/FormObjects/subformOverview>Subform</a> - <a href=/docs/pt/20-R6/FormObjects/tabControl>Tab control</a> - <a href=/docs/pt/20-R6/FormObjects/text>Text Area</a> - <a href=/docs/pt/20-R6/FormObjects/webAreaOverview>Web Area</a><hr><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=wordwrap>Wordwrap<a href=#wordwrap class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h2><blockquote>
+<p>Para los objetos <a href=/docs/pt/20-R6/FormObjects/inputOverview>entrada</a>, disponibles cuando la propiedad <a href=/docs/pt/20-R6/FormObjects/propertiesEntry#multiline>Multilínea</a> está definida como "yes".</p>
+</blockquote><p>Gerencia a exibição do conteúdo quando ele excede a largura do objeto.<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=marcado-para-list-boxsim-para-entrada>Marcado para list box/Sim para entrada<a href=#marcado-para-list-boxsim-para-entrada class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><code>Gramática JSON: "normal"</code><p>Quando essa opção é selecionada, o texto passa automaticamente para a próxima linha sempre que sua largura exceder a da coluna/área, se a altura da coluna/área permitir.<ul>
+<li>
+<p>Em colunas/áreas de linha única, somente a última palavra que pode ser exibida por completo é exibida. 4D insere retornos de linha; é possível rolar o conteúdo da área pressionando a tecla de seta para baixo.</p>
+</li>
+<li>
+<p>Em colunas/áreas com várias linhas, 4D efetua retornos de linha automáticos.</p>
+</li>
+</ul><p><img decoding=async loading=lazy src="data:image/png;base64,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" width=327 height=165 class=img_ev3q><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=não-selecionado-para-list-boxnão-para-entrada>Não selecionado para list box/Não para entrada<a href=#não-selecionado-para-list-boxnão-para-entrada class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><code>Gramática JSON: "none"</code><p>Quando esta opção é selecionada, 4D não faz nenhum retorno automático de linha e a última palavra que pode ser exibida pode ser truncada. Nas áreas de tipo de texto, são suportadas os retornos de carro:<p><img decoding=async loading=lazy src="data:image/png;base64,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" width=327 height=167 class=img_ev3q><p>Nas caixas de lista, qualquer texto muito longo é truncado e exibido com uma elipse (...). En el siguiente ejemplo, la opción Wordwrap está <strong>marcada para la columna izquierda</strong> y <strong>desmarcada para la columna derecha</strong>:<p><img decoding=async loading=lazy src=/docs/pt/assets/images/property_wordwrap1-9ddbae6ed6a5333bc50c6908d0213d9e.png width=419 height=206 class=img_ev3q><p>Observe que, independentemente do valor da opção Wordwrap, a altura da linha não será alterada. Se o texto com quebras de linha não puder ser exibido inteiramente na coluna, ele é truncado (sem uma elipse). No caso de caixas de lista exibindo apenas uma única linha, somente a primeira linha do texto é exibida:<p><img decoding=async loading=lazy src=/docs/pt/assets/images/property_wordwrap2-b69879dbf7ee213ea9d225ded09b365b.png width=419 height=74 class=img_ev3q><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=automático-para-entrada-opção-padrão>Automático para entrada (opção padrão)<a href=#automático-para-entrada-opção-padrão class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><code>Gramática JSON: "automatic"</code><ul>
+<li>Em áreas de linha única, palavras localizadas no final das linhas são truncadas e não há retornos de linha.</li>
+<li>Em áreas com várias linhas, 4D efetua retornos automáticos de linha.</li>
+</ul><p><img decoding=async loading=lazy src="data:image/png;base64,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" width=327 height=168 class=img_ev3q><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=gramática-json-12>Gramática JSON<a href=#gramática-json-12 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Nome<th>Tipo de dados<th>Valores possíveis<tbody><tr><td>wordwrap<td>string<td>"automatic" (exceto list box), "normal", "nenhum"</table><h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id=objectos-suportados-12>Objectos suportados<a href=#objectos-suportados-12 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho">​</a></h4><p><a href=/docs/pt/20-R6/FormObjects/inputOverview>Entrada</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-columns>Columna List Box</a> - <a href=/docs/pt/20-R6/FormObjects/listboxOverview#list-box-footers>Pie List Box</a></div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class=col><a href="https://github.com/4d/docs/issues/new?title=Comment%20on%20FormObjects%2Fproperties_Display.md%20(20-R6)&body=Please%20enter%20your%20comment%3A" target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Comentar esta página</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Navegação nas páginas dos documentos"><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/pt/20-R6/FormObjects/propertiesDataSource><div class=pagination-nav__sublabel>Anterior</div><div class=pagination-nav__label>Fonte de dados</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/pt/20-R6/FormObjects/propertiesEntry><div class=pagination-nav__sublabel>Próximo</div><div class=pagination-nav__label>Entrada</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#formato-alfa class="table-of-contents__link toc-highlight">Formato Alfa</a><li><a href=#formato-de-data class="table-of-contents__link toc-highlight">Formato de Data</a><ul><li><a href=#formatos-incorporados class="table-of-contents__link toc-highlight">Formatos incorporados</a><li><a href=#formato-personalizado class="table-of-contents__link toc-highlight">Formato personalizado</a></ul><li><a href=#formato-do-número class="table-of-contents__link toc-highlight">Formato do número</a><ul><li><a href=#marcadores class="table-of-contents__link toc-highlight">Marcadores</a><li><a href=#caracteres-separadores class="table-of-contents__link toc-highlight">Caracteres separadores</a><li><a href=#pontos-decimais-e-outros-caracteres-de-visualização class="table-of-contents__link toc-highlight">Pontos decimais e outros caracteres de visualização</a><li><a href=#formatos-para-positivo-negativo-e-zero class="table-of-contents__link toc-highlight">Formatos para positivo, negativo e zero</a><li><a href=#notação-científica class="table-of-contents__link toc-highlight">Notação científica</a><li><a href=#formatos-hexadecimais class="table-of-contents__link toc-highlight">Formatos hexadecimais</a><li><a href=#notação-xml class="table-of-contents__link toc-highlight">Notação XML</a><li><a href=#mostrar-um-número-como-hora class="table-of-contents__link toc-highlight">Mostrar um número como hora</a><li><a href=#exemplos class="table-of-contents__link toc-highlight">Exemplos</a></ul><li><a href=#formato-imagem class="table-of-contents__link toc-highlight">Formato imagem</a><ul><li><a href=#escalado-para-caber class="table-of-contents__link toc-highlight">Escalado para caber</a><li><a href=#truncado-centrado-e-não-centrado class="table-of-contents__link toc-highlight">Truncado (centrado e não centrado)</a><li><a href=#escalado-para-caber-proporcional-e-escalado-para-caber-centrado-proporcional class="table-of-contents__link toc-highlight">Escalado para caber (proporcional) e Escalado para caber centrado (proporcional)</a><li><a href=#replicado class="table-of-contents__link toc-highlight">Replicado</a></ul><li><a href=#formato-hora class="table-of-contents__link toc-highlight">Formato Hora</a><ul><li><a href=#formatos-incorporados-1 class="table-of-contents__link toc-highlight">Formatos incorporados</a><li><a href=#formato-personalizado-1 class="table-of-contents__link toc-highlight">Formato personalizado</a></ul><li><a href=#texto-quando-falsetexto-quando-true class="table-of-contents__link toc-highlight">Texto quando False/Texto quando True</a><li><a href=#tipo-de-exibição class="table-of-contents__link toc-highlight">Tipo de exibição</a><li><a href=#não-renderizado class="table-of-contents__link toc-highlight">Não renderizado</a><li><a href=#três-estados class="table-of-contents__link toc-highlight">Três Estados</a><li><a href=#título class="table-of-contents__link toc-highlight">Título</a><li><a href=#truncar-com-reticências class="table-of-contents__link toc-highlight">Truncar com reticências</a><li><a href=#visibilidade class="table-of-contents__link toc-highlight">Visibilidade</a><li><a href=#wordwrap class="table-of-contents__link toc-highlight">Wordwrap</a></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class=footer__title>Comunidade</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://developer.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Centro de desenvolvimento 4D</a><li class=footer__item><a href=https://blog.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Blog</a><li class=footer__item><a href=https://discuss.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Forum</a><li class=footer__item><a href=https://facebook.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook</a><li class=footer__item><a href=https://twitter.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Twitter</a><li class=footer__item><a href=https://youtube.com/user/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Youtube</a><li class=footer__item><a href=https://github.com/4D target=_blank rel="noopener noreferrer" class=footer__link-item>Github</a></ul></div><div class="col footer__col"><div class=footer__title>Suporte</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://doc.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Doc Center (Onde tudo começou)</a><li class=footer__item><a href=https://kb.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Base de conhecimento</a><li class=footer__item><a href=https://us.4d.com/product-download/Feature-Release target=_blank rel="noopener noreferrer" class=footer__link-item>Baixares<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/resources target=_blank rel="noopener noreferrer" class=footer__link-item>Resources<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/4d-technical-support target=_blank rel="noopener noreferrer" class=footer__link-item>Obter suporte<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a></ul></div><div class="col footer__col"><div class=footer__title>Empresa</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://us.4d.com/about-us target=_blank rel="noopener noreferrer" class=footer__link-item>Sobre 4D<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/contact-us target=_blank rel="noopener noreferrer" class=footer__link-item>Contactar-nos<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/4d-around-the-world target=_blank rel="noopener noreferrer" class=footer__link-item>4D no mundo<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a><li class=footer__item><a href=https://us.4d.com/Careers target=_blank rel="noopener noreferrer" class=footer__link-item>Careers<svg width=13.5 height=13.5 aria-hidden=true viewBox="0 0 24 24" class=iconExternalLink_nPIU><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>© 2024 4D SAS - Todos os direitos reservados</div></div></div></footer></div>
