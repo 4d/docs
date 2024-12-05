@@ -41,8 +41,10 @@ Se o objeto designado pelo parâmetro *objeto* não é encontrado no formulário
 O exemplo abaixo obtém o texto selecionado no campo \[Produtos\]Comentarios:
 
 ```4d
- GET HIGHLIGHT([Produtos]Comentarios;vFirst;vLast)
- If(vFirst<vlast)     alert("o="" texto="" selecionado="" é:="" "+substring([produtos]comentarios;vprimerot;vultimo-vprimeiro))=""  end="" if<="" pre=""></vlast)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### Exemplo 2 

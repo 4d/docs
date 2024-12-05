@@ -41,8 +41,10 @@ Si l'objet désigné par le paramètre *objet* n'est pas trouvé dans le formula
 L'exemple suivant récupère le texte sélectionné dans le champ *\[Produits\]Notes* : 
 
 ```4d
- GET HIGHLIGHT([Produits]Notes;vPremier;vDernier)
- If(vPremier<vdernier)     alert("le="" texte="" sélectionné="" est="" :="" "+substring([produits]notes;vpremier;vdernier-vpremier))=""  end="" if<="" pre=""></vdernier)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### Exemple 2 

@@ -41,8 +41,10 @@ displayed_sidebar: docs
 以下の例題を使用して、フィールド \[Products\]Comments から反転表示された部分を検出します。 
 
 ```4d
- GET HIGHLIGHT([Products]Comments;vFirst;vLast)
- If(vFirst<vlast)     alert("the="" selected="" text="" is:="" "+substring([products]comments;vfirst;vlast-vfirst))=""  end="" if<="" pre=""></vlast)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### 例題 2 
