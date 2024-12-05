@@ -18,16 +18,16 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get printed height.Summary-->La commande **Get printed height** retourne la hauteur globale (en pixels) de la section imprimée par la commande [Print form](print-form.md).<!-- END REF-->
+<!--REF #_command_.Get printed height.Summary-->La commande **Get printed height** retourne la hauteur globale (en pixels) de la section imprimée par la commande [Print form](../commands/print-form.md).<!-- END REF-->
 
 La valeur retournée sera comprise entre 0 (le bord supérieur de la page) et la hauteur globale retournée par la commande [GET PRINTABLE AREA](get-printable-area.md) (la taille maximum de la zone d’impression).
 
-Si vous imprimez une nouvelle section via la commande [Print form](print-form.md), la hauteur de cette section est ajoutée à cette valeur. Si la zone d’impression disponible est insuffisante pour contenir cette section, une nouvelle page est générée et la valeur retournée est 0.
+Si vous imprimez une nouvelle section via la commande [Print form](../commands/print-form.md), la hauteur de cette section est ajoutée à cette valeur. Si la zone d’impression disponible est insuffisante pour contenir cette section, une nouvelle page est générée et la valeur retournée est 0.
 
 Les marges d’impression gauche et droite n’influent pas sur la valeur retournée, à la différence des marges inférieure et supérieure (définies éventuellement via la commande [SET PRINTABLE MARGIN](set-printable-margin.md)).
 
 #### Voir aussi 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  

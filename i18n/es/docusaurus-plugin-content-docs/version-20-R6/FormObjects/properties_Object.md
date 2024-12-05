@@ -58,7 +58,7 @@ Esta es la lista de objetos cuyo valor se puede guardar:
 | [Casilla de verificación](checkbox_overview.md) | Valor de la variable asociada (0, 1, 2)                                                  |
 | [Lista desplegable](dropdownList_Overview.md)   | Número de línea seleccionada                                                                                |
 | [Botón de radio](radio_overview.md)             | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
-| [Tab control](tabControl.md)                    | Número de pestaña seleccionada                                                                              |
+| [Control de pestañas](tabControl.md)            | Número de pestaña seleccionada                                                                              |
 
 #### Gramática JSON
 
@@ -148,7 +148,7 @@ Sin embargo, esta propiedad tiene una función tipográfica en los siguientes ca
 
 - **[Variables dinámicas](#dynamic-variables)**: puede utilizar esta propiedad para declarar el tipo de variables dinámicas.
 - **[Columnas List Box ](listbox_overview.md#list-box-columns)**: esta propiedad se utiliza para asociar un formato de visualización a los datos de la columna. Los formatos suministrados dependerán del tipo de variable (list box de tipo array) o del tipo dato/campo (list boxes de tipo selección y colección). Los formatos 4D estándar que pueden utilizarse son: Alfa, Numérico, Fecha, Hora, Imagen y Booleano. El tipo Texto no tiene formatos de visualización específicos. Todos los formatos personalizados existentes también están disponibles.
-- **[Variables imagen](input_overview.md)**: puede utilizar este menú para declarar las variables antes de cargar el formulario en modo interpretado. Mecanismos nativos específicos rigen la visualización de variables de imagen en los formularios. Estos mecanismos exigen una mayor precisión a la hora de configurar las variables: a partir de ahora, deberán haber sido declaradas antes de cargar el formulario -es decir, incluso antes del evento de formulario `On Load` - a diferencia de otros tipos de  Para hacer esto, necesitas que la instrucción `C_PICTURE(varName)` se haya ejecutado antes de cargar el formulario (normalmente, en el método que llama al comando `DIALOG`), o que la variable se haya digitado a nivel de formulario utilizando la propiedad tipo de expresión.
+- **[Variables imagen](input_overview.md)**: puede utilizar este menú para declarar las variables antes de cargar el formulario en modo interpretado. Mecanismos nativos específicos rigen la visualización de variables de imagen en los formularios. Estos mecanismos exigen una mayor precisión a la hora de configurar las variables: a partir de ahora, deberán haber sido declaradas antes de cargar el formulario -es decir, incluso antes del evento de formulario `On Load` - a diferencia de otros tipos de  Estos mecanismos exigen una mayor precisión a la hora de configurar las variables: a partir de ahora, deberán haber sido declaradas antes de cargar el formulario -es decir, incluso antes del evento de formulario `On Load` - a diferencia de otros tipos de  Para hacer esto, necesitas que la instrucción `C_PICTURE(varName)` se haya ejecutado antes de cargar el formulario (normalmente, en el método que llama al comando `DIALOG`), o que la variable se haya digitado a nivel de formulario utilizando la propiedad tipo de expresión.
   De lo contrario, la variable imagen no se mostrará correctamente (sólo en modo interpretado).
 
 #### Gramática JSON
@@ -269,7 +269,7 @@ Puede forzar un retorno de carro en la etiqueta utilizando el caracter \ (barra 
 
 Para insertar un \ en la etiqueta, ingrese "\\".
 
-Por defecto, la etiqueta se coloca en el centro del objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
+Por defecto, la etiqueta se coloca en el centro del objeto. Cuando el objeto también contiene un icono, puede modificar la ubicación relativa de estos dos elementos utilizando la propiedad [Posición Título/imagen](properties_TextAndPicture.md#titlepicture-position).
 
 Para la traducción de la aplicación, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -298,7 +298,7 @@ Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálcu
 | Mínimo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Suma                                       | X   |      |       | X    | X    |          | Igual que el tipo de columna        |
-| Conteo                                     | X   | X    | X     | X    | X    | X        | Longint                             |
+| Conteo                                     | X   | X    | X     | X    | X    | X        | Integer                             |
 | Promedio                                   | X   |      |       | X    |      |          | Real                                |
 | Desviación estándar(\*) | X   |      |       | X    |      |          | Real                                |
 | Varianza(\*)            | X   |      |       | X    |      |          | Real                                |

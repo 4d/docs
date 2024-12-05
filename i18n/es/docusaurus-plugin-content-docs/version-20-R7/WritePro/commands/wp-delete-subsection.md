@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parámetros     | Tipo    |   | Descripción                                                                        |
 | -------------- | ------- | - | ---------------------------------------------------------------------------------- |
 | wpSection      | Object  | → | 4D Write Pro section                                                               |
-| subSectionType | Longint | → | Subsection type (wk first page, wk left page, or wk right page) |
+| subSectionType | Integer | → | Subsection type (wk first page, wk left page, or wk right page) |
 | subSection     | Object  | → | 4D Write Pro subsection                                                            |
 
 <!-- END REF-->
@@ -27,9 +27,9 @@ The *subSectionType* parameter specifes the subsection to delete. You can pass o
 
 | Constante     | Tipo    | Valor |
 | ------------- | ------- | ----- |
-| wk first page | Longint | 1     |
-| wk left page  | Longint | 2     |
-| wk right page | Longint | 3     |
+| wk first page | Integer | 1     |
+| wk left page  | Integer | 2     |
+| wk right page | Integer | 3     |
 
 :::note
 

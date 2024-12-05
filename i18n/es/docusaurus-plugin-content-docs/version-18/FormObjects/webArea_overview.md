@@ -7,7 +7,7 @@ title: Área Web
 
 Las áreas web pueden mostrar varios tipos de contenido web dentro de sus formularios: Páginas HTML con contenidos estáticos o dinámicos, archivos, imágenes, Javascript, etc. El motor de renderizado del área web depende de la plataforma de ejecución de la aplicación y de [la opción motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) seleccionada.
 
-Es posible crear varias áreas web en el mismo formulario. Note, however, that the use of Web areas must follow [several rules](#web-area-rules).
+Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-area-rules).
 
 Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de lenguaje](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) así como también [eventos formulario](#form-events) genéricos y específicos, permiten al desarrollador controlar el funcionamiento de las áreas web. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
 > No se recomienda el uso de plugins web ni de applets de Java en las áreas web porque pueden provocar inestabilidad en el funcionamiento de 4D, especialmente a nivel de gestión de eventos.
@@ -31,22 +31,22 @@ La selección del motor de renderizado web anidado le permite llamar a los méto
 
 Cuando se selecciona la propiedad [Acceder a los métodos 4D](properties_WebArea.md#access-4d-methods), se puede llamar a los métodos 4D desde un área Web.
 
-> This property is only available if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> Esta propiedad solo está disponible si el área web [utiliza el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### Objeto $4d
 
-The [4D embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
+El [motor de renderizado web incrustado de 4D](properties_WebArea.md#use-embedded-web-rendering-engine) suministra al área un objeto JavaScript llamado $4d que puede asociar a cualquier método proyecto 4D utilizando la notación objeto ".".
 
 Por ejemplo, para llamar al método `HelloWorld` de 4D, basta con ejecutar la siguiente declaración:
 
-```codeJS
+```js
 $4d.HelloWorld();
 ```
 > JavaScript es sensible a las mayúsculas y minúsculas, por lo que es importante tener en cuenta que el objeto se llama $4d (con "d" minúscula).
 
 La sintaxis de las llamadas a los métodos 4D es la siguiente:
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
@@ -199,4 +199,4 @@ Cuando haya realizado los ajustes como se ha descrito anteriormente, entonces te
 
 ## Propiedades soportadas
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Estilo de línea de borde](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - [Menú contextual](properties_Entry.md#context-menu) - [Altura](properties_CoordinatesAndSizing.md#height) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Método](properties_Action.md#method) - [Nombre de objeto](properties_Object.md#object-name) - [Progresión](properties_WebArea.md#progression) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Utilizar motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)

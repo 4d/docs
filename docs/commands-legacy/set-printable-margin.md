@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->The **SET PRINTABLE MARGIN** command sets the values of various printing margins by using the [Print form](print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->The **SET PRINTABLE MARGIN** command sets the values of various printing margins by using the [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF-->
 
 You can pass one of the following values in the *left*, *top*, *right* and *bottom* parameters:
 
@@ -59,4 +59,4 @@ The following example gets the paper size:
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

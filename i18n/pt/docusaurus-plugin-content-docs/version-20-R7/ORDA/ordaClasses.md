@@ -260,7 +260,7 @@ End if
 
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
-- Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes. d#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
+- Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes.md#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
   - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
   - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
@@ -819,7 +819,7 @@ $id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method"
 
 ## onHttpGet keyword
 
-Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class.
+Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
 
 The `onHttpGet` keyword is available with:
 
@@ -863,7 +863,7 @@ Uma função com a palavra-chave `onHttpGet` pode retornar qualquer valor de um 
 
 :::info
 
-You can return a value of the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
 
 :::
 
@@ -979,7 +979,7 @@ If ($status.success)
 
 ### Ficheiros de classe (class files)
 
-Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](Concepts/classes. d#class-files) (*e.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
+Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](Concepts/classes.md#class-files) (*e.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
 
 ### Criação de classes
 

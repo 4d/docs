@@ -41,7 +41,7 @@ La valeur par défaut dépend du type de variable :
 | ---------- | -------------------- |
 | Booleen    | False                |
 | Date       | 00-00-00             |
-| Longint    | 0                    |
+| Integer    | 0                    |
 | Time       | 00:00:00             |
 | Picture    | picture size=0       |
 | Real       | 0                    |

@@ -35,7 +35,7 @@ La resolución recomendada es 1920x1080.
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
 - Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
-- Las sesiones web (*aka* Scalable sessions) deben [estar activadas](sessions.md#enabling-web-sessions).
+- Las sesiones web (*igualmente llamadas sesiones escalables*) deben [estar activadas](sessions.md#enabling-web-sessions).
 - El código 4D llamado por los formularios Qodly debe ser [hilo seguro](preemptiveWeb.md).
 
 ### Acceso a Qodly Studio
@@ -67,7 +67,7 @@ Después de cualquier cambio en esta configuración, debe [reiniciar el servidor
 
 #### A nivel del proyecto
 
-Después de haber habilitado el acceso a Qodly Studio en el nivel 4D, es necesario designar explícitamente cada proyecto al que se puede acceder. La opción **Habilitar el acceso a Qodly Studio** debe estar habilitada en la [página de funcionalidades web de los parámetros de la aplicación 4D](../settings/web.md#enable-access-to-qodly-studio).
+Después de haber habilitado el acceso a Qodly Studio en el nivel 4D, es necesario designar explícitamente cada proyecto al que se puede acceder. La opción **Activar el acceso a Qodly Studio** debe estar habilitada en la [página de funcionalidades web de los parámetros de la aplicación 4D](../settings/web.md#enable-access-to-qodly-studio).
 
 Tenga en cuenta que los [parámetros usuario](../settings/overview.md) pueden definirse en varios niveles, y que se aplican prioridades.
 
@@ -118,7 +118,7 @@ The Qodly Studio documentation is available on the [Qodly documentation website]
 
 You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. Sin embargo, dependiendo de la etapa de implementación, los desarrolladores 4D utilizarán Qodly Studio o 4D IDE (ver [Comparación de funcionalidades](#comparación-de-funcionalidades)).
 
-Se ofrecen ejemplos de código en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), pero como QodlyScript hereda del Lenguaje 4D, no se sentirá perdido. Para más información, consulte la página [De QodlyScript a Lenguaje 4D](from-qodlyscript-to-4d.md).
+Se ofrecen ejemplos de código en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), pero como QodlyScript hereda del Lenguaje 4D, no se sentirá perdido. Se ofrecen ejemplos de código en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), pero como QodlyScript hereda del Lenguaje 4D, no se sentirá perdido.
 
 :::info
 
@@ -139,7 +139,8 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Roles y privilegios REST/Web                                                     | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                                                                                                                        | Editor de roles y privilegios de Qodly Studio                                 |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
-(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). Note that in 4D single-user, if you open some 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)).
 
 ### Lenguaje
 
@@ -254,7 +255,7 @@ Con Qodly Studio for 4D, el modo ["forzar login"](../REST/authUsers.md#force-log
 
 ### Configuración
 
-Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is enabled for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview), using the **Force login** option:
+Asegúrese de que el [modo "force login"](../REST/authUsers.md#force-login-mode) esté habilitado para su aplicación 4D en la [página Roles y privilegios](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview), usando la opción **Force login**:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 

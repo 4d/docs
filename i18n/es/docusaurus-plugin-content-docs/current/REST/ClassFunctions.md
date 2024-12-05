@@ -69,7 +69,7 @@ All functions allowed to be called directly from HTTP REST requests (`POST` or `
 exposed Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ### `onHttpGet`
 
@@ -82,11 +82,11 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Hilo seguro
 
-Todo el código 4D llamado desde las peticiones REST **debe ser hilo-seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [_Utilizar proceso apropiativo_](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [_Utilizar proceso apropiativo_](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
 
 :::info
 
-You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+Puede restringir las llamadas a funciones ORDA específicas configurando los privilegios apropiados en el archivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
 :::
 
@@ -122,7 +122,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 ### Parámetro de entidad
 
-Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY). If the key parameter is omitted in a request, a new entity is loaded in memory on the server.
+Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY). Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY).
 También puede pasar valores para todos los atributos de la entidad. Estos valores se utilizarán automáticamente para la entidad manejada en el servidor.
 
 > Si la petición envía los valores de atributo modificados para una entidad existente en el servidor, la función de modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con los valores modificados. Esta funcionalidad le permite, por ejemplo, verificar el resultado de una operación en una entidad, tras aplicar todas las reglas de negocio, desde la aplicación cliente. A continuación, puede decidir guardar o no la entidad en el servidor.
@@ -627,7 +627,7 @@ $ageAverage:=$students.getAgeAverage()
 
 ### Returning a document
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 // Product dataclass
@@ -681,7 +681,7 @@ You can call the function using this request:
 
 ### Using an entity selection to get a list
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 shared singleton Class constructor()

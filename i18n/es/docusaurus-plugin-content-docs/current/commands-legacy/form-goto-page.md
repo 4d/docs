@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** cambia la página actual de un formulario para mostrar la página especificada por *numPag*.<!-- END REF-->
 
-Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](form-load.md) o si *numPag* corresponde a la página actual del formulario, **FORM GOTO PAGE** no hace nada. Si *numPag* es superior que el número de páginas del formulario, se muestra la última página. Si *numPag* es menor que uno, se muestra la primera página.
+Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](../commands/form-load.md) o si *numPag* corresponde a la página actual del formulario, **FORM GOTO PAGE** no hace nada. Si *numPag* es superior que el número de páginas del formulario, se muestra la última página. Si *numPag* es menor que uno, se muestra la primera página.
 
 El parámetro *\** es útil cuando el comando se llama en el contexto de un subformulario en página que contiene varias páginas. En este caso, cuando pase este parámetro, el comando cambia la página del subformulario actual (el que llamó al comando). Por defecto, si se omite el parámetro *\**, el comando se aplica siempre al formulario padre.
 
@@ -32,7 +32,7 @@ Los botones de acción automática realizan las mismas tareas que los comandos [
 Los comandos de gestión de página pueden utilizarse con formularios de entrada o con formularios de salida en cajas de diálogo. Los formularios de salida utilizan sólo la primera página. Un formulario siempre tiene por lo menos una página, la primera página. Recuerde que sin importar el número de páginas que tenga un formulario, sólo existe un método de formulario para cada formulario. 
 
 * Utilice el comando [FORM Get current page](form-get-current-page.md) para saber que página se está mostrando.
-* Utilice [Form event code](form-event-code.md) On Page Change que se genera cada vez que la página actual del formulario cambia.
+* Utilice [Form event code](../commands/form-event-code.md) On Page Change que se genera cada vez que la página actual del formulario cambia.
 
 **Nota:** cuando diseñaun formulario, puede trabajar con las páginas de la 1 a la X, como también con la página 0, en la cual pone los objetos que aparecen en todas las páginas. Cuando **utiliza** un formulario, y llama los comandos de página, usted trabaja con las páginas de la 1 a la X; la página 0 se combina automáticamente con la página que está siendo mostrada.
 

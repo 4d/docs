@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->La commande **PRINT SETTINGS** provoque l'affichage d'une boîte de dialogue d'impression.<!-- END REF--> Cette commande doit être appelée avant une série de commandes [Print form](print-form.md) ou la commande [OPEN PRINTING JOB](open-printing-job.md).
+<!--REF #_command_.PRINT SETTINGS.Summary-->La commande **PRINT SETTINGS** provoque l'affichage d'une boîte de dialogue d'impression.<!-- END REF--> Cette commande doit être appelée avant une série de commandes [Print form](../commands/print-form.md) ou la commande [OPEN PRINTING JOB](open-printing-job.md).
 
 Le paramètre facultatif *typeDial* permet de configurer l’affichage de la boîte de dialogue d’impression. Vous pouvez utiliser l'une des constantes suivantes du thème *Options d'impression* :
 
@@ -31,7 +31,7 @@ Le paramètre facultatif *typeDial* permet de configurer l’affichage de la bo�
 
 #### Exemple 
 
-Reportez-vous à l'exemple de la commande [Print form](print-form.md).
+Reportez-vous à l'exemple de la commande [Print form](../commands/print-form.md).
 
 #### Variables et ensembles système 
 
@@ -41,5 +41,5 @@ Si l'utilisateur clique sur le bouton OK dans chaque boîte de dialogue, la vari
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  

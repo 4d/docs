@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Activated.Summary-->**Activated** retourne Vrai dans une méthode formulaire lorsque la fenêtre contenant le formulaire passe au premier plan.<!-- END REF-->
 
-**Note :** Cette commande équivaut à utiliser la fonction [Form event code](form-event-code.md) et tester si elle retourne l'événement On Activate.
+**Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Activate.
 
 **ATTENTION :** N'appelez pas de commandes telles que [TRACE](trace.md) ou [ALERT](alert.md) dans la phase **Activated** d'un formulaire, car cela provoquerait une boucle sans fin.
 
@@ -29,4 +29,4 @@ displayed_sidebar: docs
 #### Voir aussi 
 
 [Deactivated](deactivated.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

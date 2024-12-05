@@ -37,7 +37,7 @@ Em *arrayNomObjeto*, passe um array texto que é enchido automaticamente pelo co
 
 O array devolve os nomes dos objetos de todas as colunas (incluindo os pés de coluna), independentemente de se são ou não visíveis.  
   
-Este comando é útil no contexto da análise de um formulário utilizando os comandos [FORM LOAD](form-load.md), [FORM GET OBJECTS](form-get-objects.md) e [OBJECT Get type](object-get-type.md). Se pode utilizar, quando seja necessário, para obter os nomes dos sub objetos dos list box.
+Este comando é útil no contexto da análise de um formulário utilizando os comandos [FORM LOAD](../commands/form-load.md), [FORM GET OBJECTS](form-get-objects.md) e [OBJECT Get type](object-get-type.md). Se pode utilizar, quando seja necessário, para obter os nomes dos sub objetos dos list box.
 
 #### Exemplo 
 
@@ -60,5 +60,5 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 
 #### Ver também 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  

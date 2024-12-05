@@ -34,14 +34,14 @@ L'objet retourné contient les propriétés suivantes :
 | cpuTime          | Real                                    | Running time (seconds)                                        |
 | cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
 | creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | Longint                                 | Process unique ID                                                                |
+| ID               | Integer                                 | Process unique ID                                                                |
 | name             | Text                                    | Nom du process                                                                   |
-| number           | Longint                                 | Process number                                                                   |
+| number           | Integer                                 | Process number                                                                   |
 | preemptive       | Boolean                                 | True if run preemptive, false otherwise                                          |
 | sessionID        | Text                                    | Session UUID                                                                     |
-| state            | Longint                                 | Current status. Possible values: see below       |
+| state            | Integer                                 | Current status. Possible values: see below       |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
-| type             | Longint                                 | Running process type. Possible values: see below |
+| type             | Integer                                 | Running process type. Possible values: see below |
 | visible          | Boolean                                 | True if visible, false otherwise                                                 |
 
 - Possible values for "state":

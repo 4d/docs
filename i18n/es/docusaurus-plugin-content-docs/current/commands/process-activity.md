@@ -18,9 +18,9 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                 |
-| ----------- | ------------------------------ |
-| 20 R7       | Support of sessionID parameter |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 20 R7       | Support of *sessionID* parameter |
 
 </details>
 
@@ -54,7 +54,7 @@ When executed on 4D in remote or local mode, `Process activity` always returns t
 
 The "sessions" property contains a collection of objects describing all running sessions on the server. For a description of session object properties, please refer to the [`Session info`](session-info.md) command.
 
-:::note Notes
+:::note Notas
 
 - You can get the object of a session using the [Session](session.md) command.
 - `Process activity` returns remote client sessions, stored procedure session and rest sessions but not Web sessions (limitation).
@@ -80,7 +80,7 @@ You want to get the collection of all user sessions:
  
  var $o : Object
  var $i : Integer
- vat $processName;$userName : Text
+ var $processName;$userName : Text
 
  
  $o:=Process activity //Get process & session info
@@ -107,5 +107,5 @@ You want to get all processes related to the current session:
 
 #### Ver también
 
-[Session storage](../commands-legacy/session-storage.md)\
+[Session storage](session-storage.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)

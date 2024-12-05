@@ -36,4 +36,4 @@ Esta informação se retorna em três variáveis:
 
 #### Ver também 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

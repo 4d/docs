@@ -38,8 +38,8 @@ displayed_sidebar: docs
 
 | 定数                               | 型       | 説明                                                       |
 | -------------------------------- | ------- | -------------------------------------------------------- |
-| `sk execute in current database` | Longint | (デフォルト) フォーミュラは作成されたコンテキストにおいて実行されます。 |
-| `sk execute in host database`    | Longint | フォーミュラは、ホストデータベースのコンテキストで実行されます。                         |
+| `sk execute in current database` | Integer | (デフォルト) フォーミュラは作成されたコンテキストにおいて実行されます。 |
+| `sk execute in host database`    | Integer | フォーミュラは、ホストデータベースのコンテキストで実行されます。                         |
 
 #### 例題
 

@@ -47,8 +47,8 @@
     "message": "Preferências",
     "description": "The label for category Preferences in sidebar docs"
   },
-  "sidebar.docs.category.Language": {
-    "message": "Línguagem",
+  "sidebar.docs.category.4D Language": {
+    "message": "Línguagem 4D",
     "description": "The label for category Language in sidebar docs"
   },
   "sidebar.docs.category.Language.link.generated-index.title": {

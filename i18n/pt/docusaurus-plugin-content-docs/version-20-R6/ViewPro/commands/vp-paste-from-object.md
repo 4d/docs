@@ -21,7 +21,7 @@ title: VP PASTE FROM OBJECT
 | ---------- | ------- | -- | ---------------------------------- | ---------------- |
 | rangeObj   | Object  | -> | Objeto intervalo de células        |                  |
 | dataObject | Object  | -> | Objeto que contém os dados a colar |                  |
-| options    | Longint | -> | Especifica o que é colado          | <!-- END REF --> |
+| options    | Integer | -> | Especifica o que é colado          | <!-- END REF --> |
 
 #### Descrição
 

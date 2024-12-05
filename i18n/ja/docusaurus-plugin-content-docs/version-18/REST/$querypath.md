@@ -15,7 +15,7 @@ title: "$querypath"
 
 | プロパティ         | 型          | 説明                              |
 | ------------- | ---------- | ------------------------------- |
-| description   | String     | 実際に実行されたクエリ、または複数ステップの場合は "AND" |
+| description   | Text       | 実際に実行されたクエリ、または複数ステップの場合は "AND" |
 | time          | Number     | クエリの実行に要した時間 (ミリ秒単位)            |
 | recordsfounds | Number     | レコードの検出件数                       |
 | steps         | Collection | クエリパスの後続ステップを定義するオブジェクトのコレクション  |

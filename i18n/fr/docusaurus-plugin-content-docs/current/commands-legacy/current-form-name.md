@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form name.Summary-->La commande **Current form name** retourne le nom du formulaire courant défini pour le process.<!-- END REF--> Le formulaire courant peut être un formulaire projet ou un formulaire table. 
 
-Par défaut, si vous n’avez pas appelé la commande [FORM LOAD](form-load.md) dans le process courant, le formulaire courant est le formulaire en cours d’affichage ou d’impression. Si vous avez appelé la commande [FORM LOAD](form-load.md) dans le process, le formulaire courant reste celui défini par cette commande jusqu’à l’appel de [FORM UNLOAD](form-unload.md) (ou [CLOSE PRINTING JOB](close-printing-job.md)).
+Par défaut, si vous n’avez pas appelé la commande [FORM LOAD](../commands/form-load.md) dans le process courant, le formulaire courant est le formulaire en cours d’affichage ou d’impression. Si vous avez appelé la commande [FORM LOAD](../commands/form-load.md) dans le process, le formulaire courant reste celui défini par cette commande jusqu’à l’appel de [FORM UNLOAD](form-unload.md) (ou [CLOSE PRINTING JOB](close-printing-job.md)).
 
 La commande retourne :
 
@@ -59,4 +59,4 @@ Vous souhaitez obtenir le formulaire courant si c’est un formulaire projet :
 
 #### Voir aussi 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  

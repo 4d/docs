@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
 
-This command must be used with the form event On Column Moved (see the [Form event code](form-event-code.md) command). 
+This command must be used with the form event On Column Moved (see the [Form event code](../commands/form-event-code.md) command). 
 
 **Note:** This command takes invisible columns into account.
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  

@@ -2257,8 +2257,8 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
     | Constante     | Type    | Valeur | Commentaire                                          |
     | ------------- | ------- | ------ | ---------------------------------------------------- |
-    | ck ascending  | Longint | 0      | Les éléments sont triés par ordre croissant (défaut) |
-    | ck descending | Longint | 1      | Les éléments sont triés par ordre décroissant        |
+    | ck ascending  | Integer | 0      | Les éléments sont triés par ordre croissant (défaut) |
+    | ck descending | Integer | 1      | Les éléments sont triés par ordre décroissant        |
 
     Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 

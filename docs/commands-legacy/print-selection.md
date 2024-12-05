@@ -33,11 +33,11 @@ During printing, the output form method and/or the form’s object methods are e
 * An On Printing Break event is generated just before a break area is printed.
 * An On Printing Footer event is generated just before a footer is printed.
 
-You can check whether **PRINT SELECTION** is printing the first header by testing [Before selection](before-selection.md) during an On Header event. You can also check for the last footer, by testing [End selection](end-selection.md) during an On Printing Footer event. For more information, see the description of these commands, as well as those of [Form event code](form-event-code.md) and [Level](level.md).
+You can check whether **PRINT SELECTION** is printing the first header by testing [Before selection](before-selection.md) during an On Header event. You can also check for the last footer, by testing [End selection](end-selection.md) during an On Printing Footer event. For more information, see the description of these commands, as well as those of [Form event code](../commands/form-event-code.md) and [Level](level.md).
 
 To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. You can also use statistical and arithmetical functions like [Sum](sum.md) and [Average](average.md) to assign values to variables. For more information, see the descriptions of [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md).
 
-**Warning:** Do not use the [PAGE BREAK](page-break.md) command with the **PRINT SELECTION** command. [PAGE BREAK](page-break.md) is to be used with the [Print form](print-form.md) command.
+**Warning:** Do not use the [PAGE BREAK](page-break.md) command with the **PRINT SELECTION** command. [PAGE BREAK](page-break.md) is to be used with the [Print form](../commands/print-form.md) command.
 
 After a call to **PRINT SELECTION**, the OK variable is set to 1 if the printing has been completed. If the printing was interrupted, the OK variable is set to 0 (zero) (i.e., the user clicked Cancel in the printing dialog box).
 

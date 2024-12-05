@@ -5097,7 +5097,7 @@ O comando `VP SET DEFAULT STYLE` <!-- REF #_method_.VP SET DEFAULT STYLE.Summary
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *styleObj* lets you pass an object containing style settings. Você pode usar uma folha de estilo existente ou criar um estilo. For more information, see the [Style objects](configuring.md#style-objects) paragraph.
+The *styleObj* lets you pass an object containing style settings. Você pode usar uma folha de estilo existente ou criar um estilo. Para obter mais informações, consulte o parágrafo [Objetos estilo](configuring.md#style-objects).
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the style will be defined. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 

@@ -168,8 +168,8 @@ _italic_
 ```md
 | Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 
@@ -214,7 +214,7 @@ GetLogo (size) -> logo
 
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Longint | in | Logo style selector (1 to 5)  |
+| size      | Integer | in | Logo style selector (1 to 5)  |
 | logo      | Picture | out | Selected logo |
 
 

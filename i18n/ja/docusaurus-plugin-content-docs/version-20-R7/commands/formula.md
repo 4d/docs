@@ -135,7 +135,7 @@ displayed_sidebar: docs
 
 #### 参照
 
-[4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)\
-[4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
-[4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
+[4D Blog - フォーミュラ: シンプルさの裏にある、さらなるパワー](https://blog.4d.com/ja/new-formula-more-power-behind-simplicity/)\
+[4D Blog - フォーミュラ: 既成概念にとらわれない発想](https://blog.4d.com/ja/new-formula-think-outside-the-box/)\
+[4D Blog - 独自のメソッドをオブジェクトにカプセル化する](https://blog.4d.com/ja/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)

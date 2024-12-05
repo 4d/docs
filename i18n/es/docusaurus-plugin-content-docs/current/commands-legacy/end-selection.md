@@ -57,7 +57,7 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 #### Ver también 
 
 [Before selection](before-selection.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  

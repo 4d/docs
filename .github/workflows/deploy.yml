@@ -5,11 +5,13 @@ on:
     branches: [main]
 
 jobs:
+  workflow-check:
+    uses: ./.github/workflows/workflow-syntax-check.yml
   workflow-build:
     uses: ./.github/workflows/workflow-build.yml
 
   gh-release:
-    needs: workflow-build
+    needs: [workflow-build]
     name: 'Deploy website'
     runs-on: ubuntu-latest
     steps:

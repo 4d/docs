@@ -41,7 +41,7 @@ O valor por defeito depende do tipo de variável:
 | ------------ | ------------------- |
 | Booleano     | False               |
 | Date         | 00-00-00            |
-| Longint      | 0                   |
+| Integer      | 0                   |
 | Hora         | 00:00:00            |
 | Imagem       | tamanho da imagem=0 |
 | Real         | 0                   |
@@ -62,9 +62,9 @@ O quadro seguinte lista os tipos de dados básicos, os tipos de dados para os qu
 | Tipo de dados a converter | para String | para Número | para Data | para Tempo | para Booleano |
 | ------------------------- | ----------- | ----------- | --------- | ---------- | ------------- |
 | String (1)                |             | Num         | Date      | Hora       | Bool          |
-| Número (2)                | String      |             |           |            | Bool          |
-| Date                      | String      |             |           |            | Bool          |
-| Hora                      | String      |             |           |            | Bool          |
+| Número (2)                | Text        |             |           |            | Bool          |
+| Date                      | Text        |             |           |            | Bool          |
+| Hora                      | Text        |             |           |            | Bool          |
 | Parâmetros                |             | Num         |           |            |               |
 
 (1) Strings formatadas em JSON podem ser convertidas em dados escalares, objetos ou coleções, usando o comando `JSON Parse`

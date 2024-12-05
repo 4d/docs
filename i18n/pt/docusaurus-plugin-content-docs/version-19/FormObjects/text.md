@@ -4,7 +4,7 @@ title: Text
 ---
 
 
-A text object allows you to display static written content (*e.g.*, instructions, titles, labels, etc.) on a form. These static text areas can become dynamic when they include dynamic references. Para mais informações, consulte [Usando referências em textos estáticos](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
+Um objeto de texto permite a exibição de conteúdo escrito estático*(por exemplo*, instruções, títulos, rótulos etc.) em um formulário. Estas áreas de texto estático podem se tornar dinâmicas quando incluem referências dinâmicas. Para mais informações, consulte [Usando referências em textos estáticos](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
 
 #### JSON Exemplo
 
@@ -17,26 +17,26 @@ A text object allows you to display static written content (*e.g.*, instructions
                 "top": 160, 
                 "width": 100,
                 "height": 20,
-                "stroke": "#ff0000"  //text color   
+                "stroke": "#ff0000"  //cor do texto  
                 "fontWeight": "bold"
                 }
 ```
 
 ## Rotação
 
-4D lets you rotate text areas in your forms using the [Orientation](properties_Text.md#orientation) property.
+O 4D permite que você gire as áreas de texto em seus formulários usando a propriedade [Orientation](properties_Text.md#orientation).
 
 ![](../assets/en/FormObjects/staticText.png)
 
 > A rotação do texto pode ser definida para um processo utilizando o comando de linguagem `OBJECT SET TEXT ORIENTATION`.
 
-Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, bem como todas as suas propriedades. Note that the text area’s height and width properties do not depend on its orientation:
+Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, bem como todas as suas propriedades. Observe que as propriedades de largura e altura da área de texto não dependem da sua orientação:
 
 ![](../assets/en/FormObjects/staticText2.png)
 
-- If the object is resized in direction A, its [width](properties_CoordinatesAndSizing.md#width) is modified;
-- If the object is resized in direction C, its [height](properties_CoordinatesAndSizing.md#height) is modified;
-- If the object is resized in direction B, both its [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) are modified.
+- Se o objeto for redimensionado na direção A, sua [largura](properties_CoordinatesAndSizing.md#width) será modificada;
+- Se o objeto for redimensionado na direção C, sua [altura](properties_CoordinatesAndSizing.md#height) será modificada;
+- Se o objeto for redimensionado na direção B, sua [largura](properties_CoordinatesAndSizing.md#width) e [altura](properties_CoordinatesAndSizing.md#height) serão modificadas.
 
 ## Propriedades compatíveis
 

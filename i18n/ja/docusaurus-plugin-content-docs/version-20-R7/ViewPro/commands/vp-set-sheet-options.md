@@ -9,11 +9,11 @@ title: VP SET SHEET OPTIONS
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| 引数           | 型      |    | 説明                                             |                  |
-| ------------ | ------ | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName   | Text   | -> | 4D View Pro エリア名                               |                  |
-| sheetOptions | Object | -> | 設定するシートオプション                                   |                  |
-| sheet        | Object | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
+| 引数           | 型       |    | 説明                                             |                  |
+| ------------ | ------- | -- | ---------------------------------------------- | ---------------- |
+| vpAreaName   | Text    | -> | 4D View Pro エリア名                               |                  |
+| sheetOptions | Object  | -> | 設定するシートオプション                                   |                  |
+| sheet        | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
 #### 説明
 

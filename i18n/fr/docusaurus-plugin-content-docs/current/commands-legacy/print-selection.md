@@ -35,13 +35,13 @@ Pendant l'impression, la méthode du formulaire sortie et les méthodes objet du
 * Un événement On Printing Footer est généré juste avant que la zone de pied de page soit imprimée.
 
 Vous pouvez savoir si **PRINT SELECTION** est sur le point d'imprimer le premier en-tête en testant [Before selection](before-selection.md) pendant un événement On Header. Vous pouvez également savoir si **PRINT SELECTION** est sur le point d'imprimer le dernier pied de page, en testant [End selection](end-selection.md) pendant un événement On Printing Footer.  
-Pour plus d'informations, reportez-vous à la description de ces commandes ainsi qu'aux commandes [Form event code](form-event-code.md) et [Level](level.md).
+Pour plus d'informations, reportez-vous à la description de ces commandes ainsi qu'aux commandes [Form event code](../commands/form-event-code.md) et [Level](level.md).
 
 Si **PRINT SELECTION** est appelée au même moment par deux process différents, l'impression déclenchée par le second process attendra que le premier ait terminé.
 
 Pour imprimer une sélection triée avec des sous-totaux ou des ruptures à l'aide de la commande **PRINT SELECTION**, vous devez d'abord trier la sélection. Puis vous devez inclure, dans chaque zone de rupture de l'état, une variable associée à une méthode objet assignant le sous-total à la variable. Vous pouvez aussi utiliser des fonctions statistiques ou arithmétiques telles que [Sum](sum.md) et [Average](average.md) pour assigner des valeurs aux variables. Pour plus d'informations, reportez-vous à la description des commandes [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md).
 
-**Attention :** N'utilisez pas la commande [PAGE BREAK](page-break.md) avec **PRINT SELECTION**. [PAGE BREAK](page-break.md) est exclusivement réservée à une utilisation combinée avec la commande [Print form](print-form.md).
+**Attention :** N'utilisez pas la commande [PAGE BREAK](page-break.md) avec **PRINT SELECTION**. [PAGE BREAK](page-break.md) est exclusivement réservée à une utilisation combinée avec la commande [Print form](../commands/print-form.md).
 
 Après un appel à **PRINT SELECTION**, la variable OK prend la valeur 1 si l'impression s'est déroulée correctement. Si l'impression a été interrompue (par exemple l'utilisateur a cliqué sur un bouton Annuler dans les boîtes de dialogue d'impression), la variable OK prend la valeur *0* (zéro).
 

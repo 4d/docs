@@ -60,7 +60,7 @@ Para isso, utilize o método de objeto para criar a variável *vstRegistroAtual*
 
 #### Ver também 
 
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [FORM SET INPUT](form-set-input.md)  
 [PRINT SELECTION](print-selection.md)  

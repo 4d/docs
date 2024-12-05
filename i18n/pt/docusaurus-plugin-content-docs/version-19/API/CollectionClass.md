@@ -1693,8 +1693,8 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 
  | Parâmetros    | Tipo    | Valor | Comentário                                                  |
  | ------------- | ------- | ----- | ----------------------------------------------------------- |
- | ck ascending  | Longint | 0     | Os elementos são ordenados de forma ascendente (por padrão) |
- | ck descending | Longint | 1     | Os elementos são ordenados de forma descendente             |
+ | ck ascending  | Integer | 0     | Os elementos são ordenados de forma ascendente (por padrão) |
+ | ck descending | Integer | 1     | Os elementos são ordenados de forma descendente             |
 
  This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
 

@@ -31,7 +31,7 @@ Se passa uma string vazia em *nomImpr*, se utilizará a impressora atual definid
 
 O comando **SET CURRENT PRINTER** deve ser chamado antes de [SET PRINT OPTION](set-print-option.md), de maneira que as opções disponíveis correspondam à impressora selecionada. Por outra parte, **SET CURRENT PRINTER** deve ser chamada depois de*\_o\_PAGE SETUP*, do contrário os parâmetros da impressora são perdidos.
 
-Este comando pode ser utilizado com os comandos[PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md), e [QR REPORT](qr-report.md) e se aplica a todas as impressões de 4D, incluso no ambiente Desenho.  
+Este comando pode ser utilizado com os comandos[PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), e [QR REPORT](qr-report.md) e se aplica a todas as impressões de 4D, incluso no ambiente Desenho.  
   
 Os comandos de impressão devem ser chamadas obrigatoriamente com o parâmetro > (onde seja relevante) de modo a que os parâmetros especificados não sejam perdidos.
 

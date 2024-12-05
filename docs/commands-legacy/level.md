@@ -67,5 +67,5 @@ This example is a template for a form method. It shows each of the possible even
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  

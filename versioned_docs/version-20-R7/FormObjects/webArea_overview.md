@@ -8,7 +8,7 @@ Web areas can display various types of web content within your forms: HTML pages
 
 It is possible to create several web areas in the same form. Note, however, that the use of web areas must follow [several rules](#web-area-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Specific variables can be used to exchange information between the area and the 4D environment.
+Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 
 
 ## Specific properties
@@ -45,15 +45,15 @@ The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-re
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
-```codeJS
+```js
 $4d.HelloWorld();
 ```
 
->JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+>JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
 
 The syntax of calls to 4D methods is as follows:
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 - `param1...paramN`: You can pass as many parameters as you need to the 4D method.
@@ -61,7 +61,7 @@ These parameters can be of any type supported by JavaScript (string, number, arr
 
 - `function(result)`: Function to pass as last argument. This "callback" function is called synchronously once the 4D method finishes executing. It receives the `result` parameter.
 
-- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+- `result`: Execution result of the 4D method. This result can be of any type supported by JavaScript (string, number, array, object).
 
 > By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding:
 `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
@@ -73,8 +73,8 @@ Given a 4D project method named `today` that does not receive parameters and ret
 4D code of `today` method:
 
 ```4d
- C_TEXT($0)
- $0:=String(Current date;System date long)
+ #DECLARE : Text
+ return String(Current date;System date long)
 ```
 
 In the web area, the 4D method can be called with the following syntax:
@@ -83,7 +83,7 @@ In the web area, the 4D method can be called with the following syntax:
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the web area.
+The 4D method does not receive any parameters but it does return the result to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the web area.
 
 Here is the code of the HTML page:
 
@@ -92,9 +92,9 @@ Here is the code of the HTML page:
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <script type="text/javascript">
-$4d.today(function(dollarZero)
+$4d.today(function(result)
 {
-    var curDate = dollarZero;
+    var curDate = result;
     document.getElementById("mydiv").innerHTML=curDate;
 });
 </script>
@@ -106,14 +106,15 @@ $4d.today(function(dollarZero)
 
 #### Example 2  
 
-The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
+The 4D project method `calcSum` receives parameters and returns their sum:
 
 4D code of `calcSum` method:
 
 ```4d
- C_REAL(${1}) // receives n REAL type parameters
- C_REAL($0) // returns a Real
- C_LONGINT($i;$n)
+ #DECLARE (... : Real) -> $sum : Real 
+  // receives n Real type parameters
+  // and returns a Real
+ var $i; $n : Integer
  $n:=Count parameters
  For($i;1;$n)
     $0:=$0+${$i}
@@ -123,16 +124,16 @@ The 4D project method `calcSum` receives parameters (`$1...$n`) and returns thei
 The JavaScript code run in the web area is:
 
 ```js
-$4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
+$4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
     {
-        var result = dollarZero // result is 262.5
+        var result = theSum // result is 262.5
     });
 ```
 
 
 ## Standard actions  
 
-Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html). 
+Four specific standard actions are available for managing web areas automatically: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` and `Stop Loading URL`. These actions can be associated with buttons or menu commands and allow quick implementation of basic web interfaces. These actions are described in [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html). 
 
 
 ## Form events  
@@ -162,9 +163,9 @@ In addition, web areas support the following generic form events:
 When the form is executed, standard browser interface functions are available to the user in the web area, which permit interaction with other form areas:
 
 - **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
+- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 - **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties.
-For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](../assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. In this event, you can call the [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](../assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
 
 > Drag and drop features described above are not supported in web areas using the [macOS system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -207,7 +208,7 @@ To display the Web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 
 > With [Windows system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine), a change in this preference requires a navigation action in the area (for example, a page refresh) to be taken into account. 
 
-For more information, refer to the description of the `WA SET PREFERENCE` command.
+For more information, refer to the description of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the web inspector window is displayed.   
 

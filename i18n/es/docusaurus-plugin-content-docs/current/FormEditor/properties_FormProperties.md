@@ -9,7 +9,7 @@ title: Propiedades de los formularios
 
 > La propiedad de esquema de color sólo se aplica en macOS.
 
-Esta propiedad define el esquema de colores para el formulario. This property defines the color scheme for the form. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. Esta propiedad define el esquema de colores para el formulario. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background
@@ -33,32 +33,45 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                |
-| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \| "win"} objects </li> |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                             |
+| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\ |
 
 ---
 
-## Pages
+## Form Class
 
-Cada formulario consta de al menos dos páginas:
+Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
 
-- una página 0 (página de fondo)
-- una página 1 (página principal)
+Associating a class to the form provides the following benefits:
 
-Para más información, consulte [Páginas formulario](forms.md#form-pages).
+- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+
+![](../assets/en/FormObjects/warning-proplist.png)
+
+- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
+
+- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+
+- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
+
+:::note
+
+See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+
+:::
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                                                                                     |
-| ------ | -------------- | ---------------------------------------------------------------------------------------------------- |
-| pages  | collection     | Colección de páginas (cada página es un objeto, la página 0 es el primer elemento |
+| Nombre    | Tipos de datos | Valores posibles                                                                                                        |
+| --------- | -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| formClass | string         | name of an existing user class ("_className_" or "_componentNameSpace_._className_") |
 
 ---
 
 ## Nombre del formulario
 
-Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D. El nombre del formulario debe cumplir con las [reglas especificadas para los identificadores](Concepts/identifiers.md) en 4D.
+Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D. Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D.
 
 #### Gramática JSON
 
@@ -123,6 +136,23 @@ Define `\<None>` en la lista de propiedades (o " " en JSON) para heredar un form
 | Nombre             | Tipos de datos  | Valores posibles                  |
 | ------------------ | --------------- | --------------------------------- |
 | inheritedFormTable | string o number | nombre de tabla o número de tabla |
+
+---
+
+## Pages
+
+Cada formulario consta de al menos dos páginas:
+
+- una página 0 (página de fondo)
+- una página 1 (página principal)
+
+Para más información, consulte [Páginas formulario](forms.md#form-pages).
+
+#### Gramática JSON
+
+| Nombre | Tipos de datos | Valores posibles                                                                                     |
+| ------ | -------------- | ---------------------------------------------------------------------------------------------------- |
+| pages  | collection     | Colección de páginas (cada página es un objeto, la página 0 es el primer elemento |
 
 ---
 

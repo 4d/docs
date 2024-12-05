@@ -33,7 +33,7 @@ In all cases, use the [Old](old.md) command to detect whether the field value ha
 
 **Note:** Although **Modified** can be applied to any type of field, if you use it in combination with the [Old](old.md) command, be aware of the restrictions that apply to the [Old](old.md) command. For details, see the description of the [Old](old.md) command.
 
-During data entry, it is usually easier to perform operations in object methods using the [Form event code](form-event-code.md) command than to use **Modified** in form methods. Since an object method is sent an On Data Change event whenever a field is modified, the use of an object method is equivalent to using **Modified** in a form method.
+During data entry, it is usually easier to perform operations in object methods using the [Form event code](../commands/form-event-code.md) command than to use **Modified** in form methods. Since an object method is sent an On Data Change event whenever a field is modified, the use of an object method is equivalent to using **Modified** in a form method.
 
 **Note:** To operate properly, the **Modified** command is to be used only in a form method or in a method called by a form method.
 
@@ -68,5 +68,5 @@ You select a record for the table *\[anyTable\]*, then you call multiple subrout
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Old](old.md)  

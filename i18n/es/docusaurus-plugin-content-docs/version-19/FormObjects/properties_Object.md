@@ -263,7 +263,7 @@ Puede forzar un retorno de carro en la etiqueta utilizando el caracter \ (barra 
 
 Para insertar un \ en la etiqueta, ingrese "&#92;&#92;".
 
-Por defecto, la etiqueta se coloca en el centro del objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
+Por defecto, la etiqueta se coloca en el centro del objeto. Cuando el objeto también contiene un icono, puede modificar la ubicación relativa de estos dos elementos utilizando la propiedad [Posición Título/imagen](properties_TextAndPicture.md#titlepicture-position).
 
 Para la traducción de la aplicación, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -291,7 +291,7 @@ Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálcu
 | Mínimo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Suma                    | X   |      |       | X    | X    |          | Igual que el tipo de columna        |
-| Conteo                  | X   | X    | X     | X    | X    | X        | Longint                             |
+| Conteo                  | X   | X    | X     | X    | X    | X        | Integer                             |
 | Promedio                | X   |      |       | X    |      |          | Real                                |
 | Desviación estándar(*)  | X   |      |       | X    |      |          | Real                                |
 | Varianza(*)             | X   |      |       | X    |      |          | Real                                |

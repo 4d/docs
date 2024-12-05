@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** prints the current record of *aTable*, without modifying the current selection.<!-- END REF--> The current output form is used for printing. If there is no current record for *aTable*, **PRINT RECORD** does nothing.
 
-You can print subforms with the **PRINT RECORD** command. This is not possible with [Print form](print-form.md).
+You can print subforms with the **PRINT RECORD** command. This is not possible with [Print form](../commands/print-form.md).
 
 **Note:** If there are modifications to the record that have not been saved, this command prints the modified field values, not the field values located on disk.
 
@@ -35,7 +35,7 @@ By default, **PRINT RECORD** displays the Print job dialog box before printing. 
 * Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-**Warning:** Do not use the [PAGE BREAK](page-break.md) command with **PRINT RECORD**. [PAGE BREAK](page-break.md) is exclusively reserved for use in combination with the [Print form](print-form.md) command.
+**Warning:** Do not use the [PAGE BREAK](page-break.md) command with **PRINT RECORD**. [PAGE BREAK](page-break.md) is exclusively reserved for use in combination with the [Print form](../commands/print-form.md) command.
 
 #### Example 1 
 
@@ -64,4 +64,4 @@ The following example prints the same current record in two different forms. The
 
 #### See also 
 
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

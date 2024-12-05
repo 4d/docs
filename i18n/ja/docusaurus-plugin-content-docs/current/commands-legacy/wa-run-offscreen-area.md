@@ -95,6 +95,6 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 *Webエリアのプログラムによる管理*  

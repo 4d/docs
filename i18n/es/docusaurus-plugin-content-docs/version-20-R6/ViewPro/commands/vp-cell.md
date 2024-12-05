@@ -12,8 +12,8 @@ title: VP Cell
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |
-| column     | Longint | ->                          | Índice de la columna                                           |
-| row        | Longint | ->                          | Índice de la línea                                             |
+| column     | Integer | ->                          | Índice de la columna                                           |
+| row        | Integer | ->                          | Índice de la línea                                             |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |
 | Result     | Object  | <- | Objeto rango de una sola celda                                 |
 

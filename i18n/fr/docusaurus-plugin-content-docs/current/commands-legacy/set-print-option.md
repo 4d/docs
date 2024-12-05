@@ -40,7 +40,7 @@ Le paramètre *option* vous permet de désigner l’option à modifier. Vous pou
 | Legacy printing layer option | 16     | (Windows uniquement) *valeur1* uniquement : 1=sélectionner l'ancienne couche d'impression GDI pour toutes les tâches d'impression suivantes, 0=sélectionner la couche d'impression D2D (défaut). Ce sélecteur est principalement destiné, dans les applications 4D sous Windows, à permettre aux plug-ins d'ancienne génération d'imprimer dans des tâches d'impression 4D.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Print preview option         | 18     | (Uniquement pour Windows) *valeur1* : Format à utiliser pour les aperçus avant impression sous Windows. Valeurs disponibles : kp preview automatic (par défaut) : Utiliser l'imprimante et la visionneuse XPS si elles sont disponibles, sinon utiliser l'imprimante ou la visionneuse PDF si elles sont disponibles, sinon générer une erreur.. kp preview XPS : Utiliser l'imprimante et la visionneuse XPS si elle est disponible, sinon générer une erreur. kp preview PDF : Utiliser l'imprimante et la visionneuse PDF si elles sont disponibles, sinon générer une erreur. *valeur2* (ne peut être utilisé qu'avec [GET PRINT OPTION](get-print-option.md).): Format d'aperçu avant impression utilisé sous Windows (peut différer de la valeur1 en fonction de la configuration). Valeurs disponibles : kp preview none : Aucun format disponible. kp preview XPS : Imprimante et visionneuse XPS utilisées. kp preview PDF : Imprimante et visionneuse PDF utilisées.                        |
 
-Une fois fixée à l’aide de cette commande, une option d’impression sera conservée durant toute la session pour l’application 4D entière. Elle sera utilisée par les commandes [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](print-form.md), [QR REPORT](qr-report.md) et par toutes les impressions de 4D, y compris en mode Développement.
+Une fois fixée à l’aide de cette commande, une option d’impression sera conservée durant toute la session pour l’application 4D entière. Elle sera utilisée par les commandes [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), [QR REPORT](qr-report.md) et par toutes les impressions de 4D, y compris en mode Développement.
 
 **Notes :**
 
@@ -78,6 +78,6 @@ Si la valeur passée pour une *option* est invalide ou si elle n'est pas disponi
 
 [GET PRINT OPTION](get-print-option.md)  
 *Options d'impression*  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  

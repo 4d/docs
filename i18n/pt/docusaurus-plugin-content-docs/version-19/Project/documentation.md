@@ -153,10 +153,10 @@ $txt:="Hello world!"
 - A etiqueta de tabela é suportada:
 
 ```
-| Parâmetro | Tipo | Descrição |
+| Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea | String |Área de escrita profissional|
-| toolbar | String |Nome da barra de ferramentas |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - A etiqueta de ligação é suportada:
@@ -197,7 +197,7 @@ GetLogo (size) -> logo
 
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Longint | in | Logo style selector (1 to 5)  |
+| size      | Integer | in | Logo style selector (1 to 5)  |
 | logo      | Picture | out | Selected logo |
 
 

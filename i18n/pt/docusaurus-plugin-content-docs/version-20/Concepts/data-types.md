@@ -41,7 +41,7 @@ O valor por defeito depende do tipo de variável:
 | ------------ | ------------------- |
 | Booleano     | False               |
 | Date         | 00-00-00            |
-| Longint      | 0                   |
+| Integer      | 0                   |
 | Hora         | 00:00:00            |
 | Imagem       | tamanho da imagem=0 |
 | Real         | 0                   |

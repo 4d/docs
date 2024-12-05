@@ -107,7 +107,7 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
  End if
 ```
 
-この例題では、ON EVENT CALLが使用されている点に注意してください。これは、ループで*PAGE SETUP*、[PRINT FORM](print-form.md "PRINT FORM")、[PAGE BREAK](page-break.md "PAGE BREAK")コマンドを使い、特別な印刷用レポートを生成しているためです。
+この例題では、ON EVENT CALLが使用されている点に注意してください。これは、ループで*PAGE SETUP*、[PRINT FORM](../commands/print-form.md "PRINT FORM")、[PAGE BREAK](page-break.md "PAGE BREAK")コマンドを使い、特別な印刷用レポートを生成しているためです。
 
 [PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってレポートを印刷する場合、ユーザに印刷を中断させるようなイベント処理を実行する必要はありません。この処理は[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドにより自動的に行われます。
 

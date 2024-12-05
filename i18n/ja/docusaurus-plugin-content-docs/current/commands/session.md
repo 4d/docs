@@ -18,6 +18,7 @@ displayed_sidebar: docs
 
 | リリース  | 内容                               |
 | ----- | -------------------------------- |
+| 20 R8 | Support of standalone sessions   |
 | 20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
 | 18 R6 | 追加                               |
 
@@ -31,11 +32,12 @@ displayed_sidebar: docs
 
 - Webセッション ([スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合)
 - リモートクライアントセッション
-- ストアドプロシージャーセッション
+- the stored procedures session,
+- the *designer* session in a standalone application.
 
-For more information, see the [Session types](../command/session.md-types) paragraph.
+For more information, see the [Session types](../API/SessionClass.md#session-types) paragraph.
 
-サポートされていないコンテキスト (シングルユーザーアプリケーション、スケーラブルセッションが無効...) から呼び出されると、コマンドは *Null* を返します。
+If the command is called from a non supported context (e.g. scalable sessions disabled), it returns *Null*.
 
 #### Webセッション
 
@@ -68,6 +70,10 @@ For more information on web user sessions, please refer to the [Web Server Sessi
 
 ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html) のページを参照ください。
 
+#### Standalone session
+
+The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
+
 #### 例題
 
 "公開オプション: 4DタグとURL(4DACTION...)" を有効にした `action_Session` メソッドを定義しました。 ブラウザーに次の URL を入力してメソッドを呼び出します:
@@ -92,6 +98,6 @@ IP:port/4DACTION/action_Session
 
 ### 参照
 
-[Session storage](../commands-legacy/session-storage.md)\
+[Session storage](session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)

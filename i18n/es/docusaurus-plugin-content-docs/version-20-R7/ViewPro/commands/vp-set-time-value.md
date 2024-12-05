@@ -12,7 +12,7 @@ title: VP SET TIME VALUE
 | Parámetros    | Tipo   |    | Descripción          |                  |
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto rango         |                  |
-| timeValue     | Text   | -> | Valor hora a definir |                  |
+| timeValue     | Hora   | -> | Valor hora a definir |                  |
 | formatPattern | Text   | -> | Formato del valor    | <!-- END REF --> |
 
 #### Descripción

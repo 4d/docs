@@ -50,7 +50,7 @@ If you pass an empty string ("") in *title,* you instruct 4D to use the Window T
 
 * The *controlMenuBox* parameter is the optional Control-menu box method for the window. If this parameter is specified, a Control-menu box (Windows) or a Close Box (Macintosh) is added to the window. When the user double-clicks the Control-menu box (Windows) or clicks on the Close Box (Macintosh), the method passed in *controlMenuBox* is called.
 
-**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an On Close Box event occurs. For more information, see the command [Form event code](form-event-code.md).
+**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an On Close Box event occurs. For more information, see the command [Form event code](../commands/form-event-code.md).
 
 If more than one window is open for a process, the last window opened is the active (frontmost) window for that process. Only information within the active window can be modified. Any other windows can be viewed. When the user types, the active window will always come to the front, if it is not already there.
 

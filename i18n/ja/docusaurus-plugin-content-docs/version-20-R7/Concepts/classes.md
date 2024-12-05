@@ -191,6 +191,12 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 // コード
 ```
 
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
+
 クラス関数とは、当該クラスのプロパティです。 クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです。 クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。
 
 [共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` structure](shared.md#useend-use) 構文なしで関数を呼び出せるようにできます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
@@ -324,6 +330,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // コード
 ```
+
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
 
 クラスコンストラクター関数を使って、ユーザークラスのオブジェクトを生成・初期化することができます。 このコンストラクターは任意の [引数](#引数) を受け取ることができます。
 

@@ -6,7 +6,7 @@ title: Number (Real, Integer)
 Número es un término genérico que significa:
 
 - Los campos, variables o expresiones de tipo real. El rango del tipo Real es ±1,7e±308 (13 dígitos significativos).
-- Integer variable or expression. The range for the Integer data type is -2^31..(2^31)-1 (4-byte Integer, aka *Long* or *Longint*).
+- Variable o expresión entera. The range for the Integer data type is -2^31..(2^31)-1 (4-byte Integer, aka *Long* or *Longint*).
 
 :::info Compatibilidad
 
@@ -56,13 +56,13 @@ Los números negativos se especifican con el signo menos (-). Por ejemplo:
 |                   |                                           |          | 10 = 11                           | False               |
 | Desigualdad       | Número # Número                           | Boolean  | 10 #11                            | True                |
 |                   |                                           |          | 10 # 10                           | False               |
-| Mayor que         | Number > Number                           | Boolean  | 11 > 10                           | True                |
+| Mayor que         | Número > Número                           | Boolean  | 11 > 10                           | True                |
 |                   |                                           |          | 10 > 11                           | False               |
-| Menor que         | Number < Number  | Boolean  | 10 < 11  | True                |
+| Menor que         | Número < Número  | Boolean  | 10 < 11  | True                |
 |                   |                                           |          | 11 < 10  | False               |
-| Mayor o igual que | Number >= Number                          | Boolean  | 11 >= 10                          | True                |
+| Mayor o igual que | Número >= Número                          | Boolean  | 11 >= 10                          | True                |
 |                   |                                           |          | 10 >= 11                          | False               |
-| Menor o igual que | Number <= Number | Boolean  | 10 <= 11 | True                |
+| Menor o igual que | Número <= Número | Boolean  | 10 <= 11 | True                |
 |                   |                                           |          | 11 <= 10 | False               |
 
 ### Módulo
@@ -75,7 +75,7 @@ El operador modulo % divide el primer número entre el segundo y devuelve un res
 
 :::warning
 
-El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). To calculate the modulo with numbers outside of this range, use the [`Mod`](../commands-legacy/mod.md) command.
+El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). Para calcular el módulo con números fuera de este rango, utilice el comando [`Mod`](../commands-legacy/mod.md).
 
 :::
 
@@ -85,11 +85,11 @@ El operador de división entero largo \ devuelve valores significativos sólo co
 
 ### Comparación real
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) command.
+Para comparar dos reales por igualdad, el lenguaje 4D realmente compara el valor absoluto de la diferencia con el *épsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
 
 :::note
 
-For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) setting into account.
+Por coherencia, el motor de base de datos 4D siempre compara los campos de base de datos de tipo real utilizando un valor de 10^-6 para *epsilon* y no tiene en cuenta el ajuste [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
 
 :::
 
@@ -143,16 +143,16 @@ An expression that uses a bitwise operator returns a Long value, except for the 
 
 La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 
-| Operación                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Y                                | Cada bit resultante es el resultado de la operación AND lógica aplicada a los bits de los dos operandos. Here is the logical AND table:<li>1 & 1 --> 1</li><li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0. |
-| O (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 \| 1 --> 1</li><li>0 \| 1 --> 1</li><li>1 \| 0 --> 1</li><li>0 \| 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                                                   |
-| O (exclusivo) | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 ^ \| 1 --> 0</li><li>0 ^ \| 1 --> 1</li><li>1 ^ \| 0 --> 1</li><li>0 ^ \| 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                                             |
-| Left Bit Shift                   | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la izquierda el número de posiciones indicado por el segundo operando. Los bits de la izquierda se pierden y los nuevos bits de la derecha se ponen en 0. **Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.          |
-| Right Bit Shift                  | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la derecha el número de posición indicado por el segundo operando. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                          |
-| Bit Set                          | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 1. Los demás bits no se modifican.                                                                                                                                                                                                                                    |
-| Poner el bit en 0                | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 0. Los demás bits no se modifican.                                                                                                                                                                                                                                    |
-| Probar bit                       | Devuelve True si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 1. Devuelve False si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 0.                                                                                                                                                                                                                     |
+| Operación                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Y                                | Cada bit resultante es el resultado de la operación AND lógica aplicada a los bits de los dos operandos. Cada bit resultante es el resultado de la operación AND lógica aplicada a los bits de los dos operandos.                                                                                                                                                                                                     |
+| O (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 \\                                                                                                                                                                                                                                                                                                          |
+| O (exclusivo) | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 ^ \\                                                                                                                                                                                                                                                                                                      |
+| Left Bit Shift                   | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la izquierda el número de posiciones indicado por el segundo operando. Los bits de la izquierda se pierden y los nuevos bits de la derecha se ponen en 0. **Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N. |
+| Right Bit Shift                  | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la derecha el número de posición indicado por el segundo operando. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                 |
+| Bit Set                          | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 1. Los demás bits no se modifican.                                                                                                                                                                                                                           |
+| Poner el bit en 0                | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 0. Los demás bits no se modifican.                                                                                                                                                                                                                           |
+| Probar bit                       | Devuelve True si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 1. Devuelve False si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 0.                                                                                                                                                                                                            |
 
 ### Ejemplos
 

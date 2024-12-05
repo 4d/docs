@@ -27,7 +27,7 @@ title: VP Get column attributes
 
 #### Description
 
-La commande `VP Récupère les attributs de colonne de la table` <!-- REF #_method_.VP Récupère les attributs de la colonne de la table. ummary -->retourne les attributs courants de la colonne spécifiée *column* dans la table *tableName*<!-- END REF -->.
+La commande `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->retourne les attributs courants de la colonne spécifiée *column* dans la table *tableName*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 

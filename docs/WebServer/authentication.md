@@ -83,13 +83,14 @@ The `On Web Authentication` database method is therefore called:
 
 - when the web server receives a URL requesting a resource that does not exist
 - when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
+- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md) command
 - when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
 
 The `On Web Authentication` database method is NOT called:
 
 - when the web server receives a URL requesting a valid static page.
 - when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md). 
 
 
 ### Syntax

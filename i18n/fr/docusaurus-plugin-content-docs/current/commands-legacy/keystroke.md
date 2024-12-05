@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Keystroke.Summary-->**Keystroke** retourne le caractère tapé par l'utilisateur dans un champ ou une zone saisissable.<!-- END REF--> 
 
-En général, vous appelez **Keystroke** dans une méthode formulaire ou objet, lors de la gestion des événements formulaire On Before Keystroke et On After Keystroke. Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](form-event-code.md). 
+En général, vous appelez **Keystroke** dans une méthode formulaire ou objet, lors de la gestion des événements formulaire On Before Keystroke et On After Keystroke. Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](../commands/form-event-code.md). 
 
 Si vous voulez remplacer un caractère saisi par l'utilisateur par un autre, utilisez la commande [FILTER KEYSTROKE](filter-keystroke.md).
 
@@ -165,5 +165,5 @@ A l'aide des possibilités de communication interprocess de 4D, vous pouvez cons
 #### Voir aussi 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  

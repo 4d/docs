@@ -45,7 +45,7 @@ Para obtener una visión general de esta clase, consulte la entrada del blog [**
 | Parámetros | Tipo                         |                             | Descripción                                       |
 | ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
 | settings   | Object                       | ->                          | Parámetros para generar o cargar un par de llaves |
-| resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+| Result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 
@@ -409,7 +409,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 

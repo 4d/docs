@@ -20,9 +20,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CANCEL.Summary-->El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:
 
 * cancelar un registro nuevo o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md) o [MODIFY RECORD](modify-record.md).<!-- END REF-->
-* cancelar un formulario mostrado por intermedio del comando [DIALOG](dialog.md).
+* cancelar un formulario mostrado por intermedio del comando [DIALOG](../commands/dialog.md).
 * salir de un formulario que muestra una selección de registros, utilizando [DISPLAY SELECTION](display-selection.md) o [MODIFY SELECTION](modify-selection.md).
-* cancelar la impresión de un formulario que está a punto de ser impreso utilizando el comando [Print form](print-form.md) (ver a continuación).
+* cancelar la impresión de un formulario que está a punto de ser impreso utilizando el comando [Print form](../commands/print-form.md) (ver a continuación).
 
 En el contexto de entrada de datos, **CANCEL** efectúa la misma acción que si el usuario hubiera presionado la tecla de cancelación (**Esc**).
 
@@ -32,7 +32,7 @@ Este comando también se usa en el metódo de la caja de cierre opcional para el
 
 **CANCEL** no puede estar en la cola. Ejecutar dos comandos **CANCEL** en una fila desde dentro de un método en respuesta a un evento tendría el mismo efecto que ejecutar sólo uno.
 
-Finalmente, este comando puede ser utilizado en el evento de formulario On Printing Detail, cuando se utiliza el comando [Print form](print-form.md). En este contexto, el comando **CANCEL** suspende la impresión del formulario que está a punto de imprimirse, luego retoma en la siguiente página. Este mecanismo puede utilizarse para administrar la impresión de formularios cuando no hay suficiente espacio o en caso de que sea necesaria una ruptura de página.
+Finalmente, este comando puede ser utilizado en el evento de formulario On Printing Detail, cuando se utiliza el comando [Print form](../commands/print-form.md). En este contexto, el comando **CANCEL** suspende la impresión del formulario que está a punto de imprimirse, luego retoma en la siguiente página. Este mecanismo puede utilizarse para administrar la impresión de formularios cuando no hay suficiente espacio o en caso de que sea necesaria una ruptura de página.
 
 **Nota:** esta operación es diferente de la del comando [PAGE BREAK](page-break.md)(\*) que cancela TODOS los formularios que están en espera de impresión.
 
@@ -52,4 +52,4 @@ Cuando el comando CANCEL se ejecuta (anulación de formulario o de impresión), 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

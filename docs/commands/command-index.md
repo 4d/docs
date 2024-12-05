@@ -91,7 +91,7 @@ title: Index
 
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
 [`Call chain`](../commands-legacy/call-chain.md)<br/>
-[`CALL FORM`](../commands-legacy/call-form.md)<br/>
+[`CALL FORM`](call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>
 [`CALL WORKER`](../commands-legacy/call-worker.md)<br/>
 [`CANCEL`](../commands-legacy/cancel.md)<br/>
@@ -121,7 +121,7 @@ title: Index
 [`Command name`](../commands-legacy/command-name.md)<br/>
 [`Compact data file`](../commands-legacy/compact-data-file.md)<br/>
 [`Compare strings`](../commands-legacy/compare-strings.md)<br/>
-[`Compile project`](../commands-legacy/compile-project.md)<br/>
+[`Compile project`](compile-project.md)<br/>
 [`COMPONENT LIST`](../commands-legacy/component-list.md)<br/>
 [`COMPRESS BLOB`](../commands-legacy/compress-blob.md)<br/>
 [`CONFIRM`](../commands-legacy/confirm.md)<br/>
@@ -207,7 +207,7 @@ title: Index
 [`Delete string`](../commands-legacy/delete-string.md)<br/>
 [`DELETE USER`](../commands-legacy/delete-user.md)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands-legacy/describe-query-execution.md)<br/>
-[`DIALOG`](../commands-legacy/dialog.md)<br/>
+[`DIALOG`](dialog.md)<br/>
 [`DIFFERENCE`](../commands-legacy/difference.md)<br/>
 [`DISABLE MENU ITEM`](../commands-legacy/disable-menu-item.md)<br/>
 [`Discover data key`](../commands-legacy/discover-data-key.md)<br/>
@@ -280,7 +280,7 @@ title: Index
 [`Euro converter`](../commands-legacy/euro-converter.md)<br/>
 [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md)<br/>
 [`EXECUTE METHOD`](../commands-legacy/execute-method.md)<br/>
-[`EXECUTE METHOD IN SUBFORM`](../commands-legacy/execute-method-in-subform.md)<br/>
+[`EXECUTE METHOD IN SUBFORM`](execute-method-in-subform.md)<br/>
 [`EXECUTE ON CLIENT`](../commands-legacy/execute-on-client.md)<br/>
 [`Execute on server`](../commands-legacy/execute-on-server.md)<br/>
 [`Exp`](../commands-legacy/exp.md)<br/>
@@ -313,11 +313,11 @@ title: Index
 [`Font file`](../commands-legacy/font-file.md)<br/>
 [`FONT LIST`](../commands-legacy/font-list.md)<br/>
 [`FONT STYLE LIST`](../commands-legacy/font-style-list.md)<br/>
-[`Form`](../commands-legacy/form.md)<br/>
+[`Form`](form.md)<br/>
 [`FORM Convert to dynamic`](../commands-legacy/form-convert-to-dynamic.md)<br/>
-[`FORM EDIT`](../commands-legacy/form-edit.md)<br/>
-[`FORM Event`](../commands-legacy/form-event.md)<br/>
-[`Form event code`](../commands-legacy/form-event-code.md)<br/>
+[`FORM EDIT`](form-edit.md)<br/>
+[`FORM Event`](form-event.md)<br/>
+[`Form event code`](form-event-code.md)<br/>
 [`FORM FIRST PAGE`](../commands-legacy/form-first-page.md)<br/>
 [`FORM Get color scheme`](../commands-legacy/form-get-color-scheme.md)<br/>
 [`FORM Get current page`](../commands-legacy/form-get-current-page.md)<br/>
@@ -329,7 +329,7 @@ title: Index
 [`FORM GET VERTICAL RESIZING`](../commands-legacy/form-get-vertical-resizing.md)<br/>
 [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md)<br/>
 [`FORM LAST PAGE`](../commands-legacy/form-last-page.md)<br/>
-[`FORM LOAD`](../commands-legacy/form-load.md)<br/>
+[`FORM LOAD`](form-load.md)<br/>
 [`FORM NEXT PAGE`](../commands-legacy/form-next-page.md)<br/>
 [`FORM PREVIOUS PAGE`](../commands-legacy/form-previous-page.md)<br/>
 [`FORM SCREENSHOT`](../commands-legacy/form-screenshot.md)<br/>
@@ -658,7 +658,7 @@ title: Index
 [`METHOD GET NAMES`](../commands-legacy/method-get-names.md)<br/>
 [`METHOD Get path`](../commands-legacy/method-get-path.md)<br/>
 [`METHOD GET PATHS`](../commands-legacy/method-get-paths.md)<br/>
-[`METHOD GET PATHS FORM`](../commands-legacy/method-get-paths-form.md)<br/>
+[`METHOD GET PATHS FORM`](method-get-paths-form.md)<br/>
 [`METHOD OPEN PATH`](../commands-legacy/method-open-path.md)<br/>
 [`METHOD RESOLVE PATH`](../commands-legacy/method-resolve-path.md)<br/>
 [`METHOD SET ACCESS MODE`](../commands-legacy/method-set-access-mode.md)<br/>
@@ -758,7 +758,7 @@ title: Index
 [`OBJECT GET SCROLLBAR`](../commands-legacy/object-get-scrollbar.md)<br/>
 [`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md)<br/>
 [`OBJECT Get style sheet`](../commands-legacy/object-get-style-sheet.md)<br/>
-[`OBJECT GET SUBFORM`](../commands-legacy/object-get-subform.md)<br/>
+[`OBJECT GET SUBFORM`](object-get-subform.md)<br/>
 [`OBJECT GET SUBFORM CONTAINER SIZE`](../commands-legacy/object-get-subform-container-size.md)<br/>
 [`OBJECT Get subform container value`](../commands-legacy/object-get-subform-container-value.md)<br/>
 [`OBJECT Get text orientation`](../commands-legacy/object-get-text-orientation.md)<br/>
@@ -804,7 +804,7 @@ title: Index
 [`OBJECT SET SCROLLBAR`](../commands-legacy/object-set-scrollbar.md)<br/>
 [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)<br/>
 [`OBJECT SET STYLE SHEET`](../commands-legacy/object-set-style-sheet.md)<br/>
-[`OBJECT SET SUBFORM`](../commands-legacy/object-set-subform.md)<br/>
+[`OBJECT SET SUBFORM`](object-set-subform.md)<br/>
 [`OBJECT SET SUBFORM CONTAINER VALUE`](../commands-legacy/object-set-subform-container-value.md)<br/>
 [`OBJECT SET TEXT ORIENTATION`](../commands-legacy/object-set-text-orientation.md)<br/>
 [`OBJECT SET THREE STATES CHECKBOX`](../commands-legacy/object-set-three-states-checkbox.md)<br/>
@@ -885,7 +885,7 @@ title: Index
 [`POST KEY`](../commands-legacy/post-key.md)<br/>
 [`POST OUTSIDE CALL`](../commands-legacy/post-outside-call.md)<br/>
 [`PREVIOUS RECORD`](../commands-legacy/previous-record.md)<br/>
-[`Print form`](../commands-legacy/print-form.md)<br/>
+[`Print form`](print-form.md)<br/>
 [`PRINT LABEL`](../commands-legacy/print-label.md)<br/>
 [`Print object`](../commands-legacy/print-object.md)<br/>
 [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md)<br/>

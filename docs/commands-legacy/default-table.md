@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** Although using **DEFAULT TABLE** and omitting the table name may make the code easier to read, many programmers find that using this command actually causes more problems and confusion than it is worth.<!-- END REF--> In particular, note that [DEFAULT TABLE](default-table.md) takes priority when you use, for example, the [DIALOG](dialog.md) command with a project form and there is a default table form with the same name.
+<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** Although using **DEFAULT TABLE** and omitting the table name may make the code easier to read, many programmers find that using this command actually causes more problems and confusion than it is worth.<!-- END REF--> In particular, note that [DEFAULT TABLE](default-table.md) takes priority when you use, for example, the [DIALOG](../commands/dialog.md) command with a project form and there is a default table form with the same name.
 
 **DEFAULT TABLE** sets *aTable* as the default table for the current process.
 

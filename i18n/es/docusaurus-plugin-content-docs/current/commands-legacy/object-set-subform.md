@@ -44,5 +44,5 @@ Cuando modifica un subformulario página, el comando puede ejecutarse en cualqui
 
 #### Ver también 
 
-[OBJECT GET SUBFORM](object-get-subform.md)  
+[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  

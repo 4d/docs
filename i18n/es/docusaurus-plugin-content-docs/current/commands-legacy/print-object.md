@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print object.Summary-->El comando **Print object** permite imprimir el o los objetos de formulario designado(s) por los parámetros *objeto* y *\**, en la ubicación definida por los parámetros *posX* y *posY*.<!-- END REF-->  
   
-Antes de llamar el comando **Print object**, debe designar el formulario tabla o proyecto que contiene los objetos a imprimir, utilizando el comando [FORM LOAD](form-load.md).   
+Antes de llamar el comando **Print object**, debe designar el formulario tabla o proyecto que contiene los objetos a imprimir, utilizando el comando [FORM LOAD](../commands/form-load.md).   
   
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena de caracteres). Si no pasa el parámetro *\**, está indicando que *objeto* es una variable. En este caso, se pasa una referencia de variable (tipo de objeto únicamente) en lugar de una cadena.  
   
@@ -97,4 +97,4 @@ Ejemplo de impresión de un list box completo:
 
 #### Ver también 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  

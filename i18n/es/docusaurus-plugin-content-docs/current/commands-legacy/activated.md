@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Activated.Summary-->El comando **Activated** (obsoleto) devuelve **True** en un método formulario cuando la ventana que contiene el formulario se convierte en la ventana del primer plano del proceso del primer plano.<!-- END REF-->
 
-**Nota:** este comando es equivalente a usar [Form event code](form-event-code.md) y probar si devuelve el evento On Activate.
+**Nota:** este comando es equivalente a usar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Activate.
 
 **ATENCIÓN:** no ubique un comando como [TRACE](trace.md) o [ALERT](alert.md)en la fase **Activated** del formulario, ya que esto produce un bucle infinito.
 
@@ -29,4 +29,4 @@ displayed_sidebar: docs
 #### Ver también 
 
 [Deactivated](deactivated.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

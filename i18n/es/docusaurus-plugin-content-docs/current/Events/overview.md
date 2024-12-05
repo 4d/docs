@@ -5,7 +5,7 @@ title: Eventos formulario
 
 Los eventos formulario son eventos que pueden llevar a la ejecución del método de formulario y/o del o de los métodos objeto de formulario. Los eventos de formulario le permiten controlar el flujo de su aplicación y escribir código que se ejecuta sólo cuando ocurre un evento específico.
 
-En su código, se controlan los eventos mediante el comando `FORM Event`, que devuelve el evento disparado. Por ejemplo:
+In your code, you control the events using the [`FORM Event`](../commands/form-event.md) command, that returns the triggered event. Por ejemplo:
 
 ```4d
 //code of a button
@@ -18,7 +18,7 @@ End if
 
 ## Objeto evento
 
-Cada evento es devuelto como un objeto por el comando `FORM Event`. Por defecto, contiene las siguientes propiedades:
+Each event is returned as an object by the [`FORM Event`](../commands/form-event.md) command. Por defecto, contiene las siguientes propiedades:
 
 | Propiedad   | Tipo         | Descripción                                                                                                |
 | ----------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ Cuando se produce un evento formulario, 4D realiza las siguientes acciones:
 
 No asuma que los métodos objeto, si los hay, serán llamados en un orden particular. La regla general es que los métodos objeto siempre se llaman antes que el método formulario. Si un objeto es un subformulario, se llaman los métodos objeto del formulario lista del subformulario, y luego se llama al método formulario del formulario listado. 4D continúa llamando a los métodos objeto del formulario padre. En otras palabras, cuando un objeto es un subformulario, 4D utiliza la misma regla general para los métodos objeto y formulario dentro del objeto subformulario.
 
-Excepto en los eventos [En carga](onLoad.md) y [En descarga](onUnload.md) (ver más abajo), si la propiedad del evento formulario no está seleccionada para un evento determinado, esto no impide las llamadas a los métodos objetos cuya misma propiedad de eve En otras palabras, la activación o desactivación de un evento a nivel de formulario no tiene ningún efecto sobre las propiedades del evento del objeto.
+ATENCIÓN: los eventos [On Load](onLoad.md) y [On Unload](onUnload.md) se generan para los objetos si están activados a la vez para los objetos y para el formulario al que pertenecen los objetos. En otras palabras, la activación o desactivación de un evento a nivel de formulario no tiene ningún efecto sobre las propiedades del evento del objeto.
 
 El número de objetos asociados a un evento depende de la naturaleza del mismo.
 
@@ -113,4 +113,4 @@ El número de objetos asociados a un evento depende de la naturaleza del mismo.
 
 Tenga siempre en cuenta que, para todo evento, se llama al método de un formulario o de un objeto si se selecciona la correspondiente propiedad del evento para el formulario o los objetos. La ventaja de desactivar los eventos en el entorno de diseño (utilizando la lista de propiedades del editor de formularios) es que puede reducir el número de llamadas a los métodos y, por tanto, optimizar significativamente la velocidad de ejecución de sus formularios.
 
-> ATENCIÓN: los eventos [On Load](onLoad.md) y [On Unload](onUnload.md) se generan para los objetos si están activados a la vez para los objetos y para el formulario al que pertenecen los objetos. Si los eventos están activados sólo para los objetos, no se producirán; estos dos eventos también deben estar activados a nivel del formulario.
+> Excepto en los eventos [En carga](onLoad.md) y [En descarga](onUnload.md) (ver más abajo), si la propiedad del evento formulario no está seleccionada para un evento determinado, esto no impide las llamadas a los métodos objetos cuya misma propiedad de eve En otras palabras, la activación o desactivación de un evento a nivel de formulario no tiene ningún efecto sobre las propiedades del evento del objeto. Si los eventos están activados sólo para los objetos, no se producirán; estos dos eventos también deben estar activados a nivel del formulario.

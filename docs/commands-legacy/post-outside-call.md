@@ -44,6 +44,6 @@ See example for [Semaphore](semaphore.md).
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  

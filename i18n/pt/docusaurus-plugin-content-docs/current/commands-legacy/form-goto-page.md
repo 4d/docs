@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** modifica a página atual de um formulário para mostrar a página especificada por *numPag*.<!-- END REF-->
 
-Se não for mostrado nenhum formulário ou carregado pelo comando [FORM LOAD](form-load.md) ou se *numPag* corresponde à página atual do formulário, **FORM GOTO PAGE** não faz nada. Se *numPag* é superior ao número de páginas do formulário, a última página é mostrada. Se *numPag* é menor que um, a primeira página é mostrada.  
+Se não for mostrado nenhum formulário ou carregado pelo comando [FORM LOAD](../commands/form-load.md) ou se *numPag* corresponde à página atual do formulário, **FORM GOTO PAGE** não faz nada. Se *numPag* é superior ao número de páginas do formulário, a última página é mostrada. Se *numPag* é menor que um, a primeira página é mostrada.  
   
 O parâmetro *\** é útil quando o comando é chamado no contexto de um subformulário em página que contém muitas páginas. Neste caso, quando passar este parâmetro, o comando muda a página do subformulário atual (a que chamou o comando). Por padrão, quando o parâmetro *\** é omitido, o comando é sempre aplicado ao formulário pai.
 
@@ -32,7 +32,7 @@ Os botões de ação automática realizam as mesmas tarefas que os comandos [FIR
 Os comandos de página podem ser utilizadas com formulários de entrada ou com formulários de saída em diálogos.Os formulários de saída utilizam apenas a primeira página. Um formulário sempre tem ao menos uma página, a primeira página. Lembre que sem importar o número de páginas que um formulário tenha, só existe um método de formulário para cada formulário. 
 
 * Utilize o comando [FORM Get current page](form-get-current-page.md) para saber que página está sendo mostrada.
-* Utilize [Form event code](form-event-code.md) On Page Change que é gerado cada vez que a página atual do formulário muda.
+* Utilize [Form event code](../commands/form-event-code.md) On Page Change que é gerado cada vez que a página atual do formulário muda.
 
 **Nota:** quando **desenha** um formulário, pode trabalhar com as páginas da 1 à X, como também com a página 0, na qual põe os objetos que aparecem em todas as páginas. Quando **utiliza** um formulário, e chama os comandos de página, você trabalha com as páginas da 1 a X; a página 0 é combinada automaticamente com a página que está sendo mostrada.
 

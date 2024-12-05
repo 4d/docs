@@ -60,4 +60,4 @@ O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mo
 
 #### Ver também 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

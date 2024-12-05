@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** changes the currently displayed form page to the form page specified by *pageNumber*.<!-- END REF-->
 
-If no form is displayed or loaded by the [FORM LOAD](form-load.md) command, or if *pageNumber* corresponds to the current page of the form, **FORM GOTO PAGE** does nothing. If *pageNumber* is greater than the number of pages, the last page is displayed. If *pageNumber* is less than one, the first page is displayed.
+If no form is displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if *pageNumber* corresponds to the current page of the form, **FORM GOTO PAGE** does nothing. If *pageNumber* is greater than the number of pages, the last page is displayed. If *pageNumber* is less than one, the first page is displayed.
 
 The *\** parameter is useful when the command is called in the context of a page type subform containing several pages. In this case, when you pass this parameter, the command changes the page of the current subform (the one that called the command). By default, when the *\** parameter is omitted, the command is always applied to the parent form.
 
@@ -32,7 +32,7 @@ Automatic action buttons perform the same tasks as the [FORM FIRST PAGE](form-fi
 Page commands can be used with input forms or with forms displayed in dialogs. Output forms use only the first page. A form always has at least one page—the first page. Remember that regardless of the number of pages a form has, only one form method exists for each form. 
 
 * Use the [FORM Get current page](form-get-current-page.md) command to find out which page is being displayed.
-* Use the On Page Change [Form event code](form-event-code.md) that is generated each time the current page of the form changes.
+* Use the On Page Change [Form event code](../commands/form-event-code.md) that is generated each time the current page of the form changes.
 
 **Note:** When **designing** a form, you can work with pages 1 through X, as well as with page 0, in which you put objects that will appear in all of the pages. When **using** a form, and therefore when calling page commands, you work with pages 1 through X; page 0 is automatically combined with the page being displayed.
 

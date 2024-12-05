@@ -44,7 +44,7 @@ Automaticamente, os valores *moveH*, *moveV*, *redimH* e *redimV* modificam as c
 Este comando funciona nos seguintes contextos:
 
 * Formulários de entrada em modo entrada de dados,
-* Formulários mostrados utilizando o comando [DIALOG](dialog.md "DIALOG"),
+* Formulários mostrados utilizando o comando [DIALOG](../commands/dialog.md "DIALOG"),
 * Cabeçalhos e rodapés de página de formulários de saída mostrados pelos comandos [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION") ou [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION"),
 * Formulários em curso de impressão.
 

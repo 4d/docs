@@ -40,4 +40,4 @@ Para saber el tamaño total de la página, puede:
 #### Ver también 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

@@ -152,7 +152,7 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 Designa el color de la fuente.
 
-> This property also sets the [color of object's border](properties_BackgroundAndBorder.md#background-color--fill-color) (if any) when "plain" or "dotted" style is used.
+> Esta propiedad también define el [color del borde del objeto](properties_BackgroundAndBorder.md#background-color--fill-color) (si existe) cuando se utiliza el estilo "plano" o "punteado".
 
 El color puede ser especificado por:
 
@@ -289,7 +289,7 @@ Indica una expresión o una variable que se evaluará para cada línea mostrada.
 | disabled                    | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. El texto y los controles (casillas de selección, listas, etc.) aparecen atenuados o en gris. Valores por defecto: False.                                                                                                                                                                                                                                        |
 | cell.`\<columnName>` | object  | Permite aplicar la propiedad a una sola columna. Pase en `\<columnName>` el nombre del objeto de la columna list box. **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda"                                                                                                                                                                                           |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)).
+> Los parámetros de estilo definidos con esta propiedad se ignoran si ya se han definido otros parámetros de estilo mediante expresiones (*es decir*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)).
 
 **Ejemplo**
 

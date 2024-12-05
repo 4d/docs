@@ -46,14 +46,14 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
-```codeJS
+```js
 $4d.HelloWorld();
 ```
 > JavaScript は大文字小文字を区別するため、オブジェクトの名前は $4d (dは小文字) であることに注意が必要です。
 
 4Dメソッドへの呼び出しのシンタックスは以下のようになります:
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 - `param1...paramN`: 4Dメソッドに対して必要なだけ引数を渡すことができます。 これらの引数は、JavaScript にサポートされている型であればどんなものでも渡せます (文字列、数値、配列、オブジェクト)。

@@ -327,8 +327,8 @@
     "message": "Ambiente de desenvolvimento",
     "description": "The label for category Development Environment in sidebar docs"
   },
-  "sidebar.docs.category.Language": {
-    "message": "Línguagem",
+  "sidebar.docs.category.4D Language": {
+    "message": "Línguagem 4D",
     "description": "The label for category Language in sidebar docs"
   },
   "sidebar.docs.category.Concepts": {

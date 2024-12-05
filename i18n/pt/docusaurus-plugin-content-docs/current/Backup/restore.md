@@ -52,7 +52,7 @@ Você pode restaurar um arquivo manualmente do aplicativo atual usando a [págin
 
 ## Integração manual do histórico
 
-Se você não marcou a opção para a integração automática do arquivo de log na página de restauração do MSC (veja [integração completa de vários arquivos de log](MSC/restore. d#successive-intergration-of-several-data-log-files)), uma caixa de diálogo de aviso aparece durante a abertura do aplicativo quando 4D avisa que o arquivo de log contém mais operações do que as que foram realizadas no arquivo de dados.
+Se você não marcou a opção para a integração automática do arquivo de log na página de restauração do MSC (veja [integração completa de vários arquivos de log](MSC/restore.md#successive-intergration-of-several-data-log-files)), uma caixa de diálogo de aviso aparece durante a abertura do aplicativo quando 4D avisa que o arquivo de log contém mais operações do que as que foram realizadas no arquivo de dados.
 
 ![](../assets/en/Backup/backup08.png)
 

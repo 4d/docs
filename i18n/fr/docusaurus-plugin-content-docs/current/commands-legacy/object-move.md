@@ -39,7 +39,7 @@ Par défaut, les valeurs de *dépH*, *dépV*, *redimH* et *redimV* modifient les
 Cette commande fonctionne uniquement dans les contextes suivants :
 
 * Formulaires entrée en mode saisie,
-* Formulaires affichés via la commande [DIALOG](dialog.md),
+* Formulaires affichés via la commande [DIALOG](../commands/dialog.md),
 * En-têtes et pieds de page des formulaires sortie affichés par les commandes [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
 * Formulaires en cours d'impression.
 

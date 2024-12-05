@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DRAG ICON.Summary-->La commande **SET DRAG ICON** vous permet d’associer l’image *icône* au curseur lors des glisser-déposer gérés par programmation.<!-- END REF-->
 
-Cette commande peut être appelée uniquement dans le contexte de l’événement formulaire On Begin Drag Over (cf. commande [Form event code](form-event-code.md)).
+Cette commande peut être appelée uniquement dans le contexte de l’événement formulaire On Begin Drag Over (cf. commande [Form event code](../commands/form-event-code.md)).
 
 Passez dans le paramètre *icône* l’image à utiliser. Sa taille maximale est de 256x256 pixels. Si l’une de ses dimensions excède 256 pixels, elle est automatiquement redimensionnée. 
 
@@ -59,4 +59,4 @@ A noter que vous pouvez modifier la position du curseur par rapport à l’image
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

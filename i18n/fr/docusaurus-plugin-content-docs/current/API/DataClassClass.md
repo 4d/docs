@@ -275,7 +275,7 @@ Pour chaque objet de *objectCol* :
   - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
   - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 
-> La propriété "\_\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\*\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
+> La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\*\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
 
 **Entités liées**
 
@@ -453,7 +453,7 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 La fonction `.get()` <!-- REF #DataClassClass.get().Summary -->requête la dataclass pour récupérer l'entité correspondant au paramètre *primaryKey*<!-- END REF -->.
 
-Dans *primaryKey*, passez la valeur de clé primaire de l'entité à récupérer. Le type de valeur doit correspondre au type de clé primaire définie dans le datastore (entier long ou texte). Vous pouvez également vous assurer que la valeur de la clé primaire est toujours renvoyée sous forme de texte en utilisant la fonction [`.getKey()`](EntityClass.md#getkey) avec le paramètre `dk key as string`.
+Dans *primaryKey*, passez la valeur de clé primaire de l'entité à récupérer. Le type de valeur doit correspondre au type de clé primaire définie dans le datastore (entier long ou texte). Le type de valeur doit correspondre au type de clé primaire définie dans le datastore (entier long ou texte).
 
 Si aucune entité avec *primaryKey* n'est trouvée, une entité **Null** est retournée.
 
@@ -526,7 +526,7 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 | Paramètres | Type    |                             | Description                        |
 | ---------- | ------- | --------------------------- | ---------------------------------- |
-| result     | Integer | <- | Nombre d'entités dans la dataclass |
+| Résultat   | Integer | <- | Nombre d'entités dans la dataclass |
 
 <!-- END REF -->
 
@@ -696,7 +696,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->renvoie u
 
 | Paramètres | Type   |                             | Description                                                                 |
 | ---------- | ------ | --------------------------- | --------------------------------------------------------------------------- |
-| result     | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass. |
+| Résultat   | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass. |
 
 <!-- END REF -->
 
@@ -844,7 +844,7 @@ La fonction `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary --
 
 > Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
-Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre *keepOrder*. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Pour plus d'informations, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
+Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre *keepOrder*. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités.
 
 Une fois créée, l'entity selection ne contient aucune entité (`mySelection.length` retourne 0). Cette méthode vous permet de construire progressivement des entity selections en faisant des appels ultérieurs à la fonction [`add()`](EntitySelectionClass.md#add).
 
@@ -937,7 +937,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
 | Contient mot-clé                        | %                             | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                                                                     |
 
-- **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée.
+- Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection.
   Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
@@ -1136,7 +1136,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 #### Recherches dans les relations N vers N
 
-ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
+ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
 
 ![alt-text](../assets/en/API/manytomany.png)
 

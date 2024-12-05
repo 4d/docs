@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET PRINTABLE MARGIN.Summary-->The GET PRINTABLE MARGIN command returns the current values of the different margins defined using the [Print form](print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF--> 
+<!--REF #_command_.GET PRINTABLE MARGIN.Summary-->The GET PRINTABLE MARGIN command returns the current values of the different margins defined using the [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF--> 
 
 The values are returned in pixels with respect to the paper edges. 
 
@@ -31,7 +31,7 @@ It is possible to obtain the paper size as well as to calculate the printable ar
 
 By default, the printing calculation in 4D is based on “printable margins”. The advantage of this system is that the forms adapt themselves automatically to the new printers (since they are positioned in the printable area). On the other hand, in the case of pre-printed forms, it was not possible to position the elements to be printed precisely because changing the printer can modify the printable margins.
 
-It is possible to base the form printing carried out using the [Print form](print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands on a fixed margin which is identical on each printer: the paper margins, i.e. the physical limits of the sheet. To do this, simply use the [GET PRINTABLE MARGIN](get-printable-margin.md), [SET PRINTABLE MARGIN](set-printable-margin.md) and [GET PRINTABLE AREA](get-printable-area.md) commands.
+It is possible to base the form printing carried out using the [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands on a fixed margin which is identical on each printer: the paper margins, i.e. the physical limits of the sheet. To do this, simply use the [GET PRINTABLE MARGIN](get-printable-margin.md), [SET PRINTABLE MARGIN](set-printable-margin.md) and [GET PRINTABLE AREA](get-printable-area.md) commands.
 
 #### About Printing Terminology 
 
@@ -46,5 +46,5 @@ It is possible to base the form printing carried out using the [Print form](prin
 #### See also 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  

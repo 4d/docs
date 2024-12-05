@@ -166,10 +166,10 @@ _italic_
 - A etiqueta de tabela é suportada:
 
 ```md
-| Parâmetro | Tipo | Descrição |
+| Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea | String |Área de escrita profissional|
-| toolbar | String |Nome da barra de ferramentas |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 
@@ -208,16 +208,18 @@ No ficheiro `WP SwitchToolbar.md`, pode escrever:
 <!-- This method returns a different logo depending on the size parameter -->
 
 
-<!-- This method returns a different logo depending on the size parameter --> GetLogo (size) -> logo
+GetLogo (size) -> logo
 
 
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Longint | in | Logo style selector (1 to 5)  |
+| size      | Integer | in | Logo style selector (1 to 5)  |
 | logo      | Picture | out | Selected logo |
 
 
-## Description This method returns a logo of a specific size, depending on the value of the *size* parameter value.
+## Description
+
+This method returns a logo of a specific size, depending on the value of the *size* parameter.
 1 = tamanho mais pequeno, 5 = tamanho maior.
 
 ## Example C_PICTURE($logo)

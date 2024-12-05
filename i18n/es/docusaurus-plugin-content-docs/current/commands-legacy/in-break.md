@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Para que se genere el ciclo de ejecución **In break** asegúrese de que la propiedad del evento On Printing Break para el formulario y/o los objetos haya sido seleccionada en el entorno Diseño.
 
-**Nota:** este comando es equivalente a utilizar [Form event code](form-event-code.md) y probar si devuelve el evento On Printing Break.
+**Nota:** este comando es equivalente a utilizar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Printing Break.
 
 #### Ver también 
 

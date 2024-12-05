@@ -3,7 +3,7 @@ id: text
 title: Text
 ---
 
-Um objeto texto permite exibir conteúdo escrito estático (*e.g.*, instruções, títulos, etiquetas, etc.) em um formulário. These static text areas can become dynamic when they include dynamic references. Para más información, consulte [Uso de referencias en textos estáticos](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
+Um objeto texto permite exibir conteúdo escrito estático (*e.g.*, instruções, títulos, etiquetas, etc.) em um formulário. Estas áreas de texto estático podem se tornar dinâmicas quando incluem referências dinâmicas. Para más información, consulte [Uso de referencias en textos estáticos](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html).
 
 #### JSON Exemplo
 
@@ -29,7 +29,7 @@ Um objeto texto permite exibir conteúdo escrito estático (*e.g.*, instruções
 
 > A rotação do texto pode ser definida para um processo utilizando o comando de linguagem `OBJECT SET TEXT ORIENTATION`.
 
-Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, bem como todas as suas propriedades. Note that the text area’s height and width properties do not depend on its orientation:
+Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, bem como todas as suas propriedades. Observe que as propriedades de largura e altura da área de texto não dependem da sua orientação:
 
 ![](../assets/en/FormObjects/staticText2.png)
 

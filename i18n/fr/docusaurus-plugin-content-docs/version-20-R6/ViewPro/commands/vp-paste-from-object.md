@@ -21,7 +21,7 @@ title: VP PASTE FROM OBJECT
 | ---------- | ------- | -- | --------------------------------------- | ---------------- |
 | rangeObj   | Object  | -> | Objet plage de cellules                 |                  |
 | dataObject | Object  | -> | Object containing the data to be pasted |                  |
-| options    | Longint | -> | Specifies what is pasted                | <!-- END REF --> |
+| options    | Integer | -> | Specifies what is pasted                | <!-- END REF --> |
 
 #### Description
 

@@ -17,7 +17,7 @@ title: VP Get sheet options
 
 #### Description
 
-La commande `VP Get sheet options` <!-- REF #_method_.VP Obtenir les options de la feuille. ummary -->retourne un objet contenant les options de la feuille courante de la zone *vpAreaName* <!-- END REF -->.
+La commande `VP Get sheet options` <!-- REF #_method_.VP Obtenir les options de la feuille.Summary -->retourne un objet contenant les options de la feuille courante de la zone *vpAreaName* <!-- END REF -->.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 

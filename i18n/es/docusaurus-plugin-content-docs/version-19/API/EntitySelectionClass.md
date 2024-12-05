@@ -1793,7 +1793,7 @@ El parámetro *begin* permite indicar el índice de inicio de las entidades a ex
 
 El parámetro *howMany* permite especificar el número de entidades a extraer, empezando por la especificada en *begin*. Las entidades descartadas no se devuelven pero se tienen en cuenta en *howMany*. Por ejemplo, si *howMany*= 3 y hay 1 entidad descartada, sólo se extraen 2 entidades.
 
-If *howMany* > length of the entity selection, the method returns (length - *begin*) objects.
+Si *howMany* > longitud de la entity selection, el método devuelve (length - *begin*) objetos.
 
 Si *howMany* > longitud de la entity selection, el método devuelve (length - *begin*) objetos.
 

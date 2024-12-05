@@ -18,7 +18,7 @@ Algunas de las características generales del separador:
 * Los topes de los separadores se calculan para que los objetos desplazados permanezcan totalmente visibles en el formulario o no pasen por debajo/al lado de otro separador. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
 * Si se redimensiona un formulario mediante un separador, las nuevas dimensiones del formulario se guardan sólo mientras se muestra el formulario. Una vez que se cierra un formulario, se restablecen las dimensiones iniciales.
 
-Una vez insertado, el separador aparece como una línea. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
+Una vez insertado, el separador aparece como una línea. Puede modificar su [estilo de borde](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) para obtener una línea más fina o [cambiar su color](properties_BackgroundAndBorder.md#line-color).
 
 #### Ejemplo JSON
 
@@ -35,7 +35,7 @@ Una vez insertado, el separador aparece como una línea. You can modify its [bor
 
 ### Propiedades soportadas
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Estilo de línea de borde](properties_BackgroundAndBorder.md#border-line-style) - [Tamaño horizontal](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Línea Color](properties_BackgroundAndBorder.md#line-color) - [Nombre de objeto](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable o Expresión](properties_Object.md#variable-or-expression) -  [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
 ## Interacción con las propiedades de los objetos vecinos
 

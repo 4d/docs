@@ -74,7 +74,7 @@ Designa a colocação de um ícone em relação ao objeto formulário.
 
 #### Objectos suportados
 
-[List Box Header](listbox_overview.md#list-box-headers)
+[Cabeçalho do list box](listbox_overview.md#list-box-headers)
 
 ---
 

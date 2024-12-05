@@ -327,8 +327,8 @@
     "message": "開発環境",
     "description": "The label for category Development Environment in sidebar docs"
   },
-  "sidebar.docs.category.Language": {
-    "message": "ランゲージ",
+  "sidebar.docs.category.4D Language": {
+    "message": "4Dランゲージ",
     "description": "The label for category Language in sidebar docs"
   },
   "sidebar.docs.category.Concepts": {
@@ -720,7 +720,7 @@
     "description": "The label for category Spell Checker in sidebar docs"
   },
   "sidebar.docs.category.String": {
-    "message": "String",
+    "message": "文字列",
     "description": "The label for category String in sidebar docs"
   },
   "sidebar.docs.category.Structure Access": {

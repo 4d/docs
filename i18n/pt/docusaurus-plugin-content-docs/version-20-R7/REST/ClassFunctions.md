@@ -130,7 +130,7 @@ Também é possível transmitir valores para quaisquer atributos da entidade. Es
 | Propriedades                                          | Tipo                                                          | Descrição                                                                        |
 | ----------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | Atributos da entidade                                 | misto                                                         | Opcional - Valores a modificar                                                   |
-| __DATACLASS | String                                                        | Obrigatório - Indica a Dataclass da entidade                                     |
+| __DATACLASS | Text                                                          | Obrigatório - Indica a Dataclass da entidade                                     |
 | __ENTITY    | Parâmetros                                                    | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma entidade |
 | __KEY       | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                         |
 
@@ -155,7 +155,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | Propriedades                                         | Tipo       | Descrição                                                                                   |
 | ---------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------- |
 | Atributos da entidade                                | misto      | Opcional - Valores a modificar                                                              |
-| __DATASET  | String     | Obrigatório - entitySetID (UUID) da seleção de entidades                 |
+| __DATASET  | Text       | Obrigatório - entitySetID (UUID) da seleção de entidades                 |
 | __ENTITIES | Parâmetros | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma seleção de entidade |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
@@ -626,7 +626,7 @@ $ageAverage:=$students.getAgeAverage()
 
 ### Returning a document
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 // Product dataclass
@@ -680,7 +680,7 @@ You can call the function using this request:
 
 ### Using an entity selection to get a list
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 shared singleton Class constructor()

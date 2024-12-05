@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SET PRINT MARKER.Summary-->La commande **SET PRINT MARKER** permet de définir la position d’un taquet au moment de l’impression.<!-- END REF--> Combinée aux commandes [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) ou [Print form](print-form.md), cette commande permet d’ajuster la taille des zones d’impression. 
+<!--REF #_command_.SET PRINT MARKER.Summary-->La commande **SET PRINT MARKER** permet de définir la position d’un taquet au moment de l’impression.<!-- END REF--> Combinée aux commandes [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) ou [Print form](../commands/print-form.md), cette commande permet d’ajuster la taille des zones d’impression. 
 
 **SET PRINT MARKER** peut être appelée dans deux contextes : 
 
 * lors de l’événement formulaire On Header, dans le cadre de l’utilisation des commandes [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).
-* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](print-form.md). Ce fonctionnement facilite l’impression d’états personnalisés (voir exemple).
+* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form.md). Ce fonctionnement facilite l’impression d’états personnalisés (voir exemple).
 
 L’effet de la commande est limité à l’impression, aucune modification n’apparaît à l’écran. Les modifications apportées aux formulaires ne sont pas sauvegardées. 
 
@@ -76,7 +76,7 @@ Le formulaire de sortie utilisé pour l’impression est le suivant :
 
 ![](../assets/en/commands/pict28725.fr.png)
 
-L’événement formulaire On Printing Detail a été sélectionné pour le formulaire (rappelons que la commande [Print form](print-form.md) ne génère que cet événement, quelle que soit la zone imprimée).   
+L’événement formulaire On Printing Detail a été sélectionné pour le formulaire (rappelons que la commande [Print form](../commands/print-form.md) ne génère que cet événement, quelle que soit la zone imprimée).   
 Pour chaque enregistrement, la hauteur de la ligne doit être adaptée en fonction du contenu de la colonne “Acteurs” ou “Résumé” (colonne ayant le plus de contenu). Voici le résultat souhaité :
 
 ![](../assets/en/commands/pict28726.fr.png)
@@ -180,6 +180,6 @@ La méthode du formulaire Print\_List3 est la suivante :
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  

@@ -191,6 +191,12 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 // code
 ```
 
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
+
 As funções de classe são propriedades específicas da classe. Eles são objetos da classe [4D.Function](API/FunctionClass.md). No arquivo de definição de classe, as declarações de funções usam a palavra-chave `Function` seguida pelo nome da função.
 
 Se a função for declarada em uma [classe compartilhada](#shared-classes), você pode usar a palavra-chave `shared` para que a função possa ser chamada sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
@@ -322,6 +328,12 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // code
 ```
+
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
 
 Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e pode ser usada para criar e inicializar objetos da classe de usuário.
 

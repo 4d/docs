@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAK dispara a impressão de dados enviados a la impressora e provocar um salto de página.<!-- END REF--> PAGE BREAK se utiliza conjuntamente com [Print form](print-form.md) (no contexto do evento de formulário On Printing Detail) para forçar saltos de página e imprimir a última página criada em memória. Não utilize PAGE BREAK com o comando [PRINT SELECTION](print-selection.md). É melhor utilizar [Subtotal](subtotal.md) ou [BREAK LEVEL](break-level.md) com o parâmetro opcional para gerar saltos de página.
+<!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAK dispara a impressão de dados enviados a la impressora e provocar um salto de página.<!-- END REF--> PAGE BREAK se utiliza conjuntamente com [Print form](../commands/print-form.md) (no contexto do evento de formulário On Printing Detail) para forçar saltos de página e imprimir a última página criada em memória. Não utilize PAGE BREAK com o comando [PRINT SELECTION](print-selection.md). É melhor utilizar [Subtotal](subtotal.md) ou [BREAK LEVEL](break-level.md) com o parâmetro opcional para gerar saltos de página.
 
 Os parâmetros *\** e *\>* são opcionais.
 
-O parâmetro *\** lhe permite cancelar um trabalho de impressão iniciado pelo comando [Print form](print-form.md). A execução deste comando detém imediatamente os trabalhos de impressão em progresso.
+O parâmetro *\** lhe permite cancelar um trabalho de impressão iniciado pelo comando [Print form](../commands/print-form.md). A execução deste comando detém imediatamente os trabalhos de impressão em progresso.
 
 **Nota:** em Windows, este mecanismo pode ser transtornado pelas propriedades de fila de espera do servidor de impressão. Se a impressora se configura para começar a impressão imediatamente, o cancelamento não será efetiva. Para que o comando **PAGE BREAK(\*)** funcione corretamente, é preferível escolher a propriedade "Iniciar impressão quando a última página tenha entrado na fila" da impressora. 
 
@@ -36,7 +36,7 @@ A segunda opção é particularmente útil quando se utiliza com um trabalho de 
 
 #### Exemplo 1 
 
-Ver o exemplo do comando [Print form](print-form.md "Print form").
+Ver o exemplo do comando [Print form](../commands/print-form.md "Print form").
 
 #### Exemplo 2 
 
@@ -45,4 +45,4 @@ Consulte o exemplo do comando [SET PRINT MARKER](set-print-marker.md "SET PRINT 
 #### Ver também 
 
 [CANCEL](cancel.md)  
-[Print form](print-form.md)  
+[Print form](../commands/print-form.md)  

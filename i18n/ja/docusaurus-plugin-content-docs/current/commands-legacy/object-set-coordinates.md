@@ -38,7 +38,7 @@ displayed_sidebar: docs
 このコマンドは以下の様な場合においてのみ機能します:
 
 * レコード編集中の入力フォーム
-* [DIALOG](dialog.md) コマンドを使用して表示したフォーム
+* [DIALOG](../commands/dialog.md) コマンドを使用して表示したフォーム
 * [MODIFY SELECTION](modify-selection.md) か [DISPLAY SELECTION](display-selection.md) フォームを使用して表示された出力フォームのヘッダーとフッター
 * 印刷中のフォーム
 

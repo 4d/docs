@@ -53,4 +53,4 @@ Si el comando falla, se genera un error que puede interceptar con la ayuda del c
 
 #### Ver también 
 
-[Compile project ](compile-project.md)  
+[Compile project ](../commands/compile-project.md)  

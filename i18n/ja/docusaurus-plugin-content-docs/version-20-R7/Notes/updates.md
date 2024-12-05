@@ -15,7 +15,7 @@ title: リリースノート
 - コンパイラー設定の新しい [**直接型指定モード**](../Project/compiler.md#直接型指定の有効化): コード内のすべての変数および引数を `var` と `#DECLARE`/`Function` キーワードで宣言します (新規プロジェクトではこのモードのみサポートされます)。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。
 - [セッションシングルトン](../Concepts/classes.md#シングルトンクラス) と、新しい [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) クラスプロパティをサポート。
 - New [`onHttpGet` function keyword](../ORDA/ordaClasses.md#onhttpget-keyword) to define singleton or ORDA functions that can be called through [HTTP REST GET requests](../REST/ClassFunctions.md#function-calls).
-- New [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class for the REST server to return any web contents.
+- New [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class for the REST server to return any web contents.
 - Qodly Studio: [Qodly Studio デバッガーを 4D Server で有効化](../WebServer/qodly-studio.md#4d-server-で-qodlyデバッガーを使用する) できるようになりました。
 - 4Dクライアントアプリケーション用の新しいアプリケーションビルド XMLキー: 接続時にサーバーから送信される証明書について、認証局の&#x20;
   署名 や [ドメイン](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.ja.html) を検証するためのキーが追加されました。
@@ -31,7 +31,6 @@ title: リリースノート
 #### 動作の変更
 
 - [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
-- コンパイラー指示コマンド (`C_XXX`) は非推奨となり、`_O_C_XXX` という名前に変更されました (たとえば、`C_TEXT` は `_O_C_TEXT` という名前に変更されました)。
 - [`File`](../commands/file.md) コマンド (および [`4D.File.new()`](../API/FileClass.md#4dfilenew) コマンド) は、引数として与えられた *path* のシンタックスをより厳しくチェックする様になりました。
 
 ## 4D 20 R6

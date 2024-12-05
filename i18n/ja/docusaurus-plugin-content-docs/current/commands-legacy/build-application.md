@@ -53,4 +53,4 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Compile project](compile-project.md)  
+[Compile project](../commands/compile-project.md)  

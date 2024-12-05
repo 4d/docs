@@ -70,7 +70,7 @@ O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando
 
 #### Exemplo 2 
 
-Ver o exemplo #6 do comando [Form event](form-event.md "Form event"). Este exemplo mostra todos os testes que pode necessitar para monitorar completamente os eventos que ocorrem durante a execução do comando DISPLAY SELECTION.
+Ver o exemplo #6 do comando [Form event](../commands/form-event.md "Form event"). Este exemplo mostra todos os testes que pode necessitar para monitorar completamente os eventos que ocorrem durante a execução do comando DISPLAY SELECTION.
 
 #### Exemplo 3 
 
@@ -102,5 +102,5 @@ Também pode utilizar outros comandos, tais como [PRINT SELECTION](print-selecti
 #### Ver também 
 
 *Conjuntos*  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  

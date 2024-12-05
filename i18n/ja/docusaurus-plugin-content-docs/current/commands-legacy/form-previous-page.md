@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE コマンドは、現在表示されているフォームページから前のフォームページに移動します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](form-load.md) コマンドによってロードされてない場合や、すでに先頭のフォームページが表示されている場合、FORM PREVIOUS PAGE コマンドは何も行いません。
+<!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE コマンドは、現在表示されているフォームページから前のフォームページに移動します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされてない場合や、すでに先頭のフォームページが表示されている場合、FORM PREVIOUS PAGE コマンドは何も行いません。
 
 #### 例題 
 

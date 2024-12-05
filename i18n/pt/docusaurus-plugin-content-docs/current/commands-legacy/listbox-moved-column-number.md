@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (string). Se omitir este parâmetro, indica que o parâmetro *objeto* é uma variável. Nesse caso, não passa uma string, mas uma referência de variável. Para maior informação sobre nomes de objetos, consulte a seção . 
 
-Este comando deve ser utilizado com o evento de formulário On column moved (ver o comando [Form event](form-event.md "Form event")). 
+Este comando deve ser utilizado com o evento de formulário On column moved (ver o comando [Form event](../commands/form-event.md "Form event")). 
 
 **Nota:** este comando considera as colunas invisíveis.
 
 #### Ver também 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  

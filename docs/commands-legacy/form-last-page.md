@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE changes the currently displayed form page to the last form page.<!-- END REF--> If a form is not being displayed or loaded by the [FORM LOAD](form-load.md) command, or if the last form page is already displayed, FORM LAST PAGE does nothing.
+<!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE changes the currently displayed form page to the last form page.<!-- END REF--> If a form is not being displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if the last form page is already displayed, FORM LAST PAGE does nothing.
 
 #### Example 
 

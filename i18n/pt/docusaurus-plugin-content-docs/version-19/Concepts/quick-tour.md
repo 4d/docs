@@ -267,7 +267,7 @@ Os mesmos símbolos são frequentemente utilizados para operações diferentes, 
 | Tipo de dados | Operação       | Exemplo                                                                                                        |
 | ------------- | -------------- | -------------------------------------------------------------------------------------------------------------- |
 | Number        | Adição         | 1 + 2 adiciona os números e resultados em 3                                                                    |
-| String        | Concatenação   | "Hello " + "there" concatena (junta) as cadeias de caracteres e resulta em "Hello there"                       |
+| Text          | Concatenação   | "Hello " + "there" concatena (junta) as cadeias de caracteres e resulta em "Hello there"                       |
 | Data e Número | Adição de data | !1989-01-01! + 20 acrescenta 20 dias à data de 1 de janeiro de 1989 e resulta na data de 21 de janeiro de 1989 |
 
 
@@ -291,10 +291,10 @@ Refere-se a uma expressão pelo tipo de dados que devolve. Existem vários tipos
 
 | Expression               | Tipo                 | Descrição                                                                                                                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String               | A palavra Hello é uma constante cadeia de caracteres, indicada pelas aspas duplas.                                                                                |
-| “Hello ” + “there”       | String               | Duas cadeias, "Hello " e "there", são adicionadas (concatenadas) com o operador de concatenação de cadeias (+). É devolvida a cadeia de caracteres "Hello there". |
-| “Sr. ” + [People]Name    | String               | São concatenadas duas cadeias: a cadeia "Mr. " e o valor atual do campo Name na tabela People. Se o campo contiver "Smith", a expressão devolve "Mr. Smith".      |
-| Uppercase("smith")       | String               | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                        |
+| “Hello”                  | Text                 | A palavra Hello é uma constante cadeia de caracteres, indicada pelas aspas duplas.                                                                                |
+| “Hello ” + “there”       | Text                 | Duas cadeias, "Hello " e "there", são adicionadas (concatenadas) com o operador de concatenação de cadeias (+). É devolvida a cadeia de caracteres "Hello there". |
+| “Sr. ” + [People]Name    | Text                 | São concatenadas duas cadeias: a cadeia "Mr. " e o valor atual do campo Name na tabela People. Se o campo contiver "Smith", a expressão devolve "Mr. Smith".      |
+| Uppercase("smith")       | Text                 | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                        |
 | 4                        | Number               | Esta é uma constante numérica, 4.                                                                                                                                 |
 | 4 * 2                    | Number               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                      |
 | myButton                 | Number               | Esta é uma variável associada a um botão. Devolve o valor atual do botão: 1 se foi clicado, 0 se não foi.                                                         |

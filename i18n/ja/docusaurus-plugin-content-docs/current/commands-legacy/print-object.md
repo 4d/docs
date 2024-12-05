@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print object.Summary-->**Print object** コマンドを使用して *object*と*\** 引数で指定したフォームオブジェクトを、*posX*と*posY*の位置に、任意のサイズで印刷できます。<!-- END REF-->
 
-**Print object** コマンドを呼び出す前に、印刷するテーブルまたはオブジェクトを含むプロジェクトフォームを新しい [FORM LOAD](form-load.md) で指定しなければなりません。
+**Print object** コマンドを呼び出す前に、印刷するテーブルまたはオブジェクトを含むプロジェクトフォームを新しい [FORM LOAD](../commands/form-load.md) で指定しなければなりません。
 
 オプションの*\** 引数を渡すと、*object*引数にはオブジェクト名 (文字列) を渡します。*\** 引数を渡さない場合、*object*には変数を指定します。この場合、文字列ではなく変数参照 (オブジェクトタイプのみ) を渡します。
 
@@ -98,4 +98,4 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  

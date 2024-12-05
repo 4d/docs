@@ -734,9 +734,9 @@ O objecto `data` em cada entrada contém as seguintes propriedades:
 
 | Propriedade                                           | Tipo         | Descrição                                                                                                                                                  |
 | ----------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY       | String       | Chave primária da entidade                                                                                                                                 |
-| __STAMP     | Longint      | Stamp da entidade na base de dados                                                                                                                         |
-| __TIMESTAMP | String       | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z) |
+| __KEY       | Text         | Chave primária da entidade                                                                                                                                 |
+| __STAMP     | Integer      | Stamp da entidade na base de dados                                                                                                                         |
+| __TIMESTAMP | Text         | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z) |
 | dataClassAttributeName                                | Diferente de | Se houver dados na cache para um atributo dataclass, estes são devolvidos numa propriedade com o mesmo tipo que na base de dados.          |
 
 Os dados relativos a entidades relacionadas são armazenados na cache do objecto de dados.

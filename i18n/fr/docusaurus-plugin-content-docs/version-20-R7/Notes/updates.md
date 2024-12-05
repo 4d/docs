@@ -15,7 +15,7 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Nouveau [**mode de typage direct**](../Project/compiler.md#enabling-direct-typing) dans lequel vous déclarez toutes les variables et paramètres dans votre code en utilisant les mots-clés `var` et `#DECLARE`/`Function` (seul mode supporté dans les nouveaux projets). La [fonctionnalité de vérification de syntaxe](../Project/compiler.md#check-syntax) a été adaptée en conséquence.
 - Prise en charge des [singletons de session](../Concepts/classes.md#singleton-classes) et nouvelle propriété de classe [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton).
 - Nouveau [mot-clé de fonction `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) pour définir des fonctions singleton ou ORDA qui peuvent être appelées par des [requêtes HTTP REST GET](../REST/ClassFunctions.md#function-calls).
-- Nouvelle classe [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) pour que le serveur retourne n'importe quel contenu web.
+- New [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class for the REST server to return any web contents.
 - Qodly Studio : Vous pouvez maintenant [attacher le débogueur Qodly à 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 - Nouvelles clés Build Application pour que les applications 4D distantes valident les [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.fe.html) et/ou les [domaines](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.fe.html) des autorités de certification des serveurs.
 - Langage 4D :
@@ -30,7 +30,6 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 #### Changements de comportement
 
 - Les documentations du [Langage 4D](../commands/command-index.md) et du [Langage 4D Write Pro](../WritePro/commands/command-index.md) sont maintenant entièrement disponibles sur developer.4d.com. Découvrez toutes les nouvelles fonctionnalités et les modifications concernant ces documentations dans cette release note.
-- Les directives de compilation (`C_XXX`) sont désormais obsolètes et ont été renommées `_O_C_XXX` (par exemple, `C_TEXT` a été renommé `_O_C_TEXT`).
 - The [`File`](../commands/file.md) command (as well as [`4D.File.new()`](../API/FileClass.md#4dfilenew)) is stricter when it comes to checking the syntax of the *path* supplied as a parameter.
 
 ## 4D 20 R6

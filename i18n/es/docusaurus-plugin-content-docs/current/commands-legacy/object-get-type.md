@@ -96,5 +96,5 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
 
 #### Ver también 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  

@@ -260,7 +260,7 @@ End if
 
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
-- Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes. d#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
+- Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes.md#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
   - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
   - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
@@ -904,7 +904,7 @@ If ($status.success)
 
 ### Ficheiros de classe (class files)
 
-Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](Concepts/classes. d#class-files) (*e.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
+Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](Concepts/classes.md#class-files) (*e.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
 
 ### Criação de classes
 

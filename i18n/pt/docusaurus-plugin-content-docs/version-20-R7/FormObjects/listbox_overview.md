@@ -255,7 +255,7 @@ Form events on list box or list box column objects may return the following addi
 
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
 
-## Colunas list boxes
+## Colunas List box {#list-box-columns}
 
 Uma list box é feita de um ou mais objetos coluna que têm propriedades específicas. Pode selecionar uma coluna list box no editor de Formulário clicando nela ou quando o objeto list box for selecionado:
 
@@ -401,7 +401,7 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 
 - **Caixa de listagem de seleção de coleção/entidade**: As seleções são gerenciadas por meio de propriedades dedicadas da caixa de listagem:
   - [Current item](properties_DataSource.md#current-item) é um objeto que receberá o elemento/entidade selecionado
-  - [Selected Items](properties_DataSource.md#selected-items) é uma coleção de itens selecionados
+  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
   - [Current item position](properties_DataSource.md#current-item-position) retorna a posição do elemento ou da entidade selecionada.
 
 - **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.

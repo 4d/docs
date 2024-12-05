@@ -5,16 +5,16 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 
-**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| 引数         | 型      |                             | 説明                                            |                  |
-| ---------- | ------ | --------------------------- | --------------------------------------------- | ---------------- |
-| vpAreaName | Text   | ->                          | 4D View Pro フォームオブジェクト名                       |                  |
-| name       | Text   | ->                          | 命名レンジの名前                                      |                  |
-| scope      | Number | ->                          | ターゲットのスコープ (デフォルト=カレントシート) |                  |
-| 戻り値        | Object | <- | 命名フォーミュラ、または命名レンジの定義                          | <!-- END REF --> |
+| 引数         | 型       |                             | 説明                                            |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                       |                  |
+| name       | Text    | ->                          | 命名レンジの名前                                      |                  |
+| scope      | Integer | ->                          | ターゲットのスコープ (デフォルト=カレントシート) |                  |
+| 戻り値        | Object  | <- | 命名フォーミュラ、または命名レンジの定義                          | <!-- END REF --> |
 
 #### 説明
 

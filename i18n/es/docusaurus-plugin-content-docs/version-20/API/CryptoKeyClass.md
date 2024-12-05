@@ -45,7 +45,7 @@ Para obtener una visión general de esta clase, consulte la página [**CryptoKey
 | Parámetros | Tipo         |    | Descripción                                       |
 | ---------- | ------------ | -- | ------------------------------------------------- |
 | settings   | Object       | -> | Parámetros para generar o cargar un par de llaves |
-| resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+| Result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 <!-- END REF -->
 
 La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un nuevo objeto `4D.CryptoKey` que encapsula un par de llaves de cifrado<!-- END REF -->, basado en el parámetro objeto *settings*. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.
@@ -385,8 +385,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 | 18 R4       | Añadidos       |
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
-
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                          |

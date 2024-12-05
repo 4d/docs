@@ -555,10 +555,10 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| Parâmetro     | Tipo       |    | Descrição                                                        |
-| ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Text       | -> | Rota do atributo cujos valores quer obter                        |
-| option        | Integer    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
+| Parâmetro     | Tipo       |    | Descrição                                                       |
+| ------------- | ---------- |:--:| --------------------------------------------------------------- |
+| attributePath | Text       | -> | Rota do atributo cujos valores quer obter                       |
+| option        | Integer    | -> | `dk diacritical`: avaliação diacríticos ("A" # "a" por exemplo) |
 | Resultados    | Collection | <- | Coleção apenas com valores distintos|<!-- END REF -->
 
 |

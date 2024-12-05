@@ -124,15 +124,15 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 | プロパティ名      |                 |               | 型                          | 必須 | 説明                                                                 |
 | ----------- | --------------- | ------------- | -------------------------- | -- | ------------------------------------------------------------------ |
 | privileges  |                 |               | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                        |
-|             | \[].privilege  |               | String                     |    | アクセス権の名称                                                           |
+|             | \[].privilege  |               | Text                       |    | アクセス権の名称                                                           |
 |             | \[].includes   |               | String の Collection        |    | 内包する権限名のリスト                                                        |
 | roles       |                 |               | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                       |
-|             | \[].role       |               | String                     |    | ロール名                                                               |
+|             | \[].role       |               | Text                       |    | ロール名                                                               |
 |             | \[].privileges |               | String の Collection        |    | 内包する権限名のリスト                                                        |
 | permissions |                 |               | Object                     | ○  | 設定されたパーミッションのリスト                                                   |
 |             | allowed         |               | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                   |
-|             |                 | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                |
-|             |                 | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
+|             |                 | \[].applyTo  | Text                       | ○  | 対象の [リソース](#リソース) 名                                                |
+|             |                 | \[].type     | Text                       | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
 |             |                 | \[].read     | String の Collection        |    | 権限名のリスト                                                            |
 |             |                 | \[].create   | String の Collection        |    | 権限名のリスト                                                            |
 |             |                 | \[].update   | String の Collection        |    | 権限名のリスト                                                            |

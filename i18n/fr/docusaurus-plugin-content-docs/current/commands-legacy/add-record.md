@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Compatibilité 
 
-<!--REF #_command_.ADD RECORD.Summary-->*Cette commande est apparue dans les premières versions de 4D et reste toujours utile pour créer des prototypes ou effectuer des développements simples.<!-- END REF--> Toutefois, pour construire des interfaces modernes et personnalisées, il est désormais recommandé d'utiliser des formulaires génériques basés sur la commande [DIALOG](dialog.md) qui fournit des fonctionnalités avancées et un meilleur contrôle du flux de données.* 
+<!--REF #_command_.ADD RECORD.Summary-->*Cette commande est apparue dans les premières versions de 4D et reste toujours utile pour créer des prototypes ou effectuer des développements simples.<!-- END REF--> Toutefois, pour construire des interfaces modernes et personnalisées, il est désormais recommandé d'utiliser des formulaires génériques basés sur la commande [DIALOG](../commands/dialog.md) qui fournit des fonctionnalités avancées et un meilleur contrôle du flux de données.* 
 
 #### Description 
 

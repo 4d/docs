@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name       | Text     | → | Nombre del proceso del que se desea obtener el número de proceso |
 | id         | Text     | → | ID del proceso del que se desea obtener el número de proceso     |
 | \*         | Operador | → | Devuelve el número de proceso del servidor                       |
-| Resultado  | Longint  | ← | Process number                                                   |
+| Resultado  | Integer  | ← | Process number                                                   |
 
 <!-- END REF-->
 

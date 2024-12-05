@@ -57,6 +57,11 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
 ```4d
+  //getFirst メソッド
+  //getFirst(localID;dataclass) -> entity
+ #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
+
+ $entity:=ds($localId)[$dataClassName].all().first()
 ```
 
 #### 参照

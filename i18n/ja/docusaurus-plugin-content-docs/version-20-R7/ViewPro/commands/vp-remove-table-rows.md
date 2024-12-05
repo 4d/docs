@@ -22,7 +22,7 @@ title: VP REMOVE TABLE ROWS
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
 | tableName  | Text    | -> | Table name                                     |                  |
 | row        | Integer | -> | 行の削除の開始場所を指定する表組み内のインデックス                      |                  |
-| count      | Text    | -> | 削除する行の数 (>0)                |                  |
+| count      | Integer | -> | 削除する行の数 (>0)                |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
 #### 説明

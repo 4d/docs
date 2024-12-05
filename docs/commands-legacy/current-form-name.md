@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form name.Summary-->The **Current form name** command returns the name of the current form defined for the process.<!-- END REF--> The current form can be a project form or a table form. 
 
-By default, if you have not called the [FORM LOAD](form-load.md) command in the current process, the current form is the one being displayed or printed. If you have called the [FORM LOAD](form-load.md) command in the process, the current form is the one set by this command and it remains so until you call [FORM UNLOAD](form-unload.md) (or [CLOSE PRINTING JOB](close-printing-job.md)).
+By default, if you have not called the [FORM LOAD](../commands/form-load.md) command in the current process, the current form is the one being displayed or printed. If you have called the [FORM LOAD](../commands/form-load.md) command in the process, the current form is the one set by this command and it remains so until you call [FORM UNLOAD](form-unload.md) (or [CLOSE PRINTING JOB](close-printing-job.md)).
 
 The command returns:
 
@@ -59,4 +59,4 @@ You want to get the current form if it is a project form:
 
 #### See also 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  

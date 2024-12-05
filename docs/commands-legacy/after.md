@@ -22,8 +22,8 @@ displayed_sidebar: docs
 
 In order for the **After** execution cycle to be generated, make sure that the On Validate event property for the form and/or the objects has been selected in the Design environment.
 
-**Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Validate event.
+**Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Validate event.
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

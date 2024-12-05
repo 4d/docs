@@ -23,7 +23,7 @@ Dependendo dos privilegios de acesso do usuário atual, certas funções dispon�
 
 **Nota:** 
 
-* este comando funciona com o mesmo princípio que uma chamada a [DIALOG](dialog.md) com o parâmetro *\**: o CSM se mostra em uma janela e o comando devolve imediatamente o controle do código 4D. Se o processo atual termina, a janela é fechada automaticamente mediante a simulação de um [CANCEL](cancel.md). Por isso deve gerenciar sua visualização através do código do processo em execução.
+* este comando funciona com o mesmo princípio que uma chamada a [DIALOG](../commands/dialog.md) com o parâmetro *\**: o CSM se mostra em uma janela e o comando devolve imediatamente o controle do código 4D. Se o processo atual termina, a janela é fechada automaticamente mediante a simulação de um [CANCEL](cancel.md). Por isso deve gerenciar sua visualização através do código do processo em execução.
 * Este comando não pode ser executado em uma aplicação 4D remota.
 
 #### Ver também 

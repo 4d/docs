@@ -2099,8 +2099,8 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
   | Constante     | Tipo    | Valor | Comentario                                                                    |
   | ------------- | ------- | ----- | ----------------------------------------------------------------------------- |
-  | ck ascending  | Longint | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
-  | ck descending | Longint | 1     | Los elementos se ordenan de forma descendente                                 |
+  | ck ascending  | Integer | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
+  | ck descending | Integer | 1     | Los elementos se ordenan de forma descendente                                 |
 
   Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 

@@ -217,7 +217,7 @@ Aqui estão as propriedades retornadas no parâmetro *$editor*:
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
 | $editor.editor.form              | Object     | O formulário completo                                                             |
 | $editor.editor.file              | File       | Objeto File do ficheiro do formulário                                             |
-| $editor.editor.name              | String     | Nome do formulário                                                                |
+| $editor.editor.name              | Text       | Nome do formulário                                                                |
 | $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                        |
 | $editor.editor.currentPageNumber | number     | O número da página actual                                                         |
 | $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
@@ -234,7 +234,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | formProperties    | Object     | formProperties se modificada pela macro                                |
 | editor.groups     | Object     | informação do grupo, se os grupos forem modificados pela macro         |
 | editor.views      | Object     | view info, se as vistas forem modificadas pela macro                   |
-| editor.activeView | String     | Nome da vista activa                                                   |
+| editor.activeView | Text       | Nome da vista activa                                                   |
 
 
 Por exemplo, se objectos da página actual e grupos tiverem sido modificados, pode escrever:
@@ -257,7 +257,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 | Propriedade | Tipo | Descrição |
 | ----------- | ---- | --------- |
 |             |      |           |
- source|String|código do método|
+ source|Text|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. Esta funcionalidade só está disponível para o código macro.
 

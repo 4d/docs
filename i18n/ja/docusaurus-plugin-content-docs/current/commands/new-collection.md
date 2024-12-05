@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 #### 説明
 
-The `New collection` command <!--REF #_command_.New collection.Summary-->creates a new empty or prefilled collection and returns its reference.<!-- END REF--> Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
+`New collection` コマンドは、<!--REF #_command_.New collection.Summary-->新しい空の、または値が既に入れられたコレクションを作成し、その参照を返します。<!-- END REF-->コレクションは、[Collection クラス API](../API/CollectionClass.md)のプロパティや関数を使用して操作することができます。
 
 引数を渡さなかった場合、`New collection` は空のコレクションを作成し、その参照を返します。
 
 返された参照は、コレクション型の 4D変数に代入する必要があります。
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> `var : Collection` ステートメントは`Collection` 型の変数を宣言しますが、コレクション自体は作成しないという点に注意して下さい。
 
 任意で、一つ以上の *value* 引数を渡すことで、あらかじめ値の入った新しいコレクションを作成することができます。
 

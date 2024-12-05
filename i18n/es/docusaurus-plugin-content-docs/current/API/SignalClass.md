@@ -18,15 +18,15 @@ Un objeto `4D.Signal` contiene los siguientes métodos y propiedades integrados:
 - [`.signaled`](#signaled)
 - [`.description`](#description).
 
-Todo worker/proceso que llame al método `.wait()` suspenderá su ejecución hasta que la propiedad `.signaled` sea true. Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. La propiedad `.signaled` se convierte en true cuando cualquier worker/proceso llama al método `.trigger()`.
+Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
 
 Tenga en cuenta que para evitar situaciones de bloqueo, el método `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
 
-Signal objects are created with the [`New signal`](../commands/new-signal.md) command.
+Los objetos señal se crean con el comando [`New signal`](../commands/new-signal.md).
 
 ### Trabajar con señales
 
-In 4D, you create a new signal object by calling the [`New signal`](../commands/new-signal.md) command. Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que puedan modificarla cuando hayan terminado la tarea que se quiere esperar.
+En 4D, se crea un nuevo objeto señal llamando al comando [`New signal`](../commands/new-signal.md). Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que puedan modificarla cuando hayan terminado la tarea que se quiere esperar.
 
 - `signal.wait()` debe ser llamado desde el worker/proceso que necesita que otro worker/proceso termine una tarea para poder continuar.
 - `signal.trigger()` debe llamarse desde el worker/proceso que terminó su ejecución para liberar a todos los demás.
@@ -126,7 +126,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el estado actual del objeto `Signal`<!-- END REF -->. Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
+Lanzamiento Cuando se crea la señal, `.signaled` es **False**. La propiedad `.signaled` se convierte en true cuando cualquier worker/proceso llama al método `.trigger()`.
 
 Esta propiedad es de **solo lectura**.
 
@@ -158,7 +158,7 @@ Esta propiedad es de **solo lectura**.
 
 La función `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->define la propiedad `signaled` del objeto signal como **true**<!-- END REF --> y despierta a todos los workers o procesos que esperan esta signal.
 
-Si la señal ya está en el estado de señalización (es decir, la propiedad signaled\` ya es **true**), la función no hace nada.
+Si la señal ya está en el estado de señalización (es decir, la propiedad signaled\\` ya es **true**), la función no hace nada.
 
 <!-- END REF -->
 

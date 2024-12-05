@@ -218,7 +218,7 @@ Estas son las propiedades devueltas en el parámetro *$editor*:
 | -------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
 | $editor.editor.form              | Object     | Formulario completo                                                                               |
 | $editor.editor.file              | File       | Objeto File del archivo de formularios                                                            |
-| $editor.editor.name              | String     | Nombre del formulario                                                                             |
+| $editor.editor.name              | Text       | Nombre del formulario                                                                             |
 | $editor.editor.table             | number     | Número de tabla del formulario, 0 para el formulario proyecto                                     |
 | $editor.editor.currentPageNumber | number     | El número de la página actual                                                                     |
 | $editor.editor.currentPage       | Object     | La página actual, que contiene todos los objetos de formulario y el orden de entrada de la página |
@@ -235,7 +235,7 @@ Estas son las propiedades que puede pasar en el objeto `$result` si quiere que e
 | formProperties    | Object     | formProperties si es modificado por la macro                            |
 | editor.groups     | Object     | información de grupo, si los grupos son modificados por la macro        |
 | editor.views      | Object     | ver información, si las vistas son modificadas por la macro             |
-| editor.activeView | String     | Nombres de vistas activos                                               |
+| editor.activeView | Text       | Nombres de vistas activos                                               |
 
 
 Por ejemplo, si los objetos de la página actual y de los grupos han sido modificados, puede escribir:
@@ -258,7 +258,7 @@ Cuando se maneja el atributo `method` de los objetos de formulario, se puede def
 | Propiedad | Tipo | Descripción |
 | --------- | ---- | ----------- |
 |           |      |             |
- source|Cadena|Código del método|
+ fuente|Texto|código del método|
 
 4D creará un archivo con el nombre del objeto en la carpeta "objectMethods" con el contenido del atributo `source`. Esta función solo está disponible para el código macro.
 

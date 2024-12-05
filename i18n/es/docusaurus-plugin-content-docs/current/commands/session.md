@@ -18,6 +18,7 @@ displayed_sidebar: docs
 
 | Lanzamiento | Modificaciones                                                     |
 | ----------- | ------------------------------------------------------------------ |
+| 20 R8       | Support of standalone sessions                                     |
 | 20 R5       | Soporte de cliente remoto y sesiones de procedimientos almacenados |
 | 18 R6       | Añadidos                                                           |
 
@@ -31,11 +32,12 @@ Dependiendo del proceso desde el que se llame al comando, la sesión de usuario 
 
 - una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-sessions)),
 - una sesión de cliente remoto,
-- la sesión de procedimientos almacenados.
+- the stored procedures session,
+- the *designer* session in a standalone application.
 
-For more information, see the [Session types](../command/session.md-types) paragraph.
+For more information, see the [Session types](../API/SessionClass.md#session-types) paragraph.
 
-Si el comando se llama desde un contexto no soportado (aplicación monousuario, sesiones escalables desactivadas...), devuelve *Null*.
+If the command is called from a non supported context (e.g. scalable sessions disabled), it returns *Null*.
 
 #### Sesiones web
 
@@ -68,6 +70,10 @@ Todos los procesos de procedimientos almacenados comparten la misma sesión virt
 
 Para obtener información sobre la sesión de usuario virtual de los procedimientos almacenados, consulte la página [4D Server y lenguaje 4D](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
 
+#### Standalone session
+
+The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
+
 #### Ejemplo
 
 Ha definido el método `action_Session` con el atributo "Disponible a través de etiquetas 4D y URLs". Se llama al método introduciendo la siguiente URL en el navegador:
@@ -92,6 +98,6 @@ IP:port/4DACTION/action_Session
 
 ### Ver también
 
-[Session storage](../commands-legacy/session-storage.md)\
+[Session storage](session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)

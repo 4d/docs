@@ -7,7 +7,7 @@ title: Clases
 
 El lenguaje 4D soporta el concepto de **clases**. En un lenguaje de programación, el uso de una clase permite definir el comportamiento de un objeto con propiedades y funciones asociadas.
 
-Cada objeto es una instancia de su clase. Una vez definida una clase usuario, puede <strong x-id="1">instanciar</strong> los objetos de esta clase en cualquier parte de su código. Una clase puede [`extend`](#class-extends-classname) otra clase, y luego hereda sus [funciones](#function) y propiedades ([declaradas](#property) y [calculadas](#function-get-and-function-set)).
+Una vez definida una clase usuario, puede <strong x-id="1">instanciar</strong> los objetos de esta clase en cualquier parte de su código. Una vez definida una clase usuario, puede <strong x-id="1">instanciar</strong> los objetos de esta clase en cualquier parte de su código. Una clase puede [`extend`](#class-extends-classname) otra clase, y luego hereda sus [funciones](#function) y propiedades ([declaradas](#property) y [calculadas](#function-get-and-function-set)).
 
 > El modelo de clases en 4D es similar al de las clases en JavaScript, y se basa en una cadena de prototipos.
 
@@ -98,8 +98,8 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
 
 Las clases disponibles son accesibles desde sus class stores. Hay dos class stores disponibles:
 
-- [`cs`](../commands/cs.md) for user class store
-- [`4D`](../commands/4d.md) for built-in class store
+- [`cs`](../commands/cs.md) para el almacén de clases de usuario
+- [`4D`](../commands/4d.md) para el almacén de clases integrado
 
 ### `cs`
 
@@ -107,9 +107,9 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 
 <!-- REF #_command_.cs.Params -->
 
-| Parámetros | Tipo   |                                | Descripción                                       |                  |
-| ---------- | ------ | ------------------------------ | ------------------------------------------------- | ---------------- |
-| classStore | Object | &amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
+| Parámetros | Tipo   |                                        | Descripción                                       |                  |
+| ---------- | ------ | -------------------------------------- | ------------------------------------------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
 
 El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parámetros | Tipo   |                                | Descripción    |                  |
-| ---------- | ------ | ------------------------------ | -------------- | ---------------- |
-| classStore | Object | &amp;larr; | Class store 4D | <!-- END REF --> |
+| Parámetros | Tipo   |                                        | Descripción    |                  |
+| ---------- | ------ | -------------------------------------- | -------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;larr; | Class store 4D | <!-- END REF --> |
 
 El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases 4D integradas<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
@@ -180,7 +180,7 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 - `property` para definir propiedades estáticas de los objetos con un tipo.
 - `Function get <Name>` y `Function set <Name>` para definir las propiedades calculadas de los objetos.
 - `Class extends <ClassName>` para definir la herencia.
-- `This` and `Super` are commands that have special
+- `This` y `Super` son comandos que tienen funciones especiales
 
 ### `Function`
 
@@ -191,9 +191,15 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 // code
 ```
 
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
+
 Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md). En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function` seguida del nombre de la función.
 
-Si la función se declara en una [clase compartida](#clases-compartidas), puede utilizar la palabra clave `shared` para que la función pueda ser llamada sin la estructura `Use...End use`. Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
+Si las funciones se declaran en una [clase compartida](#shared-class-constructor), puede utilizar la palabra clave `shared` con ellas para que puedan ser llamadas sin la estructura [`Use...End use`](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
 El nombre de la función debe ser compatible con las [reglas de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
@@ -325,11 +331,17 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 // código
 ```
 
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+
+:::
+
 Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
 
 Cuando llama a la función [`new()`](API/ClassClass.md#new), el constructor de clase es llamado con los parámetros opcionalmente pasados a la función `new()`.
 
-Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). Un constructor puede utilizar la palabra clave [`Super`](#super) para llamar al constructor de la superclase.
+Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
 
 Puede crear y escribir propiedades de instancia dentro del constructor (ver ejemplo). Alternativamente, si los valores de las propiedades de instancia no dependen de los parámetros pasados al constructor, puede definirlos utilizando la palabra clave [`property`](#property).
 
@@ -365,7 +377,7 @@ La palabra clave`property` se puede utilizar para declarar una propiedad dentro 
 
 La declaración de propiedades de clase mejora las sugerencias del editor de código, las funciones de tecleo predictivo y la detección de errores.
 
-Las propiedades se declaran para nuevos objetos cuando llama a [`new()`](API/ClassClass. d#new), sin embargo, no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
+Las propiedades se declaran para nuevos objetos cuando llama a [`new()`](API/ClassClass.md#new), sin embargo, no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
 
 :::note
 
@@ -491,15 +503,15 @@ $o.age:="Smith" //error con la sintaxis de verificación
 
 Si no se accede a la propiedad, el código nunca se ejecuta.
 
-Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.</p><p spaces-before="0" line-breaks-before="2">In the class definition file, computed property 
+Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.</p><p spaces-before="0" line-breaks-before="2">In the class definition file, computed property
 
 En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (*getter*) y `Function set` (*setter*) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
 `Función get` devuelve un valor del tipo de la propiedad y `Function set` toma un parámetro del tipo de la propiedad. Ambos argumentos deben cumplir con los [parámetros de función](#parameters) estándar.
 
-Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. Si solo se define una `Función set`, 4D devuelve *undefined* cuando se lee la propiedad.
+Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. En este caso, se devuelve un error si el código intenta modificar la propiedad.
 
-Si las funciones se declaran en una [clase compartida](#shared-class-constructor), puede utilizar la palabra clave `shared` con ellas para que puedan ser llamadas sin la estructura [`Use...End use`](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
+Si la función se declara en una [clase compartida](#clases-compartidas), puede utilizar la palabra clave `shared` para que la función pueda ser llamada sin la estructura `Use...End use`. Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
 El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del \*getter \*. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
@@ -600,7 +612,7 @@ The following commands have specific features when they are used within class fu
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error).
 
 For more details, see the [`Super`](../commands/super.md) command description.
 
@@ -617,7 +629,7 @@ Function f() : Integer
  return This.a+This.b
 ```
 
-Then you can write in a method:
+A continuación, puede escribir en un método:
 
 ```4d
 $o:=cs.ob.new()

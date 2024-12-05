@@ -76,7 +76,7 @@ La propriété `.size` <!-- REF #Blob.size.Summary -->retourne la taille d'un `4
 
 Le paramètre `start` est un indice dans le blob, indiquant le premier octet à inclure dans le nouveau `4D.Blob`. Si vous indiquez une valeur négative, 4D la traite comme un décalage de la fin du blob vers le début. Par exemple, -10 correspondrait à l'avant-dernier octet du blob. La valeur par défaut est 0. Si vous spécifiez une valeur pour start qui est supérieure à la taille du blob source, la taille du `4D.Blob` retourné est 0, et il ne contient aucune donnée.
 
-Le paramètre `end` est un indice dans le blob indiquant le premier octet qui ne sera pas inclus dans le nouveau `4D.Blob` (c'est-à-dire que l'octet situé exactement à cet indice ne sera pas inclus). Si vous indiquez une valeur négative, 4D la traite comme un décalage de la fin du blob vers le début. Par exemple, -10 correspondrait à l'avant-dernier octet du blob. La valeur par défaut est la taille du blob.
+Sommaire Si vous indiquez une valeur négative, 4D la traite comme un décalage de la fin du blob vers le début. Par exemple, -10 correspondrait à l'avant-dernier octet du blob. La valeur par défaut est la taille du blob.
 
 #### Exemple
 

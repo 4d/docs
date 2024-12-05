@@ -145,7 +145,7 @@ Les différences sont retournées sous forme de collection d'objets dont les pro
 
 | Nom de propriété | Type                      | Description                                  |
 | ---------------- | ------------------------- | -------------------------------------------- |
-| attributeName    | String                    | Nom de l'attribut                            |
+| attributeName    | Text                      | Nom de l'attribut                            |
 | value            | Dépend du type d'attribut | Valeur de l'attribut dans l'entité d'origine |
 | otherValue       | Dépend du type d'attribut | Valeur de l'attribut dans *entityToCompare*  |
 

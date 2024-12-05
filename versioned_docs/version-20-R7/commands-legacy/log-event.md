@@ -34,8 +34,7 @@ The optional *outputType* parameter specifies the output channel taken by the *m
 
 If you do not pass the *outputType* parameter, the value 0 (Into Windows log events) is used by default.
 
-If you have defined the *outputType* parameter as Into Windows log events, you can attribute a level of importance to *message*, via the optional *importance* parameter which helps you to read and understand the log events. There are three levels of importance: Information, Warning, and Error.  
-4D provides you with the following predefined constants, placed in the “*Log Events*” category:
+You can attribute a level of importance to *message*, via the optional *importance* parameter which helps you to read and understand the log events. There are three levels of importance: Information, Warning, and Error.  4D provides you with the following predefined constants:
 
 | Constant            | Type    | Value |
 | ------------------- | ------- | ----- |
@@ -44,6 +43,12 @@ If you have defined the *outputType* parameter as Into Windows log events, you c
 | Warning message     | Integer | 1     |
 
 If you don’t pass anything in *importance* or pass an incorrect value, the default value (0) is used.
+
+:::note
+
+The *importance* parameter is only used with *outputType* `Into Windows log events`, `Into 4D diagnostic log`, and `Into system standard outputs`.
+
+:::
 
 #### Example 
 

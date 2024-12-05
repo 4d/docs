@@ -25,4 +25,4 @@ Cette commande doit être appelée uniquement dans le cadre de l’événement f
 #### Voir aussi 
 
 [Contextual click](contextual-click.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  

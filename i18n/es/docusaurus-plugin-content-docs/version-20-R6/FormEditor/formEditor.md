@@ -90,7 +90,7 @@ La barra de objetos contiene todos los objetos activos e inactivos que se pueden
 | ![](../assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Control de pestañas](FormObjects/tabControl.md)                                                                                                                                                                                                                                                                     |   D   |
 | ![](../assets/en/FormEditor/plugin.png)    | [Área de plug-in ](FormObjects/pluginArea_overview.md) / [Subformulario](FormObjects/subform_overview.md) / [Área Web](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview |   X   |
 
-Para dibujar un tipo de objeto, seleccione el botón correspondiente y luego trace el objeto en el formulario. Después de crear un objeto, puede modificar su tipo utilizando la lista de propiedades. Mantenga presionada la tecla **Mayúsculas** mientras dibuja para restringir el objeto a una forma regular. Las líneas se limitan a horizontales, 45° o verticales, los rectángulos se limitan a cuadrados y los óvalos se limitan a círculos.
+Para dibujar un tipo de objeto, seleccione el botón correspondiente y luego trace el objeto en el formulario. Después de crear un objeto, puede modificar su tipo utilizando la lista de propiedades. Para dibujar un tipo de objeto, seleccione el botón correspondiente y luego trace el objeto en el formulario. Las líneas se limitan a horizontales, 45° o verticales, los rectángulos se limitan a cuadrados y los óvalos se limitan a círculos.
 
 La variante actual del tema es el objeto que se insertará en el formulario. Al hacer clic en la parte derecha de un botón, se accede al menú de variantes:
 
@@ -134,7 +134,7 @@ Una vez insertado el objeto en el formulario, puede modificar sus característic
 
 Puede trabajar con dos tipos de objetos en sus formularios:
 
-- **Objetos estáticos** (líneas, marcos, imágenes de fondo, etc.): estos objetos se utilizan generalmente para definir la apariencia del formulario y sus etiquetas, así como para la interfaz gráfica. Están disponibles en la barra de objetos del editor de formularios. También puede definir sus atributos gráficos (tamaño, color, fuente, etc.) y sus propiedades de redimensionamiento utilizando la Lista de Propiedades. Los objetos estáticos no tienen variables asociadas como los objetos activos. Sin embargo, se pueden insertar objetos dinámicos en objetos estáticos.
+- **Objetos estáticos** (líneas, marcos, imágenes de fondo, etc.): estos objetos se utilizan generalmente para definir la apariencia del formulario y sus etiquetas, así como para la interfaz gráfica. Están disponibles en la barra de objetos del editor de formularios. Están disponibles en la barra de objetos del editor de formularios. Están disponibles en la barra de objetos del editor de formularios. Los objetos estáticos no tienen variables asociadas como los objetos activos. Sin embargo, se pueden insertar objetos dinámicos en objetos estáticos.
 
 - **Objetos activos**: estos objetos realizan tareas o funciones en la interfaz y pueden adoptar muchas formas: campos, botones, listas desplazables, etc. Cada objeto activo está asociado a un campo o a una variable.
 
@@ -333,7 +333,7 @@ Puede previsualizar el resultado real de sus parámetros haciendo clic en el bot
 
 ### Gestionar los planos de los objetos
 
-A veces tendrá que reorganizar los objetos que obstruyen la vista de otros objetos del formulario. Por ejemplo, puede tener un gráfico que desee que aparezca detrás de los campos en un formulario. 4D ofrece cuatro elementos de menú, **Mover hacia atrás**, **Mover hacia delante**, **Subir un nivel** y **Bajar un nivel** que le permiten organizar los planos de los objetos en el formulario. Estas capas también determinan el orden de entrada por defecto (ver Modificación del orden de entrada de datos). La figura siguiente muestra objetos delante y detrás de otros objetos:
+A veces tendrá que reorganizar los objetos que obstruyen la vista de otros objetos del formulario. Por ejemplo, puede tener un gráfico que desee que aparezca detrás de los campos en un formulario. A veces tendrá que reorganizar los objetos que obstruyen la vista de otros objetos del formulario. Estas capas también determinan el orden de entrada por defecto (ver Modificación del orden de entrada de datos). La figura siguiente muestra objetos delante y detrás de otros objetos:
 
 ![](../assets/en/FormEditor/layering.png)
 

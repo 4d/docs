@@ -36,7 +36,6 @@ jobs:
           else
           npm i
           fi
-          export NODE_OPTIONS="--max-old-space-size=14336"
           npm run build
       - uses: actions/upload-artifact@v4
         with:

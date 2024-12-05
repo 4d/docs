@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE changes the currently displayed form page to the previous form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](form-load.md) command, or if the first form page is already displayed, FORM PREVIOUS PAGE does nothing.
+<!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE changes the currently displayed form page to the previous form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if the first form page is already displayed, FORM PREVIOUS PAGE does nothing.
 
 #### Example 
 

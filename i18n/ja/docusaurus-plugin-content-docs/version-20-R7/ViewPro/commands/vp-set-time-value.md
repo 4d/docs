@@ -12,7 +12,7 @@ title: VP SET TIME VALUE
 | 引数            | 型      |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
 | rangeObj      | Object | -> | レンジオブジェクト |                  |
-| timeValue     | Text   | -> | 設定する時間値   |                  |
+| timeValue     | Time   | -> | 設定する時間値   |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
 #### 説明

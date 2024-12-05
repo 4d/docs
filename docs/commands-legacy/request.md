@@ -31,7 +31,7 @@ The user can enter text into the text input area. To specify a default value, pa
 
 **Tip:** Do not call the **Request** command from the section of a form or object method that handles the On Activate or On Deactivate form event; this will cause an endless loop.
 
-**Tip:** If you need to get several pieces of information from the user, design a form and present it with [DIALOG](dialog.md), rather than presenting a succession of **Request** dialog boxes.
+**Tip:** If you need to get several pieces of information from the user, design a form and present it with [DIALOG](../commands/dialog.md), rather than presenting a succession of **Request** dialog boxes.
 
 #### Example 1 
 

@@ -3,7 +3,7 @@ id: tabControl
 title: Controles Abas
 ---
 
-A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. O usuário acessa cada tela clicando na guia correspondente.
+Uma guia cria um objeto que permite que o usuário escolha entre várias telas virtuais exibidas nos limites da guia. O usuário acessa cada tela clicando na guia correspondente.
 
 O seguinte formulário de várias páginas utiliza um objeto de controlo de pestanas:
 
@@ -11,7 +11,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. Se o controle de guias é usado como uma ferramenta de navegação de página, então o [`FORM GOTO PAGE`](https://doc.4d.comando/4dv19/help/command/en/page247.html) ou a ação padrão `gotoPage` seria usada quando um usuário clica em uma aba.
+As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. Se o controle de guias é usado como uma ferramenta de navegação de página, então o [`FORM GOTO PAGE`](https://doc.4d.comando/4dv19/help/command/en/page247.html) ou a ação padrão `gotoPage` seria usada quando um usuário clica em uma aba.
 
 Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
 
@@ -111,7 +111,7 @@ Eis um exemplo de método objeto:
 
 Quando você atribuir a [ação padrão](properties_Action.md#padrao) `gotoPage` para o controle de abas, o 4D exibirá automaticamente a página do formulário que corresponde ao número da guia selecionada.
 
-For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
+Por exemplo, se o usuário selecionar a terceira aba, 4D exibirá a terceira página do formulário atual (se existir).
 
 ## Propriedades compatíveis
 

@@ -30,7 +30,7 @@ Aqui está uma descrição dos dados retornados:
 
 | Propriedade                                             | Tipo       | Descrição                                                                                                                                                                                                                              |
 | ------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Nome da dataclass.                                                                                                                                                                                                     |
+| __entityModel | Text       | Nome da dataclass.                                                                                                                                                                                                     |
 | __COUNT       | Number     | Número de entidades na classe de dados.                                                                                                                                                                                |
 | __SENT        | Number     | Número de entidades enviadas pela petição REST. Este número puede ser el número total de entidades si es menor que el valor definido por `$top/$limit`.                                                |
 | __FIRST       | Number     | Número de entidade em que a seleção vai começar. O bien 0 por defecto o el valor definido por `$skip`.                                                                                                 |
@@ -40,7 +40,7 @@ Cada entidade contém as propriedades abaixo:
 
 | Propriedade                                           | Tipo   | Descrição                                                                                                                          |
 | ----------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Valor da chave primária definida para a classe de dados.                                                           |
+| __KEY       | Text   | Valor da chave primária definida para a classe de dados.                                                           |
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                                                 |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
@@ -141,7 +141,7 @@ Devuelve los datos de la entidad específica definida por la llave primaria de l
 
 Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
 
-For more information about the data returned, refer to [\{dataClass\}](#dataclass).
+Para más información sobre los datos devueltos, consulte [\{dataClass\}](#dataclass).
 
 Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 

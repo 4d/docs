@@ -130,7 +130,7 @@ Vous pouvez également transmettre des valeurs pour tous les attributs de l'enti
 | Propriétés                                            | Type                                                                 | Description                                                                 |
 | ----------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Attributs de l'entité                                 | mixte                                                                | Optionnelle - Valeurs à modifier                                            |
-| __DATACLASS | String                                                               | Obligatoire - Indique la Dataclass de l'entité                              |
+| __DATACLASS | Text                                                                 | Obligatoire - Indique la Dataclass de l'entité                              |
 | __ENTITY    | Boolean                                                              | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
 | __KEY       | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
@@ -155,7 +155,7 @@ L'entity selection doit avoir été définie au préalable à l'aide de [$method
 | Propriétés                                           | Type    | Description                                                                             |
 | ---------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
 | Attributs de l'entité                                | mixte   | Optionnelle - Valeurs à modifier                                                        |
-| __DATASET  | String  | Obligatoire - entitySetID (UUID) de la sélection d'entité            |
+| __DATASET  | Text    | Obligatoire - entitySetID (UUID) de la sélection d'entité            |
 | __ENTITIES | Boolean | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
@@ -628,7 +628,7 @@ $ageAverage:=$students.getAgeAverage()
 
 ### Returning a document
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 // Product dataclass
@@ -682,7 +682,7 @@ You can call the function using this request:
 
 ### Using an entity selection to get a list
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 shared singleton Class constructor()

@@ -67,5 +67,5 @@ Voici un exemple de traitement à la volée des caractères saisis dans un champ
 
 #### Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  

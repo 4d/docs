@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | name      | Text     | → | Nome do processo para o qual se deseja recuperar o número do processo |
 | id        | Text     | → | ID do processo para o qual se deseja recuperar o número do processo   |
 | \*        | Operador | → | Retorna o número do processo do servidor                              |
-| Resultado | Longint  | ← | Process number                                                        |
+| Resultado | Integer  | ← | Process number                                                        |
 
 <!-- END REF-->
 

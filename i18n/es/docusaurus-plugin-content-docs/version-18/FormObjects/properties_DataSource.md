@@ -122,7 +122,7 @@ Consulte la sección [Tipo de expresión](properties_Object.md#expression-type).
 
 Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
+> No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-value)" que permite definir un valor de campo en los nuevos registros.
 
 Debe introducir una lista de valores. En el editor de formularios, un diálogo específico permite introducir valores separados por retornos de carro:
 
@@ -249,9 +249,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                           |
-| ------------------- | -------------- | ------------------------------------------ |
-| selectedItemsSource | string         | Assignable collection or object expression |
+| Nombre              | Tipos de datos | Valores posibles                          |
+| ------------------- | -------------- | ----------------------------------------- |
+| selectedItemsSource | string         | Colección asignable o expresión de objeto |
 
 #### Objetos soportados
 

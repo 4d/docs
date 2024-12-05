@@ -34,7 +34,7 @@ O parâmetro opcional *tipoSaida* permite precisar o canal de saida tomado pela 
 
 Se omitir o parâmetro *tipoSaida,* o valor 0 se utiliza como padrão (Into Windows Log Events).
 
-Se tiver definido *tipoSaida* de tipo Into Windows Log Events, pode atribuir à mensagem um nível de importância vía o parâmetro opcional *importancia* com o fim de facilitar a leitura de histórico de eventos. Há três níveis de importância: Informação, Advertência e Erro. 4D oferece as constantes abaixo predefinidas, localizadas no tema *Historial de eventos*:
+Você pode atribuir um nível de importância à *mensagem* por meio do parâmetro opcional *importancia*, que o ajuda a ler e entender os eventos de registro. Há três níveis de importância: Informação, Aviso e Erro.  4D lhe fornece as seguintes constantes predefinidas:
 
 | Constante           | Tipo          | Valor |
 | ------------------- | ------------- | ----- |
@@ -43,6 +43,12 @@ Se tiver definido *tipoSaida* de tipo Into Windows Log Events, pode atribuir à 
 | Warning message     | Inteiro longo | 1     |
 
 Se não passar nada no parâmetro *importancia* ou se passar um valor inválido, se utiliza o valor como padrão (0).
+
+:::nota
+
+O parâmetro *importancia* só é usado com *tipoSaida* `Into Windows log events`, `Into 4D diagnostic log` e `Into system standard outputs`.
+
+:::
 
 #### Exemplo 
 

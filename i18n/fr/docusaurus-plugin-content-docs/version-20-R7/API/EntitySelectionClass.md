@@ -5,7 +5,7 @@ title: EntitySelection
 
 Une entity selection est un objet contenant une ou plusieurs référence(s) à des [entités](ORDA/dsMapping.md#entity) appartenant à la même [Dataclass](ORDA/dsMapping.md#dataclass). Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
 
-Les entity selections peuvent être créées à partir de sélections existantes en utilisant diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou des fonctions de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). Vous pouvez également créer des entity selections vierges à l'aide de la fonction [`dataClass.newSelection()`](DataClassClass.md#newselection) ou de la commande [`Create new selection`](../commands/create-entity-selection.md).
+Les entity selections peuvent être créées à partir de sélections existantes en utilisant diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou des fonctions de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](../commands/create-entity-selection.md) command.
 
 ### Sommaire
 
@@ -46,6 +46,10 @@ Les entity selections peuvent être créées à partir de sélections existantes
 | [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<br/><!-- INCLUDE #EntitySelectionClass.slice().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<br/><!-- INCLUDE #EntitySelectionClass.sum().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->                                  |
+
+#### Voir également
+
+[`USE ENTITY SELECTION`](../commands/use-entity-selection.md)
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
@@ -1070,7 +1074,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 | Paramètres | Type |                             | Description                                                                  |
 | ---------- | ---- | --------------------------- | ---------------------------------------------------------------------------- |
-| result     | Text | <- | Attributs de contexte associés à l'entity selection, séparés par une virgule |
+| Résultat   | Text | <- | Attributs de contexte associés à l'entity selection, séparés par une virgule |
 
 <!-- END REF -->
 

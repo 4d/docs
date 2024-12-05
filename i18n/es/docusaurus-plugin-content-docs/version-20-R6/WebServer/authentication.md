@@ -28,7 +28,7 @@ Básicamente, en este modo, depende del desarrollador definir cómo autenticar a
 Este modo de autenticación es el más flexible porque permite:
 
 - o bien, delegar la autenticación del usuario a una aplicación de terceros (por ejemplo, una red social, SSO);
-- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del Lo importante es que nunca guarde la contraseña en claro, utilizando ese código:
+- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código:
 
 ```4d
 //... creación de cuenta de usuario
@@ -83,7 +83,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita una página estática válida.
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- cuando el servidor web recibe una URL que comienza con `rest/` y se ejecuta el servidor REST (en este caso, la autenticación es manejada a través de [`ds. función uthentify`](../REST/authUsers#force-login-mode) o el [método base `On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) (obsoleto) o los [parámetros de estructura](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxis
 
@@ -157,7 +157,7 @@ El parámetro `$4` recibe la dirección IP utilizada para llamar al servidor web
 
 #### $5 y $6 - Nombre de usuario y contraseña
 
-Los parámetros `$5` y `$6` reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo de identificación estándar que muestra el navegador. Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
+Los parámetros `$5` y `$6` reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo de identificación estándar que muestra el navegador. Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
 > Si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $6 (la contraseña del usuario) no se devuelve por razones de seguridad.
 

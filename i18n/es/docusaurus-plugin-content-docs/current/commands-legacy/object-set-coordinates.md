@@ -38,7 +38,7 @@ También puede pasar los valores de coordenadas absolutas en los parámetros *de
 Este comando sólo funciona en los siguientes contextos:
 
 * Los formularios de entrada en el modo entrada,
-* Formulario mostrados usando el comando [DIALOG](dialog.md),
+* Formulario mostrados usando el comando [DIALOG](../commands/dialog.md),
 * Encabezados y pies de página de formularios de salida mostrados por el comando [MODIFY SELECTION](modify-selection.md) o [DISPLAY SELECTION](display-selection.md),
 * Los formularios en impresión.
 

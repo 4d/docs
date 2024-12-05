@@ -109,7 +109,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 ## Tipo de expresión
 
-> This property is called **Data Type** in the Property List for Selection and collection type list box columns.
+> Esta propiedad se denomina **Tipo de datos** en la Lista de propiedades de las columnas del list box de tipo Selección y colección.
 
 Especifique el tipo de datos para la expresión o variable asociada al objeto. Tenga en cuenta que el objetivo principal de este ajuste es configurar las opciones (como los formatos de visualización) disponibles para el tipo de datos. En realidad, no escribe la variable en sí. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema `Compilador`.
 
@@ -237,7 +237,7 @@ Puede forzar un retorno de carro en la etiqueta utilizando el caracter \ (barra 
 
 Para insertar un \ en la etiqueta, ingrese "&#92;&#92;".
 
-Por defecto, la etiqueta se coloca en el centro del objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
+Por defecto, la etiqueta se coloca en el centro del objeto. Cuando el objeto también contiene un icono, puede modificar la ubicación relativa de estos dos elementos utilizando la propiedad [Posición Título/imagen](properties_TextAndPicture.md#titlepicture-position).
 
 Para la traducción de la base de datos, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -265,7 +265,7 @@ Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálcu
 | Mínimo                  | X   |      | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                  | X   |      | X     | X    | X    |          | Igual que el tipo de columna        |
 | Suma                    | X   |      | X     |      | X    |          | Igual que el tipo de columna        |
-| Conteo                  | X   | X    | X     | X    | X    | X        | Longint                             |
+| Conteo                  | X   | X    | X     | X    | X    | X        | Integer                             |
 | Promedio                | X   |      |       | X    |      |          | Real                                |
 | Desviación estándar(*)  | X   |      |       | X    |      |          | Real                                |
 | Varianza(*)             | X   |      |       | X    |      |          | Real                                |

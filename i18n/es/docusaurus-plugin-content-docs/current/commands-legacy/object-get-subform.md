@@ -41,4 +41,4 @@ Si no hay formulario listado, se devuelve una cadena vacía en el parámetro *su
 #### Ver también 
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT SET SUBFORM](../commands/object-set-subform.md)  

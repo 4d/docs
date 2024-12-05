@@ -5,14 +5,14 @@ title: VP Get names
 
 <!-- REF #_method_.VP Get names.Syntax -->
 
-**VP Get names** ( vpAreaName : Text { ; scope : Number } ) : Collection<!-- END REF -->
+**VP Get names** ( vpAreaName : Text { ; scope : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get names.Params -->
 
 | Parâmetro  | Tipo       |                             | Descrição                                                      |                  |
 | ---------- | ---------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | ->                          | Nome de objeto formulário área 4D View Pro                     |                  |
-| scope      | Number     | ->                          | Escopo de destino (padrão = planilha atual) |                  |
+| scope      | Integer    | ->                          | Escopo de destino (padrão = planilha atual) |                  |
 | Resultados | Collection | <- | Nomes existentes no âmbito definido                            | <!-- END REF --> |
 
 #### Descrição

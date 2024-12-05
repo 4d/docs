@@ -55,6 +55,6 @@ As a result, at runtime, updating the value of the main form's Input object also
 
 #### Ver también 
 
-[Form](form.md)  
+[Form](../commands/form.md)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  

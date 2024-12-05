@@ -45,7 +45,7 @@ Para obtener una visión general de esta clase, consulte la entrada del blog [**
 | Parámetros | Tipo                         |                             | Descripción                                       |
 | ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
 | settings   | Object                       | ->                          | Parámetros para generar o cargar un par de llaves |
-| resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+| Result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 

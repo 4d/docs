@@ -101,6 +101,8 @@ You can click twice on the button so that it remains selected even after you hav
 
 ### Property List  
 
+![](../assets/en/FormEditor/property-list.png)
+
 Both forms and form objects have properties that control access to the form, the appearance of the form, and the behavior of the form when it is used. Form properties include, for example, the form’s name, its menu bar, and its size. Object Properties include, for example, an object’s name, its dimensions, its background color, and its font.
 
 You can display and modify form and object properties using the Property List. It displays either form or objects properties depending on what you select in the editor window.
