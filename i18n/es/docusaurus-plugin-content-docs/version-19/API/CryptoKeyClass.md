@@ -387,7 +387,6 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
-
 <!-- REF #CryptoKey.verify().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                          |
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
