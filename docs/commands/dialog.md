@@ -65,7 +65,7 @@ This form then reacts “normally” to user actions and is closed using a stand
 
 **Notes:** 
 
-* You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](call-form.md) command to establish communication between the forms.
+* You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](../commands-legacy/call-form.md) command to establish communication between the forms.
 * You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
 * When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. You do not have to manage the closing of the window itself.
 
@@ -168,7 +168,7 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 
 [ACCEPT](../commands-legacy/accept.md)  
 [ADD RECORD](../commands-legacy/add-record.md)  
-[CALL FORM](call-form.md)  
+[CALL FORM](../commands-legacy/call-form.md)  
 [CANCEL](../commands-legacy/cancel.md)  
 [Form](form.md)  
 [Open window](../commands-legacy/open-window.md)  

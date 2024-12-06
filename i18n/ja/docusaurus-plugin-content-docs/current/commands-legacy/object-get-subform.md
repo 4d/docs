@@ -41,4 +41,4 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-[OBJECT SET SUBFORM](../commands/object-set-subform.md)  
+[OBJECT SET SUBFORM](object-set-subform.md)  

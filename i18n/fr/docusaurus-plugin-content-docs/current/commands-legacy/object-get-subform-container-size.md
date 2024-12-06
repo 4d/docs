@@ -30,5 +30,5 @@ Cette commande est utile par exemple dans le cas où des objets du sous-formulai
 
 #### Voir aussi 
 
-[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
-[OBJECT SET SUBFORM](../commands/object-set-subform.md)  
+[OBJECT GET SUBFORM](object-get-subform.md)  
+[OBJECT SET SUBFORM](object-set-subform.md)  

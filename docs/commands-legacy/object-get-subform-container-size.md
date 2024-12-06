@@ -32,5 +32,5 @@ The On Resize event is generated in the subform form method if the subform objec
 
 #### See also 
 
-[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
-[OBJECT SET SUBFORM](../commands/object-set-subform.md)  
+[OBJECT GET SUBFORM](object-get-subform.md)  
+[OBJECT SET SUBFORM](object-set-subform.md)  

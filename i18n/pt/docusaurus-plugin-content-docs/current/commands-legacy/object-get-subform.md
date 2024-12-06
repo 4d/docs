@@ -42,4 +42,4 @@ Se não houver formulário lista, uma string vazia é devolvida no parâmetro *s
 #### Ver também 
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-[OBJECT SET SUBFORM](../commands/object-set-subform.md)  
+[OBJECT SET SUBFORM](object-set-subform.md)  

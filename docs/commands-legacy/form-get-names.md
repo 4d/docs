@@ -65,4 +65,4 @@ Examples of typical use:
 #### See also 
 
 *Forms*  
-[METHOD GET PATHS FORM](../commands/method-get-paths-form.md)  
+[METHOD GET PATHS FORM](method-get-paths-form.md)  

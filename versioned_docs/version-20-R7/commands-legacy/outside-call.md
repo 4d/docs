@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 In order for the **Outside call** execution cycle to be generated, make sure that the On Outside Call event property for the form and/or the objects has been selected in the Design environment.
 
-**Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Outside Call event.
+**Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Outside Call event.
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  

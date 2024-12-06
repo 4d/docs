@@ -62,5 +62,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[METHOD GET PATHS FORM](../commands/method-get-paths-form.md)  
+[METHOD GET PATHS FORM](method-get-paths-form.md)  
 *フォーム*  

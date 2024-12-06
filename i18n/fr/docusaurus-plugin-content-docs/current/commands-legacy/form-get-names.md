@@ -65,4 +65,4 @@ Exemples d’utilisations type :
 #### Voir aussi 
 
 *Formulaires*  
-[METHOD GET PATHS FORM](../commands/method-get-paths-form.md)  
+[METHOD GET PATHS FORM](method-get-paths-form.md)  
