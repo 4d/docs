@@ -12,8 +12,8 @@ title: Restaurar um backup
 
 - A perda de ficheiro(s) de base de dados. This incident can occur because of defective sectors on the disk containing the database, a virus, manipulation error, etc. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. To find out if a database was damaged following an incident, simply relaunch the database using 4D. O programa realiza um autodiagnóstico e detalha as operações de restauração necessárias. Em modo automático, essas operações são realizadas diretamente sem precisar de ajuda da parte do usuário. If a regular backup strategy was put into place, the 4D restore tools will allow you to recover (in most cases) the database in the exact state it was in before the incident.
 
-> 4D can launch procedures automatically to recover databases following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Database Settings. For more information, refer to the [Automatic Restore](settings.md#automatic-restore) paragraph.  
-> If the incident is the result of an inappropriate operation performed on the data (deletion of a record, for example), you can attempt to repair the database using the "rollback" function in the log file. Essa função está disponível na página [Rollback](MSC/rollback.md) do MSC.
+> 4D can launch procedures automatically to recover databases following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Database Settings. Para mais informações, veja o parágrafo [Restauração automatica ](settings.md#automatic-restore).  
+> Se o incidente for resultado de uma operação inadequada realizadas nos dados (eliminação de um registro, por exemplo) pode tentar reparar o banco de dados usando a função "rollback" do arquivo de histórico. Essa função está disponível na página [Rollback](MSC/rollback.md) do MSC.
 
 ## Restaurar manualmente o backup (diálogo padrão)
 

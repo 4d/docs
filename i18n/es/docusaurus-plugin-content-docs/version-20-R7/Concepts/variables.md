@@ -49,7 +49,7 @@ var $myVar //una variable variant
 ```
 
 `varName` es el nombre de la variable, debe cumplir con las [reglas 4D](Concepts/identifiers.md) sobre identificadores.
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) (deprecated) and [arrays](Concepts/arrays.md).
+Esta sintaxis solo soporta declaraciones de [variables locales y de proceso](#local-process-and-interprocess-variables), por lo que excluye [variables interproceso](#interprocess-variables) (obsoleto) y [arrays](Concepts/arrays.md).
 
 `varType` puede ser:
 

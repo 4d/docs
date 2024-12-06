@@ -239,7 +239,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Uso de la función dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Usando el comando [`Create entity selection`](../commands/create-entity-selection.md) o la función [`.newSelection()`](API/DataClassClass.md#newselection) de la dataclass para crear una selección de entidades en blanco;
 - Utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una entity selection existente;
 - Utilizando una de las diversas funciones de la [clase Entity selection](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando un atributo de relación de tipo "related entities" (ver abajo).

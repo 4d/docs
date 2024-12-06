@@ -134,17 +134,16 @@ Este ejemplo describe la asociación de la URL `/4DACTION` con un objeto imagen 
 El método `getPhoto` es el siguiente:
 
 ```4d
-#DECLARE ($url : Text) // This parameter must always be declared
+#DECLARE ($url : Text) // Este parámetro debe declararse siempre
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //find the picture in the Images folder within the Resources folder
+ //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$url+".psd"
 
-READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
-WEB SEND BLOB($BLOB;"image/png")
+READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
+PICTURE TO BLOB($PictVar;$BLOB;".png") //convierte la imagen en formato ".png". WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACCIÓN para publicar formularios
@@ -191,15 +190,15 @@ OK="Search"
 4D llama al método base `<On Web Authentication>` (si existe), luego se llama al método proyecto `processForm`, que es el siguiente:
 
 ```4d
- #DECLARE ($url : Text) //mandatory for compiled mode
+ #DECLARE ($url : Text) //obligatorio para el modo compilado
  var $vName : Integer
  var vName;vLIST : Text
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrVals;0)
- WEB GET VARIABLES($arrNames;$arrVals) //we retrieve all the variables of the form
+ WEB GET VARIABLES($arrNames;$arrVals) //recuperamos todas las variables del formulario
  $vName:=Find in array($arrNames;"vName")
  vName:=$arrVals{$vName}
- If(Find in array($arrNames;"vExact")=-1) //If the option has not been checked
+ If(Find in array($arrNames;"vExact")=-1) //Si la opción no ha sido marcada
     vName:=vName+"@"
  End if
  QUERY([Jockeys];[Jockeys]Name=vName)
@@ -208,9 +207,9 @@ OK="Search"
     vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<br/>"
     NEXT RECORD([Jockeys])
  End while
- WEB SEND FILE("results.htm") //Send the list to the results.htm form
-  //which contains a reference to the variable vLIST,
-  //for example <!--4DHTML vLIST-->
+ WEB SEND FILE("results.htm") //Enviar la lista al formulario results.htm
+  //que contiene una referencia a la variable vLIST,
+  //por ejemplo <!--4DHTML vLIST-->
   //...
 End if
 ```
@@ -282,7 +281,7 @@ Las principales características de esta página son:
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 
 ```4d
-  // Retrieval of value of variables
+  // Recuperación del valor de las variables
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
@@ -290,25 +289,25 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
 
  Case of
 
-  // The Log On button was clicked
+  // Se ha presionado el botón Log On
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
        QUERY([WWW Users];[WWW Users]UserName=$arrValues{$user})
        $0:=(Records in selection([WWW Users])>0)
        If($0)
           WWW POST EVENT("Log On";WWW Log information)
-  // The WWW POST EVENT method saves the information in a database table
+  // El método WWW POST EVENT guarda la información en una tabla de la base
        Else
 
           $0:=WWW Register
-  // The WWW Register method lets a new Web user register
+  // El método WWW Register permite que un nuevo usuario de la Web se registre
        End if
 
-  // The Register button was clicked
+  // Se ha presionado el botón Register
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
 
-  // The Information button was clicked
+  // Se ha presionado el botón de información
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
  End case

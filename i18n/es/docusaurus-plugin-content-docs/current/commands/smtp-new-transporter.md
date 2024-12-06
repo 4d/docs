@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo                               |   | Descripción                                                                       |
 | ---------- | ---------------------------------- | - | --------------------------------------------------------------------------------- |
 | server     | Object                             | → | Información del servidor de correo                                                |
-| Resultado  | 4D.SMTPTransporter | ← | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| Resultado  | 4D.SMTPTransporter | ← | [Objeto SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 

@@ -33,7 +33,7 @@ The following ORDA and singleton functions can be called in REST:
 
 :::
 
-Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parameters](#parameters) are passed either in the body of the POST request (`POST` calls) or in the `params` collection in the URL (`GET` calls).
+Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parámetros](#parameters) se pasan en el cuerpo de la petición POST (llamadas `POST`) o en la colección `params` de la URL (llamadas `GET`).
 
 Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
@@ -49,7 +49,7 @@ con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
 :::note
 
-The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+La función `getCity()` debe haber sido declarada con la palabra clave `onHttpGet` (ver [Configuración de la función](#function-configuration)).
 
 :::
 

@@ -110,8 +110,8 @@ Este archivo de texto también puede contener llaves de configuración, en parti
 
 #### `Triggers`
 
-| Contenido                                          | Descripción                                                                                                                               | Formato |
-| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Contenido                                                                                    | Descripción                                                                                                                               | Formato |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | table__n_.4dm | Métodos trigger definidos en el proyecto. Un archivo de activación por tabla (n es el número de tabla) | text    |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. Es compatible con las herramientas de control de versión.
@@ -238,4 +238,4 @@ Define la carpeta raíz por defecto del servidor web 4D para las páginas, las i
 
 ## Archivo `.gitignore` (opcional)
 
-Archivo que especifica los archivos que serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias. Para configurar el contenido de ese archivo, consulte [Crear archivo `.gitignore`](Preferences/general.md#create-gitignore-file).
+Archivo que especifica los archivos que serán ignorados por git. Archivo que especifica los archivos que serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias.

@@ -19,7 +19,7 @@ Sólo un depurador puede depurar una aplicación 4D Server en un momento dado. S
 
 - el depurador local de 4D Server (por defecto) - si el servidor no está ejecutando sin interfaz.
 - el depurador de un cliente 4D remoto - si la sesión remota tiene acceso al modo Diseño.
-- the [Qodly debugger](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) on 4D Server - if the server allows access to Qodly Studio.
+- el [depurador Qodly](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) en el servidor 4D - si el servidor permite el acceso a Qodly Studio.
 
 El depurador asociado es llamado cada vez que se encuentra un 4D Server:
 

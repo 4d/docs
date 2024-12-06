@@ -183,7 +183,7 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Não existe uma palavra-chave final para o código de função. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -321,7 +321,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Não existe uma palavra-chave final para o código de função do construtor de classe. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -437,13 +437,13 @@ Se uma classe [estende](#class-extends-classname) outra classe, as propriedades 
 
 :::note
 
-If you initialize a property in its declaration line with an object or a collection in a [shared class](#shared-classes), the value is automatically transformed into a shared value:
+Se você inicializar uma propriedade em sua linha de declaração com um objeto ou uma coleção em uma [classe compartilhada](#shared-classes), o valor é automaticamente transformado em um valor compartilhado:
 
 ```4d
-// in a shared class
+// em uma classe compartilhada
 property myCollection := ["something"]
-// myCollection will be a shared collection
-// equivalent to:
+// myCollection será uma coleção compartilhada
+// equivalente a:
 myCollection := New shared collection("something")
 ```
 
@@ -833,7 +833,7 @@ Se a palavra-chave da função `shared` for usada em uma classe de usuário não
 
 ## Classes Singleton
 
-Uma **classe singleton** é uma classe de usuário que produz apenas uma única instância. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern). A singleton has a unique instance for the process in which it is instantiated, while a *shared* singleton has a unique instance for all processes on the machine. Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo ou processo.
+Uma **classe singleton** é uma classe de usuário que produz apenas uma única instância. Para obter mais informações sobre singletons, consulte a [página da Wikipedia sobre singletons](https://en.wikipedia.org/wiki/Singleton_pattern). Um singleton tem uma instância exclusiva para o processo onde é instanciado, enquanto um singleton *compartilhado* tem uma instância exclusiva para todos os processos na máquina. Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo ou processo.
 
 A classe singleton é instanciada na primeira chamada da propriedade [`cs.<class>.me`](../API/ClassClass.md#me). A classe singleton instanciada é então sempre retornada quando a propriedade [`me`](../API/ClassClass.md#me) é usada.
 
@@ -843,15 +843,15 @@ O [`.isSingleton`](../API/ClassClass.md#issingleton) propriedade de objetos de c
 
 ### Âmbito
 
-The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its *shared* property.
+O escopo de uma instância singleton pode ser o processo em que ela é instanciada ou todos os processos na máquina, dependendo de sua propriedade *compartilhada*.
 
-| Singleton criado em | Scope if not shared                                                                                        | Scope if shared   |
-| ------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------- |
-| 4D usuário único    | Processo                                                                                                   | Aplicação         |
-| 4D Server           | Processo                                                                                                   | Máquina 4D Server |
-| Modo remoto 4D      | Process (*nota*: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D |
+| Singleton criado em | Escopo se não for compartilhado                                                                            | Escopo se compartilhado |
+| ------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------- |
+| 4D usuário único    | Processo                                                                                                   | Aplicação               |
+| 4D Server           | Processo                                                                                                   | Máquina 4D Server       |
+| Modo remoto 4D      | Process (*nota*: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D       |
 
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
+Uma vez instanciada, uma classe singleton (e seu singleton) existe enquanto houver uma referência a ela em algum lugar da aplicação em execução na máquina.
 
 :::info
 
@@ -861,7 +861,7 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 ### Criação de um singleton
 
-To create a singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por exemplo:
+Para criar uma classe singleton, adicione a palavra-chave `singleton` antes do [`Class Constructor`](#class-constructor). Por exemplo:
 
 ```4d
 	//class: ProcessTag
@@ -892,7 +892,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### Criação de um singleton compartilhado
 
-To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por exemplo:
+Para criar um singleton compartilhado por todos os processos da máquina, adicione as palavras-chave `shared singleton` antes do [constructor de classe](#class-constructor). Por exemplo:
 
 ```4d
 //Class VehicleFactory
@@ -919,7 +919,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
+Em seguida, você pode chamar o singleton **cs.VehicleFactory** para obter um novo veículo de qualquer lugar da aplicação em sua máquina com uma única linha:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("caminhão")

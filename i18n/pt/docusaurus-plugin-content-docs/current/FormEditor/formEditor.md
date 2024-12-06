@@ -314,7 +314,7 @@ Para distribuir objetos com igual espaçamento:
 
 1. Selecione três ou mais objetos e clique na ferramenta Distribuir pretendida.
 
-2. Na barra de ferramentas, clique na ferramenta de distribuição que corresponde à distribuição que você deseja aplicar.<p>![](../assets/en/FormEditor/distributionTool. ng)</p> OU<p>Selecione um comando de menu de distribuição no submenu **Alinhar** no menu **Objeto** ou no menu de contexto do editor.</p>4D distribui os objetos apropriadamente. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
+2. Na barra de ferramentas, clique na ferramenta de distribuição que corresponde à distribuição que você deseja aplicar.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OU<p>Selecione um comando de menu de distribuição no submenu **Alinhar** no menu **Objeto** ou no menu de contexto do editor.</p>4D distribui os objetos apropriadamente. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
 
 Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
@@ -322,7 +322,7 @@ Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
 2. Seleccione el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor. A seguinte caixa de diálogo é exibida:![](../assets/en/FormEditor/alignmentAssistant.png)
 
-3. Nas áreas de Alinhamento Esquerdo/Direita e/ou Topo/Bottom Alinhamento, clique no ícone de distribuição padrão: ![](../assets/en/FormEditor/horizontalDistribution. ng) <p>(ícone padrão de distribuição horizontal)</p>A área de exemplo exibe os resultados da sua seleção.
+3. Nas áreas de Alinhamento Esquerdo/Direita e/ou Topo/Bottom Alinhamento, clique no ícone de distribuição padrão: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(ícone padrão de distribuição horizontal)</p>A área de exemplo exibe os resultados da sua seleção.
 
 4. Para executar uma distribuição que use o esquema padrão, clique em **Preview** ou _Apply_.<p>Nesse caso, o 4D executará uma distribuição padrão, de modo que os objetos sejam dispostos com uma quantidade igual de espaço entre eles</p>. OU:<p>Para executar uma distribuição específica, selecione a opção **Distribute** (por exemplo, se quiser distribuir os objetos com base na distância até o lado direito). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
 

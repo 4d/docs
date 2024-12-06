@@ -138,7 +138,7 @@ El catálogo *City* siguiente está expuesto en un datastore remoto (vista parci
 La clase `City` ofrece una API:
 
 ```4d
-// cs.City class
+// clase cs.City 
 
 Class extends DataClass
 
@@ -832,7 +832,7 @@ Use the `onHttpGet` keyword to declare functions that can be called through HTTP
 The `onHttpGet` keyword is available with:
 
 - ORDA Data model class functions
-- [Singletons class functions](../Concepts/classes.md#singleton-classes)
+- [Funciones de la clase Singletons](../Concepts/classes.md#singleton-classes)
 
 La sintaxis formal es:
 
@@ -863,7 +863,7 @@ In the HTTP GET request, parameters must be passed directly in the URL and decla
 IP:port/rest/<dataclass>/functionName?$params='[<params>]'
 ```
 
-See the [Parameters](../REST/classFunctions#parameters) section in the REST server documentation.
+Consulte la sección [Parámetros](../REST/classFunctions#parameters) en la documentación del servidor REST.
 
 ### resultado
 

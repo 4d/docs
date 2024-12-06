@@ -107,9 +107,9 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 
 <!-- REF #_command_.cs.Params -->
 
-| Parámetros | Tipo   |                                        | Descripción                                       |                  |
-| ---------- | ------ | -------------------------------------- | ------------------------------------------------- | ---------------- |
-| classStore | Object | &amp;amp;amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
+| Parámetros | Tipo   |                                                | Descripción                                       |                  |
+| ---------- | ------ | ---------------------------------------------- | ------------------------------------------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;amp;amp;larr; | Class store usuario para el proyecto o componente | <!-- END REF --> |
 
 El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parámetros | Tipo   |                                        | Descripción    |                  |
-| ---------- | ------ | -------------------------------------- | -------------- | ---------------- |
-| classStore | Object | &amp;amp;amp;larr; | Class store 4D | <!-- END REF --> |
+| Parámetros | Tipo   |                                                | Descripción    |                  |
+| ---------- | ------ | ---------------------------------------------- | -------------- | ---------------- |
+| classStore | Object | &amp;amp;amp;amp;amp;larr; | Class store 4D | <!-- END REF --> |
 
 El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases 4D integradas<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
@@ -158,7 +158,7 @@ Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el
 - función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase
 - propiedad [`isShared`](API/ClassClass.md#isshared), true si la clase es [compartida](#clases-compartidas)
 - propiedad [`isSingleton`](API/ClassClass.md#issingleton), verdadero si la clase define una [clase singleton](#singleton-classes).
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- propiedad [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true si la clase define un [singleton de sesión](#singleton-classes).
 - Propiedad [`me`](API/ClassClass.md#me), que permite instanciar y acceder a [singletons](#singleton-classes).
 
 Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
@@ -612,7 +612,7 @@ The following commands have specific features when they are used within class fu
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error).
+El comando [`Super`](../commands/super.md) permite realizar llamadas a [`superclass`](../API/ClassClass#superclass), es decir, a la clase padre de la función. Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error).
 
 For more details, see the [`Super`](../commands/super.md) command description.
 
@@ -752,7 +752,7 @@ Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) a
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- Las funciones compartidas Singleton soportan [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 
@@ -762,7 +762,7 @@ Si necesita instanciar un singleton con parámetros, también puede llamar la fu
 
 La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
 
-The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+La propiedad [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) de los objetos Class permite saber si la clase es un singleton de sesión.
 
 ### Ejemplos
 

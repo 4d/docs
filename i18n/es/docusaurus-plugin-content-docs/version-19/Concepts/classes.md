@@ -280,6 +280,7 @@ Class Constructor({$parameterName : type; ...})
 // code
 // code
 // Class:
+// Class:
 ```
 
 :::note

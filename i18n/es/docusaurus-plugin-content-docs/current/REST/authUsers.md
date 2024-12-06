@@ -39,7 +39,7 @@ La secuencia de inicio de sesión del usuario es la siguiente:
 
 En la fase de inicio de sesión del usuario, el uso de la licencia está desconectado de las sesiones de usuario web. Sólo se requiere una licencia cuando se ejecuta el comando [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), lo que permite controlar el número de licencias utilizadas.
 
-Todas las demás peticiones REST (manejando datos o ejecutando una función) sólo serán procesadas si son ejecutadas dentro de una sesión web con privilegios apropiados, de lo contrario devuelven un error. Sintaxis Sintaxis Sintaxis Sintaxis Sintaxis Ejecutar esta función activa el consumo de la licencia 4D.
+Todas las demás peticiones REST (manejando datos o ejecutando una función) sólo serán procesadas si son ejecutadas dentro de una sesión web con privilegios apropiados, de lo contrario devuelven un error. Sintaxis Sintaxis Sintaxis Sintaxis Sintaxis Sintaxis Ejecutar esta función activa el consumo de la licencia 4D.
 
 ### Peticiones REST descriptivas
 

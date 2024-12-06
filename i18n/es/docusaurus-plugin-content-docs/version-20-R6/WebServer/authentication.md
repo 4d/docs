@@ -157,7 +157,7 @@ El parámetro `$4` recibe la dirección IP utilizada para llamar al servidor web
 
 #### $5 y $6 - Nombre de usuario y contraseña
 
-Los parámetros `$5` y `$6` reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo de identificación estándar que muestra el navegador. Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
+Los parámetros `$5` y `$6` reciben el nombre de usuario y la contraseña introducidos por el usuario en la caja de diálogo de identificación estándar que muestra el navegador. Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
 > Si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $6 (la contraseña del usuario) no se devuelve por razones de seguridad.
 

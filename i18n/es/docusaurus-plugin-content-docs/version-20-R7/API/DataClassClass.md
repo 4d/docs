@@ -459,7 +459,7 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 La función `.get()` <!-- REF #DataClassClass.get().Summary -->consulta la clase de datos para recuperar la entidad que coincide con el parámetro *primaryKey*<!-- END REF -->.
 
-En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). También puedes asegurarse de que el valor de la llave primaria siempre se devuelva como Texto utilizando la función [`.getKey()`](EntityClass.md#getkey) con el parámetro `dk key as string`.
+En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto).
 
 Si no se encuentra ninguna entidad con *primaryKey*, se devuelve una entidad **Null**.
 
@@ -850,7 +850,7 @@ La función `.newSelection()` <!-- REF #DataClassClass.newSelection(). Summary -
 
 > Para obtener información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
-Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Para más información, por favor vea [Selección de entidades ordenadas vs no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades.
 
 Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelection.length` devuelve 0). Este método permite construir gradualmente selecciones de entidades haciendo llamadas posteriores a la función [`add()`](EntitySelectionClass.md#add).
 
@@ -900,7 +900,7 @@ Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` va
 
 #### parámetro queryString
 
-El parámetro *queryString* utiliza la siguiente sintaxis:
+Ejemplo 1
 
 ```4d
 attributePath|formula comparator value   
@@ -943,8 +943,8 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |
 
-- **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos.
-  Al utilizar un valor constante, deben respetarse las siguientes reglas:
+- Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20.
+  Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the <strong x-id="1">value</strong> type to the attribute data type whenever possible, for an easier handling of values coming from the Internet.
   - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
   - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
@@ -1044,7 +1044,7 @@ Al buscar dentro de atributos de objetos de dataclass que contengan las coleccio
 
 ```
 Entity 1:
-ds.Class.name: "A"
+ds. Class.name: "A"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
@@ -1052,7 +1052,7 @@ ds.Class.info:
             } ] }
 
 Entity 2:
-ds.Class.name: "B"
+ds. Class.name: "B"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
@@ -1060,7 +1060,7 @@ ds.Class.info:
             } ] }
 
 Entity 3:
-ds.Class.name: "C"
+ds. Class.name: "C"
 ds.Class.info:
     { "coll" : [ {
                 "val":0,
@@ -1094,7 +1094,7 @@ Puede utilizar cualquier letra del alfabeto como notación `[a]`.
 
 #### Vinculación de los argumentos de búsqueda y los atributos de colección
 
-Al buscar dentro de los atributos de objetos de clases de datos que contengan colecciones utilizando varios argumentos de consulta unidos por el operador AND, es posible que desee asegurarse de que sólo se devuelvan entidades que contengan elementos que coincidan con todos los argumentos, y no entidades en las que los argumentos puedan encontrarse en elementos diferentes. Para ello, es necesario vincular los argumentos de la búsqueda a los elementos de colección, de modo que sólo se encuentren los elementos únicos que contengan argumentos vinculados.
+Para ello, es necesario vincular los argumentos de la búsqueda a los elementos de colección, de modo que sólo se encuentren los elementos únicos que contengan argumentos vinculados. Al buscar dentro de los atributos de objetos de clases de datos que contengan colecciones utilizando varios argumentos de consulta unidos por el operador AND, es posible que desee asegurarse de que sólo se devuelvan entidades que contengan elementos que coincidan con todos los argumentos, y no entidades en las que los argumentos puedan encontrarse en elementos diferentes.
 
 Por ejemplo, con las dos entidades siguientes:
 
@@ -1218,7 +1218,7 @@ En el parámetro *querySettings* se puede pasar un objeto que contenga opciones 
 
 #### Sobre queryPlan y queryPath
 
-La información registrada en `queryPlan`/`queryPath` incluye el tipo de búsqueda (indexada y secuencial) y cada subconsulta necesaria junto con los operadores de conjunción. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Puede resultarle útil analizar esta información mientras desarrolla sus aplicaciones. Generalmente, la descripción del plan de consulta y su ruta de acceso son idénticas, pero pueden diferir porque 4D puede implementar optimizaciones dinámicas cuando se ejecuta una consulta para mejorar el rendimiento. Por ejemplo, el motor 4D puede convertir dinámicamente una consulta indexada en una secuencial si estima que es más rápida. Este caso concreto puede darse cuando el número de entidades que se buscan es bajo.
+La información registrada en `queryPlan`/`queryPath` incluye el tipo de búsqueda (indexada y secuencial) y cada subconsulta necesaria junto con los operadores de conjunción. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Generalmente, la descripción del plan de consulta y su ruta de acceso son idénticas, pero pueden diferir porque 4D puede implementar optimizaciones dinámicas cuando se ejecuta una consulta para mejorar el rendimiento. Por ejemplo, el motor 4D puede convertir dinámicamente una consulta indexada en una secuencial si estima que es más rápida. Este caso concreto puede darse cuando el número de entidades que se buscan es bajo.
 
 Por ejemplo, si ejecuta la siguiente búsqueda:
 

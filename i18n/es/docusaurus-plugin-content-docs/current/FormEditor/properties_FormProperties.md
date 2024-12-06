@@ -41,17 +41,17 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 ## Form Class
 
-Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+Nombre de una [clase usuario] existente(../Concepts/classes.md#class-definition) para asociar al formulario. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
 
 Associating a class to the form provides the following benefits:
 
-- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+- Cuando trabajas en el [Editor de formularios](../FormEditor/formEditor.md), la clase asociada se utiliza para comprobar con precisión la sintaxis de expresiones como `Form.myProperty` en todas las áreas de la [Lista de propiedades](../FormEditor/formEditor.md#property-list) que soporta [expresiones](../Concepts/quick-tour.md#expressions) (por ejemplo, **Variable o Expresión**, **Expresión de color de fuente**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
 - The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
 
-- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+- También puede beneficiarse de las funciones de autocompletado (../code-editor/write-class-method.md#autocomplete-functions) en el editor de código.
 
 - When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
 

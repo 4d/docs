@@ -51,7 +51,7 @@ La instanciación de la colección puede realizarse de una de las siguientes man
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
+Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Monitored activity`](../commands-legacy/monitored-activity.md) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
 
 :::
 

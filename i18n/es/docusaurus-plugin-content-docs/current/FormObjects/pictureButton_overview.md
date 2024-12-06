@@ -52,7 +52,7 @@ Hay otros modos disponibles:
 - [Retroceder al primer cuadro](properties_Animation.md#loop-back-to-first-frame)
 - [Retroceder al soltar](properties_Animation.md#switch-back-when-released)
 - [Alternar al pasar el ratón por encima](properties_Animation.md#switch-when-roll-over)
-- [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
+- [Alternar continuamente al hacer clic](properties_Animation.md#switch-continuously-on-clicks)
 - [Usar el último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
 - [Usar último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
 

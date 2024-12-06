@@ -105,7 +105,7 @@ This example is a template for a form method. It shows each of the possible even
 This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
 ```4d
-  //A form method
+  ////Método formulario
  Case of
     :(Form event code=On Load)
        $vsTheEvent:="The form is about to be displayed"
