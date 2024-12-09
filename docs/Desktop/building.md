@@ -100,15 +100,15 @@ Builds a compiled component from the structure.
 
 A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md#basics) (the host application project), its functionalities are accessible from the host project.
 
-If you have named your application *MyComponent*, 4D will automatically create a *Components* folder containing *MyComponent.4dbase/Contents* subfolders:
+If you have named your application *MyComponent*, 4D will automatically create a *Components* folder with the following structure:
 
-`<destination_folder>/Components/MyComponent.4dbase/Contents/MyComponent.4DZ`.
+`<destination_folder>/Components/MyComponent.4dbase/Contents/`.
 
 The *MyComponent.4dbase* folder is the [package folder of the compiled component](../Project/components.md).
 
 The *Contents* folder contains:
 
-* *MyComponent.4DZ* file
+* *MyComponent.4DZ* file - the [compiled structure](#build-compiled-structure).
 * A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 * An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). It contains the following prefilled fields:
   - `CFBundleDisplayName` and `CFBundleName` for the application name,
@@ -725,7 +725,7 @@ In principle, updating server applications or merged single-user applications re
 
 You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) for monitoring operations. The idea is to implement a function in your 4D application triggering the automatic update sequence described below. It can be a menu command or a process running in the background and checking at regular intervals for the presence of an archive on a server.
 
-> You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
 Here is the scenario for updating a server or merged single-user application:
 
@@ -741,4 +741,4 @@ The installation procedure produces a log file detailing the update operations o
 
 The update log is named `YYYY-MM-DD_HH-MM-SS_log_X.txt`, for example, `2021-08-25_14-23-00_log_1.txt` for a file created on August 25, 2021 at 14:23.
 
-This file is created in the "Updater" application folder, within the system user folder. You can find out the location of this file at any time using the [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) command.
+This file is created in the "Updater" application folder, within the system user folder. You can find out the location of this file at any time using the [`Get last update log path`](../commands-legacy/get-last-update-log-path.md) command.
