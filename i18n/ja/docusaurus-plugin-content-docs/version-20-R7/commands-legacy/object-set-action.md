@@ -89,5 +89,4 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_OBJECT Get action*  
 [OBJECT Get action](object-get-action.md)  

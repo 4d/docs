@@ -70,7 +70,6 @@ Usted quiere obtener una lista de fuentes recientes:
 
 #### Ver también 
 
-*\_o\_Font name*  
 [FONT STYLE LIST](font-style-list.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [SET RECENT FONTS](set-recent-fonts.md)  

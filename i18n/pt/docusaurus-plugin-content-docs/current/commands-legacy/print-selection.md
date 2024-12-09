@@ -59,7 +59,6 @@ O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando
 
 #### Ver também 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level ](level.md)  

@@ -68,7 +68,6 @@ You want to get a list of recent fonts:
 
 #### See also 
 
-*\_o\_Font name*  
 [FONT STYLE LIST](font-style-list.md)  
 *Font Type List*  
 [OBJECT SET FONT](object-set-font.md)  

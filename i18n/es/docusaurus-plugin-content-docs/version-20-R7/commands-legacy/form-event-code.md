@@ -835,7 +835,6 @@ Como resultado, el rectángulo rojo sigue el desplazamiento del list box:
 
 #### Ver también 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [Current form table](current-form-table.md)  
 [FILTER KEYSTROKE](filter-keystroke.md)  

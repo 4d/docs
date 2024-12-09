@@ -819,7 +819,6 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 
 #### Voir aussi 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [Current form table](current-form-table.md)  
 [FILTER KEYSTROKE](filter-keystroke.md)  

@@ -64,7 +64,6 @@ The following example uses the path to a .json form to print the records in an e
 
 #### See also 
 
-*\_o\_CREATE USER FORM*  
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  

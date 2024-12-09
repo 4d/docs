@@ -31,7 +31,3 @@ displayed_sidebar: docs
 #### エラー管理 
 
 エラーが発生すると、コマンドは[ON ERR CALL](on-err-call.md "ON ERR CALL") コマンドでとらえることが可能なエラーコードを生成します。
-
-#### 参照 
-
-*\_o\_INTEGRATE LOG FILE*  

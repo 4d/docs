@@ -840,7 +840,6 @@ On Before Keystroke と On After Keystroke イベントを処理する方法は[
 
 #### 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [Current form table](current-form-table.md)  
 [FILTER KEYSTROKE](filter-keystroke.md)  

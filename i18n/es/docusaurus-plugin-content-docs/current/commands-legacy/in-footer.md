@@ -26,6 +26,5 @@ Para que se genere el ciclo de ejecución **In footer** asegúrese de que la pro
 
 #### Ver también 
 
-*\_o\_During*  
 [In break](in-break.md)  
 [In header](in-header.md)  

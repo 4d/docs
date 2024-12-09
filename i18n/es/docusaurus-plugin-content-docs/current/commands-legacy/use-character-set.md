@@ -42,8 +42,6 @@ La variable sistema OK toma el valor 1 si el mapa se carga correctamente, de lo 
 
 #### Ver también 
 
-*\_o\_Mac to Win*  
-*\_o\_Win to Mac*  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  

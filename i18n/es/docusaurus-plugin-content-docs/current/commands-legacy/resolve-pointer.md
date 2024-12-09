@@ -104,7 +104,6 @@ Este es un ejemplo de puntero a un array 2D:
 
 #### Ver también 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
 [Is a variable](is-a-variable.md)  

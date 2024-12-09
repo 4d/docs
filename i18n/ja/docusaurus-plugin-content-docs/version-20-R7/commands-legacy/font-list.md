@@ -68,7 +68,6 @@ Windows環境下では、この原理は4D v15 R4から採用されています�
 
 #### 参照 
 
-*\_o\_Font name*  
 [FONT STYLE LIST](font-style-list.md)  
 *Font Type List*  
 [OBJECT SET FONT](object-set-font.md)  

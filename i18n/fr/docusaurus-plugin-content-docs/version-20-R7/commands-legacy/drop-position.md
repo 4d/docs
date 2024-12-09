@@ -93,5 +93,4 @@ La méthode objet de la list box de gauche (destination) contient le code suivan
 
 #### Voir aussi 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Présentation du Glisser-Déposer*  

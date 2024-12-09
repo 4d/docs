@@ -40,5 +40,4 @@ Vous souhaitez associer l’action standard de validation à un bouton :
 
 #### Voir aussi 
 
-*\_o\_OBJECT Get action*  
 [OBJECT Get action](object-get-action.md)  

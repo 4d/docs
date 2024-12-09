@@ -55,6 +55,3 @@ This example creates an interprocess array of 50 [Text](# "A character string th
  End for
 ```
 
-#### See also 
-
-*\_o\_ARRAY STRING*  

@@ -57,6 +57,3 @@ ARRAY TEXTを既存の配列に適用する場合、
  End for
 ```
 
-#### 参照 
-
-*\_o\_ARRAY STRING*  

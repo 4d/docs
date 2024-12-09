@@ -46,7 +46,6 @@ Codecは拡張子 (例 “.gif”), または Mimeタイプ (例 “image/jpeg�
 
 #### 参照 
 
-*\_o\_PICTURE TO GIF*  
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  

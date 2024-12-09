@@ -64,7 +64,6 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_CREATE USER FORM*  
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  

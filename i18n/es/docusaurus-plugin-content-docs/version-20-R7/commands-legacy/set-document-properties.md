@@ -34,6 +34,4 @@ Las fechas y horas de creación y última modificación son administradas por el
 
 #### Ver también 
 
-*\_o\_SET DOCUMENT CREATOR*  
-*\_o\_SET DOCUMENT TYPE*  
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  

@@ -103,7 +103,6 @@ Este é um exemplo de ponteiro a um array 2D:
 
 #### Ver também 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
 [Is a variable](is-a-variable.md)  

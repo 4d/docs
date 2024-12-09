@@ -104,6 +104,5 @@ Cambia a fondo transparente con un color de fuente claro:
 
 #### Ver también 
 
-*\_o\_OBJECT SET COLOR*  
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB Color](select-rgb-color.md)  

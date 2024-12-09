@@ -54,7 +54,3 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Texte](# "Un
     ◊tabTexte{$vElem}:="Elément n°"+String($vElem)
  End for
 ```
-
-#### Voir aussi 
-
-*\_o\_ARRAY STRING*  

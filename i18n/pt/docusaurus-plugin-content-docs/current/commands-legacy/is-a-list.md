@@ -28,7 +28,3 @@ Ver o exemplo do comando [CLEAR LIST](clear-list.md "CLEAR LIST").
 #### Exemplo 2 
 
 Ver os exemplos do comando DRAG AND DROP PROPERTIES.
-
-#### Ver também 
-
-*\_o\_DRAG AND DROP PROPERTIES*  

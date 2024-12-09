@@ -60,7 +60,6 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  

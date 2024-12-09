@@ -64,7 +64,6 @@ Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los reg
 
 #### Ver también 
 
-*\_o\_CREATE USER FORM*  
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  

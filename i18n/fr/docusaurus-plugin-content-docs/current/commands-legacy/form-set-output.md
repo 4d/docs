@@ -80,7 +80,6 @@ L'exemple suivant utilise un formulaire décrit dans un fichier .json :
 
 #### Voir aussi 
 
-*\_o\_CREATE USER FORM*  
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  

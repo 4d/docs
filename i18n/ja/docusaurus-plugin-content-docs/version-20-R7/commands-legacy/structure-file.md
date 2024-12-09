@@ -64,7 +64,6 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  

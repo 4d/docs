@@ -98,6 +98,4 @@ Si l'intégration s'effectue correctement, la variable système OK prend la vale
 
 #### Voir aussi 
 
-  
-*\_o\_INTEGRATE LOG FILE*  
 [LOG FILE TO JSON](log-file-to-json.md)  

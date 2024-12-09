@@ -30,6 +30,5 @@ Macintosh上
 
 #### 参照 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  

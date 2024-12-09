@@ -26,6 +26,5 @@ Para que se genere el ciclo de ejecución **In break** asegúrese de que la prop
 
 #### Ver también 
 
-*\_o\_During*  
 [In footer](in-footer.md)  
 [In header](in-header.md)  

@@ -104,6 +104,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_OBJECT SET COLOR*  
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB Color](select-rgb-color.md)  

@@ -64,7 +64,6 @@ L’exemple suivant permet de savoir si la méthode est appelée depuis un compo
 
 #### Voir aussi 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  

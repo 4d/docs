@@ -54,7 +54,3 @@ Este exemplo cria um array de interprocesso de elementos do tipo texto e atribui
     ◊atValores{$vlElem}:="Elemento #"+String($vlElem)
  End for
 ```
-
-#### Ver também 
-
-*\_o\_ARRAY STRING*  

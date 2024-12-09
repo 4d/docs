@@ -30,6 +30,5 @@ Si está trabajando por ejemplo con la base en la carpeta Documentos:MisCDsƒ: e
 
 #### Ver también 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  

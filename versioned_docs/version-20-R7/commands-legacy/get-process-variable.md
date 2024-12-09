@@ -108,13 +108,8 @@ This example reads the source process instances of the variables *v1*,*v2*,*v3* 
  GET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-#### Example 7 
-
-See the example for the *\_o\_DRAG AND DROP PROPERTIES* command.
-
 #### See also 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Drag and Drop*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 *Processes*  

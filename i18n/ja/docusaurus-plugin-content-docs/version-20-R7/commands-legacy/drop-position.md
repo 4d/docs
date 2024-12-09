@@ -94,5 +94,4 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *ドラッグ＆ドロップ*  

@@ -115,7 +115,6 @@ Ver el ejemplo del comando DRAG AND DROP PROPERTIES.
 
 #### Ver también 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Arrastrar y soltar*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 *Procesos*  

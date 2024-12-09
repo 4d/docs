@@ -98,7 +98,6 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_CREATE USER FORM*  
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
 [DISPLAY SELECTION](display-selection.md)  

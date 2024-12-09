@@ -41,8 +41,6 @@ The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it
 
 #### See also 
 
-*\_o\_Mac to Win*  
-*\_o\_Win to Mac*  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  

@@ -64,7 +64,6 @@ Os exemplos abaixo usam a rota a um formulário json para imprimir os registros 
 
 #### Ver também 
 
-*\_o\_CREATE USER FORM*  
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  

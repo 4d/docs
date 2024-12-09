@@ -55,6 +55,3 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Texte](# "Un
  End for
 ```
 
-#### Voir aussi 
-
-*\_o\_ARRAY STRING*  
