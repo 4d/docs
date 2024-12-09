@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 **注:**
 
-- **DIALOG**(form;\*) シンタックスと[CALL FORM](call-form.md) コマンドを組み合わせることによってフォーム間で通信をすることができます。
+- You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](../commands-legacy/call-form.md) command to establish communication between the forms.
 - **DIALOG**(form;\*) ステートメントの前に、あらかじめウィンドウが作成されている必要があります。 プロセスのカレントダイアログウィンドウや、各プロセスにデフォルトで作成されるウィンドウは使用できません。 でなければ、エラー -9909 が生成されます。
 - オプションの *\** 引数を使用する場合、標準アクションまたは[CANCEL](../commands-legacy/cancel.md) コマンドや[ACCEPT](../commands-legacy/accept.md) コマンドを呼び出すと、ウィンドウは自動的に閉じられます。 ウィンドウ自身の終了を管理する必要はありません。
 
@@ -171,7 +171,7 @@ displayed_sidebar: docs
 
 [ACCEPT](../commands-legacy/accept.md)\
 [ADD RECORD](../commands-legacy/add-record.md)\
-[CALL FORM](call-form.md)\
+[CALL FORM](../commands-legacy/call-form.md)\
 [CANCEL](../commands-legacy/cancel.md)\
 [Form](form.md)\
 [Open window](../commands-legacy/open-window.md)

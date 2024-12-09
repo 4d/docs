@@ -367,7 +367,7 @@ L'objet `.info` contient les propriétés suivantes:
 | creationDateTime | Date ISO 8601 | Date et heure de création de la session                                                                                                                      |
 | state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                       |
 | ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                            |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                     |
+| persistentID     | Text          | Sessions distantes : ID persistant de la session                                                                                             |
 
 :::note
 
@@ -580,7 +580,7 @@ End use
 La propriété `.userName` contient <!-- REF #SessionClass.userName.Summary -->le nom d'utilisateur associé à la session<!-- END REF -->. Vous pouvez vous en servir pour identifier l'utilisateur dans votre code.
 
 - Avec les sessions web, cette propriété est une chaîne vide par défaut. Elle peut être définie via la propriété `privileges` de la fonction [`setPrivileges()`](#setprivileges).
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
+- Avec les sessions clients distants et procédures stockées, cette propriété retourne le même nom d'utilisateur que la commande [`Current user`](../commands-legacy/current-user.md).
 
 Cette propriété est en **lecture seule**.
 

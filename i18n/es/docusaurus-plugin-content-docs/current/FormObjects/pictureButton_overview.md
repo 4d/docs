@@ -19,6 +19,7 @@ Los botones imagen pueden utilizarse de dos maneras:
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
 
 - Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Con los [menús emergentes de imágenes](picturePopupMenu_overview.md), todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que el botón de imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).\
+  Aquí un ejemplo de un botón imagen.\
   Aquí un ejemplo de un botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación. La opción se implementa como un botón imagen en una caja de diálogo personalizada de propiedades:
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
@@ -56,7 +57,7 @@ Hay otros modos disponibles:
 - [Usar el último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
 - [Usar último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
 
-> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displa La numeración de las imágenes en la tabla empieza por 0.
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displa La numeración de las imágenes en la tabla empieza por 0. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 

@@ -56,7 +56,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
 - New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
+- Suporte ao esquema de cores escura e clara para [formulários](../FormEditor/properties_FormProperties.md#color-scheme) e [folhas de estilo](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
 - [Native compilation](../Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Cálculo de variável](../FormObjects/properties_Object.md#variable-calculation) agora é suportado pelas colunas list box da entity selection selecionada.

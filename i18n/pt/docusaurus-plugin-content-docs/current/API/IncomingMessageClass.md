@@ -9,15 +9,15 @@ The HTTP request handler can return any value (or nothing). It usually returns a
 
 All properties of this class are read-only. They are automatically filled by the request handler.
 
-<details><summary>Historia</summary>
+<details><summary>História</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R8       | Clase añadida  |
+| Release | Mudanças          |
+| ------- | ----------------- |
+| 20 R8   | Classe adicionada |
 
 </details>
 
-### Ejemplo
+### Exemplo
 
 The following [**HTTPHandlers.json** file](../WebServer/http-request-handler.md) has been defined:
 
@@ -105,13 +105,13 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 <!-- REF #IncomingMessageClass.getBlob().Params -->
 
-| Parámetros | Tipo |                             | Descripción                   |
+| Parâmetro  | Tipo |                             | Descrição                     |
 | ---------- | ---- | --------------------------- | ----------------------------- |
-| Result     | Blob | <- | Body of the request as a Blob |
+| Resultados | Blob | <- | Body of the request as a Blob |
 
 <!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.getBlob()` function <!-- REF #IncomingMessageClass.getBlob().Summary -->returns the body of the request as a Blob<!-- END REF -->.
 
@@ -127,14 +127,14 @@ If the body has not been given as a binary content, the function tries to conver
 
 <!-- REF #IncomingMessageClass.getHeader().Params -->
 
-| Parámetros | Tipo |                             | Descripción                          |
-| ---------- | ---- | --------------------------- | ------------------------------------ |
-| key        | Text | ->                          | Header property to get               |
-| Result     | Text | <- | Valor de la propiedad del encabezado |
+| Parâmetro  | Tipo |                             | Descrição                    |
+| ---------- | ---- | --------------------------- | ---------------------------- |
+| \|         | Text | ->                          | Header property to get       |
+| Resultados | Text | <- | Value of the header property |
 
 <!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.getHeader()` function <!-- REF #IncomingMessageClass.getHeader().Summary -->returns the value of the *key* header<!-- END REF -->.
 
@@ -144,7 +144,7 @@ The *key* parameter is not case sensitive.
 
 :::
 
-#### Ejemplo
+#### Exemplo
 
 ```4d
 var $value : Text
@@ -162,13 +162,13 @@ $value := $request.getHeader("content-type")
 
 <!-- REF #IncomingMessageClass.getJSON().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                |
-| ---------- | ------- | --------------------------- | ------------------------------------------ |
-| Result     | Variant | <- | JSON resolution of the body of the request |
+| Parâmetro  | Tipo         |                             | Descrição                                  |
+| ---------- | ------------ | --------------------------- | ------------------------------------------ |
+| Resultados | Diferente de | <- | JSON resolution of the body of the request |
 
 <!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.getJSON()` function <!-- REF #IncomingMessageClass.getJSON().Summary -->returns the body of the request as a JSON resolution<!-- END REF -->.
 
@@ -184,13 +184,13 @@ If the body has not been given as JSON valid content, an error is raised.
 
 <!-- REF #IncomingMessageClass.getPicture().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                    |
-| ---------- | ------- | --------------------------- | ------------------------------ |
-| Result     | Picture | <- | Body of the request as picture |
+| Parâmetro  | Tipo   |                             | Descrição                      |
+| ---------- | ------ | --------------------------- | ------------------------------ |
+| Resultados | Imagem | <- | Body of the request as picture |
 
 <!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.getPicture()` function <!-- REF #IncomingMessageClass.getPicture().Summary -->returns the body of the request as a picture (in case of a body sent as a picture)<!-- END REF -->.
 
@@ -214,13 +214,13 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
-| Parámetros | Tipo |                             | Descripción                 |
+| Parâmetro  | Tipo |                             | Descrição                   |
 | ---------- | ---- | --------------------------- | --------------------------- |
-| Result     | Text | <- | Body of the request as text |
+| Resultados | Text | <- | Body of the request as text |
 
 <!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.getText()` function <!-- REF #IncomingMessageClass.getText().Summary -->returns the body of the request as a text value<!-- END REF -->.
 
@@ -234,11 +234,11 @@ If the body has not been given as a string value, the function tries to convert 
 
 <!-- REF #IncomingMessageClass.headers.Syntax -->**headers** : Object<!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary -->the current headers of the incoming message as key/value pairs (strings)<!-- END REF -->.
 
-La propiedad `.headers` es de sólo lectura.
+The `.headers` property is read-only.
 
 Header names (keys) are lowercased. Note header names are case sensitive.
 
@@ -250,7 +250,7 @@ Header names (keys) are lowercased. Note header names are case sensitive.
 
 <!-- REF #IncomingMessageClass.url.Syntax -->**url** : Text<!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.url` property contains <!-- REF #IncomingMessageClass.url.Summary -->the URL of the request without the *IP:port* part and as a string<!-- END REF -->.
 
@@ -272,7 +272,7 @@ The "host" part of the request (*IP:port*) is provided by the [`host` header](#h
 
 <!-- REF #IncomingMessageClass.urlPath.Syntax -->**urlPath** : Collection<!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.urlPath` property contains <!-- REF #IncomingMessageClass.urlPath.Summary -->the URL of the request without the *IP:port* part and as a collection of strings<!-- END REF -->.
 
@@ -288,7 +288,7 @@ The `.urlPath` property is read-only.
 
 <!-- REF #IncomingMessageClass.urlQuery.Syntax -->**urlQuery** : Object<!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.urlQuery` property contains <!-- REF #IncomingMessageClass.urlQuery.Summary -->the parameters of the request when they have been given in the URL as key/value pairs<!-- END REF -->.
 
@@ -338,7 +338,7 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 
 <!-- REF #IncomingMessageClass.verb.Syntax -->**verb** : Text<!-- END REF -->
 
-#### Descripción
+#### Descrição
 
 The `.verb` property contains <!-- REF #IncomingMessageClass.verb.Summary -->the verb used by the request<!-- END REF -->.
 

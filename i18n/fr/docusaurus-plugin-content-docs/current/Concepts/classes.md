@@ -107,9 +107,9 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <!-- REF #_command_.cs.Params -->
 
-| Paramètres | Type   |                                    | Description                                                         |                  |
-| ---------- | ------ | ---------------------------------- | ------------------------------------------------------------------- | ---------------- |
-| classStore | Object | &amp;amp;larr; | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
+| Paramètres | Type   |   | Description                                                         |                  |
+| ---------- | ------ | - | ------------------------------------------------------------------- | ---------------- |
+| classStore | Object | ← | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
 
 La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Paramètres | Type   |                                    | Description    |                  |
-| ---------- | ------ | ---------------------------------- | -------------- | ---------------- |
-| classStore | Object | &amp;amp;larr; | Class store 4D | <!-- END REF --> |
+| Paramètres | Type   |   | Description    |                  |
+| ---------- | ------ | - | -------------- | ---------------- |
+| classStore | Object | ← | Class store 4D | <!-- END REF --> |
 
 La commande `4D` <!-- REF #_command_.4D.Summary -->retourne le class store des classes 4D intégrées disponibles<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
 

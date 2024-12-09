@@ -153,7 +153,7 @@ The `$IPServer` parameter receives the IP address used to call the web server. 4
 
 #### $user and $password - User Name and Password
 
-Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
+Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
 > If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
 

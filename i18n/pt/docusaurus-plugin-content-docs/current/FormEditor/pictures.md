@@ -49,7 +49,7 @@ As imagens de alta resolução com a convenção @nx podem ser utilizadas nos se
 - [Cabeçalhos List box](FormObjects/listbox_overview.md#list-box-headers)
 - [Ícones de menu](Menus/properties.md#item-icon)
 
-4D dá automaticamente prioridade às imagens com a resolução mais alta. Por exemplo, ao usar duas telas (uma de alta resolução e outra padrão) e mover um formulário de uma tela para outra, 4D renderiza automaticamente a resolução mais alta possível da imagem. Mesmo que um comando ou propriedade especifique _circle.png_, _circle@3x.png_ será usado (se existir).
+4D dá automaticamente prioridade às imagens com a resolução mais alta. 4D dá automaticamente prioridade às imagens com a resolução mais alta. Mesmo que um comando ou propriedade especifique _circle.png_, _circle@3x.png_ será usado (se existir).
 
 > Note que a priorização da resolução ocorre apenas para a apresentação de imagens no ecrã, não havendo priorização automática durante a impressão.
 

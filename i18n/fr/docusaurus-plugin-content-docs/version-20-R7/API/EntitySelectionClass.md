@@ -5,7 +5,7 @@ title: EntitySelection
 
 Une entity selection est un objet contenant une ou plusieurs référence(s) à des [entités](ORDA/dsMapping.md#entity) appartenant à la même [Dataclass](ORDA/dsMapping.md#dataclass). Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
 
-Les entity selections peuvent être créées à partir de sélections existantes en utilisant diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou des fonctions de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](../commands/create-entity-selection.md) command.
+Les entity selections peuvent être créées à partir de sélections existantes en utilisant diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou des fonctions de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). Vous pouvez également créer des entity selections vierges à l'aide de la fonction [`dataClass.newSelection()`](DataClassClass.md#newselection) ou de la commande [`Create entity selection`](../commands/create-entity-selection.md).
 
 ### Sommaire
 
@@ -210,7 +210,7 @@ La fonction `.add()` <!-- REF #EntitySelectionClass.add().Summary -->ajoute l'*e
 
 :::info attention
 
-L'entity selection doit être *modifiable*, c'est-à-dire qu'elle a été créée par exemple par [`.newSelection()`](DataClassClass.md#newselection) ou `Create entity selection`, sinon `.add()` renverra une erreur. Les entity selections partageables n'acceptent pas l'ajout d'entités. Pour plus d'informations, reportez-vous au paragraphe [Entity selections partageables ou modifiables](ORDA/entities.md#shareable-or-alterable-entity-selections).
+L'entity selection doit être *modifiable*, c'est-à-dire qu'elle a été créée par exemple par [`.newSelection()`](DataClassClass.md#newselection) ou `Create entity selection`, sinon `.add()` renverra une erreur. Les entity selections partageables n'acceptent pas l'ajout d'entités. Les entity selections partageables n'acceptent pas l'ajout d'entités.
 
 :::
 
@@ -674,7 +674,7 @@ La fonction `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->r
 
 La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas retournées.
 
-Dans le paramètre *attributePath* passez l'attribut d'entité dont vous voulez obtenir les valeurs distinctes. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Si *attributePath* mène à une propriété d'objet qui contient des valeurs de différents types, celles-ci sont d'abord regroupées par type et triées ensuite. Les types sont renvoyés dans l'ordre suivant :
+Dans le paramètre *attributePath* passez l'attribut d'entité dont vous voulez obtenir les valeurs distinctes. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Les types sont renvoyés dans l'ordre suivant :
 
 1. booléens
 2. chaînes

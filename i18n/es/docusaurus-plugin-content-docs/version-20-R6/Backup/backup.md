@@ -16,7 +16,7 @@ Una copia de seguridad puede iniciarse de tres maneras:
 
 1. Seleccione el elemento **Copia de seguridad...** en el menú **Archivo** de 4D.
    La ventana de copia de seguridad aparece:
-   ![](../assets/en/Backup/backup01. ng)
+   ![](../assets/en/Backup/backup01.png)
    Puede ver la ubicación de la carpeta de copia de seguridad usando el menú emergente junto al área de "destino de copia de seguridad". Esta ubicación se define en la página **Copia de seguridad/configuración** de las Propiedades de la base.
 
 - También puede abrir el [Centro de mantenimiento y seguridad](MSC/overview.md) de 4D y mostrar la [página de copias de seguridad](MSC/backup.md).

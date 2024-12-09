@@ -5,7 +5,7 @@ title: Fondo y borde
 
 ## Color de fondo alternado
 
-Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Por defecto, _Automático_ está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
+Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Permite definir un color de fondo diferente para las líneas o columnas impares de un list box.
 
 También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
@@ -179,7 +179,7 @@ Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris cl
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. Para ello, se define un array de colores de fondo para cada columna, por ejemplo `<>_BgndColor_1`, `<>_BgndColor_2` y `<>_BgndColor_3`. Los valores de estos arrays tienen prioridad sobre los definidos en las propiedades del list box, así como los del array de color de fondo general:
+A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. Los valores de estos arrays tienen prioridad sobre los definidos en las propiedades del list box, así como los del array de color de fondo general:
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // naranja oscuro

@@ -429,7 +429,7 @@ Mayor que
 | Parámetros   | Tipo |                             | Descripción                                                      |
 | ------------ | ---- | :-------------------------: | ---------------------------------------------------------------- |
 | propertyPath | Text |              ->             | Ruta de la propiedad del objeto que se utilizará para el cálculo |
-| Result       | Real | <- | Los elementos se ordenan de forma descendente                    |
+| Result       | Real | <- | Colección que contiene los elementos añadidos                    |
 
 <!-- END REF -->
 
@@ -694,7 +694,7 @@ Una comparación recursiva de colecciones puede llevar mucho tiempo si la colecc
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efecturar toda prueba, con o sin los parámetros, y debe devolver *true* para cada elemento que cumpla la prueba. Recibe un `Object` en el primer parámetro ($1).
 
@@ -902,7 +902,7 @@ La función `.filter()` <!-- REF #collection.filter().Summary -->devuelve una nu
 Se designa la retrollamada a ejecutar para filtrar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 Se llama a la retrollamada con los parámetros pasados en *param* (opcional) y un objeto en primer parámetro (*$1*). La retrollamada puede realizar cualquier prueba, con o sin el parámetro(s) y debe devolver **true** para cada elemento que cumpla la condición y por lo tanto, debe añadirse a la nueva colección.
 
@@ -919,7 +919,7 @@ Puede definir los siguientes parámetros:
 
 :::note
 
-Este ejemplo comprueba que todos los elementos de una colección son de tipo real:
+Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
 :::
 
@@ -989,7 +989,7 @@ Ejemplo
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -1142,7 +1142,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Descripción
 
-Colección original ordenada
+Colección original sin elementos eliminados
 
 > Esta función no modifica la colección original.
 
@@ -1188,7 +1188,7 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 #### Descripción
 
-Objeto compartido que se agrupa con la colección resultante
+La nueva colección compartida
 
 expresión
 
@@ -1252,7 +1252,7 @@ Colección de valores transformados
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -1734,7 +1734,7 @@ La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colecc
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
 
@@ -2164,7 +2164,7 @@ Ordenar con una ruta de propiedad:
 
 #### Descripción
 
-Nuevo tamaño de la colección
+La nueva colección
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
@@ -2174,7 +2174,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 
 - Comparación
 
-- Colección original con valores rellenados
+- Tipo
 
 En la retrolamada, pase un código que compare dos valores y devuelva **true** si el primer valor es menor que el segundo. Puede ofrecer los parámetros *extraParam* a la retrollamada si es necesario.
 
@@ -2393,7 +2393,7 @@ donde:
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
 
 - **valor**: valor a comparar con el valor actual de la propiedad de cada elemento de la colección. Puede ser cualquier valor de expresión constante que coincida con la propiedad del tipo de datos del elemento o un [**marcador de posición**](#using-placeholders).
-  Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the <strong x-id="1">value</strong> type to the attribute data type whenever possible, for an easier handling of values coming from the Internet.
+  For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
   - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
   - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
@@ -2641,7 +2641,7 @@ La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *form
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 Tipo
 
@@ -2726,7 +2726,7 @@ La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplic
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 Tipo
 
@@ -3047,7 +3047,7 @@ La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si a
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
 - Comparación
-- Colección original con valores rellenados
+- Tipo
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efecturar toda prueba, con o sin los parámetros, y debe devolver *true* para cada elemento que cumpla la prueba. Recibe un `Object` en el primer parámetro ($1).
 
@@ -3068,7 +3068,7 @@ Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar 
 
 - Tipo
 
-- Colección original con valores rellenados
+- Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 - Descripción
 
@@ -3146,7 +3146,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Ejemplo
 
-- Una colección se inicializa con:
+- Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.
 
 #### Ejemplo 1
 

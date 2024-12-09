@@ -148,7 +148,8 @@ No entanto, essa propriedade tem uma função de digitação nos seguintes casos
 
 - **[Variáveis dinâmicas](#dynamic-variables)**: você pode usar essa propriedade para declarar o tipo de variáveis dinâmicas.
 - **[List Box Columns](listbox_overview.md#list-box-columns)**: essa propriedade é usada para associar um formato de exibição aos dados da coluna. Os formatos fornecidos dependerão do tipo de variável (caixa de lista de tipos de matriz) ou do tipo de data/campo (caixas de lista de tipos de coleção e seleção). Os formatos padrão 4D que podem ser usados são: Alfa, Numeric, Data, Hora, Imagem e Booleano. O tipo de texto não tem formatos de visualização específicos. Também estão disponíveis quaisquer formatos personalizados existentes.
-- **[Variables imagen](input_overview.md)**: puede utilizar este menú para declarar las variables antes de cargar el formulario en modo interpretado. Mecanismos nativos específicos governam a exibição de variáveis de imagens em formas. Esses mecanismos requerem maior precisão na configuração das variáveis: a partir de agora, elas devem já ter sido declaradas antes de carregarem o formulário — i. ., mesmo antes do evento `No carregamento` — ao contrário de outros tipos de variáveis. Para fazer isso, você também precisa que a instrução `C_PICTURE(varName)` tenha sido executada antes de carregar o formulário (tipicamente, no método chamando o comando `DIALOG`), ou para que a variável tenha sido digitada no nível de formulário usando a propriedade do tipo de expressão.
+- **[Variáveis de imagem](input_overview.md)**: você pode usar este menu para declarar as variáveis antes de carregar o formulário no modo de interpretação. Mecanismos nativos específicos governam a exibição de variáveis de imagens em formas. Esses mecanismos requerem maior precisão na configuração das variáveis: a partir de agora, elas devem já ter sido declaradas antes de carregarem o formulário — i. ., mesmo antes do evento `No carregamento` — ao contrário de outros tipos de variáveis. Para fazer isso, você também precisa que a instrução `C_PICTURE(varName)` tenha sido executada antes de carregar o formulário (tipicamente, no método chamando o comando `DIALOG`), ou para que a variável tenha sido digitada no nível de formulário usando a propriedade do tipo de expressão.
+  Caso contrário, a variável de imagem não será exibida corretamente (apenas no modo de interpretação).
   Caso contrário, a variável de imagem não será exibida corretamente (apenas no modo de interpretação).
 
 #### Gramática JSON
@@ -185,12 +186,12 @@ Para usar elementos da coleção ou entidades para definir o conteúdo da linha 
 
 Insira uma expressão que retorne uma coleção ou uma seleção de entidades. Geralmente, você irá digitar o nome de uma variável, um elemento de coleção ou uma propriedade que contém uma coleção ou uma seleção de entidade.
 
-A coleção ou a seleção da entidade deve estar disponível para o formulário quando for carregada. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
+A coleção ou a seleção da entidade deve estar disponível para o formulário quando for carregada. Cada elemento da coleção ou cada entidade da seleção da entidade será associada a uma linha da caixa de lista e estará disponível como um objeto através do [`This`](. /Concepts/classes.md#esta) palavra-chave:
 
-- si ha utilizado una colección de objetos, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de propiedad, por ejemplo `This.<propertyPath>`.
-- si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de atributo, por ejemplo `This.<attributePath>`.
+- se você usou uma coleção de objetos, você pode chamar **Isso** na expressão de código de dados para acessar cada valor de propriedade, por exemplo `Isso.<propertyPath>`.
+- se você usou uma seleção de entidade, pode chamar **Isso** na expressão de código de dados para acessar cada valor de atributo, por exemplo `Isso.<attributePath>`.
 
-> Si ha utilizado una colección de valores escalares (y no objetos), 4D le permite mostrar cada valor llamando a **This.value** en la expresión datasource. However in this case you will not be able to modify values or to access the current object (see below).
+> Se você usou uma coleção de valores escalares (e não objetos), 4D permite que você exiba cada valor chamando **This.value** na expressão da fonte de dados. No entanto, neste caso, você não será capaz de modificar valores ou acessar o objeto atual (veja abaixo).
 
 #### Gramática JSON
 
@@ -210,10 +211,10 @@ Especifique o tipo de list box.
 
 ![](../assets/en/FormObjects/listbox_dataSource.png)
 
-- **Arrays**(por defecto): utiliza elementos de array como líneas del list box.
-- **Selección actual**: utiliza expresiones, campos o métodos cuyos valores se evaluarán para cada registro de la selección actual de una tabla.
-- **Selección temporal**: utiliza expresiones, campos o métodos cuyos valores se evaluarán para cada registro de una selección temporal.
-- **Colección o Selección de entidades**: utilice elementos de colección o entidades para definir el contenido de las líneas del list box. Tenga en cuenta que con este tipo de list box, debe definir la propiedad [Colección o Selección de entidades](properties_Object.md#collection-or-entity-selection).
+- **Arrays**(padrão): use elementos array como as linhas da caixa de lista.
+- **Seleção Atual**: use expressões, campos ou métodos cujos valores serão avaliados para cada registro da seleção atual de uma tabela.
+- **Seleção Nomeada**: use expressões, campos ou métodos cujos valores serão avaliados para cada registro de uma seleção nomeada.
+- **Seleção de Coleção ou Entidade**: use elementos de coleção ou entidades para definir o conteúdo da linha da caixa de lista. Note que com esta caixa de lista, você precisa definir a propriedade [Seleção de coleção ou Entidade](properties_Object.md#collection-or-entity-selection)
 
 #### Gramática JSON
 
@@ -229,7 +230,7 @@ Especifique o tipo de list box.
 
 ## Tipo de plug-in
 
-Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objeto. Plug-in external area names are published in the manifest.json file of the plug-in.
+Nome da [área externa plug-in ](pluginArea_overview.md) associada ao objeto. Nomes de área externa do plug-in são publicados no arquivo manifest.json do plugin.
 
 #### Gramática JSON
 
@@ -245,7 +246,7 @@ Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objet
 
 ## Grupo Rádio
 
-Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
+Permite que os botões de rádio sejam usados em conjuntos coordenados: somente um botão de cada vez pode ser selecionado no conjunto.
 
 #### Gramática JSON
 
@@ -269,9 +270,9 @@ Pode forçar um retorno de carro na etiqueta utilizando o carácter \ (barra inv
 
 Para inserir um \ na etiqueta, introduzir "\\".
 
-Por padrão, a etiqueta é colocada no centro do objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
+Por padrão, a etiqueta é colocada no centro do objeto. Quando o objeto também contém um ícone, você pode modificar a localização relativa desses dois elementos usando a propriedade [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position)
 
-Para la traducción de la aplicación, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Para fins de tradução da aplicação, você pode inserir uma referência XLIFF na área do título de um botão (veja [Apêndice B: arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 #### Gramática JSON
 
@@ -287,11 +288,11 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 ## Cálculo de variáveis
 
-Esta propiedad define el tipo de cálculo que se realizará en un área [pie de columna](listbox_overview.md#list-box-footers).
+Esta propriedade define o tipo de cálculo a ser feito em uma área de [rodapé da coluna](listbox_overview.md#list-box-footers).
 
-> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D command.
+> O cálculo de rodapés também pode ser definido usando o comando [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D.
 
-Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais cálculos podem ser usados de acordo com o tipo de dados encontrados em cada coluna e indica que o tipo é automaticamente afetado por 4D para a variável de rodapé (se não for digitado pelo código):
 
 | Cálculo                                   | Num | Text | Date | Hora | Bool | Pict | tipo var rodapé         |
 | ----------------------------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
@@ -307,24 +308,24 @@ Existem vários tipos de cálculos disponíveis. The following table shows which
 
 (\*) Apenas para list boxes do tipo array.
 
-> Sólo las [variables](Concepts/variables.md) declaradas o dinámicas pueden utilizarse para mostrar los cálculos de pie de página. No se soportan otros tipos de [expresiones](Concepts/quick-tour.md#expressions) como `Form.value`.
+> Somente declarado ou dinâmico [variables](Aceitar/variáveis.md) pode ser usado para exibir os cálculos do rodapé. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.value` não são compatíveis.
 
-Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+Cálculos automáticos ignoram o estado mostrado/oculto das linhas de caixa de lista. Se você quiser restringir um cálculo para apenas linhas visíveis, você deve usar um cálculo personalizado.
 
-*Null* no se tienen en cuenta para ningún cálculo.
+Valores *null* não são levados em conta para quaisquer cálculos.
 
-If the column contains different types of values (collection-based column for example):
+Se a coluna contiver diferentes tipos de valores (coluna baseada em coleção, por exemplo):
 
-- Average and Sum only take numerical elements into account (other element types are ignored).
-- Mínimo y Máximo devuelven un resultado según el orden habitual de las listas de tipos, tal como se define en la función [collection.sort()](API/CollectionClass.md#sort).
+- Média e Soma só levam em consideração elementos numéricos (outros tipos de elementos são ignorados).
+- Retorno mínimo e máximo um resultado de acordo com a ordem habitual de lista de tipos conforme definida na função [collection.sort()](API/CollectionClass.md#sort).
 
-Using automatic calculations in footers of columns based upon expressions has the following limitations:
+Usar cálculos automáticos nos rodapés das colunas com base nas expressões tem as seguintes limitações:
 
 - es **soportado** con todos los tipos de list boxes cuando la expresión es "simple" (como `[table]field` o `this.attribute`),
-- se **soporta pero no se recomienda** por razones de rendimiento con list boxes colección/selección de entidades cuando la expresión es "compleja" (distinta de `this.attribute`) y el list box contiene un gran número de líneas,
-- **no se soporta** con list boxes selección actual/selección temporal cuando la expresión es "compleja". Precisa utilizar cálculos personalizados.
+- É **possível, mas não recomendado** por motivos de desempenho com caixas de listagem de seleção de coleção/entidade quando a expressão for "complexa" (diferente de `this.attribute`) e a caixa de listagem contiver um grande número de linhas,
+- não é **suportado** com as caixas de lista de seleção de seleção atuais/nomeadas quando a expressão é "complexa". Precisa utilizar cálculos personalizados.
 
-Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálculos automáticos y debe asignar el valor de la variable en esta área por programación.
+Quando **Personalizado** ("nenhum" em JSON) é definido, nenhum cálculo automático é realizado por 4D e você deve atribuir o valor da variável nesta área por programação.
 
 #### Gramática JSON
 

@@ -16,10 +16,10 @@ You can show or hide several interface elements on the current page of the form:
 
 - **Inherited Form**: Inherited form objects (if there is an [inherited form](forms.md#inherited-forms)).
 - **Page 0**: Objects from [page 0](forms.md#form-pages). This option allows you to distinguish between the objects on the form’s current page and those on page 0.
-- **Paper**: Borders of the printing page, which are shown as gray lines. This element can only be displayed by default in ["for printing" type](properties_FormProperties.md#form-type) forms.
+- **Paper**: Borders of the printing page, which are shown as gray lines. Este elemento só pode ser exibido por padrão em formulários do tipo ["para impressão"](properties_FormProperties.md#form-type).
 - **Réguas**: réguas da janela do editor de formulários.
-- **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
+- **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. Esse elemento só pode aparecer por padrão nos [formulários lista](properties_FormProperties.md#form-type).
+- **Marker Labels**: Marker labels, available only when the output control lines are displayed. Esse elemento só pode aparecer por padrão nos [formulários lista](properties_FormProperties.md#form-type).
 - **Limites**: Limites do formulário. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
 
 > > The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor margin**](properties_FormSize.md#hor-margin) and [**Vert margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
@@ -29,7 +29,7 @@ You can show or hide several interface elements on the current page of the form:
 When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
 
 - the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
-- the current [form type](properties_FormProperties.md#form-type):
+- o [tipo de formulário](properties_FormProperties.md#form-type) atual:
   - Marcadores e rótulos de marcadores são sempre exibidos por padrão em formulários lista
   - O papel é apresentado por defeito nos formulários "para impressão".
 

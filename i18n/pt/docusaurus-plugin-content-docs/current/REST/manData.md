@@ -63,7 +63,7 @@ Para computar todos os valores e retornar um objeto JSON:
 
 ## Chamar as funções de classe do modelo de dados
 
-Puede llamar las [funciones de clase usuarios](ClassFunctions.md) ORDA del modelo de datos vía las peticiones POST, para poder beneficiarse del API de la aplicación objetivo. Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
+Puede llamar las [funciones de clase usuarios](ClassFunctions.md) ORDA del modelo de datos vía las peticiones POST, para poder beneficiarse del API de la aplicación objetivo. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
