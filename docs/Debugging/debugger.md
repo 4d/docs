@@ -12,7 +12,7 @@ The debugger is useful when you need to spot errors or monitor the execution of 
 There are multiple ways to get the Debugger to display:
 
 * Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
-* Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
+* Using the [`TRACE`](../commands-legacy/trace.md) command
 * Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
 * Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
 
@@ -23,8 +23,8 @@ There are multiple ways to get the Debugger to display:
 
 When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. For example, in the above debugger window:
 
-* *Clients_BuildLogo* is the method being traced
-* The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
+* *drop* is the method being traced
+* The debugger window appeared because of a break point. 
 
 Displaying a new debugger window uses the same configuration as the last window displayed in the same session. If you run several user processes, you can trace them independently and have one debugger window open for each process.
 
@@ -46,7 +46,11 @@ The debugger's tool bar includes several buttons, associated with default shortc
 
 ![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
 
-> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
+:::note
+
+Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+
+:::
 
 #### No Trace
 
@@ -103,16 +107,27 @@ If you use this button to modify a method, the modifications are only effective 
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Save Settings  
+## Saving configuration  
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+The current configuration of the debugger window is automatically saved in the project. This includes:
 
-* the size and position of the window
-* the position of the division lines and the contents of the area that evaluates the expressions
+- expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can also [pin an expression] to display it in all contexts. 
+- the size and position of the window,
+- the position of the division lines.
 
-These parameters are stored in the project.
+These parameters are stored .
 
 This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
+
+
+The **Default size settings** button restores the default position and size of the window (including the window itself and the division lines). 
+
+![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
+
+
+### Pin an expression
+
+![pinning-expression](../assets/en/Debugging/pin-expression.png)
 
 ## Watch Pane
 
