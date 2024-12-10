@@ -319,7 +319,7 @@ You select the display mode to be used for all debugger windows using the **Disp
 
 The following options are available:
 
-- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the source code. 
+- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code. 
 - **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List. 
 - **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png). 
 
@@ -352,13 +352,13 @@ Be careful when you evaluate a 4D expression modifying the value of one of the S
 
 :::
 
-### Pin an expression
+### Pinning an expression
 
-You can click on the pushpin icon to pin an expression. 
+You can click on the pushpin icon to pin an expression: 
 
 ![pinning-expression](../assets/en/Debugging/pin-expression.png)
 
-It will then be displayed in every debugger window. 
+The expression will then be displayed in all debugger windows. 
 
 ### Contextual Menu
 
@@ -371,7 +371,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-* **Insert Command... **: Displays a menu allowing to insert a 4D command as a new expression.
+* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
@@ -390,6 +390,13 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 The Source Code Pane shows the source code of the method or function currently being traced.
 
 This area also allows you to add or remove [**break points**](breakpoints.md).
+
+### Prototype
+
+The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+
+![prototype](../assets/en/Debugging/prototype.png)
+
 
 ### Tool tip
 
