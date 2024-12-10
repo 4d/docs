@@ -13,9 +13,9 @@ Backup settings are defined through three pages in the Database Settings dialog 
 
 ## Backups periódicos
 
-You can automate the backup of databases opened with 4D or 4D Server (even when no client machines are connected). Isso implica definir uma frequência de cópia de segurança (horas, dias, semanas ou meses): para cada sessão, 4D automaticamente inicia uma cópia de segurança usando as configurações atuais de backup.
+Pode automatizar a cópia de segurança dos bancos de dados abertos com 4D ou 4D Server (mesmo quando não houver máquinas cliente conectadas). Isso implica definir uma frequência de cópia de segurança (horas, dias, semanas ou meses): para cada sessão, 4D automaticamente inicia uma cópia de segurança usando as configurações atuais de backup.
 
-If this application was not launched at the theoretical moment of the backup, the next time 4D is launched, it considers the backup as having failed and proceeds as set in the Database Settings (refer to [Handling backup issues](backup.md#handling-backup-issues)).
+Se essa aplicação não for lançada no momento teórico do backup, na próxima vez que 4D for lançado, considera o backup como tendo falhado e continua como estabelecido nas propriedades do banco de dados (ver [Manejo de problemas da cópia de segurança](backup.md#handling-backup-issues)).
 
 The scheduler backup settings are defined on the **Backup/Scheduler** page of the Database Settings:
 
@@ -68,7 +68,7 @@ Para modificar o local onde se armazenam esses arquivos, clique no botão **...*
 
 The **Use Log** option, when checked, indicates that the database uses a log file. Sua rota de acesso é especificada debaixo da opção. When this option is checked, it is not possible to open the database without a log file.
 
-By default, any database created with 4D uses a log file (option checked in the **General Page** of the **Preferences**). O arquivo de histórico é chamado *data.journal* e está na pasta Data.
+Por padrão, qualquer banco de dados criado com 4D usa um arquivo de log (opção marcada na **Página Geral** do **Preferências**). O arquivo de histórico é chamado *data.journal* e está na pasta Data.
 
 > Activating a new log file requires the data of the database to be backed up beforehand. Quando você marcar esta opção, uma mensagem de aviso informa que um backup é necessário. The creation of the log file is postponed and it will actually be created only after the next backup of the database.
 
@@ -113,7 +113,7 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 ### Restauração automática
 
-- **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the database, if an anomaly is detected (corrupted file, for example) during database launch. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
+- **Restaura a última cópia de segurança se o banco de dados for danificado**: Quando essa opção for marcada, o programa inicia automaticamente a restauração do arquivo de dados do último backup válido do banco, se uma anomalia for detectada (arquivo corrupto por exemplo) durante a o lançamento do banco de dados. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
 > No caso de uma restauração automática, somente o arquivo de dados é restaurado. If you wish to get the attached files or the project files, you must perform a manual restore.
 
