@@ -34,8 +34,7 @@ displayed_sidebar: docs
 
 *outputType*引数を渡さない場合、デフォルトでInto Windows Log Events (0) が使用されます。
 
-引数*outputType*にInto Windows Log Eventsを指定すると、オプションの引数*importance*を通して*message*に重要度を付けることができます。ログイベントを読んだり理解する助けになります。重要度には情報、警告とエラーの3つのレベルがあります。  
-4Dには、前もって定義された以下のような定数があります。これらは*Log Events*カテゴリーに置かれています。
+オプションの*importance* 引数を使用して*message* の重要度を設定することで、ログイベントを読みやすくして理解しやすくすることができます。重要度には情報、警告とエラーの3つのレベルがあります。4D は、以下の定義済み定数を提供しています:
 
 | 定数                  | 型    | 値 |
 | ------------------- | ---- | - |
@@ -43,8 +42,11 @@ displayed_sidebar: docs
 | Information message | 倍長整数 | 0 |
 | Warning message     | 倍長整数 | 1 |
   
-  
 *importance* に何も渡さなかったり、正しくない値を渡すと、デフォルト値(0) が使用されます。
+
+:::注意
+*importance* 引数は*outputType* 引数に `Into Windows log events`、 `Into 4D diagnostic log`、 および `Into system standard outputs` を渡した時のみ使用されます。
+:::
 
 #### 例題 
 
