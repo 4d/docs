@@ -319,7 +319,7 @@ You select the display mode to be used for all debugger windows using the **Disp
 
 The following options are available:
 
-- **Local variables**: Displays and evaluates automatically local variables as soon as they are used in the source code. 
+- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the source code. 
 - **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List. 
 - **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
