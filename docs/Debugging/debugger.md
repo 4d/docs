@@ -321,7 +321,7 @@ The following options are available:
 
 - **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the source code. 
 - **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List. 
-- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png). 
 
 :::note
 
@@ -340,13 +340,11 @@ There are several ways to add expressions to the list:
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
 * Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
 * Select a [display option](#display-mode) that automatically inserts expressions. 
-* Select [**New Expression...**] in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**.  
-
-You can enter any formula that returns a result.
+* Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. You can enter any formula that returns a result.
 
 To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
 
-To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
+To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
 
 :::warning
 
