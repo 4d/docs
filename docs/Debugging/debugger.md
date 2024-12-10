@@ -107,20 +107,17 @@ If you use this button to modify a method, the modifications are only effective 
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-## Saving configuration  
+## Auto-saving  
 
-The configuration of the debugger window is automatically saved in the project. This includes:
+The current state of the debugger window is automatically saved in the project. This includes:
 
-- expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can also [pin an expression](#pin-an-expression) to display it in all contexts. 
 - the size and position of the window,
-- the position of the division lines.
-
-These parameters are stored .
-
-This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
+- the position of the division lines,
+- the [display mode](#display-mode),
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts. 
 
 
-The **Default size settings** button restores the default position and size of the window (including the window itself and the division lines). 
+The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself). 
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
