@@ -109,9 +109,9 @@ If you use this button to modify a method, the modifications are only effective 
 
 ## Saving configuration  
 
-The current configuration of the debugger window is automatically saved in the project. This includes:
+The configuration of the debugger window is automatically saved in the project. This includes:
 
-- expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can also [pin an expression] to display it in all contexts. 
+- expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can also [pin an expression](#pin-an-expression) to display it in all contexts. 
 - the size and position of the window,
 - the position of the division lines.
 
@@ -124,10 +124,6 @@ The **Default size settings** button restores the default position and size of t
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
-
-### Pin an expression
-
-![pinning-expression](../assets/en/Debugging/pin-expression.png)
 
 ## Watch Pane
 
@@ -145,9 +141,9 @@ At any point, you can drag and drop themes, theme sublists (if any), and theme i
 
 ### Expression list
 
-#### Line Objects
+#### Line Expressions
 
-This theme lets you keep track of the values of the objects or expressions:
+This theme lets you keep track of the values of expressions:
 
 * used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
 * used in the previous line of code
@@ -305,8 +301,9 @@ You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1
 
 The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
-* field
 * variable
+* object and object property
+* field
 * pointer
 * calculation
 * 4D command
@@ -315,15 +312,38 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+
+### Display mode
+
+You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu). 
+
+![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
+
+The following options are available:
+
+- **Local variables**: Displays and evaluates automatically local variables as soon as they are used in the source code. 
+- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List. 
+- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+
+:::note
+
+Whatever the display mode, you can add custom expressions at any moment. 
+
+:::
+
 
 ### Handling expressions
+
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression). 
 
 There are several ways to add expressions to the list:
 
 * Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
 * Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
+* Select a [display option](#display-mode) that automatically inserts expressions. 
+* Select [**New Expression...**] in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**.  
 
 You can enter any formula that returns a result.
 
@@ -331,23 +351,34 @@ To edit an expression, click on it to select it, then click again or press **Ent
 
 To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
 
->**Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+:::warning
+
+Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+
+:::
+
+### Pin an expression
+
+You can click on the pushpin icon to pin an expression. 
+
+![pinning-expression](../assets/en/Debugging/pin-expression.png)
+
+It will then be displayed in every debugger window. 
 
 ### Contextual Menu
 
-The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
+The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**New Expression**: This inserts a new expression and displays the 4D Formula Editor.
-
+- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
+- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
-
-* **Insert Command**: Shortcut for inserting a 4D command as a new expression.
+* **Insert Command... **: Displays a menu allowing to insert a 4D command as a new expression.
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions.
+* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
 > This option is not available in [remote debugging mode](debugging-remote.md).
 
@@ -357,6 +388,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 * **Show Icons**: Displays an icon denoting the type of each item.
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
 * **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
+
 
 ## Source Code Pane
 
