@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 `Super` は次の 2つの目的のために使います:
 
-1. Inside a [constructor code]((../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. `Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します: When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
 
 - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
 - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。

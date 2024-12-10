@@ -136,7 +136,7 @@ Once the object is placed in the form, you can modify its characteristics using 
 
 É possível trabalhar com dois tipos de objetos nos formulários:
 
-- **Objetos estáticos** (linhas, quadros, imagens de fundo, etc.): Esses objetos são geralmente usados para definir a aparência do formulário e de seus rótulos, bem como para a interface gráfica. Estão disponíveis na barra de objetos do editor de formulários. Estão disponíveis na barra de objetos do editor de formulários. Você também pode definir seus atributos gráficos (tamanho, cor, fonte, etc.) Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
+- **Objetos estáticos** (linhas, quadros, imagens de fundo, etc.): Esses objetos são geralmente usados para definir a aparência do formulário e de seus rótulos, bem como para a interface gráfica. Estão disponíveis na barra de objetos do editor de formulários. Estão disponíveis na barra de objetos do editor de formulários. Estão disponíveis na barra de objetos do editor de formulários. Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
 
 - **Objetos ativos**: Esses objetos executam tarefas ou funções na interface e podem assumir várias formas: campos, botões, listas roláveis, etc. Cada objeto ativo é associado com um campo ou uma variável.
 
@@ -157,7 +157,7 @@ Para selecionar um objecto utilizando a Lista de Propriedades:
 1. Escolher o nome do objecto na lista pendente da Lista de Objectos localizada no topo da Lista de Propriedades. Usando estes dois métodos, pode seleccionar um objecto que esteja escondido por outros objectos ou localizado fora da área visível da janela actual.
    Para cancelar a seleção de um objeto, clique fora do limite do objeto ou **Shift+clique** no objeto.
 
-> \> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> \> > > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selecção de múltiplos objectos
 
@@ -196,7 +196,7 @@ A caixa de diálogo "Duplicate Many" é exibida quando você seleciona um ou mai
 
 ![](../assets/en/FormEditor/duplcateMany.png)
 
-- Na área superior, introduza o número de colunas e linhas (linhas) de objectos que pretende obter. Por exemplo, se quiser três colunas e duas linhas de objectos, introduza 3 na área de Coluna(s) e 2 na área de Linha(s). Se quiser três novas cópias horizontais de um objecto, introduza 4 na área de Coluna(s) e deixe o valor por defeito, 1, na área de Linha(s).
+- Na área superior, introduza o número de colunas e linhas (linhas) de objectos que pretende obter. Por exemplo, se quiser três colunas e duas linhas de objectos, introduza 3 na área de Coluna(s) e 2 na área de Linha(s). Na área superior, introduza o número de colunas e linhas (linhas) de objectos que pretende obter.
 
 - Para linhas e colunas, defina o offset que deseja deixar entre cada cópia. O valor deve ser expresso em pontos. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 

@@ -45,7 +45,7 @@ Altura do formulário (em pixéis) quando o [tamanho do formulário](#size-based
 
 
 ---
-## Margem hor.
+## Margem Margem hor.
 
 Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`
 
@@ -61,7 +61,7 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 ---
 
-## Margem hor.
+## Margem Margem hor.
 
 Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
 

@@ -5,7 +5,7 @@ title: Restaurar um backup
 
 4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Podem ocorrer dois tipos principais de incidentes:
 
-- A interrupção inesperada de um banco de dados durante o uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
+- A interrupção inesperada de um banco de dados durante o uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
   - Se a cache estiver vazia, a base de dados abre-se normalmente. Todas as alterações efectuadas na base de dados foram registadas. Este caso não exige nenhuma operação particular
   - Se a cache conter operações, o arquivo de dados está intacto mas exige integrar o arquivo de histórico atual.
   - Se a cache estiver no processo de ser escrita, o arquivo de dados está provavelmente danificado. When restoring a backup and integrating the current log file in a encrypted database:

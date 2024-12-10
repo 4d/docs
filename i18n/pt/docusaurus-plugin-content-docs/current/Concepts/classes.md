@@ -276,7 +276,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 Você também pode declarar o parâmetro de retorno adicionando apenas `: type` e usar a [`return expression`](parameters.md#return-expression) (ele também encerrará a execução da função). Por exemplo:
 
 ```4d
-Function add($x : Variant; $y : Integer)-&gt;$result : Integer
+Function add($x : Variant; $y : Integer)-&amp;gt;$result : Integer
 ```
 
 #### Exemplo 1

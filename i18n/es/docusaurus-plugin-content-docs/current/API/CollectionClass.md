@@ -840,7 +840,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### Descripción
 
-Colección compartida que se agrupa con la colección resultante
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función modifica la colección original.
 
@@ -1596,9 +1596,9 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 <!-- REF #collection.last().Params -->
 
-| Parámetros | Tipo |                             | Descripción        |
-| ---------- | ---- | :-------------------------: | ------------------ |
-| Result     | any  | <- | La nueva colección |
+| Parámetros | Tipo |                             | Descripción                                   |
+| ---------- | ---- | :-------------------------: | --------------------------------------------- |
+| Result     | any  | <- | Colección que contiene los elementos añadidos |
 
 <!-- END REF -->
 
@@ -1829,7 +1829,7 @@ Lanzamiento
 | Parámetros   | Tipo                                            |                             | Descripción                                                         |
 | ------------ | ----------------------------------------------- | :-------------------------: | ------------------------------------------------------------------- |
 | propertyPath | Text                                            |              ->             | Ruta de la propiedad del objeto que se utilizará para la evaluación |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Colección original con valores rellenados                           |
+| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Valor a contar                                                      |
 
 <!-- END REF -->
 
@@ -2253,9 +2253,9 @@ Lanzamiento
 
 <!-- REF #collection.pop().Params -->
 
-| Parámetros | Tipo |                             | Descripción        |
-| ---------- | ---- | :-------------------------: | ------------------ |
-| Result     | any  | <- | La nueva colección |
+| Parámetros | Tipo |                             | Descripción                                   |
+| ---------- | ---- | :-------------------------: | --------------------------------------------- |
+| Result     | any  | <- | Colección que contiene los elementos añadidos |
 
 <!-- END REF -->
 

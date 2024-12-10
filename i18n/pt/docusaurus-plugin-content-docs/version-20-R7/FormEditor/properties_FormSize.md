@@ -41,7 +41,7 @@ Altura del formulario (en píxeles) cuando el [tamaño del formulario](#size-bas
 
 ---&#x20;
 
-## Margem hor.
+## Margem Margem hor.
 
 Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\<object name>`
 
@@ -55,7 +55,7 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 ---
 
-## Margem hor.
+## Margem Margem hor.
 
 Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\<object name>`.
 

@@ -460,7 +460,7 @@ Las siguientes etiquetas de estado están disponibles:
 - **Not found**: la dependencia se declara en el archivo dependencies.json pero no se encuentra.
 - **Inactive**: la dependencia no se carga porque no es compatible con el proyecto (por ejemplo, el componente no está compilado para la plataforma actual).
 - **Duplicated**: la dependencia no se carga porque existe otra dependencia con el mismo nombre en la misma ubicación (y está cargada).
-- **Available after restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Disponible después del reinicio**: la referencia a dependencias acaba de ser añadida [usando la interfaz](#monitoring-project-dependencies), se cargará una vez que la aplicación se reinicie.
 - **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
 
 Al pasar el ratón por encima de la línea de dependencia, se muestra un mensaje que ofrece información adicional sobre el estado:
