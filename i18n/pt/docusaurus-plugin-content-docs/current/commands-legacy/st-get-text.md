@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ST Get text.Summary-->O comando *OBJECT Get styled text* devolve o texto com estilo encontrado no campo ou variável de texto designado pelo parâmetro *objeto*.<!-- END REF-->   
@@ -64,3 +61,13 @@ No caso de erro, não modifica a variável. Quando ocorre um erro em uma variáv
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1116 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

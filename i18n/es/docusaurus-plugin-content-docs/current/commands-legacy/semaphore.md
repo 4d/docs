@@ -147,3 +147,12 @@ Sintaxis:
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 *Semáforos y señales*  
 [Test semaphore](test-semaphore.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 143 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

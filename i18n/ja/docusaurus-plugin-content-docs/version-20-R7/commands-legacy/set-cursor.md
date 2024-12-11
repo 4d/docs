@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET CURSOR.Summary-->SET CURSOR コマンド はマウスカーソルを、*cursor* 引数に渡したID番号のシステムカーソルへと変更します。<!-- END REF-->
@@ -62,3 +59,13 @@ displayed_sidebar: docs
     SET CURSOR(9019)
  End if
 ```
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 469 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

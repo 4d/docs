@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Export structure file.Summary-->O comando **Export structure file** divide a estrutura atual do banco de dados 4D em um conjunto de arquivos de texto ou arquivos de imagem nativos e os armazena na *rotaPastta* especificada.<!-- END REF--> Como padrão, se exporta a totalidade da estrutura do banco de dados (métodos, formulários, catálogo, etc.). Pode filtrar os conteúdos a exportar utilizando o parâmetro *opções* (ver abaixo).
@@ -116,3 +113,12 @@ Se quiser exportar apenas os métodos projeto e banco de dados, e um arquivo de 
 #### Ver também 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1565 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

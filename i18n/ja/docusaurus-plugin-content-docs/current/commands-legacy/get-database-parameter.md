@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get database parameter.Summary-->**Get database parameter**コマンドを使用して、現在の4Dデータベースパラメーターの値を知ることができます。<!-- END REF-->パラメーター値が文字列の場合、それは*stringValue* 引数に返されます。
@@ -135,3 +132,12 @@ displayed_sidebar: docs
 [Application info](application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 643 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.FOLDER LIST.Summary-->The **FOLDER LIST** command populates the Text or String array *directories* with the names of the folders located at the pathname you pass in *pathname*.<!-- END REF-->
-
-**Note:** The *pathname* parameter only accepts absolute pathnames. 
+<!--REF #_command_.FOLDER LIST.Summary-->The **FOLDER LIST** command populates the Text or String array *directories* with the names of the folders located at the pathname you pass in *pathname*.<!-- END REF-->The *pathname* parameter only accepts absolute pathnames. 
 
 If there are no folders at the specified location, the command returns an empty array. If the pathname you pass in *pathname* is invalid, **FOLDER LIST** generate a file manager error that you can intercept using an [ON ERR CALL](on-err-call.md) method.
 
@@ -26,3 +24,13 @@ If there are no folders at the specified location, the command returns an empty 
 
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 473 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

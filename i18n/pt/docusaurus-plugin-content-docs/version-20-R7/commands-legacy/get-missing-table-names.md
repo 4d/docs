@@ -32,3 +32,12 @@ Quando tiver identificado as tabelas faltantes do banco, pode reativá-las atrav
 #### Ver também 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1125 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

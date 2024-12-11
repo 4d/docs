@@ -45,3 +45,12 @@ This command is particularly useful in the context of components because it enab
 
 *Error Handler*  
 [ON ERR CALL](on-err-call.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 704 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

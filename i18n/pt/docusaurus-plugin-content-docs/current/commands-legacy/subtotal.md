@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Subtotal.Summary-->Subtotal devolve o subtotal de valores para o nível de quebra atual ou anterior.<!-- END REF--> Subtotal só funciona quando uma seleção ordenada é impressa com [PRINT SELECTION](print-selection.md) ou utilizando Imprimir no ambiente Desenho. O parâmetro *valores* deve ser de tipo real, inteiro, ou inteiro longo. Você deve atribuir o resultado da função Subtotal a uma variável localizada na área de quebra do formulário.  
@@ -64,3 +61,12 @@ A função Subtotal é necessária para mostrar valores em um formulário.
 [BREAK LEVEL](break-level.md)  
 [Level ](level.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 97 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

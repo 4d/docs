@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Window kind.Summary-->Window kind コマンドは*window*に渡した参照番号のウィンドウのタイプを返します。<!-- END REF-->ウィンドウが存在しない場合、 Window kind には *0* が返されます。
@@ -42,3 +39,12 @@ displayed_sidebar: docs
 [GET WINDOW RECT](get-window-rect.md)  
 [Get window title](get-window-title.md)  
 [Window process](window-process.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 445 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

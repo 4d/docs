@@ -29,3 +29,12 @@ displayed_sidebar: docs
 
 [False](false.md)  
 [Not](not.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 214 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

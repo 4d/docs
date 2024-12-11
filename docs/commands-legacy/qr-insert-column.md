@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->The QR INSERT COLUMN command inserts or creates a column at the specified position.<!-- END REF--> Columns located to the right of that position will be shifted accordingly.
@@ -41,3 +38,13 @@ The following statement inserts (or creates) a first column in a Quick Report ar
 #### See also 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 748 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

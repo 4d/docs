@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->El comando QR ON COMMAND ejecuta el método proyecto 4D pasado en el parámetro *nomMetodo* cuando un comando del editor de informes rápidos es llamado por el usuario, seleccionando un comando de menú o haciendo clic en un botón.<!-- END REF-->
@@ -45,3 +42,13 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 *QR Comandos*  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 790 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

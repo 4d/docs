@@ -42,3 +42,12 @@ O exemplo a seguir lhe permite conhecer o estado de um processo (em nosso caso, 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 652 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

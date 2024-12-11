@@ -160,3 +160,13 @@ DOCモード (または複合タイプのRPCモード) で公開されたWebサ�
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 778 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

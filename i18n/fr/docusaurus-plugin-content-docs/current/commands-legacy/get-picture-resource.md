@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->La commande **GET PICTURE RESOURCE** retourne dans le champ ou la variable image désigné(e) par *resDonnées* l'image stockée dans la ressource image ("PICT") dont vous passé le numéro dans *resNum*.<!-- END REF-->
@@ -44,3 +41,13 @@ S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est
 #### Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 502 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

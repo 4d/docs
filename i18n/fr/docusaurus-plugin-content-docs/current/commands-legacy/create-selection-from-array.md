@@ -20,9 +20,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->La commande **CREATE SELECTION FROM ARRAY** construit la sélection temporaire *nom* à partir :
 
 * soit du tableau de numéros d’enregistrements absolus *tabEnrg* de *laTable*,
-* soit du tableau de booléens *tabEnrg* ; dans ce cas, les valeurs du tableau indiquent l’appartenance (Vrai) ou non (Faux) de chaque enregistrement de *laTable* à la sélection *nom*.<!-- END REF-->
-
-**Attention** : Une sélection nommée est créée et chargée en mémoire. Par conséquent, assurez-vous que vous disposez de suffisamment de mémoire avant d'exécuter cette commande.
+* soit du tableau de booléens *tabEnrg* ; dans ce cas, les valeurs du tableau indiquent l’appartenance (Vrai) ou non (Faux) de chaque enregistrement de *laTable* à la sélection *nom*.<!-- END REF-->: Une sélection nommée est créée et chargée en mémoire. Par conséquent, assurez-vous que vous disposez de suffisamment de mémoire avant d'exécuter cette commande.
 
 Si vous ne passez pas le paramètre *nom* ou si vous passez une chaîne vide, la commande s’appliquera à la sélection courante de *laTable*, qui sera donc mise à jour.
 
@@ -48,3 +46,14 @@ Si un numéro d'enregistrement est invalide (enregistrement non créé), l’err
 [LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 640 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

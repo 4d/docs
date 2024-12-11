@@ -82,3 +82,12 @@ Cet exemple compare les résultats obtenus en fonction du séparateur “courant
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 11 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

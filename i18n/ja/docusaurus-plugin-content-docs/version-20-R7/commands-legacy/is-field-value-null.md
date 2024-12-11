@@ -28,3 +28,12 @@ displayed_sidebar: docs
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 964 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -25,3 +25,12 @@ displayed_sidebar: docs
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Tan](tan.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 17 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

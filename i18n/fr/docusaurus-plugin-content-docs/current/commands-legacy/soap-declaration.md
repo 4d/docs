@@ -190,3 +190,12 @@ Cet exemple illustre l'effet des différents types de déclarations :
 [Is data file locked](is-data-file-locked.md)  
 [SOAP Get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 782 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

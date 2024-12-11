@@ -29,3 +29,13 @@ Este método evitará la apertura de la base si el archivo de datos está bloque
     QUIT 4D
  End if
 ```
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 716 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

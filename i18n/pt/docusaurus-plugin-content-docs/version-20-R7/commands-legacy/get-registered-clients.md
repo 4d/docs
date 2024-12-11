@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->O comando GET REGISTERED CLIENTS preenche dois arrays:
@@ -49,3 +46,13 @@ Consulte o exemplo do comando [REGISTER CLIENT](register-client.md).
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 650 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

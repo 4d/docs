@@ -22,3 +22,12 @@ This command can be used for security reasons in the *On Web Authentication Data
 #### See also 
 
 [SOAP DECLARATION](soap-declaration.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 783 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

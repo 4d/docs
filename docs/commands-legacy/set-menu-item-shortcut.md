@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->The **SET MENU ITEM SHORTCUT** command assigns a new shortcut to a menu item.<!-- END REF--> 
@@ -79,3 +76,12 @@ Definition of the F4 shortcut for the "Close" menu item:
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 423 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

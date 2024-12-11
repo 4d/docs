@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->La commande **OBJECT SET RGB COLORS** modifie les couleurs d'avant-plan et d'arrière-plan du ou des objet(s) défini(s) par le paramètre *objet* et le paramètre optionnel *\**.<!-- END REF--> Lorsque la commande est appliquée à un objet de type list box, un paramètre supplémentaire permet de modifier la couleur alternée des lignes.
@@ -107,3 +104,12 @@ Passage du fond en transparent avec couleur de police claire :
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB Color](select-rgb-color.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 628 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

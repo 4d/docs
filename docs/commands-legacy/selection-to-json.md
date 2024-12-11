@@ -91,3 +91,12 @@ You can use the *template* syntax in order to export fields from different table
 #### See also 
 
 [JSON TO SELECTION](json-to-selection.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1234 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

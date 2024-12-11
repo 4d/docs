@@ -24,3 +24,12 @@ See example for the [Current machine](current-machine.md) command.
 #### See also 
 
 [Current machine](current-machine.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 484 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

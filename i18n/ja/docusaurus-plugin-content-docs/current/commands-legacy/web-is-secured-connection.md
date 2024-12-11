@@ -27,3 +27,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 698 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

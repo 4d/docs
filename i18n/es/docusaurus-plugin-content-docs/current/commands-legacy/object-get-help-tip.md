@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->El comando **OBJECT Get help tip** devuelve el mensaje de ayuda asociado al objeto o a los objetos designados por los parámetros *objeto* y *\** en el proceso actual.<!-- END REF-->  
@@ -39,3 +36,12 @@ El título de un botón imagen se guarda en forma de mensaje de ayuda. Este tít
 #### Ver también 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1182 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

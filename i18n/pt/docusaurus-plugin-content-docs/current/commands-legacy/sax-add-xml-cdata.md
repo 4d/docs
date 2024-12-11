@@ -75,3 +75,13 @@ Se ou comando tiver sido executado corretamente, a variável sistema Ok assume o
 #### Ver também 
 
 [SAX GET XML CDATA](sax-get-xml-cdata.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 856 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

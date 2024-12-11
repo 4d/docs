@@ -35,3 +35,14 @@ Este exemplo seleciona todas as faturas de clientes com crédito superior ou igu
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 340 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

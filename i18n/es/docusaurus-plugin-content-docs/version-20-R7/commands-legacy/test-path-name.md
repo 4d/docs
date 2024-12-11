@@ -50,3 +50,12 @@ El siguiente ejemplo prueba la presencia del documento “Diario” en la carpet
 [CREATE FOLDER](create-folder.md)  
 [Object to path](object-to-path.md)  
 [Path to object ](path-to-object.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 476 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

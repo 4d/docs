@@ -33,3 +33,12 @@ No exemplo abaixo, se uma pesquisa não encontrar nenhum registro, um bip é emi
 #### Ver também 
 
 [PLAY](play.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 151 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

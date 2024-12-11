@@ -74,3 +74,12 @@ To do this, simply execute the following code:
 #### See also 
 
 [DOM Append XML element](dom-append-xml-element.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1083 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->O comando OPEN SECURITY CENTERmostra a janela do Centro de segurança e manutenção (CSM).<!-- END REF--> Para saber mais veja a página *Centro de segurança e manutenção*.   
@@ -29,3 +26,12 @@ Dependendo dos privilegios de acesso do usuário atual, certas funções dispon�
 #### Ver também 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1018 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

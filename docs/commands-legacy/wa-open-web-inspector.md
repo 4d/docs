@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->The **WA OPEN WEB INSPECTOR** command opens a web inspector for the web area designated by the *\** and *object* parameters.<!-- END REF-->
@@ -25,3 +22,12 @@ displayed_sidebar: docs
 
 *Programmed management of Web Areas*  
 [WA Run offscreen area](wa-run-offscreen-area.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1736 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

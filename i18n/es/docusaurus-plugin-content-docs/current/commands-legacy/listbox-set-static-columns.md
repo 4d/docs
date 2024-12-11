@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->El comando **LISTBOX SET STATIC COLUMNS** define las primeras *numColumnas* columnas (empezando por la izquierda) en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -30,3 +27,12 @@ Las columnas estáticas no pueden moverse en el list box.
 
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1153 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

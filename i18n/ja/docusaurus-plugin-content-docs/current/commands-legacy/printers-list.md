@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->**PRINTERS LIST** コマンドは、引数として渡された各配列にそのマシンで使用できるプリンタの名前、およびオプションとしてプリンタの場所とモデルを返します。<!-- END REF-->
@@ -47,3 +44,13 @@ macOS上では、プリンタ名 (プリンタサーバの名前) を使用し�
 
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 789 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

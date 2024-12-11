@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->The SQL EXECUTE command executes an SQL command and binds the result to 4D objects (arrays, variables or fields).<!-- END REF--> 
@@ -161,3 +158,13 @@ If the command has been executed correctly, the system variable OK returns 1\. O
 #### See also 
 
 [SQL LOAD RECORD](sql-load-record.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 820 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

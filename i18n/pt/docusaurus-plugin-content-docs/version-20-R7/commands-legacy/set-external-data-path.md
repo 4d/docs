@@ -58,3 +58,11 @@ Se você deseja guardar o conteúdo de um arquivo existente no campo imagem, arm
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1134 |
+| Thread-seguro | &check; |
+
+

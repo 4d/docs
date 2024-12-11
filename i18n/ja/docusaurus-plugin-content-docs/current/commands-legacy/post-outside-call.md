@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### Compatibility Note 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->This command was named **CALL PROCESS** in previous 4D releases.<!-- END REF--> 
@@ -47,3 +44,12 @@ displayed_sidebar: docs
 [Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 329 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

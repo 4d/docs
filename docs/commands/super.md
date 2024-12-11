@@ -111,3 +111,12 @@ $message:=$square.description() //I have 4 sides which are all equal
 #### See also
 
 [**Concept page for Classes**](../Concepts/classes.md). 
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1706 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

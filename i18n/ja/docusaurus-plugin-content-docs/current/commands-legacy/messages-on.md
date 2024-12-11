@@ -19,3 +19,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [MESSAGES OFF](messages-off.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 181 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

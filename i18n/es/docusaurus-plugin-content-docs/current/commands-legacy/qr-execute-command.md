@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->El comando **QR EXECUTE COMMAND** ejecuta el comando de botón de la barra de herramientas cuya referencia se pasa en *comando*.<!-- END REF--> Este comando se utiliza por lo general para ejecutar un comando seleccionado por el usuario e interceptado en su código a través del comando [QR ON COMMAND](qr-on-command.md).
@@ -40,3 +37,13 @@ Si pasa un número de *comando* incorrecto, se genera el error -9852.
 
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 791 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

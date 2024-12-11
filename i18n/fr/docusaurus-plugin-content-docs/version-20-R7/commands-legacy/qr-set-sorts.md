@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET SORTS.Summary-->La commande **QR SET SORTS** vous permet de définir l'ordre de tri de chaque colonne de l'état rapide dont la référence est passée dans *zone*.<!-- END REF--> 
@@ -48,3 +45,13 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 #### Voir aussi 
 
 [QR GET SORTS](qr-get-sorts.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 752 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

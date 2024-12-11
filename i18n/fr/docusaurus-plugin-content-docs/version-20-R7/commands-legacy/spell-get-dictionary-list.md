@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->La commande **SPELL GET DICTIONARY LIST** retourne dans les tableaux *langID*, *langFichiers* et *langNoms* les IDs, les noms de fichiers et les noms des langues correspondant aux fichiers de dictionnaires Hunspell installés sur la machine.<!-- END REF--> 
@@ -54,3 +51,12 @@ Vous avez placé "fr-classique+reforme1990.aff" et "fr-classique+reforme1990.dic
 #### Voir aussi 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1204 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

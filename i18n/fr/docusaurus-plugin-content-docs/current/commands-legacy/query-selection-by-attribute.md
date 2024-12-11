@@ -45,3 +45,15 @@ Vous souhaitez trouver les personnes âgées entre 20 et 30 ans parmi les enregi
 #### Voir aussi 
 
 [QUERY BY ATTRIBUTE](query-by-attribute.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1424 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

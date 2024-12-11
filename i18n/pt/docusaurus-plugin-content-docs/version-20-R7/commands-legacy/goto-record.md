@@ -29,3 +29,14 @@ Veja o exemplo para Record Number.
 
 [Record number](record-number.md)  
 *Sobre Números de Registros*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 242 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

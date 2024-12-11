@@ -41,3 +41,12 @@ Windows上で、4Dの起動時に、DLLライブラリが4D実行形式のファ
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 491 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

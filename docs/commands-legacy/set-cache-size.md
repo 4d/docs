@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SET CACHE SIZE.Summary-->The **SET CACHE SIZE** command sets the database cache size dynamically and, optionally, sets the mininum byte size at which to start to free memory.<!-- END REF-->
-
-**Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+<!--REF #_command_.SET CACHE SIZE.Summary-->The **SET CACHE SIZE** command sets the database cache size dynamically and, optionally, sets the mininum byte size at which to start to free memory.<!-- END REF-->This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
 
 In *size*, pass the new size for the database cache in bytes. This new size is applied dynamically when the command is executed.
 
@@ -40,3 +38,12 @@ You want to add 100 MB to the current database cache size. You can write:
 #### See also 
 
 [Get cache size](get-cache-size.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1399 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

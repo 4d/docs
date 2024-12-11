@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->The **PICTURE LIBRARY LIST** command returns the reference numbers and names of the pictures currently stored in the Picture Library of the database.<!-- END REF-->
@@ -95,3 +92,12 @@ The following example exports the Picture Library to a document on disk:
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 564 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

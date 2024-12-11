@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Get list item font.Summary-->O comando Get list item font retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *RefElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF--> 
@@ -34,3 +31,12 @@ Finalmente, pode passar \* em *refElem*: neste caso, o comando se aplicará ao e
 #### Ver também 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 954 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

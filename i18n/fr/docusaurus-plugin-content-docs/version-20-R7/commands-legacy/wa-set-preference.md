@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->La commande **WA SET PREFERENCE** permet de fixer différentes préférences pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
@@ -52,3 +49,12 @@ Vous souhaitez autoriser le déposer d'URLs dans la zone Web 'myarea' :
 #### Voir aussi 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1041 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

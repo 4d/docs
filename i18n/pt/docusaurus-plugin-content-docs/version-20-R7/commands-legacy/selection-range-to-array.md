@@ -108,3 +108,11 @@ Use os 50 primeiros registros atuais da tabela \[facturas\] para carregar vário
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 368 |
+| Thread-seguro | &check; |
+
+

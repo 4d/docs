@@ -35,3 +35,13 @@ Mesmo que você possa utilizar os [Self](self.md) para adicionar dias a uma data
   // Esta linha faz o mesmo que $vdAmanhã:=Current date+1
  $vdAmanhã:=Add to date(Current date;0;0;1)
 ```
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 393 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

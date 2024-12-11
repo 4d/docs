@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Print object.Summary-->O comando **Print object** permite imprimir ele ou os objetos de formulário designado(s) pelos parâmetros *objeto* e *\**, na localização definida pelos parâmetros *posX* e *posY*.<!-- END REF-->  
@@ -98,3 +95,12 @@ Exemplo de impressão de um list box completo:
 #### Ver também 
 
 [FORM LOAD](../commands/form-load.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1095 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

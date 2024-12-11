@@ -25,3 +25,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1171 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

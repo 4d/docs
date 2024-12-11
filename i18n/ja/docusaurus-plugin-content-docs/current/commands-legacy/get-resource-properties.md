@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get resource properties.Summary-->**Get resource properties**コマンドは、*resType*に渡されるタイプかつ*resID*に渡されるIDを持つリソースの属性を返します。<!-- END REF-->
@@ -36,3 +33,14 @@ displayed_sidebar: docs
 #### システム変数およびセット 
 
 リソースが存在しない場合OK変数は0に、そうでなければ1に設定されます。
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 515 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

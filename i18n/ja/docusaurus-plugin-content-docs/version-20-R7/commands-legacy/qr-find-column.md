@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR Find column.Summary-->QR Find column コマンドは、*expression*引数で渡された表現式に一致する内容を持つ最初のカラムの番号を返します。<!-- END REF-->
@@ -49,3 +46,14 @@ displayed_sidebar: docs
     QR DELETE COLUMN(MyArea;$NumColumn)
  End if
 ```
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 776 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

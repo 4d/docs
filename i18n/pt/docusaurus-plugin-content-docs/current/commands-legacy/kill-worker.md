@@ -54,3 +54,12 @@ No método (*theWorker*), adicionou código para manejar esta situaçao:
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
 *Sobre Workers*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1390 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

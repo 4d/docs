@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB SET ARRAY.Summary-->The **OB SET ARRAY** command defines the *array* to be associated with the *property* in the language object designated by the *object* parameter.<!-- END REF-->
-
-*object* can be an object varialble or a 4D object field.
+<!--REF #_command_.OB SET ARRAY.Summary-->The **OB SET ARRAY** command defines the *array* to be associated with the *property* in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
 
 In the *property* parameter, pass the label of the property to be created or modified. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
 Note that the *property* parameter is case sensitive. 
@@ -134,3 +132,12 @@ Using a picture array:
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 *Type conversions between collections and 4D arrays*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1227 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

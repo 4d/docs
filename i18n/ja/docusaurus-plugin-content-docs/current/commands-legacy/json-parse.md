@@ -185,3 +185,12 @@ beta[1].golf:{line:10,offset:12}}}
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1218 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

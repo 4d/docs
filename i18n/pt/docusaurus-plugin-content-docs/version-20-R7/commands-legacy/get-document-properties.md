@@ -210,3 +210,13 @@ Quando esse método tiver sido implementado no banco de dados, nóste mos todo o
 #### Ver também 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 477 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

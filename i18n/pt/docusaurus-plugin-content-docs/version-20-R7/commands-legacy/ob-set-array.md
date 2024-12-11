@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.OB SET ARRAY.Summary-->O comando **OB SET ARRAY** define o *array* a ser associado a *propriedade* no objeto definido pelo parâmetro *objeto*.<!-- END REF-->
-
-*objeto* deve ter sido definido com o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D..  
+<!--REF #_command_.OB SET ARRAY.Summary-->O comando **OB SET ARRAY** define o *array* a ser associado a *propriedade* no objeto definido pelo parâmetro *objeto*.<!-- END REF-->deve ter sido definido com o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D..  
   
 No parâmetro *propriedade*, passe a etiqueta da propriedade a criar ou modificar. Se a propriedade já existe em *objeto*, seu valor se atualiza. Se não existe, é criado.  
 Tenha em conta que o parâmetro *propriedade* leva em conta as maiúsculas e minúsculas.  
@@ -132,3 +130,12 @@ Usar um array de imagem:
 *Conversões de Tipo entre coleções e arrays 4D*  
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1227 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS changes the graph settings for graph displayed in a form.<!-- END REF--> The graph must have already been defined using the [GRAPH](graph.md) command. GRAPH SETTINGS has no effect on a pie chart. This command must be called in the same process as the form.
@@ -45,3 +42,12 @@ See example for the [GRAPH](graph.md) command.
 #### See also 
 
 [GRAPH](graph.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 298 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

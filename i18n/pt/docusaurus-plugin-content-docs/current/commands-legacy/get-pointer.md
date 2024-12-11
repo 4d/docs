@@ -50,3 +50,12 @@ Usando ponteiros para elementos de arrays bi-dimensionais:
 
 [Field](field.md)  
 [Table](table.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 304 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

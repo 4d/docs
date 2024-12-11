@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->O comando WA SET PREFERENCE permite fixar diferentes preferências para o área web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  
@@ -55,3 +52,12 @@ WA SET PREFERENCE( *;"myarea"; WA enable URL drop ; True)
 #### Ver também 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1041 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST Get content type.Summary-->**ST Get content type**コマンドは、 *object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内で見つかったコンテンツの型を返します。<!-- END REF-->
@@ -105,3 +102,14 @@ displayed_sidebar: docs
        ...
     End if
 ```
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1286 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

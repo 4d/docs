@@ -48,3 +48,14 @@ If a record number is invalid (record not created), the error -10503 is generate
 [LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 640 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Changes current selection ||
+| Forbidden on the server ||
+
+

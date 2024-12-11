@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->El comando RESIZE FORM WINDOW  permite modificar el tamaño de la ventana del formulario actual.<!-- END REF-->
@@ -49,3 +46,12 @@ Después de la ejecución de esta línea:
 [FORM GET PROPERTIES](form-get-properties.md)  
 [FORM SET SIZE](form-set-size.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 890 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

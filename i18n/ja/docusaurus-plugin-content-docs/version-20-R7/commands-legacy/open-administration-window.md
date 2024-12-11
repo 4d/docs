@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->**OPEN ADMINISTRATION WINDOW**コマンドは、コマンドを実行したマシン上でサーバ管理ウィンドウを開きます。<!-- END REF-->4D Serverの管理ウィンドウで現在のパラメタを表示させたり、さまざまなメンテナンス操作を行ったりできます (4D Server Reference Guide参照)。4D Server のバージョン11から、このウィンドウをクライアントマシン上で表示できるようになりました: 
@@ -52,3 +49,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OPEN SECURITY CENTER](open-security-center.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1047 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->SELECT LIST ITEMS BY POSITION コマンドは、*list*に渡された参照番号のリストにおいて、*itemPos*ならびにオプションとして*positionsArray*に渡された位置にある項目を選択します。<!-- END REF-->
@@ -74,3 +71,12 @@ displayed_sidebar: docs
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 381 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

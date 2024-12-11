@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Parse formula.Summary-->La commande **Parse formula** inspecte le contenu de la *formule* 4D, vérifie sa syntaxe, et la retourne sous une forme normalisée.<!-- END REF--> Cette opération permet à la formule de rester valide dans le cas où un élément du langage 4D ou de la structure est renommé (commande, constante, table, champ ou plug-in 4D). 
@@ -105,3 +102,12 @@ Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur e
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Utiliser des tokens dans les formules*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1576 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

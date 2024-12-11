@@ -29,3 +29,14 @@ A l'origine, cette commande était utile pour "replacer" dans la sélection cour
 *Présentation des Sélections Temporaires*  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 189 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

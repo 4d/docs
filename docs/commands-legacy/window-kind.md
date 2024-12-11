@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Window kind.Summary-->The **Window kind** command returns the 4D type of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, **Window kind** returns *0* (zero).
@@ -41,3 +38,12 @@ See example for the [WINDOW LIST](window-list.md) command.
 [GET WINDOW RECT](get-window-rect.md)  
 [Get window title](get-window-title.md)  
 [Window process](window-process.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 445 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

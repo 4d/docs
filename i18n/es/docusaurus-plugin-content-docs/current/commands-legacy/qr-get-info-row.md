@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR Get info row.Summary-->El comando QR Get info row indica si *linea* se muestra o se oculta en *area*.<!-- END REF-->
@@ -41,3 +38,13 @@ Si el parámetro *linea* es incorrecto, se genera el error -9852.
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 769 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

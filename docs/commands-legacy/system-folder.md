@@ -49,3 +49,12 @@ If you omit the *type* parameter, the function will return the pathname to activ
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 487 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->O comando QR GET DESTINATION recupera o *tipo* de saída do relatório para a área cuja referência se passou em *area*.<!-- END REF--> 
@@ -39,3 +36,13 @@ Se passa um número de *area* incorreto, se gera o erro -9850.
 #### Ver também 
 
 [QR SET DESTINATION](qr-set-destination.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 756 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

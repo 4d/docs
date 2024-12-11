@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->GET PASTEBOARD DATA コマンドはペーストボード中*dataType*で指定したタイプのデータを、BLOB フィールドまたは変数 *data* に返します。<!-- END REF--> (例えばペーストボードに4D内でコピーされたテキストが含まれている場合、BLOBの文字コードはUTF-16です) 
@@ -56,3 +53,13 @@ displayed_sidebar: docs
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 401 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

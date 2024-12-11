@@ -95,3 +95,13 @@ La commande **LOG FILE TO JSON** modifie la valeur des variables système OK et 
 
   
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1352 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document |
+| Interdite sur le serveur ||
+
+

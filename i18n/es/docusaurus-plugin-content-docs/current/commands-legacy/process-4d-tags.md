@@ -72,3 +72,11 @@ Este ejemplo genera un texto utilizando los datos de los arrays:
 #### Ver también 
 
 *Etiquetas de transformación 4D*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 816 |
+| Hilo seguro | &check; |
+
+

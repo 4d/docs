@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** reemplaza el formato de salida para los objetos especificados por *objeto* por el formato que pasa en *formatSalida*.<!-- END REF--> El nuevo formato se utiliza únicamente para la visualización actual, no se guarda con el formulario.
@@ -361,3 +358,12 @@ Pase un termómetro a modo "Barber shop"
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 236 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

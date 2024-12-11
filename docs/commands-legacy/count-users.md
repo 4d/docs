@@ -23,3 +23,11 @@ When executed on a 4D single-user application, **Count users** returns 1.
 
 [Count tasks](count-tasks.md)  
 [Count user processes](count-user-processes.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 342 |
+| Thread safe | &check; |
+
+

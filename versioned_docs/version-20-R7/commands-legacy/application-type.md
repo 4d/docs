@@ -42,3 +42,12 @@ Somewhere in your code, other than in the *On Server Startup Database Method*, y
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 494 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

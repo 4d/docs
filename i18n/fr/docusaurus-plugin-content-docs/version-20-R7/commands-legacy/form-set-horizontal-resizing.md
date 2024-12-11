@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->La commande **FORM SET HORIZONTAL RESIZING** permet de modifier par programmation les propriétés de redimensionnement horizontal du formulaire courant.<!-- END REF--> Par défaut, ces propriétés sont définies dans l’éditeur de formulaires en mode Développement. Les nouvelles propriétés sont fixées pour le process courant, elles ne sont pas stockées avec le formulaire. 
@@ -39,3 +36,12 @@ Reportez-vous à l'exemple de la commande [FORM SET SIZE](form-set-size.md).
 [FORM GET HORIZONTAL RESIZING](form-get-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 892 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

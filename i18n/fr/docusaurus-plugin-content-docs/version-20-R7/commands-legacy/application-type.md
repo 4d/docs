@@ -42,3 +42,12 @@ Quelque part dans votre code, ailleurs que dans la *On Server Startup Database M
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 494 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

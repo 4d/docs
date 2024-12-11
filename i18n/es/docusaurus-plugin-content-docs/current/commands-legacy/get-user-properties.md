@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** devuelve la información sobre el usuario cuyo número de referencia se pasa en el parámetro *refUsuario*.<!-- END REF--> Debe pasar un número de referencia de usuario devuelto por el comando [GET USER LIST](get-user-list.md).
@@ -55,3 +52,13 @@ Si no tiene privilegios de acceso para llamar al comando GET USER PROPERTIES o s
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
 [Validate password](validate-password.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 611 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

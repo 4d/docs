@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
@@ -80,3 +77,12 @@ Après la deuxième instruction, toutes les cellules de la troisième ligne pass
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1268 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -42,3 +42,13 @@ Se o usuário clicar em Cancelar na caixa de diálogo de abrir arquivos, ou se f
 #### Ver também 
 
 [SAVE SET](save-set.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 185 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

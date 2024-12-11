@@ -54,3 +54,11 @@ Al final de la lista de registros hay un botón con un método de objeto. El mé
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 122 |
+| Hilo seguro | &check; |
+
+

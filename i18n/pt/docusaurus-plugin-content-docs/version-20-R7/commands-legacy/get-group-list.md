@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST preenche os arrays *nomGrupos e numGrupos* com os nomes e os números de referência únicos dos grupos tais como aparecem no editor de senhas.<!-- END REF-->  
@@ -35,3 +32,13 @@ Se não tiver privilégios de acesso para chamar ao comando GET GROUP LIST ou se
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 610 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

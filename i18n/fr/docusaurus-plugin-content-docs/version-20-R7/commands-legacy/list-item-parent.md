@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.List item parent.Summary-->La commande **List item parent** retourne le numéro de référence de l'élément parent.<!-- END REF-->
@@ -72,3 +69,12 @@ Voici les numéros de référence des éléments de cette liste :
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 633 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

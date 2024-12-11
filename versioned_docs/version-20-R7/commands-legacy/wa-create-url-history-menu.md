@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.WA Create URL history menu.Summary-->The **WA Create URL history menu** command creates and fills a menu that can be used directly for navigation among the URLs visited during the session in the Web area designated by the *\** and *object* parameters.<!-- END REF--> It can be used to build a custom navigation interface.
@@ -70,3 +67,12 @@ The following code can be associated with a 3D button having a pop-up menu entit
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [WA GET URL HISTORY](wa-get-url-history.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1049 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -35,3 +35,13 @@ Although you can use the [Self](self.md) to add days to a date, **Add to date** 
   // This line does the same thing as $vdTomorrow:=Current date+1
  $vdTomorrow:=Add to date(Current date;0;0;1)
 ```
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 393 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

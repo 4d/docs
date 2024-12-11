@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->**GET LIST PROPERTIES** コマンドは、*list*で指定された参照番号を持つ階層リストについての情報を返します。<!-- END REF--> 
@@ -45,3 +42,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET LIST PROPERTIES](set-list-properties.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 632 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

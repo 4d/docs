@@ -38,3 +38,12 @@ displayed_sidebar: docs
 
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 323 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

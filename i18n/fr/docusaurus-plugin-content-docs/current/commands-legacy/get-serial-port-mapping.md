@@ -49,3 +49,12 @@ Cette méthode projet permet d'adresser le même port série (sans protocole), q
 #### Voir aussi 
 
 [SET CHANNEL](set-channel.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 909 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

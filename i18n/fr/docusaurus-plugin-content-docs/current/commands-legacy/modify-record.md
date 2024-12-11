@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.MODIFY RECORD.Summary-->La commande **MODIFY RECORD** permet à l'utilisateur de modifier l'enregistrement courant de *laTable*, ou de la table par défaut si ce paramètre est omis.<!-- END REF--> **MODIFY RECORD** charge depuis le disque l'enregistrement courant pour le process en cours (s'il n'est pas déjà chargé par un autre utilisateur/process) et l'affiche dans le formulaire entrée courant. S'il n'y a pas d'enregistrement courant, **MODIFY RECORD** ne fait rien. **MODIFY RECORD** ne change pas la sélection courante. 
@@ -52,3 +49,13 @@ La variable système OK prend la valeur 1 lorsque l'enregistrement est validé e
 [Modified record](modified-record.md)  
 [READ WRITE](read-write.md)  
 [UNLOAD RECORD](unload-record.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 57 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

@@ -68,3 +68,12 @@ Desea conocer el estado de cifrado de un archivo de datos que corresponde al arc
 
   
 [Encrypt data file](encrypt-data-file.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1609 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

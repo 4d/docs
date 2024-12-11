@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Count screens.Summary-->El comando Count screens devuelve el número de pantallas conectadas a su equipo.<!-- END REF-->
@@ -27,3 +24,12 @@ displayed_sidebar: docs
 [SCREEN DEPTH](screen-depth.md)  
 [Screen height](screen-height.md)  
 [Screen width](screen-width.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 437 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

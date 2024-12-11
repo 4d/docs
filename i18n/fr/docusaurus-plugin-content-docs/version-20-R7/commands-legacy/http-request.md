@@ -125,3 +125,12 @@ Demande d’ajout d’enregistrement en JSON dans une base distante :
 #### Voir aussi 
 
 [HTTP Get](http-get.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1158 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

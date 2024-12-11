@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->**EDIT FORMULA**コマンドを使用してフォーミュラーエディターを開き、ユーザーはフォーミュラーを作成したり変更したりできます。<!-- END REF-->次の項目をデフォルトとして表示することができます。
@@ -56,3 +53,13 @@ displayed_sidebar: docs
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 806 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

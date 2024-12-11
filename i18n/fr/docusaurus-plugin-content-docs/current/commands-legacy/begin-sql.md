@@ -43,3 +43,12 @@ A noter que le *Débogueur* de 4D évaluera le code SQL ligne par ligne. Dans ce
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 948 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

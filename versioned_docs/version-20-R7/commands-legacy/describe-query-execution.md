@@ -67,3 +67,12 @@ $vResultPath :
 
 [Last query path](last-query-path.md)  
 [Last query plan](last-query-plan.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1044 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

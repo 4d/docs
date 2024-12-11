@@ -26,3 +26,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OPEN DATA FILE](open-data-file.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 313 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -24,3 +24,12 @@ Por defeito, caso nenhum limite tenha sido definido, o comando devolve 0.
 #### Ver também 
 
 [SET QUERY LIMIT](set-query-limit.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1156 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

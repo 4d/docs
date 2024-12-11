@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.End selection.Summary-->La fonction **End selection** retourne Vrai lorsque le pointeur de l'enregistrement courant se trouve après le dernier enregistrement de la sélection courante de *laTable*.<!-- END REF--> **End selection** est généralement utilisée pour tester si l'appel à la commande [NEXT RECORD](next-record.md) place ou non le pointeur d'enregistrement courant derrière le dernier enregistrement de la sélection. Si la sélection courante est vide, **End selection** retourne Vrai.
+<!--REF #_command_.End selection.Summary-->La fonction **End selection** retourne Vrai lorsque le pointeur de l'enregistrement courant se trouve après le dernier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour tester si l'appel à la commande [NEXT RECORD](next-record.md) place ou non le pointeur d'enregistrement courant derrière le dernier enregistrement de la sélection. Si la sélection courante est vide, **End selection** retourne Vrai.
 
 Pour replacer le pointeur d'enregistrement courant dans la sélection, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) ne replace pas le pointeur dans la sélection.
 
@@ -61,3 +61,12 @@ La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 36 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

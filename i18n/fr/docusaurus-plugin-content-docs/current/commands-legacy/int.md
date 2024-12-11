@@ -30,3 +30,12 @@ L'exemple suivant illustre le fonctionnement de **Int** pour les nombres positif
 #### Voir aussi 
 
 [Dec](dec.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 8 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

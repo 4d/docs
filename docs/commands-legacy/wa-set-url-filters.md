@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->The WA SET URL FILTERS command sets up one or more filters for the Web area designated by the *\** and *object* parameters.<!-- END REF-->
@@ -140,3 +137,12 @@ You want to deny access to specific IP addresses:
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1030 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

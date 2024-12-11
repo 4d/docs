@@ -45,3 +45,12 @@ You want to reset all current sessions for all mobile applications:
 #### See also 
 
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1596 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

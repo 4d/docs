@@ -32,3 +32,12 @@ Cette commande doit être appelée depuis une méthode d'appel sur erreur instal
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1799 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

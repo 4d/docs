@@ -34,3 +34,14 @@ The following example displays all the records from the \[People\] table:
 [QUERY](query.md)  
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 47 |
+| Thread safe | &check; |
+| Changes current record ||
+| Changes current selection ||
+| Forbidden on the server ||
+
+

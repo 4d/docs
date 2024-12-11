@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Drop position.Summary-->El comando Drop position puede utilizarse para descubrir la ubicación, en un objeto de destino “complejo”, donde un objeto ha sido (arrastrado y) soltado.<!-- END REF-->
@@ -96,3 +93,12 @@ El método de objeto list box de la izquierda (destino) contiene el siguiente c�
 #### Ver también 
 
 *Arrastrar y soltar*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 608 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->La commande **SQL EXPORT DATABASE** exporte au format SQL tous les enregistrements de toutes les tables de la base.<!-- END REF--> En SQL, cette opération d’exportation globale est appelée "Dump". 
@@ -58,3 +55,13 @@ Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1
 #### Voir aussi 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1065 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

@@ -52,3 +52,12 @@ Ver o exemplo do comando [ENCRYPT BLOB](encrypt-blob.md).
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 688 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

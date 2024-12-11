@@ -26,3 +26,12 @@ See the examples for [DELAY PROCESS](delay-process.md) and [Process info](../com
 [Process number](../commands/process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 322 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -25,3 +25,12 @@ displayed_sidebar: docs
 
 [RESTART 4D](restart-4d.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1301 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

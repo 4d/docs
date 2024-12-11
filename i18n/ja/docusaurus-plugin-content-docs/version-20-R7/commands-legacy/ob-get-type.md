@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB Get type.Summary-->**OB Get type**コマンドは、*object* で指定したランゲージオブジェクトの *property* に関連付けられた値の型を返します。<!-- END REF-->
-
-*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB Get type.Summary-->**OB Get type**コマンドは、*object* で指定したランゲージオブジェクトの *property* に関連付けられた値の型を返します。<!-- END REF-->で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *property* 引数には、値の型を取得したいプロパティのラベルを渡します。  
 *property* 引数では、大文字と小文字は区別されることに注意して下さい。
@@ -54,3 +52,12 @@ displayed_sidebar: docs
 
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [Value type](value-type.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1230 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

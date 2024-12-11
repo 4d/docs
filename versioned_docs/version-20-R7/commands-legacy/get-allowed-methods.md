@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->The **GET ALLOWED METHODS** command returns, in *methodsArray*, the names of methods that can be used to write formulas.<!-- END REF--> These methods are listed at the end of the list of commands in the editor. 
@@ -46,3 +43,12 @@ This example authorizes a set of specific methods to create a report:
 #### See also 
 
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 908 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

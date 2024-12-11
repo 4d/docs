@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->ERASE WINDOW コマンドは*window*で指定されたウィンドウの内容をクリアします。<!-- END REF-->
@@ -30,3 +27,12 @@ ERASE WINDOWはウィンドウの内容をクリアします。スクリーン�
 
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 160 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

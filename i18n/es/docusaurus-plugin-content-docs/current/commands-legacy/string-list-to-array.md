@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->El comando STRING LIST TO ARRAY llena el array *cadenas* con: 
@@ -46,3 +43,13 @@ Si se encuentra el recurso, la variable sistema OK toma el valor 1, de lo contra
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 511 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

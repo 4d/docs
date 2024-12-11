@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET ABOUT.Summary-->El comando **SET ABOUT** cambia el comando de menú **Acerca de 4D** del menú **Ayuda** (Windows) o del menú **Aplicación** (Mac OS X) por *textoElem*.<!-- END REF-->
@@ -46,3 +43,12 @@ El siguiente ejemplo reinicializa el comando de menú Acerca de 4D:
 #### Ver también 
 
 [SET HELP MENU](set-help-menu.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 316 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

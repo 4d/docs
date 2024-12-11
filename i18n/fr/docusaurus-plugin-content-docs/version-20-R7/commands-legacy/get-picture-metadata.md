@@ -98,3 +98,13 @@ La variable système OK retourne 1 si la récupération des métadonnées s’es
 *Noms des métadonnées images*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 *Valeurs des métadonnées images*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1122 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

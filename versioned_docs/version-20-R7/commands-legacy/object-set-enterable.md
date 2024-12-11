@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->The **OBJECT SET ENTERABLE** command makes the form objects specified by *object* either enterable or non-enterable and can set the *focusable* attribute.<!-- END REF-->
@@ -75,3 +72,12 @@ Here is the object method of a checkbox located in the header of a list in order
 
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 238 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Nota de compatibilidad*: este comando solo funciona en bases de datos binarias.<!-- END REF--> Siempre devuelve un BLOB vacío en proyectos.* 
@@ -34,3 +31,13 @@ Este concepto permite conservar un backup de usuarios en la base e implementar u
 #### Ver también 
 
 [BLOB TO USERS](blob-to-users.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 849 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+| Prohibido en el servidor ||
+
+

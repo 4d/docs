@@ -47,3 +47,13 @@ La eliminación de un documento hace que la variable sistema tome el valor 1\. S
 #### Ver también 
 
 [Test path name](test-path-name.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 159 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+| Prohibido en el servidor ||
+
+

@@ -81,3 +81,12 @@ This example illustrates the sending and retrieval of extended characters via a 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 103 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

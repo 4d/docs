@@ -146,3 +146,12 @@ Type ファンクションはフィールド、インタープロセス変数、
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 295 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

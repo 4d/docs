@@ -30,3 +30,13 @@ On Macintosh, if you do not pass the optional *\** parameter, the size of the da
 [Get document position](get-document-position.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET DOCUMENT SIZE](set-document-size.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 479 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

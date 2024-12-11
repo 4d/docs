@@ -61,3 +61,12 @@ Para isso, basta escrever:
 #### Ver também 
 
 [DOM Create XML element](dom-create-xml-element.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1097 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

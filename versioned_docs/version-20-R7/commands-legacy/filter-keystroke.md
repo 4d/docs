@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->**FILTER KEYSTROKE** enables you to replace the character entered by the user into a field or an enterable area with the first character of the string *filteredChar* you pass.<!-- END REF-->
@@ -243,3 +240,12 @@ The Get highlighted text method is listed here:
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 389 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

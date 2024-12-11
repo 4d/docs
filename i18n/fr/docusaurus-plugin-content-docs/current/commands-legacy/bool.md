@@ -47,3 +47,12 @@ Vous sélectionnez une valeur en fonction d'un attribut de champ objet, en antic
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1537 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

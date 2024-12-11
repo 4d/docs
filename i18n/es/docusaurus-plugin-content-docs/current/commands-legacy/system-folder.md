@@ -49,3 +49,12 @@ Si omite el parámetro *tipo*, la función devolverá la ruta a la carpeta siste
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 487 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

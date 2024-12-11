@@ -49,3 +49,12 @@ Conversion d’une image avec une qualité de 60 % :
 #### Voir aussi 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1002 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

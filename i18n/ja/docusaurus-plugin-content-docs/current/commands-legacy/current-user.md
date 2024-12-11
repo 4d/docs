@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Current user.Summary-->Current user コマンドは、カレントユーザのエイリアス、またはユーザ名を返します。<!-- END REF-->
-
-*user* 引数が省略されていた場合、デフォルトで、セッション中に[SET USER ALIAS](set-user-alias.md) コマンドでユーザーに対してエイリアスが定義されていた場合には、コマンドはユーザーエイリアスを返します。そうでない場合、コマンドは4D ユーザーアカウント名を返します。
+<!--REF #_command_.Current user.Summary-->Current user コマンドは、カレントユーザのエイリアス、またはユーザ名を返します。<!-- END REF-->引数が省略されていた場合、デフォルトで、セッション中に[SET USER ALIAS](set-user-alias.md) コマンドでユーザーに対してエイリアスが定義されていた場合には、コマンドはユーザーエイリアスを返します。そうでない場合、コマンドは4D ユーザーアカウント名を返します。
 
 任意の引数には、返される情報を指定する、以下の定数を渡すことができます:
 
@@ -38,3 +36,12 @@ displayed_sidebar: docs
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 [User in group](user-in-group.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 182 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

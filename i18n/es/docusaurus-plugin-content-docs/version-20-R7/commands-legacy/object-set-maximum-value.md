@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Summary-->El comando **OBJECT SET MAXIMUM VALUE** modifica el valor máximo del objeto o de los objetos designado(s) por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  
@@ -32,3 +29,12 @@ En *valorMax*, pase el nuevo valor máximo que desea asignar al objeto para el p
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1244 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Is a list.Summary-->The Is a list command returns TRUE if the value you pass in *list* is a valid reference to a hierarchical list.<!-- END REF--> Otherwise, it returns FALSE.
@@ -24,4 +21,14 @@ displayed_sidebar: docs
 #### Example
 
 See example for the [CLEAR LIST](clear-list.md) command.
+
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 621 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
 

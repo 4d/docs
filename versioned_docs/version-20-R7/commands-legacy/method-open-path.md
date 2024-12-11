@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->The **METHOD OPEN PATH** command opens, in the 4D Method editor, the method whose internal pathname is passed in the *path* parameter.<!-- END REF-->
@@ -34,3 +31,12 @@ You can execute this command from a component, but in this case, you must pass t
 
 *Design Object Access Commands*  
 [METHOD Get path](method-get-path.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1213 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

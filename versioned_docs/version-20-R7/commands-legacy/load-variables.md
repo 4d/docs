@@ -45,3 +45,13 @@ If the variables are loaded properly, the OK system variable is set to 1; otherw
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 74 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document |
+| Forbidden on the server ||
+
+

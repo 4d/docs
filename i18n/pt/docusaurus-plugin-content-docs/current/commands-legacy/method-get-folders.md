@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->O comando **METHOD GET FOLDERS** devolve no array *arrayNoms*, os nomes das pastas criadas na página Início do Explorador de 4D:  
@@ -32,3 +29,12 @@ Se executado este comando desde um componente, devolve por defeito os caminhos d
 #### Ver também 
 
 [METHOD GET PATHS](method-get-paths.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1206 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

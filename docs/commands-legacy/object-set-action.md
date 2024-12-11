@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->The **OBJECT SET ACTION** command modifies the standard action associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -41,3 +38,12 @@ You want to associate the **Validate** standard action with a button:
 #### See also 
 
 [OBJECT Get action](object-get-action.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1259 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

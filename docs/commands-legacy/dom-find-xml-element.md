@@ -117,3 +117,13 @@ An error is generated when:
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 864 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->La commande **SELECT LOG FILE** crée ou ferme le fichier d'historique de la base de données, suivant la valeur que vous passez dans *historique*.<!-- END REF-->
@@ -39,3 +36,13 @@ L'erreur -4447 est générée si l'opération ne peut pas être réalisée car l
 #### Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 345 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

@@ -92,3 +92,12 @@ displayed_sidebar: docs
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1712 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -46,3 +46,12 @@ displayed_sidebar: docs
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 274 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

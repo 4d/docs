@@ -50,3 +50,12 @@ L'exemple suivant ajoute des enregistrements à l'ensemble des meilleurs clients
 
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 120 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

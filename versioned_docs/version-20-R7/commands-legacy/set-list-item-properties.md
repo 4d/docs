@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->The **SET LIST ITEM PROPERTIES** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
@@ -80,3 +77,12 @@ The following example changes the text of the current item of *list* to bold and
 *Hierarchical Lists*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 386 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

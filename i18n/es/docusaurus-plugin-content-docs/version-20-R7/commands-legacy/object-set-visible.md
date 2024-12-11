@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->El comando OBJECT SET VISIBLE muestra u oculta los objetos especificados por *objeto*.<!-- END REF-->
@@ -61,3 +58,12 @@ o:
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 603 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

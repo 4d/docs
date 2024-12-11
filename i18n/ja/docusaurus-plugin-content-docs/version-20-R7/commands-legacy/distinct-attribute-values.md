@@ -93,3 +93,12 @@ displayed_sidebar: docs
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1397 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

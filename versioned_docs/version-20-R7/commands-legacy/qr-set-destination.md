@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->The **QR SET DESTINATION** command sets the output *type* of the report for the area whose reference was passed in *area*.<!-- END REF-->
@@ -52,3 +49,13 @@ The following code sets the destination as being the text file "Mydoc.txt" and e
 #### See also 
 
 [QR GET DESTINATION](qr-get-destination.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 745 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

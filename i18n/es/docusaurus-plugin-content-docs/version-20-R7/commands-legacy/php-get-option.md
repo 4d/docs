@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 :::info Compatibilidad
 
 **PHP es obsoleto en 4D**. Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -37,3 +34,12 @@ Pase en el parámetro *opcion* una constante del tema "*PHP*" para designar la o
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1060 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

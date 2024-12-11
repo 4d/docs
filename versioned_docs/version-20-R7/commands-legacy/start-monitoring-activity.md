@@ -92,3 +92,12 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1712 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

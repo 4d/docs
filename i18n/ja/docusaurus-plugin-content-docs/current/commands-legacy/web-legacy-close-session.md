@@ -35,3 +35,12 @@ Webプロセスや他のプロセスからこのコマンドが呼び出され�
 
 [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
 *Webセッション管理(旧式)*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1208 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

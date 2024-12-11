@@ -26,3 +26,13 @@ You pass the name of the HTML home page or the page’s HTML access path to the 
 To stop sending *homePage* as home page for the current Web process, execute **WEB SET HOME PAGE** with an empty string ("") passed in *homePage*.
 
 **Note:** The default home page of the Web server is specified in the Database Settings dialog box. 
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 639 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

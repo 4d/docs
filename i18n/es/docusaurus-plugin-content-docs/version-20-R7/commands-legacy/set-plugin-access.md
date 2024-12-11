@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->El comando SET PLUGIN ACCESS permite especificar por programación el grupo de usuarios autorizado a utilizar cada plug-in “serializado” instalado en la base.<!-- END REF--> Al hacer esto, puede administrar la repartición de las licencias de los plug-ins.
@@ -46,3 +43,12 @@ Pase en el parámetro *grupo* el nombre del grupo cuyos usuarios están autoriza
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 845 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

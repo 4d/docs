@@ -24,8 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Field.Summary-->La commande **Field** a deux syntaxes :
 
-* Si vous passez un numéro de table dans *numTable* et un numéro de champ dans *numChamp*, **Field** retourne un pointeur vers le champ.<!-- END REF-->
-* Si vous passez un pointeur vers un champ dans *ptrChamp*, **Field** retourne le numéro du champ.
+* Si vous passez un numéro de table dans *numTable* et un numéro de champ dans *numChamp*, **Field** retourne un pointeur vers le champ.<!-- END REF-->retourne le numéro du champ.
 
 #### Exemple 1 
 
@@ -57,3 +56,12 @@ Dans l'exemple, la variable *champNum* est égale au numéro de champ de \[Table
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 253 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

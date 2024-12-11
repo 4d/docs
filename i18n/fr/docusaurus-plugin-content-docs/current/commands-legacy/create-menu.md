@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Create menu.Summary-->La commande **Create menu** permet de créer un nouveau menu en mémoire.<!-- END REF--> Ce menu n’existera qu’en mémoire et ne sera pas ajouté dans l’éditeur de menus en mode Développement. Toute modification effectuée sur ce menu durant la session sera immédiatement répercutée à l’ensemble des instances de ce menu et ce, dans tous les process de la base.
@@ -43,3 +40,12 @@ Reportez-vous à l'exemple de la commande [SET MENU BAR](set-menu-bar.md).
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [SET MENU BAR](set-menu-bar.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 408 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

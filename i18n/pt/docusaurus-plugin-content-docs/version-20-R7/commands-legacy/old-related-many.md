@@ -25,3 +25,14 @@ OLD RELATED MANY muda a seleção da tabela relacionada e seleciona o primeiro r
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 263 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

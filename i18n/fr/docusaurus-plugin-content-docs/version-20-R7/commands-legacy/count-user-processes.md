@@ -23,3 +23,12 @@ displayed_sidebar: docs
 
 [Count tasks](count-tasks.md)  
 [Count users](count-users.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 343 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Keystroke.Summary-->Keystroke devuelve el carácter introducido por el usuario en un campo o en un área editable.<!-- END REF--> 
@@ -171,3 +168,12 @@ Utilizando las habilidades de la comunicación interproceso de 4D, puede constru
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 390 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->El comando ST GET ATTRIBUTES se utiliza para recuperar el valor actual de un atributo de estilo en una selección de texto del objeto de formulario designado por *objeto*.<!-- END REF-->
@@ -105,3 +102,13 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 #### Ver también 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1094 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

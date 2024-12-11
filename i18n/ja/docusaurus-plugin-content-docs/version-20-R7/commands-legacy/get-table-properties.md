@@ -34,3 +34,12 @@ displayed_sidebar: docs
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 687 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

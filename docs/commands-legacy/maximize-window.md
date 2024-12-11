@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->The MAXIMIZE WINDOW command triggers the expansion of the window whose reference number was passed in *window*.<!-- END REF--> If this parameter is omitted, the effect is the same but is applied to all the frontmost windows of the current process (Windows) or to the frontmost window of the current process (Mac OS). 
@@ -85,3 +82,12 @@ In this context, when the user clicks on the button:
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 453 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

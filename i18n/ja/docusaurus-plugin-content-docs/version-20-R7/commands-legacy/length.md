@@ -28,3 +28,13 @@ Lengthの使用例を次に示します。結果を変数*vlResult*に代入し�
  vlResult:=Length("Topaz") // vlResultは5
  vlResult:=Length("Citizen") // vlResultは7
 ```
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 16 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

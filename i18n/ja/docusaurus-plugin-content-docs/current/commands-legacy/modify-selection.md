@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->MODIFY SELECTIONは、[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")とほぼ同じ機能を提供します。<!-- END REF-->詳細については[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")の説明を参照してください。2つのコマンドの違いを以下にあげます:
@@ -32,3 +29,12 @@ displayed_sidebar: docs
 [DISPLAY SELECTION](display-selection.md)  
 [Form event code](../commands/form-event-code.md)  
 *セット*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 204 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

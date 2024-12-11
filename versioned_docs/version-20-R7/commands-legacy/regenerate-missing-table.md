@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->The **REGENERATE MISSING TABLE** command rebuilds the missing table whose name is passed in the *tableName* parameter.<!-- END REF--> When a missing table is rebuilt, it becomes visible in the Structure editor and its data can once again be accessed.
@@ -62,3 +59,12 @@ This method regenerates all the missing tables that may be present in the databa
 #### See also 
 
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1126 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

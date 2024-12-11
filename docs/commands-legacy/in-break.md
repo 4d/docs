@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.In break.Summary-->**In break** returns True for the In break execution cycle.<!-- END REF--> 
@@ -28,3 +25,12 @@ In order for the **In break** execution cycle to be generated, make sure that th
 
 [In footer](in-footer.md)  
 [In header](in-header.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 113 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->La commande **QR SET REPORT KIND** permet de définir le *type* de l'état rapide présent dans la *zone*.<!-- END REF-->
@@ -36,3 +33,13 @@ Si la valeur de *type* est incorrecte, l’erreur -9852 est générée.
 #### Voir aussi 
 
 [QR Get report kind](qr-get-report-kind.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 738 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

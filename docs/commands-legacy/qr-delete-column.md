@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->The QR DELETE COLUMN command deletes the column in *area* whose number was passed in *colNumber*.<!-- END REF--> This command does not apply to cross-table reports.
@@ -37,3 +34,13 @@ The following example makes sure the report is a list report and deletes the thi
 #### See also 
 
 [QR INSERT COLUMN](qr-insert-column.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 749 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

@@ -82,3 +82,11 @@ displayed_sidebar: docs
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 339 |
+| スレッドセーフである | &check; |
+
+

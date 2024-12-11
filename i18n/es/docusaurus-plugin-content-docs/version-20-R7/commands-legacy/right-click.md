@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Right click.Summary-->El comando Right click devuelve [True](true.md "True") si se hace clic en el botón derecho del ratón.<!-- END REF-->
@@ -26,3 +23,12 @@ Este comando debe utilizarse únicamente en el contexto del evento de formulario
 
 [Contextual click](contextual-click.md)  
 [Form event code](form-event-code.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 712 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

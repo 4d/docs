@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Print object.Summary-->**Print object** コマンドを使用して *object*と*\** 引数で指定したフォームオブジェクトを、*posX*と*posY*の位置に、任意のサイズで印刷できます。<!-- END REF-->
@@ -99,3 +96,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [FORM LOAD](form-load.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1095 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

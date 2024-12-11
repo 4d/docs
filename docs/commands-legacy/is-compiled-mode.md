@@ -41,3 +41,12 @@ In one of your routines, you include debugging code useful only when you are run
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 492 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

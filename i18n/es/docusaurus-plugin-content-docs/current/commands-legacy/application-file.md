@@ -41,3 +41,12 @@ Al iniciar su base de datos en Windows, necesita verificar si una librería DLL 
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 491 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

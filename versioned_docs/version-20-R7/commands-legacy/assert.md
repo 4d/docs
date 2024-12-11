@@ -53,3 +53,13 @@ An assertion can allow parameters passed to a project method to be tested in ord
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1129 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

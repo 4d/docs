@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Execute on server.Summary-->Execute on server コマンドはサーバマシン上 (クライアント/サーバで実行された場合) 、または同じマシン上 (シングルユーザで実行された場合) で新しいプロセスを開始し、そのプロセスのプロセス番号を返します。<!-- END REF-->
@@ -192,3 +189,12 @@ WriteLog メソッドはサーバー側で実行されます。メソッドの�
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 373 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

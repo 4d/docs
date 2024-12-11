@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Arctan.Summary-->Arctan returns the angle, expressed in radians, of the tangent *number*.<!-- END REF-->
-
-**Note:** 4D provides the predefined constants Pi, Degree, and Radian. Pi returns the Pi number (3.14159...), Degree returns one degree expressed in radians (0.01745...), and Radian returns one radian expressed in degrees (57.29577...).
+<!--REF #_command_.Arctan.Summary-->Arctan returns the angle, expressed in radians, of the tangent *number*.<!-- END REF-->4D provides the predefined constants Pi, Degree, and Radian. Pi returns the Pi number (3.14159...), Degree returns one degree expressed in radians (0.01745...), and Radian returns one radian expressed in degrees (57.29577...).
 
 #### Example 
 
@@ -33,3 +31,12 @@ The following example shows the value of Pi:
 [Cos](cos.md)  
 [Sin](sin.md)  
 [Tan](tan.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 20 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.POST CLICK.Summary-->La commande **POST CLICK** simule un clic souris.<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur clique réellement avec le bouton de la souris.
@@ -31,3 +28,12 @@ Si vous passez le paramètre *process*, le clic est envoyé au process dont vous
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 466 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->La commande **METHOD OPEN PATH** ouvre, dans l’éditeur de méthodes de 4D, la méthode dont vous avez passé le chemin d’accès interne dans le paramètre *chemin*.<!-- END REF-->
@@ -32,3 +29,12 @@ Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous 
 
 *Commandes du thème Accès objets développement*  
 [METHOD Get path](method-get-path.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1213 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->O comando SQL EXECUTE SCRIPT permite executar uma série de instruções SQL localizadas no arquivo de script designado por *rotaScript*.<!-- END REF-->  
@@ -61,3 +58,13 @@ Se o script for executado corretamente (nenhum erro ocorre), a variável Sistema
  \* Se *açãoErro* é SQL On erro continue (valor 3), a variável OK sempre assume o valor 1\.   
   
 **Nota**: Se utilizar este comando para executar ações consumidoras de memória tales como importação massiva de dados, pode considerar chamar ao comando SQL *ALTER DATABASE* para desativar temporáriamente as opções SQL.
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1089 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

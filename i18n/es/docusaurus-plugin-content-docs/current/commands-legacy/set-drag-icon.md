@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->El comando **SET DRAG ICON** asocia la imagen de icono al cursor durante las operaciones de arrastrar y soltar que se manejan por programación.<!-- END REF-->
@@ -60,3 +57,12 @@ Note que puede modificar la posición del cursor con respecto a la imagen:
 #### Ver también 
 
 [Form event code](../commands/form-event-code.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1272 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

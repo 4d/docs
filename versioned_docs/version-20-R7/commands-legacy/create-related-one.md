@@ -24,3 +24,12 @@ If a related record exists, **CREATE RELATED ONE** acts just like [RELATE ONE](r
 #### See also 
 
 [SAVE RELATED ONE](save-related-one.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 65 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

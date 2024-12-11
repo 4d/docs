@@ -43,3 +43,15 @@ Isso faz com que encontre todas as empresas localizadas em Nova Iorque, com ativ
 #### Ver também 
 
 [QUERY](query.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 341 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

@@ -58,3 +58,12 @@ In this example, data from fields of the records in a table are extracted and th
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1219 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

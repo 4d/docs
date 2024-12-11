@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->O comando **OBJECT SET HORIZONTAL ALIGNMENT** permite determinar o tipo de alinhamento aplicado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -56,3 +53,12 @@ Os objetos de formulário aos quais pode aplicar este comando são os seguintes:
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 706 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

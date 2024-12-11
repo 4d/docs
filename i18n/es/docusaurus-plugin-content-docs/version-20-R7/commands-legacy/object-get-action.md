@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get action.Summary-->El comando **OBJECT Get action** devuelve el nombre y (si es el caso) el parámetro de la acción estándar asociada con el objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -46,3 +43,12 @@ Usted desea asociar la acción "Cancelar" con todos los objetos en el formulario
 #### Ver también 
 
 [OBJECT SET ACTION](object-set-action.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1457 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

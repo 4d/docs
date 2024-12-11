@@ -69,3 +69,13 @@ You want to select a server at startup from a single-user application. You could
     QUIT 4D
  End if
 ```
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1321 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

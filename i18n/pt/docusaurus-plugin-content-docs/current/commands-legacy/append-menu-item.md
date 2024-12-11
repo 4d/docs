@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->O comando APPEND MENU ITEM  adiciona nova linhas de menu ao menu cujo número ou referência se passa em *menu*.<!-- END REF-->
@@ -83,3 +80,12 @@ Então, em todo método de formulário ou de projeto, pode escrever:
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 411 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

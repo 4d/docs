@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Current form window.Summary-->O comando Current form window devolve a referência da janela do formulário atual.<!-- END REF--> Se nenhuma janela tiver sido definida para o formulário atual, o comando devolve 0.  
@@ -27,3 +24,12 @@ A janela do formulário atual pode ser gerada automaticamente por um comando tal
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 827 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

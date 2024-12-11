@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.OB Is defined.Summary-->El comando **OB Is defined** devuelve **True** si *objeto* o *propiedad* se definen y **False** en caso contrario.<!-- END REF-->  
-  
-*objeto* debe haber sido creado con el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.  
+<!--REF #_command_.OB Is defined.Summary-->El comando **OB Is defined** devuelve **True** si *objeto* o *propiedad* se definen y **False** en caso contrario.<!-- END REF-->debe haber sido creado con el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.  
   
 Por defecto, si se omite el parámetro *propiedad*, el comando comprueba que *objeto* esté definido. Un objeto está definido si su contenido se ha sido inicializado.  
   
@@ -62,3 +60,12 @@ Esta prueba es equivalente a:
 #### Ver también 
 
 [OB Is empty](ob-is-empty.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1231 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -33,3 +33,12 @@ Pour plus d'informations sur les composants 4D, reportez-vous au manuel *Mode D�
 #### Voir aussi 
 
 [PLUGIN LIST](plugin-list.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1001 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

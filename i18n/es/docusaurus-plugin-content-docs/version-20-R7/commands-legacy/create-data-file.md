@@ -26,3 +26,12 @@ Antes de lanzar la operación, el comando verifica que la ruta de acceso no corr
 #### Ver también 
 
 [OPEN DATA FILE](open-data-file.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 313 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

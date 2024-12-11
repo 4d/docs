@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.EXPORT SYLK.Summary-->El comando **EXPORT SYLK** escribe los datos de los registros de la selección actual de *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento Sylk Windows o Macintosh, en el disco.
@@ -52,3 +49,13 @@ OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma 
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 85 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

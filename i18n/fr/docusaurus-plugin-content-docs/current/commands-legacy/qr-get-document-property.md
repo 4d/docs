@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR Get document property.Summary-->La commande **QR Get document property** vous permet de connaître la valeur courante de la *propriété* d'affichage de la boîte de dialogue d'impression ou de l'unité du document présent dans la *zone*.<!-- END REF--> 
@@ -37,3 +34,12 @@ Si la valeur du paramètre *propriété* est incorrecte, l’erreur -9852 est g�
 #### Voir aussi 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 773 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

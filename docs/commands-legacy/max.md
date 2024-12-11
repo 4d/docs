@@ -69,3 +69,13 @@ For an example of computing an object field attribute, please refer to the examp
 #### See also 
 
 [Min](min.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 3 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

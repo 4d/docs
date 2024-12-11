@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->La commande **FORM SCREENSHOT** retourne un formulaire sous forme d'image.<!-- END REF--> Cette commande admet deux syntaxes différentes : en fonction de la syntaxe utilisée, vous pouvez obtenir soit l'image d'un formulaire exécuté, soit l'image du formulaire dans l'éditeur de formulaires.
@@ -39,3 +36,12 @@ Par défaut, la commande capture la page 1 du formulaire. Si vous souhaitez capt
 #### Voir aussi 
 
 [FORM LOAD](form-load.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 940 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

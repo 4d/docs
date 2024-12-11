@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SHOW TOOL BAR.Summary-->**SHOW TOOL BAR** コマンドは、カレントプロセスにおいて[Open form window](open-form-window.md) コマンドで作成されたカスタムのツールバーの表示を管理します。<!-- END REF-->
@@ -28,3 +25,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 433 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

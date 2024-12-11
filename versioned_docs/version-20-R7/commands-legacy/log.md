@@ -31,3 +31,12 @@ The following line displays 1:
 #### See also 
 
 [Exp](exp.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 22 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

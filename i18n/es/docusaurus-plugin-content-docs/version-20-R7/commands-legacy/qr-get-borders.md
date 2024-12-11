@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->El comando QR GET BORDERS permite recuperar el estilo del borde de una celda determinada.<!-- END REF--> 
@@ -72,3 +69,13 @@ Si el parámetro *area* es incorrecto, se genera el error -9850.
 #### Ver también 
 
 [QR SET BORDERS](qr-set-borders.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 798 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

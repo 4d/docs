@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->O comando **SET APPLICATION COLOR SCHEME** define o esquema de cores a usar no nível da aplicação para a sessão atual.<!-- END REF--> Este esquema será aplicado a formulários que não declaram um esquema específico (um esquema de cores definido no nível do formulário tem prioridade sobre o nível da aplicação).
@@ -39,3 +36,12 @@ No parâmetro *esquemaCor*, passe um esquema de cores a aplicar:
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [Get application color scheme](get-application-color-scheme.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1762 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

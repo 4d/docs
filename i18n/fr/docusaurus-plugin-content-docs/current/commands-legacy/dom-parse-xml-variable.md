@@ -83,3 +83,13 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML source](dom-parse-xml-source.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 720 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

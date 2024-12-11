@@ -67,3 +67,12 @@ This example generates a password hash using bcrypt with a cost factor 4.
   
 [Generate digest](generate-digest.md)  
 [Verify password hash](verify-password-hash.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1533 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

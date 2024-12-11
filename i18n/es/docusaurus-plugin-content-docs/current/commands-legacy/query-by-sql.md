@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->El comando QUERY BY SQL permite aprovechar directamente el motor SQL integrado de 4D.<!-- END REF--> Este comando puede ejecutar una petición SELECT simple que puede escribirse de esta forma: 
@@ -162,3 +159,15 @@ Si el formato de la condición de búsqueda es correcto, la variable sistema OK 
 #### Ver también 
 
 [QUERY BY FORMULA](query-by-formula.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 942 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

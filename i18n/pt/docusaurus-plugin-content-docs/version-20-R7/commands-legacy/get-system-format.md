@@ -42,3 +42,12 @@ No parâmetro *formato*, passe o tipo do parâmetro do qual queira conhecer o va
 #### Ver também 
 
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 994 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

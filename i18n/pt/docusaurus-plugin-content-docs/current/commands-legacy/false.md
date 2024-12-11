@@ -29,3 +29,12 @@ O exemplo atribui a variável *vbOpcoes* Falso:
 
 [Not](not.md)  
 [True](true.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 215 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

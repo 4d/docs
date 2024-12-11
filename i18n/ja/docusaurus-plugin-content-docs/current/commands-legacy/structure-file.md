@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Structure file.Summary-->**Structure file** コマンドは、現在使用しているデータベースのストラクチャファイルのパス名を返します。<!-- END REF-->
-
-* バイナリーモードのデータベースでは、コマンドは**.4db** ファイルのパス名を返します。
+<!--REF #_command_.Structure file.Summary-->**Structure file** コマンドは、現在使用しているデータベースのストラクチャファイルのパス名を返します。<!-- END REF-->ファイルのパス名を返します。
 * プロジェクトモードのデータベースでは、コマンドは**.** **4dproject** ファイルのパス名を返します。
 
 **注:** データベースがコンパイルされて4D Volume Desktopに統合されている場合、WindowsおよびmacOSでこのコマンドはアプリケーションファイル(実行可能なアプリケーション)のパス名を返します。macOS上では、このファイルはソフトウェアパッケージの中の\[Contents:Mac OS\]フォルダに置かれます。これは以前のメカニズムに起因するものであり、互換性のため保持されています。ソフトウェアパッケージ自体のフルアクセスパスを取得したい場合には、[Application file](application-file.md) コマンドの利用をお勧めします。方法としては、[Application type](application-type.md) コマンドを使用してアプリケーションタイプを調べた後、その結果に応じて**Structure file** または[Application file](application-file.md) を実行します。
@@ -67,3 +65,11 @@ displayed_sidebar: docs
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 489 |
+| スレッドセーフである | &check; |
+
+

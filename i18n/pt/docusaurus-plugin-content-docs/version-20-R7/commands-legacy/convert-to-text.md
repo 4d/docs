@@ -31,3 +31,13 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Do co
 #### Ver também 
 
 [CONVERT FROM TEXT](convert-from-text.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1012 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** changes the currently displayed form page to the form page specified by *pageNumber*.<!-- END REF-->
@@ -51,3 +48,12 @@ The following example is an object method for a button. It displays a specific p
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 247 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

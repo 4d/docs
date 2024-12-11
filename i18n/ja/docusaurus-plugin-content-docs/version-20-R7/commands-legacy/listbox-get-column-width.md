@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get column width.Summary-->LISTBOX Get column width コマンドは、*object*引数および *\** で指定された列の幅（ピクセル単位）を返します。<!-- END REF-->*object*引数には、リストボックスの列や列ヘッダを渡すことができます。
@@ -32,3 +29,12 @@ LISTBOX Get column width は列サイズ変更の制限値を *minWidth* と *ma
 #### 参照 
 
 [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 834 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

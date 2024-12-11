@@ -31,3 +31,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 559 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

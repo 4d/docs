@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB GET ARRAY.Summary-->The **OB GET ARRAY** command retrieves, in *array*, the array of values stored in the *property* of the language object designated by the *object* parameter.<!-- END REF--> 
-
-*object* can be an object variable or a 4D object field.
+<!--REF #_command_.OB GET ARRAY.Summary-->The **OB GET ARRAY** command retrieves, in *array*, the array of values stored in the *property* of the language object designated by the *object* parameter.<!-- END REF-->can be an object variable or a 4D object field.
 
 In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive.
 
@@ -53,3 +51,12 @@ We want to change a value in the first element of the array:
 
 [OB SET ARRAY](ob-set-array.md)  
 *Type conversions between collections and 4D arrays*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1229 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

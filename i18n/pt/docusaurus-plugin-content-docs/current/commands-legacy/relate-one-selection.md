@@ -58,3 +58,14 @@ A seguinte técnica utiliza **RELATE ONE SELECTION** para obter o mesmo resultad
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 349 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

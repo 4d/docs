@@ -50,3 +50,14 @@ L'exemple suivant envoie des lettres aux 50 plus mauvais clients puis aux 50 mei
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 350 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

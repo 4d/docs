@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->La commande **LISTBOX GET GRID** retourne le statut affiché/masqué des lignes horizontales et/ou verticales composant la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -30,3 +27,12 @@ La commande retourne dans les paramètres *horizontal* et *vertical* la valeur *
 #### Voir aussi 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1199 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -61,3 +61,13 @@ In all cases:
 * 01/25/2007 means January 25, 2007
 
 This command only affects data entry. It has no effect on date storage, computation, and so on.
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 392 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

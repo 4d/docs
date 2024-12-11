@@ -36,3 +36,13 @@ You want to check that the Web server is running:
     ... //do appropriate actions
  End if
 ```
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1313 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

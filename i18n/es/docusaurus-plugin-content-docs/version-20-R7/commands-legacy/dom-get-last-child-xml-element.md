@@ -43,3 +43,13 @@ Si el comando se ejecutó correctamente, la variable sistema OK toma el valor 1\
 #### Ver también 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 925 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

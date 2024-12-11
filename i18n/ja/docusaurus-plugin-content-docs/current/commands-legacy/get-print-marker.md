@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get print marker.Summary-->Get print marker コマンドを使用し、印刷中にマーカの現在位置を取得することができます。<!-- END REF-->
@@ -64,3 +61,12 @@ displayed_sidebar: docs
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 708 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

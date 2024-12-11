@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->GET FIELD TITLES コマンドを使用して、目的の *table* に対してデータベースフィールドの名前と番号を配列 *fieldTitles* と *fieldNums* に受け取ります。<!-- END REF-->これら2つの配列内容は同期化されています。
@@ -29,3 +26,12 @@ displayed_sidebar: docs
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 804 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

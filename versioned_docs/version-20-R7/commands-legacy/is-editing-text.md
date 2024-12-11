@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Is editing text.Summary-->The **Is editing text** command returns **True** if the user is entering values in an input form object, and **False** in all other cases.<!-- END REF--> 
@@ -61,3 +58,12 @@ You want to allow the user to select a row beginning with the typed letter or nu
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
 [Type ahead made easy (blog post)](https://blog.4d.com/type-ahead-made-easy/)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1744 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

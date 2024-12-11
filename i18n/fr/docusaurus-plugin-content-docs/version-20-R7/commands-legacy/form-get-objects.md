@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->La commande **FORM GET OBJECTS** retourne sous forme de tableau(x) la liste de tous les objets présents dans le formulaire courant.<!-- END REF--> Cette liste peut être restreinte à la page courante du formulaire et peut exclure les objets des formulaires hérités. La commande peut être utilisée avec les formulaires entrée et sortie. 
@@ -122,3 +119,12 @@ Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des 
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Objets (Formulaires)*  
 *Objets de formulaire (Accès)*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 898 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

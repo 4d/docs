@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->OLD RELATED ONEは、リレーションを実行する際に*aField*の古い値を使用することを除き、[RELATE ONE](relate-one.md "RELATE ONE")と同じ処理を行います。<!-- END REF-->
@@ -34,3 +31,13 @@ OLD RELATED ONEは、更新前のカレントレコードの内容にリレー�
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 [SAVE RELATED ONE](save-related-one.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 44 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

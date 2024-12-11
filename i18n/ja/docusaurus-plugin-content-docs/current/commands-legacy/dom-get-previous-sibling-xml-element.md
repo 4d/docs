@@ -34,3 +34,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 924 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

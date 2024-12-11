@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET PRINTABLE MARGIN.Summary-->El comando GET PRINTABLE MARGIN devuelve los valores actuales de los diferentes márgenes definidos utilizando los comandos [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) y [PRINT RECORD](print-record.md).<!-- END REF--> 
@@ -46,3 +43,12 @@ Es posible basar la impresión de los formularios efectuados utilizando los coma
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 711 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

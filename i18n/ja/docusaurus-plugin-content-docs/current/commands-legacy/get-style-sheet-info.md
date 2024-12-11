@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->**GET STYLE SHEET INFO**コマンドは、*styleSheetName*パラメーターで指定したスタイルシートの現在の構成を返します。<!-- END REF--> 
@@ -67,3 +64,13 @@ displayed_sidebar: docs
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1256 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

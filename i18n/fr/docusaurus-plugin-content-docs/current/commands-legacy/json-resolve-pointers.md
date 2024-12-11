@@ -231,3 +231,12 @@ Si vous exécutez :
 #### Voir aussi 
 
   
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1478 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

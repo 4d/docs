@@ -62,3 +62,13 @@ No método de projeto STATS, escreva o código abaixo:
 ```
 
 Pode enviar a página "stats.shtm" utilizando um link URL ou utilizando o comando [WEB SEND FILE](web-send-file.md).
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 658 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

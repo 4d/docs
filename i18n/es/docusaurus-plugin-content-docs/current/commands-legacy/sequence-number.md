@@ -59,3 +59,12 @@ El siguiente ejemplo es parte de un método de formulario. Estas líneas de cód
 *Acerca de números de registros*  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 244 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

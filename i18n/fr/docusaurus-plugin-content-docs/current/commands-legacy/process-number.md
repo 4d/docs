@@ -65,3 +65,12 @@ Avec cette fonction, la méthode projet listée ci-dessous colle le texte reçu 
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 372 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

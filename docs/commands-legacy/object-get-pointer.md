@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->The **OBJECT Get pointer** command returns a pointer to the variable of a form object.<!-- END REF--> 
@@ -58,3 +55,12 @@ Given a form "SF" used twice as a subform in the same parent form. The subform o
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
 *Objects (Forms)*  
 [Self](self.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1124 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

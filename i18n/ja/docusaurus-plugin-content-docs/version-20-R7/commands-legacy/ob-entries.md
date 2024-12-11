@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OB Entries.Summary-->**OB Entries** コマンドは*object* 引数で指定したオブジェクトのコンテンツを、キー/値のペアとして格納したオブジェクトのコレクションを返します。<!-- END REF-->
@@ -57,3 +54,12 @@ displayed_sidebar: docs
 
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1720 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Summary-->The **LISTBOX SET ROWS HEIGHT** command allows you to modify by programming the row height in the list box object set using the *object* and *\** parameters.<!-- END REF--> 
@@ -39,3 +36,12 @@ By default, if you omit the *unit* parameter, the height is expressed in pixels.
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 835 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -44,3 +44,12 @@ displayed_sidebar: docs
 
 [HTTP AUTHENTICATE](http-authenticate.md)  
 [HTTP GET OPTION](http-get-option.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1160 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

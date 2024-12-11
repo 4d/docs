@@ -24,3 +24,12 @@ Se já existe um registro relacionado, CREATE RELATED ONE atua como [RELATE ONE]
 #### Ver também 
 
 [SAVE RELATED ONE](save-related-one.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 65 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

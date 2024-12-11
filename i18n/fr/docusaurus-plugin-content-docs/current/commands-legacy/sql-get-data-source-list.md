@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->La commande **SQL GET DATA SOURCE LIST** retourne dans les tableaux *tabNomsSources* et *tabPilotes* les noms et les pilotes des sources de données de type *typeSource* définies dans le gestionnaire ODBC du système d’exploitation.<!-- END REF-->
@@ -56,3 +53,13 @@ Si la commande est correctement exécutée, la variable système OK prend la val
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 989 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

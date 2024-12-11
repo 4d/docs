@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Select RGB Color.Summary-->**Select RGB Color**コマンドはシステムカラー選択ウィンドウを表示し、ユーザによって選択された色のRGB値を返します。<!-- END REF-->
@@ -43,3 +40,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 956 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

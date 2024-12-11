@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->El comando SCREEN DEPTH devuelve en los parámetros *profundidad* y *color* la información sobre el monitor.<!-- END REF--> 
@@ -61,3 +58,13 @@ Su aplicación muestra varios gráficos a color. Puede escribir en alguna parte 
 #### Ver también 
 
 [Count screens](count-screens.md)  
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 439 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

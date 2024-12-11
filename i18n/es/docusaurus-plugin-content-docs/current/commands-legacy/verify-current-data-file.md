@@ -42,3 +42,13 @@ Si el método de retrollamada no existe, la verificación no se efectúa, se gen
 #### Ver también 
 
 [VERIFY DATA FILE](verify-data-file.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1008 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, Document, error |
+| Prohibido en el servidor ||
+
+

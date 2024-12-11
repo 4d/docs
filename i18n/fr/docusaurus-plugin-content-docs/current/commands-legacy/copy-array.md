@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.COPY ARRAY.Summary-->La commande **COPY ARRAY** crée ou remplace le tableau *destination* avec les mêmes contenu, taille et type que le tableau *source*.<!-- END REF-->
-
-**Note** : Pour les tableaux numériques de différents types, le type du tableau de destination est conservé.
+<!--REF #_command_.COPY ARRAY.Summary-->La commande **COPY ARRAY** crée ou remplace le tableau *destination* avec les mêmes contenu, taille et type que le tableau *source*.<!-- END REF-->: Pour les tableaux numériques de différents types, le type du tableau de destination est conservé.
 
 Les tableaux *source* et *destination* peuvent être des tableaux locaux, process ou interprocess. La portée du tableau n'a pas d'importance lors de la duplication des tableaux.
 
@@ -36,3 +34,13 @@ L'exemple suivant remplit un tableau C. Un nouveau tableau, "D", est ensuite cr�
  SELECTION TO ARRAY([Contacts]Société;C) // Remplir le tableau C avec les données du champ
  COPY ARRAY(C;D) // Copier le tableau C dans le tableau D
 ```
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 226 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

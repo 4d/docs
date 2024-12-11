@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->The **GET PICTURE FROM LIBRARY** command returns in the *picture* parameter the Picture Library graphic whose reference number is passed in *picRef* or whose name is passed in *picName*.<!-- END REF-->
@@ -56,3 +53,13 @@ If there is not enough memory to return the picture, an error -108 is generated.
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 565 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

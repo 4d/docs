@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR Get drop column.Summary-->QR Get drop column コマンドは、ドロップ動作が行われた場所の値を返します。<!-- END REF-->
@@ -29,3 +26,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 747 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

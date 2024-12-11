@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->La commande **QR EXECUTE COMMAND** exécute la commande de bouton de la barre d'outils dont la référence est passée dans le paramètre *numCommande*.<!-- END REF--> En général, cette commande est utilisée pour exécuter une commande de menu sélectionnée par l'utilisateur et interceptée dans votre code via la commande [QR ON COMMAND](qr-on-command.md).
@@ -40,3 +37,13 @@ Si le paramètre *numCommande* est incorrect, l’erreur -9852 est générée.
 
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 791 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

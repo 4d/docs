@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get format.Summary-->El comando OBJECT Get format devuelve el formato de salida actual aplicado al objeto especificado en el parámetro *objeto*.<!-- END REF-->
@@ -66,3 +63,12 @@ Customized formats are returned untouched:
 #### Ver también 
 
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 894 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

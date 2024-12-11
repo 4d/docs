@@ -46,3 +46,13 @@ O seguinte exemplo arquiva os registros que tem mais de 30 dias. Esta operação
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 68 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Proibido no servidor ||
+
+

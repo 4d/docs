@@ -49,3 +49,12 @@ Este exemplo mostra um alerta. Este método passa um ponteiro a um campo:
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 257 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

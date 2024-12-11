@@ -39,3 +39,13 @@ Exemplos de uso:
   // Lista dos métodos projeto da base local que começam por uma cadeia específica
  METHOD GET NAMES(t_Names;"web_@";*)
 ```
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1166 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

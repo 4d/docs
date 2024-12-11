@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR Get command status.Summary-->O comando QR Get command status devolve 0 se o *comando* estiver inativo ou 1 se estiver ativo.<!-- END REF-->  
@@ -39,3 +36,13 @@ Se o parâmetro *comando* for incorreto, se gera o erro -9852.
 
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR ON COMMAND](qr-on-command.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 792 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

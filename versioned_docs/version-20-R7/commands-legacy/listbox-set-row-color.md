@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -66,3 +63,12 @@ In an array type list box, we want to set colors for a row and for one cell in t
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1270 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -28,3 +28,13 @@ QUERY SELECTION WITH ARRAYは[QUERY WITH ARRAY](query-with-array.md "QUERY WITH 
 #### 参照 
 
 [QUERY WITH ARRAY](query-with-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1050 |
+| スレッドセーフである | &check; |
+| カレントセレクションを変更する ||
+| サーバー上での使用は不可 ||
+
+

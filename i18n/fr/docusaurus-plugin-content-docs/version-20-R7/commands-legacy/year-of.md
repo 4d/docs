@@ -38,3 +38,12 @@ Reportez-vous à l'exemple de la fonction [Current date](current-date.md).
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 25 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

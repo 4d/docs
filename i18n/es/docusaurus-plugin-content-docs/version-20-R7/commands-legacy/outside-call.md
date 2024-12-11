@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Outside call.Summary-->**Outside call** devuelve True para el ciclo de ejecución After.<!-- END REF--> 
@@ -28,3 +25,12 @@ Para que se genere el ciclo de ejecución **Outside call**, asegúrese de que la
 
 [Form event code](form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 328 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

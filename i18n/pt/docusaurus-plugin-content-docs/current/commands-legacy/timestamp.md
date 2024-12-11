@@ -42,3 +42,12 @@ Resultado:
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1445 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

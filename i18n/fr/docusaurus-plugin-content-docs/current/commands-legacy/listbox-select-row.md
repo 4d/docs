@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->La commande **LISTBOX SELECT ROW** provoque la sélection de la ligne de numéro *positionLigne* dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
@@ -55,3 +52,12 @@ A l’issue de l’exécution de la méthode, les tableaux sont synchronisés : 
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 912 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

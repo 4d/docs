@@ -25,3 +25,12 @@ The Count user processes function returns the number of processes opened directl
 
 [Count tasks](count-tasks.md)  
 [Count users](count-users.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 343 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

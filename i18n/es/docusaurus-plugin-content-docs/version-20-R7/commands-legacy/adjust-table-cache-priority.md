@@ -51,3 +51,12 @@ Usted desea cambiar temporalmente la prioridad de la caché de los campos escala
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1429 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

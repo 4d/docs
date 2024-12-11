@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Contextual click.Summary-->O comando Contextual click retorna Verdadeiro se foi realizado um clique contextual:
@@ -43,3 +40,12 @@ Este método, combinado com uma área de rolagem, lhe permite modificar o valor 
 
 [Form event code](form-event-code.md)  
 [Right click](right-click.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 713 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

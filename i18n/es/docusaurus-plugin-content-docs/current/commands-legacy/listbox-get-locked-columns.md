@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->El comando **LISTBOX Get locked columns** devuelve el número de columnas bloqueadas en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  
@@ -32,3 +29,12 @@ displayed_sidebar: docs
 #### Ver también 
 
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1152 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.VERIFY DATA FILE.Summary-->El comando VERIFY DATA FILE efectúa una verificación estructural de los objetos contenidos en el archivo de datos 4D designado por *rutaEstructura* y *rutaDatos*.<!-- END REF-->
-
-**Nota:** para mayor información sobre el proceso de verificación de datos, consulte el Manual de Diseño. *rutaEstructura* designa el archivo de estructura (compilado o no) asociado con el archivo de datos a verificar. Puede tratarse del archivo de estructura abierto o de cualquier otro archivo de estructura. Usted debe pasar un nombre de ruta completo, expresado con la sintaxis del sistema operativo. También puede pasar una cadena vacía, en este caso aparece una caja de diálogo estándar de apertura de archivos que permite al usuario designar el archivo de estructura a utilizar.
+<!--REF #_command_.VERIFY DATA FILE.Summary-->El comando VERIFY DATA FILE efectúa una verificación estructural de los objetos contenidos en el archivo de datos 4D designado por *rutaEstructura* y *rutaDatos*.<!-- END REF-->para mayor información sobre el proceso de verificación de datos, consulte el Manual de Diseño. *rutaEstructura* designa el archivo de estructura (compilado o no) asociado con el archivo de datos a verificar. Puede tratarse del archivo de estructura abierto o de cualquier otro archivo de estructura. Usted debe pasar un nombre de ruta completo, expresado con la sintaxis del sistema operativo. También puede pasar una cadena vacía, en este caso aparece una caja de diálogo estándar de apertura de archivos que permite al usuario designar el archivo de estructura a utilizar.
 
 *rutaDatos* designa un archivo de datos 4D (.4DD). Debe corresponder al archivo de estructura definido por el parámetro *rutaEstructura*. Atención, usted puede designar el archivo de estructura actual pero el archivo de datos no debe ser el archivo actual (abierto). Para verificar el archivo de datos está abierto actualmente, utilice el comando [VERIFY CURRENT DATA FILE](verify-current-data-file.md). Si intenta verificar el archivo de datos actual con el comando VERIFY DATA FILE, se genera un error.
 
@@ -170,3 +168,13 @@ Si el método de retrollamada no existe, la verificación no se efectúa, se gen
 #### Ver también 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 939 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, Document, error |
+| Prohibido en el servidor ||
+
+

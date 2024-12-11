@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.DELETE MENU ITEM.Summary-->El comando DELETE MENU ITEM elimina la línea de menú cuyo número o referencia de menú y número de elemento usted pasó en *menu* y *menuItem*.<!-- END REF--> Puede pasar -1 en *menuItem* para indicar el último elemento añadido a *menu.*
@@ -36,3 +33,12 @@ Si omite el parámetro *proceso*, DELETE MENU ITEM se aplica a la barra de menú
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 413 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Time.Summary-->Time コマンドは、*timeValue* 引数で指定した時間に相当する時間表示を返します。<!-- END REF--> 
-
-*timeValue* 引数には以下のものを渡す事ができます。
+<!--REF #_command_.Time.Summary-->Time コマンドは、*timeValue* 引数で指定した時間に相当する時間表示を返します。<!-- END REF-->引数には以下のものを渡す事ができます。
 
 * システムの言語に対応している4D標準の時間フォーマットで表された時刻を含んでいる文字列(詳細な情報については[String](string.md) を参照して下さい)。
 * 00:00:00を経過した秒数を表す倍長整数
@@ -51,3 +49,12 @@ displayed_sidebar: docs
 [String](string.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 179 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

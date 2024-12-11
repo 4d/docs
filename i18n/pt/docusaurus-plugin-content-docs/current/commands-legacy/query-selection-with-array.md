@@ -28,3 +28,13 @@ Para maior informação, consulte a descrição do comando [QUERY WITH ARRAY](qu
 #### Ver também 
 
 [QUERY WITH ARRAY](query-with-array.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1050 |
+| Thread-seguro | &check; |
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

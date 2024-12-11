@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->El comando EXECUTE ON CLIENT provoca la ejecución del método *nomMetodo*, con los parámetros *param1.<!-- END REF-->.. paramN*, si es necesario, en el cliente 4D registrado cuyo nombre es *nomCliente*. El nombre registrado del cliente 4D es definido por el comando [REGISTER CLIENT](register-client.md "REGISTER CLIENT").   
@@ -62,3 +59,12 @@ Consulte el ejemplo del comando [REGISTER CLIENT](register-client.md "REGISTER C
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 651 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

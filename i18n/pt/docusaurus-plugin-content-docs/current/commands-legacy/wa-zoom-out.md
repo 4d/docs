@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->O comando WA ZOOM OUT reduz o tamanho do texto mostrado no área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> 
@@ -28,3 +25,12 @@ Em Windows, o alcance deste comando é global: a configuração se conserva depo
 #### Ver também 
 
 [WA ZOOM IN](wa-zoom-in.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1040 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

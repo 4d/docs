@@ -33,3 +33,12 @@ In *xmlInfo*, pass a code indicating the type of information to be retrieved. Yo
 #### See also 
 
 [XML GET ERROR](xml-get-error.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 721 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

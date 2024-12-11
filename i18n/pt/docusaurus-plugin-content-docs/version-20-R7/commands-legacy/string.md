@@ -174,3 +174,12 @@ Se a expressão for avaliada como Null, o comando devolve a string "null". Isto 
 [Num](num.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 10 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

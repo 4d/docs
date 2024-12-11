@@ -30,3 +30,12 @@ Siempre y cuando se haya definido una tabla por defecto, la siguiente línea de 
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 363 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

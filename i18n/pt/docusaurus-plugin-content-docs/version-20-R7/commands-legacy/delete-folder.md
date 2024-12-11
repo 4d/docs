@@ -42,3 +42,13 @@ Pode interceptar estes erros usando o método isntalado pelo comando [ON ERR CAL
 
   
 [DELETE DOCUMENT](delete-document.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 693 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+| Proibido no servidor ||
+
+

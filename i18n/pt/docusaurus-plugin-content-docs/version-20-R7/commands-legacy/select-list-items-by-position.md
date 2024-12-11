@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->O comando SELECT LIST ITEMS BY POSITION seleciona os elementos cuja posição se passa em *posiçaoElem* e opcionalmente em *posiçao* *Array* na lista cujo número de referência ou nome de objeto é passada em *lista*.<!-- END REF-->
@@ -75,3 +72,12 @@ São selecionados os elementos segundo, terceiro e quinto da lista hierárquica
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 381 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

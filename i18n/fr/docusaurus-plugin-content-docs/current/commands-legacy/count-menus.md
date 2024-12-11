@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Count menus.Summary-->La commande **Count menus** retourne le nombre de menus présents dans la barre de menus.<!-- END REF-->
@@ -26,3 +23,12 @@ Si vous omettez le paramètre *process*, **Count menus** s'applique à la barre 
 #### Voir aussi 
 
 [Count menu items](count-menu-items.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 404 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

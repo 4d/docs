@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->O comando PRINTERS LIST preenche os arrays passados como parâmetros com os nomes e opcionalmente com a localização os nomes personalizados e os modelos de impressão disponíveis para a máquina.<!-- END REF-->
@@ -47,3 +44,13 @@ A variável sistema OK toma o valor 1 se o comando tiver sido executado corretam
 
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 789 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

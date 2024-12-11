@@ -46,3 +46,13 @@ DocType文は書かれたXMLのタイプを示し、使用される Document Typ
 #### 参照 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 851 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+| サーバー上での使用は不可 ||
+
+

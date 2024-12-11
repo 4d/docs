@@ -58,3 +58,13 @@ Um erro é gerado quando:
 #### Ver também 
 
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 867 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+| Proibido no servidor ||
+
+

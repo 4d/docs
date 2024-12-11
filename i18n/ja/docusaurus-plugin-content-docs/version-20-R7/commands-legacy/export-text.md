@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->EXPORT TEXT コマンドは、カレントプロセスにおける*aTable*のカレントセレクションのレコードをディスクに書き出します。<!-- END REF-->このデータは*document*に書き込まれます。*document*は、WindowsまたはMacintoshのテキストドキュメントです。
@@ -54,3 +51,13 @@ EXPORT TEXT を使用する際、デフォルトのフィールド区切り文�
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 167 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

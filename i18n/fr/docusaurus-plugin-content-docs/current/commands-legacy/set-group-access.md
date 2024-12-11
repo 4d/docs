@@ -43,3 +43,12 @@ Vous souhaitez ajouter l'utilisateur courant aux groupes "admin" et "plugins" da
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1737 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

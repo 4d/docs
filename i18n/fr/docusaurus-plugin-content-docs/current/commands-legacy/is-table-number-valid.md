@@ -24,3 +24,12 @@ Cette commande permet de détecter d’éventuelles suppressions de tables, ce q
 
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 999 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

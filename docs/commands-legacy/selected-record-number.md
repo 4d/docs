@@ -35,3 +35,12 @@ The following example saves the current selected record number in a variable:
 *About Record Numbers*  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 246 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

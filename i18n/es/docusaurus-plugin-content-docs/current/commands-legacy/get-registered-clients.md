@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->El comando GET REGISTERED CLIENTS llena dos arrays:
@@ -49,3 +46,13 @@ Si la operación se realiza correctemente, la variable sistema OK toma el valor 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 650 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

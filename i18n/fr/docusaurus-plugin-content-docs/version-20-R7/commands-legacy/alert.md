@@ -67,3 +67,12 @@ Ce code affiche la boîte de dialogue d'alerte suivante :
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 41 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

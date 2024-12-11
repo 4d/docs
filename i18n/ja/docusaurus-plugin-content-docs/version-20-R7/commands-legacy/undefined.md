@@ -59,3 +59,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [CLEAR VARIABLE](clear-variable.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 82 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

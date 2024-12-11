@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->**BRING TO FRONT** passe les fenêtres du process de numéro *process* au premier plan.<!-- END REF--> Toutes les fenêtres appartenant à *process* passent au premier plan. Si le process est déjà au premier plan, la commande ne fait rien. Si le process est caché, il faut utiliser la commande [SHOW PROCESS](show-process.md) pour faire d'abord apparaître le process, sinon **BRING TO FRONT** ne fait rien.
@@ -39,3 +36,12 @@ L'exemple suivant est une méthode qui peut être exécutée à partir d'une com
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 326 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

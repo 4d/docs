@@ -82,3 +82,12 @@ Un formulaire “Demande de certificat” comporte les six champs nécessaires �
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 691 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

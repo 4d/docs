@@ -108,3 +108,12 @@ Here is an example of a 2D array pointer:
 [Is a variable](is-a-variable.md)  
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 394 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

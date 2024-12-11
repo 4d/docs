@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->O comando WA EXECUTE JAVASCRIPT FUNCTION executa, na área Web designada pelos parâmetros *\** e *objeto*, a função JavaScript *funcaoJS* retorna opcionalmente seu resultado no parâmetro *resultado*.<!-- END REF--> 
@@ -60,3 +57,12 @@ A função JavaScript "getCustomerInfo" recebe um número ID como parâmetro e d
 #### Ver também 
 
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1043 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

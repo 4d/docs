@@ -87,3 +87,12 @@ El siguiente ejemplo le permite seleccionar la carpeta en la cual se almacenará
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 670 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+
+

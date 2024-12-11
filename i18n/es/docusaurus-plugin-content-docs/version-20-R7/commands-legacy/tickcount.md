@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Tickcount.Summary-->Tickcount devuelve el número de tics (1 tic = 1 / 60avo de un segundo) pasados desde que se inició el equipo.<!-- END REF-->
-
-**Nota:** Tickcount devuelve un valor de tipo Entero largo.
+<!--REF #_command_.Tickcount.Summary-->Tickcount devuelve el número de tics (1 tic = 1 / 60avo de un segundo) pasados desde que se inició el equipo.<!-- END REF-->Tickcount devuelve un valor de tipo Entero largo.
 
 #### Ejemplo 
 
@@ -27,3 +25,12 @@ Ver el ejemplo del comando [Milliseconds](milliseconds.md "Milliseconds").
 
 [Current time](current-time.md)  
 [Milliseconds](milliseconds.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 458 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

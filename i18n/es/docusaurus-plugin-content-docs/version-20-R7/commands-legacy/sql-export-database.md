@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->El comando SQL EXPORT DATABASE exporta al formato SQL todos los registros de todas las tablas de la base.<!-- END REF--> En SQL, esta operación de exportación global se llama "Dump".
@@ -58,3 +55,13 @@ Si la exportación se realiza correctamente, la variable OK toma el valor 1\. De
 #### Ver también 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1065 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

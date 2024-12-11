@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->The SCREEN DEPTH command returns in *depth* and *color* information about the monitor.<!-- END REF--> 
@@ -61,3 +58,13 @@ Your application displays many color graphics. Somewhere in your database, you c
 #### See also 
 
 [Count screens](count-screens.md)  
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 439 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

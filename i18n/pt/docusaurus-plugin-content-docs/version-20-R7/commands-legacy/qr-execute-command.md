@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->O comando **QR EXECUTE COMMAND** executa o comando de menu ou o botão da barra de ferramentas cuja referência se passa em *comando*.<!-- END REF--> Este comando é utilizado geralmente para executar um comando de menu selecionado pelo usuário e interceptado em seu código através do comando [QR ON COMMAND](qr-on-command.md)
@@ -45,3 +42,13 @@ Se passa um número de *comando* incorreto, se gera o erro -9852.
 
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 791 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

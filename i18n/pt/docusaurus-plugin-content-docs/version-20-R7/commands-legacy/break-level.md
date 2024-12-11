@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->BREAK LEVEL especifica o número de níveis de quebra em um relatório realizado utilizando [PRINT SELECTION](print-selection.md).<!-- END REF-->
@@ -47,3 +44,12 @@ O exemplo a seguir imprime um relatório com dois níveis de quebra. A seleção
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 302 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

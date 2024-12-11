@@ -61,3 +61,13 @@ El siguiente método de objeto del área desplegable *atNames* selecciona el reg
 #### Ver también 
 
 [Selected record number](selected-record-number.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 245 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Prohibido en el servidor ||
+
+

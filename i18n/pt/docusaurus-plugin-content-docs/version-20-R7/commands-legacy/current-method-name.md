@@ -45,3 +45,13 @@ Este comando não pode ser chamado desde uma fórmula 4D.
 ```4d
 
 ```
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 684 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

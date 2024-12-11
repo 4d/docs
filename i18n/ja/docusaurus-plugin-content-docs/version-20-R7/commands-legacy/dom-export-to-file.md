@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DOM EXPORT TO FILE.Summary-->DOM EXPORT TO FILE コマンドは、XMLツリーをディスク上のファイルに格納します。<!-- END REF-->
-
-*elementRef* 引数には書き出すXMLのルート要素参照を渡します。
+<!--REF #_command_.DOM EXPORT TO FILE.Summary-->DOM EXPORT TO FILE コマンドは、XMLツリーをディスク上のファイルに格納します。<!-- END REF-->引数には書き出すXMLのルート要素参照を渡します。
 
 *filePath*には使用する、または作成するファイルのフルパスを渡します。ファイルが存在しない場合は作成されます。 
 
@@ -58,3 +56,13 @@ XMLにおいて、改行はそれがXML要素の内側あるいは間いずれ�
 
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 862 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+| サーバー上での使用は不可 ||
+
+

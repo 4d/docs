@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SET DOCUMENT POSITION.Summary-->Cette commande ne fonctionne qu'avec un document déjà ouvert, dont vous avez passé le numéro de référence dans le paramètre *docRef*.<!-- END REF-->
-
-**SET DOCUMENT POSITION** définit la position que vous passez dans *offset* comme étant celle à laquelle la prochaine lecture ([RECEIVE PACKET](receive-packet.md)) ou écriture ([SEND PACKET](send-packet.md)) aura lieu.
+<!--REF #_command_.SET DOCUMENT POSITION.Summary-->Cette commande ne fonctionne qu'avec un document déjà ouvert, dont vous avez passé le numéro de référence dans le paramètre *docRef*.<!-- END REF-->définit la position que vous passez dans *offset* comme étant celle à laquelle la prochaine lecture ([RECEIVE PACKET](receive-packet.md)) ou écriture ([SEND PACKET](send-packet.md)) aura lieu.
 
 Si vous omettez le paramètre optionnel *ancre*, la position est définie par rapport au début du document. Sinon, vous pouvez passer dans le paramètre *ancre* une des valeurs listées ci-dessus. 
 
@@ -30,3 +28,12 @@ En fonction de l'*ancre* définie, vous pouvez passer des valeurs positives ou n
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 482 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

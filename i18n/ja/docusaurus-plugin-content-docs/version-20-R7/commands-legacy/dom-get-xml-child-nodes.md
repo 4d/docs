@@ -62,3 +62,12 @@ $typeArrと$textArr配列には以下の値が含まれます:
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1081 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

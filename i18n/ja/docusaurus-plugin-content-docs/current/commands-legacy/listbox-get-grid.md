@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->**LISTBOX GET GRID**コマンドは*object* と *\** 引数で指定したリストボックスオブジェクトの縦横グリッド線の表示/非表示状態をそれぞれ返します。<!-- END REF-->
@@ -30,3 +27,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1199 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

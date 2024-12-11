@@ -53,3 +53,13 @@ Imagettes résultantes (48x48)
 **Note :** Avec les modes “Proportionnelle” et “Proportionnelle centrée”, les espaces vides apparaîtront blancs dans les imagettes — lorsque ces modes sont appliqués aux champs ou variables images dans les formulaires 4D, les espaces vides sont transparents. 
 
 Le paramètre *profondeur* est ignoré et doit être omis. La commande utilise toujours la profondeur écran (nombre de couleurs) courante. 
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 679 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

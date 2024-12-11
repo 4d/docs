@@ -69,3 +69,12 @@ L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évalua
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 233 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

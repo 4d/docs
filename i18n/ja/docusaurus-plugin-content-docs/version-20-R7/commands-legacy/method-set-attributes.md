@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->**METHOD SET ATTRIBUTES** コマンドは、*path* 引数で指定したメソッドの、*attributes* 引数で指定した値を設定することができます。<!-- END REF-->
@@ -54,3 +51,12 @@ displayed_sidebar: docs
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1335 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get cache size.Summary-->La commande **Get cache size** retourne, en octets, la taille courante du cache de la base de données.<!-- END REF-->
-
-**Note :** Cette commande fonctionne uniquement en mode local (4D Server et 4D) ; elle ne doit pas être utilisée avec 4D en mode accès distant.
+<!--REF #_command_.Get cache size.Summary-->La commande **Get cache size** retourne, en octets, la taille courante du cache de la base de données.<!-- END REF-->Cette commande fonctionne uniquement en mode local (4D Server et 4D) ; elle ne doit pas être utilisée avec 4D en mode accès distant.
 
 #### Exemple 
 
@@ -26,3 +24,12 @@ Voir l'exemple de la commande [SET CACHE SIZE](set-cache-size.md).
 #### Voir aussi 
 
 [SET CACHE SIZE](set-cache-size.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1432 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

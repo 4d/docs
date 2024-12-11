@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->O comando **METHOD OPEN PATH** abre, no editor de métodos de 4D, o método cuja rota de acesso interna é passada no parâmetro *rota*.<!-- END REF-->
@@ -32,3 +29,12 @@ Pode executar este comando desde um componente, mas neste caso, deve passar o pa
 
 *Design Object Access Commands*  
 [METHOD Get path](method-get-path.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1213 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -25,3 +25,12 @@ displayed_sidebar: docs
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 320 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

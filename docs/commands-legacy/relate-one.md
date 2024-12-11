@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.RELATE ONE.Summary-->**RELATE ONE** has two forms.<!-- END REF-->
@@ -91,3 +88,15 @@ If the command has been executed correctly and if the related records have been 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 42 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Changes current record ||
+| Changes current selection ||
+| Forbidden on the server ||
+
+

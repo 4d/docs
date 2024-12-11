@@ -41,3 +41,12 @@ You want to drop a specific remote user:
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1633 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

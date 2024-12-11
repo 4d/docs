@@ -60,3 +60,12 @@ Este exemplo cria um array local de 100 filas, contendo cada uma 50 elementos de
 #### Ver também 
 
 *Criando arrays*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1222 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

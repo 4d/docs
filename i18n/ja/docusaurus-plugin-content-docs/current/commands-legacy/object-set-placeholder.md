@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->**OBJECT SET PLACEHOLDER**コマンドは、引数 *object* と *\** で指定したオブジェクトにプレースホルダーテキストを関連付けます。<!-- END REF-->
@@ -48,3 +45,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1295 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

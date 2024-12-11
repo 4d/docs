@@ -55,3 +55,12 @@ Desea exportar la estructura actual de la base de datos en formato html:
 #### Ver también 
 
 [IMPORT STRUCTURE](import-structure.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1311 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->El comando FORM SET SIZE le permite cambiar el tamaño del formulario actual por programación.<!-- END REF--> El nuevo tamaño es definido por el proceso actual; no está almacenado con el formulario.
@@ -124,3 +121,12 @@ El método de objeto asociado con este botón es el siguiente:
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 891 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

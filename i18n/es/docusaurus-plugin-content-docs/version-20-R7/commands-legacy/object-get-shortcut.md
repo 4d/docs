@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->El comando **OBJECT GET SHORTCUT** devuelve el atajo de teclado asociado al objeto o a los objetos designados por los parámetros *objeto* y *\** en el proceso actual.<!-- END REF-->  
@@ -44,3 +41,12 @@ Si ninguna tecla de modificación se ha definido para el atajo, modificadores de
 #### Ver también 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1186 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

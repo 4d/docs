@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->GET PICTURE FROM PASTEBOARD devolve a imagem presente na área de transferência no campo ou variável imagem *imagem*.<!-- END REF-->
@@ -43,3 +40,13 @@ Se a imagem for extraída corretamente, OK toma o valor 1; do contrário OK toma
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 522 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

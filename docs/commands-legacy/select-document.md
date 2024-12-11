@@ -96,3 +96,13 @@ If no file was selected (for example, if the user clicked on the **Cancel** butt
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 905 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document, error |
+| Forbidden on the server ||
+
+

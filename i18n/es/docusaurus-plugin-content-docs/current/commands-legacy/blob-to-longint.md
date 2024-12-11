@@ -58,3 +58,12 @@ El siguiente ejemplo lee 20 valores de tipo entero largo de un BLOB, a partir de
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 551 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -62,3 +62,13 @@ Este es un ejemplo que permite verificar la existencia de un valor:
 ```
 
 Tenga en cuenta >= permite cubrir todos los casos. De hecho, la función devuelve un número de registro y el primer registro tiene el número 0.
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 653 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

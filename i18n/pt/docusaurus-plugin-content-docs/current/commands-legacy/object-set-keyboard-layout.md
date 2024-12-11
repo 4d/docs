@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->O comando **OBJECT SET KEYBOARD LAYOUT** permite definir ou modificar dinamicamente a configuração de teclado associada ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
@@ -29,3 +26,12 @@ Em *codigoLing*, passe uma cadeia indicando o código de linguagem a utilizar, b
 #### Ver também 
 
 [OBJECT Get keyboard layout](object-get-keyboard-layout.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1179 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

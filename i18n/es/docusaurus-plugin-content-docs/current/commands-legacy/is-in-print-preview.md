@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Is in print preview.Summary-->El comando **Is in print preview** devuelve True si la opción **Vista previa de impresión** está seleccionada en la caja de diálogo de impresión y False de lo contrario.<!-- END REF--> Esta configuración es local al proceso. 
@@ -47,3 +44,12 @@ Este ejemplo permite tener en cuenta todos los tipos de impresiones:
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1198 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

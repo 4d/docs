@@ -45,3 +45,13 @@ Se as variáveis são carregadas corretamente, a variável sistema OK assume o v
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 74 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, Document |
+| Proibido no servidor ||
+
+

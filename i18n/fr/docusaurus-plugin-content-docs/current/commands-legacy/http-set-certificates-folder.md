@@ -56,3 +56,12 @@ Vous souhaitez changer temporairement de dossier de certificats :
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1306 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

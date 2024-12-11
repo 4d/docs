@@ -32,3 +32,12 @@ You want to call a worker and pass the calling process name as parameter:
 *About workers*  
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1392 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Get menu title.Summary-->O comando Get menu title devolve o título do menu cujo número ou referência é passada em *menu.<!-- END REF-->*  
@@ -29,3 +26,12 @@ Se omite o parâmetro *processo*, Get menu title é aplicado à barra de menus d
 #### Ver também 
 
 [Count menus](count-menus.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 430 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

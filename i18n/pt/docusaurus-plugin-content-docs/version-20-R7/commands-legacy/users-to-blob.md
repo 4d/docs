@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Nota de compatibilidade*: este comando só funciona em bancos de dados binários.<!-- END REF--> Sempre devolve um BLOB vazio em projetos.*
@@ -34,3 +31,13 @@ Este conceito permite conservar um backup de usuários no banco e implementar um
 #### Ver também 
 
 [BLOB TO USERS](blob-to-users.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 849 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+| Proibido no servidor ||
+
+

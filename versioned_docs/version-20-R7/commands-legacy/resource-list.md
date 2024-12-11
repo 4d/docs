@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->The **RESOURCE LIST** command populates the arrays *resIDs* and *resNames* with the resource IDs and names of the resources whose type is passed in *resType*.<!-- END REF-->
@@ -72,3 +69,12 @@ The following example copies the picture resources present in all currently open
 #### See also 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 500 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

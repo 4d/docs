@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->La commande **OBJECT GET RGB COLORS** retourne les couleurs d’avant-plan et d’arrière-plan de l'objet ou du groupe d'objets désigné(s) par *objet*.<!-- END REF-->
@@ -38,3 +35,12 @@ Pour plus d’informations sur le format des paramètres *couleurAvantPlan*, *co
 #### Voir aussi 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1074 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

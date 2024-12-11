@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->La commande **DELETE FROM LIST** supprime l'élément désigné par le paramètre *réfElément* de la liste dont le numéro de référence ou le nom d'objet est passé dans *liste*.<!-- END REF--> 
@@ -44,3 +41,12 @@ L'exemple suivant supprime l'élément sélectionné de la liste *hList*. Si une
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 624 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -106,3 +106,12 @@ Después de la ejecución este código:
 [INTEGER TO BLOB](integer-to-blob.md)  
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 554 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

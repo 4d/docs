@@ -30,3 +30,12 @@ If you perform the operation from within a trigger or from a subroutine (that ca
 [START TRANSACTION](start-transaction.md)  
 *Triggers*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 397 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

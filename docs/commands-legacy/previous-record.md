@@ -26,3 +26,13 @@ If **PREVIOUS RECORD** moves the current record pointer before the current selec
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 110 |
+| Thread safe | &check; |
+| Changes current record ||
+| Forbidden on the server ||
+
+

@@ -22,9 +22,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Summary-->La commande **LISTBOX GET ARRAYS** retourne un ensemble de tableaux synchronisés fournissant diverses informations sur chaque colonne (visible ou non) de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
@@ -52,3 +49,12 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 832 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

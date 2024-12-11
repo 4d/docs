@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->El comando **GET PRINT OPTION** devuelve los valores actuales de una opción de impresión.<!-- END REF-->
@@ -52,3 +49,13 @@ La variable sistema OK toma el valor 1 si el comando ha sido ejecutado correctam
 
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 734 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

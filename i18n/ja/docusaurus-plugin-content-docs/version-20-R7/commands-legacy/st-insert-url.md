@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST INSERT URL.Summary-->**ST INSERT URL**コマンドは、*object* 引数で指定したスタイル付テキストフィールドまたはテキスト変数内に、 URL のリンクを挿入します。<!-- END REF-->
@@ -66,3 +63,13 @@ displayed_sidebar: docs
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1280 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.After.Summary-->**After** retourne Vrai pour le cycle d'exécution Après.<!-- END REF-->
@@ -27,3 +24,12 @@ Si vous souhaitez que la phase **After** du cycle d'exécution soit générée, 
 #### Voir aussi 
 
 [Form event code](form-event-code.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 31 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

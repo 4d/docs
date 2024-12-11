@@ -32,3 +32,12 @@ displayed_sidebar: docs
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1799 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

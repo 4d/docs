@@ -59,3 +59,12 @@ Depois da execução, $att contém, por exemplo:
 #### Ver também 
 
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1334 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

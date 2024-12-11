@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->O comando LISTBOX SORT COLUMNS \[descv\] ordena as filas do list box designado pelos parâmetros objeto e \* em função dos valores de uma ou várias colunas.<!-- END REF-->\[#/descv\]
@@ -36,3 +33,13 @@ Pode definir ordenações multiniveis: para fazer isso, passe tantos pares (*num
 Conforme com o princípio de funcionamento do list box, as colunas estão sincronizadas, o que significa que a ordenação de uma coluna repercute automaticamente em todas as outras colunas do objeto.
 
 Nota: O comando LISTBOX SORT COLUMNS não leva em consideração a propriedade de listbox *Ordenável* .
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 916 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

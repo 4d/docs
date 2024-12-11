@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Windows Alt down.Summary-->Windows Alt down はWindowsのAlt キーが押されていると[True](true.md "True")を返します。<!-- END REF-->
-
-**Note:** Macintoshのプラットフォーム上で呼び出された場合は、Macintoshのoptionキーが押されていると、 Windows Alt down は[True](true.md "True")を返します。
+<!--REF #_command_.Windows Alt down.Summary-->Windows Alt down はWindowsのAlt キーが押されていると[True](true.md "True")を返します。<!-- END REF-->Macintoshのプラットフォーム上で呼び出された場合は、Macintoshのoptionキーが押されていると、 Windows Alt down は[True](true.md "True")を返します。
 
 #### 例題 
 
@@ -31,3 +29,12 @@ displayed_sidebar: docs
 [Macintosh option down](macintosh-option-down.md)  
 [Shift down](shift-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 563 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

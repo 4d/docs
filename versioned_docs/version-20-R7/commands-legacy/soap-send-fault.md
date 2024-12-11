@@ -43,3 +43,12 @@ To go back to the example of the “Square\_root” Web Service provided in the 
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP Get info](soap-get-info.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 781 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

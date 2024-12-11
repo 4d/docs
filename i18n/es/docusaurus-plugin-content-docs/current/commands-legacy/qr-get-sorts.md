@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR GET SORTS.Summary-->El comando QR GET SORTS llenas dos arrays:
@@ -38,3 +35,13 @@ Si pasa un número de area inválido, se genera el error -9850.
 #### Ver también 
 
 [QR SET SORTS](qr-set-sorts.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 753 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

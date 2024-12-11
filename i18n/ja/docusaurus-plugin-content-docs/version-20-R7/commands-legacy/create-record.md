@@ -46,3 +46,13 @@ displayed_sidebar: docs
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 68 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| サーバー上での使用は不可 ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->O comando WA GET EXTERNAL LINKS FILTERS retorna nos arrays *arrFiltro* e *permitirArrRecusar*, os filtros de links externos da área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> Se nenhum filtro estiver ativo, os arrays são retornados vazios.  
@@ -29,3 +26,12 @@ Os filtros são instalados pelo comando [WA SET EXTERNAL LINKS FILTERS](wa-set-e
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1033 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

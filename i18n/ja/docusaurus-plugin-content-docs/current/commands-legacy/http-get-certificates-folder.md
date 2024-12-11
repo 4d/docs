@@ -41,3 +41,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1307 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Menu selected.Summary-->Menu selected é utilizado só quando são mostrados formulários.<!-- END REF--> Esta função detecta o comando de menu escolhido no menu no caso de um submenu hierárquico, retorna a referência do submenu. 
@@ -64,3 +61,12 @@ O método a seguir de formulário utiliza Menu selected para proporcionar os arg
 #### Ver também 
 
 *Gestão de Menus*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 152 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

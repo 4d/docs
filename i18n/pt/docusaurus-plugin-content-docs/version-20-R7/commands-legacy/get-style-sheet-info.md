@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->O comando **GET STYLE SHEET INFO** devolve a configuração atual da folha de estilo *nomeFolhaEstilo* .<!-- END REF--> 
@@ -67,3 +64,13 @@ Se quiser conhecer a configuração atual da folha de estilo "Automatic"
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1256 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Clickcount.Summary-->El comando **Clickcount** devuelve, en el contexto de un evento clic, el número de veces que el usuario ha hecho clic de manera repetida con el mismo botón del ratón.<!-- END REF--> Normalmente, este comando devuelve 2 para un doble clic. 
@@ -61,3 +58,13 @@ Las etiquetas no son editables pero lo son después de un triple-clic. Si desea 
     End case
  End if
 ```
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1332 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

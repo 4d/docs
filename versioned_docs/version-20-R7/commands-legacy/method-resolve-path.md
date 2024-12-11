@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->The **METHOD RESOLVE PATH** command parses the internal path name passed in the *path* parameter and returns its different components in the *methodType*, *ptrTable*, *objectName*, and *formObjectName* parameters.<!-- END REF-->
@@ -85,3 +82,12 @@ Resolution of a path for an object of a table form method:
 #### See also 
 
 [METHOD Get path](method-get-path.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1165 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

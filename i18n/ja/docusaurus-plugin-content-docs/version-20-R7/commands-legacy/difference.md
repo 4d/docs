@@ -55,3 +55,11 @@ displayed_sidebar: docs
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 122 |
+| スレッドセーフである | &check; |
+
+

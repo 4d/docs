@@ -52,3 +52,13 @@ displayed_sidebar: docs
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 853 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

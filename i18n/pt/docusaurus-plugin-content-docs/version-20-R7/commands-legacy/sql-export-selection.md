@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->O comando SQL EXPORT SELECTION exporta ao formato SQL os registros da seleção atual da tabela 4D especificada pelo parâmetro *Tabela*.<!-- END REF-->   
@@ -39,3 +36,13 @@ Se a exportação for realizada corretamente, a variável OK assume o valor 1\. 
 #### Ver também 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1064 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

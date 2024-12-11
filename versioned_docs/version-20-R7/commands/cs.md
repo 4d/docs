@@ -10,3 +10,13 @@ displayed_sidebar: docs
 
 
 The **cs** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#cs).  
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1710 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

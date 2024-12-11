@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->El comando **OBJECT GET BEST SIZE** devuelve en los parámetros *largOpt* y *altOpt*, el largo y alto “óptimo” del objeto de formulario designado por los parámetros *\** y *objeto*.<!-- END REF--> Estos valores se expresan en píxeles. Este comando es particularmente útil para la visualización o impresión de informes complejos, asociados al comando [OBJECT MOVE](object-move.md).
@@ -54,3 +51,12 @@ Consulte el ejemplo en el comando [SET PRINT MARKER](set-print-marker.md "SET PR
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 717 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

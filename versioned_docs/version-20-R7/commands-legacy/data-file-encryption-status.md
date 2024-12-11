@@ -68,3 +68,12 @@ You want to know the encryption status of a data file that corresponds to the cu
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [Encrypt data file](encrypt-data-file.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1609 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

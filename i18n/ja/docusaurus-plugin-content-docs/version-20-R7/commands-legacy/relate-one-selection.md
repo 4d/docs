@@ -57,3 +57,14 @@ displayed_sidebar: docs
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
 *セット*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 349 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+| サーバー上での使用は不可 ||
+
+

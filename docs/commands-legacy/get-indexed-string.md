@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get indexed string.Summary-->The **Get indexed string** command returns: 
@@ -47,3 +44,13 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 510 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

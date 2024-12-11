@@ -82,3 +82,12 @@ To extract from the root folder:
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1637 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

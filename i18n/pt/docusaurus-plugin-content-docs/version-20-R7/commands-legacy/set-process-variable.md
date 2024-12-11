@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->O comando SET PROCESS VARIABLE escreve as variáveis processo *dstVar* (*dstVar2*, etc.) do processo de destino cujo número se passa em *processo* utilizando os valores passados em *expr1* (*expr2*, etc.).<!-- END REF-->  
@@ -99,3 +96,11 @@ Este exemplo escreve a instância das variáveis *v1*, *v2* e *v3* utilizando a 
 [POST OUTSIDE CALL](post-outside-call.md)  
 *Processos*  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 370 |
+| Thread-seguro | &check; |
+
+

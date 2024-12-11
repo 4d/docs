@@ -108,3 +108,12 @@ displayed_sidebar: docs
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1228 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

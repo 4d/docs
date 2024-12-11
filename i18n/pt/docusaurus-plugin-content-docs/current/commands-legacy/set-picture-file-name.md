@@ -26,3 +26,12 @@ O nome por defeito se utiliza como nome de arquivo quando a imagem se exporta em
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1172 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

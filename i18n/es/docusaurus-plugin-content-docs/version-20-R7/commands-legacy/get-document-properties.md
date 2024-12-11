@@ -208,3 +208,13 @@ Una vez implementado en la base, tenemos todo lo que necesitamos para escribir e
 #### Ver también 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 477 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

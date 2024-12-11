@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX Get row color as number.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
@@ -59,3 +56,12 @@ Soit la list box suivante :
 *List box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1271 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

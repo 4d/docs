@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->The INSERT IN LIST command inserts the item designated by the *itemRef* parameter in the list whose reference number or object name you pass in *list*.<!-- END REF-->
@@ -53,3 +50,12 @@ The following code inserts an item (with no attached sublist) just before the cu
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 625 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

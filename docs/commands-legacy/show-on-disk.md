@@ -46,3 +46,14 @@ The following examples illustrate the operation of this command:
 #### System variables and sets 
 
 The system variable OK is set to 1 if the command is executed correctly. 
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 922 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

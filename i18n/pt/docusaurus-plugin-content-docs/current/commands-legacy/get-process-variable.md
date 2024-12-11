@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->O comando GET PROCESS VARIABLE lê o valor de as variáveis processo *srcVar* (*srvVar2*, etc.) desde o processo fonte cujo número se passa em *processo* e devolve seus valores atuais nas variáveis *dstVar* (*dstVar2*, etc.) do processo atual.<!-- END REF-->  
@@ -120,3 +117,11 @@ Ver o exemplo do comando DRAG AND DROP PROPERTIES.
 *Processos*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 371 |
+| Thread-seguro | &check; |
+
+

@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->The **SET LIST ITEM PARAMETER** command modifies the *selector* parameter for the *itemRef* item of the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
@@ -64,3 +61,12 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 986 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

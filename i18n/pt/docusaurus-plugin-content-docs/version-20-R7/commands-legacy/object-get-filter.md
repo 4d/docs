@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get filter.Summary-->O comando OBJECT Get filter devolve o nome de todo filtro associado com o objeto ou grupo de objetos designado por *objeto*.<!-- END REF-->  
@@ -27,3 +24,12 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 #### Ver também 
 
 [OBJECT SET FILTER](object-set-filter.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1073 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

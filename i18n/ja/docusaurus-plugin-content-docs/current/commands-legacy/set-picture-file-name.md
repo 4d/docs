@@ -24,3 +24,12 @@ displayed_sidebar: docs
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1172 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

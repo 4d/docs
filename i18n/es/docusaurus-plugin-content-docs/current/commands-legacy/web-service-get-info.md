@@ -29,3 +29,13 @@ El parámetro *tipoInfo* le permite indicar el tipo de información que quiere o
 
   
 Se devuelve una cadena vacía cuando no hay información disponible, en particular si la última petición SOAP no generó errores. 
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 780 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

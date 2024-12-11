@@ -49,3 +49,13 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 728 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

@@ -39,3 +39,12 @@ Vous voulez ajouter 100 Mo à la taille du cache de votre base. Vous pouvez écr
 #### Voir aussi 
 
 [Get cache size](get-cache-size.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1399 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

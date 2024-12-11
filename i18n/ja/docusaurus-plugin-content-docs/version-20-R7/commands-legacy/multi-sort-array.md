@@ -112,3 +112,12 @@ displayed_sidebar: docs
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 718 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

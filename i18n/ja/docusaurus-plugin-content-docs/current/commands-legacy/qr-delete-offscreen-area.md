@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Summary-->QR DELETE OFFSCREEN AREA コマンドは、*area*引数に渡された参照番号のクイックレポートオフスクリーンエリアをメモリから削除します。<!-- END REF-->
@@ -25,3 +22,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 754 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

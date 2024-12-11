@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.CANCEL.Summary-->La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 
@@ -51,3 +48,13 @@ Lorsque la commande [CANCEL](cancel.md) est exécutée (formulaire annulé ou an
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 270 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

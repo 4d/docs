@@ -37,3 +37,12 @@ If the last element opened is *<Book>*, the following statement:
 
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 854 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

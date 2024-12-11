@@ -23,3 +23,12 @@ displayed_sidebar: docs
 [Active transaction](active-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *トランザクションの停止*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1386 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

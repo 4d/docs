@@ -60,3 +60,12 @@ Encriptar un archivo de texto ubicado en la carpeta RESOURCES de la base de dato
 [ENCRYPT BLOB](encrypt-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1773 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->La commande **LISTBOX GET CELL POSITION** retourne les numéros de la *colonne* et de la *ligne* correspondant à l’emplacement du dernier clic ou de la dernière action de sélection effectuée dans la list box désignée par *\** et objet.<!-- END REF-->   
@@ -55,3 +52,12 @@ Les valeurs retournées par la commande ne sont pas mises à jour dans le cas d�
 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 971 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -24,3 +24,12 @@ displayed_sidebar: docs
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 333 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

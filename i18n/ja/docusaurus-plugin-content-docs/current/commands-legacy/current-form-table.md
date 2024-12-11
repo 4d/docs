@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Current form table.Summary-->Current form tableコマンドは、カレントプロセスで表示または印刷されているフォームが属するテーブルのポインタを返します。<!-- END REF-->
@@ -65,3 +62,12 @@ displayed_sidebar: docs
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 627 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

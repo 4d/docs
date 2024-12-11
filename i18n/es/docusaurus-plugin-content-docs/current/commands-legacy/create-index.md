@@ -87,3 +87,12 @@ Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal�
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 966 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

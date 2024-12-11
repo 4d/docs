@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SHOW TOOL BAR.Summary-->La commande **SHOW TOOL BAR** permet de gérer l'affichage des barres d'outils personnalisées créées par la commande [Open form window](open-form-window.md) pour le process courant.<!-- END REF-->
@@ -28,3 +25,12 @@ Reportez-vous à l'exemple de la commande [HIDE TOOL BAR](hide-tool-bar.md).
 #### Voir aussi 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 433 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

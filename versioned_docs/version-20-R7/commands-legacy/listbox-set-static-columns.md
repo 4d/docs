@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->The **LISTBOX SET STATIC COLUMNS** command sets *numColumns* columns as static (starting from the first on the left) in the list box designated by the *object* and *\** parameters.<!-- END REF-->
@@ -30,3 +27,12 @@ Static columns cannot be moved within the list box.
 
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1153 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

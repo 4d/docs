@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->O comando GET LIST PROPERTIES  retorna informação sobre a lista cujo número de referência se passa em *lista*.<!-- END REF-->
@@ -40,3 +37,12 @@ Para uma completa descrição da aparência, ícones de knots, altura de linha m
 #### Ver também 
 
 [SET LIST PROPERTIES](set-list-properties.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 632 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

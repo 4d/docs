@@ -49,3 +49,12 @@ displayed_sidebar: docs
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 257 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

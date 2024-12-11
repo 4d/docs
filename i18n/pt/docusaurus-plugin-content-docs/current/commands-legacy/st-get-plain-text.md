@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ST Get plain text.Summary-->O comando *OBJECT Get plain text* remove as etiquetas de estilo da variável ou campo de texto designado pelos parâmetros *\** e *objeto* e devolve o texto plano.<!-- END REF--> 
@@ -111,3 +108,13 @@ No caso de erro, não modifica a variável. Quando ocorre um erro em uma variáv
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1092 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

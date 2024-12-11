@@ -116,3 +116,12 @@ $o1:={a10;b"xyz"}
 [Find in sorted array](find-in-sorted-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 230 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

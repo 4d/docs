@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->La commande **QR GET BORDERS** retourne les attributs d'encadrement d'une cellule spécifique de *zone*.<!-- END REF-->
@@ -71,3 +68,13 @@ Si le paramètre *encadrement* est incorrect, l’erreur -9854 est générée.
 #### Voir aussi 
 
 [QR SET BORDERS](qr-set-borders.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 798 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

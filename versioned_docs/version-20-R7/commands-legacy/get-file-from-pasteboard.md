@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->The Get file from pasteboard command returns the absolute pathname of a file included in a drag and drop operation.<!-- END REF--> Several files can be selected and moved simultaneously. The *xIndex* parameter is used to designate a file from among the set of files selected.
@@ -44,3 +41,12 @@ The following example can be used to retrieve in an array all the pathnames of t
 #### See also 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 976 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get resource properties.Summary-->El comando **Get resource properties** devuelve los atributos del recurso cuyo tipo se pasa en *resTipo* y cuyo número de identificación se pasa en *resNum*.<!-- END REF--> 
@@ -36,3 +33,14 @@ Ver el ejemplo del comando [Get resource name](get-resource-name.md).
 #### Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 0 si el recurso no existe, de lo contrario toma el valor 1.
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 515 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

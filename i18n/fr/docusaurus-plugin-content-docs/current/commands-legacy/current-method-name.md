@@ -37,3 +37,13 @@ En fonction du type de méthode d’appel, la chaîne retournée peut prendre l�
 Cette commande ne doit pas être appelée depuis une formule 4D.
 
 **Note :** Pour que cette commande fonctionne en mode compilé, elle ne doit pas figurer dans le code dont le contrôle d'exécution a été désactivé. Voir *Contrôle d’exécution*.
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 684 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->The **GET PRINT OPTION** command returns the current value(s) of a print option.<!-- END REF-->
@@ -52,3 +49,13 @@ The system variable OK is set to 1 if the command has been executed correctly; o
 
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 734 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

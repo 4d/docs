@@ -30,3 +30,12 @@ Se realiza as operações (adição, modificação, ou eliminação de registros
 [START TRANSACTION](start-transaction.md)  
 *Triggers*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 397 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

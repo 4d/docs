@@ -33,3 +33,13 @@ Se o comando for executado corretamente e se o elemento referenciado não for o 
 #### Ver também 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 924 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->**METHOD GET MODIFICATION DATE**コマンドは*path*引数で指定されたメソッドの更新日と時刻をそれぞれ*modDate*と*modTime*引数に返します。<!-- END REF-->
@@ -70,3 +67,13 @@ displayed_sidebar: docs
 ```
 
   
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1170 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

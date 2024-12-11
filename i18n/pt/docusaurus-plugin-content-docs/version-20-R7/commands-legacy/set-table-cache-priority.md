@@ -49,3 +49,12 @@ Em , se quiser estabelecer uma prioridade mais alta para os dados escalares \[Cu
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1400 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

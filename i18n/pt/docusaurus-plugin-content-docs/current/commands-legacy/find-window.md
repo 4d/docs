@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Find window.Summary-->O comando Find window devolve (se existe) o número de referência da primeira janela “tocada” pelo ponto cujas coordenadas se passam em *esquerda e superior*.<!-- END REF-->  
@@ -31,3 +28,12 @@ O parâmetro *parteJanela*, devolve 3 se toca a janela, caso contrário 0\. (**N
 
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 449 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Macintosh option down.Summary-->Macintosh option down devuelve TRUE si la tecla Opción Macintosh está presionada.<!-- END REF--> 
-
-**Nota:** cuando se llama bajo Windows, Macintosh option down devuelve TRUE si la tecla Alt Windows está presionada.
+<!--REF #_command_.Macintosh option down.Summary-->Macintosh option down devuelve TRUE si la tecla Opción Macintosh está presionada.<!-- END REF-->cuando se llama bajo Windows, Macintosh option down devuelve TRUE si la tecla Alt Windows está presionada.
 
 #### Ejemplo 
 
@@ -31,3 +29,12 @@ Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 545 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

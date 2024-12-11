@@ -60,3 +60,12 @@ Aquí están los diferentes resultados del comando [Undefined](undefined.md) as�
 #### Ver también 
 
 [CLEAR VARIABLE](clear-variable.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 82 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

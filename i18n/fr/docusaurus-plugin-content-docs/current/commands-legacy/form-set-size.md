@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->La commande **FORM SET SIZE** permet de modifier par programmation la taille du formulaire courant.<!-- END REF--> La nouvelle taille est définie pour le process courant, elle n’est pas stockée avec le formulaire.  
@@ -127,3 +124,12 @@ La méthode objet associée à ce bouton est la suivante :
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 891 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

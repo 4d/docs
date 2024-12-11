@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->**OBJECT Get corner radius** コマンドは*object* 引数で指定されたオブジェクトの角の半径のカレントの値を返します。<!-- END REF-->この値は、*角の半径プロパティ* を使用してフォームレベルで設定されているか、あるいは[OBJECT SET CORNER RADIUS](object-set-corner-radius.md) コマンドを使用してカレントプロセスに対して設定することが可能です。
@@ -49,3 +46,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET CORNER RADIUS](object-set-corner-radius.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1324 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

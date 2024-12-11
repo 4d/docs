@@ -31,3 +31,14 @@ Aviso: lembre que um número de registro pode ser reutilizado se o registro for 
 *Seleções temporárias*  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 189 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

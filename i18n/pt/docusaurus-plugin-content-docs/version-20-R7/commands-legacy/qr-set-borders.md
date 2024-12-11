@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->O comando QR SET BORDERS permite definir o estilo da borda de uma célula dada.<!-- END REF-->   
@@ -74,3 +71,13 @@ Se o parâmetro *largura* é incorreto, se gera o erro -9855.
 #### Ver também 
 
 [QR GET BORDERS](qr-get-borders.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 797 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

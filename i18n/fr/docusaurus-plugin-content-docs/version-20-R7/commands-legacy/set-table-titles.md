@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** vous permet de masquer, renommer et réordonner les tables de votre base qui apparaissent dans les éditeurs standard de 4D en mode Application (lorsque le mode de lancement est le mode **Application**, ou après avoir sélectionné "**Tester l'application**" dans le menu **Exécution**) .<!-- END REF-->
@@ -182,3 +179,12 @@ Vous voulez supprimer tous les noms de tables et de champs personnalisés défin
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 601 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

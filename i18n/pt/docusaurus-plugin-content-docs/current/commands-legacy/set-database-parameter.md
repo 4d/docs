@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->O comando **SET DATABASE PARAMETER** permite modificar vários parâmetros internos do banco de dados 4D.<!-- END REF-->  
@@ -148,3 +145,12 @@ Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 642 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

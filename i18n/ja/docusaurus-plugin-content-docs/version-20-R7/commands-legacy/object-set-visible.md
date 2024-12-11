@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->OBJECT SET VISIBLE コマンドは、*object*によって指定されるオブジェクトを表示、あるいは非表示にします。<!-- END REF--> 
@@ -61,3 +58,12 @@ displayed_sidebar: docs
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 603 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

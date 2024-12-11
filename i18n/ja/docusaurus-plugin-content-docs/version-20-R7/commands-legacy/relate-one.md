@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.RELATE ONE.Summary-->**RELATE ONE** には2つの形式があります。<!-- END REF--> 
@@ -91,3 +88,15 @@ displayed_sidebar: docs
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 42 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+| サーバー上での使用は不可 ||
+
+

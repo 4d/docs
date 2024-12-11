@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->**SPELL CHECK TEXT**コマンドは*text*引数の内容を、*checkPos*の位置からチェックし、最初に見つかった未知の単語の位置を返します。<!-- END REF-->
@@ -55,3 +52,13 @@ displayed_sidebar: docs
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1215 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

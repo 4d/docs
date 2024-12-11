@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.User in group.Summary-->User in group retorna TRUE se *user* estlver em *group*.<!-- END REF-->
@@ -45,3 +42,12 @@ O exemplo abaixo procura faturas específicas. Se o usuário atual estiver no gr
 #### Ver também 
 
 [Current user](current-user.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 338 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

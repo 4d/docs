@@ -61,3 +61,12 @@ Example under Windows
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1106 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

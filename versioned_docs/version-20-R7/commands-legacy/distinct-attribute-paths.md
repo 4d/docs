@@ -67,3 +67,12 @@ The *aTPaths* array receives the following elements:
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1395 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

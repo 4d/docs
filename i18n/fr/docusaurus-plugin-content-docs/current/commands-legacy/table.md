@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Table.Summary-->**Table** a trois syntaxes différentes.<!-- END REF-->
-
-* Si vous passez un numéro de table dans *numTable*, **Table** retourne un pointeur sur la table.
+<!--REF #_command_.Table.Summary-->**Table** a trois syntaxes différentes.<!-- END REF-->retourne un pointeur sur la table.
 * Si vous passez un pointeur de table dans *unPtr*, **Table** retourne le numéro de la table.
 * Si vous passez un pointeur de champ dans *unPtr*, **Table** retourne le numéro de table du champ.
 
@@ -59,3 +57,12 @@ Dans l'exemple suivant, la variable *numTable* est égale au numéro de la table
 [Field](field.md)  
 [Last table number](last-table-number.md)  
 [Table name](table-name.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 252 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

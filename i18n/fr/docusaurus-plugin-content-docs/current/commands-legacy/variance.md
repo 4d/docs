@@ -66,3 +66,12 @@ Cet exemple vous permet d’obtenir la variance des valeurs placées dans un tab
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 27 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

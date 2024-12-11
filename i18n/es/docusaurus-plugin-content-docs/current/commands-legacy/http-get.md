@@ -105,3 +105,13 @@ Recuperación de un vídeo:
 #### Ver también 
 
 [HTTP Request](http-request.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1157 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

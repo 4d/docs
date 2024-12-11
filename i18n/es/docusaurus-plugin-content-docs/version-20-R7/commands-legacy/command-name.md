@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Command name.Summary-->El comando **Command name** devuelve el nombre y (opcionalmente) las propiedades del comando cuyo número se pasa en *comando*.<!-- END REF-->
-
-**Nota:** el número de cada comando está indicado en el Explorador, así como también en el área de Propiedades de esta documentación.
+<!--REF #_command_.Command name.Summary-->El comando **Command name** devuelve el nombre y (opcionalmente) las propiedades del comando cuyo número se pasa en *comando*.<!-- END REF-->el número de cada comando está indicado en el Explorador, así como también en el área de Propiedades de esta documentación.
 
 **Nota de compatibilidad**: como el nombre de un comando puede variar de una versión 4D a otra (comandos renombrados), este comando se utilizó en versiones anteriores del programa para designar un comando directamente por medio de su número, especialmente en partes de código no tokenizadas. Esta sintaxis permite evitar posibles problemas debido a las variaciones en los nombres de los comandos, así como otros elementos tales como tablas, sin dejar de poder escribir estos nombres de forma legible (para obtener más información sobre este punto, consulte la sección *Utilizar tokens en fórmulas*). Además, de forma predeterminada, la versión en Inglés del lenguaje se utiliza a partir de 4D v15; Sin embargo, la opción "Utilizar la configuración del sistema regional" en la [Is a list](is-a-list.md) de las Preferencias le permite continuar con el uso de la versión en español en un 4D en español.
 
@@ -103,3 +101,13 @@ Luego, para el comando "SAVE RECORD" (53) por ejemplo, puede escribir:
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Procesos 4D apropiativos*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 538 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

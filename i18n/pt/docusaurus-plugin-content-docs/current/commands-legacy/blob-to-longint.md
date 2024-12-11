@@ -58,3 +58,12 @@ O exemplo a seguir lê 20 valores Inteiro longo de um BLOB, iniciando no offset 
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 551 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

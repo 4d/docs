@@ -98,3 +98,13 @@ displayed_sidebar: docs
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 48 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

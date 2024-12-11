@@ -30,3 +30,12 @@ Even if you are not running with the Client/Server version of the 4D environment
 #### See also 
 
 [Current system user](current-system-user.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 483 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

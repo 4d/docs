@@ -50,3 +50,12 @@ Se quiser mudar temporariamente a prioridade de cache para os campos escalares \
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1429 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

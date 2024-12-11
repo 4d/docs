@@ -43,3 +43,11 @@ displayed_sidebar: docs
 [Selected record number](selected-record-number.md)  
 [Sequence number](sequence-number.md)  
 *レコード番号について*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 243 |
+| スレッドセーフである | &check; |
+
+

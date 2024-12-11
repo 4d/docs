@@ -48,3 +48,12 @@ Reportez-vous à l’exemple de la commande [ENCRYPT BLOB](encrypt-blob.md).
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 688 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

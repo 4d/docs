@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->**LISTBOX GET GRID COLORS**コマンドは*object*と*\** 引数で指定したリストボックスの縦横グリッドカラーをそれぞれ返します。<!-- END REF-->
@@ -33,3 +30,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1200 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

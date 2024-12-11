@@ -74,3 +74,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Append XML element](dom-append-xml-element.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1083 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

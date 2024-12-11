@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->La commande **SET UPDATE FOLDER** permet de définir le dossier contenant la mise à jour de l’application 4D fusionnée courante.<!-- END REF--> Cette information est mémorisée durant la session 4D jusqu’à l’appel de la commande [RESTART 4D](restart-4d.md). Si l’application est quittée manuellement, cette information n'est pas conservée.
@@ -58,3 +55,12 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
 
 [Get last update log path](get-last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1291 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+
+

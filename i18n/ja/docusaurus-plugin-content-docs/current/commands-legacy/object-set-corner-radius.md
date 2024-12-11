@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->**OBJECT SET CORNER RADIUS** コマンドは、*object* 引数で指定したオブジェクトの角の半径を*radius* 引数で指定した半径に変更します。<!-- END REF-->新しい半径はそのプロセスに対してのみ有効で、フォーム内には保存されません。
@@ -69,3 +66,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1323 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

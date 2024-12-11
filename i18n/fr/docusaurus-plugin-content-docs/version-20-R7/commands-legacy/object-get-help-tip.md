@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->La commande **OBJECT Get help tip** retourne le message d’aide associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** dans le process courant.<!-- END REF--> 
@@ -39,3 +36,12 @@ Le libellé d’un bouton image est stocké sous forme de message d’aide. Ce l
 #### Voir aussi 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1182 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

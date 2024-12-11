@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->**Tema:** Eventos formulário
@@ -61,3 +58,12 @@ O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mo
 #### Ver também 
 
 [Form event code](../commands/form-event-code.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1422 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

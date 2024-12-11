@@ -29,3 +29,12 @@ Référez-vous à l'exemple de [Process state](process-state.md) et [Semaphore](
 [Count users](count-users.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 335 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

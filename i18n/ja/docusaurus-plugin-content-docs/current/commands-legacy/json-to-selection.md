@@ -68,3 +68,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Selection to JSON](selection-to-json.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1235 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

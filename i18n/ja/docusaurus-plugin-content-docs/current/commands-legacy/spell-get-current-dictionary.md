@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SPELL Get current dictionary.Summary-->**SPELL Get current dictionary**コマンドは使用中の辞書のID番号を返します。<!-- END REF-->
@@ -36,3 +33,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1205 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

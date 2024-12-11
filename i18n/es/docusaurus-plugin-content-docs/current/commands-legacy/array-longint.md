@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.ARRAY LONGINT.Summary-->El comando ARRAY LONGINT crea y/o redimensiona un array de elementos de tipo [Entero largo](# "Entre -2 millardos y +2 millardos") de 4 bytes en memoria.<!-- END REF-->
-
-* El parámetro *nombreArray* es el nombre del Array.
+<!--REF #_command_.ARRAY LONGINT.Summary-->El comando ARRAY LONGINT crea y/o redimensiona un array de elementos de tipo [Entero largo](# "Entre -2 millardos y +2 millardos") de 4 bytes en memoria.<!-- END REF-->es el nombre del Array.
 * El parámetro *tamaño* es el número de elementos en el array.
 * El parámetro *tamañoi2* es opcional; si se especifica *tamaño2*, el comando crea un array de dos dimensiones. En este caso, *tamaño* especifica el número de filas y *tamaño2* el número de columnas en cada array. Cada fila en un array de dos dimensiones puede tratarse como un elemento y un array. Esto significa que mientras trabaja con la primera dimensión del arrray, puede utilizar otros comandos de array para insertar y borrar arrays completos en un array de dos dimensiones.
 
@@ -59,3 +57,12 @@ Este ejemplo crea un array interproceso de 4 bytes de 50 elementos de tipo [Ente
 
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY REAL](array-real.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 221 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

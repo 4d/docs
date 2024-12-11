@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ST Get expression.Summary-->O comando **ST Get expression** devolve a primeira expressão que se encontra na seleção atual do campo ou da variável de texto com estilo designada pelo parâmetro *objeto*.<!-- END REF--> 
@@ -95,3 +92,13 @@ Você quer executar um método 4D quando é feito clique em um link de um usuár
 #### Ver também 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1287 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

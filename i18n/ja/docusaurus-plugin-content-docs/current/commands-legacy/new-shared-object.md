@@ -67,3 +67,12 @@ displayed_sidebar: docs
 [New object](new-object.md)  
 [New shared collection](new-shared-collection.md)  
 *共有オブジェクトと共有コレクション*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1526 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

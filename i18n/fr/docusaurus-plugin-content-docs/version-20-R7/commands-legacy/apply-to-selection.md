@@ -63,3 +63,12 @@ Si l'utilisateur clique sur le bouton Stop dans le thermomètre de progression, 
 
 [EDIT FORMULA](edit-formula.md)  
 *Présentation des ensembles*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 70 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

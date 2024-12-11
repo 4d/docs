@@ -41,3 +41,13 @@ A variável OK é definida como 1 se a variável foi reescrita com sucesso, caso
 #### Ver também 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 533 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

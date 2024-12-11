@@ -55,3 +55,14 @@ El siguiente ejemplo procesa un evento:
 #### Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario toma el valor 0 y se genera un error. 
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 860 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+| Prohibido en el servidor ||
+
+

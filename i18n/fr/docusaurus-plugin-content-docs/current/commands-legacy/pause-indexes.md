@@ -46,3 +46,11 @@ Exemple de méthode d’import massif de données :
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1293 |
+| Thread safe | &check; |
+
+

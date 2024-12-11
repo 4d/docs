@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->El comando GET PASTEBOARD DATA TYPE permite obtener la lista de los tipos de datos presentes en el portapapeles.<!-- END REF--> Este comando generalmente debe ser utilizado en el contexto de una operación arrastrar y soltar, en los eventos de formulario On Drop o On Drag Over del objeto de destino. Más particularmente, permite verificar la presencia de un tipo de datos específico en el portapapeles. 
@@ -40,3 +37,12 @@ Para mayor información sobre los tipos de datos soportados, consulte la secció
 #### Ver también 
 
 *Gestión de portapapeles*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 958 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

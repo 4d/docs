@@ -56,3 +56,12 @@ Example using *On Web Authentication Database Method* in Digest mode:
 
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 946 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

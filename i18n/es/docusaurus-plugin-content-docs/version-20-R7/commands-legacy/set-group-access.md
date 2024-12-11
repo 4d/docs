@@ -44,3 +44,12 @@ Desea promocionar al usuario actual a los grupos "admin" y "plugins" para la ses
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1737 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->HIDE PROCESSは*process*に属するすべてのウィンドウを非表示にします。<!-- END REF-->*process*のすべてのインタフェース要素は、次に[SHOW PROCESS](show-process.md "SHOW PROCESS")コマンドを実行するまで非表示となります。そのプロセスのメニューバーも非表示になります。したがって、プロセスが非表示になっているときにウィンドウを開いても画面が再描画されたり表示されません。プロセスが既に非表示になっている場合、このコマンドは何も実行しません。
@@ -38,3 +35,12 @@ displayed_sidebar: docs
 
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 324 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

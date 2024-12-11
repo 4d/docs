@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->La commande **CONVERT COORDINATES** permet de convertir les coordonnées (x;y) d'un point depuis un système de coordonnées vers un autre système de coordonnées.<!-- END REF--> Les systèmes de coordonnées pris en charge sont les formulaires (ainsi que les sous-formulaires), les fenêtres et l'écran. Par exemple, vous pouvez utiliser cette commande pour obtenir les coordonnées, dans le formulaire principal, d'un objet appartenant à un sous-formulaire. Ce principe facilite notamment la création de menus contextuels à des emplacements personnalisés. 
@@ -89,3 +86,12 @@ Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la sour
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1365 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->La commande **METHOD SET COMMENTS** remplace la documentation de la ou des méthode(s) désignée(s) par le paramètre *chemin* par ceux définis dans le paramètre *commentaires*.<!-- END REF-->
@@ -64,3 +61,12 @@ Ajout d’une date de modification à une documentation de trigger existante :
 #### Voir aussi 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1193 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

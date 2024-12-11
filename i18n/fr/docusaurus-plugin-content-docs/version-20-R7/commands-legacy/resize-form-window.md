@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->La commande **RESIZE FORM WINDOW** permet de modifier la taille de la fenêtre du formulaire courant.<!-- END REF--> 
@@ -50,3 +47,12 @@ Après l'exécution de cette ligne :
 [FORM GET PROPERTIES](form-get-properties.md)  
 [FORM SET SIZE](form-set-size.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 890 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

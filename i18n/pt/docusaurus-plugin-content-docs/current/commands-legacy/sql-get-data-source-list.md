@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->O comando SQL GET DATA SOURCE LIST retorna nos arrays *arrayNomesFontes* e *arrayDrivers*, os nomes e drivers das fontes de dados de tipo *tipoFonte* definidas no administrador ODBC do Sistema operativo.<!-- END REF-->  
@@ -57,3 +54,13 @@ Se o comando for executado corretamente, a variável Sistema OK assume o valor 1
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 989 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

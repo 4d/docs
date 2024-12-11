@@ -29,9 +29,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Position.Summary-->**Position** コマンドは、*aString* の中で*find* が最初に現われる位置を返します。<!-- END REF-->
-
-*aString* の中に*find* が見つからない場合は、Positionはゼロ(0) を返します。
+<!--REF #_command_.Position.Summary-->**Position** コマンドは、*aString* の中で*find* が最初に現われる位置を返します。<!-- END REF-->の中に*find* が見つからない場合は、Positionはゼロ(0) を返します。
 
 *find* が見つかると、*aString* の中に検索文字列が最初に表示された文字位置を返します。
 
@@ -117,3 +115,12 @@ Position関数の使用例を次に示します。結果を変数*vlResult*に�
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 15 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

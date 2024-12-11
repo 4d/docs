@@ -51,3 +51,13 @@ XMLにおいて、改行はそれがXML要素の内側あるいは間いずれ�
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 863 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+| サーバー上での使用は不可 ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.In header.Summary-->**In header** devolve True para o ciclo de execução In header.<!-- END REF--> 
@@ -28,3 +25,12 @@ Para que seja gerado o ciclo de execução **In header**, tenha certeza de que o
 
 [In break](in-break.md)  
 [In footer](in-footer.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 112 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

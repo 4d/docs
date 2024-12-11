@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST populates the arrays *groupNames* and *groupNumbers* with the names and unique ID numbers of the groups as they appear in the Password editor window.<!-- END REF-->
@@ -35,3 +32,13 @@ If you do not have the proper access privileges for calling GET GROUP LIST or if
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 610 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

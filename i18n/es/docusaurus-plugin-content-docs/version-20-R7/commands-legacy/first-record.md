@@ -34,3 +34,13 @@ El siguiente ejemplo carga el primer registro de la tabla \[Clientes\]:
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 50 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Prohibido en el servidor ||
+
+

@@ -43,3 +43,12 @@ Ce test permet d’exécuter du code différent selon que la version est une app
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 495 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

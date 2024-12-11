@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR New offscreen area.Summary-->La commande **QR New offscreen area** crée une zone d'Etat rapide hors écran et retourne son numéro de référence.<!-- END REF--> 
@@ -24,3 +21,12 @@ displayed_sidebar: docs
 
 [QR DELETE OFFSCREEN AREA](qr-delete-offscreen-area.md)  
 [QR NEW AREA](qr-new-area.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 735 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

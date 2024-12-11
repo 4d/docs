@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->OBJECT Get font style コマンドは、*object*で指定されたフォームオブジェクトで使用されている文字フォントの現在のスタイルを返します。<!-- END REF-->. 
@@ -36,3 +33,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1071 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

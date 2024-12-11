@@ -22,9 +22,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->La commande **LISTBOX INSERT COLUMN FORMULA** insère une colonne dans la list box désignée par les paramètres *objet* et *\** .<!-- END REF-->   
@@ -119,3 +116,12 @@ La colonne est ajoutée à la list box :
 #### Voir aussi 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 970 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

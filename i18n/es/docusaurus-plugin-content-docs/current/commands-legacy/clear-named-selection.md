@@ -24,3 +24,12 @@ Si *temp* fue creado por el comando [CUT NAMED SELECTION](cut-named-selection.md
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 333 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

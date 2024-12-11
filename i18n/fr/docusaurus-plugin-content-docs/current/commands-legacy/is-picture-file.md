@@ -28,3 +28,12 @@ Si vous ne passez pas le paramètre *\**, la commande teste le fichier en recher
 #### Voir aussi 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1113 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

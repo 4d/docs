@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->O comando SET LIST PROPERTIES define a aparência da lista hierárquica cuja referência é passada no parâmetro *lista*.<!-- END REF-->  
@@ -67,3 +64,12 @@ Se deseja recusar a sublista de expandir/contrair ao dar duplo clique, pode escr
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 387 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

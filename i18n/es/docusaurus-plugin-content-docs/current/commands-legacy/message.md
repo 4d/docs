@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.MESSAGE.Summary-->El comando MESSAGE generalmente se utiliza para informar al usuario sobre alguna actividad.<!-- END REF--> Muestra *mensaje* en la pantalla en una ventana de mensaje especial que se abre y cierra cada vez que usted llama a MESSAGE, a menos que usted trabaje con una ventana que abrió previamente utilizando [Open window](open-window.md) (ver los siguientes detalles). El mensaje es temporal y se borra tan pronto como se muestre un formulario o se detenga la ejecución del método. Si se ejecuta otro comando MESSAGE, el mensaje anterior se borra.
@@ -115,3 +112,12 @@ El resultado es el siguiente (en Windows):
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
 [Open window](open-window.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 88 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

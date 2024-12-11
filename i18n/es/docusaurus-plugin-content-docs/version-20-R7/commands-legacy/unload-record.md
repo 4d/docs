@@ -29,3 +29,12 @@ Si un registro tiene una cantidad importante de datos, de campos de imagen, o de
 
 [LOAD RECORD](load-record.md)  
 *Record Locking*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 212 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

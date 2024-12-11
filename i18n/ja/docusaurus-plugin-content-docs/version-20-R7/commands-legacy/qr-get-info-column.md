@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR GET INFO COLUMN.Summary-->##### リストモード 
@@ -110,3 +107,13 @@ QR GET INFO COLUMN コマンドを使用して、同様のパラメータを取�
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 766 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

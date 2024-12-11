@@ -42,3 +42,13 @@ The following example deletes an employee record. The code asks the user what em
 
 [Locked](locked.md)  
 *Triggers*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 58 |
+| Thread safe | &check; |
+| Changes current record ||
+| Forbidden on the server ||
+
+

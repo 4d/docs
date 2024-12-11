@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GET VERTICAL RESIZING.Summary-->The FORM GET VERTICAL RESIZING command returns the vertical resizing properties of the current form in the *resize*, *minHeight* and *maxHeight* variables.<!-- END REF--> These properties may have been set for the form in the Form editor in Design mode or for the current process via the [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md) command.
@@ -25,3 +22,12 @@ displayed_sidebar: docs
 #### See also 
 
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1078 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

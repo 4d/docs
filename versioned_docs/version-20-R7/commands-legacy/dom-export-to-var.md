@@ -55,3 +55,13 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 863 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

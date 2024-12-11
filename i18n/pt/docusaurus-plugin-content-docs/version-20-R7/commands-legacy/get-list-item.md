@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->O comando GET LIST ITEM retorna a informação sobre o elemento especificado por *posiçaoElem* da lista cujo número de referencia ou nome de objeto se passa em *lista*.<!-- END REF--> 
@@ -68,3 +65,12 @@ Consulte o exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST
 [Selected list items](selected-list-items.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 378 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

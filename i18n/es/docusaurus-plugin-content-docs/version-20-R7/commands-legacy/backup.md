@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.BACKUP.Summary-->El comando BACKUP inicia el backup de la base de datos utilizando los parámetros de copia de seguridad actuales.<!-- END REF--> No aparece una caja de diálogo de confirmación; sin embargo, aparece una barra de progreso en la pantalla.
@@ -40,3 +37,12 @@ En caso de que se presenten incidentes durante el backup, la información relati
 [BACKUP INFO](backup-info.md)  
 *Método de base de datos On Backup Startup*  
 [RESTORE](restore.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 887 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

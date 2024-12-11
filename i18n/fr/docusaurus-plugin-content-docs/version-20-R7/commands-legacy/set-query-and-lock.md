@@ -69,3 +69,13 @@ Si la commande est appelée hors du contexte d’une transaction, une erreur est
 #### Voir aussi 
 
 [QUERY](query.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 661 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

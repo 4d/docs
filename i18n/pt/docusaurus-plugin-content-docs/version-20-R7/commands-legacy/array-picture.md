@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.ARRAY PICTURE.Summary-->O comando ARRAY PICTURE cria e/ou redimensiona um array de elementos [Imagem](# "Can be any Windows or Macintosh picture") na memória.<!-- END REF-->
-
-* O parâmetro *nomeArray* é o nome do array.
+<!--REF #_command_.ARRAY PICTURE.Summary-->O comando ARRAY PICTURE cria e/ou redimensiona um array de elementos [Imagem](# "Can be any Windows or Macintosh picture") na memória.<!-- END REF-->é o nome do array.
 * O parâmetro *tamanho* é o número de elementos em um array.
 * O parâmetro *tamanho2* é opcional; se *tamanho2* for especificado, o comando cria um array de duas dimensões. Neste caso, *tamanho* especifica o número de linhas e *tamanho2* especifica o número de colunas em cada array. Cada linha em um array de duas dimensões pode ser tratada tanto como um elemento como um array. Isso significa que enquanto se trabalha com a primeira dimensão do array, você pode usar outros comandos de array para inserir e deletar arrays inteiros e arrays de duas dimensões.
 
@@ -61,3 +59,13 @@ Este exemplo cria um array de interprocesso de tipo [Imagem](# "Can be any Windo
  End for
  ARRAY PICTURE(◊agValores;$vlPictElem)
 ```
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 279 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->**LISTBOX SET FOOTER CALCULATION**コマンドは*object* と *\** 引数で指定したリストボックスのフッターに割り当てる自動計算を設定します。<!-- END REF-->
@@ -53,3 +50,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1140 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

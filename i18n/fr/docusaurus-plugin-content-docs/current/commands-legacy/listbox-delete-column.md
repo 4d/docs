@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->La commande **LISTBOX DELETE COLUMN** supprime une ou plusieurs colonne(s) (visibles ou non) dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -36,3 +33,12 @@ Si le paramètre *positionCol* est supérieur au nombre de colonnes de la list b
 
 [LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 830 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->O comando **SET CURRENT PRINTER** utiliza para designar a impressora a utilizar par imprimir com a aplicação 4D atual.<!-- END REF-->  
@@ -57,3 +54,13 @@ Criação de um documento PDF em Windows:
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 787 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

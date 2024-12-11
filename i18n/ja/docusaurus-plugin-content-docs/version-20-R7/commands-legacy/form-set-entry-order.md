@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->**FORM SET ENTRY ORDER** コマンドは カレントプロセスのカレントフォームにおいて、*objectNames* に渡した配列に基づき入力順を動的に指定します。<!-- END REF--> 
@@ -56,3 +53,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [FORM GET ENTRY ORDER](form-get-entry-order.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1468 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

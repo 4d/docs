@@ -61,3 +61,13 @@ Este é um exemplo que permite verificar a existência de um valor:
 ```
 
 Tenha em conta >= permite cobrir todos os casos. De fato, a função devolve um número de registro e o primeiro registro tem o número 0.
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 653 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

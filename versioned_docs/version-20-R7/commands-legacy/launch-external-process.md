@@ -146,3 +146,13 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 811 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

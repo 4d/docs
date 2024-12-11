@@ -89,3 +89,12 @@ Vous utilisez la syntaxe avec *template* afin d'exporter des champs de différen
 #### Voir aussi 
 
 [JSON TO SELECTION](json-to-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1234 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

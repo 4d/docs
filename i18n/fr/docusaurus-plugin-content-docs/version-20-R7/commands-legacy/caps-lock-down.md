@@ -29,3 +29,12 @@ Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 547 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

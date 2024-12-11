@@ -56,3 +56,12 @@ We want to modify the query destination temporarily and then restore the previou
 #### See also 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1155 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

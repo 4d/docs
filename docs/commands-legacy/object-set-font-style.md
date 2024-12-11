@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->**OBJECT SET FONT STYLE** sets the form objects specified by *object* to be displayed using the font style you pass in *styles*.<!-- END REF-->
@@ -57,3 +54,12 @@ This example sets the font style to Plain for all form objects with names starti
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 *Programming Notes*  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 166 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

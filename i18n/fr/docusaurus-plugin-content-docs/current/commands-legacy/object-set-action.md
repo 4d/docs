@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->La commande **OBJECT SET ACTION** vous permet de modifier l’action standard associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -41,3 +38,12 @@ Vous souhaitez associer l’action standard de validation à un bouton :
 #### Voir aussi 
 
 [OBJECT Get action](object-get-action.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1259 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

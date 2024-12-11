@@ -14,9 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.HTTP Parse message.Summary-->A documentação para este comando está disponível em [developer.<!-- END REF-->4d.com.](https://developer.4d.com/docs/API/HTTPRequestClass#http-parse-messege)
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1824 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

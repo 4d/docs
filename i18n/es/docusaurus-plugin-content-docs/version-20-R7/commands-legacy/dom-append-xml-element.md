@@ -28,3 +28,12 @@ Ver el ejemplo del comando [DOM Insert XML element](dom-insert-xml-element.md "D
 #### Ver también 
 
 [DOM Insert XML element](dom-insert-xml-element.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1082 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

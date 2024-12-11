@@ -75,3 +75,12 @@ Specifying the default table results in this code:
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 46 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

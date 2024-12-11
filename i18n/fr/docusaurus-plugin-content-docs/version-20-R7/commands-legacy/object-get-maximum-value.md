@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->La commande **OBJECT GET MAXIMUM VALUE** retourne dans la variable *valeurMaxi* la valeur maximum actuelle de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -30,3 +27,12 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1245 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

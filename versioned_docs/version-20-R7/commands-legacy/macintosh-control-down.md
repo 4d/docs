@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Macintosh control down.Summary-->**Macintosh control down** returns TRUE if the Macintosh Control key is pressed.<!-- END REF-->
-
-**Note:** When called on a Windows platform, **Macintosh control down** always return FALSE. This Macintosh key has no equivalent on Windows.
+<!--REF #_command_.Macintosh control down.Summary-->**Macintosh control down** returns TRUE if the Macintosh Control key is pressed.<!-- END REF-->When called on a Windows platform, **Macintosh control down** always return FALSE. This Macintosh key has no equivalent on Windows.
 
 #### Example 
 
@@ -31,3 +29,12 @@ See example for the [Shift down](shift-down.md) command.
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 544 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

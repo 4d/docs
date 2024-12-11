@@ -51,3 +51,13 @@ displayed_sidebar: docs
 
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 855 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

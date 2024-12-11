@@ -68,3 +68,12 @@ Se quiser conhecer o estado de criptografia de um arquivo de dados que correspon
 
   
 [Encrypt data file](encrypt-data-file.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1609 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

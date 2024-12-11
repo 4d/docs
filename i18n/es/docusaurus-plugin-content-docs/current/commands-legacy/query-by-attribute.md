@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** busca los registros que coincidan con la cadena de consulta definida utilizando los parámetros *campoObjeto*, *rutaAtributo*, *opBusq* y *valor*, y devuelve una selección de registros para *tabla*.<!-- END REF-->
-
-**QUERY BY ATTRIBUTE** cambia la selección actual de *tabla* para el proceso actual y vuelve el primer registro de la nueva selección el registro actual. Si se omite el parámetro *tabla*, el comando se aplica a la tabla por defecto. Si no se ha definido ninguna tabla por defecto, se produce un error.
+<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** busca los registros que coincidan con la cadena de consulta definida utilizando los parámetros *campoObjeto*, *rutaAtributo*, *opBusq* y *valor*, y devuelve una selección de registros para *tabla*.<!-- END REF-->cambia la selección actual de *tabla* para el proceso actual y vuelve el primer registro de la nueva selección el registro actual. Si se omite el parámetro *tabla*, el comando se aplica a la tabla por defecto. Si no se ha definido ninguna tabla por defecto, se produce un error.
 
 El parámetro opcional *opC* *onj* se utilizar para combinar varias llamadas a **QUERY BY ATTRIBUTE** en caso de búsquedas múltiples. Los operadores de conjunción disponibles son los mismos que los del comando [QUERY](query.md):
 
@@ -406,3 +404,15 @@ La variable OK toma el valor 0 si: - el usuario hace clic en Cancelar en la caja
   
 *Estructura de los objetos de lenguaje 4D*  
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1331 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

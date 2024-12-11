@@ -166,3 +166,13 @@ See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-time
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 77 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document |
+| Forbidden on the server ||
+
+

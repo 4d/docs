@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Frontmost process.Summary-->Frontmost process devuelve el número del proceso cuya ventana (o ventanas) están en el primer plano.<!-- END REF--> 
@@ -36,3 +33,12 @@ Ver el ejemplo para [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").
 
 [BRING TO FRONT](bring-to-front.md)  
 [WINDOW LIST](window-list.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 327 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

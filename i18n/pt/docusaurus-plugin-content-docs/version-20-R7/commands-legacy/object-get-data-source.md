@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->O comando **OBJECT Get data source** devolve a fonte de dados atual dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  
@@ -44,3 +41,12 @@ Executa o seguinte código:
 #### Ver também 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1265 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

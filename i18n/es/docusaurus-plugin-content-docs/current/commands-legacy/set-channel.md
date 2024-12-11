@@ -168,3 +168,13 @@ Ver los ejemplos de los comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUF
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 77 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, Document |
+| Prohibido en el servidor ||
+
+

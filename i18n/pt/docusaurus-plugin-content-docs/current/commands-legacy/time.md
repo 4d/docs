@@ -51,3 +51,12 @@ Pode expressar todo valor numérico como uma hora:
 [String](string.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 179 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

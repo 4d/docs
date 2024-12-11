@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->The **PRINT OPTION VALUES** command returns in *namesArray* a list of names available for the print *option* defined.<!-- END REF--> Optionally, you can retrieve additional information for each name in *info1Array* and *info2Array*. 
@@ -56,3 +53,12 @@ All the information returned by these commands is supplied by the operating syst
 
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 785 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

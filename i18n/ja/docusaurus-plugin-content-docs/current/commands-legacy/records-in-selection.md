@@ -33,3 +33,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Records in table](records-in-table.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 76 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

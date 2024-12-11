@@ -113,3 +113,13 @@ After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the pa
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 104 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

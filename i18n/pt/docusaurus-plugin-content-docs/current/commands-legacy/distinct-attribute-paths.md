@@ -67,3 +67,12 @@ O array *aTPaths* obtém os elementos abaixo:
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1395 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

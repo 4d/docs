@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->El comando **OBJECT SET PLACEHOLDER** asocia un texto de ejemplo al objeto o a los objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  
@@ -47,3 +44,12 @@ Usted quiere mostrar el texto "Buscar" un combo box:
 #### Ver también 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1295 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->The **SET LIST ITEM** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
@@ -80,3 +77,12 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 385 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

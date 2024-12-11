@@ -277,3 +277,12 @@ In this example, we customize a few settings:
 *Graph Parameters*  
 [GRAPH SETTINGS](graph-settings.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 169 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

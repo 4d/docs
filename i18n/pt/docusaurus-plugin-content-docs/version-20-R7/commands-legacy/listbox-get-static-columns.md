@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->O comando **LISTBOX Get static columns** devolve o número de colunas estáticas no list box designado pelos parâmetros objeto e *\**.<!-- END REF--> 
@@ -34,3 +31,12 @@ Se uma coluna é inserida ou é eliminada por programação dentro de uma conjun
 #### Ver também 
 
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1154 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

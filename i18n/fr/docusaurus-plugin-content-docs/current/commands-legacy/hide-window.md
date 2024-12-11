@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->La commande **HIDE WINDOW** permet de masquer la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, la fenêtre de premier plan du process courant.<!-- END REF--> Cette commande vous permet, par exemple, dans un process comportant plusieurs fenêtres, de ne conserver à l'écran que la fenêtre active. 
@@ -48,3 +45,12 @@ Cet exemple est la méthode d'un bouton placé dans un formulaire entrée. Ce bo
 #### Voir aussi 
 
 [SHOW WINDOW](show-window.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 436 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->O comando **CHECK LOG FILE** mostra a caixa de diálogo de visulização do arquivo de histórico atual da base de dados (acessível também através da janela do Centro de segurança e manutenção) :
@@ -37,3 +34,13 @@ Este comando só pode ser utilizado no contexto de aplicativos monousuários. Ma
 
 *Erros de Gestão de backup (1401 -> 1421)*  
 [RESTORE](restore.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 799 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

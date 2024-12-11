@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Is a list.Summary-->La fonction **Is a list** retourne VRAI si la valeur passée dans le paramètre *liste* est une référence valide à une liste hiérarchique.<!-- END REF--> Dans les autres cas, elle retourne FAUX.
@@ -24,4 +21,14 @@ displayed_sidebar: docs
 #### Exemple
 
 Reportez-vous à l'exemple de la commande [CLEAR LIST](clear-list.md).
+
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 621 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
 

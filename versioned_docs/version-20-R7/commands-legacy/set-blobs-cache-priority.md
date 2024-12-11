@@ -48,3 +48,12 @@ In the , you want to set a high priority for the \[Customer\] table "blobs" data
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1425 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -32,3 +32,12 @@ L'exemple suivant crée un ensemble après qu'une recherche ait été effectuée
 
 [CLEAR SET](clear-set.md)  
 [CREATE EMPTY SET](create-empty-set.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 116 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -82,3 +82,12 @@ Ces exemples illustrent comment récupérer la clé digest d’un texte :
 [Generate password hash](generate-password-hash.md)  
 *Protocole sécurisé*  
 [WEB Validate digest](web-validate-digest.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1147 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

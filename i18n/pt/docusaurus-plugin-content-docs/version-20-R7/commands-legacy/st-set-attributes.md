@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->O comando ST SET ATTRIBUTES permite modificar um ou mais atributos de estilo no(s) objeto(s) de formulário designado(s) por *objeto*.<!-- END REF-->   
@@ -106,3 +103,13 @@ No caso de erro, não modifica a variável. Quando ocorre um erro em uma variáv
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1093 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

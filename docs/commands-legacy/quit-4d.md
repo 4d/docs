@@ -67,3 +67,11 @@ The project method listed here is associated with the Quit or Exit menu item in 
 #### See also 
 
 [On Exit database method](on-exit-database-method.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 291 |
+| Thread safe | &check; |
+
+

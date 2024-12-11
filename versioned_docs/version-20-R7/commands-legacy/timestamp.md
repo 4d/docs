@@ -42,3 +42,12 @@ Result:
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1445 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -33,3 +33,13 @@ El siguiente ejemplo recupera el registro de un cliente en la pila:
 
 [PUSH RECORD](push-record.md)  
 *Uso de la pila de registros*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 177 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Prohibido en el servidor ||
+
+

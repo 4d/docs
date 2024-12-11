@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->La commande **FORM Convert to dynamic** convertit le formulaire classique *nomFormulaire* en formulaire dynamique et le retourne sous forme d'objet.<!-- END REF-->
@@ -63,3 +60,12 @@ Si vous exécutez le code :
 
 [DIALOG](../commands/dialog.md)  
 [Export structure file](export-structure-file.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1570 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

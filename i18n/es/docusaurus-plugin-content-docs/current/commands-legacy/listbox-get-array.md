@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**Nota:** este comando sólo funciona con los list box de tipo array.<!-- END REF-->
@@ -63,3 +60,12 @@ Ejemplos típicos de uso:
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1278 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

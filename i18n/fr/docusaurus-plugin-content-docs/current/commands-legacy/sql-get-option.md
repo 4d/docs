@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->La commande **SQL GET OPTION** retourne la *valeur* courante de l’option passée dans le paramètre *option*.<!-- END REF-->
@@ -30,3 +27,13 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 #### Voir aussi 
 
 [SQL SET OPTION](sql-set-option.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 819 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

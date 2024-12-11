@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST Get text.Summary-->**ST Get text** コマンドは *object* 引数で指定されたフィールドや変数中のスタイル付きテキストを返します。<!-- END REF-->
@@ -62,3 +59,13 @@ displayed_sidebar: docs
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1116 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

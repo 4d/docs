@@ -66,3 +66,12 @@ O seguinte método de projeto adiciona os parágrafos que são encontrados no te
 #### Ver também 
 
 [Position](position.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 12 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

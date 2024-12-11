@@ -49,3 +49,13 @@ The following example sets the serial port to receive data. It then sets a time-
 [RECEIVE PACKET](receive-packet.md)  
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 268 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->The **Is waiting mouse up** コマンドはカレントオブジェクトがクリックされて、かつマウスボタンがリリースされておらず、親ウィンドウにフォーカスが入っている場合に**True**を返します。<!-- END REF-->そうでない場合、例えばマウスボタンがリリースされる前に親ウィンドウのフォーカスが外れてしまった場合などには**False**を返します。
@@ -53,3 +50,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Form event code](../commands/form-event-code.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1422 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

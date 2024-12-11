@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->El comando APPEND DATA TO PASTEBOARD añade en el portapapeles los datos del tipo especificado en *tipoDatos* en el BLOB *datos*.<!-- END REF-->
@@ -218,3 +215,13 @@ Si los datos en el BLOB se añaden correctamente al portapapeles, la variable si
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 403 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

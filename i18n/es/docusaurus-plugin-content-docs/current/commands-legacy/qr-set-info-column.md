@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR SET INFO COLUMN.Summary-->##### Informes en lista 
@@ -112,3 +109,13 @@ Si el parámetro *numColumna* es incorrecto, se genera el error -9852.
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 765 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

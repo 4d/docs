@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Create deployment license.Summary-->The **Create deployment license** command creates an embedded license file in the Licenses folder of the *mergedApp* built application.<!-- END REF--> If the Licenses folder does not exist the *mergedApp*, it is created by the command.
@@ -59,3 +56,12 @@ The command returns a *status* object containing the following properties:
 #### See also 
 
 [Blog post - Finalize an application with 4D commands](https://blog.4d.com/finalize-an-application-with-4d-commands)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1811 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

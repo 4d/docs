@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR Count columns.Summary-->O comando QR Count columns devolve o número de colunas presentes na *area* do relatório rápido.<!-- END REF-->
@@ -36,3 +33,13 @@ O código a seguir permite adicionar uma coluna adicional à direita da última 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 [QR INSERT COLUMN](qr-insert-column.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 764 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

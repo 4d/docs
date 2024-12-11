@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.After.Summary-->**After** devuelve True para el ciclo de ejecución After.<!-- END REF-->
@@ -27,3 +24,12 @@ Para que el ciclo de ejecución **After** se genere, asegúrese de que la propie
 #### Ver también 
 
 [Form event code](form-event-code.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 31 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

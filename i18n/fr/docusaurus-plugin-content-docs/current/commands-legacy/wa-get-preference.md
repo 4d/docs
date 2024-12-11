@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->La commande **WA GET PREFERENCE** permet de lire la valeur courante d’une préférence dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
@@ -39,3 +36,12 @@ Passez dans le paramètre *valeur* une variable devant recevoir la valeur couran
 #### Voir aussi 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1042 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

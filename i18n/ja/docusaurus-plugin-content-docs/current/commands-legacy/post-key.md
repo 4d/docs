@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.POST KEY.Summary-->POST KEY コマンドはキーストロークをシミュレートします。<!-- END REF-->これは、ユーザが実際にキーボード上で文字を入力した場合と同様の結果を生じます。
@@ -38,3 +35,12 @@ displayed_sidebar: docs
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
 *ファンクションキーコード*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 465 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

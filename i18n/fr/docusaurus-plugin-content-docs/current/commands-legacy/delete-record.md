@@ -42,3 +42,13 @@ L'exemple suivant permet de supprimer l'enregistrement d'un employé. La méthod
 
 [Locked](locked.md)  
 *Présentation des triggers*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 58 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Interdite sur le serveur ||
+
+

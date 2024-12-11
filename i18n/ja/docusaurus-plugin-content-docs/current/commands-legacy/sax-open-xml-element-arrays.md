@@ -54,3 +54,12 @@ SAX OPEN XML ELEMENT ARRAYS は日付、数値、ブール、そしてピクチ�
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 921 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

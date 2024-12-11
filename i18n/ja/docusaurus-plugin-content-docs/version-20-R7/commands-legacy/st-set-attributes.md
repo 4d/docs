@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->**ST SET ATTRIBUTES** コマンドを使用して、 *object*で指定したフォームオブジェクト中の1つ以上のスタイル属性を変更できます。<!-- END REF--> 
@@ -105,3 +102,13 @@ displayed_sidebar: docs
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1093 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

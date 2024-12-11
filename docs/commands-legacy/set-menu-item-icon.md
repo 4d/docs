@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->The **SET MENU ITEM ICON** command modifies the icon associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->  
@@ -46,3 +43,12 @@ Use of a picture located in the Resources folder of the database:
 #### See also 
 
 [GET MENU ITEM ICON](get-menu-item-icon.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 984 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.RESUME INDEXES.Summary-->**RESUME INDEXES** コマンドは、 [PAUSE INDEXES](pause-indexes.md) コマンドを使用して停止させた *aTable* のインデックスを全て再起動させます。<!-- END REF--> *aTable* のインデックスが停止されていない場合、コマンドは何もしません。
+<!--REF #_command_.RESUME INDEXES.Summary-->**RESUME INDEXES** コマンドは、 [PAUSE INDEXES](pause-indexes.md) コマンドを使用して停止させた *aTable* のインデックスを全て再起動させます。<!-- END REF-->のインデックスが停止されていない場合、コマンドは何もしません。
 
 ほとんどの場合、このコマンドの実行は *aTable* のインデックスのリビルドをトリガーします。  
 任意の *\** 引数を渡した場合、インデックスのリビルドは非同期モードにて実行されます。これはインデックスの完了如何に関わらず、コマンドを呼び出すメソッドは呼び出された後も実行を続けるという事です。この引数を省略した場合、インデックスのリビルドはメソッドの実行をリビルドのオペレーションが完了するまで停止します。
@@ -27,3 +27,11 @@ displayed_sidebar: docs
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1294 |
+| スレッドセーフである | &check; |
+
+

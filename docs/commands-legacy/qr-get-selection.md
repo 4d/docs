@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR GET SELECTION.Summary-->The QR GET SELECTION command returns the coordinates of the cell that is selected.<!-- END REF-->
@@ -41,3 +38,13 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 #### See also 
 
 [QR SET SELECTION](qr-set-selection.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 793 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

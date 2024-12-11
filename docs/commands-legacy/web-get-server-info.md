@@ -130,3 +130,12 @@ After you execute the following code:
 [License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1531 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

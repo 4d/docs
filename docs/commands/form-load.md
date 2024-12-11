@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF--> There can only be one current form per process.
@@ -162,3 +159,12 @@ You want to print a form containing a list box. During the *on load* event, you 
 [LISTBOX GET OBJECTS](../commands-legacy/listbox-get-objects.md)  
 [OBJECT Get type](../commands-legacy/object-get-type.md)  
 [Print object](../commands-legacy/print-object.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1103 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -125,3 +125,12 @@ Petición para añadir un registro en JSON a una base remota:
 #### Ver también 
 
 [HTTP Get](http-get.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1158 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

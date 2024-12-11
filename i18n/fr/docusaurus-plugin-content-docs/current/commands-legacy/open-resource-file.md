@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Open resource file.Summary-->La commande **Open resource file** ouvre le fichier de ressources dont vous avez passé le nom ou le chemin d'accès complet dans le paramètre *resNomFichier*.<!-- END REF-->
@@ -100,3 +97,13 @@ Si le fichier de ressources n'a pas pu être ouvert à la suite d'un problème d
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 *Ressources*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 497 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document, error |
+| Interdite sur le serveur ||
+
+

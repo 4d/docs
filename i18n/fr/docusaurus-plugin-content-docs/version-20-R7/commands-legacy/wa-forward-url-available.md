@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA Forward URL available.Summary-->La commande **WA Forward URL available** permet de savoir s’il existe un URL suivant disponible dans la séquence d’URLs ouverts dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
@@ -28,3 +25,12 @@ La commande retourne Vrai si un URL existe et Faux sinon. Cette commande permet 
 
 [WA Back URL available](wa-back-url-available.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1027 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

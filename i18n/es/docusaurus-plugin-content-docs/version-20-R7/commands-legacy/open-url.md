@@ -81,3 +81,12 @@ Puede abrir un mismo archivo texto con diferentes aplicaciones utilizando el par
 #### Ver también 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 673 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -88,3 +88,12 @@ displayed_sidebar: docs
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 344 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

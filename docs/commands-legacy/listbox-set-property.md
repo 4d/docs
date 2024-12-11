@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->The **LISTBOX SET PROPERTY** command sets the *value* for the *property* of the list box or list box column specified using the *object* and *\** parameters.<!-- END REF-->
@@ -87,3 +84,12 @@ You want to set a maximum width for the column whose name is "ProductNumber":
   
 *List Box*  
 [LISTBOX Get property](listbox-get-property.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1440 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

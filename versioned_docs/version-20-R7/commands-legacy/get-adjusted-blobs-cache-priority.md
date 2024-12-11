@@ -25,3 +25,12 @@ displayed_sidebar: docs
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 *Managing priorities in database cache*  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1428 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -49,3 +49,12 @@ Exemples sous Windows :
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1107 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

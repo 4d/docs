@@ -55,3 +55,12 @@ Se quiser salvar uma chave de criptografia em um arquivo .4DKeyChain:
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1611 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

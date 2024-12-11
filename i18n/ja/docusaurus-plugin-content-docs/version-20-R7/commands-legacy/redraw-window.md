@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->REDRAW WINDOW コマンドは*window*に渡した参照番号を持つウィンドウのグラフィックな更新を行います。<!-- END REF-->
@@ -27,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [ERASE WINDOW](erase-window.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 456 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

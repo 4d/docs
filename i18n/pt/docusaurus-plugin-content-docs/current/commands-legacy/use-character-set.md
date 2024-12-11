@@ -52,3 +52,13 @@ A variável de sistema OK é definida como 1 se o mapa é carregado corretamente
 [RECEIVE BUFFER](receive-buffer.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 205 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->GET MENU ITEMS コマンドは、*menu*引数で指定したメニューまたはメニューバーのタイトルとIDを*menuTitlesArray* と *menuRefsArray* 配列に返します。<!-- END REF-->
@@ -36,3 +33,13 @@ displayed_sidebar: docs
  MenuBarRef:=Get menu bar reference(Frontmost process)
  GET MENU ITEMS(MenuBarRef;menuTitlesArray;menuRefsArray)
 ```
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 977 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

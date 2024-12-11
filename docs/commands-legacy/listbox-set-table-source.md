@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->The **LISTBOX SET TABLE SOURCE** command can be used to modify the source of the data displayed in the listbox that is designated by the *\** and *object* parameters.<!-- END REF-->
@@ -40,3 +37,12 @@ If the listbox already contains columns, their contents will be updated after th
 #### See also 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1013 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** define los objetos formulario especificados por *objeto* para mostrarse utilizando el tamaño de fuente que se pasa en *tamaño*.<!-- END REF-->
@@ -52,3 +49,12 @@ El siguiente ejemplo define el tamaño de fuente para todos los objetos de formu
 [OBJECT Get font size](object-get-font-size.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 165 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

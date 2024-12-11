@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.RELEASE MENU.Summary-->The **RELEASE MENU** command removes the menu whose ID is passed in *menu* from memory.<!-- END REF--> This menu must have been created by the menu [Create menu](create-menu.md) command. The following rule applies: for each [Create menu](create-menu.md) there must be a corresponding [RELEASE MENU](release-menu.md).
@@ -57,3 +54,12 @@ This example shows different ways to use this command:
 #### See also 
 
 [Create menu](create-menu.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 978 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

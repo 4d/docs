@@ -38,3 +38,12 @@ Desativação de asserções
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1131 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

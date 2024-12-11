@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->El comando **OBJECT Get data source** devuelve la fuente de datos actual de los objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  
@@ -44,3 +41,12 @@ Ejecuta el siguiente código:
 #### Ver también 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1265 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

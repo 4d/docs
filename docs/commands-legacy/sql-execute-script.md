@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->The **SQL EXECUTE SCRIPT** command is used to execute a series of SQL statements placed in the script file designated by *scriptPath*.<!-- END REF--> This command can only be executed on a local machine (local 4D or stored procedure on 4D Server). It works with the current database (internal or external database).
@@ -59,3 +56,13 @@ If the script is executed correctly (no error occurs), the *OK* system variable 
 * If *errorAction* is SQL On error continue (value 3), the *OK* variable is always 1\.
 
 **Note:** If you use this command to execute memory-consuming actions such as massive data imports, you can consider calling the *ALTER DATABASE* SQL command in order to temporarily disable the SQL options.
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1089 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

@@ -116,3 +116,12 @@ A titre indicatif, voici une liste non exhaustive des champs HTTP pouvant être 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 697 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

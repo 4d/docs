@@ -109,3 +109,12 @@ If you want the array of names be used as a third sort criterion, you need to as
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 718 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

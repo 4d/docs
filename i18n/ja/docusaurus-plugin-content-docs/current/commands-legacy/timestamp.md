@@ -42,3 +42,12 @@ displayed_sidebar: docs
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1445 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

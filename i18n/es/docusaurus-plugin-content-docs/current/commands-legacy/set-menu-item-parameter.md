@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->El comando SET MENU ITEM PARAMETER permite asociar una cadena de caracteres personalizada con una línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> 
@@ -44,3 +41,12 @@ Este código ofrece un menú que incluye los nombres de las ventanas abiertas y 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1004 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

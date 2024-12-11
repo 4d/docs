@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form, if any.<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
@@ -100,3 +97,12 @@ If values are edited and the OK button is clicked, the field is updated (the par
 #### See also 
 
 [DIALOG](dialog.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1466 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

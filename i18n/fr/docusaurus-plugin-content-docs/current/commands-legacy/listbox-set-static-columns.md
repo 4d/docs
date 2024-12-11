@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->La commande **LISTBOX SET STATIC COLUMNS** permet de rendre statiques les *nbColonnes* premières colonnes gauches de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -30,3 +27,12 @@ Les colonnes statiques (ou colonnes fixes) ne peuvent pas être déplacées dans
 
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1153 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

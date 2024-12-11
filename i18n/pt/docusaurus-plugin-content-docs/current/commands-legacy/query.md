@@ -310,3 +310,15 @@ A variável Ok toma o valor 0 se:
 #### Ver também 
 
 [QUERY SELECTION](query-selection.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 277 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

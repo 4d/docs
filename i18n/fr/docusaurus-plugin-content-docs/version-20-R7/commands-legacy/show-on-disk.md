@@ -46,3 +46,14 @@ Ces exemples illustrent le fonctionnement de la commande.
 #### Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la commande est correctement exécutée, sinon elle prend la valeur 0.
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 922 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

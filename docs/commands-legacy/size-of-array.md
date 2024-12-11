@@ -46,3 +46,12 @@ The following example returns the number of columns for a row in a two-dimension
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 274 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

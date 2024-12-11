@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->La commande **OBJECT SET TITLE** change le libellé du ou des objets(s) spécifié(s) dans le paramètre *objet* et le remplace par la valeur définie dans le paramètre *libellé* *.<!-- END REF-->*
@@ -74,3 +71,12 @@ Vous souhaitez insérer des libellés sur deux lignes :
 #### Voir aussi 
 
 [OBJECT Get title](object-get-title.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 194 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -32,3 +32,12 @@ Este exemplo atribui primeiro Verdadeiro a uma variável, logo muda o valor da v
 
 [False](false.md)  
 [True](true.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 34 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -38,3 +38,12 @@ L'exemple suivant illustre l'utilisation de **Change string**. Les résultats so
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 234 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

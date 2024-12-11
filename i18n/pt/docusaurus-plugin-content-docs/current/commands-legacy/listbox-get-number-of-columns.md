@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get number of columns.Summary-->O comando LISTBOX Get number of columns devolve o número total de colunas (visíveis ou invisíveis) presentes no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -27,3 +24,12 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome
 #### Ver também 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 831 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

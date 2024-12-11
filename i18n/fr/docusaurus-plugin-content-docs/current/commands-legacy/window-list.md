@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WINDOW LIST.Summary-->La commande **WINDOW LIST** remplit le tableau *fenêtres* avec les numéros de référence des fenêtres actuellement ouvertes dans tous les process (process moteur et process utilisateur).<!-- END REF--> Seules les fenêtres "visibles" (i.e. non cachées) sont retournées. 
@@ -53,3 +50,12 @@ La méthode projet suivante place en "mosaïque" toutes les fenêtres ouvertes (
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 442 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

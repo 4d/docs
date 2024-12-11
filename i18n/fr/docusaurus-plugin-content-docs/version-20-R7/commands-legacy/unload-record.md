@@ -29,3 +29,12 @@ Si les enregistrements contiennent une quantité importante de données, de cham
 
 [LOAD RECORD](load-record.md)  
 *Verrouillage d'enregistrements*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 212 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

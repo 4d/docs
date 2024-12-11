@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Validate password.Summary-->La commande **Validate password** retourne Vrai si la chaîne passée dans *motDePasse* est le mot de passe du compte utilisateur dont le n° de référence ou le nom est passé dans *utilisateur*.<!-- END REF-->
@@ -63,3 +60,12 @@ Dans la [On REST Authentication database method](on-rest-authentication-database
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 638 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

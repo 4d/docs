@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.EDIT ITEM.Summary-->La commande **EDIT ITEM** permet de passer en “mode édition” l’élément courant ou l’élément de numéro *élément* du tableau ou de la liste désigné(e) par le paramètre *objet*.<!-- END REF-->   
@@ -75,3 +72,12 @@ Soient deux colonnes d’une list box dont les noms de variables associées sont
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 870 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

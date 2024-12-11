@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Create deployment license.Summary-->**Create deployment license** コマンドは、*mergedApp* 引数で指定したビルドされたアプリのライセンスフォルダ内に、埋め込みライセンスファイルを作成します。<!-- END REF--> *mergedApp* 引数で指定した組み込みアプリ内にライセンスフォルダが存在しない場合、フォルダはコマンドによって作成されます。
@@ -59,3 +56,12 @@ displayed_sidebar: docs
 #### 参照 
 
   
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1811 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

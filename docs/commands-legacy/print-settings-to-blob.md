@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->The **Print settings to BLOB** command saves the current 4D print settings in the *printSettings* BLOB.<!-- END REF--> The *printSettings* parameter stores all the settings used for printing:
@@ -56,3 +53,12 @@ You want to store the current print settings to disk:
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1433 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -58,3 +58,12 @@ You want to select styles of the "Verdana" font family (if available):
 #### See also 
 
 [FONT LIST](font-list.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1362 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

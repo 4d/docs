@@ -33,3 +33,12 @@ Bien que la commande **ABORT** soit destinée à une utilisation au sein d'une m
 #### Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 156 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

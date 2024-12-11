@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->The **SET LIST PROPERTIES** command sets the line height and selection properties of the hierarchical list whose list reference you pass in *list*.<!-- END REF-->
@@ -63,3 +60,12 @@ You want to disallow the expand/collapse sublist on double-click. You can write 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 387 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

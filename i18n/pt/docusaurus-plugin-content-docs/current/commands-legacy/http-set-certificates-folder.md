@@ -56,3 +56,12 @@ Você quer mudar temporalmente a pasta de certificados:
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1306 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

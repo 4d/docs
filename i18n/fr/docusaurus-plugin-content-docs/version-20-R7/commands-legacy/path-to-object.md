@@ -176,3 +176,12 @@ Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
 [Folder](folder.md)  
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1547 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -33,3 +33,12 @@ Si la imagen no contiene palabras claves o metadatos IPTC/Keywords, el comando d
 
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [SET PICTURE METADATA](set-picture-metadata.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1142 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

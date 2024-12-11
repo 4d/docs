@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Encrypt data file.Summary-->The **Encrypt data file** command is used to encrypt or re-encrypt the data file designated by the *dataPath* parameter associated to the *structurePath* parameter.<!-- END REF--> It can also be used to remove encryption from the database. The command does not modify the original files, it returns the full path name of the folder created to backup the original data file.
@@ -135,3 +132,12 @@ Re-encrypt an encrypted data file with the current key (for example, when the en
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1610 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

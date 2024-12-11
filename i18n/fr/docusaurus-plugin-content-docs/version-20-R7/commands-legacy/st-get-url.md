@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.ST GET URL.Summary-->La commande **ST GET URL** retourne le libellé et l’adresse du premier URL détecté dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
@@ -73,3 +70,12 @@ Sur un événement double-clic, vous vérifiez que vous êtes bien en présence 
 #### Voir aussi 
 
 [ST INSERT URL](st-insert-url.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1288 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

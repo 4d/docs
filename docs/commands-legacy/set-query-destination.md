@@ -252,3 +252,12 @@ After this project method is implemented in your application, you can write:
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 396 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Command name.Summary-->The **Command name** command returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->
-
-**Note:** The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
+<!--REF #_command_.Command name.Summary-->The **Command name** command returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
 
 **Compatibility note:** Since a command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions of the program to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information about this point, refer to the *Using tokens in formulas* section). Furthermore, by default, the English language version is used starting with 4D v15; however, the "Use regional system settings" option on the [Is a list](is-a-list.md) of the Preferences allows you to continue using the French language in a French version of 4D.
 
@@ -103,3 +101,13 @@ Then, for the "SAVE RECORD" command (53) for example, you can write:
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Preemptive 4D processes*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 538 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

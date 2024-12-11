@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->PRINT SETTINGS muestra una caja de diálogo de impresión.<!-- END REF--> Este comando debe llamarse antes de una serie de comandos [Print form](../commands/print-form.md) o el comando [OPEN PRINTING JOB](open-printing-job.md).
@@ -43,3 +40,13 @@ Si el usuario hace clic en OK en ambas cajas de diálogo, la variable sistema OK
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 106 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

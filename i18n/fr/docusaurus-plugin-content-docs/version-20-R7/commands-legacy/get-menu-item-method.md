@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Get menu item method.Summary-->La commande **Get menu item method** retourne le nom de la méthode projet 4D associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
@@ -31,3 +28,12 @@ La commande retourne le nom de la méthode 4D sous la forme d’une chaîne de c
 #### Voir aussi 
 
 [SET MENU ITEM METHOD](set-menu-item-method.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 981 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

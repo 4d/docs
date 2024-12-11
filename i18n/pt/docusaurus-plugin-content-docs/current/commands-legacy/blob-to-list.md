@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.BLOB to list.Summary-->O comando BLOB to list cria uma lista hierárquica com os dados armazenados no BLOB blob no o offset de bytes (a partir de zero) especificado pelo *offset* e retorna um número de referência de lista hierárquica para essa nova lista.<!-- END REF-->
@@ -62,3 +59,13 @@ A variável OK recebe o valor 1 se a lista for criada corretamente, caso contrá
 #### Ver também 
 
 [LIST TO BLOB](list-to-blob.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 557 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

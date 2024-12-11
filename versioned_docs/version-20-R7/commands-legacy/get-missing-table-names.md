@@ -33,3 +33,12 @@ Once you have identified the missing tables of the database, you can reactivate 
 #### See also 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1125 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

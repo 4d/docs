@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** vous permet d'imprimer des étiquettes à partir des données de la sélection de *laTable*.<!-- END REF-->
@@ -112,3 +109,12 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 39 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

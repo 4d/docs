@@ -37,3 +37,13 @@ Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fi
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 634 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

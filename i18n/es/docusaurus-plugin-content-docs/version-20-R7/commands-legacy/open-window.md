@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana cuyas dimensiones son definidas por los cuatro primeros parámetros: 
@@ -140,3 +137,12 @@ Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo Mac 
 [CLOSE WINDOW](close-window.md)  
 *Crear ventana*  
 [Open form window](open-form-window.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 153 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

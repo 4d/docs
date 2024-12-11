@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.OB SET.Summary-->El comando **OB SET** crea o modifica uno o más pares de *propiedad*/*valor* en el objeto de lenguaje designado por el parámetro *objeto*.<!-- END REF-->  
-  
-*objeto* debe haber sido definido usando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.
+<!--REF #_command_.OB SET.Summary-->El comando **OB SET** crea o modifica uno o más pares de *propiedad*/*valor* en el objeto de lenguaje designado por el parámetro *objeto*.<!-- END REF-->debe haber sido definido usando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.
 
 En el parámetro *propiedad*, pase la etiqueta de la propiedad a crear o modificar. Si la propiedad ya existe en *objeto*, su valor se actualiza. Si no existe, se crea.  
   
@@ -198,3 +196,12 @@ Usted desea almacenar una imagen en un campo objeto. Puede escribir:
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1220 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

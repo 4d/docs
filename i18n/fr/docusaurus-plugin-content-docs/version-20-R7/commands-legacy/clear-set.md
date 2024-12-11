@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.CLEAR SET.Summary-->**CLEAR SET** efface *ensemble* de la mémoire et la libère ainsi pour d'autres utilisations.<!-- END REF--> **CLEAR SET** n'a aucune conséquence sur les tables, sélections ou enregistrements. Pour sauvegarder un ensemble avant de l'effacer, utiliser la commande [SAVE SET](save-set.md). Comme les ensembles consomment de la mémoire, pensez à les effacer dès qu'ils ne sont plus nécessaires.
+<!--REF #_command_.CLEAR SET.Summary-->**CLEAR SET** efface *ensemble* de la mémoire et la libère ainsi pour d'autres utilisations.<!-- END REF-->n'a aucune conséquence sur les tables, sélections ou enregistrements. Pour sauvegarder un ensemble avant de l'effacer, utiliser la commande [SAVE SET](save-set.md). Comme les ensembles consomment de la mémoire, pensez à les effacer dès qu'ils ne sont plus nécessaires.
 
 #### Exemple 
 
@@ -26,3 +26,12 @@ Reportez-vous à l'exemple de la commande [USE SET](use-set.md).
 [CREATE EMPTY SET](create-empty-set.md)  
 [CREATE SET](create-set.md)  
 [LOAD SET](load-set.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 117 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

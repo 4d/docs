@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->El comando SET PRINT MARKER permite definir la posición de un marcador durante la impresión.<!-- END REF--> Combinado con los comandos [Get print marker](get-print-marker.md "Get print marker"), [OBJECT MOVE](object-move.md "OBJECT MOVE") o [Print form](print-form.md "Print form"), este comando le permite ajustar el tamaño de las áreas de impresión. 
@@ -184,3 +181,12 @@ El método de formulario List\_Imp3 es el siguiente:
 [Print form](print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 709 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.WA Get page title.Summary-->WA Get page title コマンドは、*\** と *object* 引数で指定したWebエリアの現在のページまたは表示されているページのタイトルを返します。<!-- END REF-->タイトルはHTMLのtitleタグに対応します。
@@ -27,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [WA Get page content](wa-get-page-content.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1036 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->QUERY BY EXAMPLE realiza a mesma ação que o comando de menu Pesquisa por formulário.<!-- END REF-->.. no ambiente Desenho. Este comando mostra o formulário de entrada atual como janela de pesquisa. QUERY BY EXAMPLE busca em *tabela* os dados que o usuário introduz na janela de pesquisa. O formulário deve conter os campos que você queira utilizar para realizar a pesquisa. A pesquisa é otimizada; os campos indexados são utilizados automaticamente para otimizar a pesquisa.
@@ -43,3 +40,15 @@ Se o usuário clicar no botão Aceitar, ou pressionar a tecla Enter, a variável
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 292 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

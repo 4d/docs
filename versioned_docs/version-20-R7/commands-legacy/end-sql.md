@@ -21,3 +21,12 @@ A sequence of SQL statements must be enclosed with the [Begin SQL](begin-sql.md)
 #### See also 
 
 [Begin SQL](begin-sql.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 949 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

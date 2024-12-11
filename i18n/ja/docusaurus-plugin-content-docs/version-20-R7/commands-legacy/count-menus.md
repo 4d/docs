@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Count menus.Summary-->Count menus コマンドは、メニューバー上にあるメニューの数を返します。<!-- END REF-->
@@ -26,3 +23,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Count menu items](count-menu-items.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 404 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

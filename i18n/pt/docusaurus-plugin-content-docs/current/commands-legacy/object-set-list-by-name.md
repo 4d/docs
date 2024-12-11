@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->O comando OBJECT SET LIST BY NAME define ou substitui a lista associada ao objeto o grupo de objetos designado por *objeto* A lista cujo nome é passado no parâmetro *lista* deve ter sido criada no editor de listas, em modo Desenho*.<!-- END REF-->*  
@@ -96,3 +93,12 @@ Você quer eliminar a lista de associações:
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 237 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

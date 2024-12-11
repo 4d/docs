@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->**METHOD GET COMMENTS**コマンドは*path*引数で指定したメソッドのドキュメンテーションを*comments*引数に返します。<!-- END REF-->
@@ -56,3 +53,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [METHOD SET COMMENTS](method-set-comments.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1189 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

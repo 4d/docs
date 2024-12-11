@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->The **IMPORT TEXT** command reads data from *document*, a Windows or Macintosh text document, into the table *aTable* by creating new records for that table.<!-- END REF-->
@@ -56,3 +53,13 @@ OK is set to 1 if the import is successfully completed; otherwise, it is set to 
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 168 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

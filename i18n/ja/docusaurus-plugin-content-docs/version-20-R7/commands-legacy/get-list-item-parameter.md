@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->**GET LIST ITEM PARAMETER** コマンドは、*list* 引数にリスト参照やオブジェクト名で指定したリストの、*itemRef* 項目の、*selector* パラメタに対応する現在値を取得するために使用します。<!-- END REF-->
@@ -36,3 +33,12 @@ displayed_sidebar: docs
 
 *Hierarchical Lists*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 985 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -44,3 +44,12 @@ El siguiente ejemplo vuelve automáticas todas las relaciones Muchos a Uno y res
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 310 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

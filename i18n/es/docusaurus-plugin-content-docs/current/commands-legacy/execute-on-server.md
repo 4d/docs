@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Execute on server.Summary-->El comando Execute on server inicia un nuevo proceso en el equipo servidor (cuando se llama en Cliente/Servidor) o en el mismo equipo (si se llama en monousuario) y devuelve el número de este proceso.<!-- END REF-->
@@ -191,3 +188,12 @@ Consulte la sección *Servicios basados en los procedimientos almacenados (ejemp
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 373 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

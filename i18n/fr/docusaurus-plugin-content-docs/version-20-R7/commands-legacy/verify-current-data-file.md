@@ -42,3 +42,13 @@ Si la méthode de rétro-appel passée n’existe pas, la vérification n’est 
 #### Voir aussi 
 
 [VERIFY DATA FILE](verify-data-file.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1008 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document, error |
+| Interdite sur le serveur ||
+
+

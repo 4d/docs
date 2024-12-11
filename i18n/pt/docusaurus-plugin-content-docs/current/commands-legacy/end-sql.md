@@ -21,3 +21,12 @@ Uma sequência de instruções SQL deve estar rodeada pelas palavras chaves [Beg
 #### Ver também 
 
 [Begin SQL](begin-sql.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 949 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

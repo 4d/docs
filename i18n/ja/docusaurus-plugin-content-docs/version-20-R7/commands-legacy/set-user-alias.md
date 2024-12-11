@@ -40,3 +40,12 @@ displayed_sidebar: docs
 [CHANGE CURRENT USER](change-current-user.md)  
 [Current user](current-user.md)  
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1666 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

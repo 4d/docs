@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->La commande **QR SET HEADER AND FOOTER** vous permet de définir le contenu et la taille de l'en-tête et du pied de page de la *zone*.<!-- END REF--> 
@@ -57,3 +54,13 @@ L'instruction suivante place le libellé “Titre du centre” dans l'en-tête d
 #### Voir aussi 
 
 [QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 774 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

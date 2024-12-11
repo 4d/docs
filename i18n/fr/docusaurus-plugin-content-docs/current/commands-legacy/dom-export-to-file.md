@@ -61,3 +61,13 @@ Une erreur est générée lorsque :
 
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 862 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

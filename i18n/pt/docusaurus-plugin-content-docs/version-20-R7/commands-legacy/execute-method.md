@@ -32,3 +32,13 @@ Se este comando é executado corretamente, a variável sistema OK toma o valor 1
 #### Ver também 
 
 [EXECUTE FORMULA](execute-formula.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1007 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

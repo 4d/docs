@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->**REDUCE RESTORE WINDOW** コマンドは、*window* 引数に参照を渡したウィンドウを、WindowsのタスクバーまたはmacOS のDockへ収納、またはそこから展開します。<!-- END REF-->
@@ -32,3 +29,12 @@ displayed_sidebar: docs
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1829 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

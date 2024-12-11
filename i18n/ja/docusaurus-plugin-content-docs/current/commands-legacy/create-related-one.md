@@ -24,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SAVE RELATED ONE](save-related-one.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 65 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

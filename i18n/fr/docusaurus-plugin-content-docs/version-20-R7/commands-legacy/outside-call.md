@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Outside call.Summary-->**Outside call** retourne Vrai pour le cycle d'exécution Appel extérieur.<!-- END REF--> 
@@ -28,3 +25,12 @@ Si vous voulez que le cycle d'exécution **Outside call** soit généré, vérif
 
 [Form event code](form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 328 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -118,3 +118,12 @@ Dans l'exemple suivant, vous souhaitez recherchez toutes les instances d'une cha
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 15 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** pushes the current record of *aTable* (and its subrecords, if any) onto the table’s record stack.<!-- END REF--> **PUSH RECORD** may be executed before a record is saved.
+<!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** pushes the current record of *aTable* (and its subrecords, if any) onto the table’s record stack.<!-- END REF-->may be executed before a record is saved.
 
 If you push a record that was unlocked, this record stays locked for all the other processes and users until you pop and unload it.
 
@@ -33,3 +33,12 @@ The following example pushes the record for the customer onto the record stack:
 
 [POP RECORD](pop-record.md)  
 *Using the Record Stack*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 176 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

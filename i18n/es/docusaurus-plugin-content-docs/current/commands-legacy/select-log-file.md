@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->El comando **SELECT LOG FILE** crea, o cierra el archivo historial de acuerdo al valor que se pase en *historial*.<!-- END REF-->
@@ -41,3 +38,13 @@ Se genera el error -4447 si no se puede realizar la operación porque la base de
 #### Ver también 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 345 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+| Prohibido en el servidor ||
+
+

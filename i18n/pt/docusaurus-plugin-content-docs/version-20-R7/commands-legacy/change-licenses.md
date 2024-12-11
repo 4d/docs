@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->O comando CHANGE LICENSES mostra a caixa de diálogo de atualização de licenças 4D .<!-- END REF-->  
@@ -43,3 +40,12 @@ Desta forma um usuário pode ativar licenças sem ter que modificar a base.
 
 [License info](license-info.md)  
 [Is license available](is-license-available.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 637 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.IMPORT DIF.Summary-->The **IMPORT DIF** command reads data from *document*, a Windows or Macintosh DIF document, into the table *aTable* by creating new records for that table.<!-- END REF-->
@@ -54,3 +51,13 @@ OK is set to 1 if the import is successfully completed; otherwise, it is set to 
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 86 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

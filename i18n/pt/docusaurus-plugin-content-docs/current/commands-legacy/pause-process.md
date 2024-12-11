@@ -31,3 +31,12 @@ Quando se suspende a execução de um processo, as janelas que pertencem a este 
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 319 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

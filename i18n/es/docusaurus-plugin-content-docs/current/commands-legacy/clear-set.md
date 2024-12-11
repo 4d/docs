@@ -26,3 +26,12 @@ Ver el ejemplo del comando [USE SET](use-set.md "USE SET").
 [CREATE EMPTY SET](create-empty-set.md)  
 [CREATE SET](create-set.md)  
 [LOAD SET](load-set.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 117 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -25,3 +25,12 @@ This command is intended to be used in an automatic update process for a merged 
 
 [RESTART 4D](restart-4d.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1301 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

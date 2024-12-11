@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
@@ -69,3 +66,12 @@ Vous voulez associer un tableau de hauteurs de ligne à une list box :
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1279 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

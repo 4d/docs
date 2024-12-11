@@ -97,3 +97,13 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
 #### Voir aussi 
 
 [VOLUME LIST](volume-list.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 472 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

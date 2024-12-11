@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.POST EVENT.Summary-->The **POST EVENT** command simulates a keyboard or mouse event.<!-- END REF--> Its effect is as if the user actually acted on the keyboard or the mouse.
@@ -76,3 +73,12 @@ If you specify the *process* parameter, the event is sent to the process whose p
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 467 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

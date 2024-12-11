@@ -61,3 +61,13 @@ Here is an example that lets you verify the existence of a value:
 ```
 
 Note the >= that lets you cover all cases. In fact, the function returns a record number and the first record is numbered 0.
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 653 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -65,3 +65,13 @@ La variable OK prend la valeur 1 si le BLOB a été correctement décompressé, 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 535 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

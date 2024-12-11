@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->El comando **FORM SET OUTPUT** define el formulario de salida actual de *formulario* o *formUsuario*.<!-- END REF--> El formulario debe pertenecer a *tabla*.
@@ -72,3 +69,12 @@ Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los reg
 [MODIFY SELECTION](modify-selection.md)  
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 54 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

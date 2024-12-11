@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Menu selected.Summary-->**Menu selected** is used only when forms are displayed.<!-- END REF--> It detects which menu command has been chosen from a menu and, in the case of a hierarchical submenu, returns the reference of the submenu.
@@ -62,3 +59,12 @@ The following form method uses **Menu selected** to supply the menu and menu ite
 #### See also 
 
 *Managing Menus*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 152 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

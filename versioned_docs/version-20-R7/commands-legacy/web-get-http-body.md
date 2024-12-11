@@ -48,3 +48,12 @@ When the form is submitted to the Web server, the $requestText variable receives
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 814 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

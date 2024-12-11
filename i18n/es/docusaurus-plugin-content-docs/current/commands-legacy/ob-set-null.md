@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.OB SET NULL.Summary-->El comando **OB SET NULL** almacena el valor **null** en el objeto de lenguaje designado por el parámetro *objeto* .<!-- END REF-->  
-  
-*objeto* debe haber sido definido utilizando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.  
+<!--REF #_command_.OB SET NULL.Summary-->El comando **OB SET NULL** almacena el valor **null** en el objeto de lenguaje designado por el parámetro *objeto* .<!-- END REF-->debe haber sido definido utilizando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.  
   
 En el parámetro *propiedad*, pase la etiqueta de la propiedad en la que desea almacenar el valor **null**. Si la propiedad ya existe en *objeto*, su valor se actualiza. Si no existe, se crea.  
 Tenga en cuenta que el parámetro *propiedad* tiene en cuenta las mayúsculas y minúsculas.
@@ -41,3 +39,12 @@ Queremos poner el valor nulo en la propiedad "edad" para Lea:
 [Null](null.md)  
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [OB SET](ob-set.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1233 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

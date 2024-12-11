@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Load list.Summary-->**Load list** creates a new hierarchical list whose contents are copied from the list and whose name you pass in *listName*.<!-- END REF--> It then returns the list reference number to the newly created list. 
@@ -53,3 +50,12 @@ You create a database for the international market and you need to switch to dif
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 383 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

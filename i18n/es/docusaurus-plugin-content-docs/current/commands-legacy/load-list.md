@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Load list.Summary-->Load list crea una lista jerárquica cuyo contenido se copia de la lista pasada en *nomLista*.<!-- END REF--> Luego devuelve el número de referencia de la lista creada recientemente. 
@@ -51,3 +48,12 @@ Usted crea una base para el mercado internacional y necesita cambiar a los difer
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 383 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Open form window.Summary-->Open form window コマンドはフォーム*formName*のサイズとリサイズプロパティを使用して、新しいウィンドウを開きます。<!-- END REF-->
@@ -141,3 +138,12 @@ Movable form dialog box 、Plain form window およびPalette form window タイ
 [Open window](open-window.md)  
 *Window Types*  
 *ウィンドウタイプ(互換性)*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 675 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

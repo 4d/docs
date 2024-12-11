@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Day of.Summary-->O comando Day of retorna o dia do mês de *data*.<!-- END REF-->
-
-**Nota:** Day of retorna um valor entre 1 e 31\. Para obter o dia da semana de uma data, utilize o comando [Day number](day-number.md "Day number").
+<!--REF #_command_.Day of.Summary-->O comando Day of retorna o dia do mês de *data*.<!-- END REF-->Day of retorna um valor entre 1 e 31\. Para obter o dia da semana de uma data, utilize o comando [Day number](day-number.md "Day number").
 
 #### Exemplo 1 
 
@@ -38,3 +36,12 @@ Veja o exemplo para o comando [Current date](current-date.md "Current date").
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 23 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

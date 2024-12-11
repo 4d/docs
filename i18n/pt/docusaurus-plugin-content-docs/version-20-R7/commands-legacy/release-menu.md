@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.RELEASE MENU.Summary-->O comando RELEASE MENU apaga da memória o menu cuja referência se passa em *menu*.<!-- END REF-->. A regra é a seguinte: a cada [Create menu](create-menu.md) deve corresponder um [RELEASE MENU](release-menu.md). 
@@ -57,3 +54,12 @@ Este exemplo mostra as diferentes formas de utilizar este comando:
 #### Ver também 
 
 [Create menu](create-menu.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 978 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -41,3 +41,12 @@ Em uma de suas rotinas, você inclui a depuração do código apenas quando voc�
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 492 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

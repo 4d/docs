@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->**SET LIST PROPERTIES** コマンドは、*list*引数に渡された参照番号を持つ階層リストの行の高さとセレクションプロパティを設定します。<!-- END REF-->
@@ -63,3 +60,12 @@ displayed_sidebar: docs
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 387 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

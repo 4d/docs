@@ -36,3 +36,12 @@ Si quiere conocer el nombre de la variable apuntada o el número del campo, pued
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 315 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

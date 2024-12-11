@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->La commande **SET PICTURE TO LIBRARY** crée une nouvelle image ou remplace une image existante dans la bibliothèque d’images.<!-- END REF-->
@@ -95,3 +92,13 @@ S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est g
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 566 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

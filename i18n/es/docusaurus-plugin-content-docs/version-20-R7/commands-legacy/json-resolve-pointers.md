@@ -230,3 +230,12 @@ Si ejecuta:
 #### Ver también 
 
   
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1478 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

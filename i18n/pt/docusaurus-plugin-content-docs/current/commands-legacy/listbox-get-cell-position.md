@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->O comando LISTBOX GET CELL POSITION devolve os números da *coluna* e da *fila* correspondentes a localização no list box (designado por *\** e *objeto*) do último clique ou as coordenadas vertical e horizontal do mouse.<!-- END REF-->
@@ -58,3 +55,12 @@ Se a seleção é modificada utilizando as flechas do teclado, *coluna* devolve 
 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 971 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

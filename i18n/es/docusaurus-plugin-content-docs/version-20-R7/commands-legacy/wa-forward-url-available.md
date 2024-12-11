@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.WA Forward URL available.Summary-->El comando WA Forward URL available permite conocer si existe un URL siguiente disponible en la secuencia de URLs abiertos en el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->
@@ -28,3 +25,12 @@ El comando devuelve [True](true.md "True") si existe un URL y de lo contrario [F
 
 [WA Back URL available](wa-back-url-available.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1027 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

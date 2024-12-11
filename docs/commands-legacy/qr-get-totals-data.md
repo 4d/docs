@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR GET TOTALS DATA.Summary-->##### List Mode 
@@ -75,3 +72,13 @@ If you pass an invalid *breakNum* number, the error -9853 will be generated.
 #### See also 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 768 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

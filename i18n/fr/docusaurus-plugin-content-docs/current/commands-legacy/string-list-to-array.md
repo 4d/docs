@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->La commande **STRING LIST TO ARRAY** remplit le tableau *chaînes* avec : 
@@ -49,3 +46,13 @@ La variable système OK prend la valeur 1 si la ressource est trouvée, sinon el
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 511 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

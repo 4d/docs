@@ -29,3 +29,14 @@ Recuerde que una selección temporal es una representación de una selección de
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 332 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

@@ -35,3 +35,12 @@ displayed_sidebar: docs
 [Locked](locked.md)  
 [UNLOAD RECORD](unload-record.md)  
 *レコードのロック*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 52 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

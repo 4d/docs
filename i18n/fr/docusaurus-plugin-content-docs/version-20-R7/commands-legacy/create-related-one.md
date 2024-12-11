@@ -22,3 +22,12 @@ Si un enregistrement lié existe déjà, la commande **CREATE RELATED ONE** a al
 #### Voir aussi 
 
 [SAVE RELATED ONE](save-related-one.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 65 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

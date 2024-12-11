@@ -32,3 +32,13 @@ Si *cheminAlias* désigne bien un alias/raccourci, la variable système OK prend
 #### Voir aussi 
 
 [CREATE ALIAS](create-alias.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 695 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

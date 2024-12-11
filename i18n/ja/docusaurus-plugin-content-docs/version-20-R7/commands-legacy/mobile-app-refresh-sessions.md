@@ -45,3 +45,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [On Mobile App Authentication データベースメソッド](on-mobile-app-authentication-database-method.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1596 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

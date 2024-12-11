@@ -93,3 +93,13 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 719 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

@@ -42,3 +42,13 @@ Se o usuário clicar no botão Cancelar na caixa de diálogo de salvar arquivos,
 #### Ver também 
 
 [LOAD SET](load-set.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 184 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

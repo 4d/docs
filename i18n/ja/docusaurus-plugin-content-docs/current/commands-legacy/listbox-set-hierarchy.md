@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->LISTBOX SET HIERARCHY コマンドを使用して*object*と*\**で指定されたリストボックスを階層モードにするか非階層モードにするか設定できます。<!-- END REF-->. 
@@ -54,3 +51,12 @@ aCountry、aRegion、そしてaCity配列をリストボックスの階層とし
 #### 参照 
 
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1098 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

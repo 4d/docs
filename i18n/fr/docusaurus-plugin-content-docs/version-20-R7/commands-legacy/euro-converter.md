@@ -114,3 +114,13 @@ Voici différents types de conversion pouvant être obtenus à l’aide de cette
   //Convertir la valeur en lires italiennes
  $EnLires:=Euro converter($valeur;French Franc;Italian Lira)
 ```
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 676 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR Find column.Summary-->O comando QR Find column devolve o número da primeira coluna cujo conteúdo corresponde à *expressao* passada em parâmetro.<!-- END REF-->
@@ -44,3 +41,14 @@ $NumColumn:=QR Find column (MiArea; "\[G.NQR Tests\]Trimestre")
     QR DELETE COLUMN(MinhaArea;$NumColumn)
  End if
 ```
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 776 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB Is empty.Summary-->The **OB Is empty** command returns True if *object* is undefined or empty, and False if *object* is defined (initialized) and contains at least one property.<!-- END REF-->
-
-*object* can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Is empty.Summary-->The **OB Is empty** command returns True if *object* is undefined or empty, and False if *object* is defined (initialized) and contains at least one property.<!-- END REF-->can be an object varialble or a 4D object field.
 
 #### Example 
 
@@ -43,3 +41,12 @@ Here are the different results of this command as well as the [OB Is defined](ob
 #### See also 
 
 [OB Is defined](ob-is-defined.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1297 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

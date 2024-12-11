@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE**コマンドは、現在表示されているフォームページを*pageNumber*で指定したフォームページに変更します。<!-- END REF--> 
@@ -50,3 +47,12 @@ displayed_sidebar: docs
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 247 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

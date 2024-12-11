@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Count parameters.Summary-->Count parameters コマンドは、プロジェクトメソッドに渡された引数の数を返します。<!-- END REF-->
-
-**警告:** Count parametersは、他のメソッド（プロジェクトメソッド、その他）から呼び出されるプロジェクトメソッド内でのみ意味を持ちます。Count parametersを呼び出すプロジェクトメソッドがメニューに割り当てられている場合、Count parametersは0を返します。
+<!--REF #_command_.Count parameters.Summary-->Count parameters コマンドは、プロジェクトメソッドに渡された引数の数を返します。<!-- END REF-->Count parametersは、他のメソッド（プロジェクトメソッド、その他）から呼び出されるプロジェクトメソッド内でのみ意味を持ちます。Count parametersを呼び出すプロジェクトメソッドがメニューに割り当てられている場合、Count parametersは0を返します。
 
 #### 例題 1 
 
@@ -95,3 +93,12 @@ MyMethod内でCount parametersを使用し、実際の引数の数を取得し�
 
 [Copy parameters](copy-parameters.md)  
 *コンパイラコマンド*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 259 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

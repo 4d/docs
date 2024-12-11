@@ -75,3 +75,13 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 #### See also 
 
 [SAX GET XML CDATA](sax-get-xml-cdata.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 856 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

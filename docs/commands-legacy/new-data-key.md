@@ -55,3 +55,12 @@ You want to save an encryption key in a .4DKeyChain file:
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1611 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

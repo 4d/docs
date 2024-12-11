@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.RESTORE.Summary-->The RESTORE command can be used to restore the file(s) included in a 4D archive.<!-- END REF--> This command is useful as part of custom interfaces for managing backups. 
@@ -36,3 +33,13 @@ The RESTORE command modifies the value of the *OK* and *Document* variables: if 
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 918 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document, error |
+| Forbidden on the server ||
+
+

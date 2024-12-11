@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.BLOB PROPERTIES.Summary-->O comando **BLOB PROPERTIES** retorna informações sobre o *blob* BLOB.<!-- END REF-->
-
-* O parâmetro *comprimido* diz se o BLOB é comprimido ou não, e retorna um dos seguintes valores.
+<!--REF #_command_.BLOB PROPERTIES.Summary-->O comando **BLOB PROPERTIES** retorna informações sobre o *blob* BLOB.<!-- END REF-->diz se o BLOB é comprimido ou não, e retorna um dos seguintes valores.
 
 | Constante                  | Tipo          | Valor | Comentário                                                                                                                                             |
 | -------------------------- | ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -77,3 +75,12 @@ Depois que este método tenha sido adicionado à sua aplicação, você pode us�
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 536 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

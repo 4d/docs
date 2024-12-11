@@ -35,3 +35,12 @@ Par défaut, si vous ne passez pas le paramètre *\**, la commande retourne uniq
 
 *Introduction aux images*  
 [Is picture file](is-picture-file.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 992 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

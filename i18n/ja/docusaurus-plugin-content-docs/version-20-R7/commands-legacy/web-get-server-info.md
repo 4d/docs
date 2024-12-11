@@ -90,3 +90,12 @@ displayed_sidebar: docs
 [License info](license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1531 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

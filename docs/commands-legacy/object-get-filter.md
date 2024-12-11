@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get filter.Summary-->The OBJECT Get filter command returns the name of any filter associated with the object or group of objects designated by *object*.<!-- END REF-->
@@ -27,3 +24,12 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 #### See also 
 
 [OBJECT SET FILTER](object-set-filter.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1073 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

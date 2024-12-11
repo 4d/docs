@@ -44,3 +44,13 @@ BLOB TO VARIABLEと[VARIABLE TO BLOB](variable-to-blob.md)は4Dの内部フォ�
 #### 参照 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 533 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

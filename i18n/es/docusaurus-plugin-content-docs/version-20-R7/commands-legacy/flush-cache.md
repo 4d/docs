@@ -30,3 +30,12 @@ Normalmente, no es necesario llamar a este comando, ya que 4D guarda las modific
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 297 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

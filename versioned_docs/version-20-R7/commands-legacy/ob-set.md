@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB SET.Summary-->The **OB SET** command creates or modifies one or more *property*/*value* pairs in the language object designated by the *object* parameter.<!-- END REF--> 
-
-*object* must be an object variable or designate a 4D object field.
+<!--REF #_command_.OB SET.Summary-->The **OB SET** command creates or modifies one or more *property*/*value* pairs in the language object designated by the *object* parameter.<!-- END REF-->must be an object variable or designate a 4D object field.
 
 In the *property* parameter, pass the label of the property to be created or modified. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
 
@@ -198,3 +196,12 @@ You want to store a picture in an object field. You can write:
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1220 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

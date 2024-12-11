@@ -47,3 +47,12 @@ displayed_sidebar: docs
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 459 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -41,3 +41,12 @@ Dans une base contenant un formulaire projet nommé “LeForm” et un formulair
 #### Voir aussi 
 
 [DEFAULT TABLE](default-table.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 993 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

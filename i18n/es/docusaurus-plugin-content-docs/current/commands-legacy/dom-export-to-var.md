@@ -55,3 +55,13 @@ Si el comando se ejecutó correctamente, la variable sistema OK toma el valor 1\
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 863 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+| Prohibido en el servidor ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get string resource.Summary-->Get string resource コマンドは、*resID*に渡されるIDを持つストリング ("STR ") リソースに格納されている文字列を返します。<!-- END REF-->
@@ -45,3 +42,13 @@ displayed_sidebar: docs
 [Get indexed string](get-indexed-string.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 506 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

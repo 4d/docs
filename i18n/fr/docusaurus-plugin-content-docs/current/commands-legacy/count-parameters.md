@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Count parameters.Summary-->**Count parameters** retourne le nombre de paramètres passés à une méthode projet.<!-- END REF-->
-
-**ATTENTION :** **Count parameters** n'a d'intérêt que dans une méthode projet appelée par une autre méthode (projet ou non). Si la méthode projet qui appelle **Count parameters** est associée à une commande de menu, la fonction retourne 0.
+<!--REF #_command_.Count parameters.Summary-->**Count parameters** retourne le nombre de paramètres passés à une méthode projet.<!-- END REF-->**Count parameters** n'a d'intérêt que dans une méthode projet appelée par une autre méthode (projet ou non). Si la méthode projet qui appelle **Count parameters** est associée à une commande de menu, la fonction retourne 0.
 
 #### Exemple 1 
 
@@ -94,3 +92,12 @@ ou :
 
 *Commandes du thème Compilateur*  
 [Copy parameters](copy-parameters.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 259 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

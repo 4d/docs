@@ -80,3 +80,12 @@ Puisque la commande retourne une collection, elle peut être utilisée avec **.j
 #### Voir aussi 
 
 [Count parameters](count-parameters.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1790 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

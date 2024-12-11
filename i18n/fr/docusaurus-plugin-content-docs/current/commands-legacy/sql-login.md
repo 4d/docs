@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SQL LOGIN.Summary-->La commande **SQL LOGIN** vous permet d’ouvrir une connexion avec une source de données SQL, définie dans le paramètre *source*.<!-- END REF--> Elle désigne la cible des requêtes SQL exécutées ultérieurement dans le process courant : 
@@ -206,3 +203,13 @@ Si la connexion est correctement établie, la variable système OK prend la vale
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
 [SQL LOGOUT](sql-logout.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 817 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

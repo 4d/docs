@@ -64,3 +64,12 @@ Si vous ne spécifiez pas de statut, celui-ci est automatiquement HTTP/1.0 200 O
 #### Voir aussi 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 660 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

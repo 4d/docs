@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Summary-->The **OBJECT SET RESIZING OPTIONS** command sets or dynamically modifies the resizing options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> These options specify how the object is displayed when the form window is resized.
@@ -44,3 +41,12 @@ In the *vertical* parameter, you pass a value indicating the vertical resizing o
 #### See also 
 
 [OBJECT GET RESIZING OPTIONS](object-get-resizing-options.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1175 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

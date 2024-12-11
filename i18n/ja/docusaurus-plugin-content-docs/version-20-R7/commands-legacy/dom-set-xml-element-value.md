@@ -116,3 +116,13 @@ XML処理のルールに準拠するため、行末文字シークエンス(CR�
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 868 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+| サーバー上での使用は不可 ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Modified.Summary-->**Modified** はデータ入力中、プログラムを使用して*field* に値が代入されていたり、データ入力中に値が編集された場合に、[True](true.md "True")を返します。<!-- END REF-->**Modified** コマンドはフォームメソッド（またはフォームメソッドから呼ばれたサブルーチン）で使用されなければなりません。 
@@ -70,3 +67,12 @@ displayed_sidebar: docs
 
 [Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 32 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

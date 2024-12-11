@@ -42,3 +42,12 @@ The following example allows you to know the state of a process (in our case, wh
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 652 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

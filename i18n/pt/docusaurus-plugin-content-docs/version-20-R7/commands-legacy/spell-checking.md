@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->O comando **SPELL CHECKING** ativa a revisão ortográfica de campo ou variável que tem o foco no formulário em tela.<!-- END REF--> O objeto verificado deve ser de tipo Alfa ou Texto.
@@ -36,3 +33,12 @@ A verificação ortográfica começa com a primeira palavra de campo ou variáve
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 900 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

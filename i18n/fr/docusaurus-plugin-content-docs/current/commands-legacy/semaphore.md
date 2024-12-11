@@ -148,3 +148,12 @@ Syntaxe :
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 *Sémaphores et signaux*  
 [Test semaphore](test-semaphore.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 143 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

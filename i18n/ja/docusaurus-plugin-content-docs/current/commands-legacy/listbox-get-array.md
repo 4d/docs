@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
@@ -63,3 +60,12 @@ displayed_sidebar: docs
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1278 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

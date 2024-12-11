@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->La commande **RESOURCE LIST** remplit les tableaux *resNums* et *resNoms* avec les numéros et les noms des ressources dont vous avez passé le type dans *resType*.<!-- END REF-->
@@ -72,3 +69,12 @@ L'exemple suivant copie dans la bibliothèque d'images de la base les ressources
 #### Voir aussi 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 500 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

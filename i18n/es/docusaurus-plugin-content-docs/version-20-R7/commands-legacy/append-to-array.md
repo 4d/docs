@@ -43,3 +43,12 @@ El siguiente código:
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 911 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

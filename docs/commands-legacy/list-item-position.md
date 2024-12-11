@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.List item position.Summary-->The **List item position** command returns the position of the item whose item reference number is passed in *itemRef*, within the list whose list reference number or object name is passed in *list*.<!-- END REF--> 
@@ -41,3 +38,12 @@ If the item does not exist, **List item position** returns 0.
 
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 629 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

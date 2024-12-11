@@ -19,8 +19,6 @@ displayed_sidebar: docs
 #### Description 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->La commande **COPY DOCUMENT** copie le fichier ou dossier désigné par *nomSource* à l'emplacement désigné par *nomDest* et le renomme optionnellement.<!-- END REF--> 
-
-* **Copie de fichier**  
 Dans ce cas, le paramètre *nomSource* peut contenir :  
    * soit un chemin d'accès complet de fichier, exprimé par rapport à la racine du volume,  
    * soit un chemin d'accès relatif au dossier de la base.  
@@ -123,3 +121,13 @@ Les exemples suivants créent différents fichiers et dossiers dans le dossier d
 
 [MOVE DOCUMENT](move-document.md)  
 *Présentation des documents système*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 541 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

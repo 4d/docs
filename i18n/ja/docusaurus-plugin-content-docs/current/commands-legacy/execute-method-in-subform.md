@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->**EXECUTE METHOD IN SUBFORM** コマンドを使用して サブフォームオブジェクト*subformObject* のコンテキストにおいて*formula* 引数で指定したコードを実行できます。<!-- END REF-->
@@ -75,3 +72,14 @@ displayed_sidebar: docs
 #### システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1085 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

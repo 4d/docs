@@ -49,3 +49,12 @@ The following tests if the document “Journal” is present in the folder of th
 [CREATE FOLDER](create-folder.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 476 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

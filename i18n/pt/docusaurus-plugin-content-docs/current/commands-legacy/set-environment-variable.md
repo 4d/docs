@@ -43,3 +43,12 @@ Consulte os exemplos do comando [LAUNCH EXTERNAL PROCESS](launch-external-proces
 #### Ver também 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 812 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

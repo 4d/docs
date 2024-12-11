@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->SET PICTURE TO LIBRARY コマンドは、新規ピクチャを作成、またはピクチャライブラリにあるピクチャを置き換えます。<!-- END REF-->
@@ -95,3 +92,13 @@ displayed_sidebar: docs
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 566 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

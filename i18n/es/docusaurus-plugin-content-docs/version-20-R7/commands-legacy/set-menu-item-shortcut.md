@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->El comando **SET MENU ITEM SHORTCUT** asigna un nuevo acceso directo a un elemento del menú.<!-- END REF--> 
@@ -80,3 +77,12 @@ Definición del atajo de teclado F4 para la opción de menú "Cerrar":
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 423 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

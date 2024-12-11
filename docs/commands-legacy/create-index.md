@@ -87,3 +87,12 @@ Creation of a composite index on the “City” and “Zipcode” fields of the 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 966 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

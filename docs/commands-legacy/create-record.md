@@ -46,3 +46,13 @@ The following example archives records that are over 30 days old. It does does t
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 68 |
+| Thread safe | &check; |
+| Changes current record ||
+| Forbidden on the server ||
+
+

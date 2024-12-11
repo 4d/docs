@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ST GET URL.Summary-->The **ST GET URL** command returns the text label and address of the first URL detected in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
@@ -73,3 +70,12 @@ When there is a double-click event, you check that there is in fact an URL, and 
 #### See also 
 
 [ST INSERT URL](st-insert-url.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1288 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** prints the current record of *aTable*, without modifying the current selection.<!-- END REF--> The current output form is used for printing. If there is no current record for *aTable*, **PRINT RECORD** does nothing.
@@ -65,3 +62,11 @@ The following example prints the same current record in two different forms. The
 #### See also 
 
 [Print form](print-form.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 71 |
+| Thread safe | &check; |
+
+

@@ -31,3 +31,13 @@ The following example pops the record for the customer off the record stack:
 
 [PUSH RECORD](push-record.md)  
 *Using the Record Stack*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 177 |
+| Thread safe | &check; |
+| Changes current record ||
+| Forbidden on the server ||
+
+

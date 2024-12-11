@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->GET MENU ITEM ICON コマンドは*iconRef*変数に、*menu* と *menuItem*引数で指定されたメニュー項目に関連付けられたアイコンの参照を返します。<!-- END REF-->この参照はピクチャーのパス名または番号です。
@@ -37,3 +34,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET MENU ITEM ICON](set-menu-item-icon.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 983 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

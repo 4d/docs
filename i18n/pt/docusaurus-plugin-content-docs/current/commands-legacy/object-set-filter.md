@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** substitui o filtro de entrada para os objetos especificados por *objeto* por *filtroEntrada*.<!-- END REF--> 
@@ -58,3 +55,12 @@ O exemplo a seguir permite unicamente a entrada das letras “a,” “b,” “
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 235 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

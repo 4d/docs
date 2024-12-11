@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->**On Server Close Connectionデータベースメソッド**は、4Dクライアントプロセスが終了するたびに、サーバマシン上で一度呼び出されます。<!-- END REF-->

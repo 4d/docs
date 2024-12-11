@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->**CLEAR PASTEBOARD** efface entièrement le conteneur de données.<!-- END REF--> Si le conteneur contient plusieurs instances des mêmes données, toutes les instances sont effacées. Après un appel à **CLEAR PASTEBOARD**, le conteneur de données est vide.
@@ -42,3 +39,12 @@ Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-dat
 #### Voir aussi 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 402 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

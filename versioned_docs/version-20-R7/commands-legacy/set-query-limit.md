@@ -63,3 +63,12 @@ See the second example for the [SET QUERY DESTINATION](set-query-destination.md)
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 395 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -26,3 +26,13 @@ displayed_sidebar: docs
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 874 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

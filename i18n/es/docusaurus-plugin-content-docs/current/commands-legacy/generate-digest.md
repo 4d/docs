@@ -84,3 +84,12 @@ Estos ejemplos ilustran cómo recuperar el extracto de un texto:
 [Generate password hash](generate-password-hash.md)  
 *Protocolo seguro*  
 [WEB Validate digest](web-validate-digest.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1147 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

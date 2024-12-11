@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->O comando **OBJECT SET CORNER RADIUS** modifica o rádio das esquinas dos objetos retângulo arredondado cujos nomes passou no parâmetro *objeto*.<!-- END REF--> O novo rádio só se define para o processo e não é guardado no formulário. 
@@ -67,3 +64,12 @@ Note that for text areas (as well as inputs), unlike for rectangles, the corner 
 #### Ver também 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1323 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

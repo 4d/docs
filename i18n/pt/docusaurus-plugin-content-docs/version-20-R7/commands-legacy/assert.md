@@ -53,3 +53,13 @@ Uma asserção permite provar os parâmetros passados a um método de projeto pa
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1129 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

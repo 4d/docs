@@ -33,3 +33,12 @@ O seguinte exemplo mostra um alerta indicando a porcentagem de clientes classifi
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 195 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

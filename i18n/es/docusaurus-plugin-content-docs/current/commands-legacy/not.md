@@ -32,3 +32,12 @@ Este ejemplo asigna primero Verdadero a una variable, luego cambia el valor de l
 
 [False](false.md)  
 [True](true.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 34 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

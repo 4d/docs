@@ -55,3 +55,13 @@ displayed_sidebar: docs
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1129 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

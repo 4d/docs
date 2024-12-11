@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->**LISTBOX INSERT COLUMN**コマンドは、*object*引数および *\** で指定されたリストボックスに列を挿入します。<!-- END REF-->
@@ -99,3 +96,12 @@ displayed_sidebar: docs
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 829 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

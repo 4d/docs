@@ -21,3 +21,12 @@ Si le serveur Web n'était pas lancé, la commande ne fait rien.
 #### Voir aussi 
 
 [WEB START SERVER](web-start-server.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 618 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

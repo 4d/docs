@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->**LISTBOX DELETE ROWS**コマンドは、*object*引数および *\** で指定されたリストボックスから、*rowPosition* から始まるひとつ以上の行（表示または非表示）を削除します。<!-- END REF--> 
@@ -38,3 +35,13 @@ displayed_sidebar: docs
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 914 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

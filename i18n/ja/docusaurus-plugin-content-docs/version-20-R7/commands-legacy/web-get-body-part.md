@@ -19,9 +19,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.WEB GET BODY PART.Summary-->**WEB GET BODY PART**コマンドはWebプロセスのコンテキストで使用され、マルチパートリクエストのボディ部を解析します。<!-- END REF-->
-
-*part* 引数には解析対象のパート番号を渡します。総パート数は[WEB Get body part count](web-get-body-part-count.md)コマンドで取得できます。
+<!--REF #_command_.WEB GET BODY PART.Summary-->**WEB GET BODY PART**コマンドはWebプロセスのコンテキストで使用され、マルチパートリクエストのボディ部を解析します。<!-- END REF-->引数には解析対象のパート番号を渡します。総パート数は[WEB Get body part count](web-get-body-part-count.md)コマンドで取得できます。
 
 *contents* 引数にはパートのコンテンツが返されます。取得するパートがファイルの場合、BLOB型の引数を渡さなければなりません。Webフォームから送信されるテキストデータの場合、テキスト型の引数を渡すことができます。 
 
@@ -95,3 +93,12 @@ GetFileのコードは以下の通りです:
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1212 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

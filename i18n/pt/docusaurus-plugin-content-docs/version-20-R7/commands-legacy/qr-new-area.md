@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR NEW AREA.Summary-->O comando **QR NEW AREA** cria uma nova área de relatório rápido e armazena seu número de referência na variável de tipo Inteiro longo referenciada pelo ponteiro *ptr*.<!-- END REF-->
@@ -23,3 +20,12 @@ displayed_sidebar: docs
 #### Ver também 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1320 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

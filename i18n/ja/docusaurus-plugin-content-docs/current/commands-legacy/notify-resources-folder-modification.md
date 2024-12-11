@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->NOTIFY RESOURCES FOLDER MODIFICATION コマンドを使用して、接続されたすべての4D マシンに、**Resources**フォルダが更新された旨の通知の送信を、4D Server に強制することができます。<!-- END REF-->この結果、リモートの4Dマシンはローカル**Resources**フォルダを同期できます。
@@ -37,3 +34,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Get 4D folder](get-4d-folder.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1052 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

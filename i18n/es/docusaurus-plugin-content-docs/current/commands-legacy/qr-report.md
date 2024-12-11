@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT** imprime un informe para *tabla*, con ayuda del editor de informes rápidos de 4D.<!-- END REF--> Este editor permite a los usuarios crear sus propios informes. Para mayor información sobre la creación de informes rápidos con la ayuda del editor de informes rápidos, consulte la sección *Informes rápidos* en el *Manual de Diseño* de 4D.
@@ -133,3 +130,12 @@ El método myCallbackMeth convierte el informe cuando se genera:
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 197 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

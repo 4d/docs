@@ -41,3 +41,13 @@ The following method returns the hypotenuse of the right triangle whose two legs
 ```
 
 For instance, Hypotenuse (4;3) returns 5.
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 539 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

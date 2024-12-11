@@ -100,3 +100,13 @@ DOMツリーストラクチャを使用する
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1122 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

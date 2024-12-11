@@ -24,3 +24,12 @@ Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-dat
 #### Voir aussi 
 
 [System folder](system-folder.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 486 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

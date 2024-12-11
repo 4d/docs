@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Select RGB Color.Summary-->O comando Select RGB Color mostra a janela sistema de seleção de cor e devolve o valor RGB da cor selecionada pelo usuário.<!-- END REF--> 
@@ -43,3 +40,13 @@ O efeito da validação desta caixa de diálogo muda dependendo da plataforma:
 #### Ver também 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 956 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

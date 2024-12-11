@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->O comando **CALL SUBFORM CONTAINER** permite a uma instância de subformulário enviar o *evento* ao objeto subformulário que o contiver.<!-- END REF--> O objeto subformulário pode então processar o *evento* no contexto do formulário pai. 
@@ -32,3 +29,12 @@ Em *evento*, pode passar todo evento de formulário pré-definido de 4D (pode ut
 
 [Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1086 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

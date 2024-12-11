@@ -38,3 +38,12 @@ The table number and record number for the record involved by the database event
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
 *Triggers*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 399 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

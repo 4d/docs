@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET LIST ITEM FONT.Summary-->El comando SET LIST ITEM FONT modifica la fuente de caracteres del elemento especificado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF--> 
@@ -45,3 +42,12 @@ Aplicar la fuente Times al elemento actual de la lista:
 [OBJECT SET FONT](object-set-font.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 953 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

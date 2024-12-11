@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Keystroke.Summary-->**Keystroke** retourne le caractère tapé par l'utilisateur dans un champ ou une zone saisissable.<!-- END REF--> 
@@ -167,3 +164,12 @@ A l'aide des possibilités de communication interprocess de 4D, vous pouvez cons
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Form event code](form-event-code.md)  
 [Get edited text](get-edited-text.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 390 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

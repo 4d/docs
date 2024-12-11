@@ -28,3 +28,14 @@ Référez-vous à l'exemple de la commande [Record number](record-number.md).
 
 *A propos des numéros d'enregistrements*  
 [Record number](record-number.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 242 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

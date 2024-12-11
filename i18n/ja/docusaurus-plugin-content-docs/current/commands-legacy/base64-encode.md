@@ -38,3 +38,12 @@ Bse64 エンコーディングは、8-bit のコードされたデータを編�
 [Generate digest](generate-digest.md)  
 [XML DECODE](xml-decode.md)  
 *XML DOMコマンドの概要*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 895 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

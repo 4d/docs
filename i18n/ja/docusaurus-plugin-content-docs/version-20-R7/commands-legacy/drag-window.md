@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->DRAG WINDOW コマンドは、ユーザがマウスのクリックと移動を行うと、ウィンドウをドラッグします。<!-- END REF-->通常このコマンドは (非表示ボタンなど) マウスクリックに瞬時に反応するオブジェクトのオブジェクトメソッドから呼び出します。
@@ -49,3 +46,12 @@ displayed_sidebar: docs
 
 [GET WINDOW RECT](get-window-rect.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 452 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

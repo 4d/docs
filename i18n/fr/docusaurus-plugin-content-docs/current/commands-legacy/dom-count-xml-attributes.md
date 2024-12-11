@@ -52,3 +52,13 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 #### Voir aussi 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 727 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

@@ -25,3 +25,12 @@ Este comando permite detectar as eventuais eliminações de campos, que criam qu
 
 [Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1000 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

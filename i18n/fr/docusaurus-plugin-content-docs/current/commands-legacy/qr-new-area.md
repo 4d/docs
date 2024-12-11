@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR NEW AREA.Summary-->La commande **QR NEW AREA** crée une nouvelle zone d'état rapide et stocke son numéro de référence dans la variable de type Entier long référencée par le pointeur *ptr*.<!-- END REF-->
@@ -23,3 +20,12 @@ displayed_sidebar: docs
 #### Voir aussi 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1320 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

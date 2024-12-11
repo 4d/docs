@@ -68,3 +68,13 @@ If the compacting operation is carried out correctly, the OK system variable is 
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 937 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document |
+| Forbidden on the server ||
+
+

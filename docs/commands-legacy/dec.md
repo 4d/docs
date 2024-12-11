@@ -30,3 +30,12 @@ The following example takes a monetary value expressed as a real number, and ext
 #### See also 
 
 [Int](int.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 9 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

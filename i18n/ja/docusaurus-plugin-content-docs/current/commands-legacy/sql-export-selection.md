@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->SQL EXPORT SELECTION コマンドは、aTable引数で指定した4DテーブルのカレントセレクションをSQLフォーマットで書き出します。<!-- END REF-->
@@ -39,3 +36,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1064 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

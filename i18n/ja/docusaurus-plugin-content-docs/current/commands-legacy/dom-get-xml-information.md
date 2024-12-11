@@ -33,3 +33,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [XML GET ERROR](xml-get-error.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 721 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

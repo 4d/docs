@@ -43,3 +43,12 @@ Ao invés de utilizar as ações automáticas “Seguinte registro” ou “Regi
     End if
  End if
 ```
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 669 |
+| Thread-seguro | &check; |
+
+

@@ -46,3 +46,13 @@ Si el usuario hace clic en **Cancelar** en la caja de diálogo estándar de guar
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 665 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

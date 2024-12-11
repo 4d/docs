@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Compare strings.Summary-->**Compare strings** コマンドは、*aString* 引数の文字列が*bString* 引数の文字列比較して低い/等しい/高いと評価されるかによって負の値/ゼロ/正の値を返します。<!-- END REF--> 
-
-*aString* 引数にはtext 型の値を渡します。
+<!--REF #_command_.Compare strings.Summary-->**Compare strings** コマンドは、*aString* 引数の文字列が*bString* 引数の文字列比較して低い/等しい/高いと評価されるかによって負の値/ゼロ/正の値を返します。<!-- END REF-->引数にはtext 型の値を渡します。
 
 *bString* 引数には、*aString* 引数と比較するtext 型の値を渡します。
 
@@ -106,3 +104,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Position](position.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1756 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

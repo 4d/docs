@@ -38,3 +38,12 @@ Ver o exemplo do comando [Process number](process-number.md).
 
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 323 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

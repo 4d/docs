@@ -50,3 +50,12 @@ displayed_sidebar: docs
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1009 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

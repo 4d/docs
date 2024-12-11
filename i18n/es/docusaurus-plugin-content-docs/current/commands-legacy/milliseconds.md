@@ -47,3 +47,12 @@ El siguiente código espera hasta 5 segundos para que un registro bloqueado se d
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 459 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

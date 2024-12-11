@@ -50,3 +50,12 @@ Vous souhaitez modifier temporairement la priorité des champs scalaires de la t
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1429 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

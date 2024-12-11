@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET ABOUT.Summary-->**SET ABOUT** コマンドは、**ヘルプ** メニュー(Windows) または**アプリケーション** メニュー(macOS) 内の"**4Dについて**"メニューを*itemText* に変更します。<!-- END REF-->
@@ -46,3 +43,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET HELP MENU](set-help-menu.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 316 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

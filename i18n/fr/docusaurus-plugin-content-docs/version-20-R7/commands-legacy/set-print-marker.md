@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->La commande **SET PRINT MARKER** permet de définir la position d’un taquet au moment de l’impression.<!-- END REF--> Combinée aux commandes [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) ou [Print form](print-form.md), cette commande permet d’ajuster la taille des zones d’impression. 
@@ -183,3 +180,12 @@ La méthode du formulaire Print\_List3 est la suivante :
 [Print form](print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 709 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

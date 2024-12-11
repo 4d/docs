@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.PLAY.Summary-->La commande **PLAY** vous permet de jouer des fichiers de son ou multimedia.<!-- END REF--> Sous OS X, la commande permet également de jouer un son système. 
@@ -59,3 +56,12 @@ Exemple de son système sous OS X :
 #### Voir aussi 
 
 [BEEP](beep.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 290 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

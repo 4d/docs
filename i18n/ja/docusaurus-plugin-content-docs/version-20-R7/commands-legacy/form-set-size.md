@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->**FORM SET SIZE** コマンドを使用すると、プログラムからカレントフォームのサイズを変更することができます。<!-- END REF-->新しいサイズは、カレントプロセスに対して定義され、フォームには保存されません。
@@ -124,3 +121,12 @@ displayed_sidebar: docs
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 891 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

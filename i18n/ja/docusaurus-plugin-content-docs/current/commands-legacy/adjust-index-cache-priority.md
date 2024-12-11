@@ -52,3 +52,12 @@ displayed_sidebar: docs
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1430 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -38,3 +38,12 @@ displayed_sidebar: docs
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 256 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

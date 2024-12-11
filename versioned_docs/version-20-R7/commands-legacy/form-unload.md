@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM UNLOAD.Summary-->The **FORM UNLOAD** command releases from memory the current form designated using the [FORM LOAD](form-load.md) command.<!-- END REF-->
@@ -24,3 +21,12 @@ Calling this command is necessary when you use the [FORM LOAD](form-load.md) com
 #### See also 
 
 [FORM LOAD](form-load.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1299 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

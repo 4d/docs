@@ -24,3 +24,12 @@ Ver el ejemplo del comando [Current machine](current-machine.md "Current machine
 #### Ver también 
 
 [Current machine](current-machine.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 484 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->The **OPEN COLOR PICKER** command displays the system color picker dialog box.<!-- END REF--> 
@@ -31,3 +28,12 @@ If the color was changed, the On After Edit form event is generated for the obje
 #### See also 
 
 [OPEN FONT PICKER](open-font-picker.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1304 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

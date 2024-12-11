@@ -181,3 +181,12 @@ IO ERROR HANDLERプロジェクトメソッドは以下のようになります:
 [Last errors](last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *システム変数*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 155 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -110,3 +110,13 @@ Um erro é gerado quando:
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 864 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+| Proibido no servidor ||
+
+

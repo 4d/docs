@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SQL Get current data source.Summary-->El comando *Get current data source* devuelve el nombre de la fuente de datos actual de la aplicación.<!-- END REF--> La fuente de datos actual recibe las búsquedas SQL ejecutadas dentro de las estructuras [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL"). 
@@ -31,3 +28,12 @@ Este comando permite verificar la fuente de datos actual, generalmente antes de 
 [SQL GET DATA SOURCE LIST](sql-get-data-source-list.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 990 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

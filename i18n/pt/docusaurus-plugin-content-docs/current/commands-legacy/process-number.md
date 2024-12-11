@@ -66,3 +66,12 @@ Com esta função, o método de projeto listado cola o texto recebido como parâ
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 372 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -39,3 +39,12 @@ Usted quiere añadir 100 MB al tamaño de la caché de su base actual. Puede esc
 #### Ver también 
 
 [Get cache size](get-cache-size.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1399 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

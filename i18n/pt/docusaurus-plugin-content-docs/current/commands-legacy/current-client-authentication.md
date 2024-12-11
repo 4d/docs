@@ -70,3 +70,13 @@ Com esta configuração, não se mostra um diálogo de senha para um 4D remoto q
 * replicar os nomes do diretório Active nos nomes de usuário 4D e grupos, para um mapeamento automático,
 * mapa retorna informação para uma tabela personalizada \[users\] ,
 * usa propriedades LDAP para conseguir credenciais de usuário.
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1355 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ST GET URL.Summary-->O comando **ST GET URL** devolve a etiqueta e o endereço da primeira URL detectada no campo ou a variável de texto multi estilo designado pelo parâmetro *objeto*.<!-- END REF--> 
@@ -72,3 +69,12 @@ Quando há um evento de duplo clique, se comprova que não existe em realidade u
 #### Ver também 
 
 [ST INSERT URL](st-insert-url.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1288 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

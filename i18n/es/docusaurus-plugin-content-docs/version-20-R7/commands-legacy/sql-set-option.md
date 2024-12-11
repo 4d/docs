@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->El comando **SQL SET OPTION** se utiliza para modificar el *valor* de la opción pasada en *opcion*.<!-- END REF-->
@@ -49,3 +46,13 @@ Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1\. De l
 #### Ver también 
 
 [SQL GET OPTION](sql-get-option.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 818 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

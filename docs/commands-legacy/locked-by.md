@@ -40,3 +40,11 @@ If the record has been locked by a *$lock REST request*:
 
 [Locked](locked.md)  
 *Record Locking*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 353 |
+| Thread safe | &check; |
+
+

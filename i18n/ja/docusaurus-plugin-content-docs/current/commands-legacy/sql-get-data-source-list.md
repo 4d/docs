@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->*GET DATA SOURCE LIST*コマンドは、オペレーションシステムのODBCマネージャで定義されている*sourceType* データソースのドライバと名前を*sourceNamesArr*と*driversArr*の配列に返します。<!-- END REF-->
@@ -56,3 +53,13 @@ displayed_sidebar: docs
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 989 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

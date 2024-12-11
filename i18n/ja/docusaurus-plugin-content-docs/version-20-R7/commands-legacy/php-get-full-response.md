@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 :::info 互換性
 
 **4D のビルトインPHPインタープリターは削除されました**。[`4D.SystemWorkerクラス`](../API/SystemWorkerClass.md) を使用して外部PHPインタープリターをご利用ください。
@@ -40,3 +37,12 @@ PHPスクリプトはstdoutバッファーにデータを書き込むことが�
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1061 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

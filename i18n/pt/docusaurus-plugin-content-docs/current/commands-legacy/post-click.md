@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.POST CLICK.Summary-->O comando POST CLICK simula um clique do mouse.<!-- END REF--> Tem o mesmo efeito que quando o usuário clicar no botão do mouse 
@@ -31,3 +28,12 @@ Se especificar o parâmetro processo *processo*, o clique é enviado ao processo
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 466 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

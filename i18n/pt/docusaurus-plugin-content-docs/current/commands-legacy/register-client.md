@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->O comando REGISTER CLIENT “registra” uma máquina cliente com o nome especificado em *nomeCliente* no 4D Server, a fim de permitir outros clientes ou eventualmente 4D server (utilizando métodos armazenados) executar métodos fazendo uso do comando [EXECUTE ON CLIENT](execute-on-client.md).<!-- END REF--> Uma vez registrado, um cliente 4D pode executar um ou vários métodos para outros clientes.
@@ -115,3 +112,13 @@ Se um cliente 4D está registrado corretamente, a variável do sistema OK é igu
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 648 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

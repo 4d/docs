@@ -30,3 +30,13 @@ O arquivo é renomeado com os números de backups atuais do banco de dados e o a
 
 Caso se apresente um erro, o comando gera um código que pode ser interceptado utilizando o comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 926 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+
+

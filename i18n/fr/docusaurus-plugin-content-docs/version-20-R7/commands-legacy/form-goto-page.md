@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** change la page courante du formulaire pour afficher la page désignée par *numéroPage*.<!-- END REF-->
@@ -50,3 +47,12 @@ L'exemple suivant est la méthode objet d'un bouton affichant la page 3 du formu
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 247 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

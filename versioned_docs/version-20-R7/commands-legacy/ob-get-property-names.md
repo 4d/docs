@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->The **OB GET PROPERTY NAMES** command returns, in *arrProperties*, the names of the properties contained in the language object designated by the *object* parameter.<!-- END REF-->
-
-*object* can be an object varialble or a 4D object field.
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->The **OB GET PROPERTY NAMES** command returns, in *arrProperties*, the names of the properties contained in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
 
 Pass a text array in the *arrProperties* parameter. If the array does not exist, the command creates and sizes it automatically. 
 
@@ -98,3 +96,12 @@ Using an object array element:
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1232 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

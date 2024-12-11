@@ -145,3 +145,12 @@ If the contents of *childValue* are not valid, an error is returned.
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1080 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

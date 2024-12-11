@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->La commande **GET LIST ITEM ICON** retourne dans *icône* l’icône associée à l’élément dont vous avez passé le numéro de référence dans *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
@@ -40,3 +37,12 @@ Si aucune icône n’est associée à l’élément, la variable icône est reto
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 951 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -41,3 +41,13 @@ Si la ejecución del comando es correcta, la variable sistema Document contiene 
 *Imágenes*  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 678 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, Document |
+| Prohibido en el servidor ||
+
+

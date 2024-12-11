@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->**SET MENU ITEM PROPERTY**コマンドは、*menu* と *menuItem*引数で指定されたメニュー項目に、*property*の*value*を設定するために使用します。<!-- END REF-->
@@ -48,3 +45,12 @@ Associated Standard Action プロパティの場合、*value* 引数には標準
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 973 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

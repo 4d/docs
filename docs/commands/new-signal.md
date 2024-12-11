@@ -72,3 +72,13 @@ The ***doSomething*** method could be like:
  $signal.trigger() // The work is finished
 ```
 
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1641 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

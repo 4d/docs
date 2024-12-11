@@ -47,3 +47,12 @@ displayed_sidebar: docs
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1537 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

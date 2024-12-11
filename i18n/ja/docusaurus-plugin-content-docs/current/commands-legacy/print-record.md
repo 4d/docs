@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** は *aTable*のカレントレコードを、カレントセレクションを変更せずに印刷します。<!-- END REF-->カレント出力フォームが印刷に用いられます。*aTable*にカレントレコードが存在しない場合、**PRINT RECORD**は何も行いません。
@@ -66,3 +63,11 @@ displayed_sidebar: docs
 #### 参照 
 
 [Print form](../commands/print-form.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 71 |
+| スレッドセーフである | &check; |
+
+

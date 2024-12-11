@@ -47,3 +47,13 @@ If the user clicks **Cancel** in the standard save file dialog box or in the imp
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 665 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

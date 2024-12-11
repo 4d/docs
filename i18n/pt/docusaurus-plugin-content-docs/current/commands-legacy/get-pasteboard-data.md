@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->O comando GET PASTEBOARD DATA devolve no campo ou variável de tipo BLOB ou na variável *dados*, os dados que se encontram na área de transferência e cujo tipo se passa em *tipoDados*.<!-- END REF-->(Se a cópia contiver texto copiado dentro de 4D, então o conjunto de caracteres do BLOB é provavelmente UTF-16)
@@ -56,3 +53,13 @@ Se os dados são extraídos corretamente, a variável OK toma o valor 1; do cont
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 401 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

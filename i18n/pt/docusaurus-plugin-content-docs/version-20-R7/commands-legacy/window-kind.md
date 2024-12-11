@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Window kind.Summary-->O comando Window kind devolve o tipo de janela 4D cujo número de referência for passado no parâmetro *janela*.<!-- END REF--> Se a janela não existir, Window kind devolve *0 (zero)*.  
@@ -42,3 +39,12 @@ Ver o exemplo do comando [WINDOW LIST](window-list.md).
 [GET WINDOW RECT](get-window-rect.md)  
 [Get window title](get-window-title.md)  
 [Window process](window-process.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 445 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

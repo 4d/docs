@@ -51,3 +51,12 @@ El lenguaje actual de la base permite definir la carpeta .lproj en la que el pro
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1009 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

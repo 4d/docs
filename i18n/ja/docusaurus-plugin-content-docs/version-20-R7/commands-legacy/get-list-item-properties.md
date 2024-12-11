@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->**GET LIST ITEM PROPERTIES** コマンドは、引数*list*に渡されたリスト参照番号またはオブジェクト名のリスト内で、引数*itemRef*によって指定された項目のプロパティを返します。<!-- END REF-->
@@ -54,3 +51,12 @@ displayed_sidebar: docs
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 631 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

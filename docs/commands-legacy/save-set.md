@@ -41,3 +41,13 @@ If the user clicks Cancel in the Save File dialog box, or if there is an error d
 #### See also 
 
 [LOAD SET](load-set.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 184 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

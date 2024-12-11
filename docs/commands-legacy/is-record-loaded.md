@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Is record loaded.Summary-->The Is record loaded command returns True if *aTable*’s current record is loaded in the current process.<!-- END REF-->
-
-**4D Server**: In principle, when tables are linked by automatic relations, the current records of related tables are loaded automatically (see *About Relations*). However, for optimization reasons, 4D Server only loads these records when necessary, for example when reading or assigning a field of the related record. As a result, in this context the **Is record loaded** command will return False in remote mode (it returns True in local mode). 
+<!--REF #_command_.Is record loaded.Summary-->The Is record loaded command returns True if *aTable*’s current record is loaded in the current process.<!-- END REF-->command will return False in remote mode (it returns True in local mode). 
 
 #### Example 
 
@@ -43,3 +41,12 @@ Instead of using the “Next record” or “Previous record” automatic action
     End if
  End if
 ```
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 669 |
+| Thread safe | &check; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->La commande **LISTBOX SET ROW HEIGHT** permet de modifier la hauteur de la ligne spécifiée dans le paramètre *ligne* dans la List box désignée par les paramètres *objet* et éventuellement *\**.<!-- END REF-->
@@ -85,3 +82,12 @@ En revanche, si le code suivant est exécuté :
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1409 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -86,3 +86,12 @@ Este es o método do botão **Gerar**
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 691 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

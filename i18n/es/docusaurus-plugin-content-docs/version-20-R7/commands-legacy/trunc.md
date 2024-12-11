@@ -35,3 +35,12 @@ El siguiente ejemplo ilustra la manera cómo Trunc funciona con diferentes argum
 #### Ver también 
 
 [Round](round.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 95 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

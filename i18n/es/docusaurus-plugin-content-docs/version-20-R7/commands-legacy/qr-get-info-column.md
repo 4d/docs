@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR GET INFO COLUMN.Summary-->##### Informes en lista 
@@ -118,3 +115,13 @@ Puede escribir:
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 766 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

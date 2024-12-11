@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** sets the entry filter for the objects specified by *object* to the filter you pass in *entryFilter*.<!-- END REF-->
@@ -58,3 +55,12 @@ The following example allows only the letters “a,” “b,” “c,” or “g
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 235 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

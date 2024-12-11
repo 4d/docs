@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** sets the form objects specified by *object* to be displayed using the font size you pass in *size*.<!-- END REF-->
@@ -52,3 +49,12 @@ The following example sets the font size for all the form objects whose name sta
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 *Programming Notes*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 165 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

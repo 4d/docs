@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->La commande **IMPORT STRUCTURE** vous permet d'importer, dans la base courante, la définition XML de la structure de la base 4D passée dans le paramètre *structureXML*.<!-- END REF--> 
@@ -50,3 +47,12 @@ Vous souhaitez importer une définiton de structure stockée sur disque dans la 
 #### Voir aussi 
 
 [EXPORT STRUCTURE](export-structure.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1310 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

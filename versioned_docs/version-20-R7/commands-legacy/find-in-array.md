@@ -109,3 +109,12 @@ You want to find an object reference:
 [Find in sorted array](find-in-sorted-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 230 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

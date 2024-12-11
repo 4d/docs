@@ -25,3 +25,12 @@ Si *process* a été suspendu, référez-vous aux commandes [PAUSE PROCESS](paus
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 320 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

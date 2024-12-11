@@ -30,3 +30,12 @@ Use READ WRITE when you must modify a record and save the changes. Also use READ
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
 *Record Locking*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 146 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

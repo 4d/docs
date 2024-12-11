@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 :::info Compatibility
 
 **PHP is deprecated in 4D**. It is now recommended to use the [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -38,3 +35,12 @@ Pass a constant from the "*PHP*" theme in the *option* parameter to designate th
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1060 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

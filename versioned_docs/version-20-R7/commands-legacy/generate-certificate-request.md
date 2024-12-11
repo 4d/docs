@@ -86,3 +86,12 @@ Here is the **Generate** button method:
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 691 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

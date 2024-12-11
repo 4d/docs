@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR GET SELECTION.Summary-->El comando QR GET SELECTION devuelve las coordenadas de la selección actual de *area*.<!-- END REF-->
@@ -41,3 +38,13 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 #### Ver también 
 
 [QR SET SELECTION](qr-set-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 793 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

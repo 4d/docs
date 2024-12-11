@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.RELEASE MENU.Summary-->La commande **RELEASE MENU** efface de la mémoire le menu dont vous avez passé l’identifiant dans *menu*.<!-- END REF--> Ce menu doit avoir été créé par la commande [Create menu](create-menu.md). La règle est la suivante : à chaque [Create menu](create-menu.md) doit correspondre un [RELEASE MENU](release-menu.md). 
@@ -57,3 +54,12 @@ Cet exemple illustre les cas d'utilisation de cette commande :
 #### Voir aussi 
 
 [Create menu](create-menu.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 978 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

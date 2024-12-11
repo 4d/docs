@@ -52,3 +52,12 @@ L'exemple suivant permet de vérifier s'il y a des factures impayées dans la ta
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 331 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

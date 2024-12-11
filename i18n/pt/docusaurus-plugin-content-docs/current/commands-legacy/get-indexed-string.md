@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Get indexed string.Summary-->O comando Get indexed string devolve:   
@@ -41,3 +38,13 @@ Se o recurso for encontrado, OK toma o valor 1, do contrário assume o valor 0 (
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 510 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

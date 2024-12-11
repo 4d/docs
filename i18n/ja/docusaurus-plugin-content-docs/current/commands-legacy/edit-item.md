@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.EDIT ITEM.Summary-->**EDIT ITEM** コマンドは*object* 引数で指定された項目、または指定された配列やリスト中*item* で指定された項目を編集状態にします。<!-- END REF-->
@@ -75,3 +72,12 @@ displayed_sidebar: docs
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 870 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

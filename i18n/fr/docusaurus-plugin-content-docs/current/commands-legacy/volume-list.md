@@ -39,3 +39,12 @@ A l'aide de la zone de défilement *ttVolumes*, vous voulez afficher la liste de
 [DOCUMENT LIST](document-list.md)  
 [FOLDER LIST](folder-list.md)  
 [VOLUME ATTRIBUTES](volume-attributes.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 471 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

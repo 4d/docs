@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS lets the user edit the password system.<!-- END REF--> When this command is executed, the Toolbox window with only the Users and User groups pages appears.
@@ -37,3 +34,12 @@ The following example displays the Users and User groups management window to th
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 281 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -30,3 +30,14 @@ Différents événements peuvent rendre une sélection temporaire obsolète : la
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 332 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

@@ -63,3 +63,13 @@ Mac OS Xのシリアルポート バッファーサイズは、理論的には�
 [Semaphore](semaphore.md)  
 [SET CHANNEL](set-channel.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 172 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

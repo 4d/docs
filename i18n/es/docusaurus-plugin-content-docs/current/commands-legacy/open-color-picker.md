@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->El comando **OPEN COLOR PICKER** muestra la caja de diálogo de selección de color del sistema.<!-- END REF-->  
@@ -31,3 +28,12 @@ Si el color se ha cambiado, el evento formulario On After Edit se genera para el
 #### Ver también 
 
 [OPEN FONT PICKER](open-font-picker.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1304 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->FILTER KEYSTROKE は、ユーザがフィールドや入力可エリアに入力した文字を、*filteredChar* に渡した文字列の最初の文字で置き換えます。<!-- END REF-->
@@ -247,3 +244,13 @@ Get highlighted text メソッド:
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 389 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

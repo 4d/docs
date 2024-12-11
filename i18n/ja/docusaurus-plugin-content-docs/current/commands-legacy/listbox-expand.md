@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->LISTBOX EXPAND コマンドは*object*と*\**で指定したリストボックスオブジェクトのブレーク行を展開するために使用します。<!-- END REF-->
@@ -82,3 +79,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1100 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

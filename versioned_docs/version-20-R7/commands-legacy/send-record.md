@@ -34,3 +34,12 @@ See example for the [RECEIVE RECORD](receive-record.md) command.
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 78 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

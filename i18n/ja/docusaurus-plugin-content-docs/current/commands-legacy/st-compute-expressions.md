@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->**ST COMPUTE EXPRESSIONS**コマンドは、*object* 引数で指定したマルチスタイルあるいは4D Write Proのフィールドあるいは変数内にあるダイナミック 4D 式を更新します。<!-- END REF-->
@@ -70,3 +67,13 @@ displayed_sidebar: docs
 
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1285 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

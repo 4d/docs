@@ -52,3 +52,13 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 #### See also 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 727 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

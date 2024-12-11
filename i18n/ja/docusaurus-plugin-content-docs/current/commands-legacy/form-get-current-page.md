@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM Get current page.Summary-->**FORM Get current page**コマンドは、現在表示されているフォームページ、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされたカレントフォームの番号を返します。<!-- END REF-->
@@ -70,3 +67,12 @@ displayed_sidebar: docs
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 276 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -66,3 +66,12 @@ SVG ピクチャの挿入:
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [XML GET OPTIONS](xml-get-options.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1090 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

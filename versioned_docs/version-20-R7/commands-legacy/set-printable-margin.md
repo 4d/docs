@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->The **SET PRINTABLE MARGIN** command sets the values of various printing margins by using the [Print form](print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF-->
@@ -60,3 +57,12 @@ The following example gets the paper size:
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
 [Print form](print-form.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 710 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

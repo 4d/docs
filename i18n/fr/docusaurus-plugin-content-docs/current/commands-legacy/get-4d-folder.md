@@ -206,3 +206,12 @@ Si le paramètre *dossier* est invalide ou si le chemin d'accès retourné est v
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 485 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

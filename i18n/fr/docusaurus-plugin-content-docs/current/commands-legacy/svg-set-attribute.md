@@ -94,3 +94,13 @@ Modification du contenu d’un élément de type texte :
 #### Voir aussi 
 
 [SVG GET ATTRIBUTE](svg-get-attribute.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1055 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

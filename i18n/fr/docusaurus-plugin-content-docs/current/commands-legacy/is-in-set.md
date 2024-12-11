@@ -34,3 +34,12 @@ L'exemple suivant est la méthode objet d'un bouton testant si l'enregistrement 
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 273 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->El comando **OPEN FONT PICKER** muestra la caja de diálogo de selección de fuente del sistema.<!-- END REF-->  
@@ -45,3 +42,12 @@ Este es el código del botón:
 #### Ver también 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1303 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

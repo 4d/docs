@@ -44,3 +44,12 @@ You can call options in any order. If the same option is set more than once, onl
 
 [HTTP AUTHENTICATE](http-authenticate.md)  
 [HTTP GET OPTION](http-get-option.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1160 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

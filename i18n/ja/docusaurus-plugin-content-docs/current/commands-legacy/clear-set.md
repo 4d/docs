@@ -26,3 +26,12 @@ displayed_sidebar: docs
 [CREATE EMPTY SET](create-empty-set.md)  
 [CREATE SET](create-set.md)  
 [LOAD SET](load-set.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 117 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

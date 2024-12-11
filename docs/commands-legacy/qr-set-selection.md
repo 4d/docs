@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->The QR SET SELECTION command highlights a cell, a row, a column or the entire *area* as you would with a mouse click.<!-- END REF--> It also lets you deselect the current selection.
@@ -42,3 +39,13 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 #### See also 
 
 [QR GET SELECTION](qr-get-selection.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 794 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

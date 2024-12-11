@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->O comando DRAG WINDOW permite arrastar a janela na qual o usuário clica para seguindo os movimentos do mouse.<!-- END REF--> Geralmente este comando se chama desde um método de objeto de um objeto que possa responder instantaneamente aos cliques do mouse (por exemplo um botão invisível).
@@ -56,3 +53,12 @@ Depois pode arrastar a janela clicando em qualquer das margens.
 
 [GET WINDOW RECT](get-window-rect.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 452 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

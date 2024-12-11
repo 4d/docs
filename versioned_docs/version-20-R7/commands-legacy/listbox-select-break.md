@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->The **LISTBOX SELECT BREAK** command can be used to select break rows in the list box object designated by the *object* and *\** parameters.<!-- END REF--> The list box must be displayed in hierarchical mode. 
@@ -64,3 +61,12 @@ Here is the result:
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1117 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

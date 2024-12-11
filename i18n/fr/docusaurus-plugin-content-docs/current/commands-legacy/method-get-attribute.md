@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->La commande **METHOD Get attribute** retourne la valeur de l’attribut *typeAttribut* pour la méthode projet désignée par le paramètre *chemin*.<!-- END REF--> Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée. 
@@ -42,3 +39,12 @@ La commande retourne **Vrai** si un attribut est sélectionné et **Faux** s’i
 #### Voir aussi 
 
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1169 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

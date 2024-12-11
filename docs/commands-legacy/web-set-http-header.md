@@ -63,3 +63,12 @@ If you do not specify a state, it will automatically be HTTP/1.0 200 OK. By defa
 #### See also 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 660 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

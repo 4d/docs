@@ -69,3 +69,13 @@ If the command is not called in the context of a transaction, an error is genera
 #### See also 
 
 [QUERY](query.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 661 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

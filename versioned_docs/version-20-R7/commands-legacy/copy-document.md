@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.COPY DOCUMENT.Summary-->The **COPY DOCUMENT** command copies the file or folder specified by *sourceName* to the location specified by *destinationName* and, optionally, renames it.<!-- END REF-->
-
-* **Copying files**  
+<!--REF #_command_.COPY DOCUMENT.Summary-->The **COPY DOCUMENT** command copies the file or folder specified by *sourceName* to the location specified by *destinationName* and, optionally, renames it.<!-- END REF--> 
 In this case, the *sourceName* parameter can contain:  
    * either a complete file pathname expressed with respect to the root of the volume,  
    * or a pathname relative to the database folder.  
@@ -122,3 +120,13 @@ The following examples create different files and folders in the database folder
 
 [MOVE DOCUMENT](move-document.md)  
 *System Documents*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 541 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

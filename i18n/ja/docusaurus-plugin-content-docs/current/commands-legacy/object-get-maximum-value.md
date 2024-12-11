@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->**OBJECT GET MAXIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトのカレントの最大値を、 *maxValue* 変数の中に返します。<!-- END REF-->
@@ -30,3 +27,12 @@ displayed_sidebar: docs
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1245 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

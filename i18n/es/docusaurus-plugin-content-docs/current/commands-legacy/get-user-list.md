@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET USER LIST.Summary-->GET USER LIST llena los arrays *nomsUsuario* y *refUsuario* con los nombres y los números de referencia únicos de los usuarios tal como aparecen en la ventana de contraseñas.<!-- END REF-->
@@ -38,3 +35,13 @@ Si no tiene privilegios de acceso para llamar al comando GET USER LIST o si otro
 [GET GROUP LIST](get-group-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 609 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

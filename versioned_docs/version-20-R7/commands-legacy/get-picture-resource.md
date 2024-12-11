@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->The **GET PICTURE RESOURCE** command returns in the picture field or variable *resData* the picture stored in the picture (“PICT”) resource whose ID is passed in *resID*.<!-- END REF-->
@@ -44,3 +41,13 @@ If there is not enough memory to load the picture, an error is generated. You ca
 #### See also 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 502 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

@@ -21,3 +21,12 @@ displayed_sidebar: docs
 
 [Count tasks](count-tasks.md)  
 [Count users](count-users.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 343 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

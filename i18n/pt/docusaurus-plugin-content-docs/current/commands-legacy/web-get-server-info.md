@@ -88,3 +88,12 @@ Depois de executar o código abaixo:
 [License info](license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1531 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

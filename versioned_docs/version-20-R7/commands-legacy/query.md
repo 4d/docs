@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QUERY.Summary-->**QUERY** looks for records matching the criteria specified in *queryArgument* and returns a selection of records for *aTable*.<!-- END REF--> **QUERY** changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
+<!--REF #_command_.QUERY.Summary-->**QUERY** looks for records matching the criteria specified in *queryArgument* and returns a selection of records for *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
 
 If the *aTable* parameter is omitted, the command applies to the default table. If no default table has been set, an error occurs.
 
@@ -309,3 +309,15 @@ The OK variable is set to 0 if:
 #### See also 
 
 [QUERY SELECTION](query-selection.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 277 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Changes current record ||
+| Changes current selection ||
+| Forbidden on the server ||
+
+

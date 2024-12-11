@@ -41,3 +41,12 @@ Vous souhaitez supprimer un utilisateur distant spécifique :
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1633 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

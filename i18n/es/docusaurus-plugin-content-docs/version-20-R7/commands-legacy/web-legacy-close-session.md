@@ -35,3 +35,12 @@ Después de la ejecución de este comando, si un cliente web envía una petició
 
 *Gestión de las sesiones web (heredado)*  
 [Método base On Web Legacy Close Session](metodo-base-on-web-legacy-close-session.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1208 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

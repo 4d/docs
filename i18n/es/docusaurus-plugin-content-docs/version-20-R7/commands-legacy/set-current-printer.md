@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->El comando **SET CURRENT PRINTER** designa la impresora a utilizar para imprimir con la aplicación 4D actual.<!-- END REF-->
@@ -55,3 +52,13 @@ Creación de un documento PDF bajo Windows:
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 787 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

@@ -41,3 +41,13 @@ O método a seguir retorna a hipotenusa do triângulo cujos dois lados são pass
 ```
 
 Por exemplo, Hipotenusa (4;3) devolve 5.
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 539 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

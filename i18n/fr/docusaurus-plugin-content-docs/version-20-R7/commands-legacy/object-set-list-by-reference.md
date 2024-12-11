@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->La commande **OBJECT SET LIST BY REFERENCE** définit ou remplace l’énumération associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**, avec la liste hiérarchique référencée dans le paramètre *liste*.<!-- END REF-->
@@ -130,3 +127,12 @@ Pour pouvoir mettre à jour la liste associée au pop up géré par tableau, il 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1266 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

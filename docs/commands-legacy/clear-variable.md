@@ -44,3 +44,12 @@ In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is
 #### See also 
 
 [Undefined](undefined.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 89 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

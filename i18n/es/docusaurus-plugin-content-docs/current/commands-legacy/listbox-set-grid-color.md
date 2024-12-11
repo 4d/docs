@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->El comando **LISTBOX SET GRID COLOR** le permite modificar el color de la rejilla del objeto list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -38,3 +35,12 @@ Los parámetros *horizontal* y *vertical* le permiten especificar las líneas a 
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 842 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

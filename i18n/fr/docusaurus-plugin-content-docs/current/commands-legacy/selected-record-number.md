@@ -38,3 +38,12 @@ L'exemple suivant stocke le numéro de l'enregistrement courant de la sélection
 *A propos des numéros d'enregistrements*  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 246 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

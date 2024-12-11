@@ -55,3 +55,12 @@ displayed_sidebar: docs
 [Generate digest](generate-digest.md)  
 [XML DECODE](xml-decode.md)  
 *XML DOMコマンドの概要*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 896 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

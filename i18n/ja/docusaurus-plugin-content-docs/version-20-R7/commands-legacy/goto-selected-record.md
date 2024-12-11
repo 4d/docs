@@ -61,3 +61,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [Selected record number](selected-record-number.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 245 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| サーバー上での使用は不可 ||
+
+

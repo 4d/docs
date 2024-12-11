@@ -33,3 +33,12 @@ Em *xmlInfo*, passe um código indicando o tipo de informação a ser recuperado
 #### Ver também 
 
 [XML GET ERROR](xml-get-error.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 721 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

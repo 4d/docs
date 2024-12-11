@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD clears the pasteboard and puts a copy of the picture passed in *picture* into it.<!-- END REF--> 
@@ -50,3 +47,13 @@ If there is not enough memory to paste the picture into the pasteboard, the OK v
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 521 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

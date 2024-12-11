@@ -46,3 +46,11 @@ displayed_sidebar: docs
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1293 |
+| スレッドセーフである | &check; |
+
+

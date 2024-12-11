@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->**ST INSERT EXPRESSION**コマンドは、*object* 引数で指定したスタイル付テキストフィールドまたはテキスト変数内に、4D 式への参照を挿入します。<!-- END REF-->
@@ -90,3 +87,13 @@ displayed_sidebar: docs
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1281 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

@@ -30,3 +30,14 @@ Para mayor información, consulte la descripción del comando [QUERY BY FORMULA]
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 207 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->**OBJECT SET SUBFORM**コマンドは*\** 引数および*object* 引数で指定したサブフォームオブジェクトに割り当てられる詳細フォームおよびオプションでリストフォームを動的に変更します。<!-- END REF-->
@@ -44,3 +41,12 @@ displayed_sidebar: docs
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1138 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

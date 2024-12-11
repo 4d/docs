@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->El comando FORM GET OBJECTS devuelve en forma de array(s) la lista de todos los objetos presentes en el formulario actual.<!-- END REF--> Esta lista puede estar restringida a la página actual del formulario y puede excluir los objetos de los formularios heredados. El comando puede ser utilizado con los formularios de entrada y de salida.
@@ -127,3 +124,12 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Objetos (Formularios)*  
 *Objetos de formulario (Acceso)*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 898 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

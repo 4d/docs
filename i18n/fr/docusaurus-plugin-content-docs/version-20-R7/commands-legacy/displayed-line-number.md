@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Displayed line number.Summary-->La commande **Displayed line number** fonctionne uniquement dans le contexte de l’événement formulaire On Display Detail.<!-- END REF--> Elle retourne le numéro de la ligne en cours de traitement durant l’affichage à l’écran d’une liste d’enregistrements ou des lignes d'une list box. Si **Displayed line number** est appelée en-dehors de l’affichage d’une liste ou d'une listbox, elle retourne 0.
@@ -47,3 +44,12 @@ Cet exemple permet d’appliquer une couleur alternée à un formulaire liste af
 
 [Form event code](form-event-code.md)  
 [Selected record number](selected-record-number.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 897 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

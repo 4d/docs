@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->El comando **OBJECT SET DRAG AND DROP OPTIONS** define o modifica dinámicamente las opciones de arrastrar y soltar para el objeto o los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->
@@ -45,3 +42,12 @@ Definición de un área de texto en arrastrar y soltar auto:
 #### Ver también 
 
 [OBJECT GET DRAG AND DROP OPTIONS](object-get-drag-and-drop-options.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1183 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

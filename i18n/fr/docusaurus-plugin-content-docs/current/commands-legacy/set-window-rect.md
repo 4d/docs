@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->La commande **SET WINDOW RECT** modifie les coordonnées globales de la fenêtre dont vous avez passé le numéro de référence [RefFen](# "Expression de type Entier long identifiant de façon unique une fenêtre ouverte") dans le paramètre *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, la commande ne fait rien.
@@ -61,3 +58,12 @@ La fenêtre apparaît ainsi :
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 444 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

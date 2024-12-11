@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->La commande **GET FIELD TITLES** remplit les tableaux *titresChamps* et *numChamps* avec les noms et les numéros des champs de *laTable* désignée.<!-- END REF--> Le contenu des deux tableaux est synchronisé.
@@ -30,3 +27,12 @@ Dans les deux cas, la commande ne retourne pas les champs déclarés invisibles.
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 804 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

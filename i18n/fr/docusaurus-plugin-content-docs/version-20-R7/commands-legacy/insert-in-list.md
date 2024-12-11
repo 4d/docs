@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->La commande **INSERT IN LIST** insère l'élément désigné par le paramètre *réfElément* dans la liste dont le numéro de référence ou le nom d'objet est passé dans *liste*.<!-- END REF--> 
@@ -53,3 +50,12 @@ L'exemple suivant insère un élément (associé à aucune sous-liste) juste dev
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 625 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

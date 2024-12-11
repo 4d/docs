@@ -39,3 +39,12 @@ O número de tabela e de registro para o registro relacionado pelo evento de ban
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
 *Triggers*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 399 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

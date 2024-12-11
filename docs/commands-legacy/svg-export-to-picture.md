@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->The **SVG EXPORT TO PICTURE** command saves an SVG format picture contained in an XML tree in the picture field or variable indicated by the *pictVar* parameter.<!-- END REF-->
-
-**Note:** For more information about the SVG format, refer to the *Overview of XML Utilities Commands* section. 
+<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->The **SVG EXPORT TO PICTURE** command saves an SVG format picture contained in an XML tree in the picture field or variable indicated by the *pictVar* parameter.<!-- END REF-->For more information about the SVG format, refer to the *Overview of XML Utilities Commands* section. 
 
 Pass the root XML element reference that contains the SVG picture in *elementRef*.
 
@@ -53,3 +51,12 @@ The following example can be used to display “Hello World” in a 4D picture:
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1017 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

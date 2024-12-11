@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->O comando STRING LIST TO ARRAY preenche o array *cadeias* com:   
@@ -46,3 +43,13 @@ Se o recurso for encontrado, a variável sistema OK assume o valor 1, do contrá
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 511 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

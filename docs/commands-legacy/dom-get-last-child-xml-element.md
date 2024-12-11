@@ -43,3 +43,13 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 #### See also 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 925 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->**SET FIELD TITLES** コマンドを使用すれば、アプリケーションモードにおいて、クエリエディターのような標準の4 Dダイアログボックスを表示する際に、*aTable* に渡されるそのテーブルのフィールドのマスクや名前の変更、並べ替えが行えます (スタートアップモードが**アプリケーション**である場合、または**実行**メニューから**アプリケーションをテスト**を選択した場合) 。<!-- END REF-->
@@ -64,3 +61,12 @@ displayed_sidebar: docs
 [Last field number](last-field-number.md)  
 [Parse formula](parse-formula.md)  
 [SET TABLE TITLES](set-table-titles.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 602 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

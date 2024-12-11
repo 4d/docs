@@ -78,3 +78,13 @@ will display the request dialog box (on Windows) shown here:
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 163 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

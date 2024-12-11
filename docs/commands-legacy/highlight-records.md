@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->The **HIGHLIGHT RECORDS** command highlights records in a list form.<!-- END REF--> This operation is identical to manually selecting records in list mode by using the mouse or the **Shift+Click** or **Ctrl+Click** (Windows) or **Command+Click** (Mac OS) key combinations. The current selection is not modified. 
@@ -50,3 +47,12 @@ When the user clicks the button, the standard query dialog box appears. Once the
 
 [GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 656 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

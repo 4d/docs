@@ -20,9 +20,6 @@ displayed_sidebar: docs
 #### Description 
 
 <!--REF #_command_.OB Copy.Summary-->The **OB Copy** command returns an object containing a complete (deep) copy of the properties, sub-objects and values for the *object*.<!-- END REF-->
-
-* First syntax: **OB Copy(object{; resolvePtrs})**
-
 If *object* contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing **True** in the *resolvePtrs* parameter. In this case, each pointer present as a value in *object* is evaluated when copying and its dereferenced value is used. 
 
 **Note:** If properties of *object* are shared objects or shared collections, they become regular (not shared) objects or collections in the returned copy. Use the second syntax if you want to return shared elements (see below).
@@ -167,3 +164,12 @@ We want to copy *$sharedObj* in *$sharedColl* but since they belong to different
 
 [OB Get](ob-get.md)  
 *Shared objects and shared collections*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1225 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

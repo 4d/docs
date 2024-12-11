@@ -145,3 +145,13 @@ Calling a formula using object notation:
 [4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)  
 [Formula from string](formula-from-string.md)  
 
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1597 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

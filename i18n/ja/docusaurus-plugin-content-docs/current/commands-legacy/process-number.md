@@ -66,3 +66,12 @@ displayed_sidebar: docs
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 372 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

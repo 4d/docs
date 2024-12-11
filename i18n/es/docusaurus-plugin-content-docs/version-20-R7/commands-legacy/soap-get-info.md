@@ -33,3 +33,12 @@ Pase en el parámetro *numInfo* el número del tipo de información SOAP que qui
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 784 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

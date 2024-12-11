@@ -26,3 +26,13 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 874 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

@@ -46,3 +46,13 @@ L'exemple suivant archive les enregistrements datant de plus de 30 jours. Cette 
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 68 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Interdite sur le serveur ||
+
+

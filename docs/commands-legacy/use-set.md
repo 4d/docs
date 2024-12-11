@@ -35,3 +35,14 @@ The following example uses [LOAD SET](load-set.md) to load a set of the Acme loc
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 118 |
+| Thread safe | &check; |
+| Changes current record ||
+| Changes current selection ||
+| Forbidden on the server ||
+
+

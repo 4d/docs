@@ -23,3 +23,12 @@ For more information, please refer to the *Suspending transactions* section.
 [Active transaction](active-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 *Suspending transactions*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1385 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

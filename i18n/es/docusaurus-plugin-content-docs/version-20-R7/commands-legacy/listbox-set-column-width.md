@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->El comando LISTBOX SET COLUMN WIDTH le permite modificar por programación el ancho de una o todas las columnas del objeto (list box, columna o título) designado utilizando los parámetros *objeto* y *\**.<!-- END REF-->
@@ -35,3 +32,12 @@ Los parámetros opcionales *anchoMin* y *anchoMax* permiten definir los límites
 #### Ver también 
 
 [LISTBOX Get column width](listbox-get-column-width.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 833 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

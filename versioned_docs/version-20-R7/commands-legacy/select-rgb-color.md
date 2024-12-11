@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Select RGB Color.Summary-->The Select RGB Color command displays the system color selection window and returns the RGB value of the color selected by the user.<!-- END REF-->
@@ -42,3 +39,13 @@ The effect of validating this dialog box differs depending on the platform:
 #### See also 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 956 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get type.Summary-->The **OBJECT Get type** command returns the type of the object designated by the *object* and *\** parameters in the current form.<!-- END REF--> 
@@ -98,3 +95,12 @@ You want to load a form and get a list of all the objects of list boxes that it 
 
 [FORM LOAD](form-load.md)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1300 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

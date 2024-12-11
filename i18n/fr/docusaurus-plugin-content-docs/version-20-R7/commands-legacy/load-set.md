@@ -43,3 +43,13 @@ Si l'utilisateur clique sur Annuler dans la boîte de dialogue d'ouverture de fi
 #### Voir aussi 
 
 [SAVE SET](save-set.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 185 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

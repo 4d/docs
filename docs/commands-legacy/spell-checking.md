@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->The **SPELL CHECKING** command triggers the spell check of the field or variable having the focus in the currently displayed form.<!-- END REF--> The object checked must be of the string or text type.
@@ -36,3 +33,12 @@ Spell checking starts with the first word of the field or variable. If an unknow
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 900 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

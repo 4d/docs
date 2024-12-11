@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->The FORM GET OBJECTS command returns the list of all objects present in the current form in the form of (an) array(s).<!-- END REF--> This list can be restricted to the current form page and can exclude objects of inherited forms. The command can be used with both input and output forms.
@@ -126,3 +123,12 @@ You want to load a form and get a list of all the objects of list boxes that it 
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Form Objects (Access)*  
 *Objects (Forms)*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 898 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

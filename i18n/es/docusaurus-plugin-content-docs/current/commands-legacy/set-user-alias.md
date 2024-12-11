@@ -40,3 +40,12 @@ Sus usuarios se administran a través de una tabla personalizada y utilizan la m
 [CHANGE CURRENT USER](change-current-user.md)  
 [Current user](current-user.md)  
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1666 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

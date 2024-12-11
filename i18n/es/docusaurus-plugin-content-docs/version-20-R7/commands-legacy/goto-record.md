@@ -28,3 +28,14 @@ Ver el ejemplo para Record Number.
 
 *Acerca de números de registros*  
 [Record number](record-number.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 242 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

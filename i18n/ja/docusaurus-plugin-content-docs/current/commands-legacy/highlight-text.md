@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->**HIGHLIGHT TEXT**コマンドは、*object* 内にあるテキストの一部を反転表示します。<!-- END REF-->
@@ -65,3 +62,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [GET HIGHLIGHT](get-highlight.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 210 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

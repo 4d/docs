@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Level.Summary-->Level se utiliza para determinar el nivel de ruptura o del encabezado actual.<!-- END REF--> Devuelve el nivel de ruptura durante los eventos On Header y On Printing Break.
@@ -69,3 +66,12 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
 [BREAK LEVEL](break-level.md)  
 [Form event code](form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 101 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

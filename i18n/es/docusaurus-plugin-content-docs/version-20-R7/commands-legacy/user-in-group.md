@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.User in group.Summary-->User in group devuelve TRUE si *usuario* está en *grupo*.<!-- END REF-->
@@ -43,3 +40,12 @@ El siguiente ejemplo busca facturas específicas. Si el usuario actual está en 
 #### Ver también 
 
 [Current user](current-user.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 338 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

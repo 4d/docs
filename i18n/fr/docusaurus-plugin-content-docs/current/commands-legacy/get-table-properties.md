@@ -34,3 +34,12 @@ Après l’exécution de la commande :
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 687 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

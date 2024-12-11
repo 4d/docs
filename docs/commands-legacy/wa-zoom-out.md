@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->The WA ZOOM OUT command reduces the size of the contents displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
@@ -28,3 +25,12 @@ Under Windows, the scope of this command is global: the configuration is retaine
 #### See also 
 
 [WA ZOOM IN](wa-zoom-in.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1040 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->O comando REDRAW WINDOW provoca uma atualização do conteúdo da janela cujo número de referência é passado em janela.<!-- END REF-->  
@@ -27,3 +24,12 @@ Se omitir o parâmetro *janela*, REDRAW WINDOW aplica à janela do primeiro plan
 #### Ver também 
 
 [ERASE WINDOW](erase-window.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 456 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->La commande **BLOB TO USERS** remplace les comptes utilisateurs et les groupes présents dans le BLOB *utilisateurs* dans la base courante.<!-- END REF--> Le BLOB *utilisateurs* est crypté et doit impérativement avoir été créé par la commande [USERS TO BLOB](users-to-blob.md).
@@ -49,3 +46,13 @@ Si la commande est exécutée correctement, la variable système OK prend la val
 #### Voir aussi 
 
 [USERS TO BLOB](users-to-blob.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 850 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

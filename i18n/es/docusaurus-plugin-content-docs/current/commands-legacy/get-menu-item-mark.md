@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get menu item mark.Summary-->El comando Get menu item mark devuelve la marca de la línea de menú cuyo número o referencia de menú y número de línea se pasan en *menu* y *menuItem*.<!-- END REF--> Puede pasar -1 en *menuItem* para indicar el último elemento añadido a *menu.*
@@ -42,3 +39,12 @@ El siguiente ejemplo invierte la marca de una línea de menú:
 #### Ver también 
 
 [SET MENU ITEM MARK](set-menu-item-mark.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 428 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -27,3 +27,12 @@ Os tipos de campos de dados escalares incluem campos de tipo data/hora, numéric
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 *Gerenciar prioridades em cache de banco de dados*  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1426 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

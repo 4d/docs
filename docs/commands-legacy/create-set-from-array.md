@@ -38,3 +38,13 @@ In a Longint array, if a record number is invalid (record not created), the erro
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 641 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->**OBJECT Get style sheet**コマンドは、引数 *object* と *\** で指定したオブジェクトに関連付けられたスタイルシートの名前を返します。<!-- END REF-->
@@ -48,3 +45,12 @@ displayed_sidebar: docs
 
 *Font Styles*  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1258 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

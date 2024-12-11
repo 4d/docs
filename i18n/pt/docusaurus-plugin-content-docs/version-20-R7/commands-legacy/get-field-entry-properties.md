@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->O comando GET FIELD ENTRY PROPERTIES retorna as propriedades de entrada de dados para o campo especificado por *numTabela* e *numCampo* ou por *pontCampo*.<!-- END REF-->  
@@ -44,3 +41,12 @@ Se nenhuma lista estiver associada ao campo ou se o tipo do campo não permitir 
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 685 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

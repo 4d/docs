@@ -90,3 +90,12 @@ O exemplo abaixo indexa o campo *\[Clientes\]Num*:
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 344 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

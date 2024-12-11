@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Clickcount.Summary-->The **Clickcount** command returns, in the context of a mouse click event, the number of times the user has clicked in rapid succession with the same mouse button.<!-- END REF--> Typically, this command returns 2 for a double-click. 
@@ -61,3 +58,13 @@ Labels are not enterable but they become so after a triple-click. If you want to
     End case
  End if
 ```
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1332 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

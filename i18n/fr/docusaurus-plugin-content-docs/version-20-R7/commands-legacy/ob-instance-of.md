@@ -46,3 +46,12 @@ Puis, dans une méthode, vous pouvez saisir :
 #### Voir aussi 
 
 [OB Class](ob-class.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1731 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

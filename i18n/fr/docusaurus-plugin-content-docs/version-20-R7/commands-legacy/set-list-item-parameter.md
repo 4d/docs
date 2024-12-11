@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->La commande **SET LIST ITEM PARAMETER** permet de modifier le paramètre *sélecteur* pour l’élément *réfElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF-->
@@ -63,3 +60,12 @@ Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une l
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 986 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES**コマンドを使用すれば、アプリケーションモードにおいて、標準の4Dダイアログボックスに現れるデータベーステーブルを一部隠したり、表示名称を変更したり、並び順を変えたりできます(スタートアップモードが**アプリケーション**である、あるいは**実行**メニューの**アプリケーションをテスト**を選択した場合)。<!-- END REF-->例えばこのコマンドを使用すれば、アプリケーションモードでのクエリエディターのテーブル表示を変更できます。
@@ -191,3 +188,12 @@ displayed_sidebar: docs
 [Parse formula](parse-formula.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 601 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

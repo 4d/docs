@@ -29,3 +29,14 @@ Este comando fue útil para “reponer” un registro que había sido apilado y 
 *Selecciones temporales*  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 189 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

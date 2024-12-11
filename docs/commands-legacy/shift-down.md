@@ -51,3 +51,12 @@ The following object method for the button *bAnyButton* performs different actio
 [Macintosh option down](macintosh-option-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 543 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

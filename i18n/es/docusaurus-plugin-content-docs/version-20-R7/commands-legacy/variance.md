@@ -66,3 +66,12 @@ Este ejemplo permite obtener la varianza de valores ubicados en un array:
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 27 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

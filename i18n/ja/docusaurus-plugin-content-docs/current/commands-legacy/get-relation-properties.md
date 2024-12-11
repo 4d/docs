@@ -43,3 +43,12 @@ displayed_sidebar: docs
 [GET TABLE PROPERTIES](get-table-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 686 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

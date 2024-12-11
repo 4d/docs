@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### 
 
 <!--REF #_command_.On Drop database method.Summary-->O On Drop database method está disponível em aplicações 4D locais ou remotas.<!-- END REF-->

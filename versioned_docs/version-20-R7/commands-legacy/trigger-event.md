@@ -53,3 +53,12 @@ You use the **Trigger event** command to structure your triggers as follows:
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 369 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

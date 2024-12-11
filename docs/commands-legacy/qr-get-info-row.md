@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR Get info row.Summary-->The **QR Get info row** command retrieves the display status of the row whose reference was passed in *row*.<!-- END REF-->
@@ -42,3 +39,13 @@ If you pass an invalid *row* value, the error -9852 will be generated.
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 769 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

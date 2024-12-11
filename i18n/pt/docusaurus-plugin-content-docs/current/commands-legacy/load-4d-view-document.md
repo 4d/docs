@@ -194,3 +194,13 @@ Obterá o resultado abaixo (objeto stringified):
 ```
 
 **Nota:** para mais informação sobre o formato do [objeto](# "Estruturas de dados como objetos 4D nativos"), devolvido, contacte os serviços técnicos de 4D.
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1528 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

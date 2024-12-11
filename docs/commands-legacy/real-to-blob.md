@@ -132,3 +132,12 @@ After executing this code:
 [INTEGER TO BLOB](integer-to-blob.md)  
 [LONGINT TO BLOB](longint-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 552 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

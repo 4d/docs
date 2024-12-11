@@ -31,3 +31,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SELECT LOG FILE](select-log-file.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 928 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Trunc.Summary-->**Trunc** retourne *nombre* dont la partie décimale a été tronquée à partir du nombre de décimales spécifié par *nbDécimales*.<!-- END REF--> **Trunc** arrondit toujours *nombre* à la valeur inférieure.
+<!--REF #_command_.Trunc.Summary-->**Trunc** retourne *nombre* dont la partie décimale a été tronquée à partir du nombre de décimales spécifié par *nbDécimales*.<!-- END REF-->arrondit toujours *nombre* à la valeur inférieure.
 
 Si *nbDécimales* est positif, la troncature se fait sur la partie décimale de *nombre*. Si *nbDécimales* est négatif, la troncature se fait sur la partie entière de *nombre*.
 
@@ -35,3 +35,12 @@ L'exemple suivant illustre la manière dont **Trunc** fonctionne dans différent
 #### Voir aussi 
 
 [Round](round.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 95 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

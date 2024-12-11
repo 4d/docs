@@ -75,3 +75,12 @@ Você quer obter uma lista de fontes recentes:
 [SET RECENT FONTS](set-recent-fonts.md)  
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 *Tipo de lista das fontes*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 460 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

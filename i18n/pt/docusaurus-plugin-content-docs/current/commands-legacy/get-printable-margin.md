@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET PRINTABLE MARGIN.Summary-->O comando GET PRINTABLE MARGIN devolve os valores atuais das diferentes margens definidas utilizando o comando [Print form](../commands/print-form.md) [PRINT SELECTION](print-selection.md) e [PRINT RECORD](print-record.md).<!-- END REF-->. 
@@ -46,3 +43,12 @@ Por padrão, em 4D o cálculo das impressões é realizada baseada nas “margen
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 711 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

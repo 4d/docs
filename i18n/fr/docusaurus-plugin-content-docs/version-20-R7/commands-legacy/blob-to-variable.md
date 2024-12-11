@@ -41,3 +41,13 @@ La variable OK prend la valeur 1 si la variable a été correctement réécrite,
 #### Voir aussi 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 533 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

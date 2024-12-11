@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->The **OBJECT Get data source** command returns the current data source of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -42,3 +39,12 @@ You execute the following code:
 #### See also 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1265 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

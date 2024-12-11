@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR GET TOTALS DATA.Summary-->##### リストモード 
@@ -78,3 +75,13 @@ QR GET TOTALS DATA コマンドを使用し、指定したセルの詳細を取�
 #### 参照 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 768 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

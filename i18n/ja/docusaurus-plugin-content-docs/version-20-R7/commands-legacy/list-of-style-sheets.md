@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->**LIST OF STYLE SHEETS**コマンドは、*arrStyleSheets*配列にアプリケーション内のスタイルシートのリストを返します。<!-- END REF-->.
@@ -52,3 +49,12 @@ displayed_sidebar: docs
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1255 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

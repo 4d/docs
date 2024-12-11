@@ -19,9 +19,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DOM Create XML element.Summary-->**DOM Create XML element** コマンドは、*elementRef* で参照されるXML中の*xPath* 引数で指定された位置に新しい要素を作成し、また必要であれば属性を追加します。<!-- END REF-->
-
-*elementRef* にはルートの要素参照 (例えば[DOM Create XML Ref](dom-create-xml-ref.md) コマンドで作成された) を渡します。
+<!--REF #_command_.DOM Create XML element.Summary-->**DOM Create XML element** コマンドは、*elementRef* で参照されるXML中の*xPath* 引数で指定された位置に新しい要素を作成し、また必要であれば属性を追加します。<!-- END REF-->にはルートの要素参照 (例えば[DOM Create XML Ref](dom-create-xml-ref.md) コマンドで作成された) を渡します。
 
 *xPath* 引数には、XPath 記法を使用して表現された、作成するパスを渡します(詳細な情報については、*XPath記法のサポート (DOM)*の章を参照してください)。以下のパス式がサポートされます: 
 
@@ -160,3 +158,13 @@ $aAttrName1:="Font"
 [DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 865 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+| サーバー上での使用は不可 ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Is license available.Summary-->Is license available コマンドを使用して、プラグインの有効性を確認することができます。<!-- END REF-->例えば、プラグインが必要な機能を表示または非表示にする際に有効です。
@@ -48,3 +45,12 @@ Is license available コマンドは次のような3通りの使用が可能で�
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 714 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

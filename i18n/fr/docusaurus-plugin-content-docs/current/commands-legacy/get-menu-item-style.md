@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Get menu item style.Summary-->La commande **Get menu item style** retourne le style de police de la ligne de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
@@ -49,3 +46,12 @@ Si, par exemple, vous voulez tester si une ligne de menu est affichée en gras, 
 #### Voir aussi 
 
 [SET MENU ITEM STYLE](set-menu-item-style.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 426 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

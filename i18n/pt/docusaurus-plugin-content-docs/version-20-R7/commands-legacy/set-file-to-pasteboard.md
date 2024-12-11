@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->O comando SET FILE TO PASTEBOARD adiciona a área de transferência à rota de acesso completa do arquivo passada no parâmetro *arquivo*.<!-- END REF--> Este comando permite criar interfaces permitindo arrastar e soltar objetos 4D aos arquivos no escritório por exemplo.  
@@ -30,3 +27,12 @@ O comando admite o asterisco *\** como parâmetro opcional. Automaticamente, qua
 #### Ver também 
 
 [Get file from pasteboard](get-file-from-pasteboard.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 975 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

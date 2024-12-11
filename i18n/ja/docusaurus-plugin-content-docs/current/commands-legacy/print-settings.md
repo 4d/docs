@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** は印刷設定ダイアログボックスを表示します。<!-- END REF-->このコマンドを使用する場合、[Print form](../commands/print-form.md) や [OPEN PRINTING JOB](open-printing-job.md) コマンドよりも前に呼び出されなければなりません。
@@ -43,3 +40,13 @@ displayed_sidebar: docs
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 106 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

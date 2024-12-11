@@ -60,3 +60,12 @@ After the call, the variable is incremented by the number of bytes read. Therefo
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 555 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

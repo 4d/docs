@@ -146,3 +146,12 @@ See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) co
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 295 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

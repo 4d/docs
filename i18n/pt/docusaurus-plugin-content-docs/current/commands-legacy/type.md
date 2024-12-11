@@ -141,3 +141,12 @@ Ver exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md 
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 295 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

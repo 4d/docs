@@ -36,3 +36,13 @@ La méthode suivante vide la sélection courante de la table *\[Clients\]* :
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 334 |
+| Thread safe | &check; |
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->El comando SQL EXECUTE se utiliza para ejecutar un comando SQL y asociar el resultado a objetos 4D (arrays, variables o campos).<!-- END REF-->
@@ -160,3 +157,13 @@ Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1, de lo
 #### Ver también 
 
 [SQL LOAD RECORD](sql-load-record.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 820 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

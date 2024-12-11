@@ -72,3 +72,13 @@ If the document has been created correctly, the system variable OK is set to 1 a
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 266 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document, error |
+| Forbidden on the server ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.WINDOW LIST.Summary-->El comando WINDOW LIST llena el array *ventanas* con los números de referencia de las ventanas abiertas actualmente en todos los procesos (procesos kernel o usuario).<!-- END REF--> Sólo las ventanas "visibles" (ventanas no ocultas) se devuelven. 
@@ -53,3 +50,12 @@ El siguiente método de proyecto coloca en mosaico todas las ventanas abiertas a
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 442 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

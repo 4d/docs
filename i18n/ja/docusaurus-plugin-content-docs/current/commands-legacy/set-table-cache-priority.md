@@ -49,3 +49,12 @@ displayed_sidebar: docs
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1400 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

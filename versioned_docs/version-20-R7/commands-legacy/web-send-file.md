@@ -49,3 +49,13 @@ If the file to be sent exists and if the timeout has not run out, OK is set to 1
 #### See also 
 
 [WEB SEND BLOB](web-send-blob.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 619 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

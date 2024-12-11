@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Get window title.Summary-->O comando Get window title devolve o título da janela cujo número de referência se passa em *janela*.<!-- END REF--> Se a janela não existir, se devolve uma cadeia vazia.  
@@ -30,3 +27,12 @@ Ver exemplo do comando [SET WINDOW TITLE](set-window-title.md).
 #### Ver também 
 
 [SET WINDOW TITLE](set-window-title.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 450 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

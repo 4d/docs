@@ -31,3 +31,12 @@ Antes de llamar el comando, pase en la variable del parámetro *offset* la posic
 #### Ver también 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 559 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

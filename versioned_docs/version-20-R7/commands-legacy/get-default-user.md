@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get default user.Summary-->The Get default user command returns the unique user ID of the user set as “Default user” in the database Settings dialog box:
@@ -23,3 +20,13 @@ displayed_sidebar: docs
 ![](../assets/en/commands/pict36789.en.png)
 
 If no default user has been set, the command returns 0.<!-- END REF-->
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 826 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

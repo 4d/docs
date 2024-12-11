@@ -23,3 +23,12 @@ Para más información, por favor consulte la sección *Suspender las transaccio
 [Active transaction](active-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 *Suspender las transacciones*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1385 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

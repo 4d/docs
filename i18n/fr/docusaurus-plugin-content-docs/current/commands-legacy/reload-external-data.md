@@ -26,3 +26,12 @@ Il est alors nécessaire de demander le rechargement des données à l'aide de l
 #### Voir aussi 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1135 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

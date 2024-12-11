@@ -81,3 +81,12 @@ You create a new collection and then add a new element:
 
 [New shared collection](new-shared-collection.md)  
 [Type](../commands-legacy/type.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1472 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->IMPORT SYLK コマンドは、WindowsまたはMacintoshの標準的なSYLK形式のドキュメント*document*から *aTable*にデータを読み込み、新しいレコードを作成します。<!-- END REF-->
@@ -54,3 +51,13 @@ IMPORT SYLK を使用する際、デフォルトのフィールド区切り文�
 [IMPORT DIF](import-dif.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 87 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

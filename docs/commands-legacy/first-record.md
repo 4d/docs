@@ -34,3 +34,13 @@ The following example makes the first record of the \[Customers\] table the firs
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 50 |
+| Thread safe | &check; |
+| Changes current record ||
+| Forbidden on the server ||
+
+

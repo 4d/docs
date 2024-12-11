@@ -40,3 +40,11 @@ Si l'enregistrement a été verrouillé par une *requête REST $lock*:
 
 [Locked](locked.md)  
 *Verrouillage d'enregistrements*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 353 |
+| Thread safe | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->La commande **METHOD SET CODE** modifie le code de la ou des méthode(s) désignée(s) par le paramètre *chemin* avec le contenu passé dans le paramètre *code*.<!-- END REF--> 
@@ -100,3 +97,12 @@ Cet exemple permet d’exporter et d’importer la totalité des méthodes proje
 #### Voir aussi 
 
 [METHOD GET CODE](method-get-code.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1194 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

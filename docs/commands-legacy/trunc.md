@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Trunc.Summary-->**Trunc** returns *number* with its decimal part truncated to the number of decimal places specified by *places*.<!-- END REF--> **Trunc** always truncates toward negative infinity.
+<!--REF #_command_.Trunc.Summary-->**Trunc** returns *number* with its decimal part truncated to the number of decimal places specified by *places*.<!-- END REF-->always truncates toward negative infinity.
 
 If *places* is positive, *number* is truncated to *places* decimal places. If *places* is negative, number is truncated on the left of the decimal point.
 
@@ -35,3 +35,12 @@ The following example illustrates how Trunc works with different arguments. Each
 #### See also 
 
 [Round](round.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 95 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

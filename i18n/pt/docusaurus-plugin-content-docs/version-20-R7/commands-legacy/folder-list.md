@@ -26,3 +26,13 @@ Se não houver pastas na localização especificada, o comando retorna um array 
 
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 473 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+| Proibido no servidor ||
+
+

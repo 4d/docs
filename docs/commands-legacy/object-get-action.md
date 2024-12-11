@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get action.Summary-->The **OBJECT Get action** command returns the name and (if any) parameter of the standard action associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -46,3 +43,12 @@ You want to associate the "Cancel" action with all the objects in the form that 
 #### See also 
 
 [OBJECT SET ACTION](object-set-action.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1457 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->OPEN SECURITY CENTER コマンドは、Maintenance and Security Center (MSC) ウィンドウを表示します。<!-- END REF-->詳細な情報については、*Maintenance & Security Center* のページを参照してください。 
@@ -27,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1018 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

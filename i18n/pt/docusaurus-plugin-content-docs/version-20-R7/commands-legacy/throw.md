@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.throw.Summary-->O comando **throw** cria um erro que será lançado inmediatamente ou quando o método que o chamar o devolva a seu chamador (modo diferido).<!-- END REF-->
@@ -108,3 +105,12 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1805 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

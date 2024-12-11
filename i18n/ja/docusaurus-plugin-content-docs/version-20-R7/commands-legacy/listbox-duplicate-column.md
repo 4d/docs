@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->**LISTBOX DUPLICATE COLUMN**コマンドは、 *object* と *\** 演算子によって指定された列を、プログラムによって実行中のフォームにおいて複製します。<!-- END REF-->(アプリケーションモード)
@@ -96,3 +93,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1273 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

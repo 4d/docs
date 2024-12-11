@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** retourne les informations concernant l'utilisateur dont le numéro de référence est passé dans le paramètre *réfUtilisateur*.<!-- END REF--> Vous devez passer le numéro de référence retourné par la commande [GET USER LIST](get-user-list.md).
@@ -55,3 +52,13 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER 
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
 [Validate password](validate-password.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 611 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

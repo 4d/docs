@@ -92,3 +92,12 @@ Here is the code for GetFile:
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1212 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -25,3 +25,12 @@ Get document position devuelve la posición, a partir del inicio del documento, 
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 481 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

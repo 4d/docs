@@ -25,9 +25,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.HTTP AUTHENTICATE.Summary-->**HTTP AUTHENTICATE**コマンドはクライアントアプリケーションの認証を要求するサーバーへのHTTPリクエストを可能にします。<!-- END REF-->
-
-*name* *と* *password*引数には必要な認証情報 (ユーザー名とパスワード) を渡します。この情報はエンコードされ、[HTTP Request](http-request.md)または[HTTP Get](http-get.md)を使用して送信されるHTTPリクエストに追加されます。
+<!--REF #_command_.HTTP AUTHENTICATE.Summary-->**HTTP AUTHENTICATE**コマンドはクライアントアプリケーションの認証を要求するサーバーへのHTTPリクエストを可能にします。<!-- END REF-->*と* *password*引数には必要な認証情報 (ユーザー名とパスワード) を渡します。この情報はエンコードされ、[HTTP Request](http-request.md)または[HTTP Get](http-get.md)を使用して送信されるHTTPリクエストに追加されます。
 
 オプションの*authMethod*引数を使用して、使用する認証メソッドを指定できます。*HTTP Client*テーマの以下の定数を使用できます:
 
@@ -57,3 +55,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [HTTP SET OPTION](http-set-option.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1161 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

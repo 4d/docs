@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->El comando Get file from pasteboard devuelve la ruta de acceso absoluto de un archivo incluido en una operación de arrastrar y soltar.<!-- END REF--> Varios archivos pueden ser seleccionados y movidos simultáneamente. El parámetro *indiceN* se utiliza para designar un archivo entre un conjunto de archivos seleccionados. 
@@ -44,3 +41,12 @@ El siguiente ejemplo puede utilizarse para recuperar en un array todas las rutas
 #### Ver también 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 976 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

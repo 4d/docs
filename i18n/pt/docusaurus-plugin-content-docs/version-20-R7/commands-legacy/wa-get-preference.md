@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->O comando WA GET PREFERENCE permite obter o valor atual de uma preferência na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> 
@@ -37,3 +34,12 @@ Passe no parâmetro *valor* uma variável que receberá o valor atual da prefer�
 #### Ver também 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1042 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

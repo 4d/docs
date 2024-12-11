@@ -93,3 +93,13 @@ La variable OK prend la valeur 1 si le BLOB a été correctement compressé, sin
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 534 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

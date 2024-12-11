@@ -55,3 +55,12 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 [Folder ](folder.md)  
 [Path to object ](path-to-object.md)  
 [Test path name](test-path-name.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1548 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

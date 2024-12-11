@@ -59,3 +59,12 @@ Para criptografar um arquivo texto na pasta RESOURCES no banco de dados:
 [ENCRYPT BLOB](encrypt-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1773 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

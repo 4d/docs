@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Equal pictures.Summary-->**Equal pictures**コマンドは2つのピクチャーの寸法と内容を厳密に比較します。<!-- END REF-->
-
-*picture1* には元のピクチャーを、*picture2* には比較したいピクチャーを渡します。 
+<!--REF #_command_.Equal pictures.Summary-->**Equal pictures**コマンドは2つのピクチャーの寸法と内容を厳密に比較します。<!-- END REF-->には元のピクチャーを、*picture2* には比較したいピクチャーを渡します。 
 
 * ピクチャーの寸法が異なる場合、コマンドは**False**を返し、*mask* 引数には空のピクチャーが返されます。
 * ピクチャーの寸法が同じで内容が異なる場合、コマンドは**False**を返し、*mask* 引数には2つのピクチャーを比較したピクチャーマスクの結果が返されます。この比較はピクセルごとに行われ、黒の背景上に、一致しないピクセルが白で表されます。
@@ -41,3 +39,14 @@ displayed_sidebar: docs
 ```4d
  $equal :=Equal pictures($pict1;$pict2;$mask)
 ```
+
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1196 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

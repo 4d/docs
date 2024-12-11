@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Find in list.Summary-->El comando Find in list devuelve la posición o referencia del primer elemento de la *lista* que es equivalente a la cadena pasada en *valor*.<!-- END REF--> Si se encuentran varios elementos, la función también puede llenar un array *arrayElem* con la posición o la referencia de cada elemento. 
@@ -64,3 +61,13 @@ Dada la siguiente lista jerárquica:
  $vlItemPos:=Find in list(hList;"Fecha";0;*)
   //$vlItemPos igual a 0
 ```
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 952 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

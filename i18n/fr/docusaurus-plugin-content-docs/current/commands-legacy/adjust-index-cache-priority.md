@@ -52,3 +52,12 @@ Vous souhaitez modifier temporairement la priorité des index du champ \[Docs\]C
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1430 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

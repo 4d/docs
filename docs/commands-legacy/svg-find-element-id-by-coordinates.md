@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SVG Find element ID by coordinates.Summary-->The **SVG Find element ID by coordinates** command returns the ID ("id" or "xml:id" attribute) of the XML element found at the location set by the coordinates (x,y) in the SVG picture designated by the *pictureObject* parameter.<!-- END REF--> This command can be used more particularly to create interactive graphic interfaces using SVG objects.
@@ -55,3 +52,13 @@ If *pictureObject* does not contain a valid SVG picture, the command returns an 
 #### See also 
 
 [SVG Find element IDs by rect](svg-find-element-ids-by-rect.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1054 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

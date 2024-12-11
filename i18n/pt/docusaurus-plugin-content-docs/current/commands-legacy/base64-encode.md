@@ -37,3 +37,12 @@ Por padrão, se omitir o parâmetro *\**, o comando utiliza uma codificação Ba
 [Generate digest](generate-digest.md)  
 *Visão Geral dos comandos XML DOM*  
 [XML DECODE](xml-decode.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 895 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

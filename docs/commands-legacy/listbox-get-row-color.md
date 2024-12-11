@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX Get row color.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -60,3 +57,12 @@ Given the following list box:
 #### See also 
 
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1658 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

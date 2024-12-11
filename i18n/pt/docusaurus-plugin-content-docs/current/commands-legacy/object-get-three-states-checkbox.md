@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get three states checkbox.Summary-->O comando **OBJECT Get three states checkbox** devolve o estado atual da propriedade "Três estados" da(s) caixa(s) de seleção designada(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->
@@ -27,3 +24,12 @@ A propriedade "Três estados" se pode definir seja usando a lista de propriedade
 #### Ver também 
 
 [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1250 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

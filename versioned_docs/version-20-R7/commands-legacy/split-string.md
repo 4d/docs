@@ -57,3 +57,12 @@ The *separator* parameter can be a multiple-character string:
 #### See also 
 
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1554 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

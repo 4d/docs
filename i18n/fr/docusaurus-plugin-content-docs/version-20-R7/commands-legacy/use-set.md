@@ -37,3 +37,14 @@ L'exemple suivant utilise [LOAD SET](load-set.md) pour charger un ensemble des s
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 118 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

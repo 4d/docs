@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->La commande **ST FREEZE EXPRESSIONS** "gèle" le contenu des expressions situées dans le champ ou la variable texte multistyle ou 4D Write Pro désigné(e) par le paramètre *objet*.<!-- END REF--> Cette action convertit les expressions dynamiques en textes statiques ou (zones 4D Write Pro uniquement) en images et supprime de l’*objet* les références associées. 
@@ -68,3 +65,12 @@ Vous souhaitez insérer l’heure courante au début du texte et la figer avant 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1282 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

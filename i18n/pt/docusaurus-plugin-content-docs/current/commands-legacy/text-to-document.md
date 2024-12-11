@@ -82,3 +82,12 @@ Exemplo que permite ao usuário indicar a localização do arquivo a criar:
 
 [Document to text](document-to-text.md)  
 *Documentos Sistema*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1237 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

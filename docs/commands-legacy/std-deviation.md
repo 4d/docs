@@ -58,3 +58,12 @@ This example gets the standard deviation of a series of values placed in an arra
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 26 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

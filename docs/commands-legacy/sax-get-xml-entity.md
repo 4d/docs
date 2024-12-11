@@ -48,3 +48,13 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 #### See also 
 
 [SAX Get XML node](sax-get-xml-node.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 879 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

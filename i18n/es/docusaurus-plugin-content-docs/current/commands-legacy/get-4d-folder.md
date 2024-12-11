@@ -208,3 +208,12 @@ Si el parámetro *carpeta* no es válido o si la ruta de acceso devuelta está v
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 485 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

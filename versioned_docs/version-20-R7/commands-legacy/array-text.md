@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY TEXT.Summary-->The ARRAY TEXT command creates and/or resizes an array of [Text](# "A character string that may contain from 0 to 2 GB of text") elements in memory.<!-- END REF--> 
-
-* The *arrayName* parameter is the name of the array.
+<!--REF #_command_.ARRAY TEXT.Summary-->The ARRAY TEXT command creates and/or resizes an array of [Text](# "A character string that may contain from 0 to 2 GB of text") elements in memory.<!-- END REF-->parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.
 * The *size2* parameter is optional; if *size2* is specified, the command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* specifies the number of columns in each array. Each row in a two-dimensional array can be treated as both an element and an array. This means that while working with the first dimension of the array, you can use other array commands to insert and delete entire arrays in a two-dimensional array.
 
@@ -54,4 +52,14 @@ This example creates an interprocess array of 50 [Text](# "A character string th
     ◊atValues{$vlElem}:="Element #"+String($vlElem)
  End for
 ```
+
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 222 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
 

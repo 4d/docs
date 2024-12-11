@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->La commande **OBJECT GET EVENTS** vous permet de d’obtenir la configuration courante des événements formulaire du formulaire, de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -49,3 +46,12 @@ Vous souhaitez activer deux événements et obtenir la liste des événements po
 #### Voir aussi 
 
 [OBJECT SET EVENTS](object-set-events.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1238 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->PICTURE LIBRARY LIST コマンドは、データベースのピクチャライブラリの中に現在格納されているピクチャの参照番号と名前を返します。<!-- END REF-->
@@ -95,3 +92,12 @@ displayed_sidebar: docs
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 564 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

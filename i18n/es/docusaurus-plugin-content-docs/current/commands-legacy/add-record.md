@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Compatibilidad 
 
 <!--REF #_command_.ADD RECORD.Summary-->**Este comando se implementó en las primeras versiones de 4D y sigue siendo útil para la creación de prototipos o desarrollos básicos.<!-- END REF--> Sin embargo, para construir interfaces personalizadas y modernas, ahora se recomienda utilizar formularios genéricos basados en el comando [DIALOG](../commands/dialog.md) que ofrecen funciones avanzadas y un mejor control sobre el flujo de datos.* 
@@ -92,3 +89,15 @@ La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancel
 [CREATE RECORD](create-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 56 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

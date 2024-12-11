@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Create deployment license.Summary-->El comando **Create deployment license** crea un archivo de licencia anidado en la carpeta Licenses de la aplicación creada *mergedApp*.<!-- END REF--> Si la carpeta Licenses no existe en *mergedApp*, el comando la creará.
@@ -57,3 +54,12 @@ Si la compilación requiere una licencia OEM específica (*4D OEM XML Keys*) y s
 #### Ver también 
 
   
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1811 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

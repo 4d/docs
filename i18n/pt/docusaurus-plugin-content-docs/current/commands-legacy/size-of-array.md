@@ -46,3 +46,12 @@ O exemplo a seguir retorna o número de colunas em um array bidimensional:
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 274 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -54,3 +54,12 @@ In the context of deploying a merged application, you want to open or create the
 #### See also 
 
 [CREATE DATA FILE](create-data-file.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 312 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

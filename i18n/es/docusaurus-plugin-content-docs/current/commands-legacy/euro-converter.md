@@ -78,3 +78,13 @@ Estos son algunos ejemplos de conversiones que pueden realizarse con este comand
   //Convertir el valor a Liras Italianas
  $EnLiras:=Euro converter($valor;French Franc;Italian Lira)
 ```
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 676 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

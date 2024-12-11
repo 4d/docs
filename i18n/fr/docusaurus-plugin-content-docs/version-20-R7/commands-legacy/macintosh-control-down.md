@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Macintosh control down.Summary-->**Macintosh control down** retourne Vrai si la touche **Control** du Macintosh est enfoncée.<!-- END REF-->
-
-**Note :** Lorsqu'elle est appelée sous Windows, la fonction **Macintosh control down** retourne toujours Faux. Cette touche Macintosh n'a pas d'équivalent sous Windows.
+<!--REF #_command_.Macintosh control down.Summary-->**Macintosh control down** retourne Vrai si la touche **Control** du Macintosh est enfoncée.<!-- END REF-->Lorsqu'elle est appelée sous Windows, la fonction **Macintosh control down** retourne toujours Faux. Cette touche Macintosh n'a pas d'équivalent sous Windows.
 
 #### Exemple 
 
@@ -31,3 +29,12 @@ Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 544 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

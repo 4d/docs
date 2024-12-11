@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.RELATE MANY SELECTION.Summary-->El comando RELATE MANY SELECTION crea una selección de registros en la tabla Muchos, basada en la selección actual de la tabla Uno.<!-- END REF-->
-
-**Nota:** RELATE MANY SELECTION cambia el registro actual de la tabla Uno.
+<!--REF #_command_.RELATE MANY SELECTION.Summary-->El comando RELATE MANY SELECTION crea una selección de registros en la tabla Muchos, basada en la selección actual de la tabla Uno.<!-- END REF-->RELATE MANY SELECTION cambia el registro actual de la tabla Uno.
 
 #### Ejemplo 
 
@@ -35,3 +33,14 @@ Este ejemplo selecciona todas las facturas de clientes con crédito superior o i
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 340 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

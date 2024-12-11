@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->QR SET TEXT PROPERTY コマンドを使用し、*colNum* と *rowNum* で指定されたセルのテキスト属性を設定できます。<!-- END REF--> 
@@ -86,3 +83,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR Get text property](qr-get-text-property.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 759 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

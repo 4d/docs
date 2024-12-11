@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->La commande **CHANGE LICENSES** affiche la boîte de dialogue du Gestionnaire de licences 4D.<!-- END REF--> 
@@ -42,3 +39,12 @@ Vous permettrez ainsi à un utilisateur d‘activer des licences sans avoir à m
 
 [License info](license-info.md)  
 [Is license available](is-license-available.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 637 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

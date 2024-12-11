@@ -49,3 +49,12 @@ Les fichiers de clés (fichiers d'extension ".4DKeyChain") doivent être stocké
 
   
 [New data key](new-data-key.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1639 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

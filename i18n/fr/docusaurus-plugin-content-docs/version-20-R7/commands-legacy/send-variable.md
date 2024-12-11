@@ -32,3 +32,12 @@ Reportez-vous à l'exemple de la commande [RECEIVE RECORD](receive-record.md).
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SET CHANNEL](set-channel.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 80 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

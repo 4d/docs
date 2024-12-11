@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->O comando OBJECT Get list name devolve o nome da lista associada ao objeto ou a um grupo de objetos designados por *objeto*.<!-- END REF--> 4D lhe permite associar uma lista de opções (criada com o editor de listas em modo Desenho) com objetos de formulário utilizando o editor de formulários ou o comando [OBJECT SET LIST BY NAME](object-set-list-by-name.md).  
@@ -40,3 +37,12 @@ Se nenhuma lista do tipo definido está associada ao *objeto*, o comando devolve
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1072 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

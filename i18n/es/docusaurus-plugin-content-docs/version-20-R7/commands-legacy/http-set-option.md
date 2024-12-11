@@ -45,3 +45,12 @@ El orden de llamada de las opciones no tiene importancia. Si la misma opción se
 
 [HTTP AUTHENTICATE](http-authenticate.md)  
 [HTTP GET OPTION](http-get-option.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1160 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

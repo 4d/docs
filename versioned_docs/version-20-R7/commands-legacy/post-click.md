@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.POST CLICK.Summary-->The POST CLICK command simulates a mouse click.<!-- END REF--> Its effect as if the user actually clicked the mouse button.
@@ -31,3 +28,12 @@ If you specify the *process* parameter, the click is sent to the process whose p
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 466 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -28,3 +28,12 @@ NULL値は、4DのSQLカーネルによって使用されます。詳細につ�
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 965 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

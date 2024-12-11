@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->The **OBJECT SET TEXT ORIENTATION** command modifies the orientation of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
@@ -51,3 +48,12 @@ You want to apply an orientation of 270° to a variable in your form:
 #### See also 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1284 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

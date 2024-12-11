@@ -57,3 +57,11 @@ Usted desea guardar el contenido de un archivo existente en el campo imagen, alm
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1134 |
+| Hilo seguro | &check; |
+
+

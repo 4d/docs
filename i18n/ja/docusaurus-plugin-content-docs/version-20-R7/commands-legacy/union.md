@@ -50,3 +50,12 @@ displayed_sidebar: docs
 
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 120 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

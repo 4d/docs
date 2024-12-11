@@ -47,3 +47,13 @@ La suppression d'un document met la variable système OK à 1\. Si **DELETE DOCU
 #### Voir aussi 
 
 [Test path name](test-path-name.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 159 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Interdite sur le serveur ||
+
+

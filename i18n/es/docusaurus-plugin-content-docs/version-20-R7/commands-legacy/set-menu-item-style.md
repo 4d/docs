@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET MENU ITEM STYLE.Summary-->El comando SET MENU ITEM STYLE cambia el estilo de la fuente de la línea de menú cuyo número o referencia de menú se pasa en *menu* y cuyo número de elemento se pasa en *menuItem* de acuerdo al estilo de fuente pasado en *itemEstilo*.<!-- END REF--> Puede pasa -1 en *menuItem* para indicar el último elemento añadido a *menu*.
@@ -41,3 +38,12 @@ En el parámetro *itemEstilo* puede definir el estilo del elemento. Pase una com
 #### Ver también 
 
 [Get menu item style](get-menu-item-style.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 425 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

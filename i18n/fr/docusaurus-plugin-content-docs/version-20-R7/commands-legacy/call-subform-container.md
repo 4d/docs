@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->La commande **CALL SUBFORM CONTAINER** permet à une instance de sous-formulaire d’envoyer l’*événement* à l’objet sous-formulaire qui la contient.<!-- END REF--> L’objet sous-formulaire peut alors traiter l’*événement* dans le contexte du formulaire parent. 
@@ -32,3 +29,12 @@ Vous pouvez passer dans *événement* tout événement formulaire prédéfini de
 
 [Form event code](form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1086 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

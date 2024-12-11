@@ -55,3 +55,11 @@ Un bouton associé à une méthode objet est placé en bas de la liste. La méth
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 122 |
+| Thread safe | &check; |
+
+

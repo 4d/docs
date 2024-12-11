@@ -63,3 +63,12 @@ Se quiser executar instruções usando chamadas para comandos 4D e tabelas. Já 
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 63 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

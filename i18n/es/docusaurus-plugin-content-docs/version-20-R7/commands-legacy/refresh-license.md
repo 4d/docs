@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Refresh license.Summary-->El comando **Refresh license** actualiza la licencia actual del servidor 4D.<!-- END REF--> Lo conecta con la base de datos de clientes 4D y activa automáticamente cualquier licencia nueva o actualizada (por ejemplo, clientes comprados adicionales) relacionada con la licencia actual.
@@ -47,3 +44,13 @@ Desea actualizar su licencia y recibir un mensaje cuando se complete:
     ALERT($res.statusText)
  End if
 ```
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1336 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

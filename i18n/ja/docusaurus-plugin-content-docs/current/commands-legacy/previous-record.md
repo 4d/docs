@@ -26,3 +26,13 @@ PREVIOUS RECORDで、カレントセレクションの前にカレントレコ�
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 110 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| サーバー上での使用は不可 ||
+
+

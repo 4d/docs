@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->El comando **WA Run offscreen area** crea un área web en memoria que se puede utilizar para cargar y analizar automáticamente las páginas web.<!-- END REF-->
@@ -99,3 +96,13 @@ La variable del sistema OK se define en 0 si se ha alcanzado el tiempo de espera
 [FORM Event](form-event.md)  
 *Gestión programada de áreas web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1727 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->La commande **DISPLAY NOTIFICATION** provoque l’affichage d’un message de notification à destination de l'utilisateur.<!-- END REF--> 
@@ -43,3 +40,12 @@ Sous Windows, la fenêtre du message reste affichée tant qu'aucune activité n'
 #### Voir aussi 
 
 [ALERT](alert.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 910 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

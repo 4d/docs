@@ -23,3 +23,12 @@ Para saber mais, consulte *Suspender as transações*.
 [Active transaction](active-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspender as transações*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1386 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Day of.Summary-->Day of コマンドは、*date*から日を返します。<!-- END REF-->
-
-**Note:** Day of は1から31までの値を返します。日付から曜日を取得するには、[Day number](day-number.md "Day number")コマンドを使用します。
+<!--REF #_command_.Day of.Summary-->Day of コマンドは、*date*から日を返します。<!-- END REF-->Day of は1から31までの値を返します。日付から曜日を取得するには、[Day number](day-number.md "Day number")コマンドを使用します。
 
 #### 例題 1 
 
@@ -38,3 +36,12 @@ displayed_sidebar: docs
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 23 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

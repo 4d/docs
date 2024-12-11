@@ -38,3 +38,12 @@ Le numéro de table et d'enregistrement pour l'enregistrement concerné par l'é
 *Présentation des triggers*  
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 399 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

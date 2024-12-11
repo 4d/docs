@@ -101,3 +101,12 @@ displayed_sidebar: docs
   
 [CALL WORKER](call-worker.md)  
 [DIALOG](dialog.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1391 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

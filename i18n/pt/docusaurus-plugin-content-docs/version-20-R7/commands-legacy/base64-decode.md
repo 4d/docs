@@ -55,3 +55,12 @@ Este exemplo lhe permite transferir uma imagem através de um BLOB:
 [Generate digest](generate-digest.md)  
 *Visão Geral dos comandos XML DOM*  
 [XML DECODE](xml-decode.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 896 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

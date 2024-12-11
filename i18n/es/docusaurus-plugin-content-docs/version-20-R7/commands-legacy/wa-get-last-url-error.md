@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.WA GET LAST URL ERROR.Summary-->El comando WA GET LAST URL ERROR permite recuperar varios elementos de información relacionados con el último error ocurrido en el área Web designada por los parámetros *\** y *objeto*.<!-- END REF-->
@@ -41,3 +38,12 @@ Es recomendable llamar este comando dentro del marco del evento de formulario On
 #### Ver también 
 
 [Form event code](form-event-code.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1034 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

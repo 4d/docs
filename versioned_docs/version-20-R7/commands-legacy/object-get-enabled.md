@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->The OBJECT Get enabled command returns True if the object or group of objects designated by *object* is enabled in the form and False if it is not enabled.<!-- END REF--> 
@@ -37,3 +34,12 @@ This command can be applied to the following types of objects:
 #### See also 
 
 [OBJECT SET ENABLED](object-set-enabled.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1079 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX Get row font style.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -53,3 +50,12 @@ Given the following list box:
 #### See also 
 
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1269 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

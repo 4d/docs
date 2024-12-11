@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->The **ST INSERT EXPRESSION** command inserts a reference to the *expression* in the styled text field or variable designated by the *object* parameter.<!-- END REF-->
@@ -90,3 +87,13 @@ You want to replace the highlighted text with a field value:
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1281 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

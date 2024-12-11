@@ -64,3 +64,13 @@ Lorsqu'un **DELETE SELECTION** rencontre un enregistrement verrouillé, celui-ci
 *Présentation des ensembles*  
 [TRUNCATE TABLE](truncate-table.md)  
 *Verrouillage d'enregistrements*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 66 |
+| Thread safe | &check; |
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

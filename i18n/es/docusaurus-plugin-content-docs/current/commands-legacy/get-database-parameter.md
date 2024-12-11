@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get database parameter.Summary-->El comando **Get database parameter** permite obtener el valor actual de un parámetro de la base 4D.<!-- END REF--> Cuando el valor del parámetro es una cadena de caracteres, se devuelve en el parámetro *valorAlfa*.
@@ -135,3 +132,12 @@ En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
 [Application info](application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 643 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

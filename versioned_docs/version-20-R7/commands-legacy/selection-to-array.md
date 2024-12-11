@@ -79,3 +79,11 @@ The same example can be written:
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 260 |
+| Thread safe | &check; |
+
+

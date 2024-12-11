@@ -43,3 +43,13 @@ If the callback method does not exist, the verification is not carried out, an e
 #### See also 
 
 [VERIFY DATA FILE](verify-data-file.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1008 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document, error |
+| Forbidden on the server ||
+
+

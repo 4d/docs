@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Current form table.Summary-->The Current form table command returns the pointer to the table of the form being displayed or printed in the current process.<!-- END REF-->
@@ -66,3 +63,12 @@ To do so, use the object method to create the variable *vsCurrentRecord*, then c
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 627 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

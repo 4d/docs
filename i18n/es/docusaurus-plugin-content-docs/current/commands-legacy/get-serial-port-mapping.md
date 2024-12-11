@@ -49,3 +49,12 @@ Este método de proyecto puede utilizarse para direccionar el mismo puerto seria
 #### Ver también 
 
 [SET CHANNEL](set-channel.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 909 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->La commande **METHOD GET CODE** retourne dans le paramètre *code* le contenu de la ou des méthode(s) désignée(s) par le paramètre *chemin*.<!-- END REF--> La commande peut retourner le code de tous les types de méthodes : méthodes base, définitions de classes, triggers, méthodes projet, méthodes formulaire et méthodes objet.
@@ -121,3 +118,12 @@ Le document résultant contient alors :
 
 [METHOD SET CODE](method-set-code.md)  
 *Utiliser des tokens dans les formules*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1190 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

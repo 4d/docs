@@ -109,3 +109,12 @@ Find in array コマンドは、タイプがテキスト、数値、日付、ポ
 [Find in sorted array](find-in-sorted-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 230 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

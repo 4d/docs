@@ -26,3 +26,13 @@ Vous passez dans le paramètre *homePage* le nom de la page HTML d’accueil ou 
 Pour ne plus envoyer *homePage* comme page d’accueil pour le process Web courant, appelez de nouveau la commande **WEB SET HOME PAGE** en passant une chaîne vide ("") dans *homePage*.
 
 **Note :** La page d’accueil par défaut du serveur Web est définie dans les Propriétés de la base. 
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 639 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

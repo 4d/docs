@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET ABOUT.Summary-->The **SET ABOUT** command changes the **About 4D** menu command in the **Help** menu (Windows) or in the **Application** menu (macOS) menu to *itemText*.<!-- END REF--> 
@@ -46,3 +43,12 @@ The following example resets the About 4D menu command:
 #### See also 
 
 [SET HELP MENU](set-help-menu.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 316 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

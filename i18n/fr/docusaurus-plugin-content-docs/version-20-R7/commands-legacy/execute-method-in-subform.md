@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->La commande **EXECUTE METHOD IN SUBFORM** permet d’exécuter le code désigné dans *formule* dans le contexte de l’objet de sous-formulaire *objetSousForm*.<!-- END REF--> 
@@ -75,3 +72,14 @@ Si cette méthode était utilisée directement dans la méthode du formulaire Ca
 #### Variables et ensembles système 
 
 Si cette commande est exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1085 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

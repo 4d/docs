@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get menu item key.Summary-->El comando Get menu item key devuelve el código del atajo **Ctrl** (Windows) o **Comando** (Mac OS) para el comando de menú cuyo número o referencia de menú se pasa en *menu* y cuyo número de comando se pasa en *menuItem*.<!-- END REF--> Puede pasar -1 en *menuItem* para indicar el último elemento añadido a *menu.*
@@ -51,3 +48,12 @@ Para obtener un atajo asociado con un comando de menú, es útil implementar una
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 424 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

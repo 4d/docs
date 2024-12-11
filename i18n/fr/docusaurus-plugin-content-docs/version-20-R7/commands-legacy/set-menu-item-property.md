@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->La commande **SET MENU ITEM PROPERTY** permet de fixer la *valeur* de la *propriété* pour la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->   
@@ -53,3 +50,12 @@ Pour plus d’informations sur les propriétés standard des lignes de menus, re
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 973 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

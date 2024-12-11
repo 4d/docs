@@ -37,3 +37,13 @@ According to the calling method type, the returned string can be as follows:
 This command cannot be called from within a 4D formula.
 
 **Note:** For this command to be able to operate in compiled mode, it must not be included in code for which range checking has been disabled. See *Range checking*.
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 684 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

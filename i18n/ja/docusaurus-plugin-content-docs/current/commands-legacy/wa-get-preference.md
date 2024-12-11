@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->WA GET PREFERENCE コマンドを使用して、*\** と *object* によって指定されたWebエリアの環境設定の現在値を取得します。<!-- END REF-->
@@ -36,3 +33,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1042 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

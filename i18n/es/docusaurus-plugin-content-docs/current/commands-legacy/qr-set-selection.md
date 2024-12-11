@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->El comando QR SET SELECTION permite seleccionar una celda, una fila, una columna o toda un *area* como lo haría con un ratón.<!-- END REF--> Este comando también le permite deseleccionar la selección actual.
@@ -38,3 +35,13 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 #### Ver también 
 
 [QR GET SELECTION](qr-get-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 794 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

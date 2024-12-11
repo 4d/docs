@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Is user deleted.Summary-->Is user deleted コマンドを使用して、引数 *userID* に渡したユニークなユーザーID番号を持つユーザーアカウントをテストします。<!-- END REF-->
@@ -32,3 +29,13 @@ displayed_sidebar: docs
 [DELETE USER](delete-user.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 616 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

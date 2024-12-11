@@ -35,3 +35,13 @@ Las fechas y horas de creación y última modificación son administradas por el
 #### Ver también 
 
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 478 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

@@ -33,3 +33,12 @@ El siguiente ejemplo apila el registro de un cliente:
 
 [POP RECORD](pop-record.md)  
 *Uso de la pila de registros*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 176 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

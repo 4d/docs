@@ -53,3 +53,12 @@ Se quiser mudar temporariamente a prioridade da cache dos campos de texto da tab
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1431 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

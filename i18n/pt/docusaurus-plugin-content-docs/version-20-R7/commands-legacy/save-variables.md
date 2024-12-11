@@ -48,3 +48,13 @@ Se as variáveis são guardadas corretamente, a variável sistema OK assume o va
 [LOAD VARIABLES](load-variables.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 *Variáveis sistema*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 75 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, Document |
+| Proibido no servidor ||
+
+

@@ -30,3 +30,13 @@ NEXT RECORDでカレントセレクションの最後を超えてカレントレ
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 51 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| サーバー上での使用は不可 ||
+
+

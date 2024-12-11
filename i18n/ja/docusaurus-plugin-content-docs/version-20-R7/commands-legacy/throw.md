@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.throw.Summary-->**throw** コマンドは、エラーを作成します。<!-- END REF-->エラーは即座に、あるいはカレントメソッドの終了時に (遅延モード) スローされます。
@@ -107,3 +104,12 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1805 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

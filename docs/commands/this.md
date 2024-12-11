@@ -183,3 +183,12 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 [Self](../commands-legacy/self.md)  
 [Super](super.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1470 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

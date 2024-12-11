@@ -32,3 +32,12 @@ If you don’t pass the *set* parameter, the command will use UserSet in the cur
 #### See also 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 646 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

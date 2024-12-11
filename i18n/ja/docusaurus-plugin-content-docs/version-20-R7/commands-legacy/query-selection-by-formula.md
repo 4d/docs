@@ -30,3 +30,14 @@ QUERY SELECTION BY FORMULAは[QUERY BY FORMULA](query-by-formula.md "QUERY BY FO
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 207 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+| サーバー上での使用は不可 ||
+
+

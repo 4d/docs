@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->SVG EXPORT TO PICTURE コマンドはXMLツリーのSVGフォーマットのピクチャを、*pictVar* 引数で指定したピクチャフィードや変数に保存するために使用できます。<!-- END REF-->
-
-**Note:** SVGフォーマットに関する詳細はの節を参照してください。
+<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->SVG EXPORT TO PICTURE コマンドはXMLツリーのSVGフォーマットのピクチャを、*pictVar* 引数で指定したピクチャフィードや変数に保存するために使用できます。<!-- END REF-->SVGフォーマットに関する詳細はの節を参照してください。
 
 *elementRef*にはSVGピクチャを含むXMLのルート要素参照を渡します。
 
@@ -53,3 +51,12 @@ displayed_sidebar: docs
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1017 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

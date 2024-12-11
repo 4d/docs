@@ -150,3 +150,13 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 #### See also 
 
 [ds](ds.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1452 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

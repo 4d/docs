@@ -91,3 +91,12 @@ Puede utilizar la sintaxis *template* para exportar campos de tablas diferentes:
 #### Ver también 
 
 [JSON TO SELECTION](json-to-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1234 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

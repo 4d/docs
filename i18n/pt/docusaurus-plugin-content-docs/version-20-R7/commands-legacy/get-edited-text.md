@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Get edited text.Summary-->O comando Get edited text é utilizado principalmente com o evento de formulário On After Keystroke para recuperar o texto a medida em que é introduzido.<!-- END REF--> Também pode ser utilizado com o evento de formulário On Before Keystroke. Para maior informação sobre estes eventos de formulário, por favor consulte a descrição do comando [Form event code](form-event-code.md).
@@ -69,3 +66,12 @@ End if
 
 [Form event code](form-event-code.md)  
 [Is editing text](is-editing-text.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 655 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -52,3 +52,13 @@ If an invalid character is passed in *tag*, an error is generated.
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 853 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

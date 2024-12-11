@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->**ON EVENT CALL** installe la méthode dont le nom est passé dans *méthodeEvén* comme méthode de gestion des événements.<!-- END REF--> 
@@ -118,3 +115,12 @@ Lorsque vous imprimez un état à l'aide la commande [PRINT SELECTION](print-sel
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 190 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

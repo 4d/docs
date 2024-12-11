@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->The OBJECT Get list name command returns the name of the choice list associated with the object or group of objects designated by *object*.<!-- END REF--> 4D lets you associate a choice list (created with the choice list editor in Design mode) with form objects using the form editor or the [OBJECT SET LIST BY NAME](object-set-list-by-name.md) command. 
@@ -39,3 +36,12 @@ If there is no list of the type defined associated with the *object*, the comman
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1072 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

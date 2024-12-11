@@ -92,3 +92,12 @@ Este é o código do método GetFile:
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1212 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

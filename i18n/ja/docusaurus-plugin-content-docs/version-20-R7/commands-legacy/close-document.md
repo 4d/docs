@@ -37,3 +37,12 @@ displayed_sidebar: docs
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 267 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

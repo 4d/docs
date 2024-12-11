@@ -49,3 +49,13 @@ displayed_sidebar: docs
 
 [SAX ADD XML CDATA](sax-add-xml-cdata.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 878 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

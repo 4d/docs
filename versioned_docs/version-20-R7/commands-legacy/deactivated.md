@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Deactivated.Summary-->The **Deactivated** command returns True in a form or object method when the frontmost window of the frontmost process, containing the form, moves to the back.<!-- END REF-->
@@ -28,3 +25,12 @@ In order for the **Deactivated** execution cycle to be generated, make sure that
 
 [Activated](activated.md)  
 [Form event code](../commands/form-event-code.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 347 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

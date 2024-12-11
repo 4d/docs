@@ -23,3 +23,12 @@ Si este comando se llama fuera del contexto de una sesión web, devuelve una cad
 
 *Gestión de las sesiones web (heredado)*  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1162 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

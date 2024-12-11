@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->El comando GET MENU ITEMS devuelve, en los arrays *arrayTitMenus* y *arraysRefMenus*, los títulos e identificadores de todas las líneas de menú o de la barra de menús designada por el parámetro *menu*.<!-- END REF--> 
@@ -36,3 +33,13 @@ Usted quiere conocer el contenido de la barra de menú del proceso actual:
  RefBarMenu:=Get menu bar reference(Frontmost process)
  GET MENU ITEMS(RefBarMenu;arrayTitMenus;arraysRefMenus)
 ```
+
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 977 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

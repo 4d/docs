@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.RELATE MANY SELECTION.Summary-->La commande **RELATE MANY SELECTION** crée une sélection d'enregistrements dans la table N basée sur la sélection courante de la table 1, et charge le premier enregistrement de la table N comme enregistrement courant.<!-- END REF-->
-
-**Note :** **RELATE MANY SELECTION** modifie l'enregistrement courant de la table 1.
+<!--REF #_command_.RELATE MANY SELECTION.Summary-->La commande **RELATE MANY SELECTION** crée une sélection d'enregistrements dans la table N basée sur la sélection courante de la table 1, et charge le premier enregistrement de la table N comme enregistrement courant.<!-- END REF-->**RELATE MANY SELECTION** modifie l'enregistrement courant de la table 1.
 
 #### Exemple 
 
@@ -35,3 +33,14 @@ Prenons l'exemple d'une base de données comportant une table *\[Factures\]* don
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 340 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

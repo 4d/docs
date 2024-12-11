@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get text resource.Summary-->Get text resource コマンドは、*resID*に渡されるIDを持つテキスト ("TEXT") リソースに格納されているテキストを返します。<!-- END REF-->
@@ -45,3 +42,13 @@ displayed_sidebar: docs
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 504 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

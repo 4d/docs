@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -192,3 +189,12 @@ var $result:=Compile project($options)
 #### See also 
 
 [BUILD APPLICATION](../commands-legacy/build-application.md)
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1760 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->La commande **LISTBOX SET GRID** permet d’afficher ou de masquer les traits horizontaux et/ou verticaux composant la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -32,3 +29,12 @@ Passez dans les paramètres *horizontal* et *vertical* des valeurs booléennes i
 [LISTBOX GET GRID](listbox-get-grid.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 841 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

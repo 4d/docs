@@ -63,3 +63,12 @@ When you use the Web debug log *selector*, you can receive one of the following 
 #### See also 
 
 [WEB SET OPTION](web-set-option.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1209 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

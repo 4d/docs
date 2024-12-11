@@ -21,3 +21,12 @@ Une séquence d'instructions SQL doit être encadrée par les mot-clés [Begin S
 #### Voir aussi 
 
 [Begin SQL](begin-sql.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 949 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -21,10 +21,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** localiza os registros que correspondam com a string de consulta definida utilizando os parâmetros *campoObjeto*, *caminhoAtributo*, *opPesq* e *valor* e retorna uma seleção de registros para a *tabela*.<!-- END REF-->  
-
-  
-**QUERY BY ATTRIBUTE** altera a seleção atual de *tabela* para o processo atual e faz o primeiro registro da nova seleção do registro atual. Se o parâmetro *tabela* for omitido, o comando aplica-se a tabela como padrão. Se você não tiver definido qualquer tabela padrão, ocorre um erro.
+<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** localiza os registros que correspondam com a string de consulta definida utilizando os parâmetros *campoObjeto*, *caminhoAtributo*, *opPesq* e *valor* e retorna uma seleção de registros para a *tabela*.<!-- END REF-->altera a seleção atual de *tabela* para o processo atual e faz o primeiro registro da nova seleção do registro atual. Se o parâmetro *tabela* for omitido, o comando aplica-se a tabela como padrão. Se você não tiver definido qualquer tabela padrão, ocorre um erro.
 
 O parâmetro opcional *opConj* é usado para combinar várias chamadas a **QUERY BY ATTRIBUTE** no caso de várias pesquisas. Os operadores de conjunção disponíveis são o mesmo que o comando [QUERY](query.md):  
   
@@ -409,3 +406,15 @@ A variável Ok toma o valor 0 se:
   
 *Estrutura dos objetos de linguagem 4D*  
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1331 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+| Proibido no servidor ||
+
+

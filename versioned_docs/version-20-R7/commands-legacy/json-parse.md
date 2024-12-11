@@ -189,3 +189,12 @@ beta[1].golf:{line:10,offset:12}}}
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1218 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

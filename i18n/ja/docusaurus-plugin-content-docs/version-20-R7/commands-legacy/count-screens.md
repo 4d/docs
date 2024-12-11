@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Count screens.Summary-->Count screensコマンドは、マシンに接続されている画面モニターの数を返します。<!-- END REF-->
@@ -27,3 +24,12 @@ displayed_sidebar: docs
 [SCREEN DEPTH](screen-depth.md)  
 [Screen height](screen-height.md)  
 [Screen width](screen-width.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 437 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

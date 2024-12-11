@@ -26,3 +26,12 @@ The default name is used as the file name when the picture is exported in a disk
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1172 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

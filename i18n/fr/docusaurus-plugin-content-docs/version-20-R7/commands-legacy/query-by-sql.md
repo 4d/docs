@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->La commande **QUERY BY SQL** permet de tirer directement parti du moteur SQL intégré de 4D.<!-- END REF--> Elle exécute une requête SELECT simple qui peut être écrite ainsi :
@@ -160,3 +157,15 @@ Si le format de la condition de recherche est correct, la variable système OK p
 #### Voir aussi 
 
 [QUERY BY FORMULA](query-by-formula.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 942 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

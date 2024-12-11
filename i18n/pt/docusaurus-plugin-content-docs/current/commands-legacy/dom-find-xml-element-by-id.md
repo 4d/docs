@@ -28,3 +28,13 @@ O comando retorna como resultado a referência XML do elemento encontrado.
 #### Ver também 
 
 [DOM Find XML element](dom-find-xml-element.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1010 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Menu bar height.Summary-->Menu bar height はメニューバーの高さをピクセル数で返します。<!-- END REF-->
@@ -32,3 +29,12 @@ displayed_sidebar: docs
 [HIDE MENU BAR](hide-menu-bar.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 440 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

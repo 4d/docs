@@ -55,3 +55,12 @@ displayed_sidebar: docs
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1611 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

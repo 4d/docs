@@ -60,3 +60,13 @@ Se o comando tiver sido executado corretamente e se o elemento analisado não fo
 #### Ver também 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 724 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

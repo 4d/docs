@@ -24,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Current machine](current-machine.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 484 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

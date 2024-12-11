@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->La commande **WA GET URL FILTERS** retourne dans les tableaux *tabFiltres* et *tabAutorisRefus* les filtres actifs dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Si aucun filtre n’est actif, les tableaux sont retournés vides. 
@@ -29,3 +26,12 @@ Les filtres sont installés par la commande [WA SET URL FILTERS](wa-set-url-filt
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1031 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

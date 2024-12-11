@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Keystroke.Summary-->**Keystroke** returns the character entered by the user into a field or an enterable area.<!-- END REF--> 
@@ -171,3 +168,12 @@ Using the interprocess communication capabilities of 4D, you can similarily buil
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 390 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -118,3 +118,12 @@ En el siguiente ejemplo, usted quiere encontrar todas las instancias de una cade
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 15 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

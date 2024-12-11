@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->O comando GOTO OBJECT é utilizado para selecionar o objeto editável *objeto* como a área ativa do formulário.<!-- END REF--> É equivalente a um clique do usuário na área ou de utilizar a tecla Tab para selecionar o campo ou a variável. 
@@ -52,3 +49,12 @@ Veja o exemplo do comando [REJECT](reject.md "REJECT").
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 206 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

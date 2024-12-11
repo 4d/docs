@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Windows Alt down.Summary-->**Windows Alt down** returns TRUE if the Windows Alt key is pressed.<!-- END REF-->
-
-**Note:** When called on a Macintosh platform, **Windows Alt down** returns TRUE if the Macintosh Option key is pressed.
+<!--REF #_command_.Windows Alt down.Summary-->**Windows Alt down** returns TRUE if the Windows Alt key is pressed.<!-- END REF-->When called on a Macintosh platform, **Windows Alt down** returns TRUE if the Macintosh Option key is pressed.
 
 #### Example 
 
@@ -31,3 +29,12 @@ See example for the [Shift down](shift-down.md) command.
 [Macintosh option down](macintosh-option-down.md)  
 [Shift down](shift-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 563 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

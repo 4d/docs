@@ -50,3 +50,12 @@ displayed_sidebar: docs
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1429 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

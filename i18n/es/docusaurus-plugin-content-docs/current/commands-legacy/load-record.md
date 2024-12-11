@@ -36,3 +36,12 @@ En entornos multiusuario y multiprocesos, cuando necesite modificar un registro 
 [Locked](locked.md)  
 *Record Locking*  
 [UNLOAD RECORD](unload-record.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 52 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

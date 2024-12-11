@@ -56,3 +56,14 @@ L'exemple suivant parvient au même résultat que le précédent :
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 349 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
+
+

@@ -48,3 +48,12 @@ displayed_sidebar: docs
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1425 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

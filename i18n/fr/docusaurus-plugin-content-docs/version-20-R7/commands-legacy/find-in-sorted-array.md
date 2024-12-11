@@ -71,3 +71,12 @@ Vous souhaitez trouver le nombre d'occurrences de chaînes débutant par "test" 
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1333 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

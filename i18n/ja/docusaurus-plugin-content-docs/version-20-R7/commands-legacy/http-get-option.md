@@ -43,3 +43,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [HTTP SET OPTION](http-set-option.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1159 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

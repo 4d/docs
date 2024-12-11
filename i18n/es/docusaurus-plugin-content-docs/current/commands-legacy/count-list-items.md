@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Count list items.Summary-->El comando Count list items devuelve el número actual de elementos visibles o el número total de elementos en la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF-->
@@ -63,3 +60,12 @@ Acá tenemos una lista llamada *hList* mostrada en el entorno Aplicación:
 
 [List item position](list-item-position.md)  
 [Selected list items](selected-list-items.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 380 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

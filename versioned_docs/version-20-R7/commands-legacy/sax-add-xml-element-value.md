@@ -50,3 +50,13 @@ If the command has been executed correctly, the system variable OK is set to 1; 
 
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 855 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

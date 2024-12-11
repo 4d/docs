@@ -106,3 +106,12 @@ With this command, you can easily handle objects in loops:
 
   
 [New shared object](new-shared-object.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1471 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->La commande **OBJECT GET PRINT VARIABLE FRAME** vous permet de d’obtenir la configuration courante des options d’impression en taille variable de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -39,3 +36,12 @@ Si l’*objet* est un sous-formulaire et si l’impression en taille variable es
 #### Voir aussi 
 
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1241 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

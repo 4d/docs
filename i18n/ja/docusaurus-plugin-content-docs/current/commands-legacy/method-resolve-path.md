@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->**METHOD RESOLVE PATH**コマンドは*path*引数に渡された内部パス名を解決し、*methodType*、*ptrTable*、*objectName*、そして *formObjectName*引数にそれぞれ情報を返します。<!-- END REF-->
@@ -85,3 +82,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [METHOD Get path](method-get-path.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1165 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

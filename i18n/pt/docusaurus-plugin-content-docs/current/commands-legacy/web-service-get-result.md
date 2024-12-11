@@ -53,3 +53,12 @@ Imagine um serviço web que devolve a hora atual em qualquer cidade do mundo. Os
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 779 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

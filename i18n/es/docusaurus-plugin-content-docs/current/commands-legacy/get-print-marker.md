@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get print marker.Summary-->El comando Get print marker permite obtener la posición actual de un marcador durante una impresión.<!-- END REF--> 
@@ -64,3 +61,12 @@ Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRIN
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 708 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -97,3 +97,13 @@ Si no se seleccionó ningún archivo (por ejemplo, si el usuario hace clic en el
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 905 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, Document, error |
+| Prohibido en el servidor ||
+
+

@@ -35,3 +35,12 @@ After this command is executed, if a Web client sends a request using an invalid
 
 [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
 *Web Sessions Management (Legacy)*  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1208 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

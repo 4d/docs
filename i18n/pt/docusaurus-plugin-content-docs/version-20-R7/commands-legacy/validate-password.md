@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 Validate password retorna True se a cadeia passada em *senha* for a senha para a conta de usuário cujo número de referência é passado em *refUsuario*.  
@@ -62,3 +59,12 @@ No [On 4D Mobile Authentication database method](on-4d-mobile-authentication-dat
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 638 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

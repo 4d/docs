@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->The **SPELL ADD TO USER DICTIONARY** command adds one or more words to the current user dictionary.<!-- END REF-->
@@ -39,3 +36,12 @@ Adding proper nouns to the user dictionary:
 #### See also 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1214 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

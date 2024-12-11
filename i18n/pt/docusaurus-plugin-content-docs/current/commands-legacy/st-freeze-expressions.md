@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->O comando **ST FREEZE EXPRESSIONS** "congela" o conteúdo das expressões encontradas em texto mult-estilo ou no campo ou variável 4D Write Pro com estilo definido pelo parâmetro *objeto*.<!-- END REF--> Esta ação converte expressões dinâmicas em texto estático ou (apenas para áreas 4D Write Pro) converte imagens e remove as referências associadas ao *objeto*. 
@@ -69,3 +66,12 @@ Você quer inserir a hora atual ao início do texto e logo congelar ela antes de
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1282 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

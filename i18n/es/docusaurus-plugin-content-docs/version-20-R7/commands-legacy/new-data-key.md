@@ -55,3 +55,12 @@ Desea guardar una llave de cifrado en un archivo .4DKeyChain:
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1611 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

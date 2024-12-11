@@ -146,3 +146,12 @@ Result:
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1080 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

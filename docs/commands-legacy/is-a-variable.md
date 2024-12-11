@@ -24,3 +24,12 @@ When you want to know the name of the variable being pointed to or the field num
 
 [Is nil pointer](is-nil-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 294 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

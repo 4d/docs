@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->**METHOD Get attribute**コマンドは*path*引数で指定されたプロジェクトメソッドの*attribType*属性値を返します。<!-- END REF-->このコマンドはプロジェクトメソッドに対してのみ動作します。無効なパスを渡すとエラーが生成されます。 
@@ -42,3 +39,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1169 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

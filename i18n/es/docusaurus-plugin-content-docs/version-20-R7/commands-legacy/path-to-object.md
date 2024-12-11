@@ -174,3 +174,12 @@ Desea saber la cantidad de subcarpetas en una ruta:
 [Folder ](folder.md)  
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1547 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

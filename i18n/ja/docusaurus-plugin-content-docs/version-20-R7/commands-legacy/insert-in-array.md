@@ -45,3 +45,12 @@ displayed_sidebar: docs
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 227 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

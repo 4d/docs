@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->**OBJECT SET RGB COLORS** コマンドは、引数*object*とオプション引数の *\** によって指定されるオブジェクトの前景色と背景色を変更します。<!-- END REF-->コマンドがリストボックスに対して適用される場合、引数を更に使用して奇数行の背景色を変更することができます。
@@ -106,3 +103,12 @@ displayed_sidebar: docs
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB Color](select-rgb-color.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 628 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

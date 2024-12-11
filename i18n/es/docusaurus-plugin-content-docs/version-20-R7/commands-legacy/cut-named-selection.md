@@ -36,3 +36,13 @@ El método siguiente vacía la selección actual de una tabla *\[Clientes\]*:
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 334 |
+| Hilo seguro | &check; |
+| Modifica la selección actual ||
+| Prohibido en el servidor ||
+
+

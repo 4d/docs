@@ -35,3 +35,12 @@ End for
 #### Ver também 
 
 [Records in table](records-in-table.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 76 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

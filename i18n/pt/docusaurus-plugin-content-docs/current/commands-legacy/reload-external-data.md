@@ -26,3 +26,12 @@ A continuação deve recarregar os dados utilizando o comando **RELOAD EXTERNAL 
 #### Ver também 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1135 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

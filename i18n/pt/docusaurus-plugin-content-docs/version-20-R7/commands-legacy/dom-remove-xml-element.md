@@ -27,3 +27,13 @@ Um erro é gerado quando o elemento de referência for inválido
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 869 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+| Proibido no servidor ||
+
+

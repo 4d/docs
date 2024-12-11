@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->O novo comando **METHOD SET ATTRIBUTES** permite que você defina os valores dos *atributos* para os métodos especificados no parâmetro *caminho*.<!-- END REF-->
@@ -63,3 +60,12 @@ Se você desejar modificar apenas um atributo:
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1335 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

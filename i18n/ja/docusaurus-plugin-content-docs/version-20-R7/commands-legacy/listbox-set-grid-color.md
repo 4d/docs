@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->**LISTBOX SET GRID COLOR** コマンドを使用し、 *object* 引数および *\** で指定されたリストボックスオブジェクト上のグリッドの色を変更することができます。<!-- END REF-->
@@ -38,3 +35,12 @@ displayed_sidebar: docs
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 842 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

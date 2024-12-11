@@ -33,3 +33,12 @@ L'exemple suivant affiche une boîte de dialogue d'alerte qui indique le pourcen
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 195 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

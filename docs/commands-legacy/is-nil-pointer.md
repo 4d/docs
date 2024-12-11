@@ -36,3 +36,12 @@ If you want to find out the name of the variable or the number of the field that
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 315 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

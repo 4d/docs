@@ -78,3 +78,13 @@ Este ejemplo utiliza una unión para buscar todas las líneas de facturas de cli
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 48 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+
+

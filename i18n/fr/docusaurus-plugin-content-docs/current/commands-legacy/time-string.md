@@ -36,3 +36,12 @@ L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “468
 
 [String](string.md)  
 [Time](time.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 180 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

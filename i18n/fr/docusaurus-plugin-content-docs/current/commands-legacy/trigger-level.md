@@ -24,3 +24,12 @@ Reportez-vous à la description des *Triggers en cascade*.
 *Présentation des triggers*  
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 398 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

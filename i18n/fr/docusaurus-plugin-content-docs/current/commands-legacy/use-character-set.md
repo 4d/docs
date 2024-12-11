@@ -49,3 +49,13 @@ La variable système OK prend la valeur 1 si le filtre est correctement chargé,
 [RECEIVE BUFFER](receive-buffer.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 205 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

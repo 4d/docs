@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->**ST FREEZE EXPRESSIONS**コマンドは、*object* 引数で指定されたマルチスタイルテキストあるいは4D Write Proのフィールドまたは変数内の4D 式の内容を固定化します。<!-- END REF-->これにより、ダイナミックな4D式はスタティックなテキストあるいは画像(4D Write Pro エリアのみ)へと変換され、*object* に関連付けられた参照は解除されます。
@@ -68,3 +65,12 @@ displayed_sidebar: docs
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1282 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

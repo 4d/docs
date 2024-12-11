@@ -78,3 +78,13 @@ This example uses a join to query all the lines of "ACME" client invoices even t
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 48 |
+| Thread safe | &check; |
+| Changes current record ||
+| Changes current selection ||
+
+

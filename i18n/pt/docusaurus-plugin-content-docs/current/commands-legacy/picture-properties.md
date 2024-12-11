@@ -29,3 +29,12 @@ Os parâmetros *hDesp*, *vDesp*, e *modo* devolvem as posições horizontal e ve
 #### Ver também 
 
 [Picture size](picture-size.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 457 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

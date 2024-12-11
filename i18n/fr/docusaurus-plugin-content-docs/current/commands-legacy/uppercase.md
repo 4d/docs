@@ -37,3 +37,12 @@ Reportez-vous à l'exemple de [Lowercase](lowercase.md).
 #### Voir aussi 
 
 [Lowercase](lowercase.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 13 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

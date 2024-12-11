@@ -35,3 +35,12 @@ El siguiente ejemplo guarda el número del registro actual de la selección en u
 *Acerca de números de registros*  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 246 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

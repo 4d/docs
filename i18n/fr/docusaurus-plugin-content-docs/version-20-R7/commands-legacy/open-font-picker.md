@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->La commande **OPEN FONT PICKER** affiche la boîte de dialogue de sélection de police du système.<!-- END REF-->
@@ -45,3 +42,12 @@ Le code du bouton est le suivant :
 #### Voir aussi 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1303 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -24,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [System folder](system-folder.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 486 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

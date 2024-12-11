@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM PREVIOUS PAGE.Summary-->**FORM PREVIOUS PAGE** change la page courante d'un formulaire pour afficher la page précédente.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la page affichée est la première page du formulaire, **FORM PREVIOUS PAGE** ne fait rien.
@@ -34,3 +31,12 @@ Cet exemple est une méthode appelée par une commande de menu. Elle provoque l'
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 249 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Summary-->**LISTBOX SET FOOTERS HEIGHT**コマンドは*object*と*\** 引数で指定したリストボックスのフッター行の高さを変更します。<!-- END REF-->
@@ -37,3 +34,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX Get footers height](listbox-get-footers-height.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1145 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

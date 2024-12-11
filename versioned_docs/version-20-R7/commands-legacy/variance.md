@@ -66,3 +66,12 @@ This example gets the variance of the values placed in an array:
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 27 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->The **METHOD GET PATHS** command fills the *arrPaths* array with the internal pathnames and names of methods in the application that are of the type specified by the *methodType* parameter.<!-- END REF-->
@@ -87,3 +84,12 @@ Refer to the example of the [METHOD SET CODE](method-set-code.md) command.
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1163 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

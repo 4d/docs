@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->O comando **LISTBOX GET GRID** devolve o estado visível/oculto das linhas horizontais e verticais que compõem a grade do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -30,3 +27,12 @@ O comando devolve nos parâmetros *horizontal* e *vertical*, o valor **True** ou
 #### Ver também 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1199 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

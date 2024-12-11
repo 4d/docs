@@ -23,3 +23,11 @@ Dans le cas d'une version monoposte de 4D, **Count users** retourne 1.
 
 [Count tasks](count-tasks.md)  
 [Count user processes](count-user-processes.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 342 |
+| Thread safe | &check; |
+
+

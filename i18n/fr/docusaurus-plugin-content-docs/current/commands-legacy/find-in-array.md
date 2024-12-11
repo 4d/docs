@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->
-
-**Find in array** peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.
+<!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.
 
 *valeur* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont mises en oeuvre, voir [Opérateurs basiques](https://developer.4d.com/docs/fr/Concepts/operators/#op%C3%A9rateurs-basiques)). Si aucun élément n'est trouvé, **Find in array** renvoie -1.
 
@@ -108,3 +106,12 @@ Vous voulez trouver une référence d'objet :
 [Find in sorted array](find-in-sorted-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 230 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

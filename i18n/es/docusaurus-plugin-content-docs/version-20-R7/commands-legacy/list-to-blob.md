@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->El comando LIST TO BLOB almacena la lista jerárquica *list* en el BLOB *blob*.<!-- END REF-->
@@ -48,3 +45,13 @@ Ver el ejemplo del comando [BLOB to list](blob-to-list.md "BLOB to list").
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [SAVE LIST](save-list.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 556 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

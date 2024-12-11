@@ -16,12 +16,19 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get adjusted index cache priority.Summary-->**Get adjusted index cache priority** コマンドは、*aField* 引数で指定されたフィールドのインデックスに対しキャッシュマネージャーによって適用されたキャッシュ優先度値を返します。<!-- END REF-->
-
-**注:** このコマンドはローカルモード(4D Serverおよび4D)においてのみ動作します。リモートモードでは使用できません。
+<!--REF #_command_.Get adjusted index cache priority.Summary-->**Get adjusted index cache priority** コマンドは、*aField* 引数で指定されたフィールドのインデックスに対しキャッシュマネージャーによって適用されたキャッシュ優先度値を返します。<!-- END REF-->このコマンドはローカルモード(4D Serverおよび4D)においてのみ動作します。リモートモードでは使用できません。
 
 #### 参照 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 *データベースキャッシュ内の優先度を管理*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1427 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

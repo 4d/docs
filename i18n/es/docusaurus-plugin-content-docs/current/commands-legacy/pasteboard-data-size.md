@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Pasteboard data size.Summary-->El comando Pasteboard data size permite probar si hay datos del tipo *tipoDatos* en el portapapeles.<!-- END REF--> 
@@ -94,3 +91,13 @@ Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 *Portapapeles*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 400 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

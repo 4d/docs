@@ -55,3 +55,12 @@ displayed_sidebar: docs
 [Folder](folder.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1548 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

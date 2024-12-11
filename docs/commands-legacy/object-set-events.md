@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->The **OBJECT SET EVENTS** command modifies, for the current process, the configuration of the form events of the form or object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -168,3 +165,12 @@ Disables a single event of the form without modifying the others:
 
 *Form Events*  
 [OBJECT GET EVENTS](object-get-events.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1239 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

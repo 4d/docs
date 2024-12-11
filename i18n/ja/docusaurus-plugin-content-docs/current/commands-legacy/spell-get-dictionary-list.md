@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->**SPELL GET DICTIONARY LIST**コマンドはマシンにインストールされたハンスペル辞書ファイルのID、ファイル名、言語名をそれぞれ*langID*、*langFiles*そして*langNames*配列に返します。<!-- END REF-->
@@ -52,3 +49,12 @@ Hunspell辞書に"fr-classic+reform1990.aff"、"fr-classic+reform1990.dic"、"fr
 #### 参照 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1204 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

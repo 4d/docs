@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.DOCUMENT LIST.Summary-->El comando **DOCUMENT LIST** llena el array de tipo Texto *documentos* con los nombres del los documentos ubicados en la ubicación pasada en *rutaAcceso*.<!-- END REF--> 
-
-**Nota:** el parámetro *rutaAcceso* sólo acepta rutas de acceso absolutas. 
+<!--REF #_command_.DOCUMENT LIST.Summary-->El comando **DOCUMENT LIST** llena el array de tipo Texto *documentos* con los nombres del los documentos ubicados en la ubicación pasada en *rutaAcceso*.<!-- END REF-->el parámetro *rutaAcceso* sólo acepta rutas de acceso absolutas. 
 
 Por defecto, si omite el parámetro *opciones*, sólo los nombres de los documentos se devuelven en el array *documentos*. Puede modificar este funcionamiento pasando en el parámetro *opciones*, una o más de las siguientes constantes, que se encuentran en el tema *Documentos sistema*:
 
@@ -113,3 +111,13 @@ Lista de todos los documentos en modo recursivo Posix (relativo):
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 474 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

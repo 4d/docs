@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get format.Summary-->La commande **OBJECT Get format** retourne le format d’affichage courant appliqué à l’objet spécifié par le paramètre *objet*.<!-- END REF-->
@@ -66,3 +63,12 @@ Les formats personnalisés sont retournés inchangés :
 #### Voir aussi 
 
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 894 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

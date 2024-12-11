@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->El comando **METHOD Get attribute** devuelve el valor del atributo *tipoAtributo* para el método proyecto designado por el parámetro *ruta*.<!-- END REF--> Este comando sólo funciona con métodos proyecto. Si pasa una *ruta* invalida, se genera un error. 
@@ -42,3 +39,12 @@ El comando devuelve **True** si se selecciona un atributo y **False** si se dese
 #### Ver también 
 
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1169 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

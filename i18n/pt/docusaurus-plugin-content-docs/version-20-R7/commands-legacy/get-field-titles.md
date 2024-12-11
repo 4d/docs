@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->O comando GET FIELD TITLES preenche os arrays *titulosCampos* e *numCampos* com os nomes e os números dos campos da *Tabela*.<!-- END REF--> Os conteúdos desses dois arrays estão sincronizados.  
@@ -32,3 +29,12 @@ Em ambos casos, o comando não retorna campos invisíveis.
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 804 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

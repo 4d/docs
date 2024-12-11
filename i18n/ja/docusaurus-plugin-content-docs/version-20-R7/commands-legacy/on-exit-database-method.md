@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 
 
 <!--REF #_command_.On Exit database method.Summary-->**On Exitデータベースメソッド**は、データベースを終了すると一回呼び出されます。<!-- END REF-->
@@ -109,3 +106,12 @@ displayed_sidebar: docs
 
 [On Startupデータベースメソッド](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 905252 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

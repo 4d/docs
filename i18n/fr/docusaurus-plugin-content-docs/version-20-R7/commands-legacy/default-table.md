@@ -77,3 +77,12 @@ Voici le résultat lorsqu'une table par défaut est définie :
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 46 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

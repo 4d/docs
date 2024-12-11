@@ -70,3 +70,13 @@ Se quiser selecionar um servidor no início desde uma aplicação monousuário. 
     QUIT 4D
  End if
 ```
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1321 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

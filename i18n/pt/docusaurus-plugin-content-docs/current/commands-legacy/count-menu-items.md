@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Count menu items.Summary-->O comando Count menu items devolve o número dos elementos do menu presentes no menu cujo número ou referência é passada em *menu.<!-- END REF-->*  
@@ -29,3 +26,12 @@ Se omite o parâmetro *processo*, Count menu items é aplicada a barra de menus 
 #### Ver também 
 
 [Count menus](count-menus.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 405 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

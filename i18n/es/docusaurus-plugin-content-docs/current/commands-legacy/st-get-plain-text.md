@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ST Get plain text.Summary-->El comando ST Get plain textremueve las etiquetas de estilo de la variable o campo de texto designado por los parámetros *\** y *objeto* y devuelve el texto plano.<!-- END REF-->
@@ -112,3 +109,13 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1092 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

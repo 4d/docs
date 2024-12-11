@@ -62,3 +62,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1334 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->**Tema:** Eventos formulario
@@ -64,3 +61,12 @@ End case
 #### Ver también 
 
 [Form event code](../commands/form-event-code.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1422 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

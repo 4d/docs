@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->**LISTBOX SELECT ROW** コマンドは、 *object* 引数および *\** で指定されたリストボックス内において、*position* に渡した番号の行を選択します。<!-- END REF--> 
@@ -56,3 +53,12 @@ displayed_sidebar: docs
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 912 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

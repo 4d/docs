@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get text resource.Summary-->El comando Get text resource devuelve el texto guardado en el recurso texto (“TEXT”) cuyo número de identificación se pasa en *resNum*.<!-- END REF-->
@@ -45,3 +42,13 @@ Si se encuentra el recurso, OK toma el valor 1\. De lo contrario, toma el valor 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 504 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

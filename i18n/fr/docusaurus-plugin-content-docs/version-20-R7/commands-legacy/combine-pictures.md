@@ -50,3 +50,12 @@ Résultat :
 #### Voir aussi 
 
 [TRANSFORM PICTURE](transform-picture.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 987 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

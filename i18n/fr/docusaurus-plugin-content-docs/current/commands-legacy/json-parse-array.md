@@ -58,3 +58,12 @@ Dans cet exemple, les données des champs des enregistrements d’une table sont
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1219 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

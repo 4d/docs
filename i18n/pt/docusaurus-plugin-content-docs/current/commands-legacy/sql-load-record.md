@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->O comando SQL LOAD RECORD recupera a 4D um ou mais registros da fonte de dados aberta na conexão atual.<!-- END REF-->  
@@ -35,3 +32,13 @@ Se o comando tiver sido executado corretamente, a variável Sistema OK retorna 1
 
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 822 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE コマンドは、現在表示されているフォームページを最終のフォームページに変更します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされてない場合や、すでに最終のフォームページが表示されている場合、FORM LAST PAGEコマンドは何も行いません。
@@ -34,3 +31,12 @@ displayed_sidebar: docs
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 251 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

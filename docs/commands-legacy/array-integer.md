@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY INTEGER.Summary-->The ARRAY INTEGER command creates and/or resizes an array of 2-byte [Integer](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") elements in memory.<!-- END REF-->
-
-* The *arrayName* parameter is the name of the array.
+<!--REF #_command_.ARRAY INTEGER.Summary-->The ARRAY INTEGER command creates and/or resizes an array of 2-byte [Integer](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") elements in memory.<!-- END REF-->parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.
 * The *size2* parameter is optional; if *size2* is specified, the command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* specifies the number of columns in each array. Each row in a two-dimensional array can be treated as both an element and an array. This means that while working with the first dimension of the array, you can use other array commands to insert and delete entire arrays in a two-dimensional array.
 
@@ -59,3 +57,12 @@ This example creates an interprocess array of 50 2-byte [Integer](# "Number betw
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 220 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

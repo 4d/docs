@@ -32,3 +32,12 @@ El siguiente ejemplo crea un conjunto después de efectuar una búsqueda, de man
 
 [CLEAR SET](clear-set.md)  
 [CREATE EMPTY SET](create-empty-set.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 116 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

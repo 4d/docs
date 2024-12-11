@@ -26,3 +26,14 @@ Se passa uma string vazia em *rotaDoc*, aparece a caixa de diálogo padrão de a
 Passe em *ícone* um campo ou uma variável imagem 4D. Depois da execução do comando, este parâmetro contém o ícone do arquivo (formato PICT).  
   
 O parâmetro opcional *tamanho* permite indicar as dimensões em píxels do ícone. Este valor representa o comprimento do quadrado incluindo o ícone. Geralmente, os ícones são definidos de 32x32 píxels (“ícones longos”) ou 16x16 píxels (“ícones pequenos”). Se passa 0 ou omite este parâmetro, o comando retorna o ícone mais grande disponível.
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 700 |
+| Thread-seguro | &check; |
+| Modificar variáveis | Document, error |
+| Proibido no servidor ||
+
+

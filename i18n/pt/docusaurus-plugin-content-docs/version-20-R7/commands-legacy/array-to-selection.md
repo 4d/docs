@@ -80,3 +80,12 @@ Se quiser copiar uma seleção de registroar para uma tablela arquivo selecionan
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *Variáveis sistema*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 261 |
+| Thread-seguro | &check; |
+| Modificar a seleção atual ||
+
+

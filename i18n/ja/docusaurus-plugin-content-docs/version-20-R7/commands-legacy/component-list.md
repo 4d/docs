@@ -33,3 +33,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [PLUGIN LIST](plugin-list.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1001 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

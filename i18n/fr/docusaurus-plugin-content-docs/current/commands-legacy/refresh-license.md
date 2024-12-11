@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Refresh license.Summary-->La commande **Refresh license** met à jour la licence 4D Server courante.<!-- END REF--> Elle vous connecte à la base cliente de 4D et active automatiquement les nouvelles licences ou les mises à jour (*ex:* suite à l'achat de nouveaux clients).
@@ -47,3 +44,13 @@ Vous souhaitez mettre à jour votre licence et recevoir un message à la fin de 
     ALERT($res.statusText)
  End if
 ```
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1336 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

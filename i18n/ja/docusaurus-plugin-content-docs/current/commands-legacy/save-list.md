@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SAVE LIST.Summary-->SAVE LIST コマンドは、デザインモードのリストエディタに、*list* 引数に渡した参照番号を持つリストを*listName* 引数に渡した名前で保存します。<!-- END REF-->
@@ -28,3 +25,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Load list](load-list.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 384 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

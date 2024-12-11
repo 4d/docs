@@ -24,3 +24,12 @@ Count user processesは、ユーザが直接あるいは間接に開いたプロ
 
 [Count tasks](count-tasks.md)  
 [Count users](count-users.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 343 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

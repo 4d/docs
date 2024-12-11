@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.DIALOG.Summary-->El comando **DIALOG** presenta el *formulario* al usuario junto con los parámetros *formData* (opcional).<!-- END REF--> Este comando se designa para trabajar con interfaces de usuario avanzadas y personalizadas basadas en formularios. Puede utilizarlo para mostrar información de la base o de otras ubicaciones, o para ofrecer funcionalidades de entrada de datos. A diferencia de [ADD RECORD](add-record.md) o [MODIFY RECORD](modify-record.md), **DIALOG** le da control total sobre el formulario, su contenido y los bontones de navegación y validación. 
@@ -138,3 +135,13 @@ Después de llamar a DIALOG, si se acepta el diálogo, la variable sistema OK to
 [CANCEL](cancel.md)  
 [Form](form.md)  
 [Open window](open-window.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 40 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+| Prohibido en el servidor ||
+
+

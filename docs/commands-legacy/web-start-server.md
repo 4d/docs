@@ -25,3 +25,13 @@ If the Web Server is successfully started, **OK** is set to 1; otherwise **OK** 
 #### See also 
 
 [WEB STOP SERVER](web-stop-server.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 617 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

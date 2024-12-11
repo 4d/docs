@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->The **METHOD SET ATTRIBUTE** command sets the value(s) of the *attribType* attribute(s) for the project method designated by the *path* parameter.<!-- END REF--> This command only works with project methods. If you pass an invalid *path*, an error is generated. 
@@ -70,3 +67,12 @@ Setting several attribute/value pairs:
 *Design Object Access*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1192 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

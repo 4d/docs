@@ -82,3 +82,12 @@ Este ejemplo muestra una forma estándar de establecer valores de **Almacenamien
 #### Ver también 
 
 *Objetos y colecciones compartidos*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1525 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

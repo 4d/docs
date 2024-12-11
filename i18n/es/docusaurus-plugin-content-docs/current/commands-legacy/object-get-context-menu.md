@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->El comando **OBJECT Get context menu** devuelve el estado actual de la opción "Menú contextual" del objeto o de los objetos designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->  
@@ -31,3 +28,12 @@ El comando devuelve **True** si el menú contextual está activo para el objeto 
 #### Ver también 
 
 [OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1252 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

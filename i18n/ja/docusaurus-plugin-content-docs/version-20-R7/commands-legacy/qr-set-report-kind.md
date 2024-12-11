@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->QR SET REPORT KIND コマンドは、*area*に渡した参照番号のエリアのレポートタイプを設定します。<!-- END REF-->
@@ -39,3 +36,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR Get report kind](qr-get-report-kind.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 738 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

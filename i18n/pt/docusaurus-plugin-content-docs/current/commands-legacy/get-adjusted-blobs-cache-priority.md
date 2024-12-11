@@ -25,3 +25,12 @@ displayed_sidebar: docs
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 *Gerenciar prioridades em cache de banco de dados*  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1428 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

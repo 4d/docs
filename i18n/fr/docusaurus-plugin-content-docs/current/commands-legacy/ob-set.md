@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB SET.Summary-->La commande **OB SET** permet de créer ou de modifier une ou plusieurs paires propriété/valeur dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF--> 
-
-*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D. 
+<!--REF #_command_.OB SET.Summary-->La commande **OB SET** permet de créer ou de modifier une ou plusieurs paires propriété/valeur dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D. 
 
 **Note :** Cette commande prend en charge les définitions d'attributs dans les *objets* 4D Write Pro, comme la commande *WP SET ATTRIBUTES* (cf. exemple 11). Toutefois, à la différence de *WP SET ATTRIBUTES*, **OB SET** ne permet pas de manipuler directement une variable ou un champ image comme valeur d'attribut.
 
@@ -198,3 +196,12 @@ Vous souhaitez stocker une image dans un champ objet. Vous pouvez écrire :
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1220 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

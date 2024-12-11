@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.WA Forward URL available.Summary-->The WA Forward URL available command finds out whether there is a following URL available in the sequence of URLs opened in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
@@ -28,3 +25,12 @@ The command returns **True** if a URL exists and **False** otherwise. More parti
 
 [WA Back URL available](wa-back-url-available.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1027 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

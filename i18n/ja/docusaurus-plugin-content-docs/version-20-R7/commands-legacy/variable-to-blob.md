@@ -132,3 +132,13 @@ displayed_sidebar: docs
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 532 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

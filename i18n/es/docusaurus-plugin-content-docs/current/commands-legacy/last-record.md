@@ -32,3 +32,13 @@ El siguiente ejemplo designa el último registro de la tabla \[Personas\] como r
 [FIRST RECORD](first-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 200 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Prohibido en el servidor ||
+
+

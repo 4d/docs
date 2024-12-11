@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
@@ -168,3 +165,13 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [CANCEL](cancel.md)  
 [Form](form.md)  
 [Open window](open-window.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 40 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+| Forbidden on the server ||
+
+

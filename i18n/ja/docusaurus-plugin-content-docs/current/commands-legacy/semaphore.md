@@ -150,3 +150,12 @@ var $T_Sema_local;$T_Message : Text
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Test semaphore](test-semaphore.md)  
 *セマフォーとシグナル*  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 143 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

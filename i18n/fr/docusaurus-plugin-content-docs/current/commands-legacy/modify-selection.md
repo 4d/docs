@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->La commande **MODIFY SELECTION** est quasiment identique à la commande [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Reportez-vous à la commande [DISPLAY SELECTION](display-selection.md) pour une description détaillée.  
@@ -34,3 +31,12 @@ Les seules différences entre ces deux commandes sont les suivantes :
 [DISPLAY SELECTION](display-selection.md)  
 [Form event code](../commands/form-event-code.md)  
 *Présentation des ensembles*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 204 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

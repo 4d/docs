@@ -73,3 +73,13 @@ The following code will create a dialog accepting a formula in text format:
 [Parse formula](../commands-legacy/parse-formula.md)  
 
 
+
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1601 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

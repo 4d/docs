@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->**GET GROUP LIST** remplit les tableaux *nomsGroupes* et *numérosGroupes* avec les noms et les numéros de référence uniques des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe.<!-- END REF-->
@@ -35,3 +32,13 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 610 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+| Interdite sur le serveur ||
+
+

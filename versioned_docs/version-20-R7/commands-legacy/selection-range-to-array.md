@@ -108,3 +108,11 @@ Use the first 50 current records of the \[Invoices\] table to load various array
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 368 |
+| Thread safe | &check; |
+
+

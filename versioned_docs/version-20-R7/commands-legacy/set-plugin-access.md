@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->The SET PLUGIN ACCESS command sets, by programming, the user group allowed to use each “serialized” plug-in that is installed in the database.<!-- END REF--> This way you can manage how plug-in licenses are used.
@@ -46,3 +43,12 @@ Pass the name of the group whose users are authorized to use the plug-in in *gro
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 845 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.TRANSFORM PICTURE.Summary-->O comando TRANSFORM PICTURE permite aplicar uma transformação de tipo *operador* à imagem passada no parâmetro *imagem*.<!-- END REF-->
-
-**Nota:** este comando estende as funcionalidades oferecidas pelos operadores convencionais de transformação de imagens (+/, etc., ver a seção ). Estes operadores permanecem totalmente utilizáveis em 4D.  
+<!--REF #_command_.TRANSFORM PICTURE.Summary-->O comando TRANSFORM PICTURE permite aplicar uma transformação de tipo *operador* à imagem passada no parâmetro *imagem*.<!-- END REF-->este comando estende as funcionalidades oferecidas pelos operadores convencionais de transformação de imagens (+/, etc., ver a seção ). Estes operadores permanecem totalmente utilizáveis em 4D.  
   
 A *imagem* fonte se modifica diretamente depois da execução do comando. Note que exceto por “Crop” e “Fade to grey scale,” as operações não são destrutivas e podem ser desfeitas realizando a operação contrária o via a operação “Reset”. Por exemplo, uma imagem reduzida a 1% retomará seu tamanho original sem alterações é aumentado 100 vezes. As transformações não modificam o tipo original da imagem: por exemplo, uma imagem vetorial permanecerá vetorial depois de sua transformação.
 
@@ -74,3 +72,12 @@ Este é um exemplo de corte de uma imagem (a imagem se mostra no formulário com
 #### Ver também 
 
 [COMBINE PICTURES](combine-pictures.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 988 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

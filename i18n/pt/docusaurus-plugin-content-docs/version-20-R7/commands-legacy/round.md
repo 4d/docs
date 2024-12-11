@@ -37,3 +37,12 @@ O exemplo a seguir ilustra como Round funciona com diferentes argumentos. Cada l
 #### Ver também 
 
 [Trunc](trunc.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 94 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Find in list.Summary-->La commande **Find in list** retourne la position ou la référence du premier élément de *liste* qui équivaut à la chaîne passée dans *valeur*.<!-- END REF--> Si plusieurs éléments sont trouvés, la fonction peut également remplir le tableau *tabEléments* avec la position ou la référence de chaque élément.
@@ -64,3 +61,13 @@ Soit la liste hiérarchique suivante :
  $vlItemPos:=Find in list(hList;"Date";0;*)
   //$vlItemPos vaut 0`
 ```
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 952 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

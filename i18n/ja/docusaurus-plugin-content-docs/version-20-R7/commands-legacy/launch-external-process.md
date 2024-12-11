@@ -140,3 +140,13 @@ Application/UtilitiesフォルダにあるmacOS ターミナルを使用しま�
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 811 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

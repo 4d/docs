@@ -187,3 +187,13 @@ If the command has been correctly executed, the OK variable is set to 1\. Otherw
 #### See also 
 
 [Convert to text](convert-to-text.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1011 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->ARRAY TO LIST コマンドは、配列*array*の要素を使用して、(デザインモードのリストエディタで作成される)階層リストまたは選択リスト*list*リストを作成または置き換えます。<!-- END REF-->
@@ -63,3 +60,13 @@ ARRAY TO LIST コマンドを使い、配列の要素に基づくリストを作
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 287 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+| サーバー上での使用は不可 ||
+
+

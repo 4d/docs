@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->**APPEND DATA TO PASTEBOARD** ajoute dans le conteneur les données du type spécifié dans *typeDonnées* présentes dans le BLOB *données*.<!-- END REF-->
@@ -212,3 +209,13 @@ Si les données dans le BLOB sont correctement ajoutées au conteneur, la variab
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 403 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

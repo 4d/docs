@@ -53,3 +53,12 @@ En el método (*theWorker*), se añade código para manejar esta situación:
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
 *Sobre workers*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1390 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

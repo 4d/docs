@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->O comando **OBJECT Get vertical alignment** devolve um valor indicando o tipo de alinhamento vertical aplicada ao objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
@@ -45,3 +42,12 @@ O alinhamento vertical pode ser aplicado aos seguintes tipos de objetos de formu
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1188 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

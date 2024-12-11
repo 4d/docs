@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SVG Find element ID by coordinates.Summary-->El comando SVG Find element ID by coordinates devuelve la identificación ("id" o atributo "xml:id") del elemento XML encontrado en la ubicación definida por las coordenadas (x,y) en la imagen SVG designada por el parámetro *objetoImagen*.<!-- END REF--> Este comando puede utilizarse particularmente para crear interfaces gráficas interactivas utilizando objetos SVG.
@@ -53,3 +50,13 @@ Si *objetoImagen* no contiene una imagen SVG válida, el comando devuelve una ca
 #### Ver también 
 
 [SVG Find element IDs by rect](svg-find-element-ids-by-rect.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1054 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Prohibido en el servidor ||
+
+

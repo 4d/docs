@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->O comando APPEND TO LIST  adiciona um novo elemento à lista hierárquica cujo número de referência se passa em *lista*.<!-- END REF-->
@@ -156,3 +153,12 @@ Quando o formulário é executado, a lista será vista desta forma:
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 376 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

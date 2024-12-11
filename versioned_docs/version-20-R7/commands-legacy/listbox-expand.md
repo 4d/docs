@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->The LISTBOX EXPAND command is used to expand the break rows of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
@@ -82,3 +79,12 @@ This example illustrates different ways of using the command. Given the followin
 #### See also 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1100 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

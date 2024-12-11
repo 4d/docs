@@ -61,3 +61,13 @@ Notez que cette commande n'affecte que l'interprétation des dates lorsque les a
 * Si vous saisissez la date 25/01/2007, 4D considère que vous voulez indiquer le 25 janvier 2007
 
 Cette commande affecte uniquement la saisie des données. Elle n'influe pas sur le stockage des données, les calculs, etc. 
+
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 392 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

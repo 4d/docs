@@ -56,3 +56,12 @@ Queremos modificar temporariamente o destino de pesquisa e restabelecer os parâ
 #### Ver também 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1155 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

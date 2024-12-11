@@ -19,3 +19,12 @@ displayed_sidebar: docs
 #### Ver también 
 
 [MESSAGES OFF](messages-off.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 181 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

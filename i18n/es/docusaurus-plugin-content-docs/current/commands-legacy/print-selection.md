@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->PRINT SELECTION imprime la selección actual de *tabla*.<!-- END REF--> Los registros se imprimen en el formulario de salida actual de la tabla del proceso actual. PRINT SELECTION realiza la misma acción que el comando Imprimir del entorno Usuario. Si la selección está vacía, PRINT SELECTION no hace nada.
@@ -64,3 +61,12 @@ El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 60 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

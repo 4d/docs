@@ -31,3 +31,12 @@ Antes da chamada, você passa no parâmetro *offset* a posição de inserção e
 #### Ver também 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 559 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

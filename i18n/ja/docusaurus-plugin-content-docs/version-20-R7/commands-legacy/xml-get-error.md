@@ -29,3 +29,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Get XML information](dom-get-xml-information.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 732 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| サーバー上での使用は不可 ||
+
+

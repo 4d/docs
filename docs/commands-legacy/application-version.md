@@ -119,3 +119,12 @@ You want to use the application's short version value returned by the command to
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 493 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

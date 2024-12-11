@@ -25,3 +25,12 @@ If the picture does not have a default name, the command returns an empty string
 #### See also 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1171 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

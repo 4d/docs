@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->La commande **GET WINDOW RECT** retourne les coordonnées globales de la fenêtre dont vous avez passé le numéro de référence dans le paramètre *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, les variables des paramètres sont inchangées.
@@ -38,3 +35,12 @@ Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 443 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

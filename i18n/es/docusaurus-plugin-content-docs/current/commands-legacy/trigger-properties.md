@@ -38,3 +38,12 @@ El número de tabla y de registro para el registro relacionado por el evento de 
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
 *Triggers*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 399 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

@@ -44,3 +44,12 @@ The following example deletes the last element from an array, if it exists:
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 228 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

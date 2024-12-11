@@ -24,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET QUERY LIMIT](set-query-limit.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1156 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

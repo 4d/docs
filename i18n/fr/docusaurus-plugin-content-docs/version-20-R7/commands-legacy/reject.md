@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.REJECT.Summary-->**REJECT** accepte deux syntaxes.<!-- END REF--> Dans la première syntaxe, **REJECT** n'a pas de paramètre. Dans ce cas, la commande rejette la totalité de la saisie et force l'utilisateur à rester dans le formulaire. La seconde syntaxe permet de ne refuser que *leChamp* et force l'utilisateur à rester dans le champ. 
@@ -65,3 +62,12 @@ L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]S
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 38 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

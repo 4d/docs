@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->O comando **METHOD GET MODIFICATION DATE** retorna nos parâmetros *dataMod* e *horaMod* as datas e horários da última modificação dos métodos designados pelo parâmetro rota.<!-- END REF-->
@@ -70,3 +67,13 @@ Se quiser obter as datas de modificação dos métodos de um módulo com o prefi
 ```
 
   
+
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1170 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

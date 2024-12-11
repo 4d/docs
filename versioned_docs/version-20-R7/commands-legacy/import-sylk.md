@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->The **IMPORT SYLK** command reads data from *document*, a Windows or Macintosh SYLK document, into the table *aTable* by creating new records for that table.<!-- END REF-->
@@ -54,3 +51,13 @@ OK is set to 1 if the import is successfully complete; otherwise, it is set to 0
 [IMPORT DIF](import-dif.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 87 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

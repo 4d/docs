@@ -72,3 +72,12 @@ Exemple de document XML :
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1091 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

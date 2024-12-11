@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->El comando **OBJECT SET INDICATOR TYPE** modifica el tipo de indicador de progresión del o de los termómetro(s) designado(s) por los parámetros *objeto* y *\** en el proceso actual.<!-- END REF-->  
@@ -37,3 +34,12 @@ En el parámetro *indicador*, pase el tipo de indicador a mostrar. Puede utiliza
 #### Ver también 
 
 [OBJECT Get indicator type](object-get-indicator-type.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1246 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

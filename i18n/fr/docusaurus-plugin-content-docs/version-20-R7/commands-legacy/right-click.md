@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Right click.Summary-->La commande **Right click** retourne Vrai si un clic effectué avec le bouton droit de la souris a été effectué.<!-- END REF--> 
@@ -26,3 +23,12 @@ Cette commande doit être appelée uniquement dans le cadre de l’événement f
 
 [Contextual click](contextual-click.md)  
 [Form event code](form-event-code.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 712 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

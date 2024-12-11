@@ -40,3 +40,12 @@ You want to change certificates folder temporarily:
 #### See also 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1307 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->The **SELECT LIST ITEMS BY POSITION** command selects the item(s) whose position is passed in *itemPos* and, optionally, in *positionsArray* within the list whose reference number or object name is passed in *list*.<!-- END REF-->
@@ -75,3 +72,12 @@ After execution of the following lines of code:
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 381 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

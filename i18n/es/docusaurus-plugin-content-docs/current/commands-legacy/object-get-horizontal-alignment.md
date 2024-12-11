@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->El comando **OBJECT Get horizontal alignment** devuelve un código indicando el tipo de alineación horizontal aplicada al objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -61,3 +58,12 @@ Los objetos de formulario a los cuales se puede aplicar alineación son los sigu
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 707 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

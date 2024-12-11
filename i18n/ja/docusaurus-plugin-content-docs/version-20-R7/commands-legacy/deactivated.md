@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Deactivated.Summary-->**Deactivated**コマンドはプロセスの最前面のウインドウが後ろに移動すると、そのフォームメソッドでTrue を返します。<!-- END REF--> 
@@ -28,3 +25,12 @@ displayed_sidebar: docs
 
 [Activated](activated.md)  
 [Form event code](form-event-code.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 347 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Load list.Summary-->La commande **Load list** crée une liste hiérarchique dont le contenu est copié depuis la liste *nomListe* créée en mode Développement, dans l'éditeur d'énumérations.<!-- END REF--> La fonction retourne le numéro de référence de la liste nouvellement créée. 
@@ -51,3 +48,12 @@ Imaginons que vous créez une base pour le marché international. Vous voulez po
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 383 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

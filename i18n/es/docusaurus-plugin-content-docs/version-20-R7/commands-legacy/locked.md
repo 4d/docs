@@ -34,3 +34,12 @@ Durante una transacción, [LOAD RECORD](load-record.md) y Locked se utilizan con
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Record Locking*  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 147 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

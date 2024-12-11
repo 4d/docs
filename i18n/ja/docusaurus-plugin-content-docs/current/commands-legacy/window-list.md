@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.WINDOW LIST.Summary-->WINDOW LIST コマンドは配列 *windows* を生成し、実行中のすべての (カーネルおよびユーザ) プロセスで開かれているウィンドウの参照番号を返します。<!-- END REF-->"可視状態"のウィンドウ(非表示になっていないウィンドウ)のみが返されます。
@@ -53,3 +50,12 @@ displayed_sidebar: docs
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 442 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

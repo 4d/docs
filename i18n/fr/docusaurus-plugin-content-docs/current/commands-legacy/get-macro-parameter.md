@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET MACRO PARAMETER.Summary-->La commande **GET MACRO PARAMETER** retourne dans *paramTexte* une partie ou la totalité du texte de la méthode depuis laquelle elle a été appelée.<!-- END REF-->
@@ -37,3 +34,12 @@ Reportez-vous à l'exemple de [SET MACRO PARAMETER](set-macro-parameter.md).
 #### Voir aussi 
 
 [SET MACRO PARAMETER](set-macro-parameter.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 997 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

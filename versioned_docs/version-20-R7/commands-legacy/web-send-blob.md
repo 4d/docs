@@ -80,3 +80,12 @@ Refer to the example of the [PICTURE TO BLOB](picture-to-blob.md) routine.
 #### See also 
 
 [WEB SEND FILE](web-send-file.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 654 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA** effectue une recherche d'enregistrements dans *laTable*.<!-- END REF--> **QUERY BY FORMULA** modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
+<!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA** effectue une recherche d'enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
 
 **QUERY BY FORMULA** et la commande [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) fonctionnent exactement de la même manière, à la différence près que **QUERY BY FORMULA** effectue sa recherche parmi la totalité des enregistrements de la table alors que [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) se cantonne aux enregistrements de la sélection courante.
 
@@ -80,3 +80,13 @@ Dans cet exemple, on utilise une jointure pour rechercher toutes les lignes de f
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 48 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+
+

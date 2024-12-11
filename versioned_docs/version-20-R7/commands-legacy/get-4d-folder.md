@@ -207,3 +207,12 @@ If the *folder* parameter is invalid or if the pathname returned is empty, the O
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 485 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

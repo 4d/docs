@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->The ST SET PLAIN TEXT command inserts the text passed in the *newText* parameter into the styled text field or variable designated by the *object* parameter.<!-- END REF--> This command only applies to the plain text of the*object* parameter, without modifying any style tags that it contains. 
@@ -95,3 +92,13 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1136 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

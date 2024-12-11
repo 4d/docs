@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get row font style.Summary-->**Nota:** Este comando só funciona com os list box de tipo array.<!-- END REF-->
@@ -52,3 +49,12 @@ Dado o seguinte list box:
 #### Ver também 
 
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1269 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

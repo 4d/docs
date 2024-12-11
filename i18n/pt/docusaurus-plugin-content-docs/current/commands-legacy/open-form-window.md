@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Open form window.Summary-->O comando Open form window abre uma nova janela utilizando as propriedades de tamanho e de redimensionamentos do formulário *nomForm*.<!-- END REF-->
@@ -136,3 +133,12 @@ o que retorna:
 [Open window](open-window.md)  
 *Tipos de janelas*  
 *Tipos de Janelas*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 675 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

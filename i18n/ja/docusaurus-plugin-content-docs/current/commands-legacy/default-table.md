@@ -74,3 +74,12 @@ displayed_sidebar: docs
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 46 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

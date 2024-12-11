@@ -38,3 +38,12 @@ displayed_sidebar: docs
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1131 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

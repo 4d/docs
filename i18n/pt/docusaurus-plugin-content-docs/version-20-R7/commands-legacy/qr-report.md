@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR REPORT.Summary-->QR REPORT imprime um relatório para *tabela*, criado com o editor de relatórios rápidos .<!-- END REF--> O editor de relatórios rápidos permite aos usuários criar seus próprios relatórios. Para maior informação sobre a criação de relatórios rápidos com a ajuda do editor de relatórios rápidos, consulte *Relatórios rápidos* ou *Relatórios rápidos* no Manual de Desenho de 4D.  
@@ -137,3 +134,12 @@ O método myCallbackMeth converte o relatório quando é gerado:
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 197 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

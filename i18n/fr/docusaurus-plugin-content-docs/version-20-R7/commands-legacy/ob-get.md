@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB Get.Summary-->La commande **OB Get** retourne la valeur courante de la *propriété* de l’*objet*, convertie optionnellement dans le *type* défini.<!-- END REF-->
-
-*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
+<!--REF #_command_.OB Get.Summary-->La commande **OB Get** retourne la valeur courante de la *propriété* de l’*objet*, convertie optionnellement dans le *type* défini.<!-- END REF-->doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
 
 **Note :** Cette commande prend en charge les définitions d'attributs dans les *objets* 4D Write Pro, comme la commande *WP GET ATTRIBUTES* (cf. exemple 9). Toutefois, à la différence de *WP GET ATTRIBUTES*, **OB Get** ne permet pas de manipuler directement une variable ou un champ image comme valeur d'attribut.
 
@@ -213,3 +211,12 @@ Vous voulez connaître la taille d'une image stockée dans un objet :
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
 *Types champs et variables*  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 1224 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

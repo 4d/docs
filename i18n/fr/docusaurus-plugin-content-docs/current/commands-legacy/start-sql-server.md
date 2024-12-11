@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.START SQL SERVER.Summary-->La commande **START SQL SERVER** démarre le serveur SQL intégré de l’application 4D sur laquelle elle a été exécutée.<!-- END REF--> Une fois lancé, le serveur SQL peut répondre aux requêtes SQL externes.
@@ -28,3 +25,13 @@ Si le serveur SQL a été correctement lancé, la variable système OK prend la 
 #### Voir aussi 
 
 [STOP SQL SERVER](stop-sql-server.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 962 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.WA STOP LOADING URL.Summary-->The WA STOP LOADING URL command stops loading the resources of the current URL of the Web area designated by the *\** and *object* parameters.<!-- END REF-->
@@ -24,3 +21,12 @@ displayed_sidebar: docs
 #### See also 
 
 [WA REFRESH CURRENT URL](wa-refresh-current-url.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1024 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

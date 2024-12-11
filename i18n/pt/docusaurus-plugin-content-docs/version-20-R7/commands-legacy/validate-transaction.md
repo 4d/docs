@@ -30,3 +30,13 @@ Note que quando OK for estabelecido como 0, a transação é automaticamente can
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *Usar Transações*  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 240 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

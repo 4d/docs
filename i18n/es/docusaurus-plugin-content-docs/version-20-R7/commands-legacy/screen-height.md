@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Screen height.Summary-->En Windows, Screen height devuelve la altura de la ventana de la aplicación 4D (ventana MDI).<!-- END REF--> Si pasa el parámetro opcional *\**, Screen height devuelve la altura de la pantalla.
@@ -27,3 +24,12 @@ En Mac OS, Screen height devuelve la altura de la pantalla principal, es decir l
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen width](screen-width.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 188 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

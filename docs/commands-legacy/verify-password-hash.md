@@ -53,3 +53,12 @@ This example verifies a password hash previously created by [Generate password h
 
   
 [Generate password hash](generate-password-hash.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1534 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

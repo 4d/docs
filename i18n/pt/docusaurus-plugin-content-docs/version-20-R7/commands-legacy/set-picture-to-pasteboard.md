@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD limpa a área de transferência e coloca uma cópia da imagem que passou em *imagem* na área de transferência.<!-- END REF--> 
@@ -51,3 +48,13 @@ Se não houver suficiente memória para colocar uma cópia da imagem na área de
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 521 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Proibido no servidor ||
+
+

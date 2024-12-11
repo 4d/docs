@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Outside call.Summary-->**Outside call** retorna True para o ciclo de execução After.<!-- END REF--> 
@@ -28,3 +25,12 @@ Para que seja gerado o ciclo de execução **Outside call,** tenha certeza de qu
 
 [Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 328 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

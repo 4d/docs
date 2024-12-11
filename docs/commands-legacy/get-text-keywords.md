@@ -83,3 +83,12 @@ To count words in a text:
 #### See also 
 
 [DISTINCT VALUES](distinct-values.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1141 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

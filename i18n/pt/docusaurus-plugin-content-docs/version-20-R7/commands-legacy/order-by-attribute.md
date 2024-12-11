@@ -112,3 +112,12 @@ Os registros estão na seguinte ordem:
 #### Ver também 
 
   
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1407 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->GET LIST ITEM ICON コマンドは、*list*に参照番号またはオブジェクト名を渡したリスト内の、*itemRef*項目参照の項目に割り当てられたアイコンを*icon*に返します。<!-- END REF-->  
@@ -39,3 +36,12 @@ iconにはピクチャ変数を渡します。コマンド実行後、(スタテ
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 951 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

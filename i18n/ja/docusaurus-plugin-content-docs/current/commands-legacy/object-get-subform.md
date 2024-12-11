@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->**OBJECT GET SUBFORM**コマンドは*object*と*\**引数で指定したサブフォームオブジェクトに関連付けられたフォームの名前を返します。<!-- END REF-->
@@ -42,3 +39,12 @@ displayed_sidebar: docs
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 1139 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

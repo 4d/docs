@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.RESTORE.Summary-->El comando RESTORE permite restituir el o los archivos incluidos en un archivo 4D.<!-- END REF--> Este comando es útil con interfaces personalizadas para la gestión de backups. 
@@ -36,3 +33,13 @@ El comando RESTORE modifica el valor de las variables *OK* y *Document*: si la r
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 918 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, Document, error |
+| Prohibido en el servidor ||
+
+

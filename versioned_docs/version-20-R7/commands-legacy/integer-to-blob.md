@@ -114,3 +114,12 @@ After executing this code:
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 548 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+

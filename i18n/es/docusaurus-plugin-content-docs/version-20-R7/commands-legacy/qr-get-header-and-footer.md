@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->El comando QR GET HEADER AND FOOTER permite recuperar el contenido y el tamaño del encabezado o pie de página.<!-- END REF-->
@@ -69,3 +66,13 @@ El siguiente código recupera el contenido y la altura del título del encabezad
 #### Ver también 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 775 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

@@ -41,3 +41,12 @@ displayed_sidebar: docs
 [DOCUMENT LIST](document-list.md)  
 [FOLDER LIST](folder-list.md)  
 [VOLUME ATTRIBUTES](volume-attributes.md)  
+
+#### プロパティ
+|  |  |
+| --- | --- |
+| コマンド番号 | 471 |
+| スレッドセーフである | &check; |
+| サーバー上での使用は不可 ||
+
+

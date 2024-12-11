@@ -48,3 +48,12 @@ No primeiro parâmetro, passe *curPassPhrase* ou *curDataKey* que define a chave
 
   
 [New data key](new-data-key.md)  
+
+#### Propriedades
+|  |  |
+| --- | --- |
+| Número do comando | 1638 |
+| Thread-seguro | &check; |
+| Proibido no servidor ||
+
+

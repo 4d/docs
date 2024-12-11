@@ -30,3 +30,12 @@ Si vous effectuez l'opération depuis un trigger ou une sous-routine pouvant êt
 *Présentation des triggers*  
 [START TRANSACTION](start-transaction.md)  
 [VALIDATE TRANSACTION](validate-transaction.md)  
+
+#### Propriétés
+|  |  |
+| --- | --- |
+| Numéro de commande | 397 |
+| Thread safe | &check; |
+| Interdite sur le serveur ||
+
+

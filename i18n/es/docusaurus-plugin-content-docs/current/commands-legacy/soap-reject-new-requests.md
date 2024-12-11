@@ -38,3 +38,12 @@ Desea rechazar cualquier solicitud nueva a su servidor de servicios web:
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [WEB Get server info](web-get-server-info.md)  
+
+#### Propiedades
+|  |  |
+| --- | --- |
+| Número de comando | 1636 |
+| Hilo seguro | &check; |
+| Prohibido en el servidor ||
+
+

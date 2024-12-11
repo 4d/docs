@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -80,3 +77,12 @@ After the second statement, all the cells of the third row change to underlined 
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+#### Properties
+|  |  |
+| --- | --- |
+| Command number | 1268 |
+| Thread safe | &check; |
+| Forbidden on the server ||
+
+
