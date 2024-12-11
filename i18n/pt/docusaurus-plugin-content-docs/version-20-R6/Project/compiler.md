@@ -359,16 +359,16 @@ O código compilado resultante é armazenado na pasta [Libraries](architecture.m
 - **Máquina Apple**: O compilador Silicon só pode ser executado a partir de uma máquina Apple.
 - **Arquitetura do Projeto 4D**: O compilador Silicon só está disponível para desenvolvimentos 4D usando [arquitetura do projeto](architecture.md).
 - **Xcode ou Ferramentas para Desenvolvedor**: O compilador Silicon chama o compilador macOS de código aberto para compilar o projeto de código C++ na [segunda etapa](#incremental-compilador) da compilação. *clang* requer bibliotecas nativas da Apple, que são fornecidas pelo pacote **Xcode** ou **Developer Tools**.
-  - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
-  - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
+  - **Se você já tiver** Xcode ou Developer Tools instalado no seu computador, você só precisa se certificar de que a sua versão está de acordo com os requisitos 4D.
+  - **Se você não tiver** nenhuma dessas ferramentas instaladas no seu computador, você precisará baixar uma delas no site do desenvolvedor da Apple.
 
-> Recomendamos instalar **Xcode**, que es bastante sencillo de instalar. Puede decidir instalar **Developer Tools** que es más compacto, sin embargo su instalación es un poco más compleja.
+> Recomendamos instalar o **Xcode**, que é muito simples de instalar. Você pode decidir instalar **Ferramentas para Desenvolvedo** o que é mais compacto, no entanto a instalação é um pouco mais complexa.
 
-In any cases, the 4D Silicon compiler will warn you if your configuration does not comply with its requirements.
+Em quaisquer casos, o compilador 4D de Silicon irá avisá-lo se sua configuração não estiver de acordo com seus requisitos.
 
 #### Compilador incremental
 
 O compilador Silicon é incremental, o que significa que:
 
-- Durante la primera compilación, se compilan **todos los métodos 4D**. Esta etapa pode demorar algum tempo. No entanto, só ocorre uma vez.
-- Durante todas las compilaciones posteriores, sólo se procesan los métodos **nuevos o modificados**, lo que reduce drásticamente el tiempo de compilación.
+- Durante a primeira compilação, **todos os métodos 4D** são compilados. Esta etapa pode demorar algum tempo. No entanto, só ocorre uma vez.
+- Durante todas as compilações subsequentes, apenas **métodos novos ou modificados** são processados, reduzindo assim drasticamente o tempo de compilação.
