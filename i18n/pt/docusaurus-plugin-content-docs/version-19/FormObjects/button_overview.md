@@ -31,7 +31,7 @@ Com excepção do [propriedades disponíveis](#supported-properties), muitos obj
 
 ### Clássico
 
-The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+O estilo de botão Clássico é um botão padrão do sistema (*ou seja*, um retângulo com um rótulo descritivo) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
@@ -58,7 +58,7 @@ Only the Regular and Flat styles offer the [Default Button](properties_Appearanc
 
 ### Plano
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+O estilo de botão Plano é um botão padrão do sistema (*ou seja*, um retângulo com um rótulo descritivo) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/button_flat.png)
 
@@ -85,7 +85,7 @@ Only the Regular and Flat styles offer the [Default Button](properties_Appearanc
 
 ### Barra de ferramentas
 
-The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
+The Toolbar button style is primarily intended for integration in a toolbar. Inclui a opção de adicionar um menu pop-up (indicado por um triângulo invertido), sendo geralmente usado para exibir opções adicionais para o usuário selecionar.
 
 By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
@@ -280,7 +280,7 @@ O estilo de botão Círculo aparece como um botão sistema redondo. Este estilo 
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+No Windows, ele é idêntico ao estilo "Nenhum" (o círculo no plano de fundo não é considerado).
 
 #### JSON Exemplo
 
