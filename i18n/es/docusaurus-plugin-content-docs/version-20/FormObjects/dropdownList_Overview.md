@@ -40,7 +40,7 @@ Si el objeto contiene otras propiedades, se ignoran.
 
 Para inicializar el objeto asociado a la lista desplegable, puede:
 
-* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un objeto automáticamente.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Static List&#062;`    en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un objeto automáticamente.
 
 * Ejecutar código que crea el objeto y sus propiedades. Por ejemplo, si "myList" es la variable [](properties_Object.md#variable-or-expression) asociada a la lista desplegable, puede escribir en el evento de formulario [On Load](Events/onLoad.md):
 
@@ -73,7 +73,7 @@ Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se ha
 
 Para inicializar el array asociado a la lista desplegable, puede:
 
-* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Static List&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
 * Antes de mostrar el objeto, ejecute el código que asigna valores a los elementos del array. Por ejemplo:
 
@@ -124,7 +124,7 @@ Debe seleccionar cada evento que pruebe en sus sentencia Case. Los arrays siempr
 Si desea utilizar una lista desplegable para gestionar los valores de un área de entrada (campo listado o variable), 4D le permite hacer referencia al campo o variable directamente como [fuente de datos](properties_Object.md#variable-or-expression) de la lista desplegable. Esto facilita la gestión de los campos/variables listados.
 
 Por ejemplo, en el caso de un campo "Color" que sólo puede contener los valores "Blanco", "Azul", "Verde" o "Rojo", es posible crear una lista que contenga estos valores y asociarla a una lista desplegable que haga referencia al campo "Color" 4D. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
-> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. If you use a hierarchical list, only the first level is displayed and can be selected.
+> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. Si quiere mostrar contenido jerárquico, necesita usar una [lista de selección jerárquica](#using-a-hierarchical-choice-list).
 
 Para asociar una lista desplegable a un campo o variable, introduzca directamente el nombre del campo o variable como campo [Variable o Expresión](properties_Object.md#variable-or-expression) de la lista desplegable en la Lista de propiedades.
 > No es posible utilizar esta funcionalidad con una lista desplegable de objetos o arrays. Si introduce un nombre de campo en el área "Variable o expresión", deberá utilizar una lista de selección.
