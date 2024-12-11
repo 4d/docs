@@ -7,7 +7,7 @@ La clase `IMAPTransporter` le permite recuperar mensajes de un servidor de corre
 
 ### Objeto IMAP Transporter
 
-IMAP Transporter objects are instantiated with the [IMAP New transporter](../commands/imap-new-transporter.md) command. Ofrecen las siguientes propiedades y funciones:
+Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter](../commands/imap-new-transporter.md). Ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 
 #### Descripción
 
-La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.IMAPTransporter`<!-- END REF -->. It is identical to the [`IMAP New transporter`](../commands/imap-new-transporter.md) command (shortcut).
+La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.IMAPTransporter`<!-- END REF -->. Es idéntico al comando [`IMAP New transporter`](../commands/imap-new-transporter.md) (acceso directo).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

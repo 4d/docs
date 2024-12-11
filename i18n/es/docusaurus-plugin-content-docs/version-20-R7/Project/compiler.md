@@ -61,7 +61,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibilidad
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. Para más información sobre este botón, consulte la [documentación de versiones anteriores de 4D](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
 
 :::
 
@@ -131,12 +131,12 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 - **Declaración de tipos por defecto**
 - **Métodos Compilador para...**
 
-Estas opciones solo se mantienen por compatibilidad con código antiguo. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
+Estas opciones solo se mantienen por compatibilidad con código antiguo. Para más información, consulte la [documentación de versiones anteriores de 4D](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 
-In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
+En proyectos convertidos, se recomienda [habilitar el modo de escritura directa](#enabling-direct-typing) y escribir código de declaración conforme, por ejemplo:
 
-- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
+- declarar explícitamente todas las variables [usando palabras clave `var`](../Concepts/variables.md#declaring-variables)
+- declarar explícitamente todos los parámetros en prototipos de funciones (es decir, usando las palabras clave `Function` o `Class Constructor`) o con `#DECLARE` en métodos (ver [Declarando parámetros](../Concepts/parameters.md#declaring-parameters)).
 
 #### Enabling direct typing
 
@@ -148,7 +148,7 @@ El modo de escritura directa es opcional sólo en proyectos convertidos. Se util
 
 Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
 
-Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
+Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. Solo tiene que asegurarse de que todas sus variables son declaradas utilizando la [sintaxis 'var'](../Concepts/variables.md#declaring-variables) y que sus parámetros de método y función son declarados [en sus prototipos](../Concepts/parameters.md) (la función [Verificar sintaxis](#check-syntax) puede ayudarle a detectar declaraciones faltantes o no válidas).
 
 ## Advertencias
 

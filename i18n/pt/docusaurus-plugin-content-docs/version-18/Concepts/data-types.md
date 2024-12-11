@@ -35,9 +35,9 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
 
-The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
+O valor padrão depende da variável e categoria, seu contexto de execução (interpretado ou compilado), bem como, para o modo compilado, as opções de compilação definidas na página Compilador das configurações do banco de dados:
 
-- Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
+- As variáveis processo e interprocessos são sempre definidos "para zero" (que significa, dependendo do caso, "0", uma linha vazia, um Blob, um ponteiro Nil, uma data em branco (00-00-00), etc.)
 - As variáveis locais são definidas:
     - em modo interpretado: a zero
     - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
@@ -47,20 +47,20 @@ The default value depends on the variable type and category, its execution conte
 
 A tabela seguinte ilustra estes valores por defeito:
 
-| Tipo         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compilado "aleatório" | Local compilado "não"       |
-| ------------ | ----------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
-| Booleano     | False                                                                               | True                        | True (varia)                |
-| Date         | 00-00-00                                                                            | 00-00-00                    | 00-00-00                    |
-| Integer      | 0                                                                                   | 1919382119                  | 909540880 (varia)           |
-| Hora         | 00:00:00                                                                            | 533161:41:59                | 249345:34:24 (varia)        |
-| Imagem       | tamanho da imagem=0                                                                 | tamanho da imagem=0         | tamanho da imagem=0         |
-| Real         | 0                                                                                   | 1.250753659382e+243         | 1,972748538022e-217 (varia) |
-| Ponteiro     | Nil=true                                                                            | Nil=true                    | Nil=true                    |
-| Text         | ""                                                                                  | ""                          | ""                          |
-| Blob         | Tamanho do Blob =0                                                                  | Tamanho do Blob =0          | Tamanho do Blob =0          |
-| Object       | null                                                                                | null                        | null                        |
-| Collection   | null                                                                                | null                        | null                        |
-| Diferente de | indefinido                                                                          | indefinido                  | indefinido                  |
+| Tipo         | Interprocesso/Processo (interpretado/compilado), Local (interpretado/compilado "para zero") | Local compilado "aleatório" | Local compilado "não"       |
+| ------------ | ------------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
+| Booleano     | False                                                                                       | True                        | True (varia)                |
+| Date         | 00-00-00                                                                                    | 00-00-00                    | 00-00-00                    |
+| Integer      | 0                                                                                           | 1919382119                  | 909540880 (varia)           |
+| Hora         | 00:00:00                                                                                    | 533161:41:59                | 249345:34:24 (varia)        |
+| Imagem       | tamanho da imagem=0                                                                         | tamanho da imagem=0         | tamanho da imagem=0         |
+| Real         | 0                                                                                           | 1.250753659382e+243         | 1,972748538022e-217 (varia) |
+| Ponteiro     | Nil=true                                                                                    | Nil=true                    | Nil=true                    |
+| Text         | ""                                                                                          | ""                          | ""                          |
+| Blob         | Tamanho do Blob =0                                                                          | Tamanho do Blob =0          | Tamanho do Blob =0          |
+| Object       | null                                                                                        | null                        | null                        |
+| Collection   | null                                                                                        | null                        | null                        |
+| Diferente de | indefinido                                                                                  | indefinido                  | indefinido                  |
 
 
 ## Conversão de tipos de dados

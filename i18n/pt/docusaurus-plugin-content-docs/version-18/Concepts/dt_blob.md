@@ -3,12 +3,12 @@ id: blob
 title: BLOB
 ---
 
-- A BLOB (Binary Large OBjects) field, variable or expression is a contiguous series of bytes which can be treated as one whole object or whose bytes can be addressed individually. Um BLOB pode estar vazio (comprimento nulo) ou conter até 2147483647 bytes (2 GB).
+- O campo, a variável ou a expressão BLOB (Binary Large OBjects) é uma série contígua de bytes que pode ser tratada como um único objeto ou cujos bytes podem ser endereçados individualmente. Um BLOB pode estar vazio (comprimento nulo) ou conter até 2147483647 bytes (2 GB).
 
 > By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
 - Um BLOB é carregado na memória na sua totalidade. Uma variável BLOB é mantida e existe apenas na memória. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
-- Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
+- Como os outros tipos de campo que podem reter uma grande quantidade de dados (tais como tipo de campo Imagem), os campos BLOB não são duplicados na memória quando um registro for modificado. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
 
 ## Passagem de parâmetros, ponteiros e resultados de funções
 
@@ -38,11 +38,11 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 **Exemplo:**
 ```4d
-  ` Declare two variables of type BLOB
- C_BLOB(vBlobA;vBlobB)
-  ` Set the size of the first BLOB to 10K
- SET BLOB SIZE(vBlobA;10*1024)
-  ` Assign the first BLOB to the second one
+  ` Declarar duas variáveis do tipo BLOB
+ C_BLOB(vBlobA; BlobB)
+  ` Definir o tamanho do primeiro BLOB para 10K
+ SET BLOB SIZE(vBlobA; 10*1024)
+  ` Atribua o primeiro BLOB ao segundo
  vBlobB:=vBlobA
 ```
 
@@ -52,11 +52,11 @@ No entanto, nenhum operador pode ser aplicado a BLOBs.
 
 You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Exemplo:
 ```4d
-  ` Declare a variable of type BLOB
+  ` Declare uma variável do tipo BLOB
  C_BLOB(vBlob)
-  ` Set the size of the BLOB to 256 bytes
+  ` Definir o tamanho do BLOB para 256 bytes
  SET BLOB SIZE(vBlob;256)
-  ` The loop below initializes the 256 bytes of the BLOB to zero
+  ` O loop abaixo inicializa os 256 bytes do BLOB a zero
  For(vByte;0;BLOB size(vBlob)-1)
     vBlob{vByte}:=0
  End for
