@@ -3,7 +3,7 @@ id: object
 title: Objetos
 ---
 
-Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. A sintaxe desses objetos é baseada na notação JSON:
+Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objetos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
 
 - Um nome de uma propriedade é sempre um texto, por exemplo "nome".
 
