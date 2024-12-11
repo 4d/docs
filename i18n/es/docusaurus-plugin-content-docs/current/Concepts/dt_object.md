@@ -47,7 +47,7 @@ La instanciación de objetos puede realizarse de una de las siguientes maneras:
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). En este caso, no es necesario instanciar explícitamente el objeto, el lenguaje 4D lo hace por usted.
+Varias funciones y comandos 4D devuelven objetos, por ejemplo [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-tilizes.301-5945423.en.html) o [`File`](../commands/file.md). En este caso, no es necesario instanciar explícitamente el objeto, el lenguaje 4D lo hace por usted.
 
 :::
 

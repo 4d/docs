@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, object, boolean, collection, or null).
+Coleções são listas ordenadas de valores de tipos diferentes ou não (texto, número, objeto, booleano, coleção ou null).
 
-To manage Collection type variables you must use object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Para gerenciar variáveis do tipo Coleção, você deve usar notação objeto (veja [Noções básicas de Sintaxe](Concepts/dt_object.md#syntax-basics)).
 
 Para acessar a um elemento de coleção, é necessário passar o número do elemento dentro de parênteses rectos:
 
@@ -54,16 +54,16 @@ Exemplo:
 
 Pode criar dois tipos de coleções:
 
-- regular (non-shared) collections, using the `New collection` command. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções regulares (não compartilhadas) usando o comando `New collection`. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
 - coleções compartilhadas, usando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 ## Métodos de coleção
 
-4D collection references benefit from special methods (sometimes named *member functions*). Thanks to object notation, these methods can be applied to collection references using the following syntax:
+As referências a coleções 4D se beneficiam de métodos especiais (às vezes chamados *funções membro*). Thanks to object notation, these methods can be applied to collection references using the following syntax:
 
 > {$result:=}myCollection.memberFunction( {params} )
 
-Note that, even if it does not have parameters, a member function must be called with () parenthesis, otherwise a syntax error is generated.
+Observe que, mesmo que ele não tenha parâmetros, uma função membro deve ser chamada com parênteses (), caso contrário, um erro de sintaxe é gerado.
 
 Por exemplo:
 

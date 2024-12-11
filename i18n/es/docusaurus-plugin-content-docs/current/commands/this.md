@@ -50,7 +50,7 @@ $val:=$o.a //42
 En todos los casos, `This` se refiere al objeto sobre el que se ha llamado el método, como si el método fuera una función del objeto.
 
 ```4d
-//Class: ob
+//Clase: ob
 
 Function f() : Integer
  return This.a+This.b
