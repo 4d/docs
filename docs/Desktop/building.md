@@ -126,10 +126,10 @@ This tab allows you can build a stand-alone, single-user version of your applica
 
 Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
 
-The following elements are required for the build:
+A build can also use the following elements:
 
-* 4D Volume Desktop (the 4D database engine),
-* an [appropriate license](#licenses)
+* 4D Volume Desktop (the 4D database engine) (required),
+* An [appropriate license](#licenses) (optional). If you do not embed a license, the final user will have to enter a license at the first application launch (see XXX).
 
 On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
 
@@ -150,7 +150,7 @@ To select the 4D Volume Desktop folder, click on the **[...]** button. A dialog 
 
 Once the folder is selected, its complete pathname is displayed and, if it actually contains 4D Volume Desktop, the option for building an executable application is activated.
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer v18, you must select a 4D Volume Desktop v18.
+> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer 20, you must select a 4D Volume Desktop 20.
 
 #### Data linking mode
 
@@ -171,10 +171,10 @@ If you have specified "MyProject" as the name of the application, you will find 
 * *Windows*
   * MyProject.exe  - Your executable and a MyProject.rsr (the application resources)
   * 4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
-  * Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder.
+  * Database folder - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder.
 **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
   * (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the project. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
-  * Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
+  * (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
   * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
 
  All these items must be kept in the same folder in order for the executable to operate.
