@@ -98,9 +98,11 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 
 #### Descrição
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. .
+The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->.
 
-> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+
+> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save()`](#save) function is executed.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **True**).
 
