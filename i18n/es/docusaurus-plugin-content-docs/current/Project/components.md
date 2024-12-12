@@ -11,12 +11,25 @@ Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de form
 
 ## Componentes interpretados y compilados
 
-Los componentes pueden ser interpretados o [compilados](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
+Components can be interpreted or [compiled](../Desktop/building.md).
 
-- ya sea una carpeta Proyecto (componente interpretado)
-- o un archivo .4DZ (componente compilado)
+- Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados.
+- Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
-Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
+### Package folder
+
+The package folder of a component (_MyComponent.4dbase_ folder) can contain:
+
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **compiled components**:
+  - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
+  - or directly a .4DZ file with other folders such as _Resources_.
+
+:::note
+
+The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+
+:::
 
 ## Cargando componentes
 
@@ -461,7 +474,7 @@ Las siguientes etiquetas de estado están disponibles:
 - **Inactive**: la dependencia no se carga porque no es compatible con el proyecto (por ejemplo, el componente no está compilado para la plataforma actual).
 - **Duplicated**: la dependencia no se carga porque existe otra dependencia con el mismo nombre en la misma ubicación (y está cargada).
 - **Disponible después del reinicio**: la referencia a dependencias acaba de ser añadida [usando la interfaz](#monitoring-project-dependencies), se cargará una vez que la aplicación se reinicie.
-- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
+- **Descargado después de reiniciar**: la referencia de dependencias acaba de ser removida [utilizando la interfaz](#removing-a-dependency), se descargará una vez que la aplicación se reinicie.
 
 Al pasar el ratón por encima de la línea de dependencia, se muestra un mensaje que ofrece información adicional sobre el estado:
 
