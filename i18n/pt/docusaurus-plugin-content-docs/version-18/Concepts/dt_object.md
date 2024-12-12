@@ -20,19 +20,19 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
 
 (*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**Aviso:** tenha em mente que os nomes de atributo diferenciam entre maiúsculas e minúsculas.
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Para gerenciar variáveis, campos ou expressões de tipo de objeto, você pode usar a notação de objeto (cf. [Usando a notação objeto](Concepts/dt_object.md#syntax-basics)) ou os comandos 4D na seção **Objetos (Linguagem)**. Note que comandos específicos do tema Queries tais como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, ou `ORDER BY ATTRIBUTE` pode ser usado para realizar processamento em campos objeto.
 
-Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
+Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Quando a notação objeto estiver ativa no seu banco de dados (veja abaixo), você pode usar esses valores sempre que forem esperadas expressões 4D:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by PROCESS 4D TAGS or the Web Server, export files, 4D Write Pro documents...),
+- em código 4D, quer escritos nos métodos (Editor de método) ou externalizados (fórmulas, ficheiros de etiquetas 4D processados por PROCESS 4D TAGS ou no Servidor Web, arquivos de exportação, documentos 4D Write Pro...),
 - nas áreas de expressão do depurador e do explorador de Runtime,
 - na lista de propriedades do editor de formulários para objectos de formulários: Variável ou Campo de expressão, bem como várias caixas de selecção e expressões de colunas (Fonte de dados, cor de fundo, estilo, ou cor da fonte).
 
 ## Inicialização
 
-Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
+Objetos devem ter sido inicializadas, por exemplo, usando o comando `New object`, caso contrário, tentar ler ou modificar suas propriedades gerará um erro de sintaxe.
 
 Exemplo:
 ```4d
@@ -45,7 +45,7 @@ Exemplo:
 Pode criar dois tipos de objetos:
 
 - objetos regulares (não compartilhados) usando o comando `New object`. Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- objetos compartilhados, usando o comando `New shared object`. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- objetos compartilhados, usando o comando `New shared object`. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 
 ## Noções básicas de sintaxe
@@ -143,13 +143,13 @@ Quando se usar a notação de objeto, o valore **null** se torna compatível com
  If(myColl[2]=Null)
 ```
 
-For more information, please refer to the `Null` command description.
+Para mais informações, consulte a descrição de comando `Null`.
 
 ### Valor não definido
 
 A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Normalmente ao tentar ler ou atribuir expressões indefinidas, 4D gera erros. Isso não acontece nos casos abaixo:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
+- Lendo uma propriedade de um objeto indefinido ou valor retorna indefinido; atribuir um valor indefinido para variáveis (exceto arrays) tem o mesmo efeito que chamar com eles:
 
 ```4d
      C_OBJECT($o)
@@ -215,16 +215,16 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
 
 ## Identificadores de propriedade de objetos
 
-Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. Devem estar em conformidade com a gramática de identificadores JavaScript (consulte [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+As regras de nomenclatura dos tokens (ou seja, nomes de propriedades de objetos acessados usando a notação objeto) são mais restritivos do que nomes de objetos 4D padrão. Devem estar em conformidade com a gramática de identificadores JavaScript (consulte [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - o primeiro caractere deve ser uma letra, um sublinhado (_) ou um cifrão ($),
-- subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
+- os caracteres podem ser qualquer letra, dígito, um sinal de sublinhado ou dólar (não são permitidos caracteres de espaço),
 - eles são sensíveis às maiúsculas e minúsculas.
 
 **Nota:**
 
-- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. É necessário utilizar uma variável intermédia.
-- Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. Por exemplo, o atributo $o["My Att"] é válido em 4D, apesar do espaço. In this case, however, it will not be possible to use dot notation with this attribute.
+- Usar um campo de tabela como um índice de coleção, por exemplo, a.b[[Table1]Id], não é permitido. É necessário utilizar uma variável intermédia.
+- Criar atributos de objeto usando uma string entre colchetes quadradas permite que você substitua as regras de ECMA Script. Por exemplo, o atributo $o["My Att"] é válido em 4D, apesar do espaço. In this case, however, it will not be possible to use dot notation with this attribute.
 
 
 ## Exemplos
