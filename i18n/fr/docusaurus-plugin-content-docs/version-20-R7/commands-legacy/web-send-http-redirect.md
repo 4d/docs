@@ -54,13 +54,3 @@ Dans la [QR SET DESTINATION](qr-set-destination.md), placez les instructions sui
        ... //Placez ici le code de la recherche
  End case
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 659 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

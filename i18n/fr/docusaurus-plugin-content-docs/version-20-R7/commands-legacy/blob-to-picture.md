@@ -48,13 +48,3 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 682 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

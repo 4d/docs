@@ -46,13 +46,3 @@ Si l’exécution de la commande est correcte, la variable système Document con
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 680 |
-| Thread safe | &check; |
-| Modifie les variables | OK, Document |
-| Interdite sur le serveur ||
-
-

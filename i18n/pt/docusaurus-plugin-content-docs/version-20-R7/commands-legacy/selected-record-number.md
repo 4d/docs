@@ -35,12 +35,3 @@ O seguinte exemplo guarda o número do registro atual da seleção em uma variá
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
 *Sobre Números de Registros*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 246 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -35,12 +35,3 @@ Après l’exécution de cette commande, si un client Web envoie une requête ut
 
 *Gestion des sessions Web*  
 [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1208 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

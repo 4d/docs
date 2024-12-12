@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->SHOW PROCESS mostra todas as janelas que pertencem a *processo*.<!-- END REF--> Este comando não traz as janelas de *processo* ao primeiro plano. Para fazer isto, utilize o comando [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").  
@@ -31,12 +34,3 @@ O exemplo a seguir mostra um processo chamado Clientes, que foi ocultado previam
 [BRING TO FRONT](bring-to-front.md)  
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 325 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

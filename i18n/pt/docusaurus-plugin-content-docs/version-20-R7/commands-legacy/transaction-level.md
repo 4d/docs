@@ -22,12 +22,3 @@ displayed_sidebar: docs
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *Usar Transações*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 961 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

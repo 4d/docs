@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.ACCEPT.Summary-->The **ACCEPT** command is used in form or object methods (or in subroutines) to:
@@ -35,13 +38,3 @@ The **ACCEPT** command is allowed in headless mode, in the context of offscreen 
 #### See also 
 
 [CANCEL](cancel.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 269 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

@@ -96,13 +96,3 @@ Ocomando **LOG FILE TO JSON** modifica o valor das variáveis OK e Document: se 
 
   
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1352 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, Document |
-| Proibido no servidor ||
-
-

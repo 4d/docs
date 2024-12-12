@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LDAP LOGOUT.Summary-->El comando **LDAP LOGOUT** cierra la conexión con un servidor LDAP en el proceso actual (si aplica).<!-- END REF--> Si no hay conexión, se devuelve el error 1003 indicando que no está conectado.
@@ -19,12 +22,3 @@ displayed_sidebar: docs
 #### Ver también 
 
 [LDAP LOGIN](ldap-login.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1327 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

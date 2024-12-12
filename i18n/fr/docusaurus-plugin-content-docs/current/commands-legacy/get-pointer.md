@@ -50,12 +50,3 @@ Utilisation de pointeurs vers des éléments de tableaux à deux dimensions :
 
 [Field](field.md)  
 [Table](table.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 304 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

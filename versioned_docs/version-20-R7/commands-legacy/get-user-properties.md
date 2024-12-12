@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** returns the information about the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command.
@@ -52,13 +55,3 @@ If you do not have the proper access privileges for calling GET USER PROPERTIES 
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
 [Validate password](validate-password.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 611 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

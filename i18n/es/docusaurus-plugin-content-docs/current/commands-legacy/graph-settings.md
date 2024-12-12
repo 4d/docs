@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite cambiar los parámetros de los gráficos mostrados en un formulario.<!-- END REF--> El gráfico debe haber sido definido con el comando [GRAPH](graph.md). GRAPH SETTINGS no tiene efecto en un gráfico de tipo sectores. Este comando debe llamarse obligatoriamente en el mismo proceso que el formulario.
@@ -42,12 +45,3 @@ Ver el ejemplo del comando [GRAPH](graph.md "GRAPH").
 #### Ver también 
 
 [GRAPH](graph.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 298 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

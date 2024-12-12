@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->The **FORM Get color scheme** command returns the name of the actual color scheme of the currently displayed form.<!-- END REF--> If there is no current form, the command returns an empty string.
@@ -43,12 +46,3 @@ You want to load a picture depending on the form current scheme:
 
 [Get application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1761 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

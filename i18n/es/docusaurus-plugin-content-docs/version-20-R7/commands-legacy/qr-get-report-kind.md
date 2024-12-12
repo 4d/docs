@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR Get report kind.Summary-->El comando QR Get report kind devuelve el tipo del informe presente en *area*.<!-- END REF-->
@@ -34,13 +37,3 @@ Si pasa un número de *area* incorrecto, se genera el error -9850.
 #### Ver también 
 
 [QR SET REPORT KIND](qr-set-report-kind.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 755 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

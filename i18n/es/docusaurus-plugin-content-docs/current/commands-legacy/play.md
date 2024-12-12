@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.PLAY.Summary-->El comando **PLAY** permite reproducir archivos de sonido o multimedia.<!-- END REF--> Pase la ruta de acceso completa del archivo que quiere reproducir en *nombreObjeto*. En OS X, el comando también puede utilizarse para reproducir un sonido sistema.   
@@ -55,12 +58,3 @@ El siguiente código de ejemplo reproduce un sonido del sistema en OS X:
 #### Ver también 
 
 [BEEP](beep.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 290 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get printed height.Summary-->**Get printed height** コマンドは、 [Print form](../commands/print-form.md) コマンドを使って印刷された部分全体の高さ（ピクセル単位）を返します。<!-- END REF-->
@@ -30,12 +33,3 @@ displayed_sidebar: docs
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 702 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

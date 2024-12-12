@@ -251,12 +251,3 @@ Lorsque cette méthode est implémentée dans votre application, vous pouvez éc
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 396 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

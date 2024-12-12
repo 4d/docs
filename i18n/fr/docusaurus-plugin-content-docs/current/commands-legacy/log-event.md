@@ -63,12 +63,3 @@ A chaque ouverture de la base, cette information sera inscrite dans l’Observat
 #### Voir aussi 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 667 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

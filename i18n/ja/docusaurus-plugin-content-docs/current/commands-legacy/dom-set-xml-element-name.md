@@ -58,13 +58,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 867 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

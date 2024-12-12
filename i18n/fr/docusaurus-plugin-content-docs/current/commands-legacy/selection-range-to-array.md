@@ -106,11 +106,3 @@ Utilisation des 50 premiers enregistrements courants de la table \[Factures\] po
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 368 |
-| Thread safe | &check; |
-
-

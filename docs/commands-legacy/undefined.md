@@ -60,12 +60,3 @@ Here are the different results of the [Undefined](undefined.md) command as well 
 #### See also 
 
 [CLEAR VARIABLE](clear-variable.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 82 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

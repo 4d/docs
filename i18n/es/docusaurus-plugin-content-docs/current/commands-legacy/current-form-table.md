@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Current form table.Summary-->El comando Current form table devuelve el puntero hacia la tabla del formulario en pantalla o impreso en el proceso actual.<!-- END REF-->
@@ -63,12 +66,3 @@ Para esto, utilice el método de objeto para crear la variable *vsCurrentRecord*
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 627 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

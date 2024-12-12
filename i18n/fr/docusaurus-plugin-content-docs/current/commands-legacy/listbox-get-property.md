@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->La commande **LISTBOX Get property** retourne la valeur courante de la *propriété* de list box ou de colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -101,12 +104,3 @@ Si, par exemple, $déf retourne 200, vous pouvez en déduire que la 11e ligne es
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 917 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

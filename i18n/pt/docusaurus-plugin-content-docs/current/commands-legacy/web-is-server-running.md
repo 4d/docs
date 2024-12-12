@@ -36,13 +36,3 @@ Você quer verificar que o servidor web se está executando:
     ... //fazer as ações apropriadas
  End if
 ```
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1313 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

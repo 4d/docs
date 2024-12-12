@@ -44,12 +44,3 @@ The following example makes all manual Many-to-One relations automatic and rever
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 310 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

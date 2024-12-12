@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->El comando LISTBOX SET HIERARCHY permite configurar el objeto list box designado por los parámetros objeto y *\** en modo jerárquico o no jerárquico.<!-- END REF-->   
@@ -53,12 +56,3 @@ Definición de los arrays aPais, aRegion y aCiudad como jerarquía de un list bo
 #### Ver también 
 
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1098 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

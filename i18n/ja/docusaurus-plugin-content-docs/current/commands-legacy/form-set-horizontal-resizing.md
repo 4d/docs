@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->FORM SET HORIZONTAL RESIZING コマンドを使用すると、プログラムからカレントフォームの水平リサイズプロパティを変更することができます。<!-- END REF-->デフォルトとして、これらのプロパティはデザインモードのフォームエディタにおいて設定することができます。新しいプロパティはカレントプロセスに対して設定され、フォームと一緒に保存されません。
@@ -34,12 +37,3 @@ displayed_sidebar: docs
 [FORM GET HORIZONTAL RESIZING](form-get-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 892 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

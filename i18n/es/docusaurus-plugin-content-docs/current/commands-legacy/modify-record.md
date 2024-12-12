@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.MODIFY RECORD.Summary-->El comando MODIFY RECORD permite al usuario modificar el registro actual de la tabla *tabla* o de la tabla por defecto si se omite el parámetro *tabla*.<!-- END REF--> MODIFY RECORD carga el registro, si no se ha cargado por el proceso actual y muestra el formulario de entrada actual. Si no hay registro actual, entonces MODIFY RECORD no hace nada. MODIFY RECORD no afecta la selección actual. 
@@ -48,13 +51,3 @@ La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancel
 [Modified record](modified-record.md)  
 [READ WRITE](read-write.md)  
 [UNLOAD RECORD](unload-record.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 57 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

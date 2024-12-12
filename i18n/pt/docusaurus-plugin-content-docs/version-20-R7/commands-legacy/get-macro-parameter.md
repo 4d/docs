@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET MACRO PARAMETER.Summary-->O comando GET MACRO PARAMETER retorna, no parâmetro *paramText*, uma parte ou a totalidade do texto do método desde o qual é chamado.<!-- END REF-->  
@@ -35,12 +38,3 @@ Consulte o exemplo do comando [SET MACRO PARAMETER](set-macro-parameter.md "SET 
 #### Ver também 
 
 [SET MACRO PARAMETER](set-macro-parameter.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 997 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

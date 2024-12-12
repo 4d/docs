@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->The **OPEN FONT PICKER** command displays the system font picker dialog box.<!-- END REF-->
@@ -42,12 +45,3 @@ Here is the button code:
 #### See also 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1303 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

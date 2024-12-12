@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->O comando **EXECUTE ON CLIENT** é usado para forçar a execução do método *nomeMetodo*, com lo parâmetros *param1.<!-- END REF-->.. paramN*, se necessário, no cliente 4D registrado de nome *nomeCliente*.. O nome registrado do cliente 4D é definido pelo comando [REGISTER CLIENT](register-client.md). 
@@ -61,12 +64,3 @@ A variável do sistema **OK é** igual a 1 se o 4D Server recebeu corretamente o
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 651 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-
-

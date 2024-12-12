@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get title.Summary-->O comando OBJECT Get title devolve o título (etiqueta) do objeto de formulário designado por *objeto* .<!-- END REF--> Você pode usar esse comando com todos os objetos simples que tenham uma etiqueta:   
@@ -30,12 +33,3 @@ Se passar o parâmetro opcional *\**, indica que o parâmetro *objeto é* um nom
 #### Ver também 
 
 [OBJECT SET TITLE](object-set-title.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1068 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

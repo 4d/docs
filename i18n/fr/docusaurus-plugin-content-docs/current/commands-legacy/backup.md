@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.BACKUP.Summary-->La commande **BACKUP** déclenche la sauvegarde de la base de données avec les paramétrages de sauvegarde courants.<!-- END REF--> Aucune boîte de dialogue de confirmation n’est affichée. Une fenêtre de progression apparaît à l’écran.
@@ -37,12 +40,3 @@ En cas d’incident au cours de la sauvegarde, les informations relatives à l'i
 [BACKUP INFO](backup-info.md)  
 *Méthode base Sur démarrage sauvegarde*  
 [RESTORE](restore.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 887 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-
-

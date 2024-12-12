@@ -43,12 +43,3 @@ Then, in a method, you can write:
 #### See also 
 
 [OB Instance of](ob-instance-of.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1730 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

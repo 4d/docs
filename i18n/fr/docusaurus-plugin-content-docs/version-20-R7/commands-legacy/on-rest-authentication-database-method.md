@@ -17,18 +17,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.On REST Authentication database method.Summary-->La **On REST Authentication database method** est obsolète dans les projets à partir de 4D 20 R6.<!-- END REF-->
 
 L'[authentification Force login](https://developer.4d.com/docs/fr/REST/authUsers/) est désormais fortement recommandée. Dans les projets convertis, vous pouvez mettre à jour votre configuration en cliquant sur le bouton de paramètres [Activer l'authentification REST via la fonction ds.authentify()](https://developer.4d.com/docs/fr/settings/web/#acc%C3%A8s). Consultez également [cet article de blog](https://blog.4d.com/fr/force-login-now-is-the-default-mode-for-all-rest-authentications) pour savoir comment migrer votre code si nécessaire.
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 3367 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

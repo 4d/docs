@@ -61,12 +61,3 @@ Using version 1.2 of the SOAP protocol:
 #### See also 
 
 [WEB SERVICE CALL](web-service-call.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 901 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

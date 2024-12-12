@@ -37,12 +37,3 @@ O exemplo abaixo permite ao usuário criar um novo documento, escreva a string "
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 267 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

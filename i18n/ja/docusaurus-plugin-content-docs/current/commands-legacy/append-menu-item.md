@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->**APPEND MENU ITEM** コマンドは、*menu*引数に渡されたメニュー番号または参照を持つメニューに新規メニュー項目を追加します。<!-- END REF-->
@@ -79,12 +82,3 @@ displayed_sidebar: docs
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 411 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

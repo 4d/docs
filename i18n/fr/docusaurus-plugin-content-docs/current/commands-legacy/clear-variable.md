@@ -44,12 +44,3 @@ Dans un formulaire, vous utilisez une liste déroulante appelée *asMalListeD* n
 #### Voir aussi 
 
 [Undefined](undefined.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 89 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

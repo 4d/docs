@@ -35,12 +35,3 @@ You want to retrieve the numbers of the records in the current selection:
 #### See also 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 647 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

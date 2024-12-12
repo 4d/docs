@@ -24,13 +24,3 @@ DUPLICATE RECORD puede ejecutarse durante la entrada de datos. Esto permite dupl
 #### Ver también 
 
 [SAVE RECORD](save-record.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 225 |
-| Hilo seguro | &check; |
-| Modifica el registro actual ||
-| Prohibido en el servidor ||
-
-

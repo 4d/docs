@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->**OBJECT SET SCROLL POSITION**コマンドを使用して、 ([MODIFY SELECTION](modify-selection.md)または[DISPLAY SELECTION](display-selection.md)コマンドを用いて表示される) リストフォーム、サブフォーム、階層リストなどの行、あるいはリストボックスの列や行、そしてさらにピクチャのピクセルをスクロールすることができます。<!-- END REF--> 
@@ -91,12 +94,3 @@ displayed_sidebar: docs
 [HIGHLIGHT RECORDS](highlight-records.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 [OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 906 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

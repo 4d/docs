@@ -36,12 +36,3 @@ displayed_sidebar: docs
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 315 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

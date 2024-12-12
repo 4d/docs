@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR Get text property.Summary-->O comando QR Get text property devolve o valor da propriedade dos atributos de texto na célula determinada por *numColuna* e *numLinha*.<!-- END REF-->  
@@ -67,13 +70,3 @@ Se o parâmetro *propriedade* é incorreto, se gera o erro -9854.
 #### Ver também 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 760 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->La commande **MINIMIZE WINDOW** provoque un zoom arrière de la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, de toutes les fenêtres de l'application (sous Windows) ou de la fenêtre de premier plan du process courant (sous Mac OS).<!-- END REF-->
@@ -47,12 +50,3 @@ Mac OS
 
 [MAXIMIZE WINDOW](maximize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 454 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

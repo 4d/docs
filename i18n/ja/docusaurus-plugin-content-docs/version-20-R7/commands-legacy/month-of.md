@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Month of.Summary-->Month of コマンドは*aDate*の月を返します。<!-- END REF-->Month of は月の数値を返します。月の名前ではありません (例題 1参照)。
+<!--REF #_command_.Month of.Summary-->Month of コマンドは*aDate*の月を返します。<!-- END REF-->
+
+**Note:** Month of は月の数値を返します。月の名前ではありません (例題 1参照)。
 
 この関数から返される値を比較するために、4Dは*Days and Months*テーマに定義済み定数を提供しています:
 
@@ -53,12 +55,3 @@ displayed_sidebar: docs
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 24 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

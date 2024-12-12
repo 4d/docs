@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->**SQL EXPORT DATABASE**コマンドはデータベースのすべてのテーブルのすべてのレコードをSQLフォーマットで書き出します。<!-- END REF-->SQLではこのグローバルな書き出し処理は"ダンプ"と呼ばれます。  
@@ -55,13 +58,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1065 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

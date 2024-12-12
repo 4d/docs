@@ -58,12 +58,3 @@ displayed_sidebar: docs
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 26 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

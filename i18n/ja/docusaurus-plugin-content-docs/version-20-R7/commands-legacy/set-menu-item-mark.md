@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET MENU ITEM MARK.Summary-->SET MENU ITEM MARK コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目のチェックマークを、*mark*に渡した最初の文字に変更します。<!-- END REF-->
@@ -36,12 +39,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Get menu item mark](get-menu-item-mark.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 208 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

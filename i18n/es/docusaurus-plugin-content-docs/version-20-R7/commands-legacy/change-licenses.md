@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->El comando CHANGE LICENSES muestra la caja de diálogo de gestión de licencias 4D.<!-- END REF--> 
@@ -39,12 +42,3 @@ De esta forma un usuario puede activar licencias sin tener que modificar la base
 
 [License info](license-info.md)  
 [Is license available](is-license-available.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 637 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

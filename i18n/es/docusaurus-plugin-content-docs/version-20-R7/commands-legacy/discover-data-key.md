@@ -49,12 +49,3 @@ Los archivos llave (archivos de extensión ".4DKeyChain") deben almacenarse en e
 
   
 [New data key](new-data-key.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1639 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

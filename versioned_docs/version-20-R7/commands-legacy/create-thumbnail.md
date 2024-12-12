@@ -53,13 +53,3 @@ Resulting thumbnails (48x48)
 **Note:** With the “Scaled to fit proportional” and the “Scaled to fit prop centered”, the free space will be displayed in white. When these modes are applied to picture field or variable in 4D forms, the free space is transparent.
 
 The *depth* parameter is ignored and must be omitted. The command always uses the current screen depth (number of colors). 
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 679 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->El comando OBJECT GET RGB COLORS devuelve los colores de fondo y primer plano del objeto o grupo de objetos designados por *objeto*.<!-- END REF-->  
@@ -35,12 +38,3 @@ Para obtener más información acerca del formato de los parámetros *colorPrime
 #### Ver también 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1074 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

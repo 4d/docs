@@ -33,12 +33,3 @@ SOAPリクエストを処理する際、RPC引数のほかに、リクエスト�
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 784 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

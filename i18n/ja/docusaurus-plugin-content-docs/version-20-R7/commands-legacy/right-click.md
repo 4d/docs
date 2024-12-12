@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Right click.Summary-->Right click コマンドは、マウスの右ボタンがクリックされた場合に[True](true.md "True") を返します。<!-- END REF-->
@@ -23,12 +26,3 @@ displayed_sidebar: docs
 
 [Contextual click](contextual-click.md)  
 [Form event code](form-event-code.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 712 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

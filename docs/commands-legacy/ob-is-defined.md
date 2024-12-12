@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF--> 
+
+*object* can be an object varialble or a 4D object field.
 
 By default, if you omit the *property* parameter, the command checks whether the *object* is defined. An object is defined if its contents has been initialized. 
 
@@ -60,12 +62,3 @@ This test is equivalent to:
 #### See also 
 
 [OB Is empty](ob-is-empty.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1231 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

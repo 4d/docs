@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->La commande **SVG GET ATTRIBUTE** permet de lire la valeur courante de l’attribut *nomAttribut* dans un objet ou une image SVG.<!-- END REF--> 
@@ -40,12 +43,3 @@ Pour plus d’informations sur les attributs SVG, reportez-vous à la descriptio
 #### Voir aussi 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1056 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

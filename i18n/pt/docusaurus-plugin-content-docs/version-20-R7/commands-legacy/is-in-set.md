@@ -36,12 +36,3 @@ O seguinte exemplo é um método de objeto de um botão que testa se o registro 
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 273 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

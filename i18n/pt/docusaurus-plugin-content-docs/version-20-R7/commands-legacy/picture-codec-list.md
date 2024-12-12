@@ -35,12 +35,3 @@ Por padrão, se não passa o parâmetro *\**, o comando devolve unicamente os co
 
 *Imagens*  
 [Is picture file](is-picture-file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 992 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

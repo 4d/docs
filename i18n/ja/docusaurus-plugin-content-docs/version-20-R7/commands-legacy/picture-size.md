@@ -21,12 +21,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [PICTURE PROPERTIES](picture-properties.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 356 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

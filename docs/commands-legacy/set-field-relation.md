@@ -54,13 +54,3 @@ The following code allows setting only useful relations as automatic in the Quic
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 919 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

@@ -31,13 +31,3 @@ Se *rotaAlias* especifica um alias/atalho, a variável sistema OK assume o valor
 #### Ver também 
 
 [CREATE ALIAS](create-alias.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 695 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

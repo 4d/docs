@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->El comando GET LIST ITEM ICON devuelve, en *icono*, el icono asociado al elemento cuyo número de referencia se pasa en *refElem* de la lista cuyo número de referencia o nombre de objeto pasa en *lista*.<!-- END REF-->  
@@ -38,12 +41,3 @@ Si ningún icono está asociado al elemento, la variable icono se devuelve vací
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 951 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

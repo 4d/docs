@@ -47,12 +47,3 @@ Este exemplo compara os resultados obtidos de acordo com se é passado ou não o
 #### Ver também 
 
 [Uppercase](uppercase.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 14 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

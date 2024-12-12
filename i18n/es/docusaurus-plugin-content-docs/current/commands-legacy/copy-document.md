@@ -19,6 +19,8 @@ displayed_sidebar: docs
 #### Descripción 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->El comando **COPY DOCUMENT** copia el documento especificado por *nomFuente* en la ubicación especificada por *nomDest*.<!-- END REF--> 
+
+* **Copia de archivo**  
 En este caso, el parámetro *nomFuente* debe contener una ruta de acceso completa del archivo, expresada con respecto a la raíz del volumen.  
 El parámetro *nomDest* puede contener varios tipos de lugares:  
    * una ruta de acceso completa del archivo expresada con respecto a la raíz del volumen: el archivo se copia en esta ubicación  
@@ -117,13 +119,3 @@ Los siguientes ejemplos crean diferentes archivos y carpetas en la carpeta de la
 
 *Documentos del sistema*  
 [MOVE DOCUMENT](move-document.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 541 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

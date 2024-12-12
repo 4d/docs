@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->O comando  SET MENU ITEM SHORTCUT  modifica o atalho Ctrl (Windows) ou comando (Macintosh) para o comando de menu cujos números de menu e de elemento são passados em *menu* e *menuItem,* pelo caracter cujo caractere de código ou texto se passa em *itemKey*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado ao menu. Esta tecla se combinará automaticamente com a tecla **Ctrl** (Windows) ou **Comando** (Macintosh) para definir o novo atalho de teclado.
@@ -76,12 +79,3 @@ Definição do atalho\\shortcut para o item de menu "Close:
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 423 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

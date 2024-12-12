@@ -62,11 +62,3 @@ You want to save an existing file in the picture field, stored outside of the da
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1134 |
-| Thread safe | &check; |
-
-

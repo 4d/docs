@@ -52,12 +52,3 @@ We want to know how many running web servers are available:
 
 [WEB Server](web-server.md)  
 [webServer.stop()](../API/WebServerClass.md#stop)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1716 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

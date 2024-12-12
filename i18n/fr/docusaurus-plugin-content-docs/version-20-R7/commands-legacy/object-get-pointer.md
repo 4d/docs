@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->La commande **OBJECT Get pointer** retourne un pointeur vers la variable d’un objet de formulaire.<!-- END REF--> 
@@ -53,12 +56,3 @@ Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même f
 *Objets (Formulaires)*  
 *Objets de formulaire (Accès)*  
 [Self](self.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1124 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

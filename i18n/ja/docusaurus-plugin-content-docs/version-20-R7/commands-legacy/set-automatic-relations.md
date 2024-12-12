@@ -48,12 +48,3 @@ displayed_sidebar: docs
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 *リレーションについて*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 310 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

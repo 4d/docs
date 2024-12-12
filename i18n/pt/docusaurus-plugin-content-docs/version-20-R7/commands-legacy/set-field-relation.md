@@ -49,13 +49,3 @@ QR REPORT(\[Faturas\];Char(1))\[#/code4D\]
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 919 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

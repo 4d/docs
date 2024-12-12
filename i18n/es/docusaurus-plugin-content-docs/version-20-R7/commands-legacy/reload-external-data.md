@@ -26,12 +26,3 @@ A continuación debe recargar los datos utilizando el comando **RELOAD EXTERNAL 
 #### Ver también 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1135 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

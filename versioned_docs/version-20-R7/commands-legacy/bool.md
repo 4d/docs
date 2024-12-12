@@ -47,12 +47,3 @@ You select a value depending on the contents of an object field attribute, antic
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1537 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

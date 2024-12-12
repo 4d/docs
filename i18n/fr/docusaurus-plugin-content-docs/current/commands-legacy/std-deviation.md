@@ -60,12 +60,3 @@ Cet exemple vous permet d’obtenir l’écart type d’une série de valeurs pl
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 26 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

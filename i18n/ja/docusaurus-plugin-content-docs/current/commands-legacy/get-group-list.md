@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST コマンドは、パスワードエディターに表示されるグループ名とユニークなID番号を配列 *groupNames* と *groupNumbers* に返します。<!-- END REF-->
@@ -32,13 +35,3 @@ displayed_sidebar: docs
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 610 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

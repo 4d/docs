@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->The **WA Run offscreen area** command creates a web area in memory which can be used to automatically load and parse web pages.<!-- END REF--> 
@@ -96,13 +99,3 @@ The OK system variable is set to 0 if the timeout has been reached or the [CANCE
 [FORM Event](../commands/form-event.md)  
 *Programmed management of Web Areas*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1727 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

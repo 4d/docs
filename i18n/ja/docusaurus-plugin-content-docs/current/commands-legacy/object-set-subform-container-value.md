@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->**OBJECT SET SUBFORM CONTAINER VALUE** コマンドは、オヤフォーム内に表示されたサブフォームコンテナにバインドされたデータソースのカレント値を設定します。<!-- END REF-->
@@ -31,12 +34,3 @@ displayed_sidebar: docs
 
 [Form](../commands/form.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1784 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

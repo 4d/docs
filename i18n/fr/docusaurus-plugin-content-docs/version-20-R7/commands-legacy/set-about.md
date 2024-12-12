@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET ABOUT.Summary-->La commande **SET ABOUT** remplace la ligne de menu **A propos de 4D.<!-- END REF-->..** du menu **Aide** (sous Windows) ou du menu **application** (Mac OS X) par *libelléLigne*.
@@ -43,12 +46,3 @@ L'exemple suivant réinitialise la commande de menu d'A propos de 4D :
 #### Voir aussi 
 
 [SET HELP MENU](set-help-menu.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 316 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

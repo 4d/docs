@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->The **SQL EXPORT SELECTION** command exports in SQL format the records of the current selection of the 4D table designated by the *aTable* parameter.<!-- END REF--> 
@@ -36,13 +39,3 @@ If the export is carried out correctly, the *OK* variable is set to 1\. Otherwis
 #### See also 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1064 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

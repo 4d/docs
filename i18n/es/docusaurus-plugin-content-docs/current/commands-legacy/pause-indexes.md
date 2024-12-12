@@ -46,11 +46,3 @@ Ejemplo de método de importación masivo de datos:
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1293 |
-| Hilo seguro | &check; |
-
-

@@ -45,12 +45,3 @@ El siguiente ejemplo ilustra el uso de Delete string. Los resultados se asignan 
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 232 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

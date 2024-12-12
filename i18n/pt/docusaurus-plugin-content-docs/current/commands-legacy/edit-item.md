@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.EDIT ITEM.Summary-->O comando **EDIT ITEM** lhe permite editar o elemento atual ou o elemento de número *item* do array ou a lista designada pelo parâmetro *objeto*.<!-- END REF-->
@@ -73,12 +76,3 @@ Dadas duas colunas em una list box onde os nomes das variáveis são “Array1�
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 870 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

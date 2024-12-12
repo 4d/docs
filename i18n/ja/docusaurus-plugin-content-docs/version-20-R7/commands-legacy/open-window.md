@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Open window.Summary-->**Open window** は最初の4つの引数で指定された寸法を使用して新しいウィンドウを開きます。<!-- END REF-->
@@ -134,12 +137,3 @@ CloseColorPalette メソッドは[CANCEL](cancel.md)コマンドを呼び出し�
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
 *Open Window*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 153 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

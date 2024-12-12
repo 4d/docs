@@ -30,12 +30,3 @@ Incluso si no está corriendo la versión cliente/servidor de 4D, su aplicación
 #### Ver también 
 
 [Current system user](current-system-user.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 483 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

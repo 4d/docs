@@ -39,12 +39,3 @@ The following example, in Client/Server, copies the process set "*SetA*", mainta
 #### See also 
 
 *Sets*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 600 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

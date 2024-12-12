@@ -54,13 +54,3 @@ El siguiente código permite definir sólo las relaciones útiles como automáti
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 919 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

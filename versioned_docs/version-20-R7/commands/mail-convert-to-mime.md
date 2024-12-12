@@ -84,13 +84,3 @@ $mime:=MAIL Convert to MIME($mail)
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
 
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1604 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

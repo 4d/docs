@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get name.Summary-->La commande **OBJECT Get name** retourne le nom d’un objet de formulaire.<!-- END REF--> 
@@ -38,12 +41,3 @@ Après l’exécution de cette méthode objet, la variable *$nomBtn* contient la
 [OBJECT Get pointer](object-get-pointer.md)  
 *Objets (Formulaires)*  
 *Objets de formulaire (Accès)*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1087 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

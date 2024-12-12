@@ -41,12 +41,3 @@ displayed_sidebar: docs
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 492 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

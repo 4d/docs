@@ -36,12 +36,3 @@ El siguiente muestra una caja de alerta con el mensaje, “46 800 segundos repre
 
 [String](string.md)  
 [Time](time.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 180 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

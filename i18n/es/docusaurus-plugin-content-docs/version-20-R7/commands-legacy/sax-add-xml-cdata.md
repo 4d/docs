@@ -74,13 +74,3 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 #### Ver también 
 
 [SAX GET XML CDATA](sax-get-xml-cdata.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 856 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** は、*object*で指定したオブジェクトの表示フォーマットを*displayFormat*で渡したフォーマットに設定します。<!-- END REF-->新しいフォーマットは現在の表示にのみ有効です。フォームには保存されません。
@@ -329,12 +332,3 @@ This example formats a date variable and a time variable using [customized forma
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 236 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

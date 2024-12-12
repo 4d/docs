@@ -15,7 +15,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Count parameters.Summary-->El comando Count parameters devuelve el número de parámetros pasados a un método de proyecto.<!-- END REF-->Count parameters es significativo sólo en un método de proyecto que haya sido llamado por otro método (método de proyecto u otro). Si el método de proyecto que llama Count parameters está asociado a un menú, Count parameters devuelve 0.
+<!--REF #_command_.Count parameters.Summary-->El comando Count parameters devuelve el número de parámetros pasados a un método de proyecto.<!-- END REF-->
+
+**Advertencia:** Count parameters es significativo sólo en un método de proyecto que haya sido llamado por otro método (método de proyecto u otro). Si el método de proyecto que llama Count parameters está asociado a un menú, Count parameters devuelve 0.
 
 #### Ejemplo 1 
 
@@ -93,12 +95,3 @@ o:
 
 *Comandos del Compilador*  
 [Copy parameters](copy-parameters.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 259 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -33,12 +33,3 @@ displayed_sidebar: docs
 
 [System info](system-info.md)  
 [Is macOS](is-macos.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1573 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

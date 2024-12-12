@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Modified.Summary-->**Modified** returns [True](true.md "True") if *field* has been programmatically assigned a value or has been edited during data entry.<!-- END REF--> The **Modified** command must only be used in a form method (or a subroutine called by a form method).
@@ -67,12 +70,3 @@ You select a record for the table *\[anyTable\]*, then you call multiple subrout
 
 [Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 32 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

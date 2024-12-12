@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->El comando **OBJECT GET COORDINATES**devuelve las coordenadas *izquierda*, *superior*, *derecha* e *inferior* (en puntos) en las variables o campos de los objetos del formulario actual definido por los parámetros *\** y *objeto*.<!-- END REF-->
@@ -84,12 +87,3 @@ El método devuelve las coordenadas teóricas. Si el listbox es redimensionado, 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 663 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

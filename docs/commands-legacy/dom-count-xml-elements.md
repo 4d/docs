@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.DOM Count XML elements.Summary-->The DOM Count XML elements command returns the number of “child” elements dependent on the *elementRef* parent element and named *elementName*.<!-- END REF-->By default, **DOM Count XML elements** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](xml-set-options.md) command. 
+<!--REF #_command_.DOM Count XML elements.Summary-->The DOM Count XML elements command returns the number of “child” elements dependent on the *elementRef* parent element and named *elementName*.<!-- END REF-->
+
+**Note:** By default, **DOM Count XML elements** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](xml-set-options.md) command. 
 
 #### System variables and sets 
 
@@ -27,13 +29,3 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 726 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

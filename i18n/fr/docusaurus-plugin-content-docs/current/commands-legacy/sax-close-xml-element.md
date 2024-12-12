@@ -37,12 +37,3 @@ Si le dernier élément ouvert est *<Book>*, l’instruction suivante :
 
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 854 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

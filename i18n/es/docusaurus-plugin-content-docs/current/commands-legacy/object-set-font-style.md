@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->OBJECT SET FONT STYLE asigna el estilo de fuente de *estilos* a los objetos de formulario especificados por *objeto*.<!-- END REF-->
@@ -53,12 +56,3 @@ Este ejemplo define el estilo de fuente Plain para todos los objetos de formular
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 166 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

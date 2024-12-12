@@ -29,13 +29,3 @@ Génération d’un UUID dans une variable :
  var MonUUID : Text
  MonUUID:=Generate UUID
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1066 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

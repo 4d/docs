@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 
 #### Description 
 
@@ -348,12 +351,3 @@ As a result, the red rectangle follows the scrolling of the list box:
 [Keystroke](../commands-legacy/keystroke.md)  
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)  
 [SET TIMER](../commands-legacy/set-timer.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 388 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

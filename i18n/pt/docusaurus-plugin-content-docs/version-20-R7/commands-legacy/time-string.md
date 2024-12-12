@@ -36,12 +36,3 @@ O exemplo a seguir mostra uma caixa de alerta com a mensagem, “46 800 segundos
 
 [String](string.md)  
 [Time](time.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 180 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

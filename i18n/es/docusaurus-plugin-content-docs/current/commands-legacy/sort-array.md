@@ -18,6 +18,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT ARRAY.Summary-->El comando SORT ARRAY ordena uno o más arrays en orden ascendente o descendente.<!-- END REF-->
 
+**Notas:** 
+
 * No es posible ordenar arrays de tipo [Puntero](# "A reference to another variable (including arrays and array elements), table, or field") o [Imagen](# "Can be any Windows or Macintosh picture"). Puede ordenar los elementos de un array bidimensional (es decir, *a2DArray{$vlEsteElem}*) pero no puede ordenar el array bidimensional en sí mismo (es decir, *a2DArray*).
 * Puede ordenar arrays [Objeto](# "Datos estructurados como forma de objeto nativo 4D"). Los elementos null se agrupan y los elementos del array se ordenan con un orden interno.
 
@@ -80,12 +82,3 @@ Usted visualiza los nombres de una tabla *\[Personas\]* en una ventana flotante.
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 229 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

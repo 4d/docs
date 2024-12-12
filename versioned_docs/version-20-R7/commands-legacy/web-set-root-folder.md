@@ -37,13 +37,3 @@ If you specify an invalid pathname, an OS File manager error is generated. You c
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 634 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

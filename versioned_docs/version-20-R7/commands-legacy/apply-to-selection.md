@@ -62,12 +62,3 @@ If the user clicks the Stop button in the progress thermometer, the OK system va
 
 [EDIT FORMULA](edit-formula.md)  
 *Sets*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 70 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-
-

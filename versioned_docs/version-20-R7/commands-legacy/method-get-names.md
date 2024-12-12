@@ -39,13 +39,3 @@ Here are a few typical examples of use:
   // List of project methods in the host database beginning with a specific string
  METHOD GET NAMES(t_Names;"web_@";*)
 ```
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1166 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

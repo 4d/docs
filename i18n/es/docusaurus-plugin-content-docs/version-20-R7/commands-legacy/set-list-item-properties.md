@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->El comando **SET LIST ITEM PROPERTIES** modifica el elemento designado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF-->
@@ -77,12 +80,3 @@ El siguiente ejemplo cambia el texto del elemento actual de *lista* a negrita y 
 *Listas jerárquicas*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 386 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

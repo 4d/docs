@@ -72,12 +72,3 @@ Replace stringの使用例を次に示します。結果を変数*vtResult*に�
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 233 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

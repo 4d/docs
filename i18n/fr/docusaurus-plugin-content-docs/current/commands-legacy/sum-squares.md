@@ -58,12 +58,3 @@ Cet exemple vous permet d’obtenir la somme des carrés des valeurs placées da
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 28 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

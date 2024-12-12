@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Summary-->La commande **QR DELETE OFFSCREEN AREA** efface de la mémoire la zone hors écran dont la référence a été passée dans le paramètre *zone*.<!-- END REF-->
@@ -22,13 +25,3 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 #### Voir aussi 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 754 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

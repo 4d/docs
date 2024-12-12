@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->The **LISTBOX SET LOCKED COLUMNS** command locks *numColumns* columns (starting from the first on the left) in the list box designated by the *object* and *\** parameters.<!-- END REF-->
@@ -31,12 +34,3 @@ To remove the column locking, pass 0 or a negative value in *numColumns*.
 
 [LISTBOX Get locked columns](listbox-get-locked-columns.md)  
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1151 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

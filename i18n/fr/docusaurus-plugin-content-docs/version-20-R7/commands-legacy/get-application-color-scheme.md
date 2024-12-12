@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get application color scheme.Summary-->La commande **Get application color scheme** retourne le nom du schéma de couleur utilisé dans l'application.<!-- END REF--> 
@@ -43,12 +46,3 @@ Pour plus de détails sur les noms des schémas de couleur, veuillez vous report
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1763 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

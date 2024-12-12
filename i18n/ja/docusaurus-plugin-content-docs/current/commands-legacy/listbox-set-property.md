@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->**LISTBOX SET PROPERTY**コマンドは、引数*object*および *\** で指定されたリストボックスまたはカラムについて、*property* に *value* の値を設定します。<!-- END REF-->
@@ -84,12 +87,3 @@ displayed_sidebar: docs
   
 *List Box*  
 [LISTBOX Get property](listbox-get-property.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1440 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

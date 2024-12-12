@@ -44,12 +44,3 @@ No parâmetro *valor*, passe uma variável para receber o valor atual da *opçã
 #### Ver também 
 
 [HTTP SET OPTION](http-set-option.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1159 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

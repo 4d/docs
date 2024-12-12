@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->FORM GET OBJECTS コマンドは、カレントフォーム に存在する全オブジェクトのリストを配列形式で返します。<!-- END REF-->このリストは、カレントフォームページのオブジェクトに限定することができ、また継承されたフォームのオブジェクトを除外することができます。このコマンドは、入力フォームおよび出力フォームの双方で使用することができます。
@@ -123,12 +126,3 @@ displayed_sidebar: docs
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Form Objects (Access)*  
 *オブジェクト(フォーム)*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 898 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

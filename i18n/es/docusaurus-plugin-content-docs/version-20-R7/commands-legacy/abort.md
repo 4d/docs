@@ -35,12 +35,3 @@ Aunque el comando ABORT está destinado a ser utilizado sólo desde un método d
 #### Ver también 
 
 [ON ERR CALL](on-err-call.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 156 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

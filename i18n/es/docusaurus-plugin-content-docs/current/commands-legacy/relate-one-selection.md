@@ -57,14 +57,3 @@ La siguiente técnica utiliza **RELATE ONE SELECTION** para obtener el mismo res
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 349 |
-| Hilo seguro | &check; |
-| Modifica el registro actual ||
-| Modifica la selección actual ||
-| Prohibido en el servidor ||
-
-

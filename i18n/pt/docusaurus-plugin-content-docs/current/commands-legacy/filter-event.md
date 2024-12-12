@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FILTER EVENT.Summary-->O comando **FILTER EVENT** deve ser chamado desde o interior do método de gestão de eventos instalado utilizando o comando [ON EVENT CALL](on-event-call.md).<!-- END REF-->
@@ -39,12 +42,3 @@ Ver o exemplo do comando [ON EVENT CALL](on-event-call.md "ON EVENT CALL").
 #### Ver também 
 
 [ON EVENT CALL](on-event-call.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 321 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

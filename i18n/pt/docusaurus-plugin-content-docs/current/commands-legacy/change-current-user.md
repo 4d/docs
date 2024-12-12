@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->CHANGE CURRENT USER permite mudar a identidade do usuário atual no banco, sem ter que sair.<!-- END REF--> O usuário pode mudar sua identidade utilizando a caixa de diálogo de identificação do usuário do banco (quando o comando é chamado sem parâmetros) ou diretamente através deste comando. Quando um usuário muda sua identidade, o usuário abandona seus privilégios de acesso anteriores para os direitos do usuário escolhido.
@@ -67,12 +70,3 @@ O exemplo abaixo exibe a caixa de diálogo de conexão:
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 289 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->La commande **OBJECT GET COORDINATES** retourne dans les variables ou champs *gauche*, *haut*, *droite* et *bas* les coordonnées (en points) du ou des objet(s) du formulaire courant défini(s) par les paramètres *\** et *objet*.<!-- END REF-->
@@ -84,12 +87,3 @@ La méthode retourne les coordonnées théoriques. Si la list box est redimensio
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 663 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

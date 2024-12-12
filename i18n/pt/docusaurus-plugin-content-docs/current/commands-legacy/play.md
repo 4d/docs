@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.PLAY.Summary-->O comando PLAY permite reproduzir arquivos de som ou multimídia.<!-- END REF--> Passe a rota de acesso completa do arquivo que deseja reproduzir em *nomeObjeto*. Em Mac OS, o comando também pode ser utilizado para reproduzir uma fonte de som ou um som sistema. 
@@ -57,12 +60,3 @@ O código de exemplo abaixo reproduz um som do sistema em OS X:
 #### Ver também 
 
 [BEEP](beep.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 290 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

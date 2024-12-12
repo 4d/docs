@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT** prints a report for *aTable*, created with the Quick Report editor.<!-- END REF--> This editor allows users to create their own reports. For more information about creating reports with the Quick Report editor, refer to the *Quick reports* section of the 4D *Design Reference* manual.
@@ -131,12 +134,3 @@ The myCallbackMeth method converts the report when it is generated:
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 197 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-
-

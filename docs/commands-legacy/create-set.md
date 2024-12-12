@@ -32,12 +32,3 @@ The following example creates a set after doing a search, in order to save the s
 
 [CLEAR SET](clear-set.md)  
 [CREATE EMPTY SET](create-empty-set.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 116 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

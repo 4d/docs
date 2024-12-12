@@ -34,12 +34,3 @@ Au cours d'une transaction, [LOAD RECORD](load-record.md) et **Locked** sont sou
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Verrouillage d'enregistrements*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 147 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -117,13 +117,3 @@ displayed_sidebar: docs
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 864 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

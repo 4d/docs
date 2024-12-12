@@ -42,13 +42,3 @@ Si el usuario hace clic en Cancelar en la caja de diálogo de abrir archivos, o 
 #### Ver también 
 
 [SAVE SET](save-set.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 185 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

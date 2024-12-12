@@ -59,12 +59,3 @@ This example creates an interprocess array of 50 Real elements and sets each ele
 
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY LONGINT](array-longint.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 219 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

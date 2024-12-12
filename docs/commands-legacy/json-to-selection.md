@@ -68,12 +68,3 @@ Using the **JSON TO SELECTION** command to add records to the \[Company\] table:
 #### See also 
 
 [Selection to JSON](selection-to-json.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1235 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

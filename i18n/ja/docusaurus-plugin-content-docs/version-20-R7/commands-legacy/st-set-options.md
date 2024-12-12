@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->**ST SET OPTIONS**コマンドは、*object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数に関する様々なオプションを変更することができます。<!-- END REF-->
@@ -61,12 +64,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [ST GET OPTIONS](st-get-options.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1289 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

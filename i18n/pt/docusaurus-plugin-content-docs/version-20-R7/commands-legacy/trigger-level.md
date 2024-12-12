@@ -24,12 +24,3 @@ Para maior informação sobre níveis de execução, consulte o tema triggers em
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 398 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

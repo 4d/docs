@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->El comando **LISTBOX INSERT COLUMN FORMULA** inserta una columna en el listbox designado por los parámetros *objeto* y *\**.<!-- END REF-->  
@@ -117,12 +120,3 @@ La columna se añade al list box:
 #### Ver también 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 970 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

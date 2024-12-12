@@ -44,13 +44,3 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 877 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

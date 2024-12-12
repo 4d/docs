@@ -160,12 +160,3 @@ Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 [Num](num.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 10 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

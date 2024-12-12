@@ -29,13 +29,3 @@ This method will prevent the opening of the database if the data file is locked:
     QUIT 4D
  End if
 ```
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 716 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

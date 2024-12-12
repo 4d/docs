@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS はフォームに表示されるグラフの設定を変更します。<!-- END REF-->グラフは [GRAPH](graph.md) コマンドで定義済みでなければなりません。 GRAPH SETTINGS は円グラフには効果ありません。このコマンドはフォームと同じプロセスで呼び出されていなければなりません。
@@ -42,12 +45,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [GRAPH](graph.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 298 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

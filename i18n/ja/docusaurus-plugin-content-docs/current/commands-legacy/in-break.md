@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.In break.Summary-->**In break** はIn break 実行サイクルでTrueを返します。<!-- END REF-->
@@ -25,12 +28,3 @@ displayed_sidebar: docs
 
 [In footer](in-footer.md)  
 [In header](in-header.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 113 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

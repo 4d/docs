@@ -59,12 +59,3 @@ O exemplo abaixo mostra como decriptogrofar um arquivo criptografado localizado 
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1774 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

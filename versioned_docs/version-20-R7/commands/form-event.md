@@ -98,12 +98,3 @@ The resulting list box when rows are selected:
 
 [Form Events](../Events/overview.md)
 [Form event code](../commands/form-event-code.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1606 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

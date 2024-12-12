@@ -78,13 +78,3 @@ This code is strictly equivalent to:
        vStatus:="Divorced"
  End case
 ```
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 955 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

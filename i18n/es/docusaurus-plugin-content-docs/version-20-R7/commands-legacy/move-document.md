@@ -51,13 +51,3 @@ El siguiente ejemplo mueve el documento DocName:
 #### Ver también 
 
 [COPY DOCUMENT](copy-document.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 540 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

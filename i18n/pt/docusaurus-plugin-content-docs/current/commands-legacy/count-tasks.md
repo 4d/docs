@@ -29,12 +29,3 @@ Ver o exemplo para [Process state](process-state.md "Process state") e [On Exit 
 [Count users](count-users.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 335 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get subrecord key.Summary-->The Get subrecord key command facilitates the migration of 4D code using converted subtables to standard code for working with tables.<!-- END REF-->Beginning with version 11 of 4D, subtables are not supported. When a older database is converted, any existing subtables are transformed into standard tables that are linked with the original tables by an automatic relation. The former subtable becomes the Many table and the original table is the One table. In the One table, the former subtable field is transformed into a special field of the "Subtable Relation" type and in the Many field, a special "Subtable Relation" type field is added named “id\_added\_by\_converter”. 
+<!--REF #_command_.Get subrecord key.Summary-->The Get subrecord key command facilitates the migration of 4D code using converted subtables to standard code for working with tables.<!-- END REF-->
+
+**Reminder:** Beginning with version 11 of 4D, subtables are not supported. When a older database is converted, any existing subtables are transformed into standard tables that are linked with the original tables by an automatic relation. The former subtable becomes the Many table and the original table is the One table. In the One table, the former subtable field is transformed into a special field of the "Subtable Relation" type and in the Many field, a special "Subtable Relation" type field is added named “id\_added\_by\_converter”. 
 
 This allows converted databases to function but we strongly recommend that you replace any subtable mechanisms in your converted databases by those used for standard tables. 
 
@@ -78,13 +80,3 @@ For example, with the structure above you can write:
 ```
 
 This code will work with either a special relation or a standard one.
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1137 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

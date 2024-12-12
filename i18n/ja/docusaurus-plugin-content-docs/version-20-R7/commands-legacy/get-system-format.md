@@ -42,12 +42,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET FORMAT](object-set-format.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 994 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

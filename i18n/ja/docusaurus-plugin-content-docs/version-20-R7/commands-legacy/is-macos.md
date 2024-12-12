@@ -33,12 +33,3 @@ displayed_sidebar: docs
 
 [System info](system-info.md)  
 [Is Windows](is-windows.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1572 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

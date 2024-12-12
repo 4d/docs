@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->La commande **LISTBOX SORT COLUMNS** permet de trier (réordonner) toutes les lignes de la list box définie dans les paramètres *objet* et *\** sur la base des valeurs d’une ou plusieurs colonne(s).<!-- END REF-->
@@ -31,13 +34,3 @@ Vous pouvez définir des tris multi-niveaux : pour cela, passez autant de paires
 Conformément au principe de fonctionnement des list box, les colonnes sont synchronisées, ce qui signifie que le tri d’une colonne est automatiquement répercuté sur toutes les colonnes de l’objet.
 
 **Note** : La commande **LISTBOX SORT COLUMNS** ne tient pas compte de la propriété *Sortable* de la listbox.
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 916 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

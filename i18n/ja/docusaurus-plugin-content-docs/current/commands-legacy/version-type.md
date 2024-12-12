@@ -43,12 +43,3 @@ displayed_sidebar: docs
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 495 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

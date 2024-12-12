@@ -54,11 +54,3 @@ Ao final da lista de registros há um botão com um método de objeto. O método
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 122 |
-| Thread-seguro | &check; |
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->The **OBJECT SET MULTILINE** command modifies the "Multiline" property of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -43,12 +46,3 @@ You want to prohibit multiple lines in an entry area:
 #### See also 
 
 [OBJECT Get multiline](object-get-multiline.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1253 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

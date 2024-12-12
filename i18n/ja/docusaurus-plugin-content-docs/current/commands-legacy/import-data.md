@@ -47,13 +47,3 @@ displayed_sidebar: docs
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 665 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

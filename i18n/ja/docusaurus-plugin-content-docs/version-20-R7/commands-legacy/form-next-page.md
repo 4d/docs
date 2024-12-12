@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE コマンドは、現在表示されているフォームページから次のフォームページに移動します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](form-load.md) コマンドによってロードされてない場合や、すでに最終のフォームページが表示されている場合、FORM NEXT PAGE コマンドは何も行いません。
@@ -31,12 +34,3 @@ displayed_sidebar: docs
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM LAST PAGE](form-last-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 248 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -77,12 +77,3 @@ Después de añadir este método a su aplicación, lo puede utilizar de esta man
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 536 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA Get page content.Summary-->La commande **WA Get page content** retourne le code HTML de la page courante ou en cours d’affichage dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
@@ -24,12 +27,3 @@ Cette commande retourne une chaîne vide si le contenu de la page courante n’e
 #### Voir aussi 
 
 [WA SET PAGE CONTENT](wa-set-page-content.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1038 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

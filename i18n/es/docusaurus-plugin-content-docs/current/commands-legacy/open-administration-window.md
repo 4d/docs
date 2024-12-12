@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->El comando OPEN ADMINISTRATION WINDOW muestra la ventana de administración del servidor en el equipo que lo ejecuta.<!-- END REF--> La ventana de administración de 4D Server permite visualizar los parámetros actuales y efectuar varias operaciones de mantenimiento (ver la Guía de referencia de 4D). A partir de la versión 11 de 4D Server, esta ventana puede mostrarse desde un equipo cliente: 
@@ -49,12 +52,3 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 #### Ver también 
 
 [OPEN SECURITY CENTER](open-security-center.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1047 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-
-

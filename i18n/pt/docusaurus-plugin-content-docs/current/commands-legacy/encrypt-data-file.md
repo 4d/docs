@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Encrypt data file.Summary-->O comando **Encrypt data file** se utiliza para cifrar ou cifrar novamente o arquivo de dados designado pelo parâmetro *rotaDados* associado ao parâmetro *rotaEstrutura*.<!-- END REF--> Também pode ser utilizado para eliminar o cifrado do banco de dados. O comando não modifica os arquivos originais, devolve o nome de rota completo da pasta criada para respaldar o arquivo de dados original.
@@ -131,12 +134,3 @@ Re-encriptar um arquivo de dados criptografado com a chave atual (por exemplo, q
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1610 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -20,6 +20,9 @@ displayed_sidebar: docs
 #### Description 
 
 <!--REF #_command_.OB Copy.Summary-->La commande **OB Copy** retourne un objet contenant une copie complète des propriétés, sous-objets et valeurs de *objet*.<!-- END REF-->
+
+* Première syntaxe : **OB Copy(objet{; resoudrePtrs})**
+
 Si *objet* contient des valeurs de type pointeur, par défaut la copie contient également les pointeurs. Vous pouvez cependant résoudre les pointeurs au moment de la copie : pour cela, passez **Vrai** dans le paramètre *résoudrePtrs*. Dans ce cas, chaque pointeur présent comme valeur dans *objet* sera évalué au moment de la copie et sa valeur dépointée sera utilisée.
 
 **Note :** Si les propriétés de *objet* sont des objets partagés ou des collections partagées, elles sont transformées en objets ou collections standard (non partagés) dans la copie. Utilisez la deuxième syntaxe si vous souhaitez retourner des éléments partagés (voir ci-dessous).
@@ -164,12 +167,3 @@ Nous souhaitons copier *$sharedObj* dans *$sharedColl.* Etant donné qu'ils appa
 
 [OB Get](ob-get.md)  
 *Objets partagés et collections partagées*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1225 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

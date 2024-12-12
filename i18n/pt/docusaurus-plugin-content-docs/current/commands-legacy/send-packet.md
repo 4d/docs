@@ -82,12 +82,3 @@ Este exemplo ilustra o envio e recuperação de caracteres estendidos através d
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 103 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

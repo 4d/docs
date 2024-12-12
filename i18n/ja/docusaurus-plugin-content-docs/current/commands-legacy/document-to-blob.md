@@ -50,13 +50,3 @@ displayed_sidebar: docs
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 525 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

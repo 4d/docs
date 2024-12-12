@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->El comando UNREGISTER CLIENT da de baja un registro de un equipo 4D Client.<!-- END REF--> El cliente debe haber sido registrado por el comando REGISTER CLIENT. 
@@ -35,13 +38,3 @@ Si el cliente es dado de baja correctamente, la variable sistema OK toma el valo
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 649 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

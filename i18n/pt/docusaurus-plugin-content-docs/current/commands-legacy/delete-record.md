@@ -42,13 +42,3 @@ O exemplo apaga um registro de um empregado. O código pergunta ao usuário o n�
 
 [Locked](locked.md)  
 *Triggers*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 58 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Proibido no servidor ||
-
-

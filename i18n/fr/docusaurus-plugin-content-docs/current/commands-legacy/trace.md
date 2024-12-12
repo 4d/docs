@@ -60,12 +60,3 @@ La méthode projet DEBUG est listée ci-dessous :
     End if
  End if
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 157 |
-| Thread safe | &check; |
-
-

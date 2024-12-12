@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.ST Get content type.Summary-->The **ST Get content type** command returns the type of content found in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
@@ -100,14 +103,3 @@ You want to display context-menu commands based on the type of contents selected
        ...
     End if
 ```
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1286 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

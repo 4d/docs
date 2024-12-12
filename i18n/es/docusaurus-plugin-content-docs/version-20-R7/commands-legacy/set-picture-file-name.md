@@ -26,12 +26,3 @@ El nombre por defecto se utiliza como nombre de archivo cuando la imagen se expo
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1172 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

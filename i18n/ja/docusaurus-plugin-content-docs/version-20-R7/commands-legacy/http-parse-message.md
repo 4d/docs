@@ -14,16 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.HTTP Parse message.Summary-->このコマンドのドキュメントは、[developer.<!-- END REF-->4d.com](https://developer.4d.com/docs/API/HTTPRequestClass/) にあります。
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1824 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

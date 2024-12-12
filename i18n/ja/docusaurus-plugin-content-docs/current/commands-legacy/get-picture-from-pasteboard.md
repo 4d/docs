@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->**GET PICTURE FROM PASTEBOARD** は、ペーストボード内に存在するピクチャーを*picture*フィールドや変数に返します。<!-- END REF-->
@@ -40,13 +43,3 @@ displayed_sidebar: docs
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 522 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

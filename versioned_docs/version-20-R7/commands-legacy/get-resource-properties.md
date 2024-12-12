@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get resource properties.Summary-->The **Get resource properties** command returns the attributes of the resource whose type is passed in *resType* and whose ID number is passed in *resID*.<!-- END REF-->
@@ -33,14 +36,3 @@ See example for the [Get resource name](get-resource-name.md) command.
 #### System variables and sets 
 
 The OK variable is set to 0 if the resource does not exist; otherwise, it is set to 1.
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 515 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

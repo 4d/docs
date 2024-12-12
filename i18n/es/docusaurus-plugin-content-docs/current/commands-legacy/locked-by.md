@@ -40,11 +40,3 @@ Si el registro ha sido bloqueado por una *petición $lock REST*:
 
 [Locked](locked.md)  
 *Record Locking*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 353 |
-| Hilo seguro | &check; |
-
-

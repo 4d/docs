@@ -31,12 +31,3 @@ displayed_sidebar: docs
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 319 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

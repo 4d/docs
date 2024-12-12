@@ -87,13 +87,3 @@ Quanto todos os metadados são manipulados via uma referência de elementos DOM,
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1121 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

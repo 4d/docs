@@ -50,13 +50,3 @@ In all cases, you can trap the error using an [ON ERR CALL](on-err-call.md) inte
 [Create document](create-document.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [Open document](open-document.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 526 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

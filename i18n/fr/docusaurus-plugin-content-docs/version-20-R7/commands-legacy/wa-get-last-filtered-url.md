@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA Get last filtered URL.Summary-->La commande **WA Get last filtered URL** retourne le dernier URL ayant été filtré dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
@@ -33,12 +36,3 @@ Il est judicieux d’appeler cette commande dans le contexte des événements fo
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1035 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

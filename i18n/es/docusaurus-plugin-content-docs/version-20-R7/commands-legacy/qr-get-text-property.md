@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR Get text property.Summary-->El comando QR Get text property devuelve el valor de la propiedad de los atributos texto en la celda determinada por *numColumna* y *numLinea*.<!-- END REF-->
@@ -65,13 +68,3 @@ Si el parámetro *propiedad* es incorrecto, se genera el error -9854
 #### Ver también 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 760 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

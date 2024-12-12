@@ -49,11 +49,3 @@ displayed_sidebar: docs
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Tickcount](tickcount.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 178 |
-| スレッドセーフである | &check; |
-
-

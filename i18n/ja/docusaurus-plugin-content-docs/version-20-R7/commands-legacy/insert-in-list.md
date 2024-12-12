@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->INSERT IN LIST コマンドは、*list*に渡されたリスト参照番号またはオブジェクト名のリストに *itemRef*が指定する新規項目を挿入します。<!-- END REF-->
@@ -50,12 +53,3 @@ displayed_sidebar: docs
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 625 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

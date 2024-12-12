@@ -44,12 +44,3 @@ En un formulario, utilice una lista desplegable llamada *asMiListaDesplegable* c
 #### Ver también 
 
 [Undefined](undefined.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 89 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -69,12 +69,3 @@ You want to get the path of the last backup file:
 #### See also 
 
 [File](../commands/file.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1418 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

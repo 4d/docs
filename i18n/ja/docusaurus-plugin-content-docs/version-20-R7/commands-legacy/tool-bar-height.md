@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Tool bar height.Summary-->Tool bar height コマンドはカレントの表示されているツールバーの高さを、ピクセル単位で返します。<!-- END REF-->コンテキストに応じて、4Dデザイ ンモードツールバーの場合と、[Open form window](open-form-window.md) コマンドを使用して作成されたカスタムのツールバーの場合があります(デザインモードのツールバーはカスタムのツールバーが表示されている場合には自動的 に非表示になります)。
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [Menu bar height](menu-bar-height.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1016 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

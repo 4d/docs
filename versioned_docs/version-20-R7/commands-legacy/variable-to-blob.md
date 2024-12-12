@@ -132,13 +132,3 @@ After these methods have been added to your application, you can write:
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 532 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

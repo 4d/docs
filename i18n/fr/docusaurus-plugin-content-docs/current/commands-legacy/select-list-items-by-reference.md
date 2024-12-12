@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->La commande **SELECT LIST ITEMS BY REFERENCE** sélectionne le ou les élément(s) dont vous avez passé le numéro de référence dans *réfElément* et, facultativement, dans *tabRéfs*, parmi la liste dont vous avez passé la référence dans *liste*.<!-- END REF--> 
@@ -49,12 +52,3 @@ En supposant que *hList* est une liste dont les éléments ont des numéros de r
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 630 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

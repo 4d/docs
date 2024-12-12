@@ -80,12 +80,3 @@ displayed_sidebar: docs
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *システム変数*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 261 |
-| スレッドセーフである | &check; |
-| カレントセレクションを変更する ||
-
-

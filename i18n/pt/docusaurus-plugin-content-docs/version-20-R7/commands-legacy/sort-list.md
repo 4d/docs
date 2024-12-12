@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SORT LIST.Summary-->O comando SORT LIST ordena a lista cujo número de referência se passa em *lista*.<!-- END REF-->
@@ -56,12 +59,3 @@ A lista se verá assim:
 #### Ver também 
 
 [Selected list items](selected-list-items.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 391 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

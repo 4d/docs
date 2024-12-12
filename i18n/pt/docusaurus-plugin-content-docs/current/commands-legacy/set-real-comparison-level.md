@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->O comando **SET REAL COMPARISON LEVEL**  retorna o valor epsilon utilizado por 4D para fazer comparações de igualdade de valores e expressões de tipo real.<!-- END REF-->
@@ -34,13 +37,3 @@ Utilizando **SET REAL COMPARISON LEVEL** , pode aumentar ou reduzir o valor epsi
 **IMPORTANTE:** modificar o epsilon só afeta a comparação de igualdade de reais. Não tem efeito nos outros cálculos e visualizações de valores reais.
 
 **Nota** O comando **SET REAL COMPARISON LEVEL** não tem efeito em pesquisas e ordenações realizadas com campos do tipo Real. Apenas aplica a linguagem 4D.
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 623 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

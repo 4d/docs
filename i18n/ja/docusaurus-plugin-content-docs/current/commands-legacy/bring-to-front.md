@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->BRING TO FRONTは*process*に属するすべてのウィンドウを最前面に配置します。<!-- END REF-->このプロセスが既に最前のプロセスの場合は、このコマンドは何も行いません。プロセスが非表示の場合に、[SHOW PROCESS](show-process.md "SHOW PROCESS")コマンドでプロセスを表示しないとBRING TO FRONTコマンドは効果がありません。 
@@ -36,12 +39,3 @@ displayed_sidebar: docs
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 326 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -52,12 +52,3 @@ O idioma atual do banco de dados pode ser usada para determinar a pasta. lproj o
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1009 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

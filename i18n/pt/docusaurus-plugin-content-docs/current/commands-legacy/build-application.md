@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->O comando BUILD APPLICATION inicia o processo de geração da aplicação levando em consideração os parâmetros definidos nas configurações do aplicativo atual ou na configuração de aplicação designado no parâmetro *constrAppConfigurações*.<!-- END REF-->   
@@ -53,13 +56,3 @@ Se o comando falhar, é gerado um erro que pode ser interceptado com a ajuda do 
 #### Ver também 
 
 [Compile project ](../commands/compile-project.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 871 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, Document, error |
-| Proibido no servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->**FORM SET OUTPUT** vous permet de définir *formulaire* ou *formUtilisateur* comme formulaire sortie courant de *laTable* pour le process courant.<!-- END REF--> *formulaire* doit appartenir à *laTable*.
@@ -85,12 +88,3 @@ L'exemple suivant utilise un formulaire décrit dans un fichier .json :
 [MODIFY SELECTION](modify-selection.md)  
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 54 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

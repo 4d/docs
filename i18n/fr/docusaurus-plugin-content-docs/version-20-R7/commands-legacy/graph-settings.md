@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->La commande **GRAPH SETTINGS** permet de paramétrer les échelles et les grilles d'un graphe placé dans un formulaire.<!-- END REF--> Le graphe doit déjà avoir été défini à l'aide de la commande [GRAPH](graph.md). **GRAPH SETTINGS** ne fait rien s'il s'agit d'un graphe de type secteurs. Cette commande doit impérativement être appelée dans le même process que le formulaire.
@@ -41,12 +44,3 @@ Reportez-vous à l'exemple de la commande GRAPHE.
 #### Voir aussi 
 
 [GRAPH](graph.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 298 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -33,12 +33,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1125 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

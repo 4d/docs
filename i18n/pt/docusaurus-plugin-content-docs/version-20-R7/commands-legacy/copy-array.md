@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.COPY ARRAY.Summary-->O comando COPY ARRAY cria ou reescreve o array de destino com os mesmos conteúdo, tamanho e fonte do array fonte.<!-- END REF-->é mantido.
+<!--REF #_command_.COPY ARRAY.Summary-->O comando COPY ARRAY cria ou reescreve o array de destino com os mesmos conteúdo, tamanho e fonte do array fonte.<!-- END REF-->
+
+**Nota**: no caso de arrays numéricos de tipos diferentes, o tipo de array *destino* é mantido.
 
 Os arrays *fonte* e *destino* podem ser arrays locais, de processo ou interprocesso. Ao se copiar arrays, o tamanho do array não interessa.
 
@@ -34,13 +36,3 @@ O exemplo seguinte preenche o array chamado C. Ele então cria um novo array, ch
  SELECTION TO ARRAY([Pessoas]Empresa;C) // Mover os dados do campo empresa ao array C
  COPY ARRAY(C;D) // Copiar o array C ao array D
 ```
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 226 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

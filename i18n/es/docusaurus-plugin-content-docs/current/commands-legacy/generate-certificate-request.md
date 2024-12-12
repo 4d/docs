@@ -87,12 +87,3 @@ Este es el método del botón **Generar**
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 691 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

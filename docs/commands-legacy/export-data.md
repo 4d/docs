@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.EXPORT DATA.Summary-->The **EXPORT DATA** command exports data in the *fileName* file.<!-- END REF-->4D can export data in the following formats: Text, Fixed length text, XML, SYLK, DIF, DBF (dBase), and 4D. 
@@ -97,13 +100,3 @@ If the user clicks **Cancel** in the standard open file dialog box or in the exp
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DATA](import-data.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 666 |
-| Thread safe | &check; |
-| Modifies variables | OK, Document |
-| Forbidden on the server ||
-
-

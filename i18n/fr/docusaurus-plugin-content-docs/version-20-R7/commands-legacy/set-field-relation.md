@@ -54,13 +54,3 @@ Le code suivant vous permet uniquement de configurer ls liens utiles comme autom
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 919 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

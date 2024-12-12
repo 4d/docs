@@ -33,12 +33,3 @@ O seguinte exemplo empilha o registro de um cliente:
 
 [POP RECORD](pop-record.md)  
 *Usar a Pilha de Registros*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 176 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

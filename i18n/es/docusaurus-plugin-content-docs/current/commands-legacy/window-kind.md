@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Window kind.Summary-->El comando Window kind devuelve el tipo de ventana 4D cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si la ventana no existe, Window kind devuelve *0* (cero). 
@@ -38,12 +41,3 @@ Ver el ejemplo del comando [WINDOW LIST](window-list.md "WINDOW LIST").
 [GET WINDOW RECT](get-window-rect.md)  
 [Get window title](get-window-title.md)  
 [Window process](window-process.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 445 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

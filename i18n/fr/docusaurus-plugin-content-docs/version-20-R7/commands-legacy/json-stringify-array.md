@@ -108,12 +108,3 @@ Conversion d’une sélection 4D dans un tableau objet :
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1228 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

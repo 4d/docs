@@ -63,12 +63,3 @@ A variável vNOME contém ROBERTO e vCIDADE contém PARIS.
 #### Ver também 
 
 [WEB GET BODY PART](web-get-body-part.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 683 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

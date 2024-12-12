@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->O comando **WA OPEN WEB INSPECTOR** abre um inspetor web para a área web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->
@@ -22,12 +25,3 @@ displayed_sidebar: docs
 
 *Gestão programada de áreas web*  
 [WA Run offscreen area](wa-run-offscreen-area.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1736 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

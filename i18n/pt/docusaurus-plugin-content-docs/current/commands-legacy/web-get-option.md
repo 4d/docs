@@ -63,12 +63,3 @@ Quando usar o seletor web debug log, pode receber uma das constantes abaixo no p
 #### Ver também 
 
 [WEB SET OPTION](web-set-option.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1209 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

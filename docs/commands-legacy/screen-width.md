@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Screen width.Summary-->On Windows, Screen width returns the width of 4D application window (MDI window).<!-- END REF--> If you specify the optional *\** parameter, the function returns the width of the screen.
@@ -24,12 +27,3 @@ On Macintosh, Screen width returns the width of the main screen, the screen wher
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 187 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -25,12 +25,3 @@ Si la imagen no tienen un nombre por defecto, el comando devuelve una cadena vac
 #### Ver también 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1171 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

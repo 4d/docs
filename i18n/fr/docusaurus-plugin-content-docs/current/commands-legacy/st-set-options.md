@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->La commande **ST SET OPTIONS** vous permet de modifier une ou plusieurs options de fonctionnement du champ ou de la variable de texte stylé désigné(e) par le paramètre *objet*.<!-- END REF--> 
@@ -61,12 +64,3 @@ Le code suivant vous permet de basculer le mode d’affichage de la zone :
 #### Voir aussi 
 
 [ST GET OPTIONS](st-get-options.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1289 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

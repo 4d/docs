@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA OPEN FORWARD URL.Summary-->O comando WA OPEN FORWARD URL carrega na área web designada pelos parâmetros \* e *objeto* a URL passada no parâmetro url.<!-- END REF-->  
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN URL](wa-open-url.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1022 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

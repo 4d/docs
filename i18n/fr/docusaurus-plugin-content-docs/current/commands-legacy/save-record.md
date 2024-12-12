@@ -48,12 +48,3 @@ L'exemple suivant est une partie d'une méthode récupérant des enregistrements
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 *Présentation des triggers*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 53 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

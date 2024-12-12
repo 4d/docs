@@ -38,12 +38,3 @@ Disabling assertions:
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1131 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

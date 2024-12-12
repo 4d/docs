@@ -52,12 +52,3 @@ Autenticación con un servicio web ubicado detrás de un proxy:
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE Get info](web-service-get-info.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 786 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.HIDE MENU BAR.Summary-->La commande **HIDE MENU BAR** rend invisible la barre de menus.<!-- END REF-->
@@ -43,12 +46,3 @@ La méthode suivante passe un enregistrement en plein écran (sous Mac OS) jusqu
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 432 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

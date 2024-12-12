@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 :::info 互換性
 
 **4D のビルトインPHPインタープリターは削除されました**。[`4D.SystemWorkerクラス`](../API/SystemWorkerClass.md) を使用して外部PHPインタープリターをご利用ください。
@@ -37,12 +40,3 @@ option引数には、変更するオプションを指定する"*PHP*"テーマ�
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1059 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

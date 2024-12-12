@@ -37,12 +37,3 @@ El siguiente ejemplo ilustra cómo Redondeo funciona con diferentes argumentos. 
 #### Ver también 
 
 [Trunc](trunc.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 94 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

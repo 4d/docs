@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ST Get text.Summary-->La commande **ST Get text** retourne le texte multistyle présent dans le champ ou la variable de texte désigné(e) par le paramètre *objet*.<!-- END REF--> 
@@ -59,13 +62,3 @@ A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1116 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

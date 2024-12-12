@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->O comando QR SET REPORT KIND define o *tipo* do relatório presente em *area*.<!-- END REF-->  
@@ -38,13 +41,3 @@ Se passa um valor incorreto do parâmetro *propriedade*, se gera o erro -9852.
 #### Ver também 
 
 [QR Get report kind](qr-get-report-kind.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 738 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

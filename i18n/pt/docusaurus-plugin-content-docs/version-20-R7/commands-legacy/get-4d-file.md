@@ -69,12 +69,3 @@ Se quiser obter a rota do último arquivo de backup:
 #### Ver também 
 
 [File](file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1418 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

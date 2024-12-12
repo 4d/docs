@@ -39,12 +39,3 @@ Utilizando un área de desplazamiento llamada *atVolumenes,* usted quiere mostra
 [DOCUMENT LIST](document-list.md)  
 [FOLDER LIST](folder-list.md)  
 [VOLUME ATTRIBUTES](volume-attributes.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 471 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

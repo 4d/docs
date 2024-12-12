@@ -50,12 +50,3 @@ You want to temporarily change the cache priority for the \[Docs\] scalar fields
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1429 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

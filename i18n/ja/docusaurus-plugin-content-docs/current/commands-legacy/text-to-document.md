@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.TEXT TO DOCUMENT.Summary-->**TEXT TO DOCUMENT**コマンドは、 *text* を直接ディスク上のファイルへと書き込みます。<!-- END REF-->引数には書き込みたいファイルへのパス名を渡します。ファイルが存在しない場合には新たに作成されます。このファイルが既にディスク上に存在する場合、以前の内容は消去されます。ただし既に開かれていた場合にはその中身はロックされエラーが静背されます。*fileName* に渡せるものは以下の通りです:
+<!--REF #_command_.TEXT TO DOCUMENT.Summary-->**TEXT TO DOCUMENT**コマンドは、 *text* を直接ディスク上のファイルへと書き込みます。<!-- END REF-->
+
+*fileName* 引数には書き込みたいファイルへのパス名を渡します。ファイルが存在しない場合には新たに作成されます。このファイルが既にディスク上に存在する場合、以前の内容は消去されます。ただし既に開かれていた場合にはその中身はロックされエラーが静背されます。*fileName* に渡せるものは以下の通りです:
 
 * ファイル名のみ。例えば "myFile.txt" など。この場合、ファイルはアプリケーションのストラクチャーファイルの隣にある必要があります。
 * アプリケーションのストラクチャファイルからの相対パス。例えばWindowsでは "\\\\docs\\\\myFile.txt" またはmacOS では ":docs:myFile.txt"
@@ -82,12 +84,3 @@ displayed_sidebar: docs
 
 [Document to text](document-to-text.md)  
 *System Documents*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1237 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

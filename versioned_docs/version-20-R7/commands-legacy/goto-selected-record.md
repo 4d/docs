@@ -61,13 +61,3 @@ The following object method for *atNames* selects the correct record in the \[Pe
 #### See also 
 
 [Selected record number](selected-record-number.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 245 |
-| Thread safe | &check; |
-| Changes current record ||
-| Forbidden on the server ||
-
-

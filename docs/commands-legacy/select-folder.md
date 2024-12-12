@@ -84,12 +84,3 @@ The following example allows you to select the folder in which the pictures in t
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 670 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-
-

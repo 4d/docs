@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->**OLD RELATED ONE** operates the same way as [RELATE ONE](relate-one.md) does, except that **OLD RELATED ONE** uses the old value of *aField* to establish the relation.<!-- END REF-->
@@ -31,13 +34,3 @@ If the command has been executed correctly and if the related records have been 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 [SAVE RELATED ONE](save-related-one.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 44 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

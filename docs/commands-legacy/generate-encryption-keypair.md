@@ -52,12 +52,3 @@ See example for the [ENCRYPT BLOB](encrypt-blob.md) command.
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 688 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

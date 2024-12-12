@@ -56,12 +56,3 @@ Exemple de *Méthode base Sur authentification Web* en mode Digest
 
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 946 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->El comando **OB GET PROPERTY NAMES** devuelve, en *arrProp*, los nombres de las propiedades contenidas en el objeto de lenguaje designados por el parámetro *objeto* .<!-- END REF-->debe haber sido definido utilizando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.  
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->El comando **OB GET PROPERTY NAMES** devuelve, en *arrProp*, los nombres de las propiedades contenidas en el objeto de lenguaje designados por el parámetro *objeto* .<!-- END REF-->  
+  
+*objeto* debe haber sido definido utilizando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.  
   
 Pase un array texto en el parámetro *arrProp*. Si el array no existe, el comando lo crea y lo redimensiona de forma automática.  
   
@@ -96,12 +98,3 @@ Utilizando un elemento de array de objetos:
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1232 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

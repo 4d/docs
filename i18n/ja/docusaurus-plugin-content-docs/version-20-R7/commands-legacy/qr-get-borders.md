@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->QR GET BORDERS コマンドを使用し、指定したセルの罫線スタイルを取得できます。<!-- END REF-->
@@ -67,13 +70,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET BORDERS](qr-set-borders.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 798 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

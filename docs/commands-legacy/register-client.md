@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command “registers” a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or eventually 4D Server (by using stored methods) to execute methods on it by using the [EXECUTE ON CLIENT](execute-on-client.md) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.
@@ -113,13 +116,3 @@ If the 4D client is correctly registered, the OK system variable is equal to 1\.
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 648 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

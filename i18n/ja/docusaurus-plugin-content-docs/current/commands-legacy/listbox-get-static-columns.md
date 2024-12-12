@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->**LISTBOX Get static columns**コマンドは*object* と*\** 引数で指定したリストボックス中のドラッグで移動しない列数を返します。<!-- END REF-->
@@ -31,12 +34,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1154 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

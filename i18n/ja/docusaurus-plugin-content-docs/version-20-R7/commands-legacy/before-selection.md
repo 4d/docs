@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Before selection.Summary-->**Before selection** は、カレントレコードポインタが*aTable*のカレントセレクションの前にある場合にTRUEを返します。<!-- END REF-->は、一般に[PREVIOUS RECORD](previous-record.md) により、カレントレコードポインタが先頭レコードの前に移動したかどうかを調べるために使用します。カレントセレクションが空の場合、**Before selection** はTRUEを返します。
+<!--REF #_command_.Before selection.Summary-->**Before selection** は、カレントレコードポインタが*aTable*のカレントセレクションの前にある場合にTRUEを返します。<!-- END REF-->**Before selection** は、一般に[PREVIOUS RECORD](previous-record.md) により、カレントレコードポインタが先頭レコードの前に移動したかどうかを調べるために使用します。カレントセレクションが空の場合、**Before selection** はTRUEを返します。
 
 カレントレコードポインタをセレクションに内に戻すには、[FIRST RECORD](first-record.md)、[LAST RECORD](last-record.md) または [GOTO SELECTED RECORD](goto-selected-record.md) を使用します。[NEXT RECORD](next-record.md) ではポインタはセレクション内に戻りません。
 
@@ -62,12 +62,3 @@ displayed_sidebar: docs
 [Form event code](form-event-code.md)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 198 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

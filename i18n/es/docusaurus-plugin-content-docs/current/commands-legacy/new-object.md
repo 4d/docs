@@ -106,12 +106,3 @@ Con este comando, puede fácilmente manejar objetos en bucles:
 
   
 [New shared object](new-shared-object.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1471 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

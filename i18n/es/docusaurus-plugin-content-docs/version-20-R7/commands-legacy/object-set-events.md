@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->El comando **OBJECT SET EVENTS** modifica, para el proceso actual, la configuración de los eventos formulario del formulario u objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->
@@ -165,12 +168,3 @@ Desactivación de un solo evento del formulario sin modificar los otros:
 
 *Eventos formulario*  
 [OBJECT GET EVENTS](object-get-events.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1239 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get border style.Summary-->The **OBJECT Get border style** command returns the border line style of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -38,12 +41,3 @@ The command returns a value corresponding to the border line style. You can comp
 #### See also 
 
 [OBJECT SET BORDER STYLE](object-set-border-style.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1263 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

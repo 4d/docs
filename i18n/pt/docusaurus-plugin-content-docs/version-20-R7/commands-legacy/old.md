@@ -39,12 +39,3 @@ Para restaurar o valor original de um campo, atribua-lhe o valor retornado por O
 #### Ver também 
 
 [Modified](modified.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 35 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -78,13 +78,3 @@ Estes são alguns exemplos de conversões que podem ser realizadas com este coma
   //Converter o valor a Liras Italianas
  $EmLiras:=Euro converter($valor;French Franc;Italian Lira)
 ```
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 676 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

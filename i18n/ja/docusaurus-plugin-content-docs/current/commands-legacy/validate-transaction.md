@@ -30,13 +30,3 @@ OK変数に0が代入された場合、トランザクションは自動的に�
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *トランザクションを使用する*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 240 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

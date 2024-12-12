@@ -39,13 +39,3 @@ Em um array de inteiros longos, se um número de registro não for válido (regi
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 641 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

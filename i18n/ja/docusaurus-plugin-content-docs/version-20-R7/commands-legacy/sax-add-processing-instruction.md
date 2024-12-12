@@ -45,13 +45,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 857 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

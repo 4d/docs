@@ -30,12 +30,3 @@ Si efectúa la operación desde un trigger o una subrutina que puede ser llamado
 [START TRANSACTION](start-transaction.md)  
 *Triggers*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 397 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

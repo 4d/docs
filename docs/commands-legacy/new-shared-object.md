@@ -67,12 +67,3 @@ You want to create and modify a shared object. The structure must be called for 
 [New object](new-object.md)  
 [New shared collection](../commands/new-shared-collection.md)  
 *Shared objects and shared collections*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1526 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -77,12 +77,3 @@ Quando executa este código:
 
 *Documentos Sistema*  
 [TEXT TO DOCUMENT](text-to-document.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1236 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

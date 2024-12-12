@@ -60,12 +60,3 @@ Após a chamada, a variável é incrementada pelo número de bytes lidos. Portan
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 555 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

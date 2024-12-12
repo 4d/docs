@@ -51,12 +51,3 @@ com:
 
 *Comandos de Compilação*  
 [ON EVENT CALL](on-event-call.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 311 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

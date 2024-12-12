@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA STOP LOADING URL.Summary-->O comando WA STOP LOADING URL para de carregar os recurso da URL atual da área web determinada pelos parâmetros *\** e *objeto*.<!-- END REF-->
@@ -21,12 +24,3 @@ displayed_sidebar: docs
 #### Ver também 
 
 [WA REFRESH CURRENT URL](wa-refresh-current-url.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1024 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

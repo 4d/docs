@@ -69,13 +69,3 @@ Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 
 #### Ver también 
 
 [Min](min.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 3 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

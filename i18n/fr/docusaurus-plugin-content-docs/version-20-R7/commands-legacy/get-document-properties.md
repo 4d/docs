@@ -208,13 +208,3 @@ Une fois que cela est implémenté dans votre base, il suffit d'écrire la méth
 #### Voir aussi 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 477 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

@@ -67,12 +67,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [MESSAGES ON](messages-on.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 175 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

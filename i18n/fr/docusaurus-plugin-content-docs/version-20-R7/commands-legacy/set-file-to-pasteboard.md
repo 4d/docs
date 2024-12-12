@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->La commande **SET FILE TO PASTEBOARD** ajoute dans le conteneur de données le chemin d’accès complet du fichier passé dans le paramètre *fichier*.<!-- END REF--> Cette commande permet de mettre en place des interfaces autorisant le glisser-déposer d’objets 4D vers des fichiers sur le bureau par exemple.
@@ -27,12 +30,3 @@ La commande admet l’étoile *\** en paramètre optionnel. Par défaut, lorsque
 #### Voir aussi 
 
 [Get file from pasteboard](get-file-from-pasteboard.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 975 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

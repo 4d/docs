@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OB Keys.Summary-->**OB Keys** コマンドは、*object* 引数で指定したオブジェクト内の列挙可能な全てのプロパティ名を文字列として格納したコレクションを返します。<!-- END REF-->
@@ -44,12 +47,3 @@ displayed_sidebar: docs
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1719 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

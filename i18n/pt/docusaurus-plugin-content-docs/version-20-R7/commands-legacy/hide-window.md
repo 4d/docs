@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->O comando HIDE WINDOW permite ocultar a janela cujo número de referência se passa em *janela* ou, se for omitido este parâmetro, a janela do primeiro plano do processo atual.<!-- END REF--> Este comando permite, por exemplo, em um processo com várias janelas, mostrar apenas a janela ativa.  
@@ -45,12 +48,3 @@ Este exemplo corresponde a um método de um botão localizado em um formulário 
 #### Ver também 
 
 [SHOW WINDOW](show-window.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 436 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

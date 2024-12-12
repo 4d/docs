@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Day of.Summary-->**Day of** retourne le jour du mois de *laDate*.<!-- END REF-->**Day of** retourne une valeur entre 1 et 31\. Pour obtenir le numéro du jour de la semaine pour une date, vous devez utiliser la commande [Day number](day-number.md).
+<!--REF #_command_.Day of.Summary-->**Day of** retourne le jour du mois de *laDate*.<!-- END REF-->
+
+**Note :** **Day of** retourne une valeur entre 1 et 31\. Pour obtenir le numéro du jour de la semaine pour une date, vous devez utiliser la commande [Day number](day-number.md).
 
 #### Exemple 1 
 
@@ -36,12 +38,3 @@ Reportez-vous à l'exemple de la fonction [Current date](current-date.md).
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 23 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

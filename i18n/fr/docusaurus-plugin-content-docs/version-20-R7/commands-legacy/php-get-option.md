@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 :::info Compatibilité
 
 **PHP est obsolète dans 4D**. Il est désormais recommandé d'utiliser la classe [`4D.SystemWorker`](../API/SystemWorkerClass.md).
@@ -37,12 +40,3 @@ Passez dans le paramètre *option* une constante du thème *PHP* désignant l’
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1060 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->QR GET HEADER AND FOOTER コマンドを使用し、ヘッダまたはフッタの内容とサイズを取得できます。<!-- END REF-->
@@ -66,13 +69,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 775 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

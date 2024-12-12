@@ -30,14 +30,3 @@ Para maior informação, consulte a descrição do comando [QUERY BY FORMULA](qu
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 207 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Modificar a seleção atual ||
-| Proibido no servidor ||
-
-

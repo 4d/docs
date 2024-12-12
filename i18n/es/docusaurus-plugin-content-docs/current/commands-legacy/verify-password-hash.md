@@ -53,12 +53,3 @@ Este ejemplo verifica un hash de contraseña creado previamente por [Generate pa
 
   
 [Generate password hash](generate-password-hash.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1534 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

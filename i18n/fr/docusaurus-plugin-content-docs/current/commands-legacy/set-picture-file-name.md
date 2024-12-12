@@ -26,12 +26,3 @@ Le nom par défaut est utilisé comme nom de fichier en cas d’exportation de l
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1172 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

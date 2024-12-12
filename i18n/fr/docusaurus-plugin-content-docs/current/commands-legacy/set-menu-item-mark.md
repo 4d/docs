@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM MARK.Summary-->La commande **SET MENU ITEM MARK** remplace la marque (ou "coche") de la ligne de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu* par le premier caractère de la chaîne que vous avez passée dans *marque* (sous Mac OS) ou par la coche standard (sous Windows).<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
@@ -37,12 +40,3 @@ Reportez-vous à l'exemple de la commande [Get menu item mark](get-menu-item-mar
 #### Voir aussi 
 
 [Get menu item mark](get-menu-item-mark.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 208 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

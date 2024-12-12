@@ -33,12 +33,3 @@ The following example shows a loop technique commonly used to move through all t
 #### See also 
 
 [Records in table](records-in-table.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 76 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

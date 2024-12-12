@@ -58,12 +58,3 @@ Este ejemplo permite obtener la suma de cuadrados de los valores ubicados en un 
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 28 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

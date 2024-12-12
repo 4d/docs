@@ -31,13 +31,3 @@ Si *rutaAlias* especifica un alias/atajo, la variable sistema OK toma el valor 1
 #### Ver también 
 
 [CREATE ALIAS](create-alias.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 695 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

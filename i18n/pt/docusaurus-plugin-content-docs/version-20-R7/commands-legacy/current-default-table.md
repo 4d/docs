@@ -30,12 +30,3 @@ Desde que uma tabela padrão tenha sido estabelecida, a linha de código abaixo 
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 363 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

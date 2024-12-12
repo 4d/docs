@@ -25,12 +25,3 @@ Get document positionは、ドキュメントの最初から見て、次の読�
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 481 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

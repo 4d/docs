@@ -55,13 +55,3 @@ In the [QR SET DESTINATION](qr-set-destination.md), you insert the following cod
        ... //Put the request code here
  End case
 ```
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 659 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

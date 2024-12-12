@@ -38,12 +38,3 @@ Cet exemple définit l’encodage et l’option standalone de l’élément *ref
 
 [DOM Create XML Ref](dom-create-xml-ref.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 859 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

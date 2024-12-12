@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->**OBJECT SET HORIZONTAL ALIGNMENT**コマンドは、引数*object* および *\** で指定したオブジェクトを整列します。<!-- END REF-->
@@ -54,12 +57,3 @@ displayed_sidebar: docs
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 706 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

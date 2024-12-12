@@ -39,13 +39,3 @@ The OK system variable is set to 1 if the variable is received. Otherwise, the O
 [RECEIVE RECORD](receive-record.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 81 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

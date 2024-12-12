@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->El comando **IMPORT STRUCTURE** importa, en la base actual, la definición XML de la estructura de la base 4D pasada en el parámetro *estructuraXML*.<!-- END REF--> 
@@ -47,12 +50,3 @@ Usted desea importar una definición de estructura guardada en la base actual:
 #### Ver también 
 
 [EXPORT STRUCTURE](export-structure.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1310 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

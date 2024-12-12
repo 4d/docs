@@ -80,12 +80,3 @@ Como o comando devolve uma coleção, pode ser utilizada com **.join()** para cr
 #### Ver também 
 
 [Count parameters](count-parameters.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1790 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

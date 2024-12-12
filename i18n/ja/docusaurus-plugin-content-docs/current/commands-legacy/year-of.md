@@ -38,12 +38,3 @@ displayed_sidebar: docs
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 25 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

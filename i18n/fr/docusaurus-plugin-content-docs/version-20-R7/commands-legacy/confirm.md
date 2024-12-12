@@ -91,13 +91,3 @@ La ligne :
 
 [ALERT](alert.md)  
 [Request](request.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 162 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

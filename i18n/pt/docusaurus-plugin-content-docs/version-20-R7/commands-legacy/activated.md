@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Activated.Summary-->O comando **Activated** retorna **True** em um método de formulário quando a janela que contém o formulário passa ao primeiro plano.<!-- END REF--> 
@@ -27,12 +30,3 @@ displayed_sidebar: docs
 
 [Deactivated](deactivated.md)  
 [Form event code](form-event-code.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 346 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

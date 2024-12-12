@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.RELATE ONE.Summary-->RELATE ONE aceita duas sintaxes.<!-- END REF-->  
@@ -89,15 +92,3 @@ Se o comando for executado corretamente e se os registros relacionados forem car
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 42 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Modificar o registro atual ||
-| Modificar a seleção atual ||
-| Proibido no servidor ||
-
-

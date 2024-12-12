@@ -60,13 +60,3 @@ In the project method STATS, you write the following code:
 ```
 
 You can send the "stats.shtm" page using a URL link or using the [WEB SEND FILE](web-send-file.md) command.
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 658 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

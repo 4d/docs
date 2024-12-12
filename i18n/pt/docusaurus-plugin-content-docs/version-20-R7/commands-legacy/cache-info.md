@@ -53,12 +53,3 @@ Se quiser obter informação da cache do banco de dados e todos os componentes a
 #### Ver também 
 
 [MEMORY STATISTICS](memory-statistics.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1402 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

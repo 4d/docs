@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->El comando **ST INSERT EXPRESSION** inserta una referencia a la expresión en el campo o la variable de texto multiestilo designada por el parámetro *objeto*.<!-- END REF-->
@@ -86,13 +89,3 @@ Desea reemplazar el texto seleccionado con el resultado de un método proyecto:
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1281 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

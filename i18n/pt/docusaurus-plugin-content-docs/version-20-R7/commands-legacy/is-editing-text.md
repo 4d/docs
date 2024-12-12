@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Is editing text.Summary-->O comando **Is editing text** devolve **True** se o usuário estiver ingressando valores em um objeto de formulário de entrada e **False** em todos os demais casos.<!-- END REF-->
@@ -58,12 +61,3 @@ Se quiser permitir que o usuário selecione uma linha começando com a letra ou 
   
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1744 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

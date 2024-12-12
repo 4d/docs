@@ -30,13 +30,3 @@ Note that when OK is set to 0, the transaction is automatically cancelled intern
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *Using Transactions*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 240 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

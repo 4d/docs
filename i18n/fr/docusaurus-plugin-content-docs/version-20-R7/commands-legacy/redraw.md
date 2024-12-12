@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.REDRAW.Summary-->Lorsque vous modifiez par programmation le contenu d'un champ affiché dans un sous-formulaire, vous devez exécuter la commande **REDRAW** pour vous assurer que le formulaire est correctement mis à jour.<!-- END REF--> 
@@ -22,12 +25,3 @@ Dans le contexte des list box en mode sélection, l’instruction **REDRAW** app
 #### Voir aussi 
 
 [SET TIMER](set-timer.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 174 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

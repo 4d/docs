@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->
+
+*object* can be an object varialble or a 4D object field.
 
 **Note:** This command supports attribute definitions in 4D Write Pro *objects*, like the *WP GET ATTRIBUTES* command (see example 9). 
 
@@ -220,12 +222,3 @@ You want to know the size of a picture stored in an object attribute:
 *Field and Variable Types*  
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1224 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

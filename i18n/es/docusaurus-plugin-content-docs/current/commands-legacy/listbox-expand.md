@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->El comando LISTBOX EXPAND se utiliza para desplegar las líneas de ruptura del objeto list box designado por los parámetros objeto y \*.<!-- END REF-->  
@@ -80,12 +83,3 @@ Este ejemplo ilustra diferentes modos de utilizar el comando. Dados los siguient
 #### Ver también 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1100 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

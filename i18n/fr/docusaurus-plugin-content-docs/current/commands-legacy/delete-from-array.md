@@ -44,12 +44,3 @@ L'exemple suivant supprime le dernier élément d'un tableau, s'il existe :
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 228 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

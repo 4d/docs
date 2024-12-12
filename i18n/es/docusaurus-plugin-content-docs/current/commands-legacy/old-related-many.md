@@ -15,7 +15,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.OLD RELATED MANY.Summary-->OLD RELATED MANY funciona de la misma forma que [RELATE MANY](relate-many.md "RELATE MANY"), excepto que OLD RELATED MANY utiliza el valor anterior del campo Uno para establecer la relación.<!-- END REF-->OLD RELATED MANY utiliza el valor anterior del campo Muchos, tal como lo devuelve la función [Old](old.md "Old"). Para mayor información, consulte la descripción del comando [Old](old.md "Old").
+<!--REF #_command_.OLD RELATED MANY.Summary-->OLD RELATED MANY funciona de la misma forma que [RELATE MANY](relate-many.md "RELATE MANY"), excepto que OLD RELATED MANY utiliza el valor anterior del campo Uno para establecer la relación.<!-- END REF--> 
+
+**Nota:** OLD RELATED MANY utiliza el valor anterior del campo Muchos, tal como lo devuelve la función [Old](old.md "Old"). Para mayor información, consulte la descripción del comando [Old](old.md "Old").
 
 OLD RELATED MANY cambia la selección de la tabla relacionada y selecciona el primer registro de la selección actual como registro actual.
 
@@ -23,14 +25,3 @@ OLD RELATED MANY cambia la selección de la tabla relacionada y selecciona el pr
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 263 |
-| Hilo seguro | &check; |
-| Modifica el registro actual ||
-| Modifica la selección actual ||
-| Prohibido en el servidor ||
-
-

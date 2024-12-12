@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 
 
 <!--REF #_command_.On Backup Shutdown database method.Summary-->**On Backup Shutdownデータベースメソッド**は、データベースのバックアップが終了するたびに呼び出されます。<!-- END REF-->バックアップが終了する理由には、コピーの終了、 ユーザによる中断、そしてエラーがあります。  

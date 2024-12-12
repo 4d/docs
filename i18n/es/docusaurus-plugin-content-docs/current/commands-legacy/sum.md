@@ -72,13 +72,3 @@ Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

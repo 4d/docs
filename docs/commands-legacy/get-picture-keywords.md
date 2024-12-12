@@ -33,12 +33,3 @@ If the picture does not contain keywords or IPTC/Keywords metadata, the command 
 
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [SET PICTURE METADATA](set-picture-metadata.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1142 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

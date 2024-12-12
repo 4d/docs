@@ -40,12 +40,3 @@ A instrução abaixo devolverá “PI” em *vNom* e “TextProcess” em *vValo
 
 [SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 875 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

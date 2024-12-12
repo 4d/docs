@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->El comando EXECUTE METHOD IN SUBFORM permite ejecutar el código desigando por *formula* en el contexto del subformulario *objetoSubform*.<!-- END REF-->   
@@ -72,14 +75,3 @@ Si este método se utilizó directamente en el método del formulario Calendar, 
 #### Variables y conjuntos del sistema 
 
 Si este comando se ejecuta correctamente, la variable sistema OK toma el valor 1; de lo contrario toma el valor 0.
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1085 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

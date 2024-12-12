@@ -49,14 +49,3 @@ The following example mails letters to 50 of the worst customers and then to 50 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 350 |
-| Thread safe | &check; |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
-

@@ -24,12 +24,3 @@ Automaticamente, as asserções estão ativas mas é possível desativá-las uti
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1130 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

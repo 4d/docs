@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### 
 
 <!--REF #_command_.On Exit database method.Summary-->The **On Exit database method** is called once when you quit a database.<!-- END REF-->
@@ -105,12 +108,3 @@ The following example shows a typical case where you launch one or more backgrou
 
 [On Startup database method](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 905252 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

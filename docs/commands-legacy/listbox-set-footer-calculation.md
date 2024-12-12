@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->The **LISTBOX SET FOOTER CALCULATION** command sets the automatic calculation associated with the footer of the list box designated by the *object* and *\** parameters
@@ -49,12 +52,3 @@ If the data type of a column or of even one column of the list box (when object 
 #### See also 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1140 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

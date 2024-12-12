@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.After.Summary-->**After** はAfter 実行サイクルでTrue を返します。<!-- END REF-->
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Form event code](form-event-code.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 31 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

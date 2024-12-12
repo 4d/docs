@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET MACRO PARAMETER.Summary-->La commande **SET MACRO PARAMETER** insère le texte *paramTexte* dans la méthode depuis laquelle elle a été appelée.<!-- END REF-->
@@ -56,12 +59,3 @@ Cette macro construit un nouveau texte qui sera retourné à la méthode appelan
 #### Voir aussi 
 
 [GET MACRO PARAMETER](get-macro-parameter.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 998 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

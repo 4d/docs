@@ -45,12 +45,3 @@ Este exemplo ilustra as duas sintaxes do comando:
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 967 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

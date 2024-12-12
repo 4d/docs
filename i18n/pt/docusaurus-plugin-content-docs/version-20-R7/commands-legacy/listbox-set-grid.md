@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->O comando **LISTBOX SET GRID** lhe permite mostrar ou ocultar as linhas horizontais e verticais que compõe a matriz no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 
@@ -29,12 +32,3 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos que indicam
 [LISTBOX GET GRID](listbox-get-grid.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 841 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

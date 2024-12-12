@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Printing page.Summary-->**Printing page** returns the printing page number.<!-- END REF--> It can be used only when you are printing with [PRINT SELECTION](print-selection.md) or the Print menu in the Design environment.
@@ -37,12 +40,3 @@ The following example changes the position of the page numbers on a report so th
 #### See also 
 
 [PRINT SELECTION](print-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 275 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

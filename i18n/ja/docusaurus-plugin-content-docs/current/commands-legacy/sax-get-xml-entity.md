@@ -48,13 +48,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SAX Get XML node](sax-get-xml-node.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 879 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

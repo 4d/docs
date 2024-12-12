@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->La commande **METHOD SET ATTRIBUTE** permet de définir la valeur d'un ou plusieurs attribut(s) *typeAttribut* pour la méthode projet désignée par le paramètre *chemin*.<!-- END REF--> Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée. 
@@ -67,12 +70,3 @@ Définition de plusieurs paires attribut/valeur :
 *Accès objets développement*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1192 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

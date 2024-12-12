@@ -42,12 +42,3 @@ Refer to examples of the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) c
 #### See also 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 812 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

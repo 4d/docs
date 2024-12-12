@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->O comando **LISTBOX SET GRID COLOR** lhe permite modificar a cor da grade do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -35,12 +38,3 @@ Os parâmetros *horizontal* e *vertical* lhe permitem especificar as linhas as q
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 842 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -35,12 +35,3 @@ In multi-user and multi-process environments, when you need to modify an existin
 [Locked](locked.md)  
 *Record Locking*  
 [UNLOAD RECORD](unload-record.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 52 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

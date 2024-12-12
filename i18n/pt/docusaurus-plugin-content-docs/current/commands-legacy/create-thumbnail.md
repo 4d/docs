@@ -58,13 +58,3 @@ O parâmetro *profundidade* é ignorado e portanto deve ser omitido. O comando s
 O parâmetro opcional *profundidade* define o número de cores em Mac OS (ou seja, a profundidade de tela) a conservar na miniatura resultante. O parâmetro é um inteiro igual ao número de bits por píxel: 1, 2, 4, 8, 16 ou 32\. Introduza 0 para utilizar a profundidade de tela atual (valor padrão).
 
 **Nota:** Em Windows, se ignora o parâmetro *profundidade*; o comando sempre utiliza a profundidade de tela atual.
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 679 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

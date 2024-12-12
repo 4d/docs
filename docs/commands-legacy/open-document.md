@@ -87,13 +87,3 @@ If you call **Open document** with a mode of 3, the function returns ?00:00:00? 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 264 |
-| Thread safe | &check; |
-| Modifies variables | OK, Document, error |
-| Forbidden on the server ||
-
-

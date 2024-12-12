@@ -69,13 +69,3 @@ If(Not($status.success))
 End if
 ```
 
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1723 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -32,12 +32,3 @@ displayed_sidebar: docs
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SET CHANNEL](set-channel.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 80 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

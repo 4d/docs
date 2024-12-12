@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Parse formula.Summary-->**Parse formula** ファンクションは、*formula* 引数で指定された4D フォーミュラを解析し、シンタックスをチェックし、正規化された形式で返します。<!-- END REF-->これにより、4D ランゲージあるいはストラクチャー要素(コマンド、定数、テーブル、フィールド、4D プラグインなど)の名前が変更された場合でも、フォーミュラが引き続き有効な状態を維持できます。
@@ -104,12 +107,3 @@ displayed_sidebar: docs
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *フォーミュラ内でのトークンの使用*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1576 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

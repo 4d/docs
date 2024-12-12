@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get application color scheme.Summary-->El comando **Get application color scheme** devuelve el nombre del esquema de color real en uso en el nivel de la aplicación.<!-- END REF--> 
@@ -43,12 +46,3 @@ Consulte la descripción del comando [SET APPLICATION COLOR SCHEME](set-applicat
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1763 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

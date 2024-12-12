@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Process state.Summary-->La commande **Process state** retourne le statut du process dont le numéro est passé dans *process*.<!-- END REF--> 
@@ -59,12 +62,3 @@ L'exemple suivant retourne le nom et le numéro de référence de chaque process
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 330 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

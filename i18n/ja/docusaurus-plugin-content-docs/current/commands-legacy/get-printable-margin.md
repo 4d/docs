@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PRINTABLE MARGIN.Summary-->GET PRINTABLE MARGIN コマンドは、[Print form](../commands/print-form.md)、[PRINT SELECTION](print-selection.md) そして [PRINT RECORD](print-record.md) コマンドに使用されるマージンの現在値を返します。<!-- END REF--> 
@@ -45,12 +48,3 @@ displayed_sidebar: docs
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 711 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -180,12 +180,3 @@ displayed_sidebar: docs
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 689 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

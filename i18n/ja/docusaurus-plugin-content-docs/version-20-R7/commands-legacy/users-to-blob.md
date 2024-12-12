@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**互換性に関する注記:* このコマンドはバイナリデータベースでのみ機能します。<!-- END REF-->プロジェクトデータベースにおいては空のBLOBが返されます。* 
@@ -31,13 +34,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [BLOB TO USERS](blob-to-users.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 849 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

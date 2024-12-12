@@ -222,12 +222,3 @@ displayed_sidebar: docs
 *Field and Variable Types*  
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1224 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

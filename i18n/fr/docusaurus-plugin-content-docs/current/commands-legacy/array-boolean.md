@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY BOOLEAN.Summary-->La commande **ARRAY BOOLEAN** crée et/ou redimensionne un tableau d'éléments de type [Booléen](# "Peut être VRAI ou FAUX") en mémoire.<!-- END REF-->est le nom du tableau.
+<!--REF #_command_.ARRAY BOOLEAN.Summary-->La commande **ARRAY BOOLEAN** crée et/ou redimensionne un tableau d'éléments de type [Booléen](# "Peut être VRAI ou FAUX") en mémoire.<!-- END REF-->
+
+* Le paramètre *nomTableau* est le nom du tableau.
 * Le paramètre *taille* est le nombre d'éléments du tableau.
 * Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, *taille* spécifie le nombre de lignes et *taille2* spécifie le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau.
 
@@ -58,12 +60,3 @@ Cet exemple crée un tableau interprocess de 50 éléments de type Booléen et a
 #### Voir aussi 
 
 [ARRAY INTEGER](array-integer.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 223 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

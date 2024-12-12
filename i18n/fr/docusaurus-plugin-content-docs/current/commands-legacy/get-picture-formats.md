@@ -46,12 +46,3 @@ Vous souhaitez connaître les formats de l'image stockée dans un champ Image de
 #### Voir aussi 
 
   
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1406 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

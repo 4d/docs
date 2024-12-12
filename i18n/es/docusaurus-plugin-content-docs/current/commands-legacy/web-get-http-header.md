@@ -118,12 +118,3 @@ On Web Connection):
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 697 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

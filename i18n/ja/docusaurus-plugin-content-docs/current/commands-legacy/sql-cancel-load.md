@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->SQL CANCEL LOAD コマンドコマンドは、現在のSELECTリクエストを終了してパラメタを初期化します。<!-- END REF-->
@@ -51,13 +54,3 @@ displayed_sidebar: docs
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 824 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

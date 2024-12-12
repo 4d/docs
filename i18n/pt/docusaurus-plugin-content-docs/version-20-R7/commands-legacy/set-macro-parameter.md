@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET MACRO PARAMETER.Summary-->O comando SET MACRO PARAMETER insere o texto *paramText* no método desde o qual é chamado.<!-- END REF-->  
@@ -56,12 +59,3 @@ Esta macro cria um novo texto que será devolvido ao método que faz a chamada:
 #### Ver também 
 
 [GET MACRO PARAMETER](get-macro-parameter.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 998 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

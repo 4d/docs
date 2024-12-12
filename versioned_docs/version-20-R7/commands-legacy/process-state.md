@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Process state.Summary-->The **Process state** command returns the state of the process whose number you pass in *process*.<!-- END REF--> 
@@ -59,12 +62,3 @@ The following example puts the name and process reference number for each proces
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 330 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

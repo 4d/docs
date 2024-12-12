@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get title.Summary-->The OBJECT Get title command returns the title (label) of the form object(s) designated by *object*.<!-- END REF--> You can use this command with all types of simple objects that contain a label:
@@ -30,12 +33,3 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 #### See also 
 
 [OBJECT SET TITLE](object-set-title.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1068 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

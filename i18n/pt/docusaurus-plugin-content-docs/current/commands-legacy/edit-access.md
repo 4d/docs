@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS permite modificar o sistema de senhas.<!-- END REF--> Quando se executa este comando, a janela da caixa de ferramentas que contiver as páginas Usuários e Grupos é mostrada.  
@@ -34,12 +37,3 @@ O exemplo abaixo mostra ao usuário a janela de gestão de usuários e grupos:
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 281 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

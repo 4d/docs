@@ -34,12 +34,3 @@ Refer to the examples given for the [ENCRYPT BLOB](encrypt-blob.md) command.
 
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 690 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

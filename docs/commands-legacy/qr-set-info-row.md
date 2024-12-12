@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->The **QR SET INFO ROW** command shows/hides the row whose reference was passed in *row*.<!-- END REF-->
@@ -51,13 +54,3 @@ The following statement hides the detail row:
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 763 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

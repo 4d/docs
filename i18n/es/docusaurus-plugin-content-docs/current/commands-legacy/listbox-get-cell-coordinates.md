@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->El comando LISTBOX GET CELL COORDINATES devuelve en las variables o campos *izq*, *arriba*, *der* y *inf* las coordenadas (en puntos) de la celda designada por los parámetros *columna* y *linea*, en el list box definido por *\** y *objeto*.<!-- END REF-->
@@ -52,12 +55,3 @@ Usted quiere dibujar un rectángulo rojo alrededor de la celda seleccionada de u
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1330 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

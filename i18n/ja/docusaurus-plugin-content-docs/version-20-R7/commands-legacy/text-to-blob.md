@@ -19,7 +19,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.TEXT TO BLOB.Summary-->**TEXT TO BLOB**コマンドはテキスト値 *text*をBLOB *blob*に書き込みます。<!-- END REF-->引数を使用して、書き込むテキスト値の内部フォーマットと文字セットを指定できます。これを行うには、*BLOB*テーマの以下の定数のうちいずれかを*textFormat* 引数に渡します: 
+<!--REF #_command_.TEXT TO BLOB.Summary-->**TEXT TO BLOB**コマンドはテキスト値 *text*をBLOB *blob*に書き込みます。<!-- END REF-->
+
+*textFormat* 引数を使用して、書き込むテキスト値の内部フォーマットと文字セットを指定できます。これを行うには、*BLOB*テーマの以下の定数のうちいずれかを*textFormat* 引数に渡します: 
 
 | 定数                       | 型    | 値 |
 | ------------------------ | ---- | - |
@@ -103,12 +105,3 @@ displayed_sidebar: docs
 [INTEGER TO BLOB](integer-to-blob.md)  
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 554 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

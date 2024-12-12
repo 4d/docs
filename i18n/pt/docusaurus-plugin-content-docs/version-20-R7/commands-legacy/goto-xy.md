@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GOTO XY.Summary-->O comando GOTO XY se utiliza conjuntamente com o comando [MESSAGE](message.md "MESSAGE") quando mostra mensagens em uma janela aberta pelo comando [Open window](open-window.md "Open window").<!-- END REF-->  
@@ -58,12 +61,3 @@ Mostra a janela a seguir (em Macintosh) por 30 segundos:
 #### Ver também 
 
 [MESSAGE](message.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 161 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

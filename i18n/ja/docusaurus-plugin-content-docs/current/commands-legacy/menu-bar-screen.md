@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Menu bar screen.Summary-->Menu bar screen はメニューバーが表示されている画面の番号を返します。<!-- END REF-->
@@ -23,12 +26,3 @@ displayed_sidebar: docs
 
 [Count screens](count-screens.md)  
 [Menu bar height](menu-bar-height.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 441 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

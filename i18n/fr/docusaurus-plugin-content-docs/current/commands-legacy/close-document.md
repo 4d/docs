@@ -37,12 +37,3 @@ L'exemple suivant permet à l'utilisateur de créer un nouveau document, écrit 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 267 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

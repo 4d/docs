@@ -27,12 +27,3 @@ Este comando permite, por exemplo, recusar as tentativas de conexão em modo nã
 #### Ver também 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 698 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

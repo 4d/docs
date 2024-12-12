@@ -68,12 +68,3 @@ Utilisation de la commande **JSON TO SELECTION** pour ajouter des enregistrement
 #### Voir aussi 
 
 [Selection to JSON](selection-to-json.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1235 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

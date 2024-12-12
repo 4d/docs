@@ -42,13 +42,3 @@ VERIFY CURRENT DATA FILEコマンドを引数なしで呼び出すと、デフ�
 #### 参照 
 
 [VERIFY DATA FILE](verify-data-file.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1008 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document、error |
-| サーバー上での使用は不可 ||
-
-

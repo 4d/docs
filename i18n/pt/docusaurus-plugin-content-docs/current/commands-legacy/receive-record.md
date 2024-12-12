@@ -151,13 +151,3 @@ The OK system variable is set to 1 if the record is received. Otherwise, the OK 
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 79 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

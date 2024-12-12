@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->SET TEXT TO PASTEBOARD は、ペーストボードを消去し、*text*に渡したテキストのコピーをペーストボードに置きます。<!-- END REF-->
@@ -38,13 +41,3 @@ displayed_sidebar: docs
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 523 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

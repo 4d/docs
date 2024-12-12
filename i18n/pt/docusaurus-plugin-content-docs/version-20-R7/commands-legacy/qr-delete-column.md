@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->O comando QR DELETE COLUMN apaga da *area* a coluna cujo número se passou em *numColuna*.<!-- END REF--> Este comando não aplica aos relatórios de tabelas cruzadas.
@@ -34,13 +37,3 @@ O exemplo a seguir garante de que o relatório seja listado e apaga a terceira c
 #### Ver também 
 
 [QR INSERT COLUMN](qr-insert-column.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 749 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

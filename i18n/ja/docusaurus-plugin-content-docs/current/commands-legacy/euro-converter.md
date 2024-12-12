@@ -80,13 +80,3 @@ displayed_sidebar: docs
   //イタリアリラに変換
  $InLires:=Euro converter($value;French Franc;Italian Lire)
 ```
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 676 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

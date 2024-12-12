@@ -198,14 +198,3 @@ Each button calls the MULTILEVEL project method with a pointer to the correspond
 #### See also 
 
 [ORDER BY FORMULA](order-by-formula.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 49 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Changes current record ||
-| Forbidden on the server ||
-
-

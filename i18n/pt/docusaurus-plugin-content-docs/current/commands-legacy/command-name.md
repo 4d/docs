@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Command name.Summary-->O comando **Command name** retorna o nome do comando cujno número foi passado em *comando*.<!-- END REF-->O número de cada comando é indicado no Explorer assim como na área Propriedades desta documentação.
+<!--REF #_command_.Command name.Summary-->O comando **Command name** retorna o nome do comando cujno número foi passado em *comando*.<!-- END REF-->
+
+**Nota:** O número de cada comando é indicado no Explorer assim como na área Propriedades desta documentação.
 
 **Nota de Compatibilidade:** Já que o nome de comando pode variar entre versões de 4D (comandos renomeados) ou de acordo com a linguagem do aplicativo, pode ser útil designar um comando através de seu número, especialmente em porções de código não-tokenizadas. A utilidade do comando com respeito a esta necessidade diminui ao longo do tempo com a evolução de 4D, já que agora 4D oferece uma sintaxe token. Esta sintaxe token pode ser usada para evitar possíveis problemas por variações em nomes de comando, assim como outros elementos tais como tabelas, mas permitindo digitar os nomes em uma maneira legível (para saber mais, veja *Usar tokens em fórmulas* ). Além disso, de forma pré-determinada, a versão na língua inglesa a partir de 4D v15; entretanto, a opção "Use regional system settings" em [Is a list](is-a-list.md) das Preferências permite que continue a usar a linguagem francesa na versão francesa de 4D.  
   
@@ -100,13 +102,3 @@ Depois, para o comando "SAVE RECORD" (53) por exemplo, pode escrever:
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Processos 4D Preemptivos*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 538 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

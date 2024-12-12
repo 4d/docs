@@ -29,13 +29,3 @@ Sous Mac OS, si vous ne passez pas le paramètre optionnel *\**, la taille de la
 [Get document position](get-document-position.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET DOCUMENT SIZE](set-document-size.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 479 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

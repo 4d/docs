@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA REFRESH CURRENT URL.Summary-->El comando WA REFRESH CURRENT URL recarga el URL actual mostrado en el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->
@@ -21,12 +24,3 @@ displayed_sidebar: docs
 #### Ver también 
 
 [WA STOP LOADING URL](wa-stop-loading-url.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1023 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

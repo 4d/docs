@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get plugin access.Summary-->Get plugin accessコマンドは引数 *plugIn* に渡した番号を持つプラグインの使用を許可されているユーザグループの名前を返します。<!-- END REF-->プラグインに割り当てられているグループが存在しない場合、コマンドは空の文字列 ("") を返します。 
@@ -33,12 +36,3 @@ displayed_sidebar: docs
 
 [SET GROUP ACCESS](set-group-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 846 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

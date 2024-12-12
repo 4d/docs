@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->O comando WA SET EXTERNAL LINKS FILTERS permite estabelecer um ou mais filtros de links externos para a zona web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> Os filtros de links externos determinam se um URL associado a página atual através um link deve ser aberto na área web ou no navegador web por padrão da máquina.
@@ -73,12 +76,3 @@ Este exemplo combina os filtros de sites e de links externos:
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1032 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

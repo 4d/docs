@@ -61,12 +61,3 @@ No seguinte exemplo, a variável *numCampo* for igual ao número do campo de \[T
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 253 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

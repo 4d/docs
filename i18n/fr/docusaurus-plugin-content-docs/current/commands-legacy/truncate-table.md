@@ -38,15 +38,3 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 #### Voir aussi 
 
 [DELETE SELECTION](delete-selection.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1051 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Change l'enregistrement courant ||
-| Change la sélection courante ||
-| Interdite sur le serveur ||
-
-

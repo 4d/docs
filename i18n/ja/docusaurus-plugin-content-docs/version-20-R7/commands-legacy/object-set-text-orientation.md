@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->**OBJECT SET TEXT ORIENTATION**コマンドは、引数 *object* と *\** で指定したオブジェクトの方向を、カレントプロセスにおいて変更します。<!-- END REF-->
@@ -48,12 +51,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1284 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

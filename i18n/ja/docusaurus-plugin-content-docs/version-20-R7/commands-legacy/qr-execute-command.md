@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->**QR EXECUTE COMMAND** コマンドは、*command*に渡された参照番号のツールバーボタンコマンドを実行します。<!-- END REF-->このコマンドの最も一般的な使い方は、[QR ON COMMAND](qr-on-command.md) コマンド経由でコード内で受け取った、ユーザーが選択したコマンドを実行することです。
@@ -37,13 +40,3 @@ displayed_sidebar: docs
 
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 791 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

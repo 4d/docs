@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET RESOURCE.Summary-->El comando GET RESOURCE devuelve en el campo o la variable BLOB *resDatos* el contenido del recurso cuyo tipo y número se pasa en *resTipo* y *resNum*.<!-- END REF--> 
@@ -48,13 +51,3 @@ Si no hay suficiente memoria para cargar la imagen, se genera un error. Puede in
 #### Ver también 
 
 *Recursos*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 508 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

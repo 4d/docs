@@ -69,13 +69,3 @@ Si el comando no se llama en el contexto de una transacción, se genera un error
 #### Ver también 
 
 [QUERY](query.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 661 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

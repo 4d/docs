@@ -50,12 +50,3 @@ displayed_sidebar: docs
 
 [Field](field.md)  
 [Table](table.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 304 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

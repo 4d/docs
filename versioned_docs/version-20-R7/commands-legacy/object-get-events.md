@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->The **OBJECT GET EVENTS** command gets the current configuration of the form events for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -46,12 +49,3 @@ You want to enable two events and get the list of events for an object:
 #### See also 
 
 [OBJECT SET EVENTS](object-set-events.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1238 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

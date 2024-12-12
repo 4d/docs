@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get HTML template.Summary-->QR Get HTML template コマンドは、クイックレポート*area*に現在使用されているHTMLテンプレートを返します。<!-- END REF-->戻り値はテキスト値であり、HTMLテンプレートの全内容が納められます。
@@ -25,13 +28,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 751 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

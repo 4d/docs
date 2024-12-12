@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->**PRINT OPTION VALUES** コマンドは、*option* で定義した印刷オプションに対して利用可能な名前のリストを*namesArray* に返します。<!-- END REF-->またオプションとして、*info1Array* および *info2Array* 内にそれぞれの名前に対する追加の情報を取得することもできます。
@@ -53,12 +56,3 @@ displayed_sidebar: docs
 
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 785 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

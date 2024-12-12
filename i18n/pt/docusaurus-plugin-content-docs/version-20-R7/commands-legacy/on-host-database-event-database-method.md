@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->O **On Host Database Event database method** permite aos recipientes 4D executar código quando se abre e fecha a base local.<!-- END REF-->  

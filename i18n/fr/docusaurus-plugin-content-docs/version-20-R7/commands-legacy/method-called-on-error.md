@@ -45,12 +45,3 @@ Cette commande est particulièrement utile dans le cadre des composants, car ell
 
 *Gestionnaire d'erreur*  
 [ON ERR CALL](on-err-call.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 704 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

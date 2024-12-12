@@ -30,13 +30,3 @@ Tenga en cuenta que cuando OK toma el valor 0, la transacción automáticamente 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *Utilización de transacciones*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 240 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

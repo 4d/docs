@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->El comando **OBJECT Get indicator type** devuelve el tipo del indicador actual asignado al termómetro(s) designado por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -34,12 +37,3 @@ Puede comparar el valor devuelto por el comando con las siguientes constantes, q
 #### Ver también 
 
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1247 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

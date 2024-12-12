@@ -34,12 +34,3 @@ Ver el ejemplo del comando [RECEIVE RECORD](receive-record.md "RECEIVE RECORD").
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 78 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -82,13 +82,3 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML source](dom-parse-xml-source.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 720 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

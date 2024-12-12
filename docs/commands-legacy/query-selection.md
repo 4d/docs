@@ -43,15 +43,3 @@ You will find all companies located in New York City, with a Stock Exchange acti
 #### See also 
 
 [QUERY](query.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 341 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
-

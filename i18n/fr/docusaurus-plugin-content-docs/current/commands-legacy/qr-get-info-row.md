@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR Get info row.Summary-->La commande **QR Get info row** indique si la ligne désignée par le paramètre *ligne* est affichée ou masquée dans la *zone*.<!-- END REF--> 
@@ -39,13 +42,3 @@ Si le paramètre *ligne* est incorrect, l’erreur -9852 est générée.
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 769 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

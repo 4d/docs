@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->The OBJECT SET SCROLLBAR command allows you to display or hide the horizontal and/or vertical scrollbars in the object set using the *object* and *\** parameters.<!-- END REF-->
@@ -44,12 +47,3 @@ The following table indicates the values you can pass in the *horizontal* and *v
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 843 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

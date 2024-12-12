@@ -35,12 +35,3 @@ L'exemple suivant utilise la fonction **Char** pour insérer un retour chariot d
 [Character code](character-code.md)  
 *Codes Unicode*  
 *Symboles d'indice de chaîne*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 90 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

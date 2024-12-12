@@ -33,12 +33,3 @@ Para mayor información sobre componentes 4D, por favor consulte el *Manual de D
 #### Ver también 
 
 [PLUGIN LIST](plugin-list.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1001 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

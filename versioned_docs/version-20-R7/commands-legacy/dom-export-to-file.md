@@ -62,13 +62,3 @@ An error is generated when:
 
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 862 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

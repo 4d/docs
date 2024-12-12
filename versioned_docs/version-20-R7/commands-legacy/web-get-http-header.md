@@ -117,12 +117,3 @@ The following method allows getting any HTTP request header field content:
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 697 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

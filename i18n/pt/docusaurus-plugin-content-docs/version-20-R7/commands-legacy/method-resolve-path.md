@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->O comando **METHOD RESOLVE PATH** analisa a rota de acesso interna passada no parâmetro *rota* e devolve seus diferentes componentes nos parâmetros *tipoMetodo*, *ptrTabela*, *nomObjeto* e *nomObjetoForm*.<!-- END REF-->  
@@ -83,12 +86,3 @@ Resolução de uma rota de método de formulário tabela:
 #### Ver também 
 
 [METHOD Get path](method-get-path.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1165 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

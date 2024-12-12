@@ -24,12 +24,3 @@ See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) co
 #### See also 
 
 [System folder](system-folder.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 486 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

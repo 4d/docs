@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->O comando OBJECT Get font style devolve o estilo atual da fonte utilizada pelo objeto de formulário designado por *objeto*.<!-- END REF--> 
@@ -33,12 +36,3 @@ Pode comparar o valor retornado pelo comando com o valor de um ou mais das segui
 #### Ver também 
 
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1071 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

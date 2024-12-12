@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Summary-->The **OBJECT SET MAXIMUM VALUE** command modifies the maximum value of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> 
@@ -29,12 +32,3 @@ In *maxValue*, pass the new maximum value you want to assign to the object for t
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1244 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

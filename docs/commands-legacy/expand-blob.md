@@ -64,13 +64,3 @@ The OK variable is set to 1 if the BLOB has been successfully expanded, otherwis
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 535 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

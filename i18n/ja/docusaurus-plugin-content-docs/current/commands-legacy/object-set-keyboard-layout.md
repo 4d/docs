@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->**OBJECT SET KEYBOARD LAYOUT**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたキーボードレイアウトをカレントプロセス内で動的に変更します。<!-- END REF-->
@@ -26,12 +29,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get keyboard layout](object-get-keyboard-layout.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1179 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

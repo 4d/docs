@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WA OPEN BACK URL.Summary-->The **WA OPEN BACK URL** command loads the previous URL in the sequence of URLs opened into the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
@@ -24,12 +27,3 @@ If there is no previous URL, the command does nothing. You can test whether a pr
 
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 [WA OPEN URL](wa-open-url.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1021 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

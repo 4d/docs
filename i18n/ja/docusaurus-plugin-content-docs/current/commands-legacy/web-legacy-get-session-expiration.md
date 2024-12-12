@@ -38,12 +38,3 @@ displayed_sidebar: docs
 [WEB Get Current Session ID](web-get-current-session-id.md)  
 [WEB SET OPTION](web-set-option.md)  
 *Webセッション管理(旧式)*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1207 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

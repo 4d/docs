@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->O comando GET PICTURE FROM LIBRARY devolve no parâmetro *imagem* a imagem da biblioteca de imagens cujo número de referência se passa em *refImag* ou cujo nome se passa em *nomImag*.<!-- END REF-->
@@ -53,13 +56,3 @@ Se não houver suficiente memória para devolver a imagem, se gera o erro -108\.
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 565 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->La commande **MAXIMIZE WINDOW** provoque le zoom de la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, de toutes les fenêtres de l'application (sous Windows) ou de la fenêtre de premier plan du process courant (sous Mac OS).<!-- END REF--> 
@@ -80,12 +83,3 @@ Dans le contexte suivant, si l'utilisateur clique sur le bouton :
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 453 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

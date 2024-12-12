@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->**OBJECT GET RESIZING OPTIONS**コマンドは*object*と*\** 引数で指定したオブジェクトのカレントプロセスのリサイズオプションを返します。<!-- END REF-->
@@ -43,12 +46,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1176 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

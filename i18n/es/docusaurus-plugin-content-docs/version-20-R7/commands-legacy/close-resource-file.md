@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->El comando **CLOSE RESOURCE FILE** cierra el archivo de recursos cuyo número de referencia se pasa en *resArchivo*.<!-- END REF--> 
@@ -28,12 +31,3 @@ Recuerde llamar finalmente **CLOSE RESOURCE FILE** para un archivo de recursos q
 #### Ver también 
 
 [Open resource file](open-resource-file.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 498 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

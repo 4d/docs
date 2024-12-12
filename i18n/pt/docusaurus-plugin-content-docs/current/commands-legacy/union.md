@@ -51,12 +51,3 @@ Este exemplo adiciona registros ao conjunto de melhores clientes. Os registros s
 
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 120 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

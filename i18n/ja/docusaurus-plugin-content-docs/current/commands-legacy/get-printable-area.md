@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->GET PRINTABLE AREA コマンドは、印刷可能領域のサイズを引数*height*および*width*へピクセル単位で返します。<!-- END REF-->このサイズは、現在の印刷設定、用紙方向等によって異なります。
@@ -38,12 +41,3 @@ displayed_sidebar: docs
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Print form](../commands/print-form.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 703 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

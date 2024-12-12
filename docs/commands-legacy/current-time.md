@@ -49,11 +49,3 @@ The following example extracts the hours, minutes, and seconds from the current 
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Tickcount](tickcount.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 178 |
-| Thread safe | &check; |
-
-

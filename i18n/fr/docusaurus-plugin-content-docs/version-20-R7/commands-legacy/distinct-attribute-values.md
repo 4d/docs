@@ -95,12 +95,3 @@ Le tableau *aLChildNum* reçoit les éléments suivants :
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1397 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->El comando SQL LOGOUT cierra la conexión con una fuente ODBC abierta en el proceso actual (si aplica).<!-- END REF--> Si no hay conexión ODBC abierta, el comando no hace nada.
@@ -23,13 +26,3 @@ Si la conexión se cierra correctamente, la variable sistema OK toma el valor 1;
 #### Ver también 
 
 [SQL LOGIN](sql-login.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 872 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

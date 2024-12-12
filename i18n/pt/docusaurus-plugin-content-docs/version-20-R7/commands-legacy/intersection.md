@@ -48,11 +48,3 @@ O exemplo a seguir pesquisa os clientes que são atendidos por dois representant
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 121 |
-| Thread-seguro | &check; |
-
-

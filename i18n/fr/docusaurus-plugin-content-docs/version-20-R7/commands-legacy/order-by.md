@@ -201,14 +201,3 @@ Quelle que soit la manière dont le tri est défini, si l'opération risque de p
 #### Voir aussi 
 
 [ORDER BY FORMULA](order-by-formula.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 49 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Change l'enregistrement courant ||
-| Interdite sur le serveur ||
-
-

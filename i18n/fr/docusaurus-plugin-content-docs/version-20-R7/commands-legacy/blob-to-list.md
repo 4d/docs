@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.BLOB to list.Summary-->**BLOB to list** crée une nouvelle liste hiérarchique avec les données stockées dans le BLOB *blob* à l'offset d'octet (à partir de zéro) spécifié par *offset* et retourne un numéro de référence de liste hiérarchique pour cette nouvelle liste.<!-- END REF-->
@@ -59,13 +62,3 @@ La variable OK prend la valeur 1 si la liste a été correctement créée, sinon
 #### Voir aussi 
 
 [LIST TO BLOB](list-to-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 557 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

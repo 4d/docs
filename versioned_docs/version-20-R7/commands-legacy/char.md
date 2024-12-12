@@ -35,12 +35,3 @@ The following example uses **Char** to insert a carriage return within the text 
 [Character code](character-code.md)  
 *Character Reference Symbols*  
 *Unicode Codes*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 90 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->La commande **CLOSE PRINTING JOB** permet de refermer la tâche d’impression préalablement ouverte par la commande [OPEN PRINTING JOB](open-printing-job.md) et d’envoyer à l’imprimante courante le document d’impression éventuellement construit.<!-- END REF-->
@@ -21,12 +24,3 @@ displayed_sidebar: docs
 #### Voir aussi 
 
 [OPEN PRINTING JOB](open-printing-job.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 996 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

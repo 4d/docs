@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->The **OBJECT SET CONTEXT MENU** command enables or disables, for the current process, the association of a context menu by default with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -28,12 +31,3 @@ Pass **True** in the *contextMenu* parameter to enable the context menu, and **F
 #### See also 
 
 [OBJECT Get context menu](object-get-context-menu.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1251 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->SET WINDOW TITLE コマンドは*window* に渡した参照番号のウィンドウのタイトルを、*title*に渡したテキストに変更します (最大80文字)。<!-- END REF-->
@@ -49,12 +52,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Get window title](get-window-title.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 213 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

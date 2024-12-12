@@ -28,12 +28,3 @@ Ver o exemplo de [Semaphore](semaphore.md "Semaphore").
 *Semáforos e Sinais*  
 [Semaphore](semaphore.md)  
 [Test semaphore](test-semaphore.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 144 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

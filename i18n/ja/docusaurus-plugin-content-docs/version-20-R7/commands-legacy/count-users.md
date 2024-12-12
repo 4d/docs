@@ -23,11 +23,3 @@ displayed_sidebar: docs
 
 [Count tasks](count-tasks.md)  
 [Count user processes](count-user-processes.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 342 |
-| スレッドセーフである | &check; |
-
-

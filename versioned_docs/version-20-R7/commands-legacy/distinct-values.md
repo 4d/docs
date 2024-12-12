@@ -82,11 +82,3 @@ To compute statistics, you want to sort the number of distinct values in a field
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 339 |
-| Thread safe | &check; |
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->O comando **EDIT FORMULA** mostra o editor de fórmulas com o propósito de permitir ao usuário escrever ou modificar uma fórmula.<!-- END REF--> O editor contém ao abrir:
@@ -53,13 +56,3 @@ Se o usuário valida a caixa de diálogo, a variável de sistema OK toma o valor
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 806 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

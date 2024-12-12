@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE cambia la página actual de un formulario para mostrar la última página del formulario.<!-- END REF--> Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](form-load.md), o si ya se muestra la última página del formulario, FORM LAST PAGE no hace nada.
@@ -31,12 +34,3 @@ El siguiente ejemplo es un método de una línea, llamado por un comando de men�
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 251 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -51,13 +51,3 @@ Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON E
 [Create document](create-document.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [Open document](open-document.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 526 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

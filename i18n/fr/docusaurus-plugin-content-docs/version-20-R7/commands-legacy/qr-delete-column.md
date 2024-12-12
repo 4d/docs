@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->La commande **QR DELETE COLUMN** supprime de la *zone* la colonne dont le numéro a été passé dans *numColonne*.<!-- END REF--> Cette commande ne peut pas être utilisée avec les états en tableau croisé.
@@ -34,13 +37,3 @@ Cet exemple supprime la troisième colonne de l'état :
 #### Voir aussi 
 
 [QR INSERT COLUMN](qr-insert-column.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 749 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

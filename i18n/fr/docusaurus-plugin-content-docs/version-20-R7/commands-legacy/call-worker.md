@@ -76,12 +76,3 @@ Voici le code de *méthodeWorker* :
 [CALL FORM](call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1389 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

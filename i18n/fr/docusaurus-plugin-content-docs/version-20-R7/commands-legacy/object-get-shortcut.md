@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->La commande **OBJECT GET SHORTCUT** retourne l’équivalent clavier associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -40,12 +43,3 @@ Si aucune touche de modification n’a été définie dans l’équivalent clavi
 #### Voir aussi 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1186 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

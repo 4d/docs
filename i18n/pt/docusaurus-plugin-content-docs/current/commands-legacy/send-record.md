@@ -34,12 +34,3 @@ O registro completo é enviado. Isso significa que imagens e BLOBs armazenados o
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 78 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

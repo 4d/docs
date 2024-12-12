@@ -39,12 +39,3 @@ O seguinte exemplo em Cliente/Servidor, copia o conjunto processo "*ConjuntoA*",
 #### Ver também 
 
 *Conjuntos*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 600 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

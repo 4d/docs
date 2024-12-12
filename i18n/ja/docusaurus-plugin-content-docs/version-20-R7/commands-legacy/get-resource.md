@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET RESOURCE.Summary-->GET RESOURCE コマンドは、*resType*と*resID*に渡されるタイプとIDを持つリソースの内容を、BLOBフィールドまたはBLOB変数の*resData*に返します。<!-- END REF-->
@@ -48,13 +51,3 @@ SET RESOURCEコマンドの例題参照
 #### 参照 
 
 *リソース*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 508 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

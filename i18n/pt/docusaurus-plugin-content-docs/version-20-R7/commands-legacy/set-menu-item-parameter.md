@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->O comando SET MENU ITEM PARAMETER permite associar uma cadeia de caracteres personalizada com uma linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> 
@@ -41,12 +44,3 @@ Este código oferece um menu que inclui os nomes das janelas abertas e permite r
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1004 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.EXPORT DATA.Summary-->**EXPORT DATA**コマンドは、データを*fileName*ファイルに書き出します。<!-- END REF-->4Dからは以下のフォーマットでデータの書き出しを行えます: テキスト、固定長テキスト、XML、SYLK、DIF、DBF（dBase）および4Dフォーマット
@@ -97,13 +100,3 @@ displayed_sidebar: docs
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DATA](import-data.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 666 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document |
-| サーバー上での使用は不可 ||
-
-

@@ -80,12 +80,3 @@ Consulte el ejemplo de la rutina [PICTURE TO BLOB](picture-to-blob.md).
 #### Ver también 
 
 [WEB SEND FILE](web-send-file.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 654 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

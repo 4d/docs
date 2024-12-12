@@ -36,12 +36,3 @@ displayed_sidebar: docs
 
 [String](string.md)  
 [Time](time.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 180 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

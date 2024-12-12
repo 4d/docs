@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Set group properties.Summary-->**Set group properties** vous permet de modifier et de mettre à jour les propriétés d'un groupe existant dont vous passez le numéro de référence unique dans *réfGroupe*, ou d'ajouter un nouveau groupe.<!-- END REF-->
@@ -56,13 +59,3 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **Set group
 [GET GROUP LIST](get-group-list.md)  
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 614 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

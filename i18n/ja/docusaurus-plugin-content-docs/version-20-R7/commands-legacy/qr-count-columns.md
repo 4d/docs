@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Count columns.Summary-->QR Count columns コマンドは、クイックレポート*area*に存在するカラムの数を返します。<!-- END REF-->
@@ -33,13 +36,3 @@ displayed_sidebar: docs
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 [QR INSERT COLUMN](qr-insert-column.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 764 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

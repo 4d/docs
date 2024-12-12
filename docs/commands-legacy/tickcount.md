@@ -15,7 +15,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Tickcount.Summary-->Tickcount returns the number of ticks (60th of a second) elapsed since the machine was started.<!-- END REF-->Tickcount returns a value of type Long Integer.
+<!--REF #_command_.Tickcount.Summary-->Tickcount returns the number of ticks (60th of a second) elapsed since the machine was started.<!-- END REF-->
+
+**Note:** Tickcount returns a value of type Long Integer.
 
 #### Example 
 
@@ -25,12 +27,3 @@ See example for the command [Milliseconds](milliseconds.md).
 
 [Current time](current-time.md)  
 [Milliseconds](milliseconds.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 458 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

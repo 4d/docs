@@ -47,13 +47,3 @@ Deleting a document sets the OK system variable to 1\. If **DELETE DOCUMENT** ca
 #### See also 
 
 [Test path name](test-path-name.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 159 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

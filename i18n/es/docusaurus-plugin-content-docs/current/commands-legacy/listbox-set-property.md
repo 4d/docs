@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->El comando **LISTBOX SET PROPERTY** define el valor de la propiedad de la columna list box o list box especificada utilizando los parámetros objeto y \*.<!-- END REF-->
@@ -84,12 +87,3 @@ Usted desea definir el ancho máximo de la columna "ProductNumber":
   
 *Listbox*  
 [LISTBOX Get property](listbox-get-property.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1440 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

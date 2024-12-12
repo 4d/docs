@@ -30,13 +30,3 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 [SAX Get XML node](sax-get-xml-node.md)  
 [SAX SET XML DECLARATION](sax-set-xml-declaration.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 873 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

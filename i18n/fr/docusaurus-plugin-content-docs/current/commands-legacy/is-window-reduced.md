@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Is window reduced.Summary-->La commande **Is window reduced** retourne **Vrai** si la fenêtre dont le numéro de référence est passé dans *window* est actuellement réduite dans la barre des tâches (Windows) ou dans le dock (macOS), et **Faux** dans le cas contraire.<!-- END REF-->
@@ -22,12 +25,3 @@ displayed_sidebar: docs
 
 [Is window maximized](is-window-maximized.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1831 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -58,12 +58,3 @@ Vous voulez sélectionner les styles de la famille de police "Verdana" (si elle 
 #### Voir aussi 
 
 [FONT LIST](font-list.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1362 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

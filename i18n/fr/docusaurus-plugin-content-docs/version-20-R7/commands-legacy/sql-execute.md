@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->La commande **SQL EXECUTE** permet d’exécuter une commande SQL et d’associer le résultat à des objets 4D (tableaux, variables ou champs) liés.<!-- END REF--> 
@@ -158,13 +161,3 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 #### Voir aussi 
 
 [SQL LOAD RECORD](sql-load-record.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 820 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

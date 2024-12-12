@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->O comando **REDUCE RESTORE WINDOW** reduz/expande a janela cujo número de referência foi passado em *janela d*esde a barra de tarefas em Windows ou no dock em macOS.<!-- END REF-->   
@@ -29,12 +32,3 @@ O comando muda o estado da janela:
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1829 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

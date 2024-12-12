@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.Month of.Summary-->O comando Month of retorna o mês de *data*.<!-- END REF-->Month of retorna o número do mês, não o nome. (ver exemplo 1).
+<!--REF #_command_.Month of.Summary-->O comando Month of retorna o mês de *data*.<!-- END REF-->
+
+**Nota:** Month of retorna o número do mês, não o nome. (ver exemplo 1).
 
 Para comparar o valor retornado por esta função, 4D oferece as seguintes constantes pré-definidas, que se encontram no tema "Days and Months":
 
@@ -52,12 +54,3 @@ Ver o exemplo do comando [Current date](current-date.md "Current date").
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 24 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

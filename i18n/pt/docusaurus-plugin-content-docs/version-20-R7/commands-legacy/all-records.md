@@ -34,14 +34,3 @@ O exemplo a seguir mostra todos os registros da tabela \[Pessoas\]:
 [QUERY](query.md)  
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 47 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Modificar a seleção atual ||
-| Proibido no servidor ||
-
-

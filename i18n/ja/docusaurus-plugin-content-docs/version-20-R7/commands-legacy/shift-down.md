@@ -51,12 +51,3 @@ displayed_sidebar: docs
 [Macintosh option down](macintosh-option-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 543 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -41,14 +41,3 @@ Este es el código del botón **Compare**:
 ```4d
  $equal :=Equal pictures($pict1;$pict2;$mask)
 ```
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1196 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

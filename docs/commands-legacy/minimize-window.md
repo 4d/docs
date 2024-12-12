@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->The MINIMIZE WINDOW command sets the size of the window whose number is passed as *window* to the size it was before being maximized.<!-- END REF--> If *window* is omitted, the command applies to each window of the application (Windows) or to the frontmost window of the process (on Mac OS).
@@ -47,12 +50,3 @@ Mac OS
 
 [MAXIMIZE WINDOW](maximize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 454 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

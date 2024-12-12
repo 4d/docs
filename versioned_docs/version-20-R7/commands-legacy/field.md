@@ -24,7 +24,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Field.Summary-->The **Field** command has two forms:
 
-* If you pass a table number in *tableNum* and a field number in fieldNum, **Field** returns a pointer to the field.<!-- END REF-->returns the field number of the field.
+* If you pass a table number in *tableNum* and a field number in fieldNum, **Field** returns a pointer to the field.<!-- END REF-->
+* If you pass a field pointer in *fieldPtr*, **Field** returns the field number of the field.
 
 #### Example 1 
 
@@ -56,12 +57,3 @@ The following example sets the *FieldNum* variable to the field number of \[Tabl
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 253 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

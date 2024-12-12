@@ -34,12 +34,3 @@ Consulte os exemplos dados para o comando .
 
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 690 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

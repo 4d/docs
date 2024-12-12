@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Frontmost process.Summary-->**Frontmost process** retourne le numéro du process dont la ou les fenêtre(s) est (sont) au premier plan.<!-- END REF--> 
@@ -33,12 +36,3 @@ Référez-vous à l'exemple de [BRING TO FRONT](bring-to-front.md).
 
 [BRING TO FRONT](bring-to-front.md)  
 [WINDOW LIST](window-list.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 327 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

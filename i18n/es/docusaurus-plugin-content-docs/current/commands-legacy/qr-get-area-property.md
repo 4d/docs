@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR Get area property.Summary-->El comando **QR Get area property** devuelve 0 si no se muestra el elemento de interfaz pasado en *propiedad*; de lo contrario, devuelve 1.<!-- END REF-->
@@ -34,13 +37,3 @@ Si el parámetro *propiedad* es incorrecto, se genera el error -9852.
 #### Ver también 
 
 [QR SET AREA PROPERTY](qr-set-area-property.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 795 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

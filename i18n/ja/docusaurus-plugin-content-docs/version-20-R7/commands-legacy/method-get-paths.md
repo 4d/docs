@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->**METHOD GET PATHS**コマンドはアプリケーションのうち、*methodType*引数で指定したタイプであるメソッドの内部的なパス名と名前を*arrPaths*配列に返します。<!-- END REF-->
@@ -84,12 +87,3 @@ displayed_sidebar: docs
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1163 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

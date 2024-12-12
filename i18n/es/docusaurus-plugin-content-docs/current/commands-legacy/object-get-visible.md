@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get visible.Summary-->El comando OBJECT Get visible devuelve True si el objeto o grupo de objetos designado por *objeto* tiene el atributo visible y de lo contrario False.<!-- END REF-->  
@@ -24,12 +27,3 @@ Si pasa el parámetro opcional *\**, indica que el parámetro objeto es un nombr
 #### Ver también 
 
 [OBJECT SET VISIBLE](object-set-visible.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1075 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

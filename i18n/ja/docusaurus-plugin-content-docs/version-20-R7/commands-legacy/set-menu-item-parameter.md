@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->SET MENU ITEM PARAMETERコマンドは、*menu*と*menuItem*引数で指定されたメニュー項目に、カスタム文字列を設定するために使用します。<!-- END REF-->
@@ -41,12 +44,3 @@ displayed_sidebar: docs
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1004 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

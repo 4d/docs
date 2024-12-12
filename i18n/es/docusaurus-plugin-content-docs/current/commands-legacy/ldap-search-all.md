@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->El comando **LDAP SEARCH ALL** busca todas las ocurrencias que coinciden con los criterios definidos en el servidor LDAP objetivo.<!-- END REF--> Este comando debe ser ejecutado dentro de una conexión a un servidor LDAP abierta con *LDAP LOGIN*; de lo contrario se devuelve un error 1003.
@@ -115,12 +118,3 @@ Estos ejemplos ilustran el uso del parámetro *atributosEnArray*:
 
 *LDAP*  
 [LDAP Search](ldap-search.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1329 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

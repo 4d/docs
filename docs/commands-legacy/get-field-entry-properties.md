@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->The GET FIELD ENTRY PROPERTIES command returns the data entry properties for the field specified by *tableNum* and *fieldNum* or by *fieldPtr*.<!-- END REF-->  
@@ -41,12 +44,3 @@ If there is no choice list associated to the field or if the field type is not s
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 685 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

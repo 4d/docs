@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->GET ALLOWED METHODS コマンドは、フォーミュラの作成に使用できるメソッド名を引数*methodsArray*に返します。<!-- END REF-->これらのメソッドは、エディタ上のコマンドリストの最後に一覧表示されます。 
@@ -43,12 +46,3 @@ GET ALLOWED METHODSコマンドは、[SET ALLOWED METHODS](../commands/set-allow
 #### 参照 
 
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 908 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

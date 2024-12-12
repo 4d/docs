@@ -47,12 +47,3 @@ The following code waits up to 5 seconds for a locked record to become unlocked 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 459 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

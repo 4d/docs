@@ -42,12 +42,3 @@ Se quiser deter o processo selecionado da coleção de processos que são mostra
 #### Ver também 
 
 [PAUSE PROCESS](pause-process.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1634 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

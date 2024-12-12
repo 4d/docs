@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->El comando GET PICTURE FROM LIBRARY devuelve en el parámetro *imagen* la imagen de la librería de imágenes cuyo número de referencia se pasa en *refImag* o cuyo nombre se pasa en *nomImag*.<!-- END REF-->
@@ -53,13 +56,3 @@ Si no hay suficiente memoria para devolver la imagen, se genera el error -108\. 
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 565 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

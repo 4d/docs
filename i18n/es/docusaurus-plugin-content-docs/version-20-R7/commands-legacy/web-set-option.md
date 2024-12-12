@@ -80,12 +80,3 @@ Una entrada registrada se ve así:
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 5 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->**LISTBOX MOVE COLUMN**コマンドは、 *object* と *\** によって指定された列を、プログラムによって実行中のフォームにおいて移動させます。<!-- END REF-->(アプリケーションモード)デザインモードで生成されたオリジナルのフォームは変更されません。
@@ -40,12 +43,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1274 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

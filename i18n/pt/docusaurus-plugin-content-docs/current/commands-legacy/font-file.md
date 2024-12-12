@@ -48,12 +48,3 @@ You want to make sure the font used in a text area is available on the user syst
 #### Ver também 
 
 [OBJECT SET FONT](object-set-font.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1700 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

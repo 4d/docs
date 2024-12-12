@@ -100,13 +100,3 @@ The *OK* system variable returns 1 if the retrieval of the metadata has proceede
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1122 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

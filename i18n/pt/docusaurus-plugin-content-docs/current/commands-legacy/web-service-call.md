@@ -172,13 +172,3 @@ Se a petição for corretamente encaminhada, e o Web Service a aceitar, a variá
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 778 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

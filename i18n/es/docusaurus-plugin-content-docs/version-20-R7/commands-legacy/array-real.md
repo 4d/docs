@@ -59,12 +59,3 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo Real y asigna a 
 
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY LONGINT](array-longint.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 219 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

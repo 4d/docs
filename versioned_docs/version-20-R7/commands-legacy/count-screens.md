@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Count screens.Summary-->The Count screens command returns the number of screen monitors connected to your machine.<!-- END REF-->
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 [SCREEN DEPTH](screen-depth.md)  
 [Screen height](screen-height.md)  
 [Screen width](screen-width.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 437 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

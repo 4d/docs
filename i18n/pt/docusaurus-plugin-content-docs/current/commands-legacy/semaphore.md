@@ -154,12 +154,3 @@ Sintaxe:
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 *Semáforos e Sinais*  
 [Test semaphore](test-semaphore.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 143 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

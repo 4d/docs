@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->The **SET WINDOW TITLE** command changes the title of the window whose reference number is passed in *window* to the text passed in *title* (max. length 80 characters).<!-- END REF-->
@@ -49,12 +52,3 @@ While performing data entry in a form, you click on a button that executes a len
 #### See also 
 
 [Get window title](get-window-title.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 213 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

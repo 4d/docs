@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Structure file.Summary-->The **Structure file** command returns the pathname of the structure file for the database with which you are currently working.<!-- END REF-->file.
+<!--REF #_command_.Structure file.Summary-->The **Structure file** command returns the pathname of the structure file for the database with which you are currently working.<!-- END REF-->
+
+* With binary databases, the command returns the pathname of the **.4db** file.
 * With project databases, the command returns the pathname of the **.4dproject** file.
 
 **Note:** In the particular case of a database that has been compiled and merged with 4D Volume Desktop, this command returns the pathname of the application file (executable application) under Windows and macOS. Under macOS, this file is located inside the software package, in the \[Contents:Mac OS\] folder. This stems from a former mechanism and is kept for compatibility reasons. If you want to get the full name of the software package itself, it is preferable to use the [Application file](application-file.md) command. The technique consists of testing the application using the [Application type](application-type.md) command, then executing **Structure file** or [Application file](application-file.md) depending on the context.
@@ -65,11 +67,3 @@ The following example can be used to find out whether the method is called from 
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 489 |
-| Thread safe | &check; |
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Deactivated.Summary-->**Deactivated** retourne Vrai dans une méthode formulaire ou méthode objet lorsque la fenêtre appartenant au process du premier plan, contenant le formulaire, passe à l'arrière-plan.<!-- END REF-->
@@ -25,12 +28,3 @@ Si vous voulez que le cycle d'exécution **Deactivated** soit généré, vérifi
 
 [Activated](activated.md)  
 [Form event code](../commands/form-event-code.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 347 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

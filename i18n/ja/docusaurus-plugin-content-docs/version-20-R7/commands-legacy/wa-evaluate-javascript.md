@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->WA Evaluate JavaScript コマンドは、*\** と *object* 引数で指定したWebエリアで、*jsCode*に渡されたJavaScriptコードを実行し、結果を戻します。<!-- END REF-->このコマンドはページが読み込まれた後に呼び出してください(On End URL Loading フォームイベントが生成されている必要があります)。
@@ -101,12 +104,3 @@ HTML ファイル内にあるJavaScriptファンクションの例:
 #### 参照 
 
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1029 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

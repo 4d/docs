@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->The SQL SET PARAMETER command allows the use of a 4D variable, array or field value in SQL requests.<!-- END REF-->
@@ -76,14 +79,3 @@ Same example as the previous one, but using the SQL SET PARAMETER command:
 #### System variables and sets 
 
 If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 823 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

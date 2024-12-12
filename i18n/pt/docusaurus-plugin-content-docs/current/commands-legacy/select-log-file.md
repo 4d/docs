@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->O comando **SELECT LOG FILE** cria, ou fecha o arquivo de histórico de acordo com o valor que se passe em *historico*.<!-- END REF-->
@@ -38,13 +41,3 @@ OK recebe o valor 1 se o arquivo de histórico é criado ou fechado corretamente
 #### Ver também 
 
 [ON ERR CALL](on-err-call.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 345 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

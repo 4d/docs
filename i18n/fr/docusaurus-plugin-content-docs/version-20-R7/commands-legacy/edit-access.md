@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->**EDIT ACCESS** permet de modifier le système de mots de passe.<!-- END REF--> Lorsque cette commande est exécutée, la fenêtre de la boîte à outils de 4D contenant les pages Utilisateurs et Groupes est appelée pour modifier les privilèges.
@@ -34,12 +37,3 @@ L'exemple suivant affiche la fenêtre de gestion des utilisateur et des groupes 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 281 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

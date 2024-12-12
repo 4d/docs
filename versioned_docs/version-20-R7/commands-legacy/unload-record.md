@@ -29,12 +29,3 @@ If a record has a large amount of data, picture fields, or external documents (s
 
 [LOAD RECORD](load-record.md)  
 *Record Locking*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 212 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

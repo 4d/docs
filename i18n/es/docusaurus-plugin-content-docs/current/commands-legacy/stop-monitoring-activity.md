@@ -26,12 +26,3 @@ Ver ejemplo para **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
 
 [Monitored activity](monitored-activity.md)  
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1721 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -186,13 +186,3 @@ Se o comando tiver sido executado corretamente, a variável OK assume o valor 1\
 #### Ver também 
 
 [Convert to text](convert-to-text.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1011 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

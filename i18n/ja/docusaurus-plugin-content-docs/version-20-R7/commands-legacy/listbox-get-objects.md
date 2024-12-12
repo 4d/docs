@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->**LISTBOX GET OBJECTS** コマンドは 、*object* と*\** 演算子で指定したリストボックスを構成するオブジェクトの、それぞれの名前を含んだ配列を返します。<!-- END REF-->
@@ -59,12 +62,3 @@ displayed_sidebar: docs
 
 [FORM LOAD](form-load.md)  
 [OBJECT Get type](object-get-type.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1302 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->La commande **CLOSE RESOURCE FILE** referme le fichier de ressources dont vous avez passé le numéro de référence dans *resFichier*.<!-- END REF-->
@@ -28,12 +31,3 @@ N'oubliez pas d'appeler finalement **CLOSE RESOURCE FILE** pour un fichier de re
 #### Voir aussi 
 
 [Open resource file](open-resource-file.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 498 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

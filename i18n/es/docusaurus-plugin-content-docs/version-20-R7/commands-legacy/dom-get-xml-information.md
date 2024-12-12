@@ -42,12 +42,3 @@ Estas constantes indican la siguiente información:
 #### Ver también 
 
 [XML GET ERROR](xml-get-error.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 721 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->O comando LISTBOX DELETE ROWS apaga a fila número *posição* (visível ou não) do list box definido pelos parâmetros *objeto* e \*.<!-- END REF-->
@@ -35,13 +38,3 @@ Se o parâmetro *posição* é superior ao número de linhas do array do list bo
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 914 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

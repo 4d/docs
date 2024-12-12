@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 :::info Compatibilidade
 
 **PHP está obsoleto em 4D**. Recomenda-se usar a classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -37,12 +40,3 @@ Dado que os intercâmbios entre 4D e o intérprete PHP se realizam através de F
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1061 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

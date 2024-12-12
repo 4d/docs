@@ -30,13 +30,3 @@ See the example for [DISPLAY RECORD](display-record.md).
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 51 |
-| Thread safe | &check; |
-| Changes current record ||
-| Forbidden on the server ||
-
-

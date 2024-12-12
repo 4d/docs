@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->El comando SQL EXECUTE SCRIPT permite ejecutar una serie de instrucciones SQL ubicadas en el archivo de script designado por *rutaScript*.<!-- END REF-->  
@@ -57,13 +60,3 @@ Si el script se ejecuta correctamente (no se encuentra ningún error), la variab
 * Si *errorAction* es SQL On error continue (valor 3), la variable *OK* siempre toma el valor 1\.
 
 **Nota:** si utiliza este comando para ejecutar acciones consumidoras de memoria tales como importación masiva de datos, puede considerar llamar al comando SQL ALTER DATABASE para desactivar temporalmente las opciones SQL.
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1089 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-
-

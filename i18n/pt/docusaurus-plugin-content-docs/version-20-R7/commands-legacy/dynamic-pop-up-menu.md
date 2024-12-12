@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->O comando Dynamic pop up menu faz aparecer um menu suspenso hierárquico na localização atual do mouse ou na localização definida pelos parâmetros opcionais *Coordx* e *Coordy*.<!-- END REF-->
@@ -91,12 +94,3 @@ Este código permite criar um menu emergente dinâmico hierárquico baseado em a
 [Pop up menu](pop-up-menu.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1006 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

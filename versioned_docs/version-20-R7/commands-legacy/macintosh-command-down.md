@@ -15,7 +15,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Macintosh command down.Summary-->**Macintosh command down** returns TRUE if the Macintosh command key is pressed.<!-- END REF-->When called on a Windows platform, **Macintosh command down** returns TRUE if the Windows Ctrl key is pressed.
+<!--REF #_command_.Macintosh command down.Summary-->**Macintosh command down** returns TRUE if the Macintosh command key is pressed.<!-- END REF-->
+
+**Note:** When called on a Windows platform, **Macintosh command down** returns TRUE if the Windows Ctrl key is pressed.
 
 #### Example 
 
@@ -29,12 +31,3 @@ See example for the [Shift down](shift-down.md) command.
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 546 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

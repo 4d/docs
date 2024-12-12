@@ -179,12 +179,3 @@ La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisat
 [Last errors](last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *Variables système*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 155 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

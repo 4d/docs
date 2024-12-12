@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->La commande **LISTBOX Get static columns** retourne le nombre de colonnes statiques dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -30,12 +33,3 @@ Si une colonne a été insérée ou supprimée par programmation à l’intérie
 #### Voir aussi 
 
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1154 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

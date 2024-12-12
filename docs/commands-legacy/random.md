@@ -32,13 +32,3 @@ The following example assigns a random integer between 10 and 30 to the *vlResul
 ```4d
  vlResult:=(Random%21)+10
 ```
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 100 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

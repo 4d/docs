@@ -32,13 +32,3 @@ The following example makes the last record of the \[People\] table the current 
 [FIRST RECORD](first-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 200 |
-| Thread safe | &check; |
-| Changes current record ||
-| Forbidden on the server ||
-
-

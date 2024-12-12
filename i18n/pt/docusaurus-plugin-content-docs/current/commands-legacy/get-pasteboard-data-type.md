@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->O comando GET PASTEBOARD DATA TYPE permite obter a lista dos tipos de dados presentes na área de transferência.<!-- END REF--> Este comando geralmente deve ser utilizado no contexto de uma operação arrastar e soltar, nos eventos de formulário On Drop ou On Drag Over do objeto de destino. Mais particularmente, permite verificar a presença de um tipo de dados específico na área de transferência. 
@@ -37,12 +40,3 @@ Para maior informação sobre os tipos de dados suportados, consulte a seção *
 #### Ver também 
 
 *Gerenciar área de transferência*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 958 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

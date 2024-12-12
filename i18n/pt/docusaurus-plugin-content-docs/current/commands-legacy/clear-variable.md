@@ -44,12 +44,3 @@ Em um formulário, utilize uma lista suspensa (drop down) chamada *MinhaListaSus
 #### Ver também 
 
 [Undefined](undefined.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 89 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

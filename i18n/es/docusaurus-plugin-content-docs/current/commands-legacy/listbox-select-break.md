@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->El comando LISTBOX SELECT BREAK se utiliza para seleccionar líneas de ruptura en el objeto list box designado por los parámetros *objeto* y *\**.<!-- END REF--> El list box debe mostrarse en modo jerárquico.   
@@ -61,12 +64,3 @@ Este es el resultado:
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1117 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

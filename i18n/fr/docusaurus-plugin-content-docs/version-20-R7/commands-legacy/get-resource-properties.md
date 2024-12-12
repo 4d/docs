@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get resource properties.Summary-->**Get resource properties** retourne les attributs de la ressource dont le type est passé dans le paramètre *resType* et le numéro de référence dans *resNum*.<!-- END REF-->
@@ -33,14 +36,3 @@ Référez-vous à l'exemple de la commande [Get resource name](get-resource-name
 #### Variables et ensembles système 
 
 La variable OK prend la valeur 0 si la ressource n'existe pas, sinon elle prend la valeur 1.
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 515 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

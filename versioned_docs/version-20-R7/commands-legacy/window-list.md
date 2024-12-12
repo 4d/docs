@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.WINDOW LIST.Summary-->The WINDOW LIST command populates the array *windows* with the window reference numbers of the windows currently open in all running processes (kernel or user processes).<!-- END REF--> Only "visible" windows (i.e. windows that are not hidden) are returned. 
@@ -50,12 +53,3 @@ The following project method tiles all the current open window, except floating 
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 442 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

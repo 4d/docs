@@ -23,12 +23,3 @@ displayed_sidebar: docs
 [Active transaction](active-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 *トランザクションの停止*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1385 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

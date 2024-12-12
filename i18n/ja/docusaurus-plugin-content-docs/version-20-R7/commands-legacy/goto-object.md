@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->GOTO OBJECTコマンドは、フォームのアクティブエリアとしてデータ入力オブジェクト*object* を選択するために使用します。<!-- END REF-->これはユーザがフィールドや変数をクリックしたりタブでフォーカスを移動したりするのと同じです。
@@ -49,12 +52,3 @@ GOTO OBJECTコマンドは以下のように使用します:
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 206 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

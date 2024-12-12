@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->La commande **ST GET ATTRIBUTES** permet de récupérer la valeur courante d’un attribut de style dans une sélection de texte du ou des objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 
@@ -98,13 +101,3 @@ A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une 
 #### Voir aussi 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1094 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

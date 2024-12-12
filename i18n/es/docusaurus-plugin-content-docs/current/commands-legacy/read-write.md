@@ -30,12 +30,3 @@ Utilice READ WRITE cuando tenga que modificar un registro y guardar los cambios.
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
 *Record Locking*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 146 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

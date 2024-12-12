@@ -80,12 +80,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Count parameters](count-parameters.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1790 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

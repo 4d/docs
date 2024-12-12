@@ -114,12 +114,3 @@ Después de la ejecución de este código:
 [INTEGER TO BLOB](integer-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 550 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

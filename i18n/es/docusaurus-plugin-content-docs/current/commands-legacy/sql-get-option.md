@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->El comando SQL GET OPTION devuelve el *valor* actual de la opción pasada en el parámetro *opcion*.<!-- END REF-->
@@ -27,13 +30,3 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 #### Ver también 
 
 [SQL SET OPTION](sql-set-option.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 819 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

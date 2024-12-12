@@ -32,12 +32,3 @@ Consulte o exemplo do comando [GET FIELD RELATION](get-field-relation.md "GET FI
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 899 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

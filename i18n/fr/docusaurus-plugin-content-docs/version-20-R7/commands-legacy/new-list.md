@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.New list.Summary-->La commande **New list** crée une nouvelle liste hiérarchique vide en mémoire et retourne son numéro de référence unique.<!-- END REF-->
@@ -44,12 +47,3 @@ Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 [INSERT IN LIST](insert-in-list.md)  
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 375 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.VOLUME ATTRIBUTES.Summary-->O comando VOLUME ATTRIBUTES retorna em bytes o tamanho, o espaço utilizado e o espaço livre do volume cujo nome se passa em *volume*.<!-- END REF-->indica um volume remoto não montado, a variável OK toma o valor 0 e os três parâmetros retornam -1.
+<!--REF #_command_.VOLUME ATTRIBUTES.Summary-->O comando VOLUME ATTRIBUTES retorna em bytes o tamanho, o espaço utilizado e o espaço livre do volume cujo nome se passa em *volume*.<!-- END REF-->  
+
+**Nota**: se *volume* indica um volume remoto não montado, a variável OK toma o valor 0 e os três parâmetros retornam -1.
 
 #### Exemplo 
 
@@ -95,13 +97,3 @@ Quando tiver sido adicionado este método de projeto a sua aplicação, pode esc
 #### Ver também 
 
 [VOLUME LIST](volume-list.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 472 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

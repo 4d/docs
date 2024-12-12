@@ -51,13 +51,3 @@ displayed_sidebar: docs
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 682 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 
@@ -23,12 +26,3 @@ El comando Next window devuelve el número de referencia de la ventana ubicada �
 #### Ver también 
 
 [Frontmost window](frontmost-window.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 448 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

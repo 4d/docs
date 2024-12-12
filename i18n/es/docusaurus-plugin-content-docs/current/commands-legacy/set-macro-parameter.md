@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET MACRO PARAMETER.Summary-->El comando SET MACRO PARAMETER inserta el texto *paramText* en el método desde el cual se llama.<!-- END REF--> 
@@ -57,12 +60,3 @@ Esta macro crea un nuevo texto que será devuelto al método llamante:
 #### Ver también 
 
 [GET MACRO PARAMETER](get-macro-parameter.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 998 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

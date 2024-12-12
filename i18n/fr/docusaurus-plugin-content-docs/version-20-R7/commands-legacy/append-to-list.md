@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->La commande **APPEND TO LIST** ajoute un nouvel élément à la liste hiérarchique dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
@@ -147,12 +150,3 @@ Dans le formulaire en exécution, la liste apparaîtra ainsi :
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 376 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

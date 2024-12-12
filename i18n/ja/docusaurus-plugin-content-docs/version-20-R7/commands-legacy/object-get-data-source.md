@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->**OBJECT Get data source**コマンドは、引数 *object* と *\** で指定したオブジェクトの、カレントのデータソースを返します。<!-- END REF-->
@@ -39,12 +42,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1265 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

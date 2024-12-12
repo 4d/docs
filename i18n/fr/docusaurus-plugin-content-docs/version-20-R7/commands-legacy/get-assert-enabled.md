@@ -24,12 +24,3 @@ Par défaut, les assertions sont actives mais elles peuvent avoir été désacti
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1130 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

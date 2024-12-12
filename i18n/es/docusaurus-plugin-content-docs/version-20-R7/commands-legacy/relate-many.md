@@ -65,13 +65,3 @@ Note que es necesario el comando RELATE MANY, aunque las relaciones sean automá
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 262 |
-| Hilo seguro | &check; |
-| Modifica la selección actual ||
-| Prohibido en el servidor ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Current form window.Summary-->Current form window コマンドはカレントフォームウィンドウの参照を返します。<!-- END REF-->カレントフォームにウィンドウが設定されていない場合、コマンドは0を返します。
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 827 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

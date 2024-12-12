@@ -33,13 +33,3 @@ O exemplo a seguir recupera o registro de um cliente na pilha:
 
 [PUSH RECORD](push-record.md)  
 *Usar a Pilha de Registros*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 177 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Proibido no servidor ||
-
-

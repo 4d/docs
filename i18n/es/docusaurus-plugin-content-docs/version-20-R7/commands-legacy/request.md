@@ -78,13 +78,3 @@ Mostrará la siguiente caja de diálogo (en Windows):
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 163 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

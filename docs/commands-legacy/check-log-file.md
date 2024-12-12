@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->The **CHECK LOG FILE** command displays the dialog box for viewing the current log file of the database (which can also be accessed via the Maintenance Security Center window):
@@ -34,13 +37,3 @@ You can intercept these errors using an error-handling method installed with the
 
 *Backup Manager Errors (1401 -> 1421)*  
 [RESTORE](restore.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 799 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

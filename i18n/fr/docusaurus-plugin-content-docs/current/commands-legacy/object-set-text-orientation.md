@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->La commande **OBJECT SET TEXT ORIENTATION** vous permet de modifier l’orientation du contenu de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF-->
@@ -48,12 +51,3 @@ Vous souhaitez appliquer une orientation de 270° à une variable de votre formu
 #### Voir aussi 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1284 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

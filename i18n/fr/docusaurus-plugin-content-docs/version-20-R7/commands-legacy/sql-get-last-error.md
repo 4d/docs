@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL GET LAST ERROR.Summary-->La commande **SQL GET LAST ERROR** retourne des informations relatives à la dernière erreur rencontrée lors de l’exécution d’une commande ODBC.<!-- END REF--> L’erreur peut provenir de l’application 4D, du réseau, de la source ODBC, etc. 
@@ -34,12 +37,3 @@ Les deux derniers paramètres ne sont remplis que si l’erreur provient de la s
 
 [Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 825 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

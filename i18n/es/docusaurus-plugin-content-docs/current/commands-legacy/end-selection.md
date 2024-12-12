@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.End selection.Summary-->**End selection** devuelve TRUE cuando el puntero del registro actual está más allá del último registro de la selección actual de *tabla*.<!-- END REF-->se utiliza generalmente para probar si la llamada al comando [NEXT RECORD](next-record.md) ha movido o no el puntero del registro actual detrás del último registro de la selección. Si la selección actual está vacía, **End selection** devuelve TRUE.
+<!--REF #_command_.End selection.Summary-->**End selection** devuelve TRUE cuando el puntero del registro actual está más allá del último registro de la selección actual de *tabla*.<!-- END REF--> **End selection** se utiliza generalmente para probar si la llamada al comando [NEXT RECORD](next-record.md) ha movido o no el puntero del registro actual detrás del último registro de la selección. Si la selección actual está vacía, **End selection** devuelve TRUE.
 
 Para mover el puntero del registro actual dentro de la selección, utilice [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) o [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) no mueva el puntero a la selección.
 
@@ -61,12 +61,3 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 36 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Quand la Méthode base Sur ouverture connexion serveur est-elle appelée ? 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->La **On Server Open Connection database method** est appelée une fois sur la machine serveur chaque fois qu’un poste 4D distant démarre un process de connexion.<!-- END REF--> La **On Server Open Connection database method** n’est appelée que par 4D Server, à l’exclusion de tout autre environnement 4D. 
@@ -130,13 +133,3 @@ L’exemple suivant interdit toute nouvelle connexion entre 2 et 4 heures du mat
  
  If((?02:00:00?<=Current time)&(Current time
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 16001 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

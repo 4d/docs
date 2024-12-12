@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.COPY ARRAY.Summary-->COPY ARRAY コマンドは*destination* 配列を、*source* 配列と同じ内容、サイズ、およびタイプで作成または上書きします。<!-- END REF-->異なるタイプの数値型配列の場合、*destination* 配列の型が採用されます。
+<!--REF #_command_.COPY ARRAY.Summary-->COPY ARRAY コマンドは*destination* 配列を、*source* 配列と同じ内容、サイズ、およびタイプで作成または上書きします。<!-- END REF-->
+
+**注:** 異なるタイプの数値型配列の場合、*destination* 配列の型が採用されます。
 
 *source*と*destination*の配列はローカル、プロセス、インタープロセス配列の組み合わせが可能です。変数のスコープが違っていても、配列を複製するのに問題はありません。
 
@@ -34,13 +36,3 @@ displayed_sidebar: docs
  SELECTION TO ARRAY([People]Company;C) // companyフィールドのデータをCにコピー
  COPY ARRAY(C;D) // C配列をD配列にコピー
 ```
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 226 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

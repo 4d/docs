@@ -59,12 +59,3 @@ Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de donnée
 [ENCRYPT BLOB](encrypt-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1773 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

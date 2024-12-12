@@ -57,12 +57,3 @@ Vous voulez compter les références d'objets dans un tableau d'objets :
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 907 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

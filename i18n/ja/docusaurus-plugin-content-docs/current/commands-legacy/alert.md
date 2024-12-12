@@ -67,12 +67,3 @@ displayed_sidebar: docs
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 41 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

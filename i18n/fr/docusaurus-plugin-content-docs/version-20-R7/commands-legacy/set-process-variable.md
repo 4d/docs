@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->La commande **SET PROCESS VARIABLE** écrit la ou les valeur(s) de *exprSource* (*exprSource2*, etc.) dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont le numéro est passé dans *process*.<!-- END REF-->
@@ -97,11 +100,3 @@ L'exemple suivant écrit l'instance des variables *v1*, *v2*, *v3* dans le proce
 *Introduction aux process*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 370 |
-| Thread safe | &check; |
-
-

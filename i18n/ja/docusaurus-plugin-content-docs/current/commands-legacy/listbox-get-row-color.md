@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get row color.Summary-->**注:** このコマンドは配列型リストボックスに対してのみ利用できます。<!-- END REF-->
@@ -57,12 +60,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1658 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

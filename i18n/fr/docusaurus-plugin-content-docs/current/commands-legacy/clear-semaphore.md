@@ -31,12 +31,3 @@ Reportez-vous à l'exemple de la fonction [Semaphore](semaphore.md "Semaphore").
 [Semaphore](semaphore.md)  
 *Sémaphores et signaux*  
 [Test semaphore](test-semaphore.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 144 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

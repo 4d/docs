@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->El comando **METHOD SET COMMENTS** remplaza la documentación del(os) método(s) designados por el parámetro *ruta* por los definidos en el parámetro *comentarios*.<!-- END REF-->
@@ -61,12 +64,3 @@ Añadir una fecha de modificación a un comentario de trigger existente:
 #### Ver también 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1193 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

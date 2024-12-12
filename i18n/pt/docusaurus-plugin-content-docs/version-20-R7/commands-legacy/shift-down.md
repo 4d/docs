@@ -51,12 +51,3 @@ O método abaixo de objeto para o botão *bUnBotao* realiza diferentes ações d
 [Macintosh option down](macintosh-option-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 543 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

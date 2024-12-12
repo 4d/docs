@@ -45,12 +45,3 @@ Vous souhaitez réinitialiser toutes les sessions en cours pour toutes les appli
 #### Voir aussi 
 
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1596 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

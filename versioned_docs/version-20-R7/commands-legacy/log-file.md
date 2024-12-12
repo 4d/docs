@@ -31,12 +31,3 @@ If the database operates with a log file, the system variable OK is set to 1\. T
 #### See also 
 
 [SELECT LOG FILE](select-log-file.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 928 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-
-

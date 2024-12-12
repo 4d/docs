@@ -48,13 +48,3 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 #### Ver también 
 
 [SAX Get XML node](sax-get-xml-node.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 879 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

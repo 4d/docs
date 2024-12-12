@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Is record loaded.Summary-->El comando Is record loaded devuelve True si si el registro actual de *tabla* se carga en el proceso actual.<!-- END REF-->devolverá False en modo remoto (devuelve True en modo local).
+<!--REF #_command_.Is record loaded.Summary-->El comando Is record loaded devuelve True si si el registro actual de *tabla* se carga en el proceso actual.<!-- END REF-->
+
+**4D Server**: en principio, cuando las tablas están relacionadas por relaciones automáticas, los registros actuales de las tablas relacionadas se cargan automáticamente (ver *Relaciones*). Sin embargo, por razones de optimización, 4D Server sólo carga estos registros cuando es necesario, por ejemplo al leer o asignar un campo del registro relacionado. Como resultado, en este contexto, el comando **Is record loaded** devolverá False en modo remoto (devuelve True en modo local).
 
 #### Ejemplo 
 
@@ -41,12 +43,3 @@ En lugar de utilizar las acciones automáticas “Siguiente registro” o “Reg
     End if
  End if
 ```
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 669 |
-| Hilo seguro | &check; |
-
-

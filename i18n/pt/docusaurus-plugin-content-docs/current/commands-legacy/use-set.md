@@ -35,14 +35,3 @@ O seguinte exemplo utiliza [LOAD SET](load-set.md) para carregar um conjunto de 
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 118 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Modificar a seleção atual ||
-| Proibido no servidor ||
-
-

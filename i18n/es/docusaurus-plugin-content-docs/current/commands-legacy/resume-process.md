@@ -25,12 +25,3 @@ Si *proceso* ha sido retrasado anteriormente, consulte los comandos [PAUSE PROCE
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 320 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

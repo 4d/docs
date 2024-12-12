@@ -45,13 +45,3 @@ Este exemplo ordena os registros da tabela \[Pessoas\] em ordem descendente, bas
 #### Ver também 
 
 [ORDER BY](order-by.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 300 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Modificar o registro atual ||
-
-

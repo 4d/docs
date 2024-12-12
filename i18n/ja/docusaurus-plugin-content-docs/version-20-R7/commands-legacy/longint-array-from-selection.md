@@ -35,12 +35,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 647 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

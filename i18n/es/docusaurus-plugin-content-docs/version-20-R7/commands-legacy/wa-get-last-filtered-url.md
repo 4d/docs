@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA Get last filtered URL.Summary-->El comando WA Get last filtered URL devuelve el último URL filtrado en el área web designada por los parámetros *\** y *objeto*.<!-- END REF--> 
@@ -33,12 +36,3 @@ Es recomendable llamar este comando en el contexto de los eventos de formulario 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1035 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

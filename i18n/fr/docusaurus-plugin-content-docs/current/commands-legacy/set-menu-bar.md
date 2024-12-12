@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET MENU BAR.Summary-->La commande **SET MENU BAR** remplace la barre de menus courante par la barre de menus *barre*, pour le process en cours uniquement.<!-- END REF--> Vous pouvez passer dans le paramètre *barre* soit le numéro soit le nom de la nouvelle barre. Vous pouvez également passer une référence unique de menu (type [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)"), chaîne de 16 caractères). Lorsque vous travaillez avec des références, les menus peuvent être utilisés comme barres de menus et inversement (cf. section *Gestion des menus*). 
@@ -115,12 +118,3 @@ Dans cet exemple complet, nous allons créer par programmation une barre comport
 #### Voir aussi 
 
 *Gestion des menus*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 67 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

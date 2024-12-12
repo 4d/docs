@@ -30,12 +30,3 @@ SET DOCUMENT POSITION コマンドは、引数*offset*に渡す、以下の読�
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 482 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

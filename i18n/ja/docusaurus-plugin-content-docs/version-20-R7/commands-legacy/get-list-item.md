@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->GET LIST ITEM コマンドは、リスト参照番号またはオブジェクト名が*list*であるリスト中、*itemPos*で指定した項目に関する情報を返します。<!-- END REF-->
@@ -65,12 +68,3 @@ displayed_sidebar: docs
 [Selected list items](selected-list-items.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 378 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

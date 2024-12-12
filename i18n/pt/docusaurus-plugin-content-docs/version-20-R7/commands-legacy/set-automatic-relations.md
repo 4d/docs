@@ -44,12 +44,3 @@ O exemplo a seguir torna automáticas todas as relações Muitos a Um e restabel
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 *Sobre Relações*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 310 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

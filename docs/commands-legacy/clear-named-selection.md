@@ -24,12 +24,3 @@ If *name* was created using the [CUT NAMED SELECTION](cut-named-selection.md) co
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 333 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

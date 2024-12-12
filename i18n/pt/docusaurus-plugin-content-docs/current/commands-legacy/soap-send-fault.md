@@ -44,12 +44,3 @@ Regresando ao exemplo do serviço Web “Raiz\_quadrada” da descrição do com
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP get info](soap-get-info.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 781 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

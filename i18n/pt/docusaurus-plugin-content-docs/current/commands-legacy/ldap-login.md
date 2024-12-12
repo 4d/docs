@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LDAP LOGIN.Summary-->O comando**LDAP LOGIN** abre uma conexão somente leitura no servidor LDAP especificado pelo parâmetro *url* com os identificadores de *login* e *senha*.<!-- END REF--> Se for aceito pelo servidor, esta ligação é utilizada para todas as pesquisas de LDAP posteriormente introduzidas no processo atual até que o comando *RuntimeVLWinFolder* sejaé executado (ou até que o processo seja fechado).
@@ -96,12 +99,3 @@ Este exemplo tenta conectar-se a um aplicativo:
 
 *LDAP*  
 [LDAP LOGOUT](ldap-logout.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1326 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

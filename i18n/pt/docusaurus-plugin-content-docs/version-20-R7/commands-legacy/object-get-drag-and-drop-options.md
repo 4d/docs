@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->O comando **OBJECT GET DRAG AND DROP OPTIONS** devolve as opções de arrastar e soltar para o objeto o os objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
@@ -36,12 +39,3 @@ Cada parâmetro devolve True ou False dependendo se a opção correspondente est
 #### Ver também 
 
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1184 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

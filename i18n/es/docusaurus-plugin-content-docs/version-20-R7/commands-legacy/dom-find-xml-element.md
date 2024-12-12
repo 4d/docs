@@ -117,13 +117,3 @@ Se genera un error cuando:
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 864 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

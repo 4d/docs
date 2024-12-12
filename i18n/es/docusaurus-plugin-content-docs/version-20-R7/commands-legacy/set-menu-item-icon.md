@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->El comando **SET MENU ITEM ICON** permite modificar el icono asociado a la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF-->  
@@ -43,12 +46,3 @@ Uso de una imagen ubicada en la carpeta Resources de la base:
 #### Ver también 
 
 [GET MENU ITEM ICON](get-menu-item-icon.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 984 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

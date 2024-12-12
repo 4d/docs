@@ -30,13 +30,3 @@ displayed_sidebar: docs
 
 [SAX Get XML node](sax-get-xml-node.md)  
 [SAX SET XML DECLARATION](sax-set-xml-declaration.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 873 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

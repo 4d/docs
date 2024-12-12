@@ -41,12 +41,3 @@ El siguiente ejemplo ilustra el uso de Insert string. Los resultados se asignan 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 231 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

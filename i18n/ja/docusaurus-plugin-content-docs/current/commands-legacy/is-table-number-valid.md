@@ -24,12 +24,3 @@ displayed_sidebar: docs
 
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 999 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

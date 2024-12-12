@@ -19,7 +19,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF-->s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :
+<!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF-->
+
+**SELECTION TO ARRAY** s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :
 
 * Charger les valeurs d'un ou plusieurs champs,
 * Charger les numéros des enregistrements de la table, à l'aide de la syntaxe *\[table\];tableau*
@@ -77,11 +79,3 @@ Le même exemple peut être écrit :
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 260 |
-| Thread safe | &check; |
-
-

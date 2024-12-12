@@ -116,13 +116,3 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 868 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

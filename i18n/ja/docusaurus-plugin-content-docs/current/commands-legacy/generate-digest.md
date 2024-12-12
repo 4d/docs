@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Generate digest.Summary-->**Generate digest**コマンドはBLOBやテキストのDigestキーを指定したアルゴリズムで生成して返します。<!-- END REF-->引数にはテキストまたはBLOBフィールドや変数を渡します。**Generate digest**コマンドはダイジェストキーを文字列として返します。
+<!--REF #_command_.Generate digest.Summary-->**Generate digest**コマンドはBLOBやテキストのDigestキーを指定したアルゴリズムで生成して返します。<!-- END REF-->
+
+*param* 引数にはテキストまたはBLOBフィールドや変数を渡します。**Generate digest**コマンドはダイジェストキーを文字列として返します。
 
 *algorithm* 引数で使用するハッシュ関数を指定します。*Digest Type*テーマ内にある以下の定数を使用できます:
 
@@ -82,12 +84,3 @@ displayed_sidebar: docs
 [Generate password hash](generate-password-hash.md)  
 [WEB Validate digest](web-validate-digest.md)  
 *暗号化プロトコル*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1147 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

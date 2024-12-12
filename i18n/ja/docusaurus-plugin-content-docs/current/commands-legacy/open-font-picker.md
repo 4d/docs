@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->**OPEN FONT PICKER**コマンドは、システムのフォントピッカーダイアログボックスを表示させます。<!-- END REF-->
@@ -42,12 +45,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1303 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

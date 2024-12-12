@@ -48,14 +48,3 @@ displayed_sidebar: docs
 [LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 640 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| カレントセレクションを変更する ||
-| サーバー上での使用は不可 ||
-
-

@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->La commande **QR GET HEADER AND FOOTER** vous permet de récupérer le contenu et la taille de l'en-tête et du pied de page de la *zone*.<!-- END REF--> 
@@ -65,13 +68,3 @@ La méthode suivante affiche le contenu et la hauteur des libellés des en-tête
 #### Voir aussi 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 775 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

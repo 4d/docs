@@ -78,13 +78,3 @@ Mostrará a seguinte caixa de diálogo (em Windows):
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 163 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties permite modificar y actualizar las propiedades de una cuenta activa de usuario existente cuyo número de referencia se pasa en el parámetro *refUsuario* o para añadir un nuevo usuario.<!-- END REF-->
@@ -62,12 +65,3 @@ Si no tiene privilegios de acceso para llamar al comando Set user properties o s
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 612 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -30,12 +30,3 @@ READ WRITEコマンドは、レコードを修正しその結果を保存しな�
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
 *レコードのロック*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 146 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

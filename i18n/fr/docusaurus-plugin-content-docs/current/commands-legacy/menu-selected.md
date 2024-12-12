@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Menu selected.Summary-->**Menu selected** ne s'utilise que lorsqu'un formulaire est affiché.<!-- END REF--> Cette fonction détecte la commande de menu choisie dans un menu et, dans le cas d'un sous-menu hiérarchique, retourne la référence du sous-menu.
@@ -59,12 +62,3 @@ La méthode formulaire suivante utilise la fonction **Menu selected** pour fourn
 #### Voir aussi 
 
 *Gestion des menus*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 152 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

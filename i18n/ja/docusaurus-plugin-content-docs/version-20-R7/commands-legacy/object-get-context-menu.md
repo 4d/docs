@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->**OBJECT Get context menu**コマンドは、引数 *object* と *\** で指定したオブジェクトの、"コンテキストメニュー"オプションのカレントの状態を返します。<!-- END REF-->
@@ -28,12 +31,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1252 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

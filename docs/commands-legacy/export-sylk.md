@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.EXPORT SYLK.Summary-->The EXPORT SYLK command writes data from the records of the current selection of *aTable* in the current process.<!-- END REF--> The data is written to *document*, a Windows or Macintosh Sylk document on the disk.
@@ -49,13 +52,3 @@ OK is set to 1 if the export is successfully completed; otherwise, it is set to 
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 85 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

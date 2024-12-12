@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW fecha a janela ativa aberta pelo comando [Open window](open-window.md) ou [Open form window](open-form-window.md) no processo atual.<!-- END REF--> CLOSE WINDOW não faz nada se não houver uma janela personalizada aberta; não fecha as janelas sistema. CLOSE WINDOW tampoco tem efeito se for chamado enquanto um formulário estiver ativo na janela. Deve chamar CLOSE WINDOW quando tiver terminado de utilizar uma janela aberta por [Open window](open-window.md) ou [Open form window](open-form-window.md)..  
@@ -38,12 +41,3 @@ O seguinte exemplo abre uma janela formulario e cria novos registros com o coman
 
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 154 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

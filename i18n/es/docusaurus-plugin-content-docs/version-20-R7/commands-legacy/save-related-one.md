@@ -25,12 +25,3 @@ SAVE RELATED ONE no guardará un registro bloqueado. Cuando utilice este comando
 [Locked](locked.md)  
 [RELATE ONE](relate-one.md)  
 *Triggers*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 43 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

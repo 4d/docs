@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->**SEND MESSAGE TO REMOTE USER** コマンドは、全てのリモートユーザー、あるいは特定のリモートユーザーに対して、メッセージを送信します。<!-- END REF-->引数には、表示されるメッセージのテキストを渡します。これはセッションユーザーのスクリーン上に、アラート画面あるいは通知として表示されます。
+<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->**SEND MESSAGE TO REMOTE USER** コマンドは、全てのリモートユーザー、あるいは特定のリモートユーザーに対して、メッセージを送信します。<!-- END REF-->
+
+*message* 引数には、表示されるメッセージのテキストを渡します。これはセッションユーザーのスクリーン上に、アラート画面あるいは通知として表示されます。
 
 任意の*userSession* 引数を使用すると、セッションIDを渡すことでメッセージを送信する特定のユーザーを指定することができます。セッションIDは[Process activity](../commands/process-activity.md) コマンドを使用することで取得できます。*userSession* 引数が省略されていた場合、メッセージは全てのユーザーに送信されます。
 
@@ -50,12 +52,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [DROP REMOTE USER](drop-remote-user.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1632 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

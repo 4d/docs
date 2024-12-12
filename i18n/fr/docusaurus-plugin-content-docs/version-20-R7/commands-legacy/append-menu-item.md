@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->La commande **APPEND MENU ITEM**  ajoute une ou plusieurs ligne(s) au menu dont vous avez passé le numéro ou la référence dans *menu.<!-- END REF-->*  
@@ -76,12 +79,3 @@ Ensuite, dans toute méthode formulaire ou projet, vous pouvez écrire :
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 411 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

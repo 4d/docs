@@ -83,12 +83,3 @@ Pour compter les mots d’un texte :
 #### Voir aussi 
 
 [DISTINCT VALUES](distinct-values.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1141 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -80,12 +80,3 @@ Usted desea copiar una selección de registros a una tabla archivo seleccionando
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *Variables sistema*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 261 |
-| Hilo seguro | &check; |
-| Modifica la selección actual ||
-
-

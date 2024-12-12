@@ -25,12 +25,3 @@ Este comando permite detectar las eventuales eliminaciones de campos, que crean 
 
 [Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1000 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

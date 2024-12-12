@@ -38,13 +38,3 @@ The following example opens an existing document called Note, appends the string
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 265 |
-| Thread safe | &check; |
-| Modifies variables | OK, Document, error |
-| Forbidden on the server ||
-
-

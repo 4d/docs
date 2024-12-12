@@ -50,12 +50,3 @@ Utilizar punteros a elementos de arrays de dos dimensiones:
 
 [Field](field.md)  
 [Table](table.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 304 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

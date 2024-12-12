@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->**OBJECT SET LIST BY NAME**コマンドは、*object*引数で指定されたオブジェクトあるいはオブジェクトグループの選択リストを、*list*に渡したリスト (デザインモードのリストエディタで定義) に設定あるいは置き換えます。<!-- END REF--> *list* 引数に名前を渡すリストは、リストエディターまたはデザインモードを使用して予め作成されている必要があります。
@@ -89,12 +92,3 @@ displayed_sidebar: docs
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 237 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

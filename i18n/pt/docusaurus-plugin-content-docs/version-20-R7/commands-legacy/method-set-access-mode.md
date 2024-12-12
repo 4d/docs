@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Summary-->O comando **METHOD SET ACCESS MODE** permite definir o comportamento de 4D quando intenta acessar em escritura a um objeto que já foi carregado em modificação por outro usuário ou processo .<!-- END REF--> O alcance deste comando é a sessão atual.
@@ -24,13 +27,3 @@ Em *modo*, passe uma das seguintes constantes do tema *Design Object Access*:
 | On object locked abort   | Inteiro longo | 0     | A carga do objeto se aborta (funcionamento por defeito)                                                                                                   |
 | On object locked confirm | Inteiro longo | 2     | 4D mostra uma caixa de diálogo permitindo-lhe eleger entre intentar novamente o abortar. Em modo remoto, esta opção não é suportada (a carga se abandona) |
 | On object locked retry   | Inteiro longo | 1     | 4D tenta carregar o objeto até que seja liberado                                                                                                          |
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1191 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

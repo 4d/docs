@@ -31,11 +31,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1133 |
-| スレッドセーフである | &check; |
-
-

@@ -113,12 +113,3 @@ Desea obtener la suma de todos los valores numéricos en una colección:
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1509 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

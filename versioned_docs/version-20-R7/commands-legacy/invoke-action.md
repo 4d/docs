@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->The **INVOKE ACTION** command triggers the standard action defined by the *action* parameter, optionally in the *target* context.<!-- END REF-->
@@ -63,12 +66,3 @@ You want to execute a **Goto page** standard action (page 3) in the main form:
 #### See also 
 
 [Action info](action-info.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1439 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

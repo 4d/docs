@@ -28,12 +28,3 @@ displayed_sidebar: docs
 [Semaphore](semaphore.md)  
 [Test semaphore](test-semaphore.md)  
 *セマフォーとシグナル*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 144 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

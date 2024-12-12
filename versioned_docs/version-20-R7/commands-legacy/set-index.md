@@ -88,12 +88,3 @@ Creation of a keywords index:
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 344 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -73,12 +73,3 @@ Você quer encontrar o número de ocorrências das cadeias que começam por "tes
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1333 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

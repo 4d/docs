@@ -19,13 +19,3 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is shared.Summary-->O comando **OB Is shared** devolve **True** se o objeto ou coleção *aVerificar* é compartido, e **False** em caso contrário (ver *Objetos compartidos e Coleções compartidas*).<!-- END REF-->
 
 Este comando devolve **True** se for passado uma seleção de entidades compaível em *aVerificar* (ver ).
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1759 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

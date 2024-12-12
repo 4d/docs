@@ -105,12 +105,3 @@ The following examples illustrate the specific impact of options in **Japanese d
 #### See also 
 
 [Position](position.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1756 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

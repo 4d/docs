@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Summary-->**GET PICTURE KEYWORDS**コマンドは引数に渡したピクチャーに割り当てられたキーワードのリストを*arrKeywords*配列に返します。<!-- END REF-->メタデータを使用して設定されたキーワードだけが返されます。他のタイプのメタデータはこのコマンドから無視されます。このコマンドは、このタイプのメタデータをサポートするピクチャー (JPEG, TIFF, 等) に対してのみ動作します。
+<!--REF #_command_.GET PICTURE KEYWORDS.Summary-->**GET PICTURE KEYWORDS**コマンドは引数に渡したピクチャーに割り当てられたキーワードのリストを*arrKeywords*配列に返します。<!-- END REF-->
+
+**IPTC/Keywords** メタデータを使用して設定されたキーワードだけが返されます。他のタイプのメタデータはこのコマンドから無視されます。このコマンドは、このタイプのメタデータをサポートするピクチャー (JPEG, TIFF, 等) に対してのみ動作します。
 
 **注:** 4DはIPTC/Keywordsタイプのメタデータをインデックスすることが可能です (デザインリファレンスマニュアルを参照)。
 
@@ -31,12 +33,3 @@ displayed_sidebar: docs
 
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [SET PICTURE METADATA](set-picture-metadata.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1142 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

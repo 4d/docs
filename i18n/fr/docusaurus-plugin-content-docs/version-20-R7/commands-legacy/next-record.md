@@ -30,13 +30,3 @@ Reportez-vous à l'exemple de la commande [DISPLAY RECORD](display-record.md).
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 51 |
-| Thread safe | &check; |
-| Change l'enregistrement courant ||
-| Interdite sur le serveur ||
-
-

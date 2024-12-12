@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA OPEN BACK URL.Summary-->WA OPEN BACK URL コマンドは、*\** と *object* 引数で指定したWebエリアに開かれた一連のURL中、現在のURLのひとつ前のURLをロードします。<!-- END REF--> 
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 [WA OPEN URL](wa-open-url.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1021 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -90,13 +90,3 @@ La variable OK toma el valor 1 si el BLOB se comprime correctamente; de lo contr
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 534 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

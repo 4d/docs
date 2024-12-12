@@ -60,12 +60,3 @@ Este exemplo, a variável *numTabela* é igual ao número da tabela a qual perte
 [Field](field.md)  
 [Last table number](last-table-number.md)  
 [Table name](table-name.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 252 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

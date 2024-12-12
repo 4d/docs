@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->O comando LISTBOX GET PRINT INFORMATION devolve a informação atual relativa a impressão do objeto list box designado pelos parâmetros *objeto e* *\** .<!-- END REF--> Este comando permite controlar a impressão do conteúdo do list box.  
@@ -66,13 +69,3 @@ Impressão de pelo menos 500 linhas do list box, conhecendo que algumas linhas e
     PAGE BREAK
  Until($GlobalPrinted>=500)
 ```
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1110 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

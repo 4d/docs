@@ -88,12 +88,3 @@ Création d'un index de mots-clés :
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 344 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

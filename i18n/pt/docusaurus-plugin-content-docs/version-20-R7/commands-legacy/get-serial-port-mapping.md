@@ -49,12 +49,3 @@ Este método de projeto pode ser usado para tratar a mesma porta serial (sem pro
 #### Ver também 
 
 [SET CHANNEL](set-channel.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 909 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

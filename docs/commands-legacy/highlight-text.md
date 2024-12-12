@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->The HIGHLIGHT TEXT command highlights a section of the text in *object*.<!-- END REF-->
@@ -62,12 +65,3 @@ See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 #### See also 
 
 [GET HIGHLIGHT](get-highlight.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 210 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

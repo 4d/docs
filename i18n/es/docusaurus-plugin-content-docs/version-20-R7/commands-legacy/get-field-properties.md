@@ -74,12 +74,3 @@ Este ejemplo recupera en las variables *vTipo*, *vLong*, *vIndex*, *vUnico* y *v
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 258 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

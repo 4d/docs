@@ -40,13 +40,3 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [DOM SET XML ELEMENT NAME](dom-set-xml-element-name.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 730 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

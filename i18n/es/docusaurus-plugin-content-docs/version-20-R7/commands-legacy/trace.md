@@ -59,12 +59,3 @@ El método de proyecto DEBUG se lista aquí:
     End if
  End if
 ```
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 157 |
-| Hilo seguro | &check; |
-
-

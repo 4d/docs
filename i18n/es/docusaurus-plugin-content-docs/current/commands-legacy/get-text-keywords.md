@@ -83,12 +83,3 @@ Para contar las palabras de un texto:
 #### Ver también 
 
 [DISTINCT VALUES](distinct-values.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1141 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->**ST SET PLAIN TEXT**コマンドは*object*引数で指定されたマルチスタイルテキストや変数に、*newText*引数に渡されたテキストを挿入します。<!-- END REF-->このコマンドは*object*引数のプレーンテキストにのみ適用され、そこに含まれるスタイルタグを変更しません。 
@@ -92,13 +95,3 @@ displayed_sidebar: docs
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1136 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

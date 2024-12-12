@@ -43,12 +43,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [DEFAULT TABLE](default-table.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 993 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

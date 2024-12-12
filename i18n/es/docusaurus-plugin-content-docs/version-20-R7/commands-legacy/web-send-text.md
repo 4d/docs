@@ -44,12 +44,3 @@ El siguiente método:
 #### Ver también 
 
 [WEB SEND BLOB](web-send-blob.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 677 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

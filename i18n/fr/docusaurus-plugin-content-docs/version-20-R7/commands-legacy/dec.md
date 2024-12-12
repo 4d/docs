@@ -30,12 +30,3 @@ L'exemple suivant utilise une valeur monétaire exprimée sous forme numérique 
 #### Voir aussi 
 
 [Int](int.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 9 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

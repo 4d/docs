@@ -26,12 +26,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [INSERT IN BLOB](insert-in-blob.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 560 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->SET MENU ITEM METHOD コマンドは、*menu*と*menuItem*引数で指定されたメニュー項目に関連付ける4Dプロジェクトメソッドを変更するために使用します。<!-- END REF-->  
@@ -34,12 +37,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Get menu item method](get-menu-item-method.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 982 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

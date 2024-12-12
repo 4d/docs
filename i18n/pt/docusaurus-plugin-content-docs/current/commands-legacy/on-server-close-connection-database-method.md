@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->O **On Server Close Connection database method** é chamado no computador servidor cada vez que termina um processo 4D Client.<!-- END REF--> 

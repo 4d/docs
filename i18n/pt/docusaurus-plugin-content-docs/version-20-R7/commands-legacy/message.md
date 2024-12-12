@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.MESSAGE.Summary-->O comando **MESSAGE** geralmente se utiliza para informar ao usuário sobre alguma atividade.<!-- END REF--> Mostra *mensagem* na tela em uma janela de mensagem especial que se abre e fecha cada vez que chamar a **MESSAGE**, a menos que trabalhe com uma janela que abriu previamente utilizando [Open window](open-window.md) (ver detalhes abaixo). A mensagem é temporária e é apagada assim que um formulário for exibido ou o método parar de executar. Se outra **MESSAGE** for executada, a mensagem antiga é apagada.
@@ -112,12 +115,3 @@ O resultado é o seguinte (em Windows):
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
 [Open window](open-window.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 88 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->**LISTBOX INSERT ROWS**コマンドは、*object*引数および *\** で指定されたリストボックスにひとつ以上の新しい行を挿入します。<!-- END REF--> 
@@ -33,13 +36,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 913 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

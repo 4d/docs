@@ -64,13 +64,3 @@ En todos los casos:
 * 25/01/2007 significa enero 25, 2007
 
 Este comando afecta sólo la entrada de datos. No tiene ningún efecto en el almacenamiento de datos, cálculos, etc.
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 392 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

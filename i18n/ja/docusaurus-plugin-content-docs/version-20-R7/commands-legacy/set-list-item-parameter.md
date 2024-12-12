@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->**SET LIST ITEM PARAMETER**コマンドは、リスト参照またはオブジェクト名を*list*に指定したリスト中、*itemRef*引数で指定した項目の*selector* パラメタを設定するために使用します。<!-- END REF-->
@@ -60,12 +63,3 @@ displayed_sidebar: docs
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 986 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

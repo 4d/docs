@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->El comando MAXIMIZE WINDOW provoca el zoom de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si se omite este parámetro, el efecto es el mismo pero se aplica a todas las ventanas de la aplicación (Windows) o de la ventana del primer plano del proceso actual (Mac OS). 
@@ -81,12 +84,3 @@ En este contexto, si el usuario hace clic en el botón:
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 453 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

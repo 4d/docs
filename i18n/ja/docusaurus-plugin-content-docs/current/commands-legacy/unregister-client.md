@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->UNREGISTER CLIENT コマンドは、クライアントステーションの登録を解除します。<!-- END REF-->クライアントは[REGISTER CLIENT](register-client.md "REGISTER CLIENT")コマンドによって既に登録されているものでなければなりません。
@@ -35,13 +38,3 @@ displayed_sidebar: docs
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 649 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

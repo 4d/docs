@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Pasteboard data size.Summary-->O comando Pasteboard data size permite testar se hay dados do tipo *tipoDatos* na área de transferência.<!-- END REF--> 
@@ -90,13 +93,3 @@ Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.m
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 400 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->El comando **OBJECT Is styled text** devuelve **True** sila opción "Multiestilo" está seleccionada para el(los) objeto(s) designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->
@@ -42,12 +45,3 @@ Un formulario contiene un campo representado por dos objetos diferentes, uno de 
 #### Ver también 
 
 *Texto multiestilo*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1261 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

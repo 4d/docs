@@ -43,12 +43,3 @@ In the *value* parameter, pass a variable to receive the current value of the *o
 #### See also 
 
 [HTTP SET OPTION](http-set-option.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1159 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

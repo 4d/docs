@@ -106,12 +106,3 @@ displayed_sidebar: docs
 
   
 [New shared object](new-shared-object.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1471 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

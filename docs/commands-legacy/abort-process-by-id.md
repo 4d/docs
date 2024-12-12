@@ -42,12 +42,3 @@ You want to stop the selected process of the processes collection displayed in a
 #### See also 
 
 [PAUSE PROCESS](pause-process.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1634 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -79,12 +79,3 @@ Cet exemple illustre l’emploi de l’option chunked avec la commande **WEB SEN
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 815 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

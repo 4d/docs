@@ -25,12 +25,3 @@ This command can be used to detect any field deletions, which create gaps in the
 
 [Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1000 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

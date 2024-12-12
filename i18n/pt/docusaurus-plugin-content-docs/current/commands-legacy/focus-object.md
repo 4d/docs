@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Nota de compatibilidade 
 
 <!--REF #_command_.Focus object.Summary-->Este comando só é conservado por razões de compatibilidade.<!-- END REF--> Começa com a versão 12 de 4D, recomenda-se que se use o comando [OBJECT Get pointer](object-get-pointer.md).
@@ -45,12 +48,3 @@ O exemplo abaixo é um método de objeto para um botão. O método de objeto mod
 #### Ver também 
 
 [OBJECT Get pointer](object-get-pointer.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 278 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

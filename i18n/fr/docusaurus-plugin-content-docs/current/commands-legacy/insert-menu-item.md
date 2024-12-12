@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->La commande **INSERT MENU ITEM** insère de nouvelles lignes dans le menu dont vous avez passé le numéro ou la référence dans *menu* et les place après la ligne de menu dont le numéro est passé dans *aprèsLigne*.<!-- END REF-->
@@ -54,12 +57,3 @@ L’exemple suivant crée un menu constitué de deux commandes auxquelles il aff
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 412 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

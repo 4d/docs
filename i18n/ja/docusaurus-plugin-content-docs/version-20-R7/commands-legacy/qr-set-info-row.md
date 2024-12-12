@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->QR SET INFO ROW コマンドは、*row*に渡した行を表示/非表示に設定します。<!-- END REF-->
@@ -50,13 +53,3 @@ displayed_sidebar: docs
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 763 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

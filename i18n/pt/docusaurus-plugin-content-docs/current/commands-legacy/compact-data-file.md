@@ -70,13 +70,3 @@ Se um arquivo de histórico for gerado, seu nome de caminho completo é retornad
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 937 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, Document |
-| Proibido no servidor ||
-
-

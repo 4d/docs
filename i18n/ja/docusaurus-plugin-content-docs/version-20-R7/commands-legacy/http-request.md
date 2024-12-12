@@ -30,7 +30,9 @@ displayed_sidebar: docs
 
 #### 
 
-<!--REF #_command_.HTTP Request.Summary-->**HTTP Request**コマンドは指定したURLに任意のメソッドでHTTPリクエストを送信し、HTTPサーバーのレスポンスを処理することを可能にします。<!-- END REF-->引数にはHTTPリクエストのメソッドを渡します。*HTTP Client*テーマの以下の定数を使用できます:
+<!--REF #_command_.HTTP Request.Summary-->**HTTP Request**コマンドは指定したURLに任意のメソッドでHTTPリクエストを送信し、HTTPサーバーのレスポンスを処理することを可能にします。<!-- END REF-->
+
+*httpMethod* 引数にはHTTPリクエストのメソッドを渡します。*HTTP Client*テーマの以下の定数を使用できます:
 
 | 定数                  | 型   | 値       | コメント                                           |
 | ------------------- | --- | ------- | ---------------------------------------------- |
@@ -122,12 +124,3 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 #### 参照 
 
 [HTTP Get](http-get.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1158 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

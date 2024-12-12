@@ -61,12 +61,3 @@ Après l'exécution de la commande, la variable *offset* est incrémentée du no
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 555 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

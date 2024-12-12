@@ -21,7 +21,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.VERIFY DATA FILE.Summary-->The VERIFY DATA FILE command carries out a structural check of the objects contained in the 4D data file designated by *structurePath* and *dataPath*.<!-- END REF-->For more information about checking data, please refer to the Design Reference manual. *structurePath* designates the structure file (compiled or not) associated with the data file to be checked. This can be the open structure file or any other structure file. You must pass a complete pathname, expressed with the syntax of the operating system. You can also pass an empty string, in this case a standard Open file dialog box appears so that the user can specify the structure file to be used.    
+<!--REF #_command_.VERIFY DATA FILE.Summary-->The VERIFY DATA FILE command carries out a structural check of the objects contained in the 4D data file designated by *structurePath* and *dataPath*.<!-- END REF-->
+
+**Note:** For more information about checking data, please refer to the Design Reference manual. *structurePath* designates the structure file (compiled or not) associated with the data file to be checked. This can be the open structure file or any other structure file. You must pass a complete pathname, expressed with the syntax of the operating system. You can also pass an empty string, in this case a standard Open file dialog box appears so that the user can specify the structure file to be used.    
   
 *dataPath* designates a 4D data file (.4DD). It must correspond to the structure file defined by the *structurePath* parameter. Be careful, you can designate the current structure file but the data file must not be the current (open) file. To verify the currently open data file, use the [VERIFY CURRENT DATA FILE](verify-current-data-file.md) command. If you attempt to verify the current data file with the VERIFY DATA FILE command, an error is generated.
 
@@ -169,13 +171,3 @@ If the callback method does not exist, the verification is not carried out, an e
 #### See also 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 939 |
-| Thread safe | &check; |
-| Modifies variables | OK, Document, error |
-| Forbidden on the server ||
-
-

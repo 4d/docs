@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GET RESOURCE.Summary-->La commande **GET RESOURCE** retourne dans le champ ou la variable BLOB *resDonnées* le contenu de la ressource dont le type et le numéro sont passés dans *resType* et *resNum*.<!-- END REF-->
@@ -48,13 +51,3 @@ S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est
 #### Voir aussi 
 
 *Ressources*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 508 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

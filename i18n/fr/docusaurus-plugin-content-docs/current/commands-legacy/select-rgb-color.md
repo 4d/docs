@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Select RGB Color.Summary-->La commande **Select RGB Color** affiche la fenêtre système de sélection de couleur et retourne la valeur RVB de la couleur sélectionnée par l’utilisateur.<!-- END REF-->
@@ -39,13 +42,3 @@ La prise en compte de la validation de la boîte de dialogue diffère selon la p
 #### Voir aussi 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 956 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

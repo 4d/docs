@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.In break.Summary-->**In break** devuelve True para el ciclo de ejecución In break.<!-- END REF--> 
@@ -25,12 +28,3 @@ Para que se genere el ciclo de ejecución **In break** asegúrese de que la prop
 
 [In footer](in-footer.md)  
 [In header](in-header.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 113 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

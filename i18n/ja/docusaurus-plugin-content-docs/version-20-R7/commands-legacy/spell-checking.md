@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->**SPELL CHECKING** コマンドは、フィールドまたは現在表示されているフォームでフォーカスを持つ変数のスペルチェックを行います。<!-- END REF-->チェックされるオブジェクトは文字列またはテキストタイプでなければなりません。
@@ -33,12 +36,3 @@ displayed_sidebar: docs
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 900 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

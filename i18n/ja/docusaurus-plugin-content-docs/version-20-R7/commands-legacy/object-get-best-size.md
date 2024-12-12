@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->**OBJECT GET BEST SIZE** コマンドは、引数 *\** と *object*で指定されたフォームオブジェクトの“最適な”幅と高さを、引数*bestWidth* と *bestHeight*に返します。<!-- END REF-->これらの値はピクセルで表わされます。このコマンドは複雑なレポートの表示や印刷に役立ち、[OBJECT MOVE](object-move.md) コマンドとともに使用します。  
@@ -49,12 +52,3 @@ displayed_sidebar: docs
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 717 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

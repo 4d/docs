@@ -26,12 +26,3 @@ See the example for [USE SET](use-set.md).
 [CREATE EMPTY SET](create-empty-set.md)  
 [CREATE SET](create-set.md)  
 [LOAD SET](load-set.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 117 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

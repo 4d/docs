@@ -186,12 +186,3 @@ displayed_sidebar: docs
 [Num](num.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 10 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get list item font.Summary-->The **Get list item font** command returns the current character font name of the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
@@ -31,12 +34,3 @@ Lastly, you can pass \* in *itemRef*: in this case, the command will get the fon
 #### See also 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 954 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -15,7 +15,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Windows Ctrl down.Summary-->Windows Ctrl down devuelve TRUE si la tecla Ctrl Windows está presionada.<!-- END REF-->cuando se llama en una plataforma Macintosh, Windows Ctrl down devuelve TRUE si la tecla Macintosh Comando está presionada.
+<!--REF #_command_.Windows Ctrl down.Summary-->Windows Ctrl down devuelve TRUE si la tecla Ctrl Windows está presionada.<!-- END REF--> 
+
+**Nota:** cuando se llama en una plataforma Macintosh, Windows Ctrl down devuelve TRUE si la tecla Macintosh Comando está presionada.
 
 #### Ejemplo 
 
@@ -29,12 +31,3 @@ Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 562 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

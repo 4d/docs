@@ -29,14 +29,3 @@ Lembre que uma seleção temporária é uma representação de uma seleção de 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 332 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Modificar a seleção atual ||
-| Proibido no servidor ||
-
-

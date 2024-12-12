@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->The **SET PICTURE TO LIBRARY** command creates a new picture or replaces a picture in the Picture Library.<!-- END REF-->
@@ -92,13 +95,3 @@ If there is not enough memory to add the picture to the Picture Library, an erro
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 566 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

@@ -60,12 +60,3 @@ Este ejemplo obtiene la desviación estándar de una serie de valores ubicados e
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 26 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

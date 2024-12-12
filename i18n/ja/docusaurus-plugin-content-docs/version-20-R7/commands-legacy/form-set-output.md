@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->**FORM SET OUTPUT** コマンドは、*form*または*userForm*を*aTable*のカレント出力フォームとして設定します。<!-- END REF-->このフォームは*aTable*に属するものでなければなりません。   
@@ -69,12 +72,3 @@ displayed_sidebar: docs
 [MODIFY SELECTION](modify-selection.md)  
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 54 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

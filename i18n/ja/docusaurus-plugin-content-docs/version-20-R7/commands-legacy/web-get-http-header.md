@@ -115,12 +115,3 @@ HTTP標準に準拠するには、フィールド名を常に英語で記述し�
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 697 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

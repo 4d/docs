@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SORT LIST.Summary-->La commande **SORT LIST** effectue un tri sur la liste dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
@@ -55,12 +58,3 @@ Après l'exécution du code suivant :
 #### Voir aussi 
 
 [Selected list items](selected-list-items.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 391 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->**OBJECT SET INDICATOR TYPE**コマンドは、引数 *object* と *\** で指定したサーモメーターの進捗インジケーターのタイプを、カレントプロセスにおいて変更します。<!-- END REF-->
@@ -34,12 +37,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get indicator type](object-get-indicator-type.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1246 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

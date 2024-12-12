@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Menu bar height.Summary-->Menu bar height returns the height of the menu bar, expressed in pixels.<!-- END REF-->
@@ -29,12 +32,3 @@ The command returns 0:
 [HIDE MENU BAR](hide-menu-bar.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 440 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

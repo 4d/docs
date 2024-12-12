@@ -72,13 +72,3 @@ For an example of computing an object field attribute, please refer to the examp
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

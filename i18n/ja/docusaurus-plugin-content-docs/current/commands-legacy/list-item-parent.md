@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.List item parent.Summary-->List item parent コマンドは、親項目の項目参照番号を返します。<!-- END REF-->
@@ -68,12 +71,3 @@ displayed_sidebar: docs
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 633 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

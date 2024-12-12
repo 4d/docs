@@ -30,12 +30,3 @@ displayed_sidebar: docs
 [START TRANSACTION](start-transaction.md)  
 [VALIDATE TRANSACTION](validate-transaction.md)  
 *トリガ*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 397 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

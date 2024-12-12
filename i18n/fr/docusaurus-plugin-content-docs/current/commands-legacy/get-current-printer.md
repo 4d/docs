@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get current printer.Summary-->La commande **Get current printer** retourne le nom de l’imprimante courante définie dans l’application 4D.<!-- END REF--> Par défaut au lancement de 4D, l’imprimante courante est l’imprimante définie dans le système.
@@ -31,12 +34,3 @@ Si aucune imprimante n'est installée, une erreur est générée.
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 788 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

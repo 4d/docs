@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->El comando **LISTBOX Get property** devuelve el valor de la *propiedad* del list box o columna especificado utilizando los parámetros *objeto* y *\*.<!-- END REF-->*
@@ -99,12 +102,3 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 917 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

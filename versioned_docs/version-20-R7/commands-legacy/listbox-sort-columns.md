@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->The LISTBOX SORT COLUMNS command applies a standard sort to the rows of the list box defined by the *object* and *\** parameters on the basis of one or more column value(s).<!-- END REF-->
@@ -33,13 +36,3 @@ You can define multi-level sorts: to do so, pass as many pairs (*colNum;order*) 
 In conformity with the principle of list box operation, the columns are synchronized which means that the sorting of a column is automatically passed on to all the other columns of the object.
 
 **Note:** The **LISTBOX SORT COLUMNS** command does not take the *Sortable* listbox property into account.
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 916 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

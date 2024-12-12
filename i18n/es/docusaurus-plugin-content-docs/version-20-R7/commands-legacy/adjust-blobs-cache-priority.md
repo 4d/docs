@@ -53,12 +53,3 @@ Usted desea cambiar temporalmente la prioridad de la caché de los campos de tex
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1431 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

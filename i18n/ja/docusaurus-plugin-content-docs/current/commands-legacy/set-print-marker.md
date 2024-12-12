@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->SET PRINT MARKER コマンドを使用し、印刷時にマーカ位置を指定することができます。<!-- END REF-->このコマンドを[Get print marker](get-print-marker.md "Get print marker")、[OBJECT MOVE](object-move.md "OBJECT MOVE")、[Print form](../commands/print-form.md "Print form")コマンドと組み合わせて使用することにより、印刷エリアのサイズを調節することができます。
@@ -182,12 +185,3 @@ Print\_List3のフォームメソッド:
 [Print form](../commands/print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 709 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

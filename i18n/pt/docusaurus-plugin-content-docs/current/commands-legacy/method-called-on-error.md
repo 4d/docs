@@ -45,12 +45,3 @@ Este comando é particularmente útil no contexto de componentes porque lhe perm
 
 *Error Handler*  
 [ON ERR CALL](on-err-call.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 704 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

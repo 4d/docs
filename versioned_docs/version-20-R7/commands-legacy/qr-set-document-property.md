@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->The QR SET DOCUMENT PROPERTY command displays the printing dialog or sets the unit used for the document.<!-- END REF-->
@@ -34,13 +37,3 @@ If you pass an invalid value in the *property* or *value* parameter, the corresp
 #### See also 
 
 [QR Get document property](qr-get-document-property.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 772 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

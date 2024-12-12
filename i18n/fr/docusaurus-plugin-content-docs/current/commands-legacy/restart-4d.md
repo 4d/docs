@@ -34,12 +34,3 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 [Get last update log path](get-last-update-log-path.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1292 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-
-

@@ -162,13 +162,3 @@ If the request has been correctly routed and the Web Service has accepted it, th
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 778 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

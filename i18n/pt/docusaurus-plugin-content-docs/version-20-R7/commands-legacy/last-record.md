@@ -32,13 +32,3 @@ O exemplo a seguir designa o último registro da tabela \[Pessoas\] como registr
 [FIRST RECORD](first-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 200 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Proibido no servidor ||
-
-

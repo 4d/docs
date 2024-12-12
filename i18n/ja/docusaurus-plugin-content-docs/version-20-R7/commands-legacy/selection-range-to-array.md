@@ -107,11 +107,3 @@ displayed_sidebar: docs
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 368 |
-| スレッドセーフである | &check; |
-
-

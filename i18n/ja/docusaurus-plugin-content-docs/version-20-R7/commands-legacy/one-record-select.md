@@ -29,14 +29,3 @@ displayed_sidebar: docs
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 *命名セレクション*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 189 |
-| スレッドセーフである | &check; |
-| カレントレコードを変更する ||
-| カレントセレクションを変更する ||
-| サーバー上での使用は不可 ||
-
-

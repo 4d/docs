@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->El comando **METHOD RESOLVE PATH** analiza la ruta de acceso interna pasada en el parámetro *ruta* y devuelve sus diferentes componentes en los parámetros *tipoMetodo*, *ptrTabla*, *nomObjeto* y *nomObjetoForm*.<!-- END REF-->  
@@ -82,12 +85,3 @@ Resolución de una ruta de objeto de método formulario tabla:
 #### Ver también 
 
 [METHOD Get path](method-get-path.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1165 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

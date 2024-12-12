@@ -26,13 +26,3 @@ Si **PREVIOUS RECORD** place le pointeur d'enregistrement courant avant la séle
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 110 |
-| Thread safe | &check; |
-| Change l'enregistrement courant ||
-| Interdite sur le serveur ||
-
-

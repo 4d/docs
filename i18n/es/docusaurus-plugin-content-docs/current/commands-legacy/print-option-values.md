@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->El comando **PRINT OPTION VALUES** devuelve en *arrayNoms* una lista de nombres disponibles para la *opcion* de impresión definida.<!-- END REF--> Opcionalmente, puede recuperar la información adicional para cada nombre en *info1Array* y *info2Array*. 
@@ -53,12 +56,3 @@ Toda la información devuelta por estos comandos es suministrada por el sistema 
 
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 785 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

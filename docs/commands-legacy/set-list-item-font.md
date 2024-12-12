@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET LIST ITEM FONT.Summary-->The **SET LIST ITEM FONT** command modifies the character font of the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
@@ -42,12 +45,3 @@ Apply the Times font to the current item of the list:
 [OBJECT SET FONT](object-set-font.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 953 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

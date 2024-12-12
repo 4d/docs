@@ -57,12 +57,3 @@ Examples of requests with authentication:
 #### See also 
 
 [HTTP SET OPTION](http-set-option.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1161 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

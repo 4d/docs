@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->La commande **QR BLOB TO REPORT** place l’état contenu dans le paramètre *blob* dans la zone d'état rapide désignée par le paramètre *zone*.<!-- END REF--> 
@@ -43,13 +46,3 @@ L'instruction suivante affiche l'état stocké dans le champ ChampBlob dans la z
 #### Voir aussi 
 
 [QR REPORT TO BLOB](qr-report-to-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 771 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

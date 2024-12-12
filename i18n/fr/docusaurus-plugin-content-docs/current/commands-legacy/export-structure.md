@@ -56,12 +56,3 @@ Vous voulez exporter la structure de la base courante au format html :
 #### Voir aussi 
 
 [IMPORT STRUCTURE](import-structure.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1311 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

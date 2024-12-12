@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Pop up menu.Summary-->The **Pop up menu** command displays a pop-up menu at the current location of the mouse.<!-- END REF--> 
@@ -89,12 +92,3 @@ The following is the pop-up menu as it appears on Windows (left) and Macintosh (
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 542 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

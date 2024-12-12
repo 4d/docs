@@ -55,13 +55,3 @@ Na parte (ou subrotina) do [QR SET DESTINATION](qr-set-destination.md), insere o
  ... //Coloque o código da pesquisa aqui
 End case
 ```
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 659 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

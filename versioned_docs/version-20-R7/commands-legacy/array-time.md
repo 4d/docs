@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY TIME.Summary-->The **ARRAY TIME** command creates and/or resizes an array of Time type elements in memory.<!-- END REF-->In 4D, times can be processed as numeric values. In 4D versions prior to v14, you had to combine a longint array with a display format in order to manage an array of times. 
+<!--REF #_command_.ARRAY TIME.Summary-->The **ARRAY TIME** command creates and/or resizes an array of Time type elements in memory.<!-- END REF-->
+
+**Reminder:** In 4D, times can be processed as numeric values. In 4D versions prior to v14, you had to combine a longint array with a display format in order to manage an array of times. 
 
 The *arrayName* parameter is the name of the array.
 
@@ -63,12 +65,3 @@ Since time arrays accept numeric values, the following code is valid:
 
 *Creating Arrays*  
 [Time](time.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1223 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -44,12 +44,3 @@ O código abaixo:
 #### Ver também 
 
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 858 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->El comando LISTBOX DELETE COLUMN borra una o más columnas (visibles o no) en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
@@ -33,12 +36,3 @@ Si el parámetro *posicionCol* es mayor al número de columnas en el list box, e
 
 [LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 830 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -27,13 +27,3 @@ displayed_sidebar: docs
 
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 722 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

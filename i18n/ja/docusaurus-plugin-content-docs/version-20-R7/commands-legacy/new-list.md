@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.New list.Summary-->New list は、新しい空の階層リストをメモリに作成し、ユニークなリスト参照番号を返します。<!-- END REF-->
@@ -44,12 +47,3 @@ New listを使用して階層リストを作成した後は、以下のことが
 [INSERT IN LIST](insert-in-list.md)  
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 375 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

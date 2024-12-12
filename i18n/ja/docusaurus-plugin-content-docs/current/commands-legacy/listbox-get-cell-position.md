@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->**LISTBOX GET CELL POSITION** コマンドは、*object*および *\** で指定されたリストボックスの最後にクリックされた位置に対応する位置、あるいはキーボードアクションで選択されたセルの位置、あるいはマウスの水平・垂直座標を*column* と*row* 引数に返します。<!-- END REF-->
@@ -53,12 +56,3 @@ displayed_sidebar: docs
 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 971 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -154,13 +154,3 @@ Se o método de callback não existir, a verificação não é efetuada, é gera
 #### Ver também 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 939 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, Document, error |
-| Proibido no servidor ||
-
-

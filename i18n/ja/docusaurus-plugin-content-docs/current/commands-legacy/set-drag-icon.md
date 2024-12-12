@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->**SET DRAG ICON**コマンドは、指定したアイコンを、ドラッグ＆ドロップ中のカーソルと関連付けます。<!-- END REF-->
@@ -57,12 +60,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Form event code](../commands/form-event-code.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1272 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

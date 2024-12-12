@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT displays the *object* using the font specified in the *font* parameter.<!-- END REF--> The *font* parameter must contain a valid font name.
@@ -60,12 +63,3 @@ The following example uses the special *%password* option, designed for entry an
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 *Programming Notes*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 164 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

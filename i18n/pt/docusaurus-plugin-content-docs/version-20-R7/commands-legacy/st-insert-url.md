@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ST INSERT URL.Summary-->O comando **ST INSERT URL** insere um link URL no campo ou a variável de texto com estilo designada pelo parâmetro *objeto* .<!-- END REF--> 
@@ -62,13 +65,3 @@ Você deseja inserir um link ao web site de 4D para substituir o texto seleciona
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1280 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.List item position.Summary-->El comando List item position devuelve la posición del elemento cuyo número de referencia o nombre de objeto se pasa en *refElem*, en la lista cuyo número de referencia se pasa en *lista*.<!-- END REF--> 
@@ -38,12 +41,3 @@ Si el elemento no existe, List item position devuelve 0.
 
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 629 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

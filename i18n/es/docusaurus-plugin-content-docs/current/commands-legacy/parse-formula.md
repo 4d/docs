@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Parse formula.Summary-->La función **Parse formula** analiza la *formula* 4D, verifica su sintaxis y devuelve su formula normalizada.<!-- END REF--> Esto permite que la fórmula siga siendo válida en el caso de que se cambie el nombre de un lenguaje 4D o elemento de estructura (comando, constante, tabla, campo o Plugin 4D).
@@ -105,12 +108,3 @@ Utilizando las tablas del **Ejemplo 1**:
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Utilizar tokens en fórmulas*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1576 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

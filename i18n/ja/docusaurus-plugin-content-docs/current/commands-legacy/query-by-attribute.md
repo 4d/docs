@@ -21,7 +21,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** は*objectField*、*attributePath*、*queryOp* そして *value* 引数を使用して定義されたクエリ文字列に合致するレコードを検索し、*aTable* に対しレコードのセレクションを返します。<!-- END REF-->はカレントプロセスにおいて*aTable* で指定されたテーブルのカレントセレクションを変更し、新しいセレクションの第一レコードをカレントレコードとします。*aTable* 引数が省略されていた場合、コマンドはデフォルトのテーブルへと適用されます。デフォルトテーブルが設定されていない場合、エラーが発生します。
+<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** は*objectField*、*attributePath*、*queryOp* そして *value* 引数を使用して定義されたクエリ文字列に合致するレコードを検索し、*aTable* に対しレコードのセレクションを返します。<!-- END REF-->
+
+**QUERY BY ATTRIBUTE** はカレントプロセスにおいて*aTable* で指定されたテーブルのカレントセレクションを変更し、新しいセレクションの第一レコードをカレントレコードとします。*aTable* 引数が省略されていた場合、コマンドはデフォルトのテーブルへと適用されます。デフォルトテーブルが設定されていない場合、エラーが発生します。
 
 任意の*conjOp* 引数を使用すると、**QUERY BY ATTRIBUTE** の呼び出しを複数のクエリ定義と組み合わせることができます。使用可能な接続演算子は[QUERY](query.md) コマンドに対して使用できるものと同じです:
 
@@ -408,15 +410,3 @@ GMT設定を使用したくない場合、これらの設定を以下の様に�
   
 *4Dオブジェクトの構造*  
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1331 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| カレントレコードを変更する ||
-| カレントセレクションを変更する ||
-| サーバー上での使用は不可 ||
-
-

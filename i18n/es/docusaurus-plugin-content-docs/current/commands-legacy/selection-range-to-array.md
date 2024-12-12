@@ -108,11 +108,3 @@ Uso de los 50 primeros registros actuales de la tabla \[Facturas\] para cargar v
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 368 |
-| Hilo seguro | &check; |
-
-

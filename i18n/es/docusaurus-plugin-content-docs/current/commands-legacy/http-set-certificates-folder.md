@@ -56,12 +56,3 @@ Usted quiere cambiar temporalmente la carpeta de certificados:
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1306 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

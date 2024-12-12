@@ -53,13 +53,3 @@ Em todos os casos, você pode interceptar o erro usando um método [ON ERR CALL]
 [Create document](create-document.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [Open document](open-document.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 526 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->La commande **SET LIST ITEM ICON** permet de modifier l’icône associée à l’élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
@@ -45,12 +48,3 @@ Affectation d'une même image à deux éléments différents. Ce code est optimi
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 950 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

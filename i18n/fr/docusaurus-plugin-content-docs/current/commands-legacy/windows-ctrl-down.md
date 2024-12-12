@@ -15,7 +15,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Windows Ctrl down.Summary-->**Windows Ctrl down** retourne Vrai si la touche **Ctrl** Windows est enfoncée.<!-- END REF-->Lorsqu'elle est appelée sous Mac OS, **Windows Ctrl down** retourne Vrai si la touche Macintosh **Commande** est enfoncée.
+<!--REF #_command_.Windows Ctrl down.Summary-->**Windows Ctrl down** retourne Vrai si la touche **Ctrl** Windows est enfoncée.<!-- END REF-->
+
+**Note :** Lorsqu'elle est appelée sous Mac OS, **Windows Ctrl down** retourne Vrai si la touche Macintosh **Commande** est enfoncée.
 
 #### Exemple 
 
@@ -29,12 +31,3 @@ Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 562 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

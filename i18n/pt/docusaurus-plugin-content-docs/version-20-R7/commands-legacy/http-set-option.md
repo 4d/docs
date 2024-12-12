@@ -45,12 +45,3 @@ Não importa a ordem das opções de chamada. Se a mesma opção é definida mai
 
 [HTTP AUTHENTICATE](http-authenticate.md)  
 [HTTP GET OPTION](http-get-option.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1160 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

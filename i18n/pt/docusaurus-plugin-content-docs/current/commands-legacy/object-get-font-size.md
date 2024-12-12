@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get font size.Summary-->O comando OBJECT Get font size devolve o tamanho (em pontos) da fonte utilizada pelo objeto de formulário designado por *objeto*.<!-- END REF--> 
@@ -24,12 +27,3 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 #### Ver também 
 
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1070 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

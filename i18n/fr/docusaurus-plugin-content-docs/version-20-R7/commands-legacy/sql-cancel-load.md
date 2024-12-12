@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->La commande **SQL CANCEL LOAD** met fin à la requête SELECT courante et initialise les paramètres du curseur.<!-- END REF--> 
@@ -51,13 +54,3 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 824 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

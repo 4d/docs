@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->The REDRAW WINDOW command provokes a graphical update of the window whose reference number you pass in *window*.<!-- END REF-->
@@ -24,12 +27,3 @@ If you omit the *window* parameter, REDRAW WINDOW applies to the frontmost windo
 #### See also 
 
 [ERASE WINDOW](erase-window.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 456 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -49,13 +49,3 @@ El siguiente ejemplo fija el puerto serial para recibir datos y el timeout. Los 
 [RECEIVE PACKET](receive-packet.md)  
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 268 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

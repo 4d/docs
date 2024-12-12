@@ -65,12 +65,3 @@ Los campos **Date** y **Content-Length** siempre son definidos por defecto por 4
 #### Ver también 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 660 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

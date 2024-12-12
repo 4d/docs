@@ -32,12 +32,3 @@ displayed_sidebar: docs
 
 [False](false.md)  
 [True](true.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 34 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

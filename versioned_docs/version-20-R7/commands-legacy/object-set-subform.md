@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->The **OBJECT SET SUBFORM** command dynamically modifies the detail form as well as, optionally, the screen list form associated with the subform object designated by the *\**, *object* parameters.<!-- END REF-->
@@ -43,12 +46,3 @@ When you modify a page subform, the command can be executed at any time; current
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1138 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

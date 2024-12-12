@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get resource name.Summary-->The **Get resource name** command returns the name of the resource whose type is passed in *resType* and whose ID number is passed in *resID*.<!-- END REF-->
@@ -23,13 +26,3 @@ displayed_sidebar: docs
 If you pass a valid resource file reference number in the parameter *resFile*, the resource is searched for within that file only. If you do not pass the parameter *resFile*, the resource is searched for within the current open resource files.
 
 If the resource does not exist, **Get resource name** returns an empty string.
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 513 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

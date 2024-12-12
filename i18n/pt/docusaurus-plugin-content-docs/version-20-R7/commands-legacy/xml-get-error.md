@@ -29,13 +29,3 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 #### Ver também 
 
 [DOM Get XML information](dom-get-xml-information.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 732 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

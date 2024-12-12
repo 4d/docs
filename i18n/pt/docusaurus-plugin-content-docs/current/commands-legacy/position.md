@@ -117,12 +117,3 @@ No exemplo abaixo, se quiser encontrar todas as instâncias de uma string e subs
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 15 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

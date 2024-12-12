@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->El comando **FORM SCREENSHOT** devuelve un formulario en forma de imagen.<!-- END REF--> Este comando admite dos sintaxis diferentes: en función de la sintaxis utilizada, puede obtener la imagen de un formulario ejecutado, o la imagen del formulario en el editor de formularios.
@@ -36,12 +39,3 @@ Por defecto, el comando devuelve una captura de pantalla de la página 1 del for
 #### Ver también 
 
 [FORM LOAD](../commands/form-load.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 940 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

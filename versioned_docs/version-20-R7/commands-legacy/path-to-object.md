@@ -174,12 +174,3 @@ You want to know the number of subfolders contained in a path:
 [Folder](../commands/folder.md)  
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1547 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

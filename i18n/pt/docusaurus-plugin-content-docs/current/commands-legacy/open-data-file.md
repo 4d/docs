@@ -54,12 +54,3 @@ No contexto de implementação de uma aplicação fusionada, se quiser abrir ou 
 #### Ver também 
 
 [CREATE DATA FILE](create-data-file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 312 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QUERY.Summary-->La commande **QUERY** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) dans *critère* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant.
+<!--REF #_command_.QUERY.Summary-->La commande **QUERY** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) dans *critère* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF--> **QUERY** modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant.
 
 Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
 
@@ -308,15 +308,3 @@ La variable OK prend la valeur 0 si :
 #### Voir aussi 
 
 [QUERY SELECTION](query-selection.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 277 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Change l'enregistrement courant ||
-| Change la sélection courante ||
-| Interdite sur le serveur ||
-
-

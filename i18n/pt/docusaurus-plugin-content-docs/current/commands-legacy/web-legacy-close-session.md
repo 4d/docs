@@ -35,12 +35,3 @@ Depois da execução deste comando, se um cliente web envia um pedido com uma co
 
 [Método banco de dados On Web Legacy Close Session database method](metodo-banco-de-dados-on-web-legacy-close-session-database-method.md)  
 *Web Sessions Management (Legacy)*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1208 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

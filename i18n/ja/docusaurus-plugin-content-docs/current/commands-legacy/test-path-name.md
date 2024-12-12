@@ -50,12 +50,3 @@ displayed_sidebar: docs
 [CREATE FOLDER](create-folder.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 476 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DOCUMENT LIST.Summary-->**DOCUMENT LIST**コマンド は、*pathname*に渡すパス名にあるドキュメントの名前を要素とするテキスト配列*documents*を生成します。<!-- END REF-->引数*pathname* は絶対パス名だけを受け入れます。 
+<!--REF #_command_.DOCUMENT LIST.Summary-->**DOCUMENT LIST**コマンド は、*pathname*に渡すパス名にあるドキュメントの名前を要素とするテキスト配列*documents*を生成します。<!-- END REF-->
+
+**注:** 引数*pathname* は絶対パス名だけを受け入れます。 
 
 *options* 引数を省略した場合、デフォルトで *documents* 配列にドキュメント名のみが返されます。*options* 引数に*System Documents*テーマの以下の定数を渡すと、この動作を変更できます:
 
@@ -113,13 +115,3 @@ displayed_sidebar: docs
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 474 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

@@ -32,12 +32,3 @@ Quiere llamar a un proceso worker y pasar el nombre del proceso de llamada como 
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
 *Sobre workers*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1392 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

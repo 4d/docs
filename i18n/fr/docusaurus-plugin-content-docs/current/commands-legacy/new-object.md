@@ -106,12 +106,3 @@ Avec cette commande, vous pouvez aisément gérer des objets en boucle :
 
   
 [New shared object](new-shared-object.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1471 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -44,13 +44,3 @@ Le code suivant permet de supprimer le premier attribut "N=1" :
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1084 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

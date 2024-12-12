@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get number of rows.Summary-->The **LISTBOX Get number of rows** command returns the number of rows in the list box set in the *object* and *\** parameters.<!-- END REF-->
@@ -29,12 +32,3 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 915 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

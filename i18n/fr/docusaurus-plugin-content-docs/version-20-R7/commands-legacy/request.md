@@ -78,13 +78,3 @@ La ligne de code :
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 163 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

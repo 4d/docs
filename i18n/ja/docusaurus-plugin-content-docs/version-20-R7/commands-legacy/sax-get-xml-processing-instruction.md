@@ -40,12 +40,3 @@ displayed_sidebar: docs
 
 [SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 875 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

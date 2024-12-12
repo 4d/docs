@@ -27,12 +27,3 @@ Em Macintosh, é modificado o tamanho do data fork do documento
 [Get document position](get-document-position.md)  
 [Get document size](get-document-size.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 480 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

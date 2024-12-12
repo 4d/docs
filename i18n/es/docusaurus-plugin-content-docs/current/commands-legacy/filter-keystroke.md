@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->FILTER KEYSTROKE permite reemplazar el carácter introducido por el usuario en un campo o en un área editable por el primer carácter de la cadena *carFiltro*.<!-- END REF-->
@@ -240,13 +243,3 @@ El método ObtenerTextoSeleccionado es el siguiente:
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 389 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

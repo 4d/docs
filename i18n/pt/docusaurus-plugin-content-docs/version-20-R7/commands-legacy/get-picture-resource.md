@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->O comando GET PICTURE RESOURCE retorna no campo ou na variável *resDados* a imagem guardada no recurso imagem (“PICT”) cujo número se passa em *resNum*.<!-- END REF-->  
@@ -41,13 +44,3 @@ Se não houver memória suficiente para carregar a imagem, um erro é gerado. Po
 #### Ver também 
 
 [ON ERR CALL](on-err-call.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 502 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

@@ -30,12 +30,3 @@ The following example illustrates how Int works for both positive and negative n
 #### See also 
 
 [Dec](dec.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 8 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

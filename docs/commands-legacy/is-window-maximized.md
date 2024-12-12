@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Is window maximized.Summary-->The **Is window maximized** command returns **True** if the window whose reference number is passed in *window* is currently maximized, and **False** otherwise.<!-- END REF--> 
@@ -34,12 +37,3 @@ You want to switch between the maximized and previous states:
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1830 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->**SET DATABASE PARAMETER**コマンドを使用して、4Dデータベース内部の様々なパラメーターを変更することができます。<!-- END REF-->
@@ -148,12 +151,3 @@ displayed_sidebar: docs
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 642 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

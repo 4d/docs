@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->**LISTBOX SET ROW HEIGHT** コマンドは、*object* および *\** パラメーターで指定されたリストボックスの、*row* で指定された行の高さを変更します。<!-- END REF-->
@@ -82,12 +85,3 @@ displayed_sidebar: docs
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1409 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

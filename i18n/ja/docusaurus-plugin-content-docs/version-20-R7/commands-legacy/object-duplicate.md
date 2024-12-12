@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->**OBJECT DUPLICATE**コマンドを使用して、*object*引数で指定したオブジェクトのコピーを作成できます。<!-- END REF-->コピーはアプリケーションモードで実行されているフォームのコンテキストで生成されます。デザインモードのソースフォームは変更されません。
@@ -102,13 +105,3 @@ displayed_sidebar: docs
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1111 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

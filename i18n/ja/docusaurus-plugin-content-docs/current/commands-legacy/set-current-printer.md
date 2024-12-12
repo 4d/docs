@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->**SET CURRENT PRINTER** コマンドは現行の4Dアプリケーションでの印刷に使用するプリンターを指定するために使用します。<!-- END REF-->
@@ -53,13 +56,3 @@ Windows 環境下でのPDF ドキュメントの作成は、以下のように�
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 787 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.PAGE BREAK.Summary-->**PAGE BREAK** triggers the printing of the data that has been sent to the printer and ejects the page.<!-- END REF--> **PAGE BREAK** is used with [Print form](print-form.md) (in the context of the On Printing Detail form event) to force page breaks and to print the last page created in memory. Do not use **PAGE BREAK** with the [PRINT SELECTION](print-selection.md) command. Instead, use [Subtotal](subtotal.md) or [BREAK LEVEL](break-level.md) with the optional parameter to generate page breaks.
@@ -43,13 +46,3 @@ Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 
 [CANCEL](cancel.md)  
 [Print form](print-form.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 6 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

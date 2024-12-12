@@ -90,12 +90,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [JSON TO SELECTION](json-to-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1234 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

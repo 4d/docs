@@ -43,12 +43,3 @@ Esta prova permite executar código diferente dependendo de que versão é uma a
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 495 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -38,12 +38,3 @@ O seguinte exemplo testa o estado da tabela \[Faturas\]. Se o estado da tabela \
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 362 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

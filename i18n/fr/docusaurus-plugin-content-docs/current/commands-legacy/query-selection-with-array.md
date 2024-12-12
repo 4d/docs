@@ -28,13 +28,3 @@ Pour plus d’informations, reportez-vous à la description de la commande [QUER
 #### Voir aussi 
 
 [QUERY WITH ARRAY](query-with-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1050 |
-| Thread safe | &check; |
-| Change la sélection courante ||
-| Interdite sur le serveur ||
-
-

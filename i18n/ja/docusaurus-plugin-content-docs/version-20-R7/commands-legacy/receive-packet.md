@@ -113,13 +113,3 @@ RECEIVE PACKET呼び出し後、エラーなしでパケットを受信すれば
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 104 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

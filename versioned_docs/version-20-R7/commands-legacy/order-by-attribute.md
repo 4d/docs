@@ -112,12 +112,3 @@ Records are in the following order:
 #### See also 
 
   
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1407 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

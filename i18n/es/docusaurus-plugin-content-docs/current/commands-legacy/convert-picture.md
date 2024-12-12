@@ -51,12 +51,3 @@ Conversión de una imagen con calidad del 60%:
 #### Ver también 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1002 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

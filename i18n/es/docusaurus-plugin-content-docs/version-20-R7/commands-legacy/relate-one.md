@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.RELATE ONE.Summary-->RELATE ONE acepta dos sintaxis.<!-- END REF--> 
@@ -86,15 +89,3 @@ Si el comando se ejecuta correctamente y si los registros relacionados se han ca
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 42 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Modifica el registro actual ||
-| Modifica la selección actual ||
-| Prohibido en el servidor ||
-
-

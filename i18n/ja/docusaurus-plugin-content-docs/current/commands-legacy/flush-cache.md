@@ -30,12 +30,3 @@ displayed_sidebar: docs
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 297 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

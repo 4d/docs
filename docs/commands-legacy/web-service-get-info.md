@@ -28,13 +28,3 @@ The *infoType* parameter allows you to indicate the type of information that you
 | Web Service HTTP status code | Integer | 2     | HTTP error code (to be used in case of main error 9912).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 An empty string is returned when no information is available, more particularly when the last SOAP request did not generate any errors.
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 780 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

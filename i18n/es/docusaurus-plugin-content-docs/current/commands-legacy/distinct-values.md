@@ -82,11 +82,3 @@ Para calcular las estadísticas, usted desea ordenar el número de valores disti
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 339 |
-| Hilo seguro | &check; |
-
-

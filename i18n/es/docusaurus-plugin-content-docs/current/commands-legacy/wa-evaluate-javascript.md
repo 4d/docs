@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->El comando WA Evaluate JavaScript ejecuta en el área web designada por los parámetros *\** y *objeto* el código JavaScript pasado en *codeJS* y devuelve el resultado.<!-- END REF--> Este comando debe ser llamado después de cargar la página (el evento de formulario On End URL Loading debe haber sido generado).
@@ -102,12 +105,3 @@ Luego puede evaluar el código JavaScript desde 4D:
 #### Ver también 
 
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1029 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

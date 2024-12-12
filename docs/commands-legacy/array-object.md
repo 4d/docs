@@ -68,12 +68,3 @@ Creation and filling of a local object array:
 
 *Creating Arrays*  
 *Objects (Language)*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1221 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

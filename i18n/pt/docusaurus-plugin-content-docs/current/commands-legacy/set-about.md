@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET ABOUT.Summary-->O comando SET ABOUT muda o comando de menu Sobre 4D do menu **Ajuda** (Windows) ou do menu **Aplicação** (Mac OS X) em *textoItem*.<!-- END REF-->
@@ -43,12 +46,3 @@ O exemplo abaixo reinicializa o comando de menu Sobre 4D:
 #### Ver também 
 
 [SET HELP MENU](set-help-menu.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 316 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

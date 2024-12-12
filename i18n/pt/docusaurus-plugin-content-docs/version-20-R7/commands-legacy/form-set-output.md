@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->O comando FORM SET OUTPUT define o formulário de salida atual de *formulario* ou *formUsuario*.<!-- END REF--> O formulário deve pertencer a *tabela*.
@@ -69,12 +72,3 @@ Os exemplos abaixo usam a rota a um formulário json para imprimir os registros 
 [MODIFY SELECTION](modify-selection.md)  
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 54 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

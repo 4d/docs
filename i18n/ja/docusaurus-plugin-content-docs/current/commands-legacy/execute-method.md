@@ -32,13 +32,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [EXECUTE FORMULA](execute-formula.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1007 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Deactivated.Summary-->O comando Deactivated retorna TRUE em um método formulário de objeto quando a janela do primeiro plano do processo do primeiro plano, que contém ol formulário, passa ao segundo plano.<!-- END REF--> 
@@ -25,12 +28,3 @@ Para que seja gerado o ciclo de execução Deactivated, tenha certeza de que o e
 
 [Activated](activated.md)  
 [Form event code](form-event-code.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 347 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

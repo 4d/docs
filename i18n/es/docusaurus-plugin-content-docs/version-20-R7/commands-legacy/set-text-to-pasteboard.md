@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->SET TEXT TO PASTEBOARD limpia el portapapeles y luego coloca una copia del texto en *texto* en el portapapeles.<!-- END REF--> 
@@ -37,13 +40,3 @@ Si el texto se coloca correctamente en el portapapeles, la variable OK toma el v
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 523 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

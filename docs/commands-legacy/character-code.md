@@ -83,12 +83,3 @@ The second piece of code runs faster for two reasons: it does only one character
 
 [Char](char.md)  
 *Character Reference Symbols*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 91 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -22,6 +22,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->O comando OBJECT DUPLICATE permite criar uma cópia do objeto designado pelo parâmetro *objeto* no contexto do formulário que está sendo executado (modo Aplicação).<!-- END REF--> O formulário de origem, gerado em modo Desenho, não se modifica. 
@@ -100,13 +103,3 @@ Criação de um novo botão opção "bRadio6" baseado no botão opção existent
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
 *Objetos de formulário (Acesso)*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1111 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

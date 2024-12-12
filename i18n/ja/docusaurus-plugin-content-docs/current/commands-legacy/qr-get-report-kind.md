@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get report kind.Summary-->QR Get report kind コマンドは、*area*に渡したエリアのレポートタイプを取得します。<!-- END REF-->
@@ -33,13 +36,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET REPORT KIND](qr-set-report-kind.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 755 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

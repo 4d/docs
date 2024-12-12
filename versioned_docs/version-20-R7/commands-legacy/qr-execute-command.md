@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->The **QR EXECUTE COMMAND** command executes the toolbar button command whose reference was passed in *command*.<!-- END REF--> The most common use for this command is to execute a command selected by the user and intercepted in your code via the [QR ON COMMAND](qr-on-command.md) command.
@@ -37,13 +40,3 @@ If you pass an invalid *command* number, the error -9852 will be generated.
 
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 791 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

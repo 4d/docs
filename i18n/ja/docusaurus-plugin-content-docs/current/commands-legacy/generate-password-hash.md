@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Generate password hash.Summary-->**Generate password hash** ファンクションは*password* 引数のパスワードから暗号化ハッシュアルゴリズムによって生成された、安全なパスワードハッシュを返します。<!-- END REF-->引数には、文字列を渡します。**Generate password hash** はパスワードのハッシュ化された文字列を返します。同じパスワードを複数回渡した場合、ハッシュ化された文字列は毎回異なる結果が返されます。
+<!--REF #_command_.Generate password hash.Summary-->**Generate password hash** ファンクションは*password* 引数のパスワードから暗号化ハッシュアルゴリズムによって生成された、安全なパスワードハッシュを返します。<!-- END REF-->
+
+*password* 引数には、文字列を渡します。**Generate password hash** はパスワードのハッシュ化された文字列を返します。同じパスワードを複数回渡した場合、ハッシュ化された文字列は毎回異なる結果が返されます。
 
 *options* オブジェクト引数には、パスワードハッシュを生成する際に使用したいプロパティを渡します。利用可能な値は以下の表にまとめてあります:   
 
@@ -65,12 +67,3 @@ bcryptは、Blowfish暗号に基づいたパスワードハッシュ機能です
   
 [Generate digest](generate-digest.md)  
 [Verify password hash](verify-password-hash.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1533 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

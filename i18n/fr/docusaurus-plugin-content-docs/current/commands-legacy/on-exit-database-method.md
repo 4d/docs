@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### 
 
 <!--REF #_command_.On Exit database method.Summary-->La méthode base **On Exit** est appelée une fois lorsque vous quittez la base.<!-- END REF-->
@@ -108,12 +111,3 @@ L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs proces
 
 [On Startup database method](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 905252 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

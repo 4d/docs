@@ -52,12 +52,3 @@ displayed_sidebar: docs
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE Get info](web-service-get-info.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 786 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

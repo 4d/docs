@@ -78,12 +78,3 @@ BLOBが圧縮された後、以下のプロジェクトメソッドは圧縮で�
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 536 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -81,11 +81,3 @@ Este exemplo gera um texto utilizando os dados dos arrays:
 #### Ver também 
 
 *Etiquetas HTML 4D*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 816 |
-| Thread-seguro | &check; |
-
-

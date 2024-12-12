@@ -25,12 +25,3 @@ Beginning with version 11 of 4D, you can nest several transactions (sub-transact
 [Transaction level](transaction-level.md)  
 *Using Transactions*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 239 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

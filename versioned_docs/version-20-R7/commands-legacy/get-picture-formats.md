@@ -46,12 +46,3 @@ You want to know the picture formats stored in a field for the current record:
 #### See also 
 
   
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1406 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

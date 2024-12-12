@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->**DISTINCT ATTRIBUTE PATHS** コマンドは、*objectField* に受け渡したインデックスがついているオブジェクトフィールドが所属するテーブルのカレントセレクションについて、同オブジェクトフィールドから検出される、重複しないパスのリストを返します。<!-- END REF-->に受け渡すオブジェクトフィールドはインデックスされている必要があり、そうでない場合にはエラーが返されます。
+<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->**DISTINCT ATTRIBUTE PATHS** コマンドは、*objectField* に受け渡したインデックスがついているオブジェクトフィールドが所属するテーブルのカレントセレクションについて、同オブジェクトフィールドから検出される、重複しないパスのリストを返します。<!-- END REF-->
+
+*objectField* に受け渡すオブジェクトフィールドはインデックスされている必要があり、そうでない場合にはエラーが返されます。
 
 *pathArray* は実行後、セレクション内から検出された重複しないパスの数と同じ要素数を持ちます。ネストされた属性へのパスは標準のドット表記で取得されます (例: "company.address.number")。オブジェクトの属性名は文字の大小を区別することに留意が必要です。このコマンドはカレントセレクションやカレントレコードを変更しません。
 
@@ -65,12 +67,3 @@ displayed_sidebar: docs
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1395 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

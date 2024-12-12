@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->El comando SQL CANCEL LOAD finaliza la solicitud SELECT actual e inicializa los parámetros.<!-- END REF--> 
@@ -51,13 +54,3 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK devuelve 1\.
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 824 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

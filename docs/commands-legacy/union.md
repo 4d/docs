@@ -50,12 +50,3 @@ This example adds records to a set of best customers. The records are displayed 
 
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 120 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

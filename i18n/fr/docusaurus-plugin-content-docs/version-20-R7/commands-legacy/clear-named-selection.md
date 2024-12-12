@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.CLEAR NAMED SELECTION.Summary-->**CLEAR NAMED SELECTION** efface *nom* de la mémoire et donc libère la mémoire qu'elle utilisait.<!-- END REF-->n'affecte pas les tables, sélections courantes ou enregistrements. Comme les sélections temporaires utilisent de la mémoire, il est conseillé de les effacer si vous n'en avez plus besoin.
+<!--REF #_command_.CLEAR NAMED SELECTION.Summary-->**CLEAR NAMED SELECTION** efface *nom* de la mémoire et donc libère la mémoire qu'elle utilisait.<!-- END REF--> **CLEAR NAMED SELECTION** n'affecte pas les tables, sélections courantes ou enregistrements. Comme les sélections temporaires utilisent de la mémoire, il est conseillé de les effacer si vous n'en avez plus besoin.
 
 Si *nom* a été créée par la commande [CUT NAMED SELECTION](cut-named-selection.md) puis traitée à l'aide de la commande [USE NAMED SELECTION](use-named-selection.md), elle n'existe plus en mémoire. Dans ce cas, vous n'avez pas besoin d'utiliser **CLEAR NAMED SELECTION**.
 
@@ -24,12 +24,3 @@ Si *nom* a été créée par la commande [CUT NAMED SELECTION](cut-named-selecti
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 333 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

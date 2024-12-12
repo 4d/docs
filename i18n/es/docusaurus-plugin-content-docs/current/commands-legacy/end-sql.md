@@ -21,12 +21,3 @@ Una secuencia de instrucciones SQL debe estar rodeada por las palabras claves [B
 #### Ver también 
 
 [Begin SQL](begin-sql.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 949 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

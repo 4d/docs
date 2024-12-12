@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->The FORM GET PROPERTIES command returns the properties of the form *formName*.<!-- END REF-->
@@ -41,12 +44,3 @@ The *title* parameter returns the title of the form's window as it was defined i
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 674 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

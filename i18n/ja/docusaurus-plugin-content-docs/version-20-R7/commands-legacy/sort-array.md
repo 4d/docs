@@ -18,6 +18,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT ARRAY.Summary-->**SORT ARRAY**コマンドは、1つまたは複数の配列を昇順や降順にソートします。<!-- END REF-->
 
+**注意:** 
+
 * Pointer 配列や Picture 配列のソートは行えません。二次元配列の要素(例えば *a2DArray{$vlThisElem}*)をソートすることはできますが、二次元配列そのもの(*a2DArray*)をソートすることはできません。
 * Object 型の配列をソートすることはできます。Null 要素はグループ化され、配列の要素は内部的な順番によってソートされます。
 
@@ -80,12 +82,3 @@ displayed_sidebar: docs
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 229 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

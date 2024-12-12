@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->El comando **LISTBOX DUPLICATE COLUMN** duplica la columna definida por los parámetros *objeto* y *\** por programación en el contexto del formulario ejecutado (Modo Aplicación).<!-- END REF--> El formulario original, generado en modo Diseño no se modifica. 
@@ -85,12 +88,3 @@ Note que las variables de encabezado y de pie de página siempre se crean con un
 #### Ver también 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1273 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

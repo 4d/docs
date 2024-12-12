@@ -62,12 +62,3 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 63 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

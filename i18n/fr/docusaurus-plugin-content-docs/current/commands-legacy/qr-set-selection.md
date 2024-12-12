@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->La commande **QR SET SELECTION** permet de sélectionner une cellule, une ligne, une colonne ou encore la totalité de la *zone*, comme vous le feriez à l'aide de la souris.<!-- END REF--> Cette commande permet également de désélectionner la sélection courante. 
@@ -36,13 +39,3 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 #### Voir aussi 
 
 [QR GET SELECTION](qr-get-selection.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 794 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

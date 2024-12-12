@@ -29,12 +29,3 @@ Notez que le BLOB de destination peut être redimensionné si nécessaire.
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 558 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

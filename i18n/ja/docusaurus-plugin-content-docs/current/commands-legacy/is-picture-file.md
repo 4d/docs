@@ -28,12 +28,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1113 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

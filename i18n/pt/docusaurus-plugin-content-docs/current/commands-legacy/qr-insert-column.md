@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->O comando QR INSERT COLUMN insere ou cria uma coluna em una posição específica.<!-- END REF--> As colunas situadas à direita da coluna adicionada serão deslocadas em conseqüência disso.  
@@ -38,13 +41,3 @@ A seguinte instrução insere (ou cria) uma primeira coluna na área MinhaArea, 
 #### Ver também 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 748 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

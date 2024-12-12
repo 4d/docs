@@ -46,13 +46,3 @@ En cas d’erreur, la commande retourne une erreur qui peut être interceptée v
 #### Voir aussi 
 
 [SAX ADD XML DOCTYPE](sax-add-xml-doctype.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 852 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

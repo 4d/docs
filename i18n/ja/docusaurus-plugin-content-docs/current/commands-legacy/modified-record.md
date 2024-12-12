@@ -42,12 +42,3 @@ displayed_sidebar: docs
 [Modified](modified.md)  
 [Old](old.md)  
 [SAVE RECORD](save-record.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 314 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

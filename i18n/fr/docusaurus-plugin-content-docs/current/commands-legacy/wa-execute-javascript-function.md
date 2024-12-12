@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->La commande **WA EXECUTE JAVASCRIPT FUNCTION** exécute dans la zone Web désignée par les paramètres *\** et *objet* la fonction JavaScript *fonctionJS* et retourne facultativement son résultat dans le paramètre *résultat*.<!-- END REF-->
@@ -57,12 +60,3 @@ La fonction JavaScript "getCustomerInfos" reçoit un identifiant numérique en p
 #### Voir aussi 
 
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1043 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

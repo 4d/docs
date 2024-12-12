@@ -92,13 +92,3 @@ Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 
 [ALERT](alert.md)  
 [Request](request.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 162 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

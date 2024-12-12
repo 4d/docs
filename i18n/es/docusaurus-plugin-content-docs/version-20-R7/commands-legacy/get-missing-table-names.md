@@ -33,12 +33,3 @@ Una vez haya identificado las tablas faltantes de la base, puede reactivarlas v�
 #### Ver también 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1125 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

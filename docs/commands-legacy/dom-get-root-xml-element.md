@@ -21,13 +21,3 @@ displayed_sidebar: docs
 #### See also 
 
 [DOM Get parent XML element](dom-get-parent-xml-element.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1053 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

@@ -21,7 +21,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->La commande **QUERY BY ATTRIBUTE** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) à l'aide des paramètres *champObjet*, *cheminAttribut*, *opRech* et *valeur* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant. Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
+<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->La commande **QUERY BY ATTRIBUTE** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) à l'aide des paramètres *champObjet*, *cheminAttribut*, *opRech* et *valeur* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->
+
+**QUERY BY ATTRIBUTE** modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant. Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
 
 Le paramètre optionnel *opConj* est utilisé pour combiner plusieurs appels à **QUERY BY ATTRIBUTE** en cas de recherche multiple. Les opérateurs de conjonction utilisables sont les mêmes que ceux de la commande [QUERY](query.md) :
 
@@ -409,15 +411,3 @@ La variable OK prend la valeur 0 si :
   
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 *Structure des objets de langage 4D*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1331 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Change l'enregistrement courant ||
-| Change la sélection courante ||
-| Interdite sur le serveur ||
-
-

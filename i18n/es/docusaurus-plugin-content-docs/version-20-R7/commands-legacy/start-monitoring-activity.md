@@ -92,12 +92,3 @@ Desea iniciar/detener la supervisión y revisión de los datos 4D y las activida
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1712 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

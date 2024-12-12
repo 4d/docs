@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.CANCEL.Summary-->The **CANCEL** command is used in form or object methods (or in a subroutine) to:
@@ -50,13 +53,3 @@ When the [CANCEL](cancel.md) command is executed (form or printing cancelled), t
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 270 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

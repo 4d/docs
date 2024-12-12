@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Length.Summary-->**Length** permite obtener la longitud de *cadena*.<!-- END REF-->devuelve el número de caracteres alfanuméricos en *cadena*.
+<!--REF #_command_.Length.Summary-->**Length** permite obtener la longitud de *cadena*.<!-- END REF--> **Length** devuelve el número de caracteres alfanuméricos en *cadena*.
 
 **Nota:** en modo Unicode, si quiere verificar que una cadena contiene caracteres, incluyendo caracteres ignorables, debe utilizar el último If(Length(vtAnyText)=0) en lugar de If(vtAnyText=""). Si la cadena contiene por ejemplo Char(1), que es carácter ignorable, Length(vtAnyText) devuelve 1 pero vtAnyText="" devuelve True.
 
@@ -28,13 +28,3 @@ Este ejemplo ilustra el uso de Length. Los resultados, descritos en los comentar
  vlResult:=Length("Topacio") // vlResult obtiene 7
  vlResult:=Length("Ciudadano") // vlResult obtiene 9
 ```
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 16 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

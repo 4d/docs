@@ -77,13 +77,3 @@ For an example of computing an object field attribute, please refer to the examp
 #### See also 
 
 [Max](max.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 4 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

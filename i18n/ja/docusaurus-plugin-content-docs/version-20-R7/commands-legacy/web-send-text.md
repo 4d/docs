@@ -45,12 +45,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [WEB SEND BLOB](web-send-blob.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 677 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

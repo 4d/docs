@@ -35,12 +35,3 @@ Apesar do comando ABORT está destinado a ser utilizado apenas a partir de um m�
 #### Ver também 
 
 [ON ERR CALL](on-err-call.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 156 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

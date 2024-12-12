@@ -41,13 +41,3 @@ Si l'utilisateur clique sur le bouton Annuler dans la boîte de dialogue standar
 #### Voir aussi 
 
 [LOAD SET](load-set.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 184 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

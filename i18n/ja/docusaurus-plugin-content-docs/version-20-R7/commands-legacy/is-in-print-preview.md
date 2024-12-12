@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Is in print preview.Summary-->**Is in print preview**コマンドは印刷ダイアログボックスで印刷プレビューオプションが選択されている場合Trueを返し、そうでなければFalseを返します。<!-- END REF-->この設定はカレントプロセスに対し有効です。 
@@ -44,12 +47,3 @@ displayed_sidebar: docs
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1198 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

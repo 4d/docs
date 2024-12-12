@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.DOCUMENT LIST.Summary-->La commande **DOCUMENT LIST** remplit le tableau de type Texte *documents* avec les noms des documents situés à l'endroit que vous avez indiqué avec le paramètre *cheminAccès*.<!-- END REF-->Vous devez passer un chemin d'accès absolu dans le paramètre *cheminAccès*. 
+<!--REF #_command_.DOCUMENT LIST.Summary-->La commande **DOCUMENT LIST** remplit le tableau de type Texte *documents* avec les noms des documents situés à l'endroit que vous avez indiqué avec le paramètre *cheminAccès*.<!-- END REF-->
+
+**Note :** Vous devez passer un chemin d'accès absolu dans le paramètre *cheminAccès*. 
 
 Par défaut, si vous omettez le paramètre *options*, seuls les noms des documents sont retournés dans le tableau *documents*. Vous pouvez modifier ce fonctionnement en passant dans le paramètre *options* une ou plusieurs des constantes suivantes, placées dans le thème *Documents système* :
 
@@ -113,13 +115,3 @@ Liste de tous les documents en mode récursif POSIX (relatif) :
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 474 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

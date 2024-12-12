@@ -60,13 +60,3 @@ If the command has been correctly executed and if the parsed element is not the 
 #### See also 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 724 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

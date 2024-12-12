@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.ARRAY BOOLEAN.Summary-->O comando ARRAY BOOLEAN cria e/ou redimensiona um array de elementos  na memória.<!-- END REF-->é o nome do array.
+<!--REF #_command_.ARRAY BOOLEAN.Summary-->O comando ARRAY BOOLEAN cria e/ou redimensiona um array de elementos  na memória.<!-- END REF-->
+
+* O parâmetro n*omeArray* é o nome do array.
 * O parâmetro *tamanho* é o número de elementos em um array.
 * O parâmetro *tamanho2* é opcional; se *tamanho2* for especificado, o comando cria um array de duas dimensões.
 
@@ -60,12 +62,3 @@ Este exemplo cria um array interprocesso de 50 elementos do tipo Booleano e dete
 #### Ver também 
 
 [ARRAY INTEGER](array-integer.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 223 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

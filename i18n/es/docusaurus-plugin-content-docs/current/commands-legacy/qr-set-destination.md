@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->El comando QR SET DESTINATION permite definir el *tipo* de salida del informe rápido en *area*.<!-- END REF-->
@@ -49,13 +52,3 @@ El siguiente código define el archivo texto Midoc.txt como tipo de destino del 
 #### Ver también 
 
 [QR GET DESTINATION](qr-get-destination.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 745 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

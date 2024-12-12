@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Subtotal.Summary-->**Subtotal** returns the subtotal for *data* for the current or last break level.<!-- END REF--> **Subtotal** works only when a sorted selection is being printed with [PRINT SELECTION](print-selection.md) or when printing using Print in the Design environment. The *data* parameter must be of type real, integer, or long integer. Assign the result of the **Subtotal** function to a variable placed in the Break area of the form.
@@ -59,12 +62,3 @@ The **Subtotal** function is necessary in order to display values on a form.
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 97 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

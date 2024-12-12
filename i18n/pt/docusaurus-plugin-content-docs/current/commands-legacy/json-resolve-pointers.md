@@ -230,12 +230,3 @@ Se executar:
 #### Ver também 
 
   
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1478 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

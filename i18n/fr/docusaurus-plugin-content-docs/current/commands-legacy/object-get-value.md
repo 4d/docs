@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get value.Summary-->La commande **OBJECT Get value** retourne la valeur courante des sources de données des objets formulaire désignés par le paramètre nomObjet.<!-- END REF-->
@@ -38,12 +41,3 @@ Voir l'exemple de la commande [OBJECT SET VALUE](object-set-value.md).
 #### Voir aussi 
 
 [OBJECT SET VALUE](object-set-value.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1743 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

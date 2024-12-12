@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA Get last filtered URL.Summary-->WA Get last filtered URL コマンドは、*\** と *object* 引数で指定したWebエリアで、最後にフィルタされたURLを返します。<!-- END REF-->
@@ -33,12 +36,3 @@ URLは以下のいずれかの理由でフィルタされることがありま�
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1035 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

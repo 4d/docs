@@ -42,13 +42,3 @@ Puede interceptar estos errores utilizando un método instalado por el comando [
 
   
 [DELETE DOCUMENT](delete-document.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 693 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

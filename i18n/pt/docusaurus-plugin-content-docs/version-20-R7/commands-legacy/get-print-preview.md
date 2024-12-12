@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get print preview.Summary-->O comando **Get print preview** devolve True se o comando [SET PRINT PREVIEW](set-print-preview.md) foi chamado com o valor **True** no processo atual.<!-- END REF-->
@@ -23,12 +26,3 @@ Note que o usuário pode modificar esta opção antes de validar a caixa de diá
 
 [Is in print preview](is-in-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1197 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

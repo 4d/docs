@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->La commande **SPELL CHECK TEXT** vérifie le contenu du paramètre *leTexte* à partir du caractère *posVérif* et retourne la position du premier mot inconnu rencontré (le cas échéant).<!-- END REF-->
@@ -53,13 +56,3 @@ On souhaite compter le nombre de fautes potentielles dans un texte :
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1215 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

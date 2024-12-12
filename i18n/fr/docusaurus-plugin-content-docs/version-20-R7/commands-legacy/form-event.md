@@ -97,12 +97,3 @@ La list box résultante s'affichera comme suit lorsque les lignes sont sélectio
 #### Voir aussi 
 
 [Form event code](form-event-code.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1606 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

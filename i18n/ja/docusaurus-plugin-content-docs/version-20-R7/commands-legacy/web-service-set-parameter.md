@@ -72,12 +72,3 @@ displayed_sidebar: docs
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 777 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -73,12 +73,3 @@ You want to get a list of recent fonts:
 [OBJECT SET FONT](object-set-font.md)  
 [SET RECENT FONTS](set-recent-fonts.md)  
 [ST SET ATTRIBUTES](st-set-attributes.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 460 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

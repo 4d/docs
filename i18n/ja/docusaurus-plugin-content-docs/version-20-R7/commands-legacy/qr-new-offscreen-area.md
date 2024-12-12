@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR New offscreen area.Summary-->QR New offscreen area コマンドは、新しくクイックレポートのオフスクリーンエリアを作成し、その参照番号を返します。<!-- END REF-->   
@@ -21,12 +24,3 @@ displayed_sidebar: docs
 
 [QR DELETE OFFSCREEN AREA](qr-delete-offscreen-area.md)  
 [QR NEW AREA](qr-new-area.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 735 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

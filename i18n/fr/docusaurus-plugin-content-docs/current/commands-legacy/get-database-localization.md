@@ -50,12 +50,3 @@ La langue courante de la base définit le dossier .lproj dans lequel le programm
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1009 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

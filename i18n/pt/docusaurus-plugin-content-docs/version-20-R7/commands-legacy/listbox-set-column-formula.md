@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->O comando **LISTBOX SET COLUMN FORMULA** modifica a *formula* associada à coluna de list box designada pelos parâmetros *objeto* e *\**.<!-- END REF--> As fórmulas só podem ser utilizadas quando a propriedade “Fonte de dados” do list box forem de **Seleção atual**, **Seleção temporal** ou **Coleção ou Seleção de Entidades.**
@@ -41,12 +44,3 @@ O parâmetro *tipoDados* designa o tipo de dados resultantes da execução da f�
 
 [LISTBOX Get column formula](listbox-get-column-formula.md)  
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1203 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

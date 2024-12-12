@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->Screen depthコマンドは、モニターについての情報を引数*depth*と*color*に返します。<!-- END REF-->
@@ -59,12 +62,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Count screens](count-screens.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 439 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

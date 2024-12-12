@@ -126,12 +126,3 @@ $webServerInfo:=WEB Get server info(True)
 [License info](license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1531 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

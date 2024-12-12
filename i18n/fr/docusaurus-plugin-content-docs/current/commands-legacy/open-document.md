@@ -86,13 +86,3 @@ Si vous passez la valeur 3 dans *mode*, la fonction retourne ?00:00:00? (pas de 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 264 |
-| Thread safe | &check; |
-| Modifie les variables | OK, Document, error |
-| Interdite sur le serveur ||
-
-

@@ -36,12 +36,3 @@ displayed_sidebar: docs
 [Locked](locked.md)  
 *Record Locking*  
 [UNLOAD RECORD](unload-record.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 52 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

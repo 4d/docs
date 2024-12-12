@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->The **GET LIST PROPERTIES** command returns information about the list whose reference number you pass in *list*.<!-- END REF-->
@@ -42,12 +45,3 @@ For a complete description of the appearance, node icons, minimal line height an
 #### See also 
 
 [SET LIST PROPERTIES](set-list-properties.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 632 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

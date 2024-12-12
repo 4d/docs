@@ -25,12 +25,3 @@ displayed_sidebar: docs
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Sin](sin.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 19 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

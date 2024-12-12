@@ -59,12 +59,3 @@ El siguiente ejemplo lee 20 valores enteros de un BLOB, a partir del offset 0x20
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 549 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

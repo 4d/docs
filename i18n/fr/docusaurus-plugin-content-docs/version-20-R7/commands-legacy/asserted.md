@@ -41,13 +41,3 @@ Insertion d’une assertion dans l’évaluation d’une expression :
 [ASSERT](assert.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1132 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

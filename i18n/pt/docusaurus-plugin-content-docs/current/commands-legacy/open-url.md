@@ -78,12 +78,3 @@ Pode abrir um arquivo texto com diferentes aplicações:
 #### Ver também 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 673 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

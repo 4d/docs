@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->**Get text from pasteboard** retourne le texte présent dans le conteneur de données.<!-- END REF--> 
@@ -32,13 +35,3 @@ Si le texte est correctement extrait, la variable système OK prend la valeur 1,
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 524 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

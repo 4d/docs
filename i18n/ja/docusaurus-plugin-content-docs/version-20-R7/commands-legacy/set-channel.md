@@ -173,13 +173,3 @@ SET CHANNELコマンドの第2の形式は、ドキュメントファイルの�
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 77 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document |
-| サーバー上での使用は不可 ||
-
-

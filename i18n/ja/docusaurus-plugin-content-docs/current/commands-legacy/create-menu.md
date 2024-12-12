@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Create menu.Summary-->Create menu コマンドはメモリに新しいメニューを作成するために使用します。<!-- END REF-->このメニューはメモリ上にのみ存在し、デザインモードの メニューバーには追加されません。セッション中にこのメニューに対して行われた更新は、データベースのすべてのプロセスの、このメニューすべてのインスタ ンスに即座に反映されます。
@@ -40,12 +43,3 @@ displayed_sidebar: docs
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [SET MENU BAR](set-menu-bar.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 408 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

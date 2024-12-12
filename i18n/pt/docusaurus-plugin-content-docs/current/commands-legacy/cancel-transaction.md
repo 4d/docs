@@ -25,12 +25,3 @@ displayed_sidebar: docs
 [Transaction level](transaction-level.md)  
 *Usar Transações*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 241 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

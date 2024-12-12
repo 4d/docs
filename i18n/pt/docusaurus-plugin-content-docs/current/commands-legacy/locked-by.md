@@ -39,11 +39,3 @@ nomeProcesso devolve o endereço IP do locker, p. ex. "127.0.0.1"
 
 [Locked](locked.md)  
 *Record Locking*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 353 |
-| Thread-seguro | &check; |
-
-

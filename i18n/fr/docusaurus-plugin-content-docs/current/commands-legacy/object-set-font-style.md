@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->**OBJECT SET FONT STYLE** assigne le style de police *style* à ou aux objet(s) de formulaire désigné(s) par *objet*.<!-- END REF-->   
@@ -55,12 +58,3 @@ L'exemple suivant définit le style de police Normal pour tous les objets de for
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 166 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

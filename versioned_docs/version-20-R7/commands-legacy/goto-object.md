@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->The **GOTO OBJECT** command is used to select the data entry object *object* as the active area of the form.<!-- END REF--> It is equivalent to the user’s clicking on or tabbing into the field or variable.
@@ -49,12 +52,3 @@ See the example for the [REJECT](reject.md) command.
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 206 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

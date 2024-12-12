@@ -38,12 +38,3 @@ Reportez-vous à l'exemple de la commande [User in group](user-in-group.md).
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 [User in group](user-in-group.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 182 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

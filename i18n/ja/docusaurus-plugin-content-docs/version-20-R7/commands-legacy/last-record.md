@@ -32,13 +32,3 @@ displayed_sidebar: docs
 [FIRST RECORD](first-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 200 |
-| スレッドセーフである | &check; |
-| カレントレコードを変更する ||
-| サーバー上での使用は不可 ||
-
-

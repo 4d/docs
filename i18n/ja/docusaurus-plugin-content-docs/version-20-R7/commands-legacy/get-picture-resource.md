@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->GET PICTURE RESOURCE コマンドは、*resID*のIDを持つピクチャ ("PICT") リソースに格納されているピクチャを*resData*のピクチャフィールドまたは変数に返します。<!-- END REF-->
@@ -41,13 +44,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [ON ERR CALL](on-err-call.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 502 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

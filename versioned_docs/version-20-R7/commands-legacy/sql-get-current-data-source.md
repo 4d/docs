@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL Get current data source.Summary-->The SQL Get current data source command returns the name of the current data source of the application.<!-- END REF--> The current data source receives the SQL queries executed within **Begin SQL/End SQL** structures.
@@ -28,12 +31,3 @@ This command lets you check the current data source, generally before executing 
 [SQL GET DATA SOURCE LIST](sql-get-data-source-list.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 990 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->MAXIMIZE WINDOW コマンドは、*window*に渡された参照番号のウィンドウを最大化します。<!-- END REF-->この引数が省略されると、同じ効果がカレントプロセスのすべての最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) に適用されます。 
@@ -84,12 +87,3 @@ Mac OSのズームボックス
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 453 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -194,13 +194,3 @@ Obtendrá el siguiente resultado (objeto stringified):
 ```
 
 **Nota:** para más información sobre el formato del [objeto](# "Datos estructurados como forma de objeto nativo 4D"), devuelto, contacte los servicios técnicos de 4D.
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1528 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

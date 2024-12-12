@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->O comando**METHOD Get attribute**retorna o valor do atributo *tipoAtributo* para o método projeto designado pelo parâmetro *rota*.<!-- END REF-->
@@ -41,12 +44,3 @@ O comando retorna **True** se for selecionado um atributo e **False** se for des
 #### Ver também 
 
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1169 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

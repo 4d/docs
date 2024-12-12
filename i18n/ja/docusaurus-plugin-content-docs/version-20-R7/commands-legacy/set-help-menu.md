@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET HELP MENU.Summary-->**SET HELP MENU** コマンドを使用すると、アプリケーションモードにおいてデフォルトの4D **ヘルプ**メニューの内容を、 *menuCol* 引数に渡したコレクションで置き換えることができます。<!-- END REF-->
@@ -59,12 +62,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET ABOUT](set-about.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1801 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

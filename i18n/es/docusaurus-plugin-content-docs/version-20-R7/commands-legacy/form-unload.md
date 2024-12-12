@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM UNLOAD.Summary-->El comando **FORM UNLOAD** libera de la memoria el formulario actual designado utilizando el comando [FORM LOAD](form-load.md).<!-- END REF-->
@@ -21,12 +24,3 @@ Llamar este comando es necesario cuando se utiliza el comando [FORM LOAD](form-l
 #### Ver también 
 
 [FORM LOAD](form-load.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1299 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

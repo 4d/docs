@@ -54,13 +54,3 @@ IANA名に関する説明は[CONVERT FROM TEXT](convert-from-text.md)コマン�
 [RECEIVE BUFFER](receive-buffer.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 205 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

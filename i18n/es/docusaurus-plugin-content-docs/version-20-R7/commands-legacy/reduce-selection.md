@@ -57,14 +57,3 @@ El siguiente ejemplo busca las estadísticas correctas para una competencia mund
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 351 |
-| Hilo seguro | &check; |
-| Modifica el registro actual ||
-| Modifica la selección actual ||
-| Prohibido en el servidor ||
-
-

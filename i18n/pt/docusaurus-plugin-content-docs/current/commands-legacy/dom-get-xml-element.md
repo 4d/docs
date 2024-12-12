@@ -33,13 +33,3 @@ Se o comando tiver sido executado corretamente, a variável sistema OK assume o 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 725 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

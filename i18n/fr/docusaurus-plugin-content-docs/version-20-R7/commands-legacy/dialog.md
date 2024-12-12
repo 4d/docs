@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.DIALOG.Summary-->La commande **DIALOG** présente le *formulaire* à l'utilisateur en lui passant des paramètres via *formData* (optionnel).<!-- END REF--> 
@@ -167,13 +170,3 @@ Si l'utilisateur valide le dialogue, la variable système OK prend la valeur 1, 
 [CANCEL](cancel.md)  
 [Form](form.md)  
 [Open window](open-window.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 40 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

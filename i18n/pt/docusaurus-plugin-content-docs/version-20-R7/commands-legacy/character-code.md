@@ -85,12 +85,3 @@ O segundo código é executado mais rápido por duas razões: apenas referencia 
 
 [Char](char.md)  
 *Símbolos de referência de caracteres*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 91 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

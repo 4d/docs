@@ -82,12 +82,3 @@ Vous souhaiter copier un tableau texte dans une collection partagée :
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *Conversions de type entre les collections et les tableaux 4D*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1563 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

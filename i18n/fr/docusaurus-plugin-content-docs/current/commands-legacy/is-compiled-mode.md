@@ -41,12 +41,3 @@ Dans une de vos méthodes, vous avez placé du code pour déboguer la base lorsq
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 492 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

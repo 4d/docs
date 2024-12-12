@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->The **SQL SET OPTION** command modifies the *value* of the option passed in *option*.<!-- END REF--> 
@@ -45,13 +48,3 @@ If the command was properly executed, the system variable OK returns 1\. Otherwi
 #### See also 
 
 [SQL GET OPTION](sql-get-option.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 818 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

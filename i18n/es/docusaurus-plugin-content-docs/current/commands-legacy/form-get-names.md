@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->El comando **FORM GET NAMES** llena el array *arrayNoms* con los nombres de los formularios de la aplicación.<!-- END REF--> 
@@ -67,12 +70,3 @@ Ejemplos de uso típicos:
 
 *Formularios*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1167 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

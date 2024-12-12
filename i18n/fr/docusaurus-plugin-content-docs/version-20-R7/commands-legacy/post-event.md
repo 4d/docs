@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.POST EVENT.Summary-->La commande **POST EVENT** simule un événement (clavier ou souris).<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur agit réellement par l'intermédiaire du clavier ou de la souris.
@@ -72,12 +75,3 @@ Si vous passez le paramètre *process*, l'événement est envoyé au process don
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 467 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

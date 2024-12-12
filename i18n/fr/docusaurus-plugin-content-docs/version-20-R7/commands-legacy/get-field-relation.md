@@ -84,12 +84,3 @@ Le code ci-dessous illustre les différentes possibilités offertes par les comm
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 920 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY TIME.Summary-->La commande **ARRAY TIME** crée et/ou redimensionne un tableau d’éléments de type Heure en mémoire.<!-- END REF-->Dans 4D, les heures peuvent être traitées en tant que valeurs numériques. Dans les versions de 4D antérieures à la v14, il était nécessaire de combiner un tableau d’entiers longs et un format d’affichage pour gérer un tableau d’heures. 
+<!--REF #_command_.ARRAY TIME.Summary-->La commande **ARRAY TIME** crée et/ou redimensionne un tableau d’éléments de type Heure en mémoire.<!-- END REF-->
+
+**Rappel :** Dans 4D, les heures peuvent être traitées en tant que valeurs numériques. Dans les versions de 4D antérieures à la v14, il était nécessaire de combiner un tableau d’entiers longs et un format d’affichage pour gérer un tableau d’heures. 
 
 Le paramètre *nomTableau* est le nom du tableau.
 
@@ -63,12 +65,3 @@ Comme les tableaux d’heures acceptent des valeurs numériques, le code suivant
 
 *Créer des tableaux*  
 [Time](time.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1223 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

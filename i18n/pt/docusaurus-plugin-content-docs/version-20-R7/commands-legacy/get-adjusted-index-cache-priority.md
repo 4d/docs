@@ -25,12 +25,3 @@ displayed_sidebar: docs
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 *Gerenciar prioridades em cache de banco de dados*  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1427 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

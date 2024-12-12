@@ -29,12 +29,3 @@ The following example displays an alert that shows the number of records in a ta
 #### See also 
 
 [Records in selection](records-in-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 83 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

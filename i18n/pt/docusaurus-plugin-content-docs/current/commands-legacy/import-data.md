@@ -46,13 +46,3 @@ Se o usuário clicar em **Cancelar** na caixa de diálogo de salvar arquivos ou 
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 665 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

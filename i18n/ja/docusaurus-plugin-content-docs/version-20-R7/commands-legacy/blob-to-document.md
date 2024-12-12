@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT は、*blob*に格納されているデータを使用して*document*の内容全体を上書きします。<!-- END REF-->を使用します(例題を参照)。
+<!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT は、*blob*に格納されているデータを使用して*document*の内容全体を上書きします。<!-- END REF-->*document*にはドキュメント名を渡します。*document*が存在しない場合、コマンドはドキュメントを作成します。既存のドキュメント名を渡す場合、それが開かれていないことを確認してください。ファイルが開かれているとエラーが生成されます。ドキュメントをユーザが選択できるようにするには、[Open document](open-document.md) または[Create document](create-document.md) 、およびプロセス変数*document* を使用します(例題を参照)。
 
 #### 例題 
 
@@ -50,13 +50,3 @@ displayed_sidebar: docs
 [Create document](create-document.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [Open document](open-document.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 526 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

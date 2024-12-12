@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->La commande **QUERY BY EXAMPLE** effectue la même action que la commande de menu **Recherche par formulaire**.<!-- END REF-->.. en mode Développement. Cette commande affiche le formulaire entrée courant comme fenêtre de recherche. **QUERY BY EXAMPLE** cherche dans *laTable* les données que l'utilisateur a saisies dans cette fenêtre. Le formulaire doit contenir les champs sur lesquels vous voulez que l'utilisateur puisse effectuer la recherche. La recherche est optimisée : les champs indexés sont automatiquement utilisés.  
@@ -41,15 +44,3 @@ Si l'utilisateur clique sur le bouton Valider ou appuie sur la touche Entrée, l
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 292 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Change l'enregistrement courant ||
-| Change la sélection courante ||
-| Interdite sur le serveur ||
-
-

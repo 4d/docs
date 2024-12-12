@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get font size.Summary-->The OBJECT Get font size command returns the size (in points) of the character font used by the form object(s) designated by *object*.<!-- END REF--> 
@@ -24,12 +27,3 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 #### See also 
 
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1070 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

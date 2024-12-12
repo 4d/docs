@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.User in group.Summary-->User in group returns TRUE if *user* is in *group*.<!-- END REF-->
@@ -42,12 +45,3 @@ The following example searches for specific invoices. If the current user is in 
 #### See also 
 
 [Current user](current-user.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 338 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

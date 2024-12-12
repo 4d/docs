@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.EXPORT DIF.Summary-->La commande **EXPORT DIF** écrit dans *document* (document DIF Windows ou Mac OS) les données des enregistrements de la sélection courante de la table *laTable* du process courant.<!-- END REF-->
@@ -49,13 +52,3 @@ OK prend la valeur 1 si l'export s'est correctement déroulé, sinon elle prend 
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [USE CHARACTER SET](use-character-set.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 84 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

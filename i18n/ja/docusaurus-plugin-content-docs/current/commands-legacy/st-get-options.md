@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->**ST GET OPTIONS**コマンドは、 *object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内で動作中のオプションのカレントの値を取得します。<!-- END REF-->
@@ -34,12 +37,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [ST SET OPTIONS](st-set-options.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1290 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

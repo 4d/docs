@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Pasteboard data size.Summary-->**Pasteboard data size** vous permet de savoir s'il y a des données du type *typeDonnées* dans le conteneur de données.<!-- END REF--> 
@@ -94,13 +97,3 @@ Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-da
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 400 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

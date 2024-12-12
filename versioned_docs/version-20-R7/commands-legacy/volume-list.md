@@ -39,12 +39,3 @@ Using a scrollable area named *atVolumes* you want to display the list of the vo
 [DOCUMENT LIST](document-list.md)  
 [FOLDER LIST](folder-list.md)  
 [VOLUME ATTRIBUTES](volume-attributes.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 471 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

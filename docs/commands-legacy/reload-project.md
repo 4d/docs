@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.RELOAD PROJECT.Summary-->The **RELOAD PROJECT** command reloads the source file definitions (methods, forms, etc.) from the disk for the running project in the current 4D environment.<!-- END REF--> It can only be used with 4D projects executed in **interpreted mode**. The command execution is asynchronous. 
@@ -34,12 +37,3 @@ When the command is called from:
 #### See also 
 
 *Developing a project*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1739 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

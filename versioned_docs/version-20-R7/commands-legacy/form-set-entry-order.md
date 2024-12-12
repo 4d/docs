@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->The **FORM SET ENTRY ORDER** command allows to set dynamically the entry order of the current form for the current process based upon the *objectNames* array.<!-- END REF--> 
@@ -52,12 +55,3 @@ You want to set the entry order of objects in the form based upon their names:
 #### See also 
 
 [FORM GET ENTRY ORDER](form-get-entry-order.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1468 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

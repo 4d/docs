@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->The **LISTBOX DUPLICATE COLUMN** command duplicates the column designated by the *object* and *\** parameters by programming in the context of the form being executed (Application mode).<!-- END REF--> The original form, generated in the Design mode, is not modified. 
@@ -93,12 +96,3 @@ You want to duplicate a Boolean column and change its title:
 #### See also 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1273 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

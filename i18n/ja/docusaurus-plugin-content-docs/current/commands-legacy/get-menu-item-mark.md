@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get menu item mark.Summary-->Get menu item mark コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目の、チェックマークを返します。<!-- END REF-->*menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
@@ -39,12 +42,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET MENU ITEM MARK](set-menu-item-mark.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 428 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

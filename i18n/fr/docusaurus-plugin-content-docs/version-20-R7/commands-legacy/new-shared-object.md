@@ -67,12 +67,3 @@ Vous souhaitez créer et modifier un objet partagé. La structure *Utiliser...Fi
 [New object](new-object.md)  
 [New shared collection](new-shared-collection.md)  
 *Objets partagés et collections partagées*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1526 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

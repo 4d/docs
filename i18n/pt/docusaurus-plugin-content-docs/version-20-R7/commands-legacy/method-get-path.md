@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD Get path.Summary-->O comando **METHOD Get path** devolve a rota de acesso interna completa de um método.<!-- END REF-->
@@ -64,12 +67,3 @@ Se o comando for executado desde um componente, retorna como padrão as rotas do
 [Current method path](current-method-path.md)  
 [METHOD OPEN PATH](method-open-path.md)  
 [METHOD RESOLVE PATH](method-resolve-path.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1164 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

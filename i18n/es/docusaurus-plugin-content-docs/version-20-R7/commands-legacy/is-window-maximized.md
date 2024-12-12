@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Is window maximized.Summary-->El comando **Is window maximized** devuelve **True** si la ventana cuyo número de referencia se pasa en *ventana* está actualmente maximizada, y **False** en caso contrario.<!-- END REF-->
@@ -34,12 +37,3 @@ Quiere cambiar entre el estado maximizado y el anterior:
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1830 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

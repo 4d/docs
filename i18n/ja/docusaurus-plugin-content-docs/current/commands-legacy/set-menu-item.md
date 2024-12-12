@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET MENU ITEM.Summary-->SET MENU ITEM コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目のテキストを、*itemText*に渡したテキストに変更します。<!-- END REF-->*menuItem*に-1を渡すと、*menu*に最後に追加された項目を指定したことになります。
@@ -33,12 +36,3 @@ displayed_sidebar: docs
 [APPEND MENU ITEM](append-menu-item.md)  
 [Get menu item](get-menu-item.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 348 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

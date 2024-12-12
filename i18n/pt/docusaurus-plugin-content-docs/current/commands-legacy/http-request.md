@@ -127,12 +127,3 @@ Petição para adicionar um registro em JSON a um banco de dados remoto:
 #### Ver também 
 
 [HTTP Get](http-get.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1158 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

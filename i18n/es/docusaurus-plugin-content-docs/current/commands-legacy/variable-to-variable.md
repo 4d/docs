@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->El comando VARIABLE TO VARIABLE escribe las variables proceso *dstVar* (*dstVar2*, etc.) del proceso de destino cuyo número se pasa en *proceso* utilizando los valores de las variables *srcVar1* *srcVar2*, etc.<!-- END REF-->
@@ -58,11 +61,3 @@ El siguiente ejemplo lee un array proceso desde el proceso indicado por *$vlProc
 [GET PROCESS VARIABLE](get-process-variable.md)  
 *Procesos*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 635 |
-| Hilo seguro | &check; |
-
-

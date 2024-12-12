@@ -29,12 +29,3 @@ The line of code adds 100 bytes to the BLOB *myBlob*:
 #### See also 
 
 [SET BLOB SIZE](set-blob-size.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 605 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

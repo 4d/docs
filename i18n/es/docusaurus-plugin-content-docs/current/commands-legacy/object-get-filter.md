@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get filter.Summary-->El comando OBJECT Get filter devuelve el nombre de todo filtro asociado con el objeto o grupo de objetos designado por *objeto*.<!-- END REF-->  
@@ -24,12 +27,3 @@ Si pasa el parámetro opcional *\**, indica que el parámetro objeto es un nombr
 #### Ver también 
 
 [OBJECT SET FILTER](object-set-filter.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1073 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

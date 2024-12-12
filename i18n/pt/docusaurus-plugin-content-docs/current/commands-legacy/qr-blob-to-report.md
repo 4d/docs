@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->O comando QR BLOB TO REPORT coloca o relatório contido no *BLOB* na área de relatório rápido passada em *area*.<!-- END REF--> 
@@ -43,13 +46,3 @@ A instrução a seguir recupera o relatório rápido armazenado em Campo4 e o mo
 #### Ver também 
 
 [QR REPORT TO BLOB](qr-report-to-blob.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 771 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

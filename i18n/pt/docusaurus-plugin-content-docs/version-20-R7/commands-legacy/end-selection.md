@@ -60,12 +60,3 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 36 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB GET ARRAY.Summary-->**OB GET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの、*property* 引数で指定したプロパティの中に保存されている値の配列を *array* という配列に返します。<!-- END REF-->で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB GET ARRAY.Summary-->**OB GET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの、*property* 引数で指定したプロパティの中に保存されている値の配列を *array* という配列に返します。<!-- END REF-->
+
+*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *property* 引数には、値を取得したいプロパティのラベルを渡します。*property* 引数では、大文字と小文字は区別されることに注意して下さい。
 
@@ -51,12 +53,3 @@ displayed_sidebar: docs
 
 [OB SET ARRAY](ob-set-array.md)  
 *コレクションと4D配列間での型の変換*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1229 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

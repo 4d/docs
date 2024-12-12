@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->La commande **EDIT FORMULA** affiche l’éditeur de formules afin de permettre à l’utilisateur d’écrire ou de modifier une formule.<!-- END REF--> L’éditeur contient à l'ouverture :
@@ -54,13 +57,3 @@ Si l’utilisateur valide la boîte de dialogue, la variable système OK prend l
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 806 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

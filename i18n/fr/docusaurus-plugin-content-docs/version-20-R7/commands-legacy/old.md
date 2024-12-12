@@ -42,12 +42,3 @@ Pour restaurer la valeur originale d'un champ, assignez-lui la valeur retournée
 #### Voir aussi 
 
 [Modified](modified.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 35 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

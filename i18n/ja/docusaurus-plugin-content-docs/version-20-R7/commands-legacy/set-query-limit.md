@@ -63,12 +63,3 @@ SET QUERY LIMITは、下記のクエリコマンドの動作を変更します:
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 395 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

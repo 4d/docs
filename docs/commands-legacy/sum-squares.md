@@ -58,12 +58,3 @@ This example gets the sum of the squares of the values placed in an array:
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 28 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

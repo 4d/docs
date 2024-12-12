@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Nota de compatibilidade 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->Esse comando era chamado **CALL PROCESS** em lançamentos 4D anteriores.<!-- END REF--> 
@@ -40,12 +43,3 @@ Ver o exemplo de [On Exit Database Method](metodo-banco-de-dados-on-exit.md "On 
 [Form event code](form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 329 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

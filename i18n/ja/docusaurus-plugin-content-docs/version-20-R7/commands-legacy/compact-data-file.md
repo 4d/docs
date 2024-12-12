@@ -68,13 +68,3 @@ Timestamp log file nameオプションを渡していた場合、ログファイ
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 937 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document |
-| サーバー上での使用は不可 ||
-
-

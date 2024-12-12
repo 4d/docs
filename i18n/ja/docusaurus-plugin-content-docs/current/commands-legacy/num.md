@@ -84,12 +84,3 @@ Num が特別に扱う3つの指定された文字があります。(*separator*
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 11 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

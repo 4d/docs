@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT muestra el *objeto* utilizando la fuente especificada en el parámetro *fuente*.<!-- END REF--> El parámetro *fuente* debe contener un nombre de fuente válido.
@@ -60,12 +63,3 @@ El siguiente ejemplo utiliza la opción especial *%password*, diseñada para la 
 [OBJECT Get font](object-get-font.md)  
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 164 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

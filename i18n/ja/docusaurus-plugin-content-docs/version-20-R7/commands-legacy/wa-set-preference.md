@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->WA SET PREFERENCE コマンドを使用して、引数 *\** と *object* によって指定されたWebエリアに対して、さまざまな環境設定を行います。<!-- END REF-->
@@ -49,12 +52,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1041 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

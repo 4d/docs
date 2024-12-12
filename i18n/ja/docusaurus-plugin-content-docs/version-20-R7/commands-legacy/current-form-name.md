@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Current form name.Summary-->**Current form name**コマンドは、プロセスのために定義されたカレントのフォームの名前を返します。<!-- END REF-->カレントフォームはプロジェクトフォームでもテーブルフォームでも可能です。
@@ -57,12 +60,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [FORM LOAD](form-load.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1298 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

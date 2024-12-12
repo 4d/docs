@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SPELL Get current dictionary.Summary-->O comando **SPELL Get current dictionary** devolve o número de ID do dicionário que está sendo utilizado.<!-- END REF-->
@@ -33,12 +36,3 @@ Queremos mostrar a linguagem do dicionário atual:
 #### Ver também 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1205 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

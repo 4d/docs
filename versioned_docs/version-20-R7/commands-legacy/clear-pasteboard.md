@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->The CLEAR PASTEBOARD command clears the pasteboard of all its contents.<!-- END REF--> If the pasteboard contains multiple instances of the same data, all instances are cleared. After a call to CLEAR PASTEBOARD, the pasteboard is empty.
@@ -39,12 +42,3 @@ See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) co
 #### See also 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 402 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

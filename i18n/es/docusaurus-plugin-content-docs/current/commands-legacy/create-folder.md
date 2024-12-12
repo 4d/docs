@@ -71,13 +71,3 @@ Creación de la subcarpeta "\\Febrero\\" en la carpeta existente "C:\\Archives\\
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 475 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

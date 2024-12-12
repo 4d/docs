@@ -53,12 +53,3 @@ In the worker method (*theWorker*), you add some code to handle this situation:
 *About workers*  
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1390 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

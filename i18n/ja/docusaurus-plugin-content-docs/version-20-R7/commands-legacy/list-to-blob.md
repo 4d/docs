@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->LIST TO BLOB コマンドは、*blob*に階層リスト*list*を格納します。<!-- END REF-->
@@ -47,13 +50,3 @@ LIST TO BLOBや[BLOB to list](blob-to-list.md "BLOB to list")は、 BLOBに格�
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [SAVE LIST](save-list.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 556 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

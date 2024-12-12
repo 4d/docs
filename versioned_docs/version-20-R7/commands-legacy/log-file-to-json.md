@@ -96,13 +96,3 @@ The **LOG FILE TO JSON** command modifies the value of the OK and Document varia
 
 [Download HDI database](http://download.4d.com/Demos/4D%5Fv15%5FR4/ExportLogToJSON%5FHDI.zip)  
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1352 |
-| Thread safe | &check; |
-| Modifies variables | OK, Document |
-| Forbidden on the server ||
-
-

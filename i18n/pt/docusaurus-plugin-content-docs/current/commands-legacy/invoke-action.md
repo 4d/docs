@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->O comando **INVOKE ACTION** ativa a ação padrão definida pelo parâmetro ação, opcionalmente no contexto objetivo.<!-- END REF-->
@@ -63,12 +66,3 @@ Se quiser executar uma ação padrão **Goto page** (página 3) no formulário p
 #### Ver também 
 
 [Action info](action-info.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1439 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

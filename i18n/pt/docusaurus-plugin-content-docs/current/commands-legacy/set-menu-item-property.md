@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->O comando SET MENU ITEM PROPERTY permite fixar o *valor* da *propriedade* para a linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF-->
@@ -49,12 +52,3 @@ Proprierdade personalizada - Nesta propriedade pode passar qualquer texto person
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 973 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

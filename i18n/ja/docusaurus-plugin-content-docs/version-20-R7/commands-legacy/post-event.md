@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.POST EVENT.Summary-->POST EVENT コマンドは、キーボードまたはマウスイベントをシミュレートします。<!-- END REF-->これは、ユーザが実際にキーボードやマウス上で動作を行った場合と同様の結果を生じます。
@@ -73,12 +76,3 @@ displayed_sidebar: docs
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 467 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

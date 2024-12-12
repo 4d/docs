@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Before.Summary-->**Before** devolve True para o ciclo de execução Before.<!-- END REF-->
@@ -24,12 +27,3 @@ Para que se gere o ciclo de execução **Before** tenha certeza de que a proprie
 #### Ver também 
 
 [Form event code](../commands/form-event-code.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 29 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

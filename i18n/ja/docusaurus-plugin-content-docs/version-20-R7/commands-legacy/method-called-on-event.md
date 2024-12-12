@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Method called on event.Summary-->Method called on event コマンドは、[ON EVENT CALL](on-event-call.md "ON EVENT CALL")コマンドでインストールされたメソッド名を返します。<!-- END REF-->
@@ -22,12 +25,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [ON EVENT CALL](on-event-call.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 705 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

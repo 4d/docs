@@ -30,12 +30,3 @@ displayed_sidebar: docs
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 363 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

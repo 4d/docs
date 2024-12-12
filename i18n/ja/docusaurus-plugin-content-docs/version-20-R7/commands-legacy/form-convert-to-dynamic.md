@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->**FORM Convert to dynamic** コマンドは、*formName* 引数で指定したフォーム(クラシックフォーム)をダイナミックフォームへと変換し、それをオブジェクト型で返します。<!-- END REF-->
@@ -59,12 +62,3 @@ displayed_sidebar: docs
 
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1570 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

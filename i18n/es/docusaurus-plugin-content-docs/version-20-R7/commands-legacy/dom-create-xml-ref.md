@@ -98,13 +98,3 @@ Si el comando se ejecutó correctamente, la variable sistema OK toma el valor 1\
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 861 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

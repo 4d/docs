@@ -28,12 +28,3 @@ The NULL value is used by the SQL kernel of 4D. For more information, please ref
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 965 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

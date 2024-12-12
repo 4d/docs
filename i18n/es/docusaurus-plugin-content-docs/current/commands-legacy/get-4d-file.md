@@ -69,12 +69,3 @@ Usted quiere obtener la ruta del último archivo de backup:
 #### Ver también 
 
 [File](file.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1418 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

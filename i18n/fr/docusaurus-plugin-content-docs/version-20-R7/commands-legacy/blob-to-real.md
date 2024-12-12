@@ -62,12 +62,3 @@ L'exemple suivant lit 20 valeurs réelles dans un BLOB à partir de l'offset 0x2
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 553 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

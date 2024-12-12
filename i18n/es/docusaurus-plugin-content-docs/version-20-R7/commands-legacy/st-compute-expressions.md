@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->El comando **ST COMPUTE EXPRESSIONS** actualiza las expresiones dinámicas 4D encontradas en un campo o variable ya sea 4D Write Pro o multiestilo designado por el parámetro *objeto*.<!-- END REF--> 
@@ -65,13 +68,3 @@ Usted desea actualizar las referencias incluidas en la selección de texto:
 
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1285 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

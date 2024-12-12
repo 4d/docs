@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.OB GET ARRAY.Summary-->O comando **OB GET ARRAY** recupera em *array*, o array de valores armazenados na *propriedade* do objeto de linguagem designado pelo parâmetro *objeto*.<!-- END REF-->deve ter sido definido com o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D.  
+<!--REF #_command_.OB GET ARRAY.Summary-->O comando **OB GET ARRAY** recupera em *array*, o array de valores armazenados na *propriedade* do objeto de linguagem designado pelo parâmetro *objeto*.<!-- END REF-->  
+  
+*objeto* deve ter sido definido com o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D.  
   
 No parâmetro *propriedade*, passe a etiqueta da propriedade a ler. Tenha em conta que o parâmetro *propriedade* leva em conta as maiúsculas e minúsculas.
 
@@ -51,12 +53,3 @@ Queremos mudar um valor no primeiro elemento do array:
 
 *Conversões de Tipo entre coleções e arrays 4D*  
 [OB SET ARRAY](ob-set-array.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1229 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

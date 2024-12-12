@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### 
 
 <!--REF #_command_.On Startup database method.Summary-->La **On Startup database method** est exécutée une seule fois, au moment de l'ouverture de la base.<!-- END REF-->
@@ -45,12 +48,3 @@ Reportez-vous à l'exemple de la section [On Exit database method](on-exit-datab
 [On Exit database method](on-exit-database-method.md)  
 *Présentation des méthodes base*  
 [QUIT 4D](quit-4d.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 905263 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

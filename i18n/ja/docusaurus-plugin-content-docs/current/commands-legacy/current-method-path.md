@@ -15,18 +15,11 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Current method path.Summary-->**Current method path**コマンドは実行中のデータベースメソッド、トリガー、プロジェクトメソッド、フォームメソッド、またはオブジェクトメソッドの内部的なパス名を返します。<!-- END REF-->4Dマクロコマンドのコンテキストでは、*<method\_path>*タグが実行中のメソッドのフルパス名で置き換えられます。 
+<!--REF #_command_.Current method path.Summary-->**Current method path**コマンドは実行中のデータベースメソッド、トリガー、プロジェクトメソッド、フォームメソッド、またはオブジェクトメソッドの内部的なパス名を返します。<!-- END REF-->
+
+**注:** 4Dマクロコマンドのコンテキストでは、*<method\_path>*タグが実行中のメソッドのフルパス名で置き換えられます。 
 
 #### 参照 
 
 [METHOD Get path](method-get-path.md)  
 [METHOD GET PATHS](method-get-paths.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1201 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

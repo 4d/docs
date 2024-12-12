@@ -63,13 +63,3 @@ Cada vez que se abre o banco de dados, esta informação será escrita no visor 
 #### Ver também 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 667 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

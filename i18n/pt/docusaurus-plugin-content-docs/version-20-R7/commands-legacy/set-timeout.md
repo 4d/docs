@@ -49,13 +49,3 @@ O exemplo a seguir define a porta serial para receber dados. Em seguida, ele def
 [RECEIVE PACKET](receive-packet.md)  
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 268 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

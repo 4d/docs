@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB Get type.Summary-->The **OB Get type** command returns the type of value associated with the *property* of the language *object*.<!-- END REF-->can be an object varialble or a 4D object field.. 
+<!--REF #_command_.OB Get type.Summary-->The **OB Get type** command returns the type of value associated with the *property* of the language *object*.<!-- END REF-->
+
+*object* can be an object varialble or a 4D object field.. 
 
 In the *property* parameter, pass the label of the property whose type you want to find out.   
 Note that the *property* parameter is case sensitive. 
@@ -52,12 +54,3 @@ We want to get the type of standard values:
 
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [Value type](value-type.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1230 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

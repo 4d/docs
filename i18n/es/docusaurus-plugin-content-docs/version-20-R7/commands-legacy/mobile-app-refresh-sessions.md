@@ -45,12 +45,3 @@ Usted desea restablecer todas las sesiones actuales para todas las aplicaciones 
 #### Ver también 
 
 [Método base On Mobile App Authentication](metodo-base-on-mobile-app-authentication.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1596 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

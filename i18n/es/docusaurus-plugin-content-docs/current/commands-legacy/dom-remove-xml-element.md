@@ -27,13 +27,3 @@ Un error se genera cuando la referencia del elemento no es válida.
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 869 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Summary-->La commande **LISTBOX MOVED ROW NUMBER** retourne dans les paramètres *ancPosition* et *nouvPosition* des numéros indiquant respectivement la précédente position et la nouvelle position de la ligne déplacée dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
@@ -32,12 +35,3 @@ Cette commande doit être utilisée en combinaison avec l’événement formulai
 
 [Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 837 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

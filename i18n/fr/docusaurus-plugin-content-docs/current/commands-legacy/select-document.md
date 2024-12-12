@@ -96,13 +96,3 @@ Si aucun fichier n’a été sélectionné (par exemple si l’utilisateur a cli
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 905 |
-| Thread safe | &check; |
-| Modifie les variables | OK, Document, error |
-| Interdite sur le serveur ||
-
-

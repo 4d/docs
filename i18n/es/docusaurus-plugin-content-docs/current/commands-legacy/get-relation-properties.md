@@ -43,12 +43,3 @@ Una se haya ejecutado el comando:
 [GET TABLE PROPERTIES](get-table-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 686 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

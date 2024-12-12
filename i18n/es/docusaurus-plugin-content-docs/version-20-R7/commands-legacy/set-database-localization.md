@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->El comando SET DATABASE LOCALIZATION utilizado para modificar el lenguaje actual de la base para la sesión actual.<!-- END REF-->  
@@ -69,13 +72,3 @@ La interfaz de su aplicación utiliza la cadena estática ":xliff:shopping". Los
 #### Ver también 
 
 [Get database localization](get-database-localization.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1104 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

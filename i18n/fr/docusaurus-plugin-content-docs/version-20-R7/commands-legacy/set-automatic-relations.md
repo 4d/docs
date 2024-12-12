@@ -44,12 +44,3 @@ L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manu
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 310 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

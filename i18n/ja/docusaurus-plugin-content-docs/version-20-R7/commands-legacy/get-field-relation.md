@@ -84,12 +84,3 @@ displayed_sidebar: docs
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 920 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

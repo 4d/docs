@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OB Entries.Summary-->La commande **OB Entries** retourne une collection d'objets dont le contenu correspond à l'*objet* comme une paire de propriétés key/value.<!-- END REF--> 
@@ -54,12 +57,3 @@ L'utilisation d'un objet comme une hashmap (système clé/valeur) permet d'accé
 
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1720 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

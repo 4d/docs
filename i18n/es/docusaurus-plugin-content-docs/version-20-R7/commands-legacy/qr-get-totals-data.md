@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR GET TOTALS DATA.Summary-->##### Informe en lista 
@@ -71,13 +74,3 @@ Si el parámetro *numRuptura* es incorrecto, se genera el error -9853.
 #### Ver también 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 768 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

@@ -105,12 +105,3 @@ Voici un exemple de pointeur vers un tableau 2D :
 [Is a variable](is-a-variable.md)  
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 394 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

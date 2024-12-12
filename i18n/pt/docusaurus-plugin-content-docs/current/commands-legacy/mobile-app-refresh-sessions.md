@@ -45,12 +45,3 @@ Se quiser resetar todas as sessões atuais para todas as aplicações móveis:
 #### Ver também 
 
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1596 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

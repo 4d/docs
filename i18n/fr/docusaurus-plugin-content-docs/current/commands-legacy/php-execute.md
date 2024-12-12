@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 :::info Compatibilité
 
 **PHP est obsolète dans 4D**. Il est désormais recommandé d'utiliser la classe [`4D.SystemWorker`](../API/SystemWorkerClass.md).
@@ -276,12 +279,3 @@ Pour plus d'informations sur la fonction *trim*, veuillez vous reporter à la do
 *Exécuter des scripts PHP dans 4D*  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1058 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

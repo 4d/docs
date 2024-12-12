@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Validate password.Summary-->Validate password returns True if the string passed in *password* is the password for the user account whose ID number or name is passed in *userID*.<!-- END REF-->
@@ -60,12 +63,3 @@ In the [On REST Authentication database method](on-rest-authentication-database-
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 638 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

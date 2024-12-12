@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR REPORT.Summary-->La commande **QR REPORT** imprime un état pour *laTable*, à l'aide de l'Editeur d'états rapides de 4D.<!-- END REF--> Cet éditeur permet à l'utilisateur de construire en totalité son propre état. Pour plus d'informations sur la création d'états à l'aide de l'Editeur d'états rapides, reportez-vous à la section *Etats rapides* dans le manuel *Mode Développement* de 4D.
@@ -130,12 +133,3 @@ La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 197 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-
-

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->The **GET MENU ITEM PROPERTY** command returns, in the *value* parameter, the current value of the property of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
@@ -32,12 +35,3 @@ In the *property* parameter, pass the property for which you want to get the val
 #### See also 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 972 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

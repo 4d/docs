@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Find window.Summary-->El comando Find windowdevuelve (si existe) el número de referencia de la primera ventana “tocada” por el punto cuyas coordenadas se pasan en *izquierda* y *superior*.<!-- END REF--> 
@@ -28,12 +31,3 @@ El parámetro *parteVentana* devuelve 3 si se toca la ventana, de lo contrario 0
 
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 449 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -43,12 +43,3 @@ displayed_sidebar: docs
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1737 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.OB SET NULL.Summary-->La commande **OB SET NULL** permet de stocker la valeur **null** dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
+<!--REF #_command_.OB SET NULL.Summary-->La commande **OB SET NULL** permet de stocker la valeur **null** dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->
+
+*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
 
 Passez dans le paramètre *propriété* le libellé de la propriété dans laquelle stocker la valeur **null**. Si la propriété existe déjà dans *objet*, sa valeur sera mise à jour. Si elle n’existe pas, elle est créée. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
@@ -38,12 +40,3 @@ On souhaite mettre la valeur null dans la propriété "âge" de Léa :
 [Null](null.md)  
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [OB SET](ob-set.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1233 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -44,13 +44,3 @@ TextまたはBLOB 型の変数を*value* 引数に渡します。BLOBを渡す�
 
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 877 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

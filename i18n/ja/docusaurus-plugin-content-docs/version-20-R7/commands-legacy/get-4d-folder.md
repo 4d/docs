@@ -206,12 +206,3 @@ displayed_sidebar: docs
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 485 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-
-

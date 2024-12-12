@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Is window reduced.Summary-->El comando **Is window reduced** devuelve **True** si la ventana cuyo número de referencia se pasa en *ventana* está actualmente reducida en la barra de tareas (Windows) o en el dock (macOS), y **False** en caso contrario.<!-- END REF-->
@@ -22,12 +25,3 @@ displayed_sidebar: docs
 
 [Is window maximized](is-window-maximized.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1831 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -28,12 +28,3 @@ PLUGIN LISTは、4Dに統合されたプラグイン (例: 4D Chart) やサー�
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 847 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

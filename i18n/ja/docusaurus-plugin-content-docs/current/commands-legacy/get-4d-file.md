@@ -67,12 +67,3 @@ User settings file for data および User settings file の両ファイルに�
 #### 参照 
 
 [File](file.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1418 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

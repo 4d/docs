@@ -15,7 +15,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Macintosh command down.Summary-->Macintosh command downはMacintoshのcommandキーが押されていると[True](true.md "True")を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、WindowsのCtrlキーが押されていると、Macintosh command down はTRUEを返します。
+<!--REF #_command_.Macintosh command down.Summary-->Macintosh command downはMacintoshのcommandキーが押されていると[True](true.md "True")を返します。<!-- END REF-->
+
+**Note:** Windowsのプラットフォーム上で呼び出された場合は、WindowsのCtrlキーが押されていると、Macintosh command down はTRUEを返します。
 
 #### 例題 
 
@@ -29,12 +31,3 @@ displayed_sidebar: docs
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 546 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.FOLDER LIST.Summary-->El comando FOLDER LIST llena el array de tipo Texto o Alfa *directorios* con los nombres de las carpetas ubicadas en la ruta de acceso que se pasa en *rutaAcceso*.<!-- END REF-->debe pasar una ruta de acceso absoluta en el parámetro *rutaAcceso*. 
+<!--REF #_command_.FOLDER LIST.Summary-->El comando FOLDER LIST llena el array de tipo Texto o Alfa *directorios* con los nombres de las carpetas ubicadas en la ruta de acceso que se pasa en *rutaAcceso*.<!-- END REF--> 
+
+**Nota:** debe pasar una ruta de acceso absoluta en el parámetro *rutaAcceso*. 
 
 Si no hay carpetas en la ubicación especificada, el comando devuelve un array vacío. Si la ruta de acceso que se pasa en *rutaAcceso* es incorrecta, FOLDER LIST genera un error del administrador de archivos que puede interceptar utilizando un método [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
@@ -24,13 +26,3 @@ Si no hay carpetas en la ubicación especificada, el comando devuelve un array v
 
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 473 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

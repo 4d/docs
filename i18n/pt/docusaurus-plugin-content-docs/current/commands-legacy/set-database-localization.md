@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->O comando SET DATABASE LOCALIZATION é utilizado para modificar o idioma atual do banco de dados para a sessão atual.<!-- END REF-->  
@@ -69,13 +72,3 @@ A interface do seu aplicativo usa a string estática ":xliff:shopping". Os arqui
 #### Ver também 
 
 [Get database localization](get-database-localization.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1104 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

@@ -37,12 +37,3 @@ You want to remove the "age" property of an object:
 #### See also 
 
 [OB SET](ob-set.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1226 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

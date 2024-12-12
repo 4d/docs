@@ -43,12 +43,3 @@ The following method:
 #### See also 
 
 [WEB SEND BLOB](web-send-blob.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 677 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -68,12 +68,3 @@ displayed_sidebar: docs
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 27 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

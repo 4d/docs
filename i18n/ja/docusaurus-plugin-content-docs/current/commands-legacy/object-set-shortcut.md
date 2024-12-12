@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->**OBJECT SET SHORTCUT**コマンドは*object* と*\** で指定したオブジェクトのキーボードショートカットをカレントプロセスで動的に変更します。<!-- END REF-->
@@ -87,12 +90,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1185 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

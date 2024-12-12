@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->**OBJECT SET LIST BY REFERENCE**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたリストを、 *list* 引数で指定した階層リストで置き換えもしくは定義します。<!-- END REF-->
@@ -127,12 +130,3 @@ displayed_sidebar: docs
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1266 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR Get document property.Summary-->QR Get document property コマンドを使用し、印刷ダイアログの表示の有無、または*area*に表示されるドキュメントの単位を取得することができます。<!-- END REF-->
@@ -35,12 +38,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 773 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

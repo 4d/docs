@@ -37,12 +37,3 @@ O exemplo define a codificação a utilizar e a opção autônoma do elemento *e
 
 [DOM Create XML Ref](dom-create-xml-ref.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 859 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

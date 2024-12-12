@@ -35,12 +35,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 812 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

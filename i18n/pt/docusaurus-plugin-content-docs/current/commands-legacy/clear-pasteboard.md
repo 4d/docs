@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->O comando CLEAR PASTEBOARD apaga o conteúdo da área de transferência.<!-- END REF--> Se a área de transferência contiver múltiplas instâncias dos mesmos dados, todas as instâncias são apagadas. Depois de chamar a CLEAR PASTEBOARD, a área de transferência fica vazio. 
@@ -39,12 +42,3 @@ Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.m
 #### Ver também 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 402 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

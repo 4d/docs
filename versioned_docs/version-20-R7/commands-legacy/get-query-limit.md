@@ -24,12 +24,3 @@ By default, if no limit is set, the command returns 0.
 #### See also 
 
 [SET QUERY LIMIT](set-query-limit.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1156 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

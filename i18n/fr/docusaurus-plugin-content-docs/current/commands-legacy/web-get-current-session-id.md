@@ -23,12 +23,3 @@ Si cette commande est appelée hors du contexte d’une session Web, elle retour
 
 *Gestion des sessions Web*  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1162 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

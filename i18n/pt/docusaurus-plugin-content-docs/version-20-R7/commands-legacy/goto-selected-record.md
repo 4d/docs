@@ -59,13 +59,3 @@ O seguinte método de objeto para *atNomes* seleciona o registro correto na sele
 #### Ver também 
 
 [Selected record number](selected-record-number.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 245 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Proibido no servidor ||
-
-

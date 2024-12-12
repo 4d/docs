@@ -34,12 +34,3 @@ displayed_sidebar: docs
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *レコードのロック*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 147 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

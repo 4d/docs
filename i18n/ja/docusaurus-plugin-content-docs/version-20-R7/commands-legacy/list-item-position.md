@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.List item position.Summary-->List item position コマンドは、*list*に渡された項目参照番号またはオブジェクト名リスト中で、*itemRef*で指定した項目の位置を返します。<!-- END REF-->
@@ -38,12 +41,3 @@ displayed_sidebar: docs
 
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 629 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -67,13 +67,3 @@ The OK system variable is set to 1 if the command execution was successful; othe
 #### See also 
 
 [RESOLVE ALIAS](resolve-alias.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 694 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

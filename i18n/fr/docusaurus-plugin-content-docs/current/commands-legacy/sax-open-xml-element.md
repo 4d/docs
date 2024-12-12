@@ -52,13 +52,3 @@ Si un caractère invalide est passé dans *balise*, une erreur est générée.
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 853 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

@@ -21,7 +21,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.VERIFY DATA FILE.Summary-->**VERIFY DATA FILE**コマンドは、*structurePath*と*dataPath*で指定したデータファイル中にあるオブジェクトの構造的な検証を行います。<!-- END REF-->データ検証に関する詳細は、Design Referenceマニュアルを参照してください。
+<!--REF #_command_.VERIFY DATA FILE.Summary-->**VERIFY DATA FILE**コマンドは、*structurePath*と*dataPath*で指定したデータファイル中にあるオブジェクトの構造的な検証を行います。<!-- END REF-->
+
+**注:** データ検証に関する詳細は、Design Referenceマニュアルを参照してください。
 
 *structurePath*は、 検証するデータファイルに対応するストラクチャーファイル (コンパイル済みまたはインタプリター) を指定します。開かれたストラクチャーや他のストラクチャーを指定できます。OSに対応した完全パス名を指定しなければなりません。空の文字列を渡すと標準のファイルを開くダイアログボックスが表示され、使用するストラクチャーファイルをユーザーが指定できます。
 
@@ -169,13 +171,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 939 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document、error |
-| サーバー上での使用は不可 ||
-
-

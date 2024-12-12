@@ -53,12 +53,3 @@ Depois em um método, pode escrever:
 #### Ver também 
 
 [OB Class](ob-class.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1731 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

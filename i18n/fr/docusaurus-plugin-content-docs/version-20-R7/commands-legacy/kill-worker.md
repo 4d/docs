@@ -53,12 +53,3 @@ Dans la méthode du process worker (*leWorker*), vous ajoutez du code pour gére
 *A propos des workers*  
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1390 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

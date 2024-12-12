@@ -61,13 +61,3 @@ La méthode objet de la zone de défilement *taNoms* suivante sélectionne le bo
 #### Voir aussi 
 
 [Selected record number](selected-record-number.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 245 |
-| Thread safe | &check; |
-| Change l'enregistrement courant ||
-| Interdite sur le serveur ||
-
-

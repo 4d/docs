@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->El comando **OBJECT GET SUBFORM** obtiene los nombres del o de los formulario(s) asociado(s) al objeto subformulario designado por los parámetros *objeto* y *\**.<!-- END REF-->  
@@ -39,12 +42,3 @@ Si no hay formulario listado, se devuelve una cadena vacía en el parámetro *su
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1139 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
@@ -132,12 +135,3 @@ which displays:
 [Open window](open-window.md)  
 *Window Types*  
 *Window Types (compatibility)*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 675 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

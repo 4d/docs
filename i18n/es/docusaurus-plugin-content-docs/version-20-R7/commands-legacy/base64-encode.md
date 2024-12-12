@@ -38,12 +38,3 @@ Por defecto, si se omite el parámetro *\**, el comando utiliza una codificació
 [Generate digest](generate-digest.md)  
 *Presentación de los comandos XML DOM*  
 [XML DECODE](xml-decode.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 895 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

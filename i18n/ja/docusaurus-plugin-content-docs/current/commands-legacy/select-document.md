@@ -98,13 +98,3 @@ displayed_sidebar: docs
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 905 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document、error |
-| サーバー上での使用は不可 ||
-
-

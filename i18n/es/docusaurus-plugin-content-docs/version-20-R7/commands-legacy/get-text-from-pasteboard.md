@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard devuelve el texto en el portapapeles.<!-- END REF--> 
@@ -32,13 +35,3 @@ Si el texto se extrae correctamente, OK toma el valor 1; de lo contrario OK toma
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 524 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

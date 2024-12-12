@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get title.Summary-->OBJECT Get titleコマンドは *object*で指定されたフォームオブジェクトのタイトル (ラベル) を返します。<!-- END REF-->このコマンドはラベルを表示するすべてのタイプのシンプルオブジェクトに使用できます:
@@ -29,12 +32,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET TITLE](object-set-title.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1068 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

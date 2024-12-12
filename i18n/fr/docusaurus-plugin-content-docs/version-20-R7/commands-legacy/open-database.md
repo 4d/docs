@@ -69,13 +69,3 @@ Vous souhaitez sélectionner un serveur au démarrage, à partir d'une applicati
     QUIT 4D
  End if
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1321 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->HIDE PROCESS oculta todas as janelas que pertencem ao *processo*.<!-- END REF--> Todos os elementos de interface de *processo* se ocultam até o seguinte [SHOW PROCESS](show-process.md "SHOW PROCESS"). A barra de menus do processo também se oculta. Isso significa que a abertura de uma janela enquanto o processo está oculto não provocará nenhuma mudança na visualização em tela. Se o processo já estiver oculto, o comando não tem nenhum efeito.  
@@ -35,12 +38,3 @@ O exemplo a seguir oculta todas as janelas que pertencem ao processo atual:
 
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 324 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

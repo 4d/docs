@@ -57,12 +57,3 @@ El parámetro *separador* puede ser una cadena de múltiples caracteres:
 #### Ver también 
 
 [TEXT TO ARRAY](text-to-array.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1554 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

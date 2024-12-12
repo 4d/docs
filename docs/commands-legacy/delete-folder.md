@@ -42,13 +42,3 @@ You can intercept these errors using a method installed by the [ON ERR CALL](on-
 
   
 [DELETE DOCUMENT](delete-document.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 693 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

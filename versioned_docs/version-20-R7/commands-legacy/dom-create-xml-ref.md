@@ -98,13 +98,3 @@ If the command was executed correctly, the system variable OK is set to 1\. Othe
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 861 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

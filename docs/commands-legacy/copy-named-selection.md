@@ -50,12 +50,3 @@ The following example allows you to check if there are other overdue invoices in
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 331 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

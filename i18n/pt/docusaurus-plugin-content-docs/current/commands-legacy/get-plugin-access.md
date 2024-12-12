@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get plugin access.Summary-->O comando Get plugin access retorna o nome do grupo de usuários autorizados a utilizar o *plug-in* cujo número se passa no parâmetro *plugIn*.<!-- END REF--> Se nenhum grupo estiver associado ao plug-in, o comando retorna uma cadeia vazia ("").  
@@ -33,12 +36,3 @@ Passe no parâmetro *plugIn* o número do plug-in do que deseja conhecer o grupo
 
 [SET GROUP ACCESS](set-group-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 846 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

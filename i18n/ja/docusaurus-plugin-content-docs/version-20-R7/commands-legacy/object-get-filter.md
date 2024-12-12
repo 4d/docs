@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get filter.Summary-->OBJECT Get filter コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループに割り当てられたフィルターの名前を返します。<!-- END REF-->.
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET FILTER](object-set-filter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1073 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

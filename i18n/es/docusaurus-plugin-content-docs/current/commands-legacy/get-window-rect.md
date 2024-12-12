@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->El comando **GET WINDOW RECT** devuelve las coordenadas globales de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si la ventana no existe, las variables de los parámetros no cambian. 
@@ -35,12 +38,3 @@ Ver el ejemplo del comando [WINDOW LIST](window-list.md "WINDOW LIST").
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 443 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

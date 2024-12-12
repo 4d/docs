@@ -44,12 +44,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Undefined](undefined.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 89 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

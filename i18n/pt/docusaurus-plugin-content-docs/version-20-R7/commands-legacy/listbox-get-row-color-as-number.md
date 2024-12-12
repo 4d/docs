@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get row color as number.Summary-->**Nota:** este comando só funciona com os list box de tipo array.<!-- END REF-->
@@ -58,12 +61,3 @@ Given the following list box:
 *List box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1271 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->CHANGE CURRENT USER permite cambiar la identidad del usuario actual en la base, sin tener que salir.<!-- END REF--> El usuario puede cambiar su identidad utilizando la caja de diálogo de identificación del usuario de la base (cuando el comando se llama sin parámetros) o directamente vía el comando. Cuando un usuario cambia su identidad, el usuario abandona sus privilegios de acceso anteriores para beneficiarse de los del usuario elegido.
@@ -71,12 +74,3 @@ El siguiente ejemplo muestra la caja de diálogo de conexión:
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 289 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

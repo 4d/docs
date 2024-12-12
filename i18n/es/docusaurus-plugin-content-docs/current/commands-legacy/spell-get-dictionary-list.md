@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->El comando **SPELL GET DICTIONARY LIST** devuelve en los arrays *lengID*, *lengArchivos* y *lengNoms*, los IDs, los nombres de archivos y los nombres de lenguajes correspondientes a los archivos de diccionarios Hunspell instalados en el equipo.<!-- END REF-->  
@@ -51,12 +54,3 @@ Usted pone "fr-classic+reform1990.aff" y "fr-classic+reform1990.dic" como tambi�
 #### Ver también 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1204 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->El comando SCREEN COORDINATES devuelve en los parámetros *izquierda*, *arriba*, *derecha,* y *abajo* las coordenadas de la pantalla especificada por *IDpantalla*.<!-- END REF-->
@@ -45,12 +48,3 @@ Las siguientes imágenes demuestran las diferencias entre el tamaño de la panta
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 438 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

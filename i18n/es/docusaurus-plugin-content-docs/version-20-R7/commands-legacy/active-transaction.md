@@ -43,12 +43,3 @@ Usted quiere conocer el estado de la transacción actual:
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspender las transacciones*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1387 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

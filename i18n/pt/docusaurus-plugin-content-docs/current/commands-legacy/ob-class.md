@@ -43,12 +43,3 @@ Depois, em um método, pode escrever:
 #### Ver também 
 
 [OB Instance of](ob-instance-of.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1730 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

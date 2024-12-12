@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Current form name.Summary-->The **Current form name** command returns the name of the current form defined for the process.<!-- END REF--> The current form can be a project form or a table form. 
@@ -57,12 +60,3 @@ You want to get the current form if it is a project form:
 #### See also 
 
 [FORM LOAD](../commands/form-load.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1298 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

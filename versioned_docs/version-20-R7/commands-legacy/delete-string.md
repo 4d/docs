@@ -45,12 +45,3 @@ The following example illustrates the use of Delete string. The results are assi
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 232 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

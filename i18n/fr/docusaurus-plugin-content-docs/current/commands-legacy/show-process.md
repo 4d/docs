@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->**SHOW PROCESS** fait apparaître l'ensemble des fenêtres appartenant à *process*.<!-- END REF--> Cette commande ne passe pas les fenêtres de *process* au premier plan, utilisez pour cela la commande [BRING TO FRONT](bring-to-front.md).
@@ -32,12 +35,3 @@ L'exemple suivant affiche le process "Clients", s'il était caché auparavant. L
 [BRING TO FRONT](bring-to-front.md)  
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 325 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

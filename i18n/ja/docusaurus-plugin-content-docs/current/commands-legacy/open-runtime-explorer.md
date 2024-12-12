@@ -15,13 +15,3 @@ displayed_sidebar: docs
 #### 説明 
 
 <!--REF #_command_.OPEN RUNTIME EXPLORER.Summary-->OPEN RUNTIME EXPLORER コマンドは、ランタイムエクスプローラーをフローティングウィンドウ内に表示します。<!-- END REF-->
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1781 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

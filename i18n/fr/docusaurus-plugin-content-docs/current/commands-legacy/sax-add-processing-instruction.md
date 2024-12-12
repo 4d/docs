@@ -47,13 +47,3 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 #### Voir aussi 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 857 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

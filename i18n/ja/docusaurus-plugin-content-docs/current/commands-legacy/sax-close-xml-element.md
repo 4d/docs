@@ -37,12 +37,3 @@ displayed_sidebar: docs
 
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 854 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

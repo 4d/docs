@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->The **SET DATABASE PARAMETER** command allows you to modify various internal parameters of the 4D database.<!-- END REF-->
@@ -147,12 +150,3 @@ You want to export data in JSON that contains a converted 4D date. Note that con
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 642 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

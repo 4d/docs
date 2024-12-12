@@ -29,12 +29,3 @@ Los parámetros *hDesp*, *vDesp*, y *modo* devuelven las posiciones horizontal y
 #### Ver también 
 
 [Picture size](picture-size.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 457 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

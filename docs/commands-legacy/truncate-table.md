@@ -38,15 +38,3 @@ If the command has been executed correctly, the OK system variable is set to 1\.
 #### See also 
 
 [DELETE SELECTION](delete-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1051 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
-

@@ -27,11 +27,3 @@ La commande **RESUME INDEXES** ne peut être appelée que depuis 4D Server ou un
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1294 |
-| Thread safe | &check; |
-
-

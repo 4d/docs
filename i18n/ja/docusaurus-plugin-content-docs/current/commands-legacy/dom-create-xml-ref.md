@@ -19,7 +19,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DOM Create XML Ref.Summary-->DOM Create XML Ref コマンドは空のXMLツリーをメモリに作成し、その参照を返します。<!-- END REF-->引数にはXMLツリーのルート要素名を渡します。
+<!--REF #_command_.DOM Create XML Ref.Summary-->DOM Create XML Ref コマンドは空のXMLツリーをメモリに作成し、その参照を返します。<!-- END REF-->  
+  
+*root* 引数にはXMLツリーのルート要素名を渡します。
 
 オプションの*nameSpace* 引数にはツリーの名前空間値の定義を渡します (例えば“http://www.4d.com”)。   
 *root*引数に名前空間名とコロン、そしてルート要素名を結合した文字列を渡せることができます (例えば“MyNameSpace:MyRoot”)。この場合、名前空間を指定する*nameSpace*引数は必須となります。
@@ -95,13 +97,3 @@ NSName2="http://www.4D.com/Mkt/namespace"/>
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 861 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

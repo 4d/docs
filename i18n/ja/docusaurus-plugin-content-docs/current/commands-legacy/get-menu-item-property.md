@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->**GET MENU ITEM PROPERTY** コマンドは、*menu*と*menuItem*引数で指定したメニュー項目の、現在のプロパティ値を返します。<!-- END REF-->  
@@ -31,12 +34,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 972 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

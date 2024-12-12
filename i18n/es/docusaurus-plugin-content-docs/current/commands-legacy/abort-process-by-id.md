@@ -42,12 +42,3 @@ Desea detener el proceso seleccionado de la colección de procesos que se muestr
 #### Ver también 
 
 [PAUSE PROCESS](pause-process.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1634 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

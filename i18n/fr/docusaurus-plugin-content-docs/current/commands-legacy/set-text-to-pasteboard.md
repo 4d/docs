@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->**SET TEXT TO PASTEBOARD** place une copie du texte que vous avez passé dans *texte* dans le conteneur de données.<!-- END REF--> Les données éventuellement présentes dans le conteneur sont auparavant effacées. 
@@ -37,13 +40,3 @@ Si la copie du texte est correctement placée dans le conteneur de données, la 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 523 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

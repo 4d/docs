@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.FORM LOAD.Summary-->O comando **FORM LOAD** se utiliza para carregar o *formulario* (projeto ou tabela) em memória com o propósito de imprimir seus dados ou analisar seus conteúdos.<!-- END REF--> Só pode haver um formulário atual por processo.
@@ -170,12 +173,3 @@ var $over Boolean
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
 [OBJECT Get type](object-get-type.md)  
 [Print object](print-object.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1103 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

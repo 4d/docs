@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Open resource file.Summary-->**Open resource file**コマンドは、*resFileName*に渡した名前またはパス名を持つリソースファイルを開きます。<!-- END REF--> 
@@ -97,13 +100,3 @@ Macintosh上で、この例は“MyPrefs”ファイルを開きます。
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 *リソース*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 497 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document、error |
-| サーバー上での使用は不可 ||
-
-

@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET INFO COLUMN.Summary-->##### リストモード 
@@ -107,13 +110,3 @@ QR SET INFO COLUMNコマンドを使用しても、すべてのセルに対応�
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 765 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

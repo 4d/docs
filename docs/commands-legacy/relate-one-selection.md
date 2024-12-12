@@ -57,14 +57,3 @@ The following technique uses **RELATE ONE SELECTION** to accomplish the same res
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
 *Sets*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 349 |
-| Thread safe | &check; |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
-

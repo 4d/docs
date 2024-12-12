@@ -24,12 +24,3 @@ displayed_sidebar: docs
 
 [Is nil pointer](is-nil-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 294 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

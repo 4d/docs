@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->The QR GET HEADER AND FOOTER command retrieves the contents and size of the header or footer.<!-- END REF-->
@@ -66,13 +69,3 @@ The following code retrieves the values of the header titles as well as the head
 #### See also 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 775 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

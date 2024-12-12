@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ACCEPT.Summary-->O comando ACCEPT é utilizado em métodos de objeto ou de formulário (ou em subrotinas) para:
@@ -35,13 +38,3 @@ Não é possível concatenar vários ACCEPT. A execução consecutiva de dois co
 #### Ver também 
 
 [CANCEL](cancel.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 269 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

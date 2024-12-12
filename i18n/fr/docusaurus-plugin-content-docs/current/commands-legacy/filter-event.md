@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.FILTER EVENT.Summary-->**FILTER EVENT** doit être appelée à l'intérieur d'une méthode de gestion d'événements installée par [ON EVENT CALL](on-event-call.md).<!-- END REF-->
@@ -39,12 +42,3 @@ Référez-vous à l'exemple d'[ON EVENT CALL](on-event-call.md).
 #### Voir aussi 
 
 [ON EVENT CALL](on-event-call.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 321 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -46,12 +46,3 @@ L'exemple suivant retourne le nombre de colonnes d'une ligne d'un tableau à deu
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 274 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

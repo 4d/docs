@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->WA GET EXTERNAL LINKS FILTERS コマンドは*filtersArr* と *allowDenyArr*配列に、*\** と *object* 引数で指定したWebエリアの外部リンクフィルタを返します。<!-- END REF-->フィルタが有効でない場合、空の配列が返されます。
@@ -26,12 +29,3 @@ displayed_sidebar: docs
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1033 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

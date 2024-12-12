@@ -65,12 +65,3 @@ displayed_sidebar: docs
 
 [ARRAY TO COLLECTION](array-to-collection.md)  
 *コレクションと4D配列間での型の変換*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1562 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

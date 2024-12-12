@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SQL LOGIN.Summary-->The **SQL LOGIN** command allows you to connect to an SQL data source specified in the *dataEntry* parameter.<!-- END REF--> It designates the target of the SQL queries executed subsequently in the current process: 
@@ -205,13 +208,3 @@ If the connection is successful, the system variable OK is set to 1; otherwise, 
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
 [SQL LOGOUT](sql-logout.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 817 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

@@ -25,12 +25,3 @@ displayed_sidebar: docs
 [Locked](locked.md)  
 *Présentation des triggers*  
 [RELATE ONE](relate-one.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 43 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

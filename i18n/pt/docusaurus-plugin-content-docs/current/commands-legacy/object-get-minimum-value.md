@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->O comando **OBJECT GET MINIMUM VALUE** devolve, na variável *valorMin*, o valor mínimo atual do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -27,12 +30,3 @@ Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1243 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

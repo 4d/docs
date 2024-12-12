@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET BORDER STYLE.Summary-->O comando **OBJECT SET BORDER STYLE** modifica o estilo de linha do borde do objeto(s) designada pelos parâmetros   *objeto* e *\** .<!-- END REF-->  
@@ -38,12 +41,3 @@ No parâmetro *estiloBorde*, passe o valor do estilo da linha fronteira que dese
 #### Ver também 
 
 [OBJECT Get border style](object-get-border-style.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1262 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

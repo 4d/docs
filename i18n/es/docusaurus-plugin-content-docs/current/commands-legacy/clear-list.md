@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CLEAR LIST.Summary-->El comando CLEAR LIST borra de la memoria la lista jerárquica cuyo número de referencia se pasa en *lista*.<!-- END REF-->
@@ -53,12 +56,3 @@ Ver el ejemplo del comando [BLOB to list](blob-to-list.md "BLOB to list").
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 377 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

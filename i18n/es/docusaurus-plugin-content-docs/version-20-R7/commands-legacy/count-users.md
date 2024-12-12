@@ -23,11 +23,3 @@ Cuando se ejecuta en una aplicación 4D monousuario, **Count users** devuelve 1.
 
 [Count tasks](count-tasks.md)  
 [Count user processes](count-user-processes.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 342 |
-| Hilo seguro | &check; |
-
-

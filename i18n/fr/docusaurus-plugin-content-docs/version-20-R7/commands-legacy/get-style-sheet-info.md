@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->La commande **GET STYLE SHEET INFO** retourne la configuration courante de la feuille de style *nomFeuilleStyle*.<!-- END REF--> 
@@ -64,13 +67,3 @@ Vous souhaitez connaître la configuration actuelle de la feuille de style "Auto
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1256 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

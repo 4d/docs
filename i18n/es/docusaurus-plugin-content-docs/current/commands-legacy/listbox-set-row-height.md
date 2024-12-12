@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->El comando **LISTBOX SET ROW HEIGHT** le permite modificar la altura de la *fila* especificada en el objeto list box designado utilizando los parámetros *objeto* y *\**.<!-- END REF-->
@@ -83,12 +86,3 @@ Por otro lado, si el código siguiente se ejecuta posteriormente...
 [LISTBOX Get row height ](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1409 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

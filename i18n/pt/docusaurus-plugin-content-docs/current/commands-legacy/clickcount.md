@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Clickcount.Summary-->O comando **Clickcount** devolve, no contexto de um evento clique, o número de vezes que o usuário fez clique de maneira repetida com o mesmo botão do mouse.<!-- END REF--> Normalmente, este comando devolve 2 para um clique duplo. 
@@ -58,13 +61,3 @@ As etiquetas não são editáveis mas o são depois de um triplo-clique. Se dese
     End case
  End if
 ```
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1332 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

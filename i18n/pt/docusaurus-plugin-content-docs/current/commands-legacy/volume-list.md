@@ -39,12 +39,3 @@ Utilizando uma área de rolagem chamada *atVolumes*,se quiser mostrar a lista de
 [DOCUMENT LIST](document-list.md)  
 [FOLDER LIST](folder-list.md)  
 [VOLUME ATTRIBUTES](volume-attributes.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 471 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

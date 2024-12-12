@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->El comando **SET LIST PROPERTIES** define el alto de línea y el funcionamiento de las lista jerárquica cuya referencia se pasa en el parámetro *lista*.<!-- END REF--> 
@@ -65,12 +68,3 @@ Desea rechazar la sublista de expandir/contraer al hacer doble clic. Puede escri
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 387 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

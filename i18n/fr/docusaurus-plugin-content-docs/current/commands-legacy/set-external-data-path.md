@@ -58,11 +58,3 @@ Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1134 |
-| Thread safe | &check; |
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->LISTBOX GET PRINT INFORMATION コマンドは *object*と*\**で指定したリストボックスオブジェクトの印刷に関連する現在の情報を返します。<!-- END REF-->このコマンドを使用してリストボックスの内容の印刷を制御します。
@@ -66,13 +69,3 @@ displayed_sidebar: docs
     PAGE BREAK
  Until($GlobalPrinted>=500)
 ```
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1110 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

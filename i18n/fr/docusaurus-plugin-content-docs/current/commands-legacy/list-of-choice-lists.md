@@ -14,18 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->La commande **LIST OF CHOICE LISTS** retourne dans les tableaux synchronisés *tabNums* et *tabNoms* les numéros et les noms des énumérations définies dans l’éditeur d’énumérations en mode Développement.<!-- END REF--> 
 
 Les numéros des énumérations correspondent à leur ordre de création. Dans l’éditeur d’énumérations, les énumérations sont affichées par ordre alphabétique. 
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 957 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

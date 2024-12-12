@@ -69,12 +69,3 @@ Creación y llenado de un array local de objetos:
 [C\_OBJECT](c-object.md)  
 *Creación de arrays*  
 *Objetos (Lenguaje)*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1221 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

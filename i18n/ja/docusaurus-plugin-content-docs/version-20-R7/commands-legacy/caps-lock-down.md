@@ -29,12 +29,3 @@ displayed_sidebar: docs
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 547 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->**LISTBOX Get auto row height** コマンドは、*object* 引数および *\** 引数を使用して指定したリストボックスオブジェクトの行の高さのカレンとの最小値あるいは最大値を返します。<!-- END REF-->
@@ -55,12 +58,3 @@ displayed_sidebar: docs
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1502 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

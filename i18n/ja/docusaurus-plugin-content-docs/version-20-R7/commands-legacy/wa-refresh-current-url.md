@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA REFRESH CURRENT URL.Summary-->WA REFRESH CURRENT URL コマンドは、*\** と *object* 引数で指定したWebエリアに現在表示されているURLを再読み込みします。<!-- END REF-->
@@ -21,12 +24,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [WA STOP LOADING URL](wa-stop-loading-url.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1023 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

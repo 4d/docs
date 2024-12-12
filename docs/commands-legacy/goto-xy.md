@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](open-window.md).<!-- END REF-->  
@@ -58,12 +61,3 @@ displays the following window (on Macintosh) for 30 seconds:
 #### See also 
 
 [MESSAGE](message.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 161 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

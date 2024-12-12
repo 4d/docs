@@ -48,13 +48,3 @@ displayed_sidebar: docs
 [LOAD VARIABLES](load-variables.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 *システム変数*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 75 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document |
-| サーバー上での使用は不可 ||
-
-

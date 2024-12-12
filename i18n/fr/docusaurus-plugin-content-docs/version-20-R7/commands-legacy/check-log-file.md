@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->La commande **CHECK LOG FILE** affiche la boîte de dialogue de visualisation du fichier d’historique courant de la base (également accessible via la fenêtre du Centre de sécurité et de maintenance) :
@@ -34,13 +37,3 @@ Vous pouvez intercepter ces erreurs à l’aide d’une méthode de gestion d’
 
 *Erreurs du gestionnaire de sauvegarde (1401 -> 1421)*  
 [RESTORE](restore.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 799 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

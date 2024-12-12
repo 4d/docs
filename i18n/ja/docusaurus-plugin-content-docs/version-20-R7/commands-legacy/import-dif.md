@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.IMPORT DIF.Summary-->IMPORT DIF コマンドは、WindowsまたはMacintoshの標準的なDIF形式のドキュメント*document*から *aTable*にデータを読み込み、新しいレコードを作成します。<!-- END REF-->
@@ -51,13 +54,3 @@ IMPORT DIF を使用する際、デフォルトのフィールド区切り文字
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 86 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

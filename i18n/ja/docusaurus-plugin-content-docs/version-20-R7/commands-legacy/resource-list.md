@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->RESOURCE LIST コマンドは、*resType*に渡したタイプのリソースIDとリソース名から、*resIDs*と*resNames*の配列を作成します。<!-- END REF-->
@@ -69,12 +72,3 @@ RESOURCE LISTを呼び出す前に配列を事前定義する場合は、*resIDs
 #### 参照 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 500 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

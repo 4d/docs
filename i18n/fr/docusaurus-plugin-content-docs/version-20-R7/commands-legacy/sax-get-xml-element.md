@@ -57,13 +57,3 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 #### Voir aussi 
 
 [SAX Get XML node](sax-get-xml-node.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 876 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

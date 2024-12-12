@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get menu item.Summary-->O comando Get menu item devolve o texto do comando de menu cujos números de menu e de comando são passados em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu*. 
@@ -28,12 +31,3 @@ Se omite o parâmetro *processo*, Get menu item é aplicado a barra de menus do 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM](set-menu-item.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 422 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

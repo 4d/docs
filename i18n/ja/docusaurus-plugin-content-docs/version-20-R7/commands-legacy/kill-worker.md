@@ -53,12 +53,3 @@ displayed_sidebar: docs
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
 *ワーカーについて*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1390 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

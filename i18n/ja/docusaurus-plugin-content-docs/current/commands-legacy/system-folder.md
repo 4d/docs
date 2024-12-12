@@ -50,12 +50,3 @@ displayed_sidebar: docs
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 487 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

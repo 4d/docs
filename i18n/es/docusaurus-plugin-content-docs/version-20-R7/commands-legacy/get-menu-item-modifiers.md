@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->El comando Get menu item modifiers devuelve los modificadores adicionales asociados a los atajos de teclado estándar de la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF-->
@@ -51,12 +54,3 @@ Consulte el ejemplo del comando [Get menu item key](get-menu-item-key.md "Get me
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 980 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

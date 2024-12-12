@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.VOLUME ATTRIBUTES.Summary-->VOLUME ATTRIBUTESコマンドは、引数*volume*に渡した名前を持つボリュームのサイズ、使用サイズおよび空きサイズをバイト単位で表わして返します。<!-- END REF-->*volume*がマウントされていないリモートボリュームを示す場合、OK変数に0が代入され、3つの引数は-1を返します。
+<!--REF #_command_.VOLUME ATTRIBUTES.Summary-->VOLUME ATTRIBUTESコマンドは、引数*volume*に渡した名前を持つボリュームのサイズ、使用サイズおよび空きサイズをバイト単位で表わして返します。<!-- END REF--> 
+
+**Note:** *volume*がマウントされていないリモートボリュームを示す場合、OK変数に0が代入され、3つの引数は-1を返します。
 
 #### 例題 
 
@@ -95,13 +97,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [VOLUME LIST](volume-list.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 472 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

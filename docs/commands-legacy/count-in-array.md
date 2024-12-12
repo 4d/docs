@@ -57,12 +57,3 @@ You want to count object references in an object array:
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 907 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

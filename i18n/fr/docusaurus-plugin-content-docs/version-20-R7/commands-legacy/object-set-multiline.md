@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->La commande **OBJECT SET MULTILINE** vous permet de modifier la propriété "Multilignes" de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
@@ -43,12 +46,3 @@ Vous souhaitez interdire le multiligne dans une zone de saisie :
 #### Voir aussi 
 
 [OBJECT Get multiline](object-get-multiline.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1253 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

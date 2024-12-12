@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->El comando **LISTBOX SET TABLE SOURCE** permite modificar la fuente de datos mostrada en el listbox diseñado por los parámetros *\** y *objeto*
@@ -37,12 +40,3 @@ Si el list box ya contiene las columnas, sus contenidos se actualizarán despué
 #### Ver también 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1013 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

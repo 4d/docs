@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR Get HTML template.Summary-->La commande **QR Get HTML template** retourne le modèle HTML utilisé pour la zone d'état rapide référencée par *zone*.<!-- END REF--> La valeur retournée, de type texte, contient la totalité du code HTML utilisé comme modèle. 
@@ -26,13 +29,3 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 #### Voir aussi 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 751 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

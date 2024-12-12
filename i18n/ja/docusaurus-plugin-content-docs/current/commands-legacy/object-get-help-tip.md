@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->**OBJECT Get help tip**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたカレントプロセスのヘルプメッセージを返します。<!-- END REF-->
@@ -36,12 +39,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1182 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

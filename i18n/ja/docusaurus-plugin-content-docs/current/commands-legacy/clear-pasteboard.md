@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->CLEAR PASTEBOARD コマンドは、クリップボードの内容をすべて消去します。<!-- END REF-->クリップボードに同じデータの複数のインスタンスが含まれる場合には、すべてのインスタンスが消去されます。CLEAR PASTEBOARDコマンドを呼び出した後、クリップボードは空になります。
@@ -39,12 +42,3 @@ CLEAR PASTEBOARDを1回呼び出してから、[APPEND DATA TO PASTEBOARD](appen
 #### 参照 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 402 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

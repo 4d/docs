@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->La commande **HIGHLIGHT TEXT** sélectionne une partie du texte dans *objet*.<!-- END REF-->
@@ -62,12 +65,3 @@ Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md
 #### Voir aussi 
 
 [GET HIGHLIGHT](get-highlight.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 210 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

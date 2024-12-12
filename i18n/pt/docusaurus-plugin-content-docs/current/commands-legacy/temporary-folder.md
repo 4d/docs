@@ -24,12 +24,3 @@ Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.m
 #### Ver também 
 
 [System folder](system-folder.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 486 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

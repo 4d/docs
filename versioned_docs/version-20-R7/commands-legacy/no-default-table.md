@@ -42,12 +42,3 @@ In a database containing a project form named “TheForm” and a table form wit
 #### See also 
 
 [DEFAULT TABLE](default-table.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 993 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

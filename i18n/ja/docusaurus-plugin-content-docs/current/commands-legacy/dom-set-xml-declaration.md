@@ -37,12 +37,3 @@ displayed_sidebar: docs
 
 [DOM Create XML Ref](dom-create-xml-ref.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 859 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

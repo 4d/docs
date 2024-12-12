@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->El comando **SVG EXPORT TO PICTURE** permite guardar en la variable o campo imagen indicado por el parámetro *VarImag* una imagen en formato SVG contenida en un árbol XML.<!-- END REF-->para mayor información sobre el formato SVG, consulte la sección *Presentación de los comandos XML utilitarios* .
+<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->El comando **SVG EXPORT TO PICTURE** permite guardar en la variable o campo imagen indicado por el parámetro *VarImag* una imagen en formato SVG contenida en un árbol XML.<!-- END REF-->
+
+**Nota:** para mayor información sobre el formato SVG, consulte la sección *Presentación de los comandos XML utilitarios* .
 
 Pase en *refElement* la referencia del elemento XML raíz que contiene la imagen SVG.
 
@@ -51,12 +53,3 @@ El siguiente ejemplo puede utilizarse para mostrar “Hello World” en una imag
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1017 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

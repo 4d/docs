@@ -33,12 +33,3 @@ En el siguiente ejemplo, si una búsqueda no encuentra ningún registro, se emit
 #### Ver también 
 
 [PLAY](play.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 151 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -44,13 +44,3 @@ This example orders the records of the \[People\] table in descending order, bas
 #### See also 
 
 [ORDER BY](order-by.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 300 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Changes current record ||
-
-

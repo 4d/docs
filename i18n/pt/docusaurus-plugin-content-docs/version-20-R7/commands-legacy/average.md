@@ -90,13 +90,3 @@ Pode fazer os seguintes cálculos:
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 2 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

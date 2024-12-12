@@ -36,13 +36,3 @@ Vous souhaitez tester si le serveur Web de 4D est lancé :
     ... //effectuer les actions appropriées
  End if
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1313 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

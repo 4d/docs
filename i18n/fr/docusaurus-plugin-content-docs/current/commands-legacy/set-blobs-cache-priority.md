@@ -48,12 +48,3 @@ Dans la , vous souhaitez fixer une priorité très haute pour les "blobs" de la 
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1425 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

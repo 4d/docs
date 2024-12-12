@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->BREAK LEVEL especifica el número de niveles de ruptura en un informe realizado utilizando [PRINT SELECTION](print-selection.md "PRINT SELECTION").<!-- END REF-->
@@ -44,12 +47,3 @@ El siguiente ejemplo imprime un informe con dos niveles de ruptura. La selecció
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 302 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

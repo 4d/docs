@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->O comando **OBJECT SET THREE STATES CHECKBOX**  modifica para o processo atual, a propriedade de "Três Estados" da(s) caixa(s) de seleção designada(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  
@@ -30,12 +33,3 @@ No parâmetro *tresEsta*, passe **True** para ativar o modo "três estados", ou 
 #### Ver também 
 
 [OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1249 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

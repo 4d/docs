@@ -80,12 +80,3 @@ Location: http://...
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 815 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

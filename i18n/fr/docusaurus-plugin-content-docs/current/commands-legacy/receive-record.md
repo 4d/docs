@@ -152,13 +152,3 @@ La variable système OK prend la valeur 1 si l'enregistrement est correctement r
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 79 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

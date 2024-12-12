@@ -51,12 +51,3 @@ Utilisez la fonction **Trigger event** pour structurer vos triggers comme ci-des
 *Présentation des triggers*  
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 369 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

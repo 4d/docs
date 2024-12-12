@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->El comando SVG Find element IDs by rect llena el array texto *arrIDs* con los IDs (atributo "id" o "xml:id") de los elementos XML cuyo rectángulo circundante está en intersección con el rectángulo de selección en la ubicación definida por los parámetros *x* y *y*.<!-- END REF-->
@@ -41,12 +44,3 @@ Todos los elementos cuyo rectángulo circundante está en intersección con el r
 #### Ver también 
 
 [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1109 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -30,12 +30,3 @@ En temps normal, vous n'avez pas à appeler cette commande, car 4D sauvegarde r�
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 297 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

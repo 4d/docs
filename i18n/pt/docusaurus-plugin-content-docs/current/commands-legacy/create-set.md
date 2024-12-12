@@ -32,12 +32,3 @@ O seguinte exemplo cria um conjunto depois de realizar uma pesquisa, de maneira 
 
 [CLEAR SET](clear-set.md)  
 [CREATE EMPTY SET](create-empty-set.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 116 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

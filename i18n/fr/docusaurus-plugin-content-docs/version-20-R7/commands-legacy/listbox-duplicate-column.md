@@ -21,6 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->La commande **LISTBOX DUPLICATE COLUMN** permet de dupliquer la colonne désignée par le(s) paramètre(s) *objet* et *\** dans le contexte du formulaire en cours d’exécution (mode Application).<!-- END REF--> Le formulaire d’origine, généré en mode Développement, n’est pas modifié. 
@@ -92,12 +95,3 @@ Vous souhaitez dupliquer dynamiquement une colonne booléenne et modifier son ti
 #### Voir aussi 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1273 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

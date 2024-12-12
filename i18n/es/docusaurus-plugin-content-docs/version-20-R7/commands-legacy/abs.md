@@ -25,13 +25,3 @@ El siguiente ejemplo devuelve el valor absoluto de –10.3, que es 10.3:
 ```4d
  vlVector:=Abs(-10.3)
 ```
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 99 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

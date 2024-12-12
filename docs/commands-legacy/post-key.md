@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.POST KEY.Summary-->The **POST KEY** command simulates a keystroke.<!-- END REF--> Its effect is as if the user actually entered a character on the keyboard.
@@ -60,12 +63,3 @@ See example for the [Process number](../commands/process-number.md) command.
 *Function Key Codes*  
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 465 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

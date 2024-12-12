@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get type.Summary-->La commande **OBJECT Get type** retourne le type de l’objet désigné par le(s) paramètre(s) *objet* et *\** dans le formulaire courant.<!-- END REF--> 
@@ -95,12 +98,3 @@ Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des 
 
 [FORM LOAD](form-load.md)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1300 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

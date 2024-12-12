@@ -32,13 +32,3 @@ O exemplo a seguir atribui um valor aleatório entre 10 e 30 à variável *vlRes
 ```4d
  vlResult:=(Random%21)+10
 ```
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 100 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

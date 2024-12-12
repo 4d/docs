@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 CHANGE PASSWORD muda a senha do usuário atual. Este comando substitui a senha atual com a nova senha que se passa em *senha*.  
@@ -42,12 +45,3 @@ O exemplo abaixo permite ao usuário mudar sua senha.
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [OBJECT SET FONT](object-set-font.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 186 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

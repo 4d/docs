@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR GET SELECTION.Summary-->QR GET SELECTION コマンドは、選択されたセルの座標を返します。<!-- END REF-->
@@ -38,13 +41,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET SELECTION](qr-set-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 793 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

@@ -52,12 +52,3 @@ You want to send a message to all users, then send a message to a specific user:
 #### See also 
 
 [DROP REMOTE USER](drop-remote-user.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1632 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

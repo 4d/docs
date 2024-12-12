@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get column formula.Summary-->**LISTBOX Get column formula**コマンドは*object*と*\** 引数で指定したリストボックス列に割り当てられたフォーミュラを返します。<!-- END REF-->フォーミュラはリストボックスプロパティのデータソースが**カレントセレクション**、**命名セレクション**、あるいは**コレクションまたはエンティティセレクション**の場合のみ使用できます。列にフォーミュラが割り当てられていない場合、コマンドは空の文字列を返します。 
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1202 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

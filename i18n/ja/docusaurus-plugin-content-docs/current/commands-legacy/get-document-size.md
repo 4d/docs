@@ -29,13 +29,3 @@ Macintoshでは、任意の引数 *\** を渡さない場合、データフォ�
 [Get document position](get-document-position.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET DOCUMENT SIZE](set-document-size.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 479 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

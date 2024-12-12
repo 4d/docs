@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET RECENT FONTS.Summary-->The **SET RECENT FONTS** command modifies the list of fonts displayed in the context menu of the "recent fonts".<!-- END REF-->
@@ -41,12 +44,3 @@ Then the menu contains:
 #### See also 
 
 [FONT LIST](font-list.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1305 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

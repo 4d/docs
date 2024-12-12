@@ -43,12 +43,3 @@ This test lets you run different code depending on whether the version is a merg
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 495 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

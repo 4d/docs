@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->El comando DISPLAY RECORD muestra el registro actual de *tabla*, utilizando el formulario de entrada actual.<!-- END REF--> El registro se muestra hasta que un evento provoque un rediseño de la ventana. Tal evento puede ser la ejecución de un comando [ADD RECORD](add-record.md "ADD RECORD"), el regreso al formulario de entrada, o a la barra de menús. DISPLAY RECORD no hace nada si no hay registro actual.
@@ -40,12 +43,3 @@ El siguiente ejemplo muestra una serie de registros como una presentación de di
 #### Ver también 
 
 [MESSAGE](message.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 105 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

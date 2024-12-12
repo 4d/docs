@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->**SVG GET ATTRIBUTE**コマンドを使用して、オブジェクトまたはSVGピクチャの*attribName*属性の現在値を取得できます。<!-- END REF--> 
@@ -40,12 +43,3 @@ SVG属性に関する詳細は、[SVG SET ATTRIBUTE](svg-set-attribute.md)コマ
 #### 参照 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1056 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

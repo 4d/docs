@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.BLOB to print settings.Summary-->**BLOB to print settings** コマンドは、4Dの現プリンタ設定を *printSettings* BLOBに格納された内容で置き換えます。<!-- END REF-->このBLOBは [Print settings to BLOB](print-settings-to-blob.md) または  4D Pack コマンドで生成されていなければなりません (後述参照)。
@@ -75,12 +78,3 @@ The **BLOB to print settings** コマンドは、コマンドに比べてより�
 #### 参照 
 
 [Print settings to BLOB](print-settings-to-blob.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1434 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

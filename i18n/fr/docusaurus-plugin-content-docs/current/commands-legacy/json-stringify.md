@@ -174,12 +174,3 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1217 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

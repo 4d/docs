@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.EXPORT DIF.Summary-->O comando EXPORT DIF escreve os dados dos registros da seleção atual de *tabela* no processo atual.<!-- END REF--> Os dados são escritos em *documento*, um documento DIF Windows ou Macintosh, no disco.
@@ -49,13 +52,3 @@ OK toma o valor 1 se a exportação termina com sucesso; do contrário, toma o v
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [USE CHARACTER SET](use-character-set.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 84 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

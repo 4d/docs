@@ -33,12 +33,3 @@ Este comando debe ser llamado desde un método de llamada de error instalado por
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1799 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

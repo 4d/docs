@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->O comando GET HIGHLIGHT permite determinar o texto selecionado atualmente em *objeto*.<!-- END REF-->  
@@ -62,12 +65,3 @@ Modificação do estilo do texto ressaltado:
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 209 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

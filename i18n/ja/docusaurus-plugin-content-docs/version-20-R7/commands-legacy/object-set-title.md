@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->**OBJECT SET TITLE**コマンドは、*object* 引数で指定されたボタンのタイトルを*title*で渡した値に変更します。<!-- END REF-->  
@@ -71,12 +74,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get title](object-get-title.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 194 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

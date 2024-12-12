@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->BRING TO FRONT passa todas as janelas que pertencem a *processo* ao primeiro plano.<!-- END REF--> Se o processo já está no primeiro plano, o comando não faz nada. Se o processo estiver oculto, deve utilizar [SHOW PROCESS](show-process.md "SHOW PROCESS") para mostrar o processo, do contrário BRING TO FRONT não tem efeito.
@@ -36,12 +39,3 @@ O exemplo a seguir é um método que pode ser executado desde um menu. Ele verif
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 326 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

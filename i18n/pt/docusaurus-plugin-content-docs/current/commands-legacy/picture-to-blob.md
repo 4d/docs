@@ -50,13 +50,3 @@ Se quiser converter uma imagem de um formato proprietário a formato GIF e mostr
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 692 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

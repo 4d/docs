@@ -117,12 +117,3 @@ O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 697 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

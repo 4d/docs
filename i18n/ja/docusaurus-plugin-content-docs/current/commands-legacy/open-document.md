@@ -86,13 +86,3 @@ Open documentを3のモードで呼ぶと、関数は?00:00:00? (ドキュメン
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 264 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、Document、error |
-| サーバー上での使用は不可 ||
-
-

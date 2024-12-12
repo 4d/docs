@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get row height.Summary-->The **LISTBOX Get row height** command returns the current height of the specified *row* in the list box object designated using the *object* and *\** parameters.<!-- END REF--> Row height can be set globally using the Property List or the [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command, or individually by means of the [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md) command.
@@ -34,12 +37,3 @@ The returned height value is expressed:
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1408 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

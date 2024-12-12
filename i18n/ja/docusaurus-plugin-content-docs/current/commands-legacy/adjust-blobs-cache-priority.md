@@ -52,12 +52,3 @@ displayed_sidebar: docs
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1431 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

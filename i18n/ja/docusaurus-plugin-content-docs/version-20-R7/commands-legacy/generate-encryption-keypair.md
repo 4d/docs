@@ -51,12 +51,3 @@ TLS/SSLプロトコルの暗号化機能はこの原理に基づいており、�
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 688 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

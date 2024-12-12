@@ -80,12 +80,3 @@ $rootRef:=DOM Parse XML source("") //selección de documento XML
 #### Ver también 
 
 [DOM Append XML element](dom-append-xml-element.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1083 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -58,13 +58,3 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 #### Ver também 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 723 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

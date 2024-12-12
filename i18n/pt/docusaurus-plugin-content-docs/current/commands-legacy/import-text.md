@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->O comando IMPORT TEXT lê dados de *documento*, um documento texto Windows ou Macintosh e os escreve em *tabela* criando novos registros para essa tabela.<!-- END REF--> 
@@ -53,13 +56,3 @@ OK toma o valor 1 se a importação termina com sucesso; do contrário, toma o v
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 168 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

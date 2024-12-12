@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->La commande **OPEN ADMINISTRATION WINDOW** affiche la fenêtre d’administration du serveur sur le poste qui l’exécute.<!-- END REF--> La fenêtre d’administration de 4D Server permet de visualiser les paramètres courants et d’effectuer diverses opérations de maintenance (cf. Guide de référence de 4D Server). A compter de la version 11 de 4D Server, cette fenêtre peut être affichée depuis un poste client : 
@@ -49,12 +52,3 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 #### Voir aussi 
 
 [OPEN SECURITY CENTER](open-security-center.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1047 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-
-

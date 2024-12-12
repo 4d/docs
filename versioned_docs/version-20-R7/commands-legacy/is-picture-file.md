@@ -28,12 +28,3 @@ If you do not pass the *\** parameter, the command tests the file by looking for
 #### See also 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1113 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -29,12 +29,3 @@ O exemplo a seguir atribui a variável *vbOpcoes* a Verdadeiro :
 
 [False](false.md)  
 [Not](not.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 214 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

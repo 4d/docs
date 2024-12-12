@@ -38,12 +38,3 @@ See example for the command [Current date](current-date.md).
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 25 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

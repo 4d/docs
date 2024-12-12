@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.HIDE TOOL BAR.Summary-->O comando HIDE TOOL BAR  gerencia a visualização das barras de ferramentas personalizadas criadas pelo comando [Open form window](open-form-window.md) para o processo atual.<!-- END REF-->
@@ -39,12 +42,3 @@ Para evitar isto, no evento formulário On Resize da janela estandarte, é neces
 #### Ver também 
 
 [SHOW TOOL BAR](show-tool-bar.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 434 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

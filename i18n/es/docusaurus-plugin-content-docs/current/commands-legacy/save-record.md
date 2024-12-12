@@ -48,12 +48,3 @@ El siguiente ejemplo es parte de un método que lee registros de un documento. E
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 *Triggers*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 53 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

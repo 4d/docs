@@ -48,12 +48,3 @@ Quando o formulário é enviado ao servidor web, a variável $textoPetição rec
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 814 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

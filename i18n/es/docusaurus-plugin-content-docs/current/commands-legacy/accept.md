@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ACCEPT.Summary-->El comando **ACCEPT** se utiliza en métodos de objeto o de formulario (o en subrutinas) para:
@@ -35,13 +38,3 @@ El comando **ACCEPT** se permite en modo sin interfaz, en el contexto de las ár
 #### Ver también 
 
 [CANCEL](cancel.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 269 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

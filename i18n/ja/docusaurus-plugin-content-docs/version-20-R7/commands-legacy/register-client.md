@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->REGISTER CLIENT コマンドは、4Dクライアントステーションを、*clientName*で指定した名前で4D Serverに登録し、他のクライアントもしくは4D Server (ストアドプロシージャから) が登録されたマシン上で、[EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT")コマンドを使ってメソッドを実行できるようにします。<!-- END REF-->一旦登録されると、4Dクライアントは他のクライアント用に1つまたはそれ以上のメソッドを実行することができます。 
@@ -119,13 +122,3 @@ displayed_sidebar: docs
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 648 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

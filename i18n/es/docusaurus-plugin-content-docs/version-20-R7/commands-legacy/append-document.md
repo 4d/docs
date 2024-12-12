@@ -38,13 +38,3 @@ El siguiente ejemplo abre un documento existente llamado Nota, añade la cadena 
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 265 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, Document, error |
-| Prohibido en el servidor ||
-
-

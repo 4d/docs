@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->O comando ERASE WINDOW apaga o conteúdo da janela cujo número de referência se passa em janela.<!-- END REF-->  
@@ -27,12 +30,3 @@ No confunda ERASE WINDOW , que apaga o conteúdo de uma janela, com [CLOSE WINDO
 
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 160 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

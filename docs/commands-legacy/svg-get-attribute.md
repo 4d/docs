@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->The SVG GET ATTRIBUTE command is used to get the current value of the *attribName* attribute in an object or an SVG picture.<!-- END REF--> 
@@ -40,12 +43,3 @@ For more information about SVG attributes, please refer to the description of th
 #### See also 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1056 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

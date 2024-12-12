@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.List item parent.Summary-->O comando List item parent retorna o número de referência do elemento pai.<!-- END REF-->
@@ -71,12 +74,3 @@ Os números de referência dos elementos são os seguintes:
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 633 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

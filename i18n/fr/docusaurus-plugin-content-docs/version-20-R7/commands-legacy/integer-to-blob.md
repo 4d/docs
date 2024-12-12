@@ -114,12 +114,3 @@ Après l'exécution de ce code :
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 548 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

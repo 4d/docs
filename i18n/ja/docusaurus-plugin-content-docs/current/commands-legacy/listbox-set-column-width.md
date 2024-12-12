@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->**LISTBOX SET COLUMN WIDTH** コマンドを使用し、 *object*引数および *\** で指定されたオブジェクト（リストボックス、列、またはヘッダ）の任意の列の幅、またはすべての列の幅をプログラムから変更することができます。<!-- END REF-->
@@ -34,12 +37,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX Get column width](listbox-get-column-width.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 833 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -13,12 +13,3 @@ displayed_sidebar: docs
 
 
 The **Super** keyword is described in the [**Classes page**](../Concepts/classes.md#super). 
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1706 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

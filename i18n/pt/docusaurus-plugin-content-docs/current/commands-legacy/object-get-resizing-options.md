@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->O comando **OBJECT GET RESIZING OPTIONS** devolve as opções de redimensionar atualmente os objetos designados pelos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -43,12 +46,3 @@ O parâmetro *vertical* devolve um valor indicando a opção de redimensionament
 #### Ver também 
 
 [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1176 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

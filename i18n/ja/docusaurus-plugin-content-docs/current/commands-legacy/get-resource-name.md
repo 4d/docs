@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get resource name.Summary-->**Get resource name**コマンドは、*resType*のタイプで*resID*のIDを持つリソースの名前を返します。<!-- END REF-->
@@ -23,13 +26,3 @@ displayed_sidebar: docs
 *resFile*に有効なリソースファイル参照番号を渡すと、リソースはそのリソースファイル内でのみ検索されます。*resFile*を省略した場合は、現在開かれているすべてのリソースファイル内で検索されます。
 
 リソースが存在しない場合、**Get resource name**は空の文字列を返します。
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 513 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

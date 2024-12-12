@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->The **QR SET TEXT PROPERTY** command sets the text attributes for the cell determined by *colNum* and *rowNum*.<!-- END REF-->
@@ -84,13 +87,3 @@ This method defines several attributes of the first column’s title:
 #### See also 
 
 [QR Get text property](qr-get-text-property.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 759 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

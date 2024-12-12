@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->La commande **OBJECT SET VERTICAL ALIGNMENT** vous permet de modifier par programmation le type d’alignement vertical appliqué à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
@@ -41,12 +44,3 @@ Les objets de formulaire auxquels un alignement vertical peut être appliqué so
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1187 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

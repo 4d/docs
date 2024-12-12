@@ -105,12 +105,3 @@ After executing this code:
 [INTEGER TO BLOB](integer-to-blob.md)  
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 554 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -31,12 +31,3 @@ Si la base fonctionne avec un fichier d’historique, la variable système OK pr
 #### Voir aussi 
 
 [SELECT LOG FILE](select-log-file.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 928 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-
-

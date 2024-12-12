@@ -58,12 +58,3 @@ Este exemplo permite obter a soma de quadrados dos valores localizados num array
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 28 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

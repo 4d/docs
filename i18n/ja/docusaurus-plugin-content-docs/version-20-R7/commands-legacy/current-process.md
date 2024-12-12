@@ -26,12 +26,3 @@ displayed_sidebar: docs
 [Process number](process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 322 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

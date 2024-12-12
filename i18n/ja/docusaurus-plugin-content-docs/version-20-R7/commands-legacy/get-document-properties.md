@@ -204,13 +204,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 477 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

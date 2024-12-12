@@ -80,12 +80,3 @@ Since the command returns a collection, it can be used with **.join()** to build
 #### See also 
 
 [Count parameters](count-parameters.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1790 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

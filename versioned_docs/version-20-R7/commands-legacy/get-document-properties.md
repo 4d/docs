@@ -208,13 +208,3 @@ Once this is implemented in the database, we have all we need to write the proje
 #### See also 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 477 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

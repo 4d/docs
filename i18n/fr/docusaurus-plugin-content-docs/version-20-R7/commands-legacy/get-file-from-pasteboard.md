@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->La commande **Get file from pasteboard** retourne le chemin d’accès absolu d’un fichier inclus dans une opération de glisser-déposer.<!-- END REF--> Plusieurs fichiers pouvant être sélectionnés et déplacés simulanément, le paramètre *indiceN* permet de désigner un fichier parmi l’ensemble des fichiers sélectionnés.
@@ -41,12 +44,3 @@ L’exemple suivant permet de récupérer dans un tableau tous les chemins d’a
 #### Voir aussi 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 976 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

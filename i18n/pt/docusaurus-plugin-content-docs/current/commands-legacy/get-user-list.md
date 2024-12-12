@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET USER LIST.Summary-->GET USER LIST preenche os arrays *nomUsuario* e *numUsuario* com os nomes e os números de referência únicos dos usuários tais como aparecem na janela de senhas.<!-- END REF-->
@@ -35,13 +38,3 @@ Se não tiver privilégios de acesso para chamar ao comando GET USER LIST ou se 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 609 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

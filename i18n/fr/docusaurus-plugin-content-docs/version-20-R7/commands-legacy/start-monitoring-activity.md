@@ -92,12 +92,3 @@ Vous souhaitez lancer/arrêter le suivi et revoir les activités de données 4D 
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1712 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

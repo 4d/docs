@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Displayed line number.Summary-->O comando Displayed line number funciona unicamente no contexto do evento de formulário On Display Detail.<!-- END REF--> Retorna o número da linha que estiver sendo processada enquanto uma lista de registros é mostrada em tela. Se Displayed line number for chamada quando não se mostra uma lista, retorna 0.  
@@ -44,12 +47,3 @@ Este exemplo lhe permite aplicar uma cor alternativa em um formulário listado m
 
 [Form event code](../commands/form-event-code.md)  
 [Selected record number](selected-record-number.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 897 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->OBJECT GET SCROLLBAR コマンドは、*object*で指定されたオブジェクトまたはオブジェクトグループの縦横スクロールバーの表示/非表示状態を知るために使用します。<!-- END REF-->. 
@@ -44,12 +47,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1076 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

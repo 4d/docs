@@ -33,12 +33,3 @@ L'exemple suivant propose une technique de boucle couramment utilisée pour se d
 #### Voir aussi 
 
 [Records in table](records-in-table.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 76 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

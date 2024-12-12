@@ -71,12 +71,3 @@ displayed_sidebar: docs
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1333 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

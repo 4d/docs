@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->The **METHOD GET COMMENTS** command returns, in the *comments* parameter, the documentation of the method(s) designated by the *path* parameter.<!-- END REF-->
@@ -53,12 +56,3 @@ If the command is executed from a component, it applies by default to the compon
 #### See also 
 
 [METHOD SET COMMENTS](method-set-comments.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1189 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

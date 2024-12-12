@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get edited text.Summary-->La commande **Get edited text** retourne le texte en cours de saisie dans un objet de formulaire.<!-- END REF--> 
@@ -66,12 +69,3 @@ Voici un exemple de traitement à la volée des caractères saisis dans un champ
 
 [Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 655 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

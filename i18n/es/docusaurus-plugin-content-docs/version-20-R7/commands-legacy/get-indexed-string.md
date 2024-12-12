@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Get indexed string.Summary-->El comando Get indexed string devuelve:   
@@ -38,13 +41,3 @@ Si el recurso se encuentra, OK toma el valor 1, de lo contrario toma el valor 0 
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 510 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

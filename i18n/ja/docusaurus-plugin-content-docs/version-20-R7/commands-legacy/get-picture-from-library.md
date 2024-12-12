@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->GET PICTURE FROM LIBRARY コマンドは、*picRef*に渡された参照番号または*picName*に渡された名前を持つピクチャライブラリの画像を*picture*引数に返します。<!-- END REF-->
@@ -54,13 +57,3 @@ displayed_sidebar: docs
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 565 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

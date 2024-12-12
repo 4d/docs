@@ -101,12 +101,3 @@ IP:port/4DACTION/action_Session
 [Session storage](session-storage.md)  
 [Session API](../API/SessionClass.md)  
 [Web server user sessions](../WebServer/sessions.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1714 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

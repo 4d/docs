@@ -53,12 +53,3 @@ displayed_sidebar: docs
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1088 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

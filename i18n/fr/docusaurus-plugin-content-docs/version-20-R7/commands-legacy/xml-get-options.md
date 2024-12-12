@@ -37,12 +37,3 @@ Passez dans *sélecteur* une des constantes du thème *XML* ci-dessous, indiquan
 #### Voir aussi 
 
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1096 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

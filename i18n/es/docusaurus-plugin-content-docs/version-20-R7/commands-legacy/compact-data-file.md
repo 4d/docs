@@ -70,13 +70,3 @@ Si la operación de compactación se lleva a cabo correctamente, la variable sis
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 937 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, Document |
-| Prohibido en el servidor ||
-
-

@@ -42,12 +42,3 @@ In the *format* parameter, pass the type of parameter whose value you want to kn
 #### See also 
 
 [OBJECT SET FORMAT](object-set-format.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 994 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -25,12 +25,3 @@ Se *processo* foi atrasado anteriormente, consulte os comandos [PAUSE PROCESS](p
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 320 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SQL Get current data source.Summary-->*Get current data source*コマンドはアプリケーションのカレントデータソースの名前を返します。<!-- END REF-->カレントデータソースは、[Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL")内で実行されるSQLクエリを受け取ります。  
@@ -26,12 +29,3 @@ SQLクエリを実行する前に、このコマンドでカレントデータ�
 [SQL GET DATA SOURCE LIST](sql-get-data-source-list.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 990 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -42,13 +42,3 @@ El siguiente ejemplo borra un registro de un empleado. El código pregunta al us
 
 [Locked](locked.md)  
 *Triggers*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 58 |
-| Hilo seguro | &check; |
-| Modifica el registro actual ||
-| Prohibido en el servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->**OBJECT Is styled text**コマンドは、 *object* と *\** によって指定されたオブジェクトの"マルチスタイル"オプションにチェックが入っているときに **True** を返します。<!-- END REF-->
@@ -42,12 +45,3 @@ displayed_sidebar: docs
 #### 参照 
 
 *スタイル付きテキスト*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1261 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

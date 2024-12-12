@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.WA Get current URL.Summary-->El comando WA Get current URL devuelve la dirección URL de la página mostrada en el área web designada por los parámetros *\** y *objeto*.<!-- END REF--> 
@@ -35,12 +38,3 @@ La página mostrada es el URL "www.apple.com" y la página "www.4dhispano.com" e
 #### Ver también 
 
 [WA OPEN URL](wa-open-url.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1025 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

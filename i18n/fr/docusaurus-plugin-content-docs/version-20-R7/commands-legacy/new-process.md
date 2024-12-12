@@ -106,12 +106,3 @@ Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode
 [Execute on server](execute-on-server.md)  
 *Introduction aux process*  
 *Process 4D préemptifs*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 317 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

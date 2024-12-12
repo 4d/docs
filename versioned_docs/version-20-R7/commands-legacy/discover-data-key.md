@@ -49,12 +49,3 @@ Key files (".4DKeyChain" extension files) must be stored at the top level of con
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [New data key](new-data-key.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1639 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

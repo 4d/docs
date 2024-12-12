@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** permet de changer l'identité de l'utilisateur courant dans la base, sans devoir la quitter.<!-- END REF--> Le changement d'identité peut être effectué par l'utilisateur lui-même via la boîte de dialogue de connexion à la base (lorsque la commande est appelée sans paramètres) ou directement par la commande. Lorsqu'il change d'identité, l'utilisateur abandonne ses anciens privilèges au profit de ceux de l'utilisateur choisi.
@@ -66,12 +69,3 @@ L'exemple suivant affiche simplement la boîte de dialogue de connexion :
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 289 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

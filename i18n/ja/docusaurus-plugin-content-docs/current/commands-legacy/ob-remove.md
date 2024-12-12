@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB REMOVE.Summary-->**OB REMOVE**コマンドは、*object* 引数で指定したランゲージオブジェクトの、 *property* 引数で指定したプロパティを削除します。<!-- END REF-->で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して定義されているか、4Dオブジェクトフィールドが指定されている必要があります。
+<!--REF #_command_.OB REMOVE.Summary-->**OB REMOVE**コマンドは、*object* 引数で指定したランゲージオブジェクトの、 *property* 引数で指定したプロパティを削除します。<!-- END REF-->
+
+*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して定義されているか、4Dオブジェクトフィールドが指定されている必要があります。
 
 *property* 引数には、削除したいプロパティのラベルを渡します。  
 *property* 引数では、大文字と小文字は区別されることに注意して下さい。
@@ -36,12 +38,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OB SET](ob-set.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1226 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

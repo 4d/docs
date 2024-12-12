@@ -25,12 +25,3 @@ Si l’image n’a pas de nom par défaut, la commande retourne une chaîne vide
 #### Voir aussi 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1171 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

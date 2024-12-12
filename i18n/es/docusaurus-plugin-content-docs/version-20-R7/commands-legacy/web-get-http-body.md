@@ -48,12 +48,3 @@ Cuando el formulario se envia al servidor web, la variable $textoSolicitud recib
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 814 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

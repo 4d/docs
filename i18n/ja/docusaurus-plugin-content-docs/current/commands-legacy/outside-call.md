@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Outside call.Summary-->**Outside call** は、実行サイクルのあとにTrueを返します。<!-- END REF-->
@@ -25,12 +28,3 @@ displayed_sidebar: docs
 
 [Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 328 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

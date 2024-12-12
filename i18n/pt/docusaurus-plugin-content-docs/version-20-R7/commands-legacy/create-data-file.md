@@ -26,12 +26,3 @@ Antes de iniciar a operação, o comando verifica que o endereço de acesso não
 #### Ver também 
 
 [OPEN DATA FILE](open-data-file.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 313 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

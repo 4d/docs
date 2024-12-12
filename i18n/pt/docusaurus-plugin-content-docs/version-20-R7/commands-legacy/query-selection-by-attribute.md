@@ -45,15 +45,3 @@ Se quiser encontrar pessoas com uma idade entre 20 e 30 nos registros que foram 
 #### Ver também 
 
 [QUERY BY ATTRIBUTE](query-by-attribute.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1424 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Modificar o registro atual ||
-| Modificar a seleção atual ||
-| Proibido no servidor ||
-
-

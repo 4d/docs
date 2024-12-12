@@ -51,13 +51,3 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 682 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

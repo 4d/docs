@@ -28,12 +28,3 @@ PLUGIN LIST takes all plug-ins into account, including those that are integrated
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 847 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

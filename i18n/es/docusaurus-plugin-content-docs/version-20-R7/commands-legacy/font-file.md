@@ -48,12 +48,3 @@ Desea asegurarse de que la fuente utilizada en un área de texto esté disponibl
 #### Ver también 
 
 [OBJECT SET FONT](object-set-font.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1700 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

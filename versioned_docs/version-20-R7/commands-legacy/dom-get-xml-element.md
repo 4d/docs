@@ -33,13 +33,3 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 725 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

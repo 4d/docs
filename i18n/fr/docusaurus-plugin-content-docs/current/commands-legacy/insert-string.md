@@ -41,12 +41,3 @@ L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats so
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 231 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

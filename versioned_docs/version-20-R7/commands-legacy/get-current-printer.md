@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get current printer.Summary-->The **Get current printer** command returns the name of the current printer defined in the 4D application.<!-- END REF--> By default, on start-up of 4D, the current printer is the printer defined in the system.
@@ -31,12 +34,3 @@ If no printer is installed, an error is generated.
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 788 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

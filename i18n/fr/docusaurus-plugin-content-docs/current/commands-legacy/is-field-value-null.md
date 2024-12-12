@@ -28,12 +28,3 @@ La valeur retournée par cette commande n'a de sens que si l'option "*Traduire l
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 964 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

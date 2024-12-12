@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SQL End selection.Summary-->El comando SQL End selection se utiliza para determinar si los límites del resultado obtenido se han alcanzado.<!-- END REF-->
@@ -37,13 +40,3 @@ El código a continuación se conecta a una fuente de datos externos (Oracle) ut
 ```
 
 Este código devolverá en la variable 4D *vNombre* los nombres (ename) almacenados en la tabla emp.
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 821 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

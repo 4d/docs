@@ -31,13 +31,3 @@ If *aliasPath* does specify an alias/shortcut, the OK system variable is set to 
 #### See also 
 
 [CREATE ALIAS](create-alias.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 695 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

@@ -185,12 +185,3 @@ O método abaixo de gestão de erros ignora as interrupções de usuário e most
 [Last errors](last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *Variáveis sistema*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 155 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

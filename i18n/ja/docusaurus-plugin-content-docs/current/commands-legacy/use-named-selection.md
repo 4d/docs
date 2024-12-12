@@ -29,14 +29,3 @@ displayed_sidebar: docs
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 332 |
-| スレッドセーフである | &check; |
-| カレントレコードを変更する ||
-| カレントセレクションを変更する ||
-| サーバー上での使用は不可 ||
-
-

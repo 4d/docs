@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->El comando SET LIST ITEM ICON permite modificar el icono asociado al elemento especificado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista* 
@@ -46,12 +49,3 @@ Queremos asignar la misma imagen a dos elementos diferentes. El siguiente códig
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 950 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

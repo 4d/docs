@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### 
 
 <!--REF #_command_.On SQL Authentication database method.Summary-->La **On SQL Authentication database method** permet de filtrer les requêtes adressées au serveur SQL intégré de 4D.<!-- END REF--> Le filtrage peut être effectué sur la base du nom, du mot de passe ainsi que (facultativement) de l’adresse IP de l’utilisateur. Le développeur peut utiliser sa propre table d’utilisateurs ou celle des utilisateurs 4D pour évaluer les identifiants de connexion. Une fois la connexion authentifiée, la commande [CHANGE CURRENT USER](change-current-user.md) doit être appelée afin de contrôler les accès de la requête au sein de la base 4D. 

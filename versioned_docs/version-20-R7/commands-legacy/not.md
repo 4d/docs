@@ -32,12 +32,3 @@ This example first assigns True to a variable, then changes the variable value t
 
 [False](false.md)  
 [True](true.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 34 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

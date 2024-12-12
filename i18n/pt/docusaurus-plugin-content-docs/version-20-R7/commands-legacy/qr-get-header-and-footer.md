@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->O comando QR GET HEADER AND FOOTER permite recuperar o conteúdo e o tamanho do cabeçalho ou rodapé de página.<!-- END REF-->  
@@ -66,13 +69,3 @@ O código a seguir recupera o conteúdo e a altura do título do cabeçalho e os
 #### Ver também 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 775 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->O comando **LISTBOX Get property** devolve diferente informação relacionada com o tamanho e a visibilidade dos títulos e as barras de rolagem do objeto list box designado usandoos parâmetros *objeto* e *\**.<!-- END REF-->
@@ -98,12 +101,3 @@ Dado um list box "MyListbox", é executada a seguinte instrução:
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 917 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

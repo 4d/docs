@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Export structure file.Summary-->**Export structure file** コマンドは、カレントの4D データベースストラクチャーを、*folderPath* 引数で指定したパスに、テキストベースのファイルやネイティブのピクチャーファイルなどのセットに分解し、書き出し、保存します。<!-- END REF-->デフォルトでは、データベースストラクチャー全体(メソッド、フォーム、カタログ、等)が書き出されます。*options* 引数を使用することで書き出す中身をフィルターすることができます。
@@ -114,12 +117,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1565 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

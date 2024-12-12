@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->La commande **OBJECT Get list name** retourne le nom de l’énumération associée à l'objet ou au groupe d'objets désigné par *objet*.<!-- END REF--> 4D vous permet d'associer une énumération (créée avec l'éditeur d'énumérations en mode Développement) aux objets de formulaire via l'éditeur de formulaires ou la commande [OBJECT SET LIST BY NAME](object-set-list-by-name.md).
@@ -36,12 +39,3 @@ Si aucune liste du type défini n’est associée à l’*objet*, la commande re
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1072 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

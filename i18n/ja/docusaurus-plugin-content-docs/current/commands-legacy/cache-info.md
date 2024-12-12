@@ -53,12 +53,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [MEMORY STATISTICS](memory-statistics.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1402 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

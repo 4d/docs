@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FILTER EVENT.Summary-->Llame al comando **FILTER EVENT** desde el interior del método de gestión de eventos instalado utilizando el comando [ON EVENT CALL](on-event-call.md).<!-- END REF-->
@@ -40,12 +43,3 @@ Ver el ejemplo del comando [ON EVENT CALL](on-event-call.md "ON EVENT CALL").
 #### Ver también 
 
 [ON EVENT CALL](on-event-call.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 321 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

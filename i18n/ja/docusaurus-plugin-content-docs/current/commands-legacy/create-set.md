@@ -32,12 +32,3 @@ displayed_sidebar: docs
 
 [CLEAR SET](clear-set.md)  
 [CREATE EMPTY SET](create-empty-set.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 116 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

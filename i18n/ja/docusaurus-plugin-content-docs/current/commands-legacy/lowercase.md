@@ -48,12 +48,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Uppercase](uppercase.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 14 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

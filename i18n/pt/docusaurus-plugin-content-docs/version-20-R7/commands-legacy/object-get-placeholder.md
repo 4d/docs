@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->O comando **OBJECT Get placeholder** devolve o texto de exemplo associado ao objeto ou aos objetos designado(s) pelos parâmetros *objeto* e *\**.<!-- END REF--> Se não há nenhum texto do marcador associado com o objeto, o comando devolve uma cadeia vazia.
@@ -36,12 +39,3 @@ Se quer receber o texto do marcador de campo:
 #### Ver também 
 
 [OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1296 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

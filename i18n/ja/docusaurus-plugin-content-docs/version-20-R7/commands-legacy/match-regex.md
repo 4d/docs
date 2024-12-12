@@ -108,14 +108,3 @@ vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_ar
 #### エラー管理 
 
 エラーのイベントでは、コマンドはエラーを生成しますが、[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドを用いてインストールされたメソッドで、これを検知することができます。
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1019 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

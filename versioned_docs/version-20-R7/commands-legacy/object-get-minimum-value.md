@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->The **OBJECT GET MINIMUM VALUE** command returns, in the *minValue* variable, the current minimum value of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -27,12 +30,3 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1243 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

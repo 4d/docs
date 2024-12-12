@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->The **QR SET BORDERS** command sets the border style for a given cell.<!-- END REF-->
@@ -74,13 +77,3 @@ If you pass an invalid line parameter, the error -9855 will be generated.
 #### See also 
 
 [QR GET BORDERS](qr-get-borders.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 797 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### 
 
 <!--REF #_command_.On Web Connection database method.Summary-->The **On Web Connection database method** can be called in the following cases:

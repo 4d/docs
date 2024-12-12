@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Compatibility Note 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->This command was named **CALL PROCESS** in previous 4D releases.<!-- END REF--> 
@@ -44,12 +47,3 @@ Ver el ejemplo de [On Exit Database Method](metodo-base-on-exit.md "On Exit Data
 [Form event code](form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 329 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -37,12 +37,3 @@ Você quer eliminar a propriedade "idade" de um objeto:
 #### Ver também 
 
 [OB SET](ob-set.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1226 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

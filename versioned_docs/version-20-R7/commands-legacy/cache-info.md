@@ -53,12 +53,3 @@ You want to get cache information for the database and all opened components:
 #### See also 
 
 [MEMORY STATISTICS](memory-statistics.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1402 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

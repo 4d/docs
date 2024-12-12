@@ -46,12 +46,3 @@ displayed_sidebar: docs
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 948 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

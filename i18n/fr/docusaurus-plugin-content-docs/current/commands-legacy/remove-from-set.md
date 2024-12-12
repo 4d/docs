@@ -21,13 +21,3 @@ displayed_sidebar: docs
 #### Voir aussi 
 
 [ADD TO SET](add-to-set.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 561 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

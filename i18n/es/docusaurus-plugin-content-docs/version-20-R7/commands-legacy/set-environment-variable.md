@@ -42,12 +42,3 @@ Consulte los ejemplos del comando [LAUNCH EXTERNAL PROCESS](launch-external-proc
 #### Ver también 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 812 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

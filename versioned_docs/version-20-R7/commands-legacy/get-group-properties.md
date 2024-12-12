@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES returns the properties of the group whose unique group ID number you pass in *groupID*.<!-- END REF--> You must pass a valid group ID number returned by the command [GET GROUP LIST](get-group-list.md). 
@@ -39,13 +42,3 @@ If you do not have the proper access privileges for calling GET GROUP PROPERTIES
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 613 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

@@ -45,12 +45,3 @@ O exemplo a seguir adiciona um elemento a um array:
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 227 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

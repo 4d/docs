@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GOTO XY.Summary-->La commande **GOTO XY** est destinée à être utilisée conjointement avec la commande [MESSAGE](message.md) lorsque vous affichez des messages dans une fenêtre ouverte par la commande [Open window](open-window.md).<!-- END REF--> 
@@ -58,12 +61,3 @@ L'exemple ci-dessous :
 #### Voir aussi 
 
 [MESSAGE](message.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 161 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

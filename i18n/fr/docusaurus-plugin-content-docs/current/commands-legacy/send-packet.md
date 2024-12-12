@@ -81,12 +81,3 @@ Cet exemple illustre l’envoi et la récupération de caractères étendus via 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 103 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

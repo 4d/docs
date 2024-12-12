@@ -30,12 +30,3 @@ Se omite o parâmetro opcional *ancora*, a posição é relativa ao início do d
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 482 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

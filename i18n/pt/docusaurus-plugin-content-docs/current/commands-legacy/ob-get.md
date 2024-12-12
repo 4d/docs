@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.OB Get.Summary-->O comando **OB Get** devolve o valor atual da *propriedade* do *objeto*, convertido opcionalmente no *tipo* definido.<!-- END REF-->deve ter sido definido com o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D..
+<!--REF #_command_.OB Get.Summary-->O comando **OB Get** devolve o valor atual da *propriedade* do *objeto*, convertido opcionalmente no *tipo* definido.<!-- END REF-->
+
+*objeto* deve ter sido definido com o comando [C\_OBJECT](c-object.md) ou designar um campo objeto 4D..
 
 **Nota:** este comando suporta definições de atributo em *objetos* 4D Write Pro, como o comando *WP GET ATTRIBUTES* (ver o exemplo 9). .
 
@@ -220,12 +222,3 @@ Se quiser conhecer o tamanho de uma imagem armazenada em um atributo objeto:
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
 *Tipos de campos e variáveis*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1224 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

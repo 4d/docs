@@ -79,12 +79,3 @@ Reportez-vous à l’exemple de la routine [PICTURE TO BLOB](picture-to-blob.md)
 #### Voir aussi 
 
 [WEB SEND FILE](web-send-file.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 654 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

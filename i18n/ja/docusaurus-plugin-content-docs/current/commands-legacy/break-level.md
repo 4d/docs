@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL**は、[PRINT SELECTION](print-selection.md)コマンドを使ってプリントするレポートのブレークの数を指定します。<!-- END REF-->
@@ -44,12 +47,3 @@ displayed_sidebar: docs
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 302 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

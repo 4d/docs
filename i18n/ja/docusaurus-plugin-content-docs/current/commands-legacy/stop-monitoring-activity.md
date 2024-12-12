@@ -26,12 +26,3 @@ displayed_sidebar: docs
 
 [Monitored activity](monitored-activity.md)  
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1721 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

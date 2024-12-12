@@ -31,12 +31,3 @@ Cuando se suspende la ejecución de un proceso, las ventanas que pertenecen a es
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 319 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

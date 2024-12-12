@@ -33,12 +33,3 @@ You want to determine if the current operating system is Windows:
 
 [System info](system-info.md)  
 [Is macOS](is-macos.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1573 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

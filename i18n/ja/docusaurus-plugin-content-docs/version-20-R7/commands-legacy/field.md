@@ -59,12 +59,3 @@ displayed_sidebar: docs
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 253 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -29,13 +29,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [CREATE ALIAS](create-alias.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 695 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

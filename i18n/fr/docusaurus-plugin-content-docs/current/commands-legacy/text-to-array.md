@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->La commande **TEXT TO ARRAY** permet de transformer une variable texte en tableau texte.<!-- END REF--> Le texte d’origine (stylé ou non) est découpé et chaque morceau devient un élément du tableau *tabTexte* qui est retourné par la commande. Cette commande peut être utilisée par exemple pour remplir des pages ou des colonnes de texte de taille fixe.
@@ -107,12 +110,3 @@ Vous devez imprimer dans une zone de 400 pixels de large un texte d’un maximum
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1149 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

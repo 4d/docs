@@ -73,12 +73,3 @@ Este ejemplo define dos parámetros:
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 777 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->The **OBJECT SET PRINT VARIABLE FRAME** command modifies the Print Variable Frame property of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -42,12 +45,3 @@ The optional *fixedSubform* parameter lets you set an additional option when you
 #### See also 
 
 [OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1240 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

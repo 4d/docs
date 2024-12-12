@@ -145,12 +145,3 @@ Si le contenu de *valeurEnfant* est invalide, une erreur est retournée.
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1080 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

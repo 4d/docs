@@ -36,12 +36,3 @@ Si vous souhaitez connaître le nom de la variable pointée ou le numéro du cha
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 315 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

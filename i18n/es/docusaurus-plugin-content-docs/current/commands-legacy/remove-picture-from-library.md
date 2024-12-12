@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->El comando REMOVE PICTURE FROM LIBRARY elimina de la librería de imágenes la imagen cuyo número de referencia se pasa en *refImag* o cuyo nombre se pasa en *nomImag*.<!-- END REF--> 
@@ -49,12 +52,3 @@ El siguiente ejemplo borra de la librería de imágenes toda imagen cuyo nombre 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 567 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

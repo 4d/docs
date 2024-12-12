@@ -74,13 +74,3 @@ displayed_sidebar: docs
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

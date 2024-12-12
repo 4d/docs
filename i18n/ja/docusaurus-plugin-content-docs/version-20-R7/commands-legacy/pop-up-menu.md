@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Pop up menu.Summary-->**Pop up menu** コマンドは、現在マウスが置かれている場所でポップアップメニューを表示します。<!-- END REF-->
@@ -86,12 +89,3 @@ Windows上 (左) とMacintosh上 (右)で表示されるポップアップメニ
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 542 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -65,12 +65,3 @@ You want to copy different property values from a collection of objects in diffe
 
 [ARRAY TO COLLECTION](array-to-collection.md)  
 *Type conversions between collections and 4D arrays*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1562 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

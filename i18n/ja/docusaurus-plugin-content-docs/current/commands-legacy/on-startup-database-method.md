@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 
 
 <!--REF #_command_.On Startup database method.Summary-->**On Startupデータベースメソッド**は、データベースを開くと1度呼び出されます。<!-- END REF--> 
@@ -44,12 +47,3 @@ displayed_sidebar: docs
 [On Exitデータベースメソッド](on-exit-database-method.md)  
 [QUIT 4D](quit-4d.md)  
 *データベースメソッド*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 905263 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -42,12 +42,3 @@ Résultat :
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1445 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

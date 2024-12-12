@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->El comando QR SET INFO ROW muestra/oculta la fila cuya referencia se pasa en *linea*.<!-- END REF-->
@@ -49,13 +52,3 @@ La siguiente instrucción oculta el contenido de la línea detalle:
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 763 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

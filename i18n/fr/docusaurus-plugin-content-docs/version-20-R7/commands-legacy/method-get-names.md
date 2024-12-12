@@ -39,13 +39,3 @@ Exemples d’utilisations types :
   // Liste des méthodes projet de la base hôte débutant par une chaîne spécifique
  METHOD GET NAMES(t_Noms;"web_@";*)
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1166 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

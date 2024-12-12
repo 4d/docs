@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** changes the identity of the current user in the database, without needing to quit.<!-- END REF--> The user can change their identity themselves either using the database connection dialog box (when the command is called without parameters) or directly via the command. When a user changes their identity, they abandon any former access privileges in favor of those belonging to the chosen user.
@@ -66,12 +69,3 @@ The following example simply displays the connection dialog box:
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 289 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

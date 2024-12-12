@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->La commande **GET PRINT OPTION** retourne la ou les valeur(s) courante(s) d’une option d’impression.<!-- END REF--> 
@@ -66,13 +69,3 @@ La variable système OK prend la valeur 1 si la commande a été exécutée corr
 
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 734 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

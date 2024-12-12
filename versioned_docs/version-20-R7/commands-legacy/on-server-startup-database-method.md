@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### 
 
 <!--REF #_command_.On Server Startup database method.Summary-->The **On Server Startup database method** is called once on the server machine when you open a database with 4D Server.<!-- END REF--> The **On Server Startup database method** is NOT invoked by any 4D environment other than 4D Server.

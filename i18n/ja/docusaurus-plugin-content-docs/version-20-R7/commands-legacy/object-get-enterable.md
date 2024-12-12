@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->OBJECT Get enterable コマンドはobjectで指定されたオブジェクトまたはオブジェクトグループが**入力可属性**を持つ場合にTrueを、そうでなければFalseを返します。<!-- END REF-->
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1067 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

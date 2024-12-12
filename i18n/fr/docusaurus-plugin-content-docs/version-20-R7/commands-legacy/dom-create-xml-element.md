@@ -151,13 +151,3 @@ Une erreur est générée lorsque :
 [DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 865 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

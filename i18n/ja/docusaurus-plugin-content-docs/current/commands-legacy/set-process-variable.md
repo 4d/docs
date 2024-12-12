@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->SET PROCESS VARIABLE コマンドは、引数*expr1* (*expr2*等)に渡す値を、*process*に渡す番号の送り先プロセスの*dstVar* (*dstVar2*等) プロセス変数に書き込みます。<!-- END REF-->
@@ -97,11 +100,3 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
 [POST OUTSIDE CALL](post-outside-call.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 *プロセス*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 370 |
-| スレッドセーフである | &check; |
-
-

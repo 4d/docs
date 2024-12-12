@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->La commande **OBJECT MOVE** permet de déplacer le ou les objet(s) du formulaire courant, défini(s) par les paramètres *\** et *objet*, de *dépH* pixels horizontalement et de *dépV* pixels verticalement.<!-- END REF--> Il est également possible (optionnellement) de redimensionner le ou les objet(s) de *redimH* pixels horizontalement et de *redimV* pixels verticalement. 
@@ -61,12 +64,3 @@ L’instruction suivante place le bouton “Bouton\_1” aux coordonnées (10;20
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 664 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

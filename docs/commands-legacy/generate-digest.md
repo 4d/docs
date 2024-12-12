@@ -84,12 +84,3 @@ These examples illustrate how to retrieve the digest key of a text:
 [Generate password hash](generate-password-hash.md)  
 *Secured Protocol*  
 [WEB Validate digest](web-validate-digest.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1147 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -48,12 +48,3 @@ En el , usted desea definir una prioridad alta para la tabla \[Customer\]:
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1425 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

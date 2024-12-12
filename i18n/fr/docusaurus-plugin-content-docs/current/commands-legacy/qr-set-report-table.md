@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->La commande **QR SET REPORT TABLE** désigne via le paramètre *numTable* le numéro de la table courante de l'état rapide dont la référence est passée dans le paramètre *zone*.<!-- END REF--> 
@@ -26,13 +29,3 @@ Si le paramètre *numTable* est incorrect, l’erreur -9852 est générée.
 #### Voir aussi 
 
 [QR Get report table](qr-get-report-table.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 757 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

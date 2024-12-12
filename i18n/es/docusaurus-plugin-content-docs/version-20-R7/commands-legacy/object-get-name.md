@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get name.Summary-->El comando OBJECT Get name devuelve el nombre de un objeto de formulario.<!-- END REF--> 
@@ -38,12 +41,3 @@ Después de la ejecución de este método objeto, la variable *$btnName* contien
 [OBJECT Get pointer](object-get-pointer.md)  
 *Objetos (Formularios)*  
 *Objetos de formulario (Acceso)*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1087 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

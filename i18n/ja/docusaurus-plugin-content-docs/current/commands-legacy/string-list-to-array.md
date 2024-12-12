@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->**STRING LIST TO ARRAY**コマンドは以下の要素から構築される*strings*配列を生成します:
@@ -45,13 +48,3 @@ displayed_sidebar: docs
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 511 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

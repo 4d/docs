@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->The **ON EVENT CALL** command installs the method, whose name you pass in *eventMethod*, as the method for catching (trapping) events.<!-- END REF--> This method is called the **event-handling method** or **event-catching method**. 
@@ -115,12 +118,3 @@ If you print a report using [PRINT SELECTION](print-selection.md), you do NOT ne
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 190 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

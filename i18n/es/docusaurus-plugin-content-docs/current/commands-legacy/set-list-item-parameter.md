@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->El comando SET LIST ITEM PARAMETER permite modificar el parámetro *selector* para el elemento *refElem* de la lista jerárquica cuya referencia o nombre de objeto se pasa en el parámetro *lista*.<!-- END REF-->
@@ -61,12 +64,3 @@ Usted desea definir como lista de opciones de un menú emergente jerárquico una
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 986 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

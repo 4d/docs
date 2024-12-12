@@ -119,12 +119,3 @@ In the following example, you want to find all instances of a string and replace
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 15 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

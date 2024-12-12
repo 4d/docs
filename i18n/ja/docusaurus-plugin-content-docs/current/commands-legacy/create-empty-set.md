@@ -28,12 +28,3 @@ displayed_sidebar: docs
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 140 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

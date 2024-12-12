@@ -65,12 +65,3 @@ Desea copiar diferentes valores de propiedad de una colección de objetos en dif
 
 [ARRAY TO COLLECTION ](array-to-collection.md)  
 *Conversiones de tipo entre las colecciones y los arrays 4D*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1562 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

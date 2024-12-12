@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB Instance of.Summary-->**OB Instance of** コマンドは*object* 引数のオブジェクトが*class* 引数で指定されたクラスまたはその子クラスに属していればtrue を、それ以外の場合にはfalse を返します。<!-- END REF-->引数のクラスが有効なクラスオブジェクトでない場合、エラー-10745 が返されます。
+<!--REF #_command_.OB Instance of.Summary-->**OB Instance of** コマンドは*object* 引数のオブジェクトが*class* 引数で指定されたクラスまたはその子クラスに属していればtrue を、それ以外の場合にはfalse を返します。<!-- END REF-->
+
+*class* 引数のクラスが有効なクラスオブジェクトでない場合、エラー-10745 が返されます。
 
 #### 例題 
 
@@ -51,12 +53,3 @@ Polygon というクラスを作成した場合を考えます:
 #### 参照 
 
 [OB Class](ob-class.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1731 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

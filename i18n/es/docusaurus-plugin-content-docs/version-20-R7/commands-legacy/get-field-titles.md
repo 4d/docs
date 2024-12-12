@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->El comando GET FIELD TITLES llena los arrays *titulosCampos* y *numCampos* con los nombres y los números de los campos de la *tabla*.<!-- END REF--> Los contenidos de estos dos arrays están sincronizados. 
@@ -29,12 +32,3 @@ En ambos casos, el comando no devuelve campos invisibles.
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 804 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

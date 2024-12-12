@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->SHOW PROCESSは*process*に属する全ウィンドウを表示します。<!-- END REF-->このコマンドは*process*のウィンドウを最前面ウィンドウにするわけではありません。これを行うには[BRING TO FRONT](bring-to-front.md "BRING TO FRONT")コマンドを使用します。  
@@ -31,12 +34,3 @@ displayed_sidebar: docs
 [BRING TO FRONT](bring-to-front.md)  
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 325 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

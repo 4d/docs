@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->**LISTBOX Get property**コマンドは、引数*object*および *\** で指定されたリストボックスまたはカラムについて、*property* の値を返します。<!-- END REF-->
@@ -101,12 +104,3 @@ displayed_sidebar: docs
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 917 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

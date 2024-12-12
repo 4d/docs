@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->**SELECT LOG FILE** コマンドは、*logFile*引数で指定されたログファイルのオープン、作成、クローズを行います。<!-- END REF-->
@@ -37,13 +40,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [ON ERR CALL](on-err-call.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 345 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

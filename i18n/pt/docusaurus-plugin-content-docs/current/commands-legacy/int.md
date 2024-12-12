@@ -30,12 +30,3 @@ O exemplo a seguir ilustra o funcionamento de Int para números positivos e nega
 #### Ver também 
 
 [Dec](dec.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 8 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

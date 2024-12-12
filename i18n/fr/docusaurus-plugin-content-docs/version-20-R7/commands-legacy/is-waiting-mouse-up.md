@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->La commande **Is waiting mouse up** retourne **Vrai** si l'objet courant a été cliqué et que le bouton de la souris n'a pas été relâché, alors que la fenêtre contenant l'objet a le focus.<!-- END REF--> Sinon la commande retourne **Faux**, en particulier si la fenêtre contenant l'objet a perdu le focus avant que le bouton soit relâché. 
@@ -50,12 +53,3 @@ Le code suivant peut être utilisé pour gérer le suivi de la souris dans un ob
 #### Voir aussi 
 
 [Form event code](form-event-code.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1422 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

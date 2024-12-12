@@ -23,11 +23,3 @@ Quando em versão monousuário de 4D, **Count users** devolve 1.
 
 [Count tasks](count-tasks.md)  
 [Count user processes](count-user-processes.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 342 |
-| Thread-seguro | &check; |
-
-

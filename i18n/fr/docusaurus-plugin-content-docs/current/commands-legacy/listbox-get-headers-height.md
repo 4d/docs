@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get headers height.Summary-->La commande **LISTBOX Get headers height** retourne la hauteur de la ligne d’en-tête de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
@@ -34,12 +37,3 @@ Par défaut, si vous omettez le paramètre *unité*, la hauteur de ligne retourn
 #### Voir aussi 
 
 [LISTBOX SET HEADERS HEIGHT](listbox-set-headers-height.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1144 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

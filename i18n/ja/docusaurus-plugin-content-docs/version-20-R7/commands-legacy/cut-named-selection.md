@@ -36,13 +36,3 @@ CUT NAMED SELECTIONは[COPY NAMED SELECTION](copy-named-selection.md "COPY NAMED
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 334 |
-| スレッドセーフである | &check; |
-| カレントセレクションを変更する ||
-| サーバー上での使用は不可 ||
-
-

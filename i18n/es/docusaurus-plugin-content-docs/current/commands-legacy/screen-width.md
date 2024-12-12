@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Screen width.Summary-->En Windows, Screen width devuelve el largo de la ventana de la aplicación 4D (ventana MDI).<!-- END REF--> Si pasa el parámetro opcional *\**, Screen width devuelve el largo de la pantalla.  
@@ -24,12 +27,3 @@ En Macintosh, Screen width devuelve el largo de la pantalla principal, es decir 
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 187 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -76,12 +76,3 @@ En este código se especifica el resultado de la tabla por defecto:
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 46 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

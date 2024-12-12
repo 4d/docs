@@ -109,12 +109,3 @@ Si vous souhaitez que le tableau des noms soit utilisé comme troisième critèr
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 718 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

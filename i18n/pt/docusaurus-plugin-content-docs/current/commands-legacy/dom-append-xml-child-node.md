@@ -146,12 +146,3 @@ Se o conteúdo de *valorFilho* não é válido, se devolve um erro.
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1080 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

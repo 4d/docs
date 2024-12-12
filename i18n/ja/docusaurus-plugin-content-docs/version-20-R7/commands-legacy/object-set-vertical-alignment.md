@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->**OBJECT SET VERTICAL ALIGNMENT**コマンドは*object* と*\** 引数で指定されたオブジェクトに適用される行揃えのタイプを変更します。<!-- END REF-->
@@ -41,12 +44,3 @@ displayed_sidebar: docs
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1187 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

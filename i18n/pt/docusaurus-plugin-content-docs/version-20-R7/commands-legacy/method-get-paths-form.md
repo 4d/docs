@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->O comando **METHOD GET PATHS FORM** enche o array *arrRotas* com as rotas de acesso internas e os nomes dos métodos de todos os objetos dos formulários assim como também dos métodos formulário.<!-- END REF--> Os métodos formulário se etiquetam {formMethod}.
@@ -69,12 +72,3 @@ Lista de todos os objetos dos formulários "input" da tabela \[Empregados\] a pa
 #### Ver também 
 
 [FORM GET NAMES](form-get-names.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1168 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

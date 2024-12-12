@@ -65,12 +65,3 @@ Insertion d’une image SVG :
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [XML GET OPTIONS](xml-get-options.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1090 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

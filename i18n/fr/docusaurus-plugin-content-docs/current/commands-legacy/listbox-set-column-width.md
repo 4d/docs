@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->La commande **LISTBOX SET COLUMN WIDTH** permet de modifier par programmation la largeur d’une ou de toutes les colonne(s) de l’objet (list box, colonne ou en-tête) désigné par les paramètres *objet* et *\**.<!-- END REF-->
@@ -33,12 +36,3 @@ Les paramètres optionnels *largeurMini* et *largeurMaxi* permettent de fixer de
 #### Voir aussi 
 
 [LISTBOX Get column width](listbox-get-column-width.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 833 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

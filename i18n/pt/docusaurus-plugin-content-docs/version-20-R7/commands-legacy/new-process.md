@@ -106,12 +106,3 @@ No editor de barras de menus, pode substituir ADICIONAR CLIENTES pelo método IN
 [Execute on server](execute-on-server.md)  
 *Processos*  
 *Processos 4D Preemptivos*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 317 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

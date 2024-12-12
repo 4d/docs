@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### 
 
 <!--REF #_command_.On Backup Startup database method.Summary-->The **On Backup Startup database method** is called every time a database backup is about to start (manual backup, scheduled automatic backup, or using the [BACKUP](backup.md) command).<!-- END REF-->   

@@ -60,12 +60,3 @@ Este ejemplo crea un array local de 100 filas, conteniendo cada una 50 elementos
 #### Ver también 
 
 *Creación de arrays*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1222 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

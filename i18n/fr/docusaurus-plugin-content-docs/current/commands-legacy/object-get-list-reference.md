@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->La commande **OBJECT Get list reference** retourne le numéro de référence (*RefListe*) de la liste hiérarchique associée à l’objet ou au groupe d'objets désigné par *objet* et *\**.<!-- END REF--> 
@@ -36,12 +39,3 @@ Si aucune liste hiérarchique n’est associée à l’objet pour le *typeListe*
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1267 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

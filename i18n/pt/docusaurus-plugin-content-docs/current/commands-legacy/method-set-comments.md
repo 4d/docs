@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->O comando **METHOD SET COMMENTS** substitui os comentários dos métodos designados pelo parâmtero *rota* pelos definidos no parâmetro *comentarios*.<!-- END REF-->
@@ -69,12 +72,3 @@ Pode executar o comando de uma componente, mas neste caso você deve passar o pa
 #### Ver também 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1193 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

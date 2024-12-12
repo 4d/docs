@@ -38,12 +38,3 @@ See example for the [User in group](user-in-group.md) command.
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 [User in group](user-in-group.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 182 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

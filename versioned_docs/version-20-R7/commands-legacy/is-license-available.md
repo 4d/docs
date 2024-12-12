@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Is license available.Summary-->The Is license available command lets you find out the availability of a plug-in.<!-- END REF--> It is useful, for instance, for displaying or hiding functions requiring the presence of a plug-in.
@@ -46,12 +49,3 @@ Is license available returns [False](false.md "False") if the plug-in is operati
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 714 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->**OB GET PROPERTY NAMES**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に含まれているプロパティの名前を、 *arrProperties* という名前のテキスト配列に入れて返します。<!-- END REF-->で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->**OB GET PROPERTY NAMES**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に含まれているプロパティの名前を、 *arrProperties* という名前のテキスト配列に入れて返します。<!-- END REF-->
+
+*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *arrProperties* 引数にはテキスト配列を渡します。配列が存在しない場合、コマンドが自動的に作成してリサイズします。
 
@@ -96,12 +98,3 @@ displayed_sidebar: docs
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1232 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

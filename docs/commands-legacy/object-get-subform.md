@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->The **OBJECT GET SUBFORM** command gets the name(s) of the form(s) associated with the subform object designated by the *object* and *\** parameters.<!-- END REF-->
@@ -39,12 +42,3 @@ If there is no list form, an empty string is returned in the *listSubform* param
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1139 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

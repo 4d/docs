@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->El comando **OBJECT SET MULTILINE** modifica la propiedad "Multilínea" del objeto(s) designada por los parámetros *objeto* y *\** .<!-- END REF-->  
@@ -42,12 +45,3 @@ Usted quiere prohibir varias líneas en un área de entrada:
 #### Ver también 
 
 [OBJECT Get multiline](object-get-multiline.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1253 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

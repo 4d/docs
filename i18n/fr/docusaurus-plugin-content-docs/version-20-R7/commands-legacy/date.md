@@ -94,12 +94,3 @@ Vous souhaitez lire une date depuis un attribut d'objet, quelle que soit l'optio
 
 [Bool](bool.md)  
 [String](string.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 102 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

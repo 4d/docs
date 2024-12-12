@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->El comando QR SET REPORT KIND define el *tipo* del informe presente en *area*.<!-- END REF-->
@@ -38,13 +41,3 @@ Si pasa un valor incorrecto del parámetro *propiedad*, se genera el error -9852
 #### Ver también 
 
 [QR Get report kind](qr-get-report-kind.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 738 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

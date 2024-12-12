@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->SCREEN COORDINATES コマンドは、*screenID* に指定した画面のグローバル座標を引数*left*、*top*、*right*と*bottom*に返します。<!-- END REF-->
@@ -45,12 +48,3 @@ displayed_sidebar: docs
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 438 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

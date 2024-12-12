@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->La commande **SET LIST ITEM PROPERTIES** modifie l'élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF-->
@@ -77,12 +80,3 @@ L’exemple suivant passe le texte de l’élément courant de *liste* en gras e
 *Listes hiérarchiques*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 386 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

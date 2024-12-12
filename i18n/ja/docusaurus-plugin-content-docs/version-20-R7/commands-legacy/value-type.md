@@ -113,12 +113,3 @@ displayed_sidebar: docs
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1509 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

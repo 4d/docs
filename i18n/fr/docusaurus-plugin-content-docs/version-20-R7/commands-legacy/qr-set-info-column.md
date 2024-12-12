@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET INFO COLUMN.Summary-->##### Etats en liste 
@@ -104,13 +107,3 @@ Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 765 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

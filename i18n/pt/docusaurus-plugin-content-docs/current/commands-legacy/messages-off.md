@@ -65,12 +65,3 @@ O exemplo a seguir elimina os termômetros de progresso antes de realizar uma or
 #### Ver também 
 
 [MESSAGES ON](messages-on.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 175 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

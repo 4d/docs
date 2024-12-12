@@ -24,12 +24,3 @@ For more information on execution levels, see the topic *Cascading Triggers*.
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 398 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -57,14 +57,3 @@ The following example first finds the correct statistics for a worldwide contest
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
 *Sets*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 351 |
-| Thread safe | &check; |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
-

@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.HIDE MENU BAR.Summary-->HIDE MENU BARコマンドは、メニューバーを隠します。<!-- END REF-->
@@ -43,12 +46,3 @@ displayed_sidebar: docs
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 432 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

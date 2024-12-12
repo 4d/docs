@@ -44,12 +44,3 @@ En una de sus rutinas, usted incluyó el código de depuración de la base, úti
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 492 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

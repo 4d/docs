@@ -58,12 +58,3 @@ Este exemplo obtém o desvio padrão de uma série de valores localizados num ar
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 26 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -77,12 +77,3 @@ Lorsque cette méthode est placée dans votre application, vous pouvez écrire :
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 536 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

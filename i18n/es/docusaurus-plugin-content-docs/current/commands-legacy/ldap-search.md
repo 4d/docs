@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LDAP Search.Summary-->El comando **LDAP Search** busca la primera ocurrencia que coincida con los criterios definidos en el servidor LDAP objetivo.<!-- END REF--> Este comando debe ser ejecutado dentro de una conexión a un servidor LDAP abierta con *RuntimeVLIncludeIt*; de lo contrario se devuelve un error 1003.
@@ -83,12 +86,3 @@ Queremos obtener una array de todas las entradas que se encuentran en el atribut
 
 *LDAP*  
 [LDAP SEARCH ALL](ldap-search-all.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1328 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

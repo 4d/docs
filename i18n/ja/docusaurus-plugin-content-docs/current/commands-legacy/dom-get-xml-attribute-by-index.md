@@ -18,7 +18,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Summary-->**DOM GET XML ATTRIBUTE BY INDEX** コマンドは、属性のインデックスを使用して、属性名と値を取得するために使用します。<!-- END REF-->にはXML要素参照を、*attribIndex*には名前を知りたい要素のインデックス番号を渡します。名前が*attribName* 引数に、値が*attribValue* 引数に返されます。4Dは取得した値を引数として渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Summary-->**DOM GET XML ATTRIBUTE BY INDEX** コマンドは、属性のインデックスを使用して、属性名と値を取得するために使用します。<!-- END REF-->
+
+*elementRef* にはXML要素参照を、*attribIndex*には名前を知りたい要素のインデックス番号を渡します。名前が*attribName* 引数に、値が*attribValue* 引数に返されます。4Dは取得した値を引数として渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。
 
 **Note:** 配列のインデックス番号はXMLファイル中に表示される属性の順番通りではありません。XML中、属性のインデックスはnameのアルファベット順に並びかえられた属性の位置を示します。この点については[DOM Count XML attributes](dom-count-xml-attributes.md) コマンドの説明を参照してください。
 
@@ -36,13 +38,3 @@ displayed_sidebar: docs
 
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 729 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

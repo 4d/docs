@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->OBJECT SET FILTER reemplaza el filtro de entrada para los objetos especificados por *objeto* por *filtroEntrada*.<!-- END REF--> 
@@ -55,12 +58,3 @@ El siguiente ejemplo permite únicamente la entrada de las letras “a,” “b,
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 235 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

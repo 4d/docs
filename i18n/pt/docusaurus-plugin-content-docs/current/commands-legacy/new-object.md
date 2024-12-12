@@ -108,12 +108,3 @@ Com este comando, pode fácilmente manejar objetos em loops:
 
   
 [New shared object](new-shared-object.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1471 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

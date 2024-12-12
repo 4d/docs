@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Pasteboard data size.Summary-->Pasteboard data size コマンドを使用して、*dataType* に渡したデータがペーストボード内に存在するかどうかを調べることができます。<!-- END REF--> 
@@ -92,13 +95,3 @@ You want to drag some private data from different objects in your form. You can 
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 *Pasteboard*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 400 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

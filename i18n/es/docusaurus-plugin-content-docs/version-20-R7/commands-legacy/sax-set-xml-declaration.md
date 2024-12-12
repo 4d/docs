@@ -45,12 +45,3 @@ El siguiente código:
 #### Ver también 
 
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 858 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

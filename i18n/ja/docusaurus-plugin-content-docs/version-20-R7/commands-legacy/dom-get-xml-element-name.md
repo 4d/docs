@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->DOM GET XML ELEMENT NAME コマンドは、*elementRef* で指定したXML要素の名前を*elementName* 引数に返します。<!-- END REF-->引数の型が定義されてない場合、デフォルトでテキスト型が使用されます。
+<!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->DOM GET XML ELEMENT NAME コマンドは、*elementRef* で指定したXML要素の名前を*elementName* 引数に返します。<!-- END REF-->*elementName* 引数の型が定義されてない場合、デフォルトでテキスト型が使用されます。
 
 XML要素名に関する詳細は*XML DOMコマンドの概要* の節を参照してください。
 
@@ -40,13 +40,3 @@ XML要素名に関する詳細は*XML DOMコマンドの概要* の節を参照�
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [DOM SET XML ELEMENT NAME](dom-set-xml-element-name.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 730 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

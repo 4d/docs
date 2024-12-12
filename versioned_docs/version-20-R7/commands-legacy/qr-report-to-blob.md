@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->The QR REPORT TO BLOB command places the report whose reference was passed in *area* in a BLOB (variable or field).<!-- END REF-->
@@ -31,13 +34,3 @@ The following statement assigns the Quick Report stored in MyArea into a BLOB Fi
 #### See also 
 
 [QR BLOB TO REPORT](qr-blob-to-report.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 770 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

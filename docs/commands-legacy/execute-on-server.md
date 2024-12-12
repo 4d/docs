@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Execute on server.Summary-->The **Execute on server** command starts a new process on the Server machine (if it is called in Client/Server) or on the same machine (if it is called in single-user) and returns the process number for that process.<!-- END REF-->
@@ -189,12 +192,3 @@ Refer to the *SP-Based Services (Example)* section in the *4D Server Reference* 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 373 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

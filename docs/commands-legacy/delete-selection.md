@@ -63,13 +63,3 @@ If a locked record is encountered during the execution of **DELETE SELECTION**, 
 *Record Locking*  
 *Sets*  
 [TRUNCATE TABLE](truncate-table.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 66 |
-| Thread safe | &check; |
-| Changes current selection ||
-| Forbidden on the server ||
-
-

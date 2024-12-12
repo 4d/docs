@@ -36,12 +36,3 @@ El siguiente ejemplo prueba el estado de la tabla \[Facturas\]. Si el estado de 
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 362 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

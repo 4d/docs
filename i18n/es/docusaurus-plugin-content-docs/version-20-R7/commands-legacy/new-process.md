@@ -108,12 +108,3 @@ En el editor de barras de menús, puede reemplazar ADD CUSTOMERS por el método 
 [Execute on server](execute-on-server.md)  
 *Procesos*  
 *Procesos 4D apropiativos*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 317 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

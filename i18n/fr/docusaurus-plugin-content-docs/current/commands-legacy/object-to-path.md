@@ -55,12 +55,3 @@ Nous voulons dupliquer et renommer un fichier dans son dossier actuel :
 [Folder](folder.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1548 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

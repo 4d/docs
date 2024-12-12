@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->The SET DATABASE LOCALIZATION command is used to modify the current language of the database for the current session.<!-- END REF-->
@@ -69,13 +72,3 @@ The interface of your application uses the static string ":xliff:shopping". The 
 #### See also 
 
 [Get database localization](get-database-localization.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1104 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

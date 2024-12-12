@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET MENU ITEM.Summary-->O comando SET MENU ITEM modifica o texto da linha de menu cujo número ou referencia de menu se passa em *menu* e cujo número de elemento se passa em *menuItem*, para o texto que passou em *itemText*.<!-- END REF--> Pode passar -1 em *menuItem* para designar o último elemento adicionado a *menu*.
@@ -32,12 +35,3 @@ Se omitir o parâmetro *processo*, SET MENU ITEM é aplicada à barra de menus d
 [APPEND MENU ITEM](append-menu-item.md)  
 [Get menu item](get-menu-item.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 348 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

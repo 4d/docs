@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Form.Summary-->El comando **Form** devuelve el objeto asociado con el formulario actual, si lo hay.<!-- END REF--> 4D asocia automáticamente un objeto al formulario actual en los siguientes casos:
@@ -70,12 +73,3 @@ El formulario muestra los valores que ha pasado:
 #### Ver también 
 
 [DIALOG](dialog.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1466 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

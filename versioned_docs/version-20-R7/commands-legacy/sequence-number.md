@@ -58,12 +58,3 @@ The following example is part of a form method. It tests to see if this is a new
 *About Record Numbers*  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 244 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

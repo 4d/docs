@@ -48,12 +48,3 @@ Cet exemple compare les résultats obtenus suivant que le paramètre *\** a ét�
 #### Voir aussi 
 
 [Uppercase](uppercase.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 14 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

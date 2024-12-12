@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.PRINT LABEL.Summary-->PRINT LABEL permite imprimir etiquetas com los datos de la seleção de *tabela*.<!-- END REF-->
@@ -105,12 +108,3 @@ O exemplo a seguir lhe permite ao usuário efetuar uma pesquisa na tabela \[Pess
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 39 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-
-

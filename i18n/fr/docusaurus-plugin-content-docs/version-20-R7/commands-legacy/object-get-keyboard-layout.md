@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->La commande **OBJECT Get keyboard layout** retourne la configuration clavier courante associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
@@ -26,12 +29,3 @@ La commande retourne une chaîne indiquant le code de langue utilisé, basé sur
 #### Voir aussi 
 
 [OBJECT SET KEYBOARD LAYOUT](object-set-keyboard-layout.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1180 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Is user deleted.Summary-->El comando Is user deleted prueba la cuenta de usuario cuyo número de identificación único se pasa en *refUsuario*.<!-- END REF--> 
@@ -29,13 +32,3 @@ Si no tiene privilegios de acceso para llamar al comando Is user deleted o si ot
 [DELETE USER](delete-user.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 616 |
-| Hilo seguro | &check; |
-| Modifica variables | error |
-| Prohibido en el servidor ||
-
-

@@ -62,12 +62,3 @@ displayed_sidebar: docs
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 63 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

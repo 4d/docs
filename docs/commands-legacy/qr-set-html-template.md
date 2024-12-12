@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->The **QR SET HTML TEMPLATE** command sets the HTML template currently used for the Quick Report *area*.<!-- END REF--> The template will be used when building the report in HTML format. 
@@ -68,13 +71,3 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 #### See also 
 
 [QR Get HTML template](qr-get-html-template.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 750 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

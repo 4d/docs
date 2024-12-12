@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Get menu bar reference.Summary-->La commande **Get menu bar reference** renvoie l’identifiant unique de la barre de menus courante ou de la barre de menus d’un process spécifique.<!-- END REF-->
@@ -39,12 +42,3 @@ Reportez-vous à l'exemple de la commande [GET MENU ITEMS](get-menu-items.md).
 #### Voir aussi 
 
 [SET MENU BAR](set-menu-bar.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 979 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

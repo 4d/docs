@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.DOM Count XML elements.Summary-->La commande **DOM Count XML elements** retourne le nombre d’éléments “enfants” dépendants de l’élément parent *refElément* et nommés *nomElément*.<!-- END REF-->Par défaut, **DOM Count XML elements** tient compte de la casse des caractères lors de l'évaluation du paramètre *nomElément* (par conformité avec le xml). Vous pouvez contrôler la sensibilité à la casse de cette commande à l'aide du sélecteur XML DOM case sensitivity de la commande [XML SET OPTIONS](xml-set-options.md).
+<!--REF #_command_.DOM Count XML elements.Summary-->La commande **DOM Count XML elements** retourne le nombre d’éléments “enfants” dépendants de l’élément parent *refElément* et nommés *nomElément*.<!-- END REF-->
+
+**Note :** Par défaut, **DOM Count XML elements** tient compte de la casse des caractères lors de l'évaluation du paramètre *nomElément* (par conformité avec le xml). Vous pouvez contrôler la sensibilité à la casse de cette commande à l'aide du sélecteur XML DOM case sensitivity de la commande [XML SET OPTIONS](xml-set-options.md).
 
 #### Variables et ensembles système 
 
@@ -27,13 +29,3 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 726 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

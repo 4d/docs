@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->QR SET SELECTION コマンドを使用するとマウスクリックをした場合と同様に、セルや行、カラム、またはエリア全体を反転表示 (選択) することができます。<!-- END REF-->また、現在選択されている範囲を解除することもできます。
@@ -36,13 +39,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR GET SELECTION](qr-get-selection.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 794 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

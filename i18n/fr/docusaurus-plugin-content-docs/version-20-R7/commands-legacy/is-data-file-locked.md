@@ -29,13 +29,3 @@ Cette méthode empêchera l’ouverture de la base si le fichier de données est
     QUIT 4D
  End if
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 716 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

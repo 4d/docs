@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -60,12 +63,3 @@ Typical examples of use:
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1278 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

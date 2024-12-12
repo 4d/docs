@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->The **LISTBOX GET OBJECTS** command returns an array containing the names of each object making up the list box designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -59,12 +62,3 @@ You want to load a form and get a list of all the objects of list boxes that it 
 
 [FORM LOAD](form-load.md)  
 [OBJECT Get type](object-get-type.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1302 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

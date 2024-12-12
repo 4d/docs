@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->O comando SET WINDOW TITLE muda o título da janela cujo número de referência é passado em *janela* para o texto passado em *titulo* (longitude máxima 80 caracteres).<!-- END REF-->  
@@ -49,12 +52,3 @@ Enquanto realiza uma entrada de dados em um formulário, você clica em um botã
 #### Ver também 
 
 [Get window title](get-window-title.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 213 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

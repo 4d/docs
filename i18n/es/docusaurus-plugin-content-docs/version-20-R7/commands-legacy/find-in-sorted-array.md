@@ -74,12 +74,3 @@ Usted quiere encontrar el número de ocurrencias de las cadenas que comienzan po
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1333 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

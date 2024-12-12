@@ -43,12 +43,3 @@ You want to know the current transaction status:
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspending transactions*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1387 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

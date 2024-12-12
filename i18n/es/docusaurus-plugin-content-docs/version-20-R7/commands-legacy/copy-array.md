@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.COPY ARRAY.Summary-->El comando COPY ARRAY crea o remplaza el array *destino* con el mismo contenido, tamaño y tipo del array *fuente*.<!-- END REF-->en el caso de los arrays numéricos de diferentes tipos, se mantiene el tipo del array *destino*.
+<!--REF #_command_.COPY ARRAY.Summary-->El comando COPY ARRAY crea o remplaza el array *destino* con el mismo contenido, tamaño y tipo del array *fuente*.<!-- END REF-->
+
+**Nota:** en el caso de los arrays numéricos de diferentes tipos, se mantiene el tipo del array *destino*.
 
 Los arrays *fuente* y *destino* pueden ser locales, proceso o interproceso. El alcance del array no tiene importancia en el momento de copiar arrays.
 
@@ -34,13 +36,3 @@ El siguiente ejemplo llena el array C. Luego crea un nuevo array, llamado D, del
  SELECTION TO ARRAY([Personas]Empresa;C) // Mover los datos del campo empresa al array C
  COPY ARRAY(C;D) // Copiar el array C al array D
 ```
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 226 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->El comando **METHOD GET COMMENTS** devuelve en el parámetro *comentarios*, la documentación de los métodos designados por el parámetro *ruta*.<!-- END REF-->
@@ -55,12 +58,3 @@ Si el comando se ejecuta desde un componente, se aplica por defecto a los métod
 #### Ver también 
 
 [METHOD SET COMMENTS](method-set-comments.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1189 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

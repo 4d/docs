@@ -21,13 +21,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [REMOVE FROM SET](remove-from-set.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 119 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

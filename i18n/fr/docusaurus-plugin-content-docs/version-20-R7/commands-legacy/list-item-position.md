@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.List item position.Summary-->La commande **List item position** retourne la position de l'élément dont vous avez passé le numéro de référence dans *réfElément* parmi la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
@@ -38,12 +41,3 @@ Si l'élément n'existe pas, **List item position** retourne *0*.
 
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 629 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

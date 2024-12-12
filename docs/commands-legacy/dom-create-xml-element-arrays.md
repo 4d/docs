@@ -61,12 +61,3 @@ For this, you can simply write:
 #### See also 
 
 [DOM Create XML element](dom-create-xml-element.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1097 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

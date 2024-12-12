@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->O comando **LISTBOX SET AUTO ROW HEIGHT** \[#descv\]lhe permite estabelecer o *valor* de altura de fila mínimo ou máximo no objeto de list box designado utilizando os parâmetros *objeto* e *\**\[#/descv\].<!-- END REF-->
@@ -57,12 +60,3 @@ Se quiser definir as alturas mínimas e máximas para um list box com uma altura
 [LISTBOX Get auto row height ](listbox-get-auto-row-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1501 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

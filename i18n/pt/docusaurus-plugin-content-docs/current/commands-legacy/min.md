@@ -78,13 +78,3 @@ Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descri
 #### Ver também 
 
 [Max](max.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 4 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

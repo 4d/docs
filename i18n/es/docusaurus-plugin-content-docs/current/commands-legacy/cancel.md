@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.CANCEL.Summary-->El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:
@@ -50,13 +53,3 @@ Cuando el comando CANCEL se ejecuta (anulación de formulario o de impresión), 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 270 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

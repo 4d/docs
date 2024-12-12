@@ -24,12 +24,3 @@ Consulte el ejemplo del comando [WEB GET BODY PART](web-get-body-part.md).
 #### Ver también 
 
 [WEB GET BODY PART](web-get-body-part.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1211 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

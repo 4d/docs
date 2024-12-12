@@ -20,6 +20,9 @@ displayed_sidebar: docs
 #### Descripción 
 
 <!--REF #_command_.OB Copy.Summary-->El comando **OB Copy** devuelve un objeto que contiene una copia completa de las propiedades, sub objetos y valores de *objeto*.<!-- END REF-->
+
+* Primera sintaxis: **OB Copy(object{; resolvePtrs})**
+
 Si el *objeto* contiene valores de tipo de puntero, por defecto la copia también contiene los punteros. Sin embargo, puede resolver los punteros al momento de la copia pasando **True** en el parámetro *resuelvePunt*. En este caso, cada puntero presente como valor en *objeto* se evalúa al momento de la copia y se utiliza su valor desreferenciado.
 
 **Nota:** si las propiedades del *objeto* son objetos compartidos o colecciones compartidas, se convierten en objetos o colecciones estándar (no compartidos) en la copia devuelta. Use the second syntax if you want to return shared elements (see below).
@@ -164,12 +167,3 @@ Queremos copiar *$sharedObj e*n *$sharedColl* pero dado que pertenecen a diferen
 
 [OB Get](ob-get.md)  
 *Objetos y colecciones compartidos*  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1225 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

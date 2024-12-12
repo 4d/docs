@@ -25,12 +25,3 @@ Este comando está destinado a ser utilizado em um processo de atualização aut
 
 [RESTART 4D](restart-4d.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1301 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

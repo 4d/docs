@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** specifies the fields or variables to be accumulated during a form report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->
@@ -35,12 +38,3 @@ See the example for the [BREAK LEVEL](break-level.md) command.
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 303 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

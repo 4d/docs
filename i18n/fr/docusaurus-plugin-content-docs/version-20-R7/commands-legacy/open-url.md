@@ -80,12 +80,3 @@ Vous pouvez ouvrir un même fichier texte avec différentes applications en util
 #### Voir aussi 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 673 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

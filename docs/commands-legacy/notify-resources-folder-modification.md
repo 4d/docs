@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->The NOTIFY RESOURCES FOLDER MODIFICATION command "forces" 4D Server to send a notification to all the connected 4D machines indicating that the Resources folder of the database has been modified so that they can synchronize their local Resources folder.<!-- END REF--> 
@@ -34,12 +37,3 @@ Current settings are set either:
 #### See also 
 
 [Get 4D folder](get-4d-folder.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1052 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

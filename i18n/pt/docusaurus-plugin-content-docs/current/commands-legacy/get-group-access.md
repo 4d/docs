@@ -35,12 +35,3 @@ Se qusier verificar se o usuário atual pertence ao grupo "plugins":
 #### Ver também 
 
 [SET GROUP ACCESS](set-group-access.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1738 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->La commande **LISTBOX SELECT ROWS**  provoque la sélection des lignes d'une list box entity selection ou une list box collection correspondant aux entités ou objets contenus dans le paramètre *sélection*.<!-- END REF--> 
@@ -84,12 +87,3 @@ Exemple avec une collection d'objets :
 #### Voir aussi 
 
 [LISTBOX SELECT ROW](listbox-select-row.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1715 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

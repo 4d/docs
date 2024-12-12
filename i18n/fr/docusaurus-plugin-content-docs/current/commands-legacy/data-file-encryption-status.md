@@ -68,12 +68,3 @@ Vous souhaitez connaitre le statut de chiffrement d'un fichier de données corre
 
   
 [Encrypt data file](encrypt-data-file.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1609 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

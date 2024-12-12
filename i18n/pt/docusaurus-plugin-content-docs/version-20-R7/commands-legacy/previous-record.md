@@ -26,13 +26,3 @@ Se PREVIOUS RECORD move o ponteiro do registro atual antes da seleção atual, B
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 110 |
-| Thread-seguro | &check; |
-| Modificar o registro atual ||
-| Proibido no servidor ||
-
-

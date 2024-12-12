@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Print object.Summary-->The **Print object** command lets you print the form object(s) designated by the *object* and *\** parameters, at the location set by the *posX* and *posY* parameters.<!-- END REF-->
@@ -96,12 +99,3 @@ Example of printing a complete list box:
 #### See also 
 
 [FORM LOAD](../commands/form-load.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1095 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -94,12 +94,3 @@ Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção a
 
 [Bool](bool.md)  
 [String](string.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 102 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

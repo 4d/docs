@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.ST Get expression.Summary-->El comando **ST Get expression** devuelve la primera expresión que se encuentra en la selección actual del campo o de la variable de texto con estilo designada por el parámetro *objeto*.<!-- END REF--> 
@@ -91,13 +94,3 @@ Usted quiere ejecutar un método 4D cuando se hace clic en un enlace de usuario:
 #### Ver también 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1287 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

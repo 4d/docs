@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->O comando UNREGISTER CLIENT cancela o registro de uma máquina 4D Client.<!-- END REF--> O cliente deverá ter sido registrado pelo comando [REGISTER CLIENT](register-client.md).
@@ -33,13 +36,3 @@ Se o registro de um cliente é cancelado corretamente, a variável do sistema OK
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 649 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

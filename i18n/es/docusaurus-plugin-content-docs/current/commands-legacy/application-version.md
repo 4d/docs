@@ -120,12 +120,3 @@ Usted desea utilizar el valor de la versión corta de la aplicación devuelto po
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 493 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

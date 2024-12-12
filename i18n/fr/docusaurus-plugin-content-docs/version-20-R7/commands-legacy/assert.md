@@ -52,13 +52,3 @@ Une assertion peut permettre de tester les paramètres passés à une méthode p
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1129 |
-| Thread safe | &check; |
-| Modifie les variables | error |
-| Interdite sur le serveur ||
-
-

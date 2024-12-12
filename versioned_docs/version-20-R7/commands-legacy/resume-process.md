@@ -25,12 +25,3 @@ If *process* has been delayed before, see the [PAUSE PROCESS](pause-process.md) 
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 320 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

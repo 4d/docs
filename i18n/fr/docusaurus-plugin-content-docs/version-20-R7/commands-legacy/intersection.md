@@ -49,11 +49,3 @@ L'exemple suivant recherche les clients en contact avec deux représentants, Jea
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 121 |
-| Thread safe | &check; |
-
-

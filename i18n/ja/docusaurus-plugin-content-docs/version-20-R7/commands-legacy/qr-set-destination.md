@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->**QR SET DESTINATION** コマンドは、*area* に渡された参照番号のエリア用のレポート出力タイプを設定します。<!-- END REF-->
@@ -49,13 +52,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR GET DESTINATION](qr-get-destination.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 745 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

@@ -48,13 +48,3 @@ Se o arquivo a ser enviado existir e o timeout não tiver passado, OK é estabel
 #### Ver também 
 
 [WEB SEND BLOB](web-send-blob.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 619 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

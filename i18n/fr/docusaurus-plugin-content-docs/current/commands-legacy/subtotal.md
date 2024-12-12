@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Subtotal.Summary-->**Subtotal** retourne le sous-total de *valeurs* pour le niveau de rupture courant ou précédent.<!-- END REF--> **Subtotal** ne fonctionne que dans le cadre d'une sélection triée imprimée par l'intermédiaire de la commande [PRINT SELECTION](print-selection.md) ou de la commande de menu **Imprimer** du mode Développement. Le paramètre *valeurs* doit être de type numérique, entier ou entier long. Vous devez assigner le résultat de la fonction **Subtotal** à une variable placée dans la zone de rupture du formulaire.
@@ -56,12 +59,3 @@ La commande **Subtotal** permet d'afficher des calculs de sous-totaux dans des f
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 97 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

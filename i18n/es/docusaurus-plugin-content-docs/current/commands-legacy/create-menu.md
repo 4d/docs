@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Create menu.Summary-->El comando **Create menu** permite crear un nuevo menú en memoria.<!-- END REF--> Este menú sólo existirá en memoria y no se añadirá al editor de menú en el entorno Diseño. Toda modificación efectuada a este menú durante la sesión repercutirá inmediatamente en todas las instancias de este menú y en todos los procesos de la base. 
@@ -40,12 +43,3 @@ Consulte el ejemplo del comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [SET MENU BAR](set-menu-bar.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 408 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

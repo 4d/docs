@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->APPEND DATA TO PASTEBOARD コマンドは、*dataType*で指定されたデータタイプで*data*BLOB内にあるデータをペーストボードに追加します。<!-- END REF-->
@@ -217,13 +220,3 @@ GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメ
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 403 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->El comando **LISTBOX MOVE COLUMN** mueve por programación la columna designada por los parámetros *objeto* y *\** en el contexto del formulario en ejecución (modo Aplicación).<!-- END REF--> El formulario original, generado en modo Diseño, no se modifica.  
@@ -40,12 +43,3 @@ Usted quiere invertir la segunda y tercera columna del list box:
 #### Ver también 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1274 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

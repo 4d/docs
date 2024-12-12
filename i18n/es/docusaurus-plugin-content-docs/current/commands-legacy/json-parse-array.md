@@ -58,12 +58,3 @@ En este ejemplo, los datos de los campos de los registros de una tabla se extrae
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1219 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

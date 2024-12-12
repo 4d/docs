@@ -46,13 +46,3 @@ En caso de error, el comando devuelve un error que puede interceptarse utilizand
 #### Ver también 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 851 |
-| Hilo seguro | &check; |
-| Modifica variables | OK, error |
-| Prohibido en el servidor ||
-
-

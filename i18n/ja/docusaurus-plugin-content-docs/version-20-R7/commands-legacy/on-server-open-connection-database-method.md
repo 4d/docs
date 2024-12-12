@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### On Server Open Connection データベースメソッドはいつ呼び出されるか 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->**On Server Open Connectionデータベースメソッド**は、4Dリモートワークステーションが接続プロセスを開始するたびに、サーバーマシン上で一度、呼び出されます。<!-- END REF-->4D Server 以外の4D 環境では**On Server Open Connectionデータベースメソッド**が起動されることはありません。 
@@ -130,13 +133,3 @@ displayed_sidebar: docs
  
  If((?02:00:00?<=Current time)&(Current time
 ```
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 16001 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

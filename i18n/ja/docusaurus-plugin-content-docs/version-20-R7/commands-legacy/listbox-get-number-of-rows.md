@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get number of rows.Summary-->LISTBOX Get number of rowsコマンドは、*object*引数および *\** で指定されたリストボックスの行の数を返します。<!-- END REF-->
@@ -29,12 +32,3 @@ displayed_sidebar: docs
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 915 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

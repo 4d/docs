@@ -26,12 +26,3 @@ displayed_sidebar: docs
 #### Voir aussi 
 
 [INSERT IN BLOB](insert-in-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 560 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

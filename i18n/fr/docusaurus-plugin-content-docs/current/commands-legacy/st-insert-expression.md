@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->La commande **ST INSERT EXPRESSION** insère une référence à l’*expression* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
@@ -84,13 +87,3 @@ Vous souhaitez remplacer le texte sélectionné par la valeur d'un champ :
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1281 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

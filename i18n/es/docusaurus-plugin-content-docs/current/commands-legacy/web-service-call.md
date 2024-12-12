@@ -166,13 +166,3 @@ Si la petición se enruta correctamente y el servicio web la acepta, la variable
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 778 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

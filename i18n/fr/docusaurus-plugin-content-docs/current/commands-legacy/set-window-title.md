@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->La commande **SET WINDOW TITLE** remplace le titre de la fenêtre dont le numéro de référence est passé dans *fenêtre* par le texte passé dans *titre* (longueur maximale 80 caractères).<!-- END REF-->
@@ -49,12 +52,3 @@ Vous effectuez une saisie dans un formulaire et vous cliquez sur un bouton qui d
 #### Voir aussi 
 
 [Get window title](get-window-title.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 213 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

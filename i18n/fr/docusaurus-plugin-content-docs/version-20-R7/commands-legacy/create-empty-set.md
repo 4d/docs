@@ -28,12 +28,3 @@ Reportez-vous à l'exemple proposé dans la section *Présentation des ensembles
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 140 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -73,12 +73,3 @@ displayed_sidebar: docs
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 258 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

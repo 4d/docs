@@ -34,12 +34,3 @@ During transaction processing, [LOAD RECORD](load-record.md) and **Locked** are 
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Record Locking*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 147 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

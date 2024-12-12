@@ -66,11 +66,3 @@ El método de proyecto siguiente está asociado al elemento de menú Salir en el
 #### Ver también 
 
 [Método base On Exit](metodo-base-on-exit.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 291 |
-| Hilo seguro | &check; |
-
-

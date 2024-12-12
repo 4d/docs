@@ -67,13 +67,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [RESOLVE ALIAS](resolve-alias.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 694 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

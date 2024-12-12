@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->La commande **ERASE WINDOW** efface le contenu de la fenêtre dont vous avez passé la référence dans *fenêtre*.<!-- END REF--> 
@@ -27,12 +30,3 @@ Ne confondez pas **ERASE WINDOW**, qui efface le contenu d'une fenêtre, et [GOT
 
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 160 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

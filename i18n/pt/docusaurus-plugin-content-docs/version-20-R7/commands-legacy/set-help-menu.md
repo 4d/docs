@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET HELP MENU.Summary-->O comando **SET HELP MENU** lhe permite substituir o menu **Ajuda** por padrão de 4D pela coleção de elementos do menu *menuCol* de modo aplicação.<!-- END REF-->
@@ -59,12 +62,3 @@ Se quiser personalizar o menu **Ajuda** de sua aplicação:
 #### Ver também 
 
 [SET ABOUT](set-about.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1801 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

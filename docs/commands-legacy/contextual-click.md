@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Contextual click.Summary-->The Contextual click command returns True if a contextual click has been made:
@@ -40,12 +43,3 @@ This method, combined with a scrollable area, enables you to change the value of
 
 [Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 713 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

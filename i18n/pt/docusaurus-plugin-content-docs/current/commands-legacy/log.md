@@ -31,12 +31,3 @@ A linha a seguir mostra 1:
 #### Ver também 
 
 [Exp](exp.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 22 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

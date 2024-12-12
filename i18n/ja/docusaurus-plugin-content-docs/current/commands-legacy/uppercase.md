@@ -37,12 +37,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Lowercase](lowercase.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 13 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

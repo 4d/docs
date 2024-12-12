@@ -82,12 +82,3 @@ You want to copy a text array in a shared collection:
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *Type conversions between collections and 4D arrays*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1563 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

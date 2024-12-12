@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Is window reduced.Summary-->The **Is window reduced** command returns **True** if the window whose reference number is passed in *window* is currently reduced in the taskbar (Windows) or in the dock (macOS), and **False** otherwise.<!-- END REF-->
@@ -22,12 +25,3 @@ displayed_sidebar: docs
 
 [Is window maximized](is-window-maximized.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1831 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

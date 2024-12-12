@@ -62,12 +62,3 @@ Abaixo os diferentes resultados do comando [Undefined](undefined.md) assim como 
 #### Ver também 
 
 [CLEAR VARIABLE](clear-variable.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 82 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

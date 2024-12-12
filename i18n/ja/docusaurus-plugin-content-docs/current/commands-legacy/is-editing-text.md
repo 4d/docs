@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Is editing text.Summary-->**Is editing text** は、ユーザーが入力フォームオブジェクトに値を入力中であれば**True** を、それ以外の場合には**False** を返します。<!-- END REF-->
@@ -58,12 +61,3 @@ displayed_sidebar: docs
   
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1744 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

@@ -30,12 +30,3 @@ In normal cases, you should not call this command, as 4D saves data modification
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 297 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

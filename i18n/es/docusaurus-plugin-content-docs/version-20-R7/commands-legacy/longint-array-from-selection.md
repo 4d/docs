@@ -35,12 +35,3 @@ Quiere recuperar los números de los registros de la selección actual:
 #### Ver también 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 647 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

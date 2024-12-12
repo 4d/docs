@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.WA Get page content.Summary-->WA Get page content コマンドは、*\** と *object* 引数で指定したWebエリアの現在のページまたは表示されているページのHTMLコードを返します。<!-- END REF-->
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [WA SET PAGE CONTENT](wa-set-page-content.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1038 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

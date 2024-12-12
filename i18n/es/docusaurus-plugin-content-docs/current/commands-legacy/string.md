@@ -186,12 +186,3 @@ Si *expresion* se evalúa como Null, el comando devuelve la cadena "null". Esto 
 [Num](num.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 10 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

@@ -14,18 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->O comando LIST OF CHOICE LISTS retorna, nos arrays sincronizados *arrayNums* e *arrayNoms*, os números e os nomes das listas definidas no editor de listas no ambiente Desenho.<!-- END REF-->
 
 Os números das listas correspondem a sua ordem de criação. No editor de listas, as listas são mostradas em ordem alfabética.
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 957 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

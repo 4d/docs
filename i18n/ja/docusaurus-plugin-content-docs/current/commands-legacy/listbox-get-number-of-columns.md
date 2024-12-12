@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.LISTBOX Get number of columns.Summary-->LISTBOX Get number of columns コマンドは、*object*引数および *\** で指定されたリストボックスに存在する列（表示または非表示）の合計数を返します。<!-- END REF-->
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 831 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

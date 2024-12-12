@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Window process.Summary-->La commande **Window process** retourne le numéro du process qui exécute la fenêtre dont le numéro de référence est passé dans *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, la commande retourne *0* (zéro).
@@ -23,12 +26,3 @@ Si vous omettez le paramètre *fenêtre*, **Window process** retourne le numéro
 #### Voir aussi 
 
 [Current process](current-process.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 446 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

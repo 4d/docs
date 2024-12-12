@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->La commande **LDAP SEARCH ALL** recherche sur le server LDAP cible toutes les occurrences correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](ldap-login.md) dans le process courant ; sinon une erreur 1003 est retournée.
@@ -115,12 +118,3 @@ Ces exemples illustrent plus particulièrement l'utilisation du paramètre *attr
 
 *LDAP*  
 [LDAP Search](ldap-search.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1329 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

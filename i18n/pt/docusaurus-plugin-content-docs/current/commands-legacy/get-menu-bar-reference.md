@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get menu bar reference.Summary-->O comando **Get menu bar reference** devolve a identificação única da barra de menus atual ou da barra de menus de um processo específico.<!-- END REF-->
@@ -39,12 +42,3 @@ Consulte o exemplo do comando [GET MENU ITEMS](get-menu-items.md "GET MENU ITEMS
 #### Ver também 
 
 [SET MENU BAR](set-menu-bar.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 979 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

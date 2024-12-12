@@ -48,13 +48,3 @@ Si l'opération s'est correctement déroulée, la variable OK prend la valeur 1,
 [LOAD VARIABLES](load-variables.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 *Variables système*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 75 |
-| Thread safe | &check; |
-| Modifie les variables | OK, Document |
-| Interdite sur le serveur ||
-
-

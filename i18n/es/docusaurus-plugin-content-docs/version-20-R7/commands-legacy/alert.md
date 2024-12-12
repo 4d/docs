@@ -67,12 +67,3 @@ Muestra la siguiente caja de diálogo de alerta (en Windows):
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 41 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

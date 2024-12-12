@@ -26,13 +26,3 @@ Passe no parâmetro *pagInicio* o nome da página HTML ou da rota de acesso HTML
 Para não enviar *pagInicio* como página de inicio para o processo web atual, execute WEB SET HOME PAGE com uma string vazia ("") passada em *pagInicio*.  
   
 **Nota**: a página de boas vindas por padrão do servidor web se definido nas Propriedades do banco.
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 639 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

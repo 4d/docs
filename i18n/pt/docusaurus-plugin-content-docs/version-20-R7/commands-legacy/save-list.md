@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SAVE LIST.Summary-->O comando SAVE LIST guarda a lista cujo número de referência passou em *lista*, no editor de listas no ambiente Desenho, sob o nome que passou em *nomeLista*.<!-- END REF-->
@@ -25,12 +28,3 @@ Seus conteúdos são substituídos se houver uma lista com o mesmo nome.
 #### Ver também 
 
 [Load list](load-list.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 384 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

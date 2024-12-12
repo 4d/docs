@@ -28,13 +28,3 @@ O parâmetro *tipoinfo* permite indicar o tipo de informação que quiser obter.
 | Web Service HTTP status code | Inteiro longo | 2     | Código de erro HTTP (para ser usado no caso do erro principal 9912).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 Uma string vazia é retornada quando não há informação disponível, particularmente se a última petição SOAP não gerou erros.
-
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 780 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

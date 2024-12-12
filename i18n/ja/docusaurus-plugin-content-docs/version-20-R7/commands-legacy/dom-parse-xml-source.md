@@ -94,13 +94,3 @@ DTDやXSDが存在しなかったりURLが正しくない場合など検証が�
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 719 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->The **METHOD GET PATHS FORM** command fills the *arrPaths* array with the internal pathnames and names of the methods for all form objects as well as form methods.<!-- END REF--> Form methods are labeled {formMethod}.
@@ -69,12 +72,3 @@ List of all objects of the "input" form for the \[Employees\] table from a compo
 #### See also 
 
 [FORM GET NAMES](form-get-names.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1168 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

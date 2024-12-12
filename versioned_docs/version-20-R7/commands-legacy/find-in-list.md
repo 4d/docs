@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Find in list.Summary-->The **Find in list** command returns the position or reference of the first item of the *list* that is equivalent to the string passed in *value*.<!-- END REF--> If several items are found, the function can also fill an *itemsArray* array with the position or reference of each item.
@@ -61,13 +64,3 @@ Given the following hierarchical list:
  $vlItemPos:=(hList;"Date";0;*)
   //$vlItemPos equals 0
 ```
-
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 952 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Compatibilidade 
 
 <!--REF #_command_.ADD RECORD.Summary-->Esse comando foi implementado em 4D em lançamentos anteriores e é ainda útil para desenvolvimento básico ou protótipos.<!-- END REF--> Entretanto, para construir interfaces personalizadas e modernas, agora não é recomendado usar formulários genéricos baseados no comando *[DIALOG](../commands/dialog.md) que oferece propriedades avançadas e melhor controle sobre o fluxo de dados*
@@ -85,15 +88,3 @@ A variável sistema OK toma o valor 1 se aceitar o registro e 0 se o cancelar. A
 [CREATE RECORD](create-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 56 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Modificar o registro atual ||
-| Modificar a seleção atual ||
-| Proibido no servidor ||
-
-

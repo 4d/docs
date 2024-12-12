@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET RECENT FONTS.Summary-->El comando **SET RECENT FONTS** modifica la lista de fuentes recientes que aparecen en el menú contextual de las "fuentes recientes" .<!-- END REF-->  
@@ -41,12 +44,3 @@ Luego el menú contiene:
 #### Ver también 
 
 [FONT LIST](font-list.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1305 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

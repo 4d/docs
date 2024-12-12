@@ -72,12 +72,3 @@ Vous souhaitez obtenir la liste des polices récentes :
 [SET RECENT FONTS](set-recent-fonts.md)  
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 *Type de liste des polices*  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 460 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

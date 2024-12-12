@@ -130,12 +130,3 @@ Abaixo os diferentes resultados do comando [Undefined](undefined.md) assim como 
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1517 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

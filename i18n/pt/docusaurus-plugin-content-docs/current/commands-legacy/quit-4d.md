@@ -66,11 +66,3 @@ O método de projeto listado aqui está associado com o item Quit ou Exit do men
 #### Ver também 
 
 [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 291 |
-| Thread-seguro | &check; |
-
-

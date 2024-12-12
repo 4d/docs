@@ -22,12 +22,3 @@ Este comando pode ser utilizado por razões de segurança no *On Web Authenticat
 #### Ver também 
 
 [SOAP DECLARATION](soap-declaration.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 783 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

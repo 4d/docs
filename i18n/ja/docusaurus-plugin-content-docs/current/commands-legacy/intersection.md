@@ -49,11 +49,3 @@ displayed_sidebar: docs
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 121 |
-| スレッドセーフである | &check; |
-
-

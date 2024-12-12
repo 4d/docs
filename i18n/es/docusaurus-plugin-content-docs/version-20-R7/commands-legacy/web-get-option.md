@@ -63,12 +63,3 @@ Cuando utiliza el *selector* Web debug log, puede recibir una de las siguientes 
 #### Ver también 
 
 [WEB SET OPTION](web-set-option.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1209 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

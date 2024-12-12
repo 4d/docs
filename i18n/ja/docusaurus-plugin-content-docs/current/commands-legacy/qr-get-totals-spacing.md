@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->QR GET TOTALS SPACING コマンドを使用し、小計行の下部の行間を取得することができます。<!-- END REF-->このコマンドはリストモードにのみ適用されます。 
@@ -36,13 +39,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 762 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | error |
-| サーバー上での使用は不可 ||
-
-

@@ -47,13 +47,3 @@ If the command is executed successfully, the system variable Document contains t
 *Pictures*  
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 680 |
-| Thread safe | &check; |
-| Modifies variables | OK, Document |
-| Forbidden on the server ||
-
-

@@ -78,12 +78,3 @@ After this method has been added to your application, you can use it this way:
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 536 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

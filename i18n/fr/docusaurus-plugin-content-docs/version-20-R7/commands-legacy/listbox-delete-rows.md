@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->La commande **LISTBOX DELETE ROWS** supprime une ou plusieurs ligne(s) à partir de la ligne numéro *positionLigne* (visible ou non) de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
@@ -35,13 +38,3 @@ Si le paramètre *positionLigne* est supérieur au nombre de lignes des tableaux
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 914 |
-| Thread safe | &check; |
-| Modifie les variables | OK |
-| Interdite sur le serveur ||
-
-

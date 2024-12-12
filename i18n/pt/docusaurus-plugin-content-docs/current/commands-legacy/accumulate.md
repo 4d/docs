@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.ACCUMULATE.Summary-->ACCUMULATE especifica os campos ou variáveis a acumular em um relatório realizado utilizando [PRINT SELECTION](print-selection.md).<!-- END REF-->.
@@ -35,12 +38,3 @@ Ver o exemplo do comando [BREAK LEVEL](break-level.md) .
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 303 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

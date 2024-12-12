@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.GET RESOURCE.Summary-->The **GET RESOURCE** command returns in the BLOB field or variable *resData* the contents of the resource whose type and ID is passed in *resType* and *resID*.<!-- END REF-->
@@ -48,13 +51,3 @@ If there is not enough memory to load the resource, an error is generated. You c
 #### See also 
 
 *Resources*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 508 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

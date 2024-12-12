@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SORT LIST.Summary-->The **SORT LIST** command sorts the list whose reference number is passed in *list*.<!-- END REF-->
@@ -55,12 +58,3 @@ The list looks like:
 #### See also 
 
 [Selected list items](selected-list-items.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 391 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

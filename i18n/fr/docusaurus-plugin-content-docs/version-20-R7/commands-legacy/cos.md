@@ -25,12 +25,3 @@ displayed_sidebar: docs
 [Arctan](arctan.md)  
 [Sin](sin.md)  
 [Tan](tan.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 18 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

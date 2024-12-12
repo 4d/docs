@@ -84,13 +84,3 @@ DTDやXSDが存在しなかったり、URLが正しくない場合など検証�
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML source](dom-parse-xml-source.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 720 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK、error |
-| サーバー上での使用は不可 ||
-
-

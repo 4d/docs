@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get menu item parameter.Summary-->Get menu item parameter コマンドは、*menu*と*menuItem*引数で指定されるメニュー項目に割り当てられたカスタム文字列を返します。<!-- END REF-->この文字列は事前に[SET MENU ITEM PARAMETER](set-menu-item-parameter.md "SET MENU ITEM PARAMETER")コマンドで指定されていなければなりません。
@@ -24,12 +27,3 @@ displayed_sidebar: docs
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1003 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

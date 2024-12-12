@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get default user.Summary-->Get default user コマンドは、データベース設定において "デフォルトユーザー" として定義されたユーザーのユニークなユーザーIDを返します。<!-- END REF-->
@@ -20,13 +23,3 @@ displayed_sidebar: docs
 ![](../assets/en/commands/pict36789.en.png)
 
 デフォルトユーザーが設定されていない場合、コマンドは0を返します。
-
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 826 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

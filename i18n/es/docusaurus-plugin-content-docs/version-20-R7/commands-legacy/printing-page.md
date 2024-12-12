@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.Printing page.Summary-->**Printing page** devuelve el número de la página en impresión.<!-- END REF--> Puede utilizarse sólo cuando esté imprimiendo con [PRINT SELECTION](print-selection.md) o con el menú Impresión en el entorno Diseño.
@@ -37,12 +40,3 @@ El siguiente ejemplo cambia la posición de los números de página en un inform
 #### Ver también 
 
 [PRINT SELECTION](print-selection.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 275 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

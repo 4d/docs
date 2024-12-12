@@ -18,6 +18,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT ARRAY.Summary-->La commande **SORT ARRAY** trie un ou plusieurs tableau(x) par ordre croissant ou décroissant.<!-- END REF-->
 
+**Notes :** 
+
 * Vous ne pouvez pas trier de tableaux de type [Pointeur](# "A reference to another variable (including arrays and array elements), table, or field") ou [Image](# "Can be any Windows or Macintosh picture"). Vous pouvez trier un élément d'un tableau à deux dimensions (c'est-à-dire *t2DTableau{$vlCetElément}*), mais vous ne pouvez pas trier le tableau 2D lui-même (c'est-à-dire *t2DTableau*).
 * Vous pouvez trier les tableaux de type Object. Les éléments Null sont regroupés et les éléments du tableau sont triés selon un ordre interne.
 
@@ -80,12 +82,3 @@ Vous affichez les noms d'une table \[Personnes\] dans une fenêtre flottante. Ce
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 229 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -50,13 +50,3 @@ Se a execução do comando for correta, a variável sistema Document contém a r
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 680 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, Document |
-| Proibido no servidor ||
-
-

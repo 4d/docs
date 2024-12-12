@@ -22,12 +22,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [SOAP DECLARATION](soap-declaration.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 783 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

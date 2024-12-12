@@ -189,13 +189,3 @@ Si el comando ha sido ejecutado correctamente, la variable OK toma el valor 1\. 
 #### Ver también 
 
 [Convert to text](convert-to-text.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1011 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

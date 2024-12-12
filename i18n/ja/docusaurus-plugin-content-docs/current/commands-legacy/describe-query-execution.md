@@ -67,12 +67,3 @@ $vResultPath :
 
 [Last query path](last-query-path.md)  
 [Last query plan](last-query-plan.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1044 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

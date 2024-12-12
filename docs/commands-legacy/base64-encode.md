@@ -38,12 +38,3 @@ By default if the *\** parameter is omitted, the command uses a Base64 encoding.
 [Generate digest](generate-digest.md)  
 *Overview of XML DOM Commands*  
 [XML DECODE](xml-decode.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 895 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

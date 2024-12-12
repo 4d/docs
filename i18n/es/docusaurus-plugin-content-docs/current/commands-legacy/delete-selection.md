@@ -64,13 +64,3 @@ Si se encuentra un registro bloqueado durante la ejecución de DELETE SELECTION,
 [MODIFY SELECTION](modify-selection.md)  
 *Record Locking*  
 [TRUNCATE TABLE](truncate-table.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 66 |
-| Hilo seguro | &check; |
-| Modifica la selección actual ||
-| Prohibido en el servidor ||
-
-

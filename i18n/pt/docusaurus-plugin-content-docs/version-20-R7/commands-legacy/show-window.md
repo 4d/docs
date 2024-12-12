@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->O comando SHOW WINDOW permite mostrar a janela cujo número foi passado em *janela*.<!-- END REF--> Se for omitido este parâmetro, se mostrará a janela do primeiro plano do processo atual.  
@@ -26,12 +29,3 @@ Consulte o exemplo do comando [HIDE WINDOW](hide-window.md).
 #### Ver também 
 
 [HIDE WINDOW](hide-window.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 435 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

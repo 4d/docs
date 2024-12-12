@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->O comando OBJECT MOVE permite mover os objetos no formulário atual, definido pelos parâmetros *\** e *objeto, moveH* píxels horizontalmente e *moveV* píxels verticalmente.<!-- END REF-->   
@@ -66,12 +69,3 @@ A seguinte instrução move o botão “botão\_1” as seguintes coordenadas (1
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 664 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

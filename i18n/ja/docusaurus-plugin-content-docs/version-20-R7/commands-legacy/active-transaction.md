@@ -43,12 +43,3 @@ displayed_sidebar: docs
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *トランザクションの停止*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1387 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

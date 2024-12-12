@@ -82,12 +82,3 @@ Example allowing the user to indicate the location of the file to create:
 
 [Document to text](document-to-text.md)  
 *System Documents*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1237 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

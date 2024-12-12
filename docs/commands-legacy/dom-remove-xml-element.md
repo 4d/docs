@@ -26,13 +26,3 @@ An error is generated when the element reference is invalid.
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 869 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

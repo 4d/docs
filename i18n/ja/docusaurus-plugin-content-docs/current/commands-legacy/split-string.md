@@ -57,12 +57,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [TEXT TO ARRAY](text-to-array.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1554 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

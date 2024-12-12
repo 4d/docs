@@ -59,12 +59,3 @@ This example sets the *tableNum* variable to the table number of the table to wh
 [Field](field.md)  
 [Last table number](last-table-number.md)  
 [Table name](table-name.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 252 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

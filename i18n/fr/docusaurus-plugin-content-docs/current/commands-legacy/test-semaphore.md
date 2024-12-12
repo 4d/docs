@@ -45,12 +45,3 @@ Cet exemple permet de connaître l’état d’un traitement (en l’occurrence,
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 652 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

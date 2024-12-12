@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Nota**: este comando sólo funciona con los list box de tipo array.<!-- END REF-->  
@@ -65,12 +68,3 @@ Usted desea definir un array de altura de línea para un list box:
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1279 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

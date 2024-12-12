@@ -82,12 +82,3 @@ This example shows a standard way to set **Storage** values:
 #### See also 
 
 *Shared objects and shared collections*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1525 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->O comando GET ALLOWED METHODS retorna, em *arrMetodos*, os nomes dos métodos que possam ser utilizados para escrever fórmulas.<!-- END REF--> Estes métodos estão listados ao final da lista de comandos no editor.
@@ -43,12 +46,3 @@ Este exemplo autoriza um conjunto de métodos específicos para criar um relató
 #### Ver também 
 
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 908 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

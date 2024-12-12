@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->The **OBJECT SET THREE STATES CHECKBOX** command modifies, for the current process, the "Three-States" property of the checkbox(es) designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -30,12 +33,3 @@ In the *threeStates* parameter, pass **True** to enable the "three states" mode,
 #### See also 
 
 [OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1249 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

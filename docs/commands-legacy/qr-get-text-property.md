@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR Get text property.Summary-->The **QR Get text property** command returns the property value of the text attributes for the cell determined by *colNum* and *RowNum*.<!-- END REF-->
@@ -68,13 +71,3 @@ If you pass an invalid *property* number, the error -9854 will be generated.
 #### See also 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 760 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

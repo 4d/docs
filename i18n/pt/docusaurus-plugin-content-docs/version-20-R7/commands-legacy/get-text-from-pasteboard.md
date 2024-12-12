@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard devolve o texto na área de transferência.<!-- END REF--> 
@@ -32,13 +35,3 @@ Se o texto for extraído corretamente, OK toma o valor 1; do contrário OK toma 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 524 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

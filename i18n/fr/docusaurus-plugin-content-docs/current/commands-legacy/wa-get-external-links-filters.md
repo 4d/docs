@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->La commande **WA GET EXTERNAL LINKS FILTERS** retourne dans les tableaux *tabFiltres* et *tabAutorisRefus* les filtres de liens externes de la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Si aucun filtre n’est actif, les tableaux sont retournés vides. 
@@ -26,12 +29,3 @@ Les filtres sont installés par la commande [WA SET EXTERNAL LINKS FILTERS](wa-s
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1033 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

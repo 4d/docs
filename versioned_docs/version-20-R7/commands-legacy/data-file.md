@@ -32,11 +32,3 @@ If, for example, you are working with the database located in the folder Documen
 
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 490 |
-| Thread safe | &check; |
-
-

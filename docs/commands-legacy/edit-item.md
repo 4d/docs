@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.EDIT ITEM.Summary-->The **EDIT ITEM** command allows you to edit the current item or the item number *item* in the array or the list set in the *object* parameter.<!-- END REF-->   
@@ -71,12 +74,3 @@ Given two columns in a list box whose variable names are “Array1” and “Arr
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 870 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

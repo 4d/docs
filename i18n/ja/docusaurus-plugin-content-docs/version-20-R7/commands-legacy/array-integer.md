@@ -61,12 +61,3 @@ ARRAY INTEGERを既存の配列に適用する場合、
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 220 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

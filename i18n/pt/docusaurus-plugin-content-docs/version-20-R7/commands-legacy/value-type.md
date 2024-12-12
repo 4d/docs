@@ -116,12 +116,3 @@ var $sum : Real
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1509 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

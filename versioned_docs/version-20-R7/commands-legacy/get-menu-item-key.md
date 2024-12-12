@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.Get menu item key.Summary-->The **Get menu item key** command returns the code of the **Ctrl** (Windows) or **Command** (Macintosh) shortcut for the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
@@ -48,12 +51,3 @@ To obtain the shortcut associated with a menu item, it is useful to implement a 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 424 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

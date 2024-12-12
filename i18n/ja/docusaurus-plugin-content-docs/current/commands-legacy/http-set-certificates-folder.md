@@ -58,12 +58,3 @@ displayed_sidebar: docs
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1306 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

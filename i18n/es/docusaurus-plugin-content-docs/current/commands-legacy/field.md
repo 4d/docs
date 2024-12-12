@@ -57,12 +57,3 @@ En el siguiente ejemplo, la variable *campNum* es igual al número del campo de 
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 253 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

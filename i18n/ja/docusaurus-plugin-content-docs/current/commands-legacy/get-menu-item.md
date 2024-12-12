@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get menu item.Summary-->Get menu item コマンドは、引数*menu*と*menuItem*に渡されたメニューおよびメニュー項目番号を持つメニュー項目のテキストを返します。<!-- END REF-->*menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
@@ -28,12 +31,3 @@ displayed_sidebar: docs
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM](set-menu-item.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 422 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

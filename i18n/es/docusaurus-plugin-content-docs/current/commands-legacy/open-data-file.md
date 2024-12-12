@@ -54,12 +54,3 @@ En el contexto del despliegue de una aplicación fusionada, usted desea abrir o 
 #### Ver también 
 
 [CREATE DATA FILE](create-data-file.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 312 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

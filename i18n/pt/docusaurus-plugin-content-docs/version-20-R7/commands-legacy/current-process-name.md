@@ -32,12 +32,3 @@ Se quiser chamar a um processo worker e passar o nome de processo de chamada com
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
 *Sobre Workers*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1392 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

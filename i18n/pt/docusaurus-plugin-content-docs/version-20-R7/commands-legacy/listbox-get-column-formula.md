@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get column formula.Summary-->O comando **LISTBOX Get column formula** devolve a fórmula associada à coluna de list box designada pelos parâmetros *objeto* e *\**.<!-- END REF--> As fórmulas só podem ser utilizadas quando a propriedade “Fonte de dados” do list box for **Seleção atual**, **Seleção temporal**.ou **Coleção ou Seleção de Entidades**. Se nenhuma fórmula estiver associada à coluna, o comando devolve uma cadeia vazia. 
@@ -24,12 +27,3 @@ Passado o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome 
 #### Ver também 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1202 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

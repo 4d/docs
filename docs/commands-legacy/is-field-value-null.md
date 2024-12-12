@@ -28,12 +28,3 @@ The value returned by this command is only meaningful if the "*Map NULL values t
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 964 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

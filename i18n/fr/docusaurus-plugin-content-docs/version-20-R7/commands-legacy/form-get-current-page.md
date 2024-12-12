@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.FORM Get current page.Summary-->**FORM Get current page** retourne le numéro de la page courante du formulaire actuellement affiché ou du formulaire courant chargé via la commande [FORM LOAD](form-load.md).<!-- END REF-->
@@ -67,12 +70,3 @@ Alors que vous êtes en train d'utiliser un formulaire, si vous choisissez une c
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 276 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

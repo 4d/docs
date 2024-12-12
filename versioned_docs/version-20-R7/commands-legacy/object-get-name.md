@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get name.Summary-->The **OBJECT Get name** command returns the name of a form object.<!-- END REF--> 
@@ -38,12 +41,3 @@ After the execution of this object method, the *$btnName* variable contains the 
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 *Objects (Forms)*  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1087 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

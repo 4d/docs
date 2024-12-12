@@ -90,13 +90,3 @@ displayed_sidebar: docs
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 2 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

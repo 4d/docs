@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get value.Summary-->O comando **OBJECT Get value** retorna o valor atual da fonte de dados para os objetos formulários determinados pelo parâmetro *nomObjeto*.<!-- END REF-->
@@ -38,12 +41,3 @@ Ver o exemplo para o comando [OBJECT SET VALUE](object-set-value.md).
 #### Ver também 
 
 [OBJECT SET VALUE](object-set-value.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1743 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

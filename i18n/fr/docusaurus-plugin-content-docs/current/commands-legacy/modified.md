@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.Modified.Summary-->**Modified** retourne **Vrai** si une valeur a été assignée par programmation au champ *leChamp* ou s'il a été modifié lors de la saisie de données.<!-- END REF--> La commande **Modified** ne fonctionne que lorsqu'elle est appelée dans le cadre d'une méthode formulaire (ou d'une sous-méthode appelée par la méthode formulaire).
@@ -65,12 +68,3 @@ Vous sélectionnez un enregistrement de la table *\[uneTable\]*, puis vous appel
 
 [Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 32 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

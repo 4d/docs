@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard は、ペーストボードに存在するテキストを返します。<!-- END REF-->
@@ -32,13 +35,3 @@ displayed_sidebar: docs
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 524 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

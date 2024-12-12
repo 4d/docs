@@ -26,13 +26,3 @@ Une erreur est générée lorsque la référence de l’élément n’est pas va
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 869 |
-| Thread safe | &check; |
-| Modifie les variables | OK, error |
-| Interdite sur le serveur ||
-
-

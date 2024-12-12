@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->La commande **WA SET URL FILTERS** permet de mettre en place un ou plusieurs filtre(s) pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
@@ -130,12 +133,3 @@ Vous souhaitez interdire des adresses IP spécifiques :
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1030 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

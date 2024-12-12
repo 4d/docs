@@ -254,12 +254,3 @@ Depois de implementar este método de projeto em sua aplicação, pode escrever:
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 396 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

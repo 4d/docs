@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->O comando PRINT SETTINGS mostra una o dos caixas de diálogo de parâmetros de impressão.<!-- END REF--> Este comando deve ser chamado antes de uma série de comandos [Print form](print-form.md) ou o comando [OPEN PRINTING JOB](open-printing-job.md).
@@ -40,13 +43,3 @@ Se o usuário clicar em OK em ambas caixas de diálogo, a variável sistema OK t
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 106 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

@@ -92,13 +92,3 @@ Mostrará a seguinte caixa de diálogo de confirmação (em Macintosh):
 
 [ALERT](alert.md)  
 [Request](request.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 162 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK |
-| Proibido no servidor ||
-
-

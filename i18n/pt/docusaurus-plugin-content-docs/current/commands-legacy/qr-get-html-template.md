@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR Get HTML template.Summary-->O comando QR Get HTML template devolve o modelo HTML utilizado atualmente pela área do relatório rápido referenciada por área.<!-- END REF--> O valor devolvido de tipo texto e inclui a totalidade do código HTML utilizado como modelo.  
@@ -25,13 +28,3 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 #### Ver também 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 751 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

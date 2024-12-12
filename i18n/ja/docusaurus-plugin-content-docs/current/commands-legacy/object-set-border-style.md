@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.OBJECT SET BORDER STYLE.Summary-->**OBJECT SET BORDER STYLE**コマンドは、引数 *object* と *\** で指定したオブジェクトの境界線スタイルを変更します。<!-- END REF-->
@@ -38,12 +41,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get border style](object-get-border-style.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1262 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

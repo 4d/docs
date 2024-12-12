@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->The **OBJECT Get style sheet** command returns the name of the style sheet associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
@@ -45,12 +48,3 @@ In **project architecture**, only the three automatic style sheets are supported
 
 *Font Styles*  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1258 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

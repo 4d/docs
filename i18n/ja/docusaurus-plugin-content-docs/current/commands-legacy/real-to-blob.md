@@ -134,12 +134,3 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 [INTEGER TO BLOB](integer-to-blob.md)  
 [LONGINT TO BLOB](longint-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 552 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

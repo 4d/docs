@@ -59,12 +59,3 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
 [ENCRYPT BLOB](encrypt-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1773 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

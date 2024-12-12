@@ -43,12 +43,3 @@ You want to promote the current user to the "admin" and "plugins" groups for the
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1737 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

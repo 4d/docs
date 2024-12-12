@@ -50,12 +50,3 @@ SAVE RECORD が必要とされる場合を次に示します:
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 *トリガ*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 53 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

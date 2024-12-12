@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->The **OBJECT SET CORNER RADIUS** command modifies the *radius* of corners for the object(s) you passed in the *object* parameter.<!-- END REF--> The new radius is only set for the process and is not saved in the form itself. 
@@ -66,12 +69,3 @@ Note that for text areas (as well as inputs), unlike for rectangles, the corner 
 #### See also 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1323 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

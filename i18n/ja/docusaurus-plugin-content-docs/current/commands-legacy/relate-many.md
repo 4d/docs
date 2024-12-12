@@ -67,13 +67,3 @@ displayed_sidebar: docs
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 262 |
-| スレッドセーフである | &check; |
-| カレントセレクションを変更する ||
-| サーバー上での使用は不可 ||
-
-

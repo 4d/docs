@@ -41,13 +41,3 @@ La variable OK toma el valor 1 si la variable ha sido reescrita correctamente, d
 #### Ver también 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 533 |
-| Hilo seguro | &check; |
-| Modifica variables | OK |
-| Prohibido en el servidor ||
-
-

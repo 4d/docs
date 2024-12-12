@@ -18,6 +18,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->El comando LISTBOX COLLAPSE se utiliza para contraer líneas de ruptura del objeto list box designado por los parámetros *objeto* y *\** parámetros.<!-- END REF-->
@@ -50,12 +53,3 @@ Este ejemplo colapsa el primer nivel de líneas de ruptura de la selección en e
 #### Ver también 
 
 [LISTBOX EXPAND](listbox-expand.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1101 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

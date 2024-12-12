@@ -231,12 +231,3 @@ If you execute:
 #### See also 
 
   
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1478 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

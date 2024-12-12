@@ -33,12 +33,3 @@ The following example displays an alert telling what percentage of the customers
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 195 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

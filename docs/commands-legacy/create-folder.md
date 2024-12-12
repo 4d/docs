@@ -71,13 +71,3 @@ Creation of the "\\February\\" subfolder in the existing "C:\\Archives\\" folder
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 475 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

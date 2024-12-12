@@ -52,13 +52,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 727 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

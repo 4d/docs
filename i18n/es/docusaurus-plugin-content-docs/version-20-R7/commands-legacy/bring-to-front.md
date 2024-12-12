@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->BRING TO FRONT pasa todas las ventanas que pertenecen a *process* al primer plano.<!-- END REF--> Si el proceso ya está en el primer plano, el comando no hace nada. Si el proceso está oculto, debe utilizar [SHOW PROCESS](show-process.md) para mostrar el proceso, de lo contrario BRING TO FRONT no tiene efecto.
@@ -36,12 +39,3 @@ El siguiente ejemplo es un método que puede ser ejecutado desde un menú. Él v
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 326 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

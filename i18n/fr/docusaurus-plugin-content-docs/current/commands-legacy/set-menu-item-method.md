@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->La commande **SET MENU ITEM METHOD** permet de modifier la méthode projet 4D associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
@@ -34,12 +37,3 @@ Reportez-vous aux exemple de la commande [SET MENU BAR](set-menu-bar.md).
 #### Voir aussi 
 
 [Get menu item method](get-menu-item-method.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 982 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

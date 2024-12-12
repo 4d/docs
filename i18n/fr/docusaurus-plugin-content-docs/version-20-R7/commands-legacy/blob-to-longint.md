@@ -60,12 +60,3 @@ L'exemple suivant lit 20 valeurs de type Entier long dans un BLOB, à partir de 
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 551 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

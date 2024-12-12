@@ -67,13 +67,3 @@ Criação da subpasta "\\Fevereiro\\" na atual pasta "C:\\Arquivos\\":
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 475 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, error |
-| Proibido no servidor ||
-
-

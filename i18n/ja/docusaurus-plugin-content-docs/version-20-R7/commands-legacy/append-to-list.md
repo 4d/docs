@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->**APPEND TO LIST** コマンドは、*list*に渡した参照番号を持つ階層リストに新規項目を追加します。<!-- END REF-->
@@ -160,12 +163,3 @@ displayed_sidebar: docs
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 376 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

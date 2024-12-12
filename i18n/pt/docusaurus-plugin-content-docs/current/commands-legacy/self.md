@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Nota de compatibilidade 
 
 <!--REF #_command_.Self.Summary-->Este comando só é conservada por razões de compatibilidade.<!-- END REF--> A partir da versão 12 de 4D, é recomendado utilizar o comando OBJECT Get pointer.
@@ -42,12 +45,3 @@ Ver o exemplo do comando [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER")
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This ](this.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 308 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

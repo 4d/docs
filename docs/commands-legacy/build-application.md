@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->The BUILD APPLICATION command launches the application generation process.<!-- END REF--> It takes into account parameters set in the current build application settings file or the settings file set in the *buildAppSettings* parameter. 
@@ -51,13 +54,3 @@ If the command fails, an error is generated that you can intercept using the [ON
 #### See also 
 
 [Compile project](../commands/compile-project.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 871 |
-| Thread safe | &check; |
-| Modifies variables | OK, Document, error |
-| Forbidden on the server ||
-
-

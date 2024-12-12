@@ -53,12 +53,3 @@ Cet exemple compare un hash de mot de passe créé par la commande [Generate pas
 
   
 [Generate password hash](generate-password-hash.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1534 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

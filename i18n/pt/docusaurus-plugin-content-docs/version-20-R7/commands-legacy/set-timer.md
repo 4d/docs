@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.SET TIMER.Summary-->O comando SET TIMER permite ativar o evento de formulário On Timer e fixar, para o processo e formulário atual, o número de tics (1 tic = 1/60 de segundo) entre cada evento de formulário On Timer.<!-- END REF--> 
@@ -45,12 +48,3 @@ Imaginemos que você queira, quando um formulário aparece em tela, que o comput
 
 [Form event code](form-event-code.md)  
 [REDRAW](redraw.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 645 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

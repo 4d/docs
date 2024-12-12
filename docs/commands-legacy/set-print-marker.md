@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) or [Print form](../commands/print-form.md) commands, this command allows you to adjust the size of the print areas. 
@@ -179,12 +182,3 @@ The Print\_List3 form method is as follows:
 [Print form](../commands/print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 709 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

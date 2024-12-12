@@ -17,7 +17,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.ARRAY BLOB.Summary-->**ARRAY BLOB**コマンドは、メモリ上にBLOB型の要素の配列を作成・リサイズします。<!-- END REF-->引数には配列の名前を渡します。  
+<!--REF #_command_.ARRAY BLOB.Summary-->**ARRAY BLOB**コマンドは、メモリ上にBLOB型の要素の配列を作成・リサイズします。<!-- END REF-->
+
+*arrayName* 引数には配列の名前を渡します。  
 
 *size* 引数には、配列の要素の数を渡します。
 
@@ -58,12 +60,3 @@ displayed_sidebar: docs
 #### 参照 
 
 *配列を作成する*  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1222 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

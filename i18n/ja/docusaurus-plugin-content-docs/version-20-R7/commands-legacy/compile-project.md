@@ -15,6 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** は、カレントのホストプロジェクト、または*projectFile* 引数で指定したプロジェクトをコンパイルします。<!-- END REF-->コンパイルについてのより詳細な情報については、*Compilation page on developer.4d.com* を参照してください。
@@ -180,12 +183,3 @@ var $result:=Compile project($options)
 #### 参照 
 
 [BUILD APPLICATION](build-application.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 1760 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

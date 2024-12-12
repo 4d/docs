@@ -19,6 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->La commande **GET LIST ITEM PROPERTIES** retourne les propriétés de l'élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF-->
@@ -51,12 +54,3 @@ Pour plus d'informations sur ces propriétés, reportez-vous à la description d
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 631 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

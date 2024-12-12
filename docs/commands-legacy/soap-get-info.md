@@ -33,12 +33,3 @@ Pass the number of the type of SOAP information you want to get in the *infoNum*
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 784 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -92,12 +92,3 @@ You want to get a date from an object attribute, whatever the current attribute 
 
 [Bool](bool.md)  
 [String](string.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 102 |
-| Thread safe | &check; |
-| Forbidden on the server ||
-
-

@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->The **LISTBOX INSERT ROWS** command inserts one or several new row(s) in the list box set in the *object* and *\** parameters.<!-- END REF--> 
@@ -33,13 +36,3 @@ If the *rowPosition* value is higher than the total number of rows in the list b
 #### See also 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 913 |
-| Thread safe | &check; |
-| Modifies variables | OK |
-| Forbidden on the server ||
-
-

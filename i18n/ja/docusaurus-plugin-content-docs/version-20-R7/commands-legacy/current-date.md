@@ -16,7 +16,9 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Current date.Summary-->Current date コマンドは、システムクロックに保持された日付を現在の日付として返します。<!-- END REF-->リモートモードの4Dでこの関数を実行する際にアスタリスク (\*) 引数を渡すと、サーバの現在の日付が返されます。
+<!--REF #_command_.Current date.Summary-->Current date コマンドは、システムクロックに保持された日付を現在の日付として返します。<!-- END REF-->
+
+**4D Server:** リモートモードの4Dでこの関数を実行する際にアスタリスク (\*) 引数を渡すと、サーバの現在の日付が返されます。
 
 #### 例題 1 
 
@@ -96,11 +98,3 @@ displayed_sidebar: docs
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 33 |
-| スレッドセーフである | &check; |
-
-

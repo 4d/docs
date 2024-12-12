@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*This command is not thread-safe, it cannot be used in preemptive code.*
+
+
 #### Description 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->The QR SET HEADER AND FOOTER command sets the contents and size of the header or footer.<!-- END REF-->
@@ -55,13 +58,3 @@ The following statement places the title “Center title” in the header for th
 #### See also 
 
 [QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 774 |
-| Thread safe | &check; |
-| Modifies variables | error |
-| Forbidden on the server ||
-
-

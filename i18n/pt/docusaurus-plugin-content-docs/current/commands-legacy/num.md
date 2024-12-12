@@ -85,12 +85,3 @@ Este exemplo compara os resultados obtidos dependendo do separador “atual”:
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 11 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

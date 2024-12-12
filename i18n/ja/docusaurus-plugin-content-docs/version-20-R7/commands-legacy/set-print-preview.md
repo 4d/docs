@@ -13,6 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->**SET PRINT PREVIEW** は、プリントダイアログボックスのプレビュー設定のオン/オフをメソッドで切り替るためのものです。<!-- END REF-->*preview* に[True](true.md "True") を渡すとプレビューは有効になり、[False](false.md "False") を渡すと無効になります。この設定はプロセスに対してローカルであり、他のプロセスや他のユーザの印刷には影響を与えません。
@@ -36,12 +39,3 @@ displayed_sidebar: docs
 
 [Get print preview](get-print-preview.md)  
 [Is in print preview](is-in-print-preview.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 364 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

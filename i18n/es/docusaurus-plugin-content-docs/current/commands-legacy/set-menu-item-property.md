@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->El comando **SET MENU ITEM PROPERTY** permite fijar el *valor* de la propiedad para la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF-->
@@ -45,12 +48,3 @@ En el caso de la propiedad Associated standard action, puede pasar en el paráme
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 973 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

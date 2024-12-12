@@ -29,12 +29,3 @@ displayed_sidebar: docs
 
 [False](false.md)  
 [Not](not.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 214 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

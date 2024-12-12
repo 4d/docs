@@ -64,12 +64,3 @@ La variable vNOMBRE contiene ROBERTO y vCIUDAD contiene PARIS.
 #### Ver también 
 
 [WEB GET BODY PART](web-get-body-part.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 683 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

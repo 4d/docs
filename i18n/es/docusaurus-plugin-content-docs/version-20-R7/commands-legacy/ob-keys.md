@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.OB Keys.Summary-->El comando **OB Keys** devuelve una colección de cadenas que contienen todos los nombres de propiedades enumerables del *objeto*.<!-- END REF--> 
@@ -44,12 +47,3 @@ Quiere una colección con todos los nombres de propiedad de primer nivel de un o
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1719 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

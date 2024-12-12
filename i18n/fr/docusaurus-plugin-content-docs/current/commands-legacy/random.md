@@ -32,13 +32,3 @@ L'exemple suivant assigne une valeur entière aléatoire entre 10 et 30 à la va
 ```4d
  vRésultat:=(Random% 21)+10
 ```
-
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 100 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

@@ -17,6 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->El comando APPEND TO LIST añade un nuevo elemento a la lista jerárquica cuyo número de referencia se pasa en *lista*.<!-- END REF-->
@@ -153,12 +156,3 @@ Cuando el formulario se ejecuta, la lista se verá de esta forma:
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 376 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

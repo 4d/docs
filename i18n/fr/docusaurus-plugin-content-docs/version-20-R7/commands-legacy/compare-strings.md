@@ -105,12 +105,3 @@ Les exemples suivants illustrent l'incidence des options dans le **contexte de l
 #### Voir aussi 
 
 [Position](position.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 1756 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

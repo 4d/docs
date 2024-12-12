@@ -20,6 +20,9 @@ displayed_sidebar: docs
 #### Descrição 
 
 <!--REF #_command_.OB Copy.Summary-->O comando **OB Copy** devolve um objeto que contém uma cópia completa das propriedades, sub objetos e valores de *objeto*.<!-- END REF-->
+
+* Primeira sintaxe: **OB Copy(object{; resolvePtrs})**
+
   
 Se o *objeto* conter valores de tipo de ponteiro, por padrão a cópia também contém os ponteiros. No entanto, pode resolver os ponteiros ao momento da cópia passando **True** no parâmetro *resolvePont*. Neste caso, cada ponteiro presente como valor em objeto se avalia ao momento da cópia e utiliza seu valor não referenciado.
 
@@ -165,12 +168,3 @@ Imagine que queira copiar *$sharedObj* em *$sharedCol mas* como eles pertencem a
 
 [OB Get](ob-get.md)  
 *Objetos compartidos e Coleções compartidas*  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1225 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

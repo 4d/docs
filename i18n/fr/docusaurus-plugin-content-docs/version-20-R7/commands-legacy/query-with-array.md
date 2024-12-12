@@ -39,13 +39,3 @@ Cet exemple permet de récupérer les enregistrements des clients français et a
 #### Voir aussi 
 
 [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 644 |
-| Thread safe | &check; |
-| Change la sélection courante ||
-| Interdite sur le serveur ||
-
-

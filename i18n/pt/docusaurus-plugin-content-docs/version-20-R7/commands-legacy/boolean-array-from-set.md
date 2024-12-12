@@ -32,12 +32,3 @@ Se você não passar o parâmetro *conjunto*, o comando utilizará UserSet no pr
 #### Ver também 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 646 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

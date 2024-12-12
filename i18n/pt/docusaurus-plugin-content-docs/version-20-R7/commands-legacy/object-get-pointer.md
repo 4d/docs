@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->O comando OBJECT Get pointer retorna um ponteiro à variável de um objeto de formulário.<!-- END REF-->  
@@ -55,12 +58,3 @@ Dado um formulário "SF" utilizado duas vezes como sub-formulário no mesmo form
 *Objetos (Formulários)*  
 *Objetos de formulário (Acesso)*  
 [Self](self.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 1124 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

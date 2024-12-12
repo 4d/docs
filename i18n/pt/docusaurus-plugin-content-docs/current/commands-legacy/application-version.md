@@ -119,12 +119,3 @@ Você quer usar o número pequeno de versão da aplicação retornado pelo coman
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 493 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

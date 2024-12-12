@@ -46,14 +46,3 @@ USE ENTITY SELECTION($entitySel) //The current selection of the Employee table i
 #### See also 
 
 [Create entity selection](create-entity-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 1513 |
-| Thread safe | &check; |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
-

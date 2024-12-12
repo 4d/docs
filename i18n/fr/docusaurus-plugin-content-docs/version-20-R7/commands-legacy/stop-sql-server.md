@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### Description 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->La commande **STOP SQL SERVER** stoppe le serveur SQL intégré de l’application 4D sur laquelle elle a été exécutée.<!-- END REF--> Si le serveur SQL était lancé, toutes les connexions SQL sont interrompues et le serveur n’accepte plus aucune requête SQL externe. Si le serveur SQL n’était pas lancé, la commande ne fait rien.
@@ -21,12 +24,3 @@ displayed_sidebar: docs
 #### Voir aussi 
 
 [START SQL SERVER](start-sql-server.md)  
-
-#### Propriétés
-|  |  |
-| --- | --- |
-| Numéro de commande | 963 |
-| Thread safe | &check; |
-| Interdite sur le serveur ||
-
-

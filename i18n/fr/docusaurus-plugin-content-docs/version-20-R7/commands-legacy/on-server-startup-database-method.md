@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+
+
 #### 
 
 <!--REF #_command_.On Server Startup database method.Summary-->La méthode base Sur démarrage serveur est appelée une fois sur le poste serveur lorsque vous ouvrez une base avec 4D Server.<!-- END REF--> La méthode base Sur démarrage serveur n'est jamais exécutée dans un environnement autre que 4D Server.

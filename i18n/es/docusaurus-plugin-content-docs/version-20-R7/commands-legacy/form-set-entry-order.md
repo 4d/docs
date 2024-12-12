@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+
+
 #### Descripción 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->El comando **FORM SET ENTRY ORDER** permite definir dinámicamente el orden de entrada del formulario actual para el proceso actual basado en el array *nomObjetos*.<!-- END REF--> 
@@ -53,12 +56,3 @@ Usted desea definir el orden de entrada de los objetos en el formulario basado e
 #### Ver también 
 
 [FORM GET ENTRY ORDER](form-get-entry-order.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 1468 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

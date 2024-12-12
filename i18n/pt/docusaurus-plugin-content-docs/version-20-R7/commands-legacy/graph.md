@@ -280,12 +280,3 @@ Neste exemplo, personalizamos alguns parâmetros:
 [GRAPH SETTINGS](graph-settings.md)  
 *Parâmetros de Gráficos*  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 169 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

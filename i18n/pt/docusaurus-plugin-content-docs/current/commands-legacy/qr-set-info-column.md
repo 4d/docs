@@ -20,6 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.QR SET INFO COLUMN.Summary-->##### List mode 
@@ -108,13 +111,3 @@ Se o parâmetro *numColuna* for incorreto, se gera o erro -9852.
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 765 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

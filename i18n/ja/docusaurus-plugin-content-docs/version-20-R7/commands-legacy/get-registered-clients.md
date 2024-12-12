@@ -14,6 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->GET REGISTERED CLIENTS コマンドは2つの配列を作成します:
@@ -46,13 +49,3 @@ displayed_sidebar: docs
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 650 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-| サーバー上での使用は不可 ||
-
-

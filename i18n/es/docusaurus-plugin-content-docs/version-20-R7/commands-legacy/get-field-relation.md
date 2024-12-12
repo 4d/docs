@@ -83,12 +83,3 @@ El siguiente código ilustra las diferentes posibilidades ofrecidas por los coma
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 920 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

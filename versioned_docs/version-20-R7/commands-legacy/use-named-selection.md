@@ -29,14 +29,3 @@ Remember that a named selection is a representation of a selection of records at
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 332 |
-| Thread safe | &check; |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
-

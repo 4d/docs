@@ -35,13 +35,3 @@ Aunque usted puede utilizar los *Operadores de fechas* para añadir días a una 
   // Esta línea hace lo mismo que $vdMañana:=Current date+1
  $vdMañana:=Add to date(Current date;0;0;1)
 ```
-
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 393 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-

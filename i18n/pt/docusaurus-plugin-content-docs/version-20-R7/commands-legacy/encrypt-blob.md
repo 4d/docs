@@ -185,12 +185,3 @@ A empresa quer usar a Internet para trocar informações. Cada filial recebe inf
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 689 |
-| Thread-seguro | &check; |
-| Proibido no servidor ||
-
-

@@ -29,12 +29,3 @@ displayed_sidebar: docs
 #### 参照 
 
 [Picture size](picture-size.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 457 |
-| スレッドセーフである | &check; |
-| サーバー上での使用は不可 ||
-
-

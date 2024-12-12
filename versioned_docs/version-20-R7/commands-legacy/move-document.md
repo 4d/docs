@@ -51,13 +51,3 @@ The following example moves the document DocName:
 #### See also 
 
 [COPY DOCUMENT](copy-document.md)  
-
-#### Properties
-|  |  |
-| --- | --- |
-| Command number | 540 |
-| Thread safe | &check; |
-| Modifies variables | OK, error |
-| Forbidden on the server ||
-
-

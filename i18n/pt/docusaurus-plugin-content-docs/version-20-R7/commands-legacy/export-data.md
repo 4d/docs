@@ -16,6 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+
+
 #### Descrição 
 
 <!--REF #_command_.EXPORT DATA.Summary-->O comando EXPORT DATA exporta dados no arquivo *nomArquivo*.<!-- END REF--> 4D pode exportar dados nos seguintes formatos: Texto, Texto de longitude fixa, XML, SYLK, DIF, DBF (dBase) e 4D. 
@@ -96,13 +99,3 @@ Se o usuário clicar em **Cancelar** na caixa de diálogo padrão de abrir arqui
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DATA](import-data.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 666 |
-| Thread-seguro | &check; |
-| Modificar variáveis | OK, Document |
-| Proibido no servidor ||
-
-

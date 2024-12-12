@@ -12,6 +12,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
+
+
 #### 説明 
 
 <!--REF #_command_.BACKUP.Summary-->**BACKUP**コマンドは、現在のバックアップ設定を用いて、データベースのバックアップを開始します。<!-- END REF-->確認ダイアログボックスは表示されませんが、進捗バーが画面上に現れます。
@@ -36,12 +39,3 @@ displayed_sidebar: docs
 [BACKUP INFO](backup-info.md)  
 *On Backup Startupデータベースメソッド*  
 [RESTORE](restore.md)  
-
-#### プロパティ
-|  |  |
-| --- | --- |
-| コマンド番号 | 887 |
-| スレッドセーフである | &check; |
-| システム変数を更新する | OK |
-
-

@@ -51,13 +51,3 @@ Se passar em tag um caractere inválido, se gera um erro.
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
-
-#### Propriedades
-|  |  |
-| --- | --- |
-| Número do comando | 853 |
-| Thread-seguro | &check; |
-| Modificar variáveis | error |
-| Proibido no servidor ||
-
-

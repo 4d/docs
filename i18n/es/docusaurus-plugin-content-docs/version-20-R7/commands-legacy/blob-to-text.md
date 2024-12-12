@@ -60,12 +60,3 @@ Después de la ejecución del comando, la variable se incrementa en el número d
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
-
-#### Propiedades
-|  |  |
-| --- | --- |
-| Número de comando | 555 |
-| Hilo seguro | &check; |
-| Prohibido en el servidor ||
-
-
