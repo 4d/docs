@@ -17,34 +17,34 @@ displayed_sidebar: docs
 
 #### 説明
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** は、発生したフォームイベントに関する情報を格納しているオブジェクトを返します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。
 
 **返されるオブジェクト**
 
-Each returned object includes the following main properties:
+返されるオブジェクトは、それぞれ以下のメインのプロパティを格納しています:
 
-| **プロパティ**   | **型**   | **Description**                                                                                                                                                                               |
-| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName  | text    | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。                                                                                                                                           |
-| code        | integer | フォームイベントの数値。                                                                                                                                                                                  |
-| description | text    | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **プロパティ**   | **型**   | **説明**                                                                                                                    |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| objectName  | text    | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。                                                                       |
+| code        | integer | フォームイベントの数値。                                                                                                              |
+| description | text    | フォームイベント名(例: "On After Edit") 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 |
 
-For example, in the case of a click on a button, the object contains the following properties:
+例えば、ボタンをクリックした場合、オブジェクトには以下のプロパティが格納されています:
 
 ```json
 {"code":4,"description":"On Clicked","objectName":"Button2"}
 ```
 
-The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
+イベントオブジェクトには、イベントが発生したオブジェクトによっては追加のプロパティが含まれていることがあります。 これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です:
 
-- List box or list box column objects, see the *list box documentation on developer.4d.com*.
-- 4D View Pro areas, see *On VP Ready form event*.
+- リストボックスまたはカラムオブジェクト。詳細は*developer.4d.com でのリストボックスのドキュメント* を参照してください。
+- 4D View Pro エリア。詳細は*On VP Ready フォームイベント* を参照してください。
 
-**Note:** If there is no current event, **FORM Event** returns a null object.
+***注意:*** カレントのイベントが何もない場合、**FORM Event** はnull オブジェクトを返します。
 
 #### 例題 1
 
-You want to handle the On Clicked event on a button:
+ボタン上でOn Clicked イベントを管理したい場合を考えます:
 
 ```4d
  If(FORM Event.code=On Clicked)
@@ -54,11 +54,11 @@ You want to handle the On Clicked event on a button:
 
 #### 例題 2
 
-If you set the column object name with a real attribute name of a dataclass like this:
+カラムオブジェクト名に、実際のデータクラスの属性名を以下のように設定した場合:
 
 ![](../assets/en/commands/pict4843820.en.png)
 
-You can sort the column using the On Header Click event:
+On Header Click イベントを使用してカラムをソートすることができます:
 
 ```4d
  Form.event:=FORM Event
@@ -72,11 +72,11 @@ You can sort the column using the On Header Click event:
 
 #### 例題 3
 
-You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
+リストボックスオブジェクトのOn Display Details イベントが発生したときに、*メタ情報式 プロパティ*に設定したメソッドを実行したい場合を考えます:
 
 ![](../assets/en/commands/pict4843812.en.png)
 
-The *setColor* method:
+*setColor* メソッドの中身です:
 
 ```4d
  var $event;$0;$meta : Object
@@ -92,7 +92,7 @@ The *setColor* method:
  $0:=$meta
 ```
 
-The resulting list box when rows are selected:
+その結果、行が選択された際のリストボックスは以下のようになります:
 
 ![](../assets/en/commands/pict4843808.en.png)
 

@@ -86,7 +86,7 @@ Las variables o expresiones se pueden introducir o no y pueden recibir datos de 
 
 | Nombre     | Tipos de datos            | Valores posibles                                                            |
 | ---------- | ------------------------- | --------------------------------------------------------------------------- |
-| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D.</li><li>Cadena vacía para [variables dinámicas](#variables-dinámicas).</li><li>Array de cadenas (colección de nombres de array) para una columna [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes)]</li> |
+| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D.</li><li>Cadena vacía para [variables dinámicas](#dynamic-variables).</li><li>Array de cadenas (colección de nombres de array) para una columna [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expresiones
 

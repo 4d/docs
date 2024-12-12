@@ -208,7 +208,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## Objectos de formulário
 
-You designate a form object by passing its name as a string, preceded by the * parameter. O nome de um objeto de formulário pode conter até 255 caracteres.
+Você designa um objeto de formulário passando o nome dele como uma string, precedido pelo parâmetro *. O nome de um objeto de formulário pode conter até 255 caracteres.
 
 Exemplo:
 

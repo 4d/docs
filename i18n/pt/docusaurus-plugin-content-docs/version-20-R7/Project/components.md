@@ -13,7 +13,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
-- either a Project folder (interpreted component)
+- ou uma pasta de projeto (componente interpretado)
 - ou um arquivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.

@@ -11,12 +11,25 @@ title: コンポーネント
 
 ## インタープリターとコンパイル済みコンポーネント
 
-コンポーネントは、インタープリターまたは [コンパイル済み](../Desktop/building.md) のものが使えます。 コンポーネントのパッケージフォルダーには以下のいずれかが含まれます:
+Components can be interpreted or [compiled](../Desktop/building.md).
 
-- プロジェクトフォルダー (インタープリターのコンポーネント)
-- または .4DZ ファイル (コンパイル済みコンポーネント)
+- インタープリターモードで動作する 4Dプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。
+- コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
 
-インタープリターモードで動作する 4Dプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。 コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
+### Package folder
+
+The package folder of a component (_MyComponent.4dbase_ folder) can contain:
+
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **compiled components**:
+  - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
+  - or directly a .4DZ file with other folders such as _Resources_.
+
+:::note
+
+The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+
+:::
 
 ## コンポーネントの読み込み
 
