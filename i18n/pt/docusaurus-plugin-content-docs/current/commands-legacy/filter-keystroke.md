@@ -82,44 +82,41 @@ Em sua aplicação, tem algumas áreas de texto nas quais pode introduzir alguma
 Este exemplo implementa a segunda solução, baseado na tecla Ajuda.
 
 Como se explicou anteriormente, durante a edição da área de texto, o valor introduzido será atribuído à fonte de dados para esta área depois que a entrada de dados seja confirmada. Para poder recuperar e inserir entradas do dicionário na área de texto, enquanto esta área é editada, deve criar uma segunda área para colocar os valores introduzidos. Se passam como primeiros parâmetros os ponteiros até a área de entrada e até a variável, depois como terceiro parâmetro a string de caracteres “proibidos”. Sem importar como se trate a teclagem, o método retorna a teclagem original. Os caracteres “proibidos” são aqueles que você não deseja inserir na área editável e deseja tratar como caracteres especiais. 
-
 ```4d
   // Método de projeto Teclado sombra
   // Teclado sombra ( Ponteiro ; Ponteiro ; Alfa) -> Alfa
   // Teclado sombra ( -> srcArea ; -> curValor ; Filtro ) -> Antigo valor teclado
- C_STRING(1;$0)
- var $1;$2 : Pointer
- var $vtNovoValor : Text
- C_STRING(255;$3)
-  // Retorna o caractere original
- $0:=Keystroke
+ #DECLARE ($srcArea : Pointer ; $curVal : Pointer ; $filter : Text) -> $old : Text
+ var $vtNewValue : Text
+   // Retorna o caractere original
+ $old:=Keystroke
   // Obter a seleção de texto na área editável
- GET HIGHLIGHT($1->;$vlInicio;$vlFim)
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
   //Começar a trabalhar com o valor atual
- $vtNuevoValor:=$2->
+ $vtNewValue:=$curVal->
   // Dependendo da tecla pressionada ou do caractere introduzida,
   // Efetuar as ações apropriadas
  Case of
   // a tecla Retorno (eliminar) foi pressionada
-    :(Character code($0)=Backspace)
+   :(Character code($old)=Backspace)
   // Eliminar os caracteres selecionados ou o caractere a esquerda do cursor
        $vtNovoValor:=Eliminar texto($vtNovoValor;$vlInicio;$vlFim)
   // Uma tecla flecha foi pressionada
   // Não fazer nada, mas aceitar o caractere teclado
-    :(Character code($0)=Left arrow key)
-    :(Character code($0)=Right arrow key)
-    :(Character code($0)=Up arrow key)
-    :(Character code($0)=Down arrow key)
+    :(Character code($old)=Left arrow key)
+    :(Character code($old)=Right arrow key)
+    :(Character code($old)=Up arrow key)
+    :(Character code($old)=Down arrow key)
  
   // Um caractere válido foi introduzido
-    :(Position($0;$3)=0)
+    :(Position($old;$filter)=0)
        $vtNovoValor:=Inserir texto($vtNovoValor;$vlInicio;$vlFim;$0)
     Else
   // O caractere não foi aceito
        FILTER KEYSTROKE("")
  End case
   // Devolver o valor para a próxima gestão de keystroke
- $2->:=$vtNovoValor
+ $curVal->:=$vtNewValue
 ```
 
 Este método utiliza os seguintes dois sub-métodos:
@@ -128,28 +125,25 @@ Este método utiliza os seguintes dois sub-métodos:
   // Método de projeto Apagar texto
   // Apagar texto ( Alfa; Long ; Long ) -> Alfa
   // Apagar texto ( -> Texto ; SelInicio ; SelFim ) -> Novo texto
- var $0;$1 : Text
- var $2;$3 : Integer
- $0:=Substring($1;1;$2-1-Num($2=$3))+Substring($1;$3)
+ #DECLARE ($src : Text ; $start : Integer ; $end : Integer) -> $new : Text 
+ $new:=Substring($src;1;$start-1-Num($start=$end))+Substring($src;$end)
 ```
-
-```4d
+```4d 
   // Método de projeto Inserir texto
   // Inserir texto ( Alfa ; Long ; Long ; Alfa) -> Alfa
   // Inserir texto ( -> srcText ; SelInicio ; SelFin ; Texto a inserir ) -> Novo texto
- var $0;$1;$4 : Text
- var $2;$3 : Integer
- $0:=$1
- If($2#$3)
-    $0:=Substring($0;1;$2-1)+$4+Substring($0;$3)
+ #DECLARE ($src : Text ; $start : Integer ; $end : Integer ; $toInsert : Text) -> $new : Text 
+ $new:=$src
+ If($start # $end)
+    $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$end)
  Else
     Case of
-       :($2<=1)
-          $0:=$4+$0
-       :($2>Length($0))
-          $0:=$0+$4
+       :($start<=1)
+          $new:=$toInsert+$new
+       :($start>Length($new))
+          $new:=$new+$toInsert
        Else
-          $0:=Substring($0;1;$2-1)+$4+Substring($0;$2)
+          $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$start)
     End case
  End if
 ```
@@ -183,13 +177,13 @@ O método de projeto LOOKUP DICTIONARY é listado a seguir. Seu propósito é ut
   // CONSULTAR DICIONARIO ( Ponteiro ; Ponteiro )
   // CONSULTAR DICIONARIO ( -> Area editavel ; ->ShadowVariable )
  
- var $1;$2 : Pointer
+ #DECLARE ($area : Pointer ; $shadow : Pointer)
  var $vlInicio;$vlFin : Integer
  
   // Obter a seleção de texto na área editável
- GET HIGHLIGHT($1->;$vlInicio;$vlFin)
+ GET HIGHLIGHT($area->;$vlStart;$vlEnd)
   // Obter o texto selecionado ou a palavbra localizada a esquerda do cursor
- $vtHighlightedText:=ObterTextoSelecionado($2->;$vlInicio;$vlFin)
+ $vtHighlightedText:=Get highlighted text($shadow->;$vlStart;$vlEnd)
   //Há algo que buscar?
  If($vtHighlightedText#"")
   // Se a seleção de texto era o cursor
@@ -202,9 +196,9 @@ O método de projeto LOOKUP DICTIONARY é listado a seguir. Seu propósito é ut
   // Há alguma?
     If(Records in selection([Dicionario])>0)
   // Se houver alguma entrada disponível, inserí-la no texto shadow
-       $2->:=Insert text($2->;$vlInicio;$vlFin;[Dicionario]Entry)
+       $shadow->:=Insert text($shadow->;$vlStart;$vlEnd;[Dictionary]Entry)
   // Copiar o texto shadow na área editável
-       $1->:=$2->
+       $area->:=$shadow->
   // Fixar a seleção logo após inserir a entrada do dicionario
        $vlFin:=$vlInicio+Length([Dicionario]Entry)
        HIGHLIGHT TEXT(vsComments;$vlFin;$vlFin)
@@ -224,23 +218,22 @@ O método ObterTextoSelecionado é o seguinte:
   // Método de objeto ObterTextoSelecionado
   // ObterTextoSelecionado( Alfa ; Long ; Long ) -> Alfa
   // ObterTextoSelecionado ( Text ; SelInicio ; SelEnd ) -> texto selecionado
- var $0;$1 : Text
- var $2;$3 : Integer
- If($2<$3)
-    $0:=Substring($1;$2;$3-$2)
+ #DECLARE ($text : Text ; $start : Integer ; $end : Integer) -> $highlight : Text
+ If($start<$end)
+    $highlight:=Substring($text;$start;$end-$start)
  Else
-    $0:=""
-    $2:=$2-1
+    $highlight:=""
+    $start:=$start-1
     Repeat
-       If($2>0)
-          If(Position($1[[$2]];"  ,.!?:;()-_–—")=0)
-             $0:=$1[[$2]]+$0
-             $2:=$2-1
+       If($start>0)
+          If(Position($text[[$start]];"  ,.!?:;()-_–—")=0)
+             $highlight:=$text[[$start]]+$highlight
+             $start:=$start-1
           Else
-             $2:=0
+             $start:=0
           End if
        End if
-    Until($2=0)
+    Until($start=0)
  End if
 ```
 

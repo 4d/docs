@@ -80,46 +80,43 @@ En su aplicación, tiene algunas áreas de texto en las cuales puede introducir 
  \- Interceptar caracteres especiales durante la edición del área de texto 
 
 Este ejemplo implementa la segunda solución, basado en la tecla Ayuda.
-
 Como se explicó anteriormente, durante la edición del área de texto, el valor introducido será asignará a la fuente de datos para esta área después de validar la entrada de datos. Para poder recuperar e insertar entradas del diccionario en el área de texto mientras se edita esta área, debe crear una segunda área para poner los valores introducidos. Se pasan como primeros parámetros los punteros hacia el área de entrada y hacia la variable, luego como tercer parámetro la cadena de caracteres “prohibidos”. Sin importar cómo se trate el tecleado, el método devuelve el tecleadooriginal. Los caracteres “prohibidos” son aquellos que usted no quiere insertar en el área editable y quiere tratar como caracteres especiales. 
 
 ```4d
   // Método de proyecto Tecleado sombra
   // Tecleado sombra ( Puntero ; Puntero ; Alfa) -> Alfa
   // Tecleado sombra ( -> srcArea ; -> curValor ; Filtro ) -> Antiguo valor tecleado
- C_STRING(1;$0)
- var $1;$2 : Pointer
- var $vtNuevoValor : Text
- C_STRING(255;$3)
-  // Devuelve el carácter original
- $0:=Keystroke
+ #DECLARE ($srcArea : Pointer ; $curVal : Pointer ; $filter : Text) -> $old : Text
+ var $vtNewValue : Text
+   // Devuelve el carácter original
+  $old:=Keystroke
   // Obtener la selección de texto en el área editable
- GET HIGHLIGHT($1->;$vlInicio;$vlFin)
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
   //Comenzar a trabajar con el valor actual
- $vtNuevoValor:=$2->
+ $vtNewValue:=$curVal->
   // Dependiendo de la tecla presionada o del carácter introducido,
   // Efectuar las acciones apropiadas
  Case of
   // La tecla Retorno (Suprimir) ha sido presionada
-    :(Character code($0)=Backspace)
+  :(Character code($old)=Backspace)
   // Suprimir los caracteres seleccionados o el carácter a la izquierda del cursor
        $vtNuevoValor:=Borrar texto($vtNuevoValor;$vlInicio;$vlFin)
   // Una tecla flecha ha sido presionada
   // No hacer nada, sino aceptar el carácter tecleado
-    :(Character code($0)=Left arrow key)
-    :(Character code($0)=Right arrow key)
-    :(Character code($0)=Up arrow key)
-    :(Character code($0)=Down arrow key)
+    :(Character code($old)=Left arrow key)
+    :(Character code($old)=Right arrow key)
+    :(Character code($old)=Up arrow key)
+    :(Character code($old)=Down arrow key)
  
   // Un carácter válido ha sido introducido
-    :(Position($0;$3)=0)
+    :(Position($old;$filter)=0)
        $vtNuevoValor:=Insertar texto($vtNuevoValor;$vlInicio;$vlFin;$0)
     Else
   // El carácter no es aceptado
        FILTER KEYSTROKE("")
  End case
   // Devolver el valor para la próxima gestión de keystroke
- $2->:=$vtNuevoValor
+ $curVal->:=$vtNewValue
 ```
 
 Este método utiliza los siguientes dos submétodos:
@@ -128,28 +125,25 @@ Este método utiliza los siguientes dos submétodos:
   // Método de proyecto Borrar texto
   // Suprimir texto ( Alfa; Long ; Long ) -> Alfa
   // Suprimir texto ( -> Texto ; SelInicio ; SelFin ) -> Nuevo texto
- var $0;$1 : Text
- var $2;$3 : Integer
- $0:=Substring($1;1;$2-1-Num($2=$3))+Substring($1;$3)
+ #DECLARE ($src : Text ; $start : Integer ; $end : Integer) -> $new : Text 
+ $new:=Substring($src;1;$start-1-Num($start=$end))+Substring($src;$end)
 ```
-
-```4d
+```4d 
   // Método de proyecto Insertar texto
   // Insertar texto ( Alfa ; Long ; Long ; Alfa) -> Alfa
   // Insertar texto ( -> srcText ; SelInicio ; SelFin ; Texto a insertar ) -> Nuevo texto
- var $0;$1;$4 : Text
- var $2;$3 : Integer
- $0:=$1
- If($2#$3)
-    $0:=Substring($0;1;$2-1)+$4+Substring($0;$3)
+ #DECLARE ($src : Text ; $start : Integer ; $end : Integer ; $toInsert : Text) -> $new : Text 
+ $new:=$src
+ If($start # $end)
+    $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$end)
  Else
     Case of
-       :($2<=1)
-          $0:=$4+$0
-       :($2>Length($0))
-          $0:=$0+$4
+       :($start<=1)
+          $new:=$toInsert+$new
+       :($start>Length($new))
+          $new:=$new+$toInsert
        Else
-          $0:=Substring($0;1;$2-1)+$4+Substring($0;$2)
+          $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$start)
     End case
  End if
 ```
@@ -183,13 +177,13 @@ El método de proyecto LOOKUP DICTIONARY es listado a continuación. Su propósi
   // CONSULTAR DICCIONARIO ( Puntero ; Puntero )
   // CONSULTAR DICCIONARIO ( -> Area editable ; ->ShadowVariable )
  
- var $1;$2 : Pointer
+ #DECLARE ($area : Pointer ; $shadow : Pointer)
  var $vlInicio;$vlFin : Integer
  
   // Obtener la selección de texto en el área editable
- GET HIGHLIGHT($1->;$vlInicio;$vlFin)
+ GET HIGHLIGHT($area->;$vlStart;$vlEnd)
   // Obtener el texto seleccionado o la palabra situada a la izquierda del cursor
- $vtHighlightedText:=ObtenerTextoSeleccionado($2->;$vlInicio;$vlFin)
+ $vtHighlightedText:=Get highlighted text($shadow->;$vlStart;$vlEnd)
   //¿Hay algo que buscar?
  If($vtHighlightedText#"")
   // Si la selección de texto era el cursor
@@ -202,9 +196,9 @@ El método de proyecto LOOKUP DICTIONARY es listado a continuación. Su propósi
   // ¿Hay alguna?
     If(Records in selection([Diccionario])>0)
   // Si hay alguna entrada disponible, insertarla en el texto shadow
-       $2->:=Insert text($2->;$vlInicio;$vlFin;[Diccionario]Entry)
+       $shadow->:=Insert text($shadow->;$vlStart;$vlEnd;[Dictionary]Entry)
   // Copiar el texto shadow en área editable
-       $1->:=$2->
+       $area->:=$shadow->
   // Fijar la selección justo después de insertar la entrada del diccionario
        $vlFin:=$vlInicio+Length([Diccionario]Entry)
        HIGHLIGHT TEXT(vsComments;$vlFin;$vlFin)
@@ -224,23 +218,22 @@ El método ObtenerTextoSeleccionado es el siguiente:
   // Método de objeto ObtenerTextoSeleccionado
   // ObtenerTextoSeleccionado( Alfa ; Long ; Long ) -> Alfa
   // ObtenerTextoSeleccionado ( Text ; SelInicio ; SelEnd ) -> texto seleccionado
- var $0;$1 : Text
- var $2;$3 : Integer
- If($2<$3)
-    $0:=Substring($1;$2;$3-$2)
+ #DECLARE ($text : Text ; $start : Integer ; $end : Integer) -> $highlight : Text
+ If($start<$end)
+    $highlight:=Substring($text;$start;$end-$start)
  Else
-    $0:=""
-    $2:=$2-1
+    $highlight:=""
+    $start:=$start-1
     Repeat
-       If($2>0)
-          If(Position($1[[$2]];"  ,.!?:;()-_–—")=0)
-             $0:=$1[[$2]]+$0
-             $2:=$2-1
+      If($start>0)
+          If(Position($text[[$start]];"  ,.!?:;()-_–—")=0)
+             $highlight:=$text[[$start]]+$highlight
+             $start:=$start-1
           Else
-             $2:=0
+             $start:=0
           End if
        End if
-    Until($2=0)
+    Until($start=0)
  End if
 ```
 

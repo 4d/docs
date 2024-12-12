@@ -122,7 +122,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 ### Parâmetro da entidade
 
-As entidades passadas nos parâmetros são referenciadas no servidor através da sua chave (_ou seja_, a propriedade __KEY). If the key parameter is omitted in a request, a new entity is loaded in memory on the server.
+As entidades passadas nos parâmetros são referenciadas no servidor através da sua chave (_ou seja_, a propriedade __KEY). As entidades passadas nos parâmetros são referenciadas no servidor através da sua chave (_ou seja_, a propriedade __KEY).
 Também é possível transmitir valores para quaisquer atributos da entidade. Estes valores serão automaticamente utilizados para a entidade tratada no servidor.
 
 > Se o pedido enviar valores de atributos modificados para uma entidade existente no servidor, a função de modelo de dados ORDA chamada será automaticamente executada no servidor com valores modificados. Esta caraterística permite-lhe, por exemplo, verificar o resultado de uma operação numa entidade, depois de aplicar todas as regras de negócio, a partir da aplicação cliente. O usuário pode então decidir guardar ou não a entidade no servidor.

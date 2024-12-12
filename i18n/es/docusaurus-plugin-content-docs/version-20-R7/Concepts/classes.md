@@ -614,16 +614,16 @@ The following commands have specific features when they are used within class fu
 
 El comando [`Super`](../commands/super.md) permite realizar llamadas a [`superclass`](../API/ClassClass#superclass), es decir, a la clase padre de la función. Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error).
 
-For more details, see the [`Super`](../commands/super.md) command description.
+Para más detalles, vea la descripción del comando [`Super`](../commands/super.md).
 
 ### `This`
 
-The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+El comando [`This`](../commands/this.md) devuelve una referencia al objeto procesado actualmente. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
 Ejemplo:
 
 ```4d
-//Class: ob
+//Clase: ob
 
 Function f() : Integer
  return This.a+This.b
@@ -638,7 +638,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-For more details, see the [`This`](../commands/this.md) command description.
+Para más detalles, vea la descripción del comando [`This`](../commands/this.md).
 
 ## Comandos de clases
 
@@ -713,7 +713,7 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 ## Clases Singleton
 
-Una **clase singleton** es una clase usuario que sólo produce una única instancia. For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre el concepto de singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
 ### Tipos de Singletons
 
@@ -721,7 +721,7 @@ Una **clase singleton** es una clase usuario que sólo produce una única instan
 
 - a **process singleton** has a unique instance for the process in which it is instantiated,
 - a **shared singleton** has a unique instance for all processes on the machine.
-- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
+- un **singleton de sesión** es un singleton compartido pero con una instancia única para todos los procesos en la [sesión](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
 Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
@@ -745,13 +745,13 @@ Una vez instanciado, existe una clase singleton (y su singleton) siempre que exi
 
 Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) antes del [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class Constructor()`.
-- To declare a shared singleton class, write `shared singleton Class constructor()`.
-- To declare a session singleton class, write `session singleton Class constructor()`.
+- Para declarar una clase singleton (proceso), escriba `singleton Class Constructor()`.
+- Para declarar una clase singleton compartida, escribe `shared singleton Class constructor()`.
+- Para declarar una clase singleton de sesión, escriba `session singleton Class constructor()`.
 
 :::note
 
-- Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
+- Los singletons de sesión son automáticamente singletons compartidos (no hay necesidad de usar la palabra clave `shared` en el constructor de clases).
 - Las funciones compartidas Singleton soportan [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
@@ -856,4 +856,4 @@ $myList := cs.ItemInventory.me.itemList
 
 #### Ver también
 
-[Singletons in 4D](https://blog.4d.com/singletons-in-4d) (blog post) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (blog post).
+[Singletons en 4D](https://blog.4d.com/singletons-in-4d) (post del blog) <br/> [Singletons de sesión](https://blog.4d.com/introducing-session-singletons) (post del blog).

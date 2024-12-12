@@ -41,7 +41,7 @@ Con esta sintaxis:
 - los nombres de ruta absolutos empiezan por "/"
 - para subir una carpeta en una ruta relativa, utilice "../" delante del nombre de la ruta (por seguridad, no puede subir en el sistema de archivos).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
+En la sintaxis POSIX, generalmente usará los nombres de ruta `filesystem` con comandos [`File`](../commands/file.md) y [`Folder`](../commands/folder.md), por ejemplo:
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ Se soportan los siguientes modelos:
 - el texto contiene ":" y "\" como segundo y tercer caracter,
 - el texto comienza con "\\".
 
-Examples with [`Folder`](../commands/folder.md):
+Ejemplos con [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ Se soportan los siguientes modelos (sintaxis HFS+):
 - los separadores de carpetas son ":"
 - la ruta no debe comenzar con un ":"
 
-Examples with [`Folder`](../commands/folder.md):
+Ejemplos con [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ### Constructores `File` y `Folder`
 
-[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
+Los comandos [`File`](../commands/file.md) y [`Folder`](../commands/folder.md) sólo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
 
 ```4d
 //ERROR

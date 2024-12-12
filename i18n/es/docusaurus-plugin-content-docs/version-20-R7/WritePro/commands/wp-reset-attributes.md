@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
-| Parámetros          | Tipo   |   | Descripción                                       |
-| ------------------- | ------ | - | ------------------------------------------------- |
-| targetObj           | Object | → | Range or element or 4D Write Pro document         |
-| sectionOrSubsection | Object | → | Section or subsection of a 4D Write Pro document  |
-| attribName          | Text   | → | Name of attribute(s) to remove |
+| Parámetros          | Tipo   |   | Descripción                                         |
+| ------------------- | ------ | - | --------------------------------------------------- |
+| targetObj           | Object | → | Range or element or 4D Write Pro document           |
+| sectionOrSubsection | Object | → | Section or subsection of a 4D Write Pro document    |
+| attribName          | Text   | → | Nombre de atributo(s) a eliminar |
 
 <!-- END REF-->
 
@@ -24,7 +24,7 @@ The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summa
 In the *targetObj* parameter, you can pass either:
 
 - un rango, o
-- an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
+- un elemento (encabezado / pie de página / cuerpo / tabla / párrafo / imagen anclada / sección / subsección / hoja de estilo), o
 - a 4D Write Pro document
 
 When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section.

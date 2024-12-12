@@ -282,7 +282,7 @@ Para mostrar el tipo de parámetro, marque la opción **Mostrar tipos** en el me
 
 Después de desplegar la lista de parámetros, puede arrastrar y soltar los parámetros y los resultados de las funciones en el [Custom Watch Pane](#custom-watch-pane).
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+También puede utilizar el comando [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para recuperar la cadena de llamadas por programación.
 
 ## Panel de vigilancia personalizado
 

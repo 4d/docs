@@ -10,7 +10,7 @@ Usando a linguagem 4D, imprimir a mensagem tradicional ""Hello, world!" na tela 
 ALERT("Hello, World!")
 ```
 
-Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. To execute the code, you just need to click on the execution button in the Method editor:
+Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. Para executar o código, precisa clicar no botão de execução do editor de Método:
 
 ![alt-text](../assets/en/Concepts/helloworld.png)
 
@@ -40,13 +40,13 @@ A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Cria-se uma va
 C_DATE(MyDate) //Tipo de data para a variável MyDate
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Mesmo se não é geralmente recomendado, você pode criar variáveis simplesmente usando-as; não é necessariamente necessário defini-los formalmente, como se faz com os campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. Uma variável digitada com `C_XXX` não pode alterar o tipo. In compiled mode, the type can never be changed, regardless of how the variable was created.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável, atribui-lhe o tipo de data (temporária) e um conteúdo. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. Uma variável digitada com `C_XXX` não pode alterar o tipo. In compiled mode, the type can never be changed, regardless of how the variable was created.
 
 ## Comandos
 
@@ -178,7 +178,7 @@ Para aceder a um elemento da collection, é necessário passar o número do elem
 ```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  //access ao quarto elemento da coleção
 ```
 
 ## Operadores

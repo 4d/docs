@@ -86,7 +86,7 @@ Somente os estilos Clássico e Plano oferecem a propriedade [Botão padrão](pro
 
 ### Barra de ferramentas
 
-The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
+The Toolbar button style is primarily intended for integration in a toolbar. Inclui a opção de adicionar um menu pop-up (indicado por um triângulo invertido), sendo geralmente usado para exibir opções adicionais para o usuário selecionar.
 
 By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
@@ -281,7 +281,7 @@ O estilo de botão Círculo aparece como um botão sistema redondo. Este estilo 
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+No Windows, ele é idêntico ao estilo "Nenhum" (o círculo no plano de fundo não é considerado).
 
 #### JSON Exemplo
 

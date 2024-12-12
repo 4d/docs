@@ -3,7 +3,7 @@ id: object
 title: Object
 ---
 
-Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. A sintaxe desses objetos é baseada na notação JSON:
+Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objetos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
 
 - Um nome de uma propriedade é sempre um texto, por exemplo "nome". Deve seguir [regras específicas](identifiers.md#object-properties).
 
@@ -22,7 +22,7 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
 
 (*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**Aviso:** tenha em mente que os nomes de atributo diferenciam entre maiúsculas e minúsculas.
 
 You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Gerencia variáveis do tipo Objecto, campos ou expressões usando a notação de objecto [](dt_object.md#syntax-basics) ou os comandos clássicos disponíveis no tema **Objects (Language)** .
 
@@ -34,7 +34,7 @@ Cada valor de propriedade acessado através da notação de objeto é considerad
 
 ## Inicialização
 
-Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
+Objetos devem ter sido inicializadas, por exemplo, usando o comando `New object`, caso contrário, tentar ler ou modificar suas propriedades gerará um erro de sintaxe.
 
 Exemplo:
 ```4d
@@ -46,8 +46,8 @@ Exemplo:
 
 Pode criar dois tipos de objetos:
 
-- regular (non-shared) objects, using the `New object` command. Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- objetos compartilhados, usando o comando `New shared object`. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- objetos regulares (não compartilhados) usando o comando `New object`. Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
+- objetos compartilhados, usando o comando `New shared object`. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 
 ## Noções básicas de sintaxe
@@ -147,7 +147,7 @@ Quando se usar a notação de objeto, o valore **null** se torna compatível com
  If(myColl[2]=Null)
 ```
 
-For more information, please refer to the `Null` command description.
+Para mais informações, consulte a descrição de comando `Null`.
 
 ### Valor não definido
 

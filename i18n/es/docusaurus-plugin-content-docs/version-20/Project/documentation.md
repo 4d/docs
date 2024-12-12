@@ -162,6 +162,7 @@ _italic_
     var $txt : Texto
     $txt:="¡Hola mundo!"  
 ```  
+```  
 ```
 ````
 - La etiqueta de la tabla es soportada:

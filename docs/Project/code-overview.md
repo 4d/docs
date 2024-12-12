@@ -6,8 +6,7 @@ title: Methods and classes
 
 The 4D code used across your project is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md). 
 
-The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](../code-editor/write-class-method.md) to work with your code.
-
+The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the included 4D [code editor](../code-editor/write-class-method.md) to work with your code. You can also use other editors such as **VS Code**, for which the [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode) is available. 
 
 ## Creating methods
 

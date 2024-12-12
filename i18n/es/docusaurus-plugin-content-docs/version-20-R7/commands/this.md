@@ -50,7 +50,7 @@ $val:=$o.a //42
 En todos los casos, `This` se refiere al objeto sobre el que se ha llamado el método, como si el método fuera una función del objeto.
 
 ```4d
-//Class: ob
+//Clase: ob
 
 Function f() : Integer
  return This.a+This.b
@@ -70,7 +70,7 @@ En este ejemplo, el objeto asignado a la variable $o no tiene su propia propieda
 
 #### Objeto fórmula
 
-In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
+En el contexto de la ejecución de un objeto fórmula creado por los comandos [Formula](formula.md) o [Formula from string](formula-from-string.md), `This` devuelve una referencia al objeto actualmente procesado por la fórmula.
 
 For example, you want to use a project method as a formula encapsulated in an object:
 
@@ -79,8 +79,8 @@ For example, you want to use a project method as a formula encapsulated in an ob
  $person.firstName:="John"
  $person.lastName:="Smith"
  $person.greeting:=Formula(Greeting)
- $g:=$person.greeting("hello") // returns "hello John Smith"
- $g:=$person.greeting("hi") // returns "hi John Smith"
+ $g:=$person.greeting("hello") // devuelve "hola John Smith"
+ $g:=$person.greeting("hi") // devuelve "hi John Smith"
 ```
 
 With the *Greeting* project method:
@@ -92,7 +92,7 @@ With the *Greeting* project method:
 
 #### List box
 
-In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.
+En el contexto de un list box asociado a una colección o una selección de entidades, durante los eventos [`On Display Detail`](../Events/onDisplayDetail.md) o [`On Data Change`](../Events/onDataChange.md), `This` devuelve una referencia al elemento de colección o entidad a la que accede el list box para mostrar la línea actual.
 
 :::note
 
@@ -127,7 +127,7 @@ A collection of objects, each with this structure:
  
 ```
 
-In the list box, each column refers to one of the properties of the object, either directly (This.name), indirectly (This.employees.length), or through an expression (*getPicture*) in which can be used directly. The list box looks like:
+En el list box, cada columna se refiere a una de las propiedades del objeto, ya sea directamente (This.name), indirectamente (This.employees.length), o a través de una expresión (*getPicture*) en la que se puede usar directamente. The list box looks like:
 
 ![](../assets/en/commands/pict3776706.en.png)
 
@@ -160,13 +160,13 @@ You build a list box of the "Collection or entity selection" type with the follo
 Note que:
 
 - *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
-- *This.meetings* is a related attribute (based upon the One To Many relation name) that returns an entity selection of the ds.Meeting dataclass.
+- *This.meetings* es un atributo relacionado (basado en el nombre de una relación de Uno a Muchos) que devuelve una selección de entidad de la base de datos ds.Meeting.
 - **Form.eventList** is the entity selection that is attached to the list box. The initialization code can be put in the on load form event:
 
 ```4d
  Case of  
     :(Form event code=On Load)  
-       Form.eventList:=ds.Event.all() //returns an entity selection with all entities  
+       Form.eventList:=ds.Event.all() //devuelve una selección de entidad con todas las entidades  
  End case  
 ```
 

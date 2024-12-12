@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, object, boolean, collection, or null).
+Coleções são listas ordenadas de valores de tipos diferentes ou não (texto, número, objeto, booleano, coleção ou null).
 
-To manage Collection type variables you must use object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Para gerenciar variáveis do tipo Coleção, você deve usar notação objeto (veja [Noções básicas de Sintaxe](Concepts/dt_object.md#syntax-basics)).
 
 Para acessar a um elemento de coleção, é necessário passar o número do elemento dentro de parênteses rectos:
 
@@ -13,7 +13,7 @@ Para acessar a um elemento de coleção, é necessário passar o número do elem
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in expression. Exemplos:
+Você pode passar qualquer expressão 4D válida que retorne um inteiro positivo em expressão. Exemplos:
 
 ```4d
  myCollection[5]  //aceso ao 6º elemento da coleção
@@ -22,7 +22,7 @@ You can pass any valid 4D expression which returns a positive integer in express
 
 **Atenção:** os elementos da coleção estão numerados desde 0.
 
-You can assign a value to a collection element or get a collection element value using object notation:
+Você pode atribuir um valor a um elemento de coleção ou obter um valor de elemento de coleção usando notação objeto:
 
 ```4d
  myCol[10]:="My new element"
@@ -42,7 +42,7 @@ Se atribuir um índice de elemento que ultrapasse o último elemento existente d
 
 ## Inicialização
 
-Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
+Coleções devem ter sido inicializadas, por exemplo, usando o comando `New collection`, caso contrário, tentar ler ou modificar seus elementos gerará um erro de sintaxe.
 
 Exemplo:
 ```4d
@@ -54,16 +54,16 @@ Exemplo:
 
 Pode criar dois tipos de coleções:
 
-- regular (non-shared) collections, using the `New collection` command. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- coleções compartilhadas, usando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- coleções regulares (não compartilhadas) usando o comando `New collection`. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções compartilhadas, usando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Acesso a estas coleções é controlado por estruturas `Use...End use`. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 ## Métodos de coleção
 
-4D collection references benefit from special methods (sometimes named *member functions*). Thanks to object notation, these methods can be applied to collection references using the following syntax:
+As referências a coleções 4D se beneficiam de métodos especiais (às vezes chamados *funções membro*). Graças a notação objeto, esses métodos podem ser aplicados às referências de coleções usando a seguinte sintaxe:
 
 > {$result:=}myCollection.memberFunction( {params} )
 
-Note that, even if it does not have parameters, a member function must be called with () parenthesis, otherwise a syntax error is generated.
+Observe que, mesmo que ele não tenha parâmetros, uma função membro deve ser chamada com parênteses (), caso contrário, um erro de sintaxe é gerado.
 
 Por exemplo:
 
@@ -72,7 +72,7 @@ $newCol:=$col.copy() //cópia de $col a $newCol
 $col.push(10;100) //adiciona 10 e 100 para a coleção
 ```
 
-Some methods return the original collection after modification, so that you can run the calls in a sequence:
+Alguns métodos retornam a coleção original após modificação, para poder rodar as chamadas em sequência:
 
 ```4d
  $col:=New collection(5;20)
@@ -88,7 +88,7 @@ Vários métodos aceitam um _propertyPath_ como parâmetro. Este parâmetro sign
 - um nome de objeto propriedade por exemplo "Sobrenome"
 - ou uma rota de propriedades de objeto, ou seja, uma sequência hierárquica de subpropriedades vinculadas com caracteres de ponto, por exemplo "empregado.filhos.nome".
 
-**Warning:** When using methods and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Advertência:** ao usar métodos e parâmetros propertyPath, não se pode usar ".", "[ ]", ou espaços nos nomes das propriedades, dado que isso impedirá que 4D analise corretamente o caminho:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indefinido

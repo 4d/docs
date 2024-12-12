@@ -46,7 +46,7 @@ Las colecciones deben haber sido instanciadas, de lo contrario intentar leer o m
 
 La instanciación de la colección puede realizarse de una de las siguientes maneras:
 
-- using the [`New collection`](../commands/new-collection.md) command,
+- usando el comando [`New collection`](../commands/new-collection.md)
 - utilizando el operador `[]`.
 
 :::info
@@ -57,7 +57,7 @@ Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Monitored ac
 
 ### Comando `New collection`
 
-The [`New collection`](../commands/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
+El comando [`New collection`](../commands/new-collection.md) crea una nueva colección vacía o prellenada y devuelve su referencia.
 
 Ejemplos:
 
@@ -105,8 +105,8 @@ Si crea un literal de colección que contenga un único elemento, asegúrese de 
 
 Puede crear dos tipos de colecciones:
 
-- regular (non-shared) collections, using the [`New collection`](commands/new-collection.md) command or collection literal syntax (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
-- shared collections, using the [`New shared collection`](commands/new-shared-collection.md) command. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
+- las colecciones estándar (no compartidas), utilizando el comando [`New collection`](commands/new-collection.md) o la sintaxis literal de la colección (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
+- las colecciones compartidas, utilizando el comando [`New shared collection`](commands/new-shared-collection.md). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
 
 Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 

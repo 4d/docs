@@ -41,7 +41,7 @@ The language lets you take complete control over the design and operation of you
 
 A linguagem 4D lhe permite tomar o controle total de seus dados de uma maneira poderosa e elegante. A linguagem é fácil o suficiente para os iniciantes e sofisticada o bastante para os desenvolvedores com experiência. It provides smooth transitions from built-in database functions to a completely customized database.
 
-Os comandos da linguagem 4D oferecem acesso aos editores padrão de gestão de registros. For example, when you use the command, you are presented with the Query Editor (which can be accessed in the Design mode using the Query command in the Records menu. Pode dizer ao comando para pesquisar por dados descritos explicitamente. Por exemplo, ([People];[People]Last Name="Smith") encontrará todas as pessoas chamadas Smith em seu banco de dados.
+Os comandos da linguagem 4D oferecem acesso aos editores padrão de gestão de registros. Por exemplo, quando usar o comando, é apresentado o Editor de Consultas (ao qual se pode acessar no modo Desenho, usando o comando Query do menu Registros). Pode dizer ao comando para pesquisar por dados descritos explicitamente. Por exemplo, ([People];[People]Last Name="Smith") encontrará todas as pessoas chamadas Smith em seu banco de dados.
 
 A linguagem 4D é bem poderosa - um comando pode substituir centenas ou até milhares de linhas de códigos escritas nas linguagens tradicionais. Surpreendentemente, esse poder vem com bastante simplicidade - comandos com nomes em inglês comum. Por exemplo, para realizar uma pesquisa, se utiliza o comando `QUERY`; para adicionar um novo registro, se utiliza o comando `ADD RECORD`.
 

@@ -62,6 +62,7 @@ The dialog is closed by the user either with an "accept" action (triggered by th
 Keep in mind that validation does not equal saving: if the dialog includes fields, you must explicitly call the [SAVE RECORD](../commands-legacy/save-record.md) command to save any data that has been modified.
 
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
+If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. If the current process terminates, the forms created in this way are automatically closed in the same way as if a [CANCEL](../commands-legacy/cancel.md) command had been called. This opening mode is particularly useful for displaying a floating palette with a document, without necessarily requiring another process.
 
 **Notas:**
