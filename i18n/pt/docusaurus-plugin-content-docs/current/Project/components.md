@@ -11,12 +11,25 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
+Components can be interpreted or [compiled](../Desktop/building.md).
 
-- either a Project folder (interpreted component)
-- ou um arquivo .4DZ (componente compilado)
+- A 4D project running in interpreted mode can use either interpreted or compiled components.
+- A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
 
-A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
+### Package folder
+
+The package folder of a component (_MyComponent.4dbase_ folder) can contain:
+
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **compiled components**:
+  - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
+  - or directly a .4DZ file with other folders such as _Resources_.
+
+:::note
+
+The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+
+:::
 
 ## Carregando componentes
 
