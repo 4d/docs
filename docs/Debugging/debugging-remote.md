@@ -21,6 +21,9 @@ Only one debugger can debug a 4D Server application at a given time. It is calle
 * the local 4D Server debugger (default) - if the server is not running headless.
 * the debugger of a remote 4D client - if the remote session has access to Design mode.
 * the [Qodly debugger](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) on 4D Server - if the server allows access to Qodly Studio. 
+* the VS Code debugger, provided you installed the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension. 
+
+:::
 
 The attached debugger is called whenever a 4D Server encounters:
 * a break point

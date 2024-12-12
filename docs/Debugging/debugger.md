@@ -3,14 +3,13 @@ id: debugger
 title: Debugger
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
+The 4D debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
 :::info
 
-If you are used to coding with VS Code, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger]
-(https://github.com/4d/4D-Debugger-VSCode) extension. 
+If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension. 
 
 :::
 
