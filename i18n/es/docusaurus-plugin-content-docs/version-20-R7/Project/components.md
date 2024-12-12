@@ -5,13 +5,13 @@ title: Componentes
 
 Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
-Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\&type=Repositories).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\\&type=Repositories).
 
 Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de forma transparente en su ordenador o en un repositorio Github.
 
 ## Componentes interpretados y compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
+Los componentes pueden ser interpretados o [compilados](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
 
 - ya sea una carpeta Proyecto (componente interpretado)
 - o un archivo .4DZ (componente compilado)
@@ -126,7 +126,7 @@ Si no desea utilizar la arquitectura **dependencies.json**, puede instalar compo
 
 #### Personalizar rutas de componentes
 
-Si desea personalizar la ubicación de los componentes locales, declare las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto en el archivo [**environment4d.json**](#environment4djson).
+Si la ruta de un componente declarado en el archivo **environment4d.json** no se encuentra cuando se inicia el proyecto, el componente no se carga y obtiene el estado *No encontrado* [status](dependency-status), incluso si existe una versión del componente junto a la carpeta de paquetes del proyecto.
 
 Puede utilizar rutas **relativas** o **absolutas** (ver abajo).
 
@@ -144,7 +144,7 @@ Ejemplos:
 
 :::note
 
-Si la ruta de un componente declarado en el archivo **environment4d.json** no se encuentra cuando se inicia el proyecto, el componente no se carga y obtiene el estado *No encontrado* [status](dependency-status), incluso si existe una versión del componente junto a la carpeta de paquetes del proyecto.
+Si desea personalizar la ubicación de los componentes locales, declare las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto en el archivo [**environment4d.json**](#environment4djson).
 
 :::
 
@@ -158,9 +158,9 @@ Utilizar rutas relativas es **recomendable** en la mayoría de los casos, ya que
 
 Las rutas absolutas sólo deben utilizarse para componentes específicos de una máquina y un usuario.
 
-### Componentes almacenados en GitHub
+### Configuración del repositorio GitHub
 
-Los componentes 4D disponibles en GitHub pueden ser referenciados y cargados automáticamente en sus proyectos 4D.
+Para poder referenciar y utilizar directamente un componente 4D almacenado en GitHub, es necesario configurar el repositorio del componente GitHub:
 
 :::note
 
@@ -168,9 +168,9 @@ En cuanto a los componentes almacenados en GitHub, tanto los archivos [**depende
 
 :::
 
-#### Configuración del repositorio GitHub
+#### Componentes almacenados en GitHub
 
-Para poder referenciar y utilizar directamente un componente 4D almacenado en GitHub, es necesario configurar el repositorio del componente GitHub:
+Los componentes 4D disponibles en GitHub pueden ser referenciados y cargados automáticamente en sus proyectos 4D.
 
 - Comprima los archivos componentes en formato ZIP.
 - Nombre este archivo con el mismo nombre que el repositorio GitHub.
