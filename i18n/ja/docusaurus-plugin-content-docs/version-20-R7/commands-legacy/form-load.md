@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM LOAD.Summary-->**FORM LOAD**コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて*formData* 引数のデータ(オプション)とともにメモリーにロードします。<!-- END REF-->1つのプロセスにつきカレントフォームは1つしか指定できません。
@@ -171,3 +168,12 @@ displayed_sidebar: docs
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
 [OBJECT Get type](object-get-type.md)  
 [Print object](print-object.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1103 |
+| スレッドセーフである | &cross; |
+
+

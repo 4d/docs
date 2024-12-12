@@ -126,3 +126,12 @@ Request to add a record in JSON to a remote database::
 #### See also 
 
 [HTTP Get](http-get.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1158 |
+| Thread safe | &check; |
+
+

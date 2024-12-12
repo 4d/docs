@@ -44,3 +44,12 @@ displayed_sidebar: docs
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP Get info](soap-get-info.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 781 |
+| スレッドセーフである | &check; |
+
+

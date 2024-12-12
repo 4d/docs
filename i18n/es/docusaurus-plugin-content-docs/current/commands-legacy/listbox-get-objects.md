@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->El comando **LISTBOX GET OBJECTS** devuelve un array que contiene los nombres de todos los objetos que componen el list box designado por los parámetros *objeto* y *\** .<!-- END REF-->  
@@ -62,3 +59,12 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
 
 [FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1302 |
+| Hilo seguro | &cross; |
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Day of.Summary-->The **Day of** command returns the day of the month of *aDate*.<!-- END REF-->
-
-**Note:** **Day of** returns a value between 1 and 31\. To get the day of the week for a date, use the command [Day number](day-number.md).
+<!--REF #_command_.Day of.Summary-->The **Day of** command returns the day of the month of *aDate*.<!-- END REF-->**Day of** returns a value between 1 and 31\. To get the day of the week for a date, use the command [Day number](day-number.md).
 
 #### Example 1 
 
@@ -38,3 +36,12 @@ See the example for the [Current date](current-date.md) command.
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 23 |
+| Thread safe | &check; |
+
+

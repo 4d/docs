@@ -24,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [WEB GET BODY PART](web-get-body-part.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1211 |
+| スレッドセーフである | &check; |
+
+

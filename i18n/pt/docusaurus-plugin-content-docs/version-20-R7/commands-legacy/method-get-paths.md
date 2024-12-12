@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->O comando **METHOD GET PATHS** enche o array *arrRotas* com as rotas de acesso internas e os nomes dos métodos da aplicação do tipo definido pelo parâmetro *tipoMetodo*.<!-- END REF-->  
@@ -87,3 +84,12 @@ Consulte o exemplo do comando [METHOD SET CODE](method-set-code.md).
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1163 |
+| Thread-seguro | &cross; |
+
+

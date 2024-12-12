@@ -326,3 +326,13 @@ Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux 
  OB SET($oParams;"historyLength";2*60)
  $measures:=Database measures($oParams)
 ```
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1314 |
+| Thread safe | &check; |
+
+

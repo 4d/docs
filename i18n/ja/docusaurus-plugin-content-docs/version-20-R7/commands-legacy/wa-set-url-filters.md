@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->WA SET URL FILTERS コマンドは、*\** と *object* 引数で指定したWebエリアで、1 つ以上のフィルタを設定するために使用します。<!-- END REF--> 
@@ -140,3 +137,12 @@ displayed_sidebar: docs
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1030 |
+| スレッドセーフである | &cross; |
+
+

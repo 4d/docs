@@ -67,3 +67,13 @@ La variable système OK prend la valeur 1 si la commande a été correctement ex
 #### Voir aussi 
 
 [RESOLVE ALIAS](resolve-alias.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 694 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Compatibility Note 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->This command was named **CALL PROCESS** in previous 4D releases.<!-- END REF--> 
@@ -47,3 +44,13 @@ See example for [Semaphore](semaphore.md).
 [Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 329 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

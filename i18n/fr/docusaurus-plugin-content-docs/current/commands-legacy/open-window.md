@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** ouvre une nouvelle fenêtre dont les dimensions sont définies par les quatre premiers paramètres :
@@ -138,3 +135,12 @@ Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres f
 [CLOSE WINDOW](close-window.md)  
 *Creer fenetre*  
 [Open form window](open-form-window.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 153 |
+| Thread safe | &cross; |
+
+

@@ -77,3 +77,12 @@ El código de *workerMethod* es:
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
 *Sobre workers*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1389 |
+| Hilo seguro | &check; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES retorna as propriedades do grupo cujo número de referência único de ID de grupo pode passar em *GrupoID*.<!-- END REF--> Deve passar o número de referência do grupo retornado pelo comando [GET GROUP LIST](get-group-list.md). 
@@ -42,3 +39,13 @@ Se não tiver privilégios de acesso para chamar ao comando GET GROUP PROPERTIES
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 613 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

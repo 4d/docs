@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->**SET UPDATE FOLDER**コマンドは、カレントの組み込まれた4Dアプリケーションのアップデート情報を含んだフォルダの場所を指定します。<!-- END REF-->この情報は [RESTART 4D](restart-4d.md)メソッドが呼ばれるまで4Dセッション中は保存されます。アプリケーションが手動で終了した場合、この情報は保存されません。
@@ -60,3 +57,13 @@ displayed_sidebar: docs
 
 [Get last update log path](get-last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1291 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK、error |
+
+

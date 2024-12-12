@@ -63,3 +63,12 @@ Ver el segundo ejemplo del comando [SET QUERY DESTINATION](set-query-destination
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 395 |
+| Hilo seguro | &check; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->The GET MENU ITEM ICON command returns, in the *iconRef* variable, the reference of any icon that is associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This reference is the pathname or number of the picture.
@@ -36,3 +33,12 @@ If no icon is associated with the menu item, the command returns a blank value.
 #### See also 
 
 [SET MENU ITEM ICON](set-menu-item-icon.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 983 |
+| Thread safe | &cross; |
+
+

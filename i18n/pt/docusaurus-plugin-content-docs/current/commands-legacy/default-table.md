@@ -77,3 +77,12 @@ Neste código o resultado da tabela padrão:
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 46 |
+| Thread-seguro | &check; |
+
+

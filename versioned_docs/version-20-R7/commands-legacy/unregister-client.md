@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->The **UNREGISTER CLIENT** command “unregisters” a 4D client station.<!-- END REF--> The client must have already been registered by the [REGISTER CLIENT](register-client.md) command. 
@@ -36,3 +33,13 @@ If the client is correctly unregistered, the OK system variable is set to 1\. If
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 649 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

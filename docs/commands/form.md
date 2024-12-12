@@ -11,9 +11,6 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | Form data of the current form |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -109,3 +106,12 @@ If values are edited and the OK button is clicked, the field is updated (the par
 
 
 [DIALOG](dialog.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1466 |
+| Thread safe | &cross; |
+
+

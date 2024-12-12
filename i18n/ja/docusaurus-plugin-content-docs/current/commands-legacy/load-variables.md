@@ -45,3 +45,13 @@ displayed_sidebar: docs
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 74 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、Document |
+
+

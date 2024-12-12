@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Macintosh option down.Summary-->Macintosh option down はMacintoshのoptionキーが押されていると[True](true.md "True")を返します。<!-- END REF-->
-
-**Note:** Windowsのプラットフォーム上で呼び出された場合は、WindowsのAltキーが押されていると、Macintosh option down は[True](true.md "True")を返します。
+<!--REF #_command_.Macintosh option down.Summary-->Macintosh option down はMacintoshのoptionキーが押されていると[True](true.md "True")を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、WindowsのAltキーが押されていると、Macintosh option down は[True](true.md "True")を返します。
 
 #### 例題 
 
@@ -31,3 +29,12 @@ displayed_sidebar: docs
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 545 |
+| スレッドセーフである | &check; |
+
+

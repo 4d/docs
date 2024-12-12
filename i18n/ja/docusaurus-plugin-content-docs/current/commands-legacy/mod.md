@@ -19,8 +19,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Mod.Summary-->**Mod**コマンドは、*number1*を*number2*で割り算し、その余りの整数を返します。<!-- END REF-->
 
-**Notes:** 
-
 * **Mod**は整数、倍長整数、実数を受け入れます。しかし*number1*または*number2*が実数の場合、それらの値は丸められてから**Mod**計算を実行します。
 * (2^31を超える) サイズの大きな実数を用いてModを使用する場合は注意が必要です。この場合、処理が標準的なプロセッサの計算能力の限界に達してしまう可能性があります。
 
@@ -37,3 +35,13 @@ displayed_sidebar: docs
  vlResult:=Mod(4;2) // vlResult gets 0
  vlResult:=Mod(3.5;2) // vlResult gets 0
 ```
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 98 |
+| スレッドセーフである | &check; |
+
+

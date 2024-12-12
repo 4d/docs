@@ -21,3 +21,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [ADD TO SET](add-to-set.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 561 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

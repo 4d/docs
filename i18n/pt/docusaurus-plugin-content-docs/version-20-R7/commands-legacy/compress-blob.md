@@ -91,3 +91,13 @@ A variável OK é definida como 1 se o BLOB foi compactado com sucesso, caso con
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 534 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

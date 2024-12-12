@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->La commande **OBJECT Get font style** retourne le style courant de la police de caractères utilisée par le ou les objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 
@@ -36,3 +33,12 @@ Vous pouvez comparer la valeur retournée par la commande à la valeur d’une o
 #### Voir aussi 
 
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1071 |
+| Thread safe | &cross; |
+
+

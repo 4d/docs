@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->GET FIELD ENTRY PROPERTIESコマンドは、*tableNum*および*fieldNum*、または*fieldPtr*で指定したフィールドのデータ入力プロパティを返します。<!-- END REF-->  
@@ -44,3 +41,12 @@ displayed_sidebar: docs
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 685 |
+| スレッドセーフである | &cross; |
+
+

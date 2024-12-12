@@ -60,3 +60,13 @@ Par exemple, la méthode suivante effectue une boucle sur chaque enregistrement 
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 262 |
+| Thread safe | &check; |
+| Change la sélection courante ||
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.BLOB to print settings.Summary-->O comando **BLOB to print settings** substitui a configuração de impressão 4D atual pelos parâmetros armazenados no BLOB *confImpr*.<!-- END REF--> Este BLOB deve ter sido gerado pelo comando [Print settings to BLOB](print-settings-to-blob.md) ou pelo comando 4D Pack  4D Pack (ver abaixo).
@@ -77,3 +74,12 @@ Se quiser aplicar a configuração de impressão salva no disco para o contexto 
 #### Ver também 
 
 [Print settings to BLOB](print-settings-to-blob.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1434 |
+| Thread-seguro | &cross; |
+
+

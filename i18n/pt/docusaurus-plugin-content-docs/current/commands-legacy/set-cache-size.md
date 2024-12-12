@@ -39,3 +39,12 @@ Se quiser adicionar 100 MB ao tamanho da cache de seu banco de ados atual. Pode 
 #### Ver também 
 
 [Get cache size](get-cache-size.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1399 |
+| Thread-seguro | &check; |
+
+

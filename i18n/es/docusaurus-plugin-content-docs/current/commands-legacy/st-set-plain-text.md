@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->El comando ST SET PLAIN TEXT inserta el texto pasado en el parámetro *nuevTexto* en el campo o la variable de texto con estilo designado por el parámetro *objeto* .<!-- END REF--> Este comando aplica únicamente al texto plano del parámetro *objeto*, sin modificar las posibles etiquetas de estilo que contiene. 
@@ -95,3 +92,13 @@ En caso de un error, la variable no cambia. Cuando se produce un error en una va
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1136 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

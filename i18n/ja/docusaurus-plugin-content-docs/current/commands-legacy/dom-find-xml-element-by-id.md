@@ -28,3 +28,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Find XML element](dom-find-xml-element.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1010 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

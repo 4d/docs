@@ -136,3 +136,13 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 811 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

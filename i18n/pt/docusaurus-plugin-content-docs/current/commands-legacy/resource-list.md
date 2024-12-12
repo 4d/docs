@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->O comando RESOURCE LIST preenche os arrays *resNum* e *resNomes* com os números e os nomes dos recursos cujo tipo se passa em *resTipo*.<!-- END REF-->  
@@ -72,3 +69,12 @@ O exemplo a seguir copia os recursos imagem presentes em todos os arquivos de re
 #### Ver também 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 500 |
+| Thread-seguro | &cross; |
+
+

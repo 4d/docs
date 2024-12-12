@@ -73,3 +73,12 @@ O exemplo a seguir pode ser usado para descobrir se o método é chamado de um c
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 489 |
+| Thread-seguro | &check; |
+
+

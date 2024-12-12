@@ -23,3 +23,12 @@ displayed_sidebar: docs
 
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 *Webセッション管理(旧式)*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1162 |
+| スレッドセーフである | &check; |
+
+

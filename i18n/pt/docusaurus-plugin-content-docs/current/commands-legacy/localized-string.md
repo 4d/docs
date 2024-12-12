@@ -54,3 +54,13 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Se *r
 #### Ver também 
 
 [Get database localization](get-database-localization.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 991 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->The **GET LIST ITEM ICON** command returns, in *icon*, the icon associated with the item whose reference number is passed in *itemRef* in the list whose reference number or object name is passed in *list*.<!-- END REF-->  
@@ -40,3 +37,12 @@ If no icon is associated with the item, the icon variable is returned empty.
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 951 |
+| Thread safe | &cross; |
+
+

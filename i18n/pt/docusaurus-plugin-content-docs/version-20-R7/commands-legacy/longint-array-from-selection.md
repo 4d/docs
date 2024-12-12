@@ -35,3 +35,12 @@ Se quiser recuperar os números dos registros da seleção atual:
 #### Ver também 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 647 |
+| Thread-seguro | &check; |
+
+

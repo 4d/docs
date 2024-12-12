@@ -85,3 +85,12 @@ displayed_sidebar: docs
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 691 |
+| スレッドセーフである | &check; |
+
+

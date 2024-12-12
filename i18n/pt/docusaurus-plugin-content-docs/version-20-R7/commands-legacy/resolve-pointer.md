@@ -108,3 +108,12 @@ Este é um exemplo de ponteiro a um array 2D:
 [Is a variable](is-a-variable.md)  
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 394 |
+| Thread-seguro | &check; |
+
+

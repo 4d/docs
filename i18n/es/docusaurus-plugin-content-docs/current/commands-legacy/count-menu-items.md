@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Count menu items.Summary-->El comando Count menu items devuelve el número de los elementos del menú presentes en el menú cuyo número o referencia se pasa en *menu.<!-- END REF-->*  
@@ -29,3 +26,13 @@ Si omite el parámetro *proceso*, Count menu items se aplica a la barra de menú
 #### Ver también 
 
 [Count menus](count-menus.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 405 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

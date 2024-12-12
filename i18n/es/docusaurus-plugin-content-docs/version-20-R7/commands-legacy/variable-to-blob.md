@@ -138,3 +138,13 @@ Después de añadir estos métodos a su aplicación, puede escribir:
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 532 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

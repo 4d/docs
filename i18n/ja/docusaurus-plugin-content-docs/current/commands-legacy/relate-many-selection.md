@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.RELATE MANY SELECTION.Summary-->RELATE MANY SELECTION コマンドは、1テーブルのレコードセレクションを元にしてnテーブルのレコードセレクションを作成し、nテーブルの一番目のレコードをカレントレコードとしてロードします。<!-- END REF-->
-
-**Note:** RELATE MANY SELECTIONは、1テーブルのカレントレコードを変更します。
+<!--REF #_command_.RELATE MANY SELECTION.Summary-->RELATE MANY SELECTION コマンドは、1テーブルのレコードセレクションを元にしてnテーブルのレコードセレクションを作成し、nテーブルの一番目のレコードをカレントレコードとしてロードします。<!-- END REF-->RELATE MANY SELECTIONは、1テーブルのカレントレコードを変更します。
 
 #### 例題 
 
@@ -35,3 +33,14 @@ displayed_sidebar: docs
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 340 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

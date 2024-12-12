@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->La commande **OBJECT Get text orientation** retourne la valeur d’orientation courante appliquée au texte de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -58,3 +55,12 @@ Si, à l’exécution du formulaire, vous appelez l’instruction suivante :
 #### Voir aussi 
 
 [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1283 |
+| Thread safe | &cross; |
+
+

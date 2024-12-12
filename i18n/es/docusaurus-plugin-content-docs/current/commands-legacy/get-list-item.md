@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->El comando GET LIST ITEM devuelve la información sobre el elemento especificado por *posicionElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF--> 
@@ -68,3 +65,12 @@ Consulte el ejemplo del comando [APPEND TO LIST](append-to-list.md "APPEND TO LI
 [Selected list items](selected-list-items.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 378 |
+| Hilo seguro | &cross; |
+
+

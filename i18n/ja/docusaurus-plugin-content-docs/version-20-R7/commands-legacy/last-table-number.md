@@ -39,3 +39,12 @@ displayed_sidebar: docs
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 254 |
+| スレッドセーフである | &check; |
+
+

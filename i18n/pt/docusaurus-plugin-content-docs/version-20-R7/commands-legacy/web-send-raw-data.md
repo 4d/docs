@@ -83,3 +83,12 @@ Este exemplo ilustra o uso da opção chunked com o comando **WEB SEND RAW DATA*
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 815 |
+| Thread-seguro | &check; |
+
+

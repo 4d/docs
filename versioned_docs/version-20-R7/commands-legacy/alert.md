@@ -67,3 +67,12 @@ displays the alert dialog box (on Windows) shown:
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 41 |
+| Thread safe | &check; |
+
+

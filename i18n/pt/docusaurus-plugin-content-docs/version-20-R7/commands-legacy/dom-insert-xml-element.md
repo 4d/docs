@@ -78,3 +78,12 @@ Para fazer isso, simplesmente execute o código abaixo:
 #### Ver também 
 
 [DOM Append XML element](dom-append-xml-element.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1083 |
+| Thread-seguro | &check; |
+
+

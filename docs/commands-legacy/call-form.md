@@ -101,3 +101,12 @@ You can then add other messages by executing the **CALL FORM** command again:
   
 [CALL WORKER](call-worker.md)  
 [DIALOG](../commands/dialog.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1391 |
+| Thread safe | &check; |
+
+

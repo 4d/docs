@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 
 <details><summary>History</summary>
 
@@ -59,3 +56,12 @@ From your component, you want to know if the Web server of the host database is 
 
 [WEB Server list](web-server-list.md)  
 [webServer.stop()](../API/WebServerClass.md#stop)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1674 |
+| Thread safe | &cross; |
+
+

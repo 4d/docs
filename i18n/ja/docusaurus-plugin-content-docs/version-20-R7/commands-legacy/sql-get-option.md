@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->SQL GET OPTIONコマンドは、*option*に渡したオプションの現在の*value*を返します。<!-- END REF-->
@@ -30,3 +27,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [SQL SET OPTION](sql-set-option.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 819 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

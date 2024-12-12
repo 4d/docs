@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->FORM GET PROPERTIES コマンドは*formName*フォームのプロパティを返します。<!-- END REF-->
@@ -44,3 +41,12 @@ displayed_sidebar: docs
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 674 |
+| スレッドセーフである | &cross; |
+
+

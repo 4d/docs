@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->LISTBOX GET CELL COORDINATES コマンドは引数 *\** および*object*によって指定されたリストボックス内の、*column* と *row* 引数で指定したセルの*left*、*top*、*right* および *bottom*にそれぞれ左端、上端、右端、下端の座標を(ポイント単位で)返します。<!-- END REF-->
@@ -56,3 +53,12 @@ displayed_sidebar: docs
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1330 |
+| スレッドセーフである | &cross; |
+
+

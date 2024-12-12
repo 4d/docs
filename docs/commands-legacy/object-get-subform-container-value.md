@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get subform container value.Summary-->The **OBJECT Get subform container value** command returns the current value of the data source bound with the subform container displayed in the parent form.<!-- END REF-->
@@ -58,3 +55,12 @@ As a result, at runtime, updating the value of the main form's Input object also
 [Form](../commands/form.md)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1785 |
+| Thread safe | &cross; |
+
+

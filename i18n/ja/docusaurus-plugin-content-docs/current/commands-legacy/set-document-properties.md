@@ -35,3 +35,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 478 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

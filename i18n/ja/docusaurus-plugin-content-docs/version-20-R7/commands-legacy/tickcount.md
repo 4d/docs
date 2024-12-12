@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Tickcount.Summary-->Tickcount はマシンが起動されてから経過したTick (1/60秒) 数を返します。<!-- END REF-->
-
-**Note:** Tickcount は倍長整数型の値を返します。
+<!--REF #_command_.Tickcount.Summary-->Tickcount はマシンが起動されてから経過したTick (1/60秒) 数を返します。<!-- END REF-->Tickcount は倍長整数型の値を返します。
 
 #### 例題 
 
@@ -27,3 +25,12 @@ displayed_sidebar: docs
 
 [Current time](current-time.md)  
 [Milliseconds](milliseconds.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 458 |
+| スレッドセーフである | &check; |
+
+

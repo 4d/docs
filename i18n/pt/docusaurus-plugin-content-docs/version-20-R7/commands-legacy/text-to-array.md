@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->O comando **TEXT TO ARRAY** transforma uma variável texto em um array texto.<!-- END REF--> El texto original (com estilo ou não) se divide e cada parte se converte em um elemento do array *arrText* que é devolvido pelo comando. Este comando se pode utilizar por exemplo para encher as páginas ou as colunas com texto de um tamanho fixo.  
@@ -111,3 +108,12 @@ Deve imprimir em uma área de 400 pixeles de largo um texto de um máximo de 80 
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1149 |
+| Thread-seguro | &cross; |
+
+

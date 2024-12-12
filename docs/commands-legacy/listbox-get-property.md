@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->The **LISTBOX Get property** command returns the value of the *property* of the list box or column specified using the *object* and *\** parameters.<!-- END REF-->
@@ -102,3 +99,12 @@ Given a list box "MyListbox", if you execute the following statement:
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 917 |
+| Thread safe | &cross; |
+
+

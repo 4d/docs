@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -67,3 +64,12 @@ You want to set a row height array for a list box:
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1279 |
+| Thread safe | &cross; |
+
+

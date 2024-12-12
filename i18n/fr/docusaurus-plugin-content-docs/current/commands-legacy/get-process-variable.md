@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->La commande **GET PROCESS VARIABLE** lit la valeur de la ou des variable(s) process *varSource* (*varSource2*, etc.) depuis le process source dont le numéro est passé dans *process* et la retourne dans la ou les variables(s) *varDestination* ( *varDestination2*, etc.) du process courant.<!-- END REF-->
@@ -119,3 +116,12 @@ Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 *Présentation du Glisser-Déposer*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 371 |
+| Thread safe | &cross; |
+
+

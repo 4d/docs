@@ -46,3 +46,12 @@ This example illustrates both syntaxes of the command:
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 967 |
+| Thread safe | &check; |
+
+

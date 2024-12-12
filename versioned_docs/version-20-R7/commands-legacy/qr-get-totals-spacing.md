@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->The QR GET TOTALS SPACING command retrieves a space below a subtotal row.<!-- END REF--> It applies only to the list mode.
@@ -39,3 +36,13 @@ If you pass an invalid *subtotal*, the error -9852 will be generated.
 #### See also 
 
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 762 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

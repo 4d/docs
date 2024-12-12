@@ -38,3 +38,12 @@ O seguinte é um exemplo de um método genérico que mostra os registros de uma 
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 256 |
+| Thread-seguro | &check; |
+
+

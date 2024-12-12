@@ -50,3 +50,13 @@ You want to convert an image from a proprietary format to GIF format and display
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 692 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

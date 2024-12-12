@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.DELETE MENU ITEM.Summary-->DELETE MENU ITEM コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニューから、*menuItem*引数にメニュー項目番号で指定したメニュー項目を削除します。<!-- END REF-->*menuItem*に-1を渡すと、*menu*に最後に追加された項目を指定します。
@@ -35,3 +32,13 @@ displayed_sidebar: docs
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 413 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->O comandoINSERT IN LIST insere o elemento designado pelo parâmetro *refElem* na lista cujo número de referência é passado em *lista*.<!-- END REF-->
@@ -53,3 +50,12 @@ O código a seguir insere um elemento (sem sub-lista associada) justo antes do e
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 625 |
+| Thread-seguro | &cross; |
+
+

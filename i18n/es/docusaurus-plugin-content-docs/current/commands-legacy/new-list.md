@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.New list.Summary-->New list crea una nueva lista jerárquica vacía en memoria y devuelve su número de referencia único.<!-- END REF--> 
@@ -47,3 +44,12 @@ Ver el ejemplo del comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 [INSERT IN LIST](insert-in-list.md)  
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 375 |
+| Hilo seguro | &cross; |
+
+

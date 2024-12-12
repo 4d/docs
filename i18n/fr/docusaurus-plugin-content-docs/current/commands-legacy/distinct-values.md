@@ -80,3 +80,12 @@ Pour calculer des statistiques, vous voulez trier le nombre de valeurs distincte
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 339 |
+| Thread safe | &check; |
+
+

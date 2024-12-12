@@ -145,3 +145,12 @@ devuelve un objeto que contiene la siguiente información:
 [Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1571 |
+| Hilo seguro | &check; |
+
+

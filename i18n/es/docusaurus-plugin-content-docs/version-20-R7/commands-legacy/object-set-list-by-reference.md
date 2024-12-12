@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->El comando **OBJECT SET LIST BY REFERENCE** define o remplaza la lista asociada con el objeto u objetos definidos por los parámetros *objeto* y *\**, con la lista jerárquica definida en el parámetro *lista*.<!-- END REF-->
@@ -130,3 +127,12 @@ Con el fin de actualizar la lista asociada al pop-up gestionado por array, es ne
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1266 |
+| Hilo seguro | &cross; |
+
+

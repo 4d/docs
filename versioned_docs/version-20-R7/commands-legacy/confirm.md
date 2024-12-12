@@ -92,3 +92,13 @@ will display the confirm dialog box (on Windows) shown here:
 
 [ALERT](alert.md)  
 [Request](request.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 162 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

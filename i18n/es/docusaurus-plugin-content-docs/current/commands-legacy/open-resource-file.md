@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Open resource file.Summary-->El comando **Open resource file** abre el archivo de recursos cuyo nombre o ruta de acceso completa se pasa en *resNomArchivo*.<!-- END REF-->
@@ -100,3 +97,13 @@ Si el archivo de recursos no se pudo abrir por un problema del recurso o de E/S,
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 *Recursos*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 497 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK, Document, error |
+
+

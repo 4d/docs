@@ -32,3 +32,12 @@ Si está trabajando por ejemplo con la base en la carpeta Documentos:MisCDsƒ: e
 
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 490 |
+| Hilo seguro | &check; |
+
+

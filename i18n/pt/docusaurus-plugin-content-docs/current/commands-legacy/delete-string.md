@@ -44,3 +44,12 @@ O exemplo abaixo ilustra o uso de Delete string. Os resultados são atribuídos 
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 232 |
+| Thread-seguro | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.DISABLE MENU ITEM.Summary-->**DISABLE MENU ITEM** désactive la commande de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
@@ -33,3 +30,13 @@ Si vous omettez le paramètre *process*, **DISABLE MENU ITEM** s'applique à la 
 #### Voir aussi 
 
 [ENABLE MENU ITEM](enable-menu-item.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 150 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

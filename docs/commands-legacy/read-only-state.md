@@ -36,3 +36,12 @@ The following example tests the state of an \[Invoice\] table. If the state of t
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 362 |
+| Thread safe | &check; |
+
+

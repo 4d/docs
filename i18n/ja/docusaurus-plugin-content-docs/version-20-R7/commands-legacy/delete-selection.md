@@ -65,3 +65,13 @@ displayed_sidebar: docs
 [TRUNCATE TABLE](truncate-table.md)  
 *セット*  
 *レコードのロック*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 66 |
+| スレッドセーフである | &check; |
+| カレントセレクションを変更する ||
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->El comando **LISTBOX SELECT ROWS** selecciona las líneas de un list box selección de entidad o un list box colección que corresponde a las entidades u objetos contenidos en el parámetro de *seleccion*.<!-- END REF-->
@@ -87,3 +84,12 @@ Ejemplo con una colección de objetos:
 #### Ver también 
 
 [LISTBOX SELECT ROW](listbox-select-row.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1715 |
+| Hilo seguro | &cross; |
+
+

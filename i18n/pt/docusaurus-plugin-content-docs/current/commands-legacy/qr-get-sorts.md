@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR GET SORTS.Summary-->O comando QR GET SORTS preenche dois arrays:  
@@ -37,3 +34,13 @@ Se passa um número de área inválido, se gera o erro -9850.
 #### Ver também 
 
 [QR SET SORTS](qr-set-sorts.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 753 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get font.Summary-->**OBJECT Get font**コマンドは *object*指定されたフォームオブジェクトで使用されている文字フォントの名前を返します。<!-- END REF-->
@@ -27,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET FONT](object-set-font.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1069 |
+| スレッドセーフである | &cross; |
+
+

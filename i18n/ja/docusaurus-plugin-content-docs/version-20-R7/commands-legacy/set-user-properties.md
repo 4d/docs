@@ -22,9 +22,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties コマンドは、引数 userID に渡したユニークなユーザーID番号を持つ既存のユーザーアカウントのプロパティを変更・更新するか、新規ユーザーを追加します。<!-- END REF-->また、デザイナーあるいは管理者に関連する新規ユーザを追加することもできます。
@@ -66,3 +63,12 @@ displayed_sidebar: docs
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 612 |
+| スレッドセーフである | &cross; |
+
+

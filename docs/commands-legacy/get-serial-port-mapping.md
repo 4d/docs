@@ -49,3 +49,12 @@ This project method can be used to address the same serial port (without protoco
 #### See also 
 
 [SET CHANNEL](set-channel.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 909 |
+| Thread safe | &check; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->La commande **LISTBOX SET PROPERTY** permet de définir la *valeur* de la *propriété* de list box ou de colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
@@ -87,3 +84,12 @@ Vous souhaitez modifier la largeur maximale de la colonne nommée "ProductNumber
   
 *List box*  
 [LISTBOX Get property](listbox-get-property.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1440 |
+| Thread safe | &cross; |
+
+

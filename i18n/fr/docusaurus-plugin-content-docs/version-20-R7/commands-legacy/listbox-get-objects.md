@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->La commande **LISTBOX GET OBJECTS** retourne un tableau contenant les noms de chaque objet composant la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -62,3 +59,12 @@ Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des 
 
 [FORM LOAD](form-load.md)  
 [OBJECT Get type](object-get-type.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1302 |
+| Thread safe | &cross; |
+
+

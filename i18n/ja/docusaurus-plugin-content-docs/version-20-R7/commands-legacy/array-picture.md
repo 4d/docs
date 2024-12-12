@@ -63,3 +63,13 @@ ARRAY PICTURE を既存の配列に適用する場合、
  End for
  ARRAY PICTURE(<>agValues;$vlPictElem)
 ```
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 279 |
+| スレッドセーフである | &check; |
+
+

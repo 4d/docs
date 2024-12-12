@@ -42,3 +42,12 @@ The following project method builds the array *asFields*, consisting of the fiel
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 255 |
+| Thread safe | &check; |
+
+

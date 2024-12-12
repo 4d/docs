@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 :::info Compatibilidad
 
 **PHP es obsoleto en 4D**. Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -40,3 +37,12 @@ Dado que los intercambios entre 4D y el intérprete PHP se efectúan a través d
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1061 |
+| Hilo seguro | &cross; |
+
+

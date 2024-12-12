@@ -27,3 +27,12 @@ Después de ejecutar el comando, las estadísticas solicitadas se entregan en lo
 #### Ver también 
 
 [Cache info](cache-info.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1118 |
+| Hilo seguro | &check; |
+
+

@@ -92,3 +92,12 @@ O código a seguir ilustra as diferentes possibilidades oferecidas pelos comando
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 920 |
+| Thread-seguro | &check; |
+
+

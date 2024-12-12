@@ -58,3 +58,12 @@ displayed_sidebar: docs
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 *レコード番号について*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 244 |
+| スレッドセーフである | &check; |
+
+

@@ -39,3 +39,13 @@ El siguiente ejemplo le permite recuperar los registros de clientes franceses y 
 #### Ver también 
 
 [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 644 |
+| Hilo seguro | &check; |
+| Modifica la selección actual ||
+
+

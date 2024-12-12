@@ -21,3 +21,12 @@ displayed_sidebar: docs
 #### See also 
 
 [PICTURE PROPERTIES](picture-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 356 |
+| Thread safe | &check; |
+
+

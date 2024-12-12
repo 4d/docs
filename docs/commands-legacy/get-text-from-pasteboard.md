@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->**Get text from pasteboard** returns the text present in the pasteboard.<!-- END REF--> 
@@ -35,3 +32,13 @@ If the text is correctly extracted, OK is set to 1; otherwise OK is set to 0.
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 524 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

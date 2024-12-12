@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->The **SET DRAG ICON** command associates the icon picture with the cursor during drag and drop operations that are managed by programming.<!-- END REF-->
@@ -60,3 +57,12 @@ Note that you can modify the position of the cursor with respect to the picture:
 #### See also 
 
 [Form event code](../commands/form-event-code.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1272 |
+| Thread safe | &cross; |
+
+

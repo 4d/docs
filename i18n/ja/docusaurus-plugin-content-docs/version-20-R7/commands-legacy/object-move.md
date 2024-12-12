@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->OBJECT MOVEコマンドは、 *\** と*object*引数で指定されたカレントフォーム内のオブジェクトを、水平方向に*moveH*ピクセル、垂直方向に*moveV*ピクセル移動させます。<!-- END REF-->  
@@ -68,3 +65,12 @@ displayed_sidebar: docs
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 664 |
+| スレッドセーフである | &cross; |
+
+

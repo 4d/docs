@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->The **LISTBOX GET CELL POSITION** command returns the numbers of the *column* and the *row* that correspond to the location in the listbox (designated by *\** and *object*) of the last mouse click, last selection made via the keyboard, or the horizontal and vertical coordinates of the mouse.<!-- END REF-->
@@ -56,3 +53,12 @@ This command takes into account any selection or deselection actions whether by 
 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 971 |
+| Thread safe | &cross; |
+
+

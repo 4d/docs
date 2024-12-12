@@ -82,3 +82,12 @@ Se quiser copiar um array de texto em uma coleção compartilhada:
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *Conversões de Tipo entre coleções e arrays 4D*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1563 |
+| Thread-seguro | &check; |
+
+

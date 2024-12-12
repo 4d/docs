@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.RESTORE.Summary-->RESTORE コマンドは4Dアーカイブに含まれるファイルを復元するために使用できます。<!-- END REF-->このコマンドはバックアップを管理するためのカスタマイズされたインターフェースで利用できます。
@@ -36,3 +33,13 @@ RESTORE コマンドは*OK*および*Document*変数を更新します。復元�
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 918 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK、Document、error |
+
+

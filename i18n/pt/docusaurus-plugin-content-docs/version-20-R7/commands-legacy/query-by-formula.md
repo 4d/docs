@@ -80,3 +80,14 @@ Este exemplo utiliza uma união para buscar todas as linhas de faturas de client
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 48 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+
+

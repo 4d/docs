@@ -42,3 +42,13 @@ Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par 
 
   
 [DELETE DOCUMENT](delete-document.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 693 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+
+

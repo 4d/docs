@@ -52,3 +52,12 @@ Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'ob
 
   
 [Process activity](../commands/process-activity.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1839 |
+| Thread safe | &cross; |
+
+

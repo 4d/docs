@@ -100,3 +100,13 @@ La variable sistema *OK* devolve 1 se a recuperación dos metadados es correta e
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1122 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

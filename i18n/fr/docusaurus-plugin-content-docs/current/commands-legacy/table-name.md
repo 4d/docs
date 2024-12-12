@@ -38,3 +38,12 @@ La méthode suivante est un exemple de méthode générique qui affiche les enre
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 256 |
+| Thread safe | &check; |
+
+

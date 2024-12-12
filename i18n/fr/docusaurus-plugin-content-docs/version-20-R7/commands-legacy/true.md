@@ -29,3 +29,12 @@ L'exemple suivant met la variable *vbOptions* à Vrai :
 
 [False](false.md)  
 [Not](not.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 214 |
+| Thread safe | &check; |
+
+

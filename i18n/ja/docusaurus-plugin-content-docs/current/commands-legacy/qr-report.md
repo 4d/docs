@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT**はクイックレポートエディターを用いて作成された、*aTable*のレポートを印刷します。<!-- END REF-->このエディターを使用するとユーザーは独自のレポートを作成できるようになります。クイックレポートエディターを使用してレポートを作成する事については、4D*デザインリファレンス*マニュアルの*クイックレポート* の章を参照して下さい。
@@ -134,3 +131,13 @@ displayed_sidebar: docs
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 197 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

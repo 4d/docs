@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Is editing text.Summary-->El comando **Is editing text** devuelve **True** si el usuario está ingresando valores en un objeto de formulario de entrada, y **False** en todos los demás casos.<!-- END REF-->
@@ -61,3 +58,12 @@ Desea permitir que el usuario seleccione una línea que comience con la letra o 
   
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1744 |
+| Hilo seguro | &cross; |
+
+

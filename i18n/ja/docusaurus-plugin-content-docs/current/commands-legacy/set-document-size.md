@@ -27,3 +27,12 @@ Macintoshでは、ドキュメントデータフォークのサイズが変更�
 [Get document position](get-document-position.md)  
 [Get document size](get-document-size.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 480 |
+| スレッドセーフである | &check; |
+
+

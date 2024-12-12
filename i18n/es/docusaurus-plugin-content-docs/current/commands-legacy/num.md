@@ -87,3 +87,12 @@ Este ejemplo compara los resultados obtenidos dependiendo del separador “actua
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 11 |
+| Hilo seguro | &check; |
+
+

@@ -24,3 +24,12 @@ Si vous souhaitez connaître le nom de la variable pointée ou le numéro du cha
 
 [Is nil pointer](is-nil-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 294 |
+| Thread safe | &check; |
+
+

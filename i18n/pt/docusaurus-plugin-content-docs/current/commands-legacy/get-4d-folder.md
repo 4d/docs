@@ -211,3 +211,13 @@ Se o parâmetro *pasta* não é válido ou se o endereço de acesso retornado é
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 485 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get adjusted table cache priority.Summary-->**Get adjusted table cache priority**コマンドは *aTable*引数で指定したテーブルのスカラーデータのキャッシュに、キャッシュマネージャーによって適用された、調整されたキャッシュ優先度値を返します。<!-- END REF-->
-
-**注:** このコマンドはローカルモード(4D Server と4D)でのみ動作します。リモートモードの4Dでは使用できません。
+<!--REF #_command_.Get adjusted table cache priority.Summary-->**Get adjusted table cache priority**コマンドは *aTable*引数で指定したテーブルのスカラーデータのキャッシュに、キャッシュマネージャーによって適用された、調整されたキャッシュ優先度値を返します。<!-- END REF-->このコマンドはローカルモード(4D Server と4D)でのみ動作します。リモートモードの4Dでは使用できません。
 
 スカラーデータフィールド型には、日付/時間、数値、文字列型のフィールドが含まれます。
 
@@ -27,3 +25,12 @@ displayed_sidebar: docs
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
 *データベースキャッシュ内の優先度を管理*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1426 |
+| スレッドセーフである | &check; |
+
+

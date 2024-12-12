@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.TRANSFORM PICTURE.Summary-->The TRANSFORM PICTURE command applies a transformation of the *operator* type to the picture passed in the *picture* parameter.<!-- END REF-->
-
-**Note:** This command extends the functionalities offered by conventional picture transformation operators. These operators remain entirely usable in 4D.
+<!--REF #_command_.TRANSFORM PICTURE.Summary-->The TRANSFORM PICTURE command applies a transformation of the *operator* type to the picture passed in the *picture* parameter.<!-- END REF-->This command extends the functionalities offered by conventional picture transformation operators. These operators remain entirely usable in 4D.
 
 The source *picture* is modified directly after execution of the command. Note that certain operations are not destructive and can be reversed by performing the opposite operation or by means of the “Reset” operation. For example, a picture reduced to 1% will regain its original size with no alteration if it is enlarged by a factor of 100 subsequently. Transformations do not modify the original picture type: for example, a vectorial picture will remain vectorial after its transformation.
 
@@ -73,3 +71,12 @@ Here is an example of cropping a picture (the picture is displayed in the form w
 #### See also 
 
 [COMBINE PICTURES](combine-pictures.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 988 |
+| Thread safe | &check; |
+
+

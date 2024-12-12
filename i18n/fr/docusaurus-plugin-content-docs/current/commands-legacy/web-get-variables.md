@@ -59,3 +59,12 @@ On obtient alors :
 #### Voir aussi 
 
 [WEB GET BODY PART](web-get-body-part.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 683 |
+| Thread safe | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.POST KEY.Summary-->O comando POST KEY simula uma tecla.<!-- END REF--> Esse efeito funciona como se o usuário tivesse entrado um caractere no teclado.  
@@ -38,3 +35,12 @@ Ver exemplo do comando [Process number](process-number.md).
 *Códigos de Função de teclado*  
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 465 |
+| Thread-seguro | &cross; |
+
+

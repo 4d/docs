@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->**DISPLAY SELECTION** displays the selection of *aTable*, using the output form.<!-- END REF--> The records are displayed in a scrollable list similar to that of the Design environment. If the user double-clicks a record, by default the record is displayed in the current input form. The list is displayed in the frontmost window.
@@ -96,3 +93,13 @@ You can also use other commands, such as [PRINT SELECTION](print-selection.md), 
 [Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *Sets*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 59 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

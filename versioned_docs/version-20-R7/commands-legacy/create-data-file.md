@@ -26,3 +26,12 @@ Before launching the operation, the command verifies that the specified access p
 #### See also 
 
 [OPEN DATA FILE](open-data-file.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 313 |
+| Thread safe | &check; |
+
+

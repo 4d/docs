@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->**OBJECT SET ACTION**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられた標準アクションを、カレントプロセスにおいて変更します。<!-- END REF-->
@@ -90,3 +87,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT Get action](object-get-action.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1259 |
+| スレッドセーフである | &cross; |
+
+

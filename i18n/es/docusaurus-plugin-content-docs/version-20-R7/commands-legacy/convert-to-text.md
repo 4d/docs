@@ -31,3 +31,13 @@ Si el comando se ejecuta correctamente, la variable OK toma el valor 1\. De lo c
 #### Ver también 
 
 [CONVERT FROM TEXT](convert-from-text.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1012 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

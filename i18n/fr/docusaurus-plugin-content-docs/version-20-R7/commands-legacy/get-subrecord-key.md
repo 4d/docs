@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get subrecord key.Summary-->La commande **Get subrecord key** est destinée à faciliter la migration du code 4D utilisant des sous-tables converties vers le code standard de manipulation des tables.<!-- END REF-->
-
-**Rappel :** Les sous-tables ne sont plus prises en charge à compter de la version 11 de 4D. Lors de la conversion d’une ancienne base, les sous-tables existantes sont automatiquement transformées en tables standard reliées aux tables d’origine par un lien automatique. La sous-table devient une table “N” et la table d’origine la table “1”. Dans la table 1, l’ex-champ de type sous-table est transformé en champ spécial de type “Lien sous-table” et dans la table N, un champ spécial, également de type “Lien sous-table” est ajouté. Il est nommé “id\_added\_by\_converter”. 
+<!--REF #_command_.Get subrecord key.Summary-->La commande **Get subrecord key** est destinée à faciliter la migration du code 4D utilisant des sous-tables converties vers le code standard de manipulation des tables.<!-- END REF-->Les sous-tables ne sont plus prises en charge à compter de la version 11 de 4D. Lors de la conversion d’une ancienne base, les sous-tables existantes sont automatiquement transformées en tables standard reliées aux tables d’origine par un lien automatique. La sous-table devient une table “N” et la table d’origine la table “1”. Dans la table 1, l’ex-champ de type sous-table est transformé en champ spécial de type “Lien sous-table” et dans la table N, un champ spécial, également de type “Lien sous-table” est ajouté. Il est nommé “id\_added\_by\_converter”. 
 
 Ce principe permet de préserver le fonctionnement des bases de données converties, mais il est fortement conseillé de remplacer les mécanismes des sous-tables par ceux des tables standard. 
 
@@ -80,3 +78,13 @@ Par exemple, vous pouvez écrire avec la structure précédente :
 ```
 
 Ce code fonctionnera indifféremment avec un lien spécial ou standard.
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1137 |
+| Thread safe | &check; |
+
+

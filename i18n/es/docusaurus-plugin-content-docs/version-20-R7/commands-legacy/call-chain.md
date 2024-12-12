@@ -48,3 +48,13 @@ Si se ejecuta un método de objeto de formulario, la cadena de llamadas podría 
 ```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1662 |
+| Hilo seguro | &check; |
+
+

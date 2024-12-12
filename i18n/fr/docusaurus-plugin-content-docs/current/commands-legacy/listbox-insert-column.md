@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->La commande **LISTBOX INSERT COLUMN** insère une colonne dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -99,3 +96,12 @@ Vous souhaitez insérer dynamiquement une colonne dans une list box de type tabl
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 829 |
+| Thread safe | &cross; |
+
+

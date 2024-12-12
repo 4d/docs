@@ -46,3 +46,12 @@ displayed_sidebar: docs
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 967 |
+| スレッドセーフである | &check; |
+
+

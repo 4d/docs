@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->The **SET REAL COMPARISON LEVEL** command sets the epsilon value used by 4D to compare real values and expressions for equality.<!-- END REF-->
@@ -37,3 +34,13 @@ Using **SET REAL COMPARISON LEVEL**, you can increase or decrease the epsilon va
 **IMPORTANT:** Changing the epsilon only affects real comparison for equality. It has no effect on other real computations nor on the display of real values.
 
 **Note:** The **SET REAL COMPARISON LEVEL** command has no effect on queries and sorts performed with fields of the Real type. It only applies the 4D language.
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 623 |
+| Thread safe | &cross; |
+
+

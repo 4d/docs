@@ -35,3 +35,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [Round](round.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 95 |
+| スレッドセーフである | &check; |
+
+

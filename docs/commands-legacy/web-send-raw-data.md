@@ -83,3 +83,12 @@ This example illustrates the use of the chunked option with the **WEB SEND RAW D
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 815 |
+| Thread safe | &check; |
+
+

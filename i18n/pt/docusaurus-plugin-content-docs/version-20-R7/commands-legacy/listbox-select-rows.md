@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->**O comandoLISTBOX SELECT ROWS** seleciona as alinhas de uma list box de seleção de entidades ou uma list box coleção que corresponde às entidades ou objetos contendo o parâmetro *seleção*.<!-- END REF--> 
@@ -86,3 +83,12 @@ Exemplo com a coleção de objetos:
 #### Ver também 
 
 [ LISTBOX SELECT ROW ](listbox-select-row.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1715 |
+| Thread-seguro | &cross; |
+
+

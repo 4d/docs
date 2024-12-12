@@ -28,3 +28,14 @@ See the example for [Record number](record-number.md).
 
 *About Record Numbers*  
 [Record number](record-number.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 242 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Changes current selection ||
+
+

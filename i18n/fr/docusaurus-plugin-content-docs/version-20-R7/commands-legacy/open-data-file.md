@@ -54,3 +54,12 @@ Dans le contexte du déploiement d'une application fusionnée, vous souhaitez ou
 #### Voir aussi 
 
 [CREATE DATA FILE](create-data-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 312 |
+| Thread safe | &check; |
+
+

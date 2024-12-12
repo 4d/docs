@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET TIMER.Summary-->The **SET TIMER** command activates the On Timer form event and sets, for the current form and process, the number of ticks elapsed between each On Timer form event.<!-- END REF--> 
@@ -48,3 +45,12 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
 
 [Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 645 |
+| Thread safe | &cross; |
+
+

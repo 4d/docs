@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Execute on server.Summary-->La commande **Execute on server** lance un nouveau process sur la machine serveur (lorsqu'elle est appelée en environnement client/serveur) et retourne le numéro de ce process.<!-- END REF-->
@@ -191,3 +188,12 @@ Reportez-vous à la section *Services basés sur les procédures stockées (exem
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 373 |
+| Thread safe | &cross; |
+
+

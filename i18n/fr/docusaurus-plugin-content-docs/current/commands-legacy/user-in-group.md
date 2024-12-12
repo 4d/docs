@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.User in group.Summary-->La fonction **User in group** retourne Vrai si *nomUtilisateur* appartient au *groupe*.<!-- END REF-->
@@ -45,3 +42,12 @@ L'exemple suivant recherche des factures. Si l'utilisateur courant est dans le g
 #### Voir aussi 
 
 [Current user](current-user.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 338 |
+| Thread safe | &cross; |
+
+

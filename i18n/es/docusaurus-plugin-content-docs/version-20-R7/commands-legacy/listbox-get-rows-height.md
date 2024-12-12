@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->El comando **LISTBOX Get rows height** devuelve la altura actual (en píxeles o en líneas) de las líneas del objeto list box designado utilizando los parámetros *objeto* y *\**.<!-- END REF-->El valor devuelto corresponde a la altura de una sola línea.
@@ -39,3 +36,12 @@ Por defecto, si omite el parámetro *unidad*, la altura de línea devuelta se ex
 [LISTBOX Get auto row height ](listbox-get-auto-row-height.md)  
 [LISTBOX Get row height ](listbox-get-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 836 |
+| Hilo seguro | &cross; |
+
+

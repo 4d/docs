@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->O comando OBJECT SET RGB COLORS modifica as cores de fundo e primeiro plano dos objetos especificados por objeto e o parâmetro opcional \*.<!-- END REF--> Quando o comando é aplicado a um objeto list box, um parâmetro adicional lhe permite modificar a cor alternativa das filas.
@@ -107,3 +104,12 @@ Muda o fundo transparente com uma cor de fonte clara:
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB Color](select-rgb-color.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 628 |
+| Thread-seguro | &cross; |
+
+

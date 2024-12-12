@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->The **Dynamic pop up menu** causes a hierarchical pop-up menu to appear at the current location of the mouse or at the location set by the optional *xCoord* and *yCoord* parameters.<!-- END REF-->
@@ -94,3 +91,12 @@ This code allows creating a hierarchical dynamic pop up menu built upon standard
 [Pop up menu](pop-up-menu.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1006 |
+| Thread safe | &cross; |
+
+

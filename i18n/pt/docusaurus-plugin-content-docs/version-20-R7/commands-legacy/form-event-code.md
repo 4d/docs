@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Compatibilidade 
 
 <!--REF #_command_.Form event code.Summary-->**Form event code** era chamado **Form event** em versões anteriores de 4D.<!-- END REF--> Foi renomeado para maior claridade quando o comando [FORM Event](form-event.md), que retorna um objeto, foi adicionado.
@@ -853,3 +850,12 @@ Como resultado, o retângulo vermelho segue o deslocamento da list box:
 [Keystroke](keystroke.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [SET TIMER](set-timer.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 388 |
+| Thread-seguro | &cross; |
+
+

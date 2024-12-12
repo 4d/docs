@@ -26,3 +26,12 @@ displayed_sidebar: docs
 [Read only state](read-only-state.md)  
 [READ WRITE](read-write.md)  
 *レコードのロック*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 145 |
+| スレッドセーフである | &check; |
+
+

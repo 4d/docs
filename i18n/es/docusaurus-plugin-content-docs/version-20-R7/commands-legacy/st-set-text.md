@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ST SET TEXT.Summary-->El comando ST SET TEXT inserta el texto pasado en el parámetro *nuevText* en el campo o variable de texto con estilo designado por el parámetro *objeto*.<!-- END REF--> Este comando sólo se aplica al texto sin formato del parámetro de *objeto*, sin modificar las etiquetas de estilo que contiene. Se puede utilizar para modificar por programación, texto con estilo en la pantalla. 
@@ -92,3 +89,13 @@ Consulte el ejemplo del comando [ST SET PLAIN TEXT](st-set-plain-text.md).
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1115 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

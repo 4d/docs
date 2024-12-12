@@ -80,3 +80,12 @@ Voici un exemple d'entrée enregistrée dans le fichier d'historique :
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 5 |
+| Thread safe | &check; |
+
+

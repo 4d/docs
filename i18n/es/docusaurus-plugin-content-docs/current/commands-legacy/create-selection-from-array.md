@@ -48,3 +48,14 @@ Si un número de registro no es válido (registro no creado), se genera el error
 [LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 640 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Modifica la selección actual ||
+
+

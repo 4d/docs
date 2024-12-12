@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Open resource file.Summary-->O comando **Open resource file** abre o arquivo de recursos cujo nome ou rota de acesso completa se passa em *resNomArquivo*.<!-- END REF-->  
@@ -102,3 +99,13 @@ Se o arquivo de recursos não puder ser aberto por um problema do recurso ou de 
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 *Recursos*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 497 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK, Document, error |
+
+

@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.COPY ARRAY.Summary-->The COPY ARRAY command creates or overwrites the destination array *destination* with the exact contents, size, and type of the source array *source*.<!-- END REF-->
-
-**Note:** In case of numeric arrays of different types, the type of the *destination* array is kept.
+<!--REF #_command_.COPY ARRAY.Summary-->The COPY ARRAY command creates or overwrites the destination array *destination* with the exact contents, size, and type of the source array *source*.<!-- END REF-->In case of numeric arrays of different types, the type of the *destination* array is kept.
 
 The *source* and *destination* arrays can be local, process, or interprocess arrays. When copying arrays, the scope of the array does not matter.
 
@@ -36,3 +34,13 @@ The following example fills the array named C. It then creates a new array, name
  SELECTION TO ARRAY([People]Company;C) // Move company field data into array C
  COPY ARRAY(C;D) // Copy the array C to the array D
 ```
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 226 |
+| Thread safe | &check; |
+
+

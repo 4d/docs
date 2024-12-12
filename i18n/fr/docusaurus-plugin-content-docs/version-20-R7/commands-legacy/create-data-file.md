@@ -26,3 +26,12 @@ Avant de lancer l’opération, la commande vérifie que le chemin spécifié ne
 #### Voir aussi 
 
 [OPEN DATA FILE](open-data-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 313 |
+| Thread safe | &check; |
+
+

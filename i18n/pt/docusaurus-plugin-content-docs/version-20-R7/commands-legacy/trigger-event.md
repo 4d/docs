@@ -54,3 +54,12 @@ Utilize o comando **Trigger event** para estruturar seus triggers desta maneira:
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 369 |
+| Thread-seguro | &check; |
+
+

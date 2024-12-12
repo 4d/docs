@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->El comando OBJECT SET TITLE cambia el título de los objetos especificados por *objeto* y lo reemplaza por el valor pasado en *titulo* *.<!-- END REF-->*  
@@ -70,3 +67,12 @@ Usted quiere insertar los títulos en dos líneas:
 #### Ver también 
 
 [OBJECT Get title](object-get-title.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 194 |
+| Hilo seguro | &cross; |
+
+

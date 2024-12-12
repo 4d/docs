@@ -34,3 +34,13 @@ documentノードにこのコマンドを適用すると、コマンドはヌル
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 [DOM Get last child XML element](dom-get-last-child-xml-element.md)  
 [DOM Get Root XML element](dom-get-root-xml-element.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 923 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

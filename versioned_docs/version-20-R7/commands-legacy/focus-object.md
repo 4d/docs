@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Compatibility Note 
 
 <!--REF #_command_.Focus object.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
@@ -47,3 +44,12 @@ The following example is an object method for a button. The object method change
 #### See also 
 
 [OBJECT Get pointer](object-get-pointer.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 278 |
+| Thread safe | &cross; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.MODIFY RECORD.Summary-->The **MODIFY RECORD** command modifies the current record for the table *aTable* or for the default table if you omit the *aTable* parameter.<!-- END REF--> **MODIFY RECORD** loads the record, if it is not already loaded for the current process, and displays the current input form. If there is no current record, then **MODIFY RECORD** does nothing. **MODIFY RECORD** does not affect the current selection.
@@ -51,3 +48,14 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 [Modified record](modified-record.md)  
 [READ WRITE](read-write.md)  
 [UNLOAD RECORD](unload-record.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 57 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+| Forbidden on the server ||
+
+

@@ -131,3 +131,12 @@ displayed_sidebar: docs
 [Get database parameter](get-database-parameter.md)  
 [System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1599 |
+| スレッドセーフである | &check; |
+
+
