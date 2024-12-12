@@ -126,7 +126,7 @@ La definición de un modelo de formato garantiza que el contenido de sus documen
 
 4D View Pro tiene formatos integrados para números, fechas, horas y texto, pero también puede crear sus propios modelos para dar formato al contenido de las celdas utilizando caracteres y códigos especiales.
 
-For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) alinearse independientemente del espacio requerido por el número (es decir, si el importe es de 5,00 $ o de 5.000,00 $). Podría utilizar caracteres de formato y espectificar el patrón _($\* #,##0.00_) que mostraría los importes como se muestra:
+Por ejemplo, al usar los comandos [VP SET VALUE](commands/vp-set-value.md) o [VP SET NUM VALUE](commands/vp-set-num-value.md) para introducir cantidades en una factura, puede que desee utilizar los símbolos de moneda ($, €, ¥, etc.) alinearse independientemente del espacio requerido por el número (es decir, si el importe es de 5,00 $ o de 5.000,00 $). Podría utilizar caracteres de formato y espectificar el patrón _($\* #,##0.00_) que mostraría los importes como se muestra:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
