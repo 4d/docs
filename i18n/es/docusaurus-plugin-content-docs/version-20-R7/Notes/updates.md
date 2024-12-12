@@ -30,7 +30,7 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 #### Cambios de comportamiento
 
 - La documentación del [Lenguaje 4D](../commands/command-index.md) y del [Lenguaje 4D Write Pro](../WritePro/commands/command-index.md) ya está disponible en developer.4d.com. Descubra todas las novedades y cambios relativos a estas documentaciones en esta nota de la versión.
-- The [`File`](../commands/file.md) command (as well as [`4D.File.new()`](../API/FileClass.md#4dfilenew)) is stricter when it comes to checking the syntax of the *path* supplied as a parameter.
+- El comando [`File`](../commands/file.md) (así como [`4D.File.new()`](../API/FileClass.md#4dfilenew)) es más estricto a la hora de comprobar la sintaxis de *path* suministrada como parámetro.
 
 ## 4D 20 R6
 
@@ -168,7 +168,7 @@ Consulte [**Notas de la versión 4D 20.x LTS**](../../version-20/Notes/updates.m
 | Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                                     |
 | --------- | -------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL | 0aa300b                                | 20 R6             | Utilizado para QUIC                                                                                                                                            |
-| CEF       | 128                                    | **20 R7**         | Chromium 6613                                                                                                                                                  |
+| CEF       | 121                                    | 20 R5             | Chromium 6167                                                                                                                                                  |
 | Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
 | ICU       | 73.2                   | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
 | libldap   | 2.6.7  | 20 R6             |                                                                                                                                                                |
