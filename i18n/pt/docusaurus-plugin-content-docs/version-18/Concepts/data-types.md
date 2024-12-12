@@ -33,17 +33,17 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 ## Valor padrão
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
+Quando as variáveis são digitadas por uma diretiva de compilador, elas recebem um valor padrão, que eles manterão durante a sessão, desde que não tenham sido atribuídos.
 
 O valor padrão depende da variável e categoria, seu contexto de execução (interpretado ou compilado), bem como, para o modo compilado, as opções de compilação definidas na página Compilador das configurações do banco de dados:
 
 - As variáveis processo e interprocessos são sempre definidos "para zero" (que significa, dependendo do caso, "0", uma linha vazia, um Blob, um ponteiro Nil, uma data em branco (00-00-00), etc.)
 - As variáveis locais são definidas:
     - em modo interpretado: a zero
-    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
+    - no modo compilado, dependendo da opção **Inicializar variáveis locais** das configurações do banco de dados:
         - "a zero": a zero (ver acima),
-        - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
-        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Nota:** 4D recomenda a utilização de "em zero".
+        - "para um valor aleatório": 0x72677267 para números e vezes, sempre True para Booleanos, o mesmo que "para zero" para os outros,
+        - "no": nenhuma inicialização, significando o que quer que esteja na RAM é usado para as variáveis, como valores usados antes para outras variáveis. **Nota:** 4D recomenda a utilização de "em zero".
 
 A tabela seguinte ilustra estes valores por defeito:
 
