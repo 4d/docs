@@ -41,16 +41,16 @@ By default, the Regular style has a light gray background with a label in the ce
 
 ```4d
  "myButton": {
-  "type": "button", //define the type of object
-  "style":"regular", //define the style of the button
-  "defaultButton":"true" //define button as the default choice
-  "text": "OK", //text to appear on the button
-  "action": "Cancel", //action to be be performed
-  "left": 60,  //left position on the form  
-  "top": 160, //top position on the form
-    "width": 100,  //width of the button
-  "height": 20 //height of the button
-  }
+  "type": "button", //define o tipo de objeto
+  "style": "regular", //define o estilo do botão
+  "defaultButton": "true" //define o botão como a opção predefinida
+  "text": "OK", //texto a aparecer no botão
+  "action": "Cancel", //ação a executar
+  "left": 60, //posição esquerda no formulário  
+  "top": 160, //posição superior no formulário
+    "width": 100, //largura do botão
+  "height": 20 //altura do botão
+}
 ```
 
 Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
