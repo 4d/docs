@@ -10,7 +10,7 @@ Usando a linguagem 4D, imprimir a mensagem tradicional ""Hello, world!" na tela 
 ALERT("Hello, World!")
 ```
 
-Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. To execute the code, you just need to click on the execution button in the Method editor:
+Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. Para executar o código, precisa clicar no botão de execução do editor de Método:
 
 ![alt-text](../assets/en/Concepts/helloworld.png)
 
@@ -40,7 +40,7 @@ A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Cria-se uma va
 C_DATE(MyDate) //Tipo de data para a variável MyDate
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Mesmo se não é geralmente recomendado, você pode criar variáveis simplesmente usando-as; não é necessariamente necessário defini-los formalmente, como se faz com os campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
