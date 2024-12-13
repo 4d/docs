@@ -59,7 +59,6 @@ The following example selects all the records in the \[People\] table. It then u
 
 #### See also 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  

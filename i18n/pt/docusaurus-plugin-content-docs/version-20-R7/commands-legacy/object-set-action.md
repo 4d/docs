@@ -91,5 +91,4 @@ Se quiser associar a ação padrão **Validate** com um botão:
 
 #### Ver também 
 
-*\_o\_OBJECT Get action*  
 [OBJECT Get action](object-get-action.md)  

@@ -26,6 +26,7 @@ Especifica se o utilizador pode eliminar sub-registos num subformulário lista.
 Esta propriedade é utilizada para declarar o formulário detalhado a utilizar no subformulário. Pode ser:
 
 - um widget, ou seja, um subformulário de tipo página, dotado de funções específicas. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
+  You can select a component form name when it is published in the component.\
   You can select a component form name when it is published in the component.
 
 > Para ello, basta con hacer dos clics en el campo a modificar para que pase al modo edición (asegúrese de dejar suficiente tiempo entre los dos clics para no generar un doble clic).

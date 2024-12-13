@@ -94,5 +94,4 @@ The left (destination) list box object method contains the following code:
 
 #### See also 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Drag and Drop*  

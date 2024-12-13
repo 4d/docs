@@ -104,6 +104,5 @@ Changing to transparent background with a light font color:
 
 #### See also 
 
-*\_o\_OBJECT SET COLOR*  
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB Color](select-rgb-color.md)  

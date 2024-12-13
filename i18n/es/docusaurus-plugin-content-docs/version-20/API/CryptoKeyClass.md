@@ -141,7 +141,7 @@ ASSERT($status.success)
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 
-Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre de la curva normalizada de la llave<!-- END REF -->. Generalmente "prime256v1" para ES256 (por defecto), "secp384r1" para ES384, "secp521r1" para ES512.
+Definido sólo para llaves RSA: <!-- REF #CryptoKey.curve.Summary -->el tamaño de la llave en bits<!-- END REF -->. .
 <!-- END REF -->
 
 <!-- REF CryptoKey.decrypt().Desc -->
@@ -350,7 +350,7 @@ La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representac
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño de la llave en bits<!-- END REF -->. .
+Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.size.Summary -->el tamaño de la llave en bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 ## .type
@@ -387,6 +387,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
+
 <!-- REF #CryptoKey.verify().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                          |
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
@@ -407,11 +408,11 @@ La `CryptoKey` debe contener una llave **pública** válida.
 | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash      | text    | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
 | pss       | boolean | Utilice el Probabilistic Signature Scheme (PSS). Se ignora si la llave no es una llave RSA. Pase `true` al verificar un JWT para el algoritmo PS@                                                  |
-| encoding  | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Por defecto es "Base64".                                                            |
+| encoding  | text    | Codificación utilizada para convertir el mensaje binario encriptado en la cadena de resultados. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".                                        |
 
 #### *Result*
 
-La `CryptoKey` debe contener una llave **pública** válida.
+La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
 
 La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
 

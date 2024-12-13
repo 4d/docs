@@ -63,7 +63,6 @@ L'exemple suivant sélectionne la totalité des enregistrements de la table \[Pe
 
 #### Voir aussi 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  

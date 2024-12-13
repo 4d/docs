@@ -8,34 +8,34 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print form.Params-->
 
-| 引数        | 型            |   | 説明                                                                                                                                                                                       |
-| --------- | ------------ | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable    | テーブル         | → | Table owning the form, or Default table, if omitted                                                                                                                                      |
-| form      | Text, Object | → | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData  | Object       | → | フォームに関連づけるデータ                                                                                                                                                                            |
-| areaStart | Integer      | → | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
-| areaEnd   | Integer      | → | Ending area (if areaStart specified)                                                                                                                                  |
-| 戻り値       | Integer      | ← | Height of printed section                                                                                                                                                                |
+| 引数        | 型            |   | 説明                                                                                                                            |
+| --------- | ------------ | - | ----------------------------------------------------------------------------------------------------------------------------- |
+| aTable    | テーブル         | → | フォームが属するテーブル, または 省略した場合は、デフォルトテーブル                                                                                           |
+| form      | Text, Object | → | フォーム名(文字列)、あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、あるいは印刷するフォームを定義したオブジェクト |
+| formData  | Object       | → | フォームに関連づけるデータ                                                                                                                 |
+| areaStart | Integer      | → | 印刷マーカ、または開始エリア(areaEndが指定された場合)                                                                            |
+| areaEnd   | Integer      | → | 終了エリア(areaStartが指定された場合)                                                                                   |
+| 戻り値       | Integer      | ← | 印刷されたエリアの高さ                                                                                                                   |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 #### 説明
 
-<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** は、*aTable* のフィールドや変数の現在の値を使用して*form* 引数で指定したフォームを印刷します。 通常は、印刷処理を完全に制御する必要のある非常に複雑なレポートを印刷するために使用します。 **Print form** はレコード処理、ブレーク処理、改ページ処理を全く行いません。 これらの処理はすべて開発者が行います。 **Print form** は固定されたサイズの枠のなかにフィ－ルドや変数を印刷します。 通常は、印刷処理を完全に制御する必要のある非常に複雑なレポートを印刷するために使用します。 **Print form** はレコード処理、ブレーク処理、改ページ処理を全く行いません。 これらの処理はすべて開発者が行います。 **Print form** は固定されたサイズの枠のなかにフィ－ルドや変数を印刷します。
 
 *form* 引数には、以下のいづれかを渡すことができます:
 
-- the name of a form, or
-- the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
-- an object containing a description of the form.
+- フォーム名
+- 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス、*Form file path* 参照)
+- フォームの詳細を格納しているオブジェクト
 
-Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](../commands-legacy/page-break.md) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](../commands-legacy/cancel.md) command before the [PAGE BREAK](../commands-legacy/page-break.md) command.
+**Print form** は、フォームの印刷後に改ページを行わないため、同じページに異なるフォームを容易に配置することができます。 したがって、**Print form** は、異なるテーブルや異なるフォームを含む複雑な印刷処理に最適です。 フォーム間で改ページを強制的に行うには[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用してください。 印刷可能領域を超える高さのフォームの印刷を次のページに持ち越すには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用する前に[CANCEL](../commands-legacy/cancel.md) コマンドを呼び出してください。 したがって、**Print form** は、異なるテーブルや異なるフォームを含む複雑な印刷処理に最適です。 フォーム間で改ページを強制的に行うには[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用してください。 印刷可能領域を超える高さのフォームの印刷を次のページに持ち越すには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用する前に[CANCEL](../commands-legacy/cancel.md) コマンドを呼び出してください。
 
-Three different syntaxes may be used:
+3つの異なるシンタックスを使用できます:
 
-- **Detail area printing**
+- **詳細エリアの印刷**
 
 シンタックス:
 
@@ -43,9 +43,9 @@ Three different syntaxes may be used:
  height:=Print form(myTable;myForm)
 ```
 
-In this case, **Print form** only prints the Detail area (the area between the Header line and the Detail line) of the form.
+この場合、**Print form** はフォームの詳細エリア (ヘッダマーカと詳細マーカの間のエリア) だけを印刷します。
 
-- **Form area printing**
+- **フォームエリアの印刷**
 
 シンタックス:
 
@@ -53,7 +53,7 @@ In this case, **Print form** only prints the Detail area (the area between the H
  height:=Print form(myTable;myForm;marker)
 ```
 
-In this case, the command will print the section designated by the *marker*. Pass one of the constants of the *Form Area* theme in the marker parameter:
+この場合コマンドは*marker* で示されるセクションを印刷します。 この場合コマンドは*marker* で示されるセクションを印刷します。 以下の*Form Area* テーマの定数のうちの1つをmarker引数に渡します:
 
 | 定数            | 型       | 値   |
 | ------------- | ------- | --- |
@@ -81,7 +81,7 @@ In this case, the command will print the section designated by the *marker*. Pas
 | Form header8  | Integer | 208 |
 | Form header9  | Integer | 209 |
 
-- **Section printing**
+- **セクション印刷**
 
 シンタックス:
 
@@ -89,58 +89,58 @@ In this case, the command will print the section designated by the *marker*. Pas
  height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
-In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. The values entered must be expressed in pixels.
+この場合、コマンドは*areaStart* および*areaEnd* 引数間に含まれる部分を印刷します。 値はピクセル単位で入力しなければいけません。 値はピクセル単位で入力しなければいけません。
 
 **formData**
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 The form data object is available in the [`On Printing Detail` form event](../Events/onPrintingDetail.md).
+オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、[フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 formData オブジェクトは、[`On Printing Detail` form event](../Events/onPrintingDetail.md) フォームイベント内で利用可能です。
 
-For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
+form data オブジェクトについての詳細な情報については、[`DIALOG`](dialog.md) コマンドを参照してください。
 
-**Return value**
+**戻り値**
 
-The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
+**Print form** によって返される値は印刷可能範囲の高さを表します。 この値は、[Get printed height](../commands-legacy/get-printed-height.md) コマンドに自動的に考慮されます。 この値は、[Get printed height](../commands-legacy/get-printed-height.md) コマンドに自動的に考慮されます。
 
-The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
+**Print form** を使用する場合、印刷ダイアログボックスは表示されません。 レポートはデザインモードでフォームに割り当てられた用紙設定を使用しません。 **Print form** を呼び出す前に用紙設定を指定する方法は2通りあります: レポートはデザインモードでフォームに割り当てられた用紙設定を使用しません。 **Print form** を呼び出す前に用紙設定を指定する方法は2通りあります:
 
-- Call [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
-- Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
+- [PRINT SETTINGS](../commands-legacy/print-settings.md) コマンドを使用する。 この場合、ユーザが設定を行います。 この場合、ユーザが設定を行います。
+- [SET PRINT OPTION](../commands-legacy/set-print-option.md) および [GET PRINT OPTION](../commands-legacy/get-print-option.md) コマンドを使用する。 この場合、用紙設定はプログラムで指定します。 この場合、用紙設定はプログラムで指定します。
 
-**Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
+**Print form** は、印刷するページをそれぞれメモリ中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** は、印刷するページをそれぞれメモリ中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** の使用後、最後のページの印刷を確実に行うためには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドで終了しなければなりません(ただし[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) のコンテキスト内の場合を除く、注意参照)。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。
 
-**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. If you call [PAGE BREAK](../commands-legacy/page-break.md) in this case, a blank page is printed.
+**警告:** このコマンドが[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) で開かれた印刷ジョブのコンテキストで呼び出された場合、[PAGE BREAK](../commands-legacy/page-break.md) を使用して最後のページを印刷しようとしてはいけません。なぜなら、最後のページは[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドによって自動的に印刷されるからです。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。
 
-This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
+このコマンドは外部エリアとオブジェクト(例えば 4D Write や 4D Viewエリアなど) を印刷します。 エリアはコマンドの実行の際に毎回リセットされます。 エリアはコマンドの実行の際に毎回リセットされます。
 
-**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands-legacy/print-record.md) instead.
+**警告:** サブフォームは、**Print form** では印刷はされません。 **警告:** サブフォームは、**Print form** では印刷はされません。 そのようなオブジェクトを含んだフォームを一つだけ印刷したい場合は、代わりに[PRINT RECORD](../commands-legacy/print-record.md) を使用して下さい。
 
-**Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
+**Print form** は、1回だけフォームメソッドの[`On Printing Detail` event](../Events/onPrintingDetail.md) イベントを生成します。
 
-**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
+**4D Server:** このコマンドは、ストアドプロシージャのフレームワークにおいて4D Server上で実行することができます。 この状況では、次の制約があります: この状況では、次の制約があります:
 
-- Make sure that no dialog box appears on the server machine (except for a specific requirement).
-- In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
+- サーバマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。
+- プリンタ関連の問題が発生しても (用紙切れ、プリンタ接続切断等) 、エラーメッセージは生成されません。
 
 #### 例題 1
 
-The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
+以下の例は[PRINT SELECTION](../commands-legacy/print-selection.md) コマンドをエミュレートします。 しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します: しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します:
 
 ```4d
- QUERY([Register]) // Select the records
+ QUERY([Register]) // レコードを選択
  If(OK=1)
-    ORDER BY([Register]) // Sort the records
+    ORDER BY([Register]) // レコードをソート
     If(OK=1)
-       PRINT SETTINGS // Display Printing dialog boxes
+       PRINT SETTINGS // 印刷設定ダイアログを表示
        If(OK=1)
           For($vlRecord;1;Records in selection([Register]))
              If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use one form for checks
+                Print form([Register];"Check Out") // 小切手用のフォーム
              Else
-                Print form([Register];"Deposit Out") // Use another form for deposits
+                Print form([Register];"Deposit Out") // デポジット用のフォーム
              End if
              NEXT RECORD([Register])
           End for
-          PAGE BREAK // Make sure the last page is printed
+          PAGE BREAK // 最後のページを印刷
        End if
     End if
  End if
@@ -148,15 +148,15 @@ The following example performs as a [PRINT SELECTION](../commands-legacy/print-s
 
 #### 例題 2
 
-Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command.
+[SET PRINT MARKER](../commands-legacy/set-print-marker.md) コマンドの例題参照
 
 #### 例題 3
 
-This form is used as dialog, then printed with modifications:
+このフォームはダイアログとして使用され、変更されたあと印刷されます:
 
 ![](../assets/en/commands/pict6264975.en.png)
 
-The form method:
+フォームメソッド:
 
 ```4d
  If(Form event code=On Printing Detail)
@@ -166,7 +166,7 @@ The form method:
  End if
 ```
 
-The code that calls the dialog then prints its body:
+ダイアログを表示し、その後印刷するコードは以下のようなものになります:
 
 ```4d
  $formData:=New object

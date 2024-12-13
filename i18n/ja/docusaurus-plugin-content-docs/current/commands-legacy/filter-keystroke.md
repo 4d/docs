@@ -89,39 +89,37 @@ FILTER KEYSTROKE は以下の目的で使用できます:
   // Shadow keystroke project method
   // Shadow keystroke ( Pointer ; Pointer ; String) -> String
   // Shadow keystroke ( -> srcArea ; -> curValue ; Filter ) -> Old keystroke
- C_STRING(1;$0)
- var $1;$2 : Pointer
+ #DECLARE ($srcArea : Pointer ; $curVal : Pointer ; $filter : Text) -> $old : Text
  var $vtNewValue : Text
- C_STRING(255;$3)
   // 元のキーストロークを返す
- $0:=Keystroke
+ $old:=Keystroke
   // 入力エリア中で選択されている文字範囲を取得する
- GET HIGHLIGHT($1->;$vlStart;$vlEnd)
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
   // 現在値を処理する
- $vtNewValue:=$2->
+ $vtNewValue:=$curVal->
   // 押されたキーまたは入力された文字に基づき、
   // 適切な処理を行う
  Case of
   // (Delete) キーが押された
-    :(Character code($0)=Backspace)
+    :(Character code($old)=Backspace)
   // 選択されている文字あるいはカーソルの左の文字を削除
        $vtNewValue:=Delete text($vtNewValue;$vlStart;$vlEnd)
   // 矢印キーが押されたら
   // 何も行わずキーストロークを受け入れる
-    :(Character code($0)=Left arrow key)
-    :(Character code($0)=Right arrow key)
-    :(Character code($0)=Up arrow key)
-    :(Character code($0)=Down arrow key)
+    :(Character code($old)=Left arrow key)
+    :(Character code($old)=Right arrow key)
+    :(Character code($old)=Up arrow key)
+    :(Character code($old)=Down arrow key)
  
   // 入力を許可する文字が入力された
-    :(Position($0;$3)=0)
+    :(Position($old;$filter)=0)
        $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$0)
     Else
   // 入力を許可しない
        FILTER KEYSTROKE("")
  End case
   // 次のキーストローク処理のために値を返す
- $2->:=$vtNewValue
+ $curVal->:=$vtNewValue
 ```
 
 このメソッドは以下のサブメソッドを使用します:
@@ -130,26 +128,24 @@ FILTER KEYSTROKE は以下の目的で使用できます:
   // Delete text プロジェクトメソッド
   // Delete text ( String; Long ; Long ) -> String
   // Delete text ( -> Text ; SelStart ; SelEnd ) -> New text
- var $0;$1 : Text
- var $2;$3 : Integer
- $0:=Substring($1;1;$2-1-Num($2=$3))+Substring($1;$3)
+ #DECLARE ($src : Text ; $start : Integer ; $end : Integer) -> $new : Text 
+ $new:=Substring($src;1;$start-1-Num($start=$end))+Substring($src;$end)
 ```
 
 ```4d
   // Insert text プロジェクトメソッド
   // Insert text ( String; Long ; Long ; String) -> String
   // Insert text ( -> srcText ; SelStart ; SelEnd ; Text to insert ) -> New text
- var $0;$1;$4 : Text
- var $2;$3 : Integer
- $0:=$1
- If($2#$3)
-    $0:=Substring($0;1;$2-1)+$4+Substring($0;$3)
+ #DECLARE ($src : Text ; $start : Integer ; $end : Integer ; $toInsert : Text) -> $new : Text 
+ $new:=$src
+ If($start # $end)
+    $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$end)
  Else
     Caes of
- :($2<=1)
-    $0:=$4+$0
- :($2>Length($0))
-    $0:=$0+$4
+ :($start<=1)
+    $new:=$toInsert+$new
+ :($start>Length($new))
+    $new:=$new+$toInsert
  Else
     $0:=Substring($0;1;$2-1)+$4+Substring($0;$2)
 End case
@@ -185,13 +181,13 @@ LOOKUP DICTIONARYプロジェクトメソッドは以下のようなものです
   // LOOKUP DICTIONARY ( Pointer ; Pointer )
   // LOOKUP DICTIONARY ( -> Enterable Area ; ->ShadowVariable )
  
- var $1;$2 : Pointer
+ #DECLARE ($area : Pointer ; $shadow : Pointer)
  var $vlStart;$vlEnd : Integer
  
   // 入力エリアの選択範囲を取得
- GET HIGHLIGHT($1->;$vlStart;$vlEnd)
+ GET HIGHLIGHT($area->;$vlStart;$vlEnd)
   // 選択されたテキストあるいはカーソルの左側の単語を取得
- $vtHighlightedText:=Get highlighted text($2->;$vlStart;$vlEnd)
+ $vtHighlightedText:=Get highlighted text($shadow->;$vlStart;$vlEnd)
   // 検索すべきものがあるか
  If($vtHighlightedText#"")
   // テキストセレクションがカーソルなら
@@ -204,9 +200,9 @@ LOOKUP DICTIONARYプロジェクトメソッドは以下のようなものです
   // 存在するか
     If(Records in selection([Dictionary])>0)
   // 存在すればシャドウテキストに挿入する
-       $2->:=Insert text($2->;$vlStart;$vlEnd;[Dictionary]Entry)
+       $shadow->:=Insert text($shadow->;$vlStart;$vlEnd;
   // シャドウテキストを編集中のエリアにコピーする
-       $1->:=$2->
+       $area->:=$shadow->
   // 挿入した辞書入力の後に選択をセットする
        $vlEnd:=$vlStart+Length([Dictionary]Entry)
        HIGHLIGHT TEXT(vsComments;$vlEnd;$vlEnd)
@@ -226,23 +222,22 @@ Get highlighted text メソッド:
   // Get highlighted text プロジェクトメソッド
   // Get highlighted text ( String; Long ; Long ) -> String
   // Get highlighted text ( Text ; SelStart ; SelEnd ) -> highlighted text
- var $0;$1 : Text
- var $2;$3 : Integer
- If($2<$3)
-    $0:=Substring($1;$2;$3-$2)
+#DECLARE ($text : Text ; $start : Integer ; $end : Integer) -> $highlight : Text
+ If($start<$end)
+    $highlight:=Substring($text;$start;$end-$start)
  Else
-    $0:=""
-    $2:=$2-1
+    $highlight:=""
+    $start:=$start-1
     Repeat
-       If($2>0)
-          If(Position($1[[$2]];" ,.!?:;()-_")=0)
-             $0:=$1?$2?+$0
-             $2:=$2-1
+       If($start>0)
+          If(Position($text[[$start]];"  ,.!?:;()-_–—")=0)
+             $highlight:=$text[[$start]]+$highlight
+             $start:=$start-1
           Else
-             $2:=0
+             $start:=0
           End if
        End if
-    Until($2=0)
+    Until($start=0)
  End if
 ```
 

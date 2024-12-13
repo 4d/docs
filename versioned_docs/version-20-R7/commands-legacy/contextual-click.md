@@ -41,5 +41,5 @@ This method, combined with a scrollable area, enables you to change the value of
 
 #### See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  

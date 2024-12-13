@@ -70,7 +70,6 @@ O exemplo a seguir pode ser usado para descobrir se o método é chamado de um c
 
 #### Ver também 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  

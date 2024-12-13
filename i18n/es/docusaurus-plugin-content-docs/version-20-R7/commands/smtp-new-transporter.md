@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo                               |   | Descripción                                                                       |
 | ---------- | ---------------------------------- | - | --------------------------------------------------------------------------------- |
 | server     | Object                             | → | Información del servidor de correo                                                |
-| Resultado  | 4D.SMTPTransporter | ← | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| Resultado  | 4D.SMTPTransporter | ← | [Objeto SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
 
-> Este comando no abre ninguna conexión con el servidor SMTP. The SMTP connection is actually opened when the [`.send()`](../API/SMTPTransporterClass.md#send) function is executed.
+> Este comando no abre ninguna conexión con el servidor SMTP. Este comando no abre ninguna conexión con el servidor SMTP.
 >
 > La conexión SMTP se cierra automáticamente:
 >

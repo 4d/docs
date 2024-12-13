@@ -48,7 +48,6 @@ Desea convertir una imagen de un formato propietario a formato GIF y mostrarlo e
 
 #### Ver también 
 
-*\_o\_PICTURE TO GIF*  
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  

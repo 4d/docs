@@ -30,18 +30,18 @@ The `Session info` command <!-- REF #_command_.Session info.Summary -->returns a
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété        | Type          | Description                                                                                                                                                                                                                     |
-| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                         |
-| userName         | Text          | 4D user name (same value as [`Session.userName`](../API/SessionClass.md#username))                                                                                                                           |
-| machineName      | Text          | Sessions distantes : nom de la machine distante. Stored procedures session: name of the server machine. Standalone session: name of the machine |
-| systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                                                                                                 |
-| IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                                                                                               |
-| hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                                                                                                |
-| creationDateTime | Date ISO 8601 | Date and time of session creation. Standalone session: date and time of application startup                                                                                                     |
-| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                          |
-| ID               | Text          | Session UUID (same value as [`Session.id`](../API/SessionClass.md#id))                                                                                                                                       |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                        |
+| Propriété        | Type          | Description                                                                                                                                                                                                                    |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| type             | Text          | Type de session : "remote", "storedProcedure", "standalone"                                                                                                                                                    |
+| userName         | Text          | 4D user name (same value as [`Session.userName`](../API/SessionClass.md#username))                                                                                                                          |
+| machineName      | Text          | Sessions distantes : nom de la machine distante. Session procédures stockées : nom de la machine serveur. Session autonome : nom de la machine |
+| systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                                                                                                |
+| IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                                                                                              |
+| hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                                                                                               |
+| creationDateTime | Date ISO 8601 | Date et heure de création de la session. Session autonome : date et heure de démarrage de l'application                                                                                        |
+| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                         |
+| ID               | Text          | Session UUID (same value as [`Session.id`](../API/SessionClass.md#id))                                                                                                                                      |
+| persistentID     | Text          | Sessions distantes : ID persistant de la session                                                                                                                                                               |
 
 :::note
 

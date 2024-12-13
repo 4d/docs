@@ -1,7 +1,6 @@
 ---
 id: form-event-code
 title: Form event code
-slug: /commands/form-event-code
 displayed_sidebar: docs
 ---
 
@@ -9,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Parâmetro | Tipo    |   | Descrição         |
-| --------- | ------- | - | ----------------- |
-| Resultado | Integer | ← | Form event number |
+| Parâmetro | Tipo    |   | Descrição                      |
+| --------- | ------- | - | ------------------------------ |
+| Resultado | Integer | ← | Número de evento do formulário |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*Esse comando não é thread-safe, não pode ser usado em código preventivo.*
 
 #### Descrição
 
@@ -102,7 +101,7 @@ This example is a template for a form method. It shows each of the possible even
 
 #### Exemplo
 
-This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
+This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](../commands-legacy/display-selection.md) or [MODIFY SELECTION](../commands-legacy/modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
 ```4d
   //A form method
@@ -141,7 +140,7 @@ This example shows the template of a form method that handles the events that ca
 
 #### Exemplo 2
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](get-edited-text.md), [Keystroke](keystroke.md) and [FILTER KEYSTROKE](filter-keystroke.md) commands.
+For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) and [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) commands.
 
 #### Exemplo 6
 
@@ -246,7 +245,7 @@ Este exemplo mostra como responder a um evento de fecho de janela com um formul�
  End case
 ```
 
-#### Example 10
+#### Exemplo 10
 
 This example shows how to capitalize a text or alphanumeric field each time its data source value is modified:
 
@@ -260,7 +259,7 @@ This example shows how to capitalize a text or alphanumeric field each time its 
  End case
 ```
 
-#### Example 11
+#### Exemplo 11
 
 The following example illustrates how to manage a deletion action in a hierarchical list:
 
@@ -288,7 +287,7 @@ The following example illustrates how to manage a deletion action in a hierarchi
  End if
 ```
 
-#### Example 12
+#### Exemplo 12
 
 In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
 
@@ -304,7 +303,7 @@ In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us t
 
 Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### Example 13
+#### Exemplo 13
 
 You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
 
@@ -342,11 +341,11 @@ As a result, the red rectangle follows the scrolling of the list box:
 #### Veja também
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](call-subform-container.md)\
-[Current form table](current-form-table.md)\
-[FILTER KEYSTROKE](filter-keystroke.md)\
+[CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)\
+[Current form table](../commands-legacy/current-form-table.md)\
+[FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md)\
 [FORM Event](form-event.md)\
-[Get edited text](get-edited-text.md)\
-[Keystroke](keystroke.md)\
-[POST OUTSIDE CALL](post-outside-call.md)\
-[SET TIMER](set-timer.md)
+[Get edited text](../commands-legacy/get-edited-text.md)\
+[Keystroke](../commands-legacy/keystroke.md)\
+[POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
+[SET TIMER](../commands-legacy/set-timer.md)

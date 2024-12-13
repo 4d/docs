@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Keystroke.Summary-->**Keystroke** returns the character entered by the user into a field or an enterable area.<!-- END REF--> 
 
-Usually, you will call **Keystroke** within a form or object method while handling an On Before Keystroke or On After Keystroke form event. To detect keystroke events, use the command [Form event code](form-event-code.md). 
+Usually, you will call **Keystroke** within a form or object method while handling an On Before Keystroke or On After Keystroke form event. To detect keystroke events, use the command [Form event code](../commands/form-event-code.md). 
 
 To replace the character actually entered by the user with another character, use the command [FILTER KEYSTROKE](filter-keystroke.md).
 
@@ -169,5 +169,5 @@ Using the interprocess communication capabilities of 4D, you can similarily buil
 #### See also 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  

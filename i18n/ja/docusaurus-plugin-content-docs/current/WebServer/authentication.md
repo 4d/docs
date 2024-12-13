@@ -77,13 +77,14 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 - Webサーバーが、存在しないリソースを要求する URL を受信した場合
 - Webサーバーが `4DACTION/`, `4DCGI/` ... で始まる URL を受信した場合
-- Webサーバーがルートアクセス URL を受信したが、ストラクチャー設定または `WEB SET HOME PAGE` コマンドでホームページが設定されていないとき
+- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md) command
 - Webサーバーが、セミダイナミックページ内でコードを実行するタグ (`4DSCRIPT`など) を処理した場合。
 
 次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:
 
 - Webサーバーが有効な静的ページを要求する URL を受信したとき。
 - when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md).
 
 ### シンタックス
 

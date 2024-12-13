@@ -54,7 +54,3 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo texto y asigna a
     ◊atValores{$vlElem}:="Elemento #"+String($vlElem)
  End for
 ```
-
-#### Ver también 
-
-*\_o\_ARRAY STRING*  

@@ -114,7 +114,6 @@ Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 
 #### Voir aussi 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Introduction aux process*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 *Présentation du Glisser-Déposer*  

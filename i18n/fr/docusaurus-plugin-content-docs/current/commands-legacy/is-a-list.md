@@ -31,4 +31,3 @@ Reportez-vous aux exemples de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 
 #### Voir aussi 
 
-*\_o\_DRAG AND DROP PROPERTIES*  

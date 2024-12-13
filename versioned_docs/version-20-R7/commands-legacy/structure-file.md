@@ -64,7 +64,6 @@ The following example can be used to find out whether the method is called from 
 
 #### See also 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  

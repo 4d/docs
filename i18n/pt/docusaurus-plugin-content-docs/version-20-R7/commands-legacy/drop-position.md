@@ -95,5 +95,4 @@ O método de objeto de list box da esquerda (destino) contém o código abaixo:
 
 #### Ver também 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Arrastar e Soltar*  

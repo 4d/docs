@@ -9,28 +9,28 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| 引数  | 型       |   | 説明                |
-| --- | ------- | - | ----------------- |
-| 戻り値 | Integer | ← | Form event number |
+| 引数  | 型       |   | 説明         |
+| --- | ------- | - | ---------- |
+| 戻り値 | Integer | ← | フォームイベント番号 |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 #### 説明
 
-**Form event code** returns a numeric value identifying the type of form event that has just occurred. Usually, you will use **Form event code** from within a form or object method.
+**Form event code** コマンドは、現在生成中のフォームイベントタイプを示す数値を返します。 通常フォームメソッドやオブジェクトメソッド内で**Form event code** を使用します。
 
-4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
+4DにはForm Eventsテーマで定義された定数が用意されており、**Form event code** コマンドから返される値と比較することができます。 イベントには、一般的なイベント(任意のタイプのオブジェクトに対して生成される)と、特定タイプのオブジェクトのみに発生するイベントがあります。
 
-For a description of events, please refer to the [**Form Events**](../Events/overview.md) section.
+イベントの詳細については[**Form Events**](../Events/overview.md) の章を参照してください。
 
 #### 例題 1
 
-This example shows the On Validate event being used to automatically assign (to a field) the date that the record is modified:
+この例題ではレコード更新日をOn Validateイベントで自動的に(フィールドへ)割り当てる例を示します:
 
 ```4d
-  //Method of a form
+  // フォームメソッド
  Case of
   // ...
     :(Form event code=On Validate)
@@ -40,10 +40,10 @@ This example shows the On Validate event being used to automatically assign (to 
 
 #### 例題 2
 
-In this example, the complete handling of a drop-down list (initialization, user clicks, and object release) is encapsulated in the method of the object:
+この例題では、ドロップダウンリスト処理 (初期化, ユーザクリック, オブジェクトのリリース) をオブジェクトメソッドにカプセル化します:
 
 ```4d
-  //asBurgerSize Drop-down list Object Method
+  //asBurgerSize ドロップダウンリストのオブジェクトメソッド
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asBurgerSize;3)
@@ -52,7 +52,7 @@ In this example, the complete handling of a drop-down list (initialization, user
        asBurgerSize{1}:="Large"
     :(Form event code=On Clicked)
        If(asBurgerSize#0)
-          ALERT("You chose a "+asBurgerSize{asBurgerSize}+" burger.")
+          ALERT(asBurgerSize{asBurgerSize}+" バーガーが選択されました。")
        End if
     :(Form event code=On Unload)
        CLEAR VARIABLE(asBurgerSize)
@@ -61,94 +61,94 @@ In this example, the complete handling of a drop-down list (initialization, user
 
 #### 例題 3
 
-This example is a template for a form method. It shows each of the possible events that can occur when a summary report uses a form as an output form:
+この例題はフォームメソッドのテンプレートです。 出力フォームとしてサマリレポートがフォームを使用する際に発生し得るイベントを示しています:
 
 ```4d
-  //Method of a form being used as output form for a summary report
+  // 概要レポートの出力フォームとして使用されているフォームのフォームメソッド
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Header)
-  //A header area is about to be printed
+  // ヘッダエリアの印刷開始
        Case of
           :(Before selection($vpFormTable->))
-  //Code for the first break header goes here
+  // 最初のブレークヘッダ用のコード
           :(Level=1)
-  //Code for a break header level 1 goes here
+  // ヘッダブレークレベル 1 用のコード
           :(Level=2)
-  //Code for a break header level 2 goes here
+  // ヘッダブレークレベル 2 用のコード
   //...
        End case
     :(Form event code=On Printing Detail)
-  //A record is about to be printed
-  //Code for each record goes here
+  // レコードの印刷開始
+  // レコード毎のコードを記述
     :(Form event code=On Printing Break)
-  //A break area is about to be printed
+  // ブレークエリアの印刷開始
        Case of
           :(Level=0)
-  //Code for a break level 0 goes here
+  // ブレークレベル0 用のコード
           :(Level=1)
-  //Code for a break level 1 goes here
+  // ブレークレベル1 用のコード
   //...
        End case
     :(Form event code=On Printing Footer)
        If(End selection($vpFormTable->))
-  //Code for the last footer goes here
+  // 最後のフッタ用のコード
        Else
-  //Code for a footer goes here
+  // フッタ用のコード
        End if
  End case
 ```
 
 #### 例題 4
 
-This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
+この例題は[DISPLAY SELECTION](../commands-legacy/display-selection.md) または[MODIFY SELECTION](../commands-legacy/modify-selection.md) で表示されるフォームで発生するイベントを処理するメソッドのテンプレートです。 説明的にするため、フォームウィンドウのタイトルバーにイベントの説明が表示されます:
 
 ```4d
-  //A form method
+  // フォームメソッド
  Case of
     :(Form event code=On Load)
-       $vsTheEvent:="The form is about to be displayed"
+       $vsTheEvent:="フォームが表示されようとしている"
     :(Form event code=On Unload)
-       $vsTheEvent:="The output form has been exited and is about to disappear from the screen"
+       $vsTheEvent:="出力フォームを抜け、スクリーンから消えようとしている"
     :(Form event code=On Display Detail)
-       $vsTheEvent:="Displaying record #"+String(Selected record number([TheTable]))
+       $vsTheEvent:="表示中のレコード #"+String(Selected record number([TheTable]))
     :(Form event code=On Menu Selected)
-       $vsTheEvent:="A menu item has been selected"
+       $vsTheEvent:="メニュー項目が選択された"
     :(Form event code=On Header")
-       $vsTheEvent:="The header area is about to be drawn"
+       $vsTheEvent:="ヘッダエリアが描画されようとしている"
     :(Form event code=On Clicked")
-       $vsTheEvent:="A record has been clicked"
+       $vsTheEvent:="レコードがクリックされた"
     :(Form event code=On Double Clicked")
-       $vsTheEvent:="A record has been double clicked"
+       $vsTheEvent:="レコードがダブルクリックされた"
     :(Form event code=On Open Detail)
-       $vsTheEvent:="The record #"+String(Selected record number([TheTable]))+" is double-clicked"
+       $vsTheEvent:="レコード #"+String(Selected record number([TheTable]))+" がダブルクリックされた"
     :(Form event code=On Close Detail)
-       $vsTheEvent:="Going back to the output form"
+       $vsTheEvent:="出力フォームに戻る"
     :(Form event code=On Activate)
-       $vsTheEvent:="The form's window has just become the frontmost window"
+       $vsTheEvent:="フォームのウィンドウが最前面になった"
     :(Form event code=On Deactivate)
-       $vsTheEvent:="The form's window is no longer the frontmost window"
+       $vsTheEvent:="フォームのウィンドウが最前面でなくなった"
     :(Form event code=On Menu Selected)
-       $vsTheEvent:="A menu item has been chosen"
+       $vsTheEvent:="メニュー項目が選択された"
     :(Form event code=On Outside Call)
-       $vsTheEvent:="A call from another has been received"
+       $vsTheEvent:="他のプロセスからの呼び出しを受信した"
     Else
-       $vsTheEvent:="What's going on? Event #"+String(Form event)
+       $vsTheEvent:="発生したイベント #"+String(Form event)
  End case
  SET WINDOW TITLE($vsTheEvent)
 ```
 
 #### 例題 5
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](get-edited-text.md), [Keystroke](keystroke.md) and [FILTER KEYSTROKE](filter-keystroke.md) commands.
+[`On Before Keystroke`](../Events/onBeforeKeystroke.md) と [`On After Keystroke`](../Events/onAfterKeystroke.md) イベントを処理する方法は[Get edited text](../commands-legacy/get-edited-text.md)、[Keystroke](../commands-legacy/keystroke.md)、そして[FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) コマンドの説明を参照してください。
 
 #### 例題 6
 
-This example shows how to treat clicks and double clicks in the same way in a scrollable area:
+この例題は、スクロールエリアでクリックとダブルクリックを同様に扱う方法を示しています:
 
 ```4d
-  //asChoices scrollable area object method
+  // asChoices スクロール可能エリアオブジェクトメソッド
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -156,7 +156,7 @@ This example shows how to treat clicks and double clicks in the same way in a sc
        asChoices:=0
     :((Form event code=On Clicked)|(Form event code=On Double Clicked))
        If(asChoices#0)
-  //An item has been clicked, do something here
+  // 項目がクリックされたので、何らかの処理を行う
   //...
        End if
   //...
@@ -165,10 +165,10 @@ This example shows how to treat clicks and double clicks in the same way in a sc
 
 #### 例題 7
 
-This example shows how to treat clicks and double clicks using a different response. Note the use of the element zero for keeping track of the selected element:
+この例題では、クリックとダブルクリックで異なるレスポンスをする方法を示します。 要素0を使用して選択された項目を追跡していることに注目してください:
 
 ```4d
-  //asChoices scrollable area object method
+  // asChoices スクロール可能エリアのオブジェクトメソッド
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -178,9 +178,9 @@ This example shows how to treat clicks and double clicks using a different respo
     :(Form event code=On Clicked)
        If(asChoices#0)
           If(asChoices#Num(asChoices))
-  //A new item has been clicked, do something here
+  // 新しい項目がクリックされた、何か処理を行う
   //...
-  //Save the new selected element for the next time
+  // 選択された新しい項目を次回のために保存しておく
              asChoices{0}:=String(asChoices)
           End if
        Else
@@ -188,7 +188,7 @@ This example shows how to treat clicks and double clicks using a different respo
        End if
     :(Form event code=On Double Clicked)
        If(asChoices#0)
-  //An item has been double clicked, do something different here
+  // 項目がダブルクリックされた、別の処理をここで行う
        End if
   // ...
  End case
@@ -196,10 +196,10 @@ This example shows how to treat clicks and double clicks using a different respo
 
 #### 例題 8
 
-This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../Events/onGettingFocus.md) and [`On Losing Focus`](../Events/onLosingFocus.md) events:
+この例題では、[`On Getting Focus`](../Events/onGettingFocus.md) と[`On Losing Focus`](../Events/onLosingFocus.md) を使用して、フォームメソッド内でステータス情報を管理します:
 
 ```4d
-  //[Contacts];"Data Entry" form method
+  //[Contacts];"Data Entry" フォームのフォームメソッド
  Case of
     :(Form event code=On Load)
        var vtStatusArea : Text
@@ -208,10 +208,10 @@ This example shows how to maintain a status text information area from within a 
        RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
        If(($vlTableNum#0)&($vlFieldNum#0))
           Case of
-             :($vlFieldNum=1) //Last name field
+             :($vlFieldNum=1) // Last name フィールド
                 vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
   //...
-             :($vlFieldNum=10) //Zip Code field
+             :($vlFieldNum=10) // Zip Code フィールド
                 vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
   //...
           End case
@@ -227,13 +227,13 @@ This example shows how to maintain a status text information area from within a 
 この例題では、レコードのデータ入力に使われるフォームで、ウィンドウを閉じるイベントを処理する方法を示します:
 
 ```4d
-  //Method for an input form
+  // 入力フォームのフォームメソッド
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
-          CONFIRM("This record has been modified. Save Changes?")
+          CONFIRM("このレコードは更新されています。保存しますか?")
           If(OK=1)
              ACCEPT
           Else
@@ -246,12 +246,12 @@ This example shows how to maintain a status text information area from within a 
  End case
 ```
 
-#### Example 10
+#### 例題 10
 
-This example shows how to capitalize a text or alphanumeric field each time its data source value is modified:
+この例題では、文字フィールドが更新されるたびに、1文字目を大文字に、それ以外を小文字に変換する方法を示します:
 
 ```4d
-  //[Contacts]First Name Object method
+  //[Contacts]First Name オブジェクトメソッド
  Case of
   //...
     :(Form event code=On Data Change)
@@ -260,12 +260,12 @@ This example shows how to capitalize a text or alphanumeric field each time its 
  End case
 ```
 
-#### Example 11
+#### 例題 11
 
-The following example illustrates how to manage a deletion action in a hierarchical list:
+以下の例題では階層リストで削除アクションを管理する方法を示します:
 
 ```4d
- ... //method of hierarchical list
+ ... // 階層リストのメソッド
 :(Form event code=On Delete Action)
  ARRAY LONGINT($itemsArray;0)
  $Ref:=Selected list items(<>HL;$itemsArray;*)
@@ -288,25 +288,25 @@ The following example illustrates how to manage a deletion action in a hierarchi
  End if
 ```
 
-#### Example 12
+#### 例題 12
 
-In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
+この例題では[`On Scroll`](../Events/onScroll.md) フォームイベントを使用してフォーム中の２つのピクチャーを同期します。 以下のコードを"satellite" のオブジェクトメソッド(ピクチャーフィールドまたは変数)に記述します:
 
 ```4d
  Case of
     :(Form event code=On Scroll)
-  // we take the position of the left picture
+  // 左のピクチャーの位置を取得
        OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
-  // and we apply it to the right picture
+  // 取得した位置を右のピクチャーに適用
        OBJECT SET SCROLL POSITION(*;"plan";vPos;hPos;*)
  End case
 ```
 
-Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
+結果: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### Example 13
+#### 例題 13
 
-You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
+リストボックスで選択されたセルの周りに赤い長方形を描画し、リストボックスがユーザーによって垂直方向にスクロールされた場合には、その長方形を一緒に移動させたい場合を考えます。 その場合、リストボックスのオブジェクトメソッドに対して以下のように書きます:
 
 ```4d
  Case of
@@ -314,18 +314,18 @@ You want to draw a red rectangle around the selected cell of a list box, and you
     :(Form event code=On Clicked)
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
-       OBJECT SET VISIBLE(*;"RedRect";True) //initialize a red rectangle
+       OBJECT SET VISIBLE(*;"RedRect";True) // 赤い長方形を初期化
        OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
  
     :(Form event code=On Scroll)
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
        OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
-       $toAdd:=LISTBOX Get headers height(*;"LB1") //height of the header so as not to overlap it
-       If($ylb1+$toAdd<$y1)&($ylb2>$y2) //if we are inside the list box
-  //to keep it simple, we only handle headers
-  //but we should handle horizontal clipping
-  //as well as scroll bars
+       $toAdd:=LISTBOX Get headers height(*;"LB1") // オーバーラップしないためにヘッダーの高さを取得
+       If($ylb1+$toAdd<$y1)&($ylb2>$y2) // リストボックス内にいるとき
+  // 単純化のため、ここではヘッダーのみを扱います
+  // 実際にはスクロールバーに加え、
+  // 水平方向のクリッピングも管理しなければなりません。
           OBJECT SET VISIBLE(*;"RedRect";True)
           OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
        Else
@@ -335,18 +335,18 @@ You want to draw a red rectangle around the selected cell of a list box, and you
  End case
 ```
 
-As a result, the red rectangle follows the scrolling of the list box:
+結果として、赤い長方形はリストボックスのスクロールに沿って移動します:
 
 ![](../assets/en/commands/pict1900395.en.png)
 
 #### 参照
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](call-subform-container.md)\
-[Current form table](current-form-table.md)\
-[FILTER KEYSTROKE](filter-keystroke.md)\
+[CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)\
+[Current form table](../commands-legacy/current-form-table.md)\
+[FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md)\
 [FORM Event](form-event.md)\
-[Get edited text](get-edited-text.md)\
-[Keystroke](keystroke.md)\
-[POST OUTSIDE CALL](post-outside-call.md)\
-[SET TIMER](set-timer.md)
+[Get edited text](../commands-legacy/get-edited-text.md)\
+[Keystroke](../commands-legacy/keystroke.md)\
+[POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
+[SET TIMER](../commands-legacy/set-timer.md)

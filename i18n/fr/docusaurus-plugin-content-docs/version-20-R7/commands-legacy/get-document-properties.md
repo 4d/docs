@@ -207,6 +207,4 @@ Une fois que cela est implémenté dans votre base, il suffit d'écrire la méth
 
 #### Voir aussi 
 
-*\_o\_Document creator*  
-*\_o\_Document type*  
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  

@@ -47,13 +47,13 @@ title: Entity
 
 #### 説明
 
-データクラス属性はすべて、エンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
+`.touchedAttributes()` 関数は、 <!-- REF EntityClass.attributeName.Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
 この属性値タイプは属性の種類 ([](DataClassClass.md#attributename).kind; リレーションまたはストレージ) によります。
 
 * *attributeName* で指定した属性がストレージ型の場合: `.attributeName` は *attributeName* と同じ型の値を返します。
-* *attributeName* で指定した属性がリレートエンティティ型の場合: `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
+* この関数は、種類 ([kind](DataClassClass.md#attributename)) が **storage** あるいは **relatedEntity** であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が *attributeName* プロパティに返されます (リレーション名についての *value* および *otherValue* は空になります)。
 * *attributeName* で指定した属性がリレートエンティティズ型の場合: `.attributeName` はリレートエンティティの新しいエンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
 #### 例題
@@ -92,8 +92,10 @@ title: Entity
 
 #### 説明
 
-`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
-> エンティティに対して何らかの変更をおこなった場合、それらは [`.save( )`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
+`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。
+
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save()`](#save) function is executed.
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
 
@@ -151,7 +153,7 @@ title: Entity
 
 コレクションに含まれるのは異なる値を持っていた属性のみです。 差異が見つからない場合、`diff()` は空のコレクションを返します。
 
-この関数は、種類 ([kind](DataClassClass.md#attributename)) が **storage** あるいは **relatedEntity** であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が *attributeName* プロパティに返されます (リレーション名についての *value* および *otherValue* は空になります)。
+この関数は、種類 ([kind](DataClassClass.md#attributename)) が **storage** あるいは **relatedEntity** であるプロパティに適用されます。 *attributeName* で指定した属性がリレートエンティティ型の場合: `.attributeName` はリレートエンティティを返します。
 
 比較するどちらかのエンティティが **Null** である場合、エラーが生成されます。
 
@@ -281,7 +283,7 @@ vCompareResult2 ($attributesToInspect についての差異のみ返されます
 ]
 ```
 
-vCompareResult3 ($e1 において更新された (touch された) 属性のみが返されます)
+vCompareResult1 (すべての差異が返されています):
 
 ```4d
 [
@@ -335,9 +337,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.drop()` 関数は、 <!-- REF #EntityClass.drop().Summary -->データストアからエンティティに格納されているデータを削除します<!-- END REF -->。データクラスに対応するテーブルからエンティティが削除される一方、 エンティティそのものはメモリ内に残るという点に注意してください。
+`.drop()` 関数は、 <!-- REF #EntityClass.drop().Summary -->データストアからエンティティに格納されているデータを削除します<!-- END REF -->。 データクラスに対応するテーブルからエンティティが削除される一方、 エンティティそのものはメモリ内に残るという点に注意してください。
 
-マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.drop()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
+マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.drop()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。 これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
 
 *mode* 引数を渡さなかった場合のデフォルトでは、同エンティティが他のプロセスまたはユーザーによって変更されていた場合 (つまり、スタンプが変更されていた場合) にエラーを返します (以下参照)。
 
@@ -358,7 +360,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 | lockInfo      |                     | object              | ロック元についての情報                                                              |
 |               | task_id             | number              | プロセスID                                                                   |
 |               | user_name           | text                | マシン上でのセッションユーザー名                                                         |
-|               | user4d_alias        | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。それ以外は 4Dディレクトリのユーザー名                 |
+|               | user4d_alias        | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。 それ以外は 4Dディレクトリのユーザー名                |
 |               | host_name           | text                | マシン名                                                                     |
 |               | task_name           | text                | プロセス名                                                                    |
 |               | client_version      | text                |                                                                          |
@@ -373,8 +375,8 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 | 定数                                        | 値 | 説明                                                                                                                                                                                  |
 | ----------------------------------------- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br/><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li>**割り当てられた statusText**: "Entity does not exist anymore" (エンティティはもう存在しません) |
-| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。<br/>**割り当てられた statusText**: "既にロックされています"                                                                                                      |
-| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br/>**割り当てられた statusText**: "Other error" (その他のエラー)                                                                          |
+| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。 <br/>**割り当てられた statusText**: "既にロックされています"                                                                                                     |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。 <br/>**割り当てられた statusText**: "その他のエラー"                                                                                       |
 | `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br/><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><li>**割り当てられた statusText**: "Stamp has changed"</li>      |
 
 #### 例題 1
@@ -390,7 +392,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $status:=$employee.drop()
  Case of
     :($status.success)
-       ALERT($employee.firstName+" "+$employee.lastName+" をドロップしました。") // ドロップされたエンティティはメモリ内に残ります
+       ALERT($employee.firstName+" "+$employee.lastName+" をドロップしました。 ") // ドロップされたエンティティはメモリ内に残ります
     :($status.status=dk status stamp has changed)
        ALERT($status.statusText)
  End case
@@ -409,7 +411,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $status:=$employee.drop(dk force drop if stamp changed)
  Case of
     :($status.success)
-       ALERT($employee.firstName+" "+$employee.lastName+" をドロップしました。") // ドロップされたエンティティはメモリ内に残ります
+       ALERT($employee.firstName+" "+$employee.lastName+" をドロップしました。 ") // ドロップされたエンティティはメモリ内に残ります
     :($status.status=dk status entity does not exist anymore)
        ALERT($status.statusText)
  End case
@@ -642,9 +644,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| 引数  | 型                  |    | 説明                                                                 |
-| --- | ------------------ |:--:| ------------------------------------------------------------------ |
-| 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null)|<!-- END REF -->
+| 引数  | 型                  |    | 説明                                                              |
+| --- | ------------------ |:--:| --------------------------------------------------------------- |
+| 戻り値 | 4D.EntitySelection | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0)|<!-- END REF -->
 
 |
 
@@ -685,9 +687,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| 引数  | 型       |    | 説明                                                              |
-| --- | ------- |:--:| --------------------------------------------------------------- |
-| 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0)|<!-- END REF -->
+| 引数  | 型       |    | 説明                                                                 |
+| --- | ------- |:--:| ------------------------------------------------------------------ |
+| 戻り値 | Integer | <- | エンティティが所属するエンティティセレクション (見つからなければ null)|<!-- END REF -->
 
 |
 
@@ -695,7 +697,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 `.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->。
 
-内部スタンプは、エンティティが保存されるたびに 4D によって自動的にインクリメントされます。 これは同じエンティティに対する複数のユーザーの同時アクセス・編集を管理します。この機構の詳細については、[**エンティティロッキング**](ORDA/entities.md#エンティティロッキング) を参照ください。
+内部スタンプは、エンティティが保存されるたびに 4D によって自動的にインクリメントされます。 これは同じエンティティに対する複数のユーザーの同時アクセス・編集を管理します。 この機構の詳細については、[**エンティティロッキング**](ORDA/entities.md#エンティティロッキング) を参照ください。
 > (一度も保存されていない) 新規エンティティに対しては、このメソッドは 0 を返します。 しかしながら、エンティティがまだ作成されたばかりかどうかを調べるには、[isNew()](#isnew) の使用が推奨されます。
 
 #### 例題
@@ -779,9 +781,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| 引数  | 型       |    | 説明                                                                    |
-| --- | ------- |:--:| --------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。|<!-- END REF -->
+| 引数  | 型       |    | 説明                                                                     |
+| --- | ------- |:--:| ---------------------------------------------------------------------- |
+| 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |<!-- END REF -->
 
 |
 
@@ -797,7 +799,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
  $emp:=ds.Employee.new()
 
  If($emp.isNew())
-    ALERT("新規エンティティです。")
+    ALERT("新規エンティティです。 ")
  End if
 ```
 
@@ -912,7 +914,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 | 定数                                        | 値 | 説明                                                                                                                                                                                              |
 | ----------------------------------------- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br/>**割り当てられた statusText**: "Entity does not exist anymore" (エンティティはもう存在しません)           |
-| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。<br/>**割り当てられた statusText**: "既にロックされています"                                                                                                                  |
+| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。 <br/>**割り当てられた statusText**: "既にロックされています"                                                                                                                 |
 | `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br/>**割り当てられた statusText**: "その他のエラー"                                                                                                    |
 | `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br/>**割り当てられた statusText**: "スタンプが変更されています" |
 
@@ -1058,24 +1060,24 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.reload()` 関数は、 <!-- REF #EntityClass.reload().Summary -->エンティティの中身をメモリ内にリロードします<!-- END REF -->。この時、リロード元となるのはデータストアのデータクラスに対応するテーブルに保存されている情報です。 エンティティが同じプライマリーキーで存在している場合にのみリロードは実行されます。
+`.reload()` 関数は、 <!-- REF #EntityClass.reload().Summary -->エンティティの中身をメモリ内にリロードします<!-- END REF -->この時、リロード元となるのはデータストアのデータクラスに対応するテーブルに保存されている情報です。 エンティティが同じプライマリーキーで存在している場合にのみリロードは実行されます。
 
 **戻り値**
 
 `.reload( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ            | 型       | 説明                                                              |
-| ---------------- | ------- | --------------------------------------------------------------- |
-| success          | boolean | リロードが成功した場合には true、それ以外は false。<br />***エラーの場合にのみ利用可能***: |
-| status(\*)     | number  | エラーコード、以下参照                                                     |
-| statusText(\*) | text    | エラーの詳細、以下参照                                                     |
+| プロパティ            | 型       | 説明                                                               |
+| ---------------- | ------- | ---------------------------------------------------------------- |
+| success          | boolean | リロードが成功した場合には true、それ以外は false。 <br />***エラーの場合にのみ利用可能***: |
+| status(\*)     | number  | エラーコード、以下参照                                                      |
+| statusText(\*) | text    | エラーの詳細、以下参照                                                      |
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
 
 | 定数                                        | 値 | 説明                                                                                                                                                                 |
 | ----------------------------------------- | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br/><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br/>***割り当てられた statusText***: "エンティティはもう存在しません" |
-| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br/>***割り当てられた statusText***: "その他のエラー"                                                                     |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。 <br/>***割り当てられた statusText***: "その他のエラー"                                                                    |
 
 #### 例題
 
@@ -1122,11 +1124,11 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.save()` 関数は、 <!-- REF #EntityClass.save().Summary -->エンティティの変更内容を保存します<!-- END REF --> 。変更内容は、データクラスに対応するテーブル内に保存されます。 エンティティを作成したあと、あるいはエンティティに対して保存したい変更をおこなったあとにはこの関数を呼び出す必要があります。
+`.save()` 関数は、 <!-- REF #EntityClass.save().Summary -->エンティティの変更内容を保存します<!-- END REF --> 。 変更内容は、データクラスに対応するテーブル内に保存されます。 エンティティを作成したあと、あるいはエンティティに対して保存したい変更をおこなったあとにはこの関数を呼び出す必要があります。
 
 保存処理は、少なくとも一つのエンティティ属性が "touched" である (更新されている) 場合にのみ実行されます ([`.touched()`](#touched) および [`.touchedAttributes()`](#touchedattributes) 関数参照)。 そうでない場合、関数は何もしません (トリガーは呼び出されません)。
 
-マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.save()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
+マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.save()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。 これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
 
 *mode* 引数を渡さなかった場合のデフォルトでは、いずれの属性に関わらず同エンティティが他のプロセスまたはユーザーによって変更されていた場合にエラーを返します (以下参照)。
 
@@ -1150,7 +1152,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 | lockInfo     |                    | object              | ロック元についての情報                                                              |
 |              | task_id            | number              | プロセスID                                                                   |
 |              | user_name          | text                | マシン上でのセッションユーザー名                                                         |
-|              | user4d_alias       | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。それ以外は 4Dディレクトリのユーザー名                 |
+|              | user4d_alias       | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。 それ以外は 4Dディレクトリのユーザー名                |
 |              | host_name          | text                | マシン名                                                                     |
 |              | task_name          | text                | プロセス名                                                                    |
 |              | client_version     | text                |                                                                          |
@@ -1166,10 +1168,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 | 定数                                        | 値 | 説明                                                                                                                                                                                                         |
 | ----------------------------------------- | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6 | (`dk auto merge` オプションが使用されたときのみ) エンティティを保存するときに自動マージオプションが失敗しました。<br /> **割り当てられた statusText**: "自動マージ失敗"                                                                                           |
+| `dk status automerge failed`              | 6 | ロック解除が成功した場合には true、それ以外は false ドロップされたエンティティや、ロックされてないレコード、あるいは他のプロセスや他のエンティティによってロックされたレコードに対してロック解除を実行した場合、success には false が返されます。                                                                     |
 | `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br/><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li><br/>**割り当てられた statusText**: "エンティティはもう存在しません"                                           |
-| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。<br/>**割り当てられた statusText**: "既にロックされています"                                                                                                                             |
-| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br/>**割り当てられた statusText**: "その他のエラー"                                                                                                               |
+| `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。 <br/>**割り当てられた statusText**: "既にロックされています"                                                                                                                            |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。 <br/>**割り当てられた statusText**: "その他のエラー"                                                                                                              |
 | `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br/><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><br/>**割り当てられた statusText**: "スタンプが変更されています" |
 
 #### 例題 1
@@ -1258,7 +1260,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルドされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
+データクラス属性はすべて、エンティティのプロパティとして利用可能です。 <!-- REF #EntityClass.toObject().Summary -->各エンティティのプロパティは、当該<!-- END REF -->。 エンティティの属性値を格納します
 
 *filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
@@ -1268,7 +1270,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 最初の引数として、取得するエンティティ属性を渡します。 以下のものを渡すことができます:
 
-* *filterString*: プロパティパスをカンマで区切った文字列: "propertyPath1, propertyPath2, ..." または
+* リレートエンティティズの一部のプロパティを取得します:
 * *filterCol*: 文字列のコレクション: \["propertyPath1","propertyPath2";...]
 
 filter 引数がリレートエンティティ型の属性を指定する場合 ([kind](DataClassClass.md#attributename) が relatedEntity):
@@ -1582,7 +1584,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
+`.toObject()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
 この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性に適用されます。
 
@@ -1661,7 +1663,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 > 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
 ロックしているプロセス内のどのエンティティからもレコードが参照されなくなった場合、自動的にレコードロックが解除されます (たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、プロセスが終了すればエンティティおよびレコードのロックは解除されます)。
-> レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例:
+> レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1690,7 +1692,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
  ... // 処理
  $status:=$employee.unlock()
  If($status.success)
-    ALERT("エンティティのロックは解除されました。")
+    ALERT("エンティティのロックは解除されました。 ")
  End if
 ```
 

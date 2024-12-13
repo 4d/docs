@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 | 引数        | 型       |     | 説明                            |
 | --------- | ------- | :-: | ----------------------------- |
-| sessionID | Integer |  →  | Session ID                    |
+| sessionID | Integer |  →  | セッションID                       |
 | 戻り値       | Object  |  ←  | Information about the session |
 
 <!-- END REF -->

@@ -16,7 +16,7 @@ Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para tra
 | [**\{dataClass\}/{EntitySelectionClassFunction}**](ClassFunctions.md#function-calls)                                                   | `/City/getPopulation/?$filter="ID<3"` | Executa uma função de classe de uma seleção de entidade                                             |
 | [**\{dataClass\}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls) | `City[2]/getPopulation`               | Executa uma função de classe de uma entidade                                                        |
 
-> Las llamadas a las funciones se detallan en la sección [Llamar las funciones de la clase ORDA](ClassFunctions.md).
+> Chamadas de função são detalhadas na seção [Chamada das funções de classe ORDA](ClassFunctions.md).
 
 ## \{dataClass\}
 
@@ -24,7 +24,7 @@ Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase
 
 ### Descrição
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+Quando você chama este parâmetro em sua solicitação REST as primeiras 100 entidades são retornadas a menos que você tenha especificado um valor usando [`$top/$limit`]($top_$limit.md).
 
 Aqui está uma descrição dos dados retornados:
 
@@ -44,7 +44,7 @@ Cada entidade contém as propriedades abaixo:
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                                                 |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
-Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company/name,address`
 
@@ -135,15 +135,15 @@ Retorna todas as datas para uma classe de dados específica.
 
 ## \{dataClass\}\[{key}]
 
-Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, *por ejemplo*, `Company[22]` o `Company[IT0911AB2200]`
+Retorna os dados para a entidade específica definida pela chave primária do banco de dados, *por exemplo.*, `Company[22]` ou `Company[IT0911AB2200]`
 
 ### Descrição
 
-Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
+Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade.
 
 Para más información sobre los datos devueltos, consulte [\{dataClass\}](#dataclass).
 
-Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company[1]/name,address`
 
@@ -186,11 +186,11 @@ Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
 ### Descrição
 
-Pasando la *clase de datos* y un *atributo* junto con un valor, se puede recuperar toda la información pública de esa entidad. O valor é um valor único para o atributo, mas não é a chave primária.
+Passando o *dataClass* e um *atributo* com um valor, você pode recuperar todas as informações públicas para essa entidade. O valor é um valor único para o atributo, mas não é a chave primária.
 
 `GET  /rest/Company:companyCode(Acme001)`
 
-Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company:companyCode(Acme001)/name,address`
 

@@ -203,6 +203,4 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_Document creator*  
-*\_o\_Document type*  
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  

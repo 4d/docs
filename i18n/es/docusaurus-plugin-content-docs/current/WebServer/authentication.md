@@ -28,7 +28,7 @@ Básicamente, en este modo, depende del desarrollador definir cómo autenticar a
 Este modo de autenticación es el más flexible porque permite:
 
 - o bien, delegar la autenticación del usuario a una aplicación de terceros (por ejemplo, una red social, SSO);
-- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código:
+- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código: Lo importante es que nunca guarde la contraseña en claro, utilizando ese código:
 
 ```4d
 //... creación de cuenta de usuario
@@ -77,13 +77,14 @@ Por tanto, se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita un recurso que no existe
 - cuando el servidor web recibe una URL que empieza por `4DACTION/`, `4DCGI/`...
-- cuando el servidor web recibe una URL de acceso a la raíz y no se ha definido ninguna página de inicio en la Configuración o mediante el comando `WEB SET HOME PAGE`
+- cuando el servidor web recibe una URL de acceso raíz y no se ha definido ninguna página de inicio en los Parámetros o mediante el comando [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md)
 - cuando el servidor web procesa una etiqueta que ejecuta código (por ejemplo, `4DSCRIPT`) en una página semidinámica.
 
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita una página estática válida.
 - cuando el servidor web recibe una URL que comienza con `rest/` y se ejecuta el servidor REST (en este caso, la autenticación es manejada a través de [`ds. función uthentify`](../REST/authUsers#force-login-mode) o el [método base `On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) (obsoleto) o los [parámetros de estructura](REST/configuration.md#using-the-structure-settings)).
+- cuando el servidor web recibe una URL con un patrón que desencadena un [gestor de peticiones HTTP personalizadas](http-request-handler.md).
 
 ### Sintaxis
 
@@ -102,13 +103,13 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 Debe declarar estos parámetros de la siguiente manera:
 
 ```4d
-// On Web Authentication database method
+// Método base On Web Authentication
 #DECLARE ($url : Text; $content : Text; \
   $IPClient : Text; $IPServer : Text; \
   $user : Text; $password : Text) \
   -> $accept : Boolean
 
-//Code for the method
+//Código del método
 
 ```
 
@@ -120,7 +121,7 @@ Todos los parámetros del método base `On Web Authentication` no están necesar
 
 #### $url - URL
 
-The first parameter (`$url`) is the URL received by the server, from which the host address has been removed.
+El primer parámetro (`$url`) es la URL recibida por el servidor, de la que se ha eliminado la dirección del host.
 
 Tomemos el ejemplo de una conexión a la Intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.45.67.89. The following table shows the values of $urll depending on the URL entered in the Web browser:
 
@@ -134,7 +135,7 @@ Tomemos el ejemplo de una conexión a la Intranet. Supongamos que la dirección 
 
 #### $content - Header and Body of the HTTP request
 
-The second parameter (`$content`) is the header and the body of the HTTP request sent by the web browser. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
+El segundo parámetro (`$content`) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
 
 Si su aplicación utiliza esta información, deberá analizar el encabezado y el cuerpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
@@ -152,9 +153,9 @@ The `$IPServer` parameter receives the IP address used to call the web server. 4
 
 #### $user and $password - User Name and Password
 
-Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
+Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
-> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
+> Si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $password (la contraseña del usuario) no se devuelve por razones de seguridad.
 
 #### $accept - Retorno de función
 

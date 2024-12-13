@@ -104,7 +104,6 @@ DRAG AND DROP PROPERTIES コマンドの例を参照.
 
 #### 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
 [Is a variable](is-a-variable.md)  

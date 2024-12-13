@@ -451,11 +451,11 @@ Cuando los parámetros opcionales son necesarios en sus métodos, también puede
 Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales en la función de clase o la subrutina. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Por ejemplo:
 
 ```4d
-	//Here is some code from the method MY_METHOD
-DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+	//Aquí hay un código del método MY_METHOD
+DO_SOMETHING([People]Name) ///Digamos [People]El valor del nombre es "williams"
 ALERT([People]Name)
 
-	//Here is the code of the method DO_SOMETHING
+	//Aquí está el código del método DO_SOMETHING
  #DECLARE($param : Text)
  $param:=Uppercase($param)
  ALERT($param)
@@ -468,11 +468,11 @@ Hay dos formas de hacer que el método `DO_SOMETHING` cambie el valor del campo:
 1. En lugar de pasar el campo al método, se pasa un puntero al mismo, por lo que se escribiría:
 
 ```4d
-  //Here is some code from the method MY_METHOD
-DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+  //Aquí hay un código del método MY_METHOD
+DO_SOMETHING(->[People]Name) ///Digamos [People]El valor del nombre es "williams"
 ALERT([People]Last Name)
 
-  //Here the code of the method DO_SOMETHING
+  //Aquí el código del método DO_SOMETHING
 #DECLARE($param : Text)
 $param->:=Uppercase($param->)
 ALERT($param->)
@@ -483,11 +483,11 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Therefore, within 
 2. En lugar de que el método `DO_SOMETHING` "haga algo", puede reescribir el método para que devuelva un valor. Por lo tanto, escribiría:
 
 ```4d
-	//Here is some code from the method MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+	//Aquí hay un código del método MY METHOD
+ [People]Name:=DO_SOMETHING([People]Name) ///Digamos [People]El valor del nombre es "williams"
  ALERT([People]Name)
 
-	//Here the code of the method DO SOMETHING
+	//Aquí el código del método DO SOMETHING
  #DECLARE ($param : Text) -> ($result : Text)
  $result:=Uppercase($param)
  ALERT($result)
@@ -499,7 +499,7 @@ This second technique of returning a value by a subroutine is called "using a fu
 
 Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un _puntero_ interno).
 
-Consequently, when using such data types as parameters, `$param, $return...` do not contain _values_ but _references_. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
+Consequently, when using such data types as parameters, `$param, $return...` do not contain _values_ but _references_. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$param, $return...` no necesitan ser desreferenciados en la subrutina.
 
 Por ejemplo, considere el método `CreatePerson` que crea un objeto y lo envía como parámetro:
 

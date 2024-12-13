@@ -262,7 +262,7 @@ Then, the request handler can use this information to trigger appropriate busine
 
 ### Output: an instance of the 4D.OutgoingMessage class
 
-The request handler can return an object instance of the [4D.OutGoingMessage class](../API/OutGoingMessageClass.md), i.e. some full web content ready for a browser to handle, such as a file content.
+The request handler can return an object instance of the [4D.OutGoingMessage class](../API/OutgoingMessageClass.md), i.e. some full web content ready for a browser to handle, such as a file content.
 
 
 ### Example

@@ -13,7 +13,7 @@ The 4D web server provides several built-in features to handle HTTP requests:
 
 :::info
 
-You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. See [**HTTP Request Handler**](http-request-handler.md) section.
+You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. Vea la sección [**HTTP Request Handler**](http-request-handler.md).
 
 :::
 
@@ -23,7 +23,7 @@ El método base `On Web Connection` puede utilizarse como punto de entrada al se
 
 ### Llamadas a métodos base
 
-The `On Web Connection` database method is automatically called when the server receives any URL that is not a valid path to an existing page on the server (and is not a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md)).
+El método base `On Web Connection` se llama automáticamente cuando el servidor recibe cualquier URL que no sea una ruta válida a una página existente en el servidor (y no es una URL con un patrón que desencadena un [gestor de petición HTTP personalizado](http-request-handler.md)).
 
 Se llama al método de la base de datos con la URL.
 
@@ -58,7 +58,7 @@ You must declare these parameters:
 
 ### $url - URL extra data
 
-The first parameter ($url) is the URL entered by users in the address area of their web browser, without the host address.
+El primer parámetro ($url) es la URL introducida por los usuarios en el área de direcciones de su navegador web, sin la dirección local.
 
 Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
 
@@ -74,7 +74,7 @@ Tenga en cuenta que es libre de utilizar este parámetro a su conveniencia. 4D s
 
 ### $header - Header and Body of the HTTP request
 
-The second parameter ($header) is the header and the body of the HTTP request sent by the web browser. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
+El segundo parámetro ($header) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
 
 Si su aplicación utiliza esta información, deberá analizar el encabezado y el cuerpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
@@ -92,9 +92,9 @@ The $ServerIP parameter receives the IP address requested by the 4D Web Server. 
 
 ### $user and $password - User Name and Password
 
-The $user and $password parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
+Los parámetros $user y $password reciben el nombre de usuario y la contraseña introducidos por el usuario en el cuadro de diálogo de identificación estándar que muestra el navegador, si procede (ver la página [autenticación](authentication.md)).
 
-> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
+> Si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $password (la contraseña del usuario) no se devuelve por razones de seguridad.
 
 ## /4DACTION
 
@@ -134,17 +134,16 @@ Este ejemplo describe la asociación de la URL `/4DACTION` con un objeto imagen 
 El método `getPhoto` es el siguiente:
 
 ```4d
-#DECLARE ($url : Text) // This parameter must always be declared
+#DECLARE ($url : Text) // Este parámetro debe declararse siempre
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //find the picture in the Images folder within the Resources folder
+ //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$url+".psd"
 
-READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
-WEB SEND BLOB($BLOB;"image/png")
+READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
+PICTURE TO BLOB($PictVar;$BLOB;".png") //convierte la imagen en formato ".png". WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACCIÓN para publicar formularios
@@ -191,15 +190,15 @@ OK="Search"
 4D llama al método base `<On Web Authentication>` (si existe), luego se llama al método proyecto `processForm`, que es el siguiente:
 
 ```4d
- #DECLARE ($url : Text) //mandatory for compiled mode
+ #DECLARE ($url : Text) //obligatorio para el modo compilado
  var $vName : Integer
  var vName;vLIST : Text
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrVals;0)
- WEB GET VARIABLES($arrNames;$arrVals) //we retrieve all the variables of the form
+ WEB GET VARIABLES($arrNames;$arrVals) //recuperamos todas las variables del formulario
  $vName:=Find in array($arrNames;"vName")
  vName:=$arrVals{$vName}
- If(Find in array($arrNames;"vExact")=-1) //If the option has not been checked
+ If(Find in array($arrNames;"vExact")=-1) //Si la opción no ha sido marcada
     vName:=vName+"@"
  End if
  QUERY([Jockeys];[Jockeys]Name=vName)
@@ -208,9 +207,9 @@ OK="Search"
     vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<br/>"
     NEXT RECORD([Jockeys])
  End while
- WEB SEND FILE("results.htm") //Send the list to the results.htm form
-  //which contains a reference to the variable vLIST,
-  //for example <!--4DHTML vLIST-->
+ WEB SEND FILE("results.htm") //Enviar la lista al formulario results.htm
+  //que contiene una referencia a la variable vLIST,
+  //por ejemplo <!--4DHTML vLIST-->
   //...
 End if
 ```
@@ -219,9 +218,9 @@ End if
 
 El servidor web de 4D le permite recuperar datos enviados a través de peticiones POST o GET, utilizando formularios web o URLs.
 
-Cuando el servidor web recibe una petición con datos en el encabezado o en la URL, 4D puede recuperar los valores de cualquier objeto HTML que contenga. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
+Cuando el servidor web recibe una petición con datos en el encabezado o en la URL, 4D puede recuperar los valores de cualquier objeto HTML que contenga. Este principio puede ser implementado en el caso de un formulario Web, enviado por ejemplo usando [`WEB SEND FILE`](../commands-legacy/web-send-file.md) o [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), donde el usuario introduce o modifica valores, luego hace clic en el botón de validación.
 
-In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md) command. El comando `WEB GET VARIABLES` recupera los valores como texto.
+En este caso, 4D puede recuperar los valores de los objetos HTML encontrados en la solicitud usando el comando [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md). El comando `WEB GET VARIABLES` recupera los valores como texto.
 
 Considere el siguiente código fuente de la página HTML:
 
@@ -282,7 +281,7 @@ Las principales características de esta página son:
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 
 ```4d
-  // Retrieval of value of variables
+  // Recuperación del valor de las variables
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
@@ -290,25 +289,25 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
 
  Case of
 
-  // The Log On button was clicked
+  // Se ha presionado el botón Log On
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
        QUERY([WWW Users];[WWW Users]UserName=$arrValues{$user})
        $0:=(Records in selection([WWW Users])>0)
        If($0)
           WWW POST EVENT("Log On";WWW Log information)
-  // The WWW POST EVENT method saves the information in a database table
+  // El método WWW POST EVENT guarda la información en una tabla de la base
        Else
 
           $0:=WWW Register
-  // The WWW Register method lets a new Web user register
+  // El método WWW Register permite que un nuevo usuario de la Web se registre
        End if
 
-  // The Register button was clicked
+  // Se ha presionado el botón Register
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
 
-  // The Information button was clicked
+  // Se ha presionado el botón de información
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
  End case
@@ -325,9 +324,9 @@ Tenga en cuenta que con HTML, todos los objetos son objetos de texto. Si se util
 
 El servidor web de 4D ofrece varios comandos web de bajo nivel que le permiten desarrollar un procesamiento personalizado de las solicitudes:
 
-- the [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) command returns the body as raw text, allowing any parsing you may need
-- the [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) command return the headers of the request. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
-- the [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) and [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
+- el comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) devuelve el cuerpo como texto crudo, permitiendo cualquier análisis que pueda necesitar
+- el comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) devuelve los encabezados de la solicitud. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
+- los comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) y [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) para analizar la parte del cuerpo de una petición de varias partes y recuperar los valores de texto, pero también los archivos publicados, usando BLOBs.
 
 Estos comandos se resumen en el siguiente gráfico:
 
@@ -337,6 +336,6 @@ El servidor web de 4D ahora soporta archivos cargados con codificación chunked 
 
 ## Método proyecto COMPILER_WEB
 
-El método COMPILER\WEB, si existe, es llamado sistemáticamente cuando el servidor HTTP recibe una petición dinámica y llama al motor 4D. Este es el caso, por ejemplo, cuando el servidor web de 4D recibe un formulario publicado o una URL para procesar en [`On Web Connection`](#on-web-connection). Este método está destinado a contener directivas de digitación y/o inicialización de variables utilizadas durante los intercambios web. Es utilizado por el compilador cuando se compila la aplicación. El método COMPILER\WEB es común a todos los formularios web. Por defecto, el método COMPILER_WEB no existe. Debe crearlo explícitamente.
+El método COMPILER\WEB, si existe, es llamado sistemáticamente cuando el servidor HTTP recibe una petición dinámica y llama al motor 4D. El método COMPILER\WEB, si existe, es llamado sistemáticamente cuando el servidor HTTP recibe una petición dinámica y llama al motor 4D. Este método está destinado a contener directivas de digitación y/o inicialización de variables utilizadas durante los intercambios web. Es utilizado por el compilador cuando se compila la aplicación. El método COMPILER\WEB es común a todos los formularios web. Por defecto, el método COMPILER_WEB no existe. Debe crearlo explícitamente.
 
 > También se llama al método proyecto COMPILER_WEB, si existe, para cada solicitud SOAP aceptada.

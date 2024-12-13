@@ -9,12 +9,18 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 #### Destaques
 
+- Implement your own [**HTTP request handlers**](../WebServer/http-request-handler.md) using the new [`4D.IncomingMessage`](../API/IncomingMessageClass.md) class.
 - Expressions used in [form object properties](../FormObjects/properties_Reference.md) now benefit from syntax checking in the [Property list](../FormEditor/formEditor.md#property-list) and in the [Compiler](../Project/compiler.md#check-syntax).
 - You can [associate a class to a form](../FormEditor/properties_FormProperties.md#form-class) to enable code type-ahead and automatic instantiation of form data when using the [`Form`](../commands/form.md) command.
 - Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
+- [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
 - 4D Language:
   - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
+
+#### Mudanças de comportamento
+
+- Because of their [new architecture](../Desktop/building.md#build-component), components built with 4D 20 R8 and higher cannot be installed in previous 4D releases.
 
 ## 4D 20 R7
 
@@ -181,7 +187,7 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 | Biblioteca | Versão atual                           | Atualizado em 4D | Comentário                                                                                                                                |
 | ---------- | -------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL  | 0aa300b                                | 20 R6            | Usado para QUIC                                                                                                                           |
-| CEF        | 128                                    | **20 R7**        | Chromium 6613                                                                                                                             |
+| CEF        | 121                                    | 20 R5            | Chromium 6167                                                                                                                             |
 | Hunspell   | 7.3.27 | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                       |
 | ICU        | 73.2                   | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.               |
 | libldap    | 2.6.7  | 20 R6            |                                                                                                                                           |

@@ -26,6 +26,5 @@ displayed_sidebar: docs
 
 #### 参照 
 
-*\_o\_During*  
 [In break](in-break.md)  
 [In footer](in-footer.md)  

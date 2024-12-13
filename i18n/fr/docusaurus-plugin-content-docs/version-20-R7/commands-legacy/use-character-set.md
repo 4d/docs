@@ -40,8 +40,6 @@ La variable système OK prend la valeur 1 si le filtre est correctement chargé,
 
 #### Voir aussi 
 
-*\_o\_Mac to Win*  
-*\_o\_Win to Mac*  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  

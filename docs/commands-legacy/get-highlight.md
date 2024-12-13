@@ -42,8 +42,10 @@ If the object designated by the *object* parameter is not found in the form, the
 The following example gets the highlighted selection from the field called *\[Products\]Comments*: 
 
 ```4d
- GET HIGHLIGHT([Products]Comments;vFirst;vLast)
- If(vFirst<vlast)     alert("the="" selected="" text="" is:="" "+substring([products]comments;vfirst;vlast-vfirst))=""  end="" if<="" pre=""></vlast)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
 #### Example 2 

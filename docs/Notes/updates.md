@@ -14,10 +14,15 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Expressions used in [form object properties](../FormObjects/properties_Reference.md) now benefit from syntax checking in the [Property list](../FormEditor/formEditor.md#property-list) and in the [Compiler](../Project/compiler.md#check-syntax).
 - You can [associate a class to a form](../FormEditor/properties_FormProperties.md#form-class) to enable code type-ahead and automatic instantiation of form data when using the [`Form`](../commands/form.md) command.  
 - Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
+- [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
+- [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines. 
 - 4D Language:
 	- Modified commands: [`FORM EDIT`](../commands/form-edit.md)
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
 
+#### Behavior changes
+
+- Because of their [new architecture](../Desktop/building.md#build-component), components built with 4D 20 R8 and higher cannot be installed in previous 4D releases.
 
 ## 4D 20 R7
 
@@ -214,7 +219,7 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
 |BoringSSL|0aa300b|20 R6|Used for QUIC|
-|CEF|128|**20 R7**|Chromium 6613|
+|CEF|121|20 R5|Chromium 6167|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |libldap|2.6.7|20 R6||

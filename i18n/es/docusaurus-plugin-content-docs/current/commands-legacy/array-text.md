@@ -55,6 +55,3 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo texto y asigna a
  End for
 ```
 
-#### Ver también 
-
-*\_o\_ARRAY STRING*  

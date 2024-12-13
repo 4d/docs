@@ -38,7 +38,7 @@ In any cases, the setting is local to the machine; so it can be different on the
 
 ## Session implementation
 
-Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismos automáticos, basados en una cookie privada establecida por el propio 4D: "4DSID_*AppName*", donde *AppName* es el nombre del proyecto de la aplicación. Este cookie faz referência à sessão web atual da aplicação.
+Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismos automáticos, basados en una cookie privada establecida por el propio 4D: "4DSID__AppName_", donde *AppName* es el nombre del proyecto de la aplicación. Este cookie faz referência à sessão web atual da aplicação.
 
 :::info
 
@@ -46,13 +46,13 @@ The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.m
 
 :::
 
-1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID_*AppName*".
+1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID__AppName_".
 
 2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
 
 3. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
-- se crea una nueva sesión con una cookie privada "4DSID_*AppName*" en el servidor web
+- se crea una nueva sesión con una cookie privada "4DSID__AppName_" en el servidor web
 - se crea un nuevo objeto Guest `Session` dedicado a la sesión web escalable.
 
 :::note

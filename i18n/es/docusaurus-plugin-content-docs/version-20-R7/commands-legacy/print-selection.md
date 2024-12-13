@@ -60,7 +60,6 @@ El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El
 
 #### Ver también 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  

@@ -27,9 +27,8 @@ displayed_sidebar: docs
   
 Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto únicamente).  
 
-En el parámetro *acción*, pase un cadena con el nombre de la acción estándar a asociar al objeto. Opcionalmente, la acción puede tener parámetros. Para mayor información sobre nombres de acciones, consulte la sección \[#title id="964"/\] en el manual de *Diseño 4D*. También puede pasar una de las siguientes constantes, que se encuentran en el tema "*Acción estándar*":
+En el parámetro *acción*, pase un cadena con el nombre de la acción estándar a asociar al objeto. Opcionalmente, la acción puede tener parámetros. Para mayor información sobre nombres de acciones, consulte la sección Acción estándar en el manual de *Diseño 4D*. También puede pasar una de las siguientes constantes, que se encuentran en el tema "*Acción estándar*".
 
-\[#table\_kst id="3229250,3229256,3229259,3229262,3229265,3233324,3229268,3229271,3229274,3229277,3229280,3232805,3229283,3229286,3229289,3249369,3247262,3233343,3233352,3233331,3249654,3233337,3233359,3233366,3233794,3229292,3229295,3229298,3229301,3229304,3229307,3229253,3229310,3229313,3229316,3229319,3229322,3229325,3229328,3229331,3229334,3229337,3229340,3233802,3229343,3229346" typeCol="false"/\]
 
 **Nota de compatibilidad**: las constantes heredadas (prefijadas por \_o\_ en el tema) están obsoletas a partir de 4D v16 R3\. Sin embargo, todavía son soportadas por compatibilidad.  
 
@@ -43,5 +42,4 @@ Usted desea asociar la acción estándar **Validate** con un botón:
 
 #### Ver también 
 
-*\_o\_OBJECT Get action*  
 [OBJECT Get action](object-get-action.md)  

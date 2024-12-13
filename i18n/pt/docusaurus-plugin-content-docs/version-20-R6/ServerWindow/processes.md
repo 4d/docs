@@ -39,7 +39,7 @@ A atividade do processo é a percentagem de tempo que 4D Server dedicou a este p
   - Processo usuário - nome do usuário 4D,
   - Processo web - caminho URL,
 - Nome do processo,
-- Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). O número do processo é o número atribuído no servidor. No caso de um processo global, este número pode ser diferente do atribuído na máquina cliente.
+- Número do processo (como retornado pelo comando [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html), por exemplo). O número do processo é o número atribuído no servidor. No caso de um processo global, este número pode ser diferente do atribuído na máquina cliente.
 - Estado atual do processo,
 - Tempo de execução (em segundos) do processo desde a sua criação,
 - Percentagem de tempo que 4D Server dedicou a este processo (rácio).
@@ -85,9 +85,9 @@ A página também tem cinco botões de controle que atuam nos processos selecion
 
 - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Quando clicar neste botão, aparece uma caixa de diálogo de aviso para que se possa confirmar ou cancelar a operação.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> Você também pode cancelar o(s) processo(s) selecionado(s) diretamente sem exibir a caixa de diálogo de confirmação, segurando a tecla **Alt** enquanto clica neste botão, ou usando o [`ABORT PROCESS BY ID`](https://doc.md.com/4dv19/help/command/en/page1634.html).
 
-- **Pausar proceso**: permite pausar los procesos seleccionados.
+- **Pausar processo**: pode ser usado para pausar os processos selecionados.
 - **Activar proceso**: permite reactivar los procesos seleccionados. Os processos devem ter sido colocados em pausa anteriormente (utilizando o botão acima ou por programação); caso contrário, este botão não tem qualquer efeito.
 - **Depurar proceso**: permite abrir en el equipo servidor una o varias ventanas de depuración para el proceso o procesos seleccionados. Quando clicar neste botão, aparece uma caixa de diálogo de aviso para que se possa confirmar ou cancelar a operação. Note que a janela do depurador só é exibida quando o código 4D for realmente executado na máquina do servidor (por exemplo, em um gatilho ou na execução de um método com o atributo "Execute on Server").
 

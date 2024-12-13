@@ -160,7 +160,7 @@ var $a; $b : Integer:=15 //error
 
 ## Asignar los valores
 
-Los datos pueden introducirse y copiarse en variables y arrays. Poner datos en una variable se llama **asignar los datos a la variable** y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos.
+Los datos pueden introducirse y copiarse en variables y arrays. Los datos pueden introducirse y copiarse en variables y arrays. El operador de asignación también se utiliza para asignar datos a campos.
 
 El operador de asignación es un primer medio para crear una variable e introducir datos en ella. Se escribe el nombre de la variable que se quiere crear a la izquierda del operador de asignación. Por ejemplo:
 
@@ -204,7 +204,7 @@ El nombre de una variable local siempre comienza por el signo dólar ($) y puede
 
 Cuando se trabaja en un proyecto de aplicación con muchos métodos y variables, a menudo se encuentra que se necesita utilizar una variable sólo dentro del método en el que se está trabajando. Puede crear y utilizar una variable local en el método sin preocuparse de si ha utilizado el mismo nombre de variable en otro lugar.
 
-Con frecuencia, en una aplicación, se necesitan pequeñas piezas de información del usuario. El comando `Request` puede obtener esta información. Muestra una caja de diálogo con un mensaje que solicita al usuario una respuesta. Cuando el usuario introduce la respuesta, el comando devuelve la información que el usuario introdujo. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
+Con frecuencia, en una aplicación, se necesitan pequeñas piezas de información del usuario. Con frecuencia, en una aplicación, se necesitan pequeñas piezas de información del usuario. Muestra una caja de diálogo con un mensaje que solicita al usuario una respuesta. Cuando el usuario introduce la respuesta, el comando devuelve la información que el usuario introdujo. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
 
 ```4d
  $vsID:=Request("Please enter your ID:")

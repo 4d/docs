@@ -42,7 +42,7 @@ Se atribuir um índice de elemento que ultrapasse o último elemento existente d
 
 ## Inicialização
 
-Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
+Coleções devem ter sido inicializadas, por exemplo, usando o comando `New collection`, caso contrário, tentar ler ou modificar seus elementos gerará um erro de sintaxe.
 
 Exemplo:
 
@@ -58,7 +58,7 @@ Pode criar dois tipos de coleções:
 - regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
 - coleções compartidas, utilizando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use... End use`](Concepts/shared.md#useend-use) structures.
 
-For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 ## Funções de Collection
 

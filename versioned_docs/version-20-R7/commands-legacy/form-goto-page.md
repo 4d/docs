@@ -32,7 +32,7 @@ Automatic action buttons perform the same tasks as the [FORM FIRST PAGE](form-fi
 Page commands can be used with input forms or with forms displayed in dialogs. Output forms use only the first page. A form always has at least one page—the first page. Remember that regardless of the number of pages a form has, only one form method exists for each form. 
 
 * Use the [FORM Get current page](form-get-current-page.md) command to find out which page is being displayed.
-* Use the On Page Change [Form event code](form-event-code.md) that is generated each time the current page of the form changes.
+* Use the On Page Change [Form event code](../commands/form-event-code.md) that is generated each time the current page of the form changes.
 
 **Note:** When **designing** a form, you can work with pages 1 through X, as well as with page 0, in which you put objects that will appear in all of the pages. When **using** a form, and therefore when calling page commands, you work with pages 1 through X; page 0 is automatically combined with the page being displayed.
 

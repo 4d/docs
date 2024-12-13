@@ -26,6 +26,5 @@ Si vous souhaitez que le cycle d'exécution **In break** soit généré, assurez
 
 #### Voir aussi 
 
-*\_o\_During*  
 [In footer](in-footer.md)  
 [In header](in-header.md)  

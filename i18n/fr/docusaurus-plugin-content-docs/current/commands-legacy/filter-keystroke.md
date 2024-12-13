@@ -81,71 +81,68 @@ Vous disposez dans votre application de diverses zones de texte dans lesquelles 
 Comme décrit ci-dessus, lorsque vous éditez une zone de texte, la valeur du champ ou de la variable de texte ne sera réellement modifiée que lorsque que vous l'aurez validée. Pour retrouver et insérer rapidement des entrées du glossaire dans une zone de texte alors qu'elle est en train d'être modifiée, vous devez donc créer une seconde zone "tampon" pour y placer les valeurs saisies. Vous pouvez effectuer cette opération à l'aide de la méthode projet décrite ci-dessous. Vous passez comme premiers paramètres des pointeurs vers la zone de saisie et vers la variable, puis la chaîne de caractère “interdits” comme troisième paramètre. Peu importe comment l'entrée clavier sera traitée, la méthode retourne la valeur saisie originale. Les caractères “interdits” sont les caractères que vous ne voulez pas insérer dans la zone saisissable et que vous voulez traiter en tant que caractères spéciaux.
 
 ```4d
-  // Méthode projet Frappe clavier tampon
-  // Frappe clavier tampon ( Pointeur ; Pointeur ; Alpha ) -> Alpha
-  // Frappe clavier tampon ( -> zoneSource ; -> valeurCourante ; Filtre ) -> Ancien frappe clavier
- C_STRING(1;$0)
- var $1;$2 : Pointer
- var $vtNouvValeur : Text
- C_STRING(255;$3)
-  // Retourne la frappe clavier originale
- $0:=Keystroke
-  // Obtenir la sélection de texte dans la zone saisissable
- GET HIGHLIGHT($1->;$vlDébut;$vlFin)
-  // Commencer à travailler sur la valeur courante
- $vtNouvValeur:=$2->
-  // En fonction de la touche enfoncée ou du caractère saisi, effectuer les actions appropriées
+  // Shadow keystroke project method
+  // Shadow keystroke ( Pointer ; Pointer ; String ) -> String
+  // Shadow keystroke ( -> srcArea ; -> curValue ; Filter ) -> Old keystroke
+#DECLARE ($srcArea : Pointer ; $curVal : Pointer ; $filter : Text) -> $old : Text
+ var $vtNewValue : Text
+  // Return the original keystroke
+ $old:=Keystroke
+  // Get the text selection range within the enterable area
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
+  // Start working with the current value
+ $vtNewValue:=$curVal->
+  // Depending on the key pressed or the character entered,
+  // Perform the appropriate actions
  Case of
-  // La touche Retour arrière a été enfoncée
-    :(Character code($0)=Backspace key)
-  // Supprimer les caractères sélectionnés ou le caractère à gauche du curseur
-       $vtNouvValeur:=Supprimer texte($vtNouvValeur;$vlDébut;$vlFin)
-  // Une touche "flèche" a été appuyée
-  // Ne faites rien sauf accepter la frappe clavier
-    :(Character code($0)=Left arrow key)
-    :(Character code($0)=Right arrow key)
-    :(Character code($0)=Up arrow key)
-    :(Character code($0)=Down arrow key)
+  // The Backspace (Delete) key has been pressed
+    :(Character code($old)=Backspace)
+  // Delete the selected characters or the character at the left of the text cursor
+       $vtNewValue:=Delete text($vtNewValue;$vlStart;$vlEnd)
+  // An Arrow key has been pressed
+  // Do nothing, but accept the keystroke
+    :(Character code($old)=Left arrow key)
+    :(Character code($old)=Right arrow key)
+    :(Character code($old)=Up arrow key)
+    :(Character code($old)=Down arrow key)
  
-  // Un caractère valide a été saisi
-    :(Position($0;$3)=0)
-       $vtNouvValeur:=Inserer texte($vtNouvValeur;$vlDébut;$vlFin;$0)
+  // An acceptable character has been entered
+    :(Position($old;$filter)=0)
+       $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$0)
     Else
-  // Le caractère n'est pas accepté
+  // The character is not accepted
        FILTER KEYSTROKE("")
  End case
-  // Retourner la valeur pour la prochaine gestion de la frappe clavier
- $2->:=$vtNouvValeur
+  // Return the value for the next keystroke handling
+ $curVal->:=$vtNewValue
 ```
+
 
 Cette méthode utilise les sous-méthodes suivantes :
 
 ```4d
-  // Méthode projet Supprimer texte
-  // Supprimer texte ( Alpha ; Long ; Long ) -> Alpha
-  // Supprimer texte ( -> Texte ; SelDébut ; SelFin ) -> Nouveau texte
- var $0;$1 : Text
- var $2;$3 : Integer
- $0:=Substring($1;1;$2-1-Num($2=$3))+Substring($1;$3)
+  // Delete text project method
+  // Delete text ( String ; Long ; Long ) -> String
+  // Delete text ( -> Text ; SelStart ; SelEnd ) -> New text
+#DECLARE ($src : Text ; $start : Integer ; $end : Integer) -> $new : Text 
+ $new:=Substring($src;1;$start-1-Num($start=$end))+Substring($src;$end)
 ```
-
-```4d
-  // Méthode projet Inserer texte
-  // Inserer texte ( Alpha ; Long ; Long ; Alpha ) -> Alpha
-  // Inserer texte ( -> texteSource ; SelDébut ; SelFin ; Texte à insérer ) -> Nouveau texte
- var $0;$1;$4 : Text
- var $2;$3 : Integer
- $0:=$1
- If($2#$3)
-    $0:=Substring($0;1;$2-1)+$4+Substring($0;$3)
+```4d 
+  // Insert text project method
+  // Insert text ( String ; Long ; Long ; String ) -> String
+  // Insert text ( -> srcText ; SelStart ; SelEnd ; Text to insert ) -> New text
+#DECLARE ($src : Text ; $start : Integer ; $end : Integer ; $toInsert : Text) -> $new : Text 
+ $new:=$src
+ If($start # $end)
+    $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$end)
  Else
     Case of
-       :($2<=1)
-          $0:=$4+$0
-       :($2>Length($0))
-          $0:=$0+$4
+       :($start<=1)
+          $new:=$toInsert+$new
+       :($start>Length($new))
+          $new:=$new+$toInsert
        Else
-          $0:=Substring($0;1;$2-1)+$4+Substring($0;$2)
+          $new:=Substring($new;1;$start-1)+$toInsert+Substring($new;$start)
     End case
  End if
 ```
@@ -153,21 +150,21 @@ Cette méthode utilise les sous-méthodes suivantes :
 Une fois que vous avez ajouté ces méthodes projet à votre base, vous pouvez les utiliser de la manière suivante :
 
 ```4d
-  // Méthode objet de la zone saisissable vaDescription
+  // vsDescription enterable area object method
  Case of
     :(FORM Event=On Load)
-       vaDescription:=""
-       vaDescriptionDouble:=""
-  // Etablir la liste des caractères “interdits” à traiter comme des touches spéciales
-  // (Dans cet exemple, seule la touche Aide est filtrée)
-       vaTouchesSpéciales:=Char(Help key)
+       vsDescription:=""
+       vsShadowDescription:=""
+  // Establish the list of the “forbidden” characters to be treated as special keys
+  // ( here, in this example, only the Help Key is filtered)
+       vsSpecialKeys:=Char(HelpKey)
     :(FORM Event=On Before Keystroke)
-       $vsKey:=Frappe clavier tampon(->vaDescription;->vaDescriptionDouble;vaTouchesSpéciales)
+       $vsKey:=Shadow keystroke(->vsDescription;->vsShadowDescription;vsSpecialKeys)
        Case of
           :(Character code($vsKey)=Help key)
-  // Faire quelque chose lorsque la touche Aide est enfoncée
-  // Dans cet exemple, une saisie de glossaire doit être recherchée et insérée
-             chercher_Glossaire(->vaDescription;->vaDescriptionDouble)
+  // Do something when the Help key is pressed
+  // Here, in this example, a Dictionary entry must be searched and inserted
+             LOOKUP DICTIONARY(->vsDescription;->vsShadowDescription)
        End case
  End case
 ```
@@ -175,37 +172,41 @@ Une fois que vous avez ajouté ces méthodes projet à votre base, vous pouvez l
 La méthode projet chercher\_Glossaire est listée ci-dessous (le point principal est l'utilisation de la variable tampon pour réaffecter la zone saisissable à modifier) :
 
 ```4d
-  // Méthode projet chercher_Glossaire
-  // chercher_Glossaire ( Pointeur ; Pointeur )
-  // chercher_Glossaire ( -> zone saisissable ; ->variable double )
- var $1;$2 : Pointer
- var $vlDébut;$vlFin : Integer
-  // Obtenir la sélection de texte dans la zone saisissable
- GET HIGHLIGHT($1->;$vlDébut;$vlFin)
-  // Obtenir le texte sélectionné ou le mot situé à gauche du curseur $vtTexteSelectionne:=obtenirTexteSelectionne ($2->;$vlDébut;$vlFin)
-  // Y a-t-il quelque chose à rechercher ?
- If($vtTexteSelectionne#"")
-  // Si la sélection de texte était le curseur, la sélection débute au mot situé après le curseur
-    If($vlDébut=$vlFin)
-       $vlDébut:=$vlDébut-Length($vtTexteSelectionne)
+  // LOOKUP DICTIONARY project method
+  // LOOKUP DICTIONARY ( Pointer ; Pointer )
+  // LOOKUP DICTIONARY ( -> Enterable Area ; ->ShadowVariable )
+ 
+#DECLARE ($area : Pointer ; $shadow : Pointer)
+ var $vlStart;$vlEnd : Integer
+ 
+  // Get the text selection range within the enterable area
+ GET HIGHLIGHT($area->;$vlStart;$vlEnd)
+  // Get the selected text or the word on the left of the text cursor
+ $vtHighlightedText:=Get highlighted text($shadow->;$vlStart;$vlEnd)
+  // Is there something to look for?
+ If($vtHighlightedText#"")
+  // If the text selection was the text cursor,
+  // the selection now starts at the word preceeding the text cursor
+    If($vlStart=$vlEnd)
+       $vlStart:=$vlStart-Length($vtHighlightedText)
     End if
-  // Chercher la première entrée du glossaire disponible
-    QUERY([Glossaire];[Glossaire]Saisie=$vtTexteSelectionne+"@")
-  // Existe-t-elle ?
-    If(Records in selection([Glossaire])>0)
-  // Si oui, l'insérer dans la zone tampon
-       $2->:=Inserer texte($2->;$vlDébut;$vlFin;[Glossaire]Saisie)
-  // Copier le tampon dans la zone saisissable
-       $1->:=$2->
-  // Fixer la sélection après avoir inséré l'entrée du glossaire
-       $vlFin:=$vlDébut+Length([Dictionnaire]Saisie)
-       HIGHLIGHT TEXT(vsComments;$vlFin;$vlFin)
+  // Look for the first available dictionary entry
+    QUERY([Dictionary];[Dictionary]Entry=$vtHighlightedText+"@")
+  // Is there one?
+    If(Records in selection([Dictionary])>0)
+  // If so, insert it in the shadow text
+       $shadow->:=Insert text($shadow->;$vlStart;$vlEnd;[Dictionary]Entry)
+  // Copy the shadow text to the enterable being edited
+       $area->:=$shadow->
+  // Set the selection just after the insert dictionary entry
+       $vlEnd:=$vlStart+Length([Dictionary]Entry)
+       HIGHLIGHT TEXT(vsComments;$vlEnd;$vlEnd)
     Else
-  // Il n'y a pas d'entrée qui correspond dans le glossaire
+  // There is no corresponding entry in the Dictionary
        BEEP
     End if
  Else
-  // Il n'y a pas de texte sélectionné
+  // There is no highlighted text
     BEEP
  End if
 ```
@@ -213,28 +214,28 @@ La méthode projet chercher\_Glossaire est listée ci-dessous (le point principa
 La méthode obtenirTexteSelectionne est la suivante :
 
 ```4d
-  // Méthode objet obtenirTexteSelectionne
-  // obtenirTexteSelectionne ( Alpha ; Entier long ; Entier long ) -> Alpha
-  // obtenirTexteSelectionne ( Texte ; SelDébut ; SelFin ) -> texte sélectionné
- var $0;$1 : Text
- var $2;$3 : Integer
- If($2<$3)
-    $0:=Substring($1;$2;$3-$2)
+  // Get highlighted text project method
+  // Get highlighted text ( String ; Long ; Long ) -> String
+  // Get highlighted text ( Text ; SelStart ; SelEnd ) -> highlighted text
+#DECLARE ($text : Text ; $start : Integer ; $end : Integer) -> $highlight : Text
+ If($start<$end)
+    $highlight:=Substring($text;$start;$end-$start)
  Else
-    $0:=""
-    $2:=$2-1
+    $highlight:=""
+    $start:=$start-1
     Repeat
-       If($2>0)
-          If(Position($1[[$2]];"  ,.!?:;()-_–—")=0)
-             $0:=$1[[$2]]+$0
-             $2:=$2-1
+       If($start>0)
+          If(Position($text[[$start]];"  ,.!?:;()-_–—")=0)
+             $highlight:=$text[[$start]]+$highlight
+             $start:=$start-1
           Else
-             $2:=0
+             $start:=0
           End if
        End if
-    Until($2=0)
+    Until($start=0)
  End if
 ```
+
 
 #### Voir aussi 
 

@@ -845,7 +845,6 @@ Como resultado, o retângulo vermelho segue o deslocamento da list box:
 
 #### Ver também 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [Current form table](current-form-table.md)  
 [FILTER KEYSTROKE](filter-keystroke.md)  

@@ -66,10 +66,12 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
-- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
-  Ex: `"pattern" : "docs"` or `"pattern" : "docs/invoices"`
+- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
+  Regular expressions patterns are handled directly.\
+  Ex: `"regexPattern" : "/docs/**/index.html"`
 
-- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
+- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
+  Regular expressions patterns are handled directly.\
   Ex: `"regexPattern" : "/docs/**/index.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
@@ -251,7 +253,7 @@ Then, the request handler can use this information to trigger appropriate busine
 
 ### Output: an instance of the 4D.OutgoingMessage class
 
-The request handler can return an object instance of the [4D.OutGoingMessage class](../API/OutGoingMessageClass.md), i.e. some full web content ready for a browser to handle, such as a file content.
+The request handler can return an object instance of the [4D.OutGoingMessage class](../API/OutgoingMessageClass.md), i.e. some full web content ready for a browser to handle, such as a file content.
 
 ### Ejemplo
 
