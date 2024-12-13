@@ -180,3 +180,11 @@ The following error-handling method ignores the user interruptions and displays 
 [Last errors](last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *System Variables*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 156 |
+| Thread safe | &check; |
+

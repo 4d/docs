@@ -53,3 +53,11 @@ When the [CANCEL](cancel.md) command is executed (form or printing cancelled), t
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 269 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
