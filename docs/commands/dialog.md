@@ -172,3 +172,11 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [CANCEL](../commands-legacy/cancel.md)  
 [Form](form.md)  
 [Open window](../commands-legacy/open-window.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 40 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
