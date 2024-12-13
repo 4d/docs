@@ -15,7 +15,7 @@ title: ブレークポイントとキャッチコマンド
 
 ブレークポイントを設定するには、デバッガーまたはコードエディターのソースコードエリアの左マージン内をクリックします。
 
-次の図では、ブレークポイント (赤い点) がデバッガー内で、`If ($in.dataClass#Null)` の行に設定されています:
+In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If (Value type(request.reponse.headers...`:
 
 ![break-point](../assets/en/Debugging/break.png)
 
