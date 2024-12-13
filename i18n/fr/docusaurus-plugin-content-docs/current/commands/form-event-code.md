@@ -9,28 +9,28 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Paramètres | Type    |   | Description       |
-| ---------- | ------- | - | ----------------- |
-| Résultat   | Integer | ← | Form event number |
+| Paramètres | Type    |   | Description                   |
+| ---------- | ------- | - | ----------------------------- |
+| Résultat   | Integer | ← | Numéro d'événement formulaire |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 #### Description
 
-**Form event code** returns a numeric value identifying the type of form event that has just occurred. Usually, you will use **Form event code** from within a form or object method.
+**Form event code** retourne une valeur numérique qui identifie le type d'événement formulaire qui vient de se produire. Habituellement, vous utiliserez **Form event code** dans une méthode formulaire ou une méthode objet.
 
-4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
+4D fournit des constantes prédéfinies (placées dans le thème *Evénements formulaire*) permettant de comparer les valeurs retournées par la commande **Form event code**. Certains événements sont génériques (générés pour tout type d'objet), d'autres sont spécifiques à un type d'objet particulier.
 
-For a description of events, please refer to the [**Form Events**](../Events/overview.md) section.
+Pour une description des événements, veuillez vous référer à la section [**Evénements formulaire**](../Events/overview.md).
 
 #### Exemple 1
 
-This example shows the On Validate event being used to automatically assign (to a field) the date that the record is modified:
+Cet exemple montre l'utilisation de l'événement On Validate pour assigner automatiquement (à un champ) la date de modification de l'enregistrement :
 
 ```4d
-  //Method of a form
+  //Méthode formulaire
  Case of
   // ...
     :(Form event code=On Validate)
@@ -40,10 +40,10 @@ This example shows the On Validate event being used to automatically assign (to 
 
 #### Exemple 2
 
-In this example, the complete handling of a drop-down list (initialization, user clicks, and object release) is encapsulated in the method of the object:
+Dans l'exemple suivant, la gestion complète d'un menu déroulant (initialisation, clics et relâchement de l'objet) est placée dans la méthode de l'objet :
 
 ```4d
-  //asBurgerSize Drop-down list Object Method
+  //Méthode objet du menu déroulant taTaille
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asBurgerSize;3)
@@ -52,7 +52,7 @@ In this example, the complete handling of a drop-down list (initialization, user
        asBurgerSize{1}:="Large"
     :(Form event code=On Clicked)
        If(asBurgerSize#0)
-          ALERT("You chose a "+asBurgerSize{asBurgerSize}+" burger.")
+          ALERT("Vous avez choisi la taille "+asBurgerSize{asBurgerSize}+".")
        End if
     :(Form event code=On Unload)
        CLEAR VARIABLE(asBurgerSize)
@@ -61,94 +61,94 @@ In this example, the complete handling of a drop-down list (initialization, user
 
 #### Exemple 3
 
-This example is a template for a form method. It shows each of the possible events that can occur when a summary report uses a form as an output form:
+L'exemple suivant est une méthode formulaire générique. Elle fait apparaître chacun des événements qui peuvent survenir lorsqu'un formulaire est utilisé comme formulaire sortie :
 
 ```4d
-  //Method of a form being used as output form for a summary report
+  //Méthode d'un formulaire sortie
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Header)
-  //A header area is about to be printed
+  //La zone en-tête va être imprimée ou affichée
        Case of
           :(Before selection($vpFormTable->))
-  //Code for the first break header goes here
+  //Le code pour la première rupture d'en-tête doit être placé ici
           :(Level=1)
-  //Code for a break header level 1 goes here
+  //Le code pour la rupture d'en-tête niveau 1 doit être placé ici
           :(Level=2)
-  //Code for a break header level 2 goes here
+  //Le code pour la rupture d'en-tête niveau 2 doit être placé ici
   //...
        End case
     :(Form event code=On Printing Detail)
-  //A record is about to be printed
-  //Code for each record goes here
+  //Un enregistrement va être imprimé
+  //Le code pour chaque enregistrement doit être placé ici
     :(Form event code=On Printing Break)
-  //A break area is about to be printed
+  //Une rupture va être imprimée
        Case of
           :(Level=0)
-  //Code for a break level 0 goes here
+  //Le code pour la rupture 0 doit être placé ici
           :(Level=1)
-  //Code for a break level 1 goes here
+  //Le code pour la rupture 1 doit être placé ici
   //...
        End case
     :(Form event code=On Printing Footer)
        If(End selection($vpFormTable->))
-  //Code for the last footer goes here
+  //Le code pour le dernier pied de page doit être placé ici
        Else
-  //Code for a footer goes here
+  //Le code pour un pied de page doit être placé ici
        End if
  End case
 ```
 
 #### Exemple 4
 
-This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](../commands-legacy/display-selection.md) or [MODIFY SELECTION](../commands-legacy/modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
+L'exemple suivant montre une méthode formulaire générique qui gère les événements pouvant survenir dans un formulaire sortie quand il s'affiche à l'aide de la commande [DISPLAY SELECTION](../commands-legacy/display-selection.md) ou [MODIFY SELECTION](../commands-legacy/modify-selection.md). Dans un but informatif, elle affiche l'événement dans la barre de titre de la fenêtre.
 
 ```4d
-  //A form method
- Case of
-    :(Form event code=On Load)
-       $vsTheEvent:="The form is about to be displayed"
-    :(Form event code=On Unload)
-       $vsTheEvent:="The output form has been exited and is about to disappear from the screen"
-    :(Form event code=On Display Detail)
-       $vsTheEvent:="Displaying record #"+String(Selected record number([TheTable]))
-    :(Form event code=On Menu Selected)
-       $vsTheEvent:="A menu item has been selected"
-    :(Form event code=On Header")
-       $vsTheEvent:="The header area is about to be drawn"
-    :(Form event code=On Clicked")
-       $vsTheEvent:="A record has been clicked"
-    :(Form event code=On Double Clicked")
-       $vsTheEvent:="A record has been double clicked"
-    :(Form event code=On Open Detail)
-       $vsTheEvent:="The record #"+String(Selected record number([TheTable]))+" is double-clicked"
-    :(Form event code=On Close Detail)
-       $vsTheEvent:="Going back to the output form"
-    :(Form event code=On Activate)
-       $vsTheEvent:="The form's window has just become the frontmost window"
-    :(Form event code=On Deactivate)
-       $vsTheEvent:="The form's window is no longer the frontmost window"
-    :(Form event code=On Menu Selected)
-       $vsTheEvent:="A menu item has been chosen"
-    :(Form event code=On Outside Call)
-       $vsTheEvent:="A call from another has been received"
-    Else
-       $vsTheEvent:="What's going on? Event #"+String(Form event)
- End case
- SET WINDOW TITLE($vsTheEvent)
+// Une méthode formulaire exemple
+ Case of
+ :(Form event code=On Load)
+ $vaEvénement:="Le formulaire va être affiché"
+ :(Form event code=On Unload)
+ $vaEvénement:="Le formulaire sortie vient de se fermer et va disparaître de l'écran"
+ :(Form event code=On Display Detail)
+ $vaEvénement:="Affichage de l'enregistrement n°"+String(Numero dans selection([LaTable]))
+ :(Form event code=On Menu Selected)
+ $vaEvénement:="Une commande de menu a été sélectionnée"
+ :(Form event code=Sur entête)
+ $vaEvénement:="L'en-tête va être imprimé ou affiché"
+ :(Form event code=On Clicked)
+ $vaEvénement:="On a cliqué sur un enregistrement"
+ :(Form event code=On Double Clicked)
+ $vaEvénement:="On a double-cliqué sur un enregistrement"
+ :(Form event code=On Open Detail)
+ $vaEvénement:="On a double-cliqué sur l'enregistrement n°"+String(Numero dans selection([LaTable]))
+ :(Form event code=On Close Detail)
+ $vaEvénement:="Retour au formulaire sortie"
+ :(Form event code=On Activate)
+ $vaEvénement:="La fenêtre du formulaire passe au premier plan"
+ :(Form event code=On Deactivate)
+ $vaEvénement:="La fenêtre du formulaire n'est plus au premier plan"
+ :(Form event code=On Menu Selected)
+ $vaEvénement:="Une ligne de menu a été sélectionnée"
+ :(Form event code=On Outside Call)
+ $vaEvénement:="Un appel extérieur a été reçu"
+ Else
+ $vaEvénement:="Que se passe-t-il ? L'événement n°"+String(Evenement formulaire)
+ End case
+ SET WINDOW TITLE($vaEvénement)
 ```
 
 #### Exemple 5
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) and [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) commands.
+Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commandes-legacy/get-edited-text.md), [Keystroke](../commandes-legacy/keystroke.md) et [FILTER KEYSTROKE](../commandes-legacy/filter-keystroke.md).
 
 #### Exemple 6
 
-This example shows how to treat clicks and double clicks in the same way in a scrollable area:
+Cet exemple montre comment traiter les clics et les doubles clics de la même manière dans une zone de défilement :
 
 ```4d
-  //asChoices scrollable area object method
+  //Méthode objet pour la zone de défilement asChoices
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -156,7 +156,7 @@ This example shows how to treat clicks and double clicks in the same way in a sc
        asChoices:=0
     :((Form event code=On Clicked)|(Form event code=On Double Clicked))
        If(asChoices#0)
-  //An item has been clicked, do something here
+  //On a cliqué sur un élément, faire quelque chose
   //...
        End if
   //...
@@ -165,10 +165,10 @@ This example shows how to treat clicks and double clicks in the same way in a sc
 
 #### Exemple 7
 
-This example shows how to treat clicks and double clicks using a different response. Note the use of the element zero for keeping track of the selected element:
+L'exemple suivant montre comment traiter les clics et double-clics de manière différente. Notez l'utilisation de l'élément zéro pour conserver la valeur de l'élément sélectionné :
 
 ```4d
-  //asChoices scrollable area object method
+  //Méthode objet pour la zone de défilement asChoices
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -178,9 +178,9 @@ This example shows how to treat clicks and double clicks using a different respo
     :(Form event code=On Clicked)
        If(asChoices#0)
           If(asChoices#Num(asChoices))
-  //A new item has been clicked, do something here
+  //On a cliqué sur un élément, faire quelque chose
   //...
-  //Save the new selected element for the next time
+  //Sauvegarder l'élément nouvellement sélectionné pour la prochaine fois
              asChoices{0}:=String(asChoices)
           End if
        Else
@@ -188,7 +188,7 @@ This example shows how to treat clicks and double clicks using a different respo
        End if
     :(Form event code=On Double Clicked)
        If(asChoices#0)
-  //An item has been double clicked, do something different here
+  //On a double-cliqué sur un élément, faire autre chose
        End if
   // ...
  End case
@@ -196,10 +196,10 @@ This example shows how to treat clicks and double clicks using a different respo
 
 #### Exemple 8
 
-This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../Events/onGettingFocus.md) and [`On Losing Focus`](../Events/onLosingFocus.md) events:
+L'exemple suivant montre comment maintenir une zone contenant du texte à partir d'une méthode formulaire à l'aide des événements [`On Getting Focus`](../Events/onGettingFocus.md) et [`On Losing Focus`](../Events/onLosingFocus.md) :
 
 ```4d
-  //[Contacts];"Data Entry" form method
+  //Méthode formulaire [Contacts];"Data Entry"
  Case of
     :(Form event code=On Load)
        var vtStatusArea : Text
@@ -209,10 +209,10 @@ This example shows how to maintain a status text information area from within a 
        If(($vlTableNum#0)&($vlFieldNum#0))
           Case of
              :($vlFieldNum=1) //Last name field
-                vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
+                vtStatusArea:="Saisissez le nom du contact, il sera automatiquement mis en majuscules"
   //...
              :($vlFieldNum=10) //Zip Code field
-                vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
+                vtStatusArea:="Saisissez un code postal, il sera automatiquement vérifié et validé"
   //...
           End case
        End if
@@ -227,13 +227,13 @@ This example shows how to maintain a status text information area from within a 
 Cet exemple illustre comment vous pouvez répondre à un événement de fermeture de fenêtre à l'aide d'un formulaire utilisé pour la saisie de données d'enregistrement :
 
 ```4d
-  //Method for an input form
+  //Méthode pour un formulaire entrée
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
-          CONFIRM("This record has been modified. Save Changes?")
+          CONFIRM("Cet enregistrement a été modifié. Voulez-vous sauvegarder les modifications ?")
           If(OK=1)
              ACCEPT
           Else
@@ -246,12 +246,12 @@ Cet exemple illustre comment vous pouvez répondre à un événement de fermetur
  End case
 ```
 
-#### Example 10
+#### Exemple 10
 
-This example shows how to capitalize a text or alphanumeric field each time its data source value is modified:
+L'exemple suivant montre comment mettre en majuscules un champ Texte ou Alphanumérique chaque fois que la valeur est modifiée :
 
 ```4d
-  //[Contacts]First Name Object method
+  //Méthode objet de [Contacts]First Name
  Case of
   //...
     :(Form event code=On Data Change)
@@ -260,12 +260,12 @@ This example shows how to capitalize a text or alphanumeric field each time its 
  End case
 ```
 
-#### Example 11
+#### Exemple 11
 
-The following example illustrates how to manage a deletion action in a hierarchical list:
+L'exemple suivant propose une manière de gérer une action de suppression dans une liste hiérarchique :
 
 ```4d
- ... //method of hierarchical list
+ ... //méthode objet de la liste hiérarchique
 :(Form event code=On Delete Action)
  ARRAY LONGINT($itemsArray;0)
  $Ref:=Selected list items(<>HL;$itemsArray;*)
@@ -273,12 +273,12 @@ The following example illustrates how to manage a deletion action in a hierarchi
  
  Case of
     :($n=0)
-       ALERT("No item selected")
+       ALERT("Pas d’élément sélectionné")
        OK:=0
     :($n=1)
-       CONFIRM("Do you want to delete this item?")
+       CONFIRM("Voulez-vous supprimer cet élément ?")
     :($n>1)
-       CONFIRM("Do you want to delete these items?")
+       CONFIRM("Voulez-vous supprimer ces éléments ?")
  End case
  
  If(OK=1)
@@ -288,25 +288,25 @@ The following example illustrates how to manage a deletion action in a hierarchi
  End if
 ```
 
-#### Example 12
+#### Exemple 12
 
-In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
+Dans cet exemple, l'événement formulaire [`On Scroll`](../Events/onScroll.md) permet de synchroniser l'affichage de deux images dans un formulaire. Le code suivant est ajouté dans la méthode de l'objet "satellite" (champ ou variable image) :
 
 ```4d
  Case of
     :(Form event code=On Scroll)
-  // we take the position of the left picture
+  // on relève la position de l'image de gauche
        OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
-  // and we apply it to the right picture
+  // on l'applique à l'image de droite
        OBJECT SET SCROLL POSITION(*;"plan";vPos;hPos;*)
  End case
 ```
 
-Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
+Résultat : https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### Example 13
+#### Exemple 13
 
-You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
+Vous souhaitez dessiner un rectangle rouge autour de la cellule sélectionnée d'une list box, et vous voulez que le rectangle se déplace si l'utilisateur fait défiler verticalement la list box. Dans la méthode objet de la list box, vous pouvez écrire :
 
 ```4d
  Case of
@@ -314,18 +314,19 @@ You want to draw a red rectangle around the selected cell of a list box, and you
     :(Form event code=On Clicked)
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
-       OBJECT SET VISIBLE(*;"RedRect";True) //initialize a red rectangle
+       OBJECT SET VISIBLE(*;"RedRect";True) //initialiser rectangle rouge
        OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
  
     :(Form event code=On Scroll)
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
        OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
-       $toAdd:=LISTBOX Get headers height(*;"LB1") //height of the header so as not to overlap it
-       If($ylb1+$toAdd<$y1)&($ylb2>$y2) //if we are inside the list box
-  //to keep it simple, we only handle headers
-  //but we should handle horizontal clipping
-  //as well as scroll bars
+       $toAdd:=LISTBOX Get headers height(*;"LB1")
+       //tenir compte de la hauteur de l'entête pour ne pas que le rectangle empiète dessus
+       If($ylb1+$toAdd<$y1)&($ylb2>$y2) //si nous sommes dans la list box
+  //pour simplifier, on ne tient compte que des en-têtes
+  //mais il faudrait également gérer le clipping horizontal
+  //ainsi que les barres de défilement
           OBJECT SET VISIBLE(*;"RedRect";True)
           OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
        Else
@@ -335,7 +336,7 @@ You want to draw a red rectangle around the selected cell of a list box, and you
  End case
 ```
 
-As a result, the red rectangle follows the scrolling of the list box:
+En résultat, le rectangle rouge suit bien le défilement de la list box :
 
 ![](../assets/en/commands/pict1900395.en.png)
 
