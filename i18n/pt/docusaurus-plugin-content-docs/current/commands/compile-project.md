@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 #### Descrição
 
-**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../Project/compiler.md).
+**Compile project**<!--REF #_command_.Comile project.Summary--> permite que você compile o projeto host atual ou o projeto especificado no parâmetro *projectFile*.<!-- END REF--> Para obter mais informações sobre a compilação, verifique a [página de compilação](../Project/compiler.md).
 
-By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. As seguintes sintaxes são suportadas:
+Por padrão, o comando usa as opções do compilador definidas nas Configurações da estrutura. Você pode substituí-los passando um parâmetro *options*. As seguintes sintaxes são suportadas:
 
-- **Compile project**(): compiles the opened project using the options defined in the Structure Settings
+- **Compile project**(): compila o projeto aberto usando as opções definidas nas Configurações da Estrutura
 - **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
 - **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
 - **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
@@ -101,7 +101,7 @@ The object returned by **Compile project** has up to three properties:
 | symbols.methods\[\].params       | Collection             | Collection of parameter types (Value type numerical codes)                                                            |
 | symbols.methods\[\]. threadSafe  | Parâmetros             | Indicates if this method is thread safe                                                                                                  |
 
-For more information, see [Compilation tools](../Project/compiler.md#compilation-tools).
+Para obter mais informações, consulte [Ferramentas de compilação](../Project/compiler.md#compilation-tools).
 
 ###### variable objects
 
