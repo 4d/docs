@@ -13,6 +13,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Expressions used in [form object properties](../FormObjects/properties_Reference.md) now benefit from syntax checking in the [Property list](../FormEditor/formEditor.md#property-list) and in the [Compiler](../Project/compiler.md#check-syntax).
 - You can [associate a class to a form](../FormEditor/properties_FormProperties.md#form-class) to enable code type-ahead and automatic instantiation of form data when using the [`Form`](../commands/form.md) command.
 - Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
+- [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
 - [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
 - Langage 4D :
   - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
