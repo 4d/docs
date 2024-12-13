@@ -3,9 +3,15 @@ id: debugger
 title: Depurador
 ---
 
-O depurador é útil quando é necessário detetar erros ou monitorizar a execução de métodos. Permite-lhe percorrer o seu código lentamente e examinar a informação. Este processo é designado por "rastreio".
+The 4D debugger is useful when you need to spot errors or monitor the execution of methods. Permite-lhe percorrer o seu código lentamente e examinar a informação. Este processo é designado por "rastreio".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
+
+:::info
+
+If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+
+:::
 
 ## Chamando o depurador
 
