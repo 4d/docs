@@ -124,20 +124,18 @@ This tab allows you can build a stand-alone, single-user version of your applica
 
 ### Build stand-alone Application
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
+Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project. On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
 
-A build can also use the following elements:
+The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
-* 4D Volume Desktop (the 4D database engine) (required),
-* An [appropriate license](#licenses) (optional). If you do not embed a license, the final user will have to enter a license at the first application launch (see XXX).
+- You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
+- You can either embed a [deployment license](#licenses) or let the final user [enter their license](../Admin/licenses.md#first-activation) at the first application launch.
 
-On Windows, this feature creates an executable file (.exe). On macOS, it handles the creation of software packages.
-
-The principle consists of merging a compiled structure file with 4D Volume Desktop. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
-
-You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
+:::note
 
 It is possible to [automate the update of merged single-user applications](#automatic-updating-of-server-or-single-user-applications) by means of a sequence of language commands.
+
+:::
 
 #### 4D Volume Desktop Location
 
@@ -150,7 +148,7 @@ To select the 4D Volume Desktop folder, click on the **[...]** button. A dialog 
 
 Once the folder is selected, its complete pathname is displayed and, if it actually contains 4D Volume Desktop, the option for building an executable application is activated.
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D Developer 20, you must select a 4D Volume Desktop 20.
+> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
 #### Data linking mode
 
@@ -187,7 +185,7 @@ If you have specified "MyProject" as the name of the application, you will find 
 When building a stand-alone application, 4D copies the contents of the 4D Volume Desktop folder into Destination folder > *Final Application* folder. You're then able to customize the contents of the original 4D Volume Desktop folder according to your needs. You can, for example:
 
 * Install a 4D Volume Desktop version corresponding to a specific language;
-* Add a custom *PlugIns* folder;
+* Add a custom *Plugins* folder;
 * Customize the contents of the *Resources* folder.
 
 >In macOS, 4D Volume Desktop is provided in the form of a software package. In order to modify it, you must first display its contents (**Control+click** on the icon).
@@ -300,7 +298,7 @@ You can check this option:
 
 Designates the location on your disk of the 4D Volume Desktop application to be used to build the client part of your application.
 
-> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D v19, you must select a 4D Volume Desktop v19.
+> The 4D Volume Desktop version number must match the 4D Developer Edition version number. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
 
 The 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for the "concurrent" platform, you must carry out an additional build operation using a 4D application running on that platform.
 
@@ -474,7 +472,7 @@ The page lists the elements loaded by the current 4D application:
 
 ### Adding plug-ins or components
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
+If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **Plugins** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
 
 If there is a conflict between two different versions of the same plug-in (one loaded by 4D and the other located in the source application folder), priority goes to the plug-in installed in the 4D Volume Desktop/4D Server folder. However, if there are two instances of the same component, the application will not open.
 
@@ -500,20 +498,26 @@ The following optional modules can be deselected:
 
 The Licences & Certificate page can be used to:
 
-* designate the license number(s) that you want to integrate into your single-user stand-alone application
+* designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
 * sign the application by means of a certificate in macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licenses
 
-This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Desktop Volume* license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Unlimited Desktop* license (optional) to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+
+:::note
+
+You can build an application without a *4D Unlimited Desktop* deployment license. In this case, the [first activation](../Admin//licenses.md#first-activation) dialog box will be displayed to the user when they launch the application for the first time. They have to purchase and enter a per-user *4D Desktop* license. 
+
+:::
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
 
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
-You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Desktop Volume* licenses were purchased.
+You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Unlimited Desktop* licenses were purchased.
 
 Once you have selected a file, the list will indicate the characteristics of the license that it contains.
 
@@ -528,7 +532,7 @@ You can designate as many valid files as you want. When building an executable a
 
 >Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
 
-After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
+After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
 ### macOS signing certificate
 
