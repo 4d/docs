@@ -30,4 +30,4 @@ Project files can be [compiled](compiler.md) and easily deployed. 4D allows you 
 - [mobile](https://developer.4d.com/go-mobile/) applications, 
 - [desktop](Desktop/building.md) applications (client/server or single-user). 
 
-Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](../Desktop/building.md).
+Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume Desktop](../Desktop/building.md).
