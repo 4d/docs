@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-Los objetos `Folder` se crean con el comando [`Folder`](#folder). Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando `Folder` para crear una nueva carpeta, se crea un objeto `Folder` válido, pero en realidad no se almacena nada en el disco hasta que llame a la función [`folder.create()`](#create).
+Comentario Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando `Folder` para crear una nueva carpeta, se crea un objeto `Folder` válido, pero en realidad no se almacena nada en el disco hasta que llame a la función [`folder.create()`](#create).
 
 ### Ejemplo
 
@@ -78,7 +78,7 @@ Los objetos `Folder` admiten varios nombres de ruta, incluida la sintaxis `files
 
 #### Descripción
 
-El comando `Folder` <!-- REF #_command_.Folder.Summary -->crea y devuelve un nuevo objeto del tipo `4D.Folder`<!-- END REF -->. El comando acepta dos sintaxis:
+Comentario El comando acepta dos sintaxis:
 
 **Folder ( path { ; pathType } { ; \* } )**
 

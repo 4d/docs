@@ -224,7 +224,7 @@ As regras de nomenclatura dos tokens (ou seja, nomes de propriedades de objetos 
 **Nota:**
 
 - Usar um campo de tabela como um índice de coleção, por exemplo, a.b[[Table1]Id], não é permitido. É necessário utilizar uma variável intermédia.
-- Criar atributos de objeto usando uma string entre colchetes quadradas permite que você substitua as regras de ECMA Script. Por exemplo, o atributo $o["My Att"] é válido em 4D, apesar do espaço. In this case, however, it will not be possible to use dot notation with this attribute.
+- Criar atributos de objeto usando uma string entre colchetes quadradas permite que você substitua as regras de ECMA Script. Por exemplo, o atributo $o["My Att"] é válido em 4D, apesar do espaço. No entanto, neste caso, não será possível usar uma notação de ponto com esse atributo.
 
 
 ## Exemplos
@@ -233,21 +233,21 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
 - Escrita e leitura das propriedades de objetos (este exemplo compara a notação de objetos e anotação de comandos):
 
 ```4d
-  // Using the object notation
- C_OBJECT($myObj) //declares a 4D variable object
- $myObj:=New object //creates an object and assigns to the variable
- $myObj.age:=56
- $age:=$myObj.age //56
+  // Usando a notação de objeto
+ C_OBJECT($myObj) //declara um objeto de variável 4D
+ $myObj:=New object //cria um objeto e atribui à variável
+ $myObj. idade: =56
+ $age:=$myObj. ge //56
 
-  // Using the command notation
- C_OBJECT($myObj2) //declares a 4D variable object
- OB SET($myObj2;"age";42) //creates an object and adds the age property
- $age:=OB Get($myObj2;"age") //42
+  // Usando a notação de comando
+ C_OBJECT($myObj2) /declara um objeto de variável 4D
+ OB SET($myObj2; idade";42) /cria um objeto e adiciona a propriedade de idade
+ $age:=OB Get($myObj2; idade") /42
 
-  // Of course, both notations can be mixed
+  // É claro, ambas as notações podem ser misturadas
  C_OBJECT($myObj3)
- OB SET($myObj3;"age";10)
- $age:=$myObj3.age //10
+ OB SET($myObj3; idade";10)
+ $age:=$myObj3. de //10
 ```
 
 - Criar uma propriedade e atribuir valores, incluindo objetos:
@@ -270,12 +270,12 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
 - É possível acessar as propriedades como strings usando o operador []
 
 ```4d
- $Emp["city"]:="Berlin" //modifies the city property
-  //this can be useful for creating properties through variables
- C_TEXT($addr)
+  $Emp["city"]:="Berlin" //modifica a propriedade city
+  //isso pode ser útil para criar propriedades por meio de variáveis
+ var $addr : Text
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
  End for
-  // creates 4 empty properties "address1...address4" in the $Emp object
+  // cria 4 propriedades vazias "address1...address4" no objeto $Emp
 ```

@@ -13,6 +13,12 @@ Puede desplazarse por el contenido de métodos, clases y funciones, que pueden i
 
 El Editor de Código 4D ofrece una comprobación básica de errores de sintaxis. Cuando se ejecuta el código se realiza una comprobación adicional de errores. Para más información sobre cómo gestionar los errores, consulte [Depuración](../Debugging/basics.md).
 
+:::note
+
+If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension.
+
+:::
+
 ## Interface
 
 ### Toolbar (Barra de herramientas)

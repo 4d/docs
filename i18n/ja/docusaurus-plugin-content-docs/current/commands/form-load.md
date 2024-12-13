@@ -8,41 +8,41 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-| 引数       | 型            |   | 説明                                                                                                                                                                                                                       |
-| -------- | ------------ | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| aTable   | テーブル         | → | Table form to load (if omitted, load a project form)                                                                                                                                                  |
-| form     | Text, Object | → | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData | Object       | → | フォームに関連づけるデータ                                                                                                                                                                                                            |
-| \*       | 演算子          | → | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
+| 引数       | 型            |   | 説明                                                                                                                                                                      |
+| -------- | ------------ | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable   | テーブル         | → | ロードするテーブルフォーム(省略時はプロジェクトフォームをロード)                                                                                                                    |
+| form     | Text, Object | → | (プロジェクトまたはテーブル)フォーム名(文字列)、&#xA;あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、&#xA;あるいは開くフォームを定義したオブジェクト |
+| formData | Object       | → | フォームに関連づけるデータ                                                                                                                                                           |
+| \*       | 演算子          | → | 指定時、コマンドはコンポーネントから実行した場合にホストのデータベースコマンドが適応されます(それ以外の場合は無視されます)。                                                                                      |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 #### 説明
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
+<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->**FORM LOAD** コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて*formData* 引数のデータ(オプション)とともにメモリーにロードします。 1つのプロセスにつきカレントフォームは1つしか指定できません。
 
 *form* 引数には、以下のいづれかを渡すことができます:
 
-- the name of a form, or
-- the path (in POSIX syntax) to a valid .json file containing a description of the form to use, or
-- an object containing a description of the form.
+- フォーム名
+- 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス)
+- フォームの詳細を格納しているオブジェクト
 
-When the command is executed from a component, it loads the component forms by default. If you pass the *\** parameter, the method loads the host database forms.
+コマンドがコンポーネントから呼び出された場合、デフォルトではコマンドはコンポーネントのフォームをロードします。 *\** 引数を渡した場合、メソッドはホストデータベースのフォームをロードします。
 
 ##### formData
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
-The form data object is available in the [`On Load` form event](../Events/onLoad.md).
+オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、[フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
+formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。
 
-For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
+form data オブジェクトについての詳細な情報については、[`DIALOG`](dialog.md) コマンドを参照してください。
 
-##### Printing data
+##### データの印刷
 
-In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command. The [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command makes an implicit call to the [FORM UNLOAD](../commands-legacy/form-unload.md) command, so in this context it is necessary to execute **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](../commands-legacy/print-object.md) command, work with this form.
+このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は [FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて**FORM LOAD** コマンドを使用する必要があります。 ロードされた*form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
 
-If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
+**FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレークは生成されません。 ページブレークは開発者が別途指定する必要があります。
 
 Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
 

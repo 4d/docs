@@ -3,9 +3,15 @@ id: debugger
 title: デバッガー
 ---
 
-デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
+The 4D debugger is useful when you need to spot errors or monitor the execution of methods. デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
+
+:::info
+
+If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+
+:::
 
 ## デバッガーの呼び出し
 
