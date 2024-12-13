@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 #### Descrição
 
-The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
+O comando `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->cria e retorna uma nova seleção de entidade [alterável](../ORDA/entities.md#shareable-or-alterable-entity-selections) relacionada à classe de dados correspondente à *dsTable* fornecida, de acordo com a seleção atual dessa tabela<!-- END REF-->.
 
-If the current selection is sorted, an [ordered](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
+Se a seleção atual for ordenada, uma entidade [ordenada](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) é criada (a ordem da seleção atual é mantida). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
 
-If the *dsTable* is not exposed in [`ds`](ds.md), an error is returned. Esse comando não pode usado com uma datastore remota.
+Se *dsTable* não for exposta em [`ds`](ds.md), um erro será retornado. Esse comando não pode usado com uma datastore remota.
 
 No parâmetro opcional *settings*, você pode passar um objeto que contenha a seguinte propriedade:
 
