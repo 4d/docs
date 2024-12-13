@@ -69,7 +69,7 @@ Examples for a long version number:
 
 The Application version command can return additional information in the optional *buildNum* parameter: the build number of the current version of the 4D application. This is an internal compilation number that can be used for versioning or when contacting the 4D Technical Services department.
 
-**Note:** In the case of applications that are compiled and merged with 4D Volume License, the build number returned is not significant. In this context, version information is managed by the developer. 
+**Note:** In the case of applications that are compiled and merged with 4D Volume Desktop, the build number returned is not significant. In this context, version information is managed by the developer. 
 
 #### Example 1 
 
