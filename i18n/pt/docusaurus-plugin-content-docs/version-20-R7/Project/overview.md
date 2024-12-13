@@ -7,7 +7,7 @@ Um projeto 4D contém todo o código fonte de uma aplicação 4D, qualquer que s
 
 ## Ficheiros do projecto
 
-Os ficheiros de projeto 4D são abertos e editados usando aplicações normais da plataforma 4D (4D ou 4D Server). Com 4D, editores completos estão disponíveis para gerir ficheiros, incluindo um editor de estrutura, um editor de código, um editor de formulários, um editor de menus...
+Os ficheiros de projeto 4D são abertos e editados usando aplicações normais da plataforma 4D (4D ou 4D Server). With 4D, full-featured editors are available to manage files, including a structure editor, a [Code Editor](../code-editor/write-class-method.md), a [form editor](../FormEditor/formEditor.md), a menu editor...
 
 Quando os projetos estão em ficheiros de texto simples legíveis (JSON, XML, etc.), podem ser lidos ou editados manualmente pelos programadores, utilizando qualquer editor de código.
 

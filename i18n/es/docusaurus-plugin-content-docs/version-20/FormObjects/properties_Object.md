@@ -184,7 +184,7 @@ La colección o la selección de entidades debe estar disponible para el formula
 
 - si ha utilizado una colección de objetos, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de propiedad, por ejemplo `This.<propertyPath>`.
 - si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de atributo, por ejemplo `This.<attributePath>`.
-> Si ha utilizado una colección de valores escalares (y no objetos), 4D le permite mostrar cada valor llamando a **This.value** en la expresión datasource. Sin embargo, en este caso no podrá modificar valores ni acceder al objeto actual (ver más adelante).
+> > Si ha utilizado una colección de valores escalares (y no objetos), 4D le permite mostrar cada valor llamando a **This.value** en la expresión datasource. Sin embargo, en este caso no podrá modificar valores ni acceder al objeto actual (ver más adelante).
 
 
 #### Gramática JSON
