@@ -15,7 +15,7 @@ A captura de um comando permite começar a rastrear a execução de qualquer pro
 
 Para criar um ponto de interrupção, clique na margem esquerda do painel Código-fonte no depurador ou no Editor de código.
 
-En el siguiente ejemplo, se ha definido un punto de ruptura (la viñeta roja), en el depurador, en la línea `If ($in.dataClass#Null)`:
+In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If (Value type(request.reponse.headers...`:
 
 ![break-point](../assets/en/Debugging/break.png)
 
