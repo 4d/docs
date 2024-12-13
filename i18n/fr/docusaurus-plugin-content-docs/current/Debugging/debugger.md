@@ -3,9 +3,15 @@ id: debugger
 title: Débogueur
 ---
 
-Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'exécution de méthodes. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
+The 4D debugger is useful when you need to spot errors or monitor the execution of methods. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
+
+:::info
+
+If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+
+:::
 
 ## Appeler le débogueur
 
