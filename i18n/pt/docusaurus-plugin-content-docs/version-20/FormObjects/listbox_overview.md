@@ -242,7 +242,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 #### Propriedades adicionais
 
-Form events on list box or list box column objects may return the following additional properties:
+Os eventos de formulário em objetos de caixa de listagem ou de coluna de caixa de listagem podem retornar as seguintes propriedades adicionais:
 
 | Propriedade          | Tipo          | Descrição                                                                    |
 | -------------------- | ------------- | ---------------------------------------------------------------------------- |
@@ -279,7 +279,7 @@ Pode estabelecer propriedades padrão (texto, cor de fundo, etc) para cada colun
 
 ### Propriedades específicas de coluna
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-list-of-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-falsetext-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Formato alfa](properties_Display.md#alpha-format) - [Cor de fundo alternativa](properties_BackgroundAndBorder.md#alternate-background-color) - [Altura automática da linha](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Expressão de cor de fundo](properties_BackgroundAndBorder.md#background-color-expression) - [Negrito](properties_Text.md#bold) - [Lista de opções](properties_DataSource.md#choice-list) - [Classe](properties_Object.md#css-class) - [Tipo de dados (coluna de list box seleção e coleção)](properties_DataSource.md#data-type) - [Formato Data](properties_Display.md#date-format) - [Valores padrão](properties_DataSource.md#default-list-of-values) - [Tipo exibição](properties_Display.md#display-type) - [Digitável](properties_Entry.md#enterable) - [Filtro de entrada](properties_Entry.md#entry-filter) - [Lista de excluídos](properties_RangeOfValues.md#excluded-list) - [Expressão](properties_DataSource.md#expression) - [Tipo de expressão (coluna list box array)](properties_Object.md#expression-type) - [Fonte](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment) - [Preenchimento horizontal](properties_CoordinatesAndSizing.md#horizontal-padding) - [Itálico](properties_Text.md#italic) - [Invisível](properties_Display.md#visibility) - [Largura máxima](properties_CoordinatesAndSizing.md#maximum-width) - [Método](properties_Action.md#method) - [Largura mínima](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-estilo](properties_Text.md#multi-style) - [Formato número](properties_Display.md#number-format) - [Nome objeto](properties_Object.md#object-name) - [Formato imagem](properties_Display.md#picture-format) - [Redimensionável](properties_ResizingOptions.md#resizable) - [Lista obrigatória](properties_RangeOfValues.md#required-list) - [Array de cores de fundo de linha](properties_BackgroundAndBorder.md#row-background-color-array) - [Array de cores de fonte de linha](properties_Text.md#row-font-color-array) - [Array de estilo de linha](properties_Text.md#row-style-array) - [Salvar como](properties_DataSource.md#save-as) - [Expressão de estilo](properties_Text.md#style-expression) - [Texto quando False/Texto quando True](properties_Display.md#text-when-falsetext-when-true) - [Formato de hora](properties_Display.md#time-format) - [Truncar com reticências](properties_Display.md#truncate-with-ellipsis) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Alinhamento vertical](properties_Text.md#vertical-alignment) - [Preenchimento Vertical](properties_CoordinatesAndSizing.md#vertical-padding) - [Largura](properties_CoordinatesAndSizing.md#width) - [Envolvimento de palavras](properties_Display.md#wordwrap)
 
 ### Eventos formulário suportados
 
@@ -537,10 +537,10 @@ O suporte de ordenação padrão depende do tipo de list box:
 
 | Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                  |
 | ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Uma coleção de objetos        | Sim                         | <ul><li>As colunas "This.a" ou "This.a.b" podem ser ordenadas.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                  |
-| Colecção de valores escalares | Não                         | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
-| Seleção de entidades          | Sim                         | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Suportado: ordena por atributos relacionados (por exemplo, "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
-| Selecção actual               | Sim                         | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
+| Uma coleção de objetos        | Sim                         | <ul><li>As colunas "This.a" ou "This.a.b" podem ser ordenadas.</li><li>A [propriedade source do list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                  |
+| Colecção de valores escalares | Não                         | Use a classificação personalizada com a função[`orderBy()`](../API/CollectionClass.md#orderby)               |
+| Seleção de entidades          | Sim                         | <li>A [propriedade source do list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo, "This.data.city" quando "data" é um atributo de objeto)</li><li>Suportado: ordena por atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
+| Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                         |
 | Seleção temporal              | Não                         |                                                                                                              |
 | Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                   |
 
@@ -554,15 +554,15 @@ O desenvolvedor pode estabelecer ordenações personalizadas com o comando `LIST
 As ordenações personalizadas permitem-lhe:
 
 - efetuar ordenações multinível em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
-- use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- use funções como [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para classificar colunas com base em critérios complexos.
 
 #### Exemplo
 
-You want to sort a list box using values of a property stored in a related object attribute. Tem a seguinte estrutura:
+Você deseja classificar uma caixa de lista usando valores de uma propriedade armazenada em um atributo de objeto relacionado. Tem a seguinte estrutura:
 
 ![](../assets/en/FormObjects/relationLB.png)
 
-You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds. Child.all()`.
+Você projeta um list box do tipo de seleção de entidades, vinculada à expressão `Form.child`. No evento formulário `On Load`, você executa `Form.child:=ds.Child.all()`.
 
 São exibidas duas colunas:
 
@@ -587,9 +587,9 @@ P valor da variável column header variable[](properties_Object.md#variable-or-e
 
 - Se a variável for estabelecida como 1, a coluna é ordenada de forma ascendente e a flecha de ordenação é exibida;![](../assets/en/FormObjects/sorticon1.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed. ![](../assets/en/FormObjects/sorticon2.png)
+- Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida. ![](../assets/en/FormObjects/sorticon2.png)
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Não são suportados outros tipos de [expressões](Concepts/quick-tour.md#expressions), como `Form.sortValue`.
+> Somente [variáveis](Concepts/variables.md) declaradas ou dinâmicas podem ser usadas como variáveis de coluna de cabeçalho. Não são suportados outros tipos de [expressões](Concepts/quick-tour.md#expressions), como `Form.sortValue`.
 
 Pode estabelecer o valor da variável (por exemplo, Header2:=2) para  “forçar” a exibição da flecha de ordenação. A ordenação de coluna não é modificada nesse caso; depende do desenvolvedor como vai manejá-la.
 
@@ -1222,11 +1222,11 @@ OB SET($ob;"label";"Edit...")
 ### Gestão de eventos
 Vários eventos podem ser tratados durante o uso de um list box array de objetos:
 
-*   **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:
+*   **On Data Change**: um evento `On Data Change` é acionado quando qualquer valor foi modificado também:
     *   numa zona de introdução de texto
     *   numa lista pendente
     *   numa área combo box
     *   num botão de unidade (mudar do valor x para o valor x+1)
     *   numa caixa de verificação (alternar entre verificado/não verificado)
-*   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. Este evento é gerido pelo programador.
-*   **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. Este evento é gerido pelo programador.
+*   **On Clicked**: quando o usuário clicar em um botão instalado usando o atributo *valueType* "event", será gerado um evento `On Clicked`. Este evento é gerido pelo programador.
+*   **On Alternative Click**: quando o usuário clicar em um botão de reticências (atributo "alternateButton"), será gerado um evento `On Alternative Click`. Este evento é gerido pelo programador.
