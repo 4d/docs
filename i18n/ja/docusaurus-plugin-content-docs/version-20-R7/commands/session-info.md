@@ -39,7 +39,7 @@ The `Session info` command <!-- REF #_command_.Session info.Summary -->returns a
 | hostType         | Text (enum)          | Host type. Possible values: "windows", "mac", "browser"            |
 | creationDateTime | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                  |
 | state            | Text (enum)          | Session state. Possible values: "active", "postponed", "sleeping"  |
-| ID               | Text                                    | Session UUID                                                                                       |
+| ID               | Text                                    | セッションUUID                                                                                          |
 | persistentID     | Text                                    | セッションの永続的な ID                                                                                      |
 
 :::note
