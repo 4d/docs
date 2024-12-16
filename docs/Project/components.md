@@ -51,7 +51,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-dependency).
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -186,7 +186,7 @@ Absolute paths should only be used for components that are specific to one machi
 
 ### Components stored on GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
 
 :::note
 
@@ -237,7 +237,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 #### Tags and versions
 
-When you create a release in GitHub, you specify a **tag** and a **version**.
+When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.  
 
 - **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. For example :
 
@@ -252,7 +252,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- A release is also identified by a **version**. The versioning system used is based on the [*Semantic Versioning*](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -265,7 +265,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Here are a few examples:
 
@@ -282,6 +282,12 @@ Here are a few examples:
 - "`<1.2.3 || >=2`": version that is not between 1.2.3 and 2.0.0.
 
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
+
+
+The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list or the component is automatically downloaded, [depending on your settings]. 
+
+
+
 
 
 #### Private repositories
@@ -323,7 +329,7 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 ...where `<app name>` can be "4D", "4D Server", or "tool4D".
 
 
-#### dependency-lock.json
+### dependency-lock.json
 
 A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
 
@@ -335,7 +341,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 ## Monitoring Project Dependencies
 
-In an opened project, you can add, remove, and get information about dependencies and their current loading status in the **Dependencies** panel.
+In an opened project, you can add, remove, update, and get information about dependencies and their current loading status in the **Dependencies** panel.
 
 To display the Dependencies panel:
 
@@ -400,12 +406,13 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
+#### Defining a GitHub dependency version range  
 
-You can then define the [tag or version](#tags-and-versions) option for the dependency: 
+You can define the [tag or version](#tags-and-versions) option for a dependency: 
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
+- **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version. 
 - **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
@@ -415,7 +422,70 @@ Click on the **Add** button to add the dependency to the project.
 
 The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
 
-#### Providing your GitHub access token
+
+
+#### Modifying a GitHub dependency version setting
+
+You can modify the [version setting](#defining-the-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**. 
+
+
+### Managing updates
+
+The Dependency manager provides an integrated handling of updates on GitHub. The following features are supported:
+
+- Automatic and manual checking of available versions 
+- Automatic and manual updates of components
+
+Manual operations can be done **per dependency** or **for all dependencies**. 
+
+#### Checking for new versions
+
+Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background. 
+
+In addition, you can check for updates at any moment, for a single dependency or for all dependencies: 
+
+- To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
+![check component](../assets/en/Project/check-component.png)
+
+- To check for updates of all dependencies, click on the **Options** menu at the bottom of the Dependency manager window and select **Check for updates**.
+![check components](../assets/en/Project/dependency-auto.png)
+
+
+If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed: 
+
+You can choose to update the component at next startup, or to 
+
+
+(per dependency or for all dependencies)
+
+- Automatic regular checks for new versions on GitHub
+-   
+
+You decide when and how to integrate changes. You can also check for updates at any moment. 
+
+
+
+You can also configure the Dependency manager so that new versions are automatically installed. 
+
+
+
+
+
+The Dependency manager informs you when a new version is available by displaying update labels in the Dependency list. 
+
+
+To configure the version update settings, click on the **Options** menu at the bottom of the Dependency manager window. 
+
+![dependency-auto-menu](../assets/en/Project/dependency-auto.png)
+
+The following options are available:
+
+- **Automatic update**: When this option is checked (default), a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is automatically installed and will be loaded at next project startup. When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as 
+
+
+
+
+### Providing your GitHub access token
 
 If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
 
