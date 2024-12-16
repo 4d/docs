@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| 引数            | 型       |     | 説明                            |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| 戻り値           | Object  |  ←  | Information about the process |
+| 引数            | 型       |     | 説明         |
+| ------------- | ------- | :-: | ---------- |
+| processNumber | Integer |  →  | プロセス番号     |
+| 戻り値           | Object  |  ←  | プロセスに関する情報 |
 
 <!-- END REF -->
 
@@ -25,24 +25,24 @@ displayed_sidebar: docs
 
 #### 説明
 
-The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
+`Process info` コマンドは、<!-- REF #_command_.Process info.Summary -->*processNumber* 引数にプロセス番号を渡したプロセスについての詳細な情報を提供するオブジェクトを返します<!-- END REF -->。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ            | 型                                       | 説明                                                                               |
-| ---------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
-| cpuTime          | Real                                    | Running time (seconds)                                        |
-| cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
-| creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | Integer                                 | Process unique ID                                                                |
-| name             | Text                                    | プロセス名                                                                            |
-| number           | Integer                                 | Process number                                                                   |
-| プリエンプティブ         | Boolean                                 | True if run preemptive, false otherwise                                          |
-| sessionID        | Text                                    | Session UUID                                                                     |
-| state            | Integer                                 | Current status. Possible values: see below       |
-| systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
-| type             | Integer                                 | Running process type. Possible values: see below |
-| visible          | Boolean                                 | True if visible, false otherwise                                                 |
+| プロパティ            | 型                                       | 説明                                                                    |
+| ---------------- | --------------------------------------- | --------------------------------------------------------------------- |
+| cpuTime          | Real                                    | 実行時間(秒)                                            |
+| cpuUsage         | Real                                    | このプロセスに割り当てられてる時間のパーセント(0 から1 の間)                  |
+| creationDateTime | Text (Date ISO 8601) | プロセス作成の日時                                                             |
+| ID               | Integer                                 | プロセス固有のID                                                             |
+| name             | Text                                    | プロセス名                                                                 |
+| number           | Integer                                 | プロセス番号                                                                |
+| preemptive       | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                                    |
+| sessionID        | Text                                    | セッションUUID                                                             |
+| state            | Integer                                 | 現在の状態。 取り得る値: 以下を参照のこと                                |
+| systemID         | Text                                    | ID for the user process, 4D process or spare process                  |
+| type             | Integer                                 | Running process type. 取り得る値: 以下を参照のこと |
+| visible          | Boolean                                 | True if visible, false otherwise                                      |
 
 - Possible values for "state":
 

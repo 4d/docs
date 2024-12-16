@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 #### Description
 

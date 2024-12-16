@@ -87,7 +87,7 @@ O estilo Clássico de caixa de seleção corresponde a um sistema de caixa de se
 
 ![](../assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -109,7 +109,7 @@ O estilo de caixa de seleção Plano tem uma aparência minimalista. A natureza 
 
 ![](../assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -134,7 +134,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_toolbar.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -160,7 +160,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_bevel.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -188,7 +188,7 @@ Exemplo em macOS:
 
 > No Windows, o estilo de botão Rounded Bevel é idêntico ao estilo de botão [Bevel](#bevel).
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```4d
 	"myCheckBox": {
@@ -214,7 +214,7 @@ O estilo Gradient OS X tem um fundo cinza claro com um título e se mostra como 
 
 > No Windows, esse estilo de botão de caixa de seleção é idêntico ao estilo de botão [Bevel](#bevel).
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -244,7 +244,7 @@ Como padrão, o estilo OS X Textured aparece como:
 
 ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -272,7 +272,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -307,7 +307,7 @@ O estilo Recolher/Expandir é denominado "disclosure" na [gramática JSON de est
 
 :::
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -339,7 +339,7 @@ O estilo Disclosure é denominado "roundedDisclosure" na [gramática JSON do est
 
 :::
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -363,7 +363,7 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckbox": {

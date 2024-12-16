@@ -274,7 +274,7 @@ La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
+Vous pouvez utiliser cette propriété pour obtenir l'objet [`.storage`](#storage) d'une session grâce à la commande [`Session storage`](../commands-legacy/session-storage.md).
 
 :::
 
@@ -352,7 +352,7 @@ Cette propriété est uniquement disponible avec les sessions des procédures st
 
 La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session du client distant ou de la procédure stockée sur le serveur<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+L'objet `.info` est le même objet que celui retourné dans la propriété "session" par la commande [`Process activity`](../commands/process-activity.md) pour les sessions de clients distants et des procédures stockées.
 
 L'objet `.info` contient les propriétés suivantes:
 
@@ -532,7 +532,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
+Vous pouvez obtenir la propriété `.storage` d'une session en utilisant la commande [`Session storage`](../commands-legacy/session-storage.md).
 
 :::
 

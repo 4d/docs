@@ -52,33 +52,33 @@ title: デバッガー
 
 トレースが停止され、通常のメソッド実行が再開されます。
 
-> **Shift** + **F5** または **Shift** を押しながら **トレース終了** ボタンをクリックすると、実行が再開されます。 この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
+> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
 
 #### 次行に進む
 
 現在のメソッド行 (プログラムカウンターと呼ばれる黄色い矢印で示されている行) が実行されます。 その後、デバッガは次の行に移動します。
 
-"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 呼び出されるサブルーチンや関数もトレースしたい場合には、**呼び出しメソッドもトレース** ボタンを使用します。
+"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
-リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンは **トレース終了** ボタンと同じように振る舞います。
+リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
 #### 呼び出しメソッドもトレース
 
 別のメソッド (サブルーチンまたは関数) を呼び出す行が実行される時にこのボタンを使用すると、呼び出されたメソッドがデバッガーウィンドウに表示され、ステップ実行できます。
 
-デバッガーウィンドウの [呼び出し連鎖エリア](#呼び出し連鎖エリア) では、新しく呼び出されたメソッドがカレント (一番上) となります。
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
-別のメソッドを呼び出していない行が実行される場合には、このボタンは **次行に進む** ボタンと同じように振る舞います。
+When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### 呼び出し元に進む
+#### Step Out
 
-サブルーチンや関数をトレースしている場合にこのボタンをクリックすると、現在トレース中のメソッド全体を実行し、呼び出し元メソッドに戻ることができます。 デバッガーウィンドウは、コールチェーンの一つ前のメソッドに戻ります。 トレース中のメソッドがコールチェーンの最後のメソッドである場合には、デバッガーウィン ドウが閉じられます。
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
 
-リモートデバッグにおいては、メソッドの最後の行の実行時に、サーバー上でメソッドが実行されている場合には、親メソッドが呼び出されます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンは トレース終了 ボタンと同じように振る舞います。
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
 
-#### 別プロセスもトレース
+#### Step Into Process
 
-新しいプロセスを作成する (New process コマンドを呼び出す) 行を実行する際にこのボタンを使用すると新しいデバッガーウィンドウが表示され、作成されたプロセスでトレースを続行することができます。 新しいプロセスを作成しない行を実行する際には、このボタンは 次行に進む ボタンと同等に動作します。
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### 中断
 
@@ -89,9 +89,9 @@ title: デバッガー
 
 #### 中断＆編集
 
-コードエディターウィンドウが開いて、**中断＆編集** ボタンがクリックされた時点で実行していたメソッドを表示します。
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
-> **Tip**: このボタンは、コードにどのような変更が必要かが明らかであり、メソッドのテストを続行するためにその変更が必要な場合に使用してください。 変更が完了したら、メソッドを再実行できます。
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. 変更が完了したら、メソッドを再実行できます。
 
 #### 編集
 
@@ -99,7 +99,7 @@ title: デバッガー
 
 このボタンをクリックしてメソッドを編集した場合には、現在の実行は中断されないため、編集内容の反映は次回実行時になります。
 
-> **Tip**: このボタンは、コードに必要な変更内容がわかっている場合で、その変更がコードの残り部分の実行やトレースの妨げにならない場合に使用します。
+> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
 #### 設定保存
 
