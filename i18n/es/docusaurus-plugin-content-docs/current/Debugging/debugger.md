@@ -76,7 +76,7 @@ En la depuración remota, si el método se ejecuta en el servidor, se llama al m
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada](#call-chain-pane) de la ventana del depurador.
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
@@ -117,8 +117,8 @@ The current state of the debugger window is automatically saved in the project. 
 
 - the size and position of the window,
 - the position of the division lines,
-- the [display mode](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts.
+- el [modo de visualización](#display-mode),
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pin-an-expression) para mantenerla mostrada en todos los contextos.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
@@ -315,7 +315,7 @@ Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cub
 
 ### Display mode
 
-You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+El modo de visualización que se utilizará para todas las ventanas del depurador se selecciona mediante la opción **Visualización** del [menú contextual](#contextual-menu) del panel de vigilancia personalizado.
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
 
