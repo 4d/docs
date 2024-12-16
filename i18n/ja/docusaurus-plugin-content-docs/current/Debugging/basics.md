@@ -70,27 +70,31 @@ title: デバッガー
 
 - **続行**: 実行が継続されます。 エラーが発生した行は、エラーの位置によっては一部のみ実行済みである場合があります。 慎重に実行を継続してください: エラーが原因で、メソッドの残り部分が正常に実行できない場合があります。 `SET WINDOW TITLE` のように、コードの残りの部分の実行やテストの妨げにならない単純な呼び出しでエラーが発生している場合にのみ、**続行** ボタンをクリックすることを推奨します。
 
-> Tips: ループ中などで繰り返し発生するエラーの場合には、**続行** ボタンを **無視** ボタンに変更できます。 **続行**ボタンが最初に現れたときに、**Alt**キー (Windows) または **Option**キー (macOS) を押しながらボタンをクリックします。 すると、同じエラーによってダイアログが呼び出されたときには、ボタンラベルが **無視** へと変化します。
+:::tip
 
-- **アボート**: メソッドが中断され、メソッドの実行を開始する前の状態に戻ります:
+To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
+
+:::
+
+- **Abort**: Stops method execution and returns to the state before the method started executing:
 
   - イベントに対してフォームメソッドまたはオブジェクトメソッドが実行されている場合には、これらは停止され、フォームに戻ります。
   - メソッドがアプリケーションモードから実行されている場合には、このモードに戻ります。
 
-- **コピー**: デバッグ情報をクリップボードにコピーします。 この情報はエラーの内部環境 (番号や内部コンポーネント等) を説明します。 情報はタブ区切り形式で記述されます。
+- **Copy**: Copies the debugging information into the clipboard. この情報はエラーの内部環境 (番号や内部コンポーネント等) を説明します。 情報はタブ区切り形式で記述されます。
 
-- **保存...**: シンタックスエラーウィンドウの内容とコールチェーンを `.txt` ファイルに保存します。
+- **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
 
 ## デバッガー
 
-エラー検出の際によくある初歩的な失敗は、シンタックスエラーウィンドウの **アボート** ボタンをクリックし、コードエディターに戻り、コードを表示して原因を確認しようとすることです。 これは止めてください。 **デバッガー** を常に使用すれば、相当の時間と労力を節減することができます。
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. これは止めてください。 You will save plenty of time and energy by always using the [**Debugger**](debugger.md).
 
 デバッガーを使うと、メソッドをステップごとにゆっくりと実行することができます。 デバッガーは、エラーが発生した理由を知るために必要な情報を表示できます。 この情報があれば、エラーの修正方法はわかります。
 
-デバッガーを使用するもう 1つの理由は、コードの作成です。 いつも以上に複雑なアルゴリズムを作成してしまう場合があります。 達成感こそありますが、コーディングが正しいかどうかは 100%確かとはいえません。 見当もつかないまま実行するのではなく、コードの最初で `TRACE` コマンドを使用します。 その後、コードをステップごとに実行して、動作を監視することができます。
+デバッガーを使用するもう 1つの理由は、コードの作成です。 いつも以上に複雑なアルゴリズムを作成してしまう場合があります。 達成感こそありますが、コーディングが正しいかどうかは 100%確かとはいえません。 Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
 
 ## ブレーク
 
-デバッグ作業では、コードの一部のトレースを特定の行までスキップする必要がある場合があります。 また、ある式が特定の値になった時 (例: "$myVar > 1000") や、特定の 4Dコマンドが呼び出されるたびにコードをトレースしたい場合もあります。
+デバッグ作業では、コードの一部のトレースを特定の行までスキップする必要がある場合があります。 Or, you may want to trace the code when a given expression has a certain value (e.g. `$myVar > 1000`), or every time a specific 4D command is called.
 
-このようなニーズに対応するために、**ブレークポイント** と **キャッチコマンド** 機能が用意されています。 これらの機能は、コードエディター、デバッガー、ランタイムエクスプローラーから設定できます。
+These needs are covered by **breakpoints** and **command catching** features. これらの機能は、コードエディター、デバッガー、ランタイムエクスプローラーから設定できます。

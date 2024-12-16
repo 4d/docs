@@ -15,7 +15,7 @@ Les points d'arrêt sur commande vous permettent de commencer à tracer l'exécu
 
 Pour créer un point d'arrêt, cliquez dans la marge gauche de la fenêtre d'évaluation du code du débogueur ou dans l'éditeur de code.
 
-Dans l'exemple suivant, un point d'arrêt (la puce rouge) a été défini dans le débogueur, sur la ligne `If ($in.dataClass#Null)` :
+In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If (Value type(request.reponse.headers...`:
 
 ![break-point](../assets/en/Debugging/break.png)
 

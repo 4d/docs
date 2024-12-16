@@ -559,7 +559,7 @@ Resumen
 
 #### Descripción
 
-Colección original con valores rellenados
+Colección original sin elementos eliminados
 
 > Esta función no modifica la colección original.
 
@@ -1001,7 +1001,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-- Búsquedas con fechas:
+- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Por defecto, `.find()` busca en toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la búsqueda.
@@ -1089,7 +1089,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-- Búsquedas con fechas:
+- Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Por defecto, `.findIndex()` busca en toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la búsqueda.
@@ -1604,7 +1604,7 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 #### Descripción
 
-Objeto compartido que se agrupa con la colección resultante
+Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 > Esta función no modifica la colección original.
 
