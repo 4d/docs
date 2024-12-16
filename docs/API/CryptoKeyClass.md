@@ -304,21 +304,22 @@ PEM definition of an encryption key to load. If the key is a private key, the RS
 
 |Release|Changes|
 |---|---|
+|20 R8|Support of message as Blob|
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<br/>.**sign** (*message* : Blob ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|message|Text|->|Message string to sign|  
+|message|Text OR Blob|->|Message to sign|  
 |options|Object|->|Signing options|
 |Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 <!-- END REF -->
 
-The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
+The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
 The `CryptoKey` must contain a valid **private** key.
 
@@ -329,11 +330,11 @@ The `CryptoKey` must contain a valid **private** key.
 |hash|text|Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size|
 |encodingEncrypted|text|Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".|
 |pss|boolean|Use Probabilistic Signature Scheme (PSS). Ignored if the key is not an RSA key. Pass `true` when producing a JWT for PS@ algorithm|
-|encoding|text|ERepresentation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".|
+|encoding|text|Representation to be used for result signature. Possible values: "Base64" or "Base64URL". Default is "Base64".|
 
 #### *Result*
 
-The utf8 representation of the *message* string.
+The utf8 representation of the *message*.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -382,16 +383,17 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 |Release|Changes|
 |---|---|
+|20 R8|Support of message as Blob|
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.verify().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|message|Text|->|Message string that was used to produce the signature|  
+|message|Text OR Blob|->|Message that was used to produce the signature|  
 |signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
 |options|Object|->|Signing options|
 |Result|Object|<-|Status of the verification|
