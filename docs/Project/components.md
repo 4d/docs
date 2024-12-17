@@ -454,9 +454,11 @@ If you provide an [access token](#providing-your-github-access-token), checks ar
 In addition, you can check for updates at any moment, for a single dependency or for all dependencies: 
 
 - To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
+
 ![check component](../assets/en/Project/check-component-one.png)
 
 - To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
+
 ![check components](../assets/en/Project/check-component-all.png)
 
 
@@ -474,10 +476,12 @@ If you do not want to use a component update (for example you want to stay with 
 
 You can update dependencies at any moment, for a single dependency or for all dependencies:
 
-- To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window 
+- To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window:
+
 ![check component](../assets/en/Project/update-component-one.png)
 
-- To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**.
+- To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**:
+
 ![check components](../assets/en/Project/update-component-all.png)
 
 In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is used. 
