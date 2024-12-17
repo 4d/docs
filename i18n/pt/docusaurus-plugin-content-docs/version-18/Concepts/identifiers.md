@@ -222,7 +222,7 @@ OBJECT SET FONT(*;"Binfo";"Times")
 
 You designate a project method (procedure or function) by using its name. O nome de um método pode conter até 31 caracteres.
 
-**Note:** A project method that does not return a result is also called a procedure. Um método projeto que retorna um resultado também é chamado uma função.
+**Nota:** um método projeto que não retorne um resultado também é chamado de um procedimento. Um método projeto que retorna um resultado também é chamado uma função.
 
 Exemplos:
 
@@ -231,9 +231,9 @@ If(New client)
 DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use caracteres maiúsculos para nomear seus métodos; no entanto, se um método é uma função, capitalize o primeiro caractere de seu nome. Dessa maneira, quando reabrir um banco de dados para manutenção depois de alguns meses, já saberá se um método retorna um resultado, simplesmente olhando seu nome na janela do Explorer.
 
-**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Exemplo:
+**Nota:** quando você chama um método, você só digita o nome dele. Entretanto, alguns comandos integrados em 4D, como `ON EVENT CALL`, assim como todos os comandos dos Plug-In, esperam o nome de um método como uma string quando se passar um parâmetro de tipo método. Exemplo:
 
 Exemplos:
 
@@ -269,7 +269,7 @@ vtClone:=Dump("is";"the";"it")
 
 ## Comandos de plug-in
 
-You designate a plug-in command by using its name as defined by the plug-in. O nome de um comando de plug-in pode conter até 31 caracteres.
+Você designa um comando de plug-in usando seu nome conforme definido pelo plug-in. O nome de um comando de plug-in pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -290,9 +290,9 @@ Do ponto de vista do escopo, há dois tipos de conjuntos:
 
 ### Conjuntos interprocesso
 
-A set is an interprocess set if the name of the set is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Um conjunto é um conjunto interprocessos se o nome do conjunto for precedido pelos símbolos (`<>`) - um sinal de "menor que" seguido por um sinal de "maior que".
 
-An interprocess set name can contain up to 255 characters, not including the `<>` symbols.
+Um nome de conjunto de interprocessos pode conter até 255 caracteres, sem incluir os símbolos `<>`.
 
 ### Conjuntos process
 
@@ -300,9 +300,9 @@ Para designar um conjunto processo se utilizar uma expressão de tipo string que
 
 ### Conjuntos clientes
 
-O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). A client set name can contain up to 255 characters, not including the dollar sign.
+O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). Um nome de conjunto de clientes pode conter até 255 caracteres, sem incluir o cifrão.
 
-**Nota:** Os conjuntos são mantidos na máquina servidor. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. Para isso, utilizam-se os conjuntos clientes.
+**Nota:** Os conjuntos são mantidos na máquina servidor. Em certos casos, para fins de eficiência ou especiais, pode ser necessário trabalhar com conjuntos localmente nas máquinas cliente. Para isso, utilizam-se os conjuntos clientes.
 
 Exemplos:
 
