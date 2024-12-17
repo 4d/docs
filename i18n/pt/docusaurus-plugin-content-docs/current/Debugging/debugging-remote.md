@@ -20,14 +20,12 @@ Apenas um depurador pode depurar uma aplicação 4D Server num determinado momen
 - o depurador local do Servidor 4D (padrão) - se o servidor não estiver sendo executado sem interface.
 - o depurador de um cliente 4D remoto - se a sessão remota tiver acesso ao modo Desenho.
 - the [Qodly debugger](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) on 4D Server - if the server allows access to Qodly Studio.
-- the VS Code debugger, provided you installed the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
-
-:::
+- the **VS Code** debugger, provided you installed the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
 
 O depurador anexado é chamado sempre que um 4D Server se encontra:
 
 - um ponto de ruptura
-- un comando `TRACE`
+- a `TRACE` command
 - um ponto de interrupção para fazer o pedido
 - um erro
 
@@ -35,7 +33,7 @@ Tenga en cuenta que los mensajes de error se envían a la máquina depuradora as
 
 Note que:
 
-- El código ejecutado en el método `On Server Startup Database` no se puede depurar de forma remota. Só pode ser depurado no lado do servidor
+- The code executed in the `On Server Startup Database` Method cannot be debugged remotely. Só pode ser depurado no lado do servidor
 - Se não estiver ligado um depurador, o código em execução não é interrompido pelos comandos de depuração
 
 ## Ligar o depurador
@@ -51,20 +49,20 @@ Pode anexar o depurador a qualquer cliente 4D remoto autorizado a conectar-se à
 
 Para anexar o depurador a um cliente 4D remoto:
 
-1. En la barra de menús de 4D Server, seleccione **Editar** > **Separar depurador** para que el depurador esté disponible para las máquinas remotas (este paso es inútil si 4D Server está funcionando sin interfaz).
-2. En un cliente 4D remoto conectado al servidor, seleccione **Ejecutar** > **Adjuntar depurador remoto**
+1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).
+2. In a remote 4D client connected to the server, select **Run** > **Attach Remote Debugger**
 
-Si se acepta el archivo adjunto (ver [Solicitudes de archivo adjunto rechazadas](#rejected-attachment-requests)), el comando de menú se convierte en **Desconectar depurador remoto**.
+If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the menu command becomes **Detach Remote Debugger**.
 
 O depurador é então ligado ao cliente 4D remoto:
 
 - até ao fim da sessão do usuário
-- hasta que se seleccione `Detach Remote Debugger`
+- until you select `Detach Remote Debugger`
 
 Para ligar o depurador de novo ao servidor:
 
-1. En el cliente 4D remoto que tiene el depurador conectado, seleccione **Ejecutar** > **Separar depurador remoto**.
-2. En la barra de menú de 4D Server, seleccione **Editar** > **Adjuntar depurador**.
+1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
+2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
 
 > Quando o depurador estiver conectado ao servidor (padrão), todos os processos do servidor são executados automaticamente no modo cooperativo para permitir a depuração. Este fato pode ter um impacto significativo no desempenho. Quando não for necessário depurar na máquina do servidor, recomenda-se desconectar o depurador e anexá-lo a uma máquina remota, se necessário.
 
@@ -72,13 +70,13 @@ Para ligar o depurador de novo ao servidor:
 
 4D permite que você anexe automaticamente o depurador a um cliente 4D remoto ou ao servidor na inicialização:
 
-- En el servidor (si no es headless), esta opción se llama **Attach Debugger At Startup**. Quando o servidor é iniciado, ele anexa automaticamente o depurador (padrão).
+- On the server (if not headless), this option is named **Attach Debugger At Startup**. Quando o servidor é iniciado, ele anexa automaticamente o depurador (padrão).
 
-> **Advertencia**: si se selecciona esta opción para un servidor que posteriormente se lanza en modo sin interfaz, el depurador no estará disponible para este servidor.
+> **Warning**: If this option is selected for a server which is subsequently launched in headless mode, the debugger won't be available for this server.
 
-- En un cliente 4D remoto, esta opción se llama **Attach Remote Debugger At Startup**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. Si el adjunto es aceptado (ver [Rejected attachment requests](#rejected-attachment-requests)), el depurador remoto se adjunta automáticamente al cliente 4D remoto y se muestra la opción **Detach Remote Debugger**.
+- On a remote 4D client, this option is named **Attach Remote Debugger At Startup**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the remote debugger is automatically attached to the remote 4D client and the **Detach Remote Debugger option is displayed**.
 
-> Essa configuração é aplicada por projeto e é armazenada localmente no arquivo [`.4DPreferences`] (Project/architecture.md#userpreferencesusername).
+> This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
 
 ## Solicitações de anexos rejeitadas
 
@@ -92,5 +90,5 @@ Se uma máquina tentar anexar o depurador enquanto este já estiver anexado, a a
 
 A ligação do depurador neste caso exige que:
 
-- el depurador adjunto se separa del servidor o del cliente 4D remoto utilizando respectivamente el comando de menú **Detach debugger** o **Detach remote debugger**,
+- the attached debugger is detached from the server or from the remote 4D client using respectively the **Detach debugger** or **Detach remote debugger** menu command,
 - a sessão do cliente remoto 4D anexado é encerrada.
