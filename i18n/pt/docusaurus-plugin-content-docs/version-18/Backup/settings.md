@@ -118,7 +118,7 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 > No caso de uma restauração automática, somente o arquivo de dados é restaurado. Caso deseje obter os arquivos anexados ou os arquivos do projeto, você deve executar uma restauração manual.
 
 - **Integrar o último arquivo de log se o banco de dados estiver incompleto**: quando esta opção estiver marcada, o programa integra automaticamente o arquivo de log ao abrir ou restaurar o banco de dados.
-  - When opening a database, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.
-  - When restoring a database, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.
+  - Ao abrir um banco de dados, o arquivo de registro atual é automaticamente integrado se 4D detectar haver operações armazenadas no arquivo de registro que não estão presentes nos dados. Essa situação ocorre, por exemplo, se houver uma queda de energia quando houver operações no cache de dados que ainda não tenham sido gravadas no disco.
+  - Ao restaurar um banco de dados, se o arquivo de registro atual ou um arquivo de backup de registro com o mesmo número que o arquivo de backup estiver armazenado na mesma pasta, 4D examina seu conteúdo. Se ele contiver operações não encontradas no arquivo de dados, o programa o integrará automaticamente.
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
