@@ -48,7 +48,7 @@ This command returns the [`.info`](../API/SessionClass.md#info) property of the 
 
 :::
 
-Here is an example of output object:
+これが出力されたオブジェクトの一例です:
 
 ```json
 
