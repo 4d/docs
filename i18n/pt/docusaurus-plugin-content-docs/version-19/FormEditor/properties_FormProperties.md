@@ -154,7 +154,7 @@ Apenas os projetos formulário podem ser especificados como subformulários publ
 
 ## Guardar geometria
 
-When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
+Quando a opção é usada, se a janela for aberta usando o comando `Open form window` com o parâmetro `*`, vários parâmetros de formulário são salvos automaticamente pelo 4D quando a janela é fechada, independentemente de como foram modificados durante a sessão:
 
 *   a página atual,
 *   a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
