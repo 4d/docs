@@ -61,7 +61,7 @@ A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 #### Descripción
 
-The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body` property:
+La propiedad `.body` contiene <!-- REF #OutgoingMessageClass.body.Summary -->el cuerpo del mensaje saliente<!-- END REF -->. The following data types are supported in the `.body` property:
 
 - text
 - blob
@@ -70,7 +70,7 @@ The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the
 
 La propiedad `.body` es de lectura-escritura.
 
-You can also set the `.body` property using the [`setBody()`](#setbody) function, in which case the `content-type` header is automatically set.
+También puede definir la propiedad `.body` utilizando la función [`setBody()`](#setbody), en cuyo caso el encabezado `content-type` se define automáticamente.
 
 <!-- END REF -->
 
