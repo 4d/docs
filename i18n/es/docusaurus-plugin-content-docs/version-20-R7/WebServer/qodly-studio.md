@@ -138,8 +138,8 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Debugger                                                                         | 4D IDE debugger<br/>*4D Server only*: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                             | Qodly Studio debugger                                                         |
 | Roles y privilegios REST/Web                                                     | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                                                                                                                                 | Editor de roles y privilegios de Qodly Studio                                 |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
-(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
+(1) Si hace clic en el botón **Model** en Qodly Studio, no ocurre nada.<br/>
+(2) En 4D Server, abrir código 4D con el editor de código Qodly Studio es soportado **para propósitos de prueba y depuración** (ver [este párrafo](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
 (2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)).
 
 ### Lenguaje
