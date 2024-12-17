@@ -12,7 +12,7 @@ Dado que 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJ
 Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. El siguiente ejemplo oculta la [cinta](./configuring.md#ribbon) spreadJS:
 
 ```4d
-//Button's object method
+//Método objeto do botão
 
 var $js; $answer : Text
 
