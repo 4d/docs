@@ -101,14 +101,14 @@ Since components can be installed in different ways, a priority order is applied
 
 ```mermaid
 flowchart TB
-    id1("1\nComponents from project's Components folder")~~~
-    id2("2\nComponents listed in dependencies.json")~~~
-    id2 -- environment4d.json gives path --> id4("Load component\nbased on path declared\nin environment4d.json")
+    id1("1<br/>Components from project's Components folder")~~~
+    id2("2<br/>Components listed in dependencies.json")~~~
+    id2 -- environment4d.json gives path --> id4("Load component based on path declared in environment4d.json")
     ~~~
-    id3("3\nUser 4D components")
-    id2 -- environment4d.json doesn't give path --> id5("Load component\nnext to\npackage folder")
+    id3("3<br/>User 4D components")
+    id2 -- environment4d.json doesn't give path --> id5("Load component next to package folder")
     ~~~
-    id3("3\nUser 4D components")
+    id3("3<br/>User 4D components")
 ```
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the *Overloaded* status, while the loaded component has the *Overloading* status.
@@ -284,7 +284,7 @@ Here are a few examples:
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
 
-The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list or the component is automatically downloaded, [depending on your settings]. 
+The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](XXXX). 
 
 
 
@@ -406,6 +406,12 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
+Define the [dependency version range](#tags-and-versions) to use for this project. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.  
+
+Click on the **Add** button to add the dependency to the project. 
+
+The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
+
 #### Defining a GitHub dependency version range  
 
 You can define the [tag or version](#tags-and-versions) option for a dependency: 
@@ -418,15 +424,12 @@ You can define the [tag or version](#tags-and-versions) option for a dependency:
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
 
 
-Click on the **Add** button to add the dependency to the project. 
-
-The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
 
 
 
 #### Modifying a GitHub dependency version setting
 
-You can modify the [version setting](#defining-the-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**. 
+You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**. 
 
 
 ### Managing updates
@@ -434,7 +437,7 @@ You can modify the [version setting](#defining-the-github-dependency-version-ran
 The Dependency manager provides an integrated handling of updates on GitHub. The following features are supported:
 
 - Automatic and manual checking of available versions 
-- Automatic and manual updates of components
+- Automatic and manual updating of components
 
 Manual operations can be done **per dependency** or **for all dependencies**. 
 
@@ -442,45 +445,56 @@ Manual operations can be done **per dependency** or **for all dependencies**.
 
 Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background. 
 
+:::note
+
+If you provide an [access token](#providing-your-github-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+
+:::
+
 In addition, you can check for updates at any moment, for a single dependency or for all dependencies: 
 
 - To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
-![check component](../assets/en/Project/check-component.png)
+![check component](../assets/en/Project/check-component-one.png)
 
-- To check for updates of all dependencies, click on the **Options** menu at the bottom of the Dependency manager window and select **Check for updates**.
-![check components](../assets/en/Project/dependency-auto.png)
+- To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
+![check components](../assets/en/Project/check-component-all.png)
 
 
 If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed: 
 
-You can choose to update the component at next startup, or to 
+![dependency-new-version](../assets/en/Project/dependency-available.png)
 
+You can decide to [update the component](#updating-dependencies) or not. 
 
-(per dependency or for all dependencies)
+If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
 
-- Automatic regular checks for new versions on GitHub
--   
+#### Updating dependencies
 
-You decide when and how to integrate changes. You can also check for updates at any moment. 
+**Updating a dependency** means downloading a new version of the dependency from GitHub and keeping it ready to be loaded the next time the project is started. 
 
+You can update dependencies at any moment, for a single dependency or for all dependencies:
 
+- To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window 
+![check component](../assets/en/Project/update-component-one.png)
 
-You can also configure the Dependency manager so that new versions are automatically installed. 
+- To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**.
+![check components](../assets/en/Project/update-component-all.png)
 
+In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is used. 
 
+When you select an update command:
 
+- a dialog box is displayed and proposes to **restart the project**, so that the updated dependencies are immediately available. It is usually recommended to restart the project to evaluate updated dependencies. 
+- if you click Later, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
 
+#### Automatic update
 
-The Dependency manager informs you when a new version is available by displaying update labels in the Dependency list. 
+The **Automatic update** option is available in the **options** menu at the bottom of the Dependency manager window. 
 
+When this option is checked (default), new GitHub component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. This option facilitates the day-to-day management of dependency updates, by eliminating the need to manually select updates. 
 
-To configure the version update settings, click on the **Options** menu at the bottom of the Dependency manager window. 
+When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as available and will require a [manual updating](#updating-dependencies). Unselect the **Automatic update** option if you want to monitor dependency updates precisely. 
 
-![dependency-auto-menu](../assets/en/Project/dependency-auto.png)
-
-The following options are available:
-
-- **Automatic update**: When this option is checked (default), a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is automatically installed and will be loaded at next project startup. When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as 
 
 
 
