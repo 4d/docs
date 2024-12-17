@@ -9,7 +9,7 @@ Essa classe está disponível no "class store" de `4D`.
 
 :::info Veja também
 
-For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
+Para obter uma visão geral abrangente dessa classe, consulte a postagem do blog [**CryptoKey: criptografar, descriptografar, assinar e verificar!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/).
 
 :::
 
@@ -49,7 +49,7 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 <!-- END REF -->
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objeto `4D.CryptoKey` que encapsula um par de chaves de criptografia<!-- END REF -->, com base no parâmetro objeto *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *parâmetros*
 
@@ -71,21 +71,21 @@ A message is signed by a private key and the signature is verified by the corres
 - Lado bob:
 
 ```4d
-// Create the message
+// Criar a mensagem
 $message:="hello world"
 Folder(fk desktop folder).file("message.txt").setText($message)
 
-// Create a key
-$type:=New object("type";"RSA")
+// Criar uma chave
+$type:=New object("type"; "RSA")
 $key:=4D.CryptoKey.new($type)
 
-// Get the public key and save it
+// Obtenha a chave pública e salve-a
 Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
 
-// Get signature as base64 and save it
+// Obtenha a assinatura como base64 e salve-a
 Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 
-/*Bob sends the message, the public key and the signature to Alice*/
+/*Bob envia a mensagem, a chave pública e a assinatura para Alice*/
 ```
 
 - O lado Alice:
@@ -166,7 +166,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 
 <!-- END REF -->
 
-The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descriptografa o parâmetro *message* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -180,7 +180,7 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 #### *Resultado*
 
-The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
+A função retorna um objeto status com a propriedade `success` definida como `true` se a *mensagem* puder ser descriptografada com êxito.
 
 | Propriedade | Tipo       | Descrição                                                                |
 | ----------- | ---------- | ------------------------------------------------------------------------ |
@@ -188,7 +188,7 @@ The function returns a status object with `success` property set to `true` if th
 | resultado   | text       | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
 | errors      | collection | Se `success` for `false`, pode conter uma coleção de erros               |
 
-In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+Caso a *mensagem* não possa ser descriptografada porque não foi criptografada com a mesma chave ou algoritmo, o objeto `status` que está sendo retornado contém uma coleção de erros em `status.errors`.
 
 <!-- END REF -->
 
@@ -216,7 +216,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 
 <!-- END REF -->
 
-The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->criptografa o parâmetro *message* usando a chave **pública**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 

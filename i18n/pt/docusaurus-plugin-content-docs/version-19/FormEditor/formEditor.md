@@ -752,4 +752,4 @@ Pode fazer zoom no formulário atual. Switch to “Zoom” mode by clicking on t
 
 No modo Zoom, todas as funções do editor de formulários permanecem disponíveis(*).
 
-(*) For technical reasons, it is not possible to select list box elements (headers, columns, footers) when the Form editor is in Zoom mode.
+(*) Por motivos técnicos, não é possível selecionar elementos da caixa de listagem (cabeçalhos, colunas, rodapés) quando o editor de formulários está no modo Zoom.

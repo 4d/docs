@@ -5,7 +5,7 @@ title: Collection
 
 La clase Collection gestiona variables de tipo [Collection](Concepts/dt_collection.md).
 
-Ejemplo 3
+Una colección es inicializada con los comandos [`New collection`](../commands/new-collection.md) o [`New shared collection`](../commands/new-shared-collection.md).
 
 ### Ejemplo
 
@@ -57,7 +57,7 @@ Notas
 | [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
-| Ejemplo 2                                                                                                                      |
+| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
 | [<!-- INCLUDE #collection.shift().Syntax -->](#shift)<br/><!-- INCLUDE #collection.shift().Summary -->                         |
 | [<!-- INCLUDE #collection.slice().Syntax -->](#slice)<br/><!-- INCLUDE #collection.slice().Summary -->                         |
 | [<!-- INCLUDE #collection.some().Syntax -->](#some)<br/><!-- INCLUDE #collection.some().Summary -->                            |
@@ -81,10 +81,10 @@ Notas
 
 <!-- REF #collection.at().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                                                         |
-| ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------- |
-| index      | Integer |              ->             | Índice del elemento a devolver                                                      |
-| Result     | any     | <- | Este ejemplo devuelve las personas contratadas hace más de 90 días: |
+| Parámetros | Tipo    |                             | Descripción                    |
+| ---------- | ------- | :-------------------------: | ------------------------------ |
+| index      | Integer |              ->             | Índice del elemento a devolver |
+| Result     | any     | <- | El elemento en ese índice      |
 
 <!-- END REF -->
 
@@ -313,12 +313,12 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <!-- REF #collection.copy().Params -->
 
-| Parámetros   | Tipo       |                             | Descripción                                                    |
-| ------------ | ---------- | :-------------------------: | -------------------------------------------------------------- |
-| option       | Integer    |              ->             | Ejemplo 3                                                      |
-| groupWithCol | Collection |              ->             | Colección compartida que se agrupa con la colección resultante |
-| groupWithObj | Object     |              ->             | Objeto compartido que se agrupa con la colección resultante    |
-| Result       | Collection | <- | Colección original ordenada                                    |
+| Parámetros   | Tipo       |                             | Descripción                                                                                                                                  |
+| ------------ | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| option       | Integer    |              ->             | `ck resolve pointers`: resolver punteros antes de copiar,<br/>`ck shared`: devolver una colección compartida |
+| groupWithCol | Collection |              ->             | Colección compartida que se agrupa con la colección resultante                                                                               |
+| groupWithObj | Object     |              ->             | Objeto compartido que se agrupa con la colección resultante                                                                                  |
+| Result       | Collection | <- | Colección original ordenada                                                                                                                  |
 
 <!-- END REF -->
 
