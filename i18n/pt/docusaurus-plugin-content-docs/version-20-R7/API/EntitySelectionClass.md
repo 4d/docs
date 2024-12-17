@@ -2016,10 +2016,10 @@ A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna 
 
 A seleção de entidade retornada contém as entidades especificadas por *startFrom* e todas as entidades subsequentes até, mas não incluindo, a entidade especificada por *end*. Se apenas o parâmetro *startFrom* for especificado, a seleção de entidades retornada contém todas as entidades desde *startFrom* até a última entidade da seleção de entidades original.
 
-- Se *startFrom* < 0, ele será recalculado como *startFrom:=startFrom+length* (ele é considerado como o deslocamento do final da seleção da entidade). If the calculated value < 0, *startFrom* is set to 0.
+- Se *startFrom* < 0, ele será recalculado como *startFrom:=startFrom+length* (ele é considerado como o deslocamento do final da seleção da entidade). Se o valor calculado < 0, *startFrom* é definido como 0.
 - Se *startFrom >= length*, a função retorna uma seleção vazia de entidade.
 - Se *end* < 0, ele será recalculado como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Se *end < startFrom* (valores passados ou calculados), o método não fará nada.
 
 Se a seleção de entidade contém entidades que foram abandonadas, também serão retornadas.
 
