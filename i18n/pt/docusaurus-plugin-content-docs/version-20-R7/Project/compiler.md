@@ -91,7 +91,7 @@ The "Compiler" tab of the Settings dialog box lets you set parameters related to
 
 This area groups the generic options used during the compilation process.
 
-#### Generate symbol file
+#### Gerar o arquivo de símbolo
 
 Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
 
