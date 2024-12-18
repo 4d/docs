@@ -72,3 +72,13 @@ Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous re
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

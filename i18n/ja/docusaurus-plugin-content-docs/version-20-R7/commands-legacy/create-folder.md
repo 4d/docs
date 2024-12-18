@@ -71,3 +71,13 @@ displayed_sidebar: docs
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 475 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

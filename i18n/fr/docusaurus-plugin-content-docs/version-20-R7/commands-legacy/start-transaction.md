@@ -25,3 +25,12 @@ A compter de la version 11 de 4D, vous pouvez imbriquer plusieurs transactions (
 [Transaction level](transaction-level.md)  
 *Utiliser des transactions*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 239 |
+| Thread safe | &check; |
+
+

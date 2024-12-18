@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** は、*aTable*のセレクションのデータを使用してラベルを印刷します。<!-- END REF-->
@@ -110,3 +107,13 @@ displayed_sidebar: docs
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 39 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

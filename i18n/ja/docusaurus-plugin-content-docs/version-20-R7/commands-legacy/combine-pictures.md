@@ -51,3 +51,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [TRANSFORM PICTURE](transform-picture.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 987 |
+| スレッドセーフである | &check; |
+
+

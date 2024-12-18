@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Month of.Summary-->The **Month of** command returns the month of *aDate*.<!-- END REF-->
-
-**Note:** **Month of** returns the number of the month, not the name (see Example 1).
+<!--REF #_command_.Month of.Summary-->The **Month of** command returns the month of *aDate*.<!-- END REF-->**Month of** returns the number of the month, not the name (see Example 1).
 
 To compare the value returned by this function, 4D provides the following predefined constants, found in the "*Days and Months*" theme:
 
@@ -55,3 +53,12 @@ See example for the [Current date](current-date.md) command.
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 24 |
+| Thread safe | &check; |
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.METHOD Get path.Summary-->The **METHOD Get path** command returns the full internal pathname of a method.<!-- END REF-->
@@ -67,3 +64,12 @@ If the command is executed from a component, it returns by default the paths of 
 [Current method path](current-method-path.md)  
 [METHOD OPEN PATH](method-open-path.md)  
 [METHOD RESOLVE PATH](method-resolve-path.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1164 |
+| Thread safe | &cross; |
+
+

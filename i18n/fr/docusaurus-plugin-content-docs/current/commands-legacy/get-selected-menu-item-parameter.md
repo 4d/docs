@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Get selected menu item parameter.Summary-->La commande **Get selected menu item parameter** retourne la chaîne de caractères personnalisée associée à la ligne de menu sélectionnée.<!-- END REF--> Ce paramètre doit avoir été préalablement défini à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md).  
@@ -26,3 +23,12 @@ Si aucune ligne de menu n’a été sélectionnée, la commande retourne une cha
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1005 |
+| Thread safe | &cross; |
+
+

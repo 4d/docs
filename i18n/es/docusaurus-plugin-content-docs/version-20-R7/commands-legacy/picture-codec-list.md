@@ -32,3 +32,12 @@ Por defecto, si no pasa el parámetro *\**, el comando devuelve únicamente los 
 
 *Imágenes*  
 [Is picture file](is-picture-file.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 992 |
+| Hilo seguro | &check; |
+
+

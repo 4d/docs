@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.ARRAY TEXT.Summary-->O comando ARRAY TEXT cria e/ou redimensiona um array de elementos do tipo [Texto](# "A character string that may contain from 0 to 2 GB of text") na memória.<!-- END REF-->
-
-* O parâmetro *nomeArray* é o nome do array.
+<!--REF #_command_.ARRAY TEXT.Summary-->O comando ARRAY TEXT cria e/ou redimensiona um array de elementos do tipo [Texto](# "A character string that may contain from 0 to 2 GB of text") na memória.<!-- END REF-->é o nome do array.
 * O parâmetro *tamanho* é o número de elementos em um array.
 * O parâmetro *tamanho2* é opcional; se *tamanho2* for especificado, o comando cria um array de duas dimensões. Neste caso, *tamanho* especifica o número de linhas e *tamanho2* especifica o número de colunas em cada array. Cada linha em um array de duas dimensões pode ser tratada tanto como um elemento como um array. Isso significa que enquanto se trabalha com a primeira dimensão do array, você pode usar outros comandos de array para inserir e deletar arrays inteiros e arrays de duas dimensões.
 
@@ -54,3 +52,13 @@ Este exemplo cria um array de interprocesso de elementos do tipo texto e atribui
     ◊atValores{$vlElem}:="Elemento #"+String($vlElem)
  End for
 ```
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 222 |
+| Thread-seguro | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->El comando **OBJECT SET VERTICAL ALIGNMENT** modifica por programación el tipo de alineación vertical aplicada al objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->  
@@ -44,3 +41,12 @@ La alineación vertical puede aplicarse a los siguientes tipos de objetos de for
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1187 |
+| Hilo seguro | &cross; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Nota de compatibilidade 
 
 <!--REF #_command_.WA SET PAGE CONTENT.Summary-->Este comando não é mais útil.<!-- END REF--> Como a segurança em navegadores ficou cada vez mais forte, há mais e mais restrições para modificar o conteúdo de páginas "a qualquer momento". Uma abordagem mais adequada é criar um arquivo local (por exemplo na pasta temporária) e usar [WA OPEN URL](wa-open-url.md) para carregá-la. Para limpar o conteúdo, chame **WA OPEN URL**(myArea;”about:blank”).
@@ -48,3 +45,12 @@ Mostrar a frase "Olá mundo!" e definição de uma URL de banco "file:///" banco
 #### Ver também 
 
 [WA Get page content](wa-get-page-content.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1037 |
+| Thread-seguro | &cross; |
+
+

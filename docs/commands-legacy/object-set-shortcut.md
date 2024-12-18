@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->The **OBJECT SET SHORTCUT** command sets or dynamically modifies the keyboard shortcut associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
@@ -90,3 +87,12 @@ You want to associate a different shortcut depending on the current language of 
 #### See also 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1185 |
+| Thread safe | &cross; |
+
+

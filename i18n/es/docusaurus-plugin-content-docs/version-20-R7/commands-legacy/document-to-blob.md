@@ -50,3 +50,13 @@ En todos los casos, puede interceptar el error utilizando un método de interrup
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 525 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

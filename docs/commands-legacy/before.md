@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Before.Summary-->**Before** returns True for the Before execution cycle.<!-- END REF-->
@@ -27,3 +24,12 @@ In order for the **Before** execution cycle to be generated, make sure that the 
 #### See also 
 
 [Form event code](../commands/form-event-code.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 29 |
+| Thread safe | &cross; |
+
+

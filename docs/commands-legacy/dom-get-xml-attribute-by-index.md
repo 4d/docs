@@ -38,3 +38,13 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 729 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+
+

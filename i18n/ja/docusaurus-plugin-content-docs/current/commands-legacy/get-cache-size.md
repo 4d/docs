@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Get cache size.Summary-->**Get cache size**コマンドは、カレントデータベースのキャッシュサイズをバイト単位で返します。<!-- END REF-->
-
-**注:** このコマンドはローカルモード (4D Server および 4D) でのみ正しい情報を返します。リモートモードの4Dでの使用は想定されていないことに注意してください。
+<!--REF #_command_.Get cache size.Summary-->**Get cache size**コマンドは、カレントデータベースのキャッシュサイズをバイト単位で返します。<!-- END REF-->このコマンドはローカルモード (4D Server および 4D) でのみ正しい情報を返します。リモートモードの4Dでの使用は想定されていないことに注意してください。
 
 #### 例題 
 
@@ -26,3 +24,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET CACHE SIZE](set-cache-size.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1432 |
+| スレッドセーフである | &check; |
+
+

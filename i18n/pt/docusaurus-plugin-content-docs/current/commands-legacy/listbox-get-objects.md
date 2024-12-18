@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->O comando **LISTBOX GET OBJECTS** devolve um array que contém os nomes de todos os objetos que compõem o list box designado pelos parâmetros *objeto* e *\** .<!-- END REF-->  
@@ -62,3 +59,12 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 
 [FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1302 |
+| Thread-seguro | &cross; |
+
+

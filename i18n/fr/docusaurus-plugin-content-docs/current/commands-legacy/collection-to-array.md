@@ -65,3 +65,12 @@ Vous voulez copier différentes valeurs de propriété d'une collection d'objets
 
 [ARRAY TO COLLECTION](array-to-collection.md)  
 *Conversions de type entre les collections et les tableaux 4D*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1562 |
+| Thread safe | &check; |
+
+

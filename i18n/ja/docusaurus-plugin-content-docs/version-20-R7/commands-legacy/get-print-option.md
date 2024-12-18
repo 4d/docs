@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->**GET PRINT OPTION** コマンドは、プリントオプションの現在の値を返します。<!-- END REF--> 
@@ -52,3 +49,13 @@ PDFオプションコードは2つの部分、OptionT*ype*と*OptionName*から�
 
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 734 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

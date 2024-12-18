@@ -16,12 +16,19 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Sin.Summary-->Sin devuelve el seno del *número*, donde *número* se expresa en radianes.<!-- END REF-->
-
-**Nota:** 4D ofrece las constantes predefinidas *Pi*, Degree, y Radian. *Pi* devuelve el número Pi (3.14159...), Degree devuelve el valor en radianes de un grado (0.01745...), y Radian devuelve el valor en grados de un radián (57.29577...).
+<!--REF #_command_.Sin.Summary-->Sin devuelve el seno del *número*, donde *número* se expresa en radianes.<!-- END REF-->4D ofrece las constantes predefinidas *Pi*, Degree, y Radian. *Pi* devuelve el número Pi (3.14159...), Degree devuelve el valor en radianes de un grado (0.01745...), y Radian devuelve el valor en grados de un radián (57.29577...).
 
 #### Ver también 
 
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Tan](tan.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 17 |
+| Hilo seguro | &check; |
+
+

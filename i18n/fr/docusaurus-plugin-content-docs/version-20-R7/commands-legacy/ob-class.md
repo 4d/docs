@@ -40,3 +40,12 @@ Puis, dans une méthode, vous pouvez saisir :
 #### Voir aussi 
 
 [OB Instance of](ob-instance-of.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1730 |
+| Thread safe | &check; |
+
+

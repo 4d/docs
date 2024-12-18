@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->El comando **ON EVENT CALL** instala el método, cuyo nombre se pasa en *metodoEvento*, como método de gestión de eventos.<!-- END REF--> 
@@ -117,3 +114,13 @@ Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SEL
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 190 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

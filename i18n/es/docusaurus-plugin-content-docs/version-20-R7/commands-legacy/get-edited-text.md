@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get edited text.Summary-->El comando **Get edited text** se utiliza principalmente con el evento formulario On After Edit para recuperar el texto a medida que es introducido.<!-- END REF--> También puede utilizarse con los eventos formulario On Before Keystroke y On After Keystroke. Para mayor información sobre estos eventos formulario, por favor consulte la descripción del comando [Form event code](form-event-code.md).
@@ -68,3 +65,12 @@ Este es un ejemplo de cómo procesar inmediatamente los caracteres introducidos 
 
 [Form event code](form-event-code.md)  
 [Is editing text](is-editing-text.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 655 |
+| Hilo seguro | &cross; |
+
+

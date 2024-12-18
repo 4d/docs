@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->La commande **VARIABLE TO VARIABLE** écrit la valeur de la ou des variable(s) *varSource1* (*varSource2*, etc.), dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont vous avez passé le numéro dans *process*.<!-- END REF-->
@@ -62,3 +59,12 @@ L'exemple suivant récupère un tableau process depuis le process désigné par 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 *Introduction aux process*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 635 |
+| Thread safe | &cross; |
+
+

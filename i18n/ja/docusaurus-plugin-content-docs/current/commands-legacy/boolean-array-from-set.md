@@ -32,3 +32,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 646 |
+| スレッドセーフである | &check; |
+
+

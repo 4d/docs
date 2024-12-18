@@ -28,3 +28,13 @@ Este exemplo ilustra o uso de **Length**. Os resultados, descritos nos comentár
  vlResult:=Length("Topázio") // vlResult obtém 7
  vlResult:=Length("Cidadania") // vlResult obtém 9
 ```
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 16 |
+| Thread-seguro | &check; |
+
+

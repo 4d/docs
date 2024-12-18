@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Day number.Summary-->La fonction **Day number** retourne un numéro représentant le jour de la semaine auquel *laDate* correspond.<!-- END REF--> 
-
-**Note :** Si une date nulle est passée à **Day number**, la fonction retourne 2\. 
+<!--REF #_command_.Day number.Summary-->La fonction **Day number** retourne un numéro représentant le jour de la semaine auquel *laDate* correspond.<!-- END REF-->Si une date nulle est passée à **Day number**, la fonction retourne 2\. 
 
 4D fournit les constantes prédéfines suivantes, placées dans le thème "*Jours et mois*" :
 
@@ -61,3 +59,12 @@ L'exemple suivant est une fonction qui retourne le jour d'aujourd'hui sous forme
 #### Voir aussi 
 
 [Day of](day-of.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 114 |
+| Thread safe | &check; |
+
+

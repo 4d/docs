@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Compatibility 
 
 <!--REF #_command_.ADD RECORD.Summary-->*This command was implemented in 4D's early releases and is still useful for prototyping or basic developments.<!-- END REF--> However, to build customized and modern interfaces, it is now recommended to use generic forms based upon the [DIALOG](../commands/dialog.md) command which provide advanced features and better control over the data flow.*
@@ -92,3 +89,16 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 [CREATE RECORD](create-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 56 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+| Changes current record ||
+| Changes current selection ||
+| Forbidden on the server ||
+
+

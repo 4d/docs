@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.WA OPEN FORWARD URL.Summary-->La commande **WA OPEN FORWARD URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL suivant dans la séquence d’URLs ouverts.<!-- END REF--> 
@@ -27,3 +24,12 @@ S’il n’y a pas d’URL suivant (c’est-à-dire si l’utilisateur n’a jam
 
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN URL](wa-open-url.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1022 |
+| Thread safe | &cross; |
+
+

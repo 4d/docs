@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->El comando **OBJECT Get auto spellcheck** devuelve el estado de la opción Corrección ortográfica automática del o de los objeto(s) designado(s) por los parámetros *objeto* y *\** para el proceso actual .<!-- END REF-->  
@@ -29,3 +26,12 @@ El comando devuelve **True** cuando la corrección ortográfica automática est�
 #### Ver también 
 
 [OBJECT SET AUTO SPELLCHECK](object-set-auto-spellcheck.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1174 |
+| Hilo seguro | &cross; |
+
+

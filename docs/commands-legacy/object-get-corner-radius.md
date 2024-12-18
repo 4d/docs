@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the *Corner radius property* or for the current process using the [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) command.
@@ -49,3 +46,12 @@ The following code could be added to a button method:
 #### See also 
 
 [OBJECT SET CORNER RADIUS](object-set-corner-radius.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1324 |
+| Thread safe | &cross; |
+
+

@@ -92,3 +92,12 @@ Se quiser iniciar/parar o monitoramento e revisão de dados 4D e atividades de d
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1712 |
+| Thread-seguro | &check; |
+
+

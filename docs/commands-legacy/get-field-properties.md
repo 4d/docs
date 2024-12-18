@@ -74,3 +74,12 @@ This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vIn
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 258 |
+| Thread safe | &check; |
+
+

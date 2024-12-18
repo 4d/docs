@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->O comando **OBJECT GET SHORTCUT** devolve o atalho de teclado associado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** no processo atual.<!-- END REF-->  
@@ -44,3 +41,12 @@ Se nenhuma tecla de modificação foi definida para o atalho, modificadores devo
 #### Ver também 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1186 |
+| Thread-seguro | &cross; |
+
+

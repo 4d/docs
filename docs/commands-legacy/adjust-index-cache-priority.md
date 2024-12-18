@@ -52,3 +52,12 @@ You want to temporarily change the cache priority for the \[Docs\]Comments field
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1430 |
+| Thread safe | &check; |
+
+

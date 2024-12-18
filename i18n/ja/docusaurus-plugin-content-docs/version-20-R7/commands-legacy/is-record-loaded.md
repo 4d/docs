@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Is record loaded.Summary-->**Is record loaded** コマンドは、*aTable*のカレントレコードがカレントプロセス内にロードされていれば[True](true.md "True")を返します。<!-- END REF-->
-
-**4D Server**: 原理的には、テーブル同士が自動リレーションでリンクされている場合、リレート先テーブルのカレントレコードは自動でロードされます (*リレーションについて* 参照)。しかし 4D Server は最適化のため、リレートレコードのフィールドの読み込みや編集などの必要なときにだけ、これらのレコードをロードします。そのため、ローカルモードでは **Is record loaded** コマンドが True を返すような場合でも、リモートモードでは同コマンドは False を返します。
+<!--REF #_command_.Is record loaded.Summary-->**Is record loaded** コマンドは、*aTable*のカレントレコードがカレントプロセス内にロードされていれば[True](true.md "True")を返します。<!-- END REF-->参照)。しかし 4D Server は最適化のため、リレートレコードのフィールドの読み込みや編集などの必要なときにだけ、これらのレコードをロードします。そのため、ローカルモードでは **Is record loaded** コマンドが True を返すような場合でも、リモートモードでは同コマンドは False を返します。
 
 #### 例題 
 
@@ -43,3 +41,13 @@ displayed_sidebar: docs
     End if
  End if
 ```
+
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 669 |
+| スレッドセーフである | &check; |
+
+

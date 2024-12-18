@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**Nota:** Este comando só funciona com os list box de tipo array.<!-- END REF-->
@@ -63,3 +60,12 @@ Exemplos típicos de uso:
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1278 |
+| Thread-seguro | &cross; |
+
+

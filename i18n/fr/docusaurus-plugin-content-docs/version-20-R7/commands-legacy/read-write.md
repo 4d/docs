@@ -30,3 +30,12 @@ Utilisez **READ WRITE** lorsque vous devez modifier un enregistrement et sauvega
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
 *Verrouillage d'enregistrements*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 146 |
+| Thread safe | &check; |
+
+

@@ -59,3 +59,12 @@ O exemplo a seguir é parte de um método de formulário. Estas linhas de códig
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 *Sobre Números de Registros*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 244 |
+| Thread-seguro | &check; |
+
+

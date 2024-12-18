@@ -14,9 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.HTTP Parse message.Summary-->La documentation de cette commande est disponible sur [developer.<!-- END REF-->4d.com.](https://developer.4d.com/docs/fr/API/HTTPRequestClass#http-parse-messege)
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1824 |
+| Thread safe | &cross; |
+
+

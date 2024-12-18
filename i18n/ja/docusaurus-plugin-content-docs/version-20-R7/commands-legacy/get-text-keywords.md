@@ -83,3 +83,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [DISTINCT VALUES](distinct-values.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1141 |
+| スレッドセーフである | &check; |
+
+

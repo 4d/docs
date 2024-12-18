@@ -70,3 +70,12 @@ Unlike standard (not shared) collections, shared collections do not support pict
 [New collection](new-collection.md)  
 [New shared object](../commands-legacy/new-shared-object.md)  
 *Shared objects and shared collections*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1527 |
+| Thread safe | &check; |
+
+

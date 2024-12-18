@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Level.Summary-->Levelは、現在のブレークまたはヘッダのレベルを調べるために使用します。<!-- END REF-->このコマンドは、On HeaderおよびOn Printing Breakイベント中でレベル数を返します。
@@ -69,3 +66,12 @@ displayed_sidebar: docs
 [BREAK LEVEL](break-level.md)  
 [Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 101 |
+| スレッドセーフである | &cross; |
+
+

@@ -21,3 +21,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Get parent XML element](dom-get-parent-xml-element.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1053 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

@@ -38,3 +38,12 @@ The following is an example of a generic method that displays the records of a t
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 256 |
+| Thread safe | &check; |
+
+

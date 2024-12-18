@@ -24,3 +24,12 @@ Reportez-vous à l'exemple de la commande [WEB GET BODY PART](web-get-body-part.
 #### Voir aussi 
 
 [WEB GET BODY PART](web-get-body-part.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1211 |
+| Thread safe | &check; |
+
+

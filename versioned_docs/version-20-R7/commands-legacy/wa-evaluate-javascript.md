@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->The WA Evaluate JavaScript command executes, in the Web area designated by the *\** and *object* parameters, the JavaScript code passed in *jsCode* and returns the result.<!-- END REF--> This command must be called after the page is loaded (the On End URL Loading form event must have been generated).
@@ -104,3 +101,12 @@ You can then evaluate the JavaScript code from 4D:
 #### See also 
 
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1029 |
+| Thread safe | &cross; |
+
+

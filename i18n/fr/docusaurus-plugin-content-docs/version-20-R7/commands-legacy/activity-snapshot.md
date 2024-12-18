@@ -103,3 +103,13 @@ Cette méthode, exécutée dans un process séparé sous 4D ou 4D Server, permet
 Vous obtenez des tableaux du type :
 
 ![](../assets/en/commands/pict1213741.fr.png)
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1277 |
+| Thread safe | &check; |
+
+

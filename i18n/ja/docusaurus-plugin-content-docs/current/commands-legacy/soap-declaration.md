@@ -194,3 +194,12 @@ Note タイプ Is Text (Is BLOBではなく)を使用していることに留意
 [Is data file locked](is-data-file-locked.md)  
 [SOAP Get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 782 |
+| スレッドセーフである | &check; |
+
+

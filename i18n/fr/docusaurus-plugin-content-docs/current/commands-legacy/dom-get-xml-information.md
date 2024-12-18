@@ -33,3 +33,12 @@ Passez dans *infoXML* un code indiquant le type d’information à récupérer. 
 #### Voir aussi 
 
 [XML GET ERROR](xml-get-error.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 721 |
+| Thread safe | &check; |
+
+

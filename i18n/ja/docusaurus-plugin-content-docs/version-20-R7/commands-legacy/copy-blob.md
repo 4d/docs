@@ -29,3 +29,12 @@ displayed_sidebar: docs
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 558 |
+| スレッドセーフである | &check; |
+
+

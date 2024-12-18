@@ -53,3 +53,12 @@ Usted quiere obtener información de la caché de la base de datos y todos los c
 #### Ver también 
 
 [MEMORY STATISTICS](memory-statistics.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1402 |
+| Hilo seguro | &check; |
+
+

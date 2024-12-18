@@ -49,3 +49,12 @@ En el , usted desea definir una prioridad alta para el dato escalar \[Customer\]
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1400 |
+| Hilo seguro | &check; |
+
+

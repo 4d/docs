@@ -48,3 +48,13 @@ Si le fichier à envoyer existe et si le timeout n’est pas dépassé, la varia
 #### Voir aussi 
 
 [WEB SEND BLOB](web-send-blob.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 619 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

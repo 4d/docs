@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->O comando NOTIFY RESOURCES FOLDER MODIFICATION "força" 4D Server a enviar uma notificação a todas as máquinas conectadas a 4D, indicando que a pasta de Resources do banco de dados foi modificada de modo que eles possam sincronizar sua pasta de recursos locais.<!-- END REF-->   
@@ -36,3 +33,12 @@ O parâmetro atual pode estar definido:
 #### Ver também 
 
 [Get 4D folder](get-4d-folder.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1052 |
+| Thread-seguro | &cross; |
+
+

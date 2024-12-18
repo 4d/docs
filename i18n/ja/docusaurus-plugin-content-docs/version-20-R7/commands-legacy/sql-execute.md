@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->**SQL EXECUTE**コマンドを使用してSQLコマンドを実行し、結果を4Dのオブジェクト(配列、変数またはフィールド) にバインドできます。<!-- END REF-->
@@ -160,3 +157,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [SQL LOAD RECORD](sql-load-record.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 820 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

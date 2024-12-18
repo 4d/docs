@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.QR GET SELECTION.Summary-->La commande **QR GET SELECTION** retourne les coordonnées de la sélection courante de la *zone*.<!-- END REF--> 
@@ -39,3 +36,13 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 #### Voir aussi 
 
 [QR SET SELECTION](qr-set-selection.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 793 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

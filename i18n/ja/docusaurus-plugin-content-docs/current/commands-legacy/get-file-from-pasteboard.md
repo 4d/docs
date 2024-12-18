@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->Get file from pasteboard コマンドは、ドラッグ＆ドロップ処理に含まれるファイルの完全パス名を返します。<!-- END REF-->複数のファイルを同時に選択し、移動することができます。*xIndex* 引数を使用して選択したファイル中でファイルを指定することができます。
@@ -44,3 +41,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 976 |
+| スレッドセーフである | &cross; |
+
+

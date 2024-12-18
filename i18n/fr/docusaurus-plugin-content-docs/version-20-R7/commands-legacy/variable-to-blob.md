@@ -132,3 +132,13 @@ Lorsque ces méthodes ont été ajoutées à votre application, vous pouvez écr
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 532 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

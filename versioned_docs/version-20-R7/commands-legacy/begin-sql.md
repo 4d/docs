@@ -45,3 +45,12 @@ Note that the 4D *Debugger* will evaluate the SQL code line by line. In certain 
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 948 |
+| Thread safe | &check; |
+
+

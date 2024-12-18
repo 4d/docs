@@ -25,3 +25,13 @@ Se o servidor Web é iniciado corretamente, Ok assume o valor 1; do contrário O
 #### Ver também 
 
 [WEB STOP SERVER](web-stop-server.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 617 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

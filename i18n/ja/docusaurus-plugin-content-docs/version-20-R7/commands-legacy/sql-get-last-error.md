@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SQL GET LAST ERROR.Summary-->SQL GET LAST ERRORコマンドは、ODBCコマンドの実行中に発生した最後のエラーに関連する情報を返します。<!-- END REF-->エラーの発生箇所としては、4Dアプリケーション、ネットワーク、ODBCソースなどが考えられます。
@@ -37,3 +34,12 @@ displayed_sidebar: docs
 
 [Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 825 |
+| スレッドセーフである | &cross; |
+
+

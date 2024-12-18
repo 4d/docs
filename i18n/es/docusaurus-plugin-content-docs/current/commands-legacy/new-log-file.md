@@ -30,3 +30,14 @@ El archivo se renombra con los números de backup´actuales de la base y el arch
 
 En caso de que se presente un error, el comando genera un código que puede interceptarse utilizando el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 926 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 O comando OBJECT SET TITLE modifica o título dos objetos especificados por *objeto* e o substitui pelo valor passado em *titulo.*  
@@ -69,3 +66,12 @@ Você quer inserir os títulos em duas linhas:
 #### Ver também 
 
 [OBJECT Get title](object-get-title.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 194 |
+| Thread-seguro | &cross; |
+
+

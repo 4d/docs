@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GOTO XY.Summary-->GOTO XY コマンドは、[Open window](open-window.md "Open window")で開いたウインドウに[MESSAGE](message.md "MESSAGE")コマンドでメッセージを表示する際に使用できます。<!-- END REF-->  
@@ -61,3 +58,12 @@ GOTO XY コマンドでカーソルの位置を指定してから、[MESSAGE](me
 #### 参照 
 
 [MESSAGE](message.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 161 |
+| スレッドセーフである | &cross; |
+
+

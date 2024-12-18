@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get string resource.Summary-->El comando Get string resource devuelve la cadena almacenada en el recurso cadena (“STR ”) cuyo número de referencia se pasa en *resNum*.<!-- END REF--> 
@@ -45,3 +42,13 @@ La variable sistema OK toma el valor 1 si se encuentra el recurso, de lo contrar
 [Get indexed string](get-indexed-string.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 506 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -116,3 +116,13 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 868 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+
+

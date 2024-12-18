@@ -51,3 +51,13 @@ Se o comando se executa corretamente, a variável sistema OK toma o valor 1\. Se
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 682 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

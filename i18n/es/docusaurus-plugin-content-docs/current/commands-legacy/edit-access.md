@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS permite modificar el sistema de contraseñas.<!-- END REF--> Cuando se ejecuta este comando, se muestra la ventana de la caja de herramientas que contiene las páginas Usuarios y Grupos. 
@@ -37,3 +34,13 @@ El siguiente ejemplo muestra al usuario la ventana de gestión de usuarios y gru
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 281 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

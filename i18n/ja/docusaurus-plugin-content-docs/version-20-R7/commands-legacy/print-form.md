@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Print form.Summary-->**Print form** は、*aTable*のフィールドや変数の現在の値を使用して*form*を印刷します。<!-- END REF-->通常は、印刷処理を完全に制御する必要のある非常に複雑なレポートを印刷するために使用します。**Print form** はレコード処理、ブレーク処理、改ページ処理を全く行いません。これらの処理はすべて開発者が行います。**Print form** は固定されたサイズの枠のなかにフィ－ルドや変数を印刷します。
@@ -189,3 +186,12 @@ displayed_sidebar: docs
 [PAGE BREAK](page-break.md)  
 [PRINT SETTINGS](print-settings.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 5 |
+| スレッドセーフである | &cross; |
+
+

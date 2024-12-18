@@ -189,3 +189,12 @@ Dans le cas contraire, pour des raisons de sécurité, le mode synchrone est uti
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 689 |
+| Thread safe | &check; |
+
+

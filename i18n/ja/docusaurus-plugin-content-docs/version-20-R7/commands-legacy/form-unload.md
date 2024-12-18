@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM UNLOAD.Summary-->**FORM UNLOAD**コマンドは、[FORM LOAD](form-load.md)コマンドで指定したカレントのフォームをメモリーから解放します。<!-- END REF-->.
@@ -24,3 +21,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [FORM LOAD](form-load.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1299 |
+| スレッドセーフである | &cross; |
+
+

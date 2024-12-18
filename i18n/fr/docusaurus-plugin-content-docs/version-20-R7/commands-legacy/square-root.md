@@ -41,3 +41,13 @@ La méthode listée ci-dessous retourne l'hypoténuse du triangle rectangle dont
 ```
 
 Par exemple, Hypoténuse (4;3) retourne 5.
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 539 |
+| Thread safe | &check; |
+
+

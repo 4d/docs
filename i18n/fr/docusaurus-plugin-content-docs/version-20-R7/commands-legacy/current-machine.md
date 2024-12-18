@@ -30,3 +30,12 @@ Même si vous n'utilisez pas la version client/serveur de 4D, votre application 
 #### Voir aussi 
 
 [Current system user](current-system-user.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 483 |
+| Thread safe | &check; |
+
+

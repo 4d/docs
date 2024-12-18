@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET USER LIST.Summary-->La commande **GET USER LIST** remplit les tableaux *nomsUtil* et *réfsUtil* avec les noms et les numéros de référence uniques des utilisateurs tels qu'ils apparaissent dans la fenêtre des Mots de passe de 4D.<!-- END REF-->
@@ -38,3 +35,13 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 609 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

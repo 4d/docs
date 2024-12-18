@@ -62,3 +62,12 @@ After executing these instructions:
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1081 |
+| Thread safe | &check; |
+
+

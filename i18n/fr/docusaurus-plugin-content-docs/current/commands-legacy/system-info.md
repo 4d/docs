@@ -146,3 +146,12 @@ retourne un objet contenant les informations suivantes :
 [Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1571 |
+| Thread safe | &check; |
+
+

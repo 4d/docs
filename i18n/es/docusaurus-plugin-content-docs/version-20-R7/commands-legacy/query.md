@@ -309,3 +309,15 @@ La variable OK toma el valor 0 si: - el usuario hace clic en Cancelar en la caja
 #### Ver también 
 
 [QUERY SELECTION](query-selection.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 277 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+
+

@@ -18,9 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Delete string.Summary-->**Delete string** supprime *nbCars* dans *source* à partir de *positionDépart* et retourne la chaîne résultante.<!-- END REF-->
-
-**Delete string** retourne la même chaîne que *source* dans les cas suivants :
+<!--REF #_command_.Delete string.Summary-->**Delete string** supprime *nbCars* dans *source* à partir de *positionDépart* et retourne la chaîne résultante.<!-- END REF-->retourne la même chaîne que *source* dans les cas suivants :
 
 * *source* est une chaîne vide,
 * *positionDépart* est supérieur à la longueur de *source*,
@@ -45,3 +43,12 @@ L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats so
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 232 |
+| Thread safe | &check; |
+
+

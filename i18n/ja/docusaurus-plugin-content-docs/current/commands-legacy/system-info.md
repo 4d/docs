@@ -145,3 +145,12 @@ Windows マシン上で以下のコードを実行した場合:
 [Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1571 |
+| スレッドセーフである | &check; |
+
+

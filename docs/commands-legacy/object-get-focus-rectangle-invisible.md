@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->The **OBJECT Get focus rectangle invisible** command returns the status of the visibility option for the focus rectangle of the object(s) designated by the *object* and *\** parameters for the current process .<!-- END REF--> This setting corresponds to the **Hide focus rectangle** option that is available for enterable objects in the Property List in the Design mode. This command returns the current status of the option, as it is defined in Design mode or using the [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md) command.
@@ -31,3 +28,12 @@ The command returns **True** when the focus rectangle is hidden and **False** wh
 #### See also 
 
 [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1178 |
+| Thread safe | &cross; |
+
+

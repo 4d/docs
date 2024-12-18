@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Activated.Summary-->**Activated** retourne Vrai dans une méthode formulaire lorsque la fenêtre contenant le formulaire passe au premier plan.<!-- END REF-->
@@ -30,3 +27,12 @@ displayed_sidebar: docs
 
 [Deactivated](deactivated.md)  
 [Form event code](../commands/form-event-code.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 346 |
+| Thread safe | &cross; |
+
+

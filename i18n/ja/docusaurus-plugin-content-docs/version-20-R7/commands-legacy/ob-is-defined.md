@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB Is defined.Summary-->**OB Is defined**コマンドは、*object* または *property* が定義済みである場合にはTrueを返し、それ以外の場合にはFalseを返します。<!-- END REF-->   
-
-*object* 引数で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB Is defined.Summary-->**OB Is defined**コマンドは、*object* または *property* が定義済みである場合にはTrueを返し、それ以外の場合にはFalseを返します。<!-- END REF-->引数で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *property* 引数を省略した場合、コマンドは *object* が定義済みかどうかを調べます。オブジェクトの中身が初期化されていれば定義済みであるとみなされます。
 
@@ -62,3 +60,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OB Is empty](ob-is-empty.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1231 |
+| スレッドセーフである | &check; |
+
+

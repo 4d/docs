@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->La commande **LISTBOX SET FOOTER CALCULATION** permet de définir le calcul automatique associé à la zone de pied de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -52,3 +49,12 @@ Si le type de données de la colonne ou d’au moins une colonne de la list box 
 #### Voir aussi 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1140 |
+| Thread safe | &cross; |
+
+

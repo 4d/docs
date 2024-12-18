@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Outside call.Summary-->**Outside call** returns True for the After execution cycle.<!-- END REF--> 
@@ -28,3 +25,12 @@ In order for the **Outside call** execution cycle to be generated, make sure tha
 
 [Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 328 |
+| Thread safe | &cross; |
+
+

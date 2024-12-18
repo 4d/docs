@@ -67,3 +67,12 @@ Cet exemple génère un hash de mot de passe à l'aide de bcrypt avec un coût d
   
 [Generate digest](generate-digest.md)  
 [Verify password hash](verify-password-hash.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1533 |
+| Thread safe | &check; |
+
+

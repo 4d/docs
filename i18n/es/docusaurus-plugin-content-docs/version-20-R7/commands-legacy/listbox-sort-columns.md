@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->El comando LISTBOX SORT COLUMNS aplica una ordenación estándar a las líneas del list box definido por el objeto y los parámetros \* en función de los valores de una o varias columnas.<!-- END REF-->
@@ -36,3 +33,13 @@ Puede definir ordenaciones multiniveles: para hacerlo, pase tantos pares (*numCo
 Conforme con el principio de funcionamiento del list box, las columnas están sincronizadas, lo que significa que la ordenación de una columna repercute automáticamente en todas las otras columnas del objeto.
 
 **Nota:** el comando **LISTBOX SORT COLUMNS** no tiene en cuenta la propiedad listbox *Sortable*.
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 916 |
+| Hilo seguro | &cross; |
+
+

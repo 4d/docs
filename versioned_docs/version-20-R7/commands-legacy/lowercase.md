@@ -48,3 +48,12 @@ This example compares the results obtained according to whether or not the *\** 
 #### See also 
 
 [Uppercase](uppercase.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 14 |
+| Thread safe | &check; |
+
+

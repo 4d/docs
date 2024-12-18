@@ -29,3 +29,12 @@ The copy starts at the position (expressed relative to the beginning of the sour
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 558 |
+| Thread safe | &check; |
+
+

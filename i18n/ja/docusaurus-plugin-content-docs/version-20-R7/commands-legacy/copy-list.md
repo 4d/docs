@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Copy list.Summary-->Copy list コマンドは*list*に渡されたリスト参照番号を持つリストの複製を作成し、新しいリストのリスト参照番号を返します。<!-- END REF-->
@@ -28,3 +25,12 @@ displayed_sidebar: docs
 [CLEAR LIST](clear-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 626 |
+| スレッドセーフである | &cross; |
+
+

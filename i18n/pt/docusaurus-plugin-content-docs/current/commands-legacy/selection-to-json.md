@@ -91,3 +91,12 @@ Pode usar a sintaxe *modelo* para exportar campos de tabelas diferentes:
 #### Ver também 
 
 [JSON TO SELECTION](json-to-selection.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1234 |
+| Thread-seguro | &check; |
+
+

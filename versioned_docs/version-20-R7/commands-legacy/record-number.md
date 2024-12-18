@@ -43,3 +43,12 @@ The following example saves the current record number and then searches for any 
 [Is new record](is-new-record.md)  
 [Selected record number](selected-record-number.md)  
 [Sequence number](sequence-number.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 243 |
+| Thread safe | &check; |
+
+

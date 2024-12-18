@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->**METHOD GET PATHS FORM**コマンドはすべてのフォームオブジェクトとフォームメソッドの内部的なパス名と名前を*arrPaths*配列に返します。<!-- END REF-->フォームメソッドには{formMethod}とラベルが付けられます。
@@ -72,3 +69,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [FORM GET NAMES](form-get-names.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1168 |
+| スレッドセーフである | &cross; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SQL GET LAST ERROR.Summary-->El comando SQL GET LAST ERROR devuelve la información relacionada con el último error encontrado durante la ejecución de un comando ODBC.<!-- END REF--> El error puede venir de la aplicación 4D, la red, la fuente ODBC, etc. 
@@ -37,3 +34,12 @@ Los dos últimos parámetros sólo se llenan cuando el error viene de la fuente 
 
 [Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 825 |
+| Hilo seguro | &cross; |
+
+

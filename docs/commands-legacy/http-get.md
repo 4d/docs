@@ -104,3 +104,13 @@ Retrieval of a video:
 #### See also 
 
 [HTTP Request](http-request.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1157 |
+| Thread safe | &check; |
+| Modifies variables | error |
+
+

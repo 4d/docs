@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** le permite imprimir etiquetas con los datos de la selección de *tabla*.<!-- END REF-->
@@ -109,3 +106,13 @@ El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 39 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

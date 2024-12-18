@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->**SET APPLICATION COLOR SCHEME** コマンドは、カレントセッションにおいて、アプリケーションレベルで使用されるカラースキームを定義します。<!-- END REF-->このスキームは特定のスキームをまだ宣言していないフォームに対して適用されます(フォームレベルで定義されるカラースキームはアプリケーションレベルでの設定を上書きします)。
@@ -39,3 +36,12 @@ displayed_sidebar: docs
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [Get application color scheme](get-application-color-scheme.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1762 |
+| スレッドセーフである | &cross; |
+
+

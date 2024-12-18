@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Pop up menu.Summary-->O comando Pop up menu mostra um menu pop up na localização atual do mouse ou na localização definida pelos parâmetros opcionais *coordX* e *coordY*.<!-- END REF-->  
@@ -106,3 +103,12 @@ O próximo é o menu pop-up tal como aparece em Windows (esquerda) e Macintosh (
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 542 |
+| Thread-seguro | &cross; |
+
+

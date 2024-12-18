@@ -38,3 +38,13 @@ Se especificar uma rota de acesso inválida, será gerado um erro do administrad
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 634 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+
+

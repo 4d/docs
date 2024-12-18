@@ -41,3 +41,12 @@ Insert string関数の使用例を次に示します。結果を変数*vtResult*
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 231 |
+| スレッドセーフである | &check; |
+
+

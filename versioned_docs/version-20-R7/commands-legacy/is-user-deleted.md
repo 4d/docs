@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Is user deleted.Summary-->The Is user deleted command tests the user account whose unique user ID number you pass in *userID*.<!-- END REF-->
@@ -32,3 +29,13 @@ If you do not have the proper access privileges for calling Is user deleted or i
 [DELETE USER](delete-user.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 616 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

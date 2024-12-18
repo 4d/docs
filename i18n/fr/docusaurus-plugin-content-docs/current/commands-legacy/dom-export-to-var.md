@@ -57,3 +57,13 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 863 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+
+

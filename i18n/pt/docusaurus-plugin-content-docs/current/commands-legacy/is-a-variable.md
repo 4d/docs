@@ -24,3 +24,12 @@ displayed_sidebar: docs
 
 [Is nil pointer](is-nil-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 294 |
+| Thread-seguro | &check; |
+
+

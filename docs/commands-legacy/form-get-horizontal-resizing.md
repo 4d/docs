@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GET HORIZONTAL RESIZING.Summary-->The FORM GET HORIZONTAL RESIZING command returns the horizontal resizing properties of the current form in the *resize*, *minWidth* and *maxWidth* variables.<!-- END REF--> These properties may have been set for the form in the Form editor in Design mode or for the current process via the [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md) command.
@@ -25,3 +22,12 @@ displayed_sidebar: docs
 #### See also 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1077 |
+| Thread safe | &cross; |
+
+

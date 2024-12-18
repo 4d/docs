@@ -48,3 +48,13 @@ Se for executado um método de objeto de formulário, a cadeia de chamadas poder
 ```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1662 |
+| Thread-seguro | &check; |
+
+

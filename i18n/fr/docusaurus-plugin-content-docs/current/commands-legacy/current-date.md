@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Current date.Summary-->**Current date** retourne la date courante telle que définie dans l'horloge système de la machine.<!-- END REF--> 
-
-**4D Server** **:** Si vous passez le paramètre astérisque (\*) — lors d'une exécution sur un poste 4D Client —, la fonction retourne la date du jour telle que définie dans l'horloge du poste serveur. 
+<!--REF #_command_.Current date.Summary-->**Current date** retourne la date courante telle que définie dans l'horloge système de la machine.<!-- END REF-->**:** Si vous passez le paramètre astérisque (\*) — lors d'une exécution sur un poste 4D Client —, la fonction retourne la date du jour telle que définie dans l'horloge du poste serveur. 
 
 #### Exemple 1 
 
@@ -98,3 +96,12 @@ La méthode projet suivante vous permet de traiter cette question :
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 33 |
+| Thread safe | &check; |
+
+

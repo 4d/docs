@@ -20,9 +20,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** opens a new window with the dimensions given by the first four parameters:
@@ -139,3 +136,12 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
 *Open Window*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 153 |
+| Thread safe | &cross; |
+
+

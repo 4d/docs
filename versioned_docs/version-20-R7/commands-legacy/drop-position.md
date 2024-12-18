@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Drop position.Summary-->The Drop position command can be used to find out the location, in a “complex” destination object, where an object has been (dragged and) dropped.<!-- END REF-->
@@ -95,3 +92,12 @@ The left (destination) list box object method contains the following code:
 #### See also 
 
 *Drag and Drop*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 608 |
+| Thread safe | &cross; |
+
+

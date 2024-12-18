@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->O comando QR SET HTML TEMPLATE define o *modelo* HTML a utilizar para a área de relatório rápido referenciada por *area*.<!-- END REF--> Este modelo se utilizará durante a criação do relatório em formato HTML. 
@@ -76,3 +73,13 @@ Se passa um número de área inválido, se gera o erro -9850.
 #### Ver também 
 
 [QR Get HTML template](qr-get-html-template.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 750 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

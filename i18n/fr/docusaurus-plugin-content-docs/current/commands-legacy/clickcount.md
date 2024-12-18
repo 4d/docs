@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Clickcount.Summary-->La commande **Clickcount** retourne, dans le contexte d'un événement clic, le nombre de fois que l'utilisateur a cliqué de manière répétée avec le même bouton de la souris.<!-- END REF--> Typiquement, la commande retourne 2 pour un double-clic. 
@@ -61,3 +58,13 @@ Les libellés ne sont pas saisissables mais ils peuvent le devenir après un tri
     End case
  End if
 ```
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1332 |
+| Thread safe | &cross; |
+
+

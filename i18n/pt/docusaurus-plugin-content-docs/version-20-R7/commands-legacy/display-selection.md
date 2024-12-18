@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->DISPLAY SELECTION mostra a seleção de *tabela*, utilizando o formulário de saída.<!-- END REF--> Os registros se mostram em uma lista pela qual pode ser deslocada similar ao do modo Desenho. Se o usuário fizer duplo clique em um registro, por padrão é mostrado o registro no formulário de entrada atual. A lista é mostrada na janela do primeiro plano.  
@@ -104,3 +101,13 @@ Também pode utilizar outros comandos, tais como [PRINT SELECTION](print-selecti
 *Conjuntos*  
 [Form event code](form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 59 |
+| Thread-seguro | &cross; |
+| Proibido no servidor ||
+
+

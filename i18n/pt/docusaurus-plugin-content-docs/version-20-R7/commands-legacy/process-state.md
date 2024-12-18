@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Process state.Summary-->O comando Process state devolve o estado do processo cujo número foi passado em *processo*.<!-- END REF--> 
@@ -62,3 +59,12 @@ O seguinte exemplo coloca o nome e número de referencia para cada processo nos 
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 330 |
+| Thread-seguro | &cross; |
+
+

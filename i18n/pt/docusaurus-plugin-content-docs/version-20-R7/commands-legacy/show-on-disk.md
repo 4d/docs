@@ -47,3 +47,14 @@ Os exemplos abaixo ilustram o funcionamento do comando:
 #### Variáveis e conjuntos do sistema 
 
 A variável sistema OK assume o valor 1 se o comando for executado corretamente, do contrário assume o valor 0\. 
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 922 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

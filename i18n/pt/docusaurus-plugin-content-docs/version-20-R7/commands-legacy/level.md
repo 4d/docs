@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Level.Summary-->Level  se utiliza para determinar o nível de quebra do cabeçalho atual.<!-- END REF--> Devolve o nível de quebra durante os eventos On Header e On Printing Break.
@@ -69,3 +66,12 @@ Este exemplo é um modelo para um método de formulário. Mostra cada evento pos
 [BREAK LEVEL](break-level.md)  
 [Form event code](form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 101 |
+| Thread-seguro | &cross; |
+
+

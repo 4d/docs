@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### 
 
 <!--REF #_command_.On Server Shutdown database method.Summary-->O On Server Shutdown database method é chamado uma vez na máquina servidor quando a base atual é fechada em 4D Server.<!-- END REF--> O On Server Shutdown database method NÃO é chamado por outro ambiente 4D diferente de 4D Server.

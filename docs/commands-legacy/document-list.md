@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.DOCUMENT LIST.Summary-->The **DOCUMENT LIST** command populates the Text array *documents* with the names of the documents located at the location you pass in *pathname*.<!-- END REF--> 
-
-**Note:** You must pass an absolute pathname in the *pathname* parameter. 
+<!--REF #_command_.DOCUMENT LIST.Summary-->The **DOCUMENT LIST** command populates the Text array *documents* with the names of the documents located at the location you pass in *pathname*.<!-- END REF-->You must pass an absolute pathname in the *pathname* parameter. 
 
 By default, if you omit the *options* parameter, only the names of documents are returned in the *documents* array. You can modify this by passing, in the *options* parameter, one or more of the following constants, found in the *System Documents* theme:
 
@@ -115,3 +113,13 @@ List of all documents in recursive Posix (relative) mode:
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 474 |
+| Thread safe | &check; |
+| Modifies variables | error |
+
+

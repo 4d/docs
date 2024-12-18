@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->O comando SET LIST ITEM PARAMETER permite modificar o parâmetro *seletor* para o elemento *refElem* da lista hierárquica cuja referência ou nome de objeto são passadas no parâmetro *lista*.<!-- END REF-->
@@ -66,3 +63,12 @@ APPEND TO LIST($myList;ak standard action title;1)
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 986 |
+| Thread-seguro | &cross; |
+
+

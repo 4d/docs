@@ -29,3 +29,13 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 #### Voir aussi 
 
 [DOM Get XML information](dom-get-xml-information.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 732 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

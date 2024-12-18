@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->O comando LISTBOX INSERT COLUMN insere uma coluna no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 
@@ -100,3 +97,12 @@ Você deseja inserir uma coluna de forma dinâmica em um array de tipo list box 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 829 |
+| Thread-seguro | &cross; |
+
+

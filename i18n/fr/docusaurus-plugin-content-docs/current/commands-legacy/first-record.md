@@ -34,3 +34,13 @@ L'exemple suivant charge le premier enregistrement de la table \[Clients\] :
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 50 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+
+

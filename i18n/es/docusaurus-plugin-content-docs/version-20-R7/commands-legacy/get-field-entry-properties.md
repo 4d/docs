@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->El comando GET FIELD ENTRY PROPERTIES devuelve las propiedades de entrada de datos para el campo especificado por *numTabla* y *numCamp* o por *ptrCamp*.<!-- END REF--> 
@@ -47,3 +44,12 @@ Si ninguna lista está asociada al campo o si el tipo del campo no permite la as
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 685 |
+| Hilo seguro | &cross; |
+
+

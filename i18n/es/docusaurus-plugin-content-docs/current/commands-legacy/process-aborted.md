@@ -22,3 +22,12 @@ Este estado ocurrirá muy raramente. Los procesos suelen detenerse antes de que 
 #### Ver también 
 
 [Método base On Exit](metodo-base-on-exit.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 672 |
+| Hilo seguro | &check; |
+
+

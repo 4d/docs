@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->**TEXT TO ARRAY**コマンドはテキスト変数をテキスト配列変換します。<!-- END REF-->元の*varText*テキストは (スタイル付きであってもなくても) 分割され、*arrText*配列の要素となり、コマンドから返されます。このコマンドを使用して例えば適切な位置でテキストが分割されたメール本文を作成することができます。
@@ -111,3 +108,12 @@ displayed_sidebar: docs
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1149 |
+| スレッドセーフである | &cross; |
+
+

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** は、*aTable*のカレントセレクションに対して*statement*を適用します。<!-- END REF-->*statement*は1行のステートメントまたはメソッドのどちらでも構いません。*statement*が*aTable*のレコードを修正した場合、そのレコードをディスクに保存されます、レコードを修正しない場合には保存しません。カレントセレクションが空の場合、**APPLY TO SELECTION** は何も行いません。リレーションが自動であれば、*statement*はリレート先のテーブルのフィールドを含むことができます。
+<!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** は、*aTable*のカレントセレクションに対して*statement*を適用します。<!-- END REF-->は何も行いません。リレーションが自動であれば、*statement*はリレート先のテーブルのフィールドを含むことができます。
 
 **警告:** 引数($1...$n) は*statement* 引数ではサポートされていません。
 
@@ -62,3 +62,13 @@ APPLY TO SELECTION実行中にレコードを修正して、そのレコード�
 
 [EDIT FORMULA](edit-formula.md)  
 *セット*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 70 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

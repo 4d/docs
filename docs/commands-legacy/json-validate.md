@@ -104,3 +104,12 @@ You want to validate a JSON object with a schema and get the list of validation 
   
   
 [JSON Parse](json-parse.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1456 |
+| Thread safe | &check; |
+
+

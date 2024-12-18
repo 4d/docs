@@ -24,3 +24,13 @@ displayed_sidebar: docs
 #### See also 
 
 [SAVE RECORD](save-record.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 225 |
+| Thread safe | &check; |
+| Changes current record ||
+
+

@@ -60,3 +60,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 724 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

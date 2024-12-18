@@ -55,3 +55,13 @@ Note: XLIFFは大文字小文字を区別します。
 #### 参照 
 
 [Get database localization](get-database-localization.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 991 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

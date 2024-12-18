@@ -35,3 +35,12 @@ Vous voulez récupérer les numéros des enregistrements de la sélection couran
 #### Voir aussi 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 647 |
+| Thread safe | &check; |
+
+

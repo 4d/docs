@@ -63,3 +63,13 @@ Note que el acceso a la variable interproceso *vtBuffer* debe estar protegido po
 [Semaphore](semaphore.md)  
 [SET CHANNEL](set-channel.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 172 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

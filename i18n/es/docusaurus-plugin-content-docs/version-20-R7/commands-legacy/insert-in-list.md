@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->El comando INSERT IN LIST inserta el elemento designado por el parámetro *refElem* en la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->
@@ -51,3 +48,12 @@ El siguiente código inserta un elemento (sin sublista asociada) justo antes del
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 625 |
+| Hilo seguro | &cross; |
+
+

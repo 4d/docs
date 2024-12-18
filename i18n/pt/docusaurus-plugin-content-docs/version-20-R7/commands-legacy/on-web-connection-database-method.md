@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### 
 
 <!--REF #_command_.On Web Connection database method.Summary-->O On Web Connection database method pode ser chamado nos seguintes casos:  

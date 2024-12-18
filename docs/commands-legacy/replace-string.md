@@ -70,3 +70,12 @@ The following example illustrates the use of the \* parameter in the case of a d
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 233 |
+| Thread safe | &check; |
+
+

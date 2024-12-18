@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.throw.Summary-->El comando **throw** crea un error que será lanzado inmediatamente o cuando el método que lo llama devuelva a su llamador (modo diferido).<!-- END REF-->
@@ -108,3 +105,12 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1805 |
+| Hilo seguro | &cross; |
+
+

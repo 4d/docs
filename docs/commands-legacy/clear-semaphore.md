@@ -28,3 +28,12 @@ See the example for [Semaphore](semaphore.md).
 [Semaphore](semaphore.md)  
 *Semaphores and signals*  
 [Test semaphore](test-semaphore.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 144 |
+| Thread safe | &check; |
+
+

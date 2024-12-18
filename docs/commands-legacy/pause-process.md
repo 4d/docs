@@ -31,3 +31,12 @@ While process execution is suspended, the windows belonging to this process are 
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 319 |
+| Thread safe | &check; |
+
+

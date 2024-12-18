@@ -145,3 +145,12 @@ Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-da
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 295 |
+| Thread safe | &check; |
+
+
