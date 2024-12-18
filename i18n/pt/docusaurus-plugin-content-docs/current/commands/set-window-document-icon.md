@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo                                               |   | Descrição                |
 | --------- | -------------------------------------------------- | - | ------------------------ |
 | winRef    | Integer                                            | → | Window reference number  |
-| image     | Imagem                                             | → | Custom icon              |
+| image     | Imagem                                             | → | Ícone personalizado      |
 | file      | 4D.File, 4D.Folder | → | File path or folder path |
 
 <!-- END REF-->

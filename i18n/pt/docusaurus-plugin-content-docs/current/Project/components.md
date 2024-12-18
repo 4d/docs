@@ -171,7 +171,7 @@ Using relative paths is **recommended** in most cases, since they provide flexib
 
 Absolute paths should only be used for components that are specific to one machine and one user.
 
-### Components stored on GitHub
+### Componentes armazenados no GitHub
 
 4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
 

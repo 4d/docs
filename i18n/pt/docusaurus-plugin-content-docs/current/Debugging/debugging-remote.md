@@ -25,7 +25,7 @@ Apenas um depurador pode depurar uma aplicação 4D Server num determinado momen
 O depurador anexado é chamado sempre que um 4D Server se encontra:
 
 - um ponto de ruptura
-- a `TRACE` command
+- un comando `TRACE`
 - um ponto de interrupção para fazer o pedido
 - um erro
 

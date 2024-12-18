@@ -9,7 +9,7 @@ title: 用語集
 
 ## アクション
 
-[リソース上](#リソース) に対しておこなえるアクションを指します。 利用可能なアクションは、create (作成)、read (読み取り)、update (更新)、drop (削除)、execute (実行)、promote (昇格)、および describe (記述) です。
+[リソース上](#リソース) に対しておこなえるアクションを指します。 Available actions are: create, read, update, drop, execute, and promote.
 
 ## 属性
 

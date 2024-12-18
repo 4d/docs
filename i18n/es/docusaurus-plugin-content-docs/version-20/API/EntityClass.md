@@ -234,7 +234,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
+vCompareResult1 (se devuelven todas las diferencias):
 
 ```4d
 [
@@ -283,7 +283,7 @@ vCompareResult2 (sólo se devuelven las diferencias en $attributesToInspect)
 ]
 ```
 
-vCompareResult1 (se devuelven todas las diferencias):
+vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 ```4d
 [
@@ -1373,7 +1373,7 @@ Sin parámetro de filtro:
 employeeObject:=employeeSelected.toObject()
 ```
 
-Lanzamiento
+Devuelve:
 
 ```4d
 {
@@ -1404,7 +1404,7 @@ Extraer la llave primaria y el sello:
 employeeObject:=employeeSelected.toObject("";dk with primary key+dk with stamp)
 ```
 
-Lanzamiento
+Devuelve:
 
 ```4d
 {
@@ -1506,7 +1506,7 @@ Extracción de algunas propiedades de `relatedEntities`:
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
 ```
 
-Lanzamiento
+Devuelve:
 
 ```4d
 {
@@ -1534,7 +1534,7 @@ Obtenga una `relatedEntity` en un formulario simple:
  employeeObject:=employeeSelected.toObject($coll)
 ```
 
-Lanzamiento
+Devuelve:
 
 ```4d
 {
@@ -1553,7 +1553,7 @@ Extracción de todas las propiedades de una `Entidad relacionada`:
  employeeObject:=employeeSelected.toObject("employer.*")
 ```
 
-Devuelve:
+Lanzamiento
 
 ```4d
 {
@@ -1578,7 +1578,7 @@ Extracción de algunas propiedades de una `Entidad relacionada`:
  employeeObject:=employeeSelected.toObject($col)
 ```
 
-Devuelve:
+Lanzamiento
 
 ```4d
 {

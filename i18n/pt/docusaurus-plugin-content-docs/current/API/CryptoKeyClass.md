@@ -331,11 +331,11 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Parâmetro  | Tipo         |                             | Descrição                                                                       |
-| ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------- |
-| message    | Text OR Blob | ->                          | Message to sign                                                                 |
-| options    | Object       | ->                          | Opções de assinatura                                                            |
-| Resultados | Text         | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
+| Parâmetro  | Tipo          |                             | Descrição                                                                       |
+| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------- |
+| message    | Texto OU Blob | ->                          | Message to sign                                                                 |
+| options    | Object        | ->                          | Opções de assinatura                                                            |
+| Resultados | Text          | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 
 <!-- END REF -->
 
@@ -415,12 +415,12 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parâmetro  | Tipo         |                             | Descrição                                                                                         |
-| ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------- |
-| message    | Text OR Blob | ->                          | Message that was used to produce the signature                                                    |
-| signature  | Text         | ->                          | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options    | Object       | ->                          | Opções de assinatura                                                                              |
-| Resultados | Object       | <- | Estado da verificação                                                                             |
+| Parâmetro  | Tipo          |                             | Descrição                                                                                         |
+| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
+| message    | Texto OU Blob | ->                          | Message that was used to produce the signature                                                    |
+| signature  | Text          | ->                          | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
+| options    | Object        | ->                          | Opções de assinatura                                                                              |
+| Resultados | Object        | <- | Estado da verificação                                                                             |
 
 <!-- END REF -->
 

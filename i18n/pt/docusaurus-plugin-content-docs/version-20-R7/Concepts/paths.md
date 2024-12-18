@@ -62,7 +62,7 @@ São suportados os seguintes padrões:
 - the text contains ':' and '\' as the second and third character,
 - o texto começa por "\\".
 
-Examples with [`Folder`](../commands/folder.md):
+Exemplos com [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ São suportados os seguintes padrões (sintaxe HFS+):
 - os separadores de pasta são ":"
 - o caminho não deve começar com um ":"
 
-Examples with [`Folder`](../commands/folder.md):
+Exemplos com [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()

@@ -49,7 +49,7 @@ When you work with a remote datastore referenced through calls to the [`Open dat
 
 - あるプロセスがリモートデータストアのエンティティをロックした場合、セッションの共有如何に関わらず、他のすべてのプロセスに対してそのエンティティはロックされた状態です ([エンティティロッキング](entities.md#エンティティロッキング) 参照)。 同一のレコードに対応する複数のエンティティが 1つのプロセスによってロックされている場合、同プロセス内でそれらがすべてアンロックされないと、ロックは解除されません。 なお、ロックされたエンティティに対する参照がメモリ上に存在しなくなった場合にも、ロックは解除されます。
 - トランザクションは `dataStore.startTransaction( )`、`dataStore.cancelTransaction( )`、`dataStore.validateTransaction( )` のメソッドを使って、リモートデータストアごとに個別に開始・認証・キャンセルすることができます。 これらの操作は他のデータストアには影響しません。
-- 従来の 4Dランゲージコマンド (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) は `ds` で返されるメインデータストアに対してのみ動作します。
+- Classic 4D language commands ([`START TRANSACTION`](../commands-legacy/start-transaction.md), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md), [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md)) only apply to the main datastore (returned by `ds`).
   リモートデータストアのエンティティがあるプロセスのトランザクションで使われている場合、セッションの共有如何に関わらず、他のすべてのプロセスはそのエンティティを更新できません。
 - 次の場合にエンティティのロックは解除され、トランザクションはキャンセルされます:
   - プロセスが強制終了された

@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 Há várias formas de exibir o depurador:
 
 - Clicar no botão **Trace** na [janela Syntax Error] (basics.md#syntax-error-window)
-- Using the [`TRACE`](../commands-legacy/trace.md) command
+- Usando o comando [`TRACE`](../commands-legacy/trace.md)
 - Clicando no botão **Depurar** na janela Executar método ou selecionando o botão **Executar e depurar...** no Editor de Código
 - Usando **Alt+Shift+Botão Direito** (Windows) ou **Ctrl+Option+Cmd+Click** (macOS) enquanto um método está sendo executado, em seguida, selecionando o processo para rastrear no menu pop-up:
 
