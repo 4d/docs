@@ -9,7 +9,7 @@ title: Glosario
 
 ## Acción
 
-Todas las acciones que pueden realizarse en un [recurso](#resource). Las acciones disponibles son: crear, leer, actualizar, eliminar, ejecutar, promover y describir.
+Todas las acciones que pueden realizarse en un [recurso](#resource). Available actions are: create, read, update, drop, execute, and promote.
 
 ## Atributo
 
