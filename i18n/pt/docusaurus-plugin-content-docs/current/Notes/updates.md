@@ -16,7 +16,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
 - [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
 - 4D Language:
-  - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
+  - Comandos modificados: [`FORM EDIT`](../commands/form-edit.md)
   - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the _message_ parameter.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
 
@@ -52,6 +52,7 @@ Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 - Documentations for [4D Language](../commands/command-index.md) and [4D Write Pro Language](../WritePro/commands/command-index.md) are now fully available on developer.4d.com. Find out about all the new features and changes concerning these documentations in this release note.
 - The [`File`](../commands/file.md) command (as well as [`4D.File.new()`](../API/FileClass.md#4dfilenew)) is stricter when it comes to checking the syntax of the _path_ supplied as a parameter.
+- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session _describe_ privileges are now ignored.
 
 ## 4D 20 R6
 
