@@ -3,7 +3,7 @@ id: DataStoreClass
 title: DataStore
 ---
 
-A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. Os objetos `Datastore` são retornados pelos seguintes comandos:
+Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface fornecido pelo ORDA para fazer referência e acessar um banco de dados. Os objetos `Datastore` são retornados pelos seguintes comandos:
 
 - [ds](#ds): um atalho para o datastore principal
 - [Abrir datastore](#open-datastore): para abrir qualquer datastore remoto
@@ -134,10 +134,10 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 
 Os seguintes datastores remotos são compatíveis com o comando:
 
-| tipo de datastore                                                      | Descrição                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Aplicação 4D remoto                                                    | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
-| [Qodly application](https://developer.qodly.com/docs/cloud/getStarted) | Um aplicativo Qodly Server que forneceu a você um **api endpoint** e uma **api key** válida associada a um cargo definido. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                    |
+| tipo de datastore                                                    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aplicação 4D remoto                                                  | A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note) |
+| [Aplicação Qodly](https://developer.qodly.com/docs/cloud/getStarted) | Um aplicativo Qodly Server que forneceu a você um **api endpoint** e uma **api key** válida associada a um cargo definido. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.                                    |
 
 :::note
 
@@ -145,7 +145,7 @@ Os seguintes datastores remotos são compatíveis com o comando:
 
 :::
 
-Passe em connectionInfo um objeto que desceva o armazém de dados remoto ao que quiser se conectar. It can contain the following properties (all properties are optional except *hostname*):
+Passe em connectionInfo um objeto que desceva o armazém de dados remoto ao que quiser se conectar. Pode conter as propriedades abaixo (todas as propriedades são opcionais menos *hostname*):
 
 | Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Aplicação Qodly                                                              |
 | ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -1159,7 +1159,7 @@ $info:=$ds.getRemoteContextInfo("contextA")
 
 O trecho de código a seguir solicita páginas de 30 entidades da classe de dados `Address` do servidor. As entidades devolvidas contêm apenas o atributo `zipCode`.
 
-For each `Address` entity, 20 Persons entities are returned, and they only contain the `lastname` and `firstname` attributes:
+Para cada entidade `Address`, 20 entidades Persons são retornadas, e elas contêm apenas os atributos `lastname` e `firstname`:
 
 ```4d
 var $ds : 4D. DataStoreImplementation
