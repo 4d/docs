@@ -302,7 +302,7 @@ Designa a localização no seu disco da aplicação 4D Volume Desktop a ser usad
 
 A Área de Trabalho de Volume 4D deve corresponder à plataforma atual (que também será a plataforma do aplicativo cliente). Se você deseja criar um aplicativo cliente para a plataforma "simultânea", você deve realizar uma operação de construção adicional usando uma aplicação 4D em execução nessa plataforma.
 
-Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. For more information about this file, refer to the description of the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command. Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections) parágrafo.
+Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Para obter mais informações sobre esse arquivo, consulte a descrição do comando [`BUILD APPLICATION`](../commands-legacy/build-application.md). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections) parágrafo.
 
 #### Cópia de aplicativos cliente dentro do aplicativo servidor
 
