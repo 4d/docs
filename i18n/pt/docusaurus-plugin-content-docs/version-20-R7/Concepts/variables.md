@@ -73,7 +73,7 @@ A tabela seguinte enumera todos os valores `varType` suportados:
 | `Blob`                      | Valor BLOB                                           |
 | `Collection`                | Valor colecção                                       |
 | `Variant`                   | Valor variant                                        |
-| `Object`                    | Object with default class                            |
+| `Object`                    | Objeto com classe padrão                             |
 | `4D.<className>`            | Objecto do nome da classe 4D                         |
 | `cs.<className>`            | Objeto do nome da classe usuário                     |
 | `cs.<namespace><className>` | Objeto do nome da classe do componente `<namespace>` |

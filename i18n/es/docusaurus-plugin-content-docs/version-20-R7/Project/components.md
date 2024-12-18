@@ -5,7 +5,7 @@ title: Componentes
 
 Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
-Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\&type=Repositories).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\\&type=Repositories).
 
 Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de forma transparente en su ordenador o en un repositorio Github.
 
@@ -109,7 +109,7 @@ Declara un componente local en el archivo [**dependencies.json**](#dependencyjso
 
 ... donde "myComponent1" y "myComponent2" son el nombre de los componentes a cargar.
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [**environment4d.json**](#environment4djson) file, 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+De forma predeterminada, si "myComponent1" y "myComponent2" no están declarados en un archivo [**environment4d.json**](#environment4djson), 4D buscará la carpeta del paquete del componente (*es decir*, la carpeta raíz del proyecto del componente) al mismo nivel que la carpeta del paquete de su proyecto de 4D, por ejemplo:
 
 ```
 	/MyProjectRoot/
@@ -126,7 +126,7 @@ Si no desea utilizar la arquitectura **dependencies.json**, puede instalar compo
 
 #### Personalizar rutas de componentes
 
-Si desea personalizar la ubicación de los componentes locales, declare las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto en el archivo [**environment4d.json**](#environment4djson).
+Si la ruta de un componente declarado en el archivo **environment4d.json** no se encuentra cuando se inicia el proyecto, el componente no se carga y obtiene el estado *No encontrado* [status](dependency-status), incluso si existe una versión del componente junto a la carpeta de paquetes del proyecto.
 
 Puede utilizar rutas **relativas** o **absolutas** (ver abajo).
 
@@ -144,7 +144,7 @@ Ejemplos:
 
 :::note
 
-Si la ruta de un componente declarado en el archivo **environment4d.json** no se encuentra cuando se inicia el proyecto, el componente no se carga y obtiene el estado *No encontrado* [status](dependency-status), incluso si existe una versión del componente junto a la carpeta de paquetes del proyecto.
+Si desea personalizar la ubicación de los componentes locales, declare las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto en el archivo [**environment4d.json**](#environment4djson).
 
 :::
 
@@ -158,9 +158,9 @@ Utilizar rutas relativas es **recomendable** en la mayoría de los casos, ya que
 
 Las rutas absolutas sólo deben utilizarse para componentes específicos de una máquina y un usuario.
 
-### Componentes almacenados en GitHub
+### Configuración del repositorio GitHub
 
-Los componentes 4D disponibles en GitHub pueden ser referenciados y cargados automáticamente en sus proyectos 4D.
+Para poder referenciar y utilizar directamente un componente 4D almacenado en GitHub, es necesario configurar el repositorio del componente GitHub:
 
 :::note
 
@@ -168,9 +168,9 @@ En cuanto a los componentes almacenados en GitHub, tanto los archivos [**depende
 
 :::
 
-#### Configuración del repositorio GitHub
+#### Componentes almacenados en GitHub
 
-Para poder referenciar y utilizar directamente un componente 4D almacenado en GitHub, es necesario configurar el repositorio del componente GitHub:
+Los componentes 4D disponibles en GitHub pueden ser referenciados y cargados automáticamente en sus proyectos 4D.
 
 - Comprima los archivos componentes en formato ZIP.
 - Nombre este archivo con el mismo nombre que el repositorio GitHub.
@@ -357,26 +357,26 @@ Una vez establecida la conexión, se muestra el icono de GitHub![dependency-gitl
 
 :::note
 
-If the component is stored on a [private GitHub repository](#private-repositories) and your personal token is missing, an error message is displayed and a  **Add a personal access token...** button is displayed (see [Providing your GitHub access token](#providing-your-github-access-token)).
+Si el componente se almacena en un [repositorio privado de GitHub](#private-repositories) y falta su token personal, se muestra un mensaje de error y se muestra un botón **Añadir un token de acceso personal...**  (ver [Suministrar su token de acceso GitHub](#providing-your-github-access-token)).
 
 :::
 
-You can then define the [tag or version](#tags-and-versions) option for the dependency:
+Luego puede definir la opción [etiqueta o versión](#tags-and-versions) para la dependencia:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
 - **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
-- **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
+- **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
-- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+- **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
 
 Haga clic en el botón **Añadir** para añadir la dependencia al proyecto.
 
-The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Se cargará cuando se reinicie la aplicación.
+La dependencia de GitHub declarada en el archivo [**dependencies.json**](#dependenciesjson) y añadida a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible al reiniciar**. Se cargará cuando se reinicie la aplicación.
 
 #### Providing your GitHub access token
 
-If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. Para hacer esto, puede:
+Si el componente está almacenado en un [repositorio privado GitHub](#private-repositories), deberá suministrar su token de acceso personal al gestor de dependencias. Para hacer esto, puede:
 
 - click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
 - or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
@@ -403,7 +403,7 @@ Aparece una caja de diálogo de confirmación. Si la dependencia se declaró en 
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". Se descargará cuando se reinicie la aplicación.
+Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-dependencia) se marca automáticamente como "Descargar tras reinicio". Se descargará cuando se reinicie la aplicación.
 
 ### Origen de dependencia
 
@@ -461,7 +461,7 @@ Las siguientes etiquetas de estado están disponibles:
 - **Inactive**: la dependencia no se carga porque no es compatible con el proyecto (por ejemplo, el componente no está compilado para la plataforma actual).
 - **Duplicated**: la dependencia no se carga porque existe otra dependencia con el mismo nombre en la misma ubicación (y está cargada).
 - **Disponible después del reinicio**: la referencia a dependencias acaba de ser añadida [usando la interfaz](#monitoring-project-dependencies), se cargará una vez que la aplicación se reinicie.
-- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
+- **Descargado después de reiniciar**: la referencia de dependencias acaba de ser removida [utilizando la interfaz](#removing-a-dependency), se descargará una vez que la aplicación se reinicie.
 
 Al pasar el ratón por encima de la línea de dependencia, se muestra un mensaje que ofrece información adicional sobre el estado:
 

@@ -22,7 +22,7 @@ Custom HTTP Request handlers are supported:
 - when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
-## HTTPHandlers.json File
+## Arquivo HTTPHandlers.json
 
 You define your custom HTTP Request handlers in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
 

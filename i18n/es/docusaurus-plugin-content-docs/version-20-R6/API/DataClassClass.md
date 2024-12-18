@@ -943,7 +943,7 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |
 
-- Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20.
+- Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Tenga en cuenta que, en caso de no coincidencia de tipo con tipos escalares (texto, fecha, número...), 4D intentará convertir el tipo **value** al tipo de datos del atributo siempre que sea posible, para un manejo más fácil de los valores procedentes de Internet. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20.
   For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
   - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
@@ -1036,6 +1036,20 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
 
 ```4d
  $vSingles:=ds.Person.query("spouse = null") // Sintaxis correcta
+```
+
+#### Not equal to null or undefined values
+
+The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 #### No igual a en colecciones

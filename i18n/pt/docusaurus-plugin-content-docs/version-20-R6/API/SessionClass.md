@@ -571,7 +571,7 @@ If the `privileges` or `roles` property contains a name that is not declared in 
 
 By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
 
-The [`userName`](#username) property is available at session object level (read-only).
+A propriedade [`userName`](#username) está disponível no nível do objeto de sessão (somente leitura).
 
 #### Exemplo
 

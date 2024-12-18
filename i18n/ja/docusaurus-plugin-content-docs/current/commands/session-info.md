@@ -8,48 +8,48 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-| 引数        | 型       |     | 説明                            |
-| --------- | ------- | :-: | ----------------------------- |
-| sessionID | Integer |  →  | セッションID                       |
-| 戻り値       | Object  |  ←  | Information about the session |
+| 引数        | 型       |     | 説明          |
+| --------- | ------- | :-: | ----------- |
+| sessionID | Integer |  →  | セッションID     |
+| 戻り値       | Object  |  ←  | セッションに関する情報 |
 
 <!-- END REF -->
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                             |
-| ----- | ------------------------------ |
-| 20 R8 | Support of standalone sessions |
-| 20 R7 | 追加                             |
+| リリース  | 内容                |
+| ----- | ----------------- |
+| 20 R8 | スタンドアロンセッションのサポート |
+| 20 R7 | 追加                |
 
 </details>
 
 #### 説明
 
-The `Session info` command <!-- REF #_command_.Session info.Summary -->returns an object describing the session whose ID you pass in the *sessionID* parameter.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
+`Session info` コマンドは、<!-- REF #_command_.Session info.Summary -->*sessionID* 引数に渡したID を持つセッションの詳細を記述したオブジェクトを返します<!-- END REF -->。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                                                                    |
-| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | Session type: "remote", "storedProcedure", "standalone"                                                                                                               |
-| userName         | Text                             | 4D user name (same value as [`Session.userName`](../API/SessionClass.md#username))                                                                                 |
-| machineName      | Text                             | リモートセッション: リモートマシンの名前。 Stored procedures session: name of the server machine. Standalone session: name of the machine |
-| systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                                                                                                                                 |
-| IPAddress        | Text                             | リモートマシンの IPアドレス。                                                                                                                                                                      |
-| hostType         | Text                             | ホストタイプ: "windows" または "mac"                                                                                                                                           |
-| creationDateTime | 日付 (ISO 8601) | Date and time of session creation. Standalone session: date and time of application startup                                                           |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                           |
-| ID               | Text                             | Session UUID (same value as [`Session.id`](../API/SessionClass.md#id))                                                                                             |
-| persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                                                                                                                              |
+| プロパティ            | 型                                | 説明                                                                                                                              |
+| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"                                                              |
+| userName         | Text                             | 4D ユーザー名([`Session.userName`](../API/SessionClass.md#username)と同じ値)                                          |
+| machineName      | Text                             | リモートセッションの場合: リモートマシンの名前。 ストアドプロシージャセッションの場合: サーバーマシンの名前。 スタンドアロンセッションの場合: マシン名 |
+| systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                                                                           |
+| IPAddress        | Text                             | リモートマシンの IPアドレス。                                                                                                                |
+| hostType         | Text                             | ホストタイプ: "windows" または "mac"                                                                                     |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日付と時間。 スタンドアロンセッションの場合: アプリケーション起動の日付と時間                                                                |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                     |
+| ID               | Text                             | セッションUUID ([`Session.id`](../API/SessionClass.md#id) と同じ値)                                                   |
+| persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                                                                        |
 
 :::note
 
-This command returns the [`.info`](../API/SessionClass.md#info) property of the *sessionID* session. To get information about the current session, you can directly call `Session.info`.
+コマンドは*sessionID* 引数にID を渡したセッションの[`.info`](../API/SessionClass.md#info) プロパティを返します。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。
 
 :::
 
-Here is an example of output object:
+これが出力されたオブジェクトの一例です:
 
 ```json
 

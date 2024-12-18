@@ -8,4 +8,4 @@ displayed_sidebar: docs
 | ---------- | ------ | - | --------------------------------------------------- |
 | classStore | Object | ← | Class store de usuário para o projeto ou componente |
 
-The **cs** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#cs).
+A palavra-chave **cs** está descrita na [**Página Conceito para Classes**](../Concepts/classes.md#cs).

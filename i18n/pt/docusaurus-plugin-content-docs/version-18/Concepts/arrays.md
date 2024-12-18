@@ -152,7 +152,7 @@ Fazer a mesma coisa com arrays seria impossível pelas razões abaixo:
 
 - Para manter os quatro tipos de informação (código postal, cidade, região e estado) teria que manter quatro arrays grandes na memória.
 - Como um array sempre é mantido na memória inteiramente, teria que manter toda a informação de códigos postais na memória durante a sessão inteira, mesmo quando os dados não estivessem sendo usados.
-- Again, because an array is always held in memory in its entirety, each time the database is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- De novo, como um array é sempre mantido na memória em sua totalidade, a cada vez que o banco de dados for iniciado, os quatro arrays teriam que ser carregados e então salvos no disco, mesmo se os dados não forem usados ou modificados na sessão de trabalho.
 
 **Conclusão:** os arrays estão pensados para manter quantidades razoáveis de dados durante um curto período de tempo. Por outro lado, como os arrays são mantidos na memória, são fáceis de manejar e rápidos de manipular.
 

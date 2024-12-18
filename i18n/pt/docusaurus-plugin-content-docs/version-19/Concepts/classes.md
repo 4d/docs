@@ -331,20 +331,20 @@ Uma classe estendida pode chamar o construtor de sua classe pai usando o comando
 Este exemplo cria uma classe chamada `Square` a partir de uma classe chamada `Polygon`.
 
 ```4d
-//Class: Square
+//Classe: Square
 
 //path: Classes/Square.4dm 
 
 Class extends Polygon
 
 
-Class constructor ($side : Integer)
+Construtor da classe ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+ // Chama o construtor da classe pai com comprimentos
+ // fornecidos para a largura e altura do Polygon
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // Em classes derivadas, Super tem de ser chamado antes de
+ // poder usar 'This'
  This.name:="Square"
 
  Function getArea()

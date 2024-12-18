@@ -3,7 +3,7 @@ id: identifiers
 title: Identificadores
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+Esta seção descreve as convenções e regras para nomear os vários elementos da linguagem 4D (variáveis, tabelas, objetos, formulários, etc).
 
 ## Regras básicas
 
@@ -11,10 +11,10 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Pontos (".") e colchetes ("[ ]") não são permitidos em nomes de tabelas, campos, métodos ou variáveis.
 - Não são permitidas vírgulas, barras, aspas e dois pontos.
 - Os caracteres reservados para uso como operadores, como * e +, não são permitidos.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
+- Não use nomes reservados, ou seja, nomes de comandos 4D`(Date`, `Time`, etc.), palavras-chave (If, For, etc.) e constantes.
 - Os espaços finais são ignorados.
 
 ### Regras adicionais para propriedades de objetos e nomes ORDA
@@ -28,7 +28,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 - Somente os caracteres _0123456789abcdefghijklmnopqrstuvwxyz são aceitos
 - Os nomes não devem incluir nenhuma palavra-chave SQL (comando, atributo, etc.).
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**Nota:** a área "SQL" do Inspetor no editor de estrutura indica automaticamente quaisquer caracteres não autorizados no nome de uma tabela ou campo.
 
 ## Tabelas
 
@@ -44,7 +44,7 @@ ADD RECORD([Letters])
 
 ## Campos
 
-You designate a field by first specifying the table to which it belongs. O nome do campo segue imediatamente o nome da tabela. Um nome de campo pode conter até 31 caracteres.
+Você designa um campo especificando primeiro a tabela à qual ele pertence. O nome do campo segue imediatamente o nome da tabela. Um nome de campo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -56,9 +56,9 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## Variáveis interprocesso
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Você designa uma variável interprocessos precedendo o nome da variável com os símbolos (`<>`) - um sinal de "menor que" seguido de um sinal de "maior que".
 
-The name of an interprocess variable can be up to 31 characters, not including the `<>` symbols.
+O nome de uma variável interprocesso pode ter até 31 caracteres, sem incluir os símbolos `<>`.
 
 Exemplos:
 
@@ -82,7 +82,7 @@ vsCurrentName:=""
 
 ## Variáveis locais
 
-Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável. A local variable name can contain up to 31 characters, not including the dollar sign.
+Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável. Um nome de variável local pode conter até 31 caracteres, sem incluir o sinal de dólar.
 
 Exemplos:
 
@@ -208,7 +208,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## Objectos de formulário
 
-You designate a form object by passing its name as a string, preceded by the * parameter. O nome de um objeto de formulário pode conter até 255 caracteres.
+Você designa um objeto de formulário passando o nome dele como uma string, precedido pelo parâmetro *. O nome de um objeto de formulário pode conter até 255 caracteres.
 
 Exemplo:
 
@@ -222,7 +222,7 @@ OBJECT SET FONT(*;"Binfo";"Times")
 
 You designate a project method (procedure or function) by using its name. O nome de um método pode conter até 31 caracteres.
 
-**Note:** A project method that does not return a result is also called a procedure. Um método projeto que retorna um resultado também é chamado uma função.
+**Nota:** um método projeto que não retorne um resultado também é chamado de um procedimento. Um método projeto que retorna um resultado também é chamado uma função.
 
 Exemplos:
 
@@ -231,9 +231,9 @@ If(New client)
 DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
+**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use caracteres maiúsculos para nomear seus métodos; no entanto, se um método é uma função, capitalize o primeiro caractere de seu nome. Dessa maneira, quando reabrir um banco de dados para manutenção depois de alguns meses, já saberá se um método retorna um resultado, simplesmente olhando seu nome na janela do Explorer.
 
-**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Exemplo:
+**Nota:** quando você chama um método, você só digita o nome dele. Entretanto, alguns comandos integrados em 4D, como `ON EVENT CALL`, assim como todos os comandos dos Plug-In, esperam o nome de um método como uma string quando se passar um parâmetro de tipo método. Exemplo:
 
 Exemplos:
 
@@ -269,7 +269,7 @@ vtClone:=Dump("is";"the";"it")
 
 ## Comandos de plug-in
 
-You designate a plug-in command by using its name as defined by the plug-in. O nome de um comando de plug-in pode conter até 31 caracteres.
+Você designa um comando de plug-in usando seu nome conforme definido pelo plug-in. O nome de um comando de plug-in pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -290,9 +290,9 @@ Do ponto de vista do escopo, há dois tipos de conjuntos:
 
 ### Conjuntos interprocesso
 
-A set is an interprocess set if the name of the set is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Um conjunto é um conjunto interprocessos se o nome do conjunto for precedido pelos símbolos (`<>`) - um sinal de "menor que" seguido por um sinal de "maior que".
 
-An interprocess set name can contain up to 255 characters, not including the `<>` symbols.
+Um nome de conjunto de interprocessos pode conter até 255 caracteres, sem incluir os símbolos `<>`.
 
 ### Conjuntos process
 
@@ -300,9 +300,9 @@ Para designar um conjunto processo se utilizar uma expressão de tipo string que
 
 ### Conjuntos clientes
 
-O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). A client set name can contain up to 255 characters, not including the dollar sign.
+O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). Um nome de conjunto de clientes pode conter até 255 caracteres, sem incluir o cifrão.
 
-**Nota:** Os conjuntos são mantidos na máquina servidor. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. Para isso, utilizam-se os conjuntos clientes.
+**Nota:** Os conjuntos são mantidos na máquina servidor. Em certos casos, para fins de eficiência ou especiais, pode ser necessário trabalhar com conjuntos localmente nas máquinas cliente. Para isso, utilizam-se os conjuntos clientes.
 
 Exemplos:
 

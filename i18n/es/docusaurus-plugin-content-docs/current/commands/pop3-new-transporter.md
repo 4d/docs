@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo                               |   | Descripción                                                                       |
 | ---------- | ---------------------------------- | - | --------------------------------------------------------------------------------- |
 | server     | Object                             | → | Información del servidor de correo                                                |
-| Resultado  | 4D.POP3Transporter | ← | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
+| Resultado  | 4D.POP3Transporter | ← | [Objeto transporter POP3](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
 <!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new [POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) object. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
+El comando `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summary -->configura una nueva conexión POP3<!-- END REF --> en función del parámetro *server* y devuelve un nuevo objeto [transporter POP3](../API/POP3TransporterClass.md#pop3-transporter-object). El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 

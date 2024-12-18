@@ -59,7 +59,7 @@ For more information, please refer to the *Page subforms* section.
 
 **Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
-| **Property** | **Type** | **Description**                           |
+| **Property** | **Tipo** | **Description**                           |
 | ------------ | -------- | ----------------------------------------- |
 | parentForm   | object   | **Form** object of the parent output form |
 

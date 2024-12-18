@@ -321,25 +321,26 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容 |
-| ----- | -- |
-| 18 R4 | 追加 |
+| リリース  | 内容                         |
+| ----- | -------------------------- |
+| 20 R8 | Support of message as Blob |
+| 18 R4 | 追加                         |
 
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<br/>.**sign** (*message* : Blob ; *options* : Object) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| 引数      | 型      |                             | 説明                                              |
-| ------- | ------ | --------------------------- | ----------------------------------------------- |
-| message | Text   | ->                          | 署名をするメッセージ                                      |
-| options | Object | ->                          | 署名オプション                                         |
-| 戻り値     | Text   | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
+| 引数      | 型            |                             | 説明                                              |
+| ------- | ------------ | --------------------------- | ----------------------------------------------- |
+| message | Text OR Blob | ->                          | Message to sign                                 |
+| options | Object       | ->                          | 署名オプション                                         |
+| 戻り値     | Text         | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
 
 <!-- END REF -->
 
-`.sign()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.sign().Summary --> utf8 形式の *message* 文字列を署名します<!-- END REF -->。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
+The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> using the `CryptoKey` object keys and provided *options*. `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
 
 `CryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 
@@ -350,11 +351,11 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | hash              | text    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
 | encodingEncrypted | text    | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                              |
 | pss               | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                                                                            |
-| encoding          | text    | 戻り値の署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                                                 |
+| encoding          | text    | Representation to be used for result signature. 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                 |
 
 #### *結果*
 
-utf8 形式の *message* 文字列。
+The utf8 representation of the *message*.
 
 <!-- END REF -->
 
@@ -404,22 +405,23 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容 |
-| ----- | -- |
-| 18 R4 | 追加 |
+| リリース  | 内容                         |
+| ----- | -------------------------- |
+| 20 R8 | Support of message as Blob |
+| 18 R4 | 追加                         |
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| 引数        | 型      |                             | 説明                                                          |
-| --------- | ------ | --------------------------- | ----------------------------------------------------------- |
-| message   | Text   | ->                          | 署名生成時に使われたメッセージ文字列                                          |
-| signature | Text   | ->                          | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
-| options   | Object | ->                          | 署名オプション                                                     |
-| 戻り値       | Object | <- | 検証ステータス                                                     |
+| 引数        | 型            |                             | 説明                                                          |
+| --------- | ------------ | --------------------------- | ----------------------------------------------------------- |
+| message   | Text OR Blob | ->                          | Message that was used to produce the signature              |
+| signature | Text         | ->                          | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
+| options   | Object       | ->                          | 署名オプション                                                     |
+| 戻り値       | Object       | <- | 検証ステータス                                                     |
 
 <!-- END REF -->
 

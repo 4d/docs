@@ -14,7 +14,7 @@ The formal syntax of the `While... End while` control flow structure is:
     statement(s)
  End while
 ```
-A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+Um loop `While...End while` executa as declarações no loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
 It is common to initialize the value tested in the Boolean expression immediately before entering the `While... End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While... End while` executes the loop.
 
@@ -46,9 +46,9 @@ The formal syntax of the `Repeat... Until` control flow structure is:
     statement(s)
  Until(Boolean_Expression)
 ```
-A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
+Um ciclo `Repeat...Until` é como um ciclo [While...End while](flow-control#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. Assim, um loop `Repeat...Until` sempre executa o loop uma vez, enquanto se a expressão booleana for inicialmente Falsa, um loop `While...End while` não executa o loop de forma alguma.
 
-The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
+A outra diferença com um loop `Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 
 ### Exemplo
 
@@ -272,7 +272,7 @@ Aqui são dois exemplos:
 
 ## For each... End for each
 
-The formal syntax of the `For each...End for each` control flow structure is:
+A sintaxe formal da estrutura de controle de fluxo para `For each...End for each` é:
 
 ```4d
  For each(Element_courant;Expression{;debut{;fin}}){Until|While}(Expression_booléenne)}

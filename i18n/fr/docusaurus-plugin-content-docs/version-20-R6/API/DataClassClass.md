@@ -1032,6 +1032,20 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
+#### Not equal to null or undefined values
+
+The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+```
+
 #### Not equal to et les collections
 
 Lors d'une recherche dans les attributs d'objets de dataclass contenant des collections, le comparateur "not equal to *value*" (`#` ou `!=`) trouvera les éléments dont TOUTES les propriétés sont différentes de *value* (et non ceux dont AU MOINS une propriété est différente de *value*, ce qui est le cas des autres comparateurs). Fondamentalement, cela équivaut à rechercher "Not(chercher éléments de la collection pour lesquels la propriété vaut *value*"). Par exemple, avec les entités suivantes :

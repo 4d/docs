@@ -11,7 +11,7 @@ Las siguientes reglas se aplican a todas las estructuras de 4D.
 
 - Un nombre debe comenzar por un carácter alfabético, un guión bajo o un dólar ("$") (tenga en cuenta que un signo de dólar puede denotar un elemento local, ver).
 - A partir de ahí, el nombre puede incluir caracteres alfabéticos, numéricos, el carácter espacio y el carácter de subrayado ("_").
-- Puntos (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Puntos (".") y corchetes ("[ ]") no están permitidos en los nombres de tablas, campos, métodos o variables.
 - No se permiten comas, barras inclinadas, comillas ni dos puntos.
 - Los caracteres reservados para su uso como operadores, como * y +, no están permitidos.
 - No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc.), palabras clave (If, For, etc.) y constantes.

@@ -3,50 +3,50 @@ id: components
 title: Componentes
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different databases. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D databases.
+Um componente 4D é um conjunto de métodos e formulários 4D que representam uma ou mais funcionalidades que podem ser instaladas em diferentes bancos de dados. Por exemplo, você pode desenvolver um componente de e-mail 4D que gerencia todos os aspectos de envio, recebimento e armazenamento de e-mails em bancos de dados 4D.
 
-Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
+Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basicamente, os componentes são gerenciados como [plug-ins](Concepts/plug-ins.md) conforme os seguintes princípios:
 
 - Um componente consiste em um arquivo de estrutura regular (compilado ou não) que tem a arquitetura padrão ou na forma de um pacote (ver extensão .4dbase).
-- To install a component in a database, you simply need to copy it into the "Components" folder of the database, placed next to the structure file or next to the 4D executable application.
-- A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. Não pode chamar métodos de bancos de dados e triggers.
+- Para instalar um componente em um banco de dados, basta copiá-lo para a pasta "Components" do banco de dados, colocada ao lado do arquivo de estrutura ou ao lado da aplicação executável 4D.
+- Um componente pode chamar a maioria dos elementos 4D: métodos projeto, formulários projeto, barras de menu, listas de opções, imagens da biblioteca e assim por diante. Não pode chamar métodos de bancos de dados e triggers.
 - Não é possível utilizar tabelas standard ou ficheiros de dados em componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
 
 ## Definições
 
-The component management mechanisms in 4D require the implementation of the following terms and concepts:
+Os mecanismos de gerenciamento de componentes em 4D exigem a implementação dos seguintes termos e conceitos:
 
-- **Matrix Database**: 4D database used for developing the component. O banco de dados matriz é um banco de dados padrão sem atributos específicos. Uma base matriz forma um único componente. A base de dados matrix destina-se a ser copiada, compilada ou não, na pasta Components da aplicação 4D ou do banco de dados que usará o componente (banco de dados de host).
-- **Host Database**: Database in which a component is installed and used.
-- **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
+- **Banco de dados matriz**: banco de dados 4D usado para desenvolver o componente. O banco de dados matriz é um banco de dados padrão sem atributos específicos. Uma base matriz forma um único componente. A base de dados matrix destina-se a ser copiada, compilada ou não, na pasta Components da aplicação 4D ou do banco de dados que usará o componente (banco de dados de host).
+- **Banco de dados do host**: banco de dados onde um componente é instalado e usado.
+- **Componente**: banco de dados matriz, compilado ou não, copiado na pasta Components da aplicação 4D ou no banco de dados host e cujo conteúdo é usado nos bancos de dados host.
 
-It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
+Deve-se observar que um banco de dados pode ser tanto uma "matriz" quanto um "host", em outras palavras, um banco de dados matriz pode usar um ou mais componentes. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 
 ### Proteção dos componentes: compilação
 
-By default, all the project methods of a matrix database installed as a component are potentially visible from the host database. Em particular:
+Por padrão, todos os métodos projeto de um banco de dados matriz instalado como um componente são potencialmente visíveis no banco de dados host. Em particular:
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host database. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. However, it is not possible to open them in the Method editor nor to modify them.
-- The other project methods of the matrix database do not appear in the Explorer but they too can be viewed in the debugger of the host database.
+- Os métodos projeto compartilhados são encontrados na página de métodos do Explorer e podem ser chamados nos métodos do banco de dados host. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. No entanto, não é possível abri-los no editor de métodos nem modificá-los.
+- Os outros métodos de projeto do banco de dados matriz não aparecem no Explorer, mas também podem ser visualizados no depurador do banco de dados host.
 
 Para proteger os métodos projeto de um componente de forma eficaz, basta compilar a base de dados matrix e fornecê-la na forma de um arquivo .4dc (banco de dados compilado que não contém o código interpretado). Quando um banco de dados matriz compilado é instalado como um componente:
 
-- The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host database. However, their contents will not appear in the preview area nor in the debugger.
+- Os métodos projeto compartilhados são mostrados na página de métodos do Explorer e podem ser chamados nos métodos do banco de dados host. No entanto, seu conteúdo não aparecerá na área de visualização nem no depurador.
 - Os outros métodos projeto do banco de dados de matriz nunca aparecerão.
 
 ## Partilhar os métodos de projeto
 
 Todos os métodos projeto de um banco de dados matrix são, por definição, incluídos no componente (o banco de dados é o componente), que significa que eles podem ser chamados e executados pelo componente.
 
-On the other hand, by default these project methods will not be visible, nor can they be called in the host database. In the matrix database, you must explicitly designate the methods that you want to share with the host database. Esses métodos projeto podem ser chamados no código do banco de dados host (mas eles não podem ser modificados no editor de métodos da base de dados host). Esses métodos formam **pontos de entrada** no componente.
+Por outro lado, por padrão, esses métodos projeto não serão visíveis nem poderão ser chamados no banco de dados host. No banco de dados matriz, você deve designar explicitamente os métodos que deseja compartilhar com o banco de dados host. Esses métodos projeto podem ser chamados no código do banco de dados host (mas eles não podem ser modificados no editor de métodos da base de dados host). Esses métodos formam **pontos de entrada** no componente.
 
-**Note:** Conversely, for security reasons, by default a component cannot execute project methods belonging to the host database. In certain cases, you may need to allow a component to access the project methods of your host database. To do this, you must explicitly designate the project methods of the host database that you want to make accessible to the components.
+**Nota:** por razões de segurança, por padrão um componente não pode executar métodos projeto pertencentes ao banco de dados host. Em alguns casos, talvez seja necessário permitir que um componente acesse os métodos de projeto do seu banco de dados host. Para fazer isso, você deve designar explicitamente os métodos de projeto do banco de dados host que deseja tornar acessíveis aos componentes.
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
 ## Passar variáveis
 
-The local, process and interprocess variables are not shared between components and host databases. The only way to access component variables from the host database and vice versa is using pointers.
+As variáveis locais, de processo e interprocessos não são compartilhadas entre componentes e bancos de dados host. A única maneira de acessar variáveis de componentes do banco de dados host e vice-versa é usando ponteiros.
 
 Exemplo usando um array:
 
@@ -68,9 +68,9 @@ Exemplos usando variáveis:
  $p:=component_method2(...)
 ```
 
-When you use pointers to allow components and the host database to communicate, you need to take the following specificities into account:
+Quando você usa ponteiros para permitir que os componentes e o banco de dados host se comuniquem, é necessário considerar as seguintes especificidades:
 
-- The `Get pointer` command will not return a pointer to a variable of the host database if it is called from a component and vice versa.
+- O comando `Get pointer` não retornará um ponteiro para uma variável do banco de dados host se for chamado de um componente e vice-versa.
 
 - A arquitetura de componentes permite a coexistência, no mesmo banco de dados interpretado, de componentes interpretados e compilados (por outro lado, somente componentes compilados podem ser usados em um banco de dados compilado). Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado. Vamos ilustrar esse princípio com o seguinte exemplo: dados dois componentes, C (compilados) e eu (interpretados), instalados no mesmo banco de dados host.
 - Se o componente C definir a variável `myCvar` , o componente I pode acessar ao valor desta variável utilizando o ponteiro `->myCvar`.
@@ -93,7 +93,7 @@ Neste caso é preciso usar a comparação de ponteiros:
 
 ## Acesso a tabelas do banco de dados local
 
-Although components cannot use tables, pointers can permit host databases and components to communicate with each other. Por exemplo, aqui está um método que pode ser chamado a partir de um componente:
+Embora os componentes não possam usar tabelas, os ponteiros podem permitir que os bancos de dados host e os componentes se comuniquem entre si. Por exemplo, aqui está um método que pode ser chamado a partir de um componente:
 
 ```4d
 // chamar a um método componente
@@ -119,17 +119,17 @@ SAVE RECORD($tablepointer->)
 
 Exceto pelos [Comandos não utilizáveis](#unusable-commands), um componente não pode usar qualquer comando da linguagem 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` command that uses the context of the method specified by the command. Observe também que os comandos de leitura do tema "Usuários e grupos" podem ser usados a partir de um componente, mas lerão os usuários e grupos do banco de dados host (um componente não tem seus próprios usuários e grupos).
+Quando os comandos são chamados de um componente, eles são executados no contexto do componente, exceto pelo comando `EXECUTE METHOD`, que usa o contexto do método especificado pelo comando. Observe também que os comandos de leitura do tema "Usuários e grupos" podem ser usados a partir de um componente, mas lerão os usuários e grupos do banco de dados host (um componente não tem seus próprios usuários e grupos).
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the database. When these commands are called from a component, they are applied to the host database.
+Os comandos `SET DATABASE PARAMETER` e `Get database parameter` são uma exceção: seu alcance é global para o banco de dados. Quando esses comandos são chamados de um componente, eles são aplicados ao banco de dados host.
 
 Além disso, medidas especificas foram criadas para os comandos `Structure file` e `Get 4D folder` quando utilizados no marco dos componentes.
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host database.
+O comando `COMPONENT LIST` pode ser utilizado para obter a lista de componentes carregados pelo banco de dados host.
 
 ### Comandos não utilizáveis
 
-Os comandos abaixo não são compatíveis para seu uso dentro de um componente porque modificam o arquivo de estrutura - que está aberto em apenas leitura. Their execution in a component will generate the error -10511, “The CommandName command cannot be called from a component”:
+Os comandos abaixo não são compatíveis para seu uso dentro de um componente porque modificam o arquivo de estrutura - que está aberto em apenas leitura. Sua execução em um componente irá gerar erro -10511, "O comando CommandName não pode ser chamado a partir de um componente”:
 
 - `ON EVENT CALL`
 - `Method called on event`
@@ -156,20 +156,20 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 
 ## Gestão de erros
 
-An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR CALL` command only applies to the running database. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host database is not called, and vice versa.
+Um [método de tratamento de erros](Concepts/error-handling.md) instalado pelo comando `ON ERR CALL` só se aplica ao banco de dados em execução. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do banco de dados host não é chamado, e vice-versa.
 
 ## Uso de formulários
 
-- Só os "formulários projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Any project forms present in the matrix database can be used by the component.
+- Só os "formulários projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Qualquer formulário projeto presente no banco de dados matrix pode ser usado pelo componente.
 - Um componente pode chamar formulários tabela do banco de dados local. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
 
-**Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
+**Nota:** se um componente usa o comando `ADD RECORD`, a forma atual de entrada do banco de dados host será exibida, no contexto do banco de dados host. Por isso se o formulário incluir variáveis, o componente não terá acesso às mesmas.
 
 - Pode publicar formulários componentes como subformulários nos bancos de dados locais. Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
 
 ## Uso de tabelas e campos
 
-A component cannot use the tables and fields defined in the 4D structure of the matrix database. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. An external database is a 4D database that is independent from the main 4D database, but that you can work with from the main 4D database. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
+Um componente não pode usar as tabelas e os campos definidos na estrutura 4D do banco de dados matriz. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. Uma base de dados externa é uma base de dados 4D independente da base de dados principal da 4D, mas com isso você pode trabalhar a partir da base de dados principal 4D. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
 
 ### Exemplo
 
@@ -253,12 +253,12 @@ Os componentes podem utilizar recursos. Em conformidade com o princípio da gest
 
 Os mecanismos automáticos estão operacionais: os arquivos XLIFF encontrados na pasta Recursos de um componente serão carregados por este componente.
 
-In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
+Em um banco de dados host contendo um ou mais componentes, cada componente, bem como os bancos de dados de host tem sua própria "string de recursos." Os recursos são particionados entre os diferentes bancos de dados: não é possível acessar os recursos do componente A do componente B ou do banco de dados host.
 
 ## Ajuda on-line para componentes
 
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. O princípio é o mesmo que o previsto para os bancos de dados 4D:
+Um mecanismo específico foi implementado para permitir que desenvolvedores adicionem ajuda on-line a seus componentes. O princípio é o mesmo que o previsto para os bancos de dados 4D:
 
 - A ajuda do componente deve ser fornecida como um arquivo com sufixo .htm, .html ou (apenas Windows) .chm,
-- The help file must be put next to the structure file of the component and have the same name as the structure file,
-- This file is then automatically loaded into the Help menu of the application with the title “Help for...” followed by the name of the help file.
+- O arquivo de ajuda deve ser colocado ao lado do arquivo de estrutura do componente e ter o mesmo nome que o arquivo de estrutura
+- Este arquivo é então carregado automaticamente no menu Ajuda da aplicação com o título "Ajuda..” seguido pelo nome do arquivo de ajuda.

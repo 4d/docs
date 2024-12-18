@@ -32,6 +32,7 @@ title: リリースノート
 
 - [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
 - [`File`](../commands/file.md) コマンド (および [`4D.File.new()`](../API/FileClass.md#4dfilenew) コマンド) は、引数として与えられた *path* のシンタックスをより厳しくチェックする様になりました。
+- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session *describe* privileges are now ignored.
 
 ## 4D 20 R6
 
@@ -169,7 +170,7 @@ title: リリースノート
 | ライブラリ     | 現在のバージョン                               | 更新された 4D バージョン | 説明                                                                                        |
 | --------- | -------------------------------------- | -------------- | ----------------------------------------------------------------------------------------- |
 | BoringSSL | 0aa300b                                | 20 R6          | QUIC に使用                                                                                  |
-| CEF       | 128                                    | **20 R7**      | Chromium 6613                                                                             |
+| CEF       | 121                                    | 20 R5          | Chromium 6167                                                                             |
 | Hunspell  | 1.7.2  | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                    |
 | ICU       | 73.2                   | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                          |
 | libldap   | 2.6.7  | 20 R6          |                                                                                           |

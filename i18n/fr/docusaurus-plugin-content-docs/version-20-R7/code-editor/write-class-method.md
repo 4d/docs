@@ -13,6 +13,12 @@ Vous pouvez faire défiler le contenu des méthodes, des classes et des fonction
 
 L'éditeur de code 4D fournit un contrôle de base des erreurs de syntaxe. Un contrôle d'erreur supplémentaire est effectué lors de l'exécution du code. Pour plus d'informations sur la gestion des erreurs, voir [Débogage](../Debugging/basics.md).
 
+:::note
+
+Si vous avez l'habitude de coder avec **VS Code**, vous pouvez également utiliser cet éditeur avec le code 4D après avoir installé l'extension [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode).
+
+:::
+
 ## Interface
 
 ### Toolbar (Barre d’outils)

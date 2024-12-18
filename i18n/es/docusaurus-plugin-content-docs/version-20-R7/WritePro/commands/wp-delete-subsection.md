@@ -51,9 +51,9 @@ You want to delete the first page subsection of the first section:
 
 ```4d
  var $section;$subsection : Object
-  // get first section
+  // obtener la primera sección
  $section:=WP Get section(wpDoc;1)
-  // Delete the subsection
+  // Eliminar la subsección
  WP DELETE SUBSECTION($section;wk first page)
 ```
 

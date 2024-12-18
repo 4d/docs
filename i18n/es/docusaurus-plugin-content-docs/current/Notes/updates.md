@@ -13,9 +13,16 @@ Lea [**Novedades en 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R8/),
 - Las expresiones utilizadas en [propiedades de objetos de formulario](../FormObjects/properties_Reference.md) ahora se benefician de la comprobación de sintaxis en la [Lista de propiedades](../FormEditor/formEditor.md#property-list) y en el [Compilador](../Project/compiler.md#check-syntax).
 - Puede [asociar una clase a un formulario](../FormEditor/properties_FormProperties.md#form-class) para habilitar la anticipación del tipo de código y la instanciación automática de los datos del formulario cuando utilice el comando [`Form`](../commands/form.md).
 - Soporte de [sesiones autónomas](../API/SessionClass.md) para simplificar la codificación local de aplicaciones cliente/servidor.
+- [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
+- [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
 - Lenguaje 4D:
   - Comandos modificados: [`FORM EDIT`](../commands/form-edit.md)
+  - Las funciones [`.sign()`](../API/CryptoKeyClass.md#sign) y [`.verify()`](../API/CryptoKeyClass.md#verify) de la clase [4D.CryptoKey](../API/CryptoKeyClass.md) soportan Blob en el parámetro _message_.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R8): lista de todos los bugs que se han corregido en 4D 20 R8.
+
+#### Cambios de comportamiento
+
+- Because of their [new architecture](../Desktop/building.md#build-component), components built with 4D 20 R8 and higher cannot be installed in previous 4D releases.
 
 ## 4D 20 R7
 
@@ -45,6 +52,7 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 
 - La documentación del [Lenguaje 4D](../commands/command-index.md) y del [Lenguaje 4D Write Pro](../WritePro/commands/command-index.md) ya está disponible en developer.4d.com. Descubra todas las novedades y cambios relativos a estas documentaciones en esta nota de la versión.
 - El comando [`File`](../commands/file.md) (así como [`4D.File.new()`](../API/FileClass.md#4dfilenew)) es más estricto a la hora de comprobar la sintaxis de la _ruta_ suministrada como parámetro.
+- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session _describe_ privileges are now ignored.
 
 ## 4D 20 R6
 
@@ -182,7 +190,7 @@ Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/
 | Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                                     |
 | --------- | -------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL | 0aa300b                                | 20 R6             | Utilizado para QUIC                                                                                                                                            |
-| CEF       | 128                                    | **20 R7**         | Chromium 6613                                                                                                                                                  |
+| CEF       | 121                                    | 20 R5             | Chromium 6167                                                                                                                                                  |
 | Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
 | ICU       | 73.2                   | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
 | libldap   | 2.6.7  | 20 R6             |                                                                                                                                                                |

@@ -355,7 +355,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
 
-When this function is executed, the current position ([`.offset`](#offset)) is updated.
+Quando essa função é executada, a posição atual ([`.offset`](#offset)) é atualizada.
 
 :::caution Aviso
 

@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-Los objetos `Folder` se crean con el comando [`Folder`](#folder). Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando `Folder` para crear una nueva carpeta, se crea un objeto `Folder` válido, pero en realidad no se almacena nada en el disco hasta que llame a la función [`folder.create()`](#create).
+Comentario Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando `Folder` para crear una nueva carpeta, se crea un objeto `Folder` válido, pero en realidad no se almacena nada en el disco hasta que llame a la función [`folder.create()`](#create).
 
 ### Ejemplo
 
@@ -78,7 +78,7 @@ Los objetos `Folder` admiten varios nombres de ruta, incluida la sintaxis `files
 
 #### Descripción
 
-El comando `Folder` <!-- REF #_command_.Folder.Summary -->crea y devuelve un nuevo objeto del tipo `4D.Folder`<!-- END REF -->. El comando acepta dos sintaxis:
+Comentario El comando acepta dos sintaxis:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -364,7 +364,7 @@ La función `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->mueve o renom
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, la carpeta conserva su nombre cuando se mueve. Si desea cambiar renombrar la carpeta desplazada, pase el nombre completo en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, la carpeta conserva su nombre cuando se mueve. Por defecto, la carpeta conserva su nombre cuando se mueve. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 

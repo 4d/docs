@@ -8,118 +8,118 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-| 引数       | 型            |   | 説明                                                                                                                                                                                                                       |
-| -------- | ------------ | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| aTable   | テーブル         | → | Table form to load (if omitted, load a project form)                                                                                                                                                  |
-| form     | Text, Object | → | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData | Object       | → | フォームに関連づけるデータ                                                                                                                                                                                                            |
-| \*       | 演算子          | → | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
+| 引数       | 型            |   | 説明                                                                                                                                                                      |
+| -------- | ------------ | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable   | テーブル         | → | ロードするテーブルフォーム(省略時はプロジェクトフォームをロード)                                                                                                                    |
+| form     | Text, Object | → | (プロジェクトまたはテーブル)フォーム名(文字列)、&#xA;あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、&#xA;あるいは開くフォームを定義したオブジェクト |
+| formData | Object       | → | フォームに関連づけるデータ                                                                                                                                                           |
+| \*       | 演算子          | → | 指定時、コマンドはコンポーネントから実行した場合にホストのデータベースコマンドが適応されます(それ以外の場合は無視されます)。                                                                                      |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 #### 説明
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
+<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->**FORM LOAD** コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて*formData* 引数のデータ(オプション)とともにメモリーにロードします。 1つのプロセスにつきカレントフォームは1つしか指定できません。
 
 *form* 引数には、以下のいづれかを渡すことができます:
 
-- the name of a form, or
-- the path (in POSIX syntax) to a valid .json file containing a description of the form to use, or
-- an object containing a description of the form.
+- フォーム名
+- 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス)
+- フォームの詳細を格納しているオブジェクト
 
-When the command is executed from a component, it loads the component forms by default. If you pass the *\** parameter, the method loads the host database forms.
+コマンドがコンポーネントから呼び出された場合、デフォルトではコマンドはコンポーネントのフォームをロードします。 *\** 引数を渡した場合、メソッドはホストデータベースのフォームをロードします。
 
 ##### formData
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
-The form data object is available in the [`On Load` form event](../Events/onLoad.md).
+オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、[フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
+formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。
 
-For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
+form data オブジェクトについての詳細な情報については、[`DIALOG`](dialog.md) コマンドを参照してください。
 
-##### Printing data
+##### データの印刷
 
-In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command. The [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command makes an implicit call to the [FORM UNLOAD](../commands-legacy/form-unload.md) command, so in this context it is necessary to execute **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](../commands-legacy/print-object.md) command, work with this form.
+このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は [FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて**FORM LOAD** コマンドを使用する必要があります。 ロードされた*form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
 
-If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
+**FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレークは生成されません。 ページブレークは開発者が別途指定する必要があります。
 
-Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
+プロジェクトフォーム (またはフォームのオブジェクトメソッド) を開く際には、[`On Load` form event](../Events/onLoad.md) フォームイベントのみが実行されます。 他のフォームイベントは無視されます。 印刷の終わりには[`On Unload` form event](../Events/onUnload.md) フォームイベントが実行されます。
 
-To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform.
+フォームのグラフィックな一貫性を保持するために、プラットフォームにかかわらず"印刷"アピアランスプロパティを適用することをお勧めします。
 
-The current printing form is automatically closed when the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command is called.
+[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドが呼び出されると、カレント印刷フォームは自動で閉じられます。
 
-##### Parsing form contents
+##### フォームコンテンツの解析
 
-This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
+データ解析のためにスクリーン外にフォームをロードするには、 印刷ジョブ外のコンテキストで**FORM LOAD** を呼び出します。 この場合、フォームイベントは実行されません。
 
-**FORM LOAD** can be used with the [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) and [OBJECT Get type](../commands-legacy/object-get-type.md) commands in order to perform any type of processing on the form contents. You must then call the [FORM UNLOAD](../commands-legacy/form-unload.md) command in order to release the form from memory.
+**FORM LOAD** を[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) や[OBJECT Get type](../commands-legacy/object-get-type.md) コマンドと併せて使用して、フォームコンテンツを任意に処理することができます。 その後、フォームをメモリから解放するために[FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。
 
-Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](../commands-legacy/form-unload.md).
+いずれの場合においても、スクリーン上のフォームはロードされたままであるため(**FORM LOAD** コマンドに影響されない)、[FORM UNLOAD](../commands-legacy/form-unload.md)コマンドを呼び出した後にこれらをリロードする必要はありません。
 
-**Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](../commands-legacy/form-unload.md) to avoid any risk of memory overflow.
+**注:** メモリオーバーフローのリスクを回避するため、スクリーン外でフォームを使用した場合には[FORM UNLOAD](../commands-legacy/form-unload.md) を必ずコールしてください。
 
 #### 例題 1
 
-Calling a project form in a print job:
+印刷ジョブにプロジェクトフォームを呼び出す場合:
 
 ```4d
  OPEN PRINTING JOB
  FORM LOAD("print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 #### 例題 2
 
-Calling a table form in a print job:
+印刷ジョブにテーブルフォームを呼び出す場合:
 
 ```4d
  OPEN PRINTING JOB
  FORM LOAD([People];"print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 #### 例題 3
 
-Parsing of form contents to carry out processing on text input areas:
+フォームの内容を解析してテキスト入力エリアに何らかの処理をする場合:
 
 ```4d
  FORM LOAD([People];"my_form")
-  // selection of form without execution of events or methods
+  // イベントやメソッドを実行することなくフォームを選択
  FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
  For($i;1;Size of array(arrObjNames))
     If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… processing
+  //… 処理
     End if
  End for
- FORM UNLOAD //do not forget to unload the form
+ FORM UNLOAD // フォームをunloadするのを忘れないこと
 ```
 
 #### 例題 4
 
-The following example returns the number of objects on a JSON form:
+以下の例では、JSON ファイルで定義されたフォーム上にあるオブジェクトの数を返します:
 
 ```4d
- ARRAY TEXT(objectsArray;0) //sort form items into arrays
+ ARRAY TEXT(objectsArray;0) // フォームのオブジェクトを並べ替えて入れる配列
  ARRAY POINTER(variablesArray;0)
  ARRAY INTEGER(pagesArray;0)
  
- FORM LOAD("/RESOURCES/OutputForm.json") //load the form
+ FORM LOAD("/RESOURCES/OutputForm.json") // フォームを読み込む
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
  
- ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
+ ALERT("The form contains "+String(size of array(objectsArray))+" objects") // オブジェクトの数を返す
 ```
 
-the result shown is:
+結果は以下のように表示されます:
 
 ![](../assets/en/commands/pict3688480.en.png)
 
 #### 例題 5
 
-You want to print a form containing a list box. During the *on load* event, you want the contents of the list box to be modified.
+リストボックスを格納しているフォームを印刷したい場合を考えます。 *on load* イベント中に、リストボックスのコンテンツを変更したいとします。
 
-1\. In the printing method, you write:
+1\. 印刷メソッド内に、以下のように書きます:
 
 ```4d
  var $formData : Object
@@ -129,12 +129,12 @@ You want to print a form containing a list box. During the *on load* event, you 
  OPEN PRINTING JOB
  $formData:=New object
  $formData.LBcollection:=New collection()
- ... //fill the collection with data
+ ... // コレクションにデータを入れます
  
- FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ FORM LOAD("GlobalForm";$formData) // $formData 経由でコレクションをフォームに渡します
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    $full:=Print object(*;"LB") // この"LB" はリストボックスで、Form.LBcollectionをデータソースとして持つとします。
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
@@ -144,13 +144,13 @@ You want to print a form containing a list box. During the *on load* event, you 
  CLOSE PRINTING JOB
 ```
 
-2\. In the form method, you can write:
+2\. フォームメソッド内には以下のように書きます:
 
 ```4d
  var $o : Object
  Case of
     :(Form event code=On Load)
-       For each($o;Form.LBcollection) //LBcollection is available
+       For each($o;Form.LBcollection) // ここでForm.LBcollection は利用可能です
           $o.reference:=Uppercase($o.reference)
        End for each
  End case

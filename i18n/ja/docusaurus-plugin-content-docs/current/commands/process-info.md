@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| 引数            | 型       |     | 説明                            |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| 戻り値           | Object  |  ←  | Information about the process |
+| 引数            | 型       |     | 説明         |
+| ------------- | ------- | :-: | ---------- |
+| processNumber | Integer |  →  | プロセス番号     |
+| 戻り値           | Object  |  ←  | プロセスに関する情報 |
 
 <!-- END REF -->
 
@@ -25,26 +25,26 @@ displayed_sidebar: docs
 
 #### 説明
 
-The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
+`Process info` コマンドは、<!-- REF #_command_.Process info.Summary -->*processNumber* 引数にプロセス番号を渡したプロセスについての詳細な情報を提供するオブジェクトを返します<!-- END REF -->。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ            | 型                                       | 説明                                                                               |
-| ---------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
-| cpuTime          | Real                                    | Running time (seconds)                                        |
-| cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
-| creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | Integer                                 | Process unique ID                                                                |
-| name             | Text                                    | プロセス名                                                                            |
-| number           | Integer                                 | Process number                                                                   |
-| プリエンプティブ         | Boolean                                 | True if run preemptive, false otherwise                                          |
-| sessionID        | Text                                    | Session UUID                                                                     |
-| state            | Integer                                 | Current status. Possible values: see below       |
-| systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
-| type             | Integer                                 | Running process type. Possible values: see below |
-| visible          | Boolean                                 | True if visible, false otherwise                                                 |
+| プロパティ            | 型                                       | 説明                                                   |
+| ---------------- | --------------------------------------- | ---------------------------------------------------- |
+| cpuTime          | Real                                    | 実行時間(秒)                           |
+| cpuUsage         | Real                                    | このプロセスに割り当てられてる時間のパーセント(0 から1 の間) |
+| creationDateTime | Text (Date ISO 8601) | プロセス作成の日時                                            |
+| ID               | Integer                                 | プロセス固有のID                                            |
+| name             | Text                                    | プロセス名                                                |
+| number           | Integer                                 | プロセス番号                                               |
+| preemptive       | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                   |
+| sessionID        | Text                                    | セッションUUID                                            |
+| state            | Integer                                 | 現在の状態。 取り得る値: 以下を参照のこと               |
+| systemID         | Text                                    | ユーザープロセス、4D プロセス、またはスペアプロセスのID                       |
+| type             | Integer                                 | 実行中のプロセスタイプ。 取り得る値: 以下を参照のこと         |
+| visible          | Boolean                                 | 表示であればTrue、それ以外はFalse                                |
 
-- Possible values for "state":
+- "state" の取り得る値:
 
 | 定数                        | 値    |
 | ------------------------- | ---- |
@@ -57,7 +57,7 @@ The `Process info` command <!-- REF #_command_.Process info.Summary -->returns a
 | Waiting for internal flag | 4    |
 | Paused                    | 5    |
 
-- Possible values for "type":
+- "type" の取り得る値:
 
 | 定数                            | 値   |
 | ----------------------------- | --- |
@@ -93,7 +93,7 @@ The `Process info` command <!-- REF #_command_.Process info.Summary -->returns a
 | Method editor macro process   | -17 |
 | Monitor process               | -26 |
 | MSC process                   | -22 |
-| なし                            | 0   |
+| None                          | 0   |
 | On exit process               | -16 |
 | Other 4D process              | -10 |
 | Other internal process        | -40 |
@@ -118,11 +118,11 @@ The `Process info` command <!-- REF #_command_.Process info.Summary -->returns a
 
 :::note
 
-4D's internal processes have a negative type value and processes generated by the user have a positive value. Worker processes launched by user have type 5.
+4D の内部プロセスのtype は負の値を持ち、ユーザーによって生成されたプロセスのtype は正の値を持ちます。 ユーザーによってローンチされたワーカープロセスのtype は5 です。
 
 :::
 
-Here is an example of output object:
+これが出力されたオブジェクトの一例です:
 
 ```json
 
@@ -145,13 +145,12 @@ Here is an example of output object:
 
 #### 例題
 
-You want to know if the process is preemptive:
+プロセスがプリエンプティブかどうかを調べたい場合を考えます:
 
 ```4d
 
 var $preemptive : Boolean
 $preemptive:=Process info(Current process).preemptive
-
 
 ```
 

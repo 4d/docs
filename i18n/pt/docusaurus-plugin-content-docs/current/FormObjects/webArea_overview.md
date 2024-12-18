@@ -69,7 +69,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
-4D code of `today` method:
+Código 4D do método `today`:
 
 ```4d
  #DECLARE : Text
@@ -302,7 +302,7 @@ The default 4DCEFParameters.json file contains the following switches:
 }
 ```
 
-#### Example for Autoplay
+#### Exemplo para Autoplay
 
 ```json
 {

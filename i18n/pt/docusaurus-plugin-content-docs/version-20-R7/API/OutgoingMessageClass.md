@@ -84,7 +84,7 @@ You can also set the `.body` property using the [`setBody()`](#setbody) function
 
 The `.headers` property contains <!-- REF #OutgoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
 
-The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function.
+The `.headers` property is read-only. Para definir um cabeçalho, use a função [`setHeader()`](#setheader).
 
 <!-- END REF -->
 
@@ -185,6 +185,6 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 #### Descrição
 
-The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
+The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. Essa propriedade pode ser definida com a função [`setStatus()`](setstatus).
 
 <!-- END REF -->

@@ -13,9 +13,16 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Expressions used in [form object properties](../FormObjects/properties_Reference.md) now benefit from syntax checking in the [Property list](../FormEditor/formEditor.md#property-list) and in the [Compiler](../Project/compiler.md#check-syntax).
 - You can [associate a class to a form](../FormEditor/properties_FormProperties.md#form-class) to enable code type-ahead and automatic instantiation of form data when using the [`Form`](../commands/form.md) command.
 - Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
+- [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
+- [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
 - 4D Language:
   - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
+  - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the _message_ parameter.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
+
+#### 動作の変更
+
+- Because of their [new architecture](../Desktop/building.md#build-component), components built with 4D 20 R8 and higher cannot be installed in previous 4D releases.
 
 ## 4D 20 R7
 
@@ -46,6 +53,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 - [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
 - [`File`](../commands/file.md) コマンド (および [`4D.File.new()`](../API/FileClass.md#4dfilenew) コマンド) は、引数として与えられた _path_ のシンタックスをより厳しくチェックする様になりました。
+- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session _describe_ privileges are now ignored.
 
 ## 4D 20 R6
 
@@ -183,7 +191,7 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 | ライブラリ     | 現在のバージョン                               | 更新された 4D バージョン | 説明                                                                                        |
 | --------- | -------------------------------------- | -------------- | ----------------------------------------------------------------------------------------- |
 | BoringSSL | 0aa300b                                | 20 R6          | QUIC に使用                                                                                  |
-| CEF       | 128                                    | **20 R7**      | Chromium 6613                                                                             |
+| CEF       | 121                                    | 20 R5          | Chromium 6167                                                                             |
 | Hunspell  | 1.7.2  | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                    |
 | ICU       | 73.2                   | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                          |
 | libldap   | 2.6.7  | 20 R6          |                                                                                           |

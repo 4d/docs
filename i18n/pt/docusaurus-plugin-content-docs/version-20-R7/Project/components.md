@@ -13,7 +13,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
-- either a Project folder (interpreted component)
+- ou uma pasta de projeto (componente interpretado)
 - ou um arquivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
@@ -158,7 +158,7 @@ Using relative paths is **recommended** in most cases, since they provide flexib
 
 Absolute paths should only be used for components that are specific to one machine and one user.
 
-### Components stored on GitHub
+### Componentes armazenados no GitHub
 
 4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
 

@@ -735,7 +735,7 @@ onde:
  | OU        | &#124;,&#124;&#124;, or |
 
 * **order by attributePath**: pode incluir uma declaração order by *attributePath* na pesquisa para que os dados resultantes sejam ordenados de acordo com esta declaração. Pode utilizar várias instruções de ordenação, separadas por vírgulas (por exemplo, ordenação por *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente.
-> *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> *Se você usar essa instrução, a seleção de entidade retornada será ordenada (para obter mais informações, consulte [Seleções de entidades ordenadas contra não ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Usar aspas**
 
@@ -810,6 +810,20 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
 
 ```4d
  $vSingles:=ds. Person.query("spouse = null") //correct syntax
+```
+
+#### Not equal to null or undefined values
+
+The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 

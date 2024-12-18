@@ -92,8 +92,10 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 #### Descripción
 
-La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->. Esta función permite actualizar las entidades por separado.
-> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save( )`](#save).
+La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->.
+
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado solo cuando se ejecute la función [`.save()`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
 
@@ -565,7 +567,7 @@ También puede utilizar una entidad relacionada dada como objeto:
 
 #### Descripción
 
-La función `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->devuelve la clase de datos de la entidad<!-- END REF -->. Esta función es útil al escribir código genérico.
+La función `.isNew()` <!-- REF #EntityClass.getDataClass().Summary -->devuelve True si la entidad a la que se aplica acaba de ser creada y aún no se ha guardado en el almacén de datos<!-- END REF -->. .
 
 #### Ejemplo
 
@@ -973,7 +975,7 @@ El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 |                  | component signature | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                |
 |                  | errCode             | number                | Código de error                                                                                                                                                      |
 
-(\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
+(\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                     |
 | ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1137,7 +1139,7 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 | status(\*)     | number  | Código de error, ver abajo                                                                                |
 | statusText(\*) | text    | Descripción del error, ver abajo                                                                          |
 
-(\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
+(\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                            |
 | ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1371,7 +1373,7 @@ Sin parámetro de filtro:
 employeeObject:=employeeSelected.toObject()
 ```
 
-Ejemplo con el tipo `relatedEntity` con una forma simple:
+Devuelve:
 
 ```4d
 {
@@ -1402,7 +1404,7 @@ Extraer la llave primaria y el sello:
 employeeObject:=employeeSelected.toObject("";dk with primary key+dk with stamp)
 ```
 
-Ejemplo con el tipo `relatedEntity` con una forma simple:
+Devuelve:
 
 ```4d
 {
@@ -1504,7 +1506,7 @@ Extracción de algunas propiedades de `relatedEntities`:
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
 ```
 
-Ejemplo con el tipo `relatedEntity` con una forma simple:
+Devuelve:
 
 ```4d
 {
@@ -1532,7 +1534,7 @@ Obtenga una `relatedEntity` en un formulario simple:
  employeeObject:=employeeSelected.toObject($coll)
 ```
 
-Ejemplo con el tipo `relatedEntity` con una forma simple:
+Devuelve:
 
 ```4d
 {
@@ -1551,7 +1553,7 @@ Extracción de todas las propiedades de una `Entidad relacionada`:
  employeeObject:=employeeSelected.toObject("employer.*")
 ```
 
-Ejemplo con el tipo `relatedEntity` con una forma simple:
+Lanzamiento
 
 ```4d
 {
@@ -1576,7 +1578,7 @@ Extracción de algunas propiedades de una `Entidad relacionada`:
  employeeObject:=employeeSelected.toObject($col)
 ```
 
-Ejemplo con el tipo `relatedEntity` con una forma simple:
+Lanzamiento
 
 ```4d
 {

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 #### Description
 
@@ -174,3 +174,11 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [CANCEL](../commands-legacy/cancel.md)\
 [Form](form.md)\
 [Open window](../commands-legacy/open-window.md)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Command number     | 40                              |
+| Thread safe        | &amp;cross; |
+| Modifies variables | OK, error                       |

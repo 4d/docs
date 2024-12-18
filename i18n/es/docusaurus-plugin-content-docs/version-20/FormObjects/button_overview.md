@@ -359,7 +359,7 @@ Todos los botones comparten el mismo conjunto de propiedades básicas:
 > (1) No compatible con el estilo [Ayuda](#help).<br/> (2) No compatible con los estilos [Ayuda](#help), [Plano](#flat) y [Normal](#regular).
 
 
-Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
+Existen propiedades específicas adicionales, dependiendo del [estilo de botón](#button-styles):
 
 - Personalizar: [Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin)
 - Plano, Regular: [Botón por defecto](properties_Appearance.md#default-button)

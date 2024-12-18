@@ -31,6 +31,7 @@ Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 - Documentations for [4D Language](../commands/command-index.md) and [4D Write Pro Language](../WritePro/commands/command-index.md) are now fully available on developer.4d.com. Find out about all the new features and changes concerning these documentations in this release note.
 - The [`File`](../commands/file.md) command (as well as [`4D.File.new()`](../API/FileClass.md#4dfilenew)) is stricter when it comes to checking the syntax of the *path* supplied as a parameter.
+- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session *describe* privileges are now ignored.
 
 ## 4D 20 R6
 
@@ -168,7 +169,7 @@ Veja [**Notas de lançamento 4D 20.x LTS**](../../version-20/Notes/updates.md).
 | Biblioteca | Versão atual                           | Atualizado em 4D | Comentário                                                                                                                                |
 | ---------- | -------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL  | 0aa300b                                | 20 R6            | Usado para QUIC                                                                                                                           |
-| CEF        | 128                                    | **20 R7**        | Chromium 6613                                                                                                                             |
+| CEF        | 121                                    | 20 R5            | Chromium 6167                                                                                                                             |
 | Hunspell   | 7.3.27 | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                       |
 | ICU        | 73.2                   | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.               |
 | libldap    | 2.6.7  | 20 R6            |                                                                                                                                           |
