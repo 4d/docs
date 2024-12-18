@@ -42,7 +42,7 @@ Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismo
 
 :::info
 
-The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
+O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
 
 :::
 
@@ -86,7 +86,7 @@ The lifespan of an inactive cookie is 60 minutes by default, which means that th
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+Quando uma sessão Web é fechada, se o comando [`Session`](API/SessionClass.md#session) for chamado posteriormente:
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - a propriedade [`storage`](API/SessionClass.md#storage) está vazia
