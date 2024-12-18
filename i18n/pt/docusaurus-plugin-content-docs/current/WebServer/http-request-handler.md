@@ -234,7 +234,7 @@ The HTTP Request handler code must be implemented in a function of a [**Shared**
 
 If the singleton is missing or not shared, an error "Cannot find singleton" is returned by the server. If the class or the function [defined as handler](#handler-definition) in the HTTPHandlers.json file is not found, an error "Cannot find singleton function" is returned by the server.
 
-Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. In this case, you need to declare its functions with the [`shared` keyword](../Concepts/classes.md#shared-functions).
+Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. Nesse caso, você precisa declarar suas funções com a palavra-chave [`shared`](../Concepts/classes.md#shared-functions).
 
 :::note
 
