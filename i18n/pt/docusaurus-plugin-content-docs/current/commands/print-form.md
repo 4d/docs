@@ -93,7 +93,7 @@ In this case, the command will print the section included between the *areaStart
 
 **formData**
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. The form data object is available in the [`On Printing Detail` form event](../Events/onPrintingDetail.md).
+Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. O objeto de dados do formulário está disponível no evento de formulário [`On Printing Detail`](../Events/onPrintingDetail.md).
 
 For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
 
