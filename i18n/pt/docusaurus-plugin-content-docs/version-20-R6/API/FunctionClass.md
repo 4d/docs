@@ -254,7 +254,7 @@ Chamar uma fórmula usando notação de objeto:
 
 The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
 
-This command is similar to [`Formula`](#formula), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. É altamente recomendável usar a sintaxe com tokens com esse comando.
+Esse comando é como [`Formula`](#formula), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. É altamente recomendável usar a sintaxe com tokens com esse comando.
 
 > Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
@@ -317,7 +317,7 @@ In the *thisObj* parameter, you can pass a reference to the object to be used as
 
 You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
 
-Note that `.apply()` is similar to [`.call()`](#call) except that parameters are passed as a collection. Isso pode ser útil para passar resultados calculados.
+Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros são passados como coleção. Isso pode ser útil para passar resultados calculados.
 
 #### Exemplo 1
 
