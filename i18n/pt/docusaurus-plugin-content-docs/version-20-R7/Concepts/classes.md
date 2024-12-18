@@ -610,7 +610,7 @@ The following commands have specific features when they are used within class fu
 
 The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
-For more details, see the [`Super`](../commands/super.md) command description.
+Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
 
 ### `This`
 
@@ -634,7 +634,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-For more details, see the [`This`](../commands/this.md) command description.
+Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this.md).
 
 ## Comandos de classe
 
@@ -729,15 +729,15 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton criado em  | Scope of process singleton                                                                                 | Scope of shared singleton | Scope of session singleton                                            |
-| -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D usuário único** | Processo                                                                                                   | Aplicação                 | Application or Web/REST session                                       |
-| **4D Server**        | Processo                                                                                                   | Máquina 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **Modo remoto 4D**   | Process (*nota*: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D         | 4D remote machine or Web/REST session                                 |
+| Singleton criado em  | Scope of process singleton                                                                                 | Escopo do singleton compartilhado | Scope of session singleton                                            |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------- |
+| **4D usuário único** | Processo                                                                                                   | Aplicação                         | Application or Web/REST session                                       |
+| **4D Server**        | Processo                                                                                                   | Máquina 4D Server                 | Client/server session or Web/REST session or Stored procedure session |
+| **Modo remoto 4D**   | Process (*nota*: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D                 | 4D remote machine or Web/REST session                                 |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
-### Creating and using singletons
+### Criação e uso de singletons
 
 You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
 
