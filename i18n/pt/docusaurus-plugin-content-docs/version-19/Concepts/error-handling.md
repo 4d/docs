@@ -9,7 +9,7 @@ Manejo de erros responde à duas necessidades principais:
 
 - descobrir e consertar erros potenciais e bugs no código durante a fase de desenvolvimento,
 - detectar e recuperar de erros inesperados nas aplicações implementadas; em particular pode substituir diálogos de erros de sistemas (disco cheio, arquivo faltando, etc) com sua própria interface.
-> It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine, and could log errors in a dedicated file for further analyses.
+> É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Esse método evitaria a exibição de caixas de diálogo inesperadas no computador do servidor e poderia registrar os erros em um arquivo dedicado para análises posteriores.
 
 
 ## Erro ou status
@@ -23,13 +23,13 @@ Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede
 
 In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
-This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. Por exemplo:
+Esse método de projeto é instalado para o processo atual e será chamado automaticamente para qualquer erro que ocorra no processo, no modo interpretado ou compilado. Para *instalar* esse método projeto, você só precisa chamar o comando `ON ERR CALL` com o nome do método projeto como parâmetro. Por exemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Instala o método de tratamento de erros
 ```
 
-To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
+Para parar de capturar erros e devolver a mão ao 4D, chame `ON ERR CALL` com uma string vazia:
 ```4d
 ON ERR CALL("") //devolve o controlo a 4D
 ```
@@ -68,7 +68,7 @@ Within the custom error method, you have access to several pieces of information
 
 4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. :::
 
-- the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application.
+- o comando `GET LAST ERROR STACK` que retorna informações sobre a pilha de erros atual da aplicação 4D.
 - o comando `Get call chain` que devolve uma coleção de objetos que descrevem cada passo da string de chamadas a métodos dentro do processo atual.
 
 
