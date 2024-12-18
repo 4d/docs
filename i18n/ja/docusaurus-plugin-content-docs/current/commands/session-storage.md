@@ -8,19 +8,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-| 引数  | 型      |   | 説明                                                         |
-| --- | ------ | - | ---------------------------------------------------------- |
-| id  | Text   | → | Unique identifier (UUID) of the session |
-| 戻り値 | Object | ← | Storage object of the session                              |
+| 引数  | 型      |   | 説明                                  |
+| --- | ------ | - | ----------------------------------- |
+| id  | Text   | → | セッションの固有ID(UUID) |
+| 戻り値 | Object | ← | セッションのStorage オブジェクト                |
 
 <!-- END REF-->
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                             |
-| ----- | ------------------------------ |
-| 20 R8 | Support of standalone sessions |
-| 20 R6 | 追加                             |
+| リリース  | 内容                |
+| ----- | ----------------- |
+| 20 R8 | スタンドアロンセッションのサポート |
+| 20 R6 | 追加                |
 
 </details>
 
@@ -28,19 +28,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
 
-In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
+*id* 引数には、Storage を取得したいセッションのUUID を渡します。 これは4D (4D Server、またはスタンドアロンセッションに対してはシングルユーザー版4D)によって自動的に割り振られるもので、[session オブジェクト](../API/SessionClass.md) の[**.id**](../API/SessionClass.md#id) に保存されています。 セッションが存在しない場合、コマンド**Null** はを返します。
 
-**Note:** You can get the session identifiers using the [Process activity](process-activity.md) command.
+**注意:** セッションの識別子は、[Process activity](process-activity.md) コマンドを使用することで取得できます。
 
-The returned object is the [**.storage**](../API/SessionClass.md#storage) property of the session. It is a shared object used to store information available to all processes of the session.
+返されるオブジェクトは、セッションオブジェクトの[**.storage**](../API/SessionClass.md#storage) プロパティです。 これはセッションの全てのプロセスから利用可能な情報を保存するために使用される共有オブジェクトです。
 
 #### 例題
 
-This method modifies the value of a "settings" property stored in the storage object of a specific session:
+以下のメソッドは、特定のセッションのStorage オブジェクト内の"settings" プロパティの値を変更します:
 
 ```4d
-  //Set storage for a session
-  //The "Execute On Server" method property is set
+  // セッションに対してstorage を設定
+  // "サーバー上で実行" メソッドプロパティが設定されているものとする
  
  #DECLARE($id : Text; $text : Text)
  var $obj : Object
