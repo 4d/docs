@@ -338,7 +338,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 
 <!-- END REF -->
 
-The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma string *message*<!-- END REF --> usando as chaves do objeto `CryptoKey` e as *options* fornecidas. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
 A `CryptoKey` deve conter uma chave **privada** válida.
 
