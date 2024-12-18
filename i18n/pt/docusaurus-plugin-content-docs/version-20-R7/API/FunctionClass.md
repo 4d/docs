@@ -128,7 +128,7 @@ In the *thisObj* parameter, you can pass a reference to the object to be used as
 
 You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
 
-Note that `.apply()` is similar to [`.call()`](#call) except that parameters are passed as a collection. Isso pode ser útil para passar resultados calculados.
+Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros são passados como coleção. Isso pode ser útil para passar resultados calculados.
 
 #### Exemplo 1
 
