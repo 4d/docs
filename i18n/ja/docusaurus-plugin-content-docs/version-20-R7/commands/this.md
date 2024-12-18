@@ -8,21 +8,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| 引数  | 型      |   | 説明                        |
-| --- | ------ | - | ------------------------- |
-| 戻り値 | Object | ← | Current element or object |
+| 引数  | 型      |   | 説明               |
+| --- | ------ | - | ---------------- |
+| 戻り値 | Object | ← | カレントの要素またはオブジェクト |
 
 <!-- END REF-->
 
 #### 説明
 
-The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+`This` コマンドは<!--REF #_command_.This.Summary-->現在処理中のオブジェクトへの参照を返します<!-- END REF-->。
 
 `This` の値は、呼ばれ方によって決まります。 <code>This</code> の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 
-This command can be used in different contexts, described below. Within these contexts, you will access object/collection element properties or entity attributes through **This.<*propertyPath*\>**. For example, *This.name* or *This.employer.lastName* are valid pathes to object, element or entity properties.
+このコマンドは以下で説明するように、異なるコンテキストで使用することができます。 これらのコンテキストの中においては、**This.<*propertyPath*\>** を通してオブジェクト/コレクションの要素プロパティやエンティティの属性にアクセスすることができます。 例えば、*This.name* や*This.employer.lastName* はオブジェクト、要素やエンティティプロパティへの有効なパスとなります。
 
-In any other context, the command returns **Null**.
+これら以外のコンテキストにおいては、コマンドは**Null** を返します。
 
 #### クラス関数
 
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。 See [this example](super.md#example-1).
+> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。 こちらの [例題](super.md#例題-1) を参照ください。
 
 基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
 
@@ -70,20 +70,20 @@ $val:=$o.f() //8
 
 #### フォーミュラオブジェクト
 
-In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
+[Formula](formula.md) あるいは [Formula from string](formula-from-string.md) コマンドで作成されたフォーミュラオブジェクトの実行コンテキストにおいては、`This` はフォーミュラによって現在処理されているオブジェクトへの参照を返します。
 
-For example, you want to use a project method as a formula encapsulated in an object:
+例えば、プロジェクトをオブジェクトのカプセル化されたフォーミュラとして使用したい場合を考えます:
 
 ```4d
  var $person : Object := New object
  $person.firstName:="John"
  $person.lastName:="Smith"
  $person.greeting:=Formula(Greeting)
- $g:=$person.greeting("hello") // returns "hello John Smith"
- $g:=$person.greeting("hi") // returns "hi John Smith"
+ $g:=$person.greeting("hello") // "hello John Smith" を返す
+ $g:=$person.greeting("hi") // "hi John Smith" を返す
 ```
 
-With the *Greeting* project method:
+*Greeting* プロジェクトメソッドの中身は以下のようになっています:
 
 ```4d
  #DECLARE($greeting : Text) : Text
@@ -92,11 +92,11 @@ With the *Greeting* project method:
 
 #### リストボックス
 
-In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.
+コレクションまたはエンティティセレクションに割り当てられたリストボックスのコンテキストにおいては、[`On Display Detail`](../Events/onDisplayDetail.md) あるいは [`On Data Change`](../Events/onDataChange.md) イベントの最中において、は現在の行を表示するためにリストボックス割り当てられたコレクション要素またはエンティティへの参照を返します。
 
 :::note
 
-If you use a collection of scalar values in a list box, 4D creates an object for each element with a single **value** property. Thus, the element value is returned by the **This.value** non-assignable expression.
+スカラー値のコレクションをリストボックスに対して使用した場合、4D はそれぞれの要素に対して、単一のプロパティ**value** を持つオブジェクトを作成します。 Thus, the element value is returned by the **This.value** non-assignable expression.
 
 :::
 
