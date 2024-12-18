@@ -46,7 +46,7 @@ As coleções devem ter sido inicializadas, por exemplo utilizando o comando <co
 
 A instanciação da colecção pode ser feita de uma das seguintes formas:
 
-- using the [`New collection`](../commands/new-collection.md) command,
+- usando o comando [`New collection`](../commands/new-collection.md),
 - utilizando o operador [].
 
 :::info
