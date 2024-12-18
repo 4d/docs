@@ -3,7 +3,7 @@ id: identifiers
 title: Identificadores
 ---
 
-This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
+Esta seção descreve as convenções e regras para nomear os vários elementos da linguagem 4D (variáveis, tabelas, objetos, formulários, etc).
 
 ## Regras básicas
 
@@ -11,10 +11,10 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Pontos (".") e colchetes ("[ ]") não são permitidos em nomes de tabelas, campos, métodos ou variáveis.
 - Não são permitidas vírgulas, barras, aspas e dois pontos.
 - Os caracteres reservados para uso como operadores, como * e +, não são permitidos.
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
+- Não use nomes reservados, ou seja, nomes de comandos 4D`(Date`, `Time`, etc.), palavras-chave (If, For, etc.) e constantes.
 - Os espaços finais são ignorados.
 
 ### Regras adicionais para propriedades de objetos e nomes ORDA
@@ -28,7 +28,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 - Somente os caracteres _0123456789abcdefghijklmnopqrstuvwxyz são aceitos
 - Os nomes não devem incluir nenhuma palavra-chave SQL (comando, atributo, etc.).
 
-**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
+**Nota:** a área "SQL" do Inspetor no editor de estrutura indica automaticamente quaisquer caracteres não autorizados no nome de uma tabela ou campo.
 
 ## Tabelas
 
@@ -44,7 +44,7 @@ ADD RECORD([Letters])
 
 ## Campos
 
-You designate a field by first specifying the table to which it belongs. O nome do campo segue imediatamente o nome da tabela. Um nome de campo pode conter até 31 caracteres.
+Você designa um campo especificando primeiro a tabela à qual ele pertence. O nome do campo segue imediatamente o nome da tabela. Um nome de campo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -56,9 +56,9 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## Variáveis interprocesso
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Você designa uma variável interprocessos precedendo o nome da variável com os símbolos (`<>`) - um sinal de "menor que" seguido de um sinal de "maior que".
 
-The name of an interprocess variable can be up to 31 characters, not including the `<>` symbols.
+O nome de uma variável interprocesso pode ter até 31 caracteres, sem incluir os símbolos `<>`.
 
 Exemplos:
 
@@ -82,7 +82,7 @@ vsCurrentName:=""
 
 ## Variáveis locais
 
-Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável. A local variable name can contain up to 31 characters, not including the dollar sign.
+Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável. Um nome de variável local pode conter até 31 caracteres, sem incluir o sinal de dólar.
 
 Exemplos:
 
