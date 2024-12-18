@@ -35,7 +35,7 @@ Uma hora nula se escreve ?00:00:00?
 | -------------------- | -------------- | ---------- | ----------------------- | ---------- |
 | Adição               | Hora + Hora    | Hora       | ?02:03:04? + ?01:02:03? | ?03:05:07? |
 | Subtração            | Hora – Hora    | Hora       | ?02:03:04? ?02:03:04?   | ?01:01:01? |
-| Adição               | Hora + Número  | Number     | ?02:03:04? ?01:02:03?   | 7449       |
+| Adição               | Hora + Número  | Number     | ?02:03:04? ?02:03:04?   | 7449       |
 | Subtração            | Hora – Número  | Number     | ?02:03:04? ?02:03:04?   | 7319       |
 | Multiplicação        | Hora * Número  | Number     | ?02:03:04? ?02:03:04?   | 14768      |
 | Divisão              | Hora / Número  | Number     | ?02:03:04? ?02:03:04?   | 3692       |
@@ -85,6 +85,9 @@ $t1:=?23:00:00? // São 23:00 p.m.
   // It is 23:00 p.m.
   // We want to add 2 and a half hours
 $t2:=$t1 +?02:30:00? // Com uma simples adição, $t2 é?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 é ?01:30:00? and it is 1:30 a.m. the next morning a manhã seguinte
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 é ?01:30:00? // São 23:00 p.m.
+  // It is 23:00 p.m.
+  // We want to add 2 and a half hours
+$t2:=$t1 +?02:30:00?
 ```
 
