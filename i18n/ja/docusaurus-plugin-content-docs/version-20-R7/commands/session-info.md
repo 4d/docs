@@ -16,16 +16,16 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-| 引数        | 型       |     | 説明                            |
-| --------- | ------- | :-: | ----------------------------- |
-| sessionID | Integer |  →  | セッションID                       |
-| 戻り値       | Object  |  ←  | Information about the session |
+| 引数        | 型       |     | 説明          |
+| --------- | ------- | :-: | ----------- |
+| sessionID | Integer |  →  | セッションID     |
+| 戻り値       | Object  |  ←  | セッションに関する情報 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `Session info` command <!-- REF #_command_.Session info.Summary -->returns an object describing the session whose ID you pass in the *sessionID* parameter.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
+`Session info` コマンドは、<!-- REF #_command_.Session info.Summary -->*sessionID* 引数に渡したID を持つセッションの詳細を記述したオブジェクトを返します<!-- END REF -->。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
@@ -44,7 +44,7 @@ The `Session info` command <!-- REF #_command_.Session info.Summary -->returns a
 
 :::note
 
-This command returns the [`.info`](../API/SessionClass.md#info) property of the *sessionID* session. To get information about the current session, you can directly call `Session.info`.
+コマンドは*sessionID* 引数にID を渡したセッションの[`.info`](../API/SessionClass.md#info) プロパティを返します。 カレントのセッションに関する情報を取得する場合、`Session.info` を直接呼び出すことができます。
 
 :::
 
