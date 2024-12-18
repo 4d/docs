@@ -67,7 +67,7 @@ A propriedade **.accessKeyDefined** contém <!-- REF #WebServerClass.accessKeyDe
 
 <!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
 
-Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter of the [`.start()`](#start) function, it can be a [`Folder` object](FolderClass.md).
+Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `settings` da função [`.start()`](#start), ela pode ser um objeto [`Folder`](FolderClass.md).
 
 <!-- END REF -->
 
