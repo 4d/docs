@@ -36,7 +36,7 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 **Objeto arquivo**
 
-The returned `4D.ZipArchive` object contains a single [`root`](../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
+O objeto `4D.ZipArchive` retornado contém uma única propriedade [`root`](../API/ZipArchiveClass.md#root) cujo valor é um objeto `4D.ZipFolder`. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
 
 #### Exemplo
 
