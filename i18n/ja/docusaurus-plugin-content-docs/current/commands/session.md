@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 | リリース  | 内容                               |
 | ----- | -------------------------------- |
-| 20 R8 | Support of standalone sessions   |
+| 20 R8 | スタンドアロンセッションのサポート                |
 | 20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
 | 18 R6 | 追加                               |
 
@@ -32,12 +32,12 @@ displayed_sidebar: docs
 
 - Webセッション ([スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合)
 - リモートクライアントセッション
-- the stored procedures session,
-- the *designer* session in a standalone application.
+- ストアドプロシージャセッション
+- スタンドアロンアプリケーションの*designer* セッション
 
-For more information, see the [Session types](../API/SessionClass.md#session-types) paragraph.
+詳細については、[Session types](../API/SessionClass.md#session-types) の段落を参照ください。
 
-If the command is called from a non supported context (e.g. scalable sessions disabled), it returns *Null*.
+サポートされていないコンテキスト (スケーラブルセッションが無効など)から呼び出されると、コマンドは *Null* を返します。
 
 #### Webセッション
 
@@ -49,7 +49,7 @@ Webセッションの `Session` オブジェクトは、どの Webプロセス�
 - モバイルリクエスト用の [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) データベースメソッド
 - [RESTリクエストで呼び出された](../REST/ClassFunctions.md) ORDA関数。
 
-For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
+Web ユーザーセッションに関する詳細な情報については、[Web Server Sessions](../WebServer/sessions.md) の章を参照してください。
 
 #### リモートクライアントセッション
 
@@ -65,14 +65,14 @@ For more information on web user sessions, please refer to the [Web Server Sessi
 
 すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。 ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
-- methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
+- [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
 
 ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html) のページを参照ください。
 
-#### Standalone session
+#### スタンドアロンセッション
 
-The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
+`Session` オブジェクトは、スタンドアロン(シングルユーザー)アプリケーション内の任意のプロセスから利用可能なため、4D 開発環境において`Session` オブジェクトを使用することで、クライアント/サーバー用のコードを書いてテストすることができます。
 
 #### 例題
 
