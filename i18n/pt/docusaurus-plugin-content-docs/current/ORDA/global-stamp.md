@@ -26,7 +26,7 @@ No confunda el **sello de modificación global** con el **sello de entidad** int
 
 ## Configurando rastreamento de alterações de dados
 
-By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
+Por padrão, o carimbo de modificação global não é criado (a função [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) retorna 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
 ### Requisitos de estrutura
 
