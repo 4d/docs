@@ -44,7 +44,7 @@ In order to be able to execute this command, a print job must be opened beforeha
 
 If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
 
-Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
+Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. O evento formulário [`On Unload`](../Events/onUnload.md) é executado no final da impressão.
 
 To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform.
 
