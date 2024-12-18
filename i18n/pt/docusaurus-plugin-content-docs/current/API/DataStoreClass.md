@@ -240,7 +240,7 @@ A função `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->
 
 Esta função só pode ser chamada:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- no datastore local ([`ds`](../commands/ds.md)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
@@ -391,7 +391,7 @@ A função `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summary
 
 Esta função só pode ser chamada:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- no datastore local ([`ds`](../commands/ds.md)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
@@ -838,7 +838,7 @@ A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary
 
 Esta função só pode ser chamada:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- no datastore local ([`ds`](../commands/ds.md)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
