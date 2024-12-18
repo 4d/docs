@@ -101,8 +101,10 @@ Since components can be installed in different ways, a priority order is applied
 
 ```mermaid
 flowchart TB
-    id1("1<br/>Components from project's Components folder")~~~
-    id2("2<br/>Components listed in dependencies.json")~~~
+    id1("1<br/>Components from project's Components folder")
+	~~~
+    id2("2<br/>Components listed in dependencies.json")
+	~~~
     id2 -- environment4d.json gives path --> id4("Load component based on path declared in environment4d.json")
     ~~~
     id3("3<br/>User 4D components")
@@ -356,7 +358,78 @@ The Dependencies panel is then displayed. Dependencies are sorted by name in alp
 ![dependency](../assets/en/Project/dependency.png)
 
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can add or remove **local** and **GitHub** dependencies.
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). 
+
+
+
+### Filtering dependencies
+
+By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
+
+![dependency-tabs](../assets/en/Project/dependency-tabs.png)
+
+- **Active**: Dependencies that are loaded and can be used in the project. It includes *overloading* dependencies, which are actually loaded. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
+- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
+- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+
+### Dependency status
+
+Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
+
+![dependency-status](../assets/en/Project/dependency-conflict2.png)
+
+The following status labels are available:
+- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).  
+- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
+- **Not found**: The dependency is declared in the dependencies.json file but is not found.
+- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
+- **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded). 
+- **Available after restart**: The dependency reference has just been added or updated [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.  
+- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.   
+- **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.   
+- **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.   
+
+
+
+
+A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
+
+![dependency-tips](../assets/en/Project/dependency-tip1.png)
+
+### Dependency origin
+
+The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
+
+![dependency-origin](../assets/en/Project/dependency-origin.png)
+
+The following origins are possible:
+
+|Origin tag|Description|
+|---|---|
+|4D Component|Built-in 4D component, stored in the `Components` folder of the 4D application|
+|dependencies.json|Component declared in the [`dependencies.json`](#dependenciesjson) file|
+|Environment|Component declared in the [`environnement4d.json`](#environment4djson) file|
+|Project Component|Component located in the [`Components`](architecture.md#components) folder|
+
+
+**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+
+![dependency-show](../assets/en/Project/dependency-show.png)
+
+:::note
+
+This item is not displayed if the dependency is inactive because its files are not found.
+
+:::
+
+Component icon and location logo provide additional information:
+
+- The component logo indicates if it is provided by 4D or a third-party developer.
+- Local components can be differentiated from GitHub components by a small icon.
+
+![dependency-origin](../assets/en/Project/dependency-github.png)
+
+
 
 
 
@@ -423,16 +496,21 @@ You can define the [tag or version](#tags-and-versions) option for a dependency:
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
 
+The current GitHub dependency version is displayed on the right side of the dependency item:
+
+![dependency-origin](../assets/en/Project/dependency-version.png)
 
 
 
-
-#### Modifying a GitHub dependency version setting
+#### Modifying the GitHub dependency version range
 
 You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**. 
 
+Modifying the version range is useful for example if you use the automatic update feature and want to lock a dependency to a specific version number. 
 
-### Managing updates
+
+
+### Updating GitHub dependencies
 
 The Dependency manager provides an integrated handling of updates on GitHub. The following features are supported:
 
@@ -484,7 +562,7 @@ You can update dependencies at any moment, for a single dependency or for all de
 
 ![check components](../assets/en/Project/update-component-all.png)
 
-In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is used. 
+In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-github-dependency-version-range). 
 
 When you select an update command:
 
@@ -536,68 +614,3 @@ A confirmation dialog box is displayed. If the dependency was declared in the **
 If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
 
 
-### Dependency Origin
-
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
-
-![dependency-origin](../assets/en/Project/dependency-origin.png)
-
-The following origins are possible:
-
-|Origin tag|Description|
-|---|---|
-|4D Component|Built-in 4D component, stored in the `Components` folder of the 4D application|
-|dependencies.json|Component declared in the [`dependencies.json`](#dependenciesjson) file|
-|Environment|Component declared in the [`environnement4d.json`](#environment4djson) file|
-|Project Component|Component located in the [`Components`](architecture.md#components) folder|
-
-
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
-
-![dependency-show](../assets/en/Project/dependency-show.png)
-
-:::note
-
-This item is not displayed if the dependency is inactive because its files are not found.
-
-:::
-
-Component icon and location logo provide additional information:
-
-- The component logo indicates if it is provided by 4D or a third-party developer.
-- Local components can be differentiated from GitHub components by a small icon.
-
-![dependency-origin](../assets/en/Project/dependency-github.png)
-
-
-
-### Filtering Dependencies
-
-By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
-
-![dependency-tabs](../assets/en/Project/dependency-tabs.png)
-
-- **Active**: Dependencies that are loaded and can be used in the project. It includes *overloading* dependencies, which are actually loaded. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
-- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
-
-### Dependency Status
-
-Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
-
-![dependency-status](../assets/en/Project/dependency-conflict2.png)
-
-The following status labels are available:
-- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).  
-- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
-- **Not found**: The dependency is declared in the dependencies.json file but is not found.
-- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
-- **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded). 
-- **Available after restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.  
-- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.   
-
-
-
-A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
-
-![dependency-tips](../assets/en/Project/dependency-tip1.png)
