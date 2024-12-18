@@ -135,7 +135,7 @@ O 4D View Pro permite que você defina e chame **funções personalizadas 4D**, 
 
 As funções personalizadas 4D podem receber [parâmetros](#parameters) da área 4D View Pro e retornar valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. Exemplos:
+Você declara todas as suas funções usando o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions). Exemplos:
 
 ```4d
 $o:=New object
@@ -276,7 +276,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 ## Compatibidade
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md) command is recommended.
+Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. No entanto, é recomendável usar o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
 
 ### Referência a campos utilizando a estrutura virtual
 
