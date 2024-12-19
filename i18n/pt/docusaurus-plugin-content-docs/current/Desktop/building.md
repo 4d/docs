@@ -20,7 +20,7 @@ O construtor de aplicações permite-lhe:
 
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
-- either the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command,
+- ou o comando [`BUILD APPLICATION`](../commands-legacy/build-application.md),
 - ou na [caixa de diálogo Criar aplicativo] (#application-builder).
 
 :::tip
