@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](../commands/session.md) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 ### Tipos de sessão
 
@@ -151,7 +151,7 @@ Privileges are assigned to a Session using the [`setPrivileges()`](#setprivilege
 
 #### Exemplo
 
-The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+O seguinte arquivo [`roles.json`](../ORDA/privileges.md#rolesjson-file) foi definido:
 
 ```json
 {
