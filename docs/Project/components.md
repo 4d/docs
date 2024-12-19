@@ -286,8 +286,7 @@ Here are a few examples:
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
 
-The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](XXXX). 
-
+The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range). 
 
 
 
@@ -304,22 +303,7 @@ For more information, please refer to the [GitHub token interface](https://githu
 
 :::
 
-Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
-
-```json
-{
-	"github": {
-		"token": "ghpXXXXXXXXXXXXUvW8x9yZ"
-	},
-	"dependencies": {
-
-		"mySecondGitHubComponent": {
-			"github": "JohnSmith/mySecondGitHubComponent"
-		}
-	}
-}
-```
-
+You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager. 
 
 #### Local cache for dependencies
 
@@ -388,6 +372,7 @@ The following status labels are available:
 - **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.   
 - **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.   
 - **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.   
+- **Recent update**: A new version of the GitHub dependency has been loaded at startup.  
 
 
 
@@ -583,7 +568,12 @@ When this option is unchecked, a new component version matching your [component 
 
 ### Providing your GitHub access token
 
-If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
+Registering your personal access token in the Dependency manager is:
+
+- mandatory if the component is stored on a [private GitHub repository](#private-repositories),
+- recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
+
+To provide your GitHub access token, you can either:
 
 - click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path. 
 - or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
@@ -595,6 +585,8 @@ You can then enter your personal access token:
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
 You can only enter one personal access token. Once a token has been entered, you can edit it.  
+
+The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder). 
 
 
 ### Removing a dependency
