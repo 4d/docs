@@ -96,13 +96,13 @@ $val:=$o.f() //8
 
 :::note
 
-スカラー値のコレクションをリストボックスに対して使用した場合、4D はそれぞれの要素に対して、単一のプロパティ**value** を持つオブジェクトを作成します。 Thus, the element value is returned by the **This.value** non-assignable expression.
+スカラー値のコレクションをリストボックスに対して使用した場合、4D はそれぞれの要素に対して、単一のプロパティ**value** を持つオブジェクトを作成します。 Thus, the element value is returned by the **This.value** non-assignable expression. そのため、要素の値は**This.value** という代入不可の式によって返されます。
 
 :::
 
 #### 例題 1
 
-A collection of objects, each with this structure:
+以下のような構造を持つオブジェクトのコレクションがある場合を考えます:
 
 ```json
 {  
@@ -127,14 +127,14 @@ A collection of objects, each with this structure:
  
 ```
 
-In the list box, each column refers to one of the properties of the object, either directly (This.name), indirectly (This.employees.length), or through an expression (*getPicture*) in which can be used directly. The list box looks like:
+リストボックス内では、各カラムはオブジェクトのプロパティいずれか一つを、直接的(This.name) に、あるいは間接的(This.employees.length) に、あるいは直接使用できる式(*getPicture*) を通して参照しています。 このリストボックスは、以下のようになります:
 
 ![](../assets/en/commands/pict3776706.en.png)
 
-The *GetPicture* project method is automatically executed during the **On display detail** event:
+*GetPicture* プロジェクトメソッドは、**On display detail** イベント中に自動的に実行されます:
 
 ```4d
-  //GetPicture Method
+  //GetPicture メソッド
  #DECLARE -> $genderPict : Picture
  If(This.isFemale)
     $genderPict:=Form.genericFemaleImage
@@ -143,34 +143,34 @@ The *GetPicture* project method is automatically executed during the **On displa
  End if
 ```
 
-Once the form is executed, you can see the result:
+フォームを実行すると、以下のような結果が表示されます:
 
 ![](../assets/en/commands/pict3783169.en.png)
 
 #### 例題 2
 
-You want to display entities from the following structure in a list box:
+以下のようなストラクチャーからのエンティティをリストボックスに表示したい場合を考えます:
 
 ![](../assets/en/commands/pict3872836.en.png)
 
-You build a list box of the "Collection or entity selection" type with the following definition:
+その場合、以下のような定義を持つ"コレクションまたはエンティティセレクション"型のリストボックスを作成します:
 
 ![](../assets/en/commands/pict3872844.en.png)
 
 注:
 
-- *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
-- *This.meetings* is a related attribute (based upon the One To Many relation name) that returns an entity selection of the ds.Meeting dataclass.
-- **Form.eventList** is the entity selection that is attached to the list box. The initialization code can be put in the on load form event:
+- *This.ID*、*This.Title* および *This.Date* は、ds.Event データクラス内の対応する属性を直接参照します。
+- *This.meetings* は(1対N リレーション名に基づいた)リレーション属性であり、ds.Meeting データクラスのエンティティセレクションを返します。
+- **Form.eventList** はリストボックスに割り当てられているエンティティセレクションです。 初期化コードは、On Load フォームイベント内で以下のように書くことができます:
 
 ```4d
  Case of  
     :(Form event code=On Load)  
-       Form.eventList:=ds.Event.all() //returns an entity selection with all entities  
+       Form.eventList:=ds.Event.all() //全てのエンティティを格納したエンティティセレクションを返す
  End case  
 ```
 
-Once the form is executed, the list box is automatically filled with the entity selection:
+フォームが実行されると、リストボックスにはエンティティセレクションが入った状態で表示されます:
 
 ![](../assets/en/commands/pict3872875.en.png)
 
