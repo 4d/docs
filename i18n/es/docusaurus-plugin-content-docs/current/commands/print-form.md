@@ -97,7 +97,7 @@ Optionally, you can pass parameters to the *form* using either the *formData* ob
 
 For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
 
-**Return value**
+**Valor devuelto**
 
 The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
 
@@ -126,21 +126,21 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
- QUERY([Register]) // Select the records
+ QUERY([Register]) // Seleccionar los registros
  If(OK=1)
-    ORDER BY([Register]) // Sort the records
+    ORDER BY([Register]) // Ordenar los registros
     If(OK=1)
-       PRINT SETTINGS // Display Printing dialog boxes
+       PRINT SETTINGS // Mostrar cuadros de diálogo de impresión
        If(OK=1)
           For($vlRecord;1;Records in selection([Register]))
              If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use one form for checks
+                Print form([Register];"Check Out") // Utilice un formulario para cheques
              Else
-                Print form([Register];"Deposit Out") // Use another form for deposits
+                Print form([Register];"Deposit Out") // Utilice otro formulario para depósitos
              End if
              NEXT RECORD([Register])
           End for
-          PAGE BREAK // Make sure the last page is printed
+          PAGE BREAK // Asegúrese de que se imprime la última página
        End if
     End if
  End if

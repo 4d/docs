@@ -11,7 +11,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") e colchetes ("[ ]") não são permitidos em nomes de tabelas, campos, métodos ou variáveis.
+- Pontos (".") Pontos (".") e colchetes ("[ ]") não são permitidos em nomes de tabelas, campos, métodos ou variáveis.
 - Não são permitidas vírgulas, barras, aspas e dois pontos.
 - Os caracteres reservados para uso como operadores, como * e +, não são permitidos.
 - Não use nomes reservados, ou seja, nomes de comandos 4D`(Date`, `Time`, etc.), palavras-chave (If, For, etc.) e constantes.
@@ -20,7 +20,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 ### Regras adicionais para propriedades de objetos e nomes ORDA
 
 - Não são permitidos caracteres de espaço.
-- Pontos (".") e parênteses ("[ ]") não são permitidos.
+- Pontos (".") Pontos (".") e parênteses ("[ ]") não são permitidos.
 - Os nomes são sensíveis a maiúsculas e minúsculas.
 
 ### Regras adicionais para SQL
@@ -160,30 +160,27 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 
 ### Elementos de arrays bidimensionais
 
-You reference an element of a two-dimensional array by using the curly braces ({…}) duas vezes. The element referenced is denoted by two numeric expressions in two sets of curly braces.
+You reference an element of a two-dimensional array by using the curly braces ({…}) duas vezes. duas vezes. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
 Exemplos:
 
 ```4d
- //Addressing an element of a two-dimensional interprocess array
-If(<>asKeywords{$vlNextRow}{1}="Stop")
+ //Addressing an element of a two-dimensional interprocess array If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional process array
-If(asKeywords{$vlNextRow}{1}="Stop")
+ //Addressing an element of a two-dimensional process array If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional local array
-If($asKeywords{$vlNextRow}{1}="Stop")
+ //Addressing an element of a two-dimensional local array If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
 ## Atributos de objetos
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
+When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
 
 Exemplos:
 
@@ -243,7 +240,7 @@ Exemplos:
  //Mas este comando espera um nome de método ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Os métodos projeto podem aceitar parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Além disso, podem ser endereçados múltiplos parâmetros consecutivos (e últimos) com a sintaxe ${n}onde n, expressão numérica, é o número do parâmetro.
+Os métodos projeto podem aceitar parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Além disso, podem ser endereçados múltiplos parâmetros consecutivos (e últimos) com a sintaxe ${n}onde n, expressão numérica, é o número do parâmetro.
 
 Dentro de uma função, a variável local $0 contém o valor a devolver.
 
@@ -338,10 +335,8 @@ Para designar uma seleção nomeada se utiliza uma expressão de tipo string que
 Exemplos:
 
 ```4d
- //Interprocess Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode")
- //Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode")
+ //Interprocess Named Selection USE NAMED SELECTION([Customers];"<>ByZipcode")
+ //Process Named Selection USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
 ## Processos

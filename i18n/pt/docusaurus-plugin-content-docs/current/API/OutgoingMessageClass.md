@@ -70,7 +70,7 @@ The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the
 
 The `.body` property is read-write.
 
-You can also set the `.body` property using the [`setBody()`](#setbody) function, in which case the `content-type` header is automatically set.
+Você também pode definir a propriedade `.body` usando a função [`setBody()`](#setbody), caso em que o cabeçalho `content-type` é automaticamente definido.
 
 <!-- END REF -->
 

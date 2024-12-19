@@ -52,7 +52,7 @@ When executed on 4D in remote or local mode, `Process activity` always returns t
 
 **Sessions**
 
-The "sessions" property contains a collection of objects describing all running sessions on the server. For a description of session object properties, please refer to the [`Session info`](session-info.md) command.
+The "sessions" property contains a collection of objects describing all running sessions on the server. Para obter uma descrição das propriedades do objeto de sessão, consulte o comando [`Session info`](session-info.md).
 
 :::note Notes
 
@@ -63,7 +63,7 @@ The "sessions" property contains a collection of objects describing all running 
 
 **Processes**
 
-The "processes" property contains a collection of process objects describing all running processes. For a description of process object properties, please refer to the [`Process info`](process-info.md) command.
+The "processes" property contains a collection of process objects describing all running processes. Para obter uma descrição das propriedades do objeto de processo, consulte o comando [`Process info`](process-info.md).
 
 On the server, the `Process activity` command returns an additional "session" property:
 

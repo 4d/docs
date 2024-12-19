@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 `Super` は次の 2つの目的のために使います:
 
-1. `Square` クラスには、スーパークラスメソッドを呼び出すメンバーメソッドを定義します: When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. [コンストラクターコード](../Concepts/classes.md#class-constructor) において、`Super` コマンドを使用すると、そのスーパークラスのコンストラクターを呼び出すことができます。 コンストラクター内でで使用する際には、`Super` コマンドは単独で使用され、また[`This`](this.md) キーワードよりも先に使用される必要があります。
 
 - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
 - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
@@ -32,7 +32,7 @@ Super($text1) // テキスト型引数をスーパークラスコンストラク
 This.param:=$text2 // 2番目の引数を使用します
 ```
 
-2. Inside a [class function](#class-function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. [クラス関数](#class-function) 内において、`Super` は[`スーパークラス`](../API/ClassClass.md#superclass) のプロトタイプを指し、スーパークラス階層の関数の呼び出しを可能にします。
 
 ```4d
 Super.doSomething(42) // スーパークラスにて宣言されている
@@ -54,7 +54,7 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
 
-// Function definition
+// 関数定義
 Function getArea() : Integer
 
  return (This.height)*(This.width)
@@ -67,11 +67,11 @@ Class extends Rectangle
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Rectangle's width and height
+ // これは親クラスのコンストラクターに長さという引数を渡して呼び出します
+ // 渡された長さはRectangle の幅と高さとして渡されます。
  Super($side;$side)
- // In derived classes, Super must be called 
- // before you can use 'This'
+ // 継承クラスにおいては、Super は必ず
+ // 'This'を使用する前に呼び出さなければなりません。
  This.name:="Square"
 
 Function getArea() : Integer
@@ -80,7 +80,7 @@ Function getArea() : Integer
 
 #### 例題 2
 
-This example illustrates the use of `Super` in a class function. メンバーメソッドを持つ `Rectangle` クラスを作成します:
+以下はクラス関数内で`Super` を使用する例です。 メンバーメソッドを持つ `Rectangle` クラスを作成します:
 
 ```4d
 //Class: Rectangle
@@ -111,4 +111,4 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 
 #### 参照
 
-[**Concept page for Classes**](../Concepts/classes.md).
+[**クラスのコンセプトページ**](../Concepts/classes.md).

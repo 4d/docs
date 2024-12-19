@@ -146,9 +146,9 @@ Note that in 4D single-user, if you open some 4D code with the Qodly Studio code
 The following commands and classes are dedicated to the server-side management of Qodly pages:
 
 - Comando [`Web Form`](../API/WebFormClass.md#web-form): retorna a página Qodly como um objeto.
-- [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly page components.
+- comando [`Web Event`](../API/WebFormClass.md#web-event): retorna eventos acionados nos componentes da página Qodly.
 - [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly page.
-- [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly page components.
+- Classe [`WebFormItem`](../API/WebFormItemClass.md): funções e propriedades para gerenciar componentes de página Qodly.
 
 ### Uso de métodos projeto
 

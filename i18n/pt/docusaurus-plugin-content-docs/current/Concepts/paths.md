@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ### Constructores `File` y `Folder`
 
-[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
+Os comandos [`File`](../commands/file.md) e [`Folder`](../commands/folder.md) aceitam apenas **nomes de caminho absolutos**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
 
 ```4d
 	//ERROR

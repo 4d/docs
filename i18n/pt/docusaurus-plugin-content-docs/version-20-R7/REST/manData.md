@@ -19,7 +19,7 @@ To add and modify entities, you can call [`$method=update`]($method.md#methodupd
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
 
 ## Navegando dados
 
@@ -35,7 +35,7 @@ To access the entity set, you must use `$entityset/\{entitySetID\}`, for example
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
-By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). O timeout é continuamente resetado ao valor definido (seja o valor padrão ou um definido por você) a cada vez que for usado.
+Por padrão, um conjunto de entidades é armazenado por duas horas; no entanto, você pode alterar o tempo limite passando um novo valor para [`$timeout`]($timeout.md). O timeout é continuamente resetado ao valor definido (seja o valor padrão ou um definido por você) a cada vez que for usado.
 
 Se quiser remover um conjunto de entidades do cache de 4D Server, você pode usar [`$method=release`]($method.md#methodrelease).
 

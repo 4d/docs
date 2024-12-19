@@ -69,7 +69,7 @@ Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems
 
 A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. É idêntico ao comando [`Folder`](../commands/folder.md) (atalho).
 
-> It is recommended to use the [`Folder`](../commands/folder.md) shortcut command instead of `4D.Folder.new()`.
+> Recomenda-se usar o comando de atalho [`Folder`](../commands/folder.md) em vez de `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 

@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. O objecto transportador devolvido será então normalmente utilizado para enviar mensagens de correio electrónico.
 
-> Este comando não abre qualquer ligação com o servidor SMTP. The SMTP connection is actually opened when the [`.send()`](../API/SMTPTransporterClass.md#send) function is executed.
+> Este comando não abre qualquer ligação com o servidor SMTP. A conexão SMTP é realmente aberta quando a função [`.send()`](../API/SMTPTransporterClass.md#send) é executada.
 >
 > A coleção SMTP é automaticamente fechada:
 >

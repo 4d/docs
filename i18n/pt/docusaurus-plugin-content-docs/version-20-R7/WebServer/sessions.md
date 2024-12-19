@@ -42,7 +42,7 @@ Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismo
 
 :::info
 
-The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
+O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
 
 :::
 
