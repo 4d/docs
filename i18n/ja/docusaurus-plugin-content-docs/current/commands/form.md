@@ -8,37 +8,37 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
-| 引数  | 型      |   | 説明                            |
-| --- | ------ | - | ----------------------------- |
-| 戻り値 | Object | ← | Form data of the current form |
+| 引数  | 型      |   | 説明                |
+| --- | ------ | - | ----------------- |
+| 戻り値 | Object | ← | カレントのフォームのフォームデータ |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                 |
-| ----- | ------------------ |
-| 20 R8 | Form class support |
+| リリース  | 内容           |
+| ----- | ------------ |
+| 20 R8 | フォームクラスのサポート |
 
 </details>
 
 #### 説明
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->**Form** コマンドはカレントフォームに割り当てられている(*formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された)オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
 
-- the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
-- the current form is a subform,
-- a table form is currently displayed on screen.
+- カレントフォームが、[`DIALOG`](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドのいずれか一つによってロードされた場合。
+- カレントフォームがサブフォームである場合。
+- テーブルフォームが現在画面上に表示されている場合。
 
-##### Commands (DIALOG...)
+##### コマンド(DIALOGなど)
 
-If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
+カレントのフォームが[DIALOG](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドによって表示あるいはロードされていた場合、は以下のいずれかのものを返します:
 
-- the *formData* object passed as parameter to this command, if any,
-- or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
-- or, an empty object.
+- コマンドに引数として渡された*formData* オブジェクト(あれば)。
+- [フォームに割り当てられているユーザークラス](../FormEditor/properties_FormProperties.md#form-class) のインスタンス化されたオブジェクト(あれば)。
+- または、空のオブジェクト。
 
 ##### サブフォーム
 
