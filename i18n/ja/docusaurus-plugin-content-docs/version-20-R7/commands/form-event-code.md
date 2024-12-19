@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 #### 説明
 
