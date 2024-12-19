@@ -51,8 +51,9 @@ displayed_sidebar: docs
 
 アクティブな4Dフォルダーは、デフォルトでは以下の場所に作成されます:
 
-* Windows: *{Disk}:\\Users\\* *<userName>\\AppData\\Roaming\\<applicationName>*
-* macOS: *{Disk}:Users:* *<userName>:Library:Application Support:<applicationName>*
+* Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
+* macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
+
 
 ##### Licenses Folder 
 

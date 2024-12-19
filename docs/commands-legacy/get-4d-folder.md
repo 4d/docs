@@ -51,8 +51,8 @@ The 4D environment uses a specific folder to store the following information:
 
 The active 4D folder is created by default at the following location:
 
-* On Windows: *{Disk}:\\Users\\* *<userName>\\AppData\\Roaming\\<applicationName>*
-* On macOS: *{Disk}:Users:* *<userName>:Library:Application Support:<applicationName>*
+* On Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
+* On macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
 ##### Licenses Folder 
 
