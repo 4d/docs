@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
-| 引数  | 型          |   | 説明                                             |
-| --- | ---------- | - | ---------------------------------------------- |
-| 戻り値 | Collection | ← | Collection of the available Web Server objects |
+| 引数  | 型          |   | 説明                         |
+| --- | ---------- | - | -------------------------- |
+| 戻り値 | Collection | ← | 利用可能なWeb サーバーオブジェクトのコレクション |
 
 <!-- END REF-->
 
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 
 サーバーが実際に実行中か否かに関わらず、`WEB Server list` コマンドは利用可能な Webサーバーをすべて返します。
 
-> デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。 On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](web-server.md) command.
+> デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。 一方で、使用したいコンポーネントのWeb サーバーは、[`WEB Server`](web-server.md) コマンドによってそれぞれインスタンス化されている必要があります。
 
-You can use the [.name](../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
+Webサーバオブジェクトの [.name](../API/WebServerClass.md#name) プロパティを使用することで、リスト内の各 Webサーバーオブジェクトが関連づけられているデータベースまたはコンポーネントを識別することができます。
 
 #### 例題
 
@@ -47,7 +47,7 @@ You can use the [.name](../API/WebServerClass.md#name) property of the Web serve
 
  $wSList:=WEB Server list
  $vRun:=$wSList.countValues(True;"isRunning")
- ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
+ ALERT(String($wSList.length)+" 個のリストの中で、"+String($vRun)+" 個の Web サーバーが実行中です。")
 ```
 
 #### 参照
