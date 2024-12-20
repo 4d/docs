@@ -10,7 +10,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 - IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
 - POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
 
-> You can also create a new, blank `Email` object and then fill it with [Email object properties](#email-object).
+> Você também pode criar um novo objeto `Email` em branco e preenchê-lo com [propriedades do objeto Email](#email-object).
 
 You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
 
