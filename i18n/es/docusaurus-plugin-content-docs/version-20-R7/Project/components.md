@@ -314,7 +314,7 @@ A continuación, se muestra el panel Dependencias. Las dependencias se ordenan p
 
 ![dependency](../assets/en/Project/dependency.png)
 
-La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
 
 ### Añadir una dependencia local
 
