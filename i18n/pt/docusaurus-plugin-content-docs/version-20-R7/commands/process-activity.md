@@ -67,9 +67,9 @@ The "processes" property contains a collection of process objects describing all
 
 On the server, the `Process activity` command returns an additional "session" property:
 
-| Additional property | Tipo   | Descrição                                                                                                                                                                                  |   |
-| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
-| session             | Object | The [`.info`](../API/SessionClass.md#info) property of the session in which the process is running. Undefined if the `Processes only` parameter is passed. |   |
+| Additional property | Tipo   | Descrição                                                                                                                                                                                   |   |
+| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| session             | Object | A propriedade [`.info`](../API/SessionClass.md#info) da sessão onde o processo está sendo executado. Undefined if the `Processes only` parameter is passed. |   |
 
 #### Exemplo 1
 
