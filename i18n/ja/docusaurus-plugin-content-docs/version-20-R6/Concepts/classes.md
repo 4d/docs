@@ -185,7 +185,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+関数コードにおいては、終了キーワードはありません。 4D ランゲージは、次の`Function` キーワードまたはクラスファイルの終了を持って、自動的に関数のコードの終わりを検知します。
 
 :::
 
@@ -325,7 +325,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+クラスコンストラクター関数コードにおいては、終了キーワードはありません。 4D ランゲージは、次の`Function` キーワードまたはクラスファイルの終了を持って、自動的に関数のコードの終わりを検知します。
 
 :::
 
@@ -333,7 +333,7 @@ There is no ending keyword for class constructor function code. The 4D language 
 
 クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
-コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
+コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 [`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼ぶことができます。
 
 コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 また、インスタンスプロパティの値が、コンストラクターに渡される引数に依存しない場合は、[`property`](#property) キーワードを使用して定義することができます。
 
