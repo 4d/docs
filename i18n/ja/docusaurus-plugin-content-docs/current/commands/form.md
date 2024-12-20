@@ -42,26 +42,26 @@ displayed_sidebar: docs
 
 ##### サブフォーム
 
-If the current form is a subform, the returned object depends on the parent container variable:
+カレントフォームがサブフォームの場合、返されるオブジェクトは親コンテナ変数に依存します:
 
-- If the variable associated to the parent container has been typed as an object, **Form** returns the value of this variable.\
-  In this case, the object returned by **Form** is the same as the one returned by the following expression:
+- 親コンテナに割り当てられている変数がオブジェクト型であった場合、**Form** はその変数の値を返します。\
+  この場合、**Form** から返されるオブジェクトは、以下の式から返されるものと同じになります:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
 ```
 
-- If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
+- 親コンテナに割り当てられている変数がオブジェクト型として型指定されていない場合、**Form** は、サブフォームのコンテキストで4D によって維持される、空のオブジェクトを返します。
 
-For more information, please refer to the *Page subforms* section.
+より詳細な情報については、*サブフォームページ* の章を参照してください。
 
-##### Table form
+##### テーブルフォーム
 
-**Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+**Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 出力フォームから表示された入力フォームのコンテキスト(つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています:
 
-| **プロパティ**  | **型**  | **Description**                           |
-| ---------- | ------ | ----------------------------------------- |
-| parentForm | object | **Form** object of the parent output form |
+| **プロパティ**  | **型**  | **Description**         |
+| ---------- | ------ | ----------------------- |
+| parentForm | object | 親出力フォームの**Form** オブジェクト |
 
 #### 例題
 
@@ -71,7 +71,7 @@ For more information, please refer to the *Page subforms* section.
 
 **注:** "Children" オブジェクトフィールドはこの例題においての構造を示すために表示されているだけです。
 
-In the verification form, you have assigned some Form object properties to inputs:
+検証フォームでは、入力に対していくつかのフォームオブジェクトプロパティを割り当てているものとします:
 
 ![](../assets/en/commands/pict3541682.en.png)
 
