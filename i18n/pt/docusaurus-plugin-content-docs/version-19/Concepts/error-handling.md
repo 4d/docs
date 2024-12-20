@@ -9,7 +9,7 @@ Manejo de erros responde à duas necessidades principais:
 
 - descobrir e consertar erros potenciais e bugs no código durante a fase de desenvolvimento,
 - detectar e recuperar de erros inesperados nas aplicações implementadas; em particular pode substituir diálogos de erros de sistemas (disco cheio, arquivo faltando, etc) com sua própria interface.
-> > > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Esse método evitaria a exibição de caixas de diálogo inesperadas no computador do servidor e poderia registrar os erros em um arquivo dedicado para análises posteriores.
+> > > > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Esse método evitaria a exibição de caixas de diálogo inesperadas no computador do servidor e poderia registrar os erros em um arquivo dedicado para análises posteriores.
 
 
 ## Erro ou status
