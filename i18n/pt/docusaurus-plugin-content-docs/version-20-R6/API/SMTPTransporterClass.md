@@ -58,7 +58,7 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 >
 > A coleção SMTP é automaticamente fechada:
 >
-> - when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default),
+> - quando o objeto transporter for destruído se a propriedade [`keepAlive`](#keepalive) for true (padrão),
 > - após cada execução da função [`.send( )`](#send) se a propriedade [`keepAlive`](#keepalive) estiver definida como false.
 
 No parâmetro server, passe um objeto contendo as propriedades abaixo:
@@ -81,7 +81,7 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
 #### Resultados
 
-A função retorna um [**objeto SMTP transporter**](#smtp-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
+Parâmetro Todas as propriedades retornadas são **apenas leitura**.
 
 #### Exemplo
 
