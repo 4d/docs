@@ -21,7 +21,7 @@ The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->
 
 Passe o nome da área 4D View Pro a ser impressa em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-You can pass an object containing definitions for various printing attributes in the *printInfo* parameter. To view the full list of the available attributes, see [Print Attributes](../configuring.md#print-attributes).
+You can pass an object containing definitions for various printing attributes in the *printInfo* parameter. Para ver a lista completa dos atributos disponíveis, consulte [Atributos de impressão](../configuring.md#print-attributes).
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
