@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ------------ | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | aTable     | Table        | → | Table form to load (if omitted, load a project form)                                                                                                                                                  |
 | form       | Text, Object | → | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData   | Object       | → | Data to associate to the form                                                                                                                                                                                            |
+| formData   | Object       | → | Données à associer au formulaire                                                                                                                                                                                         |
 | \*         | Opérateur    | → | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
 
 <!-- END REF-->
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
 
-In the *form* parameter, you can pass:
+Dans le paramètre *form*, vous pouvez passer soit:
 
 - the name of a form, or
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use, or
@@ -33,7 +33,7 @@ When the command is executed from a component, it loads the component forms by d
 
 ##### formData
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
+Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md).
 The form data object is available in the [`On Load` form event](../Events/onLoad.md).
 
 For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
