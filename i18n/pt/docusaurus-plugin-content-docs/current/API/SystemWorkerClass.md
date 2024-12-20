@@ -565,7 +565,7 @@ Em *timeout*, passe um valor em segundos. The `SystemWorker` script will wait fo
 
 Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
+During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. Você pode sair de um `.wait()` chamando [`terminate()`](#terminate) de um retorno de chamada.
 
 Esta função devolve o objecto SystemWorker.
 

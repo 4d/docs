@@ -103,7 +103,7 @@ You can leave it up to 4D to create variables associated with your form objects 
 When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). Esta variável temporária será destruída quando o formulário for fechado.
 Para que este princípio funcione em modo compilado, é imperativo que as variáveis dinâmicas sejam explicitamente tipadas. Há duas formas de o fazer:
 
-- You can set the type using the [Expression type](#expression-type) property.
+- Você pode definir o tipo usando a propriedade [Tipo de expressão](#expression-type).
 - Puede utilizar un código de inicialización específico cuando se carga el formulario que utilice, por ejemplo, el comando `VARIABLE TO VARIABLE`:
 
 ```4d

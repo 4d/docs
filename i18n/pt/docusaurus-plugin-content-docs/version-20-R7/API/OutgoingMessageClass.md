@@ -49,7 +49,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::note
 
-A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Um objeto 4D.OutgoingMessage é um objeto [não compartilhável](../Concepts/shared.md).
 
 :::
 

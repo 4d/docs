@@ -243,7 +243,7 @@ Privileges are assigned to a Session using the [`setPrivileges()`](#setprivilege
 
 #### Exemplo
 
-The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+O seguinte arquivo [`roles.json`](../ORDA/privileges.md#rolesjson-file) foi definido:
 
 ```json
 {

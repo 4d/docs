@@ -54,7 +54,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. O objecto transportador devolvido será então normalmente utilizado para enviar mensagens de correio electrónico.
 
-> Este comando não abre qualquer ligação com o servidor SMTP. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.
+> Este comando não abre qualquer ligação com o servidor SMTP. A ligação SMTP é efetivamente aberta quando a função [`.send()`](#send) é executada.
 >
 > A coleção SMTP é automaticamente fechada:
 >

@@ -19,4 +19,4 @@ As seguintes convenções são utilizadas na sintaxe da função:
 
 ## Veja também
 
-[Classes in the 4D Language](../Concepts/classes.md).
+[Classes na linguagem 4D](../Concepts/classes.md).

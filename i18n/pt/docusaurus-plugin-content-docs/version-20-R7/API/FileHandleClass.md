@@ -5,7 +5,7 @@ title: FileHandle
 
 A classe `FileHandle` tem funções que lhe permitem ler sequencialmente ou anexar conteúdos a um objeto aberto [`File`](FileClass). O manuseamento de um arquivo pode acessar a qualquer parte de um documento.
 
-File handle objects are created with the [`file.open()`](FileClass#open) function.
+Os objetos File handle são criados usando a função [`file.open()`](FileClass#open).
 
 > To read or write a whole document at once, you might consider using the [file.getText()](FileClass.md#gettext) and [file.setText()](FileClass.md#settext) functions.
 
@@ -275,7 +275,7 @@ Essa propriedade é **leitura/escrita**.
 
 :::caution
 
-Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
+Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. Por exemplo:
 
 ```4d
   // Open a european text file using utf-16 encoding (two bytes per character)

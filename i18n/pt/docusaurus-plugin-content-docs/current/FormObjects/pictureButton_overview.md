@@ -49,7 +49,7 @@ In addition to the standard positioning and appearance settings, you can set som
 
 Estão disponíveis os seguintes outros modos:
 
-- [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame)
+- [Loop de volta ao primeiro quadro](properties_Animation.md#loop-back-to-first-frame)
 - [Volte quando lançado](properties_Animation.md#switch-back-when-released)
 - [Alterne quando Roll Over] (properties_Animation.md#switch-when-roll-over)
 - [Alterne continuamente nos cliques](properties_Animation.md#switch-continuously-on-clicks)

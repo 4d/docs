@@ -160,7 +160,7 @@ Absolute paths should only be used for components that are specific to one machi
 
 ### Componentes armazenados no GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+Componentes 4D disponíveis como lançamentos do GitHub podem ser referenciados e carregados automaticamente nos seus projetos 4D.
 
 :::note
 
@@ -224,7 +224,7 @@ Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versã
 }
 ```
 
-- Uma versão também é identificada por uma **versão**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Uma versão também é identificada por uma **versão**. O sistema de versionamento usado é baseado no conceito de *Semantic Versioning*, que é o mais usado. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -237,7 +237,7 @@ Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versã
 }
 ```
 
-The version is used to define which versions can be used. É usada uma [versão semântica padrão] (https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+A versão é usada para definir quais versões podem ser usadas. É usada uma [versão semântica padrão] (https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Eis alguns exemplos:
 
@@ -361,7 +361,7 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
-You can then define the [tag or version](#tags-and-versions) option for the dependency:
+Em seguida, você pode definir a opção [tag ou versão](#tags-and-versions) para a dependência:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 

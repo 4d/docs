@@ -56,7 +56,7 @@ The "sessions" property contains a collection of objects describing all running 
 
 :::note Notes
 
-- You can get the object of a session using the [Session](session.md) command.
+- Você pode obter o objeto de uma sessão usando o comando [Session](session.md).
 - `Process activity` returns remote client sessions, stored procedure session and rest sessions but not Web sessions (limitation).
 
 :::

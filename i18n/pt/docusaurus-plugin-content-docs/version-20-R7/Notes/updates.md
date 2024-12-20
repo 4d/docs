@@ -31,7 +31,7 @@ Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 - Documentations for [4D Language](../commands/command-index.md) and [4D Write Pro Language](../WritePro/commands/command-index.md) are now fully available on developer.4d.com. Find out about all the new features and changes concerning these documentations in this release note.
 - The [`File`](../commands/file.md) command (as well as [`4D.File.new()`](../API/FileClass.md#4dfilenew)) is stricter when it comes to checking the syntax of the *path* supplied as a parameter.
-- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session *describe* privileges are now ignored.
+- The **describe** action [permission](../ORDA/privileges.md#permission-actions) has been removed from available actions. Acesso às urls [`/rest/$catalog`](../REST/$catalog.md) não é mais controlado. Session *describe* privileges are now ignored.
 
 ## 4D 20 R6
 
@@ -91,7 +91,7 @@ Leia [**O que há de novo no 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d
 
 #### Destaques
 
-- Support of [`ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+- Suporte do [formato de criptografia `ECDSA`](../Admin/tls.md#encryption) para os certificados TLS.
 - Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - New [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) that enhances code control during code typing, syntax checking, and compilation steps to prevent execution errors.
@@ -99,7 +99,7 @@ Leia [**O que há de novo no 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d
 - Suporte de [formatos personalizados de data e hora](../Project/date-time-formats.md)
 - Nova palavra-chave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de erro simples.
 - Novo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
-- New [Non-blocking printing](../settings/compatibility.md) compatibility option.
+- Nova opção de compatibilidade [Impressão sem bloqueio](../settings/compatibility.md).
 - Nuevo [modo de edición](../Admin/dataExplorer.md#editing-data) en el Explorador de datos.
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) em doc.4d.com.
 - 4D Write Pro: [Página Novidades] (https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.en.html) em doc.4d.com.
@@ -149,11 +149,11 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 #### Destaques
 
 - New [WebSocket class](../API/WebSocketClass.md) to create and manage client WebSocket connections from 4D.
-- New QUIC network layer [interface setting](../settings/client-server.md#network-layer).
+- Nova [configuração de interface] (../settings/client-server.md#network-layer) para a camada de rede QUIC.
 - 4D View Pro: soporte del formato de archivo **.sjs** para [la importación](../ViewPro/commands/vp-import-document) y la [exportación](../ViewPro/commands/vp-export-document) de documentos.
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) em doc.4d.com.
 - 4D Write Pro: [Página Novidades] (https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
-- 4D Write Pro Interface: New [Table Wizard](../WritePro/writeprointerface.md).
+- Interface 4D Write Pro: novo [Table Wizard](../WritePro/writeprointerface.md).
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R2): lista de todos os bugs corrigidos em 4D 20 R2.
 
 #### Mudanças de comportamento

@@ -92,7 +92,7 @@ In a form displaying the record of a person, a "Check children" button opens a d
 
 **Note:** The "Children" object field is represented only to show its structure for this example.
 
-In the verification form, you have assigned some [Form](form.md) object properties to variables:
+No formulário de verificação, você atribuiu algumas propriedades do objeto [Form](form.md) a variáveis:
 
 ![](../assets/en/commands/pict3541682.en.png)
 

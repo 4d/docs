@@ -117,7 +117,7 @@ The current state of the debugger window is automatically saved in the project. 
 
 - the size and position of the window,
 - the position of the division lines,
-- the [display mode](#display-mode),
+- o [modo de exibição](#display-mode),
 - the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
@@ -340,7 +340,7 @@ Existem várias formas de adicionar expressões à lista:
 - Arraste e solte um objeto ou expressão do painel Watch ou do painel Call Chain
 - Selecione uma expressão no [painel Source Code](#source-code-pane) e pressione **ctrl+D**  (Windows) ou **cmd+D** (macOS)
 - Dê duplo clique em algum lugar no espaço vazio do Custom Watch Pane (adiciona uma expressão com um nome de espaço reservado que você pode editar)
-- Select a [display option](#display-mode) that automatically inserts expressions.
+- Selecione uma [opção de exibição](#display-mode) que insere expressões automaticamente.
 - Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. Pode introduzir qualquer fórmula que devolva um resultado.
 
 Para editar uma expressão, clique nela para selecioná-la e, em seguida, clique novamente ou pressione **Enter** no seu teclado.
@@ -376,7 +376,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 * **Excluir tudo**: Remove todas as expressões do Painel de Vigia Personalizado.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
-> This option is not available in [remote debugging mode](debugging-remote.md).
+> Essa opção não está disponível no [modo de depuração remota](debugging-remote.md).
 
 - **Recolher tudo/Expandir tudo**: Recolhe ou expande todas as listas hierárquicas.
 - **Mostrar tipos**: Exibe o tipo de cada item da lista (quando apropriado).

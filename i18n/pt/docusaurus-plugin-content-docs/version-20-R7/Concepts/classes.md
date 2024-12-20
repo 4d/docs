@@ -614,7 +614,7 @@ Para obter mais detalhes, consulte a descrição do comando [`Super`](../command
 
 ### `This`
 
-The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+O comando [`This`](../commands/this.md) retorna uma referência ao objeto processado no momento. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
 Exemplo:
 

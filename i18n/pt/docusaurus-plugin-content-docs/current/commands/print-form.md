@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 #### Descrição
 
-<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
 In the *form* parameter, you can pass:
 
@@ -93,7 +93,7 @@ In this case, the command will print the section included between the *areaStart
 
 **formData**
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. O objeto de dados do formulário está disponível no evento de formulário [`On Printing Detail`](../Events/onPrintingDetail.md).
+Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class).
 
 For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
 
@@ -108,7 +108,7 @@ The printer dialog boxes do not appear when you use **Print form**. The report d
 
 **Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
 
-**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. If you call [PAGE BREAK](../commands-legacy/page-break.md) in this case, a blank page is printed.
+**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. Se você chamar [PAGE BREAK](../commands-legacy/page-break.md) nesse caso, uma página em branco será impressa.
 
 This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
 
@@ -148,7 +148,7 @@ The following example performs as a [PRINT SELECTION](../commands-legacy/print-s
 
 #### Exemplo 2
 
-Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command.
+Consulte o exemplo do comando [SET PRINT MARKER](../commands-legacy/set-print-marker.md).
 
 #### Exemplo 3
 

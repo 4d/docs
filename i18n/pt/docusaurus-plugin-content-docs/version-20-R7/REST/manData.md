@@ -7,7 +7,7 @@ Todos [los atributos, dataclasses expuestos](configuration.md#exposing-tables-an
 
 ## Pesquisas de dados
 
-To query data directly, you can do so using the [`$filter`]($filter.md) function. Por exemplo, para encontrar a pessoa chamada "smith" poderia escrever:
+Para consultar os dados diretamente, você pode fazer isso usando a função [`$filter`]($filter.md). Por exemplo, para encontrar a pessoa chamada "smith" poderia escrever:
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
@@ -15,7 +15,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Sintaxe
+Para adicionar e modificar entidades, você pode chamar [`$method=update`]($method.md#methodupdate). Sintaxe
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 

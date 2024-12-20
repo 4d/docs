@@ -332,7 +332,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 - **Excluir tudo**: Remove todas as expressões do Painel de Vigia Personalizado.
 - **Expressões Padrão**: Copia a lista de expressões do Watch.
 
-> This option is not available in [remote debugging mode](debugging-remote.md).
+> Essa opção não está disponível no [modo de depuração remota](debugging-remote.md).
 
 - **Recolher tudo/Expandir tudo**: Recolhe ou expande todas as listas hierárquicas.
 - **Mostrar tipos**: Exibe o tipo de cada item da lista (quando apropriado).

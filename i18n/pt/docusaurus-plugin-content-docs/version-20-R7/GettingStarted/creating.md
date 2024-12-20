@@ -14,7 +14,7 @@ Para criar um novo projeto de banco de dados:
 1. Inicie 4D ou 4D Server.
 
 2. Faça uma das seguintes opções:
-   - Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
+   - Selecione **Novo > Projeto...** no menu **Arquivo**: ![](../assets/en/getStart/projectCreate1.png)
    - (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nome será utilizado:

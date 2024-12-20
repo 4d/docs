@@ -64,6 +64,9 @@ Keep in mind that validation does not equal saving: if the dialog includes field
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
+This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command.\
+If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
+If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. If the current process terminates, the forms created in this way are automatically closed in the same way as if a [CANCEL](../commands-legacy/cancel.md) command had been called. This opening mode is particularly useful for displaying a floating palette with a document, without necessarily requiring another process.
 
 **Notes :**
@@ -178,8 +181,8 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 
 #### Propriétés
 
-|                    |                                     |
-| ------------------ | ----------------------------------- |
-| Command number     | 40                                  |
-| Thread safe        | &amp;amp;cross; |
-| Modifies variables | OK, error                           |
+|                    |                                         |
+| ------------------ | --------------------------------------- |
+| Command number     | 40                                      |
+| Thread safe        | &amp;amp;amp;cross; |
+| Modifies variables | OK, error                               |

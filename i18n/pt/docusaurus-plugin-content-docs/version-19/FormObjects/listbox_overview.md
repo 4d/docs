@@ -526,7 +526,7 @@ You want to sort a list box using values of a property stored in a related objec
 
 ![](../assets/en/FormObjects/relationLB.png)
 
-You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds.Child.all()`.
+You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds. Child.all()`.
 
 São exibidas duas colunas:
 
@@ -858,7 +858,7 @@ ARRAY OBJECT(obColumn;0) //column array
 Quando uma coluna de caixa de listagem é associada a uma array de objectos, a forma como uma célula é exibida, introduzida, ou editada, é baseada no atributo valueType do elemento da array. Os valores suportados são os tipos de valores:
 
 * "texto": para um valor de texto
-* "real": for a numeric value that can include separators like a `\&#060;space&#062;`, <.>, or <,>
+* "real": for a numeric value that can include separators like a `\&#060;space&#062;`, <.>, or
 * "integer": para um valor inteiro
 * "booleano": para um valor Verdadeiro/Falso
 * "cor": para definir uma cor de fundo

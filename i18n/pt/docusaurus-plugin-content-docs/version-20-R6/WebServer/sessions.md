@@ -8,7 +8,7 @@ O servidor web 4D oferece recursos integrados para gerenciar **sessões web**. C
 As sessões Web permitem:
 
 - manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
-- manage session through a `Session` object and the [Session API](API/SessionClass.md),
+- gerenciar a sessão por um objeto `Session` e da [API de session](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - associate privileges to the user running the session.
 

@@ -5,7 +5,7 @@ title: Área Web
 
 Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-É possível criar várias áreas web no mesmo formulário. Note, however, that the use of web areas must follow [several rules](#web-area-rules).
+É possível criar várias áreas web no mesmo formulário. No entanto, observe que o uso de áreas web deve seguir [várias regras](#web-area-rules).
 
 Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 
@@ -193,7 +193,7 @@ To display the Web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 
 - **Use the web area context menu**<br/>
   This feature can only be used with onscreen web areas and requires that the following conditions are met:
-  - the [context menu](properties_Entry.md#context-menu) for the web area is enabled
+  - o [menu contextual](properties_Entry.md#context-menu) para a área web está ativado
   - Deve habilitar expressamente ao uso do inspetor na área mediante a instrução abaixo:
   ```4d
   	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  

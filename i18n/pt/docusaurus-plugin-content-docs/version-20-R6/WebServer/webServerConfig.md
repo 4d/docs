@@ -11,7 +11,7 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 | Localização do parâmetro                                                                      | Âmbito                                                                 | Servidor Web a ser usado                                       |
 | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [webServer object](webServerObject.md)                                                        | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| [objeto webServer](webServerObject.md)                                                        | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
 | `WEB SET OPTION` o comando `WEB XXX`                                                          | Temporário (sessão atual)                           | Servidor principal                                             |
 | [Caixa de diálogo **Configurações**](../settings/web.md) (páginas **Web**) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
@@ -131,11 +131,11 @@ Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](.
 
 ## Defaut Home page
 
-| Pode ser definido com              | Nome                                                                         | Comentários                               |
-| ---------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------- |
-| objeto webServer                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                   | Text                                      |
-| `WEB SET HOME PAGE`                |                                                                              | Pode ser diferente para cada processo web |
-| Caixa de diálogos de configurações | [Configuration page/Default Home Page](../settings/web.md#default-home-page) |                                           |
+| Pode ser definido com              | Nome                                                                              | Comentários                               |
+| ---------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------- |
+| objeto webServer                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                        | Text                                      |
+| `WEB SET HOME PAGE`                |                                                                                   | Pode ser diferente para cada processo web |
+| Caixa de diálogos de configurações | [Página Configuração/Página inicial padrão](../settings/web.md#default-home-page) |                                           |
 
 Designar uma página inicial padrão para o servidor Web. Esta página pode ser estática ou [semi-dynamic].
 
@@ -351,11 +351,11 @@ Estado do gerenciamento de sessão antigo para o servidor Web 4D (obsoleto).
 
 ## Log Recording
 
-| Pode ser definido com              | Nome                                                                | Comentários |
-| ---------------------------------- | ------------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`logRecording`](API/WebServerClass.md#logrecording)                |             |
-| `WEB SET OPTION`                   | `Web log recording`                                                 |             |
-| Caixa de diálogos de configurações | [Log (type) page](../settings/web.md#log-format) | Menu pop-up |
+| Pode ser definido com              | Nome                                                                  | Comentários |
+| ---------------------------------- | --------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`logRecording`](API/WebServerClass.md#logrecording)                  |             |
+| `WEB SET OPTION`                   | `Web log recording`                                                   |             |
+| Caixa de diálogos de configurações | [Página Log (type)](../settings/web.md#log-format) | Menu pop-up |
 
 Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Por padrão, os pedidos não são registados (0/No Log File). Cuando se activa, el archivo *logweb.txt* se coloca automáticamente en la carpeta Logs.
 
@@ -506,7 +506,7 @@ Neste caso, os robots não estão autorizados a aceder a todo o sítio.
 | ---------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | objeto webServer                   | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
 | `WEB SET ROOT FOLDER`              |                                                                              |                                                                                                                                       |
-| Caixa de diálogos de configurações | [Configuration page/Default HTML Root](../settings/web.md#default-html-root) |                                                                                                                                       |
+| Caixa de diálogos de configurações | [Página Configuração/raiz HTML padrão](../settings/web.md#default-html-root) |                                                                                                                                       |
 
 Caminho da pasta raiz do servidor web, ou seja, a pasta na qual 4D procurará as páginas HTML estáticas e semidinâmicas, imagens, etc., para enviar aos navegadores. O caminho é formatado no caminho completo POSIX. O servidor da Web precisará ser reiniciado para que a nova pasta raiz seja levada em consideração.
 

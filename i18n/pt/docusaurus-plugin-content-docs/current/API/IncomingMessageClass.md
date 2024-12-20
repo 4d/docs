@@ -93,7 +93,7 @@ There are 2 url parts - Url parts are: start - example
 
 :::note
 
-A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Um objeto 4D.IncomingMessage é um objeto [não compartilhável](../Concepts/shared.md).
 
 :::
 
