@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
-| Paramètres  | Type                    |   | Description                                             |
-| ----------- | ----------------------- | - | ------------------------------------------------------- |
-| projectFile | 4D.File | → | .4DProject file to compile              |
-| options     | Object                  | → | Object that specifies compilation options               |
-| Résultat    | Object                  | ← | Object containing information on the compilation status |
+| Paramètres  | Type                    |   | Description                                                   |
+| ----------- | ----------------------- | - | ------------------------------------------------------------- |
+| projectFile | 4D.File | → | Fichier .4DProject à compiler                 |
+| options     | Object                  | → | Objet qui spécifie les options de compilation                 |
+| Résultat    | Object                  | ← | Objet contenant des informations sur le statut de compilation |
 
 <!-- END REF-->
 
@@ -21,46 +21,46 @@ displayed_sidebar: docs
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                            |
-| ------- | ---------------------------------------- |
-| 20 R8   | Support of `type` "formObjectExpression" |
+| Release | Modifications                                    |
+| ------- | ------------------------------------------------ |
+| 20 R8   | Prise en charge du `type` "formObjectExpression" |
 
 </details>
 
 #### Description
 
-**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../Project/compiler.md).
+**Compile project**<!--REF #_command_.Compile project.Summary--> vous permet de compiler le projet hôte courant ou le projet spécifié dans le paramètre *projectFile*.<!-- END REF--> Pour plus d'informations sur la compilation, consultez la [page Compilation](../Project/compiler.md).
 
-By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. Les syntaxes suivantes sont prises en charge :
+Par défaut, la commande utilise les options du compilateur définies dans les Paramètres de structure. Vous pouvez les remplacer en passant un paramètre *options*. Les syntaxes suivantes sont prises en charge :
 
-- **Compile project**(): compiles the opened project using the options defined in the Structure Settings
-- **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
-- **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
-- **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
+- **Compile project**() : compile le projet ouvert à l'aide des options définies dans les paramètres de structure
+- **Compile project**(*options*) : compile le projet ouvert. Les *options* définies remplacent les paramètres de structure
+- **Compile project**(*projectFile*) : compile le projet 4D *projectFile* en utilisant les options définies dans les paramètres de structure
+- **Compile project**(*projectFile*; *options*) : compile le projet 4D *projectFile* et les *options* définies remplacent les paramètres de structure
 
-**Note:** Binary databases cannot be compiled using this command.
+\*\*Note :\*\*Les bases de données binaires ne peuvent pas être compilées avec cette commande.
 
-Unlike the Compiler window, this command requires that you explicitly designate the component(s) to compile. When compiling a project with **Compile project**, you need to declare its components using the *components* property of the *options* parameter. Keep in mind that the components must already be compiled (binary components are supported).
+Contrairement à la fenêtre du Compilateur, cette commande nécessite que vous désigniez explicitement le ou les composants à compiler. Lors de la compilation d'un projet avec **Compile project**, vous devez déclarer ses composants à l'aide de la propriété *components* du paramètre *options*. A noter que les composants doivent déjà être compilés (les composants binaires sont pris en charge).
 
-The resulting compiled code will be stored in the DerivedData or Libraries folder of the project, depending on the *targets* property of the *options* parameter. If you want to create .4dz files, you still need to manually zip the compiled project or use the [build application](../Desktop/building.md) feature.
+Le code compilé résultant sera stocké dans le dossier DerivedData ou Libraries du projet, en fonction de la propriété *targets* du paramètre *options*. Si vous souhaitez créer des fichiers .4dz, vous devez toujours compresser manuellement le projet compilé ou utiliser la fonctionnalité [build application](../Desktop/building.md).
 
-If you pass an empty collection in *targets*, **Compile project** will execute a syntax check without compiling.
+Si vous passez une collection vide dans *targets*, **Compile project** exécutera une vérification syntaxique sans compiler.
 
-Compilation errors, if any, are returned as objects in the *errors* collection.
+Les erreurs de compilation, le cas échéant, sont retournées sous forme d'objets dans la collection *errors*.
 
-**Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
+**Note :** Vous ne pouvez pas appeler cette commande quand une autre compilation est en cours d'exécution (par exemple, une compilation lancée depuis la fenêtre de compilation).
 
-##### options Parameter
+##### Paramètre options
 
-The *options* parameter is an object. Here are the available compilation options:
+Le paramètre *options* est un objet. Voici les options de compilation disponibles :
 
-| **Property**                                                                       | **Type**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Propriété**                                                                      | **Type**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ---------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| components                                                                         | Collection                       | Collection of 4D.File objects to dependent components (must be already compiled)                                                                                                                                                                                                                                                                                                                                                                                       |
-| defaultTypeForButtons                                                              | Integer                          | Possible value: Is real or Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| defaultTypeForNumerics                                                             | Integer                          | Possible value: Is real or Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| generateSymbols                                                                    | Boolean                          | True to generate symbol information in the .symbols returned object                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| generateSyntaxFile                                                                 | Boolean                          | True to generate a [syntax file for code completion](../settings/general.md).md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project                                                                                                                                                                                                                                                                              |
+| components                                                                         | Collection                       | Collection d'objets 4D.File vers des composants dépendants (doit être déjà compilé)                                                                                                                                                                                                                                                                                                                                                                                    |
+| defaultTypeForButtons                                                              | Integer                          | Valeur possible : Is real ou Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| defaultTypeForNumerics                                                             | Integer                          | Valeur possible : Is real ou Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| generateSymbols                                                                    | Boolean                          | True pour générer des informations sur les symboles dans l'objet .symbols renvoyé                                                                                                                                                                                                                                                                                                                                                                                                         |
+| generateSyntaxFile                                                                 | Boolean                          | Vrai pour générer un [fichier de syntaxe pour la complétion de code](../settings/general.md#generate-syntax-file-for-code-completion-when-compiled) dans le dossier \\Resources\\en.lproj du projet                                                                                                                                                                                                                                                                                     |
 | generateTypingMethods                                                              | Text                             | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand.                                                                                                                                                                                                          |
 | plugins                                                                            | 4D.Folder object | Plug-ins folder to be used instead of the [Plugins folder of the current project](../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax.                                                                                                                                                                                                                                                                                     |
 | targets                                                                            | Collection de chaînes            | Possible values: "x86_64_generic", "arm64_macOS_lib". Pass an empty collection to execute syntax check only                                                                                                                                                                                                                                                                           |
@@ -76,7 +76,7 @@ The *options* parameter is an object. Here are the available compilation options
 
 The object returned by **Compile project** has up to three properties:
 
-| **Property**                                                                                                           | **Type**            | **Description**                                                                                                                          |
+| **Propriété**                                                                                                          | **Type**            | **Description**                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | success                                                                                                                | Boolean             | Vrai si la sauvegarde a été effectuée avec succès, sinon faux.                                                           |
 | errors                                                                                                                 | Collection d'objets | **Available only in case of error or warning**. Collection of objects describing compilation errors or warnings          |
@@ -107,7 +107,7 @@ For more information, see [Compilation tools](../Project/compiler.md#compilation
 
 `interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
 
-| **Property**   | **Type** | **Description**                                                                                           |
+| **Propriété**  | **Type** | **Description**                                                                                           |
 | -------------- | -------- | --------------------------------------------------------------------------------------------------------- |
 | name           | Text     | Name of the variable                                                                                      |
 | type           | number   | Type of the variable (like Value type command)                                         |
@@ -118,7 +118,7 @@ For more information, see [Compilation tools](../Project/compiler.md#compilation
 
 The `code` property in `methods.code` and `errors.code` is an object with the following properties:
 
-| **Property**   | **Type**                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Propriété**  | **Type**                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type           | Text                    | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) or evaluation of a formula in a 4D Write Pro document), "class", "classFunction", "formObjectExpression" (for errors occuring in expressions associated to form objects) |
 | path           | Text                    | Method path (same format as [METHOD OPEN PATH](../commands-legacy/method-open-path.md))                                                                                                                                                                                                                                                                                                                                                                                                                |
