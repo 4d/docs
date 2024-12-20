@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
 
-For a description of events, please refer to the [**Form Events**](../Events/overview.md) section.
+Para obter uma descrição dos eventos, consulte a seção [**Eventos formulário**](../Events/overview.md).
 
 #### Exemplo 1
 
