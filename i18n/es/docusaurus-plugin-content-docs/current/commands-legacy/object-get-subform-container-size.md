@@ -39,3 +39,4 @@ El evento On Resize se genera en el método formulario del subformulario si el o
 | Número de comando | 1148 |
 | Hilo seguro | &cross; |
 
+

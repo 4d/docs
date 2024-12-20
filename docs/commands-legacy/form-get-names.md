@@ -61,6 +61,7 @@ Examples of typical use:
 
 #### See also 
 
+*Forms*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
 
 #### Properties
@@ -69,4 +70,5 @@ Examples of typical use:
 | --- | --- |
 | Command number | 1167 |
 | Thread safe | &cross; |
+
 
