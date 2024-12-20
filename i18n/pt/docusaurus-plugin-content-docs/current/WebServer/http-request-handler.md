@@ -275,7 +275,7 @@ The **HTTPHandlers.json** file:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. It is received in the [`urlQuery`](../API/IncomingMessageClass.md#urlquery) object in the request.
+The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Ele é recebido no objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) na solicitação.
 
 ```4d
     //UploadFile class
