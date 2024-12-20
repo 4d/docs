@@ -40,7 +40,7 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 ## Form Class
 
-Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
+Nome de uma [classe usuário](../Concepts/classes.md#class-definition) existente para associar ao formulário. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className".
 
 Associating a class to the form provides the following benefits:
 
