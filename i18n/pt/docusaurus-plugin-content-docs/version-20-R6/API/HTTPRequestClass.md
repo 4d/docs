@@ -175,7 +175,7 @@ For the callback functions to be called when you do not use [`wait()`](#wait) (a
 
 #### objecto evento
 
-An `event` object is returned when a [callback function](#callback-functions) is called. Contém as seguintes propriedades:
+Um objeto `event` é retornado quando uma [função de retorno de chamada](#callback-functions) é chamada. Contém as seguintes propriedades:
 
 | Propriedade           | Tipo | Descrição                                                                                                                  |
 | --------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
