@@ -396,7 +396,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 - "RSA": um par de chaves RSA, usando `settings.size` como [.size](#size).
 - "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.
-- "PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
+- "PEM": uma definição de par chave em formato PEM, usando `settings.pem` como [.pem](#pem).
 
 <!-- REF CryptoKey.verify().Desc -->
 
