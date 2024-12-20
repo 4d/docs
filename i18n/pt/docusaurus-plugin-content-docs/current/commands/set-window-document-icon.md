@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 
-| Parâmetro | Tipo                                               |   | Descrição                |
-| --------- | -------------------------------------------------- | - | ------------------------ |
-| winRef    | Integer                                            | → | Window reference number  |
-| image     | Imagem                                             | → | Ícone personalizado      |
-| file      | 4D.File, 4D.Folder | → | File path or folder path |
+| Parâmetro | Tipo                                               |   | Descrição                              |
+| --------- | -------------------------------------------------- | - | -------------------------------------- |
+| winRef    | Integer                                            | → | Window reference number                |
+| image     | Imagem                                             | → | Ícone personalizado                    |
+| file      | 4D.File, 4D.Folder | → | Caminho do arquivo ou caminho da pasta |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 The `SET WINDOW DOCUMENT ICON` command <!--REF #_command_.SET WINDOW DOCUMENT ICON.Summary-->allows you to define an icon for windows in multi-window applications using either an *image* and/or *file* with the window reference *winRef*<!-- END REF-->. The icon will be visible within the window itself and on the windows taskbar to help users identify and navigate different windows.
 
-In the case of an MDI application on Windows, you can pass `-1` in *winRef* to set the icon of the main window. In other contexts (macOS or [SDI application](../Menus/sdi.md) on Windows), using -1 does nothing.
+In the case of an MDI application on Windows, you can pass `-1` in *winRef* to set the icon of the main window. Em outros contextos (macOS ou [aplicação SDI](../Menus/sdi.md) no Windows), usar -1 não faz nada.
 
 - If only *file* is passed, the window uses the icon corresponding to the file type and the file’s path is displayed in the window’s menu.
 - If only *image* is passed, 4D does not show the path and the passed image is used for the window icon.
