@@ -28,7 +28,7 @@ Basically in this mode, it's up to the developer to define how to authenticate u
 Este modo de autenticação é o mais flexível porque permite que você:
 
 - ou delegar a autenticação do usuário a um aplicativo de terceiros (por exemplo, uma rede social, SSO);
-- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del O importante é que você nunca armazene a senha de forma não protegida, usando esse código:
+- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del O importante é que você nunca armazene a senha de forma não protegida, usando esse código: O importante é que você nunca armazene a senha de forma não protegida, usando esse código:
 
 ```4d
 //... criar conta de usuário
