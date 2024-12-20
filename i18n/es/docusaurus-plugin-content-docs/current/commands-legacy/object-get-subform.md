@@ -47,4 +47,3 @@ Si no hay formulario listado, se devuelve una cadena vacía en el parámetro *su
 | Número de comando | 1139 |
 | Hilo seguro | &cross; |
 
-

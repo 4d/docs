@@ -63,7 +63,6 @@ Exemplos de usos típicos:
 
 #### Ver também 
 
-*Formulários*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
 
 #### Propriedades
@@ -72,5 +71,4 @@ Exemplos de usos típicos:
 | --- | --- |
 | Número do comando | 1167 |
 | Thread-seguro | &cross; |
-
 

@@ -222,7 +222,7 @@ GetLogo (size) -> logo
 
 ## Description
 
-Este método devuelve un logo de un tamaño específico, dependiendo del valor del parámetro *size*.
+This method returns a logo of a specific size, depending on the value of the *size* parameter.
 1 = tamaño más pequeño, 5 = tamaño más grande.
 
 ## Example

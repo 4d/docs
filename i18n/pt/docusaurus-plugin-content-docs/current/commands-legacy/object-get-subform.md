@@ -48,4 +48,3 @@ Se não houver formulário lista, uma string vazia é devolvida no parâmetro *s
 | Número do comando | 1139 |
 | Thread-seguro | &cross; |
 
-

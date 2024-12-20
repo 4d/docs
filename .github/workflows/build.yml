@@ -13,6 +13,3 @@ jobs:
     uses: ./.github/workflows/workflow-syntax-check.yml
   workflow-build:
     uses: ./.github/workflows/workflow-build.yml
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-      cancel-in-progress:  true

@@ -61,7 +61,6 @@ Exemples d’utilisations type :
 
 #### Voir aussi 
 
-*Formulaires*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
 
 #### Propriétés
@@ -70,5 +69,4 @@ Exemples d’utilisations type :
 | --- | --- |
 | Numéro de commande | 1167 |
 | Thread safe | &cross; |
-
 

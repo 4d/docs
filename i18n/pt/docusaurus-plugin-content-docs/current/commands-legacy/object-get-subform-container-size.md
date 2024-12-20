@@ -39,5 +39,3 @@ O evento On Resize é gerado no método formulario de subformulário se o objeto
 | --- | --- |
 | Número do comando | 1148 |
 | Thread-seguro | &cross; |
-
-
