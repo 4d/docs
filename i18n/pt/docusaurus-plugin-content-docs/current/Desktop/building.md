@@ -107,7 +107,7 @@ The _MyComponent.4dbase_ folder is the [package folder of the compiled component
 
 The _Contents_ folder contains:
 
-- _MyComponent.4DZ_ file - the [compiled structure](#build-compiled-structure).
+- arquivo _MyComponent.4DZ_ - a [estrutura compilada](#build-compiled-structure).
 - Uma pasta _Resources_ - quaisquer Recursos associados são automaticamente copiados para esta pasta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
 - An _Info.plist_ file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). The following [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) are prefilled:
   - `CFBundleDisplayName` and `CFBundleName` for the application name,
