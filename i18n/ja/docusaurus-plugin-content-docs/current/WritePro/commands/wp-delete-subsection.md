@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | 引数             | 型       |   | 説明                                                                                 |
 | -------------- | ------- | - | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | → | 4D Write Pro section                                                               |
+| wpSection      | Object  | → | 4D Write Pro セクション                                                                 |
 | subSectionType | Integer | → | Subsection type (wk first page, wk left page, or wk right page) |
 | subSection     | Object  | → | 4D Write Pro subsection                                                            |
 
