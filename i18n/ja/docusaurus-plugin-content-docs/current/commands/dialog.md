@@ -69,7 +69,7 @@ displayed_sidebar: docs
 
 **注:**
 
-- You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](../commands-legacy/call-form.md) command to establish communication between the forms.
+- **DIALOG**(form;\*) シンタックスと[CALL FORM](../commands-legacy/call-form.md) コマンドを組み合わせることによってフォーム間で通信をすることができます。
 - **DIALOG**(form;\*) ステートメントの前に、あらかじめウィンドウが作成されている必要があります。 プロセスのカレントダイアログウィンドウや、各プロセスにデフォルトで作成されるウィンドウは使用できません。 でなければ、エラー -9909 が生成されます。 プロセスのカレントダイアログウィンドウや、各プロセスにデフォルトで作成されるウィンドウは使用できません。 でなければ、エラー -9909 が生成されます。
 - オプションの *\** 引数を使用する場合、標準アクションまたは[CANCEL](../commands-legacy/cancel.md) コマンドや[ACCEPT](../commands-legacy/accept.md) コマンドを呼び出すと、ウィンドウは自動的に閉じられます。 ウィンドウ自身の終了を管理する必要はありません。 ウィンドウ自身の終了を管理する必要はありません。 ウィンドウ自身の終了を管理する必要はありません。 ウィンドウ自身の終了を管理する必要はありません。
 
@@ -179,8 +179,8 @@ displayed_sidebar: docs
 
 #### プロパティ
 
-|                    |                                             |
-| ------------------ | ------------------------------------------- |
-| Command number     | 40                                          |
-| Thread safe        | &amp;amp;amp;amp;cross; |
-| Modifies variables | OK, error                                   |
+|            |                                             |
+| ---------- | ------------------------------------------- |
+| コマンド番号     | 40                                          |
+| スレッドセーフである | &amp;amp;amp;amp;cross; |
+| 更新するシステム変数 | OK, error                                   |
