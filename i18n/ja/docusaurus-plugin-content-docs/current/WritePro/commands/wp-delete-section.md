@@ -9,20 +9,20 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
-| 引数          | 型       |   | 説明                                 |
-| ----------- | ------- | - | ---------------------------------- |
-| section     | Object  | → | 4D Write Pro section               |
-| wpDoc       | Object  | → | 4D Write Pro document              |
-| indexNumber | Integer | → | Index of the section to be deleted |
-| count       | Integer | → | Number of sections to be deleted   |
+| 引数          | 型       |   | 説明                  |
+| ----------- | ------- | - | ------------------- |
+| section     | Object  | → | 4D Write Pro セクション  |
+| wpDoc       | Object  | → | 4D Write Pro ドキュメント |
+| indexNumber | Integer | → | 削除するセクションのインデックス    |
+| count       | Integer | → | 削除するセクションの数         |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP DELETE SECTION** command <!--REF #_command_.WP DELETE SECTION.Summary-->deletes the passed *section* object, or deletes one or more sections starting at  *indexNumber* and depending on the *count* passed<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
+**WP DELETE SECTION** コマンドは<!--REF #_command_.WP DELETE SECTION.Summary-->*section* 引数に渡されたオブジェクトのセクションを削除します。または、*indexNumber* 引数で指定されたセクションから*count* 引数で指定された個数分だけ1つ以上のセクションを削除します。<!-- END REF-->. セクションが削除されると、ヘッダー、フッター、本文の一部、アンカーされた画像、テキストボックス、終了セクションブレーク(セクションブレークまたは継続的なセクションブレークかに関わらず)など、そのセクションに関連づけられていたものも削除されます。
 
-An error is raised if the **WP DELETE SECTION** command requests to delete all sections or if the document contains only one section.
+**WP DELETE SECTION** コマンドを使用して全てのセクションを削除しようとした場合、あるいはドキュメントにセクションが1つしか含まれていないような場合にはエラーが発生します。
 
 **WP DELETE SECTION** re-indexes the anchorSection attribute of text boxes and pictures to adjust their anchors to their sections after changes. For example, if a document has four sections and the second section is deleted, sections 3 and 4 will become sections 2 and 3 and text boxes and pictures that were previously anchored to sections 3 and 4 will now be anchored to sections 2 and 3.
 
