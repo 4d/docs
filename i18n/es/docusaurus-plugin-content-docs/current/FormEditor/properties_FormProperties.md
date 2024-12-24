@@ -53,7 +53,7 @@ Asociar una clase al formulario ofrece las siguientes ventajas:
 
 - También puede beneficiarse de las [funciones de autocompletado](../code-editor/write-class-method.md#autocomplete-functions) en el editor de código.
 
-- Cuando se ejecuta el formulario, 4D instancia automáticamente un objeto clase usuario para el formulario, que es devuelto por el objeto [`Form`](../commands/form.md). Su código puede acceder directamente a las funciones de clase definidas en la clase usuario a través del comando `Form` (por ejemplo `Form.message()`) sin tener que pasar un objeto _formData_ como parámetro a los comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), o [`FORM LOAD`](../commands/form-load.md).
+- Cuando se ejecuta el formulario, 4D instancia automáticamente un objeto clase usuario para el formulario, que es devuelto por el objeto [`Form`](../commands/form.md). Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a _formData_ object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), or [`FORM LOAD`](../commands/form-load.md) commands.
 
 :::note
 
