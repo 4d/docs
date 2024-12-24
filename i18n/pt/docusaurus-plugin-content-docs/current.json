@@ -512,7 +512,7 @@
     "description": "The generated-index page title for category Language in sidebar docs"
   },
   "sidebar.docs.category.4D Environment": {
-    "message": "4D Environment",
+    "message": "Ambiente 4D",
     "description": "The label for category 4D Environment in sidebar docs"
   },
   "sidebar.docs.category.Arrays": {
@@ -704,7 +704,7 @@
     "description": "The label for category SVG in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol": {
-    "message": "Secured Protocol",
+    "message": "Protocolo seguro",
     "description": "The label for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection": {

@@ -32,7 +32,7 @@ In *id*, pass the UUID of the session for which you want to get the storage. It 
 
 **Note:** You can get the session identifiers using the [Process activity](process-activity.md) command.
 
-The returned object is the [**.storage**](../API/SessionClass.md#storage) property of the session. It is a shared object used to store information available to all processes of the session.
+O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session.
 
 #### Exemplo
 

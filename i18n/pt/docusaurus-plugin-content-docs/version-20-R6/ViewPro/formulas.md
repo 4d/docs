@@ -221,7 +221,7 @@ If you do not declare parameters, values can be sequentially passed to methods (
 
 Os parâmetros Date e Object são tratados da seguinte maneira:
 
-- Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+- As datas em *jstype* serão passadas como [objeto](Concepts/dt_object.md) no código 4D com duas propriedades:
 
 | Propriedade | Tipo | Descrição         |
 | ----------- | ---- | ----------------- |
@@ -239,12 +239,12 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
 - [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
-- [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
+- [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido em número no 4D View Pro)
 - [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
 - [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
 - [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
-- [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
+- [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
   | Propriedade | Tipo | Descrição         |
   | ----------- | ---- | ----------------- |

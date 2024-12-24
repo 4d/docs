@@ -166,7 +166,7 @@ Definido somente para chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nome 
 
 <!-- END REF -->
 
-A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descriptografa o parâmetro *message* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->criptografa o parâmetro *message* usando a chave **pública**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -216,7 +216,7 @@ Caso a *mensagem* não possa ser descriptografada porque não foi criptografada 
 
 <!-- END REF -->
 
-A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->criptografa o parâmetro *message* usando a chave **pública**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descriptografa o parâmetro *message* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 

@@ -38,7 +38,7 @@ L'objet retourné contient les propriétés suivantes :
 | name             | Text                                    | Nom du process                                                                   |
 | number           | Integer                                 | Process number                                                                   |
 | preemptive       | Boolean                                 | True if run preemptive, false otherwise                                          |
-| sessionID        | Text                                    | Session UUID                                                                     |
+| sessionID        | Text                                    | UUID de la session                                                               |
 | state            | Integer                                 | Current status. Possible values: see below       |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
 | type             | Integer                                 | Running process type. Possible values: see below |
@@ -122,7 +122,7 @@ L'objet retourné contient les propriétés suivantes :
 
 :::
 
-Here is an example of output object:
+Voici un exemple d'objet de sortie :
 
 ```json
 

@@ -59,38 +59,38 @@ For more information, please refer to the *Page subforms* section.
 
 **Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
-| **Property** | **Type** | **Description**                           |
-| ------------ | -------- | ----------------------------------------- |
-| parentForm   | object   | **Form** object of the parent output form |
+| **Propriété** | **Type** | **Description**                           |
+| ------------- | -------- | ----------------------------------------- |
+| parentForm    | object   | **Form** object of the parent output form |
 
 #### Exemple
 
-In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
+Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
 ![](../assets/en/commands/pict3542015.en.png)
 
-**Note:** The "Children" object field is represented only to show its structure for this example.
+**Note :** Le champ objet "enfants" est représenté uniquement dans cet exemple afin de faire apparaître sa structure.
 
 In the verification form, you have assigned some Form object properties to inputs:
 
 ![](../assets/en/commands/pict3541682.en.png)
 
-Here is the code for the "Check children" button:
+Voici le code du bouton "Check Children" :
 
 ```4d
  var $win;$n;$i : Integer
  var $save : Boolean
  ARRAY OBJECT($children;0)
- OB GET ARRAY([Person]Children;"children";$children) //get the children collection
- $save:=False //initialize the save variable
+ OB GET ARRAY([Person]Children ; "children" ;$children) //obtient la collection d'enfants
+ $save:=False //initialise la variable de sauvegarde
  
  $n:=Size of array($children)
  If($n>0)
     $win:=Open form window("Edit_Children";Movable form dialog box)
-    SET WINDOW TITLE("Check children for "+[Person]Name)
-    For($i;1;$n) //for each child
-       DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-       If(OK=1) //the user clicked OK
+    SET WINDOW TITLE("Vérifier les enfants pour "+[Person]Name")
+    For($i;1 ;$n) //pour chaque enfant
+       DIALOG("Edit_Children" ;$children{$i}) //affiche la boîte de dialogue remplie de valeurs
+       If(OK=1) //l'utilisateur a cliqué sur OK
           $save:=True
        End if
     End for
@@ -103,11 +103,11 @@ Here is the code for the "Check children" button:
  End if
 ```
 
-The form displays information for each child:
+Le formulaire affiche des informations pour chaque enfant :
 
 ![](../assets/en/commands/pict3515152.en.png)
 
-If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards).
+Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 
 #### Voir également
 

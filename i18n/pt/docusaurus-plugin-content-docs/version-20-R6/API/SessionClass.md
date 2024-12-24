@@ -448,18 +448,18 @@ The `.info` object is the same object as the one returned by the [`Get process a
 
 The `.info` object contains the following properties:
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                 |
-| ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Tipo de sessão: "remote" ou "storedProcedure"                                                                                             |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                        |
-| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor |
-| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                      |
-| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                             |
-| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                          |
-| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão                                                                                                                          |
-| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                          |
-| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                          |
-| persistentID     | Text          | ID persistente da sessão                                                                                                                                  |
+| Propriedade      | Tipo          | Descrição                                                                                                                                         |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Tipo de sessão: "remote" ou "storedProcedure"                                                                                     |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                |
+| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessões remotas: nome da máquina remota. |
+| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                              |
+| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                     |
+| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                  |
+| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão                                                                                                                  |
+| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                  |
+| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                  |
+| persistentID     | Text          | ID persistente da sessão                                                                                                                          |
 
 :::note
 
@@ -569,7 +569,7 @@ Os privilégios e as funções são definidos no arquivo [`roles.json`](../ORDA/
 
 If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
 
-By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
+Como padrão quando não houver um privilégio associado à sessão, a sessão é uma [Sessão de convidados](#isguest).
 
 A propriedade [`userName`](#username) está disponível no nível do objeto de sessão (somente leitura).
 

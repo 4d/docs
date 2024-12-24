@@ -101,7 +101,7 @@ The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D W
 
 <!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
+The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
 <!-- END REF -->
 
@@ -133,7 +133,7 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - 192.168.\*
   - 192.168.\*:8081
   - <http://192.168.5.17:8081>
-  - <http://\\*.myDomain.com>
+  - <http://\\\\\*.myDomain.com>
   - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com

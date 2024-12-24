@@ -10,7 +10,7 @@ Esta propriedade só está disponível para os list box com as seguintes [fontes
 - collection ou entity selection,
 - array (não hierárquico).
 
-A propriedade não está selecionada por padrão. Note that only columns with the option selected will be taken into account to calculate the row height. Note that only columns with the option selected will be taken into account to calculate the row height.
+A propriedade não está selecionada por padrão. Quando usado para pelo menos uma coluna, a altura de cada linha na coluna será automaticamente calculada por 4D, e o conteúdo da coluna será levado em consideração. Note that only columns with the option selected will be taken into account to calculate the row height.
 
 :::note
 
@@ -122,11 +122,11 @@ Coordenada superior do objecto no formulário.
 
 </details>
 
-Defines the corner roundness (in pixels) of the object. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+Define o arredondamento do canto (em pixels) do objeto. Por padrão, o valor do raio é 0 pixels. Você pode alterar essa propriedade para desenhar objetos arredondados com formas personalizadas:
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 
-Minimum value is 0, in this case a standard non-rounded rectangle is drawn.
+O valor mínimo é 0; nesse caso, um retângulo de objeto padrão não arredondado é desenhado.
 Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
 
 :::note

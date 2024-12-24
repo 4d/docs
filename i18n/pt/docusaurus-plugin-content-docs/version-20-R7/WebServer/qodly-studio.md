@@ -136,7 +136,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | Linguagem de programação                                                                | Linguagem 4D com ORDA                                                                                                                                                                                                 | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) apresentando ORDA |
 | IDE de codificação                                                                      | 4D IDE code editor *or* VS Code with [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode)<br/>*4D Server only*: Qodly Studio code editor (see (2)) | Editor de código Qodly Studio                                                          |
 | Depurador                                                                               | 4D IDE debugger<br/>*4D Server only*: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                             | Depurador Qodly Studio                                                                 |
-| REST/Web roles and privileges                                                           | roles.json direct edit/Qodly Studio roles and privileges editor                                                                                                                                       | Qodly Studio role and privileges editor                                                |
+| Funções e privilégios REST/Web                                                          | roles.json direct edit/Qodly Studio roles and privileges editor                                                                                                                                       | Qodly Studio role and privileges editor                                                |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
 (2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
@@ -163,7 +163,7 @@ Recomendamos o uso de funções classe em vez de métodos projeto. Apenas as fun
 You can develop with Qodly Studio while your computer is not connected to the internet. Nesse caso, entretanto, os seguintes recursos não estão disponíveis:
 
 - [Templates](https://developer.qodly.com/docs/studio/pageLoaders/templates): the Template library is empty
-- UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
+- Dicas da UI: elas não são exibidas quando você clica ![alt-text](../assets/en/WebServer/tips.png).
 
 ## Implantação
 
@@ -251,7 +251,7 @@ To detach the Qodly Studio debugger from your running 4D Server application:
 
 ## Force login
 
-With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
+With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. Você também pode fazer [desconectar](#logout) o usuário a qualquer momento para diminuir o número de licenças retidas.
 
 ### Configuração
 

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 | Release | Modifications                                                             |
 | ------- | ------------------------------------------------------------------------- |
-| 20 R8   | Support of standalone sessions                                            |
+| 20 R8   | Prise en charge des sessions autonomes                                    |
 | 20 R5   | Prise en charge des sessions utilisateurs distants et procédures stockées |
 | 18 R6   | Ajout                                                                     |
 

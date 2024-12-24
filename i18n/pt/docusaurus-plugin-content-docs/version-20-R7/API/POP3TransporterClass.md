@@ -101,7 +101,7 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->flags the *msgNumber* email for deletion from the POP3 server<!-- END REF -->.
 
-No parâmetro *msgNumber*, passe o número do email a apagar. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
+No parâmetro *msgNumber*, passe o número do email a apagar. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
 Executar esse método não remove de verdade qualquer email. The flagged email will be deleted from the POP3 server only when the `POP3_transporter` object (created with `POP3 New transporter`) is destroyed. A marcação pode ser removida com o método `.undeleteAll()`.
 
@@ -265,7 +265,7 @@ Se quiser saber o emissário do primeiro email da mailbox:
 
 The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summary -->returns a `mailInfo` object corresponding  corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o email.
 
-In *msgNumber*, pass the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
+In *msgNumber*, pass the number of the message to retrieve. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
 The `mailInfo` object returned contains the following properties:
 
@@ -390,7 +390,7 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 The `.getMIMEAsBlob()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* in the mailbox designated by the [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
 
-In *msgNumber*, pass the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
+In *msgNumber*, pass the number of the message to retrieve. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
 O método retorna uma BLOB vazia se:
 

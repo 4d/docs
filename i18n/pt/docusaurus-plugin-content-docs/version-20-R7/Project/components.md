@@ -42,7 +42,7 @@ Os componentes declarados no arquivo **dependencies.json** podem ser armazenados
 - em qualquer lugar de sua máquina: o caminho do componente deve ser declarado no arquivo **environment4d.json**
 - em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
 
-If the same component is installed at different locations, a [priority order](#priority) is applied.
+Se o mesmo componente for instalado em locais diferentes, uma [ordem de prioridade](#prioridade) é aplicada.
 
 ### dependencies.json e environment4d.json
 
@@ -150,7 +150,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 #### Caminhos relativos versus caminhos absolutos
 
-Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
+Os caminhos são expressos na sintaxe POSIX, conforme descrito em [este parágrafo](../Concepts/paths#posix-syntax).
 
 Os caminhos relativos são relativos ao arquivo [`environment4d.json`](#environment4djson). Absolute paths are linked to the user's machine.
 

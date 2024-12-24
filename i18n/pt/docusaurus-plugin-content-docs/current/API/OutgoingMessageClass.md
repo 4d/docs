@@ -34,7 +34,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	return $result
 ```
 
-### OutgoingMessage Object
+### Objeto OutgoingMessage
 
 4D.OutgoingMessage objects provide the following properties and functions:
 
@@ -132,10 +132,10 @@ If *body* is not of a supported value type, an error is returned.
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
-| Parâmetro | Tipo |    | Descrição                    |
-| --------- | ---- | -- | ---------------------------- |
-| \|        | Text | -> | Header property to set       |
-| value     | Text | -> | Value of the header property |
+| Parâmetro | Tipo |    | Descrição                             |
+| --------- | ---- | -- | ------------------------------------- |
+| \|        | Text | -> | Propriedade de cabeçalho para definir |
+| value     | Text | -> | Value of the header property          |
 
 <!-- END REF -->
 

@@ -59,7 +59,7 @@ Para definir o anexo, pode utilizar:
 - um *blob*, passe um objeto `4D.Blob` contendo o próprio anexo.
 - se usar *path*, passe um valor **text** contendo a rota do arquivo anexo, expresso com a sintaxe sistema. Pode passar um nome de rota completo ou um nome de arquivo simples (em cujo caso 4D vai pesquisar para o arquivo no mesmo diretório como o arquivo projeto).
 
-The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. Se *name* for omitido e:
+Pode passar uma rota ou um Blob para definir o anexo. Se *name* for omitido e:
 
 - passar uma rota de arquivo, o nome e extensão do arquivo é usado,
 - passar um BLOB, um nome aleatório sem extensão é gerado automaticamente.

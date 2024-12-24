@@ -50,7 +50,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 #### Descrição
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command (shortcut).
+The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. Ele é idêntico ao comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (atalho).
 
 ## .cid
 

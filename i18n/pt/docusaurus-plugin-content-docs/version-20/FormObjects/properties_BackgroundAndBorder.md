@@ -38,7 +38,7 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 #### Objectos suportados
 
-[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 #### Veja também
 
@@ -205,7 +205,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 
 ## Transparente
 
-Define o fundo do list box como "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
+Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de fundo alternativa](#alternate-background-color) ou [cor de fundo](#background-color--fill-color) definida para a coluna é ignorada.
 
 #### Gramática JSON
 
