@@ -3,9 +3,9 @@ id: components
 title: コンポーネント
 ---
 
-4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
+4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
-独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\&type=Repositories) ダウンロードすることもできます。
+独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\\&type=Repositories) ダウンロードすることもできます。
 
 4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
 
@@ -14,7 +14,7 @@ title: コンポーネント
 Components can be interpreted or [compiled](../Desktop/building.md).
 
 - インタープリターモードで動作する 4Dプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。
-- コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。 この場合、コンパイル済みコンポーネントのみが利用可能です。
+- コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。 この場合、コンパイル済みコンポーネントのみが利用可能です。 この場合、コンパイル済みコンポーネントのみが利用可能です。
 
 ### Package folder
 
@@ -35,7 +35,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 :::note
 
-このページでは、**4D** と **4D Server** 環境でのコンポーネントの使用方法について説明します。 他の環境では、コンポーネントの管理は異なります: 他の環境では、コンポーネントの管理は異なります:
+このページでは、**4D** と **4D Server** 環境でのコンポーネントの使用方法について説明します。 他の環境では、コンポーネントの管理は異なります: 他の環境では、コンポーネントの管理は異なります: 他の環境では、コンポーネントの管理は異なります:
 
 - [リモートモードの 4D](../Desktop/clientServer.md) では、サーバーがコンポーネントを読み込み、リモートアプリケーションに送信します。
 - 統合されたアプリケーションでは、コンポーネントは [ビルドする際に組み込まれます](../Desktop/building.md#プラグインコンポーネントページ)。
@@ -61,7 +61,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 #### dependencies.json
 
-**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを宣言します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
+**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを宣言します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -167,7 +167,7 @@ flowchart TB
 
 パスは、POSIXシンタックスで表します ([POSIXシンタックス](../Concepts/paths#posix-シンタックス) 参照)。
 
-相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。
+相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。
 
 コンポーネントアーキテクチャーの柔軟性と移植性のため、ほとんどの場合、相対パスを使用することが **推奨** されます (特に、プロジェクトがソース管理ツールにホストされている場合)。
 
@@ -226,7 +226,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば:
 
 ```json
 {
@@ -239,7 +239,7 @@ When a release is created in GitHub, it is associated to a **tag** and a **versi
 }
 ```
 
-- リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 The versioning system used is based on the [_Semantic Versioning_](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
+- リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 The versioning system used is based on the [_Semantic Versioning_](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
 
 ```json
 {
@@ -288,7 +288,7 @@ You then need to [provide your connection token](#providing-your-github-access-t
 
 #### 依存関係のローカルキャッシュ
 
-参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます:
+参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます:
 
 - macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
@@ -386,11 +386,11 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ### ローカルな依存関係の追加
 
-ローカルな依存関係を追加するには、パネルのフッターエリアにある **+** ボタンをクリックします。 次のようなダイアログボックスが表示されます: 次のようなダイアログボックスが表示されます:
+ローカルな依存関係を追加するには、パネルのフッターエリアにある **+** ボタンをクリックします。 次のようなダイアログボックスが表示されます: 次のようなダイアログボックスが表示されます: 次のようなダイアログボックスが表示されます:
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 [**.4DZ**](../Desktop/building.md#コンポーネントをビルド) または [**.4DProject**](architecture.md#applicationname4dproject-ファイル) ファイルを選択できます。
+**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 [**.4DZ**](../Desktop/building.md#コンポーネントをビルド) または [**.4DProject**](architecture.md#applicationname4dproject-ファイル) ファイルを選択できます。
 
 選択した項目が有効であれば、その名前と場所がダイアログボックスに表示されます。
 
@@ -401,7 +401,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 プロジェクトに依存関係を追加するには、**追加** をクリックします。
 
 - プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で宣言されます。
-- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
+- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
 
 :::note
 
@@ -417,11 +417,11 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
-依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
+依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
-接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
+接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
 
 :::note
 
@@ -433,7 +433,7 @@ Define the [dependency version range](#tags-and-versions) to use for this projec
 
 プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
 
-すると、GitHub 依存関係は [**dependencies.json**](#dependenciesjson) ファイルに宣言され、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+すると、GitHub 依存関係は [**dependencies.json**](#dependenciesjson) ファイルに宣言され、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。
 
 #### Defining a GitHub dependency version range
 
@@ -540,21 +540,21 @@ To provide your GitHub access token, you can either:
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-パーソナルアクセストークンは 1つしか入力できません。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。
+パーソナルアクセストークンは 1つしか入力できません。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。
 
 The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
 ### 依存関係の削除
 
-依存関係パネルから依存関係を削除するには、対象の依存関係を選択し、パネルの **-** ボタンをクリックするか、コンテキストメニューから **依存関係の削除...** を選択します。 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。
+依存関係パネルから依存関係を削除するには、対象の依存関係を選択し、パネルの **-** ボタンをクリックするか、コンテキストメニューから **依存関係の削除...** を選択します。 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。
 
 :::note
 
-依存関係パネルを使用して削除できるのは、[**dependencies.json**](#dependenciesjson) ファイルで宣言されている依存関係に限られます。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。
+依存関係パネルを使用して削除できるのは、[**dependencies.json**](#dependenciesjson) ファイルで宣言されている依存関係に限られます。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。
 
 :::
 
-確認用のダイアログボックスが表示されます。 確認用のダイアログボックスが表示されます。 依存関係が **environment4d.json** ファイルで宣言されている場合、以下のオプションでそれを削除することができます:
+確認用のダイアログボックスが表示されます。 確認用のダイアログボックスが表示されます。 確認用のダイアログボックスが表示されます。 依存関係が **environment4d.json** ファイルで宣言されている場合、以下のオプションでそれを削除することができます:
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
