@@ -32,3 +32,12 @@ Macintosh上
 
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 490 |
+| スレッドセーフである | &check; |
+
+

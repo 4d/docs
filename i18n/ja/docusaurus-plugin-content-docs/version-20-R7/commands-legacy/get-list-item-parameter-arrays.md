@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->**GET LIST ITEM PARAMETER ARRAYS**コマンドは*list* 引数で指定した参照またはオブジェクト名を持つ階層リスト中で、*itemRef* で指定した項目に割り当てられたパラメーター (およびその値) を一回の呼び出しで取り出すことができます。<!-- END REF-->
@@ -77,3 +74,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1195 |
+| スレッドセーフである | &cross; |
+
+

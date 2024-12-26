@@ -43,3 +43,12 @@ Vous voulez connaître le statut courant de transaction :
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspendre des transactions*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1387 |
+| Thread safe | &check; |
+
+

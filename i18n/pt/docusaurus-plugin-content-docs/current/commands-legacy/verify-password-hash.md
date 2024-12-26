@@ -53,3 +53,12 @@ Este exemplo verifica um hash de senha previamente criado por [Generate password
 
   
 [Generate password hash](generate-password-hash.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1534 |
+| Thread-seguro | &check; |
+
+

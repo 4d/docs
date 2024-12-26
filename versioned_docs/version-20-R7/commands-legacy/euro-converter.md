@@ -78,3 +78,13 @@ Here are some examples of conversions that can be done with this command:
   //Convert the value into Italian Lire
  $InLires:=Euro converter($value;French Franc;Italian Lire)
 ```
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 676 |
+| Thread safe | &check; |
+
+

@@ -35,3 +35,12 @@ Although the **ABORT** command is intended to be used only from within a error-h
 #### See also 
 
 [ON ERR CALL](on-err-call.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 156 |
+| Thread safe | &check; |
+
+

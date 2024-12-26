@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->La commande **Dynamic pop up menu** fait apparaître un pop up menu hiérarchique à l’emplacement courant de la souris ou à l’emplacement défini par les paramètres facultatifs *coordX* et *coordY*.<!-- END REF-->  
@@ -93,3 +90,12 @@ Ce code permet de créer un pop up menu dynamique hiérarchique, construit sur l
 [Pop up menu](pop-up-menu.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1006 |
+| Thread safe | &cross; |
+
+

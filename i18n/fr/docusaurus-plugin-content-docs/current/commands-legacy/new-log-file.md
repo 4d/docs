@@ -30,3 +30,14 @@ Le fichier est renommé avec les numéros de sauvegarde courants de la base et d
 
 En cas d'anomalie, la commande génère une erreur que vous pouvez intercepter à l’aide de la commande [ON ERR CALL](on-err-call.md).
 
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 926 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

@@ -35,7 +35,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 | Parâmetros                                   | Valor | Comentário                                                                     |
 | -------------------------------------------- | ----- | ------------------------------------------------------------------------------ |
 | `Web server database`                        | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
-| `<a href="#keepsession">.keepSession</a>`    | 2     | Servidor Web do banco de dados de host de um componente                        |
+| Parâmetros                                   | 2     | Servidor Web do banco de dados de host de um componente                        |
 | `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
 
 The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).

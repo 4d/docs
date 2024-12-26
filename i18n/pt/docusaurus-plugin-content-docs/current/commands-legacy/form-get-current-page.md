@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM Get current page.Summary-->O comando **FORM Get current page** retorna o número da página atual do formulário mostrado atualmente ou do formulário atual carregado via o comando [FORM LOAD](../commands/form-load.md).<!-- END REF--> 
@@ -70,3 +67,12 @@ Em um formulário, se seleciona um comando de menu da barra de menu ou quando o 
 [LAST PAGE](last-page.md)  
 [NEXT PAGE](next-page.md)  
 [PREVIOUS PAGE](previous-page.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 276 |
+| Thread-seguro | &cross; |
+
+

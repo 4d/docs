@@ -33,3 +33,12 @@ Para maiores informações sobre componentes 4D, por favor consulte o Manual de 
 #### Ver também 
 
 [PLUGIN LIST](plugin-list.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1001 |
+| Thread-seguro | &check; |
+
+

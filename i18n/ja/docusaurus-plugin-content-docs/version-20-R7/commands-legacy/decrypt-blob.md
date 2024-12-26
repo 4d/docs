@@ -34,3 +34,12 @@ DECRYPT BLOBコマンドは、（意図的かどうかに関わらず）BLOB内�
 
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 690 |
+| スレッドセーフである | &check; |
+
+

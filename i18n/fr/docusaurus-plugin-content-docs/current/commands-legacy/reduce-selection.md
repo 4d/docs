@@ -58,3 +58,14 @@ L'exemple suivant établit des statistiques pour une compétition mondiale parmi
 *Présentation des ensembles*  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 351 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+
+

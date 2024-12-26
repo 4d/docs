@@ -90,7 +90,7 @@ title: Índice
 
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
 [`Call chain`](../commands-legacy/call-chain.md)<br/>
-[`CALL FORM`](call-form.md)<br/>
+[`CALL FORM`](../commands-legacy/call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>
 [`CALL WORKER`](../commands-legacy/call-worker.md)<br/>
 [`CANCEL`](../commands-legacy/cancel.md)<br/>
@@ -279,7 +279,7 @@ title: Índice
 [`Euro converter`](../commands-legacy/euro-converter.md)<br/>
 [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md)<br/>
 [`EXECUTE METHOD`](../commands-legacy/execute-method.md)<br/>
-[`EXECUTE METHOD IN SUBFORM`](execute-method-in-subform.md)<br/>
+[`EXECUTE METHOD IN SUBFORM`](../commands-legacy/execute-method-in-subform.md)<br/>
 [`EXECUTE ON CLIENT`](../commands-legacy/execute-on-client.md)<br/>
 [`Execute on server`](../commands-legacy/execute-on-server.md)<br/>
 [`Exp`](../commands-legacy/exp.md)<br/>
@@ -657,7 +657,7 @@ title: Índice
 [`METHOD GET NAMES`](../commands-legacy/method-get-names.md)<br/>
 [`METHOD Get path`](../commands-legacy/method-get-path.md)<br/>
 [`METHOD GET PATHS`](../commands-legacy/method-get-paths.md)<br/>
-[`METHOD GET PATHS FORM`](method-get-paths-form.md)<br/>
+[`METHOD GET PATHS FORM`](../commands-legacy/method-get-paths-form.md)<br/>
 [`METHOD OPEN PATH`](../commands-legacy/method-open-path.md)<br/>
 [`METHOD RESOLVE PATH`](../commands-legacy/method-resolve-path.md)<br/>
 [`METHOD SET ACCESS MODE`](../commands-legacy/method-set-access-mode.md)<br/>
@@ -756,7 +756,7 @@ title: Índice
 [`OBJECT GET SCROLLBAR`](../commands-legacy/object-get-scrollbar.md)<br/>
 [`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md)<br/>
 [`OBJECT Get style sheet`](../commands-legacy/object-get-style-sheet.md)<br/>
-[`OBJECT GET SUBFORM`](object-get-subform.md)<br/>
+[`OBJECT GET SUBFORM`](../commands-legacy/object-get-subform.md)<br/>
 [`OBJECT GET SUBFORM CONTAINER SIZE`](../commands-legacy/object-get-subform-container-size.md)<br/>
 [`OBJECT Get subform container value`](../commands-legacy/object-get-subform-container-value.md)<br/>
 [`OBJECT Get text orientation`](../commands-legacy/object-get-text-orientation.md)<br/>
@@ -802,7 +802,7 @@ title: Índice
 [`OBJECT SET SCROLLBAR`](../commands-legacy/object-set-scrollbar.md)<br/>
 [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)<br/>
 [`OBJECT SET STYLE SHEET`](../commands-legacy/object-set-style-sheet.md)<br/>
-[`OBJECT SET SUBFORM`](object-set-subform.md)<br/>
+[`OBJECT SET SUBFORM`](../commands-legacy/object-set-subform.md)<br/>
 [`OBJECT SET SUBFORM CONTAINER VALUE`](../commands-legacy/object-set-subform-container-value.md)<br/>
 [`OBJECT SET TEXT ORIENTATION`](../commands-legacy/object-set-text-orientation.md)<br/>
 [`OBJECT SET THREE STATES CHECKBOX`](../commands-legacy/object-set-three-states-checkbox.md)<br/>

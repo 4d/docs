@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->**Tema:** Acceso objetos diseño
@@ -58,3 +55,12 @@ Usted desea modificar un solo atributo:
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1335 |
+| Hilo seguro | &cross; |
+
+

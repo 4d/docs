@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->The ARRAY TO LIST command creates or replaces the hierarchical list or the choice list (created in the List editor) that is specified in *list* using the elements of the array *array.<!-- END REF-->*
@@ -63,3 +60,13 @@ An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is c
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 287 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

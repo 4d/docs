@@ -22,7 +22,7 @@ Custom HTTP Request handlers are supported:
 - when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
-## HTTPHandlers.json File
+## Arquivo HTTPHandlers.json
 
 You define your custom HTTP Request handlers in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
 
@@ -234,7 +234,7 @@ The HTTP Request handler code must be implemented in a function of a [**Shared**
 
 If the singleton is missing or not shared, an error "Cannot find singleton" is returned by the server. If the class or the function [defined as handler](#handler-definition) in the HTTPHandlers.json file is not found, an error "Cannot find singleton function" is returned by the server.
 
-Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. In this case, you need to declare its functions with the [`shared` keyword](../Concepts/classes.md#shared-functions).
+Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. Nesse caso, você precisa declarar suas funções com a palavra-chave [`shared`](../Concepts/classes.md#shared-functions).
 
 :::note
 
@@ -275,7 +275,7 @@ The **HTTPHandlers.json** file:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. It is received in the [`urlQuery`](../API/IncomingMessageClass.md#urlquery) object in the request.
+The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Ele é recebido no objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) na solicitação.
 
 ```4d
     //UploadFile class

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->El comando **OPEN SETTINGS WINDOW** abre la caja de diálogo de Preferencias 4D o las Propiedades de la base actual y muestra los parámetros o la página correspondiente a la llave pasada en el parámetro *selector*.<!-- END REF-->
@@ -141,3 +138,14 @@ Acceso a la página interfaz de las Propiedades de la base en modo "Propiedades 
 #### Variables y conjuntos del sistema 
 
 Si la caja de diálogo Preferencias/Propiedades se valida, la variable sistema OK devuelve 1; si se anula, OK devuelve 0.
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 903 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -56,3 +56,12 @@ L'exemple suivant fait partie d'une méthode formulaire. Ces lignes de code test
 *A propos des numéros d'enregistrements*  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 244 |
+| Thread safe | &check; |
+
+

@@ -41,3 +41,13 @@ Si el usuario hace clic en el botón Cancelar en la caja de diálogo de guardar 
 #### Ver también 
 
 [LOAD SET](load-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 184 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

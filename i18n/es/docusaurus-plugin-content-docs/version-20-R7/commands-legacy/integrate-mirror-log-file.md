@@ -102,3 +102,13 @@ Si la integración se efectúa correctamente, la variable sistema OK toma el val
 #### Ver también 
 
 [LOG FILE TO JSON](log-file-to-json.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1312 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, error |
+
+

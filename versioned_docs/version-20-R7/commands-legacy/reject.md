@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.REJECT.Summary-->**REJECT** has two forms.<!-- END REF--> The first form has no parameters. It rejects the entire data entry and forces the user to stay in the form. The second form rejects only *aField* and forces the user to stay in the field. 
@@ -65,3 +62,12 @@ The following example is part of an object method for an *\[Employees\]Salary* f
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 38 |
+| Thread safe | &cross; |
+
+

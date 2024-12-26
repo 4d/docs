@@ -25,3 +25,12 @@ Cette commande permet par exemple, le cas échéant, de refuser les tentatives d
 #### Voir aussi 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 698 |
+| Thread safe | &check; |
+
+

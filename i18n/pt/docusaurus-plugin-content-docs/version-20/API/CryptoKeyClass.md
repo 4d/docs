@@ -71,21 +71,21 @@ A message is signed by a private key and the signature is verified by the corres
 - Lado bob:
 
 ```4d
-// Create the message
+// Criar a mensagem
 $message:="hello world"
 Folder(fk desktop folder).file("message.txt").setText($message)
 
-// Create a key
-$type:=New object("type";"RSA")
+// Criar uma chave
+$type:=New object("type"; "RSA")
 $key:=4D.CryptoKey.new($type)
 
-// Get the public key and save it
+// Obtenha a chave pública e salve-a
 Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
 
-// Get signature as base64 and save it
+// Obtenha a assinatura como base64 e salve-a
 Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 
-/*Bob sends the message, the public key and the signature to Alice*/
+/*Bob envia a mensagem, a chave pública e a assinatura para Alice*/
 ```
 
 - O lado Alice:

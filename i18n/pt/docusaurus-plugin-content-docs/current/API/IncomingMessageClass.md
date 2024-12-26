@@ -19,7 +19,7 @@ All properties of this class are read-only. They are automatically filled by the
 
 ### Exemplo
 
-The following [**HTTPHandlers.json** file](../WebServer/http-request-handler.md) has been defined:
+O seguinte arquivo [**HTTPHandlers.json**](../WebServer/http-request-handler.md) foi definido:
 
 ```json
 [
@@ -74,7 +74,7 @@ The verb is: GET
 There are 2 url parts - Url parts are: start - example
 ```
 
-### IncomingMessage Object
+### Objeto IncomingMessage
 
 4D.IncomingMessage objects provide the following properties and functions:
 
@@ -93,7 +93,7 @@ There are 2 url parts - Url parts are: start - example
 
 :::note
 
-A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Um objeto 4D.IncomingMessage é um objeto [não compartilhável](../Concepts/shared.md).
 
 :::
 

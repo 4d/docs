@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM LAST PAGE.Summary-->La commande **FORM LAST PAGE** change la page courante d'un formulaire pour afficher la dernière page du formulaire.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la dernière page du formulaire est déjà affichée, **FORM LAST PAGE** ne fait rien.
@@ -34,3 +31,12 @@ Cet exemple est une méthode appelée par une commande de menu. Elle affiche la 
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 251 |
+| Thread safe | &cross; |
+
+

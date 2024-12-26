@@ -50,3 +50,13 @@ The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it
 [RECEIVE BUFFER](receive-buffer.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 205 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

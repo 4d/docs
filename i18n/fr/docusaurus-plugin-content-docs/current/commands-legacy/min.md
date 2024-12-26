@@ -77,3 +77,13 @@ Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous re
 #### Voir aussi 
 
 [Max](max.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 4 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

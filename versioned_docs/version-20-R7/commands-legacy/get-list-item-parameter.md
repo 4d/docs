@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->The **GET LIST ITEM PARAMETER** command is used to find out the current *value* of the *selector* parameter for the *itemRef* item of the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
@@ -38,3 +35,12 @@ In *selector*, you can pass the Additional text or Associated standard action co
 
 *Hierarchical Lists*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 985 |
+| Thread safe | &cross; |
+
+

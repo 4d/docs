@@ -94,7 +94,7 @@ In the *options* parameter, pass an object that can contain the following proper
 | onTerminate      | Formula    | indefinido | Chamada de retorno quando o processo externo é terminado. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                                                                |
 | timeout          | Number     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                                                                                                     |
 | dataType         | Text       | "text"     | Tipo de conteúdo do corpo da resposta. Valores possíveis: "text" (predefinição), "blob".                                                                                                                                                                                                                                                   |
-| encoding         | Text       | "UTF-8"    | Somente se `dataType="text"`. Codificação do conteúdo do corpo da resposta. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                                                                                                      |
+| encoding         | Text       | "UTF-8"    | Somente se `dataType="text"`. Codificação do conteúdo do corpo da resposta. Para obter a lista de valores disponíveis, consulte a descrição do comando [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html)                                                                                                                                         |
 | variables        | Object     |            | Define variáveis de ambiente personalizadas para o system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
 | currentDirectory | Folder     |            | Directório de trabalho no qual o processo é executado                                                                                                                                                                                                                                                                                                                                                         |
 | hideWindow       | Parâmetros | true       | (Windows) Esconder a janela de aplicação (se possível) ou a consola Windows                                                                                                                                                                                                                                                                                             |
@@ -360,7 +360,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Esta propriedade só está disponível se o [`dataType`](#datatype) for "text".
+The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Parâmetro
 
 Essa propriedade é **somente leitura**.
 
@@ -396,7 +396,7 @@ Se não ocorrer nenhum erro, `.errors` será undefined.
 
 #### Descrição
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
+Parâmetro Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
 
 Essa propriedade é **somente leitura**.
 
@@ -447,7 +447,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. No parâmetro *message*, passe o texto a ser escrito em *stdin*.
+Parâmetro No parâmetro *message*, passe o texto a ser escrito em *stdin*.
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
@@ -465,7 +465,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
 
-The type of the message is defined according to the [`dataType`](#datatype) attribute.
+O tipo da mensagem é definido conforme o atributo [`dataType`](#datatype).
 
 Essa propriedade é **somente leitura**.
 
@@ -565,7 +565,7 @@ Em *timeout*, passe um valor em segundos. The `SystemWorker` script will wait fo
 
 Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
+During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. Você pode sair de um `.wait()` chamando [`terminate()`](#terminate) de um retorno de chamada.
 
 Esta função devolve o objecto SystemWorker.
 

@@ -52,3 +52,12 @@ Este método modifica o valor de uma propriedade "settings" armazenada no objeto
 
   
 [Process activity](../commands/process-activity.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1839 |
+| Thread-seguro | &cross; |
+
+

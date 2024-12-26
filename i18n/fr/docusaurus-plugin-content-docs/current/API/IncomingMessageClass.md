@@ -127,10 +127,10 @@ If the body has not been given as a binary content, the function tries to conver
 
 <!-- REF #IncomingMessageClass.getHeader().Params -->
 
-| Paramètres | Type |                             | Description                  |
-| ---------- | ---- | --------------------------- | ---------------------------- |
-| key        | Text | ->                          | Header property to get       |
-| Résultat   | Text | <- | Value of the header property |
+| Paramètres | Type |                             | Description                      |
+| ---------- | ---- | --------------------------- | -------------------------------- |
+| key        | Text | ->                          | Header property to get           |
+| Résultat   | Text | <- | Valeur de la propriété de header |
 
 <!-- END REF -->
 
@@ -238,7 +238,7 @@ If the body has not been given as a string value, the function tries to convert 
 
 The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary -->the current headers of the incoming message as key/value pairs (strings)<!-- END REF -->.
 
-The `.headers` property is read-only.
+La propriété `.headers` est en lecture seule.
 
 Header names (keys) are lowercased. Note header names are case sensitive.
 

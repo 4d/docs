@@ -9,21 +9,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
-| 引数             | 型       |   | 説明                                                                                 |
-| -------------- | ------- | - | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | → | 4D Write Pro section                                                               |
-| subSectionType | Integer | → | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | Object  | → | 4D Write Pro subsection                                                            |
+| 引数             | 型       |   | 説明                                                                           |
+| -------------- | ------- | - | ---------------------------------------------------------------------------- |
+| wpSection      | Object  | → | 4D Write Pro セクション                                                           |
+| subSectionType | Integer | → | サブセクションのタイプ(wk first page、wk left page、または wk right page) |
+| subSection     | Object  | → | 4D Write Pro サブセクション                                                         |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP DELETE SUBSECTION** command <!--REF #_command_.WP DELETE SUBSECTION.Summary-->removes the *subSectionType* subsection elements from the *wpSection* 4D Write Pro section, or it directly removes the passed *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Note that the body of the document is left untouched.
+**WP DELETE SUBSECTION** コマンドは<!--REF #_command_.WP DELETE SUBSECTION.Summary-->引数で指定した4D Write Pro セクションから、引数で指定したサブセクション要素を削除します。または*subSection* 引数で指定したサブセクションを直接削除します。<!-- END REF--> サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。
 
-In *wpSection*, pass the section from which you want to remove the subsection elements. The section can be obtained using the [WP Get sections](../commands-legacy/wp-get-sections.md) or [WP Get section](../commands-legacy/wp-get-section.md) commands.
+*wpSection* 引数には、サブセクション要素を削除したいセクションを渡します。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。
 
-The *subSectionType* parameter specifes the subsection to delete. You can pass one of the following constants:
+*subSectionType* 引数は削除するサブセクションを指定します。 以下の定数のいずれかを渡すことができます:
 
 | 定数            | 型       | 値 |
 | ------------- | ------- | - |
@@ -33,33 +33,33 @@ The *subSectionType* parameter specifes the subsection to delete. You can pass o
 
 :::note
 
-Deleting a left page or right page subsection will automatically delete the opposite subsection. For example, if you delete a right page subsection, the left page subsection is automatically deleted.
+左ページまたは右ページサブセクションを削除すると、反対側のサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。
 
 :::
 
-If the *subSectionType* does not exist, the command does nothing (no error is generated).
+*subSectionType* 引数で指定したタイプのサブセクションが存在しない場合、コマンドは何もしません(エラーは生成されません)。
 
 :::note
 
-When a subsection is deleted, the header and footer are removed, as well as anchored pictures and textboxes but the body remains untouched.
+サブセクションが削除されると、ヘッダーとフッターに加えアンカーされた画像とテキストボックスも削除されますが、本文はそのまま残されます。
 
 :::
 
 #### 例題 1
 
-You want to delete the first page subsection of the first section:
+最初のセクションの最初のページのサブセクションを削除したい場合を考えます:
 
 ```4d
  var $section;$subsection : Object
-  // get first section
+  // 最初のセクションを取得
  $section:=WP Get section(wpDoc;1)
-  // Delete the subsection
+  // サブセクションを削除
  WP DELETE SUBSECTION($section;wk first page)
 ```
 
 #### 例題 2
 
-You want to delete the right page subsection of section 3:
+セクション3 の右ページサブセクションを削除したい場合を考えます:
 
 ```4d
 

@@ -83,3 +83,13 @@ L’exemple suivant permet de sélectionner le dossier dans lequel toutes les im
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 670 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+
+

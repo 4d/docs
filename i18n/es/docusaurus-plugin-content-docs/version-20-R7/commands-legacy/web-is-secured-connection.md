@@ -27,3 +27,12 @@ Este comando permite, por ejemplo, rechazar los intentos de conexión en modo no
 #### Ver también 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 698 |
+| Hilo seguro | &check; |
+
+

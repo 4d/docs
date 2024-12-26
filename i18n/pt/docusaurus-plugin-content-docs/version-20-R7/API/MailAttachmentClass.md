@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Attachment objects allow referencing files within a [`Email`](EmailObjectClass.md) object. Attachment objects are created using the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+Attachment objects allow referencing files within a [`Email`](EmailObjectClass.md) object. Os objetos Attachment são criados usando o comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ### Objeto anexos
 
@@ -50,7 +50,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 #### Descrição
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command (shortcut).
+The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. Ele é idêntico ao comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (atalho).
 
 ## .cid
 
@@ -85,7 +85,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descrição
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime) command.
+The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Você pode usar esse método com objetos de anexo recebidos pelo comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
 
 ## .name
 

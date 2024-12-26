@@ -139,3 +139,12 @@ See example for **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1713 |
+| Thread safe | &check; |
+
+

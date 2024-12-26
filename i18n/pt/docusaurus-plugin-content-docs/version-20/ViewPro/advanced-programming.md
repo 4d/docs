@@ -12,7 +12,7 @@ Como 4D View Pro é alimentado pela [solução de planilha eletrônica SpreadJS]
 Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. The following example hides the spreadJS [Ribbon](./configuring.md#ribbon):
 
 ```4d
-//Button's object method
+//Método objeto do botão
 
 var $js; $answer : Text
 

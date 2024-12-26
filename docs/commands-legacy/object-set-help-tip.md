@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET HELP TIP.Summary-->The **OBJECT SET HELP TIP** command sets or dynamically modifies the help tip associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
@@ -131,3 +128,12 @@ The result is...
 
 [OBJECT Get help tip](object-get-help-tip.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1181 |
+| Thread safe | &cross; |
+
+

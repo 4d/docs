@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->La commande **SHOW WINDOW** permet d'afficher la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, la fenêtre de premier plan du process courant.<!-- END REF-->
@@ -29,3 +26,12 @@ Voir l'exemple de la commande [HIDE WINDOW](hide-window.md).
 #### Voir aussi 
 
 [HIDE WINDOW](hide-window.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 435 |
+| Thread safe | &cross; |
+
+

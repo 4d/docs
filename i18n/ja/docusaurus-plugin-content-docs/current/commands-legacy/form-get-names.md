@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->**FORM GET NAMES**コマンドはアプリケーション中のフォーム名を*arrNames*配列に返します。<!-- END REF--> 
@@ -62,5 +59,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[METHOD GET PATHS FORM](../commands/method-get-paths-form.md)  
+[METHOD GET PATHS FORM](method-get-paths-form.md)  
 *フォーム*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1167 |
+| スレッドセーフである | &cross; |
+
+

@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.CALL WORKER.Summary-->**CALL WORKER** コマンドは、*process* に受け渡した名称または ID のワーカープロセスを作成、または呼び出して、任意の *param* パラメーターを使って *formula* 引数で指定されたコードの実行をそのコンテキスト内において要求します。<!-- END REF-->
-
-**CALL WORKER** コマンドは *params* をカプセル化し、メッセージの形でワーカーが持つメッセージボックスに受け渡します。ワーカープロセスについての詳細は*ワーカーについて* を参照ください。
+<!--REF #_command_.CALL WORKER.Summary-->**CALL WORKER** コマンドは、*process* に受け渡した名称または ID のワーカープロセスを作成、または呼び出して、任意の *param* パラメーターを使って *formula* 引数で指定されたコードの実行をそのコンテキスト内において要求します。<!-- END REF-->コマンドは *params* をカプセル化し、メッセージの形でワーカーが持つメッセージボックスに受け渡します。ワーカープロセスについての詳細は*ワーカーについて* を参照ください。
 
 *process* パラメーターに指定するプロセス名またはプロセス番号により、ワーカーは特定されます:
 
@@ -72,7 +70,16 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[CALL FORM](../commands/call-form.md)  
+[CALL FORM](call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
 *ワーカーについて*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1389 |
+| スレッドセーフである | &check; |
+
+

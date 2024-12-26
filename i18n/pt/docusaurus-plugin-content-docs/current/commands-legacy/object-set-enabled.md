@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->O comando OBJECT SET ENABLED utilizado para ativar ou desativar o objeto ou grupo de objetos especificado por *objeto no* formulário atual.<!-- END REF-->   
@@ -41,3 +38,12 @@ Este comando pode ser aplicado aos seguintes tipos de objetos:
 #### Ver também 
 
 [OBJECT Get enabled](object-get-enabled.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1123 |
+| Thread-seguro | &cross; |
+
+

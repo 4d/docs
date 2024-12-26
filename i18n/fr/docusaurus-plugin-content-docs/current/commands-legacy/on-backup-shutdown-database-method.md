@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### 
 
 <!--REF #_command_.On Backup Shutdown database method.Summary-->La **On Backup Shutdown database method** est appelée à chaque fois qu’une sauvegarde de la base vient de se terminer.<!-- END REF--> Les causes de l’arrêt de la sauvegarde peuvent être la fin de la copie, l’interruption par l’utilisateur ou une erreur.  

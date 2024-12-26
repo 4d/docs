@@ -111,3 +111,12 @@ Server: 4D/16.0.1
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 5 |
+| スレッドセーフである | &check; |
+
+

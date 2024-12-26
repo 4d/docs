@@ -14,9 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.HTTP Parse message.Summary-->La documentación de este comando está disponible en [developer.<!-- END REF-->4d.com.](https://developer.4d.com/docs/API/HTTPRequestClass#http-parse-messege)
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1824 |
+| Hilo seguro | &cross; |
+
+

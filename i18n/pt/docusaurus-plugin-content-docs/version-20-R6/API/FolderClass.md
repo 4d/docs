@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-Os objetos `Folder` são criados com o comando [`Folder`](#folder). Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\`](#create).
+Parâmetros Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\\\`](#create).
 
 ### Exemplo
 
@@ -78,7 +78,7 @@ Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems
 
 #### Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. O comando aceita duas sintaxes:
+Parâmetro O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -364,7 +364,7 @@ A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renome
 
 The *destinationFolder* must exist on disk, otherwise an error is generated.
 
-Por padrão, a pasta mantém o seu nome quando movida. Se quiser renomear a pasta movida, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Por padrão, a pasta mantém o seu nome quando movida. Por padrão, a pasta mantém o seu nome quando movida. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 

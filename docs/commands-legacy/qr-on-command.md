@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->The **QR ON COMMAND** command executes the 4D method passed in *methodName* when a Quick Report command is invoked by the user, by the selection of a menu command or by a click on a button.<!-- END REF-->
@@ -45,3 +42,13 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 *QR Commands*  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 790 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

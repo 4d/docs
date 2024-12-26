@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->La commande **FORM GET NAMES** remplit le tableau *tabNoms* avec les noms des formulaires de l’application.<!-- END REF--> 
@@ -65,4 +62,13 @@ Exemples d’utilisations type :
 #### Voir aussi 
 
 *Formulaires*  
-[METHOD GET PATHS FORM](../commands/method-get-paths-form.md)  
+[METHOD GET PATHS FORM](method-get-paths-form.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1167 |
+| Thread safe | &cross; |
+
+

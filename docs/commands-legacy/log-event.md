@@ -64,3 +64,12 @@ Each time the database is opened, this information will be written in Windows’
 #### See also 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 667 |
+| Thread safe | &check; |
+
+

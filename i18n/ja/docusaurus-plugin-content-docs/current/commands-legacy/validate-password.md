@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Validate password.Summary-->Validate password コマンドは引数 *password* に渡された文字列が、引数 *userID* に渡されたID番号または名前を持つユーザアカウントのパスワードである場合、Trueを返します。<!-- END REF--> 
@@ -63,3 +60,12 @@ displayed_sidebar: docs
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 638 |
+| スレッドセーフである | &cross; |
+
+

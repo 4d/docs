@@ -41,3 +41,13 @@ displayed_sidebar: docs
 [RECEIVE RECORD](receive-record.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 81 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

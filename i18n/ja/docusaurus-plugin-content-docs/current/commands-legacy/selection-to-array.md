@@ -79,3 +79,12 @@ displayed_sidebar: docs
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 260 |
+| スレッドセーフである | &check; |
+
+

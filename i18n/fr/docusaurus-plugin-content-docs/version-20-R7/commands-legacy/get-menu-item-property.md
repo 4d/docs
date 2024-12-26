@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->La commande **GET MENU ITEM PROPERTY** retourne dans le paramètre *valeur* la valeur courante de la propriété de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
@@ -34,3 +31,12 @@ Passez dans le paramètre *propriété* la propriété dont vous souhaitez obten
 #### Voir aussi 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 972 |
+| Thread safe | &cross; |
+
+

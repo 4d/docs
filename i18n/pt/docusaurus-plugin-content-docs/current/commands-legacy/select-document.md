@@ -97,3 +97,13 @@ Se não for selecionado nenhum arquivo (por exemplo, se o usuário clicar no bot
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 905 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, Document, error |
+
+

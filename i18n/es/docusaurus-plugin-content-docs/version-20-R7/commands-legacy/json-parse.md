@@ -190,3 +190,12 @@ beta[1].golf:{line:10,offset:12}}}
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
 *Tipos de campos y variables*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1218 |
+| Hilo seguro | &check; |
+
+

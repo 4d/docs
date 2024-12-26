@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CANCEL.Summary-->**CANCEL** コマンドは以下の目的で、フォームあるいはオブジェクトメソッド (またはそこから呼ばれるサブルーチンで) 使用されます:
@@ -53,3 +50,13 @@ CANCELコマンドが実行される (フォームや印刷がキャンセルさ
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 270 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

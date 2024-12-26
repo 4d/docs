@@ -10,7 +10,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 - IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
 - POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
 
-> You can also create a new, blank `Email` object and then fill it with [Email object properties](#email-object).
+> Você também pode criar um novo objeto `Email` em branco e preenchê-lo com [propriedades do objeto Email](#email-object).
 
 You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
 
@@ -110,7 +110,7 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 The `.attachments` property contains a <!-- REF #EmailObjectClass.attachments.Summary -->collection of `4D.MailAttachment` object(s)<!-- END REF -->.
 
-Attachment objects are defined through the [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md).
+Os objetos de anexo são definidos por meio do comando [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment). Os objetos anexo têm [propriedades e funções](MailAttachmentClass.md) específicas.
 
 ## .bcc
 
@@ -207,7 +207,7 @@ Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 | Propriedade                                                                  | Tipo | Valor                                                                                                                                                                                                                                  |
 | ---------------------------------------------------------------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [].name  | text | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). Caso seja nulo ou indefinido, o campo cabeçalho não será adicionado ao cabeçalho MIME. |
-| [].value | text | Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                                                                                      |
+| [].value | text | Valores do campo de cabeçalho conforme definido em [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                                                                     |
 
 ## .htmlBody
 
@@ -223,7 +223,7 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 #### Descrição
 
-[IMAP transporter](IMAPTransporterClass.md) only.
+[IMAP transporter](IMAPTransporterClass.md) unicamente.
 
 The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
 
@@ -282,7 +282,7 @@ Este cabeçalho geralmente é "lettersOrNumbers@domainname", por exemplo, "abcde
 
 #### Descrição
 
-[IMAP transporter](IMAPTransporterClass.md) only.
+[IMAP transporter](IMAPTransporterClass.md) unicamente.
 
 The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->.
 
@@ -333,7 +333,7 @@ Para uma melhor capacidade de entrega, é recomendado usar o mesmo endereço de 
 
 #### Descrição
 
-[IMAP transporter](IMAPTransporterClass.md) only.
+[IMAP transporter](IMAPTransporterClass.md) unicamente.
 
 The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->.
 

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->**OBJECT GET SUBFORM CONTAINER SIZE**コマンドは親フォーム中に表示されているカレントサブフォームオブジェクトの幅と高さをピクセル単位で返します。<!-- END REF-->
@@ -32,5 +29,14 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
-[OBJECT SET SUBFORM](../commands/object-set-subform.md)  
+[OBJECT GET SUBFORM](object-get-subform.md)  
+[OBJECT SET SUBFORM](object-set-subform.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1148 |
+| スレッドセーフである | &cross; |
+
+

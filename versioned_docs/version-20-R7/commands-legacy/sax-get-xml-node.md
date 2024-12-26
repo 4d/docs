@@ -55,3 +55,14 @@ The following example processes an event:
 #### System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 860 |
+| Thread safe | &check; |
+| Modifies variables | OK, error |
+
+

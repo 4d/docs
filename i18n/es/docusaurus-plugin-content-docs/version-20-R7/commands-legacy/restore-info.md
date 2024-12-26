@@ -35,3 +35,12 @@ El tipo y el contenido de los parámetros *info1* e *info2* dependen del valor d
 #### Ver también 
 
 [RESTORE](restore.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 889 |
+| Hilo seguro | &cross; |
+
+

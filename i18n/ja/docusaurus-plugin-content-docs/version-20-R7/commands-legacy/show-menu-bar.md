@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SHOW MENU BAR.Summary-->SHOW MENU BARコマンドは、メニューバーを表示します。<!-- END REF-->
@@ -30,3 +27,13 @@ displayed_sidebar: docs
 [HIDE MENU BAR](hide-menu-bar.md)  
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 431 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

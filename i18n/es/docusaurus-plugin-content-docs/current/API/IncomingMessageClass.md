@@ -113,7 +113,7 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 #### Descripción
 
-The `.getBlob()` function <!-- REF #IncomingMessageClass.getBlob().Summary -->returns the body of the request as a Blob<!-- END REF -->.
+La función `.getBlob()` <!-- REF #IncomingMessageClass.getBlob().Summary -->devuelve el cuerpo de la petición como un Blob<!-- END REF -->.
 
 If the body has not been given as a binary content, the function tries to convert the value but it can give unexpected results.
 

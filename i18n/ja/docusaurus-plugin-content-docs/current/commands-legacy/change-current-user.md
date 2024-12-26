@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** コマンドを使用すると、データベースを終了させずに、カレントユーザーを変更できます。<!-- END REF-->ユーザーはデータベース接続ダイアログボックス (引数なしでコマンドが呼び出された場合) を使用して、またはコマンドから直接、ログインユーザーを変更することが可能です。ユーザーがログインを変更すると、選択されたユーザーが保有する権限を優先す るため、以前のアクセス権はすべて放棄されます。
@@ -67,3 +64,12 @@ displayed_sidebar: docs
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 289 |
+| スレッドセーフである | &cross; |
+
+

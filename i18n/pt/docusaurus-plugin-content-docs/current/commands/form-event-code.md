@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
 
-For a description of events, please refer to the [**Form Events**](../Events/overview.md) section.
+Para obter uma descrição dos eventos, consulte a seção [**Eventos formulário**](../Events/overview.md).
 
 #### Exemplo 1
 
@@ -246,7 +246,7 @@ Este exemplo mostra como responder a um evento de fecho de janela com um formul�
  End case
 ```
 
-#### Example 10
+#### Exemplo 10
 
 This example shows how to capitalize a text or alphanumeric field each time its data source value is modified:
 
@@ -260,7 +260,7 @@ This example shows how to capitalize a text or alphanumeric field each time its 
  End case
 ```
 
-#### Example 11
+#### Exemplo 11
 
 The following example illustrates how to manage a deletion action in a hierarchical list:
 
@@ -288,7 +288,7 @@ The following example illustrates how to manage a deletion action in a hierarchi
  End if
 ```
 
-#### Example 12
+#### Exemplo 12
 
 In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
 
@@ -304,7 +304,7 @@ In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us t
 
 Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### Example 13
+#### Exemplo 13
 
 You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
 

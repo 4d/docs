@@ -43,3 +43,12 @@ displayed_sidebar: docs
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 652 |
+| スレッドセーフである | &check; |
+
+

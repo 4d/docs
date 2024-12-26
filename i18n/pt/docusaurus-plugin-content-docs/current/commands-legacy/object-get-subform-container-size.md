@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->O comando **OBJECT GET SUBFORM CONTAINER SIZE** devolve a *largura* e a *altura* (em pixels) de um objeto sub-formulário "atual", mostrado no formulário pai.<!-- END REF-->  
@@ -33,5 +30,14 @@ O evento On Resize é gerado no método formulario de subformulário se o objeto
 
 #### Ver também 
 
-[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
-[OBJECT SET SUBFORM](../commands/object-set-subform.md)  
+[OBJECT GET SUBFORM](object-get-subform.md)  
+[OBJECT SET SUBFORM](object-set-subform.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1148 |
+| Thread-seguro | &cross; |
+
+

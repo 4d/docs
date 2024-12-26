@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor.<!-- END REF--> Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
@@ -44,3 +41,12 @@ To open the *ContactList* project form:
 #### See also 
 
 *Design Object Access Commands*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1749 |
+| Thread safe | &cross; |
+
+

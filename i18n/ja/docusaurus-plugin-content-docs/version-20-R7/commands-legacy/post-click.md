@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.POST CLICK.Summary-->POST CLICK コマンドはマウスクリックをシミュレートします。<!-- END REF-->これは、ユーザが実際にマウスボタンをクリックした場合と同様の結果を生じます。
@@ -31,3 +28,12 @@ displayed_sidebar: docs
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 466 |
+| スレッドセーフである | &cross; |
+
+

@@ -119,8 +119,8 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 - **Restaura a última cópia de segurança se o banco de dados for danificado**: Quando essa opção for marcada, o programa inicia automaticamente a restauração do arquivo de dados do último backup válido do banco, se uma anomalia for detectada (arquivo corrupto por exemplo) durante a o lançamento do banco de dados. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
 - **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the application.
-  - When opening an application, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.
-  - When restoring an application, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.
+  - When opening an application, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. Essa situação ocorre, por exemplo, se houver uma queda de energia quando houver operações no cache de dados que ainda não tenham sido gravadas no disco.
+  - When restoring an application, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. Se ele contiver operações não encontradas no arquivo de dados, o programa o integrará automaticamente.
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
 

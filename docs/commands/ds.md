@@ -68,3 +68,12 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 #### See also 
 
 [Open datastore](open-datastore.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1482 |
+| Thread safe | &check; |
+
+

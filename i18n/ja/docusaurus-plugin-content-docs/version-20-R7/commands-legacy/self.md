@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 互換性に関する注意 
 
 <!--REF #_command_.Self.Summary-->このコマンドは互換性の目的で保持されています。<!-- END REF-->4D v12からはOBJECT Get pointerコマンドの利用が推奨されます。
@@ -41,3 +38,12 @@ Self が上記のコンテキスト以外で呼ばれた場合、Nilポインタ
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This](this.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 308 |
+| スレッドセーフである | &cross; |
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->El comando **OBJECT SET COORDINATES** modifica la ubicación y, opcionalmente, el tamaño del objeto o de los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  
@@ -57,3 +54,12 @@ La siguiente declaración ubica el objeto "button\_1" en las coordenadas (10,20)
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1248 |
+| Hilo seguro | &cross; |
+
+

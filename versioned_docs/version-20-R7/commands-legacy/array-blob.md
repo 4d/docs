@@ -60,3 +60,12 @@ This example creates a local array of 100 rows each containing 50 BLOB-type elem
 #### See also 
 
 *Creating Arrays*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1222 |
+| Thread safe | &check; |
+
+

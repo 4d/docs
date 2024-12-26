@@ -37,3 +37,12 @@ El siguiente ejemplo permite al usuario crear un nuevo documento, escribe la cad
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 267 |
+| Hilo seguro | &check; |
+
+

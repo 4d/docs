@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.OB SET.Summary-->**OB SET**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に、一つ以上の *プロパティ*/*値* のペアを作成もしくは変更します。<!-- END REF-->
-
-*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB SET.Summary-->**OB SET**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に、一つ以上の *プロパティ*/*値* のペアを作成もしくは変更します。<!-- END REF-->で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *property* 引数には、作成または修正したいプロパティのラベル(名前)を渡して下さい。*object* 内に指定されたプロパティが存在する場合、その値は指定した値で上書きされます。プロパティが存在しない場合、新たにプロパティが作成されます。
 
@@ -198,3 +196,12 @@ displayed_sidebar: docs
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1220 |
+| スレッドセーフである | &check; |
+
+

@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE コマンドは、現在表示されているフォームページを先頭のフォームページに変更します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされてない場合や、すでに最初のフォームページが表示されている場合、FORM FIRST PAGE コマンドは何も行いません。
@@ -34,3 +31,12 @@ displayed_sidebar: docs
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 250 |
+| スレッドセーフである | &cross; |
+
+

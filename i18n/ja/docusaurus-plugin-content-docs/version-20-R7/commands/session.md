@@ -47,7 +47,7 @@ Webセッションの `Session` オブジェクトは、どの Webプロセス�
 - モバイルリクエスト用の [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) データベースメソッド
 - [RESTリクエストで呼び出された](../REST/ClassFunctions.md) ORDA関数。
 
-For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
+Web ユーザーセッションに関する詳細な情報については、[Web Server Sessions](../WebServer/sessions.md) の章を参照してください。
 
 #### リモートクライアントセッション
 
@@ -63,7 +63,7 @@ For more information on web user sessions, please refer to the [Web Server Sessi
 
 すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。 ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
-- methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
+- [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
 
 ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html) のページを参照ください。

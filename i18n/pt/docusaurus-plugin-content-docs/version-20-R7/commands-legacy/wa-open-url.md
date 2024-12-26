@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA OPEN URL.Summary-->O comando **WA OPEN URL** carrega na área web designada pelos parâmetros *\** e *objeto* o URL passado no parâmetro *url*.<!-- END REF-->
@@ -48,3 +45,12 @@ Este comando tem o mesmo efeito que a modificação do valor da variável "URL" 
 [OPEN URL](open-url.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1020 |
+| Thread-seguro | &cross; |
+
+

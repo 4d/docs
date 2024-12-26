@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.GET DOCUMENT ICON.Summary-->El comando GET DOCUMENT ICON devuelve en el campo o la variable imagen 4D *icono*, el icono del documento cuyo nombre o ruta de acceso se pasa en *rutaDoc*.<!-- END REF--> *rutaDoc* puede especificar un archivo de todo tipo (ejecutable, documento, atajo o alias, etc.) o una carpeta. 
+<!--REF #_command_.GET DOCUMENT ICON.Summary-->El comando GET DOCUMENT ICON devuelve en el campo o la variable imagen 4D *icono*, el icono del documento cuyo nombre o ruta de acceso se pasa en *rutaDoc*.<!-- END REF-->puede especificar un archivo de todo tipo (ejecutable, documento, atajo o alias, etc.) o una carpeta. 
 
 Pase en *rutaDoc* la ruta de acceso absoluta del documento. Igualmente, puede pasar únicamente el nombre del documento o ruta de acceso relativa, en este caso el documento debe encontrarse en el directorio actual de la base (generalmente, la carpeta que contiene el archivo de estructura de la base).
 
@@ -26,3 +26,14 @@ Si pasa una cadena vacía en *rutaDoc*, aparece la caja de diálogo estándar de
 Pase en *icono* un campo o una variable imagen 4D. Después de la ejecución del comando, este parámetro contiene el icono del archivo (formato PICT).
 
 El parámetro opcional *tamaño* permite indicar las dimensiones en píxeles del icono. Este valor representa el largo del cuadrado incluyendo el icono. Generalmente, los iconos se definen de 32x32 píxeles (“iconos largos”) o 16x16 píxeles (“iconos pequeños”). Si pasa 0 u omite este parámetro, el comando devuelve el icono más grande disponible.
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 700 |
+| Hilo seguro | &check; |
+| Modifica variables | Document, error |
+
+

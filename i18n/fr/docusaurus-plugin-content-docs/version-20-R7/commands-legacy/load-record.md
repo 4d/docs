@@ -36,3 +36,12 @@ En environnements multi-utilisateurs et multi-process, lorsque vous devez modifi
 [Locked](locked.md)  
 [UNLOAD RECORD](unload-record.md)  
 *Verrouillage d'enregistrements*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 52 |
+| Thread safe | &check; |
+
+

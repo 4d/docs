@@ -37,3 +37,13 @@ En función del tipo de método llamado, la cadena devuelta puede ser:
 Este comando no puede llamarse desde una fórmula 4D.
 
 **Nota:** para que este comando funcione en modo compilado, la opción **Control de ejecución** no debe ser desactivada.
+
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 684 |
+| Hilo seguro | &check; |
+
+

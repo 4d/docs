@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                  |
-| ------- | ------------------------------ |
-| 20 R8   | Support of standalone sessions |
-| 20 R6   | Ajout                          |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 20 R8   | Prise en charge des sessions autonomes |
+| 20 R6   | Ajout                                  |
 
 </details>
 

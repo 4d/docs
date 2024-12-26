@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Modified.Summary-->**Modified** retorna [True](true.md "True") se um valor tiver sido atribuído por programação a *campo* ou se tiver sido modificado durante a entrada de dados.<!-- END REF--> O comando **Modified**deve ser utilizado unicamente em um método de formulário (ou uma subrotina chamada por um método de formulário).
@@ -70,3 +67,12 @@ Seleciona um registro para a tabela *\[umaTabela\]*, depois chama múltiplas sub
 
 [Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 32 |
+| Thread-seguro | &cross; |
+
+

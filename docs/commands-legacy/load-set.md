@@ -42,3 +42,13 @@ If the user clicks Cancel in the Open File dialog box, or there is an error duri
 #### See also 
 
 [SAVE SET](save-set.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 185 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

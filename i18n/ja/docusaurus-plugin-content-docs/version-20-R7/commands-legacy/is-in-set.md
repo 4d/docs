@@ -35,3 +35,12 @@ displayed_sidebar: docs
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 273 |
+| スレッドセーフである | &check; |
+
+

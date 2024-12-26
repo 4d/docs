@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get subform container value.Summary-->**OBJECT Get subform container value** コマンドは親フォームに表示されたサブフォームコンテナにバインドされたデータソースのカレントの値を返します。<!-- END REF-->
@@ -58,3 +55,12 @@ displayed_sidebar: docs
 [Form](form.md)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1785 |
+| スレッドセーフである | &cross; |
+
+

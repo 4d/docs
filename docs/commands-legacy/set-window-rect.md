@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->The SET WINDOW RECT command changes the global coordinates of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, the command does nothing.
@@ -63,3 +60,12 @@ The window appears as follows:
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 444 |
+| Thread safe | &cross; |
+
+

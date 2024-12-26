@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Get text resource.Summary-->La commande **Get text resource** retourne le texte stocké dans la ressource texte ("TEXT") dont vous avez passé le numéro d'ID dans *resNum*.<!-- END REF-->
@@ -45,3 +42,13 @@ OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 504 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

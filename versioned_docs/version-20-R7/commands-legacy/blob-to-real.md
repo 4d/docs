@@ -59,3 +59,12 @@ The following example reads 20 Real values from a BLOB, starting at the offset 0
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 553 |
+| Thread safe | &check; |
+
+

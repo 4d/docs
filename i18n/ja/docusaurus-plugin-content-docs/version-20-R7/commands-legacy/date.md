@@ -16,9 +16,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.Date.Summary-->**Date**コマンドは、*expression* を解釈し、日付を返します。<!-- END REF-->
-
-*expression* 引数は、ISO日付フォーマットかシステムレベルで設定される地域設定に従わなければなりません。
+<!--REF #_command_.Date.Summary-->**Date**コマンドは、*expression* を解釈し、日付を返します。<!-- END REF-->引数は、ISO日付フォーマットかシステムレベルで設定される地域設定に従わなければなりません。
 
 **ISO日付フォーマット**  
 この文字列は"YYYY-MM-DDTHH:MM:SS"という書式で構成されます。例えば"2013-11-20T10:20:00"と表現され、地域設定と関わり無く、Dateコマンドは引数として渡された*expression* を正しく評価します。ピリオドのあとの小数以下の秒はサポートされています(例:"2013-11-20T10:20:00.9854")  
@@ -95,3 +93,12 @@ displayed_sidebar: docs
 
 [Bool](bool.md)  
 [String](string.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 102 |
+| スレッドセーフである | &check; |
+
+

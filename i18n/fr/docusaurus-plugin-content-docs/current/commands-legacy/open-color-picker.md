@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->La commande **OPEN COLOR PICKER** affiche la boîte de dialogue de sélection de couleur du système.<!-- END REF--> 
@@ -31,3 +28,12 @@ Si la couleur a été modifiée, l’événement formulaire On After Edit est g�
 #### Voir aussi 
 
 [OPEN FONT PICKER](open-font-picker.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1304 |
+| Thread safe | &cross; |
+
+

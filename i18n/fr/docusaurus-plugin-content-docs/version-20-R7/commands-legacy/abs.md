@@ -25,3 +25,13 @@ L'exemple suivant retourne la valeur absolue de -10,3, qui est 10,3 :
 ```4d
  vVector:=Abs(-10,3)
 ```
+
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 99 |
+| Thread safe | &check; |
+
+

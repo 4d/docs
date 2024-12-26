@@ -173,3 +173,12 @@ Se quiser saber a quantidade de subpastas em uma rota:
 [Folder ](folder.md)  
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1547 |
+| Thread-seguro | &check; |
+
+

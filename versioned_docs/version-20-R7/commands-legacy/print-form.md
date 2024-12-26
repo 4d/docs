@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF--> It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
@@ -191,3 +188,12 @@ The code that calls the dialog then prints its body:
 [PAGE BREAK](page-break.md)  
 [PRINT SETTINGS](print-settings.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 5 |
+| Thread safe | &cross; |
+
+

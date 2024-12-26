@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.WA STOP LOADING URL.Summary-->WA STOP LOADING URL コマンドは、*\** と *object* 引数で指定したWebエリアの現在のURL のリソース読み込みを停止します。<!-- END REF-->
@@ -24,3 +21,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [WA REFRESH CURRENT URL](wa-refresh-current-url.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1024 |
+| スレッドセーフである | &cross; |
+
+

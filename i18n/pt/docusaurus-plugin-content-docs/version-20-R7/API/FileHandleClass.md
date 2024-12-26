@@ -3,9 +3,9 @@ id: FileHandleClass
 title: FileHandle
 ---
 
-The `FileHandle` class has functions that allow you to sequentially read from or append contents to an opened [`File`](FileClass) object. O manuseamento de um arquivo pode acessar a qualquer parte de um documento.
+A classe `FileHandle` tem funções que lhe permitem ler sequencialmente ou anexar conteúdos a um objeto aberto [`File`](FileClass). O manuseamento de um arquivo pode acessar a qualquer parte de um documento.
 
-File handle objects are created with the [`file.open()`](FileClass#open) function.
+Os objetos File handle são criados usando a função [`file.open()`](FileClass#open).
 
 > To read or write a whole document at once, you might consider using the [file.getText()](FileClass.md#gettext) and [file.setText()](FileClass.md#settext) functions.
 
@@ -216,7 +216,7 @@ Essa propriedade é **somente leitura**.
 
 The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->.
 
-> This function returns the same value as the ([.size](FileClass#size)) property of the `File` class.
+> Essa função retorna o mesmo valor que a propriedade ([.size](FileClass#size)) da classe `File`.
 
 #### Veja também
 
@@ -275,7 +275,7 @@ Essa propriedade é **leitura/escrita**.
 
 :::caution
 
-Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
+Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Por exemplo:
 
 ```4d
   // Open a european text file using utf-16 encoding (two bytes per character)
@@ -321,7 +321,7 @@ $s:=$fh.readText()
 
 The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the last byte read.
+Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após a leitura do último byte.
 
 #### Veja também
 
@@ -355,11 +355,11 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
 
-When this function is executed, the current position ([`.offset`](#offset)) is updated.
+Quando essa função é executada, a posição atual ([`.offset`](#offset)) é atualizada.
 
 :::caution Aviso
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
+Essa função assume que a propriedade [`.offset`](#offset) é um número de caracteres, não um número de bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
 
 :::
 
@@ -400,11 +400,11 @@ The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->retur
 
 A string de caracteres *stopChar* não está incluída no texto devolvido. Se omitir o parâmetro *stopChar*, todo o texto do documento é devolvido.
 
-When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
+Quando essa função é executada, o ([.offset](#offset)) é colocado logo após a string *stopChar*.
 
 :::caution Aviso
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
+Essa função assume que a propriedade [`.offset`](#offset) é um número de caracteres, não um número de bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
 
 :::
 

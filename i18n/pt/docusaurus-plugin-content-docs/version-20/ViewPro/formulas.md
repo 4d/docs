@@ -46,7 +46,7 @@ Todas as fórmulas têm operandos e operadores:
 | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Number](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (adição)<br/>- (subtração)<br/>* (multiplicação)<br/>/ (divisão)<br/>^ (expoente, o número de vezes para multiplicar um número por ele mesmo)<br/>% (porcentagem -- dividir o número antes do operador por cem) |
 | [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                       |
-| [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                  |
+| [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Operadores de duração:<br/>+ (adição)<br/>- (subtração)<br/>* (duração * número -> duração)<br/>/ (duração / número -> duração)                                                                                       |
 | [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenação)                                                                                                                                                                                                                                |
 | [Parâmetros](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                               |
 
@@ -279,13 +279,13 @@ Alternate solutions are available to declare fields or methods as functions in y
 ### Referência a campos utilizando a estrutura virtual
 
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. Essa solução alternativa pode ser útil se o sua aplicação já depender de uma estrutura virtual (caso contrário, recomenda-se [usar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+4D View Pro permite que você faça referência a campos 4D usando a estrutura virtual do banco de dados, ou seja, declarada por meio da função [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) e/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) com o parâmetro \*. Essa solução alternativa pode ser útil se o sua aplicação já depender de uma estrutura virtual (caso contrário, recomenda-se [usar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATENÇÃO:** não pode utilizar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Requisitos
 
-*   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
+*   O campo deve pertencer à estrutura virtual do banco de dados, ou seja, deve ser declarado por meio do comando [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) e/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) com o parâmetro \* (consulte o exemplo),
 *   Os nomes das tabelas e dos campos devem estar em conformidade com (consulte [o standard ECMA ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 *   O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
@@ -329,7 +329,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
     ARRAY TEXT($fieldTitles;1)
     ARRAY LONGINT($fieldNum;1)
     $fieldTitles{1}:="Name"
-    $fieldNum{1}:=2 //last name
+    $fieldNum{1}:=2 //sobrenome
     SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
     ```
 

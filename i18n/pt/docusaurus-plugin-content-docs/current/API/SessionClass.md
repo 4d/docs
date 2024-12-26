@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](../commands/session.md) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 ### Tipos de sessão
 
@@ -152,7 +152,7 @@ Privileges are assigned to a Session using the [`setPrivileges()`](#setprivilege
 
 #### Exemplo
 
-The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+O seguinte arquivo [`roles.json`](../ORDA/privileges.md#rolesjson-file) foi definido:
 
 ```json
 {
@@ -356,7 +356,7 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote
 :::note
 
 - The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
-- The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info.md) command for a standalone session.
+- O objeto `.info` é o mesmo objeto retornado pelo comando [`Session info`](../commands/session-info.md) para uma sessão autônoma.
 
 :::
 
@@ -477,15 +477,15 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 :::note
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. Para obter mais informações, consulte a seção [**Privilégios**](../ORDA/privileges.md).
+Os privilégios e as funções são definidos no arquivo [`roles.json`](../ORDA/privileges.md#rolesjson-file) do projeto. Para obter mais informações, consulte a seção [**Privilégios**](../ORDA/privileges.md).
 
 :::
 
 If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
 
-By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
+Como padrão quando não houver um privilégio associado à sessão, a sessão é uma [Sessão de convidados](#isguest).
 
-The [`userName`](#username) property is available at session object level (read-only).
+A propriedade [`userName`](#username) está disponível no nível do objeto de sessão (somente leitura).
 
 #### Exemplo
 

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Read only state.Summary-->La fonction **Read only state** est utilisé pour tester si *laTable* est en mode lecture seulement dans le process où la fonction est appelée.<!-- END REF--> **Read only state** retourne Vrai si *laTable* est en lecture seulement, et Faux si *laTable* est en lecture-écriture.
+<!--REF #_command_.Read only state.Summary-->La fonction **Read only state** est utilisé pour tester si *laTable* est en mode lecture seulement dans le process où la fonction est appelée.<!-- END REF-->retourne Vrai si *laTable* est en lecture seulement, et Faux si *laTable* est en lecture-écriture.
 
 #### Exemple 
 
@@ -36,3 +36,12 @@ L'exemple suivant teste le statut de la table \[Factures\]. Si elle est en lectu
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *Verrouillage d'enregistrements*  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 362 |
+| Thread safe | &check; |
+
+

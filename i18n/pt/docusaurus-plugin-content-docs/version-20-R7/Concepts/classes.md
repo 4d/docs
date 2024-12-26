@@ -158,7 +158,7 @@ Quando uma classe é [definida](#class-definition) no projeto, ela é carregada 
 - [`new()`](API/ClassClass.md#new) função, permitindo instanciar objetos de classe
 - Propriedade [`isShared`](API/ClassClass.md#isshared), true se a classe é [compartilhada](#classes-compartilhadas)
 - Propriedade [`isSingleton`](API/ClassClass.md#issingleton), true se a classe define uma [singleton](#singleton-classes).
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- propriedade [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true se a classe definir um [session singleton](#singleton-classes).
 - Propriedade [`me`](API/ClassClass.md#me), permitindo instanciar e acessar [singletons](#singleton-classes).
 
 Além disso, um objeto de classe pode fazer referência a um objeto [`construtor`](#class-constructor) (opcional).
@@ -610,11 +610,11 @@ The following commands have specific features when they are used within class fu
 
 The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
-For more details, see the [`Super`](../commands/super.md) command description.
+Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
 
 ### `This`
 
-The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+O comando [`This`](../commands/this.md) retorna uma referência ao objeto processado no momento. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
 Exemplo:
 
@@ -634,7 +634,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-For more details, see the [`This`](../commands/this.md) command description.
+Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this.md).
 
 ## Comandos de classe
 
@@ -729,17 +729,17 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton criado em  | Scope of process singleton                                                                                 | Scope of shared singleton | Scope of session singleton                                            |
-| -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D usuário único** | Processo                                                                                                   | Aplicação                 | Application or Web/REST session                                       |
-| **4D Server**        | Processo                                                                                                   | Máquina 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **Modo remoto 4D**   | Process (*nota*: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D         | 4D remote machine or Web/REST session                                 |
+| Singleton criado em  | Scope of process singleton                                                                                 | Escopo do singleton compartilhado | Scope of session singleton                                            |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------- |
+| **4D usuário único** | Processo                                                                                                   | Aplicação                         | Application or Web/REST session                                       |
+| **4D Server**        | Processo                                                                                                   | Máquina 4D Server                 | Client/server session or Web/REST session or Stored procedure session |
+| **Modo remoto 4D**   | Process (*nota*: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D                 | 4D remote machine or Web/REST session                                 |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
-### Creating and using singletons
+### Criação e uso de singletons
 
-You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) antes do [`Class constructor`](#class-constructor):
 
 - To declare a (process) singleton class, write `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
@@ -748,7 +748,7 @@ You declare singleton classes by adding appropriate keyword(s) before the [`Clas
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- As funções compartilhadas Singleton suportam a palavra-chave `onHttpGet`(../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

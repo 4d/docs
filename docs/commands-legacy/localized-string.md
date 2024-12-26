@@ -54,3 +54,13 @@ If the command is executed correctly, the OK variable is set to 1\. If *resName*
 #### See also 
 
 [Get database localization](get-database-localization.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 991 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

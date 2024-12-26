@@ -33,3 +33,12 @@ Vous voulez déterminer si le système d'exploitation courant est macOS :
 
 [System info](system-info.md)  
 [Is Windows](is-windows.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1572 |
+| Thread safe | &check; |
+
+

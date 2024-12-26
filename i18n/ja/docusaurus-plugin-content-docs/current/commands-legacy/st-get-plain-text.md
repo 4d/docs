@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.ST Get plain text.Summary-->**ST Get plain text** コマンドは*\**と*object*引数で指定したテキスト変数やフィールドからスタイルタグを取り除き、プレーンテキストを返します。<!-- END REF-->
@@ -107,3 +104,13 @@ It is now   Go to the 4D site or Open a window
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1092 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

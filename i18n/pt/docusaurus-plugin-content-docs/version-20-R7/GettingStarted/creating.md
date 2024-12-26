@@ -14,7 +14,7 @@ Para criar um novo projeto de banco de dados:
 1. Inicie 4D ou 4D Server.
 
 2. Faça uma das seguintes opções:
-   - Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
+   - Selecione **Novo > Projeto...** no menu **Arquivo**: ![](../assets/en/getStart/projectCreate1.png)
    - (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nome será utilizado:
@@ -72,7 +72,7 @@ Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofr
 
 ### Abrir um projeto com um ficheiro 4DLink
 
-You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. Há duas formas de o fazer:
+Você pode usar um [arquivo `.4DLink`](#about-4DLink-files) para iniciar a aplicação 4D e abrir o projeto alvo 4D. Há duas formas de o fazer:
 
 - haga doble clic o arrastre y suelte el archivo `.4DLink` en la aplicación 4D
 - vaya a **Archivo** > **Abrir los proyectos recientes** y seleccione un proyecto

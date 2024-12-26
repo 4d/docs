@@ -1018,6 +1018,21 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
  $vSingles:=ds.Person.query("spouse = null") // 正しいシンタックス
 ```
 
+#### Not equal to null or undefined values
+
+The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+```
+
+
 #### コレクションにおける "等しくない"
 
 コレクションを含むデータクラス属性内を検索する場合、"*値* と等しくない" 比較演算子 (`#` または `!=`) は、すべてのプロパティが *値* と異なる要素を検索します (ほかの比較演算子とは異なり、少なくとも 1つのプロパティが *値* と異なる要素は検索しません)。 つまり、"Not(プロパティ値が *value* と等しいコレクション要素を検索する)" を検索することと同じです。 たとえば、以下のような エンティティがあるとき:

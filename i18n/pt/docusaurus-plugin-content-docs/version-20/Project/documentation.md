@@ -5,36 +5,36 @@ title: Documentar um projecto
 
 
 
-In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+Nos projetos de aplicação, você pode documentar seus métodos e suas classes, formulários, tabelas ou campos. A criação de documentação é particularmente apropriada para projetos que estão sendo desenvolvidos por vários programadores e, em geral, é uma boa prática de programação. A documentação pode conter uma descrição de um elemento, bem como de qualquer informação necessária para entender como o elemento funciona na aplicação.
 
 Os seguintes elementos do projeto aceitam documentação:
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
+- Métodos (métodos banco de dados, métodos componentes, métodos projeto, métodos formulário, métodos 4D Mobile e triggers)
 - Classes
 - Formulários
 - Tabela
 
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
+Seus arquivos de documentação são escritos na sintaxe Markdown (arquivos .md) usando qualquer editor compatível com Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
 
-Documentation is displayed in the preview area (right-side panel) of the Explorer:
+A documentação é exibida na área de visualização (painel do lado direito) do Explorer:
 
 ![](../assets/en/Project/explorer_Doc.png)
 
-It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
+Ele também pode ser parcialmente exposto como [dicas do editor de código](#viewing-documentation-in-the-code-editor).
 
 
 ## Ficheiros documentação
 
 ### Nome do ficheiro de documentação
 
-Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
+Os arquivos de documentação têm o mesmo nome do elemento anexado, com a extensão ".md". Por exemplo, o arquivo de documentação anexado ao método projeto `myMethod.4dm` será denominado `myMethod.md`.
 
-In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
+No Explorer, o 4D exibe automaticamente o arquivo de documentação com o mesmo nome do elemento selecionado (veja abaixo).
 
 
 ### Arquitetura dos ficheiros de documentação
 
-All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
+Todos os arquivos de documentação são armazenados na pasta `Documentation`, localizada no primeiro nível da pasta do pacote.
 
 A arquitetura da pasta `Documentation` é a seguinte:
 
@@ -59,8 +59,8 @@ A arquitetura da pasta `Documentation` é a seguinte:
         * table1.md
         * ...
 
-- A project form and its project form method share the same documentation file for form and method.
-- A table form and its table form method share the same documentation file for form and method.
+- Um formulário projeto e seu método de formulário projeto compartilham o mesmo arquivo de documentação para formulário e método.
+- Um formulário tabela e seu método de formulário tabela compartilham o mesmo arquivo de documentação para o formulário e o método.
 
 > Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
 
@@ -73,40 +73,40 @@ Para visualizar a documentação na janela do Explorer:
 
 1. Certifique-se de que a área de pré-visualização é mostrada.
 2. Selecione o elemento documentado na lista do Explorador.
-3. Click the **Documentation** button located below the preview area.
+3. Clique no botão **Documentação** localizado abaixo da área de visualização.
 
 ![](../assets/en/Project/comments-explo2.png)
 
-- If no documentation file was found for the selected element, a **Create** button is displayed (see below).
+- Si no se ha encontrado ningún archivo de documentación para el elemento seleccionado, se muestra un botón **Crear** (ver más abajo).
 
-- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. Os conteúdos não são diretamente editáveis no painel.
+- Caso contrário, se houver um arquivo de documentação para o elemento selecionado, o conteúdo será exibido na área. Os conteúdos não são diretamente editáveis no painel.
 
 ### Editar o ficheiro de documentação
 
-You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
+Você pode criar e/ou editar um arquivo de documentação Markdown na janela Explorer para o elemento selecionado.
 
 Se não houver um arquivo de documentação para o elemento selecionado, você poderá:
 
-- click on the **Create** button in the `Documentation` pane or,
-- choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
+- clique no botão **Criar** no painel `Documentação` ou,
+- escolha a opção **Editar documentação...** no menu contextual ou no menu de opções do Explorer.
 
 ![](../assets/en/Project/comments-explo3.png)
 
-4D automatically creates an appropriately named .md file with a basic template at the relevant location and opens it with your default Markdown editor.
+4D cria automaticamente um arquivo .md com o nome apropriado com um modelo básico no local relevante e o abre com seu editor Markdown padrão.
 
-If a documentation file already exists for the selected element, you can open it with your Markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
+Se já existir um arquivo de documentação para o elemento selecionado, você poderá abri-lo com seu editor Markdown escolhendo a opção **Editar documentação...** no menu contextual ou no menu de opções do Explorer.
 
 
 
 ## Ver a documentação no editor de código
 
-The 4D code editor displays a part of a method's documentation in its help tip.
+O editor de código 4D exibe uma parte da documentação de um método em sua dica de ajuda.
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
 Se existir um ficheiro com o nome `\&#060;MethodName&#062;.md` na pasta `\&#060;package&#062;/documentation`, o editor de código é apresentado (por prioridade):
 
-- Any text entered in an HTML comment tag (`<!-- command documentation -->`) at the top of the markdown file.
+- Qualquer texto inserido em uma tag de comentário HTML (`<!-- documentação comando -->`) na parte superior do arquivo de markdown.
 
 - Or, if no html comment tag is used, the first sentence after a `# Description` tag of the markdown file.  
   In this case, the first line contains the **prototype** of the method, automatically generated by the 4D code parser.
@@ -166,10 +166,10 @@ _italic_
 - A etiqueta de tabela é suportada:
 
 ```md
-| Parameter | Type   | Description  |
+| Parâmetro | Tipo | Descrição |
 | --------- | ------ | ------------ |
-| wpArea    | Text |Write pro area|
-| toolbar   | Text |Toolbar name  |
+| wpArea | Text |Área de escrita profissional|
+| toolbar | Text |Nome da barra de ferramentas |
 ```
 
 
@@ -217,9 +217,9 @@ GetLogo (size) -> logo
 | logo      | Picture | out | Selected logo |
 
 
-## Description
+## Descrição
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter.
+Esse método retorna um logotipo de um tamanho específico, dependendo do valor do parâmetro *size*.
 1 = tamanho mais pequeno, 5 = tamanho maior.
 
 ## Example C_PICTURE($logo)

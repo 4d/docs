@@ -23,28 +23,28 @@ displayed_sidebar: docs
 
 Cada objeto retornado inclui as seguintes propriedades principais:
 
-| **Propriedade** | **Tipo** | **Description**                                                                                                                                                                               |
-| --------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName      | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                  |
-| code            | integer  | Valor numérico do evento de formulário.                                                                                                                                       |
-| description     | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **Propriedade** | **Tipo** | **Description**                                                                                                                                                      |
+| --------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName      | text     | Nome do objeto que aciona o evento - Não incluído se o evento for acionado pelo formulário                                                                           |
+| code            | integer  | Valor numérico do evento de formulário.                                                                                                              |
+| description     | text     | Nome do evento do formulário (\*por exemplo, \* "On After Edit"). Veja a seção [**Eventos de Formulário**](../Events/overview.md) |
 
-For example, in the case of a click on a button, the object contains the following properties:
+Por exemplo, no caso de um clique no botão, o objeto contém as seguintes propriedades:
 
 ```json
 {"code":4,"description":"On Clicked","objectName":"Button2"}
 ```
 
-The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
+O objeto de evento pode conter propriedades adicionais, dependendo do objeto para o qual o evento ocorre. Para objetos *eventObj* gerados em:
 
-- List box or list box column objects, see the *list box documentation on developer.4d.com*.
-- 4D View Pro areas, see *On VP Ready form event*.
+- Lista de objetos da coluna caixa de lista, veja a *documentação da caixa de lista no developer.4d.com*.
+- 4D View Pro areas , consulte *No formulário VP Pronto*.
 
-**Note:** If there is no current event, **FORM Event** returns a null object.
+**Nota:** Se não há nenhum evento atual, **Evento FORMATO** retorna um objeto nulo.
 
 #### Exemplo 1
 
-You want to handle the On Clicked event on a button:
+Você deseja manipular o evento On Clicked em um botão:
 
 ```4d
  If(FORM Event.code=On Clicked)
@@ -54,11 +54,11 @@ You want to handle the On Clicked event on a button:
 
 #### Exemplo 2
 
-If you set the column object name with a real attribute name of a dataclass like this:
+Se você definir o nome do objeto de coluna com um nome de atributo real de um dataclass como este:
 
 ![](../assets/en/commands/pict4843820.en.png)
 
-You can sort the column using the On Header Click event:
+Você pode classificar a coluna usando o evento On Header Click:
 
 ```4d
  Form.event:=FORM Event
@@ -72,11 +72,11 @@ You can sort the column using the On Header Click event:
 
 #### Exemplo 3
 
-You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
+Você deseja tratar o On Display Details em um objeto de caixa de listagem com um método definido na propriedade *Meta info expression*:
 
 ![](../assets/en/commands/pict4843812.en.png)
 
-The *setColor* method:
+O método *setColor*:
 
 ```4d
  var $event;$0;$meta : Object
@@ -92,11 +92,11 @@ The *setColor* method:
  $0:=$meta
 ```
 
-The resulting list box when rows are selected:
+A caixa de lista resultante quando as linhas são selecionadas:
 
 ![](../assets/en/commands/pict4843808.en.png)
 
 #### Veja também
 
-[Form Events](../Events/overview.md)
-[Form event code](../commands/form-event-code.md)
+[Eventos de formulário](../Events/overview.md)
+[Código de evento do formulário](../commands/form-event-code.md)

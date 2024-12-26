@@ -71,3 +71,13 @@ Création du sous-dossier "\\February\\" dans le dossier existant "C:\\Archives\
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 475 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+
+

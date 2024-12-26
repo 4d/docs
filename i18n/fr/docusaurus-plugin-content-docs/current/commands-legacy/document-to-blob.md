@@ -50,3 +50,13 @@ Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON E
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 525 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+
+

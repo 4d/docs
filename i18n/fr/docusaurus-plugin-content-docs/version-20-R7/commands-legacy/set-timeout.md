@@ -49,3 +49,13 @@ L'exemple suivant fixe le port série devant recevoir des données et le timeout
 [RECEIVE PACKET](receive-packet.md)  
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 268 |
+| Thread safe | &check; |
+| Modifie les variables | OK, error |
+
+

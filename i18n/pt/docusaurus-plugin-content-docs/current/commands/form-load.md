@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 #### Descrição
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
+<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
 
 In the *form* parameter, you can pass:
 
@@ -34,9 +34,9 @@ When the command is executed from a component, it loads the component forms by d
 ##### formData
 
 Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
-The form data object is available in the [`On Load` form event](../Events/onLoad.md).
+Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
 
-For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
+Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
 
 ##### Printing data
 
@@ -44,7 +44,7 @@ In order to be able to execute this command, a print job must be opened beforeha
 
 If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
 
-Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
+Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. O evento formulário [`On Unload`](../Events/onUnload.md) é executado no final da impressão.
 
 To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform.
 

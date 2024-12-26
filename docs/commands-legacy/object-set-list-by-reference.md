@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->The **OBJECT SET LIST BY REFERENCE** command defines or replaces the list associated with the object(s) designated by the *object* and *\** parameters, with the hierarchical list referenced in the *list* parameter.<!-- END REF-->
@@ -130,3 +127,12 @@ In order to update the list associated with the pop-up managed by array, you nee
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1266 |
+| Thread safe | &cross; |
+
+

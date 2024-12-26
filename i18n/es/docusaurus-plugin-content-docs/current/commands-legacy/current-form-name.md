@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Current form name.Summary-->El comando **Current form name** devuelve el nombre del formulario actual definido para el proceso.<!-- END REF--> El formulario actual puede ser un formulario proyecto o un formulario tabla.
@@ -60,3 +57,12 @@ Usted quiere obtener el formulario actual si éste es un formulario proyecto:
 #### Ver también 
 
 [FORM LOAD](../commands/form-load.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1298 |
+| Hilo seguro | &cross; |
+
+

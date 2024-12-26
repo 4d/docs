@@ -26,7 +26,7 @@ O parâmetro *formulasCol* é uma coleção bidimensional:
 - Cada subcoleção define os valores das células para a linha. Values must be text elements containing the formulas to assign to the cells.
 
 > If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Se um método 4D for usado, ele deverá ser permitido com o comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
 You remove the formulas in *rangeObj* by replacing them with an empty string ("").
 

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Compatibility Note:* This command only works in binary databases.<!-- END REF--> It always returns an empty BLOB in projects.* 
@@ -34,3 +31,13 @@ This lets you keep a backup of users in the database data and, as such, implemen
 #### See also 
 
 [BLOB TO USERS](blob-to-users.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 849 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
+
+

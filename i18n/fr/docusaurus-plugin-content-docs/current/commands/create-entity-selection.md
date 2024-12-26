@@ -43,3 +43,10 @@ $employees:=Create entity selection([Employee])
 #### Voir également
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
+
+#### Propriétés
+
+|                    |                                             |
+| ------------------ | ------------------------------------------- |
+| Numéro de commande | 1512                                        |
+| Thread safe        | &amp;amp;amp;amp;check; |

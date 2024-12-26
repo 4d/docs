@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Get menu bar reference.Summary-->El comando **Get menu bar reference** devuelve la identificación única de la barra de menús actual o de la barra de menús de un proceso específico.<!-- END REF-->
@@ -42,3 +39,12 @@ Consulte el ejemplo del comando [GET MENU ITEMS](get-menu-items.md "GET MENU ITE
 #### Ver también 
 
 [SET MENU BAR](set-menu-bar.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 979 |
+| Hilo seguro | &cross; |
+
+

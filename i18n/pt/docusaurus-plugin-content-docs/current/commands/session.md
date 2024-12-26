@@ -65,7 +65,7 @@ Para mais informações em sessões usuários remotos, consulte o parágrafo [**
 
 Todos os processos de procedimento armazenado compartilham a mesma sessão de usuário virtual. O objeto `Session` de procedimentos armazenados está disponível em:
 
-- methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
+- métodos chamados com o comando [`Execute on server`](../commands-legacy/execute-on-server.md),
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
 For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) page.

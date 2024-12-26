@@ -40,7 +40,7 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 
 #### Descrição
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
+The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. É idêntico ao comando [`SMTP New transporter`](../commands/smtp-new-transporter.md) (atalho).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -135,7 +135,7 @@ The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends th
 
 > The `transporter` object must have already been created using the `SMTP New transporter` command.
 
-O método cria a ligação SMTP se esta ainda não estiver viva. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](#smtp-new-transporter) command description.
+O método cria a ligação SMTP se esta ainda não estiver viva. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. Para obter mais informações, consulte a descrição do comando [`SMTP New transporter`](#smtp-new-transporter).
 
 Em *mail*, passe um objeto [`Email`](EmailObjectClass.md#email-object) válido para enviar. As propriedades de origem (de onde vem o e-mail) e de destino (um ou mais destinatários) devem ser incluídas, as restantes propriedades são opcionais.
 

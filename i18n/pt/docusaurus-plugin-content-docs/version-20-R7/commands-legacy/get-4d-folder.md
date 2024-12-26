@@ -53,8 +53,9 @@ Aplicações em ambiente 4D usar a pasta específica para armazenar as seguintes
 
 Com as principais aplicações 4D (4D e 4D Server), a pasta 4D ativa chamada **4D** e está localizada por padrão no seguinte local:
 
-* No Windows 7 e seguintes: *{Disco}:\\Usuarios\\* *<* *nomeUsuario\>\\AppData\\Roaming\\* *<nomeBanco>*
-* No OS X: *{Disco}:Usuarios:* *<* *nomeUsuario* *\>:Library:Application Support:<* *nomeBanco* *\>*
+* Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
+* macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
+
 
 ##### Pasta Licenças 
 
@@ -211,3 +212,13 @@ Se o parâmetro *pasta* não é válido ou se o endereço de acesso retornado é
 [Temporary folder](temporary-folder.md)  
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 485 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

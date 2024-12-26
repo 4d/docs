@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->La commande **OBJECT SET LIST BY NAME** définit, remplace ou dissocie l'*énumération* associée à l'objet ou au groupe d'objets désigné(s) par *objet*.<!-- END REF--> L'énumération dont le nom est passé dans le paramètre *énumération* doit avoir été créée dans l'éditeur d'énumérations, en mode Développement.
@@ -92,3 +89,12 @@ Vous souhaitez supprimer des associations de listes :
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 237 |
+| Thread safe | &cross; |
+
+

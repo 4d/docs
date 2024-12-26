@@ -55,3 +55,14 @@ O seguinte exemplo pesquisa as estatísticas corretas para uma concorrência mun
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 351 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+
+

@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->The LISTBOX GET TABLE SOURCE command can be used to find out the current source of the data displayed in the list box that is designated by the *\** and *object* parameters.<!-- END REF-->
@@ -35,3 +32,12 @@ If the list box is associated with arrays, *tableNum* returns -1 and *name*, if 
 #### See also 
 
 [LISTBOX SET TABLE SOURCE](listbox-set-table-source.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1014 |
+| Thread safe | &cross; |
+
+

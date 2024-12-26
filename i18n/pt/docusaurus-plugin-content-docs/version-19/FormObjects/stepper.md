@@ -14,7 +14,7 @@ You can assign the variable associated with the object to an enterable area (fie
 Um stepper pode ser associado diretamente a uma variável número, hora ou data.
 
 * For values of the time type, the Minimum, Maximum and Step properties represent seconds. Por exemplo, para definir um passo de 8:00 a 18:00 com passos de 10 minutos:
-  * [minimum](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
+  * [mínimo](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
   * [máximo](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
   * [passo](properties_Scale.md#step) = 600 (10*60)
 * Para valores do tipo data, o valor introduzido na propriedade [passo](properties_Scale.md#step) representa dias. As propriedades Mínimo e Máximo são ignoradas.

@@ -48,3 +48,12 @@ This example displays an alert. This method passes a pointer to a field:
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 257 |
+| Thread safe | &check; |
+
+

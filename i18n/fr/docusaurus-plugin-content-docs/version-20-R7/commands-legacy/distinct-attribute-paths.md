@@ -69,3 +69,12 @@ Le tableau *aTPaths* reçoit les éléments suivants :
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1395 |
+| Thread safe | &check; |
+
+

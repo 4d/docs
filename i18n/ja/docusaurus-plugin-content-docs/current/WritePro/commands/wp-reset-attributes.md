@@ -9,43 +9,43 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
-| 引数                  | 型      |   | 説明                                                |
-| ------------------- | ------ | - | ------------------------------------------------- |
-| targetObj           | Object | → | Range or element or 4D Write Pro document         |
-| sectionOrSubsection | Object | → | Section or subsection of a 4D Write Pro document  |
-| attribName          | Text   | → | Name of attribute(s) to remove |
+| 引数                  | 型      |   | 説明                                  |
+| ------------------- | ------ | - | ----------------------------------- |
+| targetObj           | Object | → | レンジまたは要素または4D Write Pro ドキュメント      |
+| sectionOrSubsection | Object | → | 4D Write Pro ドキュメントのセクションまたはサブセクション |
+| attribName          | Text   | → | 削除したい属性の名前                          |
 
 <!-- END REF-->
 
 #### 説明
 
-The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> This command can remove any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image. You can pass the attribute name to be reset in *attribName* or, in the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
+**WP RESET ATTRIBUTES** コマンドは<!--REF #_command_.WP RESET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、またはドキュメントの1つ以上の値をリセットすることができます。<!-- END REF-->このコマンドは任意の4D Write Pro 内部属性(文字、段落、ドキュメント、表または画像)を削除することができます。 リセットしたい属性の名前を*attribName* 引数に渡すことができます。あるいは削除したいのがセクションまたはサブセクションの場合、*sectionOrSubsection* オブジェクト単体を渡すだけで、全ての属性を一度にリセットすることができます。
 
-In the *targetObj* parameter, you can pass either:
+*targetObj* 引数には、以下のいずれかを渡すことができます:
 
-- a range, or
-- an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- レンジ
+- 要素(ヘッダー / フッター / 本文 / 表 / 段落 / アンカーされた画像またはインラインの画像 / セクション / サブセクション / スタイルシート)
+- 4D Write Pro ドキュメント
 
-When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section.
+**WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。
 
 :::note 注記
 
-- When **WP RESET ATTRIBUTES** is applied to a section/sub-section object, attributes are then inherited from the parent section or document.
-- When **WP RESET ATTRIBUTES** is applied to a style sheet object, the attributes are removed from the style sheet unless it is the default ("Normal") style sheet. In this case, the default value is applied to the attribute (the "Normal" style sheet defines all style sheet attributes).
-- When *sectionOrSubsection* is not a section nor a subsection and if no attribute is provided, then an error is raised.
+- **WP RESET ATTRIBUTES** がセクション/サブセクションオブジェクトに対して適用された場合、属性はその親セクションまたはドキュメントから継承されます。
+- **WP RESET ATTRIBUTES** がスタイルシートオブジェクトに対して適用された場合、スタイルシートがデフォルト("Normal")スタイルシートである場合を除き、その属性はスタイルシートから削除されます。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。
+- *sectionOrSubsection* 引数がセクションでもサブセクションでもなく、また属性が何も指定されたなかった場合には、エラーが生成されます。
 
 :::
 
-If the attribute to be reset was not defined in the element passed as a parameter, the command does nothing.
+引数として渡された要素の中にリセットしたい属性が定義されていなかった場合、コマンドは何もしません。
 
 #### 例題 1
 
-You want to remove several attributes from the following selection:
+以下の選択範囲から複数の属性を削除したい場合を考えます:
 
 ![](../../assets/en/WritePro/commands/pict2643861.en.png)
 
-You can execute:
+この場合、以下のように書くことができます:
 
 ```4d
  $range:=WP Get selection(*;"WParea")
@@ -56,7 +56,7 @@ You can execute:
  WP RESET ATTRIBUTES($range;wk border style)
 ```
 
-The resulting document is:
+実行後のドキュメントはこうなります:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 
@@ -64,9 +64,9 @@ The resulting document is:
 
 ```4d
 $section:=WP Get section($document; 3)
-WP RESET ATTRIBUTES($section)  // All attributes of the section are removed
+WP RESET ATTRIBUTES($section)  // セクションの全ての属性が削除される
 $subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
-WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
+WP RESET ATTRIBUTES($subSection) // サブセクションの全ての属性が削除される
 ```
 
 #### 参照

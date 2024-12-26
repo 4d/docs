@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get font.Summary-->The OBJECT Get font command returns the name of the character font used by the form object(s) designated by *object*.<!-- END REF-->
@@ -27,3 +24,12 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 #### See also 
 
 [OBJECT SET FONT](object-set-font.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1069 |
+| Thread safe | &cross; |
+
+

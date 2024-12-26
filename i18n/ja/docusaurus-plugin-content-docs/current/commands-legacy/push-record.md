@@ -33,3 +33,12 @@ displayed_sidebar: docs
 
 [POP RECORD](pop-record.md)  
 *レコードスタックの使用*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 176 |
+| スレッドセーフである | &check; |
+
+

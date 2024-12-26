@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->The DISPLAY NOTIFICATION command displays a notification message to the user.<!-- END REF-->
@@ -43,3 +40,12 @@ Under Windows, the message window remains displayed as long as no activity has b
 #### See also 
 
 [ALERT](alert.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 910 |
+| Thread safe | &cross; |
+
+

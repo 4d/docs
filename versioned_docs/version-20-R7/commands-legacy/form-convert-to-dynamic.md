@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->The **FORM Convert to dynamic** command converts the *formName* (classic form) to a dynamic form and returns it in an object.<!-- END REF-->
@@ -64,3 +61,12 @@ If you execute the code:
 
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1570 |
+| Thread safe | &cross; |
+
+

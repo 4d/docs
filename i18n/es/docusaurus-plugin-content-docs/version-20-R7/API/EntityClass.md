@@ -102,7 +102,7 @@ La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en la memor
 
 This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 
-> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save()`](#save) function is executed.
+> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save()`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`isNew()`](#isnew) devuelve **True**).
 

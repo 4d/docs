@@ -2732,7 +2732,7 @@ No parâmetro *querySettings*, você pode passar um objeto que contenha placehol
 | parameters  | Object | **Placeholders com nome para os valores** usados na *queryString*. Os valores são expressos como pares de propriedade/valor, em que propriedade é o nome do espaço reservado inserido para um valor na *queryString* (":placeholder") e valor é o valor a ser comparado. Pode combinar marcadores de posição indexados (valores passados diretamente em parâmetros de valor) e valores de marcadores de posição com nome na mesma pesquisa.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | attributes  | Object | **Placeholders nomeados para os caminhos de atributos** usados na *queryString*. Os atributos são expressos como pares de propriedade/valor, em que propriedade é o nome do espaço reservado inserido para um caminho de atributo no *queryString* (":placeholder"), e o valor pode ser uma cadeia de caracteres ou uma coleção de cadeias de caracteres. Cada valor é um caminho que pode designar uma propriedade em um objeto da coleção<table><tr><th>Tipo de propriedade</th><th>Descrição</th></tr><tr><td>String (cadeia de caracteres)</td><td>attributePath expresso usando a notação de ponto, por exemplo, "name" ou "user.address.zipCode"</td></tr><tr><td>Coleção de cadeias de caracteres</td><td>Cada cadeia de caracteres da coleção representa um nível de attributePath, por exemplo, \["name"] ou \["user", "address", "zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
 
-> Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
+> O uso desse parâmetro é obrigatório se você quiser consultar uma coleção [usando uma **referência de coleção** ou **referência de objeto**](#object-or-collection-reference-as-value).
 
 #### Exemplo 1
 
@@ -2825,19 +2825,19 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 <!-- REF #collection.reduce().Params -->
 
-| Parâmetro  | Tipo                                            |                             | Descrição                                                                         |
-| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| formula    | 4D. Function                    |              ->             | Objecto fórmula                                                                   |
-| methodName | Text                                            |              ->             | Nome da função a qual se chama para processar os elementos da coleção             |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expressão                                       |              ->             | Parâmetro(s) a transmitir                                      |
-| Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador                                                  |
+| Parâmetro  | Tipo                                            |                             | Descrição                                                                                      |
+| ---------- | ----------------------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function                    |              ->             | Objecto fórmula                                                                                |
+| methodName | Text                                            |              ->             | Nome da função a qual se chama para processar os elementos da coleção                          |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Valor a ser usado como primeiro argumento para a primeira chamada de *formula* ou *methodName* |
+| param      | expressão                                       |              ->             | Parâmetro(s) a transmitir                                                   |
+| Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador                                                               |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+A função `.reduce()` <!-- REF #collection.reduce().Summary -->aplica a chamada de retorno *formula* ou *methodName* em um acumulador e em cada elemento da coleção (da esquerda para a direita) para reduzi-lo a um único valor<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
@@ -2846,9 +2846,9 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+O retorno de chamada pega cada elemento da coleção e executa qualquer operação desejada para acumular o resultado em *$1.accumulator*, retornado em *$1.value*.
 
-Pode passar o valor para inicializar o acumulador em *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$1.accumulator* começa com *Undefined*.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2858,7 +2858,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+- *$1.accumulator*: valor a ser modificado pela função sendo inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo 1
@@ -2910,19 +2910,19 @@ Com o seguinte método ***Flatten***:
 
 <!-- REF #collection.reduceRight().Params -->
 
-| Parâmetro  | Tipo                                            |                             | Descrição                                                                         |
-| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| formula    | 4D. Function                    |              ->             | Objecto fórmula                                                                   |
-| methodName | Text                                            |              ->             | Nome da função a qual se chama para processar os elementos da coleção             |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expressão                                       |              ->             | Parâmetro(s) a transmitir                                      |
-| Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador                                                  |
+| Parâmetro  | Tipo                                            |                             | Descrição                                                                                      |
+| ---------- | ----------------------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function                    |              ->             | Objecto fórmula                                                                                |
+| methodName | Text                                            |              ->             | Nome da função a qual se chama para processar os elementos da coleção                          |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Valor a ser usado como primeiro argumento para a primeira chamada de *formula* ou *methodName* |
+| param      | expressão                                       |              ->             | Parâmetro(s) a transmitir                                                   |
+| Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador                                                               |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+A função `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplica a chamada de retorno *formula* ou *methodName* em um acumulador e em cada elemento da coleção (da direita para a esquerda) para reduzi-lo a um único valor<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
@@ -2931,9 +2931,9 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - ou *methodName*, o nome de um método projeto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+O retorno de chamada pega cada elemento da coleção e executa qualquer operação desejada para acumular o resultado em *$1.accumulator*, retornado em *$1.value*.
 
-Pode passar o valor para inicializar o acumulador em *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$1.accumulator* começa com *Undefined*.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2943,7 +2943,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+- *$1.accumulator*: valor a ser modificado pela função sendo inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo 1
@@ -3007,19 +3007,19 @@ Com o seguinte método ***Flatten***:
 
 #### Descrição
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+A função `.remove()` <!-- REF #collection.remove(). Resumo -->remove um ou mais elemento(s) da posição *índice* especificada na coleção e retorna a coleção editada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
 Em *index*, passe a posição onde deseja que o elemento seja retirado da colecção.
 
-> **Aviso**: lembre que elementos de coleção são numerados a partir de 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Aviso**: lembre que elementos de coleção são numerados a partir de 0. Se *index* for maior que o comprimento da coleção, o índice inicial real será definido como o comprimento da coleção.
 
 - Se *index* < 0, ele será recalculado como *index:=index+length* (ele é considerado como o deslocamento do final da coleção).
 - Se o valor calculado for < 0, *index* será definido como 0.
-- If the calculated value > the length of the collection, *index* is set to the length.
+- Se o valor calculado > o comprimento da coleção, *index* é definido para o comprimento.
 
-Em *howMany*, passe o número de elementos a serem removidos de *index*. If *howMany* is not specified, then one element is removed.
+Em *howMany*, passe o número de elementos a serem removidos de *index*. Se \*howMany \*não for especificado, então um elemento é removido.
 
 Se tentar remover um elemento de uma coleção vazia, o método não faz nada (não é gerado qualquer erro).
 
@@ -3066,10 +3066,10 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 > Essa função modifica a coleção original.
 
-- If *size* < collection length, exceeding elements are removed from the collection.
+- Se *size* < comprimento da coleção, os elementos excedentes são removidos da coleção.
 - Se *size* > comprimento da coleção, o comprimento da coleção é aumentado à medida.
 
-Por padrão, novos elementos são preenchidos com valores **null**. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por padrão, novos elementos são preenchidos com valores **null**. Pode especificar o valor para preencher os elementos adicionados usando o parâmetro *defaultValue*.
 
 #### Exemplo
 
@@ -3198,16 +3198,16 @@ Se a colecção estiver vazia, este método não faz nada.
 
 #### Descrição
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.slice()` <!-- REF #collection.slice().Summary -->retorna uma parte de uma coleção em uma nova coleção<!-- END REF -->, selecionada do índice *startFrom* ao índice *end* (end não incluído). Esta função devolve uma *cópia superficial* da coleção. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 
 > Essa função não modifica a coleção original.
 
-The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+A coleção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom*, a coleção devolvida contém todos os elementos desde *startFrom* até ao último elemento da coleção original.
 
 - Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção).
-- If the calculated value < 0, *startFrom* is set to 0.
+- Se o valor calculado < 0, *startFrom* é definido como 0.
 - Se *end* < 0 , ele será recalculado como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Se *end < startFrom* (valores passados ou calculados), o método não fará nada.
 
 #### Exemplo
 
@@ -3252,7 +3252,7 @@ The returned collection contains the element specified by *startFrom* and all su
 
 #### Descrição
 
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided *formula* or *methodName* code<!-- END REF -->.
+A função `.some()` <!-- REF #collection.some().Summary -->retorna true se pelo menos um elemento da coleção passar com êxito em um teste implementado no código *formula* ou *methodName* fornecido<!-- END REF -->.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
@@ -3269,16 +3269,16 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-- (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
+- (obrigatório se você usou um método) *$1.result* (boolean): **true** se a avaliação do valor do elemento for bem-sucedida, **false** caso contrário.
 - *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 De qualquer forma, no momento em que a função `.some()` encontra o primeiro elemento da coleção retornando true, ela para de chamar o retorno de chamada e retorna **true**.
 
-Por padrão, `.some()` testa toda a coleção. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Por padrão, `.some()` testa toda a coleção. Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa em *startFrom*.
 
 - Se *startFrom* >= tamanho da coleção, é retornado **False**, o que significa que a coleção não é testada.
 
-- If *startFrom* < 0, it is considered as the offset from the end of the collection.
+- Se *startFrom* < 0, é considerado como a compensação a partir do final da recolha.
 
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
@@ -3345,7 +3345,7 @@ If `.sort()` is called with no parameters, only scalar values (number, text, dat
 6. collections
 7. datas
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Pode fornecer parâmetros adicionais a <em x-id="3">methodName</em> se for necessário.
+Se pretender ordenar os elementos da coleção por outra ordem ou ordenar qualquer tipo de elemento, deve fornecer em *formula* ([objeto Formula](FunctionClass.md)) ou *methodName* (Text) uma chamada de retorno que defina a ordem de ordenação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Pode fornecer parâmetros adicionais a <em x-id="3">methodName</em> se for necessário.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -3472,7 +3472,7 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 #### Descrição
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+A função `.unshift()` <!-- REF #collection.unshift().Summary -->insere o(s) \*valu(es) fornecido(s) no início da coleção <!-- END REF -->e retorna a coleção modificada.
 
 > Essa função modifica a coleção original.
 

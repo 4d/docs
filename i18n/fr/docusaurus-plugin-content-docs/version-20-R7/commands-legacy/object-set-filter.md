@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** remplace le filtre de saisie pour *objet* par *filtreSaisie* dans le formulaire courant affiché à l'écran.<!-- END REF--> 
@@ -58,3 +55,12 @@ L'exemple suivant autorise uniquement la saisie des lettres “a”, “b”, �
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 235 |
+| Thread safe | &cross; |
+
+

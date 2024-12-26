@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Summary-->**OBJECT SET MAXIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトの最大値を、カレントプロセスにおいて変更します。<!-- END REF-->
@@ -32,3 +29,12 @@ displayed_sidebar: docs
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1244 |
+| スレッドセーフである | &cross; |
+
+

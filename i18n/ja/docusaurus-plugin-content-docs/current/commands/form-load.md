@@ -44,82 +44,82 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレークは生成されません。 ページブレークは開発者が別途指定する必要があります。
 
-Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
+プロジェクトフォーム (またはフォームのオブジェクトメソッド) を開く際には、[`On Load` form event](../Events/onLoad.md) フォームイベントのみが実行されます。 他のフォームイベントは無視されます。 印刷の終わりには[`On Unload` form event](../Events/onUnload.md) フォームイベントが実行されます。
 
-To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform.
+フォームのグラフィックな一貫性を保持するために、プラットフォームにかかわらず"印刷"アピアランスプロパティを適用することをお勧めします。
 
-The current printing form is automatically closed when the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command is called.
+[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドが呼び出されると、カレント印刷フォームは自動で閉じられます。
 
-##### Parsing form contents
+##### フォームコンテンツの解析
 
-This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
+データ解析のためにスクリーン外にフォームをロードするには、 印刷ジョブ外のコンテキストで**FORM LOAD** を呼び出します。 この場合、フォームイベントは実行されません。
 
-**FORM LOAD** can be used with the [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) and [OBJECT Get type](../commands-legacy/object-get-type.md) commands in order to perform any type of processing on the form contents. You must then call the [FORM UNLOAD](../commands-legacy/form-unload.md) command in order to release the form from memory.
+**FORM LOAD** を[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) や[OBJECT Get type](../commands-legacy/object-get-type.md) コマンドと併せて使用して、フォームコンテンツを任意に処理することができます。 その後、フォームをメモリから解放するために[FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。
 
-Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](../commands-legacy/form-unload.md).
+いずれの場合においても、スクリーン上のフォームはロードされたままであるため(**FORM LOAD** コマンドに影響されない)、[FORM UNLOAD](../commands-legacy/form-unload.md)コマンドを呼び出した後にこれらをリロードする必要はありません。
 
-**Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](../commands-legacy/form-unload.md) to avoid any risk of memory overflow.
+**注:** メモリオーバーフローのリスクを回避するため、スクリーン外でフォームを使用した場合には[FORM UNLOAD](../commands-legacy/form-unload.md) を必ずコールしてください。
 
 #### 例題 1
 
-Calling a project form in a print job:
+印刷ジョブにプロジェクトフォームを呼び出す場合:
 
 ```4d
  OPEN PRINTING JOB
  FORM LOAD("print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 #### 例題 2
 
-Calling a table form in a print job:
+印刷ジョブにテーブルフォームを呼び出す場合:
 
 ```4d
  OPEN PRINTING JOB
  FORM LOAD([People];"print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 #### 例題 3
 
-Parsing of form contents to carry out processing on text input areas:
+フォームの内容を解析してテキスト入力エリアに何らかの処理をする場合:
 
 ```4d
  FORM LOAD([People];"my_form")
-  // selection of form without execution of events or methods
+  // イベントやメソッドを実行することなくフォームを選択
  FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
  For($i;1;Size of array(arrObjNames))
     If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… processing
+  //… 処理
     End if
  End for
- FORM UNLOAD //do not forget to unload the form
+ FORM UNLOAD // フォームをunloadするのを忘れないこと
 ```
 
 #### 例題 4
 
-The following example returns the number of objects on a JSON form:
+以下の例では、JSON ファイルで定義されたフォーム上にあるオブジェクトの数を返します:
 
 ```4d
- ARRAY TEXT(objectsArray;0) //sort form items into arrays
+ ARRAY TEXT(objectsArray;0) // フォームのオブジェクトを並べ替えて入れる配列
  ARRAY POINTER(variablesArray;0)
  ARRAY INTEGER(pagesArray;0)
  
- FORM LOAD("/RESOURCES/OutputForm.json") //load the form
+ FORM LOAD("/RESOURCES/OutputForm.json") // フォームを読み込む
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
  
- ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
+ ALERT("The form contains "+String(size of array(objectsArray))+" objects") // オブジェクトの数を返す
 ```
 
-the result shown is:
+結果は以下のように表示されます:
 
 ![](../assets/en/commands/pict3688480.en.png)
 
 #### 例題 5
 
-You want to print a form containing a list box. During the *on load* event, you want the contents of the list box to be modified.
+リストボックスを格納しているフォームを印刷したい場合を考えます。 *on load* イベント中に、リストボックスのコンテンツを変更したいとします。
 
-1\. In the printing method, you write:
+1\. 印刷メソッド内に、以下のように書きます:
 
 ```4d
  var $formData : Object
@@ -129,12 +129,12 @@ You want to print a form containing a list box. During the *on load* event, you 
  OPEN PRINTING JOB
  $formData:=New object
  $formData.LBcollection:=New collection()
- ... //fill the collection with data
+ ... // コレクションにデータを入れます
  
- FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ FORM LOAD("GlobalForm";$formData) // $formData 経由でコレクションをフォームに渡します
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    $full:=Print object(*;"LB") // この"LB" はリストボックスで、Form.LBcollectionをデータソースとして持つとします。
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
@@ -144,13 +144,13 @@ You want to print a form containing a list box. During the *on load* event, you 
  CLOSE PRINTING JOB
 ```
 
-2\. In the form method, you can write:
+2\. フォームメソッド内には以下のように書きます:
 
 ```4d
  var $o : Object
  Case of
     :(Form event code=On Load)
-       For each($o;Form.LBcollection) //LBcollection is available
+       For each($o;Form.LBcollection) // ここでForm.LBcollection は利用可能です
           $o.reference:=Uppercase($o.reference)
        End for each
  End case

@@ -71,3 +71,12 @@ Cet exemple définit deux paramètres :
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 777 |
+| Thread safe | &check; |
+
+

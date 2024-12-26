@@ -68,3 +68,12 @@ displayed_sidebar: docs
 
   
 [Encrypt data file](encrypt-data-file.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1609 |
+| スレッドセーフである | &check; |
+
+

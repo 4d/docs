@@ -182,7 +182,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 - `property`: オブジェクトのスタティックプロパティを型定義します。
 - `Function get <Name>` と `Function set <Name>`: オブジェクトの計算プロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
-- `This` and `Super` are commands that have special
+- `This` および `Super` は特殊な用途を持つコマンドです。
 
 ### `Function`
 
@@ -195,7 +195,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+関数コードにおいては、終了キーワードはありません。 4D ランゲージは、次の`Function` キーワードまたはクラスファイルの終了を持って、自動的に関数のコードの終わりを検知します。
 
 :::
 
@@ -335,7 +335,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+クラスコンストラクター関数コードにおいては、終了キーワードはありません。 4D ランゲージは、次の`Function` キーワードまたはクラスファイルの終了を持って、自動的に関数のコードの終わりを検知します。
 
 :::
 
@@ -343,7 +343,7 @@ There is no ending keyword for class constructor function code. The 4D language 
 
 クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
-コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
+コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 [`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼ぶことができます。
 
 コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 また、インスタンスプロパティの値が、コンストラクターに渡される引数に依存しない場合は、[`property`](#property) キーワードを使用して定義することができます。
 
@@ -609,19 +609,19 @@ Class constructor ($side : Integer)
   $area:=This.height*This.width
 ```
 
-## Class function commands
+## クラス関数コマンド
 
-The following commands have specific features when they are used within class functions:
+以下のコマンドは、クラス関数内で使用された場合には特定の機能を持っています:
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
+[`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
 
-For more details, see the [`Super`](../commands/super.md) command description.
+詳細な情報については、[`Super`](../commands/super.md) コマンドの説明を参照してください。
 
 ### `This`
 
-The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+[`This`](../commands/this.md) コマンドは現在処理されているオブジェクトへの参照を返します。 多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
 
 例:
 
@@ -632,7 +632,7 @@ Function f() : Integer
  return This.a+This.b
 ```
 
-Then you can write in a method:
+メソッド内において、以下のように書くことができます:
 
 ```4d
 $o:=cs.ob.new()
@@ -641,7 +641,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-For more details, see the [`This`](../commands/this.md) command description.
+詳細な情報については、[`This`](../commands/this.md) コマンドの説明を参照してください。
 
 ## クラスコマンド
 
@@ -754,8 +754,8 @@ shared Function Bar($value : Integer)
 
 :::note
 
-- Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- セッションシングルトンは、自動的に共有シングルトンとなります(クラスコンストラクターにおいて`shared` キーワードを使用する必要はありません)。
+- シングルトンの共有関数は、[`onHttpGet` キーワード](../ORDA/ordaClasses.md#onhttpget-keyword) をサポートします。
 
 :::
 
@@ -848,7 +848,7 @@ shared function addItem($item:object)
     This.itemList.push($item)
 ```
 
-ItemInventorクラスをセッションシングルトンとして定義することで、各セッションと各ユーザーが独自の在庫を持つことができます。 ユーザー在庫へのアクセスは以下のように簡単です: ユーザー在庫へのアクセスは以下のように簡単です: ユーザー在庫へのアクセスは以下のように簡単です:
+ItemInventory クラスをセッションシングルトンとして定義することで、各セッションと各ユーザーが独自の在庫を持つことができます。 ユーザー在庫へのアクセスは以下のように簡単です:
 
 ```4d
 // ユーザーセッションにおいて

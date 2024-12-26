@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->O comando **FORM GET NAMES** enche o array *arrayNoms* com os nomes dos formulários da aplicação.<!-- END REF--> 
@@ -68,3 +65,12 @@ Exemplos de usos típicos:
 
 *Formulários*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1167 |
+| Thread-seguro | &cross; |
+
+

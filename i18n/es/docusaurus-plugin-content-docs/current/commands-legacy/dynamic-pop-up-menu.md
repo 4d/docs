@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->El comando **Dynamic pop up menu** hace aparecer un menú desplegable jerárquico en la ubicación actual del ratón o en la ubicación definida por los parámetros opcionales *Coordx* y *Coordy*.<!-- END REF-->
@@ -94,3 +91,12 @@ Este código permite crear un menú emergente dinámico jerárquico basado en ac
 [Pop up menu](pop-up-menu.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1006 |
+| Hilo seguro | &cross; |
+
+

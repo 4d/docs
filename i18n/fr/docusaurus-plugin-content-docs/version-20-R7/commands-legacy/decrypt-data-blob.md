@@ -58,3 +58,12 @@ Les paramètres *passPhrase* et le *salt* utilisés pour le déchiffrement sont 
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1774 |
+| Thread safe | &check; |
+
+

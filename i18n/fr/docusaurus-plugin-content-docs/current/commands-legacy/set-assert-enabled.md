@@ -38,3 +38,12 @@ Désactivation globale des assertions :
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1131 |
+| Thread safe | &check; |
+
+

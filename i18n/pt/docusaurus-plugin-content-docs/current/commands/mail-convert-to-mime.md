@@ -31,7 +31,7 @@ The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL Convert to MIME.Summ
 
 In *mail*, pass the content and the structure details of the email to convert. Isso inclui informações como os endereços de e-mail (remetente e destinatário(s)), a própria mensagem e o tipo de exibição para a mensagem.
 
-> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the email object.
+> 4D segue a [especificação JMAP](https://jmap.io/spec-mail.html) para formatar o objeto e-mail.
 
 In *options*, you can set a specific charset and encoding configuration for the mail. As seguintes propriedades estão disponíveis:
 

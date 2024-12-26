@@ -131,3 +131,12 @@ Si le code est exécuté sur 4D Server, l'objet contient (par exemple) :
 [Get database parameter](get-database-parameter.md)  
 [System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1599 |
+| Thread safe | &check; |
+
+

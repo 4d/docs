@@ -44,3 +44,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 858 |
+| スレッドセーフである | &check; |
+
+

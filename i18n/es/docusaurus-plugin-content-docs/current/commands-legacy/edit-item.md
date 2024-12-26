@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.EDIT ITEM.Summary-->El comando **EDIT ITEM** le permite editar el elemento actual o el elemento de número *elemento* del array o la lista designada por el parámetro *objeto*.<!-- END REF-->  
@@ -74,3 +71,12 @@ Dadas dos columnas de un list box donde los nombres de las variables asociadas s
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 870 |
+| Hilo seguro | &cross; |
+
+

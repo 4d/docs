@@ -83,3 +83,12 @@ The following code illustrates the various possibilities offered by the **GET FI
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 920 |
+| Thread safe | &check; |
+
+

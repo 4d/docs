@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 :::info Compatibility
 
 **PHP is deprecated in 4D**. It is now recommended to use the [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -41,3 +38,12 @@ Since exchanges between 4D and the PHP interpreter are carried out via FastCGI, 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1061 |
+| Thread safe | &cross; |
+
+

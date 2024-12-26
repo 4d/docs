@@ -42,7 +42,7 @@ Os componentes declarados no arquivo **dependencies.json** podem ser armazenados
 - em qualquer lugar de sua máquina: o caminho do componente deve ser declarado no arquivo **environment4d.json**
 - em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
 
-If the same component is installed at different locations, a [priority order](#priority) is applied.
+Se o mesmo componente for instalado em locais diferentes, uma [ordem de prioridade](#prioridade) é aplicada.
 
 ### dependencies.json e environment4d.json
 
@@ -150,7 +150,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 #### Caminhos relativos versus caminhos absolutos
 
-Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
+Os caminhos são expressos na sintaxe POSIX, conforme descrito em [este parágrafo](../Concepts/paths#posix-syntax).
 
 Os caminhos relativos são relativos ao arquivo [`environment4d.json`](#environment4djson). Absolute paths are linked to the user's machine.
 
@@ -158,9 +158,9 @@ Using relative paths is **recommended** in most cases, since they provide flexib
 
 Absolute paths should only be used for components that are specific to one machine and one user.
 
-### Components stored on GitHub
+### Componentes armazenados no GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+Componentes 4D disponíveis como lançamentos do GitHub podem ser referenciados e carregados automaticamente nos seus projetos 4D.
 
 :::note
 
@@ -224,7 +224,7 @@ Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versã
 }
 ```
 
-- Uma versão também é identificada por uma **versão**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Uma versão também é identificada por uma **versão**. O sistema de versionamento usado é baseado no conceito de *Semantic Versioning*, que é o mais usado. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -237,7 +237,7 @@ Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versã
 }
 ```
 
-The version is used to define which versions can be used. É usada uma [versão semântica padrão] (https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+A versão é usada para definir quais versões podem ser usadas. É usada uma [versão semântica padrão] (https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Eis alguns exemplos:
 
@@ -361,7 +361,7 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
-You can then define the [tag or version](#tags-and-versions) option for the dependency:
+Em seguida, você pode definir a opção [tag ou versão](#tags-and-versions) para a dependência:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 

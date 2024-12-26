@@ -15,9 +15,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DROP REMOTE USER.Summary-->**DROP REMOTE USER** コマンドは4D Server にリモートで接続している特定のユーザーの接続を解除します。<!-- END REF-->
-
-*userSession* 引数には、サーバーから接続を解除したいユーザーのセッションID を渡します。セッションID は、[Process activity](../commands/process-activity.md) コマンドを使用することで取得できます。  
+<!--REF #_command_.DROP REMOTE USER.Summary-->**DROP REMOTE USER** コマンドは4D Server にリモートで接続している特定のユーザーの接続を解除します。<!-- END REF-->引数には、サーバーから接続を解除したいユーザーのセッションID を渡します。セッションID は、[Process activity](../commands/process-activity.md) コマンドを使用することで取得できます。  
 
 **注:** このコマンドは非同期に実行され、また4D Server でしか実行することができません。このコマンドを呼び出しているメソッドがリモートクライアントでローカルに実行されるか、あるいはシングルユーザー版4D で実行された場合、**DROP REMOTE USER** は何もしません。
 
@@ -41,3 +39,12 @@ displayed_sidebar: docs
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1633 |
+| スレッドセーフである | &check; |
+
+

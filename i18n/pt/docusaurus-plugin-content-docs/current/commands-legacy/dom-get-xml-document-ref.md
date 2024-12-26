@@ -52,3 +52,12 @@ Neste exemplo, queremos encontrar a declaração DTD do documento XML:
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1088 |
+| Thread-seguro | &check; |
+
+

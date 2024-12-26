@@ -71,3 +71,12 @@ You want to find the number of occurrences of strings starting with "test" and c
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1333 |
+| Thread safe | &check; |
+
+

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.Screen height.Summary-->On Windows, Screen height returns the height of 4D application window (MDI window).<!-- END REF--> If you specify the optional *\** parameter, the function returns the height of the screen.
@@ -27,3 +24,12 @@ On Macintosh, Screen height returns the height of the main screen, the screen wh
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen width](screen-width.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 188 |
+| Thread safe | &cross; |
+
+

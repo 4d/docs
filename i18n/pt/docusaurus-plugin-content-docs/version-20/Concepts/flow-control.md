@@ -271,7 +271,7 @@ The formal syntax of the `While... End while` control flow structure is:
  End while
 ```
 
-A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+Um loop `While...End while` executa as declarações no loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
 The `break` and `continue` statements are [described below](#break-and-continue).
 
@@ -308,9 +308,9 @@ Repeat
     {continue}
 Until(Boolean_Expression)
 ```
-Um ciclo `Repeat...Until` é como um ciclo [While...End while](flow-control.md#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
+Um ciclo `Repeat...Until` é como um ciclo [While...End while](flow-control.md#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. Assim, um loop `Repeat...Until` sempre executa o loop uma vez, enquanto se a expressão booleana for inicialmente Falsa, um loop `While...End while` não executa o loop de forma alguma.
 
-The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
+A outra diferença com um loop `Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 
 The `break` and `continue` statements are [described below](#break-and-continue).
 
@@ -547,7 +547,7 @@ Aqui são dois exemplos:
 
 ## For each... End for each
 
-The formal syntax of the `For each...End for each` control flow structure is:
+A sintaxe formal da estrutura de controle de fluxo para `For each...End for each` é:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}

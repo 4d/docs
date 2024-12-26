@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->The **CLOSE PRINTING JOB** command closes the print job previously opened by the [OPEN PRINTING JOB](open-printing-job.md) command and sends any printing document that has been assembled to the current printer.<!-- END REF-->  
@@ -24,3 +21,12 @@ displayed_sidebar: docs
 #### See also 
 
 [OPEN PRINTING JOB](open-printing-job.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 996 |
+| Thread safe | &cross; |
+
+

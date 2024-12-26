@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.REJECT.Summary-->REJECT tem duas sintaxes.<!-- END REF--> A primeira sintaxe não tem parâmetros. Neste caso, o comando rechaça a totalidade da entrada e obriga ao usuário a permanecer no formulário. A segunda sintaxe recusa somente o *campo* e obriga ao usuário a permanecer no campo. 
@@ -64,3 +61,12 @@ O seguinte exemplo é parte de um método de objeto para um campo *\[Empregados\
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 38 |
+| Thread-seguro | &cross; |
+
+

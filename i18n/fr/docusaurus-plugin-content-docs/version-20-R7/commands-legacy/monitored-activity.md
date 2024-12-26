@@ -139,3 +139,12 @@ Voir l'exemple de **[START MONITORING ACTIVITY](start-monitoring-activity.md).**
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1713 |
+| Thread safe | &check; |
+
+

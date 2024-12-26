@@ -80,3 +80,13 @@ displayed_sidebar: docs
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 163 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

@@ -34,7 +34,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 	return $result
 ```
 
-### OutgoingMessage Object
+### Objeto OutgoingMessage
 
 4D.OutgoingMessage objects provide the following properties and functions:
 
@@ -49,7 +49,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::note
 
-A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Um objeto 4D.OutgoingMessage é um objeto [não compartilhável](../Concepts/shared.md).
 
 :::
 
@@ -70,7 +70,7 @@ The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the
 
 The `.body` property is read-write.
 
-You can also set the `.body` property using the [`setBody()`](#setbody) function, in which case the `content-type` header is automatically set.
+Você também pode definir a propriedade `.body` usando a função [`setBody()`](#setbody), caso em que o cabeçalho `content-type` é automaticamente definido.
 
 <!-- END REF -->
 
@@ -84,7 +84,7 @@ You can also set the `.body` property using the [`setBody()`](#setbody) function
 
 The `.headers` property contains <!-- REF #OutgoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
 
-The `.headers` property is read-only. To set a header, use the [`setHeader()`](#setheader) function.
+The `.headers` property is read-only. Para definir um cabeçalho, use a função [`setHeader()`](#setheader).
 
 <!-- END REF -->
 
@@ -132,10 +132,10 @@ If *body* is not of a supported value type, an error is returned.
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
-| Parâmetro | Tipo |    | Descrição                    |
-| --------- | ---- | -- | ---------------------------- |
-| \|        | Text | -> | Header property to set       |
-| value     | Text | -> | Value of the header property |
+| Parâmetro | Tipo |    | Descrição                             |
+| --------- | ---- | -- | ------------------------------------- |
+| \|        | Text | -> | Propriedade de cabeçalho para definir |
+| value     | Text | -> | Value of the header property          |
 
 <!-- END REF -->
 
@@ -185,6 +185,6 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 #### Descrição
 
-The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
+The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. Essa propriedade pode ser definida com a função [`setStatus()`](setstatus).
 
 <!-- END REF -->

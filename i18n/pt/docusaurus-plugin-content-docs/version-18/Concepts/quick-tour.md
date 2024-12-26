@@ -115,15 +115,13 @@ For($vlChar;1;Length(vtSomeText))
  End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode retornar um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Além disso, podem ser endereçados múltiplos parâmetros consecutivos (e últimos) com a sintaxe ${n}onde n, expressão numérica, é o número do parâmetro. Um método pode retornar um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
+$f:=New object
+$f.message:=New formula(ALERT("Hello world!"))
 $myText:="hello"
-$myText:=Do_Something($myText) //Chamar o método Do_Something
-ALERT($myText) //"HELLO"
-
-  //Aqui o código do método Do_Something
-$0:=Uppercase($1)
+$myText:=Do_Something($myText) //Call the Do_Something method
 ```
 
 ## Tipos de dados
@@ -284,8 +282,7 @@ Ambos os estilos de comentários podem ser utilizados em simultâneo.
 Inserir `//` no início de uma linha ou depois de uma declaração para adicionar um comentário de linha única. Exemplo:
 
 ```4d
-/Este é um comentário
-For($vCounter;1;100) //Starting loop
+/Este é um comentário For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment

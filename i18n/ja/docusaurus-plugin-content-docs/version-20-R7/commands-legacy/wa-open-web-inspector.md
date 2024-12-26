@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->**WA OPEN WEB INSPECTOR** コマンドは、 *\** および *object* 引数で指定されたWeb エリアにおいてWeb インスペクターを開きます。<!-- END REF-->
@@ -25,3 +22,12 @@ displayed_sidebar: docs
 
 [WA Run offscreen area](wa-run-offscreen-area.md)  
 *Webエリアのプログラムによる管理*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1736 |
+| スレッドセーフである | &cross; |
+
+

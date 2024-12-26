@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.TRANSFORM PICTURE.Summary-->El comando TRANSFORM PICTURE permite aplicar una transformación de tipo *operador* a la imagen pasada en el parámetro *imagen*.<!-- END REF-->
-
-**Nota:** este comando extiende las funcionalidades ofrecidas por los operadores convencionales de transformación de imágenes (+/, etc., ver la sección [C\_BOOLEAN](c-boolean.md)). Estos operadores permanecen totalmente utilizables en 4D.  
+<!--REF #_command_.TRANSFORM PICTURE.Summary-->El comando TRANSFORM PICTURE permite aplicar una transformación de tipo *operador* a la imagen pasada en el parámetro *imagen*.<!-- END REF-->este comando extiende las funcionalidades ofrecidas por los operadores convencionales de transformación de imágenes (+/, etc., ver la sección [C\_BOOLEAN](c-boolean.md)). Estos operadores permanecen totalmente utilizables en 4D.  
   
 La *imagen* fuente se modifica directamente después de la ejecución del comando. Tenga en cuenta que ciertas operaciones no son destructivas y pueden revertirse mediante la realización de la operación contraria o por medio de la operación "Reset". Por ejemplo, una imagen reducida a 1% retomará su tamaño original sin alteraciones si se agranda 100 veces. Las transformaciones no modifican el tipo original de la imagen: por ejemplo, una imagen vectorial permanecerá vectorial después de su transformación.
 
@@ -74,3 +72,12 @@ Este es un ejemplo de corte de una imagen (la imagen se muestra en el formulario
 #### Ver también 
 
 [COMBINE PICTURES](combine-pictures.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 988 |
+| Hilo seguro | &check; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->El comando SET PICTURE TO LIBRARY crea una nueva imagen o reemplaza una imagen existente en la librería de imágenes.<!-- END REF-->
@@ -95,3 +92,14 @@ Si no hay suficiente memoria para añadir la imagen a la librería de imágenes,
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 566 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+| Prohibido en el servidor ||
+
+

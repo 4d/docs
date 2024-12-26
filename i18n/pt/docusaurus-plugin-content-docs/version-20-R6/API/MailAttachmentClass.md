@@ -59,7 +59,7 @@ Para definir o anexo, pode utilizar:
 - um *blob*, passe um objeto `4D.Blob` contendo o próprio anexo.
 - se usar *path*, passe um valor **text** contendo a rota do arquivo anexo, expresso com a sintaxe sistema. Pode passar um nome de rota completo ou um nome de arquivo simples (em cujo caso 4D vai pesquisar para o arquivo no mesmo diretório como o arquivo projeto).
 
-The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. Se *name* for omitido e:
+Pode passar uma rota ou um Blob para definir o anexo. Se *name* for omitido e:
 
 - passar uma rota de arquivo, o nome e extensão do arquivo é usado,
 - passar um BLOB, um nome aleatório sem extensão é gerado automaticamente.
@@ -195,7 +195,7 @@ $transporter.send($email)
 
 #### Descrição
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
+The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. Ele é idêntico ao comando (atalho) [`MAIL New attachment`](#mail-new-attachment).
 
 ## .cid
 
@@ -230,7 +230,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descrição
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime) command.
+The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Você pode usar esse método com objetos de anexo recebidos pelo comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
 
 ## .name
 

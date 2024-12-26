@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.START SQL SERVER.Summary-->START SQL SERVERコマンドを使用して、実行中の4Dのアプリケーションで、統合されたSQLサーバを起動させます。<!-- END REF-->起動すると、SQLサーバは外部SQLクエリに応答します。
@@ -28,3 +25,13 @@ SQLサーバが正しく起動されるとOKシステム変数は1に、そう�
 #### 参照 
 
 [STOP SQL SERVER](stop-sql-server.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 962 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

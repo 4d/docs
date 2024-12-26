@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### 
 
 <!--REF #_command_.On Startup database method.Summary-->The On Startup database method is called once when you open a database.<!-- END REF-->
@@ -48,3 +45,12 @@ See the example in the [Semaphore](semaphore.md) section.
 *Database Methods*  
 [On Exit database method](on-exit-database-method.md)  
 [QUIT 4D](quit-4d.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 905263 |
+| Thread safe | &cross; |
+
+

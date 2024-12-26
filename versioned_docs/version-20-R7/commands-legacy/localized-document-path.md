@@ -66,3 +66,12 @@ If the current language is, for example, French Canadian (fr-ca), the command re
 #### See also 
 
 [Get database localization](get-database-localization.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1105 |
+| Thread safe | &check; |
+
+

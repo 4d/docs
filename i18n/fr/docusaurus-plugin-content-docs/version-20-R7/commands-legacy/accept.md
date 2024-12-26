@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.ACCEPT.Summary-->La commande **ACCEPT** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour :
@@ -38,3 +35,13 @@ La commande **ACCEPT** est autorisée en mode headless, dans le contexte des zon
 #### Voir aussi 
 
 [CANCEL](cancel.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 269 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

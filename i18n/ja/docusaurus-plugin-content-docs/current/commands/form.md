@@ -8,60 +8,61 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
-| 引数  | 型      |   | 説明                            |
-| --- | ------ | - | ----------------------------- |
-| 戻り値 | Object | ← | Form data of the current form |
+| 引数  | 型      |   | 説明                |
+| --- | ------ | - | ----------------- |
+| 戻り値 | Object | ← | カレントのフォームのフォームデータ |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                 |
-| ----- | ------------------ |
-| 20 R8 | Form class support |
+| リリース  | 内容           |
+| ----- | ------------ |
+| 20 R8 | フォームクラスのサポート |
 
 </details>
 
 #### 説明
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).**Form** コマンドはカレントフォームに割り当てられている(*formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された)オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます: 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
 
-- the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
-- the current form is a subform,
-- a table form is currently displayed on screen.
+- カレントフォームが、[`DIALOG`](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドのいずれか一つによってロードされた場合。
+- カレントフォームがサブフォームである場合。
+- テーブルフォームが現在画面上に表示されている場合。
 
-##### Commands (DIALOG...)
+##### コマンド(DIALOGなど)
 
-If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
+カレントのフォームが[DIALOG](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドによって表示あるいはロードされていた場合、は以下のいずれかのものを返します:
 
-- the *formData* object passed as parameter to this command, if any,
-- or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
-- or, an empty object.
+- コマンドに引数として渡された*formData* オブジェクト(あれば)。
+- [フォームに割り当てられているユーザークラス](../FormEditor/properties_FormProperties.md#form-class) のインスタンス化されたオブジェクト(あれば)。
+- または、空のオブジェクト。
 
 ##### サブフォーム
 
-If the current form is a subform, the returned object depends on the parent container variable:
+カレントフォームがサブフォームの場合、返されるオブジェクトは親コンテナ変数に依存します:
 
-- If the variable associated to the parent container has been typed as an object, **Form** returns the value of this variable.\
-  In this case, the object returned by **Form** is the same as the one returned by the following expression:
+- 親コンテナに割り当てられている変数がオブジェクト型であった場合、**Form** はその変数の値を返します。\
+  この場合、**Form** から返されるオブジェクトは、以下の式から返されるものと同じになります:\
+  In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
 ```
 
-- If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
+- 親コンテナに割り当てられている変数がオブジェクト型として型指定されていない場合、**Form** は、サブフォームのコンテキストで4D によって維持される、空のオブジェクトを返します。
 
-For more information, please refer to the *Page subforms* section.
+より詳細な情報については、*サブフォームページ* の章を参照してください。
 
-##### Table form
+##### テーブルフォーム
 
-**Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+**Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 **Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。 出力フォームから表示された入力フォームのコンテキスト(つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています:
 
-| **プロパティ**  | **型**  | **Description**                           |
-| ---------- | ------ | ----------------------------------------- |
-| parentForm | object | **Form** object of the parent output form |
+| **プロパティ**  | **型**  | **Description**         |
+| ---------- | ------ | ----------------------- |
+| parentForm | object | 親出力フォームの**Form** オブジェクト |
 
 #### 例題
 
@@ -71,7 +72,7 @@ For more information, please refer to the *Page subforms* section.
 
 **注:** "Children" オブジェクトフィールドはこの例題においての構造を示すために表示されているだけです。
 
-In the verification form, you have assigned some Form object properties to inputs:
+検証フォームでは、入力に対していくつかのフォームオブジェクトプロパティを割り当てているものとします:
 
 ![](../assets/en/commands/pict3541682.en.png)
 

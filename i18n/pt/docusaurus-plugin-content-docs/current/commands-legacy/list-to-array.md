@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->O comando LIST TO ARRAY cria ou substitui o array *array* com os elementos de primeiro nível da lista ou da lista de seleção designada por *lista*.<!-- END REF--> 
@@ -87,3 +84,12 @@ Se executa a seguinte instrução:
 [ARRAY TO LIST](array-to-list.md)  
 [Load list](load-list.md)  
 [SAVE LIST](save-list.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 288 |
+| Thread-seguro | &cross; |
+
+

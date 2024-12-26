@@ -96,7 +96,7 @@ Para mais informações em sessões usuários remotos, consulte o parágrafo [**
 
 Todos os processos de procedimento armazenado compartilham a mesma sessão de usuário virtual. O objeto `Session` de procedimentos armazenados está disponível em:
 
-- methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
+- métodos chamados com o comando [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html),
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
 For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) page.
@@ -243,7 +243,7 @@ Privileges are assigned to a Session using the [`setPrivileges()`](#setprivilege
 
 #### Exemplo
 
-The following [`roles.json`](../ORDA/privileges.md#rolesjson-file) has been defined:
+O seguinte arquivo [`roles.json`](../ORDA/privileges.md#rolesjson-file) foi definido:
 
 ```json
 {
@@ -448,18 +448,18 @@ The `.info` object is the same object as the one returned by the [`Get process a
 
 The `.info` object contains the following properties:
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                 |
-| ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Tipo de sessão: "remote" ou "storedProcedure"                                                                                             |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                        |
-| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor |
-| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                      |
-| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                             |
-| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                          |
-| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão                                                                                                                          |
-| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                          |
-| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                          |
-| persistentID     | Text          | ID persistente da sessão                                                                                                                                  |
+| Propriedade      | Tipo          | Descrição                                                                                                                                         |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Tipo de sessão: "remote" ou "storedProcedure"                                                                                     |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                |
+| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessões remotas: nome da máquina remota. |
+| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                              |
+| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                     |
+| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                  |
+| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão                                                                                                                  |
+| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                  |
+| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                  |
+| persistentID     | Text          | ID persistente da sessão                                                                                                                          |
 
 :::note
 
@@ -563,15 +563,15 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 :::note
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. Para obter mais informações, consulte a seção [**Privilégios**](../ORDA/privileges.md).
+Os privilégios e as funções são definidos no arquivo [`roles.json`](../ORDA/privileges.md#rolesjson-file) do projeto. Para obter mais informações, consulte a seção [**Privilégios**](../ORDA/privileges.md).
 
 :::
 
 If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
 
-By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
+Como padrão quando não houver um privilégio associado à sessão, a sessão é uma [Sessão de convidados](#isguest).
 
-The [`userName`](#username) property is available at session object level (read-only).
+A propriedade [`userName`](#username) está disponível no nível do objeto de sessão (somente leitura).
 
 #### Exemplo
 

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->El comando **SET DATABASE PARAMETER** permite modificar varios parámetros internos de la base de datos 4D.<!-- END REF-->  
@@ -148,3 +145,12 @@ Usted quiere exportar datos en JSON que contienen una fecha 4D convertida. Note 
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 642 |
+| Hilo seguro | &cross; |
+
+

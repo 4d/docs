@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 <details><summary>履歴</summary>
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 | `Web server host database`     | 2 | コンポーネントのホストデータベースの Webサーバー                            |
 | `Web server receiving request` | 3 | リクエストを受け取った Webサーバー (ターゲットWebサーバー) |
 
-The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
+**返されたWeb サーバーオブジェクト** には[Web server プロパティ](../API/WebServerClass.md) のカレントのプロパティが格納されています。
 
 #### 例題
 

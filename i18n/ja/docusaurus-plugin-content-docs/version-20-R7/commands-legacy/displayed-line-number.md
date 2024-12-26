@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Displayed line number.Summary-->Displayed line number コマンドはOn Display Detailフォームイベントでのみ機能します。<!-- END REF-->このコマンドはレコードリストまたはリストボックスで画面に行が表示される際、処理中の行の番号を返します。Displayed line numberがリストまたはリストボックス表示以外の場面で呼び出されると、0を返します。
@@ -47,3 +44,12 @@ displayed_sidebar: docs
 
 [Form event code](form-event-code.md)  
 [Selected record number](selected-record-number.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 897 |
+| スレッドセーフである | &cross; |
+
+

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->The **OBJECT Get list reference** command returns the reference number (ListRef) of the hierarchical list associated with the object or group of objects designated by *object* and *\**.<!-- END REF--> 
@@ -39,3 +36,12 @@ If there is no hierarchical list associated with the object for the *listType* d
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1267 |
+| Thread safe | &cross; |
+
+

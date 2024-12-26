@@ -41,3 +41,12 @@ Cette méthode de maintenance permet de demander le compactage du fichier de don
 #### Voir aussi 
 
 [Compact data file](compact-data-file.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1127 |
+| Thread safe | &check; |
+
+

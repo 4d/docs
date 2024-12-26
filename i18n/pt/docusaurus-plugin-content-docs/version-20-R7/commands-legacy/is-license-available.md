@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.Is license available.Summary-->O comando Is license available permite conhecer a disponibilidade de um plug-in.<!-- END REF--> É útil, por exemplo, para mostrar ou ocultar funções que necessitam da presença de um plug-in.  
@@ -51,3 +48,12 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 714 |
+| Thread-seguro | &cross; |
+
+

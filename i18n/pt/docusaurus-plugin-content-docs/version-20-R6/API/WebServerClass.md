@@ -7,7 +7,7 @@ The `WebServer` class API allows you to start and monitor a web server for the m
 
 ### Objeto Web Server
 
-Web server objects are instantiated with the [`WEB Server`](#web-server) command.
+Os objetos servidor Web são instanciados com o comando [`WEB Server`](#web-server).
 
 Eles oferecem as propriedades abaixo e funções:
 
@@ -84,7 +84,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 | Parâmetros                                   | Valor | Comentário                                                                     |
 | -------------------------------------------- | ----- | ------------------------------------------------------------------------------ |
 | `Web server database`                        | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
-| `<a href="#keepsession">.keepSession</a>`    | 2     | Servidor Web do banco de dados de host de um componente                        |
+| Parâmetros                                   | 2     | Servidor Web do banco de dados de host de um componente                        |
 | `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
 
 O objeto Servidor Web retornado contém os valores atuais das propriedades do Servidor Web.
@@ -131,7 +131,7 @@ Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
 
 All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
 
-> O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
+> O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. Parâmetros
 
 You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
@@ -161,7 +161,7 @@ A propriedade **.accessKeyDefined** contém <!-- REF #WebServerClass.accessKeyDe
 
 <!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
 
-Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter of the [`.start()`](#start) function, it can be a [`Folder` object](FolderClass.md).
+Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `settings` da função [`.start()`](#start), ela pode ser um objeto [`Folder`](FolderClass.md).
 
 <!-- END REF -->
 
@@ -195,7 +195,7 @@ The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D W
 
 <!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
+The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
 <!-- END REF -->
 
@@ -227,7 +227,7 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - 192.168.\*
   - 192.168.\*:8081
   - <http://192.168.5.17:8081>
-  - <http://\\*.myDomain.com>
+  - <http://\\\\\*.myDomain.com>
   - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->LISTBOX COLLAPSE コマンドを使用して *object*と*\** で指定したリストボックスのブレーク行を折りたたみます。<!-- END REF-->
@@ -53,3 +50,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [LISTBOX EXPAND](listbox-expand.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1101 |
+| スレッドセーフである | &cross; |
+
+

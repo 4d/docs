@@ -5,8 +5,8 @@ title: DataStore
 
 A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. Os objetos `Datastore` são retornados pelos seguintes comandos:
 
-- [ds](../commands/ds.md): a shortcut to the main datastore
-- [Open datastore](../commands/open-datastore.md): to open any remote datastore
+- [ds](../commands/ds.md): um atalho para o datastore principal
+- [Open datastore](../commands/open-datastore.md): para abrir qualquer datastore remoto
 
 ### Resumo
 
@@ -240,7 +240,7 @@ A função `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->
 
 Esta função só pode ser chamada:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- no datastore local ([`ds`](../commands/ds.md)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
@@ -391,7 +391,7 @@ A função `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summary
 
 Esta função só pode ser chamada:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- no datastore local ([`ds`](../commands/ds.md)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
@@ -441,12 +441,12 @@ A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retorna um
 
 **Objeto devolvido**
 
-| Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type        | string  | <li>"4D": repositório de dados principal, disponível por meio do ds </li><li>"4D Server": repositório de dados remoto, aberto com Open datastore</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| networked   | boolean | <li>True: o armazenamento de dados é acessado por meio de uma conexão de rede.</li><li>False: o armazenamento de dados não é acessado por meio de uma conexão de rede (banco de dados local)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| localID     | text    | ID do armazém de dados na máquina. Corresponde à cadeia de caracteres localId fornecida com o comando `Open datastore`. String vazia ("") para o datastore principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| connection  | object  | Objeto descrevendo a conexão remota da datastore (não retornado para datastore principal) Propriedades disponiveis: Propriedades disponiveis: Propriedades disponíveis:<table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>hostname</td><td>texto</td><td>Endereço IP ou nome do datastore remoto + ":" + número da porta</td></tr><tr><td>tls</td><td>booleano</td><td>True se a conexão segura é usada com o datastore remoto</td></tr><tr><td>idleTimeout</td><td>número</td><td>Tempo limite de inatividade da sessão (em minutos)</td></tr><tr><td>user</td><td>texto</td><td>Usuário autenticado no datastore remoto</td></tr></table> |
+| Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type        | string  | <li>"4D": repositório de dados principal, disponível por meio do ds </li><li>"4D Server": repositório de dados remoto, aberto com Open datastore</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| networked   | boolean | <li>True: o armazenamento de dados é acessado por meio de uma conexão de rede.</li><li>False: o armazenamento de dados não é acessado por meio de uma conexão de rede (banco de dados local)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| localID     | text    | ID do armazém de dados na máquina. ID do armazém de dados na máquina. String vazia ("") para o datastore principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| connection  | object  | Objeto descrevendo a conexão remota da datastore (não retornado para datastore principal) Propriedades disponiveis: Propriedades disponiveis: Objeto descrevendo a conexão remota da datastore (não retornado para datastore principal) Propriedades disponiveis: Propriedades disponiveis: Propriedades disponíveis:<table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>hostname</td><td>texto</td><td>Endereço IP ou nome do datastore remoto + ":" + número da porta</td></tr><tr><td>tls</td><td>booleano</td><td>True se a conexão segura é usada com o datastore remoto</td></tr><tr><td>idleTimeout</td><td>número</td><td>Tempo limite de inatividade da sessão (em minutos)</td></tr><tr><td>user</td><td>texto</td><td>Usuário autenticado no datastore remoto</td></tr></table> |
 
 - Se a função `.getInfo()` for executada em um servidor 4D ou um único usuário, `networked` é Falso.
 - Se a função `.getInfo()` for executada em um 4D remoto, `networked` será True
@@ -710,7 +710,7 @@ Quando essa função não é chamada, as novas seleções de entidades podem ser
 
 A função `.provideDataKey()` <!-- REF #DataStoreClass.provideDataKey().Summary -->permite fornecer uma chave de criptografia de dados para o arquivo de dados atual do armazenamento de dados e detecta se a chave corresponde aos dados criptografados<!-- END REF -->. Esta função pode ser utilizada ao abrir um banco de dados criptografado, ou ao executar qualquer operação de criptografia que precise da chave de criptografia, como por exemplo voltar a criptografar o arquivo de dados.
 
-> - A função `.provideDataKey()` deve ser chamada em um banco de dados criptografado. Se for chamado em um banco de dados não criptografado, o erro 2003 (a chave de criptografia não corresponde aos dados) é retornado. Use o comando `Data file encryption status` para determinar se o banco de dados está criptografado.
+> - A função `.provideDataKey()` deve ser chamada em um banco de dados criptografado. Se for chamado em um banco de dados não criptografado, o erro 2003 (a chave de criptografia não corresponde aos dados) é retornado. é retornado. Use o comando `Data file encryption status` para determinar se o banco de dados está criptografado.
 > - A função `.provideDataKey()` não pode ser chamada de um 4D remoto ou de um datastore remoto criptografado.
 
 Se você usar o parâmetro *curPassPhrase*, passe a cadeia de caracteres usada para gerar a chave de criptografia de dados. Quando usar este parâmetro, uma chave de criptografia é gerada.
@@ -838,7 +838,7 @@ A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary
 
 Esta função só pode ser chamada:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- no datastore local ([`ds`](../commands/ds.md)).
 - no ambiente cliente/servidor, na máquina do servidor.
 
 :::
@@ -1035,7 +1035,7 @@ Para criar um registo de pedidos ORDA do lado do cliente, chame esta função nu
 
 #### Do lado do servidor
 
-Para criar um registro de pedidos ORDA no lado do servidor, chame essa função no máquina servidor. Os dados de registro são gravados em um arquivo no formato `.jsonl`. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
+Para criar um registro de pedidos ORDA no lado do servidor, chame essa função no máquina servidor. Para criar um registro de pedidos ORDA no lado do servidor, chame essa função no máquina servidor. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
 
 - Se você passou o parâmetro *file*, os dados de registro serão gravados nesse arquivo, no local solicitado. - Se você omitir o parâmetro *file* ou se ele for nulo, os dados de registro serão gravados em um arquivo chamado *ordaRequests.jsonl* e armazenados na pasta "/LOGS".
 - O parâmetro *opções* pode ser usado para especificar se a resposta do servidor tem de ser registrada e se deve incluir o corpo. Por padrão, quando o parâmetro é omisso, a resposta completa é registrada. As seguintes constantes podem ser utilizadas neste parâmetro:

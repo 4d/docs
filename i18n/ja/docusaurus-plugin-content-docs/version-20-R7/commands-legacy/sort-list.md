@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SORT LIST.Summary-->SORT LIST コマンドは、*list*引数に渡された参照番号を持つリストをソートします。<!-- END REF-->
@@ -58,3 +55,12 @@ SORT LIST コマンドは、カレントリスト項目またはリストやサ�
 #### 参照 
 
 [Selected list items](selected-list-items.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 391 |
+| スレッドセーフである | &cross; |
+
+

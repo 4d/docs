@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 Hay varias formas de conseguir que el depurador se muestre:
 
 - Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-- Utilizando el comando [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
+- Using the [`TRACE`](../commands-legacy/trace.md) command
 - Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
 - Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
 
@@ -29,8 +29,8 @@ Hay varias formas de conseguir que el depurador se muestre:
 
 Cuando se llama, la ventana del depurador ofrece el nombre del método o de la función de clase que se está rastreando en ese momento, y la acción que provoca la aparición inicial de la ventana del depurador. Por ejemplo, en la ventana del depurador arriba:
 
-- _Clients_BuildLogo_ es el método en que se hace seguimiento
-- La ventana del depurador apareció porque detectó una llamada al comando `C_PICTURE` y este comando fue uno de los a identificar
+- _drop_ is the method being traced
+- The debugger window appeared because of a break point.
 
 La visualización de una nueva ventana del depurador utiliza la misma configuración que la última ventana visualizada en la misma sesión. Si ejecuta varios procesos usuario, puede rastrearlos independientemente y tener una ventana de depuración abierta para cada proceso.
 
@@ -52,39 +52,43 @@ La barra de herramientas del depurador incluye varios botones, asociados a acces
 
 ![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
 
-> Los accesos directos predeterminados pueden personalizarse en la página Atajos del diálogo Preferencias.
+:::note
+
+Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+
+:::
 
 #### Fin del rastreo
 
 Detener el modo Seguimiento y reanudar el curso normal de la ejecución del método.
 
-> **Shift** + **F5** o **Shift** + clic en el botón **No Trace** retoma la ejecución. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
+> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
 
 #### Pasar por encima
 
 Ejecuta la línea de método actual, indicada por el contador del programa (la flecha amarilla). El depurador pasa a la siguiente línea.
 
-El botón Ejecutar no entra en las subrutinas y las funciones, sino que se queda al nivel del método que está rastreando en ese momento. Si desea también rastrear las llamadas a las subrutinas y a las funciones, utilice el botón **Paso a paso detallado**.
+El botón Ejecutar no entra en las subrutinas y las funciones, sino que se queda al nivel del método que está rastreando en ese momento. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
-En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. Si el método padre se ejecuta en el lado remoto, el botón **Step Over** tiene el mismo efecto que el botón **No Trace**.
+En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
 #### Paso a paso detallado
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada ](#call-chain-pane) de la ventana del depurador.
+El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada](#call-chain-pane) de la ventana del depurador.
 
-Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
+When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### Ejecutar y salir
+#### Step Out
 
-Si está rastreando subrutinas y funciones, al hacer clic en este botón podrá ejecutar todo el método que se está rastreando en ese momento y retroceder hasta el método llamante. La ventana del depurador vuelve al método anterior de la cadena de llamada. Si el método actual es el último método de la cadena de llamada, se cierra la ventana del depurador.
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
 
-En la depuración remota, al ejecutarse la última línea del método, si el método se ejecuta en el servidor, se llama al método padre. Si el método padre se ejecuta en el lado remoto, el botón actúa de la misma manera que el botón Reanudar.
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
 
-#### Paso a paso del nuevo proceso
+#### Step Into Process
 
-Al ejecutar una línea que crea un nuevo proceso (es decir, al llamar al comando New process), este botón abre una nueva ventana del depurador que permite rastrear el método de gestión del proceso recién creado. En la ejecución de una línea que no crea un nuevo proceso, este botón actúa de la misma manera que el botón Ejecutar paso a paso.
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### Abortar
 
@@ -95,9 +99,9 @@ Detiene la ejecución del método y vuelve al estado anterior al inicio de la ej
 
 #### Detener y editar
 
-El método que se está ejecutando cuando se presiona el botón **Abortar y Editar** se abre en el Editor de Código.
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
-> **Consejo**: utilice este botón cuando sepa qué cambios son necesarios en su código, y el momento en que deben ser efectuados para proseguir con las pruebas de sus métodos. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
 
 #### Acción de edición
 
@@ -105,18 +109,20 @@ El método que se está ejecutando en el momento de presionar el botón Editar s
 
 Si utiliza este botón para modificar un método, las modificaciones sólo serán efectivas la próxima vez que se ejecute.
 
-> **Consejo:** utilice este botón cuando sepa qué cambios son necesarios en su código y cuando no interfieran con el resto del código a ejecutar o rastrear.
+> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Parámetros Guardar
+## Auto-saving
 
-Guarda la configuración actual de la ventana del depurador y la convierte en la configuración por defecto. Esto incluye:
+The current state of the debugger window is automatically saved in the project. Esto incluye:
 
-- el tamaño y la posición de la ventana
-- la posición de las líneas de división y el contenido del área que evalúa las expresiones
+- the size and position of the window,
+- the position of the division lines,
+- el [modo de visualización](#display-mode),
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pin-an-expression) para mantenerla mostrada en todos los contextos.
 
-Estos parámetros se almacenan en el proyecto.
+The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
-Esta acción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](./debugging-remote)).
+![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
 ## Ventana de expresión
 
@@ -134,9 +140,9 @@ En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las
 
 ### Lista de expresiones
 
-#### Objetos línea
+#### Line Expressions
 
-Este tema le permite seguir los valores de los objetos o expresiones:
+This theme lets you keep track of the values of expressions:
 
 - utilizado en la línea de código a ejecutar (la marcada con el contador de programa-la flecha amarilla en el [Panel de Código Fuente](#source-code-pane)),
 - utilizado en la línea de código anterior
@@ -294,8 +300,9 @@ También puede utilizar el comando [Call chain](https://doc.4d.com/4dv19/help/co
 
 El panel de control personalizado es útil para evaluar expresiones. Es similar al [panel de control](#watch-pane), excepto que aquí usted decide qué expresiones se muestran. Todo tipo de expresión puede ser evaluada:
 
-- campo
 - variable
+- object and object property
+- campo
 - pointer
 - cálculo
 - Comando 4D
@@ -304,39 +311,70 @@ El panel de control personalizado es útil para evaluar expresiones. Es similar 
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+
+### Display mode
+
+El modo de visualización que se utilizará para todas las ventanas del depurador se selecciona mediante la opción **Visualización** del [menú contextual](#contextual-menu) del panel de vigilancia personalizado.
+
+![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
+
+Las siguientes opciones están disponibles:
+
+- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
+- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
+- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+
+:::note
+
+Whatever the display mode, you can add custom expressions at any moment.
+
+:::
 
 ### Gestión de expresiones
+
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
 
 Hay varias formas de añadir expresiones a la lista:
 
 - Arrastrar y soltar un objeto o expresión desde el Panel de Vigilancia o el Panel de Cadena de Llamadas
 - Seleccione una expresión en el [panel código fuente](#source-code-pane) y presione **ctrl+D**  (Windows) o **cmd+D** (macOS)
 - Haga doble clic en algún lugar del espacio vacío del panel de control personalizado (añade una expresión con un nombre de marcador de posición que puede editar)
-
-Puede introducir cualquier fórmula que devuelva un resultado.
+- Select a [display option](#display-mode) that automatically inserts expressions.
+- Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. Puede introducir cualquier fórmula que devuelva un resultado.
 
 Para editar una expresión, haga clic en ella para seleccionarla y, a continuación, vuelva a hacer clic o presione **Intro** en su teclado.
 
-Para eliminar una expresión, haga clic en ella para seleccionarla y, a continuación, presione **Retroceso** o **Borrar** en su teclado.
+To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
 
-> **Atención:** tenga cuidado cuando evalúe una expresión 4D que modifique el valor de una de las Variables del Sistema (por ejemplo, la variable OK) porque la ejecución del resto del método puede verse alterada.
+:::warning
+
+Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+
+:::
+
+### Pinning an expression
+
+You can click on the pushpin icon to pin an expression:
+
+![pinning-expression](../assets/en/Debugging/pin-expression.png)
+
+The expression will then be displayed in all debugger windows.
 
 ### Menú contextual de la ventana de expresión
 
-El menú contextual del panel de control personalizado permite acceder al editor de fórmulas de 4D y a otras opciones:
+The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**Nueva expresión**: inserta una nueva expresión y muestra el editor de fórmulas de 4D.
+- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
+- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
+  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-
-Para más información sobre el Editor de fórmulas, consulte el [Manual de referencia de Diseño 4D](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
-
-- **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
-- **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
-- **Expresiones estándar**: copia la lista de expresiones del panel de control.
+* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
+* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
 > Esta opción no está disponible en [modo de depuración remota](debugging-remote.md).
 
@@ -352,6 +390,12 @@ Para más información sobre el Editor de fórmulas, consulte el [Manual de refe
 El panel de código fuente muestra el código fuente del método o de la función que se está rastreando actualmente.
 
 Esta área también le permite añadir o eliminar [**puntos de ruptura**](breakpoints.md).
+
+### Prototype
+
+The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+
+![prototype](../assets/en/Debugging/prototype.png)
 
 ### Tips
 
@@ -410,12 +454,9 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Ir a definición**: va al lugar donde se define el objeto seleccionado. Este comando está disponible para:
-  - _Métodos proyecto:_ muestra el contenido de los métodos en una nueva ventana del Editor de Código
-  - _Campos_: muestra las propiedades de los campos en el inspector de la ventana de estructura
-  - _Tablas:_ muestra las propiedades de la tabla en el inspector de la ventana de estructura
-  - _Formularios:_ muestra el formulario en el editor de formularios
-  - _Variables_ (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
+- **Show documentation**: Opens the documentation for the target element. Este comando está disponible para:
+  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
+  - _4D commands, functions, class names:_ Displays the online documentation.
 - **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
 - **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
 - **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.

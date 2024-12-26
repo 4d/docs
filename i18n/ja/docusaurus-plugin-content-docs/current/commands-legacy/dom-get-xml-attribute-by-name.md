@@ -17,9 +17,7 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->DOM GET XML ATTRIBUTE BY NAME コマンドを使用して、属性名に対応する属性値を取得できます。<!-- END REF-->
-
-*elementRef* に要素参照を、*attribName*には属性値を取得したい属性の名前を渡します。値は*attribValue* 引数に返されます。4Dは取得した値を渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->DOM GET XML ATTRIBUTE BY NAME コマンドを使用して、属性名に対応する属性値を取得できます。<!-- END REF-->に要素参照を、*attribName*には属性値を取得したい属性の名前を渡します。値は*attribValue* 引数に返されます。4Dは取得した値を渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。
 
 *attribName* 属性がXML要素中に存在しない場合、エラーが返されます。複数の同じ名前を持つ属性がXML要素中に存在する場合、最初の属性のみが返されます。
 
@@ -49,3 +47,13 @@ displayed_sidebar: docs
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 728 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

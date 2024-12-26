@@ -44,3 +44,12 @@ The following code:
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 911 |
+| Thread safe | &check; |
+
+

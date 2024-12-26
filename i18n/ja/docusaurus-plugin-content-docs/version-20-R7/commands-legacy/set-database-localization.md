@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->**SET DATABASE LOCALIZATION**コマンドを使用して、カレントセッションのデータベースカレント言語を変更できます。<!-- END REF-->
@@ -72,3 +69,13 @@ displayed_sidebar: docs
 #### 参照 
 
 [Get database localization](get-database-localization.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1104 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

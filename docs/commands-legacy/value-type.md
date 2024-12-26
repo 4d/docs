@@ -113,3 +113,12 @@ You want to sum up all numeric values in a collection:
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1509 |
+| Thread safe | &check; |
+
+

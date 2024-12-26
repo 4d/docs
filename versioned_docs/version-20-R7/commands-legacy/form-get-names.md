@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->The **FORM GET NAMES** command fills the *arrNames* array with the names of forms in the application.<!-- END REF--> 
@@ -66,3 +63,12 @@ Examples of typical use:
 
 *Forms*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1167 |
+| Thread safe | &cross; |
+
+

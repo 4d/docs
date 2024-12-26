@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->The **LISTBOX MOVE COLUMN** command moves the column designated by the *object* and *\** parameters by programming in the context of the form being executed (Application mode).<!-- END REF--> The original form, generated in the Design mode, is not modified. 
@@ -43,3 +40,12 @@ You want to swap the 2nd and 3rd columns of the list box:
 #### See also 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1274 |
+| Thread safe | &cross; |
+
+

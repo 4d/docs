@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->The **FORM GET ENTRY ORDER** command returns in *objectNames* the sorted names of objects that define the form entry order.<!-- END REF--> 
@@ -54,3 +51,12 @@ You want to exclude some objects from the current entry order:
 #### See also 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1469 |
+| Thread safe | &cross; |
+
+

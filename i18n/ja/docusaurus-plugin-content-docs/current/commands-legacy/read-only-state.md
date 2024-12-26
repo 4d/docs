@@ -36,3 +36,12 @@ displayed_sidebar: docs
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *レコードのロック*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 362 |
+| スレッドセーフである | &check; |
+
+

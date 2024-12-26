@@ -82,3 +82,12 @@ displayed_sidebar: docs
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *コレクションと4D配列間での型の変換*  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1563 |
+| スレッドセーフである | &check; |
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->The **OBJECT GET DRAG AND DROP OPTIONS** command returns the drag and drop options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
@@ -39,3 +36,12 @@ Each parameter returns True or False according to whether the corresponding opti
 #### See also 
 
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1184 |
+| Thread safe | &cross; |
+
+

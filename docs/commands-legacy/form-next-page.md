@@ -12,9 +12,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE changes the currently displayed form page to the next form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if the last form page is already displayed, FORM NEXT PAGE does nothing.
@@ -34,3 +31,12 @@ The following example is a one-line method called from a menu command. It displa
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM LAST PAGE](form-last-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 248 |
+| Thread safe | &cross; |
+
+

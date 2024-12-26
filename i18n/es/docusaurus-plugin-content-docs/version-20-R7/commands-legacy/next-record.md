@@ -30,3 +30,13 @@ Ver el ejemplo del comando [DISPLAY RECORD](display-record.md "DISPLAY RECORD").
 [FIRST RECORD](first-record.md)  
 [LAST RECORD](last-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 51 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+
+

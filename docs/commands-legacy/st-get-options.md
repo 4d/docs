@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->The **ST GET OPTIONS** command gets the current value of one or more operating options for the styled text field or variable designated by the *object* parameter.<!-- END REF-->
@@ -37,3 +34,12 @@ Pass the code of the option to get in the *option* parameter. The command return
 #### See also 
 
 [ST SET OPTIONS](st-set-options.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1290 |
+| Thread safe | &cross; |
+
+

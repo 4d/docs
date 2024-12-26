@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.GET PRINTABLE MARGIN.Summary-->La commande **GET PRINTABLE MARGIN** retourne les valeurs courantes des différentes marges définies lors de l’utilisation des commandes [Print form](print-form.md), [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).<!-- END REF-->
@@ -45,3 +42,12 @@ Il est possible de baser l’impression des formulaires effectuée à l’aide d
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 711 |
+| Thread safe | &cross; |
+
+

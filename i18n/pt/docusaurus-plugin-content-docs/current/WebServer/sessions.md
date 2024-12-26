@@ -8,7 +8,7 @@ O servidor web 4D oferece recursos integrados para gerenciar **sessões web**. C
 As sessões Web permitem:
 
 - manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
-- manage session through a `Session` object and the [Session API](API/SessionClass.md),
+- gerenciar a sessão por um objeto `Session` e da [API de session](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - associate privileges to the user running the session.
 
@@ -42,7 +42,7 @@ Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismo
 
 :::info
 
-The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
+O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
 
 :::
 
@@ -86,7 +86,7 @@ The lifespan of an inactive cookie is 60 minutes by default, which means that th
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
-When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
+Quando uma sessão Web é fechada, se o comando [`Session`](commands/session.md) for chamado posteriormente:
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - a propriedade [`storage`](API/SessionClass.md#storage) está vazia

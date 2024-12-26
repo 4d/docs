@@ -189,21 +189,21 @@ $txt:="Hello world!"
 No ficheiro `WP SwitchToolbar.md`, pode escrever:
 
 ```4d
-<!-- This method returns a different logo depending on the size parameter -->
+<!-- Esse método retorna um logotipo diferente, dependendo do parâmetro de tamanho -->
 
 
 GetLogo (size) -> logo
 
 
-| Parameter | Type   | in/out | Description |
+| Parameter | Type | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Integer | in | Logo style selector (1 to 5)  |
-| logo      | Picture | out | Selected logo |
+| size | Integer | in | Seletor de estilo de logotipo (1 a 5) |
+| logo | Picture | out | Logotipo selecionado |
 
 
-## Description
+## Descrição
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter value.
+Esse método retorna um logotipo de um tamanho específico, dependendo do valor do parâmetro *size*.
 1 = tamanho mais pequeno, 5 = tamanho maior.
 
 ## Example

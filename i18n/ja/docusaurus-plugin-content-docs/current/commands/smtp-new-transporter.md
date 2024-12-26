@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | 引数     | 型                                  |   | 説明                                                                                |
 | ------ | ---------------------------------- | - | --------------------------------------------------------------------------------- |
 | server | Object                             | → | メールサーバー情報                                                                         |
-| 戻り値    | 4D.SMTPTransporter | ← | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| 戻り値    | 4D.SMTPTransporter | ← | [SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 
@@ -27,16 +27,16 @@ displayed_sidebar: docs
 
 #### 説明
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. 返された transporter オブジェクトは、通常メールの送信に使用されます。
+`SMTP New transporter` コマンドは、<!-- REF #_command_.SMTP New transporter.Summary -->新規のSMTP 接続を設定します<!-- END REF -->。このSMTP 接続は*server* 引数の指定に応じて設定され、コマンドは新しい[SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) オブジェクトを返します。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。
 
-> このコマンドは SMTPサーバーとの接続を開始しません。 The SMTP connection is actually opened when the [`.send()`](../API/SMTPTransporterClass.md#send) function is executed.
+> このコマンドは SMTPサーバーとの接続を開始しません。 このコマンドは SMTPサーバーとの接続を開始しません。 このコマンドは SMTPサーバーとの接続を開始しません。 SMTP 接続は、実際には[`.send()`](../API/SMTPTransporterClass.md#send) 関数が実行されたときに開かれます。
 >
 > SMTP接続は、以下の場合に自動的に閉じられます:
 >
-> - when the transporter object is destroyed if the [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) property is true (default),
-> - after each  [`.send()`](../API/SMTPTransporterClass.md#send) function execution if the [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) property is set to false.
+> - [`.keepAlive`](#keepalive) プロパティが true (デフォルト) の場合に、transporter オブジェクトが消去された時。
+> - [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) プロパティがfalse に設定されている場合に、[`.send()`](../API/SMTPTransporterClass.md#send) 関数が実行された後。
 
-*server* 引数として、以下のプロパティを持つオブジェクトを渡します:
+*server* 引数には、以下のプロパティを持つオブジェクトを渡します:
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                         | デフォルト値 (省略時)                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -56,7 +56,7 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 
 #### 戻り値
 
-The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass.md#smtp-transporter-object). 返されるプロパティはすべて **読み取り専用** です。
+この関数は[**SMTP transporter オブジェクト**](../API/SMTPTransporterClass.md#smtp-transporter-object) を返します。 返されるプロパティはすべて **読み取り専用** です。 返されるプロパティはすべて **読み取り専用** です。 返されるプロパティはすべて **読み取り専用** です。
 
 #### 例題
 

@@ -33,3 +33,12 @@ Dans l'exemple suivant, un bip est émis et une alerte affichée lorsqu'aucun en
 #### Voir aussi 
 
 [PLAY](play.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 151 |
+| Thread safe | &check; |
+
+

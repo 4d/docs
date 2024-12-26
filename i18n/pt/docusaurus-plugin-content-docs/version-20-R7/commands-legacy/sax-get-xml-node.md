@@ -55,3 +55,14 @@ O exemplo abaixo processa um evento:
 #### Variáveis e conjuntos do sistema 
 
 Se o comando tiver sido executado corretamente, a variável sistema Ok assume o valor 1\. Do contrário assume o valor 0 e um erro é gerado.
+
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 860 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, error |
+
+

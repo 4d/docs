@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->O comando SQL EXECUTE é utilizado para executar um comando SQL e associar o resultado a objetos 4D (arrays, variáveis ou campos).<!-- END REF-->
@@ -160,3 +157,13 @@ Se o comando for executado corretamente, a variável sistema OK retorna 1, do co
 #### Ver também 
 
 [SQL LOAD RECORD](sql-load-record.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 820 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

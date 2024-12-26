@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->The **GET LIST ITEM** command returns information about the item specified by *itemPos* of the list whose reference number or object name is passed in *list*.<!-- END REF--> 
@@ -68,3 +65,12 @@ Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
 [Selected list items](selected-list-items.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 378 |
+| Thread safe | &cross; |
+
+

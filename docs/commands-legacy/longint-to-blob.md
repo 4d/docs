@@ -114,3 +114,12 @@ After executing this code:
 [INTEGER TO BLOB](integer-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 550 |
+| Thread safe | &check; |
+
+

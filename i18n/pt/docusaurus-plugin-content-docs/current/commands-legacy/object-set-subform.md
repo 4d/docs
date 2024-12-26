@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->O comando **OBJECT SET SUBFORM** permite modificar dinamicamente o formulário detalhado assim também, opcionalmente, o formulário listado associado ao objeto sub-formulário designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
@@ -43,5 +40,14 @@ Quando modifica um sub-formulário página, o comando pode executar-se em qualqu
 
 #### Ver também 
 
-[OBJECT GET SUBFORM](../commands/object-get-subform.md)  
+[OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1138 |
+| Thread-seguro | &cross; |
+
+

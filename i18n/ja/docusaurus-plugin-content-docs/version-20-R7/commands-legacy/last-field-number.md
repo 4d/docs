@@ -42,3 +42,12 @@ displayed_sidebar: docs
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 255 |
+| スレッドセーフである | &check; |
+
+

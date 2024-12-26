@@ -29,3 +29,12 @@ L'exemple suivant affiche une alerte indiquant le nombre d'enregistrements de la
 #### Voir aussi 
 
 [Records in selection](records-in-selection.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 83 |
+| Thread safe | &check; |
+
+

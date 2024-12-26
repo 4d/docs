@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 #### Description 
 
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Summary-->The **FORM SET VERTICAL RESIZING** command allows you to change the vertical resizing properties of the current form through programming.<!-- END REF--> By default, these properties are set in the Design environment Form editor. New properties are set for the current process; they are not stored with the form. 
@@ -39,3 +36,12 @@ Refer to the example of the [FORM SET SIZE](form-set-size.md) command.
 [FORM GET VERTICAL RESIZING](form-get-vertical-resizing.md)  
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 893 |
+| Thread safe | &cross; |
+
+

@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.OBJECT Get format.Summary-->**OBJECT Get format** コマンドは、*object*引数で指定されたオブジェクトに適用された現在の表示フォーマットを返します。<!-- END REF-->
@@ -66,3 +63,12 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT SET FORMAT](object-set-format.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 894 |
+| スレッドセーフである | &cross; |
+
+

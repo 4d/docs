@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.Screen width.Summary-->Windowsの場合、Screen width は4Dアプリケーションウィンドウ(MDIウィンドウ) の幅を返します。<!-- END REF-->任意の引数 *\** を指定した場合、Screen widthは画面の幅を返します。
@@ -27,3 +24,12 @@ Macintoshの場合、, Screen width はメイン画面の幅を返します。�
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 187 |
+| スレッドセーフである | &cross; |
+
+

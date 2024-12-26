@@ -54,12 +54,12 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. O objecto transportador devolvido será então normalmente utilizado para enviar mensagens de correio electrónico.
 
-> Este comando não abre qualquer ligação com o servidor SMTP. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.
+> Este comando não abre qualquer ligação com o servidor SMTP. A ligação SMTP é efetivamente aberta quando a função [`.send()`](#send) é executada.
 >
 > A coleção SMTP é automaticamente fechada:
 >
-> - when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default),
-> - after each  [`.send( )`](#send) function execution if the [`keepAlive`](#keepalive) property is set to false.
+> - quando o objeto transporter for destruído se a propriedade [`keepAlive`](#keepalive) for true (padrão),
+> - após cada execução da função [`.send( )`](#send) se a propriedade [`keepAlive`](#keepalive) estiver definida como false.
 
 No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
@@ -81,7 +81,7 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
 #### Resultados
 
-A função retorna um [**objeto SMTP transporter**](#smtp-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
+Parâmetro Todas as propriedades retornadas são **apenas leitura**.
 
 #### Exemplo
 
@@ -223,7 +223,7 @@ The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends th
 
 > The `transporter` object must have already been created using the `SMTP New transporter` command.
 
-O método cria a ligação SMTP se esta ainda não estiver viva. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](#smtp-new-transporter) command description.
+O método cria a ligação SMTP se esta ainda não estiver viva. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. Para obter mais informações, consulte a descrição do comando [`SMTP New transporter`](#smtp-new-transporter).
 
 Em *mail*, passe um objeto [`Email`](EmailObjectClass.md#email-object) válido para enviar. As propriedades de origem (de onde vem o e-mail) e de destino (um ou mais destinatários) devem ser incluídas, as restantes propriedades são opcionais.
 

@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.After.Summary-->**After** devolve True para o ciclo de execução After.<!-- END REF-->
@@ -27,3 +24,12 @@ Para que seja gerado o ciclo de execução **After**, tenha certeza de que o eve
 #### Ver também 
 
 [Form event code](form-event-code.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 31 |
+| Thread-seguro | &cross; |
+
+

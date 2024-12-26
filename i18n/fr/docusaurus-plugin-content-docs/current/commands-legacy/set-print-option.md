@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->La commande **SET PRINT OPTION** permet de modifier par programmation la valeur d’une option d’impression.<!-- END REF--> Chaque option définie à l’aide de cette commande est appliquée aux [paramètres courants de l'impression 4D](https://developer.4d.com/docs/fr/settings/compatibility/) tant qu’aucune autre commande modifiant les paramètres d’impression ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) sans le paramètre *\>*, etc.) n’est appelée. Si une tâche d'impression a été ouverte (ex : avec [OPEN PRINTING JOB](open-printing-job.md)), l'option est définie pour la tâche et n'est pas modifiable tant que la tâche n'est pas terminée (à l'exception de Orientation option, voir ci-dessous) .
@@ -81,3 +78,13 @@ Si la valeur passée pour une *option* est invalide ou si elle n'est pas disponi
 [Print form](../commands/print-form.md)  
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 733 |
+| Thread safe | &cross; |
+| Modifie les variables | OK, error |
+
+

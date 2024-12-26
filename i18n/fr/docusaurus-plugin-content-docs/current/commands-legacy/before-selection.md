@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Before selection.Summary-->La fonction **Before selection** retourne Vrai lorsque le pointeur d'enregistrement courant se trouve avant le premier enregistrement de la sélection courante de *laTable*.<!-- END REF--> **Before selection** est généralement utilisée pour vérifier si la commande [PREVIOUS RECORD](previous-record.md) a déplacé le pointeur d'enregistrement courant avant le premier enregistrement. Si la sélection courante est vide, **Before selection** retourne Vrai.
+<!--REF #_command_.Before selection.Summary-->La fonction **Before selection** retourne Vrai lorsque le pointeur d'enregistrement courant se trouve avant le premier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour vérifier si la commande [PREVIOUS RECORD](previous-record.md) a déplacé le pointeur d'enregistrement courant avant le premier enregistrement. Si la sélection courante est vide, **Before selection** retourne Vrai.
 
 Pour replacer le pointeur d'enregistrement courant dans la sélection courante, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [NEXT RECORD](next-record.md) ne replace pas le pointeur d'enregistrement courant dans la sélection courante.
 
@@ -63,3 +63,12 @@ La méthode formulaire suivante est utilisée pendant l'impression d'un état. E
 [Form event code](../commands/form-event-code.md)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 198 |
+| Thread safe | &check; |
+
+

@@ -3,9 +3,9 @@ id: components
 title: コンポーネント
 ---
 
-4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
+4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
-独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\&type=Repositories) ダウンロードすることもできます。
+独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\&type=Repositories) ダウンロードすることもできます。
 
 4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
 
@@ -14,7 +14,7 @@ title: コンポーネント
 Components can be interpreted or [compiled](../Desktop/building.md).
 
 - インタープリターモードで動作する 4Dプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。
-- コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
+- コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。 この場合、コンパイル済みコンポーネントのみが利用可能です。
 
 ### Package folder
 
@@ -35,7 +35,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 :::note
 
-このページでは、**4D** と **4D Server** 環境でのコンポーネントの使用方法について説明します。 他の環境では、コンポーネントの管理は異なります:
+このページでは、**4D** と **4D Server** 環境でのコンポーネントの使用方法について説明します。 他の環境では、コンポーネントの管理は異なります: 他の環境では、コンポーネントの管理は異なります:
 
 - [リモートモードの 4D](../Desktop/clientServer.md) では、サーバーがコンポーネントを読み込み、リモートアプリケーションに送信します。
 - 統合されたアプリケーションでは、コンポーネントは [ビルドする際に組み込まれます](../Desktop/building.md#プラグインコンポーネントページ)。
@@ -47,7 +47,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - [プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
-- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -61,7 +61,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 #### dependencies.json
 
-**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを宣言します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
+**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを宣言します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -95,14 +95,16 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 ```mermaid
 flowchart TB
-    id1("1\nプロジェクトの Components フォルダーにあるコンポーネント")~~~
-    id2("2\ndependencies.json にリストされたコンポーネント")~~~
-    id2 -- environment4d.json にパスがある --> id4("environment4d.json に\n宣言されたパスの\nコンポーネントをロード")
+    id1("1<br/>Components from project's Components folder")
+	~~~
+    id2("2<br/>Components listed in dependencies.json")
+	~~~
+    id2 -- environment4d.json gives path --> id4("Load component based on path declared in environment4d.json")
     ~~~
-    id3("3\nユーザー 4D コンポーネント")
-    id2 -- environment4d.json にパスがない --> id5("パッケージフォルダーの\n隣に配置されている\nコンポーネントをロード")
+    id3("3<br/>User 4D components")
+    id2 -- environment4d.json doesn't give path --> id5("Load component next to package folder")
     ~~~
-    id3("3\nユーザー 4D コンポーネント")
+    id3("3<br/>User 4D components")
 ```
 
 同じコンポーネントの別のインスタンス (A) がより高い優先度レベルにあるためにコンポーネント (B) を読み込めない場合、AとBのコンポーネントにはそれぞれ専用の [ステータス](#依存関係のステータス) が付与されます: 読み込まれなかったコンポーネント (B) には _Overloaded_ ステータス、読み込まれたコンポーネント (A) には _Overloading_ ステータスが与えられます。
@@ -165,7 +167,7 @@ flowchart TB
 
 パスは、POSIXシンタックスで表します ([POSIXシンタックス](../Concepts/paths#posix-シンタックス) 参照)。
 
-相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。
+相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。
 
 コンポーネントアーキテクチャーの柔軟性と移植性のため、ほとんどの場合、相対パスを使用することが **推奨** されます (特に、プロジェクトがソース管理ツールにホストされている場合)。
 
@@ -173,7 +175,7 @@ flowchart TB
 
 ### GitHub に保存されたコンポーネント
 
-GitHubリリースとして利用可能な 4Dコンポーネントを参照して、4Dプロジェクトに自動で読み込むことができます。
+4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
 
 :::note
 
@@ -206,7 +208,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 }
 ```
 
-... 上記の場合、"myGitHubComponent1" は宣言とパス定義の両方がされていますが、"myComponent2" は宣言されているだけです。 そのため、[**environment4d.json**](#environment4djson) ファイルにパスを定義する必要があります:
+... 上記の場合、"myGitHubComponent1" は宣言とパス定義の両方がされていますが、"myComponent2" は宣言されているだけです。 **environment4d.json** ファイルは必須ではありません。 このファイルは、**dependencies.json** ファイル内で宣言された一部またはすべてのコンポーネントのついて、**カスタムパス** を定義するのに使用します。 このファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。
 
 ```json
 {
@@ -222,9 +224,9 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 #### タグとバージョン
 
-GitHub ではリリースを作成するときに、**タグ** と **バージョン** を指定します。
+When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば:
 
 ```json
 {
@@ -237,7 +239,7 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 }
 ```
 
-- リリースは **バージョン** によっても識別されます。 使用されるバージョニング方法は、最も一般的に使用される _セマンティックバージョニング_ のコンセプトに基づいています。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
+- リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 The versioning system used is based on the [_Semantic Versioning_](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
 
 ```json
 {
@@ -250,7 +252,7 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 }
 ```
 
-バージョンは、使用できるバージョンを定義するために使用します。 [標準的なセマンティックバージョン](https://regex101.com/r/Ly7O1x/3/) を使用します。 範囲は、最小値と最大値を示す 2つのセマンティックバージョンと演算子 ('`< | > | >= | <= | =`') で定義します。 `*` はすべてのバージョンのプレースホルダーとして使用できます。 ~ および ^ の接頭辞は、数字で始まるバージョンを定義し、それぞれ次のメジャーバージョンおよびマイナーバージョンまでの範囲を示します。
+範囲は、最小値と最大値を示す 2つのセマンティックバージョンと演算子 ('`< | > | >= | <= | =`') で定義します。 `*` はすべてのバージョンのプレースホルダーとして使用できます。 ~ および ^ の接頭辞は、数字で始まるバージョンを定義し、それぞれ次のメジャーバージョンおよびマイナーバージョンまでの範囲を示します。 `*` はすべてのバージョンのプレースホルダーとして使用できます。 ~ および ^ の接頭辞は、数字で始まるバージョンを定義し、それぞれ次のメジャーバージョンおよびマイナーバージョンまでの範囲を示します。
 
 以下にいくつかの例を示します:
 
@@ -268,6 +270,8 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 タグやバージョンを指定しない場合、4D は自動的に "latest" バージョンを取得します。
 
+The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+
 #### プライベートリポジトリ
 
 プライベートリポジトリにあるコンポーネントを統合したい場合は、アクセストークンを使用して接続するよう 4D に指示する必要があります。
@@ -280,32 +284,18 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 :::
 
-次に、[**environment4d.json**](#environment4djson) ファイルに "github" キーを挿入します:
-
-```json
-{
-	"github": {
-		"token": "ghpXXXXXXXXXXXXUvW8x9yZ"
-	},
-	"dependencies": {
-
-		"mySecondGitHubComponent": {
-			"github": "JohnSmith/mySecondGitHubComponent"
-		}
-	}
-}
-```
+You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
 
 #### 依存関係のローカルキャッシュ
 
-参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます:
+参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます:
 
 - macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ... 上記で `<app name>` は "4D"、"4D Server"、または "tool4D" となります。
 
-#### dependency-lock.json
+### dependency-lock.json
 
 プロジェクトの [`userPreferences` フォルダー](architecture.md#userpreferencesusername) に `dependency-lock.json` ファイルが作成されます。
 
@@ -313,7 +303,7 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 ## プロジェクトの依存関係の監視
 
-開かれているプロジェクトでは、**依存関係** パネルで依存関係の追加・削除ができるほか、現在の読み込み状態に関する情報を取得することができます。
+In an opened project, you can add, remove, update, and get information about dependencies and their current loading status in the **Dependencies** panel.
 
 依存関係パネルを表示するには:
 
@@ -327,100 +317,44 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 ![dependency](../assets/en/Project/dependency.png)
 
-依存関係インターフェースでは、依存関係を管理することができます (4Dシングルユーザーと4D Server)。 **ローカル** と **GitHub** の依存関係を追加または削除できます。
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
 
-### ローカルな依存関係の追加
+### Filtering dependencies
 
-ローカルな依存関係を追加するには、パネルのフッターエリアにある **+** ボタンをクリックします。 次のようなダイアログボックスが表示されます:
+デフォルトでは、依存関係マネージャーによって識別されたすべての依存関係は、それらの [ステータス](#依存関係のステータス) に関係なくリストされます。 依存関係パネル上部のタブを選択することで、依存関係のステータスに応じてリストの表示をフィルタリングできます:
 
-![dependency-add](../assets/en/Project/dependency-add.png)
+![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 [**.4DZ**](../Desktop/building.md#コンポーネントをビルド) または [**.4DProject**](architecture.md#applicationname4dproject-ファイル) ファイルを選択できます。
+- **アクティブ**: プロジェクトに読み込まれ、使用できる依存関係。 実際にロードされた _Overloading_ な依存関係が含まれます。 _Overloaded_ である方の依存関係は、その他の競合している依存関係とともに **コンフリクト** パネルに表示されます。
+- **非アクティブ**: プロジェクトに読み込まれておらず、利用できない依存関係。 このステータスには様々な理由が考えられます: ファイルの欠落、バージョンの非互換性など…
+- **コンフリクト**: プロジェクトに読み込まれてはいるものの、先に読み込まれた [優先度](#優先順位) の高い依存関係と競合している依存関係。 _Overloaded_ な依存関係も表示されるため、競合の原因を確認し、適切に対処することができます。
 
-選択した項目が有効であれば、その名前と場所がダイアログボックスに表示されます。
+### Dependency status
 
-![dependency-selected](../assets/en/Project/local-selected.png)
+デベロッパーの注意を必要とする依存関係は、行の右側の **ステータスラベル** と背景色で示されます。
 
-選択された項目が有効でない場合は、エラーメッセージが表示されます。
+![dependency-status](../assets/en/Project/dependency-conflict2.png)
 
-プロジェクトに依存関係を追加するには、**追加** をクリックします。
+使用されるステータスラベルは次のとおりです:
 
-- プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で宣言されます。
-- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
+- **Overloaded**: 依存関係は読み込まれていません。より上位の [優先順位](#優先順位) において、同じ名前の依存関係がすでに読み込まれています。
+- **Overloading**: 依存関係は読み込まれていますが、下位の [優先順位](#優先順位) において読み込まれなかった同じ名前の依存関係が存在します。
+- **Not found**: dependencies.jsonファイルで依存関係が宣言されていますが、見つかりません。
+- **Inactive**: プロジェクトと互換性がないため、依存関係は読み込まれていません (例: 現在のプラットフォーム用にコンポーネントがコンパイルされていない、など)。
+- **Duplicated**: 依存関係は読み込まれていません。同じ名前を持つ別の依存関係が同じ場所に存在し、すでに読み込まれています。
+- **Available after restart**: The dependency reference has just been added or updated [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Unloaded after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が削除されました。この依存関係は、アプリケーションの再起動時にアンロードされます。
+- **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
+- **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.
+- **Recent update**: A new version of the GitHub dependency has been loaded at startup.
 
-:::note
+依存関係の行にマウスオーバーするとツールチップが表示され、ステータスに関する追加の情報を提供します:
 
-この段階で [**environment4d.json**](#environmen4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
+![dependency-tips](../assets/en/Project/dependency-tip1.png)
 
-:::
+### Dependency origin
 
-この依存関係は、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。
-
-### GitHubの依存関係の追加
-
-[GitHubの依存関係](#github-に保存されたコンポーネント) を追加するには、パネルのフッターエリアにある **+** ボタンをクリックし、**GitHub** タブを選択します。
-
-![dependency-add-git](../assets/en/Project/dependency-add-git.png)
-
-依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
-
-![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
-
-接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
-
-:::note
-
-もしコンポーネントが [GitHub のプライベートリポジトリ](#プライベートリポジトリ) に保存されていて、必要なパーソナルアクセストークン (personal access token) がない場合はエラーメッセージが表示され、**パーソナルアクセストークンを追加...** ボタンが表示されます ([GitHubアクセストークンの提供](#githubアクセストークンの提供) 参照)。
-
-:::
-
-次に、依存関係の [タグとバージョン](#タグとバージョン) オプションを定義することができます。
-
-![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
-
-- **最新**: (デフォルト) 最新の安定版バージョンとしてタグ付けされたリリースをダウンロードします。
-- **次のメジャーバージョンまで上げる**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンまでに制限します。
-- **次のマイナーバージョンまで上げる**: 上と同様に、更新を次のマイナーバージョンまでに制限します。
-- **バージョンを指定 (Tag)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-
-プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
-
-すると、GitHub 依存関係は [**dependencies.json**](#dependenciesjson) ファイルに宣言され、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。
-
-#### GitHubアクセストークンの提供
-
-コンポーネントが [GitHub のプライベートリポジトリ](#プライベートリポジトリ) に保存されている場合には、パーソナルアクセストークン (personal access token) を依存関係マネージャーに提供する必要があります。 これをおこなうには:
-
-- "依存関係を追加..." ダイアログボックスで、GitHub のプライベートリポジトリパスを入力した後に表示される \*\*パーソナルアクセストークンを追加... \*\* ボタンをクリックします。
-- または、依存関係マネージャーのメニューで、**GitHubパーソナルアクセストークンを追加...** をいつでも選択できます。
-
-![dependency-add-token](../assets/en/Project/dependency-add-token.png)
-
-すると、パーソナルアクセストークンを入力することができます:
-
-![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
-
-パーソナルアクセストークンは 1つしか入力できません。 入力されたトークンは編集することができます。
-
-### 依存関係の削除
-
-依存関係パネルから依存関係を削除するには、対象の依存関係を選択し、パネルの **-** ボタンをクリックするか、コンテキストメニューから **依存関係の削除...** を選択します。 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。
-
-:::note
-
-依存関係パネルを使用して削除できるのは、[**dependencies.json**](#dependenciesjson) ファイルで宣言されている依存関係に限られます。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。
-
-:::
-
-確認用のダイアログボックスが表示されます。 依存関係が **environment4d.json** ファイルで宣言されている場合、以下のオプションでそれを削除することができます:
-
-![dependency-remove](../assets/en/Project/remove-comp.png)
-
-ダイアログボックスを確定すると、削除された依存関係の [ステータス](#依存関係のステータス) には "Unloaded after restart" (再起動時にアンロード) フラグが自動的に付きます。 このコンポーネントはアプリケーションの再起動時にアンロードされます。
-
-### 依存関係のオリジン
-
-依存関係パネルには、各依存関係のオリジン (由来) にかかわらず、プロジェクトの依存関係すべてがリストされます。 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます:
+依存関係パネルには、各依存関係のオリジン (由来) にかかわらず、プロジェクトの依存関係すべてがリストされます。 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます: 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます:
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
@@ -450,32 +384,178 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 
-### 依存関係のフィルタリング
+### ローカルな依存関係の追加
 
-デフォルトでは、依存関係マネージャーによって識別されたすべての依存関係は、それらの [ステータス](#依存関係のステータス) に関係なくリストされます。 依存関係パネル上部のタブを選択することで、依存関係のステータスに応じてリストの表示をフィルタリングできます:
+ローカルな依存関係を追加するには、パネルのフッターエリアにある **+** ボタンをクリックします。 次のようなダイアログボックスが表示されます: 次のようなダイアログボックスが表示されます:
 
-![dependency-tabs](../assets/en/Project/dependency-tabs.png)
+![dependency-add](../assets/en/Project/dependency-add.png)
 
-- **アクティブ**: プロジェクトに読み込まれ、使用できる依存関係。 実際にロードされた _Overloading_ な依存関係が含まれます。 _Overloaded_ である方の依存関係は、その他の競合している依存関係とともに **コンフリクト** パネルに表示されます。
-- **非アクティブ**: プロジェクトに読み込まれておらず、利用できない依存関係。 このステータスには様々な理由が考えられます: ファイルの欠落、バージョンの非互換性など…
-- **コンフリクト**: プロジェクトに読み込まれてはいるものの、先に読み込まれた [優先度](#優先順位) の高い依存関係と競合している依存関係。 _Overloaded_ な依存関係も表示されるため、競合の原因を確認し、適切に対処することができます。
+**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 [**.4DZ**](../Desktop/building.md#コンポーネントをビルド) または [**.4DProject**](architecture.md#applicationname4dproject-ファイル) ファイルを選択できます。
 
-### 依存関係のステータス
+選択した項目が有効であれば、その名前と場所がダイアログボックスに表示されます。
 
-デベロッパーの注意を必要とする依存関係は、行の右側の **ステータスラベル** と背景色で示されます。
+![dependency-selected](../assets/en/Project/local-selected.png)
 
-![dependency-status](../assets/en/Project/dependency-conflict2.png)
+選択された項目が有効でない場合は、エラーメッセージが表示されます。
 
-使用されるステータスラベルは次のとおりです:
+プロジェクトに依存関係を追加するには、**追加** をクリックします。
 
-- **Overloaded**: 依存関係は読み込まれていません。より上位の [優先順位](#優先順位) において、同じ名前の依存関係がすでに読み込まれています。
-- **Overloading**: 依存関係は読み込まれていますが、下位の [優先順位](#優先順位) において読み込まれなかった同じ名前の依存関係が存在します。
-- **Not found**: dependencies.jsonファイルで依存関係が宣言されていますが、見つかりません。
-- **Inactive**: プロジェクトと互換性がないため、依存関係は読み込まれていません (例: 現在のプラットフォーム用にコンポーネントがコンパイルされていない、など)。
-- **Duplicated**: 依存関係は読み込まれていません。同じ名前を持つ別の依存関係が同じ場所に存在し、すでに読み込まれています。
-- **Available after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が追加されました。この依存関係は、アプリケーションの再起動後に読み込まれます。
-- **Unloaded after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が削除されました。この依存関係は、アプリケーションの再起動時にアンロードされます。
+- プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で宣言されます。
+- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
 
-依存関係の行にマウスオーバーするとツールチップが表示され、ステータスに関する追加の情報を提供します:
+:::note
 
-![dependency-tips](../assets/en/Project/dependency-tip1.png)
+この段階で [**environment4d.json**](#environmen4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
+
+:::
+
+この依存関係は、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+
+### GitHubの依存関係の追加
+
+[GitHubの依存関係](#github-に保存されたコンポーネント) を追加するには、パネルのフッターエリアにある **+** ボタンをクリックし、**GitHub** タブを選択します。
+
+![dependency-add-git](../assets/en/Project/dependency-add-git.png)
+
+依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
+
+![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
+
+接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
+
+:::note
+
+もしコンポーネントが [GitHub のプライベートリポジトリ](#プライベートリポジトリ) に保存されていて、必要なパーソナルアクセストークン (personal access token) がない場合はエラーメッセージが表示され、**パーソナルアクセストークンを追加...** ボタンが表示されます ([GitHubアクセストークンの提供](#githubアクセストークンの提供) 参照)。
+
+:::
+
+Define the [dependency version range](#tags-and-versions) to use for this project. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.
+
+プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
+
+すると、GitHub 依存関係は [**dependencies.json**](#dependenciesjson) ファイルに宣言され、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+
+#### Defining a GitHub dependency version range
+
+You can define the [tag or version](#tags-and-versions) option for a dependency:
+
+![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
+
+- **最新**: (デフォルト) 最新の安定版バージョンとしてタグ付けされたリリースをダウンロードします。
+- **次のメジャーバージョンまで上げる**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンまでに制限します。
+- **次のマイナーバージョンまで上げる**: 上と同様に、更新を次のマイナーバージョンまでに制限します。
+- **バージョンを指定 (Tag)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
+
+The current GitHub dependency version is displayed on the right side of the dependency item:
+
+![dependency-origin](../assets/en/Project/dependency-version.png)
+
+#### Modifying the GitHub dependency version range
+
+You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+
+Modifying the version range is useful for example if you use the automatic update feature and want to lock a dependency to a specific version number.
+
+### Updating GitHub dependencies
+
+The Dependency manager provides an integrated handling of updates on GitHub. The following features are supported:
+
+- Automatic and manual checking of available versions
+- Automatic and manual updating of components
+
+Manual operations can be done **per dependency** or **for all dependencies**.
+
+#### Checking for new versions
+
+Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background.
+
+:::note
+
+If you provide an [access token](#providing-your-github-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+
+:::
+
+In addition, you can check for updates at any moment, for a single dependency or for all dependencies:
+
+- To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
+
+![check component](../assets/en/Project/check-component-one.png)
+
+- To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
+
+![check components](../assets/en/Project/check-component-all.png)
+
+If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
+
+![dependency-new-version](../assets/en/Project/dependency-available.png)
+
+You can decide to [update the component](#updating-dependencies) or not.
+
+If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
+
+#### Updating dependencies
+
+**Updating a dependency** means downloading a new version of the dependency from GitHub and keeping it ready to be loaded the next time the project is started.
+
+You can update dependencies at any moment, for a single dependency or for all dependencies:
+
+- To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window:
+
+![check component](../assets/en/Project/update-component-one.png)
+
+- To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**:
+
+![check components](../assets/en/Project/update-component-all.png)
+
+In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-github-dependency-version-range).
+
+When you select an update command:
+
+- a dialog box is displayed and proposes to **restart the project**, so that the updated dependencies are immediately available. It is usually recommended to restart the project to evaluate updated dependencies.
+- if you click Later, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
+
+#### Automatic update
+
+The **Automatic update** option is available in the **options** menu at the bottom of the Dependency manager window.
+
+When this option is checked (default), new GitHub component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. This option facilitates the day-to-day management of dependency updates, by eliminating the need to manually select updates.
+
+When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as available and will require a [manual updating](#updating-dependencies). Unselect the **Automatic update** option if you want to monitor dependency updates precisely.
+
+### GitHubアクセストークンの提供
+
+Registering your personal access token in the Dependency manager is:
+
+- mandatory if the component is stored on a [private GitHub repository](#private-repositories),
+- recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
+
+To provide your GitHub access token, you can either:
+
+- "依存関係を追加..." ダイアログボックスで、GitHub のプライベートリポジトリパスを入力した後に表示される \*\*パーソナルアクセストークンを追加... \*\* ボタンをクリックします。
+- または、依存関係マネージャーのメニューで、**GitHubパーソナルアクセストークンを追加...** をいつでも選択できます。
+
+![dependency-add-token](../assets/en/Project/dependency-add-token.png)
+
+すると、パーソナルアクセストークンを入力することができます:
+
+![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
+
+パーソナルアクセストークンは 1つしか入力できません。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。
+
+The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
+
+### 依存関係の削除
+
+依存関係パネルから依存関係を削除するには、対象の依存関係を選択し、パネルの **-** ボタンをクリックするか、コンテキストメニューから **依存関係の削除...** を選択します。 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。
+
+:::note
+
+依存関係パネルを使用して削除できるのは、[**dependencies.json**](#dependenciesjson) ファイルで宣言されている依存関係に限られます。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。
+
+:::
+
+確認用のダイアログボックスが表示されます。 確認用のダイアログボックスが表示されます。 依存関係が **environment4d.json** ファイルで宣言されている場合、以下のオプションでそれを削除することができます:
+
+![dependency-remove](../assets/en/Project/remove-comp.png)
+
+ダイアログボックスを確定すると、削除された依存関係の [ステータス](#依存関係のステータス) には "Unloaded after restart" (再起動時にアンロード) フラグが自動的に付きます。 このコンポーネントはアプリケーションの再起動時にアンロードされます。 このコンポーネントはアプリケーションの再起動時にアンロードされます。

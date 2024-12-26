@@ -68,7 +68,7 @@
     "description": "The label for category Commands in sidebar docs"
   },
   "sidebar.docs.category.4D Environment": {
-    "message": "4D Environment",
+    "message": "Ambiente 4D",
     "description": "The label for category 4D Environment in sidebar docs"
   },
   "sidebar.docs.category.Arrays": {
@@ -256,7 +256,7 @@
     "description": "The label for category Records in sidebar docs"
   },
   "sidebar.docs.category.Relations": {
-    "message": "Relations",
+    "message": "Relações",
     "description": "The label for category Relations in sidebar docs"
   },
   "sidebar.docs.category.Resources": {
@@ -272,11 +272,11 @@
     "description": "The label for category SVG in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol": {
-    "message": "Secured Protocol",
+    "message": "Protocolo seguro",
     "description": "The label for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection": {
-    "message": "Selection",
+    "message": "Seleção",
     "description": "The label for category Selection in sidebar docs"
   },
   "sidebar.docs.category.Sets": {

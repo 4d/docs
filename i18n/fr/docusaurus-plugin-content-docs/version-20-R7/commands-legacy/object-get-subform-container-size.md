@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->La commande **OBJECT GET SUBFORM CONTAINER SIZE** retourne la *largeur* et la *hauteur* (en pixels) d’un objet sous-formulaire "courant", affiché dans le formulaire parent.<!-- END REF--> 
@@ -32,3 +29,12 @@ Cette commande est utile par exemple dans le cas où des objets du sous-formulai
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1148 |
+| Thread safe | &cross; |
+
+

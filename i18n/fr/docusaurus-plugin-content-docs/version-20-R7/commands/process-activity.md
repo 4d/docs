@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Paramètres | Type    |   | Description                                                                            |
 | ---------- | ------- | - | -------------------------------------------------------------------------------------- |
-| sessionID  | Text    | → | Session ID                                                                             |
+| sessionID  | Text    | → | ID de session                                                                          |
 | options    | Integer | → | Return options                                                                         |
 | Résultat   | Object  | ← | Snapshot of running processes and/or (4D Server only) user sessions |
 

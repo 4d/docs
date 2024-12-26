@@ -25,3 +25,12 @@ displayed_sidebar: docs
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Sin](sin.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 19 |
+| Thread safe | &check; |
+
+

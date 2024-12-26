@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.WA Create URL history menu.Summary-->O comando WA Create URL history menu cria e preenche um menu que pode ser utilizado diretamente para a navegação entre as URLs visitadas durante a sessão na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> Pode ser utilizado para criar uma interface de navegação personalizada.
@@ -70,3 +67,12 @@ O código abaixo pode estar associado a um botão 3D com menu pop up chamado "An
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [WA GET URL HISTORY](wa-get-url-history.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1049 |
+| Thread-seguro | &cross; |
+
+

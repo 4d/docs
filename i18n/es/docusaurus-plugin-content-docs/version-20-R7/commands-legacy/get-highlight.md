@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->El comando GET HIGHLIGHT permite determinar el texto seleccionado actualmente en *objeto*.<!-- END REF-->  
@@ -65,3 +62,12 @@ Modificación del estilo del texto resaltado:
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 209 |
+| Hilo seguro | &cross; |
+
+

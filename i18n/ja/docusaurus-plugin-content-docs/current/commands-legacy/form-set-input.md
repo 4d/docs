@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 #### 説明 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->**FORM SET INPUT** コマンドは、*aTable*のカレント入力フォームを*form*または*userForm*に設定します。<!-- END REF-->フォームは*aTable*に属していなければなりません。
@@ -109,3 +106,12 @@ displayed_sidebar: docs
 [MODIFY SELECTION](modify-selection.md)  
 [Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 55 |
+| スレッドセーフである | &cross; |
+
+

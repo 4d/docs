@@ -8,21 +8,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| 引数  | 型      |   | 説明                        |
-| --- | ------ | - | ------------------------- |
-| 戻り値 | Object | ← | Current element or object |
+| 引数  | 型      |   | 説明               |
+| --- | ------ | - | ---------------- |
+| 戻り値 | Object | ← | カレントの要素またはオブジェクト |
 
 <!-- END REF-->
 
 #### 説明
 
-The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+`This` コマンドは<!--REF #_command_.This.Summary-->現在処理中のオブジェクトへの参照を返します<!-- END REF-->。
 
 `This` の値は、呼ばれ方によって決まります。 <code>This</code> の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 
-This command can be used in different contexts, described below. Within these contexts, you will access object/collection element properties or entity attributes through **This.<*propertyPath*\>**. For example, *This.name* or *This.employer.lastName* are valid pathes to object, element or entity properties.
+このコマンドは以下で説明するように、異なるコンテキストで使用することができます。 これらのコンテキストの中においては、**This.<*propertyPath*\>** を通してオブジェクト/コレクションの要素プロパティやエンティティの属性にアクセスすることができます。 例えば、*This.name* や*This.employer.lastName* はオブジェクト、要素やエンティティプロパティへの有効なパスとなります。
 
-In any other context, the command returns **Null**.
+これら以外のコンテキストにおいては、コマンドは**Null** を返します。
 
 #### クラス関数
 
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。 See [this example](super.md#example-1).
+> コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。 こちらの [例題](super.md#例題-1) を参照ください。
 
 基本的に、`This` はメソッドの呼び出し元のオブジェクトを指します。
 
@@ -70,20 +70,20 @@ $val:=$o.f() //8
 
 #### フォーミュラオブジェクト
 
-In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
+[Formula](formula.md) あるいは [Formula from string](formula-from-string.md) コマンドで作成されたフォーミュラオブジェクトの実行コンテキストにおいては、`This` はフォーミュラによって現在処理されているオブジェクトへの参照を返します。
 
-For example, you want to use a project method as a formula encapsulated in an object:
+例えば、プロジェクトをオブジェクトのカプセル化されたフォーミュラとして使用したい場合を考えます:
 
 ```4d
  var $person : Object := New object
  $person.firstName:="John"
  $person.lastName:="Smith"
  $person.greeting:=Formula(Greeting)
- $g:=$person.greeting("hello") // returns "hello John Smith"
- $g:=$person.greeting("hi") // returns "hi John Smith"
+ $g:=$person.greeting("hello") // "hello John Smith" を返す
+ $g:=$person.greeting("hi") // "hi John Smith" を返す
 ```
 
-With the *Greeting* project method:
+*Greeting* プロジェクトメソッドの中身は以下のようになっています:
 
 ```4d
  #DECLARE($greeting : Text) : Text
@@ -92,17 +92,17 @@ With the *Greeting* project method:
 
 #### リストボックス
 
-In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.
+コレクションまたはエンティティセレクションに割り当てられたリストボックスのコンテキストにおいては、[`On Display Detail`](../Events/onDisplayDetail.md) あるいは [`On Data Change`](../Events/onDataChange.md) イベントの最中において、は現在の行を表示するためにリストボックス割り当てられたコレクション要素またはエンティティへの参照を返します。
 
 :::note
 
-If you use a collection of scalar values in a list box, 4D creates an object for each element with a single **value** property. Thus, the element value is returned by the **This.value** non-assignable expression.
+スカラー値のコレクションをリストボックスに対して使用した場合、4D はそれぞれの要素に対して、単一のプロパティ**value** を持つオブジェクトを作成します。 Thus, the element value is returned by the **This.value** non-assignable expression. そのため、要素の値は**This.value** という代入不可の式によって返されます。
 
 :::
 
 #### 例題 1
 
-A collection of objects, each with this structure:
+以下のような構造を持つオブジェクトのコレクションがある場合を考えます:
 
 ```json
 {  
@@ -127,14 +127,14 @@ A collection of objects, each with this structure:
  
 ```
 
-In the list box, each column refers to one of the properties of the object, either directly (This.name), indirectly (This.employees.length), or through an expression (*getPicture*) in which can be used directly. The list box looks like:
+リストボックス内では、各カラムはオブジェクトのプロパティいずれか一つを、直接的(This.name) に、あるいは間接的(This.employees.length) に、あるいは直接使用できる式(*getPicture*) を通して参照しています。 このリストボックスは、以下のようになります: このリストボックスは、以下のようになります:
 
 ![](../assets/en/commands/pict3776706.en.png)
 
-The *GetPicture* project method is automatically executed during the **On display detail** event:
+*GetPicture* プロジェクトメソッドは、**On display detail** イベント中に自動的に実行されます:
 
 ```4d
-  //GetPicture Method
+  //GetPicture メソッド
  #DECLARE -> $genderPict : Picture
  If(This.isFemale)
     $genderPict:=Form.genericFemaleImage
@@ -143,34 +143,34 @@ The *GetPicture* project method is automatically executed during the **On displa
  End if
 ```
 
-Once the form is executed, you can see the result:
+フォームを実行すると、以下のような結果が表示されます:
 
 ![](../assets/en/commands/pict3783169.en.png)
 
 #### 例題 2
 
-You want to display entities from the following structure in a list box:
+以下のようなストラクチャーからのエンティティをリストボックスに表示したい場合を考えます:
 
 ![](../assets/en/commands/pict3872836.en.png)
 
-You build a list box of the "Collection or entity selection" type with the following definition:
+その場合、以下のような定義を持つ"コレクションまたはエンティティセレクション"型のリストボックスを作成します:
 
 ![](../assets/en/commands/pict3872844.en.png)
 
 注:
 
-- *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
-- *This.meetings* is a related attribute (based upon the One To Many relation name) that returns an entity selection of the ds.Meeting dataclass.
-- **Form.eventList** is the entity selection that is attached to the list box. The initialization code can be put in the on load form event:
+- *This.ID*、*This.Title* および *This.Date* は、ds.Event データクラス内の対応する属性を直接参照します。
+- *This.meetings* は(1対N リレーション名に基づいた)リレーション属性であり、ds.Meeting データクラスのエンティティセレクションを返します。
+- **Form.eventList** はリストボックスに割り当てられているエンティティセレクションです。 初期化コードは、On Load フォームイベント内で以下のように書くことができます: 初期化コードは、On Load フォームイベント内で以下のように書くことができます:
 
 ```4d
  Case of  
     :(Form event code=On Load)  
-       Form.eventList:=ds.Event.all() //returns an entity selection with all entities  
+       Form.eventList:=ds.Event.all() //全てのエンティティを格納したエンティティセレクションを返す
  End case  
 ```
 
-Once the form is executed, the list box is automatically filled with the entity selection:
+フォームが実行されると、リストボックスにはエンティティセレクションが入った状態で表示されます:
 
 ![](../assets/en/commands/pict3872875.en.png)
 

@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** cambia la página actual de un formulario para mostrar la página especificada por *numPag*.<!-- END REF-->
@@ -51,3 +48,12 @@ El siguiente ejemplo es un método de objeto para un botón que muestra una pág
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 247 |
+| Hilo seguro | &cross; |
+
+

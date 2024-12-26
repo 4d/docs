@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Before selection.Summary-->**Before selection** devuelve TRUE cuando el puntero del registro actual se encuentra antes del primer registro de la selección actual de *tabla*.<!-- END REF-->**Before selection** generalmente es utilizado para verificar si el comando [PREVIOUS RECORD](previous-record.md) ha movido el puntero del registro actual antes del primer registro. Si la selección actual está vacía, **Before selection** devuelve TRUE.
+<!--REF #_command_.Before selection.Summary-->**Before selection** devuelve TRUE cuando el puntero del registro actual se encuentra antes del primer registro de la selección actual de *tabla*.<!-- END REF-->generalmente es utilizado para verificar si el comando [PREVIOUS RECORD](previous-record.md) ha movido el puntero del registro actual antes del primer registro. Si la selección actual está vacía, **Before selection** devuelve TRUE.
 
 Para mover el puntero del registro actual a la selección, utilice los comandos [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) o [GOTO SELECTED RECORD](goto-selected-record.md). [NEXT RECORD](next-record.md) no mueve el puntero a la selección.
 
@@ -62,3 +62,12 @@ Este método de formulario se utiliza durante la impresión de un informe. Defin
 [Form event code](form-event-code.md)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 198 |
+| Hilo seguro | &check; |
+
+

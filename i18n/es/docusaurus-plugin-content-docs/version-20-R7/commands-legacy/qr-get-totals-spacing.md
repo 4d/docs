@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->El comando QR GET TOTALS SPACING permite recuperar el valor del espacio añadido debajo de una línea de subtotal.<!-- END REF--> Aplica únicamente en modo listado.
@@ -39,3 +36,13 @@ Si el parámetro *subtotal* es incorrecto, se genera el error -9852.
 #### Ver también 
 
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 762 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

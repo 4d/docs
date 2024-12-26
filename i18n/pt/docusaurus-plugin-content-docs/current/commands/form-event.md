@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Each returned object includes the following main properties:
 
-| **Property** | **Type** | **Description**                                                                                                                                                                               |
+| **Property** | **Tipo** | **Description**                                                                                                                                                                               |
 | ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                  |
 | code         | integer  | Valor numérico do evento de formulário.                                                                                                                                       |

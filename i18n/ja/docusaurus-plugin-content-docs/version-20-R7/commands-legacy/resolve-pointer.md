@@ -109,3 +109,12 @@ DRAG AND DROP PROPERTIES コマンドの例を参照.
 [Is a variable](is-a-variable.md)  
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 394 |
+| スレッドセーフである | &check; |
+
+

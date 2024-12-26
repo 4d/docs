@@ -937,7 +937,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
 | Contient mot-clé                        | %                             | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                                                                     |
 
-- Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20.
+- **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20.
   Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
@@ -1030,6 +1030,20 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
 
 ```4d
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
+```
+
+#### Not equal to null or undefined values
+
+The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+```
+
+If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 #### Not equal to et les collections
@@ -1136,7 +1150,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 #### Recherches dans les relations N vers N
 
-ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
+ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur `AND` MAIS dans le même attribut. Par exemple, considérez la structure suivante :
 
 ![alt-text](../assets/en/API/manytomany.png)
 

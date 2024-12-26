@@ -49,3 +49,13 @@ displayed_sidebar: docs
 [RECEIVE PACKET](receive-packet.md)  
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
+
+#### プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 268 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

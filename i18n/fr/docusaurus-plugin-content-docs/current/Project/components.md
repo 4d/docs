@@ -5,7 +5,7 @@ title: Composants
 
 A 4D component is a set of 4D code and/or 4D forms representing one or more functionalities that you can add and use in your projects. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\&type=Repositories).
 
 When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
@@ -47,7 +47,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-dependency).
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -95,14 +95,16 @@ Since components can be installed in different ways, a priority order is applied
 
 ```mermaid
 flowchart TB
-    id1("1\nComponents from project's Components folder")~~~
-    id2("2\nComponents listed in dependencies.json")~~~
-    id2 -- environment4d.json gives path --> id4("Load component\nbased on path declared\nin environment4d.json")
+    id1("1<br/>Components from project's Components folder")
+	~~~
+    id2("2<br/>Components listed in dependencies.json")
+	~~~
+    id2 -- environment4d.json gives path --> id4("Load component based on path declared in environment4d.json")
     ~~~
-    id3("3\nUser 4D components")
-    id2 -- environment4d.json doesn't give path --> id5("Load component\nnext to\npackage folder")
+    id3("3<br/>User 4D components")
+    id2 -- environment4d.json doesn't give path --> id5("Load component next to package folder")
     ~~~
-    id3("3\nUser 4D components")
+    id3("3<br/>User 4D components")
 ```
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the _Overloaded_ status, while the loaded component has the _Overloading_ status.
@@ -173,7 +175,7 @@ Absolute paths should only be used for components that are specific to one machi
 
 ### Components stored on GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
 
 :::note
 
@@ -222,7 +224,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 #### Tags and versions
 
-When you create a release in GitHub, you specify a **tag** and a **version**.
+When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
 - **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. For example :
 
@@ -237,7 +239,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- A release is also identified by a **version**. The versioning system used is based on the [_Semantic Versioning_](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -250,7 +252,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Here are a few examples:
 
@@ -268,6 +270,8 @@ Here are a few examples:
 
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
+The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+
 #### Private repositories
 
 If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it.
@@ -280,21 +284,7 @@ For more information, please refer to the [GitHub token interface](https://githu
 
 :::
 
-Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
-
-```json
-{
-	"github": {
-		"token": "ghpXXXXXXXXXXXXUvW8x9yZ"
-	},
-	"dependencies": {
-
-		"mySecondGitHubComponent": {
-			"github": "JohnSmith/mySecondGitHubComponent"
-		}
-	}
-}
-```
+You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
 
 #### Local cache for dependencies
 
@@ -305,7 +295,7 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 
 ...where `<app name>` can be "4D", "4D Server", or "tool4D".
 
-#### dependency-lock.json
+### dependency-lock.json
 
 A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
 
@@ -313,7 +303,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 ## Monitoring Project Dependencies
 
-In an opened project, you can add, remove, and get information about dependencies and their current loading status in the **Dependencies** panel.
+In an opened project, you can add, remove, update, and get information about dependencies and their current loading status in the **Dependencies** panel.
 
 To display the Dependencies panel:
 
@@ -327,7 +317,72 @@ The Dependencies panel is then displayed. Dependencies are sorted by name in alp
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can add or remove **local** and **GitHub** dependencies.
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
+
+### Filtering dependencies
+
+By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
+
+![dependency-tabs](../assets/en/Project/dependency-tabs.png)
+
+- **Active**: Dependencies that are loaded and can be used in the project. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
+- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
+- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+
+### Dependency status
+
+Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
+
+![dependency-status](../assets/en/Project/dependency-conflict2.png)
+
+The following status labels are available:
+
+- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
+- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
+- **Not found**: The dependency is declared in the dependencies.json file but is not found.
+- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
+- **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
+- **Available after restart**: The dependency reference has just been added or updated [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
+- **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
+- **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.
+- **Recent update**: A new version of the GitHub dependency has been loaded at startup.
+
+A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
+
+![dependency-tips](../assets/en/Project/dependency-tip1.png)
+
+### Dependency origin
+
+The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
+
+![dependency-origin](../assets/en/Project/dependency-origin.png)
+
+The following origins are possible:
+
+| Origin tag                        | Description                                                                    |
+| --------------------------------- | ------------------------------------------------------------------------------ |
+| 4D Component                      | Built-in 4D component, stored in the `Components` folder of the 4D application |
+| dependencies.json | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
+| Environment                       | Component declared in the [`environnement4d.json`](#environment4djson) file    |
+| Project Component                 | Component located in the [`Components`](architecture.md#components) folder     |
+
+**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+
+![dependency-show](../assets/en/Project/dependency-show.png)
+
+:::note
+
+This item is not displayed if the dependency is inactive because its files are not found.
+
+:::
+
+Component icon and location logo provide additional information:
+
+- The component logo indicates if it is provided by 4D or a third-party developer.
+- Local components can be differentiated from GitHub components by a small icon.
+
+![dependency-origin](../assets/en/Project/dependency-github.png)
 
 ### Adding a local dependency
 
@@ -374,7 +429,15 @@ If the component is stored on a [private GitHub repository](#private-repositorie
 
 :::
 
-You can then define the [tag or version](#tags-and-versions) option for the dependency:
+Define the [dependency version range](#tags-and-versions) to use for this project. By defaut, "Latest" is selected, which means that the lastest version will be automatically used.
+
+Click on the **Add** button to add the dependency to the project.
+
+The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
+
+#### Defining a GitHub dependency version range
+
+You can define the [tag or version](#tags-and-versions) option for a dependency:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
@@ -383,13 +446,90 @@ You can then define the [tag or version](#tags-and-versions) option for the depe
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
 
-Click on the **Add** button to add the dependency to the project.
+The current GitHub dependency version is displayed on the right side of the dependency item:
 
-The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
+![dependency-origin](../assets/en/Project/dependency-version.png)
 
-#### Providing your GitHub access token
+#### Modifying the GitHub dependency version range
 
-If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
+You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+
+Modifying the version range is useful for example if you use the automatic update feature and want to lock a dependency to a specific version number.
+
+### Updating GitHub dependencies
+
+The Dependency manager provides an integrated handling of updates on GitHub. The following features are supported:
+
+- Automatic and manual checking of available versions
+- Automatic and manual updating of components
+
+Manual operations can be done **per dependency** or **for all dependencies**.
+
+#### Checking for new versions
+
+Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background.
+
+:::note
+
+If you provide an [access token](#providing-your-github-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+
+:::
+
+In addition, you can check for updates at any moment, for a single dependency or for all dependencies:
+
+- To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
+
+![check component](../assets/en/Project/check-component-one.png)
+
+- To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
+
+![check components](../assets/en/Project/check-component-all.png)
+
+If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
+
+![dependency-new-version](../assets/en/Project/dependency-available.png)
+
+You can decide to [update the component](#updating-dependencies) or not.
+
+If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
+
+#### Updating dependencies
+
+**Updating a dependency** means downloading a new version of the dependency from GitHub and keeping it ready to be loaded the next time the project is started.
+
+You can update dependencies at any moment, for a single dependency or for all dependencies:
+
+- To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window:
+
+![check component](../assets/en/Project/update-component-one.png)
+
+- To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**:
+
+![check components](../assets/en/Project/update-component-all.png)
+
+In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-github-dependency-version-range).
+
+When you select an update command:
+
+- a dialog box is displayed and proposes to **restart the project**, so that the updated dependencies are immediately available. It is usually recommended to restart the project to evaluate updated dependencies.
+- if you click Later, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
+
+#### Automatic update
+
+The **Automatic update** option is available in the **options** menu at the bottom of the Dependency manager window.
+
+When this option is checked (default), new GitHub component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. This option facilitates the day-to-day management of dependency updates, by eliminating the need to manually select updates.
+
+When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as available and will require a [manual updating](#updating-dependencies). Unselect the **Automatic update** option if you want to monitor dependency updates precisely.
+
+### Providing your GitHub access token
+
+Registering your personal access token in the Dependency manager is:
+
+- mandatory if the component is stored on a [private GitHub repository](#private-repositories),
+- recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
+
+To provide your GitHub access token, you can either:
 
 - click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
 - or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
@@ -401,6 +541,8 @@ You can then enter your personal access token:
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
 You can only enter one personal access token. Once a token has been entered, you can edit it.
+
+The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
 ### Removing a dependency
 
@@ -417,65 +559,3 @@ Une boîte de dialogue de confirmation s'affiche. If the dependency was declared
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
 If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
-
-### Dependency Origin
-
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
-
-![dependency-origin](../assets/en/Project/dependency-origin.png)
-
-The following origins are possible:
-
-| Origin tag                        | Description                                                                    |
-| --------------------------------- | ------------------------------------------------------------------------------ |
-| 4D Component                      | Built-in 4D component, stored in the `Components` folder of the 4D application |
-| dependencies.json | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Environment                       | Component declared in the [`environnement4d.json`](#environment4djson) file    |
-| Project Component                 | Component located in the [`Components`](architecture.md#components) folder     |
-
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
-
-![dependency-show](../assets/en/Project/dependency-show.png)
-
-:::note
-
-This item is not displayed if the dependency is inactive because its files are not found.
-
-:::
-
-Component icon and location logo provide additional information:
-
-- The component logo indicates if it is provided by 4D or a third-party developer.
-- Local components can be differentiated from GitHub components by a small icon.
-
-![dependency-origin](../assets/en/Project/dependency-github.png)
-
-### Filtering Dependencies
-
-By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
-
-![dependency-tabs](../assets/en/Project/dependency-tabs.png)
-
-- **Active**: Dependencies that are loaded and can be used in the project. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
-- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
-
-### Dependency Status
-
-Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
-
-![dependency-status](../assets/en/Project/dependency-conflict2.png)
-
-The following status labels are available:
-
-- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
-- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
-- **Not found**: The dependency is declared in the dependencies.json file but is not found.
-- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
-- **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
-- **Available after restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
-- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
-
-A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
-
-![dependency-tips](../assets/en/Project/dependency-tip1.png)

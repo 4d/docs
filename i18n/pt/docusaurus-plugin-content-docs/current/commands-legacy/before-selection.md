@@ -61,3 +61,12 @@ Este formulário é utilizado durante a impressão de um relatório. Define uma 
 [Form event code](../commands/form-event-code.md)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 198 |
+| Thread-seguro | &check; |
+
+

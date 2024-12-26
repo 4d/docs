@@ -234,7 +234,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont retournées)
+vCompareResult1 (toutes les différences sont retournées) :
 
 ```4d
 [
@@ -283,7 +283,7 @@ vCompareResult2 (seules les différences sur $attributesToInspect sont retourné
 ]
 ```
 
-vCompareResult1 (toutes les différences sont retournées) :
+vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont retournées)
 
 ```4d
 [
@@ -445,7 +445,7 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 
 La fonction `.first()` <!-- REF #EntityClass.first().Summary -->retourne une référence vers l'entité en première position dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-|
+Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
 
 #### Exemple
 
@@ -1087,7 +1087,7 @@ S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous ête
 
 La fonction `.previous()` <!-- REF #EntityClass.previous().Summary --> retourne une référence vers l'entité précédente dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-|
+vrai si l'action de suppression a été effectuée avec succès, sinon Faux.
 
 Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
 

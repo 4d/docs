@@ -35,3 +35,12 @@ El siguiente ejemplo utiliza Char para insertar un retorno de carro en el texto 
 [Character code](character-code.md)  
 *Códigos Unicode*  
 *Símbolos de referencia de caracteres*  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 90 |
+| Hilo seguro | &check; |
+
+

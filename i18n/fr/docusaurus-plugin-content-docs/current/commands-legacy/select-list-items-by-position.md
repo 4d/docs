@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->La commande **SELECT LIST ITEMS BY POSITION** sélectionne le ou les élément(s) dont vous avez passé la position dans *positionElém* et, facultativement, dans *tabPositions*, à l'intérieur de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
@@ -74,3 +71,12 @@ Après l'exécution des lignes de code suivantes :
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 381 |
+| Thread safe | &cross; |
+
+

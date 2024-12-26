@@ -79,7 +79,7 @@ title: 数値 (実数、倍長整数、整数)
 
 ### 実数の比較
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+2つの実数が等しいかどうかを比較するために、4Dランゲージは実際には差の絶対値を *イプシロン値* と比較します。 See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
 
 :::note
 
@@ -115,7 +115,7 @@ The bitwise operators operates on **Long Integer** expressions or values.
 
 ビットワイズ演算子を使用する場合、倍長整数値を32ビットの配列と考える必要があります。 これらのビットには、右から左に0~31の番号が付けられます。
 
-それぞれのビットは0か1なので、倍長整数値は32のブール値を格納できる値と考えることもできます。 A bit equal to 1 means **True** and a bit equal to 0 means **False**.
+それぞれのビットは0か1なので、倍長整数値は32のブール値を格納できる値と考えることもできます。 1に等しいビットは**True** 、0に等しいビットは**False** を意味します。
 
 ビットワイズ演算子を使用する式は倍長整数値を返します。Bit Test 演算子の場合、式は例外的にブール値を返します。 次の表にビットワイズ演算子とそのシンタックスを示します:
 
@@ -132,21 +132,21 @@ The bitwise operators operates on **Long Integer** expressions or values.
 
 #### 注記
 
-1. For the `Left Bit Shift` and `Right Bit Shift` operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. したがって、この2番目のオペランドは、0~31の間でなければなりません。 0ビットシフトするとその値がそのまま返されます。また、31ビットより多くシフトするとすべてのビットがなくなるので、0x00000000が返されます。 それ以外の値を2番目のオペランドとして渡した場合、結果は意味のない値になります。
-2. For the `Bit Set`, `Bit Clear` and `Bit Test` operations , the second operand indicates the number of the bit on which to act. したがって、この2番目のオペランドは0 ~ 31の間です。そうでない場合、式の結果は意味のないものになります。
+1. `Left Bit Shift` および`Right Bit Shift` 演算では、2番目のオペランドは、結果値において1番目のオペランドのビットがシフトされるビット数を示します。 したがって、この2番目のオペランドは、0~31の間でなければなりません。 0ビットシフトするとその値がそのまま返されます。また、31ビットより多くシフトするとすべてのビットがなくなるので、0x00000000が返されます。 それ以外の値を2番目のオペランドとして渡した場合、結果は意味のない値になります。
+2. `Bit Set`、`Bit Clear`、`Bit Test` 演算では、2番目のオペランドは、作用の対象となるビット番号を示します。 したがって、この2番目のオペランドは0 ~ 31の間です。そうでない場合、式の結果は意味のないものになります。
 
 次の表は、ビットワイズ演算子とその効果を示します:
 
-| 演算                                        | 説明                                                                                                                                                                                                                                                                                                                                                                     |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bitwise AND                               | それぞれの結果ビットは2つのオペランドのビットの論理ANDです。 Here is the logical AND table:<li>1 & 1 --> 1</li><li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0. |
-| Bitwise OR (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 \| 1 --> 1</li><li>0 \| 1 --> 1</li><li>1 \| 0 --> 1</li><li>0 \| 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
-| Bitwise OR (exclusive) | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 ^ \| 1 --> 0</li><li>0 ^ \| 1 --> 1</li><li>1 ^ \| 0 --> 1</li><li>0 ^ \| 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.     |
-| Left Bit Shift                            | 最初のオペランド値が結果値に設定され、次に結果ビットが2番目のオペランドで示されたビット数だけ左にシフトします。 左側のビットがなくなり、右側の新しいビットは0に設定されます。 **Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                                                                                                         |
-| Right Bit Shift                           | 最初のオペランド値が結果値に設定され、次に結果ビットが2番目のオペランドで示されたビット数だけ右にシフトします。 The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                                                  |
-| Bit Set                                   | 最初のオペランド値が結果値に設定され、次に結果ビットのうち2番目のオペランドで示されたビットが1に設定されます。 他のビットはそのままです。                                                                                                                                                                                                                                                                                                 |
-| Bit Clear                                 | 最初のオペランド値が結果値に設定され、次に結果ビットのうち2番目のオペランドで示されたビットが0に設定されます。 他のビットはそのままです。                                                                                                                                                                                                                                                                                                 |
-| Bit Test                                  | 最初のオペランドのうち、2番目のビットで示されたビットが1の場合、trueが返されます。 最初のオペランドのうち、2番目のビットで示されたビットが0の場合、falseが返されます。                                                                                                                                                                                                                                                                             |
+| 演算                                        | 説明                                                                                                                                                                                                                                                                                             |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bitwise AND                               | それぞれの結果ビットは2つのオペランドのビットの論理ANDです。 論理AND の表は以下のようになります:<li>1 & 1 --> 1</li><li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>言い換えると、結果のビットは両方のオペランドが1であれば1となり、それ以外の場合には結果のビットは0 となります。 |
+| Bitwise OR (inclusive) | それぞれの結果ビットは2つのオペランドのビットの論理OR です。論理OR の表は以下のようになります。:<li>1 \| 1 --> 1</li><li>0 \| 1 --> 1</li><li>1 \| 0 --> 1</li><li>0 \| 0 --> 0</li>言い換えると、結果のビットは、少なくともどちらかのオペランドが1であれば1となり、それ以外の場合には結果のビットは0 となります。                                                                      |
+| Bitwise OR (exclusive) | それぞれの結果ビットは2つのオペランドの論理XOR です。論理XOR の表は以下のようになります:<li>1 ^ \| 1 --> 0</li><li>0 ^ \| 1 --> 1</li><li>1 ^ \| 0 --> 1</li><li>0 ^ \| 0 --> 0</li>言い換えると、結果のビットは2つのオペランドのどちらか1つが1の場合にのみ1となり、それ以外の場合には結果のビットは0 となります。                                                                |
+| Left Bit Shift                            | 最初のオペランド値が結果値に設定され、次に結果ビットが2番目のオペランドで示されたビット数だけ左にシフトします。 左側のビットがなくなり、右側の新しいビットは0に設定されます。 **注記:** 正の数だけを考えると、Nビット左にシフトすることは、2^N を掛けることと同じです。                                                                                                                                    |
+| Right Bit Shift                           | 最初のオペランド値が結果値に設定され、次に結果ビットが2番目のオペランドで示されたビット数だけ右にシフトします。 右側のビットがなくなり、左側の新しいビットは 0 に設定されます。 **注記:** 正の数だけを考えると、Nビット右にシフトすることは、2^Nで割ることと同じです。                                                                                                                                    |
+| Bit Set                                   | 最初のオペランド値が結果値に設定され、次に結果ビットのうち2番目のオペランドで示されたビットが1に設定されます。 他のビットはそのままです。                                                                                                                                                                                                                         |
+| Bit Clear                                 | 最初のオペランド値が結果値に設定され、次に結果ビットのうち2番目のオペランドで示されたビットが0に設定されます。 他のビットはそのままです。                                                                                                                                                                                                                         |
+| Bit Test                                  | 最初のオペランドのうち、2番目のビットで示されたビットが1の場合、trueが返されます。 最初のオペランドのうち、2番目のビットで示されたビットが0の場合、falseが返されます。                                                                                                                                                                                                     |
 
 ### 例題
 

@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 #### Descrição 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->O comando **METHOD GET CODE** devolve no parâmetro *codigo*, o conteúdo dos métodos designados pelo parâmetro *rota*.<!-- END REF--> Este comando pode devolver o código de todos os tipos de métodos: métodos base, triggers, métodos projeto, métodos formulário e métodos objeto.  
@@ -127,3 +124,12 @@ O documento resultante conterá:
 
 [METHOD SET CODE](method-set-code.md)  
 *Usar tokens em fórmulas*  
+
+#### Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1190 |
+| Thread-seguro | &cross; |
+
+

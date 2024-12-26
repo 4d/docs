@@ -21,9 +21,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** looks for records matching the query string defined using the *objectField*, *attributePath*, *queryOp* and *value* parameters, and returns a selection of records for *aTable*.<!-- END REF-->
-
-**QUERY BY ATTRIBUTE** changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. If the *aTable* parameter is omitted, the command applies to the default table. If no default table has been set, an error occurs.
+<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** looks for records matching the query string defined using the *objectField*, *attributePath*, *queryOp* and *value* parameters, and returns a selection of records for *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. If the *aTable* parameter is omitted, the command applies to the default table. If no default table has been set, an error occurs.
 
 The optional *conjOp* parameter is used to join **QUERY BY ATTRIBUTE** calls when defining multiple queries. The conjunction operators available are the same as the ones for the [QUERY](query.md) command:
 
@@ -408,3 +406,15 @@ The OK variable is set to 0 if:
   
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 *Structure of 4D language objects*  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1331 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+| Changes current record ||
+| Changes current selection ||
+
+

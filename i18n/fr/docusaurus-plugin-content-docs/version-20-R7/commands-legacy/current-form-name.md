@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Current form name.Summary-->La commande **Current form name** retourne le nom du formulaire courant défini pour le process.<!-- END REF--> Le formulaire courant peut être un formulaire projet ou un formulaire table. 
@@ -60,3 +57,12 @@ Vous souhaitez obtenir le formulaire courant si c’est un formulaire projet :
 #### Voir aussi 
 
 [FORM LOAD](form-load.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1298 |
+| Thread safe | &cross; |
+
+

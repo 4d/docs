@@ -55,3 +55,12 @@ We want to duplicate and rename a file in its own folder:
 [Folder](../commands/folder.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
+
+#### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1548 |
+| Thread safe | &check; |
+
+
