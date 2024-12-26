@@ -185,7 +185,7 @@ Esta propriedade permite-lhe definir se o título e a imagem do botão devem ser
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
-By default, when a button contains a title and a picture, the elements are joined. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
+Por padrão, quando um botão contém um título e uma imagem, os elementos são unidos. O gráfico a seguir mostra o efeito da propriedade `imageHugsTitle` (verdadeira quando a propriedade está ativada) com diferentes alinhamentos de botões:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -198,17 +198,17 @@ By default, when a button contains a title and a picture, the elements are joine
 
 #### Objectos suportados
 
-[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
+[Botão](button_overview.md) (todos os estilos, exceto Ajuda) - [Caixa de seleção](checkbox_overview.md) (todos os estilos, exceto Regular, Plano, Divulgação e Recolher/Expandir) - [Botão de rádio](radio_overview.md) (todos os estilos, exceto Regular, Plano, Divulgação e Recolher/Expandir).
 
 ---
 
 ## Margem vertical
 
-This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
+Esta propriedade permite definir o tamanho (em pixels) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
+> Essa propriedade funciona em conjunto com a propriedade [Horizontal Margin (Margem horizontal](#horizontal-margin) ).
 
 #### Gramática JSON
 
@@ -224,35 +224,35 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 ## Com menu pop-up
 
-This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+Esta propriedade permite exibir um símbolo que aparece como um triângulo no botão para indicar a presença de um menu pop-up anexado:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
-The appearance and location of this symbol depends on the button style and the current platform.
+A aparência e o local desse símbolo dependem do estilo do botão e da plataforma atual.
 
 ### Ligados e Separados
 
-To attach a pop-up menu symbol to a button, there are two display options available:
+Para anexar um símbolo de menu pop-up a um botão, há duas opções de exibição disponíveis:
 
 |                         Linked                          |                          Separado                          |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
-> The actual availability of a "separated" mode depends on the style of the button and the platform.
+> A disponibilidade real de um modo "separado" depende do estilo do botão e da plataforma.
 
-Each option specifies the relation between the button and the attached pop-up menu:
+Cada opção especifica a relação entre o botão e o menu pop-up anexado:
 
-- When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
-- When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.
+- Quando o menu pop-up é **separado**, clicar na parte esquerda do botão executa diretamente a ação atual do botão; essa ação pode ser modificada usando o menu pop-up acessível na parte direita do botão.
+- Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Somente a seleção da ação no menu pop-up causa sua execução.
 
 :::info
 
-Refer to the [`On Alternative Click` event description](../Events/onAlternativeClick.md) for more information on the handling of events in this case.
+Consulte a [descrição do evento`On Alternative Click`](../Events/onAlternativeClick.md) para obter mais informações sobre o tratamento de eventos nesse caso.
 
 :::
 
 ### Gerir o menu pop-up
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+É importante observar que a propriedade "With Pop-up Menu" gerencia apenas o aspecto gráfico do botão. A exibição do menu pop-up e seus valores devem ser tratados inteiramente pelo desenvolvedor, principalmente por meio de `eventos de formulário` e da função [`Menu pop-up dinâmico`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) e [`Menu pop-up`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) e menu pop-up.
 
 #### Gramática JSON
 
@@ -262,4 +262,4 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 #### Objectos suportados
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Botão da barra de ferramentas](button_overview.md#toolbar) - [Botão](button_overview.md#bevel) [chanfrado - Botão chanfrado arredondado](button_overview.md#rounded-bevel) - [Botão de gradiente do OS X](button_overview.md#os-x-gradient) - [Botão texturizado do OS X](button_overview.md#os-x-textured) - [Botão do Office XP](button_overview.md#office-xp) - [Botão de círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
