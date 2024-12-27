@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
 
-**Note:** You can get the session identifiers using the [Process activity](process-activity.md) command.
+**Nota:** você pode obter os identificadores de sessão usando o comando [Process activity](process-activity.md).
 
 O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session.
 
