@@ -62,6 +62,7 @@ Le dialogue est refermé par l'utilisateur soit par une action "accepter" (décl
 A noter que la validation n'équivaut pas à la sauvegarde : si le dialogue comprend des champs, vous devez appeler explicitement la commande [SAVE RECORD](../commands-legacy/save-record.md) pour sauvegarder toutes les données qui ont été modifiées.
 
 Si vous passez le paramètre facultatif *\**, le formulaire est chargé et affiché dans la dernière fenêtre ouverte du process courant et la commande termine son exécution en laissant le formulaire actif à l'écran.\
+Si vous passez le paramètre facultatif *\**, le formulaire est chargé et affiché dans la dernière fenêtre ouverte du process courant et la commande termine son exécution en laissant le formulaire actif à l'écran.\
 Ce formulaire réagit alors "normalement" aux actions de l'utilisateur et est fermé par une action standard ou lorsque le code 4D lié au formulaire (méthode objet ou méthode formulaire) appelle la commande [CANCEL](../commands-legacy/cancel.md) ou [ACCEPT](../commands-legacy/accept.md). Si le process courant se termine, les formulaires créés de cette manière sont automatiquement fermés de la même manière que si une commande [CANCEL](../commands-legacy/cancel.md) avait été appelée. Ce mode d'ouverture est particulièrement utile pour afficher une palette flottante avec un document, sans avoir nécessairement besoin d'un autre process.
 
 **Notes :**
