@@ -40,7 +40,7 @@ O objeto retornado contém as propriedades abaixo:
 | hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                        |
 | creationDateTime | Date ISO 8601 | Date and time of session creation. Standalone session: date and time of application startup                                                                                             |
 | state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                        |
-| ID               | Text          | Session UUID (same value as [`Session.id`](../API/SessionClass.md#id))                                                                                                                               |
+| ID               | Text          | UUID da sessão (o mesmo valor de [`Session.id`](../API/SessionClass.md#id))                                                                                                                          |
 | persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                |
 
 :::note
