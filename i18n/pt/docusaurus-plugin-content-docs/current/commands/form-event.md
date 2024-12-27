@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 Each returned object includes the following main properties:
 
-| **Property** | **Tipo** | **Description**                                                                                                                                                                               |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                  |
-| code         | integer  | Valor numérico do evento de formulário.                                                                                                                                       |
-| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **Property** | **Tipo** | **Description**                                                                                                                                                                                   |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                                      |
+| code         | integer  | Valor numérico do evento de formulário.                                                                                                                                           |
+| description  | text     | Name of the form event (*e.g.* "On After Edit"). Veja a seção [**Eventos Formulário**](../Events/overview.md). |
 
 For example, in the case of a click on a button, the object contains the following properties:
 
