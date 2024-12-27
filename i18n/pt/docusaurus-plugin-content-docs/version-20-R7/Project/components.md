@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
+Os componentes podem ser interpretados ou [compilados](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
 - ou uma pasta de projeto (componente interpretado)
 - ou um arquivo .4DZ (componente compilado)
@@ -263,7 +263,7 @@ Para fazer isso, em sua conta GitHub, crie um token **classic** com direitos de 
 
 :::note
 
-For more information, please refer to the [GitHub token interface](https://github.com/settings/tokens).
+Para mais informações, consulte a [interface de token do GitHub](https://github.com/settings/tokens).
 
 :::
 
