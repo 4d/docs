@@ -27,7 +27,7 @@ As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mod
 
 :::note Compatibidade
 
-The **Access** area in the Settings dialog box is only available in converted projects for compatibility. See [Access](../settings/web.md#access) for more information.
+The **Access** area in the Settings dialog box is only available in converted projects for compatibility. Consulte [Access](../settings/web.md#access) para obter mais informações.
 
 :::
 
