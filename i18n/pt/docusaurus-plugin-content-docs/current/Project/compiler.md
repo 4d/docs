@@ -135,7 +135,7 @@ These options are only maintained for compatibility with legacy code. For more i
 
 In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declarar explicitamente todas as variáveis [usando palavras-chave `var`](../Concepts/variables.md#declaring-variables)
 - declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
 #### Enabling direct typing
