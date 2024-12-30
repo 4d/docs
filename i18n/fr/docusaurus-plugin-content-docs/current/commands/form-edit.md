@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Paramètres | Type  |   | Description                                                                                                                 |
 | ---------- | ----- | - | --------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Table | → | Table à laquelle appartient le formulaire; Si omis : Table par défaut ou utilisation d'un formulaire projet |
-| form       | Text  | → | Form name                                                                                                                   |
+| form       | Text  | → | Nom du formulaire                                                                                                           |
 | object     | Text  | → | Form object name or group name                                                                                              |
 
 <!-- END REF-->
