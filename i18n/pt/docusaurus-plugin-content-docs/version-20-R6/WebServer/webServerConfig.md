@@ -70,11 +70,11 @@ Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos al
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                                                                                               | Comentários                                                                                                                                             |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                               | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| Caixa de diálogos de configurações | [Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-names-HTTP-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
+| Pode ser definido com              | Nome                                                                                                                                      | Comentários                                                                                                                                             |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                      | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                       | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| Caixa de diálogos de configurações | Página [Opções (II) /Nomes de domínio e métodos HTTP permitidos](../settings/web.md#domain-names-HTTP-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
