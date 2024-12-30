@@ -228,7 +228,7 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 | value       | Date | Valor data        |
 | time        | Real | Tempo em segundos |
 
-- Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
+- Os objetos serão passados como [object](Concepts/dt_object.md) com uma propriedade `.value` contendo o parâmetro:
 
 | Propriedade | Tipo   | Descrição        |
 | ----------- | ------ | ---------------- |
