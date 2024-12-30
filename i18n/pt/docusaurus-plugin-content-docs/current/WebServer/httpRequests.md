@@ -13,7 +13,7 @@ The 4D web server provides several built-in features to handle HTTP requests:
 
 :::info
 
-You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. See [**HTTP Request Handler**](http-request-handler.md) section.
+You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. Veja a seção [**HTTP Request Handler**](http-request-handler.md).
 
 :::
 
