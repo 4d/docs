@@ -12,7 +12,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 > Você também pode criar um novo objeto `Email` em branco e preenchê-lo com [propriedades do objeto Email](#email-object).
 
-You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
+Você envia objetos `Email` usando a função SMTP [`.send()`](SMTPTransporterClass.md#send).
 
 [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
 
@@ -204,10 +204,10 @@ The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary --
 
 Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 
-| Propriedade                                                                  | Tipo | Valor                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [].name  | text | (mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). Caso seja nulo ou indefinido, o campo cabeçalho não será adicionado ao cabeçalho MIME. |
-| [].value | text | Valores do campo de cabeçalho conforme definido em [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                                                                     |
+| Propriedade                                                                  | Tipo | Valor                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [].name  | text | (obrigatório) Nome do campo cabeçalho, conforme definido na [RFC#5322](https://tools.ietf.org/html/rfc5322). Caso seja nulo ou indefinido, o campo cabeçalho não será adicionado ao cabeçalho MIME. |
+| [].value | text | Valores do campo de cabeçalho conforme definido em [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                                                                                     |
 
 ## .htmlBody
 
@@ -245,7 +245,7 @@ Para requisitos específicos de formatação, consulte a [RFC#5322](https://tool
 
 The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
 
-This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/html/rfc4021)).
+Essa propriedade é o cabeçalho "keywords" (consulte [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
 | Propriedade                                             | Tipo    | Valor                                                                  |
 | ------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
