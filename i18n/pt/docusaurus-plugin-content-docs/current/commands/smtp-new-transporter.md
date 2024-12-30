@@ -56,7 +56,7 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
 #### Resultados
 
-The function returns a [**SMTP transporter object**](../API/SMTPTransporterClass.md#smtp-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
+A função retorna um [**objeto SMTP transporter**](../API/SMTPTransporterClass.md#smtp-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 #### Exemplo
 
