@@ -145,7 +145,7 @@ Voici un exemple d'objet de sortie :
 
 #### Exemple
 
-You want to know if the process is preemptive:
+Vous voulez savoir si le processus est préventif :
 
 ```4d
 
