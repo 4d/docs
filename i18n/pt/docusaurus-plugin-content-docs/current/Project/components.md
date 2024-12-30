@@ -284,7 +284,7 @@ Para mais informações, consulte a [interface de token do GitHub](https://githu
 
 :::
 
-You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
+Em seguida, você precisa [fornecer seu token de conexão](#providing-your-github-access-token) para o gerenciador de dependências.
 
 #### Cache local para dependências
 
@@ -526,7 +526,7 @@ When this option is unchecked, a new component version matching your [component 
 
 Registering your personal access token in the Dependency manager is:
 
-- mandatory if the component is stored on a [private GitHub repository](#private-repositories),
+- obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
 - recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
 
 To provide your GitHub access token, you can either:
