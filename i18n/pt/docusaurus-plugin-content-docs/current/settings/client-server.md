@@ -80,7 +80,7 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
   - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
   - Quando a opção de camada QUIC é selecionada:
     - Uma mensagem beta e um ícone de alerta são exibidos perto do seletor.
-    - [Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
+    - [As configurações de tempo limite das conexões cliente-servidor](#Client-Server-Connections-Timeout) estão ocultas
     - The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
   - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
