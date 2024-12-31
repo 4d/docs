@@ -61,7 +61,7 @@ Na depuração remota, se o método for executado no servidor, o método princip
 
 Quando uma linha que chama outro método (sub-rotina ou função) é executada, clique neste botão para exibir o outro método e percorrê-lo.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+O novo método torna-se o atual (topo) método no [Painel de cadeia de chamadas](#call-chain-pane) da janela do Depurador.
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
