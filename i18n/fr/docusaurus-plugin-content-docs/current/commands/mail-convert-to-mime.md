@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 #### Description
 
-La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) pour formater l'objet courriel avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
+La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Elle peut être utilisée pour analyser le format MIME de l'objet.
 
 Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
 
