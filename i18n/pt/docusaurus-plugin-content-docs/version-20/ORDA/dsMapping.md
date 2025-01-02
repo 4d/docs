@@ -3,16 +3,16 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). As a result, ORDA exposes the whole database as a set of data model objects.
+A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
 
 
 ## Mapeamento da estrutura
 
-When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+Quando você chama um datastore usando o comando [`ds`](API/DataStoreClass.md#ds) ou a função [`Open datastore`](API/DataStoreClass.md#open-datastore) 4D automaticamente referir-se a tabelas e campos da estrutura 4D correspondente como propriedades do objeto [datastore](#datastore) retornado:
 
 *   As tabelas correspondem às dataclasses.
 *   Os campos são mapeados para atributos de armazenamento.
-*   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
+*   As relações são mapeadas para atributos de relações - os nomes de relações, definidos no editor de estrutura, são usados como nomes de atributos de relações.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 
@@ -21,56 +21,56 @@ When you call a datastore using the `ds` or the `Open datastore` command, 4D aut
 
 As seguintes regras são aplicadas a quaisquer conversões:
 
-* Os nomes de tabelas, campos e relações são mapeados para nomes de propriedade de objeto. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
+* Os nomes de tabelas, campos e relações são mapeados para nomes de propriedade de objeto. Certifique-se de que esses nomes estejam em conformidade com as regras gerais de nomenclatura de objetos, conforme explicado na seção [convenções de nomenclatura de objetos](Concepts/identifiers.md).
 *   Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
     *   Tabelas sem chave primária
     *   Tabelas com chaves primárias compostas.
 *   Os campos BLOB estão automaticamente disponíveis como atributos do tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
-> ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
+> O mapeamento ORDA não considera:  
+> - a opção "Invisível" para tabelas ou campos, - a estrutura virtual definida por `SET TABLE TITLES` ou `SET FIELD TITLES`, - a propriedade "Manual" ou "Automático" das relações.
 
 
 ### Regras para o controlo do acesso remoto
 
-When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely.
+Ao acessar a um datastore remoto por meio do comando `Open datastore` ou das [solicitações REST](REST/gettingStarted.md), somente as tabelas e os campos com a propriedade **Expose as REST resource** estão disponíveis remotamente.
 
-This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:
+Essa opção deve ser selecionada no nível da estrutura 4D para cada tabela e cada campo que você deseja expor como classe de dados e atributo no armazenamento de dados:
 
 ![](../assets/en/ORDA/ExposeDataclass.png)
 
 
 ### Actualização do modelo de dados
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificações incluem:
+Quaisquer modificações aplicadas no nível da estrutura da base de dados invalidam a camada de modelo atual da ORDA. Estas modificações incluem:
 
 *   adicionar ou remover uma tabela, um campo ou uma relação
 *   renomeação de uma tabela, um campo ou uma relação
-*   changing a core property of a field (type, unique, index, autoincrement, null value support)
+*   alterar uma propriedade principal de um campo (tipo, exclusivo, índice, autoincremento, suporte a valor null)
 
-When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
+Quando a camada atual do modelo ORDA é invalidada, ela é automaticamente recarregada e atualizada em chamadas subsequentes do datastore local `ds` no 4D e no 4D Server. Observe que as referências existentes a objetos ORDA, como entidades ou seleções de entidades, continuarão a usar o modelo a partir do qual foram criadas, até que sejam geradas novamente.
 
-However, the updated ORDA model layer is not automatically available in the following contexts:
+No entanto, a camada atualizada do modelo ORDA não está automaticamente disponível nos seguintes contextos:
 
-*   a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
-*   a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened.
+*   uma aplicação remota 4D conectado ao servidor 4D -- o aplicativo remoto deve reconectar ao servidor.
+*   um datastore remoto aberto usando `Open datastore` ou por [chamadas REST](REST/gettingStarted.md) - uma nova sessão deve ser aberta.
 
 
 ## Definição de objetos
 
 ### Datastore
 
-O datastore é o objeto de interface para um banco de dados. Constrói uma representação de todo o banco de dados como objeto. A datastore is made of a **model** and **data**:
+O datastore é o objeto de interface para um banco de dados. Constrói uma representação de todo o banco de dados como objeto. Uma datastore é feita de um **modelo** e **dados**:
 
-- The model contains and describes all the dataclasses that make up the datastore. É independente do próprio banco de dados subjacente.
-- Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
+- O modelo contém e descreve todas as dataclasses que compõem o datastore. É independente do próprio banco de dados subjacente.
+- Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. Por exemplo, nomes, endereços e datas de nascimento dos funcionários são peças de dados com os quais você pode trabalhar em um datastore.
 
-When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed.
+Quando manipulado pelo código, o datastore é um objeto cujas propriedades são todas as [dataclasses](#dataclass) que foram especificamente expostas.
 
 4D permite lidar com os seguintes datastores:
 
-- the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
-- one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
+- a datastore local, baseada na base 4D atual, devolvida pelo comando `ds` (o datastore principal).
+- um ou mais datastore(s) remotos expostos como recursos REST em bancos de dados 4D remotos, retornados pelo comando `Open datastore`.
 
 Um datastore faz referência apenas a um único banco de dados local ou remoto.
 
