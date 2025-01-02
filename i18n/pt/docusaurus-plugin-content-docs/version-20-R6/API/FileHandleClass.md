@@ -478,7 +478,7 @@ If the *size* value is less than the current document size, the document content
 
 The `.writeBlob()` function <!-- REF #FileHandleClass.writeBlob().Summary -->writes *blob* into the file, starting from the current position <!-- END REF -->.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the last byte written.
+Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após do último byte escrito.
 
 #### Veja também
 

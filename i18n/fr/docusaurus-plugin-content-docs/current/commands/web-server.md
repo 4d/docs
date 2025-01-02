@@ -38,7 +38,7 @@ Par défaut, si le paramètre *option* est omis, la commande renvoie une référ
 | `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                 |
 | `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
 
-The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
+L'objet **Web server retourné** contient les valeurs courantes des [propriétés du serveur Web](../API/WebServerClass.md).
 
 #### Exemple
 

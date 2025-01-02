@@ -80,7 +80,7 @@ Function getArea() : Integer
 
 #### Exemple 2
 
-This example illustrates the use of `Super` in a class function. Vous avez créé la classe `Rectangle` contenant une fonction :
+Cet exemple illustre l'utilisation de `Super` dans une fonction de classe. Vous avez créé la classe `Rectangle` contenant une fonction :
 
 ```4d
 //Class: Rectangle

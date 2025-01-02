@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 #### 説明
 
-`SMTP New transporter` コマンドは、<!-- REF #_command_.SMTP New transporter.Summary -->新規のSMTP 接続を設定します<!-- END REF -->。このSMTP 接続は*server* 引数の指定に応じて設定され、コマンドは新しい[SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) オブジェクトを返します。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。
+`SMTP New transporter` コマンドは、<!-- REF #_command_.SMTP New transporter.Summary -->新規のSMTP 接続を設定します<!-- END REF -->。このSMTP 接続は*server* 引数の指定に応じて設定され、コマンドは新しい[SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) オブジェクトを返します。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。 返された transporter オブジェクトは、通常メールの送信に使用されます。
 
 > このコマンドは SMTPサーバーとの接続を開始しません。 このコマンドは SMTPサーバーとの接続を開始しません。 このコマンドは SMTPサーバーとの接続を開始しません。 このコマンドは SMTPサーバーとの接続を開始しません。 SMTP 接続は、実際には[`.send()`](../API/SMTPTransporterClass.md#send) 関数が実行されたときに開かれます。
 >

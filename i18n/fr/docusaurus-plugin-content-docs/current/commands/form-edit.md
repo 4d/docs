@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Paramètres | Type  |   | Description                                                                                                                 |
 | ---------- | ----- | - | --------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Table | → | Table à laquelle appartient le formulaire; Si omis : Table par défaut ou utilisation d'un formulaire projet |
-| form       | Text  | → | Form name                                                                                                                   |
+| form       | Text  | → | Nom du formulaire                                                                                                           |
 | object     | Text  | → | Form object name or group name                                                                                              |
 
 <!-- END REF-->
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 #### Description
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
 
 The command is asynchronous: it returns immediately to the calling method and does not wait for the form to be open.
 

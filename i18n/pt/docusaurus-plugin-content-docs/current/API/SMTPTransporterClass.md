@@ -50,7 +50,7 @@ The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summa
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+Para obter informações sobre os códigos de estado SMTP, consulte [esta página](https://www.usps.org/info/smtp_status.html).
 
 #### Exemplo
 

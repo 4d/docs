@@ -25,7 +25,7 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](commands/vp-add-formula-name.md) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. Para fazer isso, insira essas fórmulas usando o comando [VP ADD FORMULA NAME](commands/vp-add-formula-name.md).
 
 ### Operadores e Operandos
 
@@ -228,7 +228,7 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 | value       | Date | Valor data        |
 | time        | Real | Tempo em segundos |
 
-- Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
+- Os objetos serão passados como [object](Concepts/dt_object.md) com uma propriedade `.value` contendo o parâmetro:
 
 | Propriedade | Tipo   | Descrição        |
 | ----------- | ------ | ---------------- |
@@ -240,7 +240,7 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 
 - [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
 - [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido em número no 4D View Pro)
-- [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
+- [date](Concepts/dt_date.md) (convertido para o tipo JS Date no 4D View Pro - hora, minuto, segundo = 0)
 - [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
 - [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed

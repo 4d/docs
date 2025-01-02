@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
+Os componentes podem ser interpretados ou [compilados](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
 - ou uma pasta de projeto (componente interpretado)
 - ou um arquivo .4DZ (componente compilado)
@@ -263,7 +263,7 @@ Para fazer isso, em sua conta GitHub, crie um token **classic** com direitos de 
 
 :::note
 
-For more information, please refer to the [GitHub token interface](https://github.com/settings/tokens).
+Para mais informações, consulte a [interface de token do GitHub](https://github.com/settings/tokens).
 
 :::
 
@@ -333,7 +333,7 @@ If the selected item is not valid, an error message is displayed.
 Clique em **Adicionar** para adicionar a dependência ao projeto.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
 
 :::note
 

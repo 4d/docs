@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Attachment objects allow referencing files within a [`Email`](EmailObjectClass.md) object. Os objetos Attachment são criados usando o comando [`MAIL New attachment`](#mail-new-attachment).
+Os objetos Attachment permitem fazer referência a arquivos em um objeto [`Email`](EmailObjectClass.md). Os objetos Attachment são criados usando o comando [`MAIL New attachment`](#mail-new-attachment).
 
 ### Objeto anexos
 

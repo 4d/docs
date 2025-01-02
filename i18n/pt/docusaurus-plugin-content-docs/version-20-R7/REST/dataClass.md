@@ -16,7 +16,7 @@ Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para tra
 | [**\{dataClass\}/{EntitySelectionClassFunction}**](ClassFunctions.md#function-calls)                                                   | `/City/getPopulation/?$filter="ID<3"` | Executa uma função de classe de uma seleção de entidade                                             |
 | [**\{dataClass\}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls) | `City[2]/getPopulation`               | Executa uma função de classe de uma entidade                                                        |
 
-> Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
+> As chamadas função são detalhadas na seção [Chamada das funções de classe ORDA](ClassFunctions.md).
 
 ## \{dataClass\}
 

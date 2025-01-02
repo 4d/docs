@@ -92,7 +92,7 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 ### Expressões
 
-You can use an [expression](Concepts/quick-tour.md#expressions) as data source for an object. Se permite toda expresión 4D válida: expresión simple, propiedad de objeto, fórmula, función 4D, nombre de método proyecto o campo que utilice la sintaxis estándar `[Table]Field`. The expression is evaluated when the form is executed and reevaluated for each form event. The expression is evaluated when the form is executed and reevaluated for each form event.
+Você pode usar uma [expressão](Concepts/quick-tour.md#expressions) como fonte de dados para um objeto. Se permite toda expresión 4D válida: expresión simple, propiedad de objeto, fórmula, función 4D, nombre de método proyecto o campo que utilice la sintaxis estándar `[Table]Field`. The expression is evaluated when the form is executed and reevaluated for each form event. The expression is evaluated when the form is executed and reevaluated for each form event.
 
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 

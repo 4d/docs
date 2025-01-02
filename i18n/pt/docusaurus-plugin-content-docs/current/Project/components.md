@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md).
+Os componentes podem ser interpretados ou [compilados](../Desktop/building.md).
 
 - A 4D project running in interpreted mode can use either interpreted or compiled components.
 - A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
@@ -280,11 +280,11 @@ Para fazer isso, em sua conta GitHub, crie um token **classic** com direitos de 
 
 :::note
 
-For more information, please refer to the [GitHub token interface](https://github.com/settings/tokens).
+Para mais informações, consulte a [interface de token do GitHub](https://github.com/settings/tokens).
 
 :::
 
-You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
+Em seguida, você precisa [fornecer seu token de conexão](#providing-your-github-access-token) para o gerenciador de dependências.
 
 #### Cache local para dependências
 
@@ -401,7 +401,7 @@ If the selected item is not valid, an error message is displayed.
 Clique em **Adicionar** para adicionar a dependência ao projeto.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
 
 :::note
 
@@ -479,17 +479,17 @@ In addition, you can check for updates at any moment, for a single dependency or
 
 - To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
 
-![check component](../assets/en/Project/check-component-one.png)
+![componente de verificação](../assets/en/Project/check-component-one.png)
 
 - To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
 
-![check components](../assets/en/Project/check-component-all.png)
+![componentes de verificação](../assets/en/Project/check-component-all.png)
 
 If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 
-You can decide to [update the component](#updating-dependencies) or not.
+Você pode decidir [atualizar o componente](#updating-dependencies) ou não.
 
 If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
 
@@ -501,7 +501,7 @@ You can update dependencies at any moment, for a single dependency or for all de
 
 - To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window:
 
-![check component](../assets/en/Project/update-component-one.png)
+![componente de verificação](../assets/en/Project/update-component-one.png)
 
 - To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**:
 
@@ -526,7 +526,7 @@ When this option is unchecked, a new component version matching your [component 
 
 Registering your personal access token in the Dependency manager is:
 
-- mandatory if the component is stored on a [private GitHub repository](#private-repositories),
+- obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
 - recommended for a more frequent [checking of dependency updates](#updating-github-dependencies).
 
 To provide your GitHub access token, you can either:

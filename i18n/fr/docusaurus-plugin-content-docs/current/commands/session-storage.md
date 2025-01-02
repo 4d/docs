@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Paramètres | Type   |   | Description                                                |
 | ---------- | ------ | - | ---------------------------------------------------------- |
-| id         | Text   | → | Unique identifier (UUID) of the session |
-| Résultat   | Object | ← | Storage object of the session                              |
+| id         | Text   | → | Identifiant unique (UUID) de la session |
+| Résultat   | Object | ← | Objet de stockage de la session                            |
 
 <!-- END REF-->
 

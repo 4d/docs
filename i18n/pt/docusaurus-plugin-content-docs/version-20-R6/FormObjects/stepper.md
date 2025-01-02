@@ -17,7 +17,7 @@ Um stepper pode ser associado diretamente a uma variável número, hora ou data.
   - [mínimo](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
   - [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
   - [step](properties_Scale.md#step) = 600 (10\*60)
-- For values of the date type, the value entered in the [step](properties_Scale.md#step) property represents days. As propriedades Mínimo e Máximo são ignoradas.
+- Para valores do tipo data, o valor inserido na propriedade [step](properties_Scale.md#step) representa dias. As propriedades Mínimo e Máximo são ignoradas.
 
 > For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to [declare it explicitly](../Concepts/variables.md#declaring-variables) as `Time` or `Date`.
 

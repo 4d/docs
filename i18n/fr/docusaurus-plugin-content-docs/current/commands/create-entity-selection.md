@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 #### Description
 
-The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
+La commande `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->construit et renvoie une nouvelle entity selection [modifiable](../ORDA/entities.md#shareable-or-alterable-entity-selections) relative à la classe de données correspondant à la *dsTable* fournie, en fonction de la sélection actuelle de cette table<!-- END REF-->.
 
-If the current selection is sorted, an [ordered](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). Si la sélection courante n'est pas triée, une entity selection non-triée est créée.
+Si la sélection actuelle est triée, une entity selection [triée](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) est créée (l'ordre de la sélection actuelle est conservé). Si la sélection courante n'est pas triée, une entity selection non-triée est créée.
 
-If the *dsTable* is not exposed in [`ds`](ds.md), an error is returned. Cette commande ne peut pas être utilisée avec un datastore distant.
+Si la *dsTable* n'est pas exposée dans [`ds`](ds.md), une erreur est retournée. Cette commande ne peut pas être utilisée avec un datastore distant.
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant la propriété suivante :
 
@@ -46,7 +46,7 @@ $employees:=Create entity selection([Employee])
 
 #### Propriétés
 
-|                    |                                                 |
-| ------------------ | ----------------------------------------------- |
-| Numéro de commande | 1512                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;check; |
+|                    |                                                     |
+| ------------------ | --------------------------------------------------- |
+| Numéro de commande | 1512                                                |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;check; |

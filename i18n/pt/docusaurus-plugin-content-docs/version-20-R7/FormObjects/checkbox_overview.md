@@ -357,7 +357,7 @@ O estilo Disclosure é denominado "roundedDisclosure" na [gramática JSON do est
 
 O estilo de botão Personalizado aceita uma imagem de fundo personalizada e permite gerir propriedades específicas:
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname)
+- [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname)
 - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset)
 - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 

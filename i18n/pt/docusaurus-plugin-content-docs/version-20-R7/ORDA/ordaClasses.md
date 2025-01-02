@@ -824,7 +824,7 @@ Use the `onHttpGet` keyword to declare functions that can be called through HTTP
 The `onHttpGet` keyword is available with:
 
 - ORDA Data model class functions
-- [Singletons class functions](../Concepts/classes.md#singleton-classes)
+- [Funções classe Singletons](../Concepts/classes.md#singleton-classes)
 
 A sintaxe formal é:
 

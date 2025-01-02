@@ -11,7 +11,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") Pontos (".") Pontos (".") Pontos (".") Pontos (".") e colchetes ("[ ]") não são permitidos em nomes de tabelas, campos, métodos ou variáveis.
+- Pontos (".") Pontos (".") Pontos (".") Pontos (".") Pontos (".") Pontos (".") e colchetes ("[ ]") não são permitidos em nomes de tabelas, campos, métodos ou variáveis.
 - Não são permitidas vírgulas, barras, aspas e dois pontos.
 - Os caracteres reservados para uso como operadores, como * e +, não são permitidos.
 - Não use nomes reservados, ou seja, nomes de comandos 4D`(Date`, `Time`, etc.), palavras-chave (If, For, etc.) e constantes.
@@ -20,7 +20,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 ### Regras adicionais para propriedades de objetos e nomes ORDA
 
 - Não são permitidos caracteres de espaço.
-- Pontos (".") Pontos (".") Pontos (".") Pontos (".") Pontos (".") e parênteses ("[ ]") não são permitidos.
+- Pontos (".") Pontos (".") Pontos (".") Pontos (".") Pontos (".") Pontos (".") e parênteses ("[ ]") não são permitidos.
 - Os nomes são sensíveis a maiúsculas e minúsculas.
 
 ### Regras adicionais para SQL

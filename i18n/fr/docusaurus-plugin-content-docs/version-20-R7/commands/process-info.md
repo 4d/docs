@@ -19,7 +19,7 @@ displayed_sidebar: docs
 | Paramètres    | Type    |     | Description                   |
 | ------------- | ------- | :-: | ----------------------------- |
 | processNumber | Integer |  →  | Process number                |
-| Résultat      | Object  |  ←  | Information about the process |
+| Résultat      | Object  |  ←  | Informations sur le processus |
 
 <!-- END REF -->
 
@@ -145,7 +145,7 @@ Voici un exemple d'objet de sortie :
 
 #### Exemple
 
-You want to know if the process is preemptive:
+Vous voulez savoir si le processus est préventif :
 
 ```4d
 

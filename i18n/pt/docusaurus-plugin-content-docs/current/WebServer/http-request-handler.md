@@ -19,7 +19,7 @@ Custom HTTP request handlers meet various needs, including:
 
 Custom HTTP Request handlers are supported:
 
-- when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
+- quando as [sessões escalonáveis](./sessions.md#enabling-web-sessions) estão ativadas,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
 ## Arquivo HTTPHandlers.json
