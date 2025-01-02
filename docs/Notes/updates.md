@@ -15,6 +15,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - You can [associate a class to a form](../FormEditor/properties_FormProperties.md#form-class) to enable code type-ahead and automatic instantiation of form data when using the [`Form`](../commands/form.md) command.  
 - Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
 - [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines. 
+- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses). 
 - 4D Language:
 	- Modified commands: [`FORM EDIT`](../commands/form-edit.md)
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
