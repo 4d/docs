@@ -20,7 +20,7 @@ Las siguientes reglas se aplican a todas las estructuras de 4D.
 ### Reglas adicionales para las propiedades de los objetos y los nombres ORDA
 
 - Los caracteres de espacio no están permitidos.
-- Puntos (".") Puntos (".") Puntos (".") Puntos (".") Puntos (".") Puntos (".") Periods (".") and brackets ("[ ]") are not allowed.
+- Puntos (".") Puntos (".") Puntos (".") Puntos (".") Puntos (".") Puntos (".") Puntos (".") Periods (".") and brackets ("[ ]") are not allowed.
 - Los nombres son sensibles a las mayúsculas y minúsculas.
 
 ### Reglas adicionales para SQL
