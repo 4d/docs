@@ -202,6 +202,19 @@ Items must be installed:
 * **on Windows**: in the *Final Application\MyProject\Database* subfolder.
 * **on macOS**: next to the *MyProject.app* software package.
 
+
+#### About licenses
+
+A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+|Deployment license|Description|Where to enter it|
+|---|----|---|
+|*4D OEM Desktop*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
+|*4D Unlimited Desktop*|**Discontinued** - Embedded custom license |[Licenses page](#licenses) of the Build application dialog|
+|*4D Desktop*|Per-user license, allowing them to use stand-alone 4D applications|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
+
+
+
 ## Client/Server page
 
 On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option.
@@ -505,19 +518,22 @@ The Licences & Certificate page can be used to:
 
 ### Licenses
 
-This tab displays the list of available deployment licenses that you can integrate into your application. By default, the list is empty. You must explicitly add your *4D Developer Professional* license as well as each *4D Unlimited Desktop* license (optional) to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. By default, the list is empty.
 
-:::note
+:::info
 
-You can build an application without a *4D Unlimited Desktop* deployment license. In this case, the [first activation](../Admin//licenses.md#first-activation) dialog box will be displayed to the user when they launch the application for the first time. They have to purchase and enter a per-user *4D Desktop* license. 
+If you keep the list empty, you build a stand-alone application without embedded deployment license. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. For more information, see the [**About licenses**](#about-licenses) paragraph.
 
 :::
+
+You must explicitly add your *4D Developer Professional* license as well as each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
 
 When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
-You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the *4D Unlimited Desktop* licenses were purchased.
+You must designate the files that contain your Developer license as well as those containing your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased.
 
 Once you have selected a file, the list will indicate the characteristics of the license that it contains.
 
