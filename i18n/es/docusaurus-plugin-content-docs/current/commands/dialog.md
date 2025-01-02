@@ -181,8 +181,8 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 
 #### Propiedades
 
-|                    |                                                     |
-| ------------------ | --------------------------------------------------- |
-| Command number     | 40                                                  |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;cross; |
-| Modifies variables | OK, error                                           |
+|                    |                                                         |
+| ------------------ | ------------------------------------------------------- |
+| Command number     | 40                                                      |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;cross; |
+| Modifies variables | OK, error                                               |
