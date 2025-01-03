@@ -305,7 +305,7 @@ Exemplo:
 
 ```4d
 var $toModify : cs.CompanySelection
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify é alternável
 ```
 
 Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
