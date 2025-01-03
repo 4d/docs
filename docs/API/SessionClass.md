@@ -37,6 +37,7 @@ The availability of properties and functions in the `Session` object depends on 
 |[<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
 |[<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->|
 |[<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->|
+|[<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->|
 |[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->|
 |[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->|
@@ -109,13 +110,17 @@ $isGuest:=Session.isGuest() //$isGuest is True
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |lifespan|Integer|->|Session token lifespan in seconds|
-|Result|Text|<-|UUID of the session OTP token|
+|Result|Text|<-|UUID of the session|
 <!-- END REF -->
 
 
 #### Description
 
-The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns it UUID<!-- END REF -->. 
+The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns its token UUID<!-- END REF -->. This token is unique to the session in which it was generated.
+
+For more information about the OTP tokens, please refer to [this section](../WebServer/sessions.md#session-token-otp).
+
+By default, the lifespan of the token is the same as the [`.idleTimeOut`](#idletimeout) of the session. You can set this timeout by passing a value in seconds in the *lifespan* parameter. If an expired token is used to restore a web user session, it is ignored and a guest session is created. 
 
 The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application. 
 
@@ -124,7 +129,7 @@ The returned token can then be used in exchanges with third-party applications o
 
 ```4d
 var $token : Text
-$token := Session.createOTP()
+$token := Session.createOTP( 60 ) //the token is valid for 1 mn
 ```
 
 <!-- END REF -->
@@ -489,6 +494,58 @@ End if
 
 
 <!-- END REF -->
+
+
+<!-- REF SessionClass.restore().Desc -->
+## .restore()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R9|Added|
+
+</details>
+
+<!-- REF #SessionClass.restore().Syntax -->**.restore** ( *token* : Text ) : Boolean <!-- END REF -->
+
+
+<!-- REF #SessionClass.restore().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|token|Text|->|Session token UUID|
+|Result|Boolean|<-|True if the current session has been successfully replaced by the session in token|
+<!-- END REF -->
+
+
+#### Description
+
+The `.restore()` function <!-- REF #SessionClass.restore().Summary -->replaces the current web user session with their original session corresponding to the *token* UUID<!-- END REF -->. Session's storage and privileges are restored. 
+
+If the original user session has been correctly restored, the function returns `true`. 
+
+The function returns `false`, no session is restored and a new guest session is used if:
+
+- the session token has already been used,
+- the session token has expired,
+- the session token does not exist,
+- the original session itself has expired.
+
+
+
+#### Example
+
+In a singleton called by a custom HTTP Request handler:
+
+```4d
+shared singleton Class constructor()
+
+Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
+   Session.restore(($request.urlQuery.state) 
+```
+
+<!-- END REF -->
+
 
 
 <!-- REF SessionClass.setPrivileges().Desc -->

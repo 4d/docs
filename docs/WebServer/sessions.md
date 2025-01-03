@@ -31,7 +31,7 @@ This option is selected by default in new projects. It can however be disabled b
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The `WEB SET OPTION` command can also set the session mode for the main Web server.
+> The [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
 
 In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 
@@ -40,7 +40,7 @@ In any cases, the setting is local to the machine; so it can be different on the
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. This cookie references the current web session for the application.
+When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. This cookie references the current web session for the application.
 
 :::info
 
@@ -203,6 +203,57 @@ Else
 End if
 ```
 
-## See also (blog post)
+:::note
 
-[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+For more examples, please refer to the [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) bog post. 
+
+:::
+
+## Session Token (OTP)
+
+The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For more information, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
+
+In 4D, session tokens can be used when calling external URLs and being called back from within a session. The callback request includes the token, so that the session which triggered the callback is loaded along with its data and privileges. The token can also be used to share the same session from multiple devices (mobile/computer). Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
+
+### Basic scenario
+
+The basic sequence of an OTP session token use in a 4D web application is the following:
+
+1. The web user initiates an action that requires a secured third-party connection, for example a payment, from within a specific session. 
+2. In your 4D code, you create a new OTP for the session using the [`Session.createOTP()`](../API/SessionClass.md#createotp) function and stores its token (UUID). 
+3. You send a request to the third-party application with the session token included in the callback Uri. Note that the way to provide the callback Uri to a third-party application depends on its API.  
+4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
+5. The request is processed by a dedicated [HTTP Request handler](http-request-handler.md) in your application using [`IncomingMessage`](../API/IncomingMessageClass.md) and [`OutgoingMessage`](../API/OutgoingMessageClass.md) classes.  
+    - If you have used the `$4DSID` parameter to handle the token, the related web user session is automatically restored in any web process with its storage and privileges. 
+    - If you have used a custom parameter name to handle the token, you need to call the [`Session.restore()`](../API/SessionClass.md#restore) function.
+
+:::note
+
+The `$4DSID` key is reserved for the 4D session token and must not be used to send parameters. 
+
+:::
+
+### Example with $4DSID
+
+The scenario using the `$4DSID` key is illustrated in the following diagram:
+
+![alt-text](../assets/en/WebServer/otp-token-$4DSID.jpg)
+
+### Example with `restore` function
+
+The scenario using a custom parameter is illustrated in the following diagram:
+
+![alt-text](../assets/en/WebServer/otp-token-restore.jpg)
+
+
+### Session token rules
+
+When implementing session tokens, the following rules apply:
+
+- HTTP and HTTPS schemas are supported. 
+- Only scalable web sessions of the **host database** can be reused with tokens. Sessions created in component web servers cannot be restored. 
+- No additional 4D Client license is consumed when reusing or restoring a session. 
+
+
+
+
