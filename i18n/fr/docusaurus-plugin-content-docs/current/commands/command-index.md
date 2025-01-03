@@ -895,9 +895,9 @@ title: Index
 [`Printing page`](../commands-legacy/printing-page.md)<br/>
 [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)<br/>
 [`Process aborted`](../commands-legacy/process-aborted.md)<br/>
-[`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
-[`Process info`](process-info.md) - **new 4D 20 R7**<br/>
-[`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
+[`Process activity`](process-activity.md) - **modifié 4D 20 R7**<br/>
+[`Process info`](process-info.md) - **nouveau 4D 20 R7**<br/>
+[`Process number`](process-number.md) - **modifié 4D 20 R7**<br/>
 [`Process state`](../commands-legacy/process-state.md)<br/>
 [`PUSH RECORD`](../commands-legacy/push-record.md)<br/>
 
@@ -1060,7 +1060,7 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
-[`Session info`](session-info.md) - **new 4D 20 R7**<br/>
+[`Session info`](session-info.md) - **nouveau 4D 20 R7**<br/>
 [`Session storage`](session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)<br/>
@@ -1130,7 +1130,7 @@ title: Index
 [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)<br/>
 [`SET USER ALIAS`](../commands-legacy/set-user-alias.md)<br/>
 [`Set user properties`](../commands-legacy/set-user-properties.md)<br/>
-[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **nouveau 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands-legacy/set-window-rect.md)<br/>
 [`SET WINDOW TITLE`](../commands-legacy/set-window-title.md)<br/>
 [`Shift down`](../commands-legacy/shift-down.md)<br/>
