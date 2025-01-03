@@ -11,7 +11,7 @@ Um botão radio aparece na forma de um texto seguido de um círculo. Entretanto,
 
 É selecionado um botão rádio:
 - quando o usuário clica nele
-- when it has the focus and the user presses the **Space bar** key.
+- quando tem o foco e o usuário pressiona a tecla **Barra de Espaço**.
 
 
 
@@ -85,28 +85,28 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
 
 O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, as esquinas do botão podem ser arredondadas.
 
- - *Windows* - the button is identical to the [Bevel](#bevel) style.
+ - *Windows* - o botão é idêntico ao estilo [Bevel](#bevel).
 
  - *macOS* - os cantos do botão são arredondados. ![](../assets/en/FormObjects/roundedBevel.png)
 
 
 ### OS X Gradient
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance.
+O estilo de botão OS X Gradient é quase idêntico ao estilo [Bevel](#bevel), exceto pelo fato de que, dependendo do sistema operacional, ele pode ter uma aparência de dois tons.
 
- - *Windows* - the button is identical to the [Bevel](#bevel) style.
+ - *Windows* - o botão é idêntico ao estilo [Bevel](#bevel).
 
- - *macOS* - the button is displayed as a two-tone system button.
+ - *macOS* - o botão é exibido como um botão de sistema de dois tons.
 
 
 
 ### OS X Texturizado
 
-The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
+O estilo de botão rádio OS X Textured é quase idêntico ao estilo [Barra de ferramentas](#toolbar), exceto, dependendo do SO, ele pode ter uma aparência diferente e não mostra o mouse.
 
 Como padrão, o estilo OS X Textured aparece como:
 
- - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
+ - *Windows* - um botão como uma barra de ferramentas com um rótulo no centro e o plano de fundo é sempre exibido.
 
  - *macOS* - - um botão sistema padrão que mostra uma mudança de cor cinza claro a cinza escuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
@@ -143,7 +143,7 @@ O estilo Contrair/Expandir tem o nome "disclosure" na [gramática JSON do estilo
 
 ### Botão disclosure
 
-The disclosure radio button style displays the radio button as a standard disclosure button, usually used to show/hide additional information. O símbolo do botão aponta para baixo com o valor 0 e para cima com o valor 1.
+O estilo do botão radio disclosure exibe o botão de opção como um botão disclosure padrão, normalmente usado para mostrar/ocultar informações adicionais. O símbolo do botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
 ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
@@ -163,7 +163,7 @@ The Custom radio button style accepts a personalized background picture and allo
 
 Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment)(1) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(2) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Number of States](properties_TextAndPicture.md#number-of-states)(2) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(2) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position)(2) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Negrito](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo do botão](properties_TextAndPicture.md#button-style) - [Classe](properties_Object.md#css-class) - [Tipo de expressão](properties_Object.md#expression-type) - [Focalizável](properties_Entry.md#focusable) - [Fonte](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment)(1) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Título dos abraços da imagem](properties_TextAndPicture.md#image-hugs-title)(2) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Número de estados](properties_TextAndPicture.md#number-of-states)(2) - [Método](properties_Action.md#method) - [Nome do objeto](properties_Object.md#object-name) - [Grupo de rádios](properties_Object.md#radio-group) - [Nome do caminho da imagem](properties_TextAndPicture.md#picture-pathname)(2) - [Direita](properties_CoordinatesAndSizing.md#right) - [Salvar valor](properties_Object.md#save-value) - [Atalho](properties_Entry.md#shortcut) - [Título](properties_Object.md#title) - [Posição do título/da imagem](properties_TextAndPicture.md#titlepicture-position)(2) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
