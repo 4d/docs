@@ -25,7 +25,7 @@ Para obter uma visão detalhada de toda a arquitetura de permissões, por favor 
 
 You can assign specific permission actions to the following resources in your project:
 
-- o armazenamento de dados
+- o datastore
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
