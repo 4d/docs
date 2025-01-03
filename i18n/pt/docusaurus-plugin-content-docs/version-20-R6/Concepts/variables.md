@@ -160,7 +160,7 @@ var $a; $b : Integer:=15 //error
 
 ## Atribuição de dados
 
-Os dados podem ser colocados e copiados de variáveis e arrays. Colocar dados em uma variável é chamado de **atribuição dos dados à variável** e é feito com o operador de atribuição (:=). O operador de atribuição também é usado para atribuir dados para elementos campos.
+Os dados podem ser colocados e copiados de variáveis e arrays. Os dados podem ser colocados e copiados de variáveis e arrays. O operador de atribuição também é usado para atribuir dados para elementos campos.
 
 O operador de atribuição é a maneira mais importante de criar uma variável e jogar dados nela. Escreve-se o nome da variável que se pretende criar no lado esquerdo do operador de atribuição. Por exemplo:
 
@@ -204,7 +204,7 @@ O nome de uma variável local começa sempre com um sinal de dólar ($) e pode c
 
 Quando trabalhar em um banco de dados com muitos métodos e variáveis, geralmente só precisa usar uma variável dentro do método no qual trabalha. Pode criar e utilizar uma variável local no método sem se preocupar se utilizou o mesmo nome de variável noutro lugar.
 
-Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. O comando `Request` pode obter essas informações. Apresenta uma caixa de diálogo com uma mensagem que solicita ao utilizador uma resposta. Quando o utilizador introduz a resposta, o comando devolve a informação que o utilizador introduziu. Normalmente não precisa de manter esta informação nos seus métodos durante muito tempo. Esta é uma forma típica de utilizar uma variável local. Aqui um exemplo simples:
+Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. Apresenta uma caixa de diálogo com uma mensagem que solicita ao utilizador uma resposta. Quando o utilizador introduz a resposta, o comando devolve a informação que o utilizador introduziu. Normalmente não precisa de manter esta informação nos seus métodos durante muito tempo. Esta é uma forma típica de utilizar uma variável local. Aqui um exemplo simples:
 
 ```4d
  $vsID:=Request("Por favor insira o seu ID:")

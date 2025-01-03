@@ -5,7 +5,7 @@ title: Classes de modelo de dados
 
 
 
-O ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
+ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
 
 Por exemplo, pode criar uma função `getNextWithHigherSalary()` na classe `EmployeeEntity` para devolver os empregados com um salário superior ao selecionado. Seria tão simples como chamar:
 
@@ -316,7 +316,7 @@ A função *getter* é obrigatória para declarar o atributo computado *attribut
 
 > Um atributo calculado pode utilizar o valor de outro(s) atributo(s) calculado(s). As chamadas recursivas geram erros.
 
-The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. São permitidos os seguintes tipos de resultados:
+A função *getter* define o tipo de dados do atributo calculado graças ao parâmetro *$result*. São permitidos os seguintes tipos de resultados:
 
 - Scalar (text, boolean, date, time, number)
 - Object
@@ -678,14 +678,14 @@ Os atributos de alias são apenas de leitura (exceto quando baseados num atribut
 
 ### Propriedades alias
 
-Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
+Atributo de alias [`kind`](../API/DataClassClass.md#attributename) é "alias".
 
-An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
+Um atributo alias herda seu tipo de dados [`type`](../API/DataClassClass.md#attributename) do atributo destino:
 
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- se o atributo de destino [`kind`](../API/DataClassClass.md#attributename) for "storage", o tipo de dados do alias será do mesmo tipo,
+- se o atributo de destino [`kind`](../API/DataClassClass.md#attributename) for "relatedEntity" ou "relatedEntities", o tipo de dados do alias é do tipo `4D.Entity` ou `4D.EntitySelection` ("*classname*Entity" ou "*classname*Selection").
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Os atributos de alias baseados em atributos da mesma classe de dados têm as mesmas propriedades que os seus atributos de destino (e nenhuma propriedade  `path` ).
+Os atributos alias baseados em relações têm uma propriedade [`path`](../API/DataClassClass.md#attributename) específica, que contém o caminho dos seus atributos de destino. Os atributos de alias baseados em atributos da mesma classe de dados têm as mesmas propriedades que os seus atributos de destino (e nenhuma propriedade  `path` ).
 
 
 ### Exemplos

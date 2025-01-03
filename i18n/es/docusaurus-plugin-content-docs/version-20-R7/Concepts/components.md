@@ -9,7 +9,7 @@ Un componente 4D es un conjunto de código y de formularios 4D que representan u
 
 Varios componentes están [preinstalados en el entorno de desarrollo 4D](Extensions/overview.md), pero muchos componentes 4D de la comunidad 4D [están disponibles en GitHub](https://github.com/search?q=4d-component\&type=Repositories). Adicionalmente, puede [desarrollar sus propios componentes 4D](Extensions/develop-components.md).
 
-La instalación y carga de componentes en sus proyectos 4D se manejan a través del [gestor de componentes 4D](../Project/components.md).
+Installation and loading of components in your 4D projects are handled through the [4D dependency manager](../Project/components.md).
 
 ## Utilización de los componentes
 

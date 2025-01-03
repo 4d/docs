@@ -110,8 +110,8 @@ A imagem pode conter de 2 a 6 estados.
 
 :::note
 
-- button not clicked / check box unchecked (variable value=0)
-- button clicked / check box checked (variable value=1)
+- "false" significa que o botão não foi clicado/não foi selecionado ou que a caixa de seleção não foi marcada (valor da variável=0)
+- "true" significa botão clicado/selecionado ou caixa de seleção verificada (variável valor=1)
 
 :::
 
