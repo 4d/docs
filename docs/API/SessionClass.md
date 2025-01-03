@@ -29,6 +29,7 @@ The availability of properties and functions in the `Session` object depends on 
 ||
 |---|
 |[<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
+|[<!-- INCLUDE #SessionClass.createOTP().Syntax -->](#createotp)<br/><!-- INCLUDE #SessionClass.createOTP().Summary -->|
 |[<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->|
 |[<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->|
@@ -89,6 +90,44 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 <!-- END REF -->
 
+
+<!-- REF SessionClass.createOTP().Desc -->
+## .createOTP()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R9|Added|
+
+</details>
+
+<!-- REF #SessionClass.createOTP().Syntax -->**.createOTP** ( { *lifespan* : Integer } ) : Text <!-- END REF -->
+
+
+<!-- REF #SessionClass.createOTP().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|lifespan|Integer|->|Session token lifespan in seconds|
+|Result|Text|<-|UUID of the session OTP token|
+<!-- END REF -->
+
+
+#### Description
+
+The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns it UUID<!-- END REF -->. 
+
+The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application. 
+
+
+#### Example
+
+```4d
+var $token : Text
+$token := Session.createOTP()
+```
+
+<!-- END REF -->
 
 
 <!-- REF SessionClass.expirationDate.Desc -->
