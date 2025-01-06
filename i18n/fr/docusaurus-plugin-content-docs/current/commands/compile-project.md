@@ -135,23 +135,23 @@ The `code` property in `methods.code` and `errors.code` is an object with the fo
 
 #### Exemples
 
-To perform a syntax check only, pass an empty collection to the targets parameter:
+Pour effectuer un contrôle de syntaxe uniquement, passez une collection vide au paramètre targets :
 
 ```4d
  var $status : Object
  var $options:={}
- $options.targets:=New collection //Empty collection for syntax checking
+ $options.targets:=New collection //Collection vide pour le contrôle syntaxique
  $status:=Compile project($options)
 ```
 
-Compile the current project using the compiler options of the Structure Settings only:
+Compilez le projet actuel en utilisant uniquement les options de compilateur définies dans les Paramètres de Structure :
 
 ```4d
  var $status : Object
  $status:=Compile project
 ```
 
-On a Silicon Mac, compile the current project to ARM only:
+Sur un Mac Silicon, compilez le projet actuel uniquement pour ARM :
 
 ```4d
  var $status : Object
@@ -160,7 +160,7 @@ On a Silicon Mac, compile the current project to ARM only:
  $status:=Compile project($options)
 ```
 
-Compile a project other than the current project:
+Compilez un projet autre que le projet actuel :
 
 ```4d
  var $status : Object
@@ -169,7 +169,7 @@ Compile a project other than the current project:
  $status:=Compile project($projectFile)
 ```
 
-Compile a project and declare its component:
+Compilez un projet et déclarez son composant :
 
 ```4d
  var $status : Object
@@ -180,7 +180,7 @@ Compile a project and declare its component:
  $status:=Compile project($options)
 ```
 
-Disable warnings 518.1 and 518.2 when compiling your project:
+Désactivez les avertissements 518.1 et 518.2 lors de la compilation de votre projet :
 
 ```4d
 var $options:={}
