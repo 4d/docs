@@ -144,12 +144,12 @@ As propriedades de dataclass são objetos de atributo que descrevem os campos ou
 
 Esse código atribui a `$nameAttribute` e `$revenuesAttribute` faz referência aos atributos name e revenues da classe `Company`. Essa sintaxe NAO devolve valores mantidos dentro do atributo, mas sim devolve referências aos próprios atributos. Para manejar os valores, é necessário passar por [Entidades](#entity).
 
-Todos os campos elegíveis em uma tabela estão disponíveis como atributos de sua [dataclass](#dataclass) principal. Para datastores remotos acessados através `Open datastore` ou [Solicitações REST](REST/gettingStarted.md), a opção **Expor como recurso REST** deve ser selecionada no nível de estrutura 4D para cada campo que você deseja ser exposto como um atributo de dataclass.
+All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). Para datastores remotos acessados através `Open datastore` ou [Solicitações REST](REST/gettingStarted.md), a opção **Expor como recurso REST** deve ser selecionada no nível de estrutura 4D para cada campo que você deseja ser exposto como um atributo de dataclass.
 
 
 #### Atributos de armazenamento e de relação
 
-Atributos da Dataclass vêm em vários tipos: armazenamento, relatedEntity e relatedEntities. Os atributos que são escalares (*ou seja*, fornecem apenas um único valor) são compatíveis com todos os tipos de dados 4D padrão (inteiro, texto, objeto etc.).
+Atributos da Dataclass vêm em vários tipos: armazenamento, relatedEntity e relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support the standard 4D data type (integer, text, object, etc.).
 
 *   Um **atributo de armazenamento** é equivalente a um campo no banco de dados 4D e pode ser indexado. Os valores atribuídos a um atributo de armazenamento são armazenados como parte da entidade quando ela é salva. Quando um atributo de armazenamento é acessado, seu valor vem diretamente do datastore. Atributos de armazenamento são o bloco de construção mais básico de uma entidade e são definidos pelo nome e tipo de dados.
 *   Um **atributo de relação** fornece acesso a outras entidades. Os atributos relação podem resultar em uma única entidade (ou nenhuma entidade) ou em uma seleção de entidades (de 0 a N). Os atributos relacional são criados com base em relações "clássicas" na estrutura relacional para fornecer acesso direto a entidades relacionadas ou a entidades relacionadas. Os atributos de relação estão diretamente disponíveis no ORDA usando seus nomes.

@@ -3,32 +3,32 @@ id: overview
 title: ORDA
 ---
 
-ORDA stands for **Object Relational Data Access**. It is an enhanced technology allowing to access both the model and the data of a database through objects.
+ORDA significa **Object Relational Data Access (Acesso a dados relacionais a objetos**). É uma tecnologia aprimorada que permite acessar o modelo e os dados de um banco de dados por meio de objetos.
 
-Relations are transparently included in the concept, in combination with [lazy loading](glossary.md#lazy-loading), to remove all the typical hassles of data selection or transfer from the developer.
+As relações são incluídas de forma transparente no conceito, em combinação com o [lazy loading](glossary.md#lazy-loading), para eliminar todos os problemas típicos de seleção ou transferência de dados do desenvolvedor.
 
-With ORDA, data is accessed through an abstraction layer, the [datastore](dsMapping.md#datastore). A datastore is an object that provides an interface to the database model and data through objects and classes. For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md##attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
+Com o ORDA, os dados são acessados por meio de uma camada de abstração, o [datastore](dsMapping.md#datastore). Um datastore é um objeto que fornece uma interface para o modelo de banco de dados e dados através de objetos e classes. Por exemplo, uma tabela é mapeada para um objeto [dataclass](dsMapping.md#dataclass) , um campo é um atributo [](dsMapping.md##attribute) de um dataclass, e registros são acessados através de [entidades](dsMapping.md#entity) e [seleções da entidade](dsMapping.md#entity-selection).
 
 
 ## Porquê utilizar ORDA?
 
-Instead of representing information as tables, records, and fields, ORDA uses an alternate approach that more accurately maps data to real-world concepts.
+Em vez de representar as informações como tabelas, registros e campos, a ORDA usa uma abordagem alternativa que mapeia com mais precisão os dados para conceitos do mundo real.
 
-Imagine the ability to denormalize a relational structure, yet not affect efficiency. Imagine describing everything about the business objects in your application in such a way that using the data becomes simple and straightforward and removes the need for a complete understanding of the relational structure.
+Imagine a capacidade de denormalizar uma estrutura relacional, mas não afeta a eficiência. Imagine descrever tudo sobre os objetos de negócios em seu aplicativo de tal forma que o uso dos dados se torne simples e direto e elimine a necessidade de um entendimento completo da estrutura relacional.
 
-In the ORDA data model, a single dataclass can incorporate all of the elements that make up a traditional relational database table, but can also include values from related parent entities, and direct references to related entities and entity selections.
+No modelo de dados da ORDA, um dataclass único pode incorporar todos os elementos que compõem uma tabela tradicional de banco de dados relacionado. mas também pode incluir valores de entidades pai relacionadas, e referências diretas a entidades relacionadas e seleções de entidades.
 
-Uma consulta retorna uma lista de entidades chamada seleção de entidades, que cumpre o papel de um conjunto de linhas de uma consulta SQL. The difference is that each entity "knows" where it belongs in the data model and "understands" its relationship to all other entities. This means that a developer does not need to explain in a query how to relate the various pieces of information, nor in an update how to write modified values back to the relational structure.
+Uma consulta retorna uma lista de entidades chamada seleção de entidades, que cumpre o papel de um conjunto de linhas de uma consulta SQL. A diferença é que cada entidade "sabe" onde pertence no modelo de dados e "entende" sua relação com todas as outras entidades. Isto significa que um desenvolvedor não precisa explicar em uma consulta como relacionar as várias informações, nem em uma atualização de como escrever valores modificados de volta para a estrutura relacional.
 
-In addition, ORDA objects such as entity selections or entities can be easily bound to UI objects such as list boxes or variables. Combined with powerful features such as the `This` and `Form` commands, they allow the building modern and modular interfaces based upon objects and collections.
+Além disso, objetos ORDA como seleções de entidades ou entidades podem ser facilmente vinculados a objetos de interface do usuário, como caixas de lista ou variáveis. Combinado com recursos poderosos, como os comandos `This` e `Form` , eles permitem a construção de interfaces modernas e modulares baseadas em objetos e coleções.
 
 ## Como utilizar ORDA?
 
-Basicamente, o ORDA lida com objetos. No ORDA, todos os conceitos principais, incluindo o próprio datastore, estão disponíveis através de objectos. In 4D, the datastore is automatically [mapped upon the 4D structure](dsMapping.md).
+Basicamente, o ORDA lida com objetos. No ORDA, todos os conceitos principais, incluindo o próprio datastore, estão disponíveis através de objectos. Em 4D, a datastore é automaticamente [mapeada na estrutura 4D](dsMapping.md).
 
-ORDA objects can be handled like 4D standard objects, but they automatically benefit from specific properties and methods.
+Objetos da ORDA podem ser manipulados como objetos padrão 4D, mas eles se beneficiam automaticamente de propriedades e métodos específicos.
 
-ORDA objects are created and instanciated when necessary by 4D methods (you do not need to create them). However, ORDA data model objects are associated with [classes where you can add custom functions](ordaClasses.md).
+Objetos ORDA são criados e instanciados quando necessário por métodos 4D (não é necessário criá-los). No entanto, objetos de modelo de dados da ORDA estão associados a classes [onde você pode adicionar funções personalizadas](ordaClasses.md).
 
 
 
