@@ -2972,7 +2972,7 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D NetKit', // The link label
-						  href: 'https://developer.4d.com/4D-NetKit/',
+						  href: 'https://developer.4d.com/4D-NetKit',
 						},
 						{
 						  type: 'link',
