@@ -2950,6 +2950,7 @@ module.exports =
 									},
 								items: [
 									"WritePro/writeprointerface",
+									"WritePro/managing-formulas",
 									{
 										type: "category",
 										label: "Commands",

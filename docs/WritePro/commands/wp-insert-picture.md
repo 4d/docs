@@ -105,5 +105,5 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 #### See also 
 
   
-[WP INSERT DOCUMENT](wp-insert-document.md)  
-[WP Picture range](wp-picture-range.md)  
+[WP Insert document body](wp-insert-document-body.md)
+[WP Picture range](../commands-legacy/wp-picture-range.md)  
