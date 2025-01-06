@@ -60,15 +60,22 @@ You want to create an empty table and append several rows of different sizes. Yo
 You want to create an empty table and append a row using a collection :
 
 ```4d
- var $wpTable;$wpRange;$wpRowColl : Object
- $wpRange:=WP Text range(WParea;wk start text;wk end text)
- $wpTable:=WP Insert table($wpRange;wk append)
- 
- $wpRowColl:=New collection("Jad"; "Lina"; "Karam" ;Formula(Current date))
- WP Table append row($wpTable; $wpRowColl)
+$table:=WP Insert table(WParea; wk replace; wk include in range)
+
+$row:=WP Table append row($table; "Reference"; "Date"; "Time"; "rnd 1"; "rdn 2")
+WP SET ATTRIBUTES($row; wk background color; "lightgrey")
+
+$colItems:=[]
+$colItems.push("KX-825")
+$colItems.push(Formula(Current date))
+$colItems.push(Formula(String(Current time; HH MM SS)))
+$colItems.push(Formula(Random))
+$colItems.push({name: "RND NUMBER"; formula: Formula(Random)})
+
+$row:=WP Table append row($table; $colItems)
 ```
 
-![](../WPpic2.png)
+![](../../assets/en/WritePro/commands/WPpic2.png)
 
 
 #### Example 3 
