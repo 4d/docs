@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | Pointer, Longint | &#8594;  | Table number or Field pointer |
+| fieldPtr &#124; tableNum | Pointer, Integer | &#8594;  | Table number or Field pointer |
 | fieldNum | Integer | &#8594;  | Field number if Table number is passed |
 | fieldType | Integer | &#8592; | Type of field |
 | fieldLength | Integer | &#8592; | Length of field, if Alphanumeric |
@@ -30,8 +30,8 @@ You either pass:
 
 After the call:
 
-* *fieldType* returns the type of the field. The *fieldType* variable parameter can take a value provided by the following predefined constants (*Field and Variable Types* theme):  
-
+* *fieldType* returns the type of the field. The *fieldType* variable parameter can take a value provided by the following predefined constants (*Field and Variable Types* theme):
+  
 | Constant           | Type    | Value |  
 | ------------------ | ------- | ----- |  
 | Is alpha field     | Integer | 0     |  

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | jsonText | Text | &#8594;  | JSON string to parse |
 | type | Integer | &#8594;  | Type in which to convert the values |
 | * | Operator | &#8594;  | Adds line position and offset of each property if returned value is an object |
-| Function result | Mixed, Object | &#8592; | Values extracted from JSON string |
+| Function result | any | &#8592; | Values extracted from JSON string |
 
 <!-- END REF-->
 

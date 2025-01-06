@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemPos &#124; * | Operator, Longint | &#8594;  | Position of item in expanded/collapsed list(s) or * for the current item in the list |
+| itemPos &#124; * | Operator, Integer | &#8594;  | Position of item in expanded/collapsed list(s) or * for the current item in the list |
 | itemRef | Integer | &#8592; | Item reference number |
 | itemText | Text | &#8592; | Text of the list item |
 | sublist | Integer | &#8592; | Sublist list reference number (if any) |
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM.Summary-->The **GET LIST ITEM** command returns information about the item specified by *itemPos* of the list whose reference number or object name is passed in *list*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list, you can use either syntax. Conversely, if you use several representations of the same list, the syntax based on the object name is required since each representation can have its own expanded/collapsed configuration and its own current item.
+If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference integer. If you only use a single representation of the list, you can use either syntax. Conversely, if you use several representations of the same list, the syntax based on the object name is required since each representation can have its own expanded/collapsed configuration and its own current item.
 
 **Note:** If you use the @ character in the name of the list object and the form contains several lists that match with this name, the **GET LIST ITEM** command will only apply to the first object whose name corresponds. 
 

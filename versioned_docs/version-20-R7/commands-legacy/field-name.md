@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Field name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | Pointer, Longint | &#8594;  | Field pointer or Table number |
+| fieldPtr &#124; tableNum | Pointer, Integer | &#8594;  | Field pointer or Table number |
 | fieldNum | Integer | &#8594;  | Field number if a table number is passed as first parameter |
 | Function result | Text | &#8592; | Name of the field |
 

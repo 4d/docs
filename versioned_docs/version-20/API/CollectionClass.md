@@ -171,7 +171,7 @@ You create a new collection and then add a new element:
 <!-- REF #_command_.New shared collection.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
+|value|Number, Text, Date, Time, Boolean, Object, Collection|->|Shared collection's value(s)|
 |Result|Collection|<-|The new shared collection|<!-- END REF -->
 
 

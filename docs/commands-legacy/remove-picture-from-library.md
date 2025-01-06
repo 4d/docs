@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picRef &#124; picName | Longint, String | &#8594;  | Reference number of Picture Library graphic or Name of Picture Library graphic |
+| picRef &#124; picName | Integer, Text | &#8594;  | Reference number of Picture Library graphic or Name of Picture Library graphic |
 
 <!-- END REF-->
 

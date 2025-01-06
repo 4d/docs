@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | Pointer, Longint | &#8594;  | Field pointer or table number |
+| fieldPtr&#124;tableNum | Pointer, Integer | &#8594;  | Field pointer or table number |
 | fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
 | oneTable | Integer | &#8592; | One table number or 0 if no relation is defined from the field |
 | oneField | Integer | &#8592; | One field number or 0 if no relation is defined from the field |

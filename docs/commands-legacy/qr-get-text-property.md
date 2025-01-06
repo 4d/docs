@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | colNum | Integer | &#8594;  | Column number |
 | rowNum | Integer | &#8594;  | Row number |
 | property | Integer | &#8594;  | Property number |
-| Function result | Longint, String | &#8592; | Value for the selected property |
+| Function result | Integer, Text | &#8592; | Value for the selected property |
 
 <!-- END REF-->
 
