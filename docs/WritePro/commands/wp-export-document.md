@@ -107,7 +107,11 @@ The wk files property allows you to [export a PDF with attachments](https://blog
 
 If the *option* parameter also contains a wk factur x property, then the first element of the wk files collection must be the Factur-X (ZUGFeRD) invoice xml file (see below).
 
-**Note:** PDF attachments are only supported by the PDF/A-3 version. When you pass the wk files property, the "PDF/A-3" version is automatically used.
+:::note
+
+PDF attachments are only supported by the PDF/A-3 version. When you pass the wk files property, the "PDF/A-3" version is automatically used.
+
+:::
 
 ##### wk factur x object 
 
@@ -128,7 +132,11 @@ To trigger a "Factur-X" PDF export, pass both the wk factur x and wk files prope
 * the first element of the wk files collection is used as Factur-X xml file,
 * if the wk files property is missing or contains an empty collection, or if its first element is not a xml file, an error is generated.
 
-**Note:** For a detailed example of Factur-X / ZUGFeRD export implementation, you can download [this HDI 4D project](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
+:::note
+ 
+For a detailed example of Factur-X / ZUGFeRD export implementation, you can download [this HDI 4D project](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
+
+:::
 
 #### Example 1 
 
@@ -256,7 +264,7 @@ WP EXPORT DOCUMENT(WParea; $file; wk docx; $options)
 
 #### See also 
 
-[4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)  
-[Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)  
-[Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)  
-[WP EXPORT VARIABLE](wp-export-variable.md)  
+[4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)</br>
+[Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)</br>
+[Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)</br>
+[WP EXPORT VARIABLE](../commands-legacy/wp-export-variable.md)</br>

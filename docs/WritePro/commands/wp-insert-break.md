@@ -94,5 +94,5 @@ You want to insert a continuous section break to have a single column section an
 
 #### See also 
 
-[WP Get breaks](wp-get-breaks.md)  
-[WP INSERT DOCUMENT](wp-insert-document.md)  
+[WP Get breaks](../commands-legacy/wp-get-breaks.md)</br>
+[WP Insert document body](wp-insert-document-body.md)  

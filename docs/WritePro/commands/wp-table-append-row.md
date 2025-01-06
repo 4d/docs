@@ -34,9 +34,12 @@ The default cell alignment will depend on the value type:
    - pictures: centered
    - other types (numbers, date, and time): right aligned
 
-**Notes:**
-- Array type values are not supported. 
-- Ensure the number of values or the size of the collection matches the number of cells in the table to avoid unexpected results.
+:::note Notes
+
+* Array type values are not supported. 
+* Ensure the number of values or the size of the collection matches the number of cells in the table to avoid unexpected results.
+
+:::
 
 The command returns the new row as a row range object.
 
@@ -109,5 +112,5 @@ In a billing application, you want to create a table automatically filled with r
 
 #### See also 
 
-[WP Insert table](wp-insert-table.md)  
-[WP Table get rows](wp-table-get-rows.md)  
+[WP Insert table](../commands-legacy/wp-insert-table.md)</br>
+[WP Table get rows](../commands-legacy/wp-table-get-rows.md)

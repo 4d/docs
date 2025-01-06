@@ -112,7 +112,11 @@ The result is:
 
 ![](../../assets/en/WritePro/commands/pict3514233.en.png)
 
-**Note**: The paper box value is only applicable to documents and sections.
+:::note
+
+The paper box value is only applicable to documents and sections.
+
+:::
 
 #### Example 4 
 

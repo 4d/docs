@@ -28,14 +28,14 @@ In the *targetObj* parameter, you can pass:
 
 In the *formula* parameter, pass the 4D formula to evaluate. You can pass:
 
-* either a [formula object](https://developer.4d.com/docs/API/FunctionClass#formula-objects) created by the [**Formula**](https://developer.4d.com/docs/API/FunctionClass#formula) or [**Formula from string**](https://developer.4d.com/docs/API/FunctionClass#formula-from-string) command,
+* either a [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command,
 * or an object containing two properties: 
 
 
-| **Property** | **Type** | **Description**                                                                                                                                                                                                                                                                       |  
-| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| name         | Text   | Name to display for the formula in the document                                                                                                                                                                                                                                       |  
-| formula      | Object   | The [formula object](https://developer.4d.com/docs/API/FunctionClass#formula-objects) created by the [**Formula**](https://developer.4d.com/docs/API/FunctionClass#formula) or [**Formula from string**](https://developer.4d.com/docs/API/FunctionClass#formula-from-string) command | 
+| **Property** | **Type** | **Description**|
+| ------------ | ------------ | ------------ |                                                                                                                                                                                                                                                                       
+| name | Text   | Name to display for the formula in the document|                                                                                                                                                                                                                                       
+| formula| Object| The [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command| 
 
 When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
 
@@ -57,7 +57,11 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-**Note:** Keep in mind that, when called, the formula object is evaluated within the context of the database or component that created it.
+:::note
+
+Keep in mind that, when called, the formula object is evaluated within the context of the database or component that created it.
+
+:::
 
 #### Example 1 
 
@@ -129,6 +133,6 @@ Result:
 #### See also 
 
 *Managing formulas*  
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP FREEZE FORMULAS](wp-freeze-formulas.md)  
-[WP Get formulas](wp-get-formulas.md)  
+[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>
+[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas.md)</br>
+[WP Get formulas](../commands-legacy/wp-get-formulas.md)  

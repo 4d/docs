@@ -39,7 +39,7 @@ The optional *option* parameter allows defining import options for:
 
 * **longint** 
 
-By default, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the wk import html expressions as text constant, HTML expressions will be imported as raw text within *##htmlBegin##* and *##htmlEnd##* tags -- which will require formatting actions afterward. For example: 
+By default, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the wk import html expressions as text constant, HTML expressions will be imported as raw text within `##htmlBegin##` and `##htmlEnd##` tags -- which will require formatting actions afterward. For example: 
 
 ```html  
 ##htmlBegin##Imported titlebold##htmlEnd##  
