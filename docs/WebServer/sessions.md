@@ -213,7 +213,7 @@ For more examples, please refer to the [Scalable sessions for advanced web appli
 
 The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For more information, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
 
-In 4D, session tokens can be used when calling external URLs and being called back from within a session. The callback request includes the token, so that the session which triggered the callback is loaded along with its data and privileges. The token can also be used to share the same session from multiple devices (mobile/computer). Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
+In 4D, session tokens can be used when calling external URLs and being called back from within a session. The callback request includes the token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices (mobile/computer). Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
 
 ### Basic scenario
 
@@ -233,6 +233,9 @@ The `$4DSID` key is reserved for the 4D session token and must not be used to se
 
 :::
 
+By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored and a new guest session is created for this request.
+
+
 ### Example with $4DSID
 
 The scenario using the `$4DSID` key is illustrated in the following diagram:
@@ -246,14 +249,19 @@ The scenario using a custom parameter is illustrated in the following diagram:
 ![alt-text](../assets/en/WebServer/otp-token-restore.jpg)
 
 
-### Session token rules
+### Supported contexts
 
-When implementing session tokens, the following rules apply:
+- Both HTTP and HTTPS schemas are supported. 
+- Only scalable web sessions of the host database can be reused with tokens:
+    - Sessions created in component web servers cannot be restored
+    - Tokens are not supported with client/server sessions or single-user sessions
+    - Tokens are not supported with legacy web sessions. 
 
-- HTTP and HTTPS schemas are supported. 
-- Only scalable web sessions of the **host database** can be reused with tokens. Sessions created in component web servers cannot be restored. 
-- No additional 4D Client license is consumed when reusing or restoring a session. 
+### Lifespan 
 
+A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp).
+
+A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
 
 
 

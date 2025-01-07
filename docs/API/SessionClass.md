@@ -99,7 +99,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 |Release|Changes|
 |---|---|
-|20 R9|Added|
+|20 R8|Added|
 
 </details>
 
@@ -115,6 +115,12 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 
 #### Description
+
+:::note
+
+This function is only available with web user sessions. It returns an empty string in other contexts.  
+
+:::
 
 The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns its token UUID<!-- END REF -->. This token is unique to the session in which it was generated.
 
@@ -503,7 +509,7 @@ End if
 
 |Release|Changes|
 |---|---|
-|20 R9|Added|
+|20 R8|Added|
 
 </details>
 
@@ -519,6 +525,12 @@ End if
 
 
 #### Description
+
+:::note
+
+This function is only available with web user sessions. It returns False in other contexts.  
+
+:::
 
 The `.restore()` function <!-- REF #SessionClass.restore().Summary -->replaces the current web user session with their original session corresponding to the *token* UUID<!-- END REF -->. Session's storage and privileges are restored. 
 
@@ -541,7 +553,7 @@ In a singleton called by a custom HTTP Request handler:
 shared singleton Class constructor()
 
 Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
-   Session.restore(($request.urlQuery.state) 
+   Session.restore($request.urlQuery.state) 
 ```
 
 <!-- END REF -->
