@@ -48,9 +48,9 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 If you do not pass a *rangeUpdate* parameter, by default the inserted table is included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-You can pass in *nbCols* and *nbRows* the number of columns and rows to define in the table. By default, if *nbCols* and *nbRows* are omitted, a new table with 0 column and 0 row is created. You will then be able to add these elements using the [WP Table append row](wp-table-append-row.md) command.
+You can pass in *nbCols* and *nbRows* the number of columns and rows to define in the table. By default, if *nbCols* and *nbRows* are omitted, a new table with 0 column and 0 row is created. You will then be able to add these elements using the [WP Table append row](../commands/wp-table-append-row.md) command.
 
-The command returns the new table as a table object, that you can pass thereafter to the other WP table commands. The table is created with default font, border, and color attributes that you can customize using the [WP SET ATTRIBUTES](wp-set-attributes.md) command.
+The command returns the new table as a table object, that you can pass thereafter to the other WP table commands. The table is created with default font, border, and color attributes that you can customize using the [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) command.
 
 #### Example 
 
@@ -68,5 +68,5 @@ Result:
 
 #### See also 
 
-[WP Table append row](wp-table-append-row.md)  
+[WP Table append row](../commands/wp-table-append-row.md)  
 [WP Table get rows](wp-table-get-rows.md)  

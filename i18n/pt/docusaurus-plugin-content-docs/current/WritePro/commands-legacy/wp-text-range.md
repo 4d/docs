@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 O novo comando **WP Text range d**evolve um novo objeto de faixa de texto (objFaixa) que contem a seleção entre *faixaInicio* e *faixaFim* na área *wpArea* 4D Write Pro.
 
-Um **4D Write Pro objeto de faixa de texto** pode ser usado para manejar atributos numa seleção de texto (com os comandos [WP GET ATTRIBUTES](wp-get-attributes.md) e [WP SET ATTRIBUTES](wp-set-attributes.md)). Para saber mais consulte o parágrafo *Comandos de seleção de faixa*.
+Um **4D Write Pro objeto de faixa de texto** pode ser usado para manejar atributos numa seleção de texto (com os comandos [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md)). Para saber mais consulte o parágrafo *Comandos de seleção de faixa*.
 
 Pode passar em *alvoObj*:
 

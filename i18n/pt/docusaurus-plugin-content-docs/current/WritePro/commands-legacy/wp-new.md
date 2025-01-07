@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.WP New.Summary-->O comando **WP New** cria e devolve um objeto 4D Write Pro.<!-- END REF-->\[#/descv\]. O objeto retornado é um documento completo que pode ser passado ao comando [WP INSERT DOCUMENT](wp-insert-document.md), por exemplo.
+<!--REF #_command_.WP New.Summary-->O comando **WP New** cria e devolve um objeto 4D Write Pro.<!-- END REF-->\[#/descv\]. O objeto retornado é um documento completo que pode ser passado ao comando [WP INSERT DOCUMENT](../commands/wp-insert-document.md), por exemplo.
 
 Por padrão, se omitir o parâmetro *fonte*, o comando devolve um objeto 4D Write Pro vazio.
 
@@ -27,7 +27,7 @@ Também pode utilizar o parâmetro *fonte*, em cujo caso o novo objeto 4D Write 
 * ou um parâmetro *blob*: Neste caso, deve passar ou:  
    * um formato de documento 4D Write Pro (.4wp) armazenado em um BLOB. Para saber mais sobre o formato 4D Write Pro, veja *formato de documento .4wp*.  
    * uma área de legado 4D Write carregada em um BLOB (Blobs contendo documentos .4w7 ou .4wt são suportados). Para uma lista detalhada de propriedades de 4D Write suportadas em documentos 4D Write Pro, veja a seção *Importar documentos 4D Write*  
-   * Se deseja importar um documento 4D Write (.4w7 ou .4wt) armazenado no disco, também pode considerar o uso do comando [WP Import document](wp-import-document.md).
+   * Se deseja importar um documento 4D Write (.4w7 ou .4wt) armazenado no disco, também pode considerar o uso do comando [WP Import document](../commands/wp-import-document.md).
 * un parámetro [objeto](# "Estruturas de dados como objetos 4D nativos") que puede ser:  
    * uma range.  
    **WP New** retorna um novo documento criado a partir da range especificada. Note que, se a range não for igual a range completa do documento, só a primeira seção é exportada e bookmarks não são exportadas  
@@ -117,5 +117,5 @@ Se definir um documento modelo com partes pré-formatadas diferentemente, cada u
 
 #### Ver também 
 
-[WP Import document](wp-import-document.md)  
-[WP INSERT DOCUMENT](wp-insert-document.md)  
+[WP Import document](../commands/wp-import-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document.md)  

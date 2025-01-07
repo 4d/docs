@@ -36,8 +36,8 @@ displayed_sidebar: docs
 | \[ \].formula    | オブジェクト | フォーミュラの文字列は**\[ \].formula.source** から取得可能です。フォーミュラは、ターゲット内にあるフォーミュラの**コピー**です。フォーミュラを編集したい場合、編集したものをドキュメントに再度挿入しないと有効になはりません。             |
 | \[ \].range      | オブジェクト | フォーミュラのレンジ(アンカーされたピクチャーのフォーミュラに対しては返されません)                                                                                                 |
 | \[ \].anchoredID | テキスト   | アンカーされた画像のID(アンカーされた画像のフォーミュラに対してのみ返されます)                                                                                                  |
-| \[ \].name       | Text   | Name of the formula, if a name was defined (not returned otherwise). Names can be defined using [WP INSERT FORMULA](wp-insert-formula.md). |
-| \[ \].name       | テキスト   | フォーミュラの名前。定義されていた場合のみ返されます(そうでない場合は返されません)。名前は[WP INSERT FORMULA](wp-insert-formula.md) を使用することで定義できます。                                    |
+| \[ \].name       | Text   | Name of the formula, if a name was defined (not returned otherwise). Names can be defined using [WP INSERT FORMULA](../commands/wp-insert-formula.md). |
+| \[ \].name       | テキスト   | フォーミュラの名前。定義されていた場合のみ返されます(そうでない場合は返されません)。名前は[WP INSERT FORMULA](../commands/wp-insert-formula.md) を使用することで定義できます。                                    |
 | \[ \].owner      | オブジェクト | 4D Write Pro ドキュメント                                                                                                                        |
 
 **注:**
@@ -73,5 +73,5 @@ displayed_sidebar: docs
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  
 [WP Get links](wp-get-links.md)  
-[WP INSERT FORMULA](wp-insert-formula.md)  
+[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
 *フォーミュラの管理*  

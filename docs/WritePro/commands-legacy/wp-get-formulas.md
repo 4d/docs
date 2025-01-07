@@ -35,7 +35,7 @@ In the *targetObj* parameter, you can pass:
 | \[ \].formula    | Object   | The formula string is available through **\[ \].formula.source**. The formula is a **copy** of the formula found in the target. If you want to modify the formula, it must be re-inserted in the document to be taken into account |
 | \[ \].range      | Object   | Range of the formula (not returned for anchored picture formulas)                                                                                                                                                                  |
 | \[ \].anchoredID | Text     | ID of anchored picture (returned for anchored picture formulas only)                                                                                                                                                               |
-| \[ \].name       | Text     | Name of the formula, if a name was defined (not returned otherwise). Names can be defined using [WP INSERT FORMULA](wp-insert-formula.md).                                                                                         |
+| \[ \].name       | Text     | Name of the formula, if a name was defined (not returned otherwise). Names can be defined using [WP INSERT FORMULA](../commands/wp-insert-formula.md).                                                                                         |
 | \[ \].owner      | Object   | 4D Write Pro document                                                                                                                                                                                                              |
 
 **Notes:**
@@ -72,4 +72,4 @@ To get the formulas of all anchored pictures in a document:
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  
 [WP Get links](wp-get-links.md)  
-[WP INSERT FORMULA](wp-insert-formula.md)  
+[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
