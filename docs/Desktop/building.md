@@ -129,7 +129,7 @@ Checking the **Build stand-alone Application** option and clicking **Build** wil
 The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
 - You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
-- You can either embed a [deployment license](#licenses) or let the final user [enter their license](../Admin/licenses.md#first-activation) at the first application launch.
+- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
 
 :::note
 
@@ -526,7 +526,7 @@ If you keep the list empty, you build a stand-alone application without embedded
 
 :::
 
-You must explicitly add your *4D Developer Professional* license as well as each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses other than the one currently being used.
+Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window.
