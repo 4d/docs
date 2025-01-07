@@ -28,12 +28,13 @@ En *menu*, puede pasar una referencia de menú ([MenuRef](# "Unique ID (16-chara
 En el parámetro *propiedad*, pase la propiedad cuyo valor quiere modificar y pase el nuevo valore en *valor*. Para el parámetro *propiedad*, puede utilizar una **propiedad estándar** (una de las constantes del tema “*Propiedades de ítem de menú*”) o una **propiedad personalizada**:
 
 * **Propiedad estándar**: La mayoría de las propiedades estándar están disponibles a través de constantes en el tema "*Propiedades de ítem de menú*".  
-| Constante                  | Tipo   | Valor                            | Comentario                                                                                                                                                                                                                                    |  
+
+| Constante                  | Tipo   | Valor                            | Comentario  |  
 | -------------------------- | ------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Access privileges          | Cadena | 4D\_access\_group                | Activar la opción "Iniciar un nuevo proceso"<br/>0 = No, 1 = Sí<br/>                                                                                                                                                          |  
 | Associated standard action | Cadena | 4D\_standard\_action             | Asociar una acción estándar a la línea de menú <br/>Ver las constantes del tema "*Acción estándar*"                                                                                                                                   |  
-| n/a                        | Cadena | 4D\_execute\_without\_validating | Activar la opción **[Ejecutar sin validar](https://developer.4d.com/docs/Menus/properties#execute-without-validating)** (para los elementos de menú asociados a acciones estándar). <br/>True=activar, False (por defecto)=desactivar |  
-| Start a new process        | Cadena | 4D\_start\_new\_process          | Asignar un grupo de acceso al comando<br/>0 = Sin restricción<br/>>0 = Número de grupo<br/>                                                                                                                           |  
+| n/a                        | Cadena | 4D\_execute\_without\_validating | Activar la opción [**Ejecutar sin validar**](../Menus/properties.md#ejecutar-sin-validar)** (para los elementos de menú asociados a acciones estándar). <br/>True=activar, False (por defecto)=desactivar |  
+| Start a new process        | Cadena | 4D\_start\_new\_process          | Asignar un grupo de acceso al comando<br/>0 = Sin restricción<br/>>0 = Número de grupo<br/>     |  
     
 En el caso de la propiedad Associated standard action, puede pasar en el parámetro *valor* un nombre de acción estándar. Para obtener una lista completa de las acciones disponibles, consulte la sección *Acciones estándar* del manual de *Diseño*. Las acciones más comunes también están disponibles como constantes en el tema *Acción estándar*.  
     

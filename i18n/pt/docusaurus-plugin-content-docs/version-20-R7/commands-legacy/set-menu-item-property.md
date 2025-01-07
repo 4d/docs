@@ -28,12 +28,13 @@ Em *menu*, pode passar uma referencia de menu ([MenuRef](# "Unique ID (16-charac
 No parâmetro *propriedade*, passe a propriedade cujo valor quer modificar e passe o novo valor em *valor*. Para o parâmetro *propriedade*, pode utilizar uma propriedade padrão (uma das constantes de tema “*Propriedades de item de menu*”) ou uma propriedade personalizada:
 
 * Propriedade padrão: as constantes do tema “*Propriedades de item de menu* assim como suas possíveis valores são descritos a continuação.  
+
 | Constante                  | Tipo   | Valor                            | Comentário                                                                                                                                                                                                                      |  
 | -------------------------- | ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Access privileges          | Cadeia | 4D\_access\_group                | Ativar a opção "Iniciar um novo processo"<br/>0 = Não, 1 = Sim                                                                                                                                                          |  
 | Associated standard action | Cadeia | 4D\_standard\_action             | Associar uma ação padrão à linha de menu<br/>Ver as constantes de tema "*Ação estandarte*"                                                                                                                              |  
-| n/a                        | Cadeia | 4D\_execute\_without\_validating | Ativar a opção **[Execute without validating](https://developer.4d.com/docs/Menus/properties#execute-without-validating)** (para itens de menu associados à ações padrão). <br/>True=ativado, False (padrão)=desativado |  
-| Start a new process        | Cadeia | 4D\_start\_new\_process          | Ativar a opção "Start New Process"<br/>0 = Não, 1 = Sim                                                                                                                                                                 |  
+| n/a                        | Cadeia | 4D\_execute\_without\_validating | Ativar a opção [**Execute without validating**](../Menus/properties.md#executar-sem-validar) (para itens de menu associados à ações padrão). <br/>True=ativado, False (padrão)=desativado |  
+| Start a new process        | Cadeia | 4D\_start\_new\_process          | Ativar a opção "Start New Process"<br/>0 = Não, 1 = Sim   |  
     
 Considere que no caso da propriedade Associated Standard Action, pode passar no parâmetro valor um nome de ação padrão.
 
