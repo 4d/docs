@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Objetos anexo permite referenciar arquivos dentro de um objeto[`Email`](EmailObjectClass.md). Objetos anexos são criados usando o comando [`MAIL New attachment`](#mail-new-attachment).
+Objetos anexo permite referenciar arquivos dentro de um objeto [`Email`](EmailObjectClass.md). Objetos anexos são criados usando o comando [`MAIL New attachment`](#mail-new-attachment).
 
 ### Objeto anexos
 
@@ -44,9 +44,9 @@ Comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary --
 
 Pode passar um caminho ou um Blob para definir o anexo.
 
-- If you use a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. Pode passar um nome de rota completo ou um nome de arquivo simples (em cujo caso 4D vai pesquisar para o arquivo no mesmo diretório como o arquivo projeto).
+- Se você usar uma *rota*, passe um valor **texto** contendo a rota do arquivo anexo, expresso com a sintaxe sistema. Pode passar um nome de rota completo ou um nome de arquivo simples (em cujo caso 4D vai pesquisar para o arquivo no mesmo diretório como o arquivo projeto).
 
-- If you use a *blob*, pass a **BLOB** value containing the attachment itself.
+- Se você usar um blob *blob*, passe um valor **BLOB** que contém o anexo em si.
 
 O parâmetro opcional *name* permite passar o nome e extensão para ser usado pelo cliente email para designar o anexo. Se *name* for omitido e:
 
@@ -204,7 +204,7 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descrição
 
-A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->retorna o conteúdo do objeto attachment em um BLOB<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
+A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->retorna o conteúdo do objeto attachment em um BLOB<!-- END REF -->. Você pode usar essa função com objetos de anexo recebidos pelo [`MAIL Convert from MIME`](#mail-convert-from-mime).
 
 ## .name
 
