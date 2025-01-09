@@ -3,12 +3,12 @@ id: branching
 title: Estruturas condicionais
 ---
 
-A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+Uma estrutura de branching permite que os métodos provem uma condição e tomem caminhos alternativos, dependendo do resultado.
 
 
 ## If... Else... End if
 
-The formal syntax of the `If... Else... End if` control flow structure is:
+A sintaxe formal da estrutura de fluxo de controle `If...Else...End if` é:
 
 ```4d
  If(Boolean_Expression)
@@ -25,7 +25,7 @@ Note que a parte `Else` é opcional; pode escrever:
  End if
 ```
 
-The `If... Else... End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
+A estrutura `If...Else...End if` permite que o seu método escolha entre duas ações, dependendo se um teste (uma expressão booleana) é TRUE ou FALSO. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
 
 Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
@@ -61,7 +61,7 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
  End if 
 ```
 
-**Dica:** A ramificação pode ser realizada sem que as instruções sejam executadas em um caso ou no outro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação pode ser realizada sem que as instruções sejam executadas em um caso ou no outro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 
 ```4d
  If(Boolean_Expression)
@@ -80,7 +80,7 @@ ou :
 
 ## Case of... Else... End case
 
-The formal syntax of the `Case of... Else... End case` control flow structure is:
+A sintaxe formal da estrutura de fluxo de controle `Case of...Else...End case` é:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -113,7 +113,7 @@ Note que a parte `Else` é opcional; pode escrever:
        statement(s)
  End case
 ```
-As with the `If... End if` structure, the `Case of... End case` structure also lets your method choose between alternative actions. Unlike the `If... End` if structure, the `Case of... End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
+Como na estrutura `If...Else...End if`, a estrutura `Case of...Else...End case` também permite que seu método escolha entre ações alternativas. Ao contrário da estrutura `If...Else...End`, a estrutura `Case of...Else...End case` pode testar um número ilimitado e razoável de expressões booleanas e tomar medidas, dependendo do qual uma seja TRUE.
 
 Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos dois pontos e da expressão booleana é chamada de um caso. Por exemplo, a linha abaixo é um caso:
 
@@ -149,7 +149,7 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
  End case
 ```
 
-For comparison, here is the `If... Else... End if` version of the same method:
+Para comparação, aqui está a versão `If...Else...End if` do mesmo método:
 
 ```4d
  If(vResult=1) //Teste se o número é 1
@@ -176,9 +176,9 @@ For comparison, here is the `If... Else... End if` version of the same method:
  End if
 ```
 
-Remember that with a `Case of... Else... End case` structure, only the first TRUE case is executed. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+Lembre-se que com uma estrutura `Case of...Else...End case`, apenas o primeiro caso TRUE é executado. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
-Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste para a presença da condition1 cobre o teste para a preença de condition1&condition2 e portanto deveria estar localizada por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
+Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste para a presença da condition1 cobre o teste para a presença de condition1&condition2 e, portanto deveria estar localizada por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
 ```4d
  Case of
@@ -205,7 +205,7 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação pode ser feita sem que as instruções sejam executados em um caso ou outro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)
