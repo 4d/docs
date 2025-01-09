@@ -15,7 +15,7 @@ Les actions assignées aux boutons peuvent provenir d'[actons standard](properti
 
 Les boutons avec des actions standard sont grisés le cas échéant lors de l'exécution du formulaire. Par exemple, si le premier enregistrement d'une table est affiché, un bouton avec l'action standard `firstRecord` apparaît grisé.
 
-Si vous souhaitez qu'un bouton exécute une action qui n'est pas disponible en tant qu'action standard, laissez le champ d'action standard vide et écrivez une méthode objet pour spécifier l'action du bouton. Pour plus d'informations sur les méthodes d'objet et comment les créer et les associer, voir [Utilisation de méthodes objet](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html). En règle générale, vous activez l'événement `Sur clic` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton. Vous pouvez associer une méthode à n'importe quel bouton.
+Si vous souhaitez qu'un bouton exécute une action qui n'est pas disponible en tant qu'action standard, laissez le champ d'action standard vide et écrivez une méthode objet pour spécifier l'action du bouton. Pour plus d'informations sur les méthodes d'objet et comment les créer et les associer, voir [Utilisation de méthodes objet](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html). En règle générale, vous activez l'événement `On Clicked` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton. Vous pouvez associer une méthode à n'importe quel bouton.
 
 La [variable](properties_Object.md#variable-or-expression) associée à un bouton est automatiquement définie sur **0** lorsque le formulaire est exécuté pour la première fois en mode Développement ou Application. Lorsque l'utilisateur clique sur un bouton, sa variable est définie sur **1**.
 
@@ -272,7 +272,7 @@ Le style du bouton Aide peut être utilisé pour afficher un bouton d'aide syst�
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) basic properties.
+> Le style Aide ne supporte pas les propriétés de base [Nombre d'États](properties_TextAndPicture.md#number-of-states), [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname) et [Position Titre/image](properties_TextAndPicture.md#titlepicture-position).
 
 ### Rond
 
@@ -330,6 +330,6 @@ Tous les boutons partagent une même série de propriétés de base :
 
 Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
+- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#background-pathname) - [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) - [Décalage icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#vertical-margin) (Personnalisé)
 - [Bouton par défaut](properties_Appearance.md#default-button) (A plat, Classique)
 - [Avec pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Barre outils, Bevel, Bevel arrondi, OS X Gradient, OS X Textured, Office XP, Rond, Personnalisé)
