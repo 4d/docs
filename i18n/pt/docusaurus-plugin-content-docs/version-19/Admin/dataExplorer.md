@@ -3,9 +3,9 @@ id: dataExplorer
 title: Explorador de dados Web
 ---
 
-> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
+> **Pré-visualizar**: o Explorador de dados Web é fornecido como um recurso de pré-visualização. Não é recomendado usar este recurso em propósito de produção; a implementação final pode ser um pouco diferente.
 
-O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. It helps you to control data and quickly identify issues at any steps of the development process.
+O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. Ajuda a controlar dados e rapidamente identificar problemas em qualquer etapa do processo de desenvolvimento.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 
@@ -20,11 +20,11 @@ O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para 
 
 ## Abrindo o Data Explorer
 
-The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
+A página do Gerenciador de Dados está disponível automaticamente quando o servidor Web [ `WebAdmin` for iniciado](webAdmin.md#starting-the-webadmin-web-server).
 
 Para ligar à página Web do Explorador de dados:
 
-- if you use a 4D application with interface, select **Data Explorer...** command from:
+- se você usar uma aplicação 4D com interface, selecione **Gerenciador de Dados...** comando de:
   - o menu **Registros** (em 4D monousuário)
   - o menu **Window** (no 4D Server)
 
@@ -76,7 +76,7 @@ A página contém várias áreas:
 
 ![alt-text](../assets/en/Admin/dataExplorer5.png)
 
-- On the right side is the **Details area**: it displays the attribute values of the currently selected entity. All attribute types are displayed, including pictures and objects (expressed in json). Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
+- No lado direito está a área **Detalhes**: ela exibe os valores de atributo da entidade selecionada atualmente. Todos os tipos de atributo são exibidos, incluindo imagens e objetos (expressos em json). Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
 
 ### Atualização de conteúdos
 
