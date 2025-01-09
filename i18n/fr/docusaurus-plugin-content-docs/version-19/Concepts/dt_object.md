@@ -18,7 +18,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
     - Image(2)
     - collection
 
-(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
+(1) Les **objets non rationalisables** tels que les objets ORDA ([Entities](ORDA/dsMapping.md#entity), [Entity selections](ORDA/dsMapping.md#entity-selection), etc. , [web server](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objet**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
 
 (2) Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[object Picture]".
 
@@ -58,14 +58,14 @@ La notation objet est utilisée pour accéder aux valeurs de propriétés d'obje
 
 Avec la notation objet, il est possible d'accéder aux propriétés d'objets (aussi appelées attributs d'objets) de deux façons :
 
-- using a "dot" symbol: > object.propertyName
+- à l'aide du symbole "point" : > objet.NomPropriété
 
 Voici un exemple :
 ```4d
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- à l'aide d'une chaîne entre crochets : > objet["NomPropriété"]
 
 Exemples :
 ```4d
