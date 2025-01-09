@@ -9,7 +9,7 @@ Ao desenvolver uma aplicação 4D, irá descobrir muitas capacidades que não no
 
 Embora 4D ofereça centenas de métodos integrados, para manipular objetos, registros e implementar a interface do usuário, pode ser necessário algum uso ou recurso especial (às vezes dependente da plataforma): alguém pode precisar de ODBC no Windows, ou pode precisar de serviços da Apple no macOS, enquanto outro ainda pode querer implementar ferramentas estatísticas específicas, login em redes sociais, plataforma de pagamento, acesso a arquivos pela rede, uma interface de usuário especial ou uma estrutura de imagem privada.
 
-It is obvious that covering all areas of both the macOS and Windows operating systems by way of 4D commands would certainly lead to a product with thousands of commands, and at the same time, most users would have no need for such a large set of capabilities. Also, creating such an all-encompassing tool would make the 4D environment incredibly complex and would take most users months of study before useful results could be expected.
+É óbvio que cobrir todas as áreas dos sistemas operacionais macOS e Windows com comandos 4D certamente levaria a um produto com milhares de comandos e, em simultâneo, a maioria dos usuários não teria necessidade de um conjunto tão grande de recursos. Além disso, a criação de uma ferramenta tão abrangente tornaria o ambiente 4D incrivelmente complexo e levaria meses de estudo para a maioria dos usuários antes que resultados úteis pudesse ser esperados.
 
 A natureza modular do ambiente 4D permite a criação de aplicativos básicos, mas não impede o desenvolvimento de sistemas altamente complexos. A arquitetura 4D Plug-in abre o ambiente 4D para qualquer tipo de aplicação ou usuário. Os 4D Plug-ins multiplicam o poder e a produtividade da aplicação ou do usuário.
 
@@ -43,13 +43,13 @@ Um plug-in pode ser muito simples, com apenas uma rotina executando uma tarefa m
 
 Você instala plug-ins no ambiente 4D copiando seus arquivos para a pasta apropriada.
 
-As pastas "PluginName.bundle" contêm versões Windows e macOS de plugins 4D. Sua arquitetura interna específica permite que 4D Server carregue a versão apropriada conforme a plataforma onde a máquina do cliente será executada. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **Plugins** folder.
+As pastas "PluginName.bundle" contêm versões Windows e macOS de plugins 4D. Sua arquitetura interna específica permite que 4D Server carregue a versão apropriada conforme a plataforma onde a máquina do cliente será executada. Para instalar um plug-in em seu ambiente, você só precisa colocar a pasta "PluginName.bundle" ou pacote em questão na pasta **Plugins** desejada.
 
 Pode colocar a pasta Plugins em dois locais diferentes:
 
 - Ao nível da aplicação 4D executável, ou seja:
   - No Windows: junto ao ficheiro .exe
-  - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
+  - No macOS: no primeiro nível da pasta Conteúdo no pacote da aplicação. Neste caso, os plug-ins estão disponíveis em cada projeto aberto por esta aplicação.
 - Ao mesmo nível que a pasta Project. Nesse caso, os plug-ins só estão disponíveis nesse projeto específico.
 
 A escolha do ubicação depende de como você deseja usar o plug-in.
