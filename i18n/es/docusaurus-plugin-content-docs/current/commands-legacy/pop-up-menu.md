@@ -62,13 +62,26 @@ El método de proyecto MI MENU RAPIDO hace aparecer un menú de navegación pop 
 
 ```4d
   // Método de proyecto MI MENU RAPIDO
- MOUSE POSITION($vlRatonX;$vlRatonY;$vlBoton)
- If(Macintosh control down|($vlBoton=2))
-    $vtElementos:="Sobre esta base...<i;(-;!-otras opciones;(-"=""     for($vltabla;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltabla))=""           $vtelementos:="$vtElementos+";"+Table" name($vltabla)=""        end="" if=""     end="" for=""     $vleleccionusuario:="Pop" up="" menu($vtelementos)=""     case="" of=""        :($vleleccionusuario="1)"   //="" mostrar="" información="" las="" opciones=""        else=""           if($vleleccionusuario="">0)
-  // Ir a la tabla cuyo número es $vlEleccionUsuario-4
-          End if
-    End case
- End if</i;(-;!-otras>
+ MOUSE POSITION($vlRatonX;$vlRatonY;$vlBoton)
+ If(Macintosh control down|($vlBoton=2))
+    $vtElementos:="Sobre esta base...<I;(-;!-Otras opciones;(-"
+    For($vlTabla;1;Get last table number)
+       If(Is table number valid($vlTabla))
+          $vtElementos:=$vtElementos+";"+Table name($vlTabla)
+       End if
+    End for
+    $vlEleccionUsuario:=Pop up menu($vtElementos)
+    Case of
+       :($vlEleccionUsuario=1)
+  ` Mostrar información
+       :($vlEleccionUsuario=2)
+  ` Mostrar las opciones
+       Else
+          If($vlEleccionUsuario>0)
+  ` Ir a la tabla cuyo número es $vlEleccionUsuario-4
+          End if
+    End case
+ End if
 ```
 
 Este método de proyecto puede llamarse desde:

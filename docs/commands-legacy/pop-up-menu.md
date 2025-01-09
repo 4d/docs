@@ -64,11 +64,24 @@ The project method MY SPEED MENU pulls down a navigation speed menu:
   // MY SPEED MENU project method
  MOUSE POSITION($vlMouseX;$vlMouseY;$vlButton)
  If(Macintosh control down|($vlButton=2))
-    $vtItems:="About this database...<i;(-;!-other options;(-"=""     for($vltable;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltable))=""           $vtitems:="$vtItems+";"+Table" name($vltable)=""        end="" if=""     end="" for=""     $vluserchoice:="Pop" up="" menu($vtitems)=""     case="" of=""        :($vluserchoice="1)"   ="" display="" information="" options=""        else=""           if($vluserchoice="">0)
-  // Go to table whose number is $vlUserChoice-4
-          End if
-    End case
- End if</i;(-;!-other>
+   $vtItems:="About this database...<I;(-;!-Other Options;(-"
+   For($vlTable;1;Get last table number)
+      If(Is table number valid($vlTable))
+         $vtItems:=$vtItems+";"+Table name($vlTable)
+      End if
+   End for
+   $vlUserChoice:=Pop up menu($vtItems)
+   Case of
+      :($vlUserChoice=1)
+  // Display Information
+      :($vlUserChoice=2)
+  // Display options
+   Else
+         If($vlUserChoice>0)
+  // Go to table whose number is $vlUserChoice-4
+         End if
+   End case
+ End if
 ```
 
 This project method can be called from:

@@ -21,7 +21,7 @@ Components can be interpreted or [compiled](../Desktop/building.md).
 
 The package folder of a component (*MyComponent.4dbase* folder) can contain:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components). 
 - for **compiled components**:
 	- either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
 	- or directly a .4DZ file with other folders such as *Resources*. 
@@ -50,7 +50,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 
 To load a component in your 4D project, you can either:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components),
+- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
 - or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
