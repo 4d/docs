@@ -120,9 +120,9 @@ Les propriétés ainsi que la méthode d’un formulaire ne sont pas prises en c
 
 Pour définir un formulaire hérité, les propriétés de [Inherited Form Name](properties_FormProperties.md#inherited-form-name) et [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (pour les formulaires table) doivent être définies dans le formulaire qui héritera de quelque chose issue d'un autre formulaire.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\&#060;None&#062;` in the Property List (or " " in JSON).
+Un formulaire peut hériter d'un formulaire projet, en définissant la propriété [Inherited Form Table](properties_FormProperties.md#inherited-form-table) sur `\&#060;None&#062;` dans la liste des propriétés (ou " " dans JSON).
 
-To stop inheriting a form, select `\&#060;None&#062;` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+Pour stopper l’héritage d’un formulaire, choisissez l’option **\<None>** dans la Liste des propriétés (ou " " dans JSON) pour la propriété [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
 > Il est possible de définir un formulaire hérité dans un formulaire qui servira à son tour de formulaire hérité pour un troisième formulaire. La combinaison des objets s’effectue alors de manière récursive. 4D détecte les boucles récursives (par exemple si le formulaire [table1]form1 est défini comme formulaire hérité de [table1]form1, c’est-à-dire de lui-même) et interrompt le chaînage des formulaires.
 
 ## Propriétés prises en charge
