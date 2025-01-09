@@ -16,7 +16,7 @@ title: On Before Keystroke
 
 ## Descrição
 
-After the `On Before Keystroke` and [`On After Keystroke event`](onAfterKeystroke.md) events are selected for an object, you can detect and handle the keystrokes within the object, using the `Form event code` command that will return `On Before Keystroke` and then [`On After Keystroke event`](onAfterKeystroke.md) (for more information, please refer to the description of the `Get edited text` command). Within the `On Before Keystroke` event, the `FILTER KEYSTROKE` command can be used to filter typed chars.
+Depois que as propriedades de evento `On Before Keystroke` e [`On After Keystroke`](onAfterKeystroke.md) forem selecionadas para um objeto, você poderá detectar e manipular as teclas pressionadas no objeto usando o comando `Form event code` que retornará `On Before Keystroke` e, em seguida, [`On After Keystroke`](onAfterKeystroke.md) (para obter mais informações, consulte a descrição do comando `Get edited text`). Within the `On Before Keystroke` event, the `FILTER KEYSTROKE` command can be used to filter typed chars.
 
 > Esses eventos também são ativados por comandos de linguagem que simulam uma ação do usuário, como `POST KEY`.
 
