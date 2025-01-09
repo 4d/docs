@@ -94,8 +94,8 @@ $myEntity.save() //sauvegarder l'entity
 
 La fonction `clone()` <!-- REF #EntityClass.clone().Summary -->crée en mémoire une nouvelle entité référençant le même enregistrement que l'entité d'origine<!-- END REF -->.
 
-This function allows you to update entities separately. Notez cependant que, pour des raisons de performance, la nouvelle entité partage la même référence d'attributs d'objets que l'entité clonée.
-> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save()`](#save) function is executed.
+Cette fonction vous permet de mettre à jour des entités séparément. Notez cependant que, pour des raisons de performance, la nouvelle entité partage la même référence d'attributs d'objets que l'entité clonée.
+> A noter que toute modification apportée aux entités n'est stockée dans l'enregistrement référencé qu'au moment où la fonction [`.save()`](#save) est exécutée.
 
 Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées dans la base de données. Elle ne peut pas être appelée sur une entité nouvellement créée (pour laquelle [`.isNew()`](#isnew) retourne **True**).
 
@@ -168,7 +168,7 @@ Si l'une des entités comparées vaut **Null**, une erreur est retournée.
  employee.lastName:="SOPHIE"
  employee.salary:=500
  $diff1:=$clone.diff(employee) // All differences are returned
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
   // Only differences on firstName and lastName are returned
 ```
 
