@@ -472,14 +472,16 @@ How to start this log:
 - Use the `SET DATABASE PARAMETER` command:
 
   ```4d
-  SET DATABASE PARAMETER(131; 1)
+  SET DATABASE PARAMETER(TCPUDP log; 1)
   ```
 
 - Configure the log through a [JSON configuration file](#using-a-log-configuration-file):
 
   ```json
   {
-      "TCPUDPLogs": true
+      "TCPUDPLogs":{
+        "state" : 1
+	       }
   }
   ```  
 
@@ -495,7 +497,7 @@ The following fields are logged for each event:
 |event|Text|The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen`|
 |size|Number|The amount of data sent or received (in bytes), 0 if not applicable|
 |excerpt|Number|First 10 bytes of data in hexadecimal format|                                                   
-|textExcerpt|Text|First 10 bytes of data in hexadecimal format|                                                  
+|textExcerpt|Text|First 10 bytes of data in text format|                                                  
 |comment|Text|Additional information about the event, such as error details or encryption status|
 
 ## Using a log configuration file

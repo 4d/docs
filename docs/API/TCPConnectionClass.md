@@ -21,7 +21,7 @@ All `TCPConnection` class functions are thread-safe.
 
 The following examples demonstrate how to use the 4D.TCPConnection and 4D.TCPEvent classes to manage a TCP client connection, handle events, send data, and properly close the connection.
 
-Define and set up callback functions:
+Define an object of type `cs.Options` and its associated callback functions:
 
 ```4d
 
@@ -62,7 +62,7 @@ $tcpClient:=4D.TCPConnection.new($domain; $port; $options)
 $tcpClient.wait($timeout)
 
 //Send data
-If ($options.result.type="connection")
+If (not($tcpClient.closed()))
 var $blobData : Blob
 SET BLOB SIZE($blobData; 0)
 TEXT TO BLOB($message; $blobData; UTF8 text without length)
@@ -127,7 +127,7 @@ In the *options* parameter, pass an object that can contain the following proper
 |onData|Formula|Callback triggered when data is received|Undefined|
 |onShutdown|Formula|Callback triggered when the connection is properly closed|Undefined|
 |onError|Formula|Callback triggered in case of an error|Undefined|
-|onTerminate|Formula|Callback triggered just before the connection is released|Undefined|
+|onTerminate|Formula|Callback triggered just before the TCPConnection is released|Undefined|
 |noDelay|Boolean|Disables Nagle's algorithm if `true`|False|
 
 
@@ -146,7 +146,7 @@ All callback functions receive two parameters:
 2. `onData` is triggered each time data is received.
 3. `onShutdown` is triggered when the connection is properly closed.
 4. `onError` is triggered if an error occurs.
-5. `onTerminate` is always triggered just before the connection is released (connection is closed or an error occured).
+5. `onTerminate` is always triggered just before the TCPConnection is released (connection is closed or an error occured).
 
 
 #### TCPEvent object
@@ -227,7 +227,7 @@ The `send()` function <!-- REF #4D.TCPConnection.send().Summary -->sends data to
 
 #### Description
 
-The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary --> closes the TCP connection<!-- END REF -->.
+The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary --> shuts down the TCP connection<!-- END REF -->.
 
 
 <!-- END REF -->
@@ -245,7 +245,7 @@ The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary --> clos
 
 #### Description
 
-The `wait()` function <!-- REF #4D.TCPConnection.wait().Summary -->waits until the connection is closed or the specified timeout is reached<!-- END REF -->.
+The `wait()` function <!-- REF #4D.TCPConnection.wait().Summary -->waits until the specified `time` is reached. If no `time` is specified, the function waits until the connection is closed.<!-- END REF -->
 
 <!-- END REF -->
 
