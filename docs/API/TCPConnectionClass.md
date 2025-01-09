@@ -21,10 +21,11 @@ All `TCPConnection` class functions are thread-safe.
 
 The following examples demonstrate how to use the 4D.TCPConnection and 4D.TCPEvent classes to manage a TCP client connection, handle events, send data, and properly close the connection.
 
-Define an object of type `cs.Options` and its associated callback functions:
+Create a class to define an object of type `cs.Options` and its associated callback functions:
 
 ```4d
 
+//cs.Options class
 property result : Object
 property noDelay : Boolean
 
@@ -63,16 +64,16 @@ $tcpClient.wait($timeout)
 
 //Send data
 If (not($tcpClient.closed()))
-var $blobData : Blob
-SET BLOB SIZE($blobData; 0)
-TEXT TO BLOB($message; $blobData; UTF8 text without length)
-$result:=$tcpClient.send($blobData)
-$tcpClient.wait($timeout)
+	var $blobData : Blob
+	SET BLOB SIZE($blobData; 0)
+	TEXT TO BLOB($message; $blobData; UTF8 text without length)
+	$result:=$tcpClient.send($blobData)
+	$tcpClient.wait($timeout)
 Else
-ALERT("connection error")
+	ALERT("connection error")
 End if
 
-//Showdown
+//Shutdown
 $tcpClient.shutdown()
 $tcpClient.wait($timeout)
 
