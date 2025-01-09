@@ -5,7 +5,7 @@ title: コンポーネント
 
 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
-独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\\\\\&type=Repositories) ダウンロードすることもできます。
+独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\\\\\\&type=Repositories) ダウンロードすることもできます。
 
 4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
 
@@ -20,7 +20,7 @@ Components can be interpreted or [compiled](../Desktop/building.md).
 
 The package folder of a component (_MyComponent.4dbase_ folder) can contain:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
 - for **compiled components**:
   - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
   - or directly a .4DZ file with other folders such as _Resources_.
@@ -46,7 +46,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
-- [プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
+- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
 - or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
@@ -61,7 +61,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 #### dependencies.json
 
-**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを宣言します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
+**dependencies.json** ファイルは、4Dプロジェクトに必要なすべてのコンポーネントを宣言します。 このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例: このファイルは、4Dプロジェクトフォルダーの **Sources** フォルダーに置く必要があります。例:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -167,7 +167,7 @@ flowchart TB
 
 パスは、POSIXシンタックスで表します ([POSIXシンタックス](../Concepts/paths#posix-シンタックス) 参照)。
 
-相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。
+相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。 絶対パスは、ユーザーのマシンにリンクされています。
 
 コンポーネントアーキテクチャーの柔軟性と移植性のため、ほとんどの場合、相対パスを使用することが **推奨** されます (特に、プロジェクトがソース管理ツールにホストされている場合)。
 
@@ -226,7 +226,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
 
 ```json
 {
@@ -288,7 +288,7 @@ You then need to [provide your connection token](#providing-your-github-access-t
 
 #### 依存関係のローカルキャッシュ
 
-参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます:
+参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます:
 
 - macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
@@ -417,11 +417,11 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
-依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
+依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例: **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
-接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
+接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
 
 :::note
 
@@ -433,7 +433,7 @@ Define the [dependency version range](#tags-and-versions) to use for this projec
 
 プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
 
-すると、GitHub 依存関係は [**dependencies.json**](#dependenciesjson) ファイルに宣言され、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+すると、GitHub 依存関係は [**dependencies.json**](#dependenciesjson) ファイルに宣言され、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。
 
 #### Defining a GitHub dependency version range
 
@@ -540,7 +540,7 @@ To provide your GitHub access token, you can either:
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-パーソナルアクセストークンは 1つしか入力できません。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。
+パーソナルアクセストークンは 1つしか入力できません。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。 入力されたトークンは編集することができます。
 
 The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
@@ -550,7 +550,7 @@ The provided token is stored in a **github.json** file in the [active 4D folder]
 
 :::note
 
-依存関係パネルを使用して削除できるのは、[**dependencies.json**](#dependenciesjson) ファイルで宣言されている依存関係に限られます。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。
+依存関係パネルを使用して削除できるのは、[**dependencies.json**](#dependenciesjson) ファイルで宣言されている依存関係に限られます。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。
 
 :::
 
