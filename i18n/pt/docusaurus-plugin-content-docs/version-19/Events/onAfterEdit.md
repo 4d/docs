@@ -18,7 +18,7 @@ Quando é usado, este evento é gerado após cada alteração feita no conteúdo
 - Ações de edição padrão que modificam conteúdo como colar, cortar, excluir ou cancelar;
 - Eliminar um valor (ação semelhante a colar);
 - Qualquer entrada de teclado feita pelo usuário; neste caso, o evento `On After Edit` é gerado após os eventos [`On Before Keystroke`](onBeforeKeystroke.md) e [`On After Keystroke`](onAfterKeystroke.md) se forem utilizadas.
-- Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
+- Qualquer modificação feita usando um comando de linguagem que simula uma ação do usuário (ou seja, `POST KEY`).
 
 No evento `On After Edit`, os dados texto introduzidos são devolvidos pelo comando [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html).
 
