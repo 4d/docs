@@ -12,7 +12,7 @@ title: On Header
 
 The `On Header` event is called when a record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
 
 Neste contexto, a seguinte sequência de chamadas para os métodos e eventos de formulário é ativada:
 
