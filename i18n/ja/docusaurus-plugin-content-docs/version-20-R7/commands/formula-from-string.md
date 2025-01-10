@@ -65,3 +65,10 @@ displayed_sidebar: docs
 
 [Formula](formula.md)\
 [Parse formula](../commands-legacy/parse-formula.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1601                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
