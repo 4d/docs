@@ -220,20 +220,28 @@ In 4D, session tokens can be used when calling external URLs and being called ba
 The basic sequence of an OTP session token use in a 4D web application is the following:
 
 1. The web user initiates an action that requires a secured third-party connection, for example a payment, from within a specific session. 
-2. In your 4D code, you create a new OTP for the session using the [`Session.createOTP()`](../API/SessionClass.md#createotp) function and stores its token (UUID). 
+2. In your 4D code, you create a new OTP for the session using the [`Session.createOTP()`](../API/SessionClass.md#createotp) function. 
 3. You send a request to the third-party application with the session token included in the callback Uri. Note that the way to provide the callback Uri to a third-party application depends on its API.  
 4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
-5. The request is processed by a dedicated [HTTP Request handler](http-request-handler.md) in your application using [`IncomingMessage`](../API/IncomingMessageClass.md) and [`OutgoingMessage`](../API/OutgoingMessageClass.md) classes.  
-    - If you have used the `$4DSID` parameter to handle the token, the related web user session is automatically restored in any web process with its storage and privileges. 
-    - If you have used a custom parameter name to handle the token, you need to call the [`Session.restore()`](../API/SessionClass.md#restore) function.
+5. The request is processed in your application.
 
-:::note
-
-The `$4DSID` key is reserved for the 4D session token and must not be used to send parameters. 
-
-:::
 
 By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored and a new guest session is created for this request.
+
+
+### Processing the callback
+
+The callback from the third-party application can be processed in different ways in your 4D application. You can use:
+
+- a dedicated [HTTP Request handler](http-request-handler.md) in your application using [`IncomingMessage`](../API/IncomingMessageClass.md) and [`OutgoingMessage`](../API/OutgoingMessageClass.md) classes. 
+- any ORDA function called with a REST request (e.g. `/rest/$singleton/Utilities/callback`) provided the *callback* function has been declared available to `GET` verb using the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- a [`4DACTION`](./httpRequests.md#4daction) url. 
+
+When processing the callback through a non-rest url (with http request handler or 4DACTION), you can use the `$4DSID` parameter to handle the token in the url. The related web user session is automatically restored in any web process with its storage and privileges (see example with $4DSID). 
+
+When processing the callback through a rest request, the `$4DSID` key cannot be used to send parameters in the REST request url. In this case, you have to use a custom parameter name to handle the token (e.g. `?$params='["123456789XXXX"]'`), and to call the [`Session.restore()`](../API/SessionClass.md#restore) function with the token received in parameter (see example with `restore`). 
+
+
 
 
 ### Example with $4DSID
@@ -259,7 +267,7 @@ The scenario using a custom parameter is illustrated in the following diagram:
 
 ### Lifespan 
 
-A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp).
+A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp). By default, the token lifespan is the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value of the session (that can be modified). 
 
 A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
 
