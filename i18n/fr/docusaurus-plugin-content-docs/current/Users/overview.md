@@ -8,7 +8,7 @@ Si plusieurs personnes utilisent une application, ce qui est souvent le cas dans
 La stratégie de contrôle d'accès 4D dépend de la configuration de votre déploiement :
 
 - dans les applications multi-utilisateurs, vous pouvez vous appuyer sur les utilisateurs et les groupes 4D,
-- dans les applications monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
+- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
@@ -26,11 +26,11 @@ Pour désactiver le système de restriction d’accès, il suffit de supprimer (
 
 ## Contrôle d'accès dans les applications monoposte
 
-Les applications monoposte sont des applications de bureau, déployées avec 4D ou fusionnées avec 4D Volume License. Dans les applications monoposte, tous les utilisateurs qui ouvrent l'application sont des [Super utilisateurs](handling_users_groups.md#designer-and-administrator); ils possèdent tous les privilèges et leur nom est "Super utilisateur". Le contrôle des accès n'est pas basé sur les utilisateurs et les groupes 4D, mais sur les **sessions utilisateur**.
+Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume Desktop. Dans les applications monoposte, tous les utilisateurs qui ouvrent l'application sont des [Super utilisateurs](handling_users_groups.md#designer-and-administrator); ils possèdent tous les privilèges et leur nom est "Super utilisateur". Le contrôle des accès n'est pas basé sur les utilisateurs et les groupes 4D, mais sur les **sessions utilisateur**.
 
 ### Identification de l'utilisateur
 
-Pour identifier l'utilisateur courant dans une application 4D monoposte, vous pouvez vous appuyer sur la commande [`Current system user`](https://doc.4d.com/4dv19R/help/command/fr/page484.html), qui retourne l'utilisateur ayant ouvert la session système. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
+To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](../commands-legacy/current-system-user.md) command, which returns the user who opened the system session. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
 
 Vous pouvez alors autoriser ou refuser les accès à votre application en utilisant un code suivant :
 
@@ -40,7 +40,7 @@ If(Current system user = $user) //vous pouvez stocker des utilisateurs dans une 
 End if
 ```
 
-Si vous souhaitez utiliser le nom d'utilisateur du système dans 4D au lieu du "Designer" (par exemple dans les fichiers journaux), vous pouvez appeler la commande [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html), par exemple:
+If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command, for example:
 
 ```4d
 SET USER ALIAS(Current system user)
