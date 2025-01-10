@@ -5,7 +5,7 @@ const darkTheme = themes.palenight;
 
 
 const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
-
+const router = process.env.DOCUSAURUS_ROUTER
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
@@ -79,6 +79,7 @@ module.exports = {
       rspackBundler: true,
       mdxCrossCompilerCache: true,
     },
+    experimental_router: router,
   },
   i18n: {
     defaultLocale: "en",
