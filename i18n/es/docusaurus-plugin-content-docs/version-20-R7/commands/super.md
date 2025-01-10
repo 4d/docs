@@ -112,3 +112,10 @@ $message:=$square.description() //tengo 4 lados iguales
 #### Ver también
 
 [**Concept page for Classes**](../Concepts/classes.md).
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1706                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
