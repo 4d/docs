@@ -69,3 +69,10 @@ El método ***doSomething*** puede ser como:
  End use
  $signal.trigger() // El trabajo ha terminado
 ```
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1641                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
