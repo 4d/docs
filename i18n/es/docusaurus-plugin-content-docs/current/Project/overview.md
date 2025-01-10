@@ -27,4 +27,4 @@ Los archivos del proyecto pueden ser [compilados](compiler.md) y fácilmente des
 - las aplicaciones [móviles](https://developer.4d.com/go-mobile/),
 - las aplicaciones [de escritorio](Desktop/building.md) (cliente/servidor o monopuesto).
 
-Las aplicaciones de back-end pueden desplegarse utilizando 4D Server, 4D, o [fusionadas con la licencia 4D Volume](../Desktop/building.md).
+Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume Desktop](../Desktop/building.md).
