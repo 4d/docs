@@ -122,12 +122,12 @@ Les formats numériques contrôlent la façon dont les nombres apparaissent lors
 
 Dans chacun des formats d'affichage numériques, le signe dièse (#), zéro (0), le caret (^) et l'astérisque (\*) sont utilisés comme placeholders. Vous créez vos propres formats numériques en utilisant un placeholder pour chaque chiffre que vous souhaitez afficher.
 
-| Placeholder | Effet pour les zéros de début ou de fin  |
-| ----------- | ---------------------------------------- |
-| #           | N'affiche rien                           |
-| 0           | Affiche 0                                |
-| ^           | Affiche un espace (1) |
-| \*          | Affiche un astérisque                    |
+| Texte exemple | Effet pour les zéros de début ou de fin  |
+| ------------- | ---------------------------------------- |
+| #             | N'affiche rien                           |
+| 0             | Affiche 0                                |
+| ^             | Affiche un espace (1) |
+| \*            | Affiche un astérisque                    |
 
 (1) Le caractère caret (^) génère un espace qui occupe la même largeur qu'un chiffre dans la plupart des polices de caractères.
 
