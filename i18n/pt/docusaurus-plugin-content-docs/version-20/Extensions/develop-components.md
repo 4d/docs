@@ -10,8 +10,8 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 ## Definições
 
-- **Projeto Matrix**: Projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
-- **Projeto host**: Projeto de aplicativo no qual um componente é instalado e usado.
+- **Projeto Matrix**: projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
+- **Projeto host**: projeto no qual um componente é instalado e usado.
 - **Componente**: Projeto de matriz que pode ser compilado ou [construído](Desktop/building.md#build-component), copiado para o diretório [`Componentes`](Project/architecture.md) do aplicativo host e cujo conteúdo é usado no aplicativo host.
 
 ## Básicos
@@ -69,11 +69,11 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 
 
 
-## Partilhar os métodos de projeto
+## Partilhar os métodos projeto
 
 Todos os métodos de projeto de um projeto de matriz são, por definição, incluídos no componente (o projeto é o componente), o que significa que eles podem ser chamados e executados dentro do componente.
 
-Por outro lado, por padrão, esses métodos de projeto não estarão visíveis e não poderão ser chamados no projeto host. No projeto de matriz, você deve designar explicitamente os métodos que deseja compartilhar com o projeto host, marcando a caixa **Compartilhado por componentes e projeto host** na caixa de diálogo de propriedades do método:
+Por outro lado, por padrão, esses métodos projeto não estarão visíveis e não poderão ser chamados no projeto host. No projeto de matriz, você deve designar explicitamente os métodos que deseja compartilhar com o projeto host, marcando a caixa **Compartilhado por componentes e projeto host** na caixa de diálogo de propriedades do método:
 
 ![](../assets/en/Concepts/shared-methods.png)
 

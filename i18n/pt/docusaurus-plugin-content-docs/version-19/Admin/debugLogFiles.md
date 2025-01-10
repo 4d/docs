@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Descrição de arquivos de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Os logs são geralmente iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) sendo armazenados na pasta [Logs](Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -17,7 +17,7 @@ Informação gravada precisa ser analisada para detectar e corrigir os problemas
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [Petições de arquivo de log por cliente ORDA](#orda-client-requests)
 
-Note: When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
+Nota: quando um arquivo de histórico for gerado seja em 4D Server ou em cliente remoto, a palavra "Server" é adicionada ao nome do arquivo do lado servidor, por exemplo, "4DRequestsLogServer.txt"
 
 Arquivos de Histórico compartilham alguns campos para que possa estabelecer uma cronologia e fazer conexões entre entradas quando depurar:
 
@@ -63,7 +63,7 @@ Para cada petição, os campos abaixo estão logados:
 | time                                       | Data e hora usando formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                     |
 | systemid                                   | ID de sistema                                                                                                                                                                      |
 | componente                                 | Assinatura de componente (por exemplo '4SQLS' ou 'dbmg')                                                                                                                           |
-| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                           |
+| process\_info_                           | Corresponde ao campo index no registro 4DRequestsLog_ProcessInfo.txt e permite vincular uma solicitação a um processo.                                                             |
 | request                                    | ID de petição em C/S ou string de mensagem para petições SQL ou mensagens `LOG EVENT`                                                                                              |
 | bytes_in                                   | Número de bytes recebidos                                                                                                                                                          |
 | bytes_out                                  | Número de bytes enviados                                                                                                                                                           |
@@ -240,12 +240,12 @@ Os arquivos de histórico podem ser produzidos em duas versões:
  Para começar esse histórico:
 
  ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log 
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log 
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+ SET DATABASE PARAMETER(SMTP Log;1) //iniciar log SMTP
+ SET DATABASE PARAMETER(POP3 Log;1) //iniciar log POP3
+ SET DATABASE PARAMETER(IMAP Log;1) //iniciar log IMAP
  ```
 
- 4D Server: Click on the **Start Request and Debug Logs** button in the [Maintenance Page](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) of the 4D Server administration window.
+ 4D Servidor: clique no botão **Iniciar solicitação e Depurar Logs** na janela de administração do servidor 4D [Manutenção](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) da janela de administração do servidor 4D.
 
    A rota do histórico é retornada pelo comando `Get 4D file`.
 

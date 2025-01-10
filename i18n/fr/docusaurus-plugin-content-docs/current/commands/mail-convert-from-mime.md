@@ -90,3 +90,10 @@ $status:=$transporter.send($email)
 
 \| mime | BLOB, Text | →  | Email in MIME |
 \| Function result | Object | ← | Email object |
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1681                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

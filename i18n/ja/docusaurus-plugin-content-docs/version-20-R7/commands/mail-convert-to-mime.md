@@ -84,3 +84,10 @@ $mime:=MAIL Convert to MIME($mail)
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1604                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

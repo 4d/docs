@@ -128,7 +128,7 @@ Alguns métodos retornam a coleção original depois de moficiação, para que p
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
 
-### parâmetro caminoPropriedade
+### parâmetro propertyPath
 
 Várias funções aceitam um _propriedadePath_ como parâmetro. Este parâmetro significa:
 

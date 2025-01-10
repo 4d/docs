@@ -68,3 +68,10 @@ If(Not($status.success))
    ALERT("An error occurred: "+$status.statusText)
 End if
 ```
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1723                            |
+| Thread safe    | &amp;check; |

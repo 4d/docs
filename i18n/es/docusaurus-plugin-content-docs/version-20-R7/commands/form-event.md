@@ -100,3 +100,10 @@ The resulting list box when rows are selected:
 
 [Form Events](../Events/overview.md)
 [Form event code](../commands/form-event-code.md)
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1606                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

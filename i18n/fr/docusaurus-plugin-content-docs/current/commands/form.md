@@ -14,8 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 <details><summary>Historique</summary>
 
 | Release | Modifications      |
@@ -26,7 +24,7 @@ displayed_sidebar: docs
 
 #### Description
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D associe automatiquement un objet à la forme courante dans les cas suivants :
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D associe automatiquement un objet à la forme courante dans les cas suivants :
 
 - the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
 - the current form is a subform,
@@ -116,3 +114,10 @@ Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le 
 #### Voir également
 
 [DIALOG](dialog.md)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 1466                            |
+| Thread safe        | &amp;cross; |

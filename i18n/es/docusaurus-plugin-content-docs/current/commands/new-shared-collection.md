@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Parámetros | Tipo                                                                |   | Descripción                                              |
-| ---------- | ------------------------------------------------------------------- | - | -------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | → | Valor(es) de la collection compartida |
-| Resultado  | Collection                                                          | ← | New shared collection                                    |
+| Parámetros | Tipo                                                  |   | Descripción                                              |
+| ---------- | ----------------------------------------------------- | - | -------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | → | Valor(es) de la collection compartida |
+| Resultado  | Collection                                            | ← | New shared collection                                    |
 
 <!-- END REF-->
 
@@ -68,3 +68,10 @@ Esta función modifica la colección original.
 [New collection](new-collection.md)\
 [New shared object](../commands-legacy/new-shared-object.md)\
 *Shared objects and shared collections*
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1527                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

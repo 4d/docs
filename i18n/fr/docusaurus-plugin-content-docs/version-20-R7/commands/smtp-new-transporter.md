@@ -85,3 +85,10 @@ La fonction retourne un [**objet SMTP transporter**](../API/SMTPTransporterClass
     ALERT("An error occurred sending the mail: "+$status.message)
  End if
 ```
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1608                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

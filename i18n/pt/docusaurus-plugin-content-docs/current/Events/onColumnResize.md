@@ -17,7 +17,7 @@ Este evento é gerado quando a largura de uma coluna na caixa de listagem é mod
 
 ### 4D View Pro
 
-This event is generated when the width of a column is modified by a user. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
+Este evento é gerado quando a largura de uma coluna é modificada por um usuário. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
 | Propriedade | Tipo          | Descrição                                                                                                   |
 | ----------- | ------------- | ----------------------------------------------------------------------------------------------------------- |

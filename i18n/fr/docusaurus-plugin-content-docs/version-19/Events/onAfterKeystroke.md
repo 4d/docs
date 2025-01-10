@@ -9,9 +9,9 @@ title: On After Keystroke
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                                          |
-| ------- | -------------------------------------------------------------------------------------- |
-| 18 R5   | - Support in non-enterable list boxes- The event is now triggered after IME validation |
+| Release | Modifications                                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------------------------------ |
+| 18 R5   | - Prise en charge dans les list box non saisissables - L'événement est désormais déclenché après la validation IME |
 </details>
 
 ## Description

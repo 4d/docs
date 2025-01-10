@@ -5,7 +5,7 @@ title: Componentes
 
 Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\\\&type=Repositories).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\\\\&type=Repositories).
 
 When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
@@ -20,7 +20,7 @@ Os componentes podem ser interpretados ou [compilados](../Desktop/building.md).
 
 The package folder of a component (_MyComponent.4dbase_ folder) can contain:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
 - for **compiled components**:
   - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
   - or directly a .4DZ file with other folders such as _Resources_.
@@ -46,7 +46,7 @@ Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D
 
 To load a component in your 4D project, you can either:
 
-- copie os arquivos de componentes na pasta [**Components** do seu projeto] (architecture.md#components),
+- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
 - or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 Os componentes declarados no arquivo **dependencies.json** podem ser armazenados em locais diferentes:
@@ -226,7 +226,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {

@@ -3,12 +3,12 @@ id: looping
 title: Estruturas de loop
 ---
 
-Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
+Estruturas de repetição repetem uma sequência de instruções até que uma condição seja cumprida ou que várias vezes seja alcançada.
 
 
 ## While... End while
 
-The formal syntax of the `While... End while` control flow structure is:
+A sintaxe formal da estrutura de fluxo de controle `While... End while` é:
 ```4d
  While(Boolean_Expression)
     statement(s)
@@ -16,7 +16,7 @@ The formal syntax of the `While... End while` control flow structure is:
 ```
 Um loop `While...End while` executa as declarações no loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-It is common to initialize the value tested in the Boolean expression immediately before entering the `While... End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While... End while` executes the loop.
+É comum inicializar o valor testado na expressão booleana imediatamente antes de entrar no loop `While... End while`. Inicializar o valor significa definí-lo como algo apropriado, geralmente para que a expressão booleana seja TRUE e `While...End while` executa o loop.
 
 O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O próximo loop continua para sempre porque _NeverStop_ sempre será TRUE:
 ```4d
@@ -40,7 +40,7 @@ Nesse exemplo, o valor da variável sistema `OK` é estabelecida pelo comando `C
 
 ## Repeat... Until
 
-The formal syntax of the `Repeat... Until` control flow structure is:
+A sintaxe formal da estrutura de fluxo de controle `Repeat...Until` é:
 ```4d
  Repeat
     statement(s)
@@ -52,7 +52,7 @@ A outra diferença com um loop `Repeat...Until` é que o loop continua até que 
 
 ### Exemplo
 
-Compare the following example with the example for the `While... End while` loop. Lembre que a expressão booleana não precisa ser iniciada - não há um comando `CONFIRM` para inicializar a variável `OK`.
+Comparar o exemplo a seguir com o exemplo para o loop `While...End while`. Lembre que a expressão booleana não precisa ser iniciada - não há um comando `CONFIRM` para inicializar a variável `OK`.
 
 ```4d
  Repeat
@@ -62,7 +62,7 @@ Compare the following example with the example for the `While... End while` loop
 
 ## For...End for
 
-The formal syntax of the `For... End for` control flow structure is:
+A sintaxe formal da estrutura de fluxo de controle `For...End for` é:
 
 ```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -70,15 +70,15 @@ The formal syntax of the `For... End for` control flow structure is:
  End for
 ```
 
-The `For... End for` loop is a loop controlled by a counter variable:
+A estrutura `For...End for` é um loop controlado por um contador:
 
-- The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For... End for` loop initializes to the value specified by *Start_Expression*.
+- A variável contador *Counter_Variable* é uma variável numérica (real ou Inteiro longo) que o loop `For...End for` inicializa para o valor especificado por *Start_Expression*.
 - Cada vez que se executa o loop, a variável do contador se incrementa no valor especificado no valor opcional *Increment_Expression*. Se não especificar *Increment_Expression*, a variável contadora é incrementada por um (1), que é o padrão.
 - Quando a variável contador passar o valor *End_Expression* daí o loop para.
 
 **Importante:** as expressões numéricas *Start_Expression*, *End_Expression* e *Increment_Expression* são avaliadas apenas uma vez no começo do loop. Se essas expressões forem variáveis, mudar uma deles dentro do loop não vai afetar o loop.
 
-**Dicas:** Entretanto, para fins especiais, pode mudar o valor da variável *Counter_Variable* dentro do loop; isso afetará o loop.
+**Dicas:** entretanto, para fins especiais, pode mudar o valor da variável *Counter_Variable* no loop; isso afetará o loop.
 
 - Geralmente *Start_Expression* pe menor que *End_Expression*.
 - Se *Start_Expression* e *End_Expression* forem iguais, o loop se executará só uma vez.
@@ -127,7 +127,7 @@ The `For... End for` loop is a loop controlled by a counter variable:
  End for
 ```
 
-Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
+A maioria dos loops `For...End for` que você irá escrever em seus projetos terá a aparência dos listados nestes exemplos.
 
 ### Diminuir a variável contador
 
@@ -190,14 +190,14 @@ Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo va
 
 ### Comparação de estruturas de loop
 
-Let's go back to the first `For... End for` example. O seguinte exemplo executa 100 iterações:
+Vamos voltar para o primeiro exemplo `For...End for`. O seguinte exemplo executa 100 iterações:
 ```4d
  For(vCounter;1;100)
   //Faz algo
  End for
 ```
 
-Here is the equivalent `While... End while` loop:
+É interessante ver como os loops `While...End while` e `Repeat...Until` realizariam a mesma ação. Aqui está o equivalente ao loop `While...End while`:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -206,7 +206,7 @@ Here is the equivalent `While... End while` loop:
  End while
 ```
 
-Here is the equivalent `Repeat... Until` loop:
+Aqui está o loop `Repeat...Until` équivalente:
 ```4d
  $i:=1 //Initializa o contador
  Repeat
@@ -214,9 +214,9 @@ Here is the equivalent `Repeat... Until` loop:
     $i:=$i+1 //Precisa incrementar o contador
  Until($i=100) //Loop 100 vezes
 ```
-**Tip:** The `For... End for` loop is usually faster than the `While... End while` and `Repeat... Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For... End for` loop whenever possible.
+**Dica:** o loop `For...End for` geralmente é mais rápido que os loops `While...End while` e `Repeat... Until`, porque 4D testa a condição internamente para cada ciclo do loop e incrementa o contador. Portanto, use o loop `For...End for` sempre que possível.
 
-### Optimizing the execution of the For... End for loops
+### Otimizando a execução do comando For...End para loops
 
 Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
 
@@ -229,9 +229,9 @@ Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, 
  End for
 ```
 
-### Nested For... End for looping structures
+### Estruturas For... End for aninhadas
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. This includes nesting `For... End for` loops. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui aninhar loops `For...End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
@@ -286,7 +286,7 @@ A estrutura `For each... End for each` faz uma iteração sobre um *Elemento_atu
 - seleções de entidades: loop em cada entidade,
 - objetos: loop em cada propriedade do objeto.
 
-The following table compares the three types of `For each... End for each`:
+A tabela a seguir compara os três tipos de `For each...End for each`:
 
 |                                           | Loop através da coleção                            | Loop nas seleções de entidades | Loop nos objetos                 |
 | ----------------------------------------- | -------------------------------------------------- | ------------------------------ | -------------------------------- |
@@ -298,13 +298,13 @@ The following table compares the three types of `For each... End for each`:
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 - Por padrão, as  _instruções_ anexas são executadas para cada valor de *Expressão*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (`While`) ou ao final do loop (`Until`).
 - Os parâmetros opcionais *begin* e *end* podem ser usados com coleç~eos e seleções de entidades para definir os limites do loop.
-- The `For each... End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use... End use` keywords. Depending on your needs, you can call the `Use... End use` keywords:
+- O loop `For each...End for each` pode ser usado em uma **coleção compartilhada** ou **objeto compartilhado**. Se seu código precisar modificar um ou mais elemento(s) das propriedades de coleção ou objeto, você precisa usar as palavras-chave `Use...End use`. Dependendo de suas necessidades, você pode chamar as palavras-chave `Use...End use`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
 ### Loop através da coleção
 
-When `For each... End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. Como padrão, o número de loops é baseado no número de elementos da coleção.
+Quando `For each... End for each` é usado com uma _Expression_ do tipo _Collection_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
 
 A coleção deve conter só elementos do mesmo tipo, do contrário se devolverá um erro assim que a variável _Current_Item_ tenha sido atribuída o primeiro tipo de valor estranho.
 

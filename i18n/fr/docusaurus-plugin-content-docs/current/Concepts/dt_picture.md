@@ -3,7 +3,7 @@ id: picture
 title: Picture
 ---
 
-Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D telles que `READ PICTURE FILE`.
+Un champ, une variable ou expression de type Picture peut être toute image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D telles que `READ PICTURE FILE`.
 
 4D utilise des API natives pour encoder (écrire) et décoder (lire) les champs et les variables des images sous Windows et macOS. Ces implémentations donnent accès à de nombreux formats natifs, dont le format RAW, couramment utilisé par les appareils photo numériques.
 

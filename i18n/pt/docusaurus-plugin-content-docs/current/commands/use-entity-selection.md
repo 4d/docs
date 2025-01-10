@@ -45,3 +45,12 @@ USE ENTITY SELECTION($entitySel) //A seleção atual da tabela Employee é atual
 #### Veja também
 
 [Create entity selection](create-entity-selection.md)
+
+#### Propriedades
+
+|                           |                                 |
+| ------------------------- | ------------------------------- |
+| Command number            | 1513                            |
+| Thread safe               | &amp;check; |
+| Changes current record    |                                 |
+| Changes current selection |                                 |

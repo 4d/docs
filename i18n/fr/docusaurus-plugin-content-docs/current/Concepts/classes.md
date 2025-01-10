@@ -193,7 +193,7 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
 
 :::
 
@@ -333,7 +333,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
 
 :::
 

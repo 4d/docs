@@ -4,11 +4,11 @@ title: Página Métodos
 ---
 
 
-Um método é basicamente um pedaço de código que executa uma ou várias ações. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
+Um método é basicamente um pedaço de código que executa uma ou várias ações. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Embora uma instrução seja sempre uma linha, uma linha pode ser tão longa quanto necessário (até 32.000 caracteres, o que provavelmente é suficiente para a maioria das tarefas).
 
 O tamanho máximo de um método de projecto é limitado a 2 GB de texto ou 32.000 linhas de comando.
 
-## Métodos especializados
+## Tipos de métodos
 
 Na Linguagem 4D, existem várias categorias de métodos. A categoria depende da forma como podem ser chamados:
 
@@ -17,11 +17,11 @@ Na Linguagem 4D, existem várias categorias de métodos. A categoria depende da 
 | **Métodos proyecto**          | Por demanda, quando chamar ao nome do método projeto (ver [Chamando a métodos projeto](#calling-project-methods)) | Sim                | Pode conter qualquer código para executar ações personalizadas Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado.                      |
 | **Método objecto (widget)**   | Automático, quando um evento envolve a forma a que o método está ligado                                           | Não                | Propriedade de um objecto de formulário (também chamado widget)                                                                                                                                   |
 | **Método formulário**         | Automático, quando um evento envolve o objecto ao qual o método está ligado                                       | Não                | Propriedade de um formulário. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. |
-| **No**(default): No highlight | Automático, cada vez que manipula os registos de uma tabela (Adicionar, Apagar e Modificar)                       | Não                | Propriedade de uma tabela. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                                          |
+| **No**(default): No highlight | Automático, cada vez que manipula os registos de uma tabela (Adicionar, Apagar e Modificar)                       | Não                | Propriedade de uma tabela. Os gatilhos/triggers são métodos que podem prevenir operações "ilegais" com os registos da sua base de dados.                                                          |
 | **Método base**               | Automático, quando ocorre um evento de sessão de trabalho                                                         | Sim (pré-definido) | Existem 16 métodos base em 4D. Ver secção Métodos base de dados                                                                                                                                   |
 
 
-> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
+> A linguagem 4D também suporta **Funções de classe**, que pode ser chamadas no contexto de uma instância de objeto. As funções de classe podem ser integradas (*por exemplo*, `collection.orderBy()` ou `entity.save()`), ou [criado pelo desenvolvedor 4D](classes.md#class-function).
 
 
 ## Métodos projeto recursivos
@@ -88,7 +88,7 @@ Pode encapsular os seus métodos de projeto em **fórmula** objectos e chamá-lo
 
 Os comandos `Formula` ou `Formula from string` permitem-lhe criar objectos de fórmula nativa que pode encapsular em propriedades de objectos. Permite-lhe implementar métodos de objectos personalizados.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. Por exemplo:
+Para executar um método armazenado numa propriedade objeto, utilizar o operador **( )** após o nome da propriedade. Por exemplo:
 
 ```4d
 //myAlert ALERT("Hello world!")
@@ -145,13 +145,13 @@ $result:=$o.fullName()
 
 
 
-Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Chamar só a propriedade de objeto devolverá uma nova referência à fórmula (e não a executará):
+Note-se que, mesmo que não tenha parâmetros, um método de objeto a ser executado deve ser chamado com ( ) parênteses. Chamar só a propriedade de objeto devolverá uma nova referência à fórmula (e não a executará):
 
 ```4d
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Métodos do menu
+### Métodos de menu
 Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. Atribui-se o método ao comando menu usando o editor de menu ou um comando do tema "Menus". O método executa-se quando o comando do menu é escolhido. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 
 Os comandos personalizados do menu podem causar a realização de uma ou mais actividades. Por exemplo, um comando de menu para introduzir registos pode chamar um método que executa duas tarefas: exibir o formulário de introdução apropriado, e chamar o comando `ADD RECORD` até que o usuário cancele a atividade de introdução de dados.
@@ -166,7 +166,7 @@ Um **método de processo** é um método de projecto que é chamado quando um pr
 ### Métodos de captura de eventos e erros
 Um **método de captação de eventos** decorre num processo separado como método de captação de eventos. Normalmente, deixa a 4D fazer a maior parte do tratamento do evento por si. Por exemplo, durante a introdução de dados, 4D detecta toques no teclado e cliques, depois chama os métodos corretos de objetos e formulários para que possa responder adequadamente aos eventos a partir destes métodos. Para mais informações, ver a descrição do comando `ON EVENT CALL`.
 
-Um **método de apanhar erros** é um método de projecto baseado na interrupção. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
+Um **método de apanhar erros** é um método de projecto baseado na interrupção. Cada vez que um erro ou uma exceção ocorre, ele é executado no processo em que foi instalado. Para mais informações, ver a descrição do comando `ON ERR CALL`.
 
 ## Métodos associados aos objetos
 
