@@ -9,7 +9,7 @@ const router = process.env.DOCUSAURUS_ROUTER
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
-  baseUrl: "/docs/",
+  baseUrl: router ? "" : "/docs/",
   //url: "https://4d.github.io/",
   url: "https://developer.4d.com/",
   organizationName: "4D",

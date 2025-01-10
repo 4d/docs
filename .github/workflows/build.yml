@@ -14,10 +14,10 @@ jobs:
   build:
     uses: ./.github/workflows/workflow-build.yml
     concurrency:
-      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-build
       cancel-in-progress:  true
   build-router:
     uses: ./.github/workflows/workflow-build-router.yml
     concurrency:
-      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-router
       cancel-in-progress:  true
