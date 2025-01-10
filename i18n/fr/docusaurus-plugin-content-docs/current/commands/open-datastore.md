@@ -143,3 +143,11 @@ En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut 
 #### Voir également
 
 [ds](ds.md)
+
+#### Propriétés
+
+|                       |                                                                 |
+| --------------------- | --------------------------------------------------------------- |
+| Numéro de commande    | 1452                                                            |
+| Thread safe           | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Modifie les variables | error                                                           |
