@@ -34,7 +34,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 ## Enumération
 
-Associe une liste de choix à un objet. Il peut s'agir d'un nom de liste de choix (une référence de liste) ou d'une collection de valeurs par défaut.
+Associe une énumération à un objet. Il peut s'agir d'un nom d'énumération (une référence de liste) ou d'une collection de valeurs par défaut.
 
 Vous pouvez également associer des listes de choix à des objets à l'aide des commandes [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv20/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv20/help/command/en/page1266.htm
 
@@ -43,7 +43,7 @@ Vous pouvez également associer des listes de choix à des objets à l'aide des 
 | Nom        | Type de données   | Valeurs possibles                                                                   |
 | ---------- | ----------------- | ----------------------------------------------------------------------------------- |
 | choiceList | liste, collection | Une liste de valeurs possibles                                                      |
-| liste      | liste, collection | Une liste de valeurs possibles (listes hiérarchiques uniquement) |
+| list       | liste, collection | Une liste de valeurs possibles (listes hiérarchiques uniquement) |
 
 #### Objets pris en charge
 
@@ -309,13 +309,13 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 ---
 
-## Selection Name
+## Sélection temporaire
 
 `Listbox de type sélection nommée`
 
-Spécifie la sélection nommée à utiliser. Vous devez entrer le nom d'une sélection nommée valide. Il peut s'agir d'une sélection nommée process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection nommée doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
+Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une sélection temporaire valide. Il peut s'agir d'une sélection temporaire process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection temporaire doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
 
-> Les sélections nommées sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections nommées** du _manuel de référence du langage 4D_.
+> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections nommées** du _manuel de référence du langage 4D_.
 
 #### Grammaire JSON
 
