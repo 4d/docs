@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | 引数        | 型            |   | 説明                                                                                                                            |
 | --------- | ------------ | - | ----------------------------------------------------------------------------------------------------------------------------- |
-| aTable    | テーブル         | → | フォームが属するテーブル, または 省略した場合は、デフォルトテーブル                                                                                           |
+| aTable    | Table        | → | フォームが属するテーブル, または 省略した場合は、デフォルトテーブル                                                                                           |
 | form      | Text, Object | → | フォーム名(文字列)、あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、あるいは印刷するフォームを定義したオブジェクト |
 | formData  | Object       | → | フォームに関連づけるデータ                                                                                                                 |
 | areaStart | Integer      | → | 印刷マーカ、または開始エリア(areaEndが指定された場合)                                                                            |
@@ -18,8 +18,6 @@ displayed_sidebar: docs
 | 戻り値       | Integer      | ← | 印刷されたエリアの高さ                                                                                                                   |
 
 <!-- END REF-->
-
-*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
 
 #### 説明
 
@@ -184,3 +182,10 @@ form data オブジェクトについての詳細な情報については、[`DI
 [PAGE BREAK](../commands-legacy/page-break.md)\
 [PRINT SETTINGS](../commands-legacy/print-settings.md)\
 [SET PRINT OPTION](../commands-legacy/set-print-option.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 5                                                               |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
