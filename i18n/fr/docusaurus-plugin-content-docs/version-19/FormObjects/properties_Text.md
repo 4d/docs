@@ -245,7 +245,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 :::note
 
 - "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
+- "justify" n'est pris en charge que par [les entrées](input_overview.md) et [les zones de texte](text.md)
 
 :::
 
