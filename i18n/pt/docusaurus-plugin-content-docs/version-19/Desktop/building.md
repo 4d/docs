@@ -456,7 +456,7 @@ Depois que o aplicativo é construído, um novo arquivo de licença de implanta�
 
 ### Certificação de aplicativos OS X
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). A assinatura de um aplicativo autoriza que ele seja executado usando a funcionalidade de Gatekeeper do macOS quando a opção "Mac App Store e Desenvolvedores identificados" estiver selecionada (veja "Sobre Gatekeeper" abaixo).
+O construtor de aplicações pode assinar aplicações 4D mesclados no macOS (aplicações de usuário único, servidor 4D e partes de clientes sob macOS). A assinatura de um aplicativo autoriza que ele seja executado usando a funcionalidade de Gatekeeper do macOS quando a opção "Mac App Store e Desenvolvedores identificados" estiver selecionada (veja "Sobre Gatekeeper" abaixo).
 
 * Verifique a opção do Sinal **** para incluir certificação no procedimento de construtor de aplicativos para OS X. 4D irá verificar a disponibilidade de elementos necessários para a certificação quando a compilação ocorrer:
 
@@ -591,9 +591,9 @@ A gestão de conexões por aplicativos cliente cobre os mecanismos pelos quais u
 
 O procedimento de conexão para aplicativos cliente mesclados suporta casos onde o servidor dedicado não está disponível. O cenário de inicialização de um aplicação cliente 4D é o seguinte:
 
-* The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
-  OR  
-  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
+* A aplicaçao cliente tenta se conectar ao servidor usando o serviço de descoberta (baseado no nome do servidor, transmitido na mesma subnet).  
+  OU  
+  Se informações válidas de conexão forem armazenadas no "EnginedServer. Arquivo DLink" dentro da aplicaçao cliente, a aplicaçao cliente tenta se conectar ao endereço especificado do servidor.
 * Se isso falhar, o aplicativo cliente tenta se conectar ao servidor usando informações armazenadas na pasta de preferências do usuário do aplicativo ("lastServer. ml" arquivo, veja a última etapa).
 * Se isso falhar, o aplicativo cliente exibe uma caixa de diálogo de erro de conexão.
   * Se o usuário clicar no **Select... Botão** (quando permitido pelo desenvolvedor 4D na etapa de compilação, veja abaixo), a caixa de diálogo padrão "conexão do servidor" é exibida.
