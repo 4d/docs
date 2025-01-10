@@ -29,10 +29,10 @@ title: On After Edit
 | プロパティ       | 型       | 説明                                                                                                  |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro エリア名                                                                                    |
-| sheetName   | text    | イベントが発生したシート名                                                                                       |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | テキスト    | "On After Edit"                                                                                     |
+| objectName  | テキスト    | 4D View Pro エリア名                                                                                    |
+| sheetName   | テキスト    | イベントが発生したシート名                                                                                       |
+| action      | テキスト    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 `action` プロパティの値に応じて、[イベントオブジェクト](overview.md#イベントオブジェクト) には追加のプロパティが含まれます。
 
@@ -53,12 +53,12 @@ title: On After Edit
 
 #### action = DragDropBlock
 
-| プロパティ     | 型       | 説明                                           |
-| --------- | ------- | -------------------------------------------- |
-| fromRange | object  | ソースセルレンジ (ドラッグされる範囲) のレンジ |
-| toRange   | object  | 移行先セルレンジ (ドロップされる場所) のレンジ |
-| copy      | boolean | ソースレンジがコピーされたかどうかを表します                       |
-| insert    | boolean | ソースレンジが挿入されたかどうかを表します                        |
+| プロパティ     | 型      | 説明                                           |
+| --------- | ------ | -------------------------------------------- |
+| fromRange | object | ソースセルレンジ (ドラッグされる範囲) のレンジ |
+| toRange   | object | 移行先セルレンジ (ドロップされる場所) のレンジ |
+| copy      | ブール    | ソースレンジがコピーされたかどうかを表します                       |
+| insert    | ブール    | ソースレンジが挿入されたかどうかを表します                        |
 
 #### action = DragFillBlock
 
@@ -73,7 +73,7 @@ title: On After Edit
 | プロパティ   | 型      | 説明          |
 | ------- | ------ | ----------- |
 | range   | object | セルのレンジ      |
-| formula | text   | 入力されたフォーミュラ |
+| formula | テキスト   | 入力されたフォーミュラ |
 
 #### action = clipboardPasted
 
