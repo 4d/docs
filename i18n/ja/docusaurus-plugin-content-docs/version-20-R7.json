@@ -140,7 +140,7 @@
     "description": "The label for category Form Events in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
-    "message": "フォーム",
+    "message": "Forms",
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Formulas": {
@@ -312,7 +312,7 @@
     "description": "The label for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table": {
-    "message": "テーブル",
+    "message": "Table",
     "description": "The label for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools": {
@@ -372,7 +372,7 @@
     "description": "The label for category XML in sidebar docs"
   },
   "sidebar.docs.category.Classes": {
-    "message": "Classes",
+    "message": "クラス",
     "description": "The label for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Classes.link.generated-index.title": {
