@@ -1,5 +1,5 @@
 ---
-id: 日付
+id: date
 title: 日付
 ---
 
