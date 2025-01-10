@@ -15,7 +15,7 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 ## Abrir uma aplicação cliente/servidor fundida
 
-A merged client/server application is customized and its starting is simplified:
+Uma aplicação cliente/servidor mesclada é personalizada e seu início é simplificado:
 
 - Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
 - Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor.
