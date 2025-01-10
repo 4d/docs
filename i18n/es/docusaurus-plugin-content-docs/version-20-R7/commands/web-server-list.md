@@ -54,3 +54,10 @@ Queremos saber cuántos servidores web en funcionamiento hay disponibles:
 
 [Servidor WEB](web-server.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1716                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
