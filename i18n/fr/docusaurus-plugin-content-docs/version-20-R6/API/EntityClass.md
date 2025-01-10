@@ -97,7 +97,7 @@ $myEntity.save() //sauvegarder l'entity
 
 La fonction `.clone()` <!-- REF #EntityClass.clone().Summary -->crée en mémoire une nouvelle entité faisant référence au même enregistrement que l'entité d'origine<!-- END REF -->.
 
-This function allows you to update entities separately. Notez cependant que, pour des raisons de performance, la nouvelle entité partage la même référence d'attributs d'objets que l'entité clonée.
+Cette fonction vous permet de mettre à jour des entités séparément. Notez cependant que, pour des raisons de performance, la nouvelle entité partage la même référence d'attributs d'objets que l'entité clonée.
 
 > Gardez à l'esprit que toutes les modifications apportées aux entités sont enregistrées dans l'enregistrement référencé uniquement lorsque la fonction [`save()`](#save) est exécutée.
 
